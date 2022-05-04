@@ -2,8 +2,20 @@
   "de-DE": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
           "name": "Zusammenfassung"
+        },
+        "13553f81-6547-4b09-b32e-7aab19725967": {
+          "name": "Machen Sie es viral"
+        },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "ab15beb1-d005-41c6-a156-e4c110c423b8": {
           "name": "Vertiefendes Lernen"
@@ -11,14 +23,29 @@
         "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
           "name": "Erste Schritte"
         },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
           "name": "Zusammenfassung"
+        },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "e4041676-353d-409e-a7aa-bcfcc62bab09": {
           "name": "Vertiefendes Lernen"
         },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
           "name": "Zusammenfassung"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Vertiefendes Lernen"
@@ -35,6 +62,9 @@
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "Erste Schritte"
         },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
           "name": "Zusammenfassung"
         },
@@ -47,6 +77,9 @@
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Erste Schritte"
         },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
           "name": "Zusammenfassung"
         },
@@ -56,14 +89,26 @@
         "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
           "name": "Vertiefendes Lernen"
         },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "633ec4e2-ea0b-496f-8878-d4178882a69e": {
           "name": "Zusammenfassung"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "f49ce667-e4b7-4a66-88a4-16848365e63a": {
           "name": "Vertiefendes Lernen"
         },
         "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
           "name": "Erste Schritte"
+        },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Aktivität (30-45 Minuten)"
         },
         "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
           "name": "Zusammenfassung"
@@ -98,6 +143,9 @@
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
           "name": "Erste Schritte"
         },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
           "name": "Zusammenfassung"
         },
@@ -113,8 +161,17 @@
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Level"
         },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Zusammenfassung"
+        },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Beurteilung (2 Minuten)"
+        },
+        "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
+          "name": "Machen Sie es viral"
         },
         "a653c76e-8536-4e82-adad-98306fc15f07": {
           "name": "Aufwärmübung"
@@ -127,6 +184,15 @@
         },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "Erste Schritte"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Abschluss (5 Minuten)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
           "name": "Vertiefendes Lernen"
@@ -152,20 +218,41 @@
         "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
           "name": "Zusammenfassung"
         },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
           "name": "Zusammenfassung"
         },
         "262ad475-1b09-4834-8401-0cf39d3955c5": {
           "name": "Vertiefendes Lernen"
         },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Beurteilung (2 Minuten)"
+        },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Erste Schritte"
+        },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Beurteilung (2 Minuten)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Abschluss (5 Minuten)"
         },
         "4e2ce993-660e-4574-9264-448e234c4bac": {
           "name": "Vertiefendes Lernen"
         },
         "f266050e-62e6-415d-8735-b80cb922587d": {
           "name": "Erste Schritte"
+        },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Aktivität (30-45 Minuten)"
         },
         "308d7e22-610e-46cb-be15-54fab1e436bb": {
           "name": "Zusammenfassung"
@@ -194,8 +281,20 @@
         "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Zusammenfassung"
         },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Abschluss (5 Minuten)"
+        },
         "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
           "name": "Vertiefendes Lernen"
+        },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Beurteilung (2 Minuten)"
         },
         "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
           "name": "Erste Schritte"
@@ -230,6 +329,18 @@
         "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
           "name": "Vertiefendes Lernen"
         },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Erste Schritte (5 Minuten)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Abschluss (5 Minuten)"
+        },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Beurteilung (2 Minuten)"
+        },
         "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
           "name": "Vertiefendes Lernen"
         },
@@ -254,6 +365,9 @@
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
           "name": "Zusammenfassung"
         },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Beurteilung (2 Minuten)"
+        },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Vertiefendes Lernen"
         },
@@ -269,6 +383,9 @@
         "239ba7ce-544c-4508-9e5c-e956de964002": {
           "name": "Zusammenfassung"
         },
+        "4cf19609-58ef-497b-b48d-2b9a0281a490": {
+          "name": "Machen Sie es viral"
+        },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
           "name": "Prüfung"
         },
@@ -280,6 +397,9 @@
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Vertiefendes Lernen"
+        },
+        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
+          "name": "Nähere Untersuchung der Informationsansicht"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Level"
@@ -1001,6 +1121,9 @@
         "c83b9067-f5cf-4d5c-a246-effde510c121": {
           "name": "Level"
         },
+        "996ce33a-6eec-46a8-8b02-9282b006dd20": {
+          "name": "Level"
+        },
         "a701bcb3-040d-450f-8427-d0ff90f42549": {
           "name": "Level"
         },
@@ -1266,6 +1389,9 @@
           "name": "Level"
         },
         "d8581195-9802-42fc-afd0-f5c50e306cf2": {
+          "name": "Level"
+        },
+        "07c990d5-b301-4bf6-b84c-9ffeee7ef887": {
           "name": "Level"
         },
         "750880fd-7e0b-4edf-83e0-85f116036b05": {
@@ -1706,7 +1832,13 @@
         "8946e76d-d595-423c-8408-0eca539f9f5f": {
           "name": "Level"
         },
+        "191d4843-f7ab-4d54-b9ce-d6ceb7d5f680": {
+          "name": "Level"
+        },
         "0d26b1ca-c97f-445a-ab3a-83e45d4ae4a9": {
+          "name": "Level"
+        },
+        "19aa92d5-e95f-42dd-98dc-9f0c86e37dc2": {
           "name": "Level"
         },
         "175a5a5f-9f19-40fc-b8d3-f6e429270c14": {
@@ -1772,7 +1904,13 @@
         "c81a77e3-a658-44f5-9f98-ba67b99803e4": {
           "name": "Level"
         },
+        "9392c057-99c8-4778-bf37-e2fa872aaa71": {
+          "name": "Level"
+        },
         "9da22490-6037-4b05-b56c-878535e11f89": {
+          "name": "Level"
+        },
+        "c5cdda6b-df76-47a7-bc8a-3225e427086d": {
           "name": "Level"
         },
         "a1fb9f1c-ccb6-4398-adcf-41955f04b6cb": {
@@ -1820,7 +1958,13 @@
         "419d2c6b-4626-4471-915f-a4f0ad231e1a": {
           "name": "Level"
         },
+        "d8216aa3-1f88-4194-a809-83c0a8bfd136": {
+          "name": "Level"
+        },
         "3b1e4fc8-7dba-4cfd-afa4-664c1e020c8e": {
+          "name": "Level"
+        },
+        "48f3c49b-4a66-4e20-aa29-042e49ddda48": {
           "name": "Level"
         },
         "2ab18f57-fbb7-4c1c-89d8-d3fae21d412f": {
@@ -1868,7 +2012,13 @@
         "5b041434-0018-4533-bbc3-52be39bde755": {
           "name": "Level"
         },
+        "9e49263a-8c10-4bf2-93d0-6ce8f78935a8": {
+          "name": "Level"
+        },
         "b9dff44c-ae84-46cd-a39c-e607dcdc72b4": {
+          "name": "Level"
+        },
+        "fcd16875-49dc-4b20-994d-0c6fc99ba57d": {
           "name": "Level"
         },
         "0b3fca52-a420-4487-8859-85980c6a7923": {
@@ -1913,7 +2063,13 @@
         "21e1bc9c-3086-4c37-8f11-f542346a8103": {
           "name": "Level"
         },
+        "19d3cae8-0c41-4d6f-9058-def565ca8ab4": {
+          "name": "Level"
+        },
         "1f2d2416-1810-4934-ba29-7657b37b5413": {
+          "name": "Level"
+        },
+        "5b3ade8b-ca99-40c0-b0bb-3e97bbbd3ab5": {
           "name": "Level"
         },
         "3aea3cc5-5d95-4617-be21-4912a2cfd7ff": {
@@ -1937,7 +2093,13 @@
         "040d1bd7-ae82-4e60-b015-17baad1279d1": {
           "name": "Level"
         },
+        "a88c8f88-88f9-4590-9123-46bf5608ee34": {
+          "name": "Level"
+        },
         "5c672516-04f3-484d-a5bc-8808b4bba3b3": {
+          "name": "Level"
+        },
+        "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5": {
           "name": "Level"
         },
         "06c4a690-d2a7-4e5b-ac4b-d064673db8cd": {
@@ -2462,7 +2624,13 @@
         "34bf035e-c547-4be5-b486-53afb9a48f7f": {
           "name": "Level"
         },
+        "6d9a6010-5625-41f6-9cba-4c508e3f5304": {
+          "name": "Level"
+        },
         "3b998e7c-a5ca-4ecf-806e-0a66dccc7485": {
+          "name": "Level"
+        },
+        "11422ae0-1498-4ab6-8542-76d01f48318a": {
           "name": "Level"
         },
         "dacf5b73-defa-4bce-8c41-ff0c1e60a6c9": {
@@ -2528,6 +2696,9 @@
         "4f1eef78-4a22-4c44-b694-b76057add793": {
           "name": "Level"
         },
+        "d3efaf4a-d127-47f9-86fe-e79c7fb49ba8": {
+          "name": "Level"
+        },
         "f6fcadb1-5887-41c2-bd41-c716efccfb91": {
           "name": "Level"
         },
@@ -2576,6 +2747,9 @@
         "675154ec-8181-4691-92cb-dbf2ed090fa6": {
           "name": "Level"
         },
+        "6d602a27-eb6d-48bb-b6f6-6abf34ddb38e": {
+          "name": "Level"
+        },
         "086b9e87-7672-4d56-b1a8-dbca21eedf59": {
           "name": "Level"
         },
@@ -2618,6 +2792,9 @@
         "108a755f-be78-47a9-9359-3c2a3de2a18b": {
           "name": "Level"
         },
+        "3ff798db-7510-4166-9181-3f291bd2858a": {
+          "name": "Level"
+        },
         "d14fce66-dbba-4b1d-b3dd-7d577a1659f1": {
           "name": "Level"
         },
@@ -2643,6 +2820,9 @@
           "name": "Level"
         },
         "db825aec-ea4c-406c-9b76-d7e82f77c720": {
+          "name": "Level"
+        },
+        "1c77cf41-b082-436b-9c70-bfab4c0bc086": {
           "name": "Level"
         },
         "36da18f0-ea4c-42d2-b26c-52c5b2df0677": {
@@ -2688,6 +2868,9 @@
           "name": "Level"
         },
         "888f5102-6f2c-43dc-b4d7-f5b1597f404e": {
+          "name": "Level"
+        },
+        "3ec86279-3061-4f41-bc0b-a3272a4a19bf": {
           "name": "Level"
         },
         "cc5c8226-aaca-482f-b271-e2e681a1696d": {
@@ -4112,6 +4295,9 @@
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Aufwärmübung"
         },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Aktivität (30-45 Minuten)"
+        },
         "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
           "name": "Zusammenfassung"
         },
@@ -4811,6 +4997,15 @@
         "dafc86e5-32a2-4e29-a95f-6566059dbf22": {
           "name": "Tag 4"
         },
+        "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
+          "name": "Aufwärmübung"
+        },
+        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
+          "name": "Aufgabe"
+        },
+        "c6c58364-dc46-4970-81f4-6470013dd502": {
+          "name": "Zusammenfassung"
+        },
         "d9ce0330-5c0e-41e2-837c-d4eba9da6310": {
           "name": "Level"
         },
@@ -4994,6 +5189,15 @@
         "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
           "name": "Zusammenfassung"
         },
+        "83194b44-89d2-4b23-8601-b26ce5caa6af": {
+          "name": "Aufwärmübung"
+        },
+        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
+          "name": "Aufgabe"
+        },
+        "098e6ecf-1fe4-459a-acc3-25907450f581": {
+          "name": "Zusammenfassung"
+        },
         "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
           "name": "Level"
         },
@@ -5118,6 +5322,15 @@
           "name": "Aufgabe"
         },
         "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
+          "name": "Zusammenfassung"
+        },
+        "95526ba9-ab16-49b6-a013-d52be08b2753": {
+          "name": "Aufwärmübung"
+        },
+        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
+          "name": "Aufgabe"
+        },
+        "abdae5ff-0f80-4901-bb76-a6a3dc1f4313": {
           "name": "Zusammenfassung"
         },
         "87851095-c111-49f0-b9eb-bbe31736cef0": {
@@ -5253,6 +5466,15 @@
           "name": "Aufgabe"
         },
         "558ee427-4fa3-4820-a16b-fe7dbfea3e4a": {
+          "name": "Zusammenfassung"
+        },
+        "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
+          "name": "Aufwärmübung"
+        },
+        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
+          "name": "Aufgabe"
+        },
+        "9df9685e-8a25-4529-a130-ccacacc23186": {
           "name": "Zusammenfassung"
         },
         "0f4a9cea-1a4a-4312-be99-79edfadbb6db": {
@@ -5495,6 +5717,12 @@
         "163efba3-af62-4989-8fab-c173dfbc4ed6": {
           "name": "Test nach dem Projekt"
         },
+        "93b32f46-c9d5-4c1b-940c-489e7d993495": {
+          "name": "Level"
+        },
+        "d07bf4d7-6a25-4ff6-9d01-adea55e214a3": {
+          "name": "Tech Setup"
+        },
         "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
           "name": "Aufwärmübung"
         },
@@ -5503,6 +5731,18 @@
         },
         "694fdbc9-0938-41a0-8646-8f04d7fb37fd": {
           "name": "Zusammenfassung"
+        },
+        "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
+          "name": "Aufwärmübung"
+        },
+        "675f7979-4687-4193-bd1e-10332a1ac050": {
+          "name": "Aufgabe"
+        },
+        "a427afac-1d4e-477c-8efb-2f2813326ece": {
+          "name": "Zusammenfassung"
+        },
+        "75941c07-de18-45db-b260-4cd48e0f1bf0": {
+          "name": "Vertiefendes Lernen"
         },
         "a03605f6-2db6-446e-ba25-a91492277402": {
           "name": "Level"
@@ -5567,6 +5807,9 @@
         "cd19519f-0869-4d79-a3ee-639ee1ed92c1": {
           "name": "Test nach dem Projekt"
         },
+        "287570f9-42d3-434a-a1df-6482860fc1df": {
+          "name": "Tech Setup"
+        },
         "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
           "name": "Aufwärmübung"
         },
@@ -5576,6 +5819,9 @@
         "3288a325-7eb2-47c6-bbc4-9eb0c1686045": {
           "name": "Zusammenfassung"
         },
+        "de8c2b38-c4ff-458f-8356-f650c7b58436": {
+          "name": "Tech Setup"
+        },
         "2b979bba-aad6-49d0-a32a-d436d4288649": {
           "name": "Aufwärmübung"
         },
@@ -5584,6 +5830,9 @@
         },
         "bc72b27d-760e-4e23-aa40-d8141b949e20": {
           "name": "Zusammenfassung"
+        },
+        "83123736-f2a8-4fdc-97c7-5ed673d1b2d1": {
+          "name": "Tech Setup"
         },
         "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
           "name": "Aufwärmübung"
@@ -5610,6 +5859,15 @@
           "name": "Aufgabe"
         },
         "a4b0740b-a9d1-41f7-9d20-00f1d77f878d": {
+          "name": "Zusammenfassung"
+        },
+        "a0381dd6-760a-46a9-9217-7e7744252d97": {
+          "name": "Aufwärmübung"
+        },
+        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
+          "name": "Aufgabe"
+        },
+        "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33": {
           "name": "Zusammenfassung"
         },
         "5618c307-5639-4715-8735-c545ded5de85": {

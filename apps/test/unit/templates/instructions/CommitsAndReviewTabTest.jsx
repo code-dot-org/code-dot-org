@@ -7,7 +7,6 @@ import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/Revie
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
-  onLoadComplete: () => {},
   channelId: 'asdfjkl',
   serverLevelId: 1,
   serverScriptId: 2,

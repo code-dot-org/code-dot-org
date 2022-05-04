@@ -68,6 +68,7 @@
           "definition": "Una serie di passaggi che sono stati codificati in qualcosa che può essere eseguito da una macchina."
         },
         "code/flappy/unversioned": {
+          "word": "programmare (to code)",
           "definition": "(v) programmare o scrivere istruzioni per un computer."
         },
         "debugging/flappy/unversioned": {
@@ -168,8 +169,29 @@
           "word": "Cicli",
           "definition": "L'azione di ripetere qualcosa più e più volte."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cifrario di Cesare",
+          "definition": "una tecnica di crittografia che sposta l'alfabeto di un certo numero di caratteri"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cifrario",
+          "definition": "il termine generico per una tecnica (o algoritmo) che esegue la crittografia"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Decifrare la crittografia",
+          "definition": "Quando si tenta di decodificare un messaggio segreto senza conoscere tutte le specifiche del codice, si sta tentando di \"decodificare\" la crittografia."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Decrittazione",
+          "definition": "un processo che inverte la crittografia, prendendo un messaggio segreto e riproducendo il messaggio originale"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Crittografia"
+          "word": "Crittografia",
+          "definition": "un processo di codifica dei messaggi per mantenerli segreti, in modo che solo i soggetti \"autorizzati\" possano leggerlo."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Cifratura con sostituzione casuale",
+          "definition": "una tecnica di crittografia che mappa ogni lettera dell'alfabeto su altre lettere dell'alfabeto scelte a caso."
         },
         "code/starwars/unversioned": {
           "definition": "(v) programmare o scrivere istruzioni per un computer."
@@ -216,7 +238,8 @@
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compressione senza perdita"
+          "word": "Compressione senza perdita",
+          "definition": "un algoritmo di compressione dei dati che permette di ricostruire perfettamente i dati originali a partire dai dati compressi. Più comunemente usato per la compressione del testo (ad es. Compressione .zip)"
         },
         "event/outbreak/unversioned": {
           "word": "Evento",
@@ -830,6 +853,10 @@
         "machine_learning/csd/2021": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+        },
+        "user/csd/2021": {
+          "word": "Utente",
+          "definition": "Qualcuno che usa un oggetto, inclusi software e hardware."
         },
         "user_interface/csd/2021": {
           "word": "Interfaccia Utente"

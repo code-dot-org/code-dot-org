@@ -1275,6 +1275,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org는 학생의 안전과 보안을 가장 중요하게 여기고 있습니다. Code.org는 [학생 개인정보 보호 서약]({pledgeLink})에 서명했으며 개인정보 보호 실무는 [Common Sense Media로부터 가장 높은 전체 점수 중 하나]({commonSenseLink})를 받았습니다. Code.org의 [개인정보 보호정책]({privacyPolicyLink})에서 더 자세한 내용을 보실 수 있습니다.",
   "parentLetterWhy": "왜 컴퓨터 과학인가요",
   "parentLetterWhyDetails": "[6명의 다른 학생들이 보여줍니다]({researchLink}): 컴퓨터 과학을 공부한 학생은 다른 과목에서도 성적이 좋으며, 문제 해결에 뛰어나고, 대학에 갈 확률이 17% 더 높습니다. 컴퓨터 과학으로 학생들은 비판적 사고, 문제 해결, 디지털 시민권을 배우고 향후 추구하는 기회가 무엇이든 컴퓨터 과학을 통해 혜택을 보게 됩니다. 그리고 Code.org에서 인터랙티브 애니메이션, 코드-아트, 게임과 앱을 배움으로써 창의성을 기르고 학습에 재미를 더할 수 있습니다.",
+  "participantTypeStudentTitle": "학생들",
+  "participantTypeTeacherTitle": "선생님들",
   "partner": "파트너: {partner}",
   "password": "비밀번호",
   "passwordConfirmation": "비밀번호 재확인",

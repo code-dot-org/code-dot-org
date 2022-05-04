@@ -1308,6 +1308,8 @@
   "parentLetterStudentPrivacyDetails": "Code.orgは、生徒の安全とセキュリティを最も重要視しています。 Code.orgは [生徒のプライバシー誓約]({pledgeLink}) に署名し、そのプライバシー慣行は [Common Sense Mediaから最高クラスの総合スコア({commonSenseLink}) を獲得しています。詳細については、Code.orgの [プライバシーポリシー]({privacyPolicyLink}) をご覧ください。\n",
   "parentLetterWhy": "なぜコンピューター サイエンスか\n",
   "parentLetterWhyDetails": "[6つの異なる研究ショー]({researchLink}): コンピューター サイエンスを学ぶ子供たちは、他の科目でより優れたパフォーマンスを発揮し、問題解決能力に優れ、大学に通う可能性が17% 高くなっています。コンピューター サイエンスは、生徒に批判的思考、問題解決、デジタル シティズンシップを教え、将来どのような機会を追求することにしても、どの生徒にも利益をもたらします。また、Code.orgでインタラクティブなアニメーション、コードアート、ゲーム、アプリを作成することを学ぶことで、創造性が刺激され、学習が楽しくなります。\n",
+  "participantTypeStudentTitle": "生徒",
+  "participantTypeTeacherTitle": "先生方",
   "partner": "パートナー: {パートナー}\n",
   "password": "パスワード",
   "passwordConfirmation": "パスワードの確認",

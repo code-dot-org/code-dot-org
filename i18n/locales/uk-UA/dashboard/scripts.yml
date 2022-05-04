@@ -4061,6 +4061,8 @@ uk:
               display_name: Зміст
             required:
               display_name: Огляд
+        dance-2019:
+          description_short: За участі Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, і 34 інших!
         k5-onlinepd-2019:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі!
@@ -5144,8 +5146,12 @@ uk:
               display_name: Послідовність дій
             csf_loops:
               display_name: Цикли
+            csf_impacts:
+              display_name: Вплив інформатики
             csf_events:
               display_name: Події
+            lessonGroup-6:
+              display_name: Фінальний проєкт
         coursec-2021:
           description_audience: 'Вік: 6-10'
           lessons:
@@ -5173,6 +5179,8 @@ uk:
               display_name: Події
             csf_data:
               display_name: Дані
+            end_of_course_project:
+              display_name: Фінальний проєкт
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Вік: 7-11'
@@ -5187,7 +5195,7 @@ uk:
               name: Танцювальна вечірка
             Loops in Ice Age:
               key: Петлі в Ice Age
-              name: Петлі в Ice Age
+              name: Цикли Льодовикового періоду
             Loops in Artist:
               key: Художник - Цикли
             Conditionals with Cards:
@@ -5271,6 +5279,8 @@ uk:
               display_name: Цифрове громадянство
             csf_variables:
               display_name: Цикли For
+            csf_data:
+              display_name: Дані та моделювання
             csf_for_loops:
               display_name: Цикли For
             lessonGroup-8:
@@ -5569,6 +5579,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Спільнота вчителів
         outbreak-module:
           title: Спалах
         csa1-exemplars:
@@ -5928,6 +5942,8 @@ uk:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування
         csp9-2022:
           lessons:
             Machine Learning:
@@ -6040,6 +6056,8 @@ uk:
               display_name: Цифрове громадянство
             lessonGroup-8:
               display_name: Змінні
+            csf_data:
+              display_name: Дані та моделювання
           description_audience: 'Вік: 9-13'
         csa1-2022:
           lessons:
@@ -6056,6 +6074,7 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          description_audience: 'Вік: 4-8'
         csa2-2022:
           lessons:
             lesson-6:
@@ -6127,12 +6146,17 @@ uk:
               display_name: Спрайти
             lessonGroup-8:
               display_name: Змінні
+            csf_data:
+              display_name: Дані та моделювання
           description_audience: 'Вік: 9-13'
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
         csa7-2022:
+          lessons:
+            lesson-6:
+              name: Інтелектуальна власність
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
@@ -6144,8 +6168,24 @@ uk:
           lessons:
             lesson-1:
               name: Ласкаво просимо
-            lesson-9:
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+            lesson-3:
               name: Планування уроку
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Ласкаво просимо
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Ласкаво просимо
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -6183,3 +6223,150 @@ uk:
               key: Планування уроку
             Next steps:
               key: Наступні кроки
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+              key: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+              key: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
+              key: Що таке комп’ютер?
+            Processing:
+              name: В обробці
+              key: В обробці
+            Storage:
+              name: Сховище
+              key: Сховище
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення проблем."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Вступ до HTML
+              key: Вступ до HTML
+            Intellectual Property:
+              name: Інтелектуальна власність
+              key: Інтелектуальна власність
+            CSS Classes:
+              name: Класи CSS
+              key: Класи CSS
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Змінні
+              key: Змінні
+            Sprites:
+              name: Спрайти
+              key: Спрайти
+            Text:
+              name: Текст
+              key: Текст
+            Conditionals:
+              name: Умови
+              key: Умови
+            Velocity:
+              name: Швидкість
+              key: Швидкість
+            Collisions:
+              name: Зіткнення
+              key: Зіткнення
+            Functions:
+              name: Функції
+              key: Функції
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво та ігри в Game Lab."
+        csd4-2022:
+          lessons:
+            Identifying User Needs:
+              name: Визначення потреб користувачів
+              key: Визначення потреб користувачів
+            Project - Paper Prototype:
+              name: Проект - Паперовий прототип
+              key: Проект - Паперовий прототип
+            Prototype Testing:
+              name: Випробування прототипів
+              key: Випробування прототипів
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+              key: Опитування після курсу Відкриття інформатики
+            Paper Prototypes:
+              key: Паперові прототипи
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            cspSurvey:
+              display_name: Опитування
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
+        csd5-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+              key: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+              key: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опитування
+        csd6-2022:
+          lessons:
+            Color LEDs:
+              name: Кольорові LEDи
+            Accelerometer:
+              name: Акселерометр
+            Functions:
+              name: Функції
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            lessonGroup-4:
+              display_name: Опитування
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
+          title: Опитування після курсу Відкриття інформатики

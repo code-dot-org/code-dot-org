@@ -26,7 +26,8 @@
           "name": "藝術家簡介"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "轉向與角度"
@@ -35,9 +36,28 @@
           "name": "Spotify 播放清單（所有年齡段）"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "加密與公開金鑰",
           "type": "影片"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Code Studio 上的加密小工具"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "活動指南 - 文字壓縮"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "活動重溫 - 把這個訊息解密",
+          "type": "活動重溫"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "把這個訊息解碼"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Studio 上的文字壓縮小工具",
+          "type": "小工具"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "影片：Aloe Blacc 介紹文字壓縮",
           "type": "影片"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -590,6 +610,12 @@
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "學生講義"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "學生講義"
+        },
         "mimi-activity/courseb/2021": {
           "name": "移動它，移動它"
         },
@@ -684,7 +710,8 @@
           "name": "我的網路環境安全:安全:它的規則!"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "我的網路環境安全:暫停&想一想"
+          "name": "我的網路環境安全:暫停&想一想",
+          "type": "學生講義"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "結對編程"
@@ -761,6 +788,9 @@
           "name": "虛擬課程修改",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "學生講義"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "我的機器人朋友"
         },
@@ -796,7 +826,8 @@
           "name": "轉向與角度"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "大事件"
@@ -1014,6 +1045,9 @@
         "sprite_lab_documentation/coursee/2021": {
           "name": "Sprite Lab 說明文件"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "學生講義"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "在線上，停一停、想一想",
           "type": "影片"
@@ -1022,7 +1056,8 @@
           "type": "影片"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "轉向與角度"
+          "name": "轉向與角度",
+          "type": "學生講義"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "轉向與角度"
@@ -1104,6 +1139,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "影片"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "學生講義"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "影片"
         },
@@ -1166,6 +1204,16 @@
         },
         "teacher_forum/csd/2021": {
           "name": "教師論壇"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "計算創新（Computing Innovations）"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "影片"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "計算機科學改變了一切",
+          "type": "影片"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "以程式碼設計螢幕畫面"
@@ -1233,6 +1281,12 @@
         },
         "prototype-an-innovation-1/csd/2021": {
           "type": "標題 "
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "表示事項"
+        },
+        "representation-matters/csd/2021": {
+          "name": "表示事項"
         },
         "representing-information-1/csd/2021": {
           "name": "表示資訊"
@@ -1419,6 +1473,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "教師論壇"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "問題解決流程"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "問題解決流程",
+          "type": "影片"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "問題解決流程"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "問題解決流程"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "電腦是什麼？"
         },
@@ -1444,6 +1511,12 @@
         "apps_and_problem_solving/csd/2021": {
           "name": "App 與問題解決",
           "type": "標題 "
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "瀏覽網頁"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "瀏覽網頁"
         },
         "html_tags/csd/2021": {
           "name": "HTML 標籤"

@@ -2,6 +2,22 @@
 nn:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': middels
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': middels
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -978,7 +994,7 @@ nn:
         text: er flyttbar
       gamelab_edgesDisplace:
         text: kantene blokkerer {SPRITE} fra å flytte seg
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'gjenta kvar {N} {UNIT} '
         options:
           UNIT:
