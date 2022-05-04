@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 22:54:28 UTC",
+    "serialized_at": "2022-04-29 16:04:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1489,8 +1489,21 @@
       }
     },
     {
-      "key": "15e4e2e5-9559-42e0-87af-f96ac932f5aa",
+      "key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795",
       "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795",
+        "lesson.key": "Project - App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022"
+      }
+    },
+    {
+      "key": "15e4e2e5-9559-42e0-87af-f96ac932f5aa",
+      "position": 6,
       "properties": {
         "name": "Extension Activities"
       },
@@ -1623,7 +1636,13 @@
       "key": "d5cbe650-e941-402e-9253-acebd19f07d1",
       "position": 2,
       "properties": {
-        "description": "###***Designing with Empathy***\n\n\n\n#### Determine the User\n\n**Overview:** Have students read through the Determine the User section of the activity guide. The first part of this activity asks students to match different shoes with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of shoes and the needs of users.\n\n**Circulate:** Monitor students as they complete the first page of the activity guide, asking students to justify some of the decisions that they made. It’s okay if students disagree about a particular shoe choice. There are no right or wrong answers here - the discussion and ability to reasonably justify a decision are what matter."
+        "description": "###***Designing with Empathy***\n\n\n\n#### Determine the User\n\n**Overview:** Have students read through the Determine the User section of the activity guide. The first part of this activity asks students to match different shoes with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of shoes and the needs of users.\n\n**Circulate:** Monitor students as they complete the first page of the activity guide, asking students to justify some of the decisions that they made. It’s okay if students disagree about a particular shoe choice. There are no right or wrong answers here - the discussion and ability to reasonably justify a decision are what matter.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d5cbe650-e941-402e-9253-acebd19f07d1",
@@ -3061,7 +3080,13 @@
       "position": 1,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\nAlso distribute a copy of the rubric or the student checklist.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed. Students can use the rubric or student checklist to self-assess and reflect as they progress through the project.",
-        "name": "Getting Started\r"
+        "name": "Getting Started\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e397d996-dc5b-42de-89ef-703458ff0392",
@@ -3087,7 +3112,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Scoping Projects:** Encourage students at this point to scope the functionality of their app to the minimum amount necessary to address their user's needs. As they work they'll likely discover new components they need to add so it's best to start with a small set early on.\r\n"
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
           }
         ]
       },
@@ -3327,7 +3352,7 @@
       "key": "7fa30068-6660-487b-9075-6d87ada8a30f",
       "position": 1,
       "properties": {
-        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2021/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
+        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2022/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
         "name": "Looking Ahead"
       },
       "seeding_key": {
@@ -3436,7 +3461,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Forming Teams:** The remainder of this unit has students completing a project in teams of 3-4. They will work together to choose a topic, develop an app, refine the app through testing and feedback, and present their work at the end of the unit. Consider how you would like to group together students to form teams, since this is a decision that will impact the rest of the unit. Also consider whether any of your class norms can be used in this unit to help reinforce teamwork & collaborative behavior.\r\n\r\n"
+            "markdown": "**Forming Teams:** The remainder of this unit has students completing a project in teams of 3-4. They will work together to choose a topic, develop an app, refine the app through testing and feedback, and present their work at the end of the unit. Consider how you would like to group together students to form teams, since this is a decision that will impact the rest of the unit. Also consider whether any of your class norms can be used in this unit to help reinforce teamwork & collaborative behavior.\n\n"
           }
         ]
       },
@@ -3482,7 +3507,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Customizing Rules:** The rules in the team contract are general enough to work for most classrooms, but to make it more impactful you should consider customizing the contract to include wording from your classroom or school rules.\r\n\r\n**Teamwork Videos:** Consider reminding your students of the Teamwork videos they watched in Unit 2 when building a website together - or, if you and your students didn’t complete Unit 2, consider watching those videos at this point in the lesson. \r\n\r\n* [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\r\n* [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\r\n"
+            "markdown": "**Customizing Rules:** The rules in the team contract are general enough to work for most classrooms, but to make it more impactful you should consider customizing the contract to include wording from your classroom or school rules.\n\n\n**Team Project Resources:** Consider showing these two videos to the class at this stage in the lesson and revisiting throughout the unit:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
           }
         ]
       },
@@ -4395,13 +4420,7 @@
       "position": 1,
       "properties": {
         "description": "**Display:** Show the Model Screen Design activity guide. This image will also be available to them during the level progression, and can optionally be printed for each team to use as a reference.",
-        "name": "Design Mode in App Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students will be using App Lab to create a simple prototype for their app. Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab](https://code.org/educate/applab).\r\n"
-          }
-        ]
+        "name": "Design Mode in App Lab\r"
       },
       "seeding_key": {
         "activity_section.key": "4a48d593-ad1b-4693-a027-041759320afd",
@@ -4436,7 +4455,13 @@
       "key": "95d0c831-8b6a-4a34-80b1-92befbf89ba0",
       "position": 4,
       "properties": {
-        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels."
+        "description": "**Code Studio:** Have students log into their computers and open Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Programming Levels:** These programming levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "95d0c831-8b6a-4a34-80b1-92befbf89ba0",
@@ -4447,7 +4472,13 @@
       "key": "0244527b-aac8-48c8-8c0f-02f3c490b4be",
       "position": 5,
       "properties": {
-        "progression_name": "Build a Screen"
+        "progression_name": "Build a Screen",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0244527b-aac8-48c8-8c0f-02f3c490b4be",
@@ -4458,7 +4489,13 @@
       "key": "73c9926c-51c3-4b0f-969c-b4120379004b",
       "position": 6,
       "properties": {
-        "progression_name": "Finish a Screen"
+        "progression_name": "Finish a Screen",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "73c9926c-51c3-4b0f-969c-b4120379004b",
@@ -4815,7 +4852,7 @@
       "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
       "position": 2,
       "properties": {
-        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels.",
+        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you used Pair Programming in previous lessons, consider having students use it throughout these levels.",
         "name": "Events in App Lab\r"
       },
       "seeding_key": {
@@ -4827,7 +4864,13 @@
       "key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
       "position": 3,
       "properties": {
-        "progression_name": "Adding Screens"
+        "progression_name": "Adding Screens",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
@@ -5848,7 +5891,7 @@
       "key": "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
+        "description": "**Code Studio:** Have students log into Code Studio and complete a short survey about the unit.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
         "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
@@ -5868,15 +5911,27 @@
       }
     },
     {
-      "key": "1e4bd477-d1df-4a8b-ab31-1ed7a3145652",
-      "position": 3,
+      "key": "4650c6de-71ab-47d0-bea2-61ff838fba65",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "4650c6de-71ab-47d0-bea2-61ff838fba65",
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795"
+      }
+    },
+    {
+      "key": "efa0a609-ffec-4ca4-81b8-c245f0383e9c",
+      "position": 2,
       "properties": {
         "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
-        "activity_section.key": "1e4bd477-d1df-4a8b-ab31-1ed7a3145652",
-        "lesson_activity.key": "36b07898-2f7d-4b48-a979-d2f46cef659b"
+        "activity_section.key": "efa0a609-ffec-4ca4-81b8-c245f0383e9c",
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795"
       }
     },
     {
