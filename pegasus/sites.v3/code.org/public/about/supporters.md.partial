@@ -4,7 +4,7 @@ nav: about_nav
 theme: responsive
 ---
 
-<link rel="stylesheet" href="/css/supporters.css">
+<link rel="stylesheet" href="/css/donors.css">
 
 # Supporters
 Code.org gratefully acknowledges current supporters who have made a generous annual commitment of $1,000 or above to support Code.org's fiscal years 2021 or 2022.
