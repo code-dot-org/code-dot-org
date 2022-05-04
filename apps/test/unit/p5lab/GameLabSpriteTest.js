@@ -34,6 +34,10 @@ describe('P5SpriteWrapper', function() {
       testSprite = createSprite();
     });
 
+    afterEach(function() {
+      testSprite = null;
+    });
+
     it('aliases position.x to positionX', function() {
       testSprite.position.x = 1;
       expect(testSprite.position.x).to.equal(testSprite.x);
@@ -159,6 +163,10 @@ describe('P5SpriteWrapper', function() {
         sprite1 = createSprite(200, 200);
       });
 
+      afterEach(function() {
+        sprite1 = null;
+      });
+
       it('defaults to 100 by 100 when no width or height are set', function() {
         expect(sprite1.width).to.equal(100);
         expect(sprite1.height).to.equal(100);
@@ -196,6 +204,10 @@ describe('P5SpriteWrapper', function() {
         var animation = new p5Wrapper.p5.Animation(sheet);
         sprite = createSprite(0, 0);
         sprite.addAnimation('label', animation);
+      });
+
+      afterEach(function() {
+        sprite = null;
       });
 
       it('defaults to image height and width when no width or height are set', function() {
@@ -259,10 +271,14 @@ describe('P5SpriteWrapper', function() {
     });
 
     describe('sprites with animations', function() {
-      var sprite1;
+      let sprite1;
       beforeEach(function() {
         sprite1 = createSprite(0, 0);
         sprite1.addAnimation('label', createTestAnimation());
+      });
+
+      afterEach(function() {
+        sprite1 = null;
       });
 
       it('returns width and height when no scale is set', function() {
@@ -323,6 +339,11 @@ describe('P5SpriteWrapper', function() {
         [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
       };
       p5Wrapper.p5._predefinedSpriteAnimations = projectAnimations;
+    });
+
+    afterEach(function() {
+      sprite = null;
+      projectAnimations = null;
     });
 
     it('throws if the named animation is not found in the project', function() {
@@ -447,6 +468,11 @@ describe('P5SpriteWrapper', function() {
         [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
       };
     });
+
+    afterEach(function() {
+      sprite = null;
+    });
+
     it('has no effect on a playing, looping animation', function() {
       sprite.setAnimation(LOOPING_ANIMATION);
       expect(sprite.animation.playing).to.be.true;
@@ -575,6 +601,11 @@ describe('P5SpriteWrapper', function() {
 
       expect(sprite.velocity.x).to.equal(3);
       expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    afterEach(function() {
+      sprite = null;
+      spriteTarget = null;
     });
 
     it('stops movement of colliding sprite when sprites bounce', function() {
@@ -721,6 +752,16 @@ describe('P5SpriteWrapper', function() {
       group = createStatefulGroup();
       group.add(spriteTarget1);
       group.add(spriteTarget2);
+    });
+
+    afterEach(function() {
+      sprite = null;
+      spriteTarget1 = null;
+      spriteTarget2 = null;
+      group = null;
+      p5WrapperStateful = null;
+      createStatefulGroup = null;
+      createStatefulSprite = null;
     });
 
     it('isTouching returns false when sprite touches nothing in the group', function() {
@@ -880,6 +921,9 @@ describe('P5SpriteWrapper', function() {
 
     afterEach(function() {
       pInst.remove();
+
+      spriteA = null;
+      spriteB = null;
     });
 
     it('false if sprites do not overlap', function() {
@@ -1120,6 +1164,9 @@ describe('P5SpriteWrapper', function() {
 
     afterEach(function() {
       pInst.remove();
+
+      spriteA = null;
+      spriteB = null;
     });
 
     it('false if sprites do not overlap', function() {
