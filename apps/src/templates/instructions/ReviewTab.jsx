@@ -163,7 +163,7 @@ class ReviewTab extends Component {
 
   onCommentDelete = deletedCommentId => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .deleteCodeReviewComment(deletedCommentId)
       .done(() => {
         const updatedComments = [...comments];
@@ -176,7 +176,7 @@ class ReviewTab extends Component {
 
   onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
         const toggledCommentIndex = comments.findIndex(
