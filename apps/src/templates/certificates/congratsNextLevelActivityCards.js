@@ -8,3 +8,5 @@ const Course2 = {
   image: pegasus('/shared/images/courses/fit-200/logo_course2.jpg'),
   buttonText: i18n.viewCourse()
 };
+
+export const nextLevelCourses = [Course2];
