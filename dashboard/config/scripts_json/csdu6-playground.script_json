@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-03-31 20:33:42 UTC",
+    "serialized_at": "2022-04-14 20:33:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -370,6 +370,21 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csdu6-playground"
       }
+    },
+    {
+      "key": "lesson-21",
+      "name": "EOU Student Facting Survey - [Course]",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -717,6 +732,18 @@
       "seeding_key": {
         "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
+      "key": "5effdb45-0847-437b-8b82-02a52dbd5064",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5effdb45-0847-437b-8b82-02a52dbd5064",
+        "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csdu6-playground"
       }
@@ -1882,7 +1909,7 @@
       "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
       "position": 1,
       "properties": {
-        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty()`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)\n\n[`myFunction()`(#68D995)](/docs/applab/callMyFunction/)\n\n[`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/)\n\n[`createButton()`(#4dd0e1)](/docs/applab/createButton/)\n\n[`rgb()`(#fff176)](/docs/applab/rgb/)\n\n[`hideElement()`(#fff176)](/docs/applab/hideElement/)\n\n[`playSound()`(#fff176)](/docs/applab/playSound/)\n\n[`playSpeech()`(#fff176)](/docs/applab/playSpeech/)\n\n[`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/)",
+        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty()`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)\n\n[`myFunction()`(#68D995)](/docs/applab/callMyFunction/)\n\n[`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/)\n\n[`createButton()`(#4dd0e1)](/docs/applab/createButton/)\n\n[`rgb()`(#fff176)](/docs/applab/rgb/)\n\n[`hideElement()`(#fff176)](/docs/applab/hideElement/)\n\n[`playSound()`(#fff176)](/docs/applab/playSound/)\n\n[`playSpeech()`(#fff176)](/docs/applab/playSpeech/)\n\n[`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/)\n\n[`intensity()`(#f78183)](/docs/applab/intensity/)\n\n[`buzzer.stop()`(#f78183)](/docs/applab/buzzer.stop/)",
         "progression_name": "App Lab Template"
       },
       "seeding_key": {
@@ -1910,6 +1937,17 @@
       "seeding_key": {
         "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864",
         "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    },
+    {
+      "key": "42468009-1e72-403e-b605-67b0b8a804df",
+      "position": 1,
+      "properties": {
+        "progression_name": "End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "42468009-1e72-403e-b605-67b0b8a804df",
+        "lesson_activity.key": "5effdb45-0847-437b-8b82-02a52dbd5064"
       }
     }
   ],
@@ -5388,6 +5426,28 @@
       "level_keys": [
         "CSD U6 - Choice Template"
       ]
+    },
+    {
+      "chapter": 140,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-Of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "42468009-1e72-403e-b605-67b0b8a804df"
+      },
+      "level_keys": [
+        "Student End of Unit Survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7057,6 +7117,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csdu6-playground",
         "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey",
+        "script_level.level_keys": [
+          "Student End of Unit Survey"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "42468009-1e72-403e-b605-67b0b8a804df"
       }
     }
   ],

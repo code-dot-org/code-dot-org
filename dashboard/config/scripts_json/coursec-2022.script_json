@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2022-03-31 20:56:42 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-21 16:36:59 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2304,7 +2304,7 @@
       "key": "7e945f73-76d3-4b83-817d-2b9af9789dd7",
       "position": 2,
       "properties": {
-        "description": "- **Angle** - Is measured in degrees where two sides of a shape come together.",
+        "description": "- **Angle** - Where two sides of a shape come together, measured in degrees.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2799,7 +2799,7 @@
       "key": "b57a66a7-3da1-4c20-8d0a-9b5da066c07e",
       "position": 1,
       "properties": {
-        "description": "At this point, students have only used loops in the Maze puzzles. Those puzzles focused on looping movement instructions. This stage will use loops to pick up multiple items in the same spot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _**Today we will be harvesting crops with code.**_\n\n_Harvester puzzles can have lots of items in one spot._ \n\n_How can we use loops to pick up any number of them with just two blocks?_\n",
+        "description": "At this point, students have only used loops in the Maze puzzles. Those puzzles focused on looping movement instructions. This stage will use loops to pick up multiple items in the same spot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _Today we will be harvesting crops with code._\n\n_Harvester puzzles can have lots of items in one spot._ \n\n_How can we use loops to pick up any number of them with just two blocks?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3054,7 +3054,7 @@
       "key": "438866ae-0223-4f9f-badd-3457a85f7c7a",
       "position": 2,
       "properties": {
-        "description": "\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s see if we can find a pattern here” slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Next” slide\n\n*Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*\n",
+        "description": "\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s see if we can find a pattern here” slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Next” slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3200,7 +3200,7 @@
       "key": "49e86e55-b607-4af6-bdb6-b912549b69ea",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Review” slide\n\n\n**Say:**- _What did we \"program\" the button click events to do?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events to Coding” slide\n\n**Say:** _Now we're going to add events to our coding. We're going to create an event for clicking the mouse and one for when the bird hits an object - like the ground or an obstacle._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Review” slide\n\n\n**Say:** _What did we \"program\" the button click events to do?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events to Coding” slide\n\n**Say:** _Now we're going to add events to our coding. We're going to create an event for clicking the mouse and one for when the bird hits an object - like the ground or an obstacle._",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3661,7 +3661,7 @@
       "key": "04091b34-9c0a-44fa-bce4-dd57c3c8f2b2",
       "position": 3,
       "properties": {
-        "description": "####Off and On\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message” slide\n\n- If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\t- Put the message aside and move on to prepping for the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s in here?” slide\n\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n",
+        "description": "####Off and On\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message” slide\n\n**Do This:** If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\n![](https://images.code.org/49e32f1270f21f04ee75cbeb84645d3b-binary message.png)\n\tPut the message aside and move on to prepping for the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s in here?” slide\n\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3753,8 +3753,7 @@
       "key": "19e5b369-31b6-4e72-9e53-69eedef73b58",
       "position": 11,
       "properties": {
-        "description": "Let's start with letters.\n\n- This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n- Fun fact: A grouping of four bits is called a nibble.",
-        "remarks": true
+        "description": "**Say:** Let's start with letters.\n\n**Do This:**\n - This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n- Fun fact: A grouping of four bits is called a nibble."
       },
       "seeding_key": {
         "activity_section.key": "19e5b369-31b6-4e72-9e53-69eedef73b58",
@@ -3775,7 +3774,7 @@
       "key": "2f527d97-64e9-49a7-ac03-b8976ac10078",
       "position": 13,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n- Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\nDrag the blocks on the slide to make different letters.\n\n\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n**Do This:** Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\n**Do This:**\nDrag the blocks on the slide to make different letters.\n\n\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
       },
       "seeding_key": {
         "activity_section.key": "2f527d97-64e9-49a7-ac03-b8976ac10078",
@@ -3862,7 +3861,7 @@
       "key": "b7e1f0fb-c42d-4cfd-bcbe-901326d9edbe",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide\n\nWalk students through the steps needed to read the message."
       },
       "seeding_key": {
         "activity_section.key": "b7e1f0fb-c42d-4cfd-bcbe-901326d9edbe",
@@ -7309,6 +7308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events_lesson_extras"
+        ],
         "progression": "Lesson Extra"
       },
       "bonus": true,
@@ -8902,15 +8904,46 @@
   ],
   "resources": [
     {
-      "name": "2021 Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "2021_change_log",
+      "name": "2022 Change Log",
+      "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview",
+      "key": "2022_change_log",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "2021_change_log"
+        "resource.key": "2022_change_log"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/coursec-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/coursec-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/coursec-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -9014,18 +9047,6 @@
       }
     },
     {
-      "name": "Course Vocabulary",
-      "url": "https://studio.code.org/s/coursec-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
-      }
-    },
-    {
       "name": "Cross-Curricular Extension Activities",
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
@@ -9064,24 +9085,10 @@
       }
     },
     {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/coursec-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
-      }
-    },
-    {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+      "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
       "key": "curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
@@ -9145,6 +9152,18 @@
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Sample Level Solutions",
+      "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/template/preview",
+      "key": "level_solutions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "level_solutions"
       }
     },
     {
@@ -9437,11 +9456,9 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
+      "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view",
       "key": "virtual_lesson_modifications",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"
@@ -9495,6 +9512,12 @@
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
         "resource.key": "csf_-_course_c_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "level_solutions"
       }
     },
     {
@@ -9795,7 +9818,25 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "2022_change_log",
+        "script.name": "coursec-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "coursec-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "coursec-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "coursec-2022"
       }
     },
@@ -9807,19 +9848,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "coursec-2022"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
-        "script.name": "coursec-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
         "script.name": "coursec-2022"
       }
     },
@@ -9877,7 +9906,7 @@
     {
       "key": "angle",
       "word": "Angle",
-      "definition": "Is measured in degrees where two sides of a shape come together.",
+      "definition": "Where two sides of a shape come together, measured in degrees.",
       "properties": {
       },
       "seeding_key": {

@@ -1,0 +1,28 @@
+name 'VPL-CSD-PILOT-S22-CI-ModuleOverview-U6'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Physical Computing
+
+##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Physical Computing unit. 
+
+<img src="https://images.code.org/59eb2814fb713d5f66dfe867efea6bd3-image-1649311889108.JPG" alt="Image of a Clicker Race App" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## In this module, you will:
+
+* ##### Get an introduction to Physical Computing.
+* ##### Practice key concepts included in the unit.
+* ##### Engage with App Lab.
+* ##### Explore end of chapter projects.
+
+
+### **Suggested time:** 90 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

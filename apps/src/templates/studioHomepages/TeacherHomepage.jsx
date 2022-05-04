@@ -7,8 +7,8 @@ import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
-import StudentSections from './StudentSections';
 import TeacherResources from './TeacherResources';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -28,7 +28,8 @@ export const UnconnectedTeacherHomepage = ({
   courses,
   donorBannerName,
   isEnglish,
-  joinedSections,
+  joinedStudentSections,
+  joinedPlSections,
   ncesSchoolId,
   queryStringOpen,
   schoolYear,
@@ -144,7 +145,6 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
-  // [MEG] TODO: Once experiment is complete, modify buttonUrl not to use experiment
   return (
     <div>
       <HeaderBanner
@@ -184,7 +184,7 @@ export const UnconnectedTeacherHomepage = ({
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
             buttonColor={Button.ButtonColor.orange}
-            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
         )}
@@ -194,7 +194,7 @@ export const UnconnectedTeacherHomepage = ({
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
             buttonColor={Button.ButtonColor.orange}
-            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
         )}
@@ -254,7 +254,11 @@ export const UnconnectedTeacherHomepage = ({
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections initialSections={joinedSections} isTeacher={true} />
+        <JoinSectionArea
+          initialJoinedStudentSections={joinedStudentSections}
+          initialJoinedPlSections={joinedPlSections}
+          isTeacher={true}
+        />
       </div>
     </div>
   );
@@ -269,7 +273,8 @@ UnconnectedTeacherHomepage.propTypes = {
   donorBannerName: PropTypes.string,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
-  joinedSections: shapes.sections,
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,

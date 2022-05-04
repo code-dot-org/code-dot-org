@@ -18,7 +18,9 @@ import javalab, {
   setDisableFinishButton,
   setIsTesting,
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
+  setBackpackEnabled,
+  appendMarkdownLog
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -270,9 +272,14 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
 
-  getStore().dispatch(
-    setBackpackApi(new BackpackClientApi(config.backpackChannel))
-  );
+  const backpackEnabled = !!config.backpackEnabled;
+  getStore().dispatch(setBackpackEnabled(backpackEnabled));
+
+  if (backpackEnabled) {
+    getStore().dispatch(
+      setBackpackApi(new BackpackClientApi(config.backpackChannel))
+    );
+  }
 
   getStore().dispatch(
     setDisableFinishButton(
@@ -366,7 +373,9 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    getStore().getState().currentUser,
+    this.onMarkdownMessage
   );
 
   let connectToJavabuilder;
@@ -494,6 +503,10 @@ Javalab.prototype.closePhotoPrompter = function() {
 Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
   // Only pass the selected photo to the mini-app if it supports the photo prompter
   this.miniApp?.onPhotoPrompterFileSelected?.(photo);
+};
+
+Javalab.prototype.onMarkdownMessage = function(message) {
+  getStore().dispatch(appendMarkdownLog(message));
 };
 
 export default Javalab;

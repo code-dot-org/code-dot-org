@@ -2,12 +2,7 @@ import React from 'react';
 import {UnconnectedEditSectionForm as EditSectionForm} from './EditSectionForm';
 import {action} from '@storybook/addon-actions';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  assignmentFamilies,
-  validAssignments,
-  testSection,
-  courseOfferings
-} from './teacherDashboardTestHelpers';
+import {testSection, courseOfferings} from './teacherDashboardTestHelpers';
 
 export default storybook => {
   storybook = storybook.storiesOf('EditSectionForm', module);
@@ -19,13 +14,12 @@ export default storybook => {
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...testSection,
-          loginType: loginType
+          loginType: loginType,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -35,19 +29,18 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('no students yet', () => (
+    storybook = storybook.add(`no students yet/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...testSection,
-          studentCount: 0
+          studentCount: 0,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -57,17 +50,18 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('save in progress', () => (
+    storybook = storybook.add(`save in progress/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={testSection}
+        section={{
+          ...testSection,
+          participantType: 'student'
+        }}
         isSaveInProgress={true}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}

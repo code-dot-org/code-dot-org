@@ -364,6 +364,7 @@ en:
       educate_beyond: "Beyond Code.org"
       educate_inspire: "Inspire a Student"
       educate_community: "Online Community"
+      educate_requirements: "Technical Requirements"
       educate_tools: "Tools and Videos"
       about_us: "About Us"
       about_leadership: "Leadership"
@@ -587,8 +588,8 @@ en:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
     help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
     built_on_github: 'Built on GitHub from Microsoft'
@@ -840,14 +841,6 @@ en:
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
     review_terms: "Review updated terms"
-  donor_interstitial:
-    title: "Your free CS courses are made possible by..."
-    subtitle: "We’d like to thank the generous donors whose support has made Code.org’s success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our [donors](%{donors_url})!"
-    local_supporters: "Local Supporters"
-    global_supporters: "Global Supporters"
-    support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
-    support_codeorg_2: "[Donate now](%{donate_url}) to support Code.org."
-    get_started: "Get started on Code.org"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Please enter your school information below."

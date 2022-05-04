@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-29 21:58:07 UTC",
+    "serialized_at": "2022-04-01 16:05:52 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9989,7 +9989,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
+      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
       "key": "functions",
       "properties": {
         "audience": "Teacher",
@@ -10016,7 +10016,8 @@
       "url": "https://youtu.be/5UMKeMPCa7E",
       "key": "functions_with_parameters",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "functions_with_parameters"
@@ -10096,7 +10097,7 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
+      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",

@@ -476,6 +476,27 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
+  describe(`reset()`, () => {
+    it('stops any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
+
+        // reset() will call resetDynamicComponents() which, for each LED, will call off()
+        // which internally calls stop().
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
+
+        return board.destroy().then(() => {
+          expect(led1.stop).to.have.been.calledOnce;
+          expect(led2.stop).to.have.been.calledOnce;
+        });
+      });
+    });
+  });
+
   describe(`destroy()`, () => {
     it('sends the board reset signal', () => {
       return board

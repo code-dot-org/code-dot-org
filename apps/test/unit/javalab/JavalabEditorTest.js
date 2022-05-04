@@ -26,7 +26,8 @@ import javalab, {
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
   setAllSources,
-  setAllValidation
+  setAllValidation,
+  setBackpackEnabled
 } from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -71,6 +72,7 @@ describe('Java Lab Editor Test', () => {
         getFileList: backpackGetFileListStub
       })
     );
+    store.dispatch(setBackpackEnabled(true));
   });
 
   afterEach(() => {
@@ -88,11 +90,12 @@ describe('Java Lab Editor Test', () => {
     );
   };
 
+  const backpackHeaderButtonId = '#javalab-editor-backpack';
   const editorHeaderButtonIdentifiers = [
     '#javalab-editor-create-file',
     '#data-mode-versions-header',
     '#javalab-editor-save',
-    '#javalab-editor-backpack'
+    backpackHeaderButtonId
   ];
 
   describe('Editing Mode', () => {
@@ -743,13 +746,23 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are enabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.false;
       });
+    });
+
+    it('hides backpack button if disabled', () => {
+      store.dispatch(setBackpackEnabled(false));
+      const editor = createWrapper();
+      expect(editor.find(backpackHeaderButtonId)).to.have.lengthOf(0);
     });
   });
 
@@ -775,10 +788,14 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are disabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.true;
       });

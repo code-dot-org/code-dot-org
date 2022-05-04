@@ -998,17 +998,76 @@ class ScriptTest < ActiveSupport::TestCase
     )
     CourseOffering.add_course_offering(foo18)
 
-    versions = foo17.summarize[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal '2018', versions[0][:version_year]
-    assert_equal '2018', versions[0][:version_title]
-    assert_equal 'foo-2017', versions[1][:name]
-    assert_equal '2017', versions[1][:version_year]
-    assert_equal '2017', versions[1][:version_title]
+    course_versions = foo17.summarize(false, create(:teacher))[:course_versions]
+    assert_equal 2, course_versions.keys.length
+    assert_equal 'foo-2017', course_versions.values[0][:name]
+    assert_equal '2017', course_versions.values[0][:version_year]
+    assert_equal 'foo-2018', course_versions.values[1][:name]
+    assert_equal '2018', course_versions.values[1][:version_year]
+  end
+
+  test 'summarize course_versions for teacher' do
+    foo16 = create(
+      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo16)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
+
+    [foo16, foo17, foo18, foo19].each do |s|
+      summary = s.summarize_course_versions(create(:teacher))
+      assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
+      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
+      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+    end
+  end
+
+  test 'summarize_course_versions for student' do
+    foo16 = create(
+      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo16)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
+
+    [foo17, foo18, foo19].each do |s|
+      summary = s.summarize_course_versions(create(:student))
+      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
+      assert_equal [true], summary.values.map {|h| h[:is_stable]}
+      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+    end
   end
 
   test 'summarize excludes unlaunched versions' do
+    teacher = create(:teacher)
     foo17 = create(
       :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
@@ -1025,36 +1084,35 @@ class ScriptTest < ActiveSupport::TestCase
     )
     CourseOffering.add_course_offering(foo19)
 
-    versions = foo17.summarize[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal 'foo-2017', versions[1][:name]
+    course_versions = foo17.summarize[:course_versions]
+    assert_equal 0, course_versions.keys.length
 
-    versions = foo17.summarize(true, create(:teacher))[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal 'foo-2017', versions[1][:name]
+    course_versions = foo17.summarize(true, teacher)[:course_versions]
+    assert_equal 2, course_versions.keys.length
+    assert_equal 'foo-2017', course_versions.values[0][:name]
+    assert_equal 'foo-2018', course_versions.values[1][:name]
   end
 
   test 'summarize includes show assign button' do
     unit = create(:script, name: 'script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    teacher = create(:teacher)
 
-    # No user, show_assign_button set to nil
-    assert_nil unit.summarize[:show_assign_button]
+    # No user, show_assign_button set to false
+    refute unit.summarize[:show_assign_button]
 
     # Teacher should be able to assign a launched unit.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
+    assert unit.summarize(true, teacher)[:show_assign_button]
 
     # Teacher should not be able to assign a unlaunched script.
     hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
-    assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
+    refute hidden_unit.summarize(true, teacher)[:show_assign_button]
 
     # Student should not be able to assign a unit,
     # regardless of visibility.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_nil unit.summarize(true, create(:student))[:show_assign_button]
+    refute unit.summarize(true, create(:student))[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
@@ -1453,42 +1511,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, bonus_levels3[1][:levels].length
   end
 
-  test "assignable_info: returns assignable info for a unit" do
-    unit = create(:script, name: 'fake-script', published_state: 'beta', lesson_extras_available: true)
-    assignable_info = unit.assignable_info
-
-    assert_equal("fake-script *", assignable_info[:name])
-    assert_equal("fake-script", assignable_info[:script_name])
-    assert_equal("Other", assignable_info[:category])
-    assert(assignable_info[:lesson_extras_available])
-  end
-
-  test "assignable_info: correctly translates unit info" do
-    test_locale = :"te-ST"
-    I18n.locale = test_locale
-    custom_i18n = {
-      'data' => {
-        'script' => {
-          'category' => {
-            'csp17_category_name' => 'CSP Test'
-          },
-          'name' => {
-            'csp1-2017' => {
-              'title' => 'CSP Unit 1 Test'
-            }
-          }
-        }
-      }
-    }
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    unit = build(:script, name: 'csp1-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
-    assignable_info = unit.assignable_info
-
-    assert_equal('CSP Unit 1 Test', assignable_info[:name])
-    assert_equal('CSP Test', assignable_info[:category])
-  end
-
   test 'get_feedback_for_section returns feedbacks for students in the section on the script' do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1557,76 +1579,6 @@ class ScriptTest < ActiveSupport::TestCase
       "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
-  test "self.valid_scripts: does not return unlaunched units when user is a student" do
-    student = create(:student)
-
-    units = Script.valid_scripts(student)
-    refute has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: does not return unlaunched units when user is a teacher" do
-    teacher = create(:teacher)
-
-    units = Script.valid_scripts(teacher)
-    refute has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: does not return unlaunched units when user is an admin" do
-    admin = create(:admin)
-
-    units = Script.valid_scripts(admin)
-    refute has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: omits in-development units" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
-    assert Script.any?(&:in_development?)
-
-    refute Script.valid_scripts(student).any?(&:in_development?)
-    refute Script.valid_scripts(teacher).any?(&:in_development?)
-    assert Script.valid_scripts(levelbuilder).any?(&:in_development?)
-  end
-
-  test "self.valid_scripts: omits pilot units" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
-    assert Script.any?(&:pilot?)
-
-    refute Script.valid_scripts(student).any?(&:pilot?)
-    refute Script.valid_scripts(teacher).any?(&:pilot?)
-    assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
-    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
-  end
-
-  test "self.valid_scripts: pilot experiment results not cached" do
-    # This test is a regression test for LP-1578 where Script.valid_scripts
-    # accidentally added pilot courses to the cached results which were then
-    # returned to non-pilot teachers.
-
-    # Start with an empty scripts table and empty cache
-    Plc::CourseUnit.delete_all  # Delete rows that reference script table
-    Script.delete_all
-    Script.clear_cache
-
-    teacher = create :teacher
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    coursea_2019 = create :script, name: 'coursea-2019', published_state: 'preview'
-    coursea_2020 = create :script, name: 'coursea-2020', published_state: 'pilot', pilot_experiment: 'my-experiment'
-
-    assert_equal [coursea_2019], Script.valid_scripts(teacher)
-    assert_equal [coursea_2019, coursea_2020], Script.valid_scripts(pilot_teacher)
-
-    # This call to valid_scripts will hit the cache; verify that the call to
-    # Script.valid_scripts(pilot_teacher) did not alter the cache.
-    assert_equal [coursea_2019], Script.valid_scripts(teacher)
-  end
-
   test "get_assessment_script_levels returns an empty list if no level groups" do
     unit = create(:script, name: 'test-no-levels')
     level_group_script_level = unit.get_assessment_script_levels
@@ -1654,6 +1606,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not Script.modern_elementary_courses_available?("ch-ch")
     assert_not Script.modern_elementary_courses_available?("it-it")
     assert_not Script.modern_elementary_courses_available?("fr-fr")
+  end
+
+  test 'locale_english_name_map' do
+    english_names = Script.locale_english_name_map
+    assert english_names.key?('en-US')
+    assert_equal english_names['en-US'], 'English'
+    assert english_names.key?('fr-FR')
+    assert_equal english_names['fr-FR'], 'French'
+  end
+
+  test 'locale_native_name_map' do
+    native_names = Script.locale_native_name_map
+    assert native_names.key?('en-US')
+    assert_equal native_names['en-US'], 'English'
+    assert native_names.key?('fr-FR')
+    assert_equal native_names['fr-FR'], 'Français'
   end
 
   test 'supported_locale_codes' do

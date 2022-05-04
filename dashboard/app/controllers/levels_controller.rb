@@ -141,8 +141,12 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
-    @in_script = @level.script_levels.any?
+    if @level.properties['encrypted']&.is_a?(String)
+      @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
+    end
+    bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
+    any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
+    @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
