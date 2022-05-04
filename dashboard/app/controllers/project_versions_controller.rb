@@ -1,9 +1,9 @@
 class ProjectVersionsController < ApplicationController
+  before_action :authenticate_user!, except: [:project_commits]
+
   # POST /project_versions
   def create
-    user_storage_id, project_id = storage_decrypt_channel_id(params[:storage_id])
-    project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
-    return render :forbidden unless can?(:create, project_owner, project_id)
+    _, project_id = storage_decrypt_channel_id(params[:storage_id])
     project_version = ProjectVersion.new(project_id: project_id, object_version_id: params[:version_id], comment: params[:comment])
     if project_version.save
       return head :ok
