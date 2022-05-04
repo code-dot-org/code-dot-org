@@ -118,6 +118,8 @@ module.exports = function(config) {
 
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 90000,
-    browserNoActivityTimeout: 90000 // 60 seconds
+    browserNoActivityTimeout: 90000, // 60 seconds
+    browserDisconnectTimeout: 90000,
+    browserDisconnectTolerance: 1
   });
 };
