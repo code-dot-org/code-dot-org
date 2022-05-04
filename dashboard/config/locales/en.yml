@@ -682,7 +682,7 @@ en:
     hello-world:
       title: 'Hello World'
       body: 'Choose from four fun themes to code interactive characters in a world you create.'
-    poem-art-2021:
+    poem-art:
       title: 'Poem Art'
       body: 'Express yourself! Use code to create animated poems.'
     hoc:
