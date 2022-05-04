@@ -22,6 +22,11 @@ describe('P5SpriteWrapper', function() {
     createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
   });
 
+  afterEach(function() {
+    p5Wrapper = null;
+    createSprite = null;
+  });
+
   describe('property aliases', function() {
     let testSprite;
 
