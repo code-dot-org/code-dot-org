@@ -880,6 +880,10 @@
           "word": "Învățare Automată",
           "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
         },
+        "user/csd/2021": {
+          "word": "Utilizator",
+          "definition": "O persoană care utilizează un obiect, inclusiv software și hardware."
+        },
         "bug/csd/2021": {
           "word": "Bug (eroare)",
           "definition": "O parte a unui program care nu funcționează corect."

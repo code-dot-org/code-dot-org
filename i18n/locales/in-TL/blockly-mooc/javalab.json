@@ -15,6 +15,7 @@
   "clearConsole": "crwdns2572402:0crwdne2572402:0",
   "classroomBlocked": "crwdns2887194:0crwdne2887194:0",
   "classNotFound": "crwdns2690785:0crwdne2690785:0",
+  "commentProfanityFound": "crwdns2916572:0wordCount={wordCount}crwdnd2916572:0words={words}crwdne2916572:0",
   "commentUpdateError": "crwdns2690225:0crwdne2690225:0",
   "commit": "crwdns2588322:0crwdne2588322:0",
   "commitAndSave": "crwdns2690787:0crwdne2690787:0",

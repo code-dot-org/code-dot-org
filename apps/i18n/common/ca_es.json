@@ -326,6 +326,8 @@
   "overview": "Vista general",
   "pairProgramming": "Programació per parelles",
   "parent": "pare/mare",
+  "participantTypeStudentTitle": "Alumnes",
+  "participantTypeTeacherTitle": "Mestres",
   "password": "Contrasenya",
   "passwordConfirmation": "Confirma la contrasenya",
   "personalLoginDialog_button": "Següent",

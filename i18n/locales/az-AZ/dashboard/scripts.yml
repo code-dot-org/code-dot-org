@@ -1590,7 +1590,7 @@ az:
         mc:
           title: Maynkraft Kod Saatı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
-          description_short: Explore a Minecraft world through code.
+          description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
           lessons:
             Hour of Code 2015:
               name: Kod Saatı 2015
@@ -9522,6 +9522,8 @@ az:
           lesson_groups:
             csp_libraries:
               display_name: Kitabxanalar
+            lessonGroup-3:
+              display_name: Sorğu
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
@@ -9739,6 +9741,7 @@ az:
             Learn to Drag and Drop:
               key: Dartıb buraxmağı oyrən
               name: Dartıb buraxmağı oyrən
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             Programming with Angry Birds:
               key: Əsəbi quşlarla proqramlaşdırma
               name: Əsəbi quşlarla proqramlaşdırma
@@ -9748,6 +9751,16 @@ az:
             Programming with Harvester:
               key: Taxılbiçən ilə proqramlaşdırma
               name: Taxılbiçən ilə proqramlaşdırma
+            Ocean Scene with Loops:
+              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
+            On the Move with Events:
+              description_student: Öz oyun və ya hekayənizi yaradın.
+            A Royal Battle with Events:
+              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
+            Programming in with Angry Birds:
+              name: Əsəbi quşlarla proqramlaşdırma
+            Programming in Harvester:
+              name: Taxılbiçən ilə proqramlaşdırma
           lesson_groups:
             csf_sequencing:
               display_name: Ardıcıllıq qurmaq
@@ -9755,6 +9768,7 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Tədbirlər
+          description_audience: 'Yaşlar: 4-8'
         csa2-2022:
           lessons:
             lesson-6:
@@ -9784,6 +9798,9 @@ az:
             lesson-19:
               name: Sazlama
         csa4-2022:
+          lessons:
+            lesson-11:
+              name: Təsadüf
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -9949,8 +9966,32 @@ az:
           lessons:
             lesson-1:
               name: Xoş gəlmişsiniz
-            lesson-9:
+            lesson-11:
+              name: Yekun
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xoş gəlmişsiniz
+            lesson-3:
               name: Dərs Planlaşdırma
+            lesson-9:
+              name: Yekun
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xoş gəlmişsiniz
+            lesson-8:
+              name: Yekun
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Xoş gəlmişsiniz
+            lesson-14:
+              name: Yekun
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xoş gəlmişsiniz
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -9998,5 +10039,215 @@ az:
             Next steps:
               key: Növbəti addımlar
               name: Növbəti addımları atmaq
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Dizayn Prosesi
+            Engage with machine learning apps:
+              name: Dizayn Prosesi
         hello-world-csc:
           title: Salam Dünya
+        csd1-2022:
+          lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+              key: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+              key: Məsələnin həlli prosesi
+            Exploring Problem Solving:
+              name: Problemin həllini araşdırmaq
+              key: Problemin həllini araşdırmaq
+            What is a Computer?:
+              name: Kompüter nədir?
+              key: Kompüter nədir?
+            Storage:
+              name: Yaddaş
+              key: Yaddaş
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              description_student: |-
+                **Günün Sualı : Nə bizə birlikdə işləməyə və sualları komanda şəklində həll etməkdə kömək edə bilər?**
+                Bu dərs siz qrup şəklində mümkün olacaq qədər çox kitabı dəstəkləyəcək spagetti körpüsü dizayn edəcək, quracaq, yoxlayacaq və əks etdirəcəksiniz.
+          lesson_groups:
+            cspSurvey:
+              display_name: Sorğu
+            csd1_1:
+              display_name: 'Fəsil 1: Problemin Həlli Prosesi'
+            csd1_2:
+              display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
+          description_short: Problemləri həll etmək üçün insanların kompüterlərlə necə işlədiyini öyrənin.
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+              key: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
+              key: Başlıqlar
+            Websites for a Purpose:
+              name: Məqsəd üçün veb saytlar
+              key: Məqsəd üçün veb saytlar
+            CSS Classes:
+              name: CSS dərsləri
+              key: CSS dərsləri
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+            lesson-1:
+              key: dərs-1
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+          lesson_groups:
+            cspSurvey:
+              display_name: Sorğu
+        csd3-2022:
+          lessons:
+            Drawing in Game Lab:
+              name: Oyun laboratoriyasında rəsm
+              key: Oyun laboratoriyasında rəsm
+            Shapes and Parameters:
+              name: Forma və parametrlər
+              key: Forma və parametrlər
+            Variables:
+              name: dəyişənlər
+              key: dəyişənlər
+            Random Numbers:
+              name: Təsadufi rəqəmlər
+              key: Təsadufi rəqəmlər
+            Sprites:
+              name: Spraytlar
+              key: Spraytlar
+            Sprite Properties:
+              name: Sprite Xüsusiyyətləri
+              key: Sprite Xüsusiyyətləri
+            Text:
+              name: mətn
+              key: mətn
+            The Draw Loop:
+              name: Bərabərlik Döngüsü
+              key: Bərabərlik Döngüsü
+            Conditionals:
+              name: Şərti ifadələr
+              key: Şərti ifadələr
+            Keyboard Input:
+              name: Klaviatura Girişi
+              key: Klaviatura Girişi
+            Velocity:
+              name: Sürət
+              key: Sürət
+            Complex Sprite Movement:
+              name: Kompleks Sprite Hərəkatı
+              key: Kompleks Sprite Hərəkatı
+            Collisions:
+              name: Toqquşmalar
+              key: Toqquşmalar
+            Functions:
+              name: Funksiyalar
+              key: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+              key: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
+              key: Oyun Dizayn Prosesindən istifadə
+            Project - Design a Game:
+              name: Layihə - Oyun dizayn edin
+              key: Layihə - Oyun dizayn edin
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+            lesson-1:
+              key: dərs-1
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+          lesson_groups:
+            csd3_1:
+              display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
+            cspSurvey:
+              display_name: Sorğu
+          student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+              key: İstifadəçinizi Anlamaq
+            User Interfaces:
+              name: İstifadəçi Araüzü
+              key: İstifadəçi Araüzü
+            Feedback and Testing:
+              name: Əks-əlaqə və Sınaq
+              key: Əks-əlaqə və Sınaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+              key: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+              key: Bazar Araşdırması
+            Prototype Testing:
+              name: İlk Nümunə Testi
+              key: İlk Nümunə Testi
+            Testing the App:
+              name: Tətbiqi yoxlamaq
+              key: Tətbiqi yoxlamaq
+            Project - App Presentation:
+              name: Layihə - Proqram Təqdimatı
+              key: Layihə - Proqram Təqdimatı
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+            Analysis of Design:
+              key: Dizaynın təhlili
+            Digital Design:
+              key: Rəqəmsal Dizayn
+          lesson_groups:
+            cspSurvey:
+              display_name: Sorğu
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Şəkilləri təmsil edir
+              key: Şəkilləri təmsil edir
+            Combining Representations:
+              name: Nümayəndəlikləri birləşdirən
+              key: Nümayəndəlikləri birləşdirən
+            Keeping Data Secret:
+              name: Məlumatlar Gizli Saxlanır
+              key: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+              key: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
+              key: Data ilə bağlı qərar vermək
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+          lesson_groups:
+            cspSurvey:
+              display_name: Sorğu
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Süni intellekt laboratoriyasına giriş
+              key: Süni intellekt laboratoriyasına giriş
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sorğu
+        csd6-2022:
+          lessons:
+            Board Events:
+              name: İdarə Heyətinin Tədbirləri
+            Color LEDs:
+              name: Rəngli LEDlər
+            Making Music:
+              name: Musiqi bəstələmək
+            Functions:
+              name: Funksiyalar
+            CS Discoveries Post-Course Survey:
+              name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sorğu
+        csd-post-survey-2022:
+          title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
