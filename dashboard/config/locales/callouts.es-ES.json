@@ -2553,6 +2553,42 @@
         },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Observa atentamente este código."
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Añade el bloque reproduceSonido aquí"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Añade tu sentencia `if` aquí"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Añade tu sentencia `if` aquí dentro"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Coloca el bloque por encima de esta línea"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Esta es la función de la temperatura"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Esta es la función de la Hora del Día"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Esta es la función del Número de Coches"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Esta es la función del tiempo"
         }
       }
     }

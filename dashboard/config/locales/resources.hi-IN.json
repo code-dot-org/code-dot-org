@@ -1911,6 +1911,16 @@
         "teacher_forum/csd/2021": {
           "name": "अध्यापक फोरम"
         },
+        "computing-innovations/csd/2021": {
+          "name": "कंप्यूटिंग अन्वेषण"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "वीडीयो"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "कंप्यूटर साइंस सब कुछ बदल रहा है",
+          "type": "वीडीयो"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "कोड के साथ स्क्रीन डिजाइन करना"
         },
@@ -1968,6 +1978,12 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "प्रोजेक्ट गाइड"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "प्रस्तुतिकरण विषय"
+        },
+        "representation-matters/csd/2021": {
+          "name": "प्रस्तुतिकरण विषय"
         },
         "representing-information-1/csd/2021": {
           "name": "जानकारी प्रस्तुत करना"
@@ -2062,6 +2078,9 @@
         "sprites_1/csd/2021": {
           "name": "स्प्राइट्स"
         },
+        "sprite_properties/csd/2021": {
+          "name": "स्प्राइट्स की विशेषताएं"
+        },
         "captioned-scenes/csd/2021": {
           "type": "शीर्षक"
         },
@@ -2147,6 +2166,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "अध्यापक फोरम"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया",
+          "type": "वीडीयो"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "कंप्यूटर क्या है?"
         },
@@ -2171,6 +2203,12 @@
         "apps_and_problem_solving/csd/2021": {
           "name": "ऐप्स और सवाल हल करना",
           "type": "शीर्षक"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "वेब पृष्ठों की पड़ताल करना"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "वेब पृष्ठों की पड़ताल करना"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "वीडीयो"

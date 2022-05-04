@@ -342,5 +342,12 @@
   "cspunit4": "cspunit4",
   "allthesurveys": "allthesurveys",
   "cs-discoveries-facilitator-in-training": "cs-discoveries-facilitator-in-training",
-  "time4csdemo": "time4csdemo"
+  "time4csdemo": "time4csdemo",
+  "contagion-guided-practice": "Contagion Guided Practice [Teacher only]",
+  "2021drafting": "Planning script for CI and CSF 2021",
+  "csf-2021-pilot": "CS Fundamentals 2021 Pilot",
+  "csd4-preview-2021": "CSD Unit 4 - The Design Process ('21-'22 Beta Preview)",
+  "csd5-preview-2021": "CSD Unit 5 - Data and Society ('21-'22 Beta Preview)",
+  "jess-test-script": "jess-test-script",
+  "contagion-pilot": "Contagion Simulator"
 }
