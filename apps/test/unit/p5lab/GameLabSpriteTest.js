@@ -1310,7 +1310,7 @@ describe('P5SpriteWrapper', function() {
     });
   });
 
-  function createTestAnimation(frameCount = 1, looping = true) {
+  function createTestAnimation(frameCount = 1, looping = false) {
     let image = new p5.Image(100, 100, p5Wrapper.p5);
     let frames = [];
     for (var i = 0; i < frameCount; i++) {
