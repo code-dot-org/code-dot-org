@@ -10,7 +10,7 @@ import createP5Wrapper, {
   expectAnimationsAreClones
 } from '../../util/gamelab/TestableP5Wrapper';
 
-describe('P5SpriteWrapper', function() {
+describe.only('P5SpriteWrapper', function() {
   let p5Wrapper, createSprite;
 
   // Using the aggressive sandbox here because the P5 library generates
