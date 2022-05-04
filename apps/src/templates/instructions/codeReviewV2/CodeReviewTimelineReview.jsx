@@ -8,6 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
 const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
@@ -59,11 +60,7 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
             viewAsCodeReviewer={true}
           />
         ))}
-        {!isClosed && (
-          <div style={{border: '1px solid black'}}>
-            Comment editor placeholder
-          </div>
-        )}
+        {!isClosed && <CodeReviewCommentEditor />}
         {!isClosed && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
