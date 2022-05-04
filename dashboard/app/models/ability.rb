@@ -117,16 +117,16 @@ class Ability
       can :project_comments, CodeReviewComment do |_, project_owner, project_id|
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
-      can :project_commits, ProjectVersion do |project_owner, project_id|
+      can :create, ReviewableProject do |_, project_owner|
+        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
+      end
+      can :destroy, ReviewableProject, user_id: user.id
+      can :project_commits, ProjectVersion do |_, project_owner, project_id|
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
       can :create, ProjectVersion do |project_owner|
         current_user.id == project_owner&.id
       end
-      can :create, ReviewableProject do |_, project_owner|
-        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
-      end
-      can :destroy, ReviewableProject, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
