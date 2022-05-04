@@ -1,10 +1,7 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
-import {
-  forEveryBooleanPermutation,
-  sandboxDocumentBody
-} from '../../util/testUtils';
+import {sandboxDocumentBody} from '../../util/testUtils';
 import createP5Wrapper, {
   createStatefulP5Wrapper,
   expectAnimationsAreClones
@@ -379,7 +376,7 @@ describe('P5SpriteWrapper', function() {
         expect(sprite.animation.getFrame()).to.equal(3);
       });
 
-      it('unpasuses a paused sprite if called with a new animation', function() {
+      it('unpauses a paused sprite if called with a new animation', function() {
         sprite.pause();
         expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
         expect(sprite.animation.playing).to.be.false;
@@ -402,21 +399,24 @@ describe('P5SpriteWrapper', function() {
         expect(sprite.animation.playing).to.be.false;
       });
 
-      // Applies to both cases, so unify them
-      forEveryBooleanPermutation(same => {
-        const description = `called with ${
-          same ? 'the current' : 'a new'
-        } animation`;
-        const label = same ? ANIMATION_LABEL : SECOND_ANIMATION_LABEL;
-        it(`does not pause a playing sprite if ${description}`, function() {
-          expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
-          expect(sprite.animation.playing).to.be.true;
+      it('does not pause a playing sprite if called with a new animation', function() {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
 
-          sprite.setAnimation(label);
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
 
-          expect(sprite.getAnimationLabel()).to.equal(label);
-          expect(sprite.animation.playing).to.be.true;
-        });
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
+      });
+
+      it('does not pause a playing sprite if called with the current animation', function() {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
       });
     });
   });
