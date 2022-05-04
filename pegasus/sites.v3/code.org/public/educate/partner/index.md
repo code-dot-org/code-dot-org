@@ -11,7 +11,7 @@ The ideal Regional Partner is a regional education unit, a nonprofit, university
 [<button>Learn more about the program and apply today!</button>](/educate/regional-partner)
 
 ## For districts or schools
-[Over 120 school districts](/educate/district/partners) across the country use Code.org’s curriculum to teach almost 10% of all U.S. students, and almost 15% of the nation's Black and Latinx students. Your district or school can work with code.org and our partners to bring full computer science courses to every student.
+[Over 120 school districts](/educate/district/partners) across the country use Code.org’s curriculum to teach almost 10% of all U.S. students, and almost 15% of the nation's Black and Hispanic/Latino students. Your district or school can work with code.org and our partners to bring full computer science courses to every student.
 
 <!-- OLD LANGUAGE
 [Check here](/educate/regional-partner#partners) to see if you have a Code.org Regional Partner in your area.  If there is a Regional Partner in your area, and you are not already connected, please fill out the interest form below.  If there is not a Regional Partner in your area, please fill out the interest form and help us recruit by suggesting a good fit for your region!
@@ -21,7 +21,7 @@ The ideal Regional Partner is a regional education unit, a nonprofit, university
 
 -->
 
-Bring computer science to your students by having teachers sign up for our professional learning. 
+Bring computer science to your students by having teachers sign up for our professional learning.
 
 <br>
 [<button>Learn more about CS Principles!</button>](/educate/csp)
