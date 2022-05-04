@@ -2500,7 +2500,19 @@
           "jittering": "कलमलाना",
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "wandering2": "घूमना2",
+          "moving east2": "पूर्व की ओर मूव करें2",
+          "spinning left2": "बाएं घुमाना2",
+          "spinning right2": "दाएं घुमाना2",
+          "shrinking2": "सिकुड़ना2",
+          "growing2": "बढ़ना2",
+          "moving south2": "दक्षिण की ओर मूव करें2",
+          "swimming left and right2": "बाएं और दाएं तैराकी करना2",
+          "moving north2": "उत्तर की ओर मूव करें2",
+          "jittering2": "कलमलाना2",
+          "moving west2": "पश्चिम की ओर मूव करें2",
+          "patrolling2": "गश्त लगाना2"
         },
         "Virtual Pet 3_2020": {
           "wandering": "घूमना",
@@ -2514,7 +2526,19 @@
           "jittering": "कलमलाना",
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "wandering2": "घूमना2",
+          "moving east2": "पूर्व की ओर मूव करें2",
+          "spinning left2": "बाएं घुमाना2",
+          "spinning right2": "दाएं घुमाना2",
+          "shrinking2": "सिकुड़ना2",
+          "growing2": "बढ़ना2",
+          "moving south2": "दक्षिण की ओर मूव करें2",
+          "swimming left and right2": "बाएं और दाएं तैराकी करना2",
+          "moving north2": "उत्तर की ओर मूव करें2",
+          "jittering2": "कलमलाना2",
+          "moving west2": "पश्चिम की ओर मूव करें2",
+          "patrolling2": "गश्त लगाना2"
         },
         "Virtual Pet 4": {
           "shrinking": "सिकुड़ना",
@@ -2604,7 +2628,9 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "mystery behavior": "रहस्यमय व्यवहार",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 1_2020": {
           "wandering": "घूमना",
@@ -2618,7 +2644,9 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "mystery behavior": "रहस्यमय व्यवहार",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 2": {
           "wandering": "घूमना",
@@ -2632,7 +2660,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 2_2020": {
           "wandering": "घूमना",
@@ -2646,7 +2675,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 3": {
           "wandering": "घूमना",
@@ -2716,7 +2746,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 4_2020": {
           "wandering": "घूमना",
@@ -2730,7 +2761,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 6": {
           "spinning left": "बाएं घुमाना",
@@ -2744,7 +2776,8 @@
           "jittering": "कलमलाना",
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 6_2020": {
           "spinning left": "बाएं घुमाना",
@@ -2758,7 +2791,8 @@
           "jittering": "कलमलाना",
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 7": {
           "moving north": "उत्तर की ओर मूव करना",
@@ -2772,7 +2806,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "behaviors 7_2020": {
           "moving north": "उत्तर की ओर मूव करना",
@@ -2786,7 +2821,8 @@
           "moving west": "पश्चिम की ओर मूव करना",
           "patrolling": "गश्त लगाना",
           "moving east": "पूर्व की ओर मूव करना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "running east": "पूर्व की ओर दौड़ना"
         },
         "courseE_Dogger_2": {
           "wandering": "घूमना",

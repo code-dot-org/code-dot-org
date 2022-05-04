@@ -5629,6 +5629,9 @@ sv:
             lesson-19:
               name: Felsökning
         csa4-2022:
+          lessons:
+            lesson-3:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -5969,6 +5972,22 @@ sv:
           lessons:
             lesson-1:
               name: Välkommen
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Välkommen
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Välkommen
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -6000,3 +6019,97 @@ sv:
               key: "'För' loopar"
             Next steps:
               key: Nästa steg
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              description_teacher: I den här Datavetenskap- och språkintegrerade lektionen
+                för nya kodare kommer studenterna att animera en dikt med kod för
+                att illustrera stämningen i en dikt. Eleverna kommer att läsa och
+                upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter
+                och bilder för att illustrera diktens stämning. Slutligen kommer studenterna
+                att använda händelser (kod) för att illustrera en förändring i stämningen
+                eller animera introduktionen av nya bilder i en dikt.
+        csd1-2022:
+          lessons:
+            Processing:
+              name: Bearbetar
+              key: Bearbetar
+            Storage:
+              name: Lagring
+              key: Lagring
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Introduktion till HTML
+              key: Introduktion till HTML
+            Using Images:
+              name: Använda bilder
+              key: Använda bilder
+            CSS Classes:
+              name: CSS-klasser
+              key: CSS-klasser
+            lesson-1:
+              key: lektion-1
+        csd3-2022:
+          lessons:
+            Variables:
+              name: variabler
+              key: variabler
+            Text:
+              name: text
+              key: text
+            Conditionals:
+              name: Villkor
+              key: Villkor
+            Collisions:
+              name: Kollisioner
+              description_teacher: "**Dagens fråga: Hur kan programmerare bygga på
+                abstraktioner för att skapa ytterligare abstraktioner?**\\\r\n\\\r\nPå
+                denna lektion, programmerar studenter sina sprites för att interagera
+                på nya sätt. Efter en kort genomgång om hur de använde [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                blocket, brainstormar studenter andra sätt som två sprites kan interagera.
+                Sedan använder de [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                för att få en sprite att skjuta en annan över skärmen innan de övar
+                med de fyra kollisionsblocken ([`collide`(#f78183)](/docs/gamelab/collide/),
+                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
+                och [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Kollisioner
+            Functions:
+              name: funktioner
+              key: funktioner
+            lesson-1:
+              key: lektion-1
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Representerar bilder
+              key: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+              key: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+              key: Automatisera databeslut
+        csd6-2022:
+          lessons:
+            Accelerometer:
+              name: Accelerometer
+            Functions:
+              name: funktioner
+        csd-post-survey-2022:
+          description: Den här enheten innehåller CS Discoveries undersökning efter
+            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
+            sista enhet i CS Discoveries.
+          student_description: Den här enheten innehåller en undersökning för när
+            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
+            tala om för dig när det är dags att svara på den här undersökningen.

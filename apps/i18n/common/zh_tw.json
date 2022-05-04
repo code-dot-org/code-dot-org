@@ -1367,6 +1367,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org 十分重視學生的安全與保障。Code.org 已經簽署 [學生隱私承諾]({pledgeLink}) ，而他們的隱私保護措施已得到 [Common Sense Media 的最高評比分數之一]({commonSenseLink})。你可以透過檢視 Code.org 的 [隱私權政策]({privacyPolicyLink}) 找到進一步的詳細資訊。",
   "parentLetterWhy": "為什麼是電腦科學",
   "parentLetterWhyDetails": "電腦科學教給學生批判性思維、解決問題和數位公民意識，無論學生將來有什麼機會，都能從中受益。而在Code.org 上學習製作互動動式畫、程式碼藝術、遊戲和 app，可以鼓勵學生的創造力，讓學習變得有趣。",
+  "participantTypeStudentTitle": "所有學生",
+  "participantTypeTeacherTitle": "教師",
   "partner": "夥伴：{partner}",
   "password": "密碼",
   "passwordConfirmation": "密碼確認",

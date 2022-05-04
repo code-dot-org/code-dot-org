@@ -48,6 +48,7 @@ cs:
       screenHeight: výškaObrazovky
       screenWidth: šířkaObrazovky
       shout: křik
+      sides: strany
       size: velikost
       speed: rychlost
       startX: startX

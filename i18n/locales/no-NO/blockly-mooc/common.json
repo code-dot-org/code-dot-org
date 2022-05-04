@@ -824,6 +824,8 @@
   "parent": "Forelder",
   "parents": "Foreldre",
   "parentsAndStudents": "Foreldre og elever",
+  "participantTypeStudentTitle": "Elever",
+  "participantTypeTeacherTitle": "lærere",
   "password": "Passord",
   "passwordConfirmation": "Bekreftelse på passord",
   "perfect": "perfekt",

@@ -1,0 +1,17 @@
+{
+  "ro-RO": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Gândire Computațională"
+        },
+        "ccela/L": {
+          "description": "Limbă"
+        },
+        "csta/IC": {
+          "description": "Impactul computerelor"
+        }
+      }
+    }
+  }
+}
