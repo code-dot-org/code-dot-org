@@ -3,72 +3,71 @@
 }
 
 .no-padding {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .no-flex {
-  display: unset;
+  display: unset !important;
 }
 
 /* Show on mobile */
 .mobile-show {
-  display: none;
+  display: none !important;
 }
 
-section {
+section.flex-container {
   padding: 2em;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-  section h3 {
-    background: #00b2c0;
-    color: white;
-    padding: .75em;
-    margin: 2em 0 0;
-    width: 100%;
-  }
-
-  section p {
+  section.flex-container p {
     margin: 1em 0;
     font-size: 18px;
   }
+    section.flex-container img {
+      align-self: center;
+    }
 
-img {
-  align-self: center;
-}
-
-.lists h4 {
-  padding: 1em;
-  margin: 2px 0 0;
-  background: #5b6770;
+section.lists h3 {
+  background: #00b2c0;
   color: white;
+  padding: .75em;
+  margin: 2em 0 0;
+  width: 100%;
 }
+  section.lists h4 {
+    padding: .75em 1em;
+    margin: 2px 0 0;
+    background: #5b6770;
+    color: white;
+  }
 
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 768px) {
 
   /* Hide on mobile */
   .mobile-hide {
-    display: none;
+    display: none !important;
   }
 
   /* Show on mobile */
   .mobile-show {
-    display: block;
+    display: block !important;
   }
 
-  section {
+  section.flex-container {
     flex-direction: column;
   }
-    section img {
+    section.flex-container img {
       margin: 1.5em auto;
     }
 
-    /* Adjust padding of the  Gold Supporters sections */
-    section:nth-of-type(2) {
+    /* Adjust padding of the Gold Supporters sections */
+    section.flex-container.logos {
       padding-bottom: 0;
     }
-    section:nth-of-type(3) {
+    section.flex-container.text {
       padding-top: 0;
       padding-bottom: 4em
     }
@@ -77,5 +76,6 @@ img {
     color: #00adbc;
     font-family: 'Gotham 7r', sans-serif;
     margin: 1.5em 1em 0;
+    font-size: 1em;
   }
 }
