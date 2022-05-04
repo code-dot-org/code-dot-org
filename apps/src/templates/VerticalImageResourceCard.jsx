@@ -59,7 +59,8 @@ class VerticalImageResourceCard extends Component {
       'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
       'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
-      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png')
+      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
+      course2: '//code.org/shared/images/courses/fit-200/logo_course2.jpg'
     };
     const imgSrc = filenameToImgUrl[image];
 

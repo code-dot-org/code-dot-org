@@ -6,7 +6,7 @@ import {nextLevelCourses} from '@cdo/apps/templates/certificates/congratsNextLev
 
 const GraduateToNextLevel = ({nextCourse}) => {
   const nextCourseInfo = nextLevelCourses.find(
-    course => course.name === nextCourse
+    course => course.title.toLowerCase().replace(' ', '') === nextCourse
   );
 
   return (
