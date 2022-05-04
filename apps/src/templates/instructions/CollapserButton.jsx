@@ -46,7 +46,28 @@ class CollapserButton extends Component {
             }
           />
         )}
-        {this.props.collapsed ? msg.more() : msg.less()}
+        <div style={{display: 'inline-block', userSelect: 'none'}}>
+          <div style={{display: 'grid'}}>
+            <div
+              style={{
+                opacity: this.props.collapsed ? 0 : 1,
+                gridRow: 1,
+                gridColumn: 1
+              }}
+            >
+              {msg.more()}
+            </div>
+            <div
+              style={{
+                opacity: this.props.collapsed ? 1 : 0,
+                gridRow: 1,
+                gridColumn: 1
+              }}
+            >
+              {msg.less()}
+            </div>
+          </div>
+        </div>
       </button>
     );
   }
