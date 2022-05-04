@@ -25,7 +25,7 @@ social:
     .col-50
       .tutorial-tile
         %a{href: "/dance"}
-          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
+          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif", alt: I18n.t(:hoc_danceparty_alt_text)}
         .tutorial-info
           %span
             %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
@@ -40,7 +40,7 @@ social:
     .col-50
       .tutorial-tile
         %a{href: "/ai"}
-          %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png"}
+          %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png", alt: I18n.t(:hoc_ai_alt_text)}
         .tutorial-info
           %span
             %h3.tutorial-info-h=hoc_s(:hoc2020_ai_header)
@@ -59,7 +59,7 @@ social:
 
   .full-resource-block{style: "position: relative"}
     %a{href: CDO.hourofcode_url('/learn')}
-      %img.full-resource-image{src: hoc_image, style: "border: 1px solid #949ca2"}
+      %img.full-resource-image{src: hoc_image, style: "border: 1px solid #949ca2", alt: I18n.t(:hoc_banner_alt_text)}
     .activities-info
       %span
         %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
