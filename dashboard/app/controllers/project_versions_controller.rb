@@ -21,7 +21,7 @@ class ProjectVersionsController < ApplicationController
     user_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id])
     project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
     return render :not_acceptable unless project_owner
-    return render :forbidden unless can?(:project_commits, project_owner, project_id)
+    return render :forbidden unless can?(:project_commits, ProjectVersion.new, project_owner, project_id)
     commits = ProjectVersion.where(project_id: project_id).order(created_at: :desc)
     commits = commits.map do |commit|
       {
