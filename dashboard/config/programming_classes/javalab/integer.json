@@ -1,0 +1,14 @@
+{
+  "category_key": "java_lang",
+  "content": "The Java Integer class wraps the primitive type int in an object. An Integer Class object contains one field of the type int. The Integer class contains a variety of other methods to help with converting int values or dealing with the int type in general.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[{\"name\":\"BYTES\",\"type\":\"static final int \",\"description\":\"The number of bytes used to represent an int value in two's complement binary form.\\n\"},{\"name\":\"MAX_VALUE\",\"type\":\"static final int\",\"description\":\"A constant that holds the maximum value that an int can have, (2^31)-1.\"},{\"name\":\"MIN_VALUE\",\"type\":\"static final int \",\"description\":\"A constant that holds the minimum value that an int can have, -2^31.\"},{\"name\":\"SIZE\",\"type\":\"static final int \",\"description\":\"The number of bits used to represent an int value in *two's complement binary form*. \\n\\nTwo's complement is a way of representing integers, see (https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html).\\n\"},{\"name\":\"TYPE\",\"type\":\"static final Class\\u003cInteger\\u003e\",\"description\":\"the Class instance that represents the primitive type int\"}]",
+  "key": "Integer",
+  "name": "Integer",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

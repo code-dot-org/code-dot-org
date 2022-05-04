@@ -80,7 +80,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    expected = @teacher.sections.map(&:summarize).as_json
+    expected = @teacher.sections.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
@@ -95,7 +95,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections.map(&:summarize).as_json
+    expected = admin.sections.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
