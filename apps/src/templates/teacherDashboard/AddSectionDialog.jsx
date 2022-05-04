@@ -14,6 +14,7 @@ import {
   editSectionProperties,
   cancelEditingSection
 } from './teacherSectionsRedux';
+import ParticipantTypePicker from './ParticipantTypePicker';
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see
@@ -27,7 +28,9 @@ class AddSectionDialog extends Component {
     beginImportRosterFlow: PropTypes.func.isRequired,
     setRosterProvider: PropTypes.func.isRequired,
     setLoginType: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired
+    setParticipantType: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
+    availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
@@ -37,9 +40,11 @@ class AddSectionDialog extends Component {
       beginImportRosterFlow,
       setRosterProvider,
       setLoginType,
-      handleCancel
+      setParticipantType,
+      handleCancel,
+      availableParticipantTypes
     } = this.props;
-    const {loginType} = section || {};
+    const {loginType, participantType} = section || {};
     const title = i18n.newSectionUpdated();
     return (
       <BaseDialog
@@ -50,7 +55,19 @@ class AddSectionDialog extends Component {
         uncloseable
       >
         <PadAndCenter>
-          {!loginType && (
+          {/*
+          The Participant Type Picker will be skips if someone only have permissions to create sections for one
+          type of participants. See teacherSectionsRedux for more details on how this is set up.
+          */}
+          {!participantType && (
+            <ParticipantTypePicker
+              title={title}
+              setParticipantType={setParticipantType}
+              handleCancel={handleCancel}
+              availableParticipantTypes={availableParticipantTypes}
+            />
+          )}
+          {!loginType && participantType && (
             <LoginTypePicker
               title={title}
               handleImportOpen={beginImportRosterFlow}
@@ -59,22 +76,29 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && <EditSectionForm title={title} isNewSection={true} />}
+          {loginType && participantType && (
+            <EditSectionForm title={title} isNewSection={true} />
+          )}
         </PadAndCenter>
       </BaseDialog>
     );
   }
 }
 
+export const UnconnectedAddSectionDialog = AddSectionDialog;
+
 export default connect(
   state => ({
     isOpen: isAddingSection(state.teacherSections),
-    section: state.teacherSections.sectionBeingEdited
+    section: state.teacherSections.sectionBeingEdited,
+    availableParticipantTypes: state.teacherSections.availableParticipantTypes
   }),
   dispatch => ({
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
     setRosterProvider: provider => dispatch(setRosterProvider(provider)),
     setLoginType: loginType => dispatch(editSectionProperties({loginType})),
+    setParticipantType: participantType =>
+      dispatch(editSectionProperties({participantType})),
     handleCancel: () => dispatch(cancelEditingSection())
   })
 )(AddSectionDialog);
