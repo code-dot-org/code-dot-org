@@ -33,9 +33,6 @@ import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
-/** @const {number} serial port transfer rate */
-const SERIAL_BAUD = 57600;
-
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
 const pinMapping = {
   A0: 12,
