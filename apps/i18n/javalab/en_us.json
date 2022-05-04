@@ -1,6 +1,7 @@
 {
   "abortedTestResult": "{className} > {methodName} ABORTED",
   "addAComment": "Add a comment",
+  "addACommentToReview": "Add a comment to the review",
   "authorizerNearLimit": "You have run your code too many times in the last hour. You have {attemptsLeft} attempts left before your account will be permanently locked and you will be unable to run Java code. Please wait 15 minutes before trying again.",
   "authorizerTokenUsed": "You are attempting to reuse a token that has already run your code. Please check that you are on a secure network before trying again. If you believe this message is in error, contact support@code.org.",
   "authorLabel": "author",
@@ -80,6 +81,7 @@
   "genericErrorMessage": "Please try again",
   "import": "Import",
   "includeFiles": "Include Files",
+  "insertCodeblock": "Insert Codeblock",
   "internalCompilerException": "Oops. We hit an error on our side while compiling your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalException": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalRuntimeException": "Oops. We hit an error on our side while running your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
@@ -118,6 +120,7 @@
   "saveToBackpack": "Save to Backpack",
   "sendingVideo": "Sending video. Total length: {totalTime} seconds.",
   "startingPainter": "Starting painter.",
+  "submit": "Submit",
   "successfulTestResult": "{className} > {methodName} SUCCEEDED",
   "switchToDisplayTheme": "Switch to {displayTheme}",
   "timeoutWarning": "Warning: your project will stop running in 15 seconds.",

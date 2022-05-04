@@ -16,7 +16,7 @@ const dataType = {
 };
 
 const CodeReviewTimeline = props => {
-  const {reviewData, commitsData} = props;
+  const {reviewData, commitsData, addCodeReviewComment} = props;
 
   const timelineEndRef = useRef(null);
 
@@ -63,6 +63,7 @@ const CodeReviewTimeline = props => {
               key={`review-${data.id}`}
               review={data}
               isLastElementInTimeline={lastElementInTimeline}
+              addCodeReviewComment={addCodeReviewComment}
             />
           );
         }
@@ -74,7 +75,8 @@ const CodeReviewTimeline = props => {
 
 CodeReviewTimeline.propTypes = {
   reviewData: PropTypes.arrayOf(reviewShape),
-  commitsData: PropTypes.arrayOf(commitShape)
+  commitsData: PropTypes.arrayOf(commitShape),
+  addCodeReviewComment: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimeline;
