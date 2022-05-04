@@ -29,12 +29,14 @@ class JavalabDropdown extends Component {
       <div style={{...styles.dropdown, ...this.props.style}}>
         {this.props.children.map((child, index) => (
           <a
+            href="#"
             {...child.props}
             key={index}
             style={{
               ...styles.anchor,
               ...child.props.style
             }}
+            tabIndex="0"
           />
         ))}
       </div>
