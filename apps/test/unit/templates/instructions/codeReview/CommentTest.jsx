@@ -75,11 +75,13 @@ describe('Code Review Comment', () => {
 
   it('displays hide option for visible resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    wrapper
+    const onClickPromise = wrapper
       .find('a')
       .first()
       .invoke('onClick')();
-    expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1);
+    onClickPromise.then(() =>
+      expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1)
+    );
   });
 
   it('displays resolve option for code owner', () => {

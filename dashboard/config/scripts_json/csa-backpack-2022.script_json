@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-backpack-2022",
-    "serialized_at": "2022-04-25 13:16:59 UTC",
+    "serialized_at": "2022-04-30 13:30:40 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -65,10 +65,10 @@
     },
     {
       "key": "lesson-3",
-      "name": "ImageEffect",
+      "name": "ImagePlus",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -100,6 +100,18 @@
       "seeding_key": {
         "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    },
+    {
+      "key": "b67ce6d3-cdfe-4230-ab50-f2d82214a4d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b67ce6d3-cdfe-4230-ab50-f2d82214a4d9",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022"
       }
@@ -280,6 +292,28 @@
       "seeding_key": {
         "activity_section.key": "47a5b416-c7e8-42b2-afd7-016a0063be54",
         "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 5 Lessons 6 and 8"
+      },
+      "seeding_key": {
+        "activity_section.key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259",
+        "lesson_activity.key": "b67ce6d3-cdfe-4230-ab50-f2d82214a4d9"
+      }
+    },
+    {
+      "key": "67a4e686-974c-437c-a3ee-4a76b3e7ce4a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 5 Lesson 10"
+      },
+      "seeding_key": {
+        "activity_section.key": "67a4e686-974c-437c-a3ee-4a76b3e7ce4a",
+        "lesson_activity.key": "b67ce6d3-cdfe-4230-ab50-f2d82214a4d9"
       }
     }
   ],
@@ -683,6 +717,72 @@
       "level_keys": [
         "CSA U3L6 Dessert"
       ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 5 Lessons 6 and 8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L6 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259"
+      },
+      "level_keys": [
+        "CSA U5L6 ImagePlus"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 5 Lessons 6 and 8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259"
+      },
+      "level_keys": [
+        "CSA U5L8 ImagePlus"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 5 Lesson 10"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L10 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "67a4e686-974c-437c-a3ee-4a76b3e7ce4a"
+      },
+      "level_keys": [
+        "CSA U5L10 ImagePlus"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -876,6 +976,42 @@
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022",
         "activity_section.key": "47a5b416-c7e8-42b2-afd7-016a0063be54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L6 ImagePlus",
+        "script_level.level_keys": [
+          "CSA U5L6 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L8 ImagePlus",
+        "script_level.level_keys": [
+          "CSA U5L8 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "096ca6d3-36f0-46b2-8da0-c2bd4dcb4259"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L10 ImagePlus",
+        "script_level.level_keys": [
+          "CSA U5L10 ImagePlus"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "67a4e686-974c-437c-a3ee-4a76b3e7ce4a"
       }
     }
   ],

@@ -8,7 +8,7 @@ Scenario: Drag a dropdown and select a different option.
   And I wait for the page to fully load
   And I dismiss the login reminder
   And I drag block "4" to offset "250, 100"
-  And I press dropdown number 11
+  And I press dropdown number 0
   Then the dropdown is visible
   Then I select item 2 from the dropdown
   And I wait for 1 seconds
