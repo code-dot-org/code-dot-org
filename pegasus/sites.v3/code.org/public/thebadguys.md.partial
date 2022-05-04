@@ -37,7 +37,7 @@ Enjoyed creating adventures with the Bad Guys? Keep the creativity going with ot
 
 {{ featured_tutorial, title: "Dance Party", body: "Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!", image: "/shared/images/courses/logo_tall_dance-2019.gif", url: "https://code.org/dance" }}
 
-{{ featured_tutorial, title: "Poem Art", body: "Add art and animation to a classic poem in this Hour of Code activity!", image: "/shared/images/courses/logo_tall_poetry.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
+{{ featured_tutorial, title: "Poem Art", body: "Add art and animation to a classic poem in this Hour of Code activity!", image: "/shared/images/courses/logo_tall_poem-art-2021.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
 
 {{ featured_tutorial, title: "AI for Oceans", body: "Learn how AI and machine learning can be used to address world problems.", image: "/shared/images/courses/logo_tall_oceans.jpg", url: "https://studio.code.org/s/oceans/reset" }}
 
