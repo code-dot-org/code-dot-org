@@ -135,7 +135,7 @@ class SchoolDistrict < ApplicationRecord
       CDO.log.info "Seeding 2020-2021 school district data"
       import_options_2021 = {col_sep: ",", headers: true, quote_char: "\x00"}
       AWS::S3.seed_from_file('cdo-nces', "2020-2021/ccd/district.csv") do |filename|
-        SchoolDistrict.merge_from_csv(filename, import_options_2021, true, is_dry_run: true, ignore_attributes: ['last_known_school_year_open']) do |row|
+        SchoolDistrict.merge_from_csv(filename, import_options_2021, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           {
             id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
             name:                         row['Agency Name'].upcase,
