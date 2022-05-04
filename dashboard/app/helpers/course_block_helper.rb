@@ -191,14 +191,12 @@ module CourseBlockHelper
         body: data_t_suffix('script.name', id, 'description_short')
       },
       Script::POEM_ART_2021_NAME => {
-        url: "https://studio.code.org/s/poem-art-2021/reset",
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short')
+        url: "https://studio.code.org/s/poem-art-2021/reset"
       },
       Script::HELLO_WORLD_FOOD_2021_NAME => {
         url: CDO.code_org_url('/helloworld'),
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short')
+        title: I18n.t('upsell.hello-world.title'),
+        body: I18n.t('upsell.hello-world.body')
       },
     }
 
