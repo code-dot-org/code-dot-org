@@ -259,12 +259,10 @@ const styles = {
     alignItems: 'center'
   },
   customText: {
-    marginRight: 2,
-    marginLeft: 2
+    margin: '0px 2px'
   },
   icon: {
-    marginRight: 2,
-    marginLeft: 2,
+    margin: '0px 2px',
     fontSize: 16,
     // we want our icon text to be a different size than our button text, which
     // requires we manually offset to get it centered properly
