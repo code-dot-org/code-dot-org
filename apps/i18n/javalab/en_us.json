@@ -30,6 +30,7 @@
   "compilingProgram": "'Compiling program...",
   "connecting": "Connecting...",
   "console": "Console",
+  "created": "Created",
   "delete": "Delete",
   "deleteFileConfirmation": "Are you sure you want to delete {filename}?",
   "duplicateProjectFilenameError": "Filename {filename} is already in use in this project. Please choose a different name",
