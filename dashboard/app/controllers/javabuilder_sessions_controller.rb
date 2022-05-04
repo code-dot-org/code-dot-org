@@ -60,10 +60,13 @@ class JavabuilderSessionsController < ApplicationController
   private
 
   def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
-    success ?
-      render(json: {token: encoded_payload, session_id: session_id}) :
-      render(status: :internal_server_error, json: {error: "Error uploading sources."})
+    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    if response
+      return render(json: {token: encoded_payload, session_id: session_id}) if response.code == '200'
+      return render(status: response.code, json: response.body)
+    else
+      return render(status: :internal_server_error, json: {error: "Error uploading sources."})
+    end
   end
 
   def get_encoded_payload(additional_payload)
@@ -111,7 +114,7 @@ class JavabuilderSessionsController < ApplicationController
         teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
       teachers << teacher.id
     end
-    teachers
+    teachers.uniq
   end
 
   def log_token_creation(payload)

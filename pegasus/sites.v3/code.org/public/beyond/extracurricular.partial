@@ -62,6 +62,17 @@ social:
 <div style="clear:both"></div>
 <br>
 
+<a class="linktag" id="empowher" href="https://empowher.metrohacks.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/empowher.png" alt="EmpowHer logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="empowher" href="https://empowher.metrohacks.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>MetroHacks EmpowHer</strong></h3></a>
+  <p>MetroHacks EmpowHer is a free, completely virtual, team-based competition for high school girls to create a CS-based project addressing an issue in their community. No prior experience in computer science is necessary to participate, as we provide workshop and mentorship programs that offer resources for all skill levels. National award winners will win over $9,000 in scholarships!</p>
+  <p><i>Registration ends in late May.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
 <a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
 </a>
@@ -119,7 +130,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="google-codenext" href="https://codenext.withgoogle.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Google Code Next</strong></h3></a>
-  <p>Code Next is a free, computer science education program that meets Black and Latinx high school students in their own communities and provides the skills and inspiration they need for long and rewarding careers in computer science-related fields. Learn computer science, plug in with a mentor, and work on impactful projects.</p>
+  <p>Code Next is a free, computer science education program that meets Black and Hispanic/Latino high school students in their own communities and provides the skills and inspiration they need for long and rewarding careers in computer science-related fields. Learn computer science, plug in with a mentor, and work on impactful projects.</p>
   <p><i>Clubs run quarterly and last approximately 9 weeks.</i></p>
 </div>
 <div style="clear:both"></div>
@@ -192,7 +203,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="hackthehood" href="https://www.hackthehood.org/tech-education.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Hack the Hood</strong></h3></a>
-  <p>Learn in-demand tech skills and launch your career with Hack the Hood’s two immersion programs: Using Tech for Social Justice and Web Development & Data Literacy. For Black, Latinx, and Indigenous learners aged 16-25.</p>
+  <p>Learn in-demand tech skills and launch your career with Hack the Hood’s two immersion programs: Using Tech for Social Justice and Web Development & Data Literacy. For Black, Hispanic/Latino, and Indigenous learners aged 16-25.</p>
   <p><i>Program dates vary. Applications are open April-June.</i></p>
 </div>
 <div style="clear:both"></div>

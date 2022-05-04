@@ -216,8 +216,15 @@ module LevelsHelper
       server_project_level_id: @level.project_template_level.try(:id)
     )
 
-    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
-    if @level.is_a?(Javalab) && (@user || current_user)
+    # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
+    # and get the backpack channel token if it exists
+    backpack_enabled = !!(@level.is_a?(Javalab) &&
+      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
+      (@user || current_user))
+
+    view_options(backpack_enabled: backpack_enabled)
+
+    if backpack_enabled
       user_id = @user&.id || current_user&.id
       backpack = Backpack.find_by_user_id(user_id)
       view_options(backpack_channel: backpack&.channel)
@@ -344,6 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:programmingEnvironment] = get_programming_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -360,12 +368,19 @@ module LevelsHelper
         end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
-        section.save(validate: false)
+        # app_options is sometimes referenced from
+        # endpoints that are being redirected to the read
+        # connection (ScriptLevel#show, for example), so
+        # make sure that we're using the write connection
+        # here.
+        ActiveRecord::Base.connected_to(role: :writing) do
+          section.save(validate: false)
+        end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:muteMusic] = !!current_user.mute_music
+      @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
@@ -423,7 +438,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
@@ -1005,6 +1020,19 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  # Get the programming environment for a given level. For now,
+  # getting programming environment information via the level is only
+  # supported by Java Lab, so only Java Lab will return a non-nil value.
+  # This method should return the name of a programming environment, or nil.
+  def get_programming_environment
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end

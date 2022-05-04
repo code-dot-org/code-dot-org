@@ -3,14 +3,12 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The problem solving process with The Design Process
+# The problem solving process with design
 
 ##### The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire course to promote student growth and development. The Design Process unit uses the problem solving process with design. 
 
 ## Define
-## Update with image from the problem solving section of the curriculum guide (starts on page 38) - Then delete these instruction.
-
-<img src="https://images.code.org/0dd1fcc01da9976cdcb100d92c998393-image-1647994716343.png" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/bff336370b359d377fe5199cff949f8a-image-1648863594090.JPG" alt="Image of the problem solving process with THe Design Process" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
 
 
 * ##### Identify potential users
@@ -33,5 +31,6 @@ markdown <<MARKDOWN
 ## Reflect
 * ##### Present to stakeholders
 * ##### Review user feedback
+
 
 MARKDOWN

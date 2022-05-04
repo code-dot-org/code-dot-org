@@ -70,7 +70,9 @@ namespace :seed do
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
     'ui-test-versioned-script-2019',
-    'ui-test-csa-family-script'
+    'ui-test-csa-family-script',
+    'ui-test-teacher-pl-course',
+    'ui-test-facilitator-pl-course'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -229,6 +231,8 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task dsls: :environment do
     DSLDefined.transaction do
+      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
@@ -243,8 +247,12 @@ namespace :seed do
       dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
-          data, _i18n = dsl_class.parse_file(filename)
-          dsl_class.setup data
+          contents = File.read(filename)
+          md5 = Digest::MD5.hexdigest(contents)
+          data, _i18n = dsl_class.parse(contents, filename)
+          unless md5 == level_md5s_by_name[data[:name]]
+            dsl_class.setup(data, md5)
+          end
         rescue Exception
           puts "Error parsing #{filename}"
           raise
@@ -291,9 +299,13 @@ namespace :seed do
   end
 
   timed_task course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
+  end
+
+  timed_task reference_guides: :environment do
+    ReferenceGuide.seed_all
   end
 
   # Seeds Standards
@@ -449,7 +461,7 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 

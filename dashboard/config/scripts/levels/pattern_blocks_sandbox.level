@@ -45,11 +45,11 @@
   },
   "level_num": "custom",
   "game_id": 23,
-  "created_at": "2022-03-18T23:44:13.000Z",
+  "created_at": "2022-03-24T13:17:58.000Z",
   "user_id": 16,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:18:39 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:20:38 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:27:23 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:33:40 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:34:00 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:35:52 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:37:13 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:39:17 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:50 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:54 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:42:23 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:44:18 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:45:46 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:46:26 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 11:04:35 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 11:09:25 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 11:53:50 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 11:59:33 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:18:39 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:20:38 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:27:23 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:33:40 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:34:00 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:35:52 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:37:13 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:39:17 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:50 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:54 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:42:23 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:44:18 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:45:46 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:46:26 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 11:04:35 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 11:09:25 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 11:53:50 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 11:59:33 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-04-07 22:43:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:44:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:06:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:07:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:08:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:09:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:36:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:41:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:41:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:41:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:42:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,7 +61,7 @@
             <block type="controls_repeat_ext">
               <value name="TIMES">
                 <block type="math_number">
-                  <field name="NUM">6</field>
+                  <field name="NUM">8</field>
                 </block>
               </value>
               <statement name="DO">
@@ -77,7 +77,7 @@
                       <field name="TEXT">Row 1</field>
                       <next>
                         <block type="turtle_shape_with_side_length">
-                          <field name="VALUE">smallRhombusRed</field>
+                          <field name="VALUE">smallRhombusRed45</field>
                           <value name="SIZE">
                             <block type="variables_get">
                               <field name="VAR">length</field>
@@ -94,7 +94,7 @@
                                       <mutation name="rowTwo"/>
                                       <next>
                                         <block type="turtle_shape_with_side_length">
-                                          <field name="VALUE">smallRhombusOrange</field>
+                                          <field name="VALUE">smallRhombusOrange45</field>
                                           <value name="SIZE">
                                             <block type="variables_get">
                                               <field name="VAR">length</field>
@@ -105,7 +105,7 @@
                                               <mutation name="findPosition"/>
                                               <next>
                                                 <block type="turtle_shape_with_side_length">
-                                                  <field name="VALUE">smallRhombusYellow</field>
+                                                  <field name="VALUE">smallRhombusOrange45</field>
                                                   <value name="SIZE">
                                                     <block type="variables_get">
                                                       <field name="VAR">length</field>
@@ -122,7 +122,7 @@
                                                             <mutation name="rowThree"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusGreen</field>
+                                                            <field name="VALUE">smallRhombusGreen45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -133,7 +133,7 @@
                                                             <mutation name="findPosition"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusCyan</field>
+                                                            <field name="VALUE">smallRhombusCyan45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -144,7 +144,7 @@
                                                             <mutation name="findPosition"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusLightBlue</field>
+                                                            <field name="VALUE">smallRhombusLightBlue45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -164,7 +164,7 @@
                                                             <mutation name="findPosition"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusBlue</field>
+                                                            <field name="VALUE">smallRhombusBlue45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -175,7 +175,7 @@
                                                             <mutation name="findPosition"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusPurple</field>
+                                                            <field name="VALUE">smallRhombusBlue45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -192,7 +192,7 @@
                                                             <mutation name="rowFive"/>
                                                             <next>
                                                             <block type="turtle_shape_with_side_length">
-                                                            <field name="VALUE">smallRhombusMagenta</field>
+                                                            <field name="VALUE">smallRhombusMagenta45</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
                                                             <field name="VAR">length</field>
@@ -206,7 +206,7 @@
                                                             <field name="DIR">turnRight</field>
                                                             <value name="VALUE">
                                                             <block type="math_number">
-                                                            <field name="NUM">60</field>
+                                                            <field name="NUM">45</field>
                                                             </block>
                                                             </value>
                                                             </block>
@@ -419,7 +419,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+        <block type="procedures_defnoreturn" usercreated="true">
           <mutation/>
           <field name="NAME" id="findPosition">findPosition</field>
           <statement name="STACK">

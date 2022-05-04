@@ -33,7 +33,10 @@ import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
-/** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
+/** @const {number} serial port transfer rate */
+const SERIAL_BAUD = 57600;
+
+/** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
 const pinMapping = {
   A0: 12,
   A1: 6,
@@ -204,14 +207,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
-   * Disconnect and clean up the board controller and all components.
-   * @return {Promise}
+   * Reset dynamic components.
+   * In practical terms, this means that a blinking LED will stop flashing when the app is reset.
    */
-  destroy() {
+  resetDynamicComponents() {
     this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
-        component.stop();
+        // Make sure the LED is turned off.  This will also stop any ongoing activity such as
+        // timer-based blinking.
+        component.off();
       } else if (component instanceof five.Button) {
         // No special cleanup required for five.Button
       } else {
@@ -219,6 +224,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       }
     });
     this.dynamicComponents_.length = 0;
+  }
+
+  /**
+   * Disconnect and clean up the board controller and all components.
+   * @return {Promise}
+   */
+  destroy() {
+    this.resetDynamicComponents();
 
     if (this.prewiredComponents_) {
       cleanupCircuitPlaygroundComponents(
@@ -300,6 +313,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         false /* shouldDestroyComponents */
       );
     }
+
+    this.resetDynamicComponents();
   }
 
   /**

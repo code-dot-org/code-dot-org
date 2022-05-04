@@ -240,8 +240,11 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
         unit.course_version.destroy if unit.course_version
+
+        unit.reload
+        unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -278,28 +281,6 @@ class UnitGroup < ApplicationRecord
     transaction {reload}
   end
 
-  # Get the assignable info for this course, then update translations
-  # @return AssignableInfo
-  def assignable_info(user = nil)
-    info = ScriptConstants.assignable_info(self)
-    # ScriptConstants gives us untranslated versions of our course name, and the
-    # category it's in. Set translated strings here
-    info[:name] = localized_title
-    info[:assignment_family_name] = family_name || name
-    info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
-    info[:version_title] = localized_version_title
-    info[:is_stable] = stable?
-    info[:pilot_experiment] = pilot_experiment
-    info[:category] = I18n.t('courses_category')
-    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
-    info[:category_priority] = -1
-    info[:script_ids] = user ?
-      units_for_user(user).map(&:id) :
-      default_unit_group_units.map(&:script_id)
-    info
-  end
-
   def self.all_courses
     return all.to_a unless should_cache?
     @@all_courses ||= course_cache.values.uniq.compact.freeze
@@ -309,49 +290,11 @@ class UnitGroup < ApplicationRecord
     CourseVersion.course_offering_keys('UnitGroup')
   end
 
-  # Get the set of valid courses for the dropdown in our sections table.
-  # @param [User] user Whose experiments to check for possible unit substitutions.
-  # @return [Array<UnitGroup>]
-  def self.valid_courses(user: nil)
-    courses = all_courses.select(&:launched?)
-
-    if user && has_any_pilot_access?(user)
-      pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
-      courses += pilot_courses
-    end
-
-    if user && user.permission?(UserPermission::LEVELBUILDER)
-      courses += all_courses.select(&:in_development?)
-    end
-
-    courses
-  end
-
-  def self.valid_course_infos(user: nil)
-    return UnitGroup.valid_courses(user: user).map {|c| c.assignable_info(user)}
-  end
-
   # @param user [User]
   # @returns [Boolean] Whether the user has any experiment enabled which is
   #   associated with an alternate unit group unit.
   def self.has_any_course_experiments?(user)
     Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
-  end
-
-  # Returns whether the course id is valid, even if it is not "stable" yet.
-  # @param course_id [String] id of the course we're checking the validity of
-  # @return [Boolean] Whether this is a valid course ID
-  def self.valid_course_id?(course_id, user)
-    UnitGroup.valid_courses(user: user).any? {|unit_group| unit_group.id == course_id.to_i}
-  end
-
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this course.
-  # Users should only be able to assign one of their valid courses.
-  def assignable_for_user?(user)
-    if user&.teacher?
-      UnitGroup.valid_course_id?(id, user)
-    end
   end
 
   # A course that the general public can assign. Has been soft or
@@ -387,8 +330,8 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user, locale_code),
-      show_assign_button: assignable_for_user?(user),
+      course_versions: summarize_course_versions(user, locale_code),
+      show_assign_button: course_assignable?(user),
       announcements: announcements,
       course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,
@@ -422,28 +365,21 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  # Returns an array of objects showing the name and version year for all courses
-  # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil, locale_code = nil)
-    return [] unless family_name
+  def included_in_units?(unit_ids)
+    default_units.any? {|unit| unit_ids.include? unit.id}
+  end
 
-    # Include launched courses, plus self if not already included
-    courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
-    courses.append(self) unless courses.any? {|c| c.id == id}
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view. 'course_assignable'
+  # will always return false for participants so they will fall into the second check for
+  # launched and can_view_version?. For instructors if course_assignable? is false then
+  # launched will also be false.
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
+    return {} unless user
 
-    versions = courses.
-      select {|c| c.family_name == family_name}.
-      map do |c|
-        {
-          name: c.name,
-          version_year: c.version_year,
-          version_title: c.localized_version_title,
-          can_view_version: c.can_view_version?(user),
-          is_stable: c.stable?
-        }
-      end
-
-    versions.sort_by {|info| info[:version_year]}.reverse
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.

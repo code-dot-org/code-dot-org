@@ -799,9 +799,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
-          exceededBlockType
-        );
+        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -1495,7 +1493,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function() {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1847,8 +1845,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???' || title.text_ === '???';
+    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
+      return field.value_ === '???' || field.text_ === '???';
     });
   });
 };
@@ -1959,8 +1957,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
-  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
-  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+  return Blockly.cdoUtils.blockLimitExceeded();
 };
 
 /**

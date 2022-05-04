@@ -1,0 +1,17 @@
+name 'CSA U6L3-L5v2_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+`nums` is an `ArrayList` initialized with the values `[3, 5, 7]`. What is stored in the list `nums` after the following code segment is run?
+
+```
+nums.add(5);
+nums.add(2, 4);
+```
+MARKDOWN

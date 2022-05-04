@@ -3,8 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/1/levels/2" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
 # Lessons 1 - 8 
 
 ##### Review the lesson overviews from the first eight lessons. Summarize the key learning from the first eight lessons and connect this to the learning throughout the unit. Highlight how the start of the unit sets students up for success later in the unit. 
@@ -19,12 +17,10 @@ markdown <<MARKDOWN
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
-### Update image for each level with an image from the unit - remove these instructions
-
 <details>
 <summary><strong>Lesson 1: Designing With Empathy</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/51240a4ad2d5d64dfffaac35332c4056-image-1648858997069.JPG" alt="Image of the activity guide for the project design feedback section about shoes" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 20px;">
 
 **Question of the Day:** Why do people create web pages?
 
@@ -44,7 +40,7 @@ Every website has a purpose, a reason someone created it and others use it. In t
 <details>
 <summary><strong>Lesson 2: Understanding Your User</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/151941032a9809230cb2a3ffdc54bc7e-image-1648860261809.JPG" alt="Image of a bunch of different chairs for a product redesign project" width="225px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we make sure a product is meeting the needs of a user?
 
@@ -64,7 +60,7 @@ Designers need to understand their users' needs in order to create useful produc
 <details>
 <summary><strong>Lesson 3: User Centered Design Define and Prepare</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/7dcde5cfdfc5a773addc3ed35baa0b18-image-1648860667929.JPG" alt="Image of the design process for problem solving" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we design for people other than ourselves?
 
@@ -83,7 +79,7 @@ This is the first part of a two-day lesson where students are guided through an 
 <details>
 <summary><strong>Lesson 4: User Centered Design Try and Reflect</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/c274022d265f1e3949747f39e7ef1db8-image-1648860819210.JPG" alt="Image of a smart dog collar prototype" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we design a product to meet a user's needs?
 
@@ -101,7 +97,7 @@ This is the second part of a two-day lesson where students are guided through an
 <details>
 <summary><strong>Lesson 5: User Interfaces</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/0e618706bba832c91b44148b468ed7a2-image-1648859184061.JPG" alt="Image of a potential app prototype or userinterface for a grandma to text their grandkids" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we test an app to make sure it meets a user's needs?
 
@@ -120,7 +116,7 @@ Following the mini design project, students look towards the next phase of desig
 <details>
 <summary><strong>Lesson 6: Feedback and Testing</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/6e098c0914809afcbb4696ff10ef38f9-image-1648859256588.JPG" alt="Image of potential improvements for an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we use feedback to improve an app?
 
@@ -140,7 +136,7 @@ In this lesson, students use feedback from "users" of the paper-prototyped app f
 <details>
 <summary><strong>Lesson 7: Identifying User Needs</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/80f02a76e63c9ae881e9ace40b3f8025-image-1648859319621.JPG" alt="Image of a brainstorming poster for an app that could address a barrier or opportunity" width="225px" style="float:left; margin: 0 0 30px 30px;  padding-right: 30px;">
 
 **Question of the Day:** How can user interviews help us create apps to meet the needs of a user?
 
@@ -158,7 +154,7 @@ In this lesson, students interpret user interviews to determine the needs & inte
 <details>
 <summary><strong>Lesson 8: Paper Prototype</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/d7afb0b619c0522337a990282da53208-image-1648861151353.JPG" alt="Image of a poster that has an app to help a user address a need or interest" width="225px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can I develop an app prototype for a user?
 

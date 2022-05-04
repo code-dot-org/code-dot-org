@@ -1426,6 +1426,10 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def mute_music?
+    !!mute_music
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
@@ -1768,6 +1772,14 @@ class User < ApplicationRecord
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
     user_course_data + user_script_data
+  end
+
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
   end
 
   def all_sections
@@ -2345,8 +2357,8 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    user_storage_apps = StorageApps.new(user_storage_id)
-    project_ids = user_storage_apps.get_all_storage_app_ids
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
@@ -2354,8 +2366,8 @@ class User < ApplicationRecord
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's storage_apps
-    user_storage_apps.soft_delete_all
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
   end
 
   def user_storage_id
@@ -2374,7 +2386,7 @@ class User < ApplicationRecord
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
     deleted_time = soft_delete_time - 5.minutes
-    StorageApps.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
+    Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 

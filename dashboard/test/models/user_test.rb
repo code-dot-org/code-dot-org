@@ -1,10 +1,10 @@
 require 'test_helper'
 require 'testing/includes_metrics'
-require 'testing/storage_apps_test_utils'
+require 'testing/projects_test_utils'
 require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
-  include StorageAppsTestUtils
+  include ProjectsTestUtils
   self.use_transactional_test_case = true
 
   setup_all do
@@ -3178,24 +3178,24 @@ class UserTest < ActiveSupport::TestCase
         with_channel_for student do |channel_id_b|
           # Student deleted channel_id_a a day before they were deleted
           # so we don't expect it to be restored when we undelete them.
-          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+          projects_table.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
+          assert_equal 'active', projects_table.where(id: channel_id_b).first[:state]
 
           Timecop.travel 1.day
 
           # Soft-deleting the student also soft-deletes their projects
           student.destroy
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
+          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
+          assert_equal 'deleted', projects_table.where(id: channel_id_b).first[:state]
 
           Timecop.travel 1.day
 
           # Restoring the student only restores projects that were deleted along
           # with the student
           student.undestroy
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
+          assert_equal 'active', projects_table.where(id: channel_id_b).first[:state]
         end
       end
     end
@@ -3365,7 +3365,7 @@ class UserTest < ActiveSupport::TestCase
       other_pl_script = create :script, name: 'pl-other', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       @teacher.assign_script(other_pl_script)
 
-      pl_section = create :section, user_id: facilitator.id, unit_group: pl_unit_group, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      pl_section = create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group
       Follower.create!(section_id: pl_section.id, student_user_id: @teacher.id, user: facilitator)
     end
 
@@ -4204,13 +4204,17 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     level = create :level
     script = create :script
-    user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-    user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-    user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
 
-    result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+    # Freeze time to ensure all the user levels have the same updated_at timestamp
+    Timecop.freeze do
+      user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+      user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+      user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
 
-    assert_equal({level.id => user_level_1}, result)
+      result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+
+      assert_equal({level.id => user_level_1}, result)
+    end
   end
 
   test 'find_by_email_or_hashed_email returns nil when no user is found' do
@@ -4469,16 +4473,16 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner finds channel owner' do
     student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+    with_channel_for student do |project_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_equal student, result
     end
   end
 
   test 'find_channel_owner returns nil for channel with no owner' do
-    with_anonymous_channel do |storage_app_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+    with_anonymous_channel do |project_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_nil result
     end
