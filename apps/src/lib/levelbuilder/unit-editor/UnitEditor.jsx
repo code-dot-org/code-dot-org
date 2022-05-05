@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -909,17 +908,6 @@ class UnitEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.isMigrated && (
-            <LessonDescriptions
-              scriptName={this.props.name}
-              currentDescriptions={null}
-              updateLessonDescriptions={hasImportedLessonDescriptions =>
-                this.setState({
-                  hasImportedLessonDescriptions
-                })
-              }
-            />
-          )}
           {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
