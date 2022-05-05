@@ -4,7 +4,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 
 /**
- * Component for a list of links that appears as a dropdown.
+ * Component for a list of buttons that appears as a dropdown.
  * This component only includes the dropdown itself,
  * not the button that opens/closes the dropdown.
  */
@@ -13,11 +13,11 @@ class JavalabDropdown extends Component {
     className: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
-        if (child.type !== 'a') {
-          throw new Error('only accepts children of type <a/>');
+        if (child.type !== 'button') {
+          throw new Error('only accepts children of type <button/>');
         }
-        if (!child.props.href && !child.props.onClick) {
-          throw new Error('each child must have an href or onclick');
+        if (!child.props.onClick) {
+          throw new Error('each child must have an onclick');
         }
       });
     },
