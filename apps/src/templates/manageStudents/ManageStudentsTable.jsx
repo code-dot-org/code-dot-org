@@ -93,6 +93,12 @@ export const COLUMNS = {
 // The "new student rows" should always be next.
 // This function takes into account having multiple "add rows"
 export const sortRows = (data, columnIndexList, orderList) => {
+  // Add secondary and tertiary sorting factors
+  columnIndexList.push('name');
+  orderList.push(orderList[0]);
+  columnIndexList.push('id');
+  orderList.push(orderList[0]);
+  // Organize student rows
   let addRows = [];
   let newStudentRows = [];
   let studentRows = [];
@@ -107,14 +113,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  // Sort students primarily alphabetically, secondarily by account creation
-  // date which aligns with id # (so that older accounts come first)
-  studentRows.sort(function(a, b) {
-    if (a.name === b.name) {
-      return a.id - b.id;
-    }
-    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
-  });
+  studentRows = orderBy(studentRows, columnIndexList, orderList);
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
