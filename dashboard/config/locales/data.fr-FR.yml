@@ -889,6 +889,9 @@ fr:
           poésie
         poetry_module_conditionals: Conditions - Codage avec poésie
         poemart_intro: Introduction à l'art de la poésie
+        CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
+        csd_u6_circuit_playground: L'Informatique Physique
+        csd_u6_input_output: Entrée et Sortie
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

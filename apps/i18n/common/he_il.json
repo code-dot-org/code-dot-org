@@ -1063,6 +1063,8 @@
   "parents": "הורים",
   "parentsAndStudents": "הורים ותלמידים",
   "parentLetterHello": "שלום!",
+  "participantTypeStudentTitle": "תלמידים",
+  "participantTypeTeacherTitle": "מורים",
   "password": "סיסמה",
   "passwordConfirmation": "וידוא סיסמא",
   "passwordTooShort": "סיסמא קצרה מדי (6 תווים נדרשים לפחות)",

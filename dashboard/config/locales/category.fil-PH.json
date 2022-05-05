@@ -1,0 +1,17 @@
+{
+  "fil-PH": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Computational Thinking"
+        },
+        "ccela/L": {
+          "description": "Lengwahe"
+        },
+        "csta/IC": {
+          "description": "Epekto ng Pag-Compute"
+        }
+      }
+    }
+  }
+}
