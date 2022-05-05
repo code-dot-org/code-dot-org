@@ -4,6 +4,22 @@ vi:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
@@ -1056,7 +1072,7 @@ vi:
         text: vẽ đường {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: cạnh chặn {SPRITE} di chuyển
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
@@ -1212,8 +1228,6 @@ vi:
           EFFECT:
             '"pop"': nổ
             '"rain"': mưa
-      gamelab_makeNewScaledSprite:
-        text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNumSprites:

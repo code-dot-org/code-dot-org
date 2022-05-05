@@ -2125,6 +2125,19 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klik kategori untuk melihat blok di kotak alat anda! Seret blok ke ruang kerja untuk menambahkannya ke program anda",
+          "New Artist Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda",
+          "New Play Lab Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Klik disini untuk melihat kodenya bekerja!"
         }
       }
     }

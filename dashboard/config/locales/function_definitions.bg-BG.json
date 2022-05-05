@@ -49,6 +49,12 @@
         "2-3 Artist Debugging 5": {
           "draw right leg": {
             "name": "начертайте десния крак"
+          },
+          "draw body and arms": {
+            "parameters": {
+              "armlength": "дължинаРъка",
+              "bodylength": "дължинанатяло"
+            }
           }
         },
         "2-3 Artist Debugging 6": {
@@ -180,7 +186,8 @@
           "get nectar make honey": {
             "parameters": {
               "honey": "мед",
-              "direction": "посока"
+              "direction": "посока",
+              "nectars": "нектар"
             }
           }
         },
@@ -271,7 +278,8 @@
           "get nectar": {
             "name": "вземи нектар",
             "parameters": {
-              "counter": "брояч"
+              "counter": "брояч",
+              "dir": "посока"
             }
           }
         },
@@ -2248,14 +2256,30 @@
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
             "parameters": {
-              "direction": "посока"
+              "direction": "посока",
+              "nectar units": "брой нектар"
             }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
             "parameters": {
-              "direction": "посока"
+              "direction": "посока",
+              "nectars": "нектар"
+            }
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw octagons": {
+            "parameters": {
+              "numOctagons": "бройОсмоъгълници"
+            }
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "parameters": {
+              "theGuess": "предположението"
             }
           }
         }

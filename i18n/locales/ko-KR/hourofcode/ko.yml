@@ -2,7 +2,7 @@
 ko:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
-  language: 한국어
+  language: 영어
   front_title: 역사상 가장 큰 학습 이벤트에 참여하세요. %{campaign_date}
   coming_soon: 곧 시작됩니다.
   campaign_date_start_short: 12월 6일
@@ -7605,7 +7605,7 @@ ko:
   tutorial_ccfirewall_string_detail_programming_languages: 블록
   tutorial_htmljs_string_detail_programming_languages: 자바스크립트
   tutorial_ttaqueducts_string_detail_programming_languages: 자바 스크립트, 커피 스크립트
-  tutorial_vtgame_string_detail_programming_languages: 한국어
+  tutorial_vtgame_string_detail_programming_languages: 영어
   tutorial_baroborav_string_detail_programming_languages: 블록, C/C++
   tutorial_baroboobstacle_string_detail_programming_languages: 블록, C/C++
   tutorial_pbstorytelling_string_detail_programming_languages: Twine (Harlowe 변형)
@@ -8064,111 +8064,111 @@ ko:
     Nepali, Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Portugal),
     Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish, Vietnamese
   tutorial_raspispace_language: Arabic, Dutch, English, English (UK), French, Greek
-  tutorial_codemonkeyjump_language: 한국어
+  tutorial_codemonkeyjump_language: 영어
   tutorial_poemart_language: Bulgarian, Corsican, Danish, Dutch, English, Estonian,
     French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Nepali,
     Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Brazil), Portuguese
     (Portugal), Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish,
     Vietnamese
-  tutorial_kodablehero_language: 한국어
+  tutorial_kodablehero_language: 영어
   tutorial_cacloud_language: English, English (UK)
-  tutorial_blocksmithbot_language: 한국어
-  tutorial_hatchmario_language: 한국어
-  tutorial_microsoftforest_language: 한국어
-  tutorial_blackbirdscreen_language: 한국어
-  tutorial_toxicodecompute2_language: 한국어
+  tutorial_blocksmithbot_language: 영어
+  tutorial_hatchmario_language: 영어
+  tutorial_microsoftforest_language: 영어
+  tutorial_blackbirdscreen_language: 영어
+  tutorial_toxicodecompute2_language: 영어
   tutorial_minecrafttimecraft_language: Bulgarian, Chinese (Simplified), Chinese (Traditional),
     Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian,
     Italian, Japanese, Korean, Norwegian (Bokmål), Norwegian (Nynorsk), Polish, Portuguese
     (Brazil), Portuguese (Portugal), Russian, Slovenian, Spanish (Spain), Spanish
     (Mexico), Swedish, Turkish, Ukrainian
-  tutorial_blackbirdtether_language: 한국어
+  tutorial_blackbirdtether_language: 영어
   tutorial_ob_language: Arabic, Chinese (Simplified), Chinese (Traditional), Czech,
     Danish, Dutch, English, French, German, Greek, Hindi, Indonesian, Italian, Japanese,
     Korean, Malay, Other, Portuguese (Brazil), Portuguese (Portugal), Romanian, Serbian
     (Cyrillic), Slovenian, Spanish (Spain), Spanish (Mexico), Swedish, Tamil, Thai,
     Turkish, Ukrainian, Urdu (Pakistan), Vietnamese
-  tutorial_codeartportrait_language: 한국어
+  tutorial_codeartportrait_language: 영어
   tutorial_shelly_language: English, Polish
-  tutorial_weavly_language: 한국어
-  tutorial_codespeakpassword_language: 한국어
+  tutorial_weavly_language: 영어
+  tutorial_codespeakpassword_language: 영어
   tutorial_codecombatozaria_language: 简体中文，英语，英语（英国），西班牙文（西班牙，墨西哥）
-  tutorial_kodableshapes_language: 한국어
-  tutorial_nasabinary_language: 한국어
-  tutorial_3dmaker_language: 한국어
-  tutorial_itchstart_language: 한국어
+  tutorial_kodableshapes_language: 영어
+  tutorial_nasabinary_language: 영어
+  tutorial_3dmaker_language: 영어
+  tutorial_itchstart_language: 영어
   tutorial_hopsub_language: Chinese (Simplified), English, Spanish (Spain), Spanish
     (Mexico)
   tutorial_itchmundos_language: Spanish (Mexico)
   tutorial_itchtenacity_language: Spanish (Mexico)
   tutorial_kcjskiing_language: English, French
-  tutorial_groksecurity_language: 한국어
+  tutorial_groksecurity_language: 영어
   tutorial_creaticode_language: Chinese (Simplified), Chinese (Traditional), English
   tutorial_kcjhockey_language: English, French
-  tutorial_ttdungeon_language: 한국어
+  tutorial_ttdungeon_language: 영어
   tutorial_ccai_language: 아랍어, 불가리아어, 카탈로니아어, 중국어(간체), 중국어(번체), 체코어, 덴마크어, 네덜란드어,
     영어, 영어(영국), 핀란드어, 프랑스어, 갈리시아어, 독일어, 그리스어, 히브리어, 헝가리어, 인도네시아어, 이탈리아어, 일본어, 한국어
     , 리투아니아어, 마케도니아어(FRYOM), 말레이어, 노르웨이어(복몰), 노르웨이어(니노르스크), 폴란드어, 포르투갈어(브라질), 포르투갈어(포르투갈),
     루마니아어, 러시아어, 세르비아어(키릴 자모), 슬로베니아어, 스페인어(스페인), 스페인어( 멕시코), 스웨덴어, 태국어, 터키어, 우크라이나어,
     베트남어
   tutorial_bsdai_language: English, English (UK)
-  tutorial_stemdata_language: 한국어
-  tutorial_thunkableinfo_language: 한국어
-  tutorial_educodespace_language: 한국어
+  tutorial_stemdata_language: 영어
+  tutorial_thunkableinfo_language: 영어
+  tutorial_educodespace_language: 영어
   tutorial_kcjtennis_language: English, French
-  tutorial_robotmagictower_language: 한국어
-  tutorial_ttdragons_language: 한국어
+  tutorial_robotmagictower_language: 영어
+  tutorial_ttdragons_language: 영어
   tutorial_kcjarchery_language: English, French
-  tutorial_ttsprouts_language: 한국어
-  tutorial_ttmaze_language: 한국어
+  tutorial_ttsprouts_language: 영어
+  tutorial_ttmaze_language: 영어
   tutorial_codetribe_language: English, English (UK)
-  tutorial_ttcanyon_language: 한국어
+  tutorial_ttcanyon_language: 영어
   tutorial_kcjxtrail_language: English, French
-  tutorial_codespeakroad_language: 한국어
-  tutorial_educodelair_language: 한국어
+  tutorial_codespeakroad_language: 영어
+  tutorial_educodelair_language: 영어
   tutorial_ibmhourofz_language: English, English (UK)
-  tutorial_gamefrootbacteria_language: 한국어
-  tutorial_educodeforest_language: 한국어
-  tutorial_educodehorus_language: 한국어
-  tutorial_codespeakpokemon_language: 한국어
-  tutorial_stemholiday_language: 한국어
-  tutorial_codespeakpixel_language: 한국어
-  tutorial_codespellsnexus_language: 한국어
-  tutorial_carnegieslime_language: 한국어
-  tutorial_ozotown_language: 한국어
-  tutorial_milnedash_language: 한국어
+  tutorial_gamefrootbacteria_language: 영어
+  tutorial_educodeforest_language: 영어
+  tutorial_educodehorus_language: 영어
+  tutorial_codespeakpokemon_language: 영어
+  tutorial_stemholiday_language: 영어
+  tutorial_codespeakpixel_language: 영어
+  tutorial_codespellsnexus_language: 영어
+  tutorial_carnegieslime_language: 영어
+  tutorial_ozotown_language: 영어
+  tutorial_milnedash_language: 영어
   tutorial_microbitpet_language: 영어, 스페인어, 프랑스어, 크로아티아어, 한국어, 포르투갈어(브라질), 포르투갈어(포르투갈),
     세르비아어, 중국어(간체)
-  tutorial_spherotriad_language: 한국어
-  tutorial_spheropassword_language: 한국어
-  tutorial_codequilt_language: 한국어
-  tutorial_ozoshape1_language: 한국어
-  tutorial_ozoshape2_language: 한국어
+  tutorial_spherotriad_language: 영어
+  tutorial_spheropassword_language: 영어
+  tutorial_codequilt_language: 영어
+  tutorial_ozoshape1_language: 영어
+  tutorial_ozoshape2_language: 영어
   tutorial_hopescape_language: Chinese (Simplified), English, Spanish (Spain), Spanish
     (Mexico)
-  tutorial_ozorace_language: 한국어
-  tutorial_ozoequestrian_language: 한국어
-  tutorial_irobotpizza_language: 한국어
-  tutorial_ai4alldance_language: 한국어
-  tutorial_ai4allneural_language: 한국어
-  tutorial_spheroinout_language: 한국어
-  tutorial_edisonblueprint_language: 한국어
-  tutorial_edisonmaze_language: 한국어
-  tutorial_milnefunctions_language: 한국어
-  tutorial_sasmap_language: 한국어
-  tutorial_firstrobotics_language: 한국어
-  tutorial_sasdata_language: 한국어
-  tutorial_carnegiesensabot_language: 한국어
-  tutorial_robotical4_language: 한국어
+  tutorial_ozorace_language: 영어
+  tutorial_ozoequestrian_language: 영어
+  tutorial_irobotpizza_language: 영어
+  tutorial_ai4alldance_language: 영어
+  tutorial_ai4allneural_language: 영어
+  tutorial_spheroinout_language: 영어
+  tutorial_edisonblueprint_language: 영어
+  tutorial_edisonmaze_language: 영어
+  tutorial_milnefunctions_language: 영어
+  tutorial_sasmap_language: 영어
+  tutorial_firstrobotics_language: 영어
+  tutorial_sasdata_language: 영어
+  tutorial_carnegiesensabot_language: 영어
+  tutorial_robotical4_language: 영어
   tutorial_kinderadd_language: English, English (UK)
   tutorial_imagipython_language: English, Swedish
-  tutorial_robotical2_language: 한국어
-  tutorial_robotical3_language: 한국어
-  tutorial_blockscadvirus_language: 한국어
-  tutorial_robotical1_language: 한국어
-  tutorial_irobotshapes_language: 한국어
-  tutorial_irobotparts_language: 한국어
-  tutorial_irobottools_language: 한국어
+  tutorial_robotical2_language: 영어
+  tutorial_robotical3_language: 영어
+  tutorial_blockscadvirus_language: 영어
+  tutorial_robotical1_language: 영어
+  tutorial_irobotshapes_language: 영어
+  tutorial_irobotparts_language: 영어
+  tutorial_irobottools_language: 영어
   tutorial_kindercar_language: English, English (UK)
   tutorial_caavatar_language: English, English (UK)
   tutorial_hello_string_detail_grades: 초등 2학년 이상
@@ -8608,86 +8608,167 @@ ko:
   all: 모두
   dont_know: 잘 모르겠음
   language_label: 언어
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: 한국어
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: 영어
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: 영어
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu
