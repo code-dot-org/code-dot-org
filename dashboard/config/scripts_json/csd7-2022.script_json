@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 23:35:52 UTC",
+    "serialized_at": "2022-05-04 18:30:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -386,14 +386,14 @@
     },
     {
       "key": "Mini-Project: Make a Machine Learning App",
-      "name": "Mini-Project: Make a Machine Learning App",
+      "name": "Project: Make a Machine Learning App",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "assessment_opportunities": "A rubric is provided to assess the mini-project",
-        "overview": "In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
+        "overview": "In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Choose from several real-world datasets to train a model and create an app that uses machine learning"
       },
@@ -538,7 +538,7 @@
       "key": "92ecc06f-cf07-4550-9f9f-1fc435c8a453",
       "position": 1,
       "properties": {
-        "name": "Before the Unit"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "92ecc06f-cf07-4550-9f9f-1fc435c8a453",
@@ -1483,6 +1483,19 @@
       }
     },
     {
+      "key": "63251396-7213-40ae-84c7-2ea28f359d4c",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63251396-7213-40ae-84c7-2ea28f359d4c",
+        "lesson.key": "Design an AI App",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd7-2022"
+      }
+    },
+    {
       "key": "1927dd23-a213-4019-bde1-1ee3c5020ba5",
       "position": 1,
       "properties": {
@@ -1500,7 +1513,8 @@
       "key": "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0",
       "position": 1,
       "properties": {
-        "description": "This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries or the App Lab Hour of Code tutorial. Students will use App Lab for the first time in Lesson 7. \n\nIf you have students who have not worked in App Lab and Design Mode before, you may consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read our recommendations for how to do this."
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "name": "Preparing for the Unit"
       },
       "seeding_key": {
         "activity_section.key": "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0",
@@ -1981,7 +1995,13 @@
       "key": "b626621f-f9fb-4b33-90cf-2038de093678",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of [r types_of_machine_learning/csd/2022] to each student. Students will use this activity guide while working through levels in Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Types of Machine Learning Activity Guide to each student. Students will use this activity guide while working through levels in Code Studio.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b626621f-f9fb-4b33-90cf-2038de093678",
@@ -1992,6 +2012,7 @@
       "key": "057c9015-057e-489e-a76f-820db91f0985",
       "position": 7,
       "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.",
         "progression_name": "Looking for Patterns",
         "tips": [
           {
@@ -3660,7 +3681,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "contentCorner",
             "markdown": "**Additional Resources:** Even though including gender on a survey may feel innocent to some students, studies have shown that gender bias can creep into recommendation and selection processes in unintended and unexpected ways. For example, a machine learning algorithm designed to screen job candidates in the tech industry was discovered to be [biased against against women](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G) and perpetuating stereotypes in the tech industry. Importantly, this phenomenon can exist even without AI and Machine Learning, such as a study showing how [gender bias was impacting selection for symphonic orchestras](https://www.princeton.edu/news/2000/11/28/blind-orchestra-auditions-better-women-study-finds).\n\nIf students are interested in this topic, consider having them explore the **[Survival of the Best Fit](https://www.survivalofthebestfit.com/)** game which simulates a similar phenomenon. "
           }
         ]
@@ -3681,7 +3702,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**This Can Be Overwhelming:** When models are imported into App Lab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
+            "markdown": "**This Can Be Overwhelming:** When models are imported into App Lab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n\n**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           }
         ]
       },
@@ -3716,7 +3737,13 @@
       "key": "6407eeff-4883-4d4a-9541-0caa24fab54c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Programming Levels:** These levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete these levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6407eeff-4883-4d4a-9541-0caa24fab54c",
@@ -3727,7 +3754,13 @@
       "key": "4b1c5fe5-6544-41f1-8b12-60761bb08d95",
       "position": 11,
       "properties": {
-        "progression_name": "Customize Your App"
+        "progression_name": "Customize Your App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4b1c5fe5-6544-41f1-8b12-60761bb08d95",
@@ -3777,7 +3810,7 @@
         "name": "Journal",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "assessmentOpportunity",
             "markdown": "**Formative Assessment:** There are a lot of places in this lesson where students may get lost or confused and not feel comfortable speaking up, especially if other students in the class have prior App Lab experience. Use this prompt as a way to determine if you need to check in with students at a later lesson, or revisit a concept from today. This is especially true if students have varied levels of experience with App Lab before this unit.\r\n"
           }
         ]
@@ -4596,7 +4629,13 @@
       "key": "6d9af5ce-913c-4c16-8a89-081c23545139",
       "position": 15,
       "properties": {
-        "progression_name": "Adding New Screens"
+        "progression_name": "Adding New Screens",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6d9af5ce-913c-4c16-8a89-081c23545139",
@@ -4612,7 +4651,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging?** Several of these practice levels feature the term debugging, which is first introduced in CS Discoveries Unit 2. If you and your students are unfamiliar with this term, consider reviewing the [CSD Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview). You can also consider showing your students this [How to Debug video](https://www.youtube.com/watch?v=auv10y-dN4s)\n\n**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)"
+            "markdown": "**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)"
           }
         ]
       },
@@ -4629,7 +4668,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-)"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -7387,7 +7426,13 @@
       "position": 4,
       "properties": {
         "description": "**Distribute:** Give students copies of the [r design_an_ai_app_-_project_guide/csd/2022].\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n",
-        "name": "Activity"
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8e488c36-f0eb-4c5a-8eda-c42d20cf5e19",
@@ -7403,7 +7448,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Issues vs Problems:** Encourage students to think broadly and consider issues they would like to address, since these are more likely to have solutions that can use data and machine learning. If students focus too narrowly on specific problems, they may have chosen something where machine learning may not be an appropriate solution. If you notice a student has a too narrow issue, encourage them to use the 5 Why's strategy to investigate the core issue and broaden their options."
+            "markdown": "**Issues vs Problems:** Encourage students to think broadly and consider issues they would like to address, since these are more likely to have solutions that can use data and machine learning. If students focus too narrowly on specific problems, they may have chosen something where machine learning may not be an appropriate solution. If you notice a student has a too narrow issue, encourage them to use the 5 Why's strategy to investigate the core issue and broaden their options.\n\n**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show an example app [like the ones available here](https://studio.code.org/s/self-paced-pl-csd5-2021/lessons/5/levels/4) to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
           }
         ]
       },
@@ -7681,6 +7726,18 @@
       "seeding_key": {
         "activity_section.key": "5d04c580-a932-46bd-86c4-649793eac948",
         "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
+      }
+    },
+    {
+      "key": "59cdc0f2-e2ce-4747-8835-c29df9131892",
+      "position": 1,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End-Of-Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "59cdc0f2-e2ce-4747-8835-c29df9131892",
+        "lesson_activity.key": "63251396-7213-40ae-84c7-2ea28f359d4c"
       }
     },
     {
@@ -11416,7 +11473,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
