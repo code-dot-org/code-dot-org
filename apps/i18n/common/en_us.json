@@ -845,6 +845,7 @@
   "examples": "Examples",
   "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "exampleSolution": "Example Solution {number}",
+  "explainCourseAssignmentsLearnMore": " Learn what happens when you assign a course.",
   "explainTtsAutoplay": "For Chrome, Internet Explorer, and Edge browsers only: When this setting is on, level instructions will be automatically read aloud to students using text-to-speech each time they open a level. This makes it easier for students who are not yet fluent readers to complete lessons.",
   "explainLessonExtras": "When Lesson Extras is on, students will end each lesson with some bonus challenges and creative projects rather than being automatically advanced to the next lesson. This feature gives students the opportunity to expand their knowledge and further practice, without getting ahead of their classmates.",
   "explainLessonExtrasLearnMore": "Learn more about Lesson Extras.",

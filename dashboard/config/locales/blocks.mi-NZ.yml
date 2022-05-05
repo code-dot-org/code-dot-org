@@ -2,6 +2,22 @@
 mi:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
@@ -994,7 +1010,7 @@ mi:
         text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:

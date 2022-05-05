@@ -5,16 +5,64 @@
         "dance-extras/Dance Party - Go Further": {
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "flappy/Flappy Code": {
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
+          "preparation": "### Sizning kod soatingizdan bir hafta oldin\n\n-   [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) va [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) bilan tanishib chiqing. Hour of Code tadbiri. \n-   [Register your Hour of Code event](http://hourofcode.com), agar siz qalbakilashtirish yoki sinfda yordam olishni istasangiz. \n    Onlayn qo'llanmani o'zingiz ko'rib chiqing va to'ldiring: [Flappy Game](https://studio.code.org/flappy/1) \n    O'quvchilaringizdan uni to'ldirishni so'rashdan oldin, avval sinovdan o'tkazganingizga ishonch hosil qiling. Texnologiyangizni tekshirib ko'ring va sizning Kodeks soatingizdan oldin biron bir muammo bilan shug'ullanishingiz kerakligi to'g'risida qaror qabul qiling. \n    ### Soatingizdan bir kun oldin Kod\n    'Kodlash', 'dasturlash' va 'disk sozlamasi' so'zlarini doskaga yozing yoki agar sizda mavjud bo'lsa, ularni so'z devoringizga qo'shing. \n    Faoliyatni yakunlagan har bir talaba sertifikat olishi kerak. Hour of Codeingiz oxirida oson bo‘lishi uchun har bir o‘quvchiga [Print one](http://code.org/certificates) oldindan chop qilib qo‘ying. ",
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "hourofcode/Maze": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "frozen/Artist": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "iceage/Ice Age Play Lab": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
         "artist/Artist": {
           "overview": "Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.",
           "student_overview": "Rassomni dasturlash orqali chiroyli rasmlar yarating."
         },
+        "gumball/Gumball Play Lab": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
         "dance/Dance Party": {
+          "overview": "Ushbu darsda barcha yoshdagi o'quvchilar xavfsiz va qo'llab-quvvatlovchi muhitda kodlash va informatika bilan tanishish tajribasiga ega bo'ladilar. Ushbu dars barcha yoshdagi o'quvchilar uchun mo'ljallangan, ammo o'qishni talab qiladi. Bu jarayon tovush talab qiladigan, musiqaga javob qaytarish uchun qurilgan",
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "preparation": "-   Qurilmaning ikkala variantini ham tekshirib ko‘ring",
+          "purpose": "“Shifrlash” bu qabul qiluvchi bo‘lmaganlar uchun biron xabarning aslini yashirish maqsadida qilingan o‘zgartirish. Shifrlash shunchaki harbiylar yoki josuslar uchun emas. Biz shifrlashdan Internetda har kungi hayotimizda foydalanamiz, asosan savdo-sotiqdagi o‘tkazmalar qilishda va usiz iqtisodimiz inqirozga yuz tutishi mumkin. \n\nUshbu dars o'quvchilarga hisoblash vositalari oldida xabarlarni shifrlashga kirishadigan fikrlashning birinchi ta'mini beradi. Hisoblash vositalari biz ma'lumotni shifrlashda foydalanadigan algoritmlarning kuchi va murakkabligini keskin oshiradi, ammo aynan shu vositalar bizning shifrlash qobiliyatimizni oshiradi. Kuchli shifrlashni rivojlantirish kompyuterlar uchun 'qiyin' bo'lgan muammolarni bilishga va shu bilimlardan xabarlarni shifrlashda foydalanishga asoslangan. Manba sifatida siz _Blown to Bits_ ning 5-bobini o'qishingiz mumkin. Bu sizning sinfingizga olib kirishingiz mumkin bo'lgan ijtimoiy mazmunni taqdim etadi."
+        },
+        "starwars/Hour of Code 2015": {
+          "purpose": "Ushbu darsda kodlash va dasturlashning asosiy CS tushunchalari, shu jumladan ketma-ketlik va hodisalar bilan tanishtirilgan. O'quv qo'llanmaning JavaScript versiyasi o'quvchilarga kod yozish tajribasini taqdim etadi."
+        },
+        "mc/Hour of Code 2015": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "playlab/Play Lab": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+        },
+        "applab-intro/Intro to App Lab": {
+          "purpose": "Ushbu dars sizning talabalaringiz uchun App Lab-da birinchi qadamdir. O'quv qo'llanmasining o'zi keng funksional imkoniyatlarga ega kuchli vosita bilan tanishish bo'lishi kerak. Talabalar o'quv mashg'ulotlarida ijobiy tajribaga ega bo'lishlari kerak va, muhimi, App Lab-da ishlashni darsdan tashqari davom ettirishlari kerak. Ular bu darsda faqat vosita imkoniyatlari bilan tanishadilar, shuning uchun ular keyinchalik amalga oshirishni istagan murakkab turdagi loyihalar uchun ilhom olish uchun code.org/applab sahifasidan yoki loyiha galereyasidan foydalanishlari lozim."
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Ushbu darsda kodlash va dasturlashning asosiy CS tushunchalari, shu jumladan ketma-ketlik va hodisalar bilan tanishtirilgan. O'quv qo'llanmaning JavaScript versiyasi o'quvchilarga kod yozish tajribasini taqdim etadi."
+        },
+        "text-compression/Text Compression": {
+          "overview": "Bir nuqtada biz bitlarni qanday tez yuborishimiz mumkinligi haqidagi fizik chegaraga erishamiz va agar biz tezroq katta hajmdagi ma'lumotlarni yuborishni istasak, biz bir xil ma'lumotlarni kamroq bitlar bilan ifodalashning yo'lini topishimiz kerak - biz ma'lumotlarni siqishimiz kerak. Bu darsda, In this lesson, talabalar matnni siqish uskunalardan foydalanib, ingliz tilidagi matn segmentlarini siqish uchun ko‘rinishlarni izlash va kattaroq ko‘rinishlarni almashtirish orqali foydalanadilar.",
+          "preparation": "-   Matnni Zichlovchi Qurilmani test qilib ko‘ring\n-   Qaysi tanlovni ishlatishni xohlashingizga qarab o‘rgatish usullarini qarab chiqing",
+          "purpose": "Zichlashning asosiy maqsadi asl ma'lumotni namoyish qilish uchun kamroq bitlardan foydalanish usuli yoki protokolini ishlab chiqishdir. Ushbu darsda siqilgan ma'lumotlarni namoyish etish uslubi, takroriy naqshlarning 'lug'ati' bilan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) ga o'xshash, ammo shuni ta'kidlash kerakki, LZW o'quvchilar ushbu darsda bajaradigan narsalardan biroz farq qiladi. Talabalar bu yerda o'z usullarini ixtiro qilishadi. LZW nafaqat matn uchun (zip fayllar), balki GIF rasm fayli formati bilan ham qo'llaniladi."
         },
         "sports/Sports": {
           "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
           "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
+        },
+        "infinity/Infinity": {
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "basketball/Bounce": {
           "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
@@ -27,6 +75,7 @@
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
         "oceans/Oceans": {
+          "purpose": "Ushbu o'quv qo'llanma talabalarni \\*\\* sun'iy intellektning \\*\\* bir turi bo'lgan \\*\\* mashinasozlik \\*\\* bilan tezda tanishtirish uchun mo'ljallangan. Talabalar mashina o'rganish modelini faollashtirish uchun \\*\\* o'quv ma'lumotlari \\*\\* qanday ishlatilishini o'rganadilar. Talabalar o'quv mashg'ulotlari davomida ijobiy tajribaga ega bo'lishi va eng muhimi, informatika fanini o'rganishda davom etishi kerak. ",
           "student_overview": "O'quv qo'llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni 'baliqlar' yoki 'baliqlar emas' deb tasniflashadi. Keyin talabalar o'zlarining ma'lumot to'plamlarini boshqa dengizni o'z ichiga olgan holda kengaytirishlari kerak bo'ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Ushbu ma'lumotlar yangi tasvirlarni belgilashga qodir bo'lgan mashina o'rganish modeli uchun ishlatiladi. "
         },
         "jigsaw/Jigsaw": {
@@ -567,6 +616,9 @@
         },
         "csd7-2021/Survey Planning": {
           "overview": "Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.\n\n\\*\\* Kun savoli: \\*\\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Ushbu kursning yakuniy bo'limini boshlash uchun talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch kelgan qurilmalarni qayta ko'rib chiqadilar.\\*"
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Ushbu darsda talabalar Circuit Playground-dan foydalanadigan dasturlarni yozish uchun birinchi imkoniyatga ega bo'ladilar. Dastlab taxtani vizual ravishda ko'rib chiqqandan va funktsional imkoniyatlarni taxmin qilgandan so'ng, talabalar onlayn rejimda harakatlanishadi, bu erda ular LEDni boshqaradigan dasturlarni yozishni o'rganadilar. App Lab ekranlarini O'chirish maydonchalari bilan birlashtirib, talabalar asta-sekin taxta elementlarini chiquvchi moslama sifatida birlashtira boshlaydilar, shu bilan birga foydalanuvchi ma'lumotlari uchun App Lab-ga ishonadilar.\\*"

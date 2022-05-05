@@ -3101,3 +3101,21 @@ hy:
             For Loops:
               name: For Loops
               key: For Loops
+        csd3-2022:
+          lessons:
+            Variables:
+              name: փոփոխականների
+              key: փոփոխականների
+            Text:
+              name: տեքստ
+              key: տեքստ
+            Conditionals:
+              name: conditionals
+              key: conditionals
+            Functions:
+              name: գործառույթները
+              key: գործառույթները
+        csd6-2022:
+          lessons:
+            Functions:
+              name: գործառույթները

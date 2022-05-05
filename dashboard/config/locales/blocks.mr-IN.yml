@@ -4,6 +4,22 @@ mr:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': अतिरिक्त लहान
+            '0.75': लहान
+            '1.00': मध्यम
+            '2.00': मोठे
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': अतिरिक्त लहान
+            '0.75': लहान
+            '1.00': मध्यम
+            '2.00': मोठे
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -963,7 +979,7 @@ mr:
         text: रेषा काढा {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: एजेस ब्लॉक {SPRITE} ला हलवण्यापासून रोखतात
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': सेकंद
@@ -1121,8 +1137,6 @@ mr:
             '"pop"': पॉप
             '"rain"': पाऊस
             '"spiral"': सर्पिलाकार
-      gamelab_makeNewScaledSprite:
-        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNumSprites:

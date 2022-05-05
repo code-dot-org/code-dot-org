@@ -415,6 +415,7 @@ es:
       starwars: 'Star Wars'
       starwarsblocks: 'La guerra de las galaxias (bloques)'
       starwarsblocks_hour: 'La guerra de las galaxias (bloques)'
+      thebadguys: 'Los Tipos Malos'
       loading: 'Cargando...'
       weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
@@ -988,6 +989,9 @@ es:
   no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tenerlo, por favor escribe a support@code.org para que podamos solucionar el problema."
   no_level_access_student: "No tienes acceso a este nivel. Por favor, pregunta a tu profesor en qué nivel deberías estar."
   no_level_access_teacher: "No tienes acceso a este nivel. Si crees que deberías tener acceso a este nivel, escribe a support@code.org para que podamos resolver la situación."
+  no_exemplar: "No existe ningún ejemplo para este nivel."
+  no_exemplar_access_student: "Los alumnos no pueden acceder al código de ejemplo. Por favor, pregunta a tu profesor en qué nivel debes estar."
+  no_exemplar_access_teacher: "Sólo los profesores verificados pueden acceder al código de ejemplo. Si quieres convertirte en profesor verificado, escribe a support@code.org."
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ir al resumen del curso'
   view_all_units: 'Ver todas las unidades'
