@@ -1013,6 +1013,7 @@ uz-UZ:
         - {}
         questions:
         - {}
+        title: Labirint
       K-1 Move It Multi 1:
         answers:
         - {}
@@ -1048,7 +1049,7 @@ uz-UZ:
         title: Turlicha tanlash
       K-1 Word Search Multi 3:
         answers:
-        - {}
+        - text: bermoq
         - correct: true
         - {}
         questions:
@@ -1267,12 +1268,26 @@ uz-UZ:
             birinchi xato nima?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
+          feedback: Noto'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi,
+            keyin Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga
+            siljimaydi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+          correct: true
+          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
+            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
+            yetarli emas.
+          correct: true
+          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
+            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Men bilmayman
+          feedback: Ushbu kodda ikkita xato mavjud. Birinchidan, Skrat noto'g'ri yo'nalishga
+            buriladi, keyin Skrat shoxga yetib borish uchun yetarlicha vaqt oldinga
+            siljimaydi.
         questions:
-        - {}
+        - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
+            boradimi yoki biror nosozlik bormi?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
@@ -6644,12 +6659,26 @@ uz-UZ:
             fermer qancha qovoq yig’adi?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
+          feedback: Noto'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi,
+            keyin Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga
+            siljimaydi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+          correct: true
+          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
+            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
+            yetarli emas.
+          correct: true
+          feedback: To'g'ri. Birinchidan, Skrat noto'g'ri yo'nalishga buriladi, keyin
+            Skrat eman yong'og'iga yetib borish uchun yetarlicha vaqt oldinga siljimaydi.
         - text: Scrat birinchi blokdan qimirlamaydi.
+          feedback: Ushbu kodda ikkita xato mavjud. Birinchidan, Skrat noto'g'ri yo'nalishga
+            buriladi, keyin Skrat shoxga yetib borish uchun yetarlicha vaqt oldinga
+            siljimaydi.
         questions:
-        - {}
+        - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
+            boradimi yoki biror nosozlik bormi?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
@@ -7428,6 +7457,8 @@ uz-UZ:
           ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
       express_EOC_examples_2021:
         display_name: Loyiha namunalari
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -7598,3 +7629,93 @@ uz-UZ:
         display_name: Amaliyot
       csd-pre-survey-levelgroup_21_22:
         title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
+      BigEvent-Unplugged:
+        markdown: |-
+          # Katta hodisa
+
+          Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # Katta hodisa
+
+          Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Ikkilik bilaguzuklar
+
+          Kompyuterlar tushunadigan tizimda sizning ismingizni ifodalovchi bilaguzuk yarating!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # Ikkilik bilaguzuklar
+
+          Kompyuterlar tushunadigan tizimda sizning ismingizni ifodalovchi bilaguzuk yarating!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Sikllanish
+
+          Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Sikllanish
+
+          Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
+      HappyMaps-Unplugged:
+        markdown: |-
+          # Baxtli xaritalar
+
+          Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # Baxtli xaritalar
+
+          Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Harakatlan, harakatlan
+
+          Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Harakatlan, harakatlan
+
+          Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mening sikllashtirilgan Robot Do'stlarim
+
+          Sikl yordamida dasturlaringizni qisqartiring!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mening sikllashtirilgan Robot Do'stlarim
+
+          Sikl yordamida dasturlaringizni qisqartiring!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mening robot do'stlarim
+
+          Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mening robot do'stlarim
+
+          Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
+          smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
+          do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
+          Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
+          boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
+          dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
+          smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
+          do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
+          Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
+          boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
+          dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseF_bee_practice:
+        display_name: Asalari mashqi

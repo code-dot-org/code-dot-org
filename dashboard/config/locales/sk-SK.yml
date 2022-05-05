@@ -210,7 +210,15 @@ sk:
     user_type_button: Zmeniť typ účtu
     user_type_label: Typ účtu
     user_type_student: Študent
+    user_type_student_desc: 'Preskúmajte všetky naše kurzy a aktivity plus:'
+    user_type_student_ability_1: Uložte si svoju prácu a projekty
+    user_type_student_ability_2: Pripojte sa k triede svojho učiteľa
     user_type_teacher: Učiteľ
+    user_type_teacher_desc: 'Všetko, k čomu majú študenti prístup, plus:'
+    user_type_teacher_ability_1: Vytvorte sekcie v triede
+    user_type_teacher_ability_2: Priraďte a sledujte prácu študentov
+    user_type_teacher_ability_3: Prihláste sa na odborné vzdelávanie
+    user_type_teacher_ability_4: Komunikujte na našom fóre pre učiteľov
     field_is_required: je povinné
     accept_terms: Musíte súhlasiť s vytvorením účtu.
     error: Vyskytla sa chyba.

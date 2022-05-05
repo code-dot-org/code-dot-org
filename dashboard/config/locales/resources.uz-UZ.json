@@ -21,7 +21,8 @@
           "name": "Rassom. Kirish"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Burilishlar va burchaklar"
+          "name": "Burilishlar va burchaklar",
+          "type": "Talabalarga tarqatma materiallar"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Burilishlar va burchaklar"
@@ -30,9 +31,28 @@
           "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Shifrlash va ochiq kalitlar",
           "type": "Video"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Code Studio-da shifrlash vidjetlari"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Mashg'ulot yo'riqnomasi - Matnni siqish"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Mashg'ulotni takrorlash - Ushbu xabarni tiklang",
+          "type": "Mashg'ulotni takrorlash"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Ushbu matnni tiklang"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Studio-da matnni siqish",
+          "type": "Vidjet"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Aloe Blak bilan matnni siqish",
           "type": "Video"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -497,6 +517,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "Sprayt yasash",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -680,6 +701,12 @@
           "name": "Virtual dars modifikatsiyalari",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "Talabalarga tarqatma materiallar"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "Talabalarga tarqatma materiallar"
+        },
         "mimi-activity/courseb/2021": {
           "name": "Move It, Move It (Harakatlan)"
         },
@@ -816,7 +843,8 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Talabalarga tarqatma materiallar"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Juftlikda dasturlash"
@@ -939,6 +967,9 @@
           "name": "Virtual dars modifikatsiyalari",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "Talabalarga tarqatma materiallar"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "My Robotic Friends"
         },
@@ -978,7 +1009,8 @@
           "name": "Burilishlar va burchaklar"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Burilishlar va burchaklar"
+          "name": "Burilishlar va burchaklar",
+          "type": "Talabalarga tarqatma materiallar"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Katta hodisa"
@@ -1214,6 +1246,9 @@
           "name": "Sprite Lab Documentation",
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "making_sprites/express/2021": {
+          "name": "Sprayt yasash"
+        },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Sprite Lab Documentation",
           "url": "https://studio.code.org/docs/spritelab/"
@@ -1323,6 +1358,9 @@
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Talabalarga tarqatma materiallar"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Pauza qiling va o'ylang",
           "type": "Video"
@@ -1335,7 +1373,8 @@
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Burilishlar va burchaklar"
+          "name": "Burilishlar va burchaklar",
+          "type": "Talabalarga tarqatma materiallar"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Burilishlar va burchaklar"
@@ -1451,6 +1490,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Talabalarga tarqatma materiallar"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
         },
@@ -1498,6 +1540,16 @@
         },
         "teacher_forum/csd/2021": {
           "name": "O‘qituvchilar forumi"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "Computing Innovations"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Kompyuter fanlari hamma narsani o‘zgartirmoqda",
+          "type": "Video"
         },
         "random_numbers_1/csd/2021": {
           "name": "Tasodifiy sonlar"
@@ -1547,6 +1599,12 @@
         "circuits-logic-video/csd/2021": {
           "name": "Kompyuterlar qanday ishlaydi: Sxemalar va mantiq",
           "type": "Video"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Representation Matters"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Representation Matters"
         },
         "representing-information-1/csd/2021": {
           "name": "Representing Information"
@@ -1698,6 +1756,19 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "O‘qituvchilar forumi"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Muammoni yechish jarayoni",
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Muammoni yechish jarayoni"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Kompyuter nima?"

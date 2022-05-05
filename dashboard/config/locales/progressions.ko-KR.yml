@@ -142,7 +142,6 @@ ko:
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
       'Mini-project: Interactive Poster': '미니 프로젝트: 인터랙티브 포스터'
       'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
-      'Mini-project: Sticker Design': '미니 프로젝트: 스티커 드자인'
       Modify simulation variables: 시뮬레이션 변수 수정
       More Buttons: 더 많은 단추
       More Input: 추가 정보
@@ -219,6 +218,7 @@ ko:
       The Buzzer: 버저
       The Collector: 컬렉터
       The Harvester: 수확인
+      Train an AI to Clean the Ocean: AI를 훈련시켜 해양 청소
       UI Element Properties: UI 요소 속성
       Updating Your Prototype: 프로토타입 업데이트
       User Interface: 사용자 인터페이스
@@ -234,6 +234,7 @@ ko:
       'Video: CS Matters': '동영상: CS 문제'
       'Video: Intro to Web Lab - Part 1': '비디오: 웹 연구소 소개 - 파트 1'
       'Video: Intro to Web Lab - Part 2': '비디오: 웹 연구소 소개 - 파트 2'
+      'Video: Outbreak Simulator: Introduction': '동영상: 발생 시뮬레이션: 개요'
       'Video: Problem Solving Process': '영상: 문제 해결 과정'
       'Video: What Makes a Computer, a Computer?': '비디오: 컴퓨터는 무엇으로 구성되나?'
       Warm Up: 워밍업

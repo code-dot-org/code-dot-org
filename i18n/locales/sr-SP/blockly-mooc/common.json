@@ -511,6 +511,8 @@
   "other": "Други",
   "overview": "Преглед",
   "parent": "Родитељ",
+  "participantTypeStudentTitle": "Студенти",
+  "participantTypeTeacherTitle": "Наставници",
   "password": "Лозинка",
   "passwordConfirmation": "Потврдите лозинку",
   "personalLoginDialog_button": "Следећи",

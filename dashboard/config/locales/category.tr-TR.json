@@ -1,0 +1,47 @@
+{
+  "tr-TR": {
+    "data": {
+      "category": {
+        "ccela/SL": {
+          "description": "Konuşma & Dinleme"
+        },
+        "ccmath/MP": {
+          "description": "Matematik Pratikleri"
+        },
+        "csta2011/CPP": {
+          "description": "Bilişim Pratiği & Programlama"
+        },
+        "csta2011/CT": {
+          "description": "Sayısal Düşünme"
+        },
+        "iste/1": {
+          "description": "Öğrenciler, teknolojiyi kullanarak yaratıcı düşünür, bilgilenir ve yenilikçi ürünler ve süreçler geliştirir."
+        },
+        "iste/4": {
+          "description": "Öğrenciler, uygun dijital araçları ve kaynakları kullanarak araştırmayı planlamak ve yürütmek, projeleri yönetmek, sorunları çözmek ve bilinçli kararlar vermek için eleştirel düşünme becerilerini kullanır."
+        },
+        "iste/6": {
+          "description": "Öğrenciler; teknoloji kavramları, sistemleri ve işlemlerini iyi bir şekilde anladığını gösterir."
+        },
+        "ccela/L": {
+          "description": "Dil"
+        },
+        "ccela/RI": {
+          "description": "Bilgilendirici Okuma"
+        },
+        "ccela/W": {
+          "description": "Yazma"
+        },
+        "csta2011/CL": {
+          "description": "İşbirliği"
+        },
+        "iste/2": {
+          "description": "Öğrenciler, belli bir mesafede bireysel öğrenimi desteklemek ve başkalarının öğrenmesine katkı sağlamak dahil olmak üzere işbirliği içerisinde iletişim kurmak ve çalışmak için dijital medya ve ortamları kullanır."
+        },
+        "csta/IC": {
+          "description": "Bilgisayarın Etkileri"
+        }
+      }
+    }
+  }
+}
