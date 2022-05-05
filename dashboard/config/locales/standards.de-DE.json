@@ -1,0 +1,182 @@
+{
+  "de-DE": {
+    "data": {
+      "standards": {
+        "ccela/6.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in der Klasse 6, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "ccela/7.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in der Klasse 7, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "ccmath/MP.1": {
+          "description": "Benutze dein Verständnis und deine Ausdauer, um Probleme zu lösen."
+        },
+        "ccmath/MP.2": {
+          "description": "Argumentiere auf abstrakte und quantitative Weise"
+        },
+        "ccmath/MP.5": {
+          "description": "Die strategische Nutzung von geeigneten Werkzeugen"
+        },
+        "ccmath/MP.6": {
+          "description": "Pflege die Präzision"
+        },
+        "ccmath/MP.7": {
+          "description": "Suche nach und benutze Strukturen"
+        },
+        "ccmath/MP.8": {
+          "description": "Halte Ausschau nach deutlicher Regelmäßigkeit in wiederholter Argumentation"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Implementieren Problemlösungen, unter Einsatz einer Block-basierten, visueller Programmierungssprache."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Um Lösungen zu entwerfen, benutze die grundlegende Schritte einer algorithmischen Methode zur Problemlösung,  (z.B. Problemstellung und -erforschung, Untersuchung von Musterbeispielen, dem Entwurf und die Implementation einer Lösung, sowie dessen Prüfung und Bewertung)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Benutze Abstraktionen, um ein Problem in Subprobleme zu unterteilen."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Beschreibe und analysiere eine Sequenz von Anweisungen die befolgt werden müssen (z. B. beschreibe das Verhalten einer Figur in einem Videospiel, dass durch Regeln und Algorithmen gesteuert wird)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Stelle Daten auf mehrere Weisen dar, inklusive Text, Klänge, Bilder und Zahlen."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Benutze visuelle Darstellungsformen für den Status, die Struktur und die Daten eines Problems (z.B. Grafiken, Tabellen, Netzwerkdiagramme, Flussdiagramme)."
+        },
+        "iste/1.a": {
+          "description": "Benutze bestehendes Wissen, um neue Ideen, Produkte oder Prozesse zu generieren"
+        },
+        "iste/1.b": {
+          "description": "Erstelle originelle Arbeiten, als Mittel zu einer persönlichen Ausdrucksweise oder dem einer Gruppe."
+        },
+        "iste/1.c": {
+          "description": "Benutze Modelle oder Simulationen, um komplexe Systeme oder Themen zu untersuchen."
+        },
+        "iste/4.b": {
+          "description": "Die Planung und das Management von Aktivitäten hilft bei der Entwicklung einer Lösung oder der Abarbeitung eines Projekts."
+        },
+        "iste/6.a": {
+          "description": "Verstehe und benutze technologische Systeme."
+        },
+        "iste/6.c": {
+          "description": "Eine Fehlersuche an Systemen und Anwendungen ausführen."
+        },
+        "iste/6.d": {
+          "description": "Übertrage dein jetziges Wissen in das Lernen von neuen Technologien."
+        },
+        "ccela/1.L.6": {
+          "description": "Um einfache Beziehungen zu signalisieren, benutze Worte und Formulierungen die durch Gespräche, durch Lesen und Texte die vorgelesen werden erlernt wurden, inklusive der Anwendung von öfters auftretenden Konjunktionen (wie z.B., weil, usw.)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Beteilige dich an den gemeinsamen Gesprächen mit verschiedenen Partnern, wie Gleichgestellte und Erwachsene in kleinen und größeren Gruppen, und mit Bezug auf die Themen und Texte in Klasse 1."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Erlerne die Bedeutung von Worten und Formulierungen wie diese üblicherweise in einem Text benutzt werden, einschließlich deren figurative, konnotative und technische Bedeutungen; analysiere wie ein Autor die Bedeutung eines Schlüsselbegriffs oder eines Wortes, über den Verlauf eines Textes benutzt oder präzisiert (z.B. wie Konrad Adenauer "
+        },
+        "ccela/2.L.6": {
+          "description": "Benutze Worte und Formulierungen die durch Gespräche, durch Lesen und Texte die vorgelesen werden erlernt wurden, inklusive der Anwendung von Eigenschaftsworten und Umstandsworten in einer Beschreibung (z.B. Es macht glücklich wenn andere Kinder glücklich sind)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Beteilige dich an den gemeinsamen Gesprächen mit verschiedenen Partnern, wie Gleichgestellte und Erwachsene in kleinen und größeren Gruppen, und mit Bezug auf die Themen und Texte in Klasse 2."
+        },
+        "ccela/3.L.6": {
+          "description": "Lerne, und benutze auf korrekte Weise, klassenspezifische, allgemein-akademische und themenspezifische Worte und Formulierungen, inklusive der die räumliche oder zeitliche Beziehungen wiedergeben (z.B. Wir haben nach ihnen gesucht, nach dem Essen an dem Abend). "
+        },
+        "ccela/3.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in den Klassen 11-12, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Verwenden Sie Addition und Subtraktion im Zahlenraum bis 20, um Textaufgaben zu lösen, die Situationen beim Addieren, Subtrahieren, Zusammenfügen, Zerlegen und Vergleichen mit Unbekannten in allen Positionen beinhalten, z. B. durch Verwendung von Objekten, Zeichnungen und Gleichungen mit einem Symbol für"
+        },
+        "ccmath/2.OA.1": {
+          "description": "Verwenden Sie Addition und Subtraktion im Zahlenraum bis 100, um Textaufgaben zu lösen, die Situationen beim Addieren, Subtrahieren, Zusammenfügen, Zerlegen und Vergleichen mit Unbekannten in allen Positionen beinhalten, z. B. durch Verwendung von Zeichnungen und Gleichungen mit einem Sy"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Benutze die Methode 'addiere und subtrahiere innerhalb 100‘ um Probleme mit Wörtern zu lösen, in Situationen mit äquivalenten Gruppen, Datenfeldern und gemessenen Quantitäten, z.B. durch die Anwendung von Zeichnungen und Gleichungen, wobei ein Symbol für die unbekannte Nummer benutzt wird, um das Problem darzustellen.1"
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Benutze standardmäßige Eingabe- und Ausgabegeräte, um Computer und verwandte Techniken erfolgreich zu betreiben."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Benutze die Prinzipien einer verantwortlichen digitalen Bürgerschaft (rechtliche und ethische Verhaltensweisen) bei der Nutzung von technologischen Systemen und Software."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Benutze technologische Ressourcen (z.B. Rechner, Datenerfassungssensoren, mobile Geräte, Videos, Unterrichtssoftware und Webwerkzeuge) für die Lösung von Problemen und selbstgesteuertes Lernen."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Lerne und benutze allgemeine akademische und domänenspezifische Worte und Formulierungen, die ausreichend sind für das Lesen, Schreiben, Sprechen und Zuhören auf der Ebene einer Hochschule und vorbereitend für eine Karriere; zeige Unabhängigkeit in dem Lernen deiner Wortschatz- und Grammatikkenntnisse, und bei der Auswahl "
+        },
+        "ccela/4.L.6": {
+          "description": "Lerne, und benutze auf korrekte Weise, klassenspezifische, allgemein-akademische und themenspezifische Worte und Formulierungen, inklusive der die präzise Aktionen, Emotionen oder Seinszustände signalisieren (z.B. ausgefragt, gewinselt, gestottert), und die grundlegend sind für ein spezifisches Thema (z.B. Wildtiere, Bestandserhaltung und gefährdete Tierarten, bei einer Diskussion von Tierschutz)."
+        },
+        "ccela/5.L.6": {
+          "description": "Lerne, und nutze auf genaue Weise, klassengeeignete, allgemein akademische und themenspezifische Wörter und Formulierungen, einschließlich der Worte die einen Kontrast, Addition und andere logische Beziehungen aufzeigen (z.B. allerdings, obwohl, dennoch, ähnlicherweise, außerdem, zusätzlich). "
+        },
+        "ccmath/4.MD.6": {
+          "description": "Messe Winkel in Ganzzahlgraden unter Anwendung eines Winkelmessers. Zeichne Winkel mit einem spezifischen Maß."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Addiere und subtrahiere mehrstellige Ganzzahlen auf flüssige Weise, unter Anwendung der Standard-Algorithmen."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular ar"
+        },
+        "ccmath/7.G.2": {
+          "description": "Zeichne (freihändig, mit einem Lineal, einem Winkelmesser und technischen Geräten) geometrische Formen mit vorbestimmten Bedingungen. Konzentriere auf den Aufbau von Dreiecken aus drei Maßen von Winkeln und Seiten, wobei du merkst wenn die Bedingungen ein einzigartiges Dreieck, mehr als ein Dreieck "
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Benutze der Entwicklung entsprechende Multimedia-Ressourcen (z.B. interaktive Bücher und Lernsoftware), um lehrplanübergreifendes Lernen zu unterstützen."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Baue Einsatz von Statements, welche ausgeführt werden müssen um eine einfache Aufgabe zu erledigen (z.B. turtle (Schildkröte) Anweisungen)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um geteilte Texte zu produzieren, veröffentlichen und aktualisieren, als Antwort auf fortgehenden Feedback, einschließlich neuer Argumente oder Informationen."
+        },
+        "ccela/4.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "ccela/6.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, und auch zur Interaktion und Kollaboration mit anderen; zeige eine angemessene Beherrschung von Maschinenschreibkenntnissen, um mindestens drei Seiten in einer einzigen Sitzung zu tippen."
+        },
+        "ccela/7.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "ccela/7.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, Mit einer Verbindung zu und Zitierung von Quellen, sowie einer Interaktion und Kollaboration mit anderen Menschen."
+        },
+        "ccela/8.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, und präsentiere die Beziehungen zwischen der Information und den Ideen auf die effiziente Weise, und in Interaktion und Kollaboration mit anderen Menschen."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Benutze verschiedene Technologien, u.a. das Internet, um schriftliche Produkte, die du selbst oder in Kooperation mit anderen erstellt hast, zu produzieren, veröffentlichen und zu aktualisieren, indem du die Vorteile der Technik nutzt, u.a. die Möglichkeit sich mit anderer Information in Verbindung zu setzen, und diese flexibel und auf dynamische Weise zu präsentieren."
+        },
+        "ccmath/MP.4": {
+          "description": "Modell mit Mathematik"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Benutze Online-Ressourcen (z.B. E-Mail, Online-Besprechungen, kollaborative Webumgebungen) um an kollaborativen Aktivitäten zur Lösung von Problemen teilzunehmen, zum Zweck der Entwicklung von Lösungen oder Produkten."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Benutze technologische Ressourcen, um altersgemäße Forschung auszuführen."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "In Kollaboration mit anderen, entwerfe, entwickele, veröffentliche und zeige Produkte (z.B. Webseiten, mobile Anwendungen, Animationen), welche technologische Ressourcen zu Demonstrationen und der Kommunikation von Lehrplankonzepten benutzen."
+        },
+        "iste/2.a": {
+          "description": "Interagiere, kollaboriere und publizieren zusammen mit Gleichgestellten, Experten und anderen Personen, unter Einsatz von verschiedenen Digitalumgebungen und Medien"
+        },
+        "iste/2.b": {
+          "description": "Kommuniziere Informationen und Ideen auf effektive Weise, an mehrere Audienzen und unter Einsatz verschiedener Medien und Formate.."
+        },
+        "iste/4.d": {
+          "description": "Benutze mehrere Prozesse und verschiedene Perspektiven, um alternative Lösungen zu erkunden."
+        },
+        "csta/1B-IC-18": {
+          "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
+        }
+      }
+    }
+  }
+}

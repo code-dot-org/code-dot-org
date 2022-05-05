@@ -585,6 +585,9 @@ zh-TW:
         poetry_module_multichoiceprompts: 多選題提示 - 程式設計如寫詩
         poetry_module_conditionals: 條件陳述式 - 程式設計如寫詩
         poemart_intro: 詩歌藝術介紹
+        CSA-PL-debugging-temp: Java實驗室調試介紹 - 臨時
+        csd_u6_circuit_playground: 實體運算
+        csd_u6_input_output: 輸入與輸出
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

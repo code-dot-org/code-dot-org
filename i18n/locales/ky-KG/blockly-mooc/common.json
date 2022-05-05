@@ -485,6 +485,8 @@
   "pairingNavigatorLink": "Топ катары жараткан чечимиңерди көрүш үчүн бул жерди баскыла.",
   "parents": "Ата-энелер",
   "parentsAndStudents": "Ата-энелер жана окуучулар",
+  "participantTypeStudentTitle": "Студенттер",
+  "participantTypeTeacherTitle": "Мугалимдер",
   "password": "Сырсөз",
   "passwordConfirmation": "Сырсөздү тастыктоо",
   "percentCorrect": "% туура",

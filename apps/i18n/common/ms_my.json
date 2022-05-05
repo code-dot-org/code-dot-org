@@ -1256,6 +1256,7 @@
   "parentLetterStudentPrivacyDetails": "Code.org mementingkan keselamatan dan keselamatan pelajar. Code.org telah menandatangani [Ikrar Privasi Pelajar]({pledgeLink}) dan amalan privasi mereka telah menerima [salah satu markah keseluruhan tertinggi daripada Common Sense Media]({commonSenseLink}). Anda boleh mendapatkan butiran lanjut dengan melihat [Dasar Privasi] ({privacyPolicyLink}) Code.org.",
   "parentLetterWhy": "Mengapa sains komputer",
   "parentLetterWhyDetails": "[Enam kajian berbeza menunjukkan]({researchLink}): kanak-kanak yang belajar sains komputer menunjukkan prestasi yang lebih baik dalam mata pelajaran lain, cemerlang dalam penyelesaian masalah dan 17% lebih berkemungkinan untuk menghadiri kolej. Sains komputer mengajar pelajar pemikiran kritis, penyelesaian masalah dan kewarganegaraan digital, dan memberi manfaat kepada semua pelajar, tidak kira apa peluang yang mereka kejar pada masa hadapan. Dan pembelajaran untuk membuat animasi interaktif, seni kod, permainan dan apl di Code.org menggalakkan kreativiti dan menjadikan pembelajaran menyeronokkan.",
+  "participantTypeTeacherTitle": "Guru",
   "partner": "Rakan kongsi: {partner}",
   "password": "Kata laluan",
   "passwordConfirmation": "Pengesahan kata laluan",

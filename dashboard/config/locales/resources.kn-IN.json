@@ -1632,6 +1632,13 @@
         "teacher_forum/csd/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ",
+          "type": "ವೀಡಿಯೊ"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
@@ -1699,6 +1706,9 @@
         "the_animation_tab/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
+        "sprite_properties/csd/2021": {
+          "name": "ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು"
+        },
         "captioned-scenes/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
@@ -1743,6 +1753,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "ವೀಡಿಯೊ"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ವೀಡಿಯೊ"

@@ -1,0 +1,47 @@
+{
+  "id-ID": {
+    "data": {
+      "category": {
+        "ccela/SL": {
+          "description": "Berbicara & Mendengarkan"
+        },
+        "ccmath/MP": {
+          "description": "Latihan Matematika"
+        },
+        "csta2011/CPP": {
+          "description": "Latihan Komputasi & Pemrograman"
+        },
+        "csta2011/CT": {
+          "description": "Berpikir secara komputasi"
+        },
+        "iste/1": {
+          "description": "Para murid menunjukkan pemikiran kreatif, membangun pengetahuan, dan mengembangkan produk dan proses inovatif menggunakan teknologi."
+        },
+        "iste/4": {
+          "description": "Murid menggunakan pemikiran kritis untuk merencanakan dan melakukan penelitian, mengelola proyek, memecahkan masalah, dan membuat keputusan yang matang menggunakan alat dan materi pembelajaran digital yang tepat."
+        },
+        "iste/6": {
+          "description": "Siswa mendemonstrasikan sebuah pengertian baik pada konsep, sistem, dan operasi teknologi."
+        },
+        "ccela/L": {
+          "description": "Bahasa"
+        },
+        "ccela/RI": {
+          "description": "Membaca Informatif"
+        },
+        "ccela/W": {
+          "description": "Menulis"
+        },
+        "csta2011/CL": {
+          "description": "Kolaborasi"
+        },
+        "iste/2": {
+          "description": "Siswa menggunakan lingkungan dan media digital untuk berkomunikasi dan bekerja sama, termasuk dari jarak jauh, untuk membantu pembelajaran secara individual dan berkontribusi untuk pembelajaran siswa lain."
+        },
+        "csta/IC": {
+          "description": "Dampak dari Komputasi"
+        }
+      }
+    }
+  }
+}

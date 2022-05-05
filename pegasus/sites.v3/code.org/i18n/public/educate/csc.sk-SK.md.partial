@@ -30,7 +30,7 @@ They're perfect for teachers who'd like to incorporate computer science into the
 
 Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 
-<em>Tip: Tieto projekty si vyžadujú určité pochopenie základov počítačovej vedy, preto vám odporúčame dokončiť našu aktivitu Hello World Hour of Code (Ahoj Svet – Hodina programovania), než začnete!</em>
+<em>Tip: Tieto projekty si vyžadujú určité pochopenie základov informatiky, preto vám odporúčame dokončiť našu aktivitu Ahoj Svet z Hodiny kódu než začnete!</em>
 
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
 
