@@ -2027,7 +2027,7 @@ class ScriptTest < ActiveSupport::TestCase
       create :script_level, levels: [level1], script: @deeper_learning_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @deeper_learning_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_unit = @deeper_learning_unit.clone_migrated_unit('dlp-2022', professional_learning_course: 'Deeper Learning 2022', new_level_suffix: '2022')
+      cloned_unit = @deeper_learning_unit.clone_migrated_unit('dlp-2022', destination_professional_learning_course: 'Deeper Learning 2022', new_level_suffix: '2022')
       assert_equal 'dlp-2022', cloned_unit.name
       assert_equal 'Deeper Learning 2022', cloned_unit.professional_learning_course
       assert_equal cloned_unit.instruction_type, @deeper_learning_unit.instruction_type

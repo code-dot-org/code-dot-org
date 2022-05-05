@@ -1131,14 +1131,14 @@ class Script < ApplicationRecord
   def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
     raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
 
-    if !destination_professional_learning_course.nil? && old_professional_learning_course?
+    if destination_professional_learning_course.nil? && old_professional_learning_course?
       raise 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
     end
 
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
-    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
+    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
       ActiveRecord::Base.transaction do
@@ -1150,6 +1150,7 @@ class Script < ApplicationRecord
         copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.name = new_name
         copied_unit.professional_learning_course = destination_professional_learning_course unless destination_professional_learning_course.nil?
+        copied_unit.peer_reviews_to_complete = peer_reviews_to_complete unless destination_professional_learning_course.nil?
         copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
         copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
         copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
@@ -1176,7 +1177,7 @@ class Script < ApplicationRecord
         end
 
         lesson_groups.each do |original_lesson_group|
-          original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
+          original_lesson_group.copy_to_unit(copied_unit, destination_professional_learning_course, new_level_suffix)
         end
 
         if destination_professional_learning_course.nil?
