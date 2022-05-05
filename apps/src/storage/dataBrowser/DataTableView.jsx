@@ -113,9 +113,8 @@ class DataTableView extends React.Component {
       }
       return (
         <div>
-          <span style={{display: 'block'}}>
-            {datasetInfo.description} {moreInfo}
-          </span>
+          <span style={{display: 'block'}}>{datasetInfo.description}</span>
+          {moreInfo}
         </div>
       );
     }
