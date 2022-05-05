@@ -43,7 +43,12 @@ class VerticalImageResourceCard extends Component {
     const cardStyle = jumbo
       ? {...styles.jumboCard, ...cardHeight}
       : {...styles.card, ...cardHeight};
-    const imageStyle = jumbo ? styles.jumboImage : styles.image;
+
+    const imageHeight = hasAdjustableHeight ? {} : styles.cardHeight;
+    const imageStyle = jumbo
+      ? {...styles.jumboImage, ...imageHeight}
+      : {...styles.image, ...imageHeight};
+
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
     const descriptionStyle = hasAdjustableHeight
       ? styles.description
@@ -129,11 +134,12 @@ const styles = {
     height: 440
   },
   image: {
-    width: 310,
-    height: 220
+    width: 310
   },
   jumboImage: {
-    width: 473,
+    width: 473
+  },
+  imageHeight: {
     height: 220
   },
   text: {
