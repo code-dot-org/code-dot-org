@@ -24,7 +24,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['parallel', 'mocha'],
+    frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
     // handled in grunt-karma config
@@ -89,10 +89,10 @@ module.exports = function(config) {
       showDiff: true
     },
 
-    parallelOptions: {
-      executors: 4, // Defaults to cpu-count - 1
-      shardStrategy: 'round-robin'
-    },
+    // parallelOptions: {
+    //   executors: 4, // Defaults to cpu-count - 1
+    //   shardStrategy: 'round-robin'
+    // },
 
     hostname: 'localhost-studio.code.org',
 
