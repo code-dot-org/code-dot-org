@@ -160,7 +160,6 @@ class UnitEditor extends React.Component {
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       teacherResources: teacherResources,
-      hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
@@ -377,9 +376,6 @@ class UnitEditor extends React.Component {
       use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
-
-    if (this.state.hasImportedLessonDescriptions) {
-    }
 
     $.ajax({
       url: `/s/${this.props.id}`,
