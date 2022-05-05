@@ -28,15 +28,14 @@ class JavalabDropdown extends Component {
     return (
       <div style={{...styles.dropdown, ...this.props.style}}>
         {this.props.children.map((child, index) => (
-          <a
-            href="#"
+          <button
+            type="button"
             {...child.props}
             key={index}
             style={{
               ...styles.anchor,
               ...child.props.style
             }}
-            tabIndex="0"
           />
         ))}
       </div>
@@ -52,7 +51,9 @@ const styles = {
     zIndex: 1000,
     backgroundColor: color.white,
     border: `1px solid ${color.charcoal}`,
-    borderRadius: 4
+    borderRadius: 4,
+    display: 'flex',
+    flexDirection: 'column'
   },
   anchor: {
     padding: '5px 12px',
@@ -66,8 +67,10 @@ const styles = {
     transition: 'background-color .2s ease-out',
     ':hover': {
       backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
+      cursor: 'pointer',
+      boxShadow: 'none'
     },
+    border: 0,
     borderRadius: 0,
     margin: 0,
     textAlign: 'center',
