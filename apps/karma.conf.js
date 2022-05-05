@@ -87,7 +87,7 @@ module.exports = function(config) {
       fixWebpackSourcePaths: true
     },
     mochaReporter: {
-      output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
+      output: 'full',
       showDiff: true
     },
 
