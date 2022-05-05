@@ -594,6 +594,8 @@
   "pairingNavigatorWarning": "Αυτό το παζλ ολοκληρώθηκε κατά τη ζεύξη με {driver}. Κοιτάξτε αυτό το παζλ στο λογαριασμό τους για να δείτε τη λύση που δημιουργήσατε ως ομάδα.",
   "pairProgramming": "Προγραμματισμός κατά ζεύγη",
   "parent": "Γονέας",
+  "participantTypeStudentTitle": "Μαθητές",
+  "participantTypeTeacherTitle": "Δάσκαλοι",
   "password": "Κωδικός πρόσβασης",
   "passwordConfirmation": "Επιβεβαίωση κωδικού",
   "personalLoginDialog_button": "Επόμενο",

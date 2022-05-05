@@ -1583,63 +1583,75 @@
         },
         "helloworld_animals_backgrounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_animals_behaviors": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_animals_events": {
           "moving forward": "ಮುಂದೆ ಸಾಗುವುದು"
         },
         "helloworld_animals_sounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_emoji_backgrounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_emoji_behaviors": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_emoji_events": {
           "moving forward": "ಮುಂದೆ ಸಾಗುವುದು"
         },
         "helloworld_emoji_sounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_food_backgrounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_food_behaviors": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_food_events": {
           "moving forward": "ಮುಂದೆ ಸಾಗುವುದು"
         },
         "helloworld_food_sounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_retro_backgrounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_retro_behaviors": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "helloworld_retro_events": {
           "moving forward": "ಮುಂದೆ ಸಾಗುವುದು"
         },
         "helloworld_retro_sounds": {
           "moving north and looping": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
-          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ"
+          "moving south and looping": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         },
         "international_outbreak_freeplay": {
           "recovering": "ಚೇತರಿಸಿಕೊಳ್ಳುತ್ತಿದ್ದಾರೆ",
@@ -1664,6 +1676,258 @@
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
           "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+        },
+        "CourseE_Project_SpriteLab": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseE_hoops": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseF_Project_SpriteLab": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 2": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 2_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 2_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 3_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 3_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 4_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 4_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 5_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 5_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 6": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 6_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 6_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 7_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party 7_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Dance Party Freeplay": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 2-validated_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 2-validated_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 3-validated_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 3-validated_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 4-validated_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 4-validated_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 5-validated_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 5-validated_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 6-validated_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Fish Tank 6-validated_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "OPD-K5-spritelab-2": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "OPD-K5-spritelab-3": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "OPD-K5-spritelab-4": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "OPD-K5-spritelab-6": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "OPD-K5-spritelab-7": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 1_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 1_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 2": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 2_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 2_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 3_2019": {
+          "wandering2": "ತಿರುಗಾಡುತ್ತಿದೆ",
+          "moving east2": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "spinning left2": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ2",
+          "spinning right2": "ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ2",
+          "shrinking2": "ಶ್ರಿಂಕ್ ಆಗುತ್ತಿದೆ2",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು",
+          "growing2": "ಬೆಳೆಯುತ್ತಿದೆ2",
+          "moving south2": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "swimming left and right2": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು2",
+          "moving north2": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "jittering2": "ನಡುಗುವುದು2",
+          "moving west2": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "patrolling2": "ಗಸ್ತು ತಿರುಗುವುದು2"
+        },
+        "Virtual Pet 3_2020": {
+          "wandering2": "ತಿರುಗಾಡುತ್ತಿದೆ",
+          "moving east2": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "spinning left2": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ2",
+          "spinning right2": "ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ2",
+          "shrinking2": "ಶ್ರಿಂಕ್ ಆಗುತ್ತಿದೆ2",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು",
+          "growing2": "ಬೆಳೆಯುತ್ತಿದೆ2",
+          "moving south2": "ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "swimming left and right2": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು2",
+          "moving north2": "ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "jittering2": "ನಡುಗುವುದು2",
+          "moving west2": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ2",
+          "patrolling2": "ಗಸ್ತು ತಿರುಗುವುದು2"
+        },
+        "Virtual Pet 4_2019": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "Virtual Pet 4_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 1": {
+          "mystery behavior": "ನಿಗೂಢ ವರ್ತನೆ",
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 1_2020": {
+          "mystery behavior": "ನಿಗೂಢ ವರ್ತನೆ",
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 2": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 2_2020": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 3": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 3_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 3a": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 3a_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 4": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 4_2020": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 6": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 6_2020": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 7": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "behaviors 7_2020": {
+          "running east": "ಪೂರ್ವಕ್ಕೆ ಓಡುತ್ತಿದೆ",
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_Dogger_2": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_1": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_1_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_2": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_2_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_3": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_3_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_4": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_4_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_5": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseE_aboutme_5_2020": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
+        },
+        "courseF_project_1": {
+          "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು"
         }
       }
     }

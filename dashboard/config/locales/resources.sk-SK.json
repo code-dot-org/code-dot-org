@@ -72,14 +72,18 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
+          "name": "Umelá inteligencia: Strojové učenie",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
           "name": "Umelá inteligencia: Vplyv na spoločnosť",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
           "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "lesson_plans/courseb/2018": {
@@ -629,14 +633,18 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
+          "name": "Umelá inteligencia: Strojové učenie",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
           "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "name": "Umelá inteligencia: Vplyv na spoločnosť",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -1840,6 +1848,7 @@
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "seeing_ai/csd/2021": {
@@ -1860,6 +1869,7 @@
         },
         "ai_training_data_bias/csd/2021": {
           "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -1913,6 +1923,13 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Fórum učiteľov"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Informatika mení svet okolo nás",
+          "type": "Video"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Ako pracujú počítače: Hardvér a softvér",
@@ -1968,6 +1985,7 @@
         },
         "video_machine_learning/csd/2021": {
           "name": "Video: Strojové učenie",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
@@ -2085,6 +2103,19 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Fórum učiteľov"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Proces riešenia problémov"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Proces riešenia problémov",
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Proces riešenia problémov"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Proces riešenia problémov"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Čo je počítač?"

@@ -2,6 +2,22 @@
 ka:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': საშუალო
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': საშუალო
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -216,6 +232,8 @@ ka:
             '"random"': შემთხვევითი
       Dancelab_randomColor:
         text: შემთხვევითი ფერი
+      Dancelab_setBackground:
+        text: დააყენე ფონის ფერი {COLOR}
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
@@ -383,6 +401,7 @@ ka:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
+        text: როცა დაჭერილია {KEY} ღილაკი
         options:
           KEY:
             '"up"': ზემოთ
@@ -430,6 +449,8 @@ ka:
         text: დაყენება
       Dancelab_whenSetup2:
         text: დაყენება
+      gamelab_addBehaviorSimple:
+        text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       gamelab_atTime:
         options:
           UNIT:
@@ -448,7 +469,11 @@ ka:
           CONDITION:
             '"when"': როდის
             '"while"': სანამ
-      gamelab_everySeconds:
+      gamelab_clickedOn:
+        text: როცა აწკაპუნებენ {SPRITE}-ზე
+      gamelab_comment:
+        text: 'კომენტარი: {COMMENT}'
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': წამები
@@ -601,6 +626,8 @@ ka:
         text: შემთხვევითი მდებარეობა
       gamelab_repeatForever:
         text: მუდამ გამეორება
+      gamelab_setBackground:
+        text: დააყენე ფონის ფერი {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -664,6 +691,7 @@ ka:
       gamelab_whenDownArrow:
         text: როცა დაჭერილია ისარი ქვემოთ
       gamelab_whenKey:
+        text: როცა დაჭერილია {KEY} ღილაკი
         options:
           KEY:
             '"up"': ზემოთ
@@ -709,6 +737,8 @@ ka:
             '50': 50/50
             '75': მაღალი
             '90': very high
+      Mikelab_addBehaviorSimple:
+        text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -835,7 +865,10 @@ ka:
             "{x: 100, y: 300}": ქვედა მარცხენა
             "{x: 300, y: 300}": ქვედა მარჯვენა
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Mikelab_whenClickedOn:
+        text: როცა აწკაპუნებენ {SPRITE}-ზე
       Mikelab_whenKeyPressed:
+        text: როცა დაჭერილია {KEY} ღილაკი
         options:
           KEY:
             '"up"': ზედა ისარი
@@ -961,6 +994,7 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
       binary_whenKey:
+        text: როცა დაჭერილია {KEY} ღილაკი
         options:
           KEY:
             '"up"': ზემოთ

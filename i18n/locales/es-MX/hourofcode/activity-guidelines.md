@@ -32,10 +32,9 @@ Algunos consejos:
 - [Guía general para crear una actividad de la Hora del Código™](#guidelines)
 - [Cómo enviar](#submit)
 - [Cómo se evaluarán las actividades](#inclusion)
-- [Sugerencias para diseñar tu actividad](#earlyreview)
-- [Directrices de marca registrada](#design)
-- [Pixel de seguimiento](#tm)
-- [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#pixel)
+- [Sugerencias para diseñar tu actividad](#design)
+- [Directrices de marca registrada](#tm)
+- [Pixel de seguimiento](#pixel)
 - [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#promote)
 
 <a id="whatsubmit"></a>
@@ -184,75 +183,55 @@ Además, para ser incluidas en la lista, todas las actividades deben:
 - Ser apropiadas para un aula de escuela pública (no debe incluir armas, contenido explícito o maduro, contenido religioso, etc.)
 - No requerir registro 
 - No requerir pago (a excepción de las actividades de robótica, que pueden requerir la compra de un robot o kit) Para actividades autodirigidas para nuevos docentes y estudiantes, el comité de revisión buscará si:
-- Los docentes pueden usar el tutorial o la actividad aunque no tengan experiencia en ciencias de la computación
-- Los estudiantes pueden tener éxito aunque no tengan experiencia en ciencias de la computación
-- Los estudiantes pueden realizar el tutorial sin ayuda de los padres o docentes
 
-Los docentes y los estudiantes pueden buscar y filtrar nuestra lista de actividades según el grado, nivel de experiencia, asignatura, equipo, etc. Primero mostraremos los planes de lecciones y las actividades que:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Reciban las calificaciones más altas del comité de revisión
 - Son actividades autodirigidas de una hora diseñadas para principiantes (estudiantes y docentes)
 - Atraen a una amplia gama de usuarios (en todas las plataformas, idiomas y edades)
-- No requieren instalación
-- Son una novedad este año
 
-[**Volver al principio**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## Sugerencias para diseñar tutoriales autoguiados de una hora
-
-Cualquier actividad enviada entre el 30 de abril y el 16 de agosto recibirá una evaluación de calidad de al menos tres miembros del [Comité de Evaluación de Actividades de la Hora del Código](/review-committee).
-
-Los evaluadores se enfocarán en proveer lo siguiente:
-
-* ¿En qué plataformas y navegadores funciona mejor el tutorial?
-* Retroalimentación crítica - ¿Qué se puede mejorar?
-* Errores o bugs - ¿Hay bugs, errores de sintaxis o gramaticales? Si los hay, ¿en qué parte de la actividad?
-* ¿Alienta esta actividad a los estudiantes a crear algo único?
-
-**Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No solo los estudiantes son principiantes, algunos docentes también lo son. Incluye información como:
-
-**La evaluación temprana no es una oportunidad para obtener retroalimentación para una actividad incompleta. Cualquier actividad que un evaluador considere los suficientemente incompleta no será evaluada.**
-
-**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
-
-Toda actividad enviada antes del 1ro de octubre recibirá una evaluación estándar, ya sea que reciba una evaluación temprana o no. Durante el periodo de evaluación estándar (septiembre-octubre), los evaluadores se enfocarán en calificar las actividades de acuerdo a los criterios descritos en la sección "Cómo serán evaluadas las actividades" de arriba. Al menos que señales cambios específicos en la actividad, los evaluadores se basarán en la retroalimentación de la evaluación temprana para calificar las actividades.
+- ¿En qué plataformas y navegadores funciona mejor el tutorial?
+- Retroalimentación crítica - ¿Qué se puede mejorar?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- ¿Alienta esta actividad a los estudiantes a crear algo único?
+- Are new this year
 
 [**Volver al principio**](#top)
 
 <a id="design"></a>
 
-## Directrices de marca registrada
+## Sugerencias para diseñar tutoriales autoguiados de una hora
 
-Puedes incluir el [logo de la Hora del Código](https://hourofcode.com/us/promote/resources#logo) en tu tutorial, pero no es obligatorio. Si utilizas el logo de la Hora del Código, consulta las directrices de marca registrada debajo. <u>Bajo ninguna circunstancia puedes usar el logo y el nombre de Code.org.</u> Ambos son marcas registradas y no pueden aparecer junto a una marca de un tercero sin un permiso expreso por escrito.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Asegúrate de que el estudiante promedio pueda finalizar la actividad sin problemas en una hora.** Puedes agregar una actividad abierta al final para los estudiantes que avancen más rápido durante la lección. Recuerda que la mayoría de los niños recién comienzan a aprender sobre las ciencias de la computación y la programación.
+**Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No solo los estudiantes son principiantes, algunos docentes también lo son.
 
-Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites: Incluye información como:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
 - Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios. 
 - ¿Existen aspectos a tener en cuenta a la hora de realizar la actividad en un aula? Por ejemplo, si hay videos, aconseja a los docentes a que los muestren en una pantalla proyectada para que toda la clase pueda verlos
 
-**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”)
+**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
 
-**Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de #CSEdWeek. ¿Y tú? @Scratch.” Usa el hashtag **#HoraDelCódigo** (con las letras H, D y C en mayúsculas)
+Toda actividad enviada antes del 1ro de octubre recibirá una evaluación estándar, ya sea que reciba una evaluación temprana o no. Durante el periodo de evaluación estándar (septiembre-octubre), los evaluadores se enfocarán en calificar las actividades de acuerdo a los criterios descritos en la sección "Cómo serán evaluadas las actividades" de arriba. Al menos que señales cambios específicos en la actividad, los evaluadores se basarán en la retroalimentación de la evaluación temprana para calificar las actividades. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Crea tu actividad en español o en otros idiomas además del inglés.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven cómo puede mejorar el mundo!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Asegúrate de que tu tutorial pueda ser utilizado en el paradigma de [Programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Esto es particularmente útil para la Hora del Código porque muchas aulas no tienen computadoras para todos los estudiantes.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Volver al principio**](#top)
 
 <a id="tm"></a>
 
-## Pixel de seguimiento
+## Directrices de marca registrada
 
-Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites:
+**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”)
 
 1. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la Hora del Código como un movimiento colectivo. Correcto: "Participa en la Hora del Código™ en ACMECorp.com". Incorrecto: "Participa en la Hora del Código de ACME Corp".
 2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
@@ -263,19 +242,19 @@ Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Ho
 
 <a id="pixel"></a>
 
-## Promoción de tus actividades, la Semana por la Educación en Ciencias de la Computación y la Hora del Código
+## Pixel de seguimiento
 
-¡Promociona tu actividad en tu red! Dirígelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Si tu tutorial es aprobado e incluido en la página final de tutoriales, Code.org te proporcionará un pixel de seguimiento único para integrarlo en tu tutorial. Mira el ejemplo debajo.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Ejemplo de pixeles de seguimiento para AppInventor:
+Example tracking pixels for Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
 [**Volver al principio**](#top)
@@ -284,7 +263,7 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 ## Promoción de tus actividades, la Semana por la Educación en Ciencias de la Computación y la Hora del Código
 
-¡Promociona tu actividad en tu red! Dirígelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad. Usa la campaña internacional de la Hora del Código durante la Semana por la Educación en Ciencias de la Computación como una excusa para animar a los usuarios a invitar a otros a unirse. ¡Ayúdanos a alcanzar más estudiantes!
+Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Destaca la Hora del Código y la Semana por la Educación en Ciencias de la Computación en tu sitio web. Por ejemplo: <http://www.tynker.com/hour-of-code>
 - Promueve la Hora del Código en redes sociales, medios de comunicación tradicionales, listas de correo, etcétera, con el hashtag #HoraDelCódigo (con H, D y C en mayúsculas)
@@ -293,4 +272,4 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 [**Volver al principio**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
