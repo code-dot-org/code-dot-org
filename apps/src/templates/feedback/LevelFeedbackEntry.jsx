@@ -111,7 +111,7 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
   useEffect(() => {
     commentRef.current &&
       setCommentHeight(getElementHeight(commentRef.current));
-  }, [commentRef]);
+  });
 
   const expandComment = () => {
     setExpanded(true);

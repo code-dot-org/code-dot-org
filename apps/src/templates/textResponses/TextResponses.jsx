@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
@@ -44,40 +44,34 @@ function TextResponses({
       prevSectionId.current = sectionId;
     }
     asyncLoadTextResponses(sectionId, scriptId);
-  }, [scriptId, sectionId, asyncLoadTextResponses]);
+  }, [scriptId, sectionId]);
 
-  const asyncLoadTextResponses = useCallback(
-    (sectionId, scriptId) => {
-      // Don't load data if it's already stored in state.
-      if (textResponsesByScript[scriptId]) {
-        return;
-      }
+  const asyncLoadTextResponses = (sectionId, scriptId) => {
+    // Don't load data if it's already stored in state.
+    if (textResponsesByScript[scriptId]) {
+      return;
+    }
 
-      setIsLoadingResponses(true);
+    setIsLoadingResponses(true);
 
-      loadTextResponsesFromServer(sectionId, scriptId)
-        .then(textResponses => {
-          setTextResponses(scriptId, textResponses);
-          setIsLoadingResponses(false);
-        })
-        .catch(err => {
-          console.error(err);
-          setIsLoadingResponses(false);
-        });
-    },
-    [textResponsesByScript, setTextResponses]
-  );
+    loadTextResponsesFromServer(sectionId, scriptId)
+      .then(textResponses => {
+        setTextResponses(scriptId, textResponses);
+        setIsLoadingResponses(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setIsLoadingResponses(false);
+      });
+  };
 
-  const setTextResponses = useCallback(
-    (scriptId, textResponses) => {
-      const newTextResponsesByScript = {
-        ...textResponsesByScript,
-        [scriptId]: textResponses
-      };
-      setTextResponsesByScript(newTextResponsesByScript);
-    },
-    [textResponsesByScript]
-  );
+  const setTextResponses = (scriptId, textResponses) => {
+    const newTextResponsesByScript = {
+      ...textResponsesByScript,
+      [scriptId]: textResponses
+    };
+    setTextResponsesByScript(newTextResponsesByScript);
+  };
 
   const onChangeScript = scriptId => {
     setScriptId(scriptId);
