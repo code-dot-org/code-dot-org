@@ -1575,6 +1575,12 @@ FactoryGirl.define do
     association :script
   end
 
+  factory :project_version do
+    sequence(:project_id)
+    sequence(:object_version_id)
+    comment 'a commit comment'
+  end
+
   factory :teacher_score do
     association :user_level
     association :teacher
