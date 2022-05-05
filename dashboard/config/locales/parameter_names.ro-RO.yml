@@ -11,6 +11,7 @@ ro:
       length: lungime
       min: min
       points: puncte
+      radius: raza
       size: dimensiune
       speed: viteză
       width: lăţime

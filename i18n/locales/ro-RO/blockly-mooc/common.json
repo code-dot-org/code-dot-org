@@ -1346,6 +1346,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org acordă cea mai mare importanță siguranței și securității elevului. Code.org a semnat  [Angajamentul de Confidențialitate a Elevului]({pledgeLink}), iar practicile de confidențialitate au primit [unul dintre cele mai ridicate scoruri totale din partea Common Sense Media]({commonSenseLink}). Poți găsi detalii suplimentare vizualizâd [Politica de Confidențialitate]({privacyPolicyLink}) a Code.org.",
   "parentLetterWhy": "De ce cibernetica",
   "parentLetterWhyDetails": "[Șase studii diferite arată]({researchLink}): copiii care studiază cibernetica au performanțe mai bune la alte discipline, excelează la rezolvarea problemelor și au cu 17% mai multe șanse să urmeze o facultate. Ciberetica îi învață pe elevi gândirea critică, soluționarea problemelor și cetățenia digitală și aduce beneficii pentru toți elevii, indiferent de oportunitățle pe care le vor urma în viitor. Iar învățarea de a face animații interactive, code-art, jocuri și aplicații pe Code.org încurajează creativitatea și face distractivă învățarea.\n\n",
+  "participantTypeStudentTitle": "Elevi",
+  "participantTypeTeacherTitle": "Profesori",
   "partner": "Partener: {partner}",
   "password": "Parolă",
   "passwordConfirmation": "Confirmarea parolei",

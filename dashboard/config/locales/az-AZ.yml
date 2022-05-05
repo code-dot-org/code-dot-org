@@ -869,7 +869,7 @@ az:
         Play Lab-dan istifadə edin.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
     minecraft2016:
       title: Minecraft
       body: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını
@@ -923,7 +923,7 @@ az:
   multi:
     wrong_title: Səhv cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
-    correct_title: Doğru
+    correct_title: Düzgün
     correct_body: Bu doğru cavabdır.
   multi-submittable:
     wrong_title: Təşəkkür
@@ -958,7 +958,7 @@ az:
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
-    correct_title: Doğru
+    correct_title: Düzgün
     correct_body: Bu doğru cavabdır.
   contract_match:
     wrong_title: Səhv cavab
@@ -973,7 +973,7 @@ az:
     placeholder: Cavabınızı buraya daxil edin.
     open_response_title: Təşəkkürlər.
     open_response_body: Cavabınız  üçün təşəkkürlər!
-    correct_title: Doğru
+    correct_title: Düzgün
     correct_body: Bu doğru cavabdır.
   lesson_extras:
     bonus_level: Bonus mərhələ

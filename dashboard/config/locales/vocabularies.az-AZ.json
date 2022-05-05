@@ -742,6 +742,10 @@
         "ethics/csd/2021": {
           "word": "Etika"
         },
+        "user/csd/2021": {
+          "word": "İstifadəçi",
+          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
         "bug/csd/2021": {
           "word": "Səhv",
           "definition": "Proqramın bir hissəsi düzgün işləmir."

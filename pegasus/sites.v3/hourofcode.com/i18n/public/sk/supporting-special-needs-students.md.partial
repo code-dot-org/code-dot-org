@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Podpora žiakov so špeciálnymi potrebami v rámci Hodiny kódu
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Podpora žiakov so zdravotným postihnutím v rámci Hodiny kódu
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Hodinu kódu si počas Týždňa informatiky môže vyskúšať každý. Často sa stáva, že žiaci s autizmom, ADHD alebo inými poruchami učenia si zamilujú programovanie. Povzbuďte všetkých žiakov v triede, aby to vyskúšali! Pri príprave aktivít v triede odmeňte skôr účasť ako ich dokončenie. Každému môžete dať [certifikát]({{ supporting-special-needs-students/certificate }}) bez ohľadu na to, koľko úloh alebo zadaní splní počas hodiny. [Párové programovanie](https://www.youtube.com/watch?v=vgkahOzFH2Q) je ďalší skvelý spôsob, ako naučiť žiakov spolupracovať a spoločne riešiť problémy.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Prispôsobenie sa rôznym potrebám vďaka aktivitám bez počítača a online kurzom
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Pri hľadaní vhodnej aktivity pre všetkých členov triedy zvážte online aj „odpojené“ alternatívy, ktoré si nevyžadujú počítače. Aktivity bez počítača umožňujú žiakom vyskúšať si koncepty informatiky v praxi. [Veľká udalosť](https://studio.code.org/s/course1/lessons/15/levels/1) dáva učiteľom kontrolu nad krokmi žiakov, čo poskytuje skvelú príležitosť na prispôsobenie obsahu schopnostiam každého žiaka.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Iným žiakom môžu pomôcky dostupné na počítači umožniť aktívnejšiu účasť ako alternatíva bez počítača. Napríklad nepočujúci alebo nedoslýchaví žiaci sa môžu naplno zúčastňovať na online kurzoch.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Najvhodnejšia alternatíva môže závisieť aj od toho, či máte k dispozícii prispôsobenú počítačovú učebňu alebo notebooky.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Majú napríklad vaši žiaci zníženú pohyblivosť alebo obratnosť? Ak majú všetci vaši žiaci v škole prístup k technológiám, opýtajte sa svojich žiakov alebo učiteľa techniky, aké pomôcky žiaci zvyčajne používajú pri práci s počítačmi, ktoré majú k dispozícii.
 
-## Sensory Impairments
+## Senzorické poruchy
 
-### Students who are blind or low vision
+### Nevidiaci alebo slabozrakí žiaci
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Pokiaľ ide o žiakov, ktorí používajú čítačku obrazovky, skvelým začiatkom môže byť [Kurz Quorum pre začiatočníkov](https://quorumlanguage.com/hourofcode/astro1.html) alebo [Kurz Quorum pre pokročilých žiakov](https://quorumlanguage.com/hourofcode/part1.html). Quorum začalo ako interpretovaný jazyk navrhnutý tak, aby bol prístupný používateľom čítačky obrazovky. Časom sa z neho stal univerzálny programovací jazyk určený pre každého používateľa. Tieto kurzy Hodiny kódu môžete použiť s celou triedou. A ak chcete ísť nad rámec Hodiny kódu, tím Quorum má pre vás ďalšie nástroje a učebné osnovy.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Ak žiaci na hodinách techniky využívajú iné pomôcky, môžete ich využiť aj pri Hodine kódu. Môže ísť o väčšie monitory, softvérové zväčšenie obrazovky, nastavenia vysokého kontrastu v operačnom systéme, hlasové ovládanie a ďalšie.
 
-### Students who are deaf or hard of hearing
+### Nepočujúci alebo nedoslýchaví žiaci
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[Kurzy na Code.org](https://studio.code.org/) sú všetky navrhnuté tak, aby sa dali používať so zvukom alebo bez neho. Všetky videá majú titulky. Niektorým žiakom môžu pomôcť aj slúchadlá nastavené na vyššiu hlasitosť.
 
 ## Viac info
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Ak sa chcete dozvedieť viac o výučbe informatiky a žiakoch so špeciálnymi potrebami, odporúčame vám túto [online knihu]({{ supporting-special-needs-students/book }}).
