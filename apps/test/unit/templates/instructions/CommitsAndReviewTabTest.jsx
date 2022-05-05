@@ -8,7 +8,6 @@ import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/Co
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
-  onLoadComplete: () => {},
   channelId: 'asdfjkl',
   serverLevelId: 1,
   serverScriptId: 2,
