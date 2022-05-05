@@ -1330,11 +1330,6 @@ class ScriptTest < ActiveSupport::TestCase
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
-        'name' => 'Report Lesson 1',
-        'descriptionStudent' => 'lesson 1 is pretty neat',
-        'descriptionTeacher' => 'This is what you should know as a teacher'
-      }].to_json
     }
 
     updated = Script.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
@@ -1344,8 +1339,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Report Script Name', updated_report_unit['title']
     assert_equal 'This is what Report Script is all about', updated_report_unit['description']
     assert_equal 'report-lesson-1', updated_report_unit['lessons']['Report Lesson 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_unit['lessons']['Report Lesson 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_unit['lessons']['Report Lesson 1']['description_teacher']
   end
 
   test "update_i18n with new lesson display name" do
