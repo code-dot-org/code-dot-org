@@ -132,4 +132,34 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
   end
+
+  class CodeDocsQueryCountTest < CurriculumDocsTest
+    def setup
+      Script.stubs(:should_cache?).returns false
+      @programming_environment = create :programming_environment
+      programming_environment_category = create :programming_environment_category, programming_environment: @programming_environment
+      @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
+    end
+
+    test "signed out environment index query count" do
+      assert_queries(1) do
+        get programming_environments_path
+      end
+      assert_response :success
+    end
+
+    test "signed out environment show query count" do
+      assert_queries(9) do
+        get programming_environment_path(@programming_environment.name)
+      end
+      assert_response :success
+    end
+
+    test "signed out expression show query count" do
+      assert_queries(10) do
+        get programming_environment_programming_expression_path(@programming_environment.name, @programming_expression.key)
+      end
+      assert_response :success
+    end
+  end
 end
