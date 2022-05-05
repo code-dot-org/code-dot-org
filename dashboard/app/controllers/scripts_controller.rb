@@ -328,7 +328,6 @@ class ScriptsController < ApplicationController
       :description_short,
       :description,
       :student_description,
-      :stage_descriptions
     ).to_h
   end
 

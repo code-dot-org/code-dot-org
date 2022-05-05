@@ -1330,7 +1330,6 @@ class Script < ApplicationRecord
   # There are three types of i18n data
   # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {}, log_event_type: 'write_other')
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     old_size = `wc -l #{units_yml.dump}`.to_i
@@ -1377,18 +1376,7 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
       metadata_i18n['lessons'] = {}
-      unless lesson_descriptions.nil?
-        JSON.parse(lesson_descriptions).each do |lesson|
-          lesson_name = lesson['name']
-          lesson_data = {
-            'description_student' => lesson['descriptionStudent'],
-            'description_teacher' => lesson['descriptionTeacher']
-          }
-          metadata_i18n['lessons'][lesson_name] = lesson_data
-        end
-      end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
