@@ -1,10 +1,7 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
-import {
-  forEveryBooleanPermutation,
-  sandboxDocumentBody
-} from '../../util/testUtils';
+import {forEveryBooleanPermutation} from '../../util/testUtils';
 import createP5Wrapper, {
   createStatefulP5Wrapper,
   expectAnimationsAreClones
@@ -15,7 +12,7 @@ describe('P5SpriteWrapper', function() {
 
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
-  sandboxDocumentBody();
+  // sandboxDocumentBody();
 
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
