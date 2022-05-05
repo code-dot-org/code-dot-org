@@ -68,6 +68,7 @@
           "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
         },
         "code/flappy/unversioned": {
+          "word": "programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -869,6 +870,10 @@
         "ethics/csd/2021": {
           "word": "Ética"
         },
+        "user/csd/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
         "user_interface/csd/2021": {
           "word": "Pantalla de Usuario"
         },
@@ -891,6 +896,30 @@
         "parameter/csd/2021": {
           "word": "Parámetro",
           "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla."
+        },
+        "encode/csd/2021": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla."
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
         },
         "debugging/csd/2021": {
           "word": "Depurar",
@@ -950,7 +979,7 @@
         },
         "processing/csd/2021": {
           "word": "Procesamiento",
-          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida"
+          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
         },
         "storage/csd/2021": {
           "word": "almacenamiento",
@@ -966,7 +995,7 @@
         },
         "html_tag/csd/2021": {
           "word": "Etiqueta HTML",
-          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y que tipo de elemento es"
+          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
         },
         "website_content/csd/2021": {
           "word": "Contenido de sitio web",

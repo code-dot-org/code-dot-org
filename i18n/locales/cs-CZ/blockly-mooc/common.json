@@ -1321,6 +1321,8 @@
   "parentLetterStudentPrivacyDetails": "Pro Code.org je bezpečnost a ochrana soukromí studentů tou nejvyšší prioritou. Organizace Code.org podepsala [závazek k ochraně soukromí studentů]({pledgeLink}) a za své postupy ochrany soukromí [získala od organizace Common Sense Media jedno z nejvyšších bodových ohodnocení]({commonSenseLink}). Další podrobnosti najdete v [zásadách ochrany osobních údajů]({privacyPolicyLink}) Code.org.",
   "parentLetterWhy": "Proč informatika",
   "parentLetterWhyDetails": "[Šest různých studií ukazuje]({researchLink}): Děti, které se učí informatiku, mají lepší prospěch v jiných předmětech, vynikají v řešení problémů a je u nich o 17 % vyšší šance, že půjdou na vysokou školu. Studium počítačových věd vede žáky ke kritickému myšlení, řešení problémů a digitálnímu občanství a je přínosné pro všechny žáky bez ohledu na to, kterým směrem se v budoucnosti budou dál rozvít. Kromě toho vytváření interaktivních animací, umění kódovat a vymýšlení her nebo aplikací na portálu Code.org rozvíjí tvořivost a představuje zábavnou formu učení.",
+  "participantTypeStudentTitle": "Studenti",
+  "participantTypeTeacherTitle": "Učitelé",
   "partner": "Partner: {partner}",
   "password": "Heslo",
   "passwordConfirmation": "Potvrzení hesla",

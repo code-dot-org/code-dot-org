@@ -435,6 +435,7 @@ vi:
         poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poemart_intro: Giới thiệu Tranh thơ ca
+        CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

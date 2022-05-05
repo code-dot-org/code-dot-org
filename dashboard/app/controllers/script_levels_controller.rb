@@ -128,11 +128,11 @@ class ScriptLevelsController < ApplicationController
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
-    extra_params = {}
+    @extra_params = {}
     if @script_level.long_assessment?
-      extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
+      @extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
-    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
+    @extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script_level&.script)
@@ -146,7 +146,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
+    if request.path != (canonical_path = build_script_level_path(@script_level, @extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return

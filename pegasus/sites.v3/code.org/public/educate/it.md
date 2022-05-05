@@ -4,7 +4,7 @@ nav: educate_nav
 theme: responsive
 ---
 
-# IT requirements for Code.org tutorials
+# Technical Requirements for Code.org Tutorials
 
 ## Hardware
 
@@ -18,21 +18,22 @@ theme: responsive
 
 Code.org takes a tiered approach to the level of support we provide for different browsers and platforms to ensure we are building a stellar experience for most of our users, and an acceptable experience for the rest. We support the following combinations of operating systems and browsers:
 
-| **Browser**                     | **Operating System**                                                                                                  |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Chrome 33.x and higher          | Windows 7 and higher <br><br> macOS 10.6 and higher <br><br> Android 4.1.2 and higher <br><br> ChromeOS (Chromebooks) |
-| Safari 7.0.x and higher         | macOS 10.6 and higher <br><br> iOS 7.x and higher                                                                     |
-| Microsoft Edge                  | Windows 10 and higher                                                                                                 |
-| Firefox 25.x and higher         | Windows 7 and higher                                                                                                  |
+| **Browser**                   | **Operating System**                                                                                               |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| Chrome 87.x and higher        | Windows 7 and higher <br><br> macOS 10.13 and higher <br><br> Android 6 and higher <br><br> ChromeOS (Chromebooks) |
+| Safari 13.x and higher        | macOS 10.13 and higher                                                                                             |
+| Mobile Safari 11.x and higher | iOS 11.x and higher                                                                                                |
+| Edge 87.x and higher          | Windows 10 and higher                                                                                              |
+| Firefox 91.x and higher       | Windows 7 and higher                                                                                               |
 
 ## Sites to Unblock
 
 For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
 
 | Priority                                                                                 | URL                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ---------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
-| **Optional**                                                                             | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`                                                                                    |
+| **Optional**                                                                             | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos** <br/>(Enhanced Privacy Mode - available late July 2018) | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use YouTube hosted videos** <br/>(Deprecated late July 2018)                        | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                |
 | **To use Code.org hosted videos**                                                        | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |

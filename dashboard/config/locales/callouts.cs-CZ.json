@@ -345,10 +345,12 @@
           "courseD_artist_ramp11_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
         },
         "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
         },
         "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
@@ -390,10 +392,12 @@
           "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
         },
         "courseD_maze_ramp3_2019": {
-          "stone_block_2": "Šedé bloky není možné zahodit."
+          "stone_block_2": "Šedé bloky není možné zahodit.",
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
         },
         "courseD_maze_ramp3_2020": {
-          "stone_block_2": "Šedé bloky není možné zahodit."
+          "stone_block_2": "Šedé bloky není možné zahodit.",
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
         },
         "courseD_maze_ramp5": {
           "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
@@ -577,7 +581,8 @@
           "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
         },
         "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
         },
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Přidej do svého programu tento blok!"
@@ -1092,6 +1097,544 @@
         },
         "CSD U3 Variables Predict Where XY_2021": {
           "grid": "K zobrazení mřížky klikněte zde."
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Klikni sem."
+        },
+        "Virtual Pet 2_2020": {
+          "": "Klikni sem."
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát."
+        },
+        "courseE_aboutme_2": {
+          "": "Klikni sem."
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Klikni sem."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
         }
       }
     }

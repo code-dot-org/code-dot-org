@@ -2,9 +2,27 @@
   "sv-SE": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
         "poem-art-2021/Poem Art": {
           "overview": "I den här Datavetenskap- och språkintegrerade lektionen för nya kodare kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Eleverna kommer att läsa och upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter och bilder för att illustrera diktens stämning. Slutligen kommer studenterna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.\n\nDenna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i flerlektionsmodulen som heter [Coding with Poetry](http://studio.code.org/s/poetry-2021).",
           "preparation": "-   Granska och slutför självstudien online själv: [Diktkonst](http://studio.code.org/s/poem-art).\n\n-   Prova alltid aktiviteterna själv innan du ber dina elever att utföra dem.\n\n-   Kontrollera din teknik och avgör om du behöver felsöka något i förväg.\n\n-   Vissa nivåer kräver ljud vid uppspelning. Dela ut hörlurar i förväg. \n\n-   [Valfritt] Två fästisar per elev till utvärderingen."
+        },
+        "dance/Dance Party": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "dance-2019/Dance Party": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "coursed-2021/Dance Party": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "express-2021/lesson-1": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         }
       }
     }

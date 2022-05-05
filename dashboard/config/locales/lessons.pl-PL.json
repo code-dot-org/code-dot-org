@@ -4,11 +4,13 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.",
+          "preparation": "-   Przejrzyj i ukończ samouczek online: [Potańcówka](https://studio.code.org/s/dance-extras/lessons/1/levels/1)\n-   Pamiętaj, aby najpierw go przetestować, zanim poprosisz uczniów o jego wykonanie. \n    Sprawdź swój sprzęt i zdecyduj, czy musisz coś rozwiązać jakieś problemy przed Godziną Kodowania.",
           "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków).",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę."
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę. ",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę. "
         },
         "hero/Minecraft Hour of Code": {
@@ -20,18 +22,23 @@
         },
         "flappy/Flappy Code": {
           "overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.",
+          "preparation": "### Tydzień przed Twoją Godziną Kodowania\n\n-   Zapoznaj się z [Poradnikiem edukatora Godziny Kodowania](http://hourofcode.com/resources/how-to/) i [Najlepszymi praktykami od skutecznych nauczycieli](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), aby zacząć planować przebieg Twojej Godziny Kodowania. \n-   [Zarejestruj swoje wydarzenie Godziny Kodowania](http://hourofcode.com), jeśli chcesz uzyskać swag lub wsparcie w klasie. \n-   Przejrzyj samouczek online i ukończ go samodzielnie: [Zrób grę Flappy](https://studio.code.org/flappy/1) \n-   Pamiętaj, abyś najpierw przetestował go, zanim poprosisz uczniów o jego ukończenie. Sprawdź swoją technologię i zdecyduj, czy musisz rozwiązać jakiekolwiek problemy przed Godziną Kodowania. \n\n### Jeden dzień przed Twoją Godziną Kodowania\n\n-   Zapisz słowa \"kodowanie\", \"programowanie\" i \"debugowanie\" na tablicy lub dodaj je do swojej ściany słów, jeśli taką masz. \n-   Każdy uczeń, który ukończył zajęcia, powinien otrzymać certyfikat. [Drukuj jeden](http://code.org/certificates) dla każdego ucznia z wyprzedzeniem, aby ułatwić sobie zakończenie Godziny Kodowania. ",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania."
         },
         "hourofcode/Maze": {
           "overview": "Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania."
         },
         "frozen/Artist": {
           "overview": "Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów."
         },
         "iceage/Ice Age Play Lab": {
           "overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego."
         },
         "hello-world-emoji-2021/Hello World": {
@@ -45,6 +52,7 @@
         },
         "gumball/Gumball Play Lab": {
           "overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania."
         },
         "dance/Dance Party": {
@@ -62,6 +70,8 @@
         },
         "hoc-encryption/Simple Encryption": {
           "overview": "Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.",
+          "preparation": "-   Zbadaj obie wersje widgetu",
+          "purpose": "“Szyfrowanie” jest procesem przekształcania wiadomości tak, aby oryginał został \"ukryty\" przed każdym, kto w zamierzeniu nie ma być odbiorcą.  Szyfrowanie nie jest już przeznaczone wyłącznie do celów wojskowych i szpiegów.  Korzystamy z niego codziennie w Internecie, w szczególności podczas prowadzenia transakcji handlowych i bez niego może dojść do zatrzymania gospodarki. \n\nNa tej lekcji uczniowie dostają przedsmak rodzaju myślenia, które wiąże się z szyfrowaniem wiadomości w obliczu narzędzi informatycznych. Narzędzia informatyczne dramatycznie zwiększają moc i złożoność algorytmów, które stosujemy do szyfrowania informacji, ale te narzędzia zwiększają również naszą zdolność do łamania szyfru.  Podstawą opracowania mocnego szyfru jest wiedza na temat problemów, które są \"trudne\" do rozwiązania przez komputery oraz stosowanie tej wiedzy do szyfrowania wiadomości. W zakresie materiałów być może zechcesz zapoznać się z całością treści zawartej w Rozdziale 5 _Rozwiany na cztery wiatry [Blown to Bits]_.  Podano w niej kontekst społeczny, który być może zechcesz wnieść do swojej klasy. ",
           "student_overview": "Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu."
         },
         "hello-world-animals-2021/Hello World": {
@@ -70,14 +80,17 @@
           "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania, z uwzględnieniem tworzenia sekwencji i zdarzeń. Wersja języka JavaScript w samouczku również pozwala uczniom doświadczyć kodu wpisywania.",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje."
         },
         "mc/Hour of Code 2015": {
           "overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę. ",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę. "
         },
         "playlab/Play Lab": {
           "overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego."
         },
         "applab-intro/Intro to App Lab": {
@@ -89,9 +102,13 @@
           "purpose": "Ta lekcja ma służyć przygotowaniu uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dysponując taką umiejętnością uczniowie mogą tworzyć projekty na dowolny temat, taki jak innych temat szkolny lub coś, co jest dla nich ważne. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania, z uwzględnieniem tworzenia sekwencji i zdarzeń. Wersja języka JavaScript w samouczku również pozwala uczniom doświadczyć kodu wpisywania.",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje."
         },
         "text-compression/Text Compression": {
+          "overview": "W pewnym momencie docieramy do fizycznego limitu prędkości, z jaką możemy przesyłać bity, i jeżeli chcemy przesyłać dużą ilość informacji szybciej, musimy znaleźć sposób reprezentowania tej samej informacji za pomocą mniejszej ilości bitów - musimy **skompresować** dane. W tej lekcji uczniowie wykorzystają Widget Kompresji Tekstu do skompresowania segmentów tekstu w języku angielskim poprzez wyszukiwanie wzorców i zastępowanie większych fragmentów symbolami. ",
+          "preparation": "-   Przetestuj widget kompresji tekstu\n-   Przejrzyj wskazówki dydaktyczne, aby zdecydować, z których opcji chcesz skorzystać",
+          "purpose": "Podstawową zasadą przyświecającą kompresji jest opracowanie metody lub protokołu używania mniejszej ilości bitów do przedstawienia oryginalnej informacji. Sposób, w jaki przedstawiamy skompresowane dane w ramach tej lekcji, przy pomocy \"słownika\" powtórzonych wzorców, jest podobny do [schematu kompresji LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), należy natomiast zauważyć, że LZW jest nieco inny od tego, co robią na tej lekcji uczniowie. Uczniowie wynajdują tutaj swój własny sposób.  LZW wykorzystuje się nie tylko do tekstu (pliki zip), ale również do formatu plików obrazkowych GIF.",
           "student_overview": "W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów – musimy skompresować dane."
         },
         "outbreak/Outbreak": {
@@ -106,6 +123,7 @@
         },
         "infinity/Infinity": {
           "overview": "Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia kodowania i programowania (używając bloków), jak również proste techniki debugowania.",
           "student_overview": "Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego."
         },
         "basketball/Bounce": {
@@ -122,6 +140,7 @@
         },
         "oceans/Oceans": {
           "overview": "Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Po pierwsze, klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie, będą musieli rozszerzyć swój zestaw danych treningowych o inne stworzenia morskie, które znajdują się w wodzie. W drugiej części ćwiczenia, wybiorą własne etykiety, które zastosują do obrazów losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który powinien być w stanie samodzielnie oznaczać nowe obrazy.",
+          "purpose": "Ten samouczek jest przeznaczony do szybkiego wprowadzenia uczniów w **naukę maszynową**, rodzaj **sztucznej inteligencji**. Uczniowie będą badać, jak wykorzystuje się **dane szkoleniowe**, aby aktywować model nauki maszynowej do klasyfikacji nowych danych. Uczniowie powinni zdobywać pozytywne doświadczenia w trakcie samouczka, a, co ważniejsze, powinni być zmotywowani do dalszej nauki informatyki. ",
           "student_overview": "Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie."
         },
         "jigsaw/Jigsaw": {
@@ -926,6 +945,9 @@
         "csd7-2021/Similarity Models": {
           "overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\\r\n\\\\r\n**Pytanie dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? ",
           "student_overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. "
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Celem rozpoczęcia przerabiania ostatniego działu tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się z szerszym zakresem informatycznych czynników kształtujących (jak wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej części tego działu, będą znów oglądać urządzenia, które poznali na tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Na tej lekcji uczniowie mają swoją pierwszą okazję do napisania programów, które korzystają z Circuit Playground. Po pierwszych oględzinach płytki oraz stworzeniu hipotezy o możliwych funkcjonalnościach, uczniowie poruszają się online tam, gdzie będą się uczyć pisania aplikacji, które sterują LED. Poprzez scalenie ekranów App Lab z Circuit Playgrounds uczniowie mogą stopniowo włączać elementy płytki jako urządzenia wyjściowego, korzystając przy tym z App Lab do pozyskania danych wejściowych użytkownika."

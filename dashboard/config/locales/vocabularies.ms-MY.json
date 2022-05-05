@@ -2,6 +2,9 @@
   "ms-MY": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "event/dance-extras/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -9,6 +12,9 @@
         "program/dance-extras/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/minecraft/unversioned": {
           "word": "Penyahpepijatan",
@@ -25,6 +31,9 @@
         "loop/minecraft/unversioned": {
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/hero/unversioned": {
           "word": "Penyahpepijatan",
@@ -57,6 +66,10 @@
           "word": "Atur Cara",
           "definition": "Siri langkah yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/flappy/unversioned": {
+          "word": "kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/flappy/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -64,6 +77,9 @@
         "program/flappy/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Penyahpepijatan",
@@ -73,6 +89,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/frozen/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/frozen/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -80,6 +99,9 @@
         "program/frozen/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/iceage/unversioned": {
           "word": "Penyahpepijatan",
@@ -90,7 +112,8 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/artist/unversioned": {
           "word": "Penyahpepijatan",
@@ -99,6 +122,9 @@
         "program/artist/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/gumball/unversioned": {
           "word": "Penyahpepijatan",
@@ -116,6 +142,12 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/dance/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/aquatic/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -131,6 +163,9 @@
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
         },
+        "code/starwars/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/starwars/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -138,6 +173,9 @@
         "program/starwars/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/mc/unversioned": {
           "word": "Penyahpepijatan",
@@ -147,6 +185,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/playlab/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/playlab/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -154,6 +195,9 @@
         "program/playlab/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Penyahpepijatan",
@@ -186,6 +230,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/infinity/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/infinity/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -198,6 +245,9 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
+        "code/basketball/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/basketball/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -206,6 +256,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -213,6 +266,9 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "event/dance-2019/unversioned": {
           "word": "Acara",
@@ -527,6 +583,9 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
+        "code/coursed/2021": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "repeat/coursed/2021": {
           "word": "Ulang",
           "definition": "Untuk melakukan sesuatu lagi."
@@ -751,6 +810,10 @@
         },
         "machine_learning/csd/2021": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "user/csd/2021": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
         },
         "bug/csd/2021": {
           "word": "Pepijat",
