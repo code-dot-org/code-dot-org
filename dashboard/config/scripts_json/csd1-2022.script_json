@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-03 19:33:11 UTC",
+    "serialized_at": "2022-05-05 18:59:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1260,7 +1260,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd/2022] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },
@@ -2421,13 +2421,7 @@
       "key": "f58f45ec-972c-4cfc-80d5-b3fb88621914",
       "position": 2,
       "properties": {
-        "description": "## Sample Apps\n\n**Transition:** Send pairs to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
-          }
-        ]
+        "description": "## Sample Apps\n\n**Transition:** Send pairs to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "f58f45ec-972c-4cfc-80d5-b3fb88621914",
@@ -3226,7 +3220,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Creating Groups:** Ideally, this project is done in pairs. If need be, groups of 3 will work. You should decide beforehand whether you will assign or allow students to pick their partners.\n\n**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video\n\n\n"
+            "markdown": "**Creating Groups:** Ideally this project is done in pairs. If need be, groups of 3 will work. You should decide beforehand whether you will assign or allow students to pick their partners.\r\n\r\n\r\n"
           }
         ]
       },
@@ -3288,7 +3282,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**What Kind of App?:** This project is supposed to result in a simple app, along the lines of those seen in the previous lesson. Even large problems or parts of large problems can be addressed by collecting and processing information appropriately.\n\n**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg\n\n"
+            "markdown": "**What Kind of App?:** This project is supposed to result in a simple app, along the lines of those seen in the previous lesson. Even large problems or parts of large problems can be addressed by collecting and processing information appropriately.\r\n\r\n"
           }
         ]
       },
@@ -3366,7 +3360,7 @@
       "key": "5f3700f4-b776-47ab-a2a6-053f2bf9f37f",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
+        "description": "The post-project test is found at the bottom of the Problem Solving and Computing unit overview page on Code Studio.\n\nThis test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
       },
       "seeding_key": {
         "activity_section.key": "5f3700f4-b776-47ab-a2a6-053f2bf9f37f",
@@ -5689,7 +5683,7 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/template/preview",
+      "url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/export?format=pdf",
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",

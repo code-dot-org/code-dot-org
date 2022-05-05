@@ -162,7 +162,7 @@ class Script < ApplicationRecord
 
   def deeper_learning_courses_cannot_be_launched
     if old_professional_learning_course? && (launched? || pilot?)
-      errors.add(:published_state, 'can never be pilot, preview or launched for a deeper learning course.')
+      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
     end
   end
 
@@ -219,7 +219,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil?
+    !professional_learning_course.nil_or_empty?
   end
 
   def generate_plc_objects
@@ -1954,7 +1954,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!get_pilot_experiment
+    !get_pilot_experiment.nil_or_empty?
   end
 
   def has_pilot_access?(user = nil)
