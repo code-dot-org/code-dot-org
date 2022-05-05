@@ -130,10 +130,6 @@ class LevelsController < ApplicationController
       @total_level_count = @level.levels.length
     end
 
-    if @level.reference_guide_level?
-      @reference_guide = @level.reference_guide
-    end
-
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,

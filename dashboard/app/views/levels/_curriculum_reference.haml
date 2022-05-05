@@ -1,7 +1,7 @@
 - level ||= @level
 
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_curriculum_reference.js'), data: {referenceGuide: @reference_guide&.summarize_for_show.to_json}}
+  %script{src: webpack_asset_path('js/levels/_curriculum_reference.js'), data: {referenceGuide: level.reference_guide&.summarize_for_show.to_json}}
 
 .curriculum-reference
   %div{style: "overflow: hidden"}
