@@ -12,7 +12,7 @@
         "isVisible": true
       },
       "CellPhone.java": {
-        "text": "import java.util.ArrayList;\n\n/*\n * Represents a cell phone\n */\npublic class CellPhone {\n\n  private ArrayList<String> messages;   // The list of text messages\n\n  /*\n   * Constructor to create a CellPhone with the\n   * specified file containing the messages\n   */\n  public CellPhone(String filename) {\n    this.messages = FileReader.getStringData(filename);\n  }\n\n  /*\n   * Returns a string containing the number of text messages to be sent for each message\n   */\n  public String getNumberTexts() {\n    // TO DO #1: Calculate the number of text messages to be sent for each\n    // message and return a string containing the information for each line.\n\n    \n  }\n}",
+        "text": "import java.util.ArrayList;\n\n/*\n * Represents a cell phone\n */\npublic class CellPhone {\n\n  private ArrayList<String> messages;   // The list of text messages\n\n  /*\n   * Constructor to create a CellPhone with the\n   * specified file containing the messages\n   */\n  public CellPhone(String filename) {\n    this.messages = FileReader.getStringData(filename);\n  }\n\n  /*\n   * Return the total number of text messages to be sent for all message\n   */\n  public int getNumberTexts() {\n    // TO DO #1: Calculate the number of text messages to be sent for all messages.\n\n    \n  }\n}",
         "isVisible": true
       },
       "FileReader.java": {
@@ -30,6 +30,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:26:04.164+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3c PBT_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3c PBT_2022\"},{\"changed_at\":\"2022-04-14 19:26:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:08:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:08:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:26:04.164+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3c PBT_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3c PBT_2022\"},{\"changed_at\":\"2022-04-14 19:26:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:08:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:08:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:08:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:08:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

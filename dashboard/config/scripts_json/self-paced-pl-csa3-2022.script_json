@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 21:23:29 UTC",
+    "serialized_at": "2022-05-04 23:32:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -558,15 +558,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
-        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+          "SP-VPL-CSA-22-printing-in-java-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -574,7 +571,7 @@
         "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
       },
       "level_keys": [
-        "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+        "SP-VPL-CSA-22-printing-in-java-video"
       ]
     },
     {
@@ -2073,32 +2070,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true,
-        "level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-        ],
-        "progression": "Traversing arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-      ]
-    },
-    {
-      "chapter": 66,
-      "position": 13,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-traversing-mc"
         ],
@@ -2119,9 +2090,9 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 14,
-      "activity_section_position": 4,
+      "chapter": 66,
+      "position": 13,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2145,9 +2116,9 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 15,
-      "activity_section_position": 5,
+      "chapter": 67,
+      "position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2171,9 +2142,9 @@
       ]
     },
     {
-      "chapter": 69,
-      "position": 16,
-      "activity_section_position": 6,
+      "chapter": 68,
+      "position": 15,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2194,6 +2165,32 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-L5-traverse-practice-2"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
+        ],
+        "progression": "Traversing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
       ]
     },
     {
@@ -2299,9 +2296,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-Printing-to-the-console-map",
+        "level.key": "SP-VPL-CSA-22-printing-in-java-video",
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+          "SP-VPL-CSA-22-printing-in-java-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -3019,18 +3016,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-mod3-L5-traversing-mc",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-L5-traversing-mc"
@@ -3070,6 +3055,18 @@
         "level.key": "SP-VPL-CSA-22-L5-traverse-practice-2",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
