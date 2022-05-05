@@ -14,7 +14,6 @@ export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
 const CommitsAndReviewTab = props => {
   const {
-    onLoadComplete,
     channelId,
     serverLevelId,
     serverScriptId,
@@ -52,9 +51,8 @@ const CommitsAndReviewTab = props => {
       // TODO: display error message TBD
       console.log(err);
     }
-    onLoadComplete();
     setLoadingReviewData(false);
-  }, [dataApi, onLoadComplete]);
+  }, [dataApi]);
 
   const setIsCodeReviewOpen = reviewData => {
     if (reviewData.length) {
@@ -143,7 +141,6 @@ export default connect(state => ({
 }))(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
-  onLoadComplete: PropTypes.func,
   // Populated by redux
   codeReviewEnabled: PropTypes.bool,
   viewAsCodeReviewer: PropTypes.bool.isRequired,

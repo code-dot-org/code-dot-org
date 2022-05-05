@@ -15,7 +15,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 1_2020": {
           "mystery behavior": "ふしぎな動き",
@@ -30,7 +31,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 2": {
           "flying": "飛行",
@@ -45,7 +47,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 2_2020": {
           "flying": "飛行",
@@ -60,7 +63,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "courseE_Dogger_2": {
           "drive left": "左に 動かす",
@@ -2340,7 +2344,19 @@
           "moving north": "北に動かす",
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
-          "patrolling": "パトロール"
+          "patrolling": "パトロール",
+          "wandering2": "あちこちに動かす 2",
+          "moving east2": "東に動かす 2",
+          "spinning left2": "左に回す 2",
+          "spinning right2": "右に回す 2",
+          "shrinking2": "小さくする 2",
+          "growing2": "大きくする 2",
+          "moving south2": "南に動かす 2",
+          "swimming left and right2": "左右に泳がせる 2",
+          "moving north2": "北に動かす 2",
+          "jittering2": "ブルブルさせる 2",
+          "moving west2": "西に動かす 2",
+          "patrolling2": "パトロール 2"
         },
         "Virtual Pet 3_2020": {
           "swimming left and right": "左右に泳がせる",
@@ -2354,7 +2370,19 @@
           "moving north": "北に動かす",
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
-          "patrolling": "パトロール"
+          "patrolling": "パトロール",
+          "wandering2": "あちこちに動かす 2",
+          "moving east2": "東に動かす 2",
+          "spinning left2": "左に回す 2",
+          "spinning right2": "右に回す 2",
+          "shrinking2": "小さくする 2",
+          "growing2": "大きくする 2",
+          "moving south2": "南に動かす 2",
+          "swimming left and right2": "左右に泳がせる 2",
+          "moving north2": "北に動かす 2",
+          "jittering2": "ブルブルさせる 2",
+          "moving west2": "西に動かす 2",
+          "patrolling2": "パトロール 2"
         },
         "Virtual Pet 4_2019": {
           "swimming left and right": "左右に泳がせる",
@@ -2452,7 +2480,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 4_2020": {
           "swimming left and right": "左右に泳がせる",
@@ -2466,7 +2495,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 6": {
           "swimming left and right": "左右に泳がせる",
@@ -2480,7 +2510,8 @@
           "moving north": "北に動かす",
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
-          "patrolling": "パトロール"
+          "patrolling": "パトロール",
+          "running east": "東に動かす"
         },
         "behaviors 6_2020": {
           "swimming left and right": "左右に泳がせる",
@@ -2494,7 +2525,8 @@
           "moving north": "北に動かす",
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
-          "patrolling": "パトロール"
+          "patrolling": "パトロール",
+          "running east": "東に動かす"
         },
         "behaviors 7": {
           "swimming left and right": "左右に泳がせる",
@@ -2508,7 +2540,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "behaviors 7_2020": {
           "swimming left and right": "左右に泳がせる",
@@ -2522,7 +2555,8 @@
           "jittering": "ブルブルさせる",
           "moving west": "西に動かす",
           "patrolling": "パトロール",
-          "moving east": "東に動かす"
+          "moving east": "東に動かす",
+          "running east": "東に動かす"
         },
         "courseE_aboutme_1": {
           "swimming left and right": "左右に泳がせる",
@@ -2861,7 +2895,7 @@
           "wandering": "あちこちに動かす",
           "growing": "大きくする",
           "jittering": "ブルブルさせる",
-          "moving east": "東に動かす\n",
+          "moving east": "東に動かす",
           "moving north": "北に動かす",
           "moving south": "南に動かす",
           "moving west": "西に動かす",

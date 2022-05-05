@@ -294,6 +294,8 @@
   "pairingNavigatorWarning": "{driver} සමග එක් කරන විට ප්‍රහේලිකාව සම්පූර්ණ විය. ඔබලා කණ්ඩායමක් ලෙස සොයාගත් විසඳුම ඔවුන්ගේ ගිණුම වෙත ගොස් ඔබට බලා ගත හැක.",
   "pairProgramming": "යුගල වශයෙන් ක්‍රමලේඛනය",
   "parent": "මව හෝ පියා",
+  "participantTypeStudentTitle": "සිසුන්",
+  "participantTypeTeacherTitle": "ගුරුවරුන්",
   "password": "මුර පදය",
   "passwordConfirmation": "මුර පදය ස්ථිර කිරීම",
   "personalLoginDialog_button": "ඊළඟ",

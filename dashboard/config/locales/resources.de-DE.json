@@ -3,6 +3,7 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
@@ -22,30 +23,65 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Einführung in Artist"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "type": "Handout für Studenten"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Turns & Angles (Kurven und Winkel)"
+        },
         "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Verschlüsselung und öffentliche Schlüssel",
           "type": "Video"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Verschlüsselungs-Widgets auf Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Aktivitätenführer - Textkomprimierung"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Zusammenfassung der Aktivitäten - dekodiere diese Nachricht",
+          "type": "Zusammenfassung der Aktivitäten "
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Dekodiere diese Nachricht"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Textkompressions-Widget auf Code Studio",
+          "type": "Widget"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Textkompression mit Aloe Blacc",
           "type": "Video"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
+          "name": "Maschinelles Lernen (AI)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
+          "name": "AI: Auswirkungen auf die Gesellschaft",
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
+          "name": "AI: Trainingdaten & Voreingenommenheit",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
@@ -481,7 +517,8 @@
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "Apps erforschen"
+          "name": "Apps erforschen",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Einführung Sprite Lab",
@@ -503,6 +540,9 @@
         "sprites_in_action/coursef/2021": {
           "name": "Sprites in Aktion",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "url": "https://www.commonsense.org/education/videos/the-power-of-words",
@@ -526,11 +566,20 @@
         "text_and_prompts/coursef/2021": {
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
+        "user_input_programs/coursef/2021": {
+          "name": "Benutzereingabeprogramme",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
         "mini_project_user_input_programs/coursef/2021": {
+          "name": "Miniprojekt: Programme zur Benutzereingabe",
           "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
         },
         "teacher_sandbox_level/coursef/2021": {
           "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Miniprojekt: Programme zur Benutzereingabe",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Pause und Denken Online",
@@ -571,14 +620,17 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
+          "name": "Maschinelles Lernen (AI)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
+          "name": "AI: Trainingdaten & Voreingenommenheit",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
+          "name": "AI: Auswirkungen auf die Gesellschaft",
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
@@ -598,6 +650,10 @@
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
           "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
         },
         "design-process/coursef/2021": {
           "name": "Entwurfsprozess",
@@ -667,10 +723,12 @@
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Handout für Studenten"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Handout für Studenten"
         },
         "mimi-activity/courseb/2021": {
           "name": "Bewegung, Bewegung",
@@ -852,7 +910,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Sicherheit in meiner Online-Nachbarschaft: Innehalten und Überlegen",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Handout für Studenten"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Paarprogrammierung",
@@ -1042,7 +1101,8 @@
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Handout für Studenten"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Meine Roboterfreunde",
@@ -1086,8 +1146,16 @@
           "name": "Unplugged Blocks (Offline-Blocks) (Kurse C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Einführung in Artist"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Turns & Angles (Kurven und Winkel)"
+        },
         "csf-turns-angles-doc/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout für Studenten"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Gefühlsgesichter Emotion Image",
@@ -1288,6 +1356,7 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels_2/coursed/2021": {
@@ -1385,12 +1454,15 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
+          "name": "Einführung in Artist",
           "type": "Video"
         },
         "turns_angles/express/2021": {
+          "name": "Turns & Angles (Kurven und Winkel)",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
+          "name": "Turns & Angles (Kurven und Winkel)",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1421,6 +1493,7 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
+          "name": "Spotify Playliste (jedes Alter)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
@@ -1541,7 +1614,8 @@
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Handout für Studenten"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
@@ -1564,7 +1638,12 @@
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout für Studenten"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Turns & Angles (Kurven und Winkel)"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Songwriting mit Funktionen",
@@ -1678,6 +1757,7 @@
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
+          "name": "AI: Trainingdaten & Voreingenommenheit",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
@@ -1689,6 +1769,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Handout für Studenten"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
@@ -1759,6 +1842,16 @@
         "teacher_forum/csd/2021": {
           "name": "Lehrer Forum"
         },
+        "computing-innovations/csd/2021": {
+          "name": "Innovation in der Informatik"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Informatik verändert alles",
+          "type": "Video"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Bildschirme mit Code gestalten"
         },
@@ -1819,6 +1912,12 @@
         },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Bewertungsleitfaden"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Darstellung ist wichtig"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Darstellung ist wichtig"
         },
         "representing-information-1/csd/2021": {
           "name": "Darstellung von Informationen"
@@ -2015,6 +2114,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "Lehrer Forum"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Problemlösungsprozess"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Problemlösungsprozess",
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Problemlösungsprozess"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Was ist ein Computer?"
         },
@@ -2040,6 +2152,12 @@
         "apps_and_problem_solving/csd/2021": {
           "name": "Apps und Problemlösung",
           "type": "Bewertungsleitfaden"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Erkundung von Webseiten"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Erkundung von Webseiten"
         },
         "html_tags/csd/2021": {
           "name": "HTML-Tags"

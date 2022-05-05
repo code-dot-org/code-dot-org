@@ -68,6 +68,7 @@
           "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
         },
         "code/flappy/unversioned": {
+          "word": "koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/flappy/unversioned": {
@@ -168,8 +169,29 @@
           "word": "Pętle",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Szyfr Cezara",
+          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie",
+          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Łamanie szyfru",
+          "definition": "Kiedy próbuje się odkodować tajną wiadomość nie znając wszystkich tajników szyfru, próbuje się \"złamać\" szyfr."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Odszyfrowywanie",
+          "definition": "proces, który odwraca szyfrowanie, poprzez przyjęcie tajnej wiadomości oraz odtworzenie oryginalnego, czytelnego tekstu"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie"
+          "word": "Szyfrowanie",
+          "definition": "proces kodowania wiadomości, aby utrzymać je w tajemnicy tak, aby mogły ją odczytać tylko \"uprawnione\" strony."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Szyfr zastępowania losowego",
+          "definition": "technika szyfrowania, która odwzorowuje każdą literę alfabetu na losowo wybrane inne litery alfabetu."
         },
         "code/starwars/unversioned": {
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
@@ -216,7 +238,8 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Kompresja bezstratna"
+          "word": "Kompresja bezstratna",
+          "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
         },
         "event/outbreak/unversioned": {
           "word": "Zdarzenie",
@@ -231,7 +254,8 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
         },
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
@@ -845,6 +869,10 @@
         },
         "ethics/csd/2021": {
           "word": "Etyka"
+        },
+        "user/csd/2021": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
         },
         "user_interface/csd/2021": {
           "word": "Interfejs użytkownika"

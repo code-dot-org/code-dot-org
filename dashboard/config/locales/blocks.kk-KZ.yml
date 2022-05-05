@@ -2,6 +2,22 @@
 kk:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орта
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орта
+            '2.00': large
+            '3.00': extra large
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -142,7 +158,7 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': секунд
