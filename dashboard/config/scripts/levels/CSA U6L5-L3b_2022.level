@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "The `Song`(#e7e8ea) class represents a song and has instance variables for the title of the song and the lines in the song. The `lines`(#e7e8ea) list is created using the `FileReader.getStringData()`(#e7e8ea) method to read the contents of a file into the list.\r\n\r\n##In Song.java:\r\n\r\n1. Write the method `getAverageCharacters()`(#e7e8ea) to calculate and return the average length of the lines in `list`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `getAverageCharacters()`(#e7e8ea) method and print the results.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -28,13 +28,15 @@
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U6L5-L3b PBT_2022"
+    "project_template_level_name": "CSA U6L5-L3b PBT_2022",
+    "display_name": "Lines in a Song",
+    "bubble_choice_description": "Find the average length of the lines in a song."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-14T19:27:02.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:27:02.160+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3a_2022\"},{\"changed_at\":\"2022-04-14 19:27:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 20:44:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:11:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:27:02.160+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3a_2022\"},{\"changed_at\":\"2022-04-14 19:27:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 20:44:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:11:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:00:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:04:56 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:05:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
