@@ -160,7 +160,6 @@ class UnitEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
@@ -381,7 +380,6 @@ class UnitEditor extends React.Component {
     };
 
     if (this.state.hasImportedLessonDescriptions) {
-      dataToSave.stage_descriptions = this.state.lessonDescriptions;
     }
 
     $.ajax({
@@ -914,13 +912,9 @@ class UnitEditor extends React.Component {
           {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.lessonDescriptions}
-              updateLessonDescriptions={(
-                lessonDescriptions,
-                hasImportedLessonDescriptions
-              ) =>
+              currentDescriptions={null}
+              updateLessonDescriptions={hasImportedLessonDescriptions =>
                 this.setState({
-                  lessonDescriptions,
                   hasImportedLessonDescriptions
                 })
               }
