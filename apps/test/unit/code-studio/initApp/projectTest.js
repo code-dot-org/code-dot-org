@@ -773,12 +773,10 @@ describe('project.js', () => {
         });
       });
 
-      it('redirects to new project when channel not found', done => {
+      it('fails when channel not found', done => {
+        stubGetChannelsWithNotFound(server);
         project.load().catch(() => {
-          expect(utils.navigateToHref).to.have.been.calledOnce;
-          expect(utils.navigateToHref.firstCall.args[0]).to.equal(
-            '/projects/artist'
-          );
+          expect(project.notFound()).to.be.true;
           done();
         });
       });
@@ -1103,6 +1101,18 @@ function restoreAppOptions() {
 function stubGetChannelsWithError(server) {
   server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
     xhr.error();
+  });
+}
+
+function stubGetChannelsWithNotFound(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.respond(
+      404,
+      {
+        'Content-Type': 'application/json'
+      },
+      'channel `channel_id` not found'
+    );
   });
 }
 
