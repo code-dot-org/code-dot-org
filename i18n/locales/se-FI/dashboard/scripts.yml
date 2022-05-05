@@ -7207,6 +7207,10 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Iskkadeapmi
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
@@ -7318,6 +7322,22 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-11:
+              name: Loahpat
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Loahpat
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-8:
+              name: Loahpat
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-14:
+              name: Loahpat
         csa2-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -7330,3 +7350,148 @@ se:
             Events:
               name: Dáhpáhusaid
               key: Dáhpáhusaid
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: CS Fuomášumiid Ovda-iskkadeapmi
+              key: CS Fuomášumiid Ovda-iskkadeapmi
+            Intro to Problem Solving:
+              name: Láidehus ČuolbmaČoavdimii
+              key: Láidehus ČuolbmaČoavdimii
+            Exploring Problem Solving:
+              name: Vásihit ČuolbmaČoavdima
+              key: Vásihit ČuolbmaČoavdima
+            Input and Output:
+              name: Input ja Output
+              key: Input ja Output
+            Processing:
+              name: Gieđahallan
+              key: Gieđahallan
+            Storage:
+              name: Vuorká
+              key: Vuorká
+            Project - Propose an App:
+              name: Prošeakta - Evttohit App:a
+              key: Prošeakta - Evttohit App:a
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Láidehus HTML:ii
+              key: Láidehus HTML:ii
+            Headings:
+              name: Bajilčállagat
+              key: Bajilčállagat
+            Digital Footprint:
+              name: Digitála Luodda
+              key: Digitála Luodda
+            Styling Text with CSS:
+              name: Stylet Teavstta CSS:ain
+              key: Stylet Teavstta CSS:ain
+            Styling Elements with CSS:
+              name: Stylet Elemeanttaid CSS:ain
+              key: Stylet Elemeanttaid CSS:ain
+            'Websites for Expression ':
+              key: Neahttasiiddut Dadjamiidda
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Programmere Guoimmuheami
+              key: Programmere Guoimmuheami
+            Plotting Shapes:
+              name: Plottet Hámiid
+              key: Plottet Hámiid
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+              key: Tevdnet SpeallanLáb:as
+            Sprites:
+              name: Sprite:at
+              key: Sprite:at
+            Sprite Movement:
+              name: Sprite Lihkadeapmi
+              key: Sprite Lihkadeapmi
+            Keyboard Input:
+              name: Boallobeavddi Input
+              key: Boallobeavddi Input
+            Project - Interactive Card:
+              name: Prošeakta  - Interaktiivva Koarta
+              key: Prošeakta  - Interaktiivva Koarta
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+              key: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
+              key: Oktiibeaškkeheamit
+            The Game Design Process:
+              name: Spealu Designa Proseassa
+              key: Spealu Designa Proseassa
+            Using the Game Design Process:
+              name: Geavat Spealu Designa Proseassa
+              key: Geavat Spealu Designa Proseassa
+            Project - Design a Game:
+              name: Prošeakta  - Designe Spealu
+              key: Prošeakta  - Designe Spealu
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Ipmirdit Du Geavaheaddji
+              key: Ipmirdit Du Geavaheaddji
+            Designing Apps for Good:
+              name: Designet App:aid Buorrin
+              key: Designet App:aid Buorrin
+            Market Research:
+              name: MárkanIskkadeapmi
+              key: MárkanIskkadeapmi
+            Prototype Testing:
+              name: Prototyhpa Teasten
+              key: Prototyhpa Teasten
+            Analysis of Design:
+              key: Analyseret Designa
+            Paper Prototypes:
+              key: BáberPrototyhpat
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: Designe Data Čoakkaldaga
+              key: Designe Data Čoakkaldaga
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: Ráhkat Musihka
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Maŋŋil Kurssa Iskkadeapmi

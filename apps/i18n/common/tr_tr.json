@@ -1254,6 +1254,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org, öğrenci emniyetine ve güvenliğine azami önem vermektedir. Code.org, [Öğrenci Gizlilik Taahhüdünü]({pledgeLink}) imzalamıştır ve gizlilik uygulamalarını  [Common Sense Media'dan en yüksek genel skorlardan birini]({commonSenseLink}) almıştır. Code.org'un [Gizlilik Politikasını]({privacyPolicyLink}) inceleyerek daha fazla ayrıntıya ulaşabilirsiniz.",
   "parentLetterWhy": "Neden bilgisayar bilimi",
   "parentLetterWhyDetails": "[Altı farklı çalışma gösterir]({researchLink}): bilgisayar bilimini çalışan çocuklar, diğer konularda daha iyi performans gösterir, problem çözmede çok iyi olurlar ve üniversiteye kabul edilme ihtimali %17 daha fazla olur. Bilgisayar bilimi, öğrencilere eleştirel düşünmeyi, problem çözmeyi ve dijital vatandaşlığı öğretir ve gelecekteki olanakları ne olursa olsun tüm öğrenciler bundan faydalanır. Ve Code.org'da etkileşimli animasyonlar, kod sanatı, oyunlar ve uygulamalar yapmayı öğrenmek yaratıcılığı arttırır ve öğrenmeyi eğlenceli hale getirir.",
+  "participantTypeStudentTitle": "Öğrenciler",
+  "participantTypeTeacherTitle": "Öğretmenler",
   "partner": "Ortak: {partner}",
   "password": "Parola",
   "passwordConfirmation": "Şifre doğrulama",

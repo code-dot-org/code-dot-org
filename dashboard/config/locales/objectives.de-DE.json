@@ -2,11 +2,77 @@
   "de-DE": {
     "data": {
       "objectives": {
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
         "6902d2bc-a266-487c-b0de-49de79f6fb98": {
           "description": "Veranschaulichung von veränderten Stimmungen in einem Gedicht."
         },
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
           "description": "Bildliche und wörtliche Sprache in einem Text darstellen."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
+        },
+        "6394fdc5-50c3-423e-8135-a64594824db3": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
         },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
@@ -14,11 +80,59 @@
         "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
           "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
         },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Erstelle ein Programm für die Komplettierung einer Abbildung, unter Einsatz von sequenziellen Schritten."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Breche komplexe Formen in einfache Teile."
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Tanzanimationen mit Code kreieren"
+        },
         "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
           "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Erkläre warum Verschlüsselung ein wichtiges Erfordernis ist, für das alltägliche Leben auf dem Internet."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Entschlüssele eine Botschaft die mit dem Caesar-Code verschlüsselt wurde, unter Einsatz eines Caesar-Code Widgets."
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Unter Einsatz einer Häufigkeitsanalyse, entschlüssele eine Botschaft die mit Random-Substitution (Zufallsaustausch) verschlüsselt wurde."
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Erkläre die Schwächen und die Sicherheitsfehler von Ersatz-Chiffres."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
@@ -26,29 +140,131 @@
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
         },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Lasse deine Studenten ihre eigenen Apps in App Lab bauen und danach teilen, unter Nutzung von Features wie Schalter, Text, Bilder, Klang und Bildschirme."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Mache weiter mit dem Bauen von Projekten, in einer kompletten App Lab Umgebung, und benutze dabei die Ressourcen die auf der code.org/applab Seite zur Verfügung gestellt sind."
+        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
         },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Kooperiere mit einem ebenbürtigen Student und finde eine Lösung für Textkomprimierung, unter Einsatz des Text-Compression-Widgets (verlustloses Komprimierungsschema). "
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Erkläre warum eine optimale Komprimierung unmöglich oder \"hart“ zu identifizieren ist."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Erkläre einige Faktoren, welche die Komprimierung zu einer Herausforderung machen."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Beschreibe den Zweck und die logische Grundlage für verlustlose Komprimierung."
+        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Erstelle eine interaktives Spiel, unter Nutzung von Sequenzen und Ereignisprozeduren."
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
         },
+        "63be9575-1232-47a5-991c-8bd03ac7c949": {
+          "description": "Definiere \"Coding“ und \"Informatik“."
+        },
+        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
+          "description": "Identifiziere Schlüsselworte im Vokabular der Informatik."
+        },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Stelle Verbindungen her, zwischen Konzepten der Informatik und der echten Welt."
+        },
+        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
+          "description": "Identifiziere Orte, an denen du weiterhin Informatik und Coding lernen kannst."
+        },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Erstelle eine interaktives Spiel, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Tanzanimationen mit Code kreieren"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Bespreche die Rolle, die durch künstliche Intelligenz in ihrem Leben gespielt wird."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Trainiere und teste ein Modell für maschinelles Lernen."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Denke logisch nach, über wie menschliche Vorurteile eine Rolle in maschinellem Lernen spielen."
         },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Veranschaulichung von veränderten Stimmungen in einem Gedicht."
@@ -62,8 +278,20 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
         },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Erstelle mit Ereignissen interaktive Animationen."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Eine Variable deklarieren"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Einer Variable einen Wert zuweisen"
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Benutze Variablen, zur Übertragung von Worten und Sätzen."
@@ -94,6 +322,15 @@
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Bespreche die Rolle, die durch künstliche Intelligenz in ihrem Leben gespielt wird."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Trainiere und teste ein Modell für maschinelles Lernen."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Denke logisch nach, über wie menschliche Vorurteile eine Rolle in maschinellem Lernen spielen."
         },
         "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
           "description": "Übersetze URLs in IP-Adressen."
@@ -311,6 +548,12 @@
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
           "description": "Entwickle deine Fähigkeiten, in der Lösung von Problemen und kritischem Denken, durch eine wiederholte Durchsicht der Praktiken beim Debugging."
         },
+        "6503170b-db97-4737-ae5d-5108591497a0": {
+          "description": "Erstelle ein Programm für die Komplettierung einer Abbildung, unter Einsatz von sequenziellen Schritten."
+        },
+        "d47b51d2-9114-4dfd-ad21-810573d85543": {
+          "description": "Breche komplexe Formen in einfache Teile."
+        },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
           "description": "Identifiziere wiederholte Muster in dem Code, die mit einer Schleife ersetzt werden könnten."
         },
@@ -410,6 +653,9 @@
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": "Erstelle eine interaktives Spiel, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
         },
@@ -418,6 +664,15 @@
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren"
+        },
+        "18434de2-92be-4695-8dc7-4aed45243596": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren"
+        },
+        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
+          "description": "Tanzanimationen mit Code kreieren"
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
           "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
@@ -499,6 +754,30 @@
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
           "description": "Entwickle deine Fähigkeiten, in der Lösung von Problemen und kritischem Denken, durch eine wiederholte Durchsicht der Praktiken beim Debugging."
+        },
+        "500825a3-b44f-4b99-ab77-2271fdcbb867": {
+          "description": "Erstelle ein Programm für die Komplettierung einer Abbildung, unter Einsatz von sequenziellen Schritten."
+        },
+        "36081e5f-1a5d-4102-a1de-27865168ee09": {
+          "description": "Breche komplexe Formen in einfache Teile."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Erstelle mit Ereignissen interaktive Animationen."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren."
+        },
+        "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
+          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren"
+        },
+        "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
+          "description": "Programme entwickeln die auf Benutzereingaben reagieren"
+        },
+        "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
+          "description": "Tanzanimationen mit Code kreieren"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
@@ -757,6 +1036,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Verdeutliche den Entwicklungsprozess, und wie dieser Gestalt an das fertige Projekt gegeben hat."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Trainiere und teste ein Modell für maschinelles Lernen."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Denke logisch nach, über wie menschliche Vorurteile eine Rolle in maschinellem Lernen spielen."
         }
       }
     }

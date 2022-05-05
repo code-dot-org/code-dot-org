@@ -267,6 +267,8 @@
   "pairProgramming": "Pāru Programmēšana",
   "parent": "Vecāki",
   "parents": "Vecāki",
+  "participantTypeStudentTitle": "Skolēni",
+  "participantTypeTeacherTitle": "Skolotāji",
   "password": "Parole",
   "passwordConfirmation": "Paroles apstiprinājums",
   "passwordTooShort": "Parole ir pārāk īsa (minimums 6 simboli)",

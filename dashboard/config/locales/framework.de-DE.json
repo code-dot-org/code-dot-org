@@ -1,0 +1,20 @@
+{
+  "de-DE": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Standards für Pflichtfächer in den englischsprachigen Geisteswissenschaften"
+        },
+        "ccmath": {
+          "name": "Standards für mathematische Pflichtfächer"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Informatikstandards (2011)"
+        },
+        "iste": {
+          "name": "ISTE Standards für Studenten"
+        }
+      }
+    }
+  }
+}

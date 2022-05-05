@@ -4,6 +4,7 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
         },
         "minecraft/Minecraft Hour of Code Designer": {
@@ -16,6 +17,10 @@
         "poem-art-2021/Poem Art": {
           "overview": "Tato lekce propojuje počítačové a jazykové vědy. Studenti v ní vytvoří animaci básně pomocí kódu, kterým ilustrují její náladu. Nejdřív si báseň přečtou a určí, jakou náladu vyjadřuje. Pak najdou odpovídající efekty a obrázky, kterými tuto náladu můžou dokreslit. A nakonec použijí události (kód), aby ilustrovali změny nálady nebo pomocí animace vyjádřili nové obrazy, které se v básni objeví. \n\nTuto lekci lze pojmout jako samostatnou hodinovou lekci. Nebo je možné ji použít jako první z řady lekcí modulu [Kódování s poezií](http://studio.code.org/s/poetry-2021).",
           "preparation": "–   Prohlédněte si a sami dokončete výukový online program: [Básnické umění](http://studio.code.org/s/poem-art).\n\n–   Než požádáte studenty, aby prováděli aktivity, nezapomeňte si je sami vyzkoušet. \n\n–   Zkontrolujte svou technologii a rozhodněte se, zda není potřeba předem vyřešit nějaké problémy.\n\n–   U některých úrovní je třeba přehrávat zvuk. Rozdejte včas sluchátka. \n\n–   [Optional] Dva samolepicí papírky na studenta pro hodnocení."
+        },
+        "flappy/Flappy Code": {
+          "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
+          "preparation": "### Jeden týden před Vaší „Hodinou programování“\n\n-   Podívejte se na [Průvodce hodinou programování](http://hourofcode.com/resources/how-to/) a Nejlepší praktiky úspěšných vzdělavatelů][1] abyste mohli začít plánovat svou akci Hodina programování. \n-   [Zaregistrujte se na svou akci „Hodina programování“](http://hourofcode.com) jestliže chcete dostat uznání nebo podporu třídy.\n-   Podívejte se na online výukový kurz a absolvujte ho sami: [Udělejte si plácací hru](https://studio.code.org/flappy/1) \n-   Než požádáte své studenty o jeho absolvování, nezapomeňte ho nejprve vyzkoušet. Zkontrolujte si techniku a rozhodněte se, zda před zahájením „Hodiny programování“ nepotřebujete něco vyřešit.\n\n### Jeden den před Vaší „Hodinou programování“\n\n-   Napište na tabuli slova „programování“, „tvorba programů“ and „ladění“ nebo je přidejte na stěnu slov, jestliže ji v učebně máte.\n-   Každý student, který absolvuje tuto aktivitu, musí obdržet certifikát. Předem [vytiskněte po jednom](http://code.org/certificates) certifikátu pro každého, abyste to na konci „Hodiny programování“ měli snazší."
         },
         "hourofcode/Maze": {
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky ve věku od 4 do 10 let, ale pomocí uvedených návrhů se dá upravit i pro starší žáky.",
@@ -39,6 +44,7 @@
         },
         "dance/Dance Party": {
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
         },
         "hello-world-food-2021/Hello World": {
@@ -59,6 +65,7 @@
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Tato lekce uvádí základní koncepce počítačové vědy, psaní kódu a programování, včetně posloupností a událostí. Verze výukového kurzu v jazyce JavaScript také studentům umožní zažít psaní kódu.",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce má dvě verze. "
         },
         "mc/Hour of Code 2015": {
@@ -69,6 +76,7 @@
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "applab-intro/Intro to App Lab": {
+          "purpose": "Tato lekce je prvním krokem Vašich studentů v prostředí App Lab. Výukový kurz sám by měl představovat přístupný úvod do tohoto mocného nástroje s širokou funkčností. Studenti by měli mít s kurzem kladnou zkušenost a co je ještě důležitější, měli by být motivováni k budování v App Lab. Tady prozkoumávají jen povrch možností tohoto nástroje, takže později by měli stránku code.org/applab nebo galerii projektů použít k tomu, aby se nechali inspirovat k projektům složitějších typů, které by chtěli realizovat.",
           "student_overview": "Na konci kurzu budeš moct svůj rozpracovaný projekt rozšířit na některou z těchto aplikací: „Vyberte si své dobrodružství“, „Pohlednice“, nebo „Osobnostní kvíz“. Také můžeš pokračovat ve vytváření dalších projektů dostupných na stránce code.org/applab. "
         },
         "hello-world-retro-2021/Hello World": {
@@ -77,6 +85,7 @@
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Tato lekce uvádí základní koncepce počítačové vědy, psaní kódu a programování, včetně posloupností a událostí. Verze výukového kurzu v jazyce JavaScript také studentům umožní zažít psaní kódu.",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce má dvě verze. "
         },
         "text-compression/Text Compression": {
@@ -96,12 +105,17 @@
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků)."
+        },
         "dance-2019/Dance Party": {
           "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
         },
         "oceans/Oceans": {
           "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Nejprve roztřídí objekty na ryby a ostatní a pokusí se vyčistit oceán od nepořádku. Pak bude jejich úkolem rozšířit cvičný datový soubor o další mořské tvory. Ve druhé části aktivity budou vybírat vlastní značky, které přidají k obrázkům náhodně vytvořených ryb. Tato cvičná data poslouží pro trénink modelu strojového učení, který by pak měl nové obrázky označovat automaticky.",
+          "purpose": "Tento výukový kurz je navržen tak, aby studentům poskytl stručný úvod do **strojového učení**, což je typ **umělé inteligence**. Studenti budou zkoumat, jak se používají **školící data** k tomu, aby bylo modelu strojového učení umožněno klasifikovat nová data. Studenti by měli během absolvování výukového kurzu prožívat příjemný prožitek, a co je ještě důležitější, mělo by je to motivovat k výuce počítačových věd. ",
           "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
         },
         "jigsaw/Jigsaw": {
@@ -441,6 +455,7 @@
         "coursed-2021/Dance Party": {
           "overview": "V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.",
           "preparation": "-   Projděte si hádanky a najděte případné problémové oblasti pro vaši třídu.\n-   Ujistěte se, že každý student má deník reflexí.\n-   Zvažte použití sluchátek. Při této aktivitě se využívá zvuk.",
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -528,6 +543,7 @@
         "express-2021/lesson-1": {
           "overview": "V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.",
           "preparation": "-   Projděte si hádanky a najděte případné problémové oblasti pro vaši třídu.\n-   Ujistěte se, že každý student má deník reflexí.\n-   Zvažte použití sluchátek. Při této aktivitě se využívá zvuk.",
+          "purpose": "Tato lekce představuje základní koncepty informatiky, a to kódování a událostmi řízení programování (pomocí bloků).",
           "student_overview": "Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek."
         },
         "express-2021/Loops with Rey and BB-8": {

@@ -671,6 +671,11 @@ in:
         PL_CSP_EIPMOverview: crwdns2857751:0crwdne2857751:0
         tesstest: crwdns2865694:0crwdne2865694:0
         CSA-PL-debugging-temp: crwdns2887208:0crwdne2887208:0
+        csd_app_lab_design_mode: crwdns2905986:0crwdne2905986:0
+        csd_app_lab_events: crwdns2905988:0crwdne2905988:0
+        PL_CSD_Unit4_AppTesting: crwdns2907916:0crwdne2907916:0
+        csd_u6_circuit_playground: crwdns2907918:0crwdne2907918:0
+        csd_u6_input_output: crwdns2907920:0crwdne2907920:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

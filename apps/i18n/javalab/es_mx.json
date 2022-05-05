@@ -1,6 +1,8 @@
 {
   "abortedTestResult": "{className} > {methodName} ABORTADO",
   "addAComment": "Añade un comentario",
+  "authorizerNearLimit": "Has ejecutado tu código demasiadas veces en la última hora. Has hecho {attemptsLeft} intentos antes de que tu cuenta sea bloqueada permanentemente y no podrás ejecutar el código Java. Por favor, espera 15 minutos antes de volver a intentarlo.",
+  "authorizerTokenUsed": "Está intentando reutilizar un token que ya ha ejecutado tu código. Por favor, comprueba que estás en una red segura antes de volver a intentarlo. Si crees que este mensaje es un error, ponte en contacto con support@code.org.",
   "authorLabel": "autor",
   "allFilesCompile": "¡Todos los archivos se compilaron!",
   "backpackFileNameConflictWarning": "Al guardar se sobrescribirá un archivo existente en la mochila.",
@@ -11,6 +13,7 @@
   "backpackSaveErrorMessage": "Vuelve a intentarlo",
   "cancel": "Cancelar",
   "clearConsole": "Borrar Consola",
+  "classroomBlocked": "Tu sección ha ejecutado el código demasiadas veces y ha sido bloqueada. Pide a tu profesor que se ponga en contacto con support@code.org para desbloquear la sección.",
   "classNotFound": "Error: uno o más de tus archivos Java no tienen una definición de clase.",
   "commentUpdateError": "Hubo un error al procesar tu solicitud. Vuelve a intentarlo.",
   "commit": "Enviar",
@@ -24,6 +27,7 @@
   "compilerError": "No hemos podido compilar el programa. Busca errores en tu programa y vuelve a intentarlo.",
   "compiling": "Compilando...",
   "compilingProgram": "'Compilando el programa...",
+  "connecting": "Conectando...",
   "console": "Consola",
   "delete": "Borrar",
   "deleteFileConfirmation": "¿Estás seguro de que quieres borrar {filename}?",
@@ -93,6 +97,7 @@
   "noCodeReviewUntilStudentEditsCode": "No puedes dejar comentarios hasta que el propietario del proyecto haya modificado el código por defecto y haya pulsado el botón \"Ejecutar\"",
   "noMainMethod": "Error: Tu programa no contiene un método principal.",
   "noOtherReviews": "Todavía no hay ningún otro proyecto listo para ser revisado.",
+  "noTestsFound": "No se encontraron pruebas.",
   "onlyVisibleToYou": "los comentarios de los profesores sólo son visibles para ti",
   "programCompleted": "Programa completado.",
   "refresh": "Actualizar",
@@ -116,5 +121,6 @@
   "teacherLabel": "Profesor",
   "togglePeerReviewError": "Ocurrió un error al habilitar/deshabilitar la revisión por pares. Vuelve a intentarlo.",
   "unknownError": "Ups. Hemos encontrado un error. Intenta ejecutar tu programa de nuevo. Si este error continúa, ponte en contacto con nosotros a support@code.org. Asegúrate de incluir el ID de conexión {connectionId} en tu mensaje.{type}",
+  "userBlocked": "Has ejecutado el código demasiadas veces y tu cuenta ha sido bloqueada. Ponte en contacto con support@code.org para desbloquear la cuenta.",
   "yourPeer": "tu compañero"
 }
