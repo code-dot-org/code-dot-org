@@ -1622,7 +1622,6 @@ class Script < ApplicationRecord
     data['lessons'] = {}
     lessons.each do |lesson|
       lesson_data = {
-        'key' => lesson.key,
         'name' => lesson.name,
       }
       data['lessons'][lesson.key] = lesson_data
