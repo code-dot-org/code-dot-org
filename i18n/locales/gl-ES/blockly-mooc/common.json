@@ -409,6 +409,8 @@
   "pairingNavigatorWarning": "Este crebacabezas foi completado en colaboración con {driver}. Busca este crebacabezas nas súas contas para ver a solución que creastes como equipo.",
   "pairProgramming": "Programación por parellas",
   "parent": "Pai / Nai",
+  "participantTypeStudentTitle": "Alumnas/os",
+  "participantTypeTeacherTitle": "Mestres",
   "password": "Contrasinal",
   "passwordConfirmation": "Confirmación do contrasinal",
   "personalLoginDialog_button": "Seguinte",

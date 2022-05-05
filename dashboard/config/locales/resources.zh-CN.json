@@ -26,7 +26,8 @@
           "name": "《小艺术家》简介"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "转向与角度"
+          "name": "转向与角度",
+          "type": "学生手册"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "转向与角度"
@@ -35,9 +36,28 @@
           "name": "Spotify 播放列表（所有年龄段）"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "加密和公钥",
           "type": "视频"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "代码开发环境中的加密工具"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "活动指南 - 文本压缩"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "活动回顾 - 解码消息",
+          "type": "活动回顾"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "解码此信息"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "代码工作室的文本压缩工具",
+          "type": "小组件"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "视频：Aloe Blacc文本压缩",
           "type": "视频"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -486,26 +506,32 @@
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "向你介绍精灵图实验室"
+          "name": "向你介绍精灵图实验室",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "探索应用程序"
+          "name": "探索应用程序",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "向你介绍精灵图实验室",
+          "url": "https://youtu.be/yd-9xZ275dM",
           "type": "视频"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "探索应用程序"
+          "name": "探索应用程序",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
-          "name": "制作精灵图"
+          "name": "制作精灵图",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "精灵图实验室文档"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "动作精灵图"
+          "name": "动作精灵图",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "视频"
@@ -571,7 +597,8 @@
           "name": "最终项目设计"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "计算机基础结课设计"
+          "name": "计算机基础结课设计",
+          "type": "评分准则"
         },
         "implementation_guide/coursef/2021": {
           "name": "实施指南"
@@ -588,6 +615,12 @@
         "virtual_lesson_modifications/coursef/2021": {
           "name": "虚拟课程修改",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "学生手册"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "学生手册"
         },
         "mimi-activity/courseb/2021": {
           "name": "移动它，移动它！"
@@ -673,6 +706,9 @@
           "name": "虚拟课程修改",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "type": "学生手册"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "结对编程"
         },
@@ -748,6 +784,9 @@
           "name": "虚拟课程修改",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "学生手册"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "我的机器人朋友"
         },
@@ -783,7 +822,8 @@
           "name": "转向与角度"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "转向与角度"
+          "name": "转向与角度",
+          "type": "学生手册"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "大事件"
@@ -913,6 +953,9 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "用 扑克牌 的 条件子句"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "项目指引"
+        },
         "implementation_guide/coursed/2021": {
           "name": "实施指南"
         },
@@ -975,8 +1018,12 @@
         "variables_video/express/2021": {
           "name": "变量"
         },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "项目指引"
+        },
         "rubric-csf-final-projects/express/2021": {
-          "name": "计算机基础结课设计"
+          "name": "计算机基础结课设计",
+          "type": "评分准则"
         },
         "teacher_forum_1/express/2021": {
           "name": "教师论坛"
@@ -1003,6 +1050,9 @@
         "sprite_lab_documentation/coursee/2021": {
           "name": "精灵图实验室文档"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "学生手册"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "在线暂停与思考",
           "type": "视频"
@@ -1011,7 +1061,8 @@
           "type": "视频"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "转向与角度"
+          "name": "转向与角度",
+          "type": "学生手册"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "转向与角度"
@@ -1039,7 +1090,8 @@
           "name": "辅助功能设计"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "计算机基础结课设计"
+          "name": "计算机基础结课设计",
+          "type": "评分准则"
         },
         "design-process/coursee/2021": {
           "name": "设计流程"
@@ -1101,8 +1153,14 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "视频"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "学生手册"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "视频"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "评分准则"
         },
         "survey_planning/csd/2021": {
           "name": "设计数据收集"
@@ -1113,6 +1171,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "视频"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "评分准则"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "视频"
         },
@@ -1120,7 +1181,8 @@
           "type": "反射"
         },
         "paper-prototypes/csd/2021": {
-          "name": "纸面原型"
+          "name": "纸面原型",
+          "type": "评分准则"
         },
         "market-research/csd/2021": {
           "name": "市场研究"
@@ -1160,13 +1222,24 @@
           "name": "响应用户输入"
         },
         "app-presentation/csd/2021": {
-          "name": "应用程序演示"
+          "name": "应用程序演示",
+          "type": "评分准则"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "应用程序演示"
         },
         "teacher_forum/csd/2021": {
           "name": "教师论坛"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "计算创新"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "视频"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "计算机科学正在改变一切",
+          "type": "视频"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "使用代码设计屏幕"
@@ -1196,6 +1269,9 @@
         "changing_sensor_scale/csd/2021": {
           "name": "改变传感器的级别"
         },
+        "emoji-race-guide/csd/2021": {
+          "type": "项目指引"
+        },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "布尔值和比较运算符"
         },
@@ -1204,6 +1280,9 @@
         },
         "if_statements_1/csd/2021": {
           "name": "If 语句"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "评分准则"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "数组的简介",
@@ -1214,6 +1293,9 @@
         },
         "circuits_and_leds/csd/2021": {
           "name": "电路和 LED"
+        },
+        "playing_notes/csd/2021": {
+          "name": "角色备注"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "计数循环",
@@ -1235,6 +1317,21 @@
           "name": "计算机如何工作：电路和逻辑",
           "type": "视频"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "项目指引"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "评分准则"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "项目指引"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "表示事项"
+        },
+        "representation-matters/csd/2021": {
+          "name": "表示事项"
+        },
         "representing-information-1/csd/2021": {
           "name": "代表信息"
         },
@@ -1247,6 +1344,9 @@
         },
         "keeping-data-secret-exemplar-2019/csd/2021": {
           "name": "数据保密"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "评分准则"
         },
         "structuring_data/csd/2021": {
           "name": "构造数据"
@@ -1288,6 +1388,7 @@
           "name": "在现实世界里的数据"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "视频：对社会的影响",
           "type": "视频"
         },
         "video_machine_learning/csd/2021": {
@@ -1295,10 +1396,17 @@
           "type": "视频"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "视频：训练数据和偏差",
           "type": "视频"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "互相检查"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "评分准则"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "项目指引"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "绘制形状"
@@ -1345,6 +1453,9 @@
         "sprite_properties/csd/2021": {
           "name": "精灵图属性"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "评分准则"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "视频"
         },
@@ -1360,6 +1471,9 @@
         },
         "the_counter_pattern/csd/2021": {
           "name": "计数器模式"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "评分准则"
         },
         "boolean_expressions/csd/2021": {
           "name": "布尔表达式",
@@ -1386,14 +1500,16 @@
           "name": "互动卡"
         },
         "interactive-card-project-guide-2019/csd/2021": {
-          "name": "互动卡"
+          "name": "互动卡",
+          "type": "项目指引"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "互动卡",
           "type": "互相检查"
         },
         "interactive_card/csd/2021": {
-          "name": "互动卡"
+          "name": "互动卡",
+          "type": "评分准则"
         },
         "velocity_1/csd/2021": {
           "name": "矢量",
@@ -1408,8 +1524,22 @@
         "collision_detection/csd/2021": {
           "name": "碰撞检测"
         },
+        "side-scroller-1/csd/2021": {
+          "name": "侧边滚动栏",
+          "type": "评分准则"
+        },
+        "side-scroller/csd/2021": {
+          "name": "侧边滚动栏",
+          "type": "项目指引"
+        },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "速度和计数模式"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "评分准则"
+        },
+        "flyer-game/csd/2021": {
+          "type": "项目指引"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "函数",
@@ -1418,11 +1548,30 @@
         "functions_1/csd/2021": {
           "name": "函数"
         },
+        "make-your-own-game/csd/2021": {
+          "type": "项目指引"
+        },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "互相检查"
         },
+        "make_your_own_game/csd/2021": {
+          "type": "评分准则"
+        },
         "teacher_forum_1/csd/2021": {
           "name": "教师论坛"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "解决问题的过程"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "解决问题的过程",
+          "type": "视频"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "解决问题的过程"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "解决问题的过程"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "什么是计算机？"
@@ -1447,7 +1596,14 @@
           "type": "互相检查"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "应用程序和问题解决"
+          "name": "应用程序和问题解决",
+          "type": "评分准则"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "探索网页"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "探索网页"
         },
         "html_tags/csd/2021": {
           "name": "HTML 标签"
@@ -1459,16 +1615,24 @@
           "type": "视频"
         },
         "video_pair_programming/csd/2021": {
+          "name": "视频：结对编程",
           "type": "视频"
         },
         "headings_and_paragraphs/csd/2021": {
           "name": "标题和段落"
         },
         "video_debugging/csd/2021": {
+          "name": "视频：调试",
           "type": "视频"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "评分准则"
         },
         "html-web-page/csd/2021": {
           "type": "互相检查"
+        },
+        "html-page/csd/2021": {
+          "type": "项目指引"
         },
         "formatting_html/csd/2021": {
           "name": "格式化 HTML"
@@ -1487,8 +1651,14 @@
           "name": "CSS介绍 -第 2 部分",
           "type": "视频"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "评分准则"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "互相检查"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "项目指引"
         },
         "creative-commons-video/csd/2021": {
           "type": "视频"
@@ -1502,8 +1672,17 @@
         "layout-properties/csd/2021": {
           "name": "布局属性"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "项目指引"
+        },
         "personal-web-page-1/csd/2021": {
           "type": "互相检查"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "项目指引"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "评分准则"
         },
         "publishing_your_website/csd/2021": {
           "name": "发布您的网站",
@@ -1519,6 +1698,7 @@
           "type": "视频"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "视频：团队合作",
           "type": "视频"
         },
         "how-search-works-video/csd/2021": {
@@ -1527,11 +1707,20 @@
         "classes/csd/2021": {
           "name": "班级"
         },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "评分准则"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "项目指引"
+        },
         "hyperlinks/csd/2021": {
           "name": "超链接"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "互相检查"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "项目指引"
         },
         "lesson_plans/pre-express/2020": {
           "name": "课程计划"

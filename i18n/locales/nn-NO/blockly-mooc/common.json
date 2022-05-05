@@ -904,6 +904,8 @@
   "parent": "Forelder",
   "parents": "Føresette",
   "parentsAndStudents": "Føresette og elevar",
+  "participantTypeStudentTitle": "Elevar",
+  "participantTypeTeacherTitle": "Lærarar",
   "password": "Passord",
   "passwordConfirmation": "Stadfesting av passord",
   "passwordTooShort": "Passord for kort (minimum seks teikn)",

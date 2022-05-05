@@ -494,6 +494,8 @@
   "overview": "بررسی اجمالی",
   "pairProgramming": "برنامه نویسی دوتایی",
   "parent": "پدر/مادر",
+  "participantTypeStudentTitle": "دانش آموزان",
+  "participantTypeTeacherTitle": "دبیران",
   "password": "کلمه عبور",
   "passwordConfirmation": "تکرار کلمه عبور",
   "personalLoginDialog_button": "بعدي",

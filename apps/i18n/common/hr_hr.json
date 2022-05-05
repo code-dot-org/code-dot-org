@@ -272,6 +272,8 @@
   "parent": "Roditelj",
   "parentLetterSectionSignIn": "Idu na [{sectionLink}]({sectionLink}) i kliknu na njihovo ime",
   "parentLetterSecretWords": "Upišite njihove tajne riječi {secretWords}, a zatim kliknite \"Prijava\"",
+  "participantTypeStudentTitle": "Učenici",
+  "participantTypeTeacherTitle": "Učitelji",
   "password": "Lozinka",
   "passwordConfirmation": "Potvrda lozinke",
   "personalLoginDialog_button": "Sljedeći",

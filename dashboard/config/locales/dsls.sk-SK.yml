@@ -507,6 +507,7 @@ sk-SK:
           sa svojho plánu pre tvorbu aplikácie\n1. **Vyhodnoť a Uprav**\n   * Vymeňte
           si navzájom aplikácie a pomôžte ich vylepšiť\n1. **Prezentuj**\n   * Predveď
           svoj finálny produkt!"
+        content1: Sem pridať popis
       Begin planning your project_2018:
         markdown: "# Proces tvorby\nPri tvorbe softvéru neustále riešite množstvo
           drobných problémov. Najzávažnejší z nich je, čo treba vytvoriť ako prvé.
@@ -539,6 +540,7 @@ sk-SK:
           sa svojho plánu pre tvorbu aplikácie\n1. **Vyhodnoť a Uprav**\n   * Vymeňte
           si navzájom aplikácie a pomôžte ich vylepšiť\n1. **Prezentuj**\n   * Predveď
           svoj finálny produkt!"
+        content1: Sem pridať popis
       Begin planning your project_2018_2019:
         markdown: |+
           # Príklady projektov
@@ -550,6 +552,7 @@ sk-SK:
           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
 
+        content1: Sem pridať popis
       Begin planning your project_2018_2019_2020:
         markdown: |+
           # Príklady projektov
@@ -561,6 +564,7 @@ sk-SK:
           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
 
+        content1: Sem pridať popis
       BigEvent-Unplugged:
         markdown: |-
           Veľká udalosť
@@ -838,10 +842,12 @@ sk-SK:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+        content1: Sem pridať popis
       CSD U3 Card Examples_2018_2019:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+        content1: Sem pridať popis
       CSD U3 Collisions SFLP:
         markdown: |
           # Prehľad
@@ -1305,6 +1311,7 @@ sk-SK:
           hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
           objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
           na svojej hre pracovať.\n"
+        content1: Sem pridať popis
       CSD U3 game intro_2018:
         markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
           na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
@@ -1317,6 +1324,7 @@ sk-SK:
           hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
           objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
           na svojej hre pracovať.\n"
+        content1: Sem pridať popis
       CSD U3 game intro_2018_2019:
         markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
           na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
@@ -1329,21 +1337,25 @@ sk-SK:
           hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
           objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
           na svojej hre pracovať.\n"
+        content1: Sem pridať popis
       CSD U3 platform intro:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
 
           V nasledujúcich leveloch vytvoríš plošinovú skákaciu hru. Predtým si pozri Sprievodcu projektom pre tento projekt. Počkaj tiež na pokyn učiteľa a až potom pokračuj ďalej.
+        content1: Sem pridať popis
       CSD U3 platform intro_2018:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
 
           V nasledujúcich leveloch vytvoríš plošinovú skákaciu hru. Predtým si pozri Sprievodcu projektom pre tento projekt. Počkaj tiež na pokyn učiteľa a až potom pokračuj ďalej.
+        content1: Sem pridať popis
       CSD U3 platform intro_2018_2019:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
 
           V nasledujúcich leveloch vytvoríš plošinovú skákaciu hru. Predtým si pozri Sprievodcu projektom pre tento projekt. Počkaj tiež na pokyn učiteľa a až potom pokračuj ďalej.
+        content1: Sem pridať popis
       CSD U6 array multi:
         answers:
         - {}
@@ -1846,6 +1858,7 @@ sk-SK:
           |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
           | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
 
+        content1: Sem pridať popis
       PowerOfWords-Unplugged:
         markdown: |-
           # Sila slov
@@ -1861,6 +1874,7 @@ sk-SK:
           # Prezentácia projektov
 
           Nastal čas prezentovať tvoj projekt. Viac informácií o prezentácii pred spolužiakmi dostaneš od učiteľa.
+        content1: Sem pridať popis
       Prepare for your presentation_2018:
         markdown: |-
           # Prezentácia projektov
@@ -4144,6 +4158,7 @@ sk-SK:
           #  Skvelý digitálny občan
 
           ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+        content1: Sem pridať popis
       csf_digital_trails:
         markdown: |-
           # Nasleduj digitálnu stopu
@@ -4162,6 +4177,7 @@ sk-SK:
           * Vo svojom hesle použi písmená, číslice a **znaky**.
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+        content1: Sem pridať popis
       csf_putting_a_stop_to_online_meanness:
         markdown: |
           # STOP zlomyseľnosti
@@ -4172,6 +4188,7 @@ sk-SK:
           * **T**oto všetko povedz nejakému dospelákovi.
           * **O**verené stránky najprv.
           * **P**očkaj a popremýšľaj.
+        content1: Sem pridať popis
       csf_safety_in_my_online_neighborhood:
         markdown: "# Moja online štvrť\n\n##  Ako sa bezpečne presúvať na miesta v
           online svete? "
@@ -4432,19 +4449,20 @@ sk-SK:
 
           V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.
       Terminology Recap:
-        markdown: "# Pauza a rekapitulácia\n\nSprávy šifrované pomocou **cézarovej
+        markdown: "# Pauza a rekapitulácia\n\nSprávy šifrované pomocou **Cézarovej
           šifry** je možné veľmi ľahko prelomiť a to prostredníctvom výpočtových nástrojov.
           Teraz, keď si si vyskúšal prelomiť abecednú šifru (celkom v pohode, čo?),
           skúsime niečo trochu ťažšie. \n\n**Zhrnutie nových pojmov**\n\n* **Zašifrovanie**
-          - proces, pomocou ktorého vieme zakódovať tajné správy, takže ju budú vedieť
-          prečítať iba tí, ktorí sú na to autorizovaní.\n* **Dešifrovanie** - opačný
+          – proces, pomocou ktorého vieme zakódovať tajné správy, takže ju budú vedieť
+          prečítať iba tí, ktorí sú na to autorizovaní.\n* **Dešifrovanie** – opačný
           proces, ktorý rozlúšti danú šifru a odhalí originálny text správy.\n* **Šifra**
-          - pojem, ktorý označuje techniku (alebo algoritmus) šifrovania správ. \n*
-          **Cézarova šifra** - technika, ktorá zašifruje správu posunutím abecedy
-          o zopár znakov alebo čísel.\n* **Prelomiť šifru** - keď sa snažíš dekódovať
-          tajnú správu *bez* toho, aby si vedel techniku šifrovania. V podstate sa
-          snažíš **prelomiť** zašifrovanú správu. \n\nStlač Pokračovať, aby sa ti
-          zobrazila **Nová výzva**...\n\n \n"
+          – pojem, ktorý označuje techniku (alebo algoritmus) šifrovania správ. \n*
+          **Cézarova šifra** – technika, ktorá zašifruje správu posunutím abecedy
+          o zopár znakov alebo čísel.\n* **Prelomiť šifru** – keď sa snažíš dekódovať
+          tajnú správu *bez* poznania techniky šifrovania. V podstate sa snažíš **prelomiť**
+          zašifrovanú správu. \n\nStlač Pokračovať, aby sa ti zobrazila **Nová výzva**...\n\n
+          \n"
+        content1: Sem pridať popis
       csd-pre-survey-levelgroup_2019:
         title: Objavujeme Informatiku - Študentský dotazník pred kurzom
       CSD Interactive Animations and Games Post-Project Test:
@@ -4559,52 +4577,54 @@ sk-SK:
 
           <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
       New Challenge Introduction:
-        markdown: "### Nová výzva: Rozlúšti náhodnú substitučnú šifru...s novým widgetom
+        markdown: "### Nová výzva: Rozlúšti náhodnú substitučnú šifru... s novým widgetom
           \n\nČo ak by sme namiesto posunutia celej abecedy namapovali každé písmeno
-          abecedy na iné náhodné písmeno abecedy? Toto sa nazýva ** náhodná substitučná
-          šifra. ** \n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nTeraz,
+          abecedy na iné náhodné písmeno? Toto sa nazýva **šifra s náhodnou substitúciou**.
+          \n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nTeraz
           namiesto toho, aby bola tajná správa kódovaná jednoduchým abecedným posunom,
-          budeš čeliť správam kódovaným pomocou ** náhodnéj substitučnej šifry**.
-          \ \n\n\n\nJe to oveľa viac náročnejšie na rozlúštenie a vyžaduje si to sofistikovanejší
-          nástroj, takže...\n\nKeď klikneš na pokračovať, uvidíš **nová, sofistikovanejšia
-          verzia šifrovacieho nástroja**, ktorá ti ukáže množstvo rôznych vecí. \n\nČo
-          to však robí, je trochu záhadou!\n\n### Tvoja úloha:\n\n * Zisti čo sa deje
-          v tejto novej verzii nástroja\n * Aké informácie sa ti predkladajú?\n *
-          Zisti čo ti nástroj umožní\n * Ako obvykle: nemôžeš to prelomiť. Takže klikaj
-          na veci naokolo.\n * Ak sa ti to podarí rozlúštiť, môžeš prelomiť správu
-          zakódovanú náhodnou substitučnou šifrou.\n \n### Nápoveda\n\n* Vedel si,
-          že **E** je najpoužívanejším písmenom v angličtine?\n\n### Zíďte sa znovu
-          a diskutujte\n Po určitom čase hrania by si sa mal s niekým - partnerom,
-          malou skupinou alebo celou triedou - stretnúť, porozprávať o tom, čo ste
-          našli, a overiť si, že viete, čo sa deje a poznáte rôzne spôsoby, ako môžete
-          tento nástroj použiť.\n"
+          budeš čeliť správam kódovaným pomocou **šifry s náhodnou substitúciou**.
+          \ \n\n\n\nJe to oveľa viac náročnejšie na prelomenie potrebuješ dômyselnejší
+          nástroj, takže...\n\nKeď klikneš na pokračovať, uvidíš **novú, dômyselnejšiu
+          verziu šifrovacieho nástroja**, ktorá ti ukáže množstvo rôznych vecí. \n\nČo
+          to však robí, je trochu záhadou!\n\n### Tvoja úloha:\n\n * Zisti, čo sa
+          deje v tejto novej verzii nástroja.\n * Aké informácie sa ti zobrazujú?\n
+          * Zisti, čo môžeš v nástroji robiť.\n * Ako obvykle: Nástroj sa nedá pokaziť.
+          Takže pokojne klikaj na veci naokolo a skúšaj.\n * Ak sa ti to podarí rozlúštiť,
+          môžeš prelomiť správu zakódovanú náhodnou substitučnou šifrou.\n \n### Pomôcka\n\n*
+          Vieš, že **E** je najpoužívanejším písmenom v angličtine?\n\n### Diskutujte
+          spoločne\n Po určitom čase hrania sa porozprávaj s niekým, či už partnerom,
+          malou skupinou alebo celou triedou, o tom, čo ste zistili. Overte si, že
+          viete, čo sa deje, a poznáte rôzne spôsoby, ako môžete tento nástroj použiť.\n"
+        content1: Sem pridať popis
       'Technique: Frequency Analysis':
         markdown: "# Prelomenie substitučných šifier\n\nNajlepšia metóda na prelomenie
-          náhodných substitučných šifier je známa ako **frekvenčná analýza** \n\nParafrázované
-          z: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* **Frekvenčná
+          šifier s náhodnou substitúciou je známa ako **frekvenčná analýza** \n\nParafráza
+          z: [Wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* **Frekvenčná
           analýza** je metóda založená na tom, ako *často* sa určité písmená vyskytujú
-          v angličtine oproti iným.\n* Napríklad, vzhľadom na časť anglického textu,
-          *E*, *T*, *A* a *O* sa vyskytujú najčastejšie, zatiaľ čo *Z*, *Q* a *X*
-          zriedkavo. Rovnako, *TH*, *ER*, *ON*, a *AN* sú najčastejšie páry písmen,
-          ktoré sa vyskytujú vedľa seba.\n* Distribúcia písmen je v skutočnosti zhruba
-          rovnaká pre takmer *všetky* vzory anglického textu. \n\n\nVerzia widgetu
-          na predchádzajúcej strane by ti mala pomôcť **prelomiť substitučnú šifru
-          pomocou frekvenčnej analýzy**.\n\nAnalýzou frekvencie písmen v šifrovanej
-          správe v porovnaní s frekvenciou písmen v typickej anglickom texte môžeš
-          začať zužovať, čo by mohli byť niektoré mapovania písmen.\n\nTento nástroj
-          ukazuje, ako je porovnaná frekvencia písmen v šifrovanom texte (oranžová)
-          s frekvenciami typickými v angličtine (modrá).\n\n### Nápoveda: Kde začať?\n\n1.
-          Nájdi najskôr krátke slová a \"prelom\" tie.  Koľko jedno-písmenových slov
-          poznáš? (\"a\").  Časté troj-písmenové slovo je \"the\".\n2. Ak to urobíš,
-          máš náhradu za najbežnejšie písmená. Mal by si byť schopný používať intuíciu,
-          aby si sa pozrel na iné slová s týmito čiastočnými substitúciami a dosiahol
-          dobrý odhad.\n3. Po nájdení pár náročných písmen bude zbytok rýchly.\n4.
-          Porovnanie frekvencií písmen poskytuje dobrý prehľad pre uskutočnenie rozumných
-          odhadov.\n\n### Skús toto:\nAnimácia nižšie ukazuje ako niekto začína. Toto
-          skúsili\n\n* Najskôr roztrieď znaky podľa frekvencie. \n* Identifikuj skupinu
-          znakov, ktoré môžu byť namapované na slovo `the`.  \nDobrý začiatok!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
-          Je náhodná substitúcia dobrá? \n* Ako dlho ti trvá po krátkej praxi, prelomiť
-          náhodnú substitučnú šifru?\n* Je to dobre alebo zle?"
+          v angličtine v porovnaní s inými.\n* Napríklad v anglickom texte sa písmená
+          *E*, *T*, *A* a *O* vyskytujú najčastejšie, zatiaľ čo písmená *Z*, *Q* a
+          *X* sú zriedkavé. Rovnako, *TH*, *ER*, *ON*, a *AN* sú najčastejšie páry
+          písmen, ktoré sa vyskytujú vedľa seba.\n* Zastúpenie písmen je v skutočnosti
+          zhruba rovnaké v takmer *všetkých* vzorkách anglického textu. \n\n\nVerzia
+          widgetu na predchádzajúcej stránke by ti mala pomôcť **prelomiť substitučnú
+          šifru pomocou frekvenčnej analýzy**.\n\nAnalýzou frekvencie písmen v šifrovanej
+          správe v porovnaní s frekvenciou písmen v typickom anglickom texte môžeš
+          začať spresňovať, čo by mohli byť niektoré mapovania písmen.\n\nTento nástroj
+          ukazuje porovnanie frekvencie písmen v šifrovanom texte (oranžová) s frekvenciami
+          typickými v angličtine (modrá).\n\n### Pomôcka: Kde začať?\n\n1. Nájdi najskôr
+          krátke slová a „prelom“ tie.  Koľko jednopísmenových slov poznáš? („a“).
+          \ Časté trojpísmenové slovo je napríklad „the“.\n2. Ak to urobíš, získaš
+          substitúcie pre najbežnejšie písmená. Teraz sa môžeš pokúsiť intuitívne
+          rozlúštiť iné slová pomocou týchto čiastočných substitúcií.\n3. Keď rozlúštiš
+          zopár náročných písmen, zvyšok ti pôjde rýchlo.\n4. Porovnanie frekvencie
+          písmen poskytuje dobrý základ pre uskutočnenie spoľahlivých odhadov.\n\n###
+          Skús toto:\nAnimácia nižšie ukazuje pokusy niekoho iného. Zatiaľ vyskúšali
+          toto:\n\n* Najskôr roztriedili znaky podľa frekvencie. \n* Identifikovali
+          skupinu znakov, ktoré môžu byť namapované na slovo „the“.  \nTo je dobrý
+          začiatok!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Je náhodná substitúcia dobrá? \n* Ako dlho ti trvá po krátkom nácviku prelomiť
+          šifru s náhodnou substitúciou?\n* Je to dobré alebo zlé?"
+        content1: Sem pridať popis
       'Overview: Design Mode':
         markdown: |-
           # Vitajte v dizajnovom režime App Labu
@@ -4885,6 +4905,7 @@ sk-SK:
           - Sprievodca aktivitami](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)\n"
         teacher_markdown: "* [Účel webovej stránky - Príklad](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
+        content1: Sem pridať popis
       CSD U2 L2 Overview:
         teacher_markdown: "* [Náčrt osobnej webovej stránky ](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
           - Príklad([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
@@ -4898,6 +4919,7 @@ sk-SK:
           webovej stránky** -  surový text, obrázky a ostatné prvky zahrnuté na webevej
           stánke \n\n\n## Materiál\n\n* [Náčrt osobnej webovej stránky  - Sprievodca
           aktivitami](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+        content1: Sem pridať popis
       CSD U2 Top Websites:
         markdown: "# Najlepšie webové stránky \n\nNižšie sú najviac navštevované webové
           stánky aj so stručným popisom na čo slúžia . \n\n1. Google.com - vyhľadávač
@@ -4960,6 +4982,7 @@ sk-SK:
           **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`\n*
           **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n* **[Body](//studio.code.org/docs/weblab/body/)**
           - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
+        content1: Sem pridať popis
       CSD U1 Test:
         title: 'Záverečný test: Počítače a riešenie problémov'
       CSD User Centered Design Post-Project Test:
@@ -4975,6 +4998,7 @@ sk-SK:
           stránkou svojho projektu . \n\n## Slovník\n\n* **Nadpis** - zhrnutie dokumentu
           alebo časti dokumentu.\n\n## Úvodný kód \n\n*  **[Nadpis](//studio.code.org/docs/weblab/h/)**
           - `<h1></h1>`\n"
+        content1: Sem pridať popis
       CSD U2 L5 Overview:
         markdown: "# Prehľad\n\nTáto lekcia trocha odbočí od vytvrárania stránok a
           zameria sa na to, ako si ľudia vyberajú informácie ,ktoré zdieľajú digitálne
@@ -4990,6 +5014,7 @@ sk-SK:
         teacher_markdown: |-
           * [Kedy záleží na tvojom súkromí ?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Sprievodca aktivitami- Príklad  ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
           * [Sociálny detektív](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc)
+        content1: Sem pridať popis
       CSD U2 L6 Overview:
         markdown: "# Prehľad\n\nV tejto lekcii sa trieda oboznám s usporiadanými a
           neusporiadanými zoznami a súvisiacimi  &lt;ul&gt;, &lt;ol&gt;, a &lt;li&gt;
@@ -4999,6 +5024,7 @@ sk-SK:
           - `<ul></ul>`\n*  **[Zoznam položiek](//studio.code.org/docs/weblab/li/)**
           - `<li></li>`\n*  **[Usporiadaný zoznam](//studio.code.org/docs/weblab/ol/)**
           - `<ol></ol>`"
+        content1: Sem pridať popis
       CSD Web Development Post-Project Test:
         title: 'Záverečný test: Vývoj webových stránok'
       Responding to User Input:
@@ -6087,6 +6113,7 @@ sk-SK:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+        content1: Sem pridať popis
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
         answers:
         - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
@@ -6148,6 +6175,7 @@ sk-SK:
           hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
           objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
           na svojej hre pracovať.\n"
+        content1: Sem pridať popis
       CSD U5 test_2021:
         title: 'Záverečný test: Údaje a spoločnosť'
       CSD U6 array multi_2021:
@@ -6215,3 +6243,149 @@ sk-SK:
         title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
         title: Objavujeme informatiku - rýchly prieskum!
+      CSD U2 Design Project:
+        content1: Sem pridať popis
+      CSD U2 Design Project_2018:
+        content1: Sem pridať popis
+      CSD U2 Design Project_2018_2019:
+        content1: Sem pridať popis
+      CSD U2 Lesson 6 Overview:
+        content1: Sem pridať popis
+      CSD U2 expand project:
+        content1: Sem pridať popis
+      CSD U2 expand project_2018:
+        content1: Sem pridať popis
+      CSD U2 expand project_2018_2019:
+        content1: Sem pridať popis
+      CSD U2 project guide:
+        content1: Sem pridať popis
+      CSD U2 project guide_2018:
+        content1: Sem pridať popis
+      CSD U2 project guide_2018_2019:
+        content1: Sem pridať popis
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: Sem pridať popis
+      CSD U3 combining rep:
+        content1: Sem pridať popis
+      CSD U3 combining rep_2018:
+        content1: Sem pridať popis
+      CSD U3 combining rep_2018_2019:
+        content1: Sem pridať popis
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: Sem pridať popis
+      CSD U5 Encryption 1:
+        content1: Sem pridať popis
+      CSD U5 Encryption 1_2018:
+        content1: Sem pridať popis
+      CSD U5 Encryption 1_2018_2019:
+        content1: Sem pridať popis
+      CSD U5 Encryption 2:
+        content1: Sem pridať popis
+      CSD U5 Encryption 2_2018:
+        content1: Sem pridať popis
+      CSD U5 Encryption 2_2018_2019:
+        content1: Sem pridať popis
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: Sem pridať popis
+      CSD U5 crosstab warmup:
+        content1: Sem pridať popis
+      CSD U5 crosstab warmup_2018:
+        content1: Sem pridať popis
+      CSD U5 crosstab warmup_2018_2019:
+        content1: Sem pridať popis
+      CSD U5 data visualization:
+        content1: Sem pridať popis
+      CSD U5 data visualization_2018:
+        content1: Sem pridať popis
+      CSD U5 data visualization_2018_2019:
+        content1: Sem pridať popis
+      CSD U5 student record:
+        content1: Sem pridať popis
+      CSD U5 student record_2018:
+        content1: Sem pridať popis
+      CSD U5 student record_2018_2019:
+        content1: Sem pridať popis
+      CSD U6 LED create intro:
+        content1: Sem pridať popis
+      CSD U6 LED create intro_2018:
+        content1: Sem pridať popis
+      CSD U6 LED create intro_2018_2019:
+        content1: Sem pridať popis
+      CSD U6 LED create intro_2021:
+        content1: Sem pridať popis
+      CSD U6 final intro:
+        content1: Sem pridať popis
+      CSD U6 final intro_2018:
+        content1: Sem pridať popis
+      CSD U6 final intro_2018_2019:
+        content1: Sem pridať popis
+      CSD U6 final intro_2021:
+        content1: Sem pridať popis
+      Internet Simulator Setup:
+        content1: Sem pridať popis
+      Internet Simulator Setup 2:
+        content1: Sem pridať popis
+      Internet Simulator Setup 3:
+        content1: Sem pridať popis
+      Multi-Screen Apps:
+        content1: Sem pridať popis
+      OPD-K5 Reviewing Reflections:
+        content1: Sem pridať popis
+      OPD-K5 Stage3aGo:
+        content1: Sem pridať popis
+      OPD-K5 Stage3aGo_copy:
+        content1: Sem pridať popis
+      OPD-K5 Stage3aGo_dani:
+        content1: Sem pridať popis
+      OPD-K5 conditionals introduced:
+        content1: Sem pridať popis
+      OPD-K5 debugging:
+        content1: Sem pridať popis
+      OPD-K5 diving deeper intro:
+        content1: Sem pridať popis
+      OPD-K5 events introduced:
+        content1: Sem pridať popis
+      OPD-K5 for loops:
+        content1: Sem pridať popis
+      OPD-K5 for loops intro:
+        content1: Sem pridať popis
+      OPD-K5 for loops introduction:
+        content1: Sem pridať popis
+      OPD-K5 functions introduced:
+        content1: Sem pridať popis
+      OPD-K5 journaling:
+        content1: Sem pridať popis
+      OPD-K5 lesson implementation planning:
+        content1: Sem pridať popis
+      OPD-K5 lesson plans:
+        content1: Sem pridať popis
+      OPD-K5 loops introduced:
+        content1: Sem pridať popis
+      OPD-K5 project:
+        content1: Sem pridať popis
+      OPD-K5 projects introduction:
+        content1: Sem pridať popis
+      OPD-K5 role_of_teacher:
+        content1: Sem pridať popis
+      OPD-K5 sequencing introduced:
+        content1: Sem pridať popis
+      OPD-K5 sprite lab:
+        content1: Sem pridať popis
+      OPD-K5 sprite lab introduction:
+        content1: Sem pridať popis
+      OPD-K5 sprite lab unplugged:
+        content1: Sem pridať popis
+      OPD-K5 sprite lab video:
+        content1: Sem pridať popis
+      OPD-K5 types of lessons:
+        content1: Sem pridať popis
+      OPD-K5 using lesson plans:
+        content1: Sem pridať popis
+      OPD-K5 variables:
+        content1: Sem pridať popis
+      OPD-K5 variables introduction:
+        content1: Sem pridať popis
+      OPD-K5 variables unplugged:
+        content1: Sem pridať popis
+      OPD-K5 where to next:
+        content1: Sem pridať popis
