@@ -89,81 +89,6 @@ export const COLUMNS = {
   ACTIONS: 4
 };
 
-// The "add row" should always be pinned to the top when sorting.
-// The "new student rows" should always be next.
-// This function takes into account having multiple "add rows"
-export const sortRows = (data, columnIndexList, orderList) => {
-  // Add secondary and tertiary sorting factors
-  columnIndexList.push('name');
-  orderList.push(orderList[0]);
-  columnIndexList.push('id');
-  orderList.push(orderList[0]);
-  // Organize student rows
-  let addRows = [];
-  let newStudentRows = [];
-  let studentRows = [];
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].rowType === RowType.ADD) {
-      addRows.push(data[i]);
-    } else if (data[i].rowType === RowType.NEW_STUDENT) {
-      newStudentRows.push(data[i]);
-    } else {
-      studentRows.push(data[i]);
-    }
-  }
-  addRows = orderBy(addRows, columnIndexList, orderList);
-  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  studentRows = orderBy(studentRows, columnIndexList, orderList);
-  return addRows.concat(newStudentRows).concat(studentRows);
-};
-
-export const ManageStudentsNotificationFull = ({manageStatus}) => {
-  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
-
-  const sectionSpotsRemaining =
-    sectionCapacity - sectionStudentCount > 0
-      ? sectionCapacity - sectionStudentCount
-      : 0;
-
-  const notificationParams = {
-    studentLimit: sectionCapacity,
-    currentStudentCount: sectionStudentCount,
-    sectionCode: sectionCode,
-    availableSpace: sectionSpotsRemaining
-  };
-
-  const notification = {
-    notice: i18n.manageStudentsNotificationCannotVerb({
-      numStudents: manageStatus.numStudents,
-      verb: manageStatus.verb || 'add'
-    }),
-    details: `${
-      sectionSpotsRemaining === 0
-        ? i18n.manageStudentsNotificationFull(notificationParams)
-        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
-    }
-          ${i18n.contactSupportFullSection({
-            supportLink: 'https://support.code.org/hc/en-us/requests/new'
-          })}`
-  };
-
-  return (
-    <Notification
-      type={NotificationType.failure}
-      notice={notification.notice}
-      details={
-        // SafeMarkedown required to convert i18n string to clickable link
-        <SafeMarkdown markdown={notification.details} />
-      }
-      dismissible={false}
-    />
-  );
-};
-
-ManageStudentsNotificationFull.propTypes = {
-  manageStatus: PropTypes.object.isRequired
-};
-
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
@@ -938,6 +863,12 @@ const styles = {
 // The "new student rows" should always be next.
 // This function takes into account having multiple "add rows"
 export const sortRows = (data, columnIndexList, orderList) => {
+  // Add secondary and tertiary sorting factors
+  columnIndexList.push('name');
+  orderList.push(orderList[0]);
+  columnIndexList.push('id');
+  orderList.push(orderList[0]);
+  // Organize student rows
   let addRows = [];
   let newStudentRows = [];
   let studentRows = [];
@@ -952,14 +883,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  // Sort students primarily alphabetically, secondarily by account creation
-  // date which aligns with id # (so that older accounts come first)
-  studentRows.sort(function(a, b) {
-    if (a.name === b.name) {
-      return a.id - b.id;
-    }
-    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
-  });
+  studentRows = orderBy(studentRows, columnIndexList, orderList);
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
