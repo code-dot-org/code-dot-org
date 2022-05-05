@@ -1646,7 +1646,7 @@ class Script < ApplicationRecord
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n_for_edit(include_lessons=true)
+  def summarize_i18n_for_edit
     data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
@@ -1654,21 +1654,11 @@ class Script < ApplicationRecord
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
     data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
-    if include_lessons
-      data[:lessonDescriptions] = lessons.map do |lesson|
-        {
-          key: lesson.key,
-          name: lesson.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
-        }
-      end
-    end
     data
   end
 
-  def summarize_i18n_for_display(include_lessons=true)
-    data = summarize_i18n_for_edit(include_lessons)
+  def summarize_i18n_for_display
+    data = summarize_i18n_for_edit
     data[:title] = title_for_display
     data
   end
