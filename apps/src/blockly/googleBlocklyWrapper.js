@@ -41,14 +41,6 @@ const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
 
-  /**
-   * Google Blockly sets Block ids to randomly generated 20-character strings.
-   * CDO Blockly set Block ids using a global counter. There are several places in our code and
-   * tests that assume Block ids will be numbers, so we want to re-implement the global counter
-   * and pass the id in the Block constructor, rather than leaving it to Google Blockly.
-   */
-  this.uidCounter_ = 0;
-
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
