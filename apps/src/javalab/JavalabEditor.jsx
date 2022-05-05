@@ -49,6 +49,7 @@ const Dialog = makeEnum(
   'COMMIT_FILES'
 );
 const DEFAULT_FILE_NAME = '.java';
+const EDITOR_LOAD_PAUSE_MS = 100;
 
 // Custom theme overrides (exported for tests)
 export const editorDarkModeThemeOverride = EditorView.theme(
@@ -305,6 +306,21 @@ class JavalabEditor extends React.Component {
         contextTarget: null,
         activeTabKey: key
       });
+      // scroll the new editor to whatever its current selection is.
+      // If this editor has no selection it will stay at the top of the file.
+      this.editors[key].dispatch({
+        scrollIntoView: true
+      });
+      // It takes a second for the editor to show up. We can't
+      // focus on it until it is visible, so we set a delay to focus
+      // on the new editor.
+      const timer = setInterval(() => {
+        this.editors[key].focus();
+        if (this.editors[key].hasFocus) {
+          // stop trying to focus once we have focused.
+          clearInterval(timer);
+        }
+      }, EDITOR_LOAD_PAUSE_MS);
     }
   }
 
