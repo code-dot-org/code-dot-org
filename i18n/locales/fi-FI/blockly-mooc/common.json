@@ -547,6 +547,8 @@
   "parent": "Vanhempi",
   "parents": "Vanhemmat",
   "parentsAndStudents": "Vanhemmat ja oppilaat",
+  "participantTypeStudentTitle": "Oppilaat",
+  "participantTypeTeacherTitle": "Opettajat",
   "password": "Salasana",
   "passwordConfirmation": "Salasanan vahvistus",
   "perfect": "täydellistä",

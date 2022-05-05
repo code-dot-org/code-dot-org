@@ -178,6 +178,7 @@ sk:
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
               description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Vytvor príbeh alebo hru s Play Labom!
+          name: playlab
         artist:
           title: Umelec
           description: Nakresli skvelé obrázky a vzory s Umelcom!
@@ -188,6 +189,7 @@ sk:
               description_student: Programuj Umelca a vytváraj nádherné obrázky.
               description_teacher: V tejto lekcii budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke. V tomto súbore úloh budú žiaci vytvárať postupne čoraz náročnejšie obrázky pomocou programovacích blokov ako `posuň sa dopredu o 100 pixelov` a `otoč sa vpravo o 90 stupňov`.
           student_description: Nakresli skvelé obrázky a vzory s Umelcom!
+          name: umelec
         hourofcode:
           title: Klasické bludisko
           description: Vyskúšaj si základy informatiky s postavičkami ako sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
@@ -348,6 +350,7 @@ sk:
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
               description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
+          name: nekonečno
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -518,6 +521,7 @@ sk:
               description_student: Dokonči úlohy presúvaním objektov.
               description_teacher: Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.
           student_description: Vyskúšaj si Skladačku.
+          name: skladačka
         step:
           title: Krok
           description: Návod po krokoch
@@ -991,6 +995,10 @@ sk:
               name: Vitajte!
             Wrap-Up:
               name: Zhrnutie
+        equity-pd:
+          lessons:
+            Codeorg Equity PD:
+              name: Code.org Equity PD
         science-PD2:
           lessons:
             Welcome!:
@@ -1171,6 +1179,7 @@ sk:
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
               description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
+          name: doba ľadová
         CSPPD3-Unit3:
           lessons:
             Getting Started:
@@ -1234,6 +1243,7 @@ sk:
             Oceans:
               name: AI pomáha oceánom
               description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Najprv roztriedi objekty na "ryby" a "ostatné" a pokúsi sa vyčistiť oceán od neporiadku. Potom bude ich úlohou rozšíriť cvičný dátový súbor o ďalšie morské živočíchy. V druhej časti aktivity budú vyberať vlastné značky, ktoré pridajú k obrázkom náhodne vytvorených rýb. Tieto cvičné dáta poslúžia pre tréning modelu strojového učenia, ktorý by potom mal nové obrázky označovať automaticky.
+          name: oceány
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -9858,6 +9868,7 @@ sk:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Navigácia na vzdelávacej platforme Code.org"
               description_teacher: |-
                 **Čo sa naučíte:**
 
@@ -11367,6 +11378,8 @@ sk:
               display_name: Parametre a Hodnoty návratnosti
             csp_libraries:
               display_name: Knižnice
+            lessonGroup-3:
+              display_name: Dotazník
         csp8-2022:
           lessons:
             lesson-4:
@@ -11801,41 +11814,70 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandboxy
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Učíme sa presúvať objekty
               name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
+              description_teacher: Táto lekcia zameraná na **budovanie zručností** poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačovej učebni, a potom budú obiť on‑line úlohy pomocou počítača.
             Sequencing with Scrat:
               key: Postupnosť krokov so Scratom
               name: Postupnosť krokov so Scratom
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto úlohy budú v lineárnej postupnosti spájať programovacie bloky.
             Programming with Angry Birds:
               key: Programovanie s Angry Birds
               name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** žiaci využijú svoje novozískané programovacie zručnosti zložitejšími spôsobmi, aby robota BB‑8 znavigovali náročnou dráhou.
             Programming with Harvester:
               key: Programovanie so Záhradníčkou
               name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má po ceste.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** žiaci aplikujú programovacie koncepty, ktoré sa naučili v prostredí Záhradníčky. Budú sa naďalej zlepšovať vo vytváraní sekvenčných algoritmov a oboznámia sa s procesom ladenia.
             Loops with Scrat:
               key: Cykly so Scratom
               name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci precvičia koncept cyklov pri programovaní úloh, ktorých cieľom je pomôcť veveričke dostať sa k žaluďu.
             Loops with Laurel:
               key: Cykly s Laurel
               name: Cykly s Laurel
+              description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to, aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci budú mať odteraz k dispozícii blok `získaj poklad`, ktorý jej na jej ceste pomôže.
             Ocean Scene with Loops:
               key: Na mori s cyklami
               name: Na mori s cyklami
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             Drawing Gardens with Loops:
               key: Kreslenie v záhrade pomocou cyklov
               name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             On the Move with Events:
               key: Udalosti v pohybe
               name: Udalosti v pohybe
+              description_student: Vytvor si vlastnú hru alebo príbeh.
+              description_teacher: V tomto **miniprojekte** dostanú žiaci príležitosť naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky doteraz získané programovacie zručnosti na vytvorenie animovanej hry. Nastal čas popustiť uzdu svojej kreativite a vytvoriť v Play Labe príbeh!
             A Royal Battle with Events:
               key: Kráľovská bitka s udalosťami
               name: Kráľovská bitka s udalosťami
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu hru.
+              description_teacher: 'V tomto **miniprojekte** dostanú žiaci príležitosť naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky doteraz získané programovacie zručnosti na vytvorenie animovanej hry. '
+            Programming in with Angry Birds:
+              name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
+            Programming in Harvester:
+              key: Programovanie so Záhradníčkou
+              name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má po ceste.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** žiaci aplikujú programovacie koncepty, ktoré sa naučili v prostredí Záhradníčky. Budú sa naďalej zlepšovať vo vytváraní sekvenčných algoritmov a oboznámia sa s procesom ladenia.
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -11843,6 +11885,8 @@ sk:
               display_name: Cykly
             csf_events:
               display_name: Udalosti
+          description_audience: 'Vek: 4-8'
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -11852,15 +11896,41 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandboxy
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Jednorozmerné (1D) polia
+            lesson-4:
+              name: Prvky poľa
             lesson-5:
               name: Cykly "Pre"
+            lesson-6:
+              name: Algoritmy poľa
+            lesson-7:
+              name: Rozšírené slučky "for"
+            lesson-8:
+              name: Statické premenné a konštanty
+            lesson-9:
+              name: Polymorfizmus
+            lesson-10:
+              name: Ďalšie algoritmy poľa
+            lesson-11:
+              name: Reverzné polia
+            lesson-13:
+              name: Údaje pre projekt Good Project – 1. deň
+            lesson-14:
+              name: Údaje pre projekt Good Project – 2. deň
+            lesson-15:
+              name: Údaje pre projekt Good Project – 3. deň
             lesson-16:
               name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandboxy
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -11878,6 +11948,9 @@ sk:
             lessonGroup-2:
               display_name: Obsah
         csa5-2022:
+          lessons:
+            lesson-7:
+              name: Rozšírené slučky "for"
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -11890,6 +11963,62 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        pltess:
+          lessons:
+            lesson-2:
+              name: hodina 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Podmienky ak v jazyku Java
+              description_student: |-
+                **Budete:**
+
+                -   vyhodnocovať booleovské výrazy
+                -   písať a čítať podmienené príkazy if, if-else, if-else-if-else
+                -   opisovať rozdiel medzi operátorom priradenia a operátorom porovnávania
+
+                **Odhadovaný čas:** 90 minút
+              description_teacher: |-
+                **Budete:**
+
+                -   vyhodnocovať booleovské výrazy
+                -   písať a čítať podmienené príkazy if, if-else, if-else-if-else
+                -   opisovať rozdiel medzi operátorom priradenia a operátorom porovnávania
+
+                **Odhadovaný čas:** 90 minút
+            lesson-4:
+              name: Slučky v jazyku Java
+              description_student: |-
+                **Budete:**
+
+                -   čítať, zapisovať a vylaďovať slučky v jazyku Java
+
+                **Odhadovaný čas:** 90 minút
+              description_teacher: |-
+                **Budete:**
+
+                -   čítať, zapisovať a vylaďovať slučky v jazyku Java
+
+                **Odhadovaný čas:** 90 minút
+            lesson-5:
+              name: Polia v jazyku Java
+              description_student: |-
+                **Budete:**
+
+                -   uvádzať a iniciovať 1D pole primitívnych dátových typov
+                -   pristupovať a upravovať prvky v poli
+                -   prechádzať poľom
+
+                **Odhadovaný čas:** 120 minút
+              description_teacher: |-
+                **Budete:**
+
+                -   uvádzať a iniciovať 1D pole primitívnych dátových typov
+                -   pristupovať a upravovať prvky v poli
+                -   prechádzať poľom
+
+                **Odhadovaný čas:** 120 minút
         csa7-pilot-extra:
           lessons:
             Java Lab:
@@ -12124,8 +12253,104 @@ sk:
               display_name: Sandbox
         vpl-csd1-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **Získate:**
+
+                -   znalosti na vysokej úrovni o učebných osnovách CS Discoveries.
+              description_teacher: |-
+                **Prehľad:**
+                Tieto asynchrónne aktivity poskytnú účastníkom prehľad na vysokej úrovni o učebných osnovách CS Discoveries vrátane prehľadu obsahu kurzu a nástrojov na vysokej úrovni, prehľad o štruktúre kurzu a ukážku toho, ako sa používa proces riešenia problémov počas celého kurzu.
+
+                **Účastníci budú:**
+
+                -   získavať znalosti na vysokej úrovni o učebných osnovách CS Discoveries.
+
+                **Odporúčaný čas:** 40 minút
+            lesson-5:
+              name: Asynchrónny prehľad
+            lesson-6:
+              name: Modelová hodina 2 – Učebný celok 2, Hodina 2
+            lesson-7:
+              name: Identita
+            lesson-8:
+              name: Úloha na hodine
+            lesson-10:
+              description_student: |-
+                **Zvážite:**
+
+                -   úlohu učiteľa v triede CS Discoveries.
+              description_teacher: |-
+                **Prehľad:**
+                Tieto asynchrónne aktivity poskytnú účastníkom úvod do úlohy učiteľa ako vedúceho študenta. Účastníci budú vyzvaní, aby zvážili, ako ich skúsenosti a presvedčenia týkajúce sa CS ovplyvňujú to, ako vidia svoju úlohu učiteľa v triede CS. Táto úvaha pripraví účastníkov na stretnutie, ktoré sa bude týkať identity neskôr na workshope.
+
+                **Účastníci:**
+
+                -   zvážia úlohu učiteľa v triede CS Discoveries.
+
+                **Odporúčaný čas:** 20 minút
+            lesson-11:
+              name: Zhrnutie
+            Intro to HTML:
+              name: Modelová hodina 2 – Učebný celok 2, Hodina 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-3:
               name: Plánovanie hodín
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Asynchrónny prehľad
+            lesson-9:
+              name: Zhrnutie
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Asynchrónny prehľad
+            lesson-8:
+              name: Zhrnutie
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Zhrnutie učebného celku"
+              description_student: |-
+                **Budete:**
+
+                -   sa venovať projektom na konco kapitoly.
+
+                **Odporúčaný čas:** 10 minút
+              description_teacher: |-
+                **Budete:**
+
+                -   sa venovať projektom na konco kapitoly.
+
+                **Odporúčaný čas:** 10 minút
+            lesson-3:
+              name: "[TEMPLATE] Obsah hodín"
+              description_student: |-
+                **Výhody:**
+
+                -   Budete vkladať ciele hodiny.
+
+                **Odporúčaný čas:** \_\_\_\_ minút
+              description_teacher: |-
+                **Výhody:**
+
+                -   Budete vkladať ciele hodiny.
+
+                **Odporúčaný čas:** \_\_\_\_ minút
+            lesson-7:
+              name: Async Prep
+            lesson-11:
+              name: Asynchrónny prehľad
+            lesson-14:
+              name: Zhrnutie
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Asynchrónny prehľad
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -12164,13 +12389,541 @@ sk:
               key: Záverečné projekty
             Lesson Planning:
               key: Plánovanie hodín
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Fyzické výpočty
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Úvod do vývoja webových stránok
+              description_student: |-
+                **Získate:**
+
+                -   základy učebného celku Vývoj webových stránok code.org.
+                -   prehľad obsahu učebného celku Vývoj webových stránok z prvého týždňa.
+
+                **Odporúčaný čas:** 10 minút
+              description_teacher: |-
+                **Získate:**
+
+                -   základy učebného celku Vývoj webových stránok code.org.
+                -   prehľad obsahu učebného celku Vývoj webových stránok z prvého týždňa.
+
+                **Odporúčaný čas:** 10 minút
+            lesson-2:
+              name: Vytvorte si webovú stránku pomocou HTML
+              description_student: |-
+                **Výhody:**
+
+                -   získate úvod do používania Web Lab.
+                -   pridáte štruktúru na webovú stránku pomocou HML.
+                -   pridáte obrázky na webovú stránku.
+
+                **Odporúčaný čas:** 30 minút
+              description_teacher: |-
+                **Výhody:**
+
+                -   získate úvod do používania Web Lab.
+                -   pridáte štruktúru na webovú stránku pomocou HML.
+                -   pridáte obrázky na webovú stránku.
+
+                **Odporúčaný čas:** 30 minút
+            lesson-3:
+              name: Označte webovú stránku s CSS
+              description_student: |-
+                **Výhody:**
+
+                -   doplníte text webovej stránky pomocou CSS.
+                -   prepojíte šablónu so štýlmi CSS s indexom webovej stránky.
+                -   dozviete sa ďalšie vlastnosti prvkov štýlu na webovej stránke.
+
+                **Odporúčaný čas:** 25 minút
+              description_teacher: |-
+                **Výhody:**
+
+                -   doplníte text webovej stránky pomocou CSS.
+                -   prepojíte šablónu so štýlmi CSS s indexom webovej stránky.
+                -   dozviete sa ďalšie vlastnosti prvkov štýlu na webovej stránke.
+
+                **Odporúčaný čas:** 25 minút
+            lesson-4:
+              name: Zvážte úlohy a zodpovednosti súvisiace s digitálnymi médiami
+              description_student: |-
+                **Výhody:**
+
+                -   Dozviete sa viac o spôsoboch, akými budú študenti pracovať, aby pochopili svoju úlohu a povinnosti  tvorcov a spotrebiteľov digitálnych médií.
+
+                **Odporúčaný čas:** 15 minút
+              description_teacher: |-
+                **Výhody:**
+
+                -   Dozviete sa viac o spôsoboch, akými budú študenti pracovať, aby pochopili svoju úlohu a povinnosti  tvorcov a spotrebiteľov digitálnych médií.
+
+                **Odporúčaný čas:** 15 minút
             lesson-5:
               name: Fyzické výpočty
+              description_student: |-
+                **Budete:**
+
+                -   sa venovať projektom na konco kapitoly.
+
+                **Odporúčaný čas:** 10 minút
+              description_teacher: |-
+                **Budete:**
+
+                -   sa venovať projektom na konco kapitoly.
+
+                **Odporúčaný čas:** 10 minút
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Výučba v oblasti vývoja webových stránok
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Vývoj webových stránok na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy vývoja webových stránok.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Web Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Vývoj webových stránok na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy vývoja webových stránok.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Web Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
         vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Úvod do interaktívnych animácií a hier
+            lesson-2:
+              name: Vytvoriť scénu
+            lesson-3:
+              name: Animovať scénu s postavičkami
+            lesson-4:
+              name: Preskúmajte dizajn hier
+            lesson-5:
+              name: Fyzické výpočty
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Príprava na výučbu interaktívnych animácií a hier
+          title: 'Modul 3: Príprava na výučbu interaktívnych animácií a hier'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+        vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-5:
               name: Fyzické výpočty
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Proces dizajnu Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy procesu navrhovania.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Proces dizajnu Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy procesu navrhovania.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Údaje a spoločnosť
+            lesson-5:
+              name: Fyzické výpočty
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Dáta a spoločnosť na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy z oblasti Dáta a spoločnosť.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Dáta a spoločnosť na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy z oblasti Dáta a spoločnosť.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Fyzické výpočty
+          title: 'Modul 6: Príprava na výučbu fyzickej informatiky'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Fyzická informatika na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy fyzickej informatiky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do spolopráce s tvorcami aplikácie.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Fyzická informatika na Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy fyzickej informatiky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do spolopráce s tvorcami aplikácie.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 90 minút
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Interaktívne animácie a hry
+            lesson-3:
+              name: Nadizajnuj svoj projekt
+            lesson-4:
+              name: Údaje a spoločnosť
+            lesson-5:
+              name: Fyzické výpočty
+            Train a machine learning model:
+              name: Interaktívne animácie a hry
+            Engage with machine learning apps:
+              name: Nadizajnuj svoj projekt
+            Consider real world implications:
+              name: Údaje a spoločnosť
+            Unit wrap up:
+              name: Fyzické výpočty
+          title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Umelá inteligencia a strojové učenie Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy umelej inteligencie a strojového učenia.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Ai Lab a aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   vytvoríte plán implementácie učebného celku so svojimi študentmi.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Umelá inteligencia a strojové učenie Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy umelej inteligencie a strojového učenia.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Ai Lab a aplikácie Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   vytvoríte plán implementácie učebného celku so svojimi študentmi.
+
+            **Odporúčaný čas:** 120 minút
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet CSC
           title: Ahoj Svet
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Aktualizácie úrovne
+          title: Ihrisko CSD
+          description_audience: Autori osnov
+          description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
+          description: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Ahoj Svet CSC
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Básnické umenie
+              description_teacher: V tejto integrovanej lekcii počítačovej vedy a anglického jazyka a literatúry pre nových kóderov budú študenti animovať báseň kódom, aby ilustrovali náladu básne. Študenti prečítajú a zistia náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti (kód) na ilustráciu zmeny nálady alebo naanimujú uvedenie nových obrázkov do básne.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Ahoj Svet CSC
+        csd1-2022:
+          lessons:
+            Intro to Problem Solving:
+              name: Úvod do riešenia problémov
+              description_student: "**Otázka dňa: Čo nám môže pomôcť spolupracovať a tímovo riešiť problémy?**\n\nBudete pracovať v skupine na navrhovaní a testovaní člnu z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. "
+              key: Úvod do riešenia problémov
+            The Problem Solving Process:
+              name: Proces riešenia problémov
+              description_teacher: |-
+                **Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r
+                \\r
+                Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémami z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
+              key: Proces riešenia problémov
+            Exploring Problem Solving:
+              name: Objavovanie riešenia problémov
+              key: Objavovanie riešenia problémov
+            What is a Computer?:
+              name: Čo je počítač?
+              description_teacher: |-
+                **Otázka dňa: Čo je počítač?**\\r
+                \\r
+                V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
+              key: Čo je počítač?
+            Input and Output:
+              name: Vstup a Výstup
+              key: Vstup a Výstup
+            Processing:
+              name: Spracovanie
+              description_teacher: |-
+                \*\*Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?
+                \*\*\\r
+                \\r
+                Táto lekcia zoznamuje študentov so štyrmi bežnými typmi spracovania: ak / tak (podmienky), hľadanie zhody (vyhľadávanie), počítanie a porovnávanie. Prostredníctvom vzorových aplikácií sú študenti najskôr oboznámení s rôznymi typmi spracovania. Následne preskúmajú ďalšie aplikácie, aby určili, aké typy spracovania sa v nich používajú. Potom vymyslia svoju vlastnú aplikáciu a rozhodnú, aké typy spracovania by potrebovala používať. Na záver brainstormingom prediskutujú ďalšie potenciálne užitočné typy spracovania, ktoré neboli zahrnuté v hlavnej lekcii.
+              key: Spracovanie
+            Storage:
+              name: Pamäť
+              key: Pamäť
+            Project - Propose an App:
+              name: Projekt - Navrhnite aplikáciu
+              description_teacher: |-
+                **Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r
+                \\r
+                Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+              key: Projekt - Navrhnite aplikáciu
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
+              key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)
+              key: Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csd1_1:
+              display_name: 'Kapitola 1: Proces riešenia problémov'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Nadpisy
+              key: Nadpisy
+            Digital Footprint:
+              name: Digitálna stopa
+              key: Digitálna stopa
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              key: lekcia-1
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Programovanie pre zábavu
+              key: Programovanie pre zábavu
+            Plotting Shapes:
+              name: Tvorba tvarov
+              key: Tvorba tvarov
+            Drawing in Game Lab:
+              name: Kreslenie v Game Labe
+              description_teacher: |-
+                **Otázka dňa: Ako odkomunikujeme počítaču, aby nakreslil na obrazovku konkrétny tvar?**\\r
+                \\r
+                V tejto lekcii sa oboznámíme s programovacím prostredím Game Labu. Na úvod sa naučíme umiestniť tvary na konkrétne miesto mriežky. Ďalej sa oboznámime s dôležitosťou správnej postupnosti príkazov, vyskúšame si hľadanie a opravovanie chýb a naučíme sa niekoľko jednoduchých príkazov. Na konci hodiny vytvoríme online verziu obrázku navrhnutého v predchádzajúcej lekcii.
+              key: Kreslenie v Game Labe
+            Variables:
+              name: Premenné
+              key: Premenné
+            Sprites:
+              name: Objekt "sprite"
+              key: Objekt "sprite"
+            Sprite Properties:
+              name: Vlastnosti postáv
+              key: Vlastnosti postáv
+            Text:
+              name: Text
+              key: Text
+            The Draw Loop:
+              name: Cyklus kreslenia
+              description_teacher: |-
+                **Otázka dňa: Ako vieme naše obrázky v Game Labe rozpohybovať?**\\r
+                \\r
+                V tejto lekcii si predstavíme cyklus kreslenia - jednu z hlavných programovacích paradigiem Game Labu. Na začiatok si prezrieme "flipbooks"  a budeme sledovať, ako rýchly sled snímiek s rôznymi obrázkami vytvára ilúziu pohybu. Video nám priblíži, ako môžeme rovnakú ilúziu vytvoriť pomocou cyklu kreslenia v Game Labe. Následne cyklus kreslenia spojíme s náhodnými číslami na vytvorenie jednoduchých animácií s bodkami a potom so „sprite“ objektami. Na záver nové vedomosti využijeme na vylepšenie scény so "sprite" objektami z predchádzajúcej lekcie.
+              key: Cyklus kreslenia
+            Sprite Movement:
+              name: Pohyb "sprite" objektu
+              key: Pohyb "sprite" objektu
+            Conditionals:
+              name: Podmienené príkazy
+              key: Podmienené príkazy
+            Keyboard Input:
+              name: Stlačenie kláves ako vstup
+              key: Stlačenie kláves ako vstup
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              key: Projekt - Interaktívna pohľadnica
+            Velocity:
+              name: Rýchlosť
+              key: Rýchlosť
+            Collision Detection:
+              name: Detekcia kolízie
+              key: Detekcia kolízie
+            Complex Sprite Movement:
+              name: Komplexný pohyb „sprite“ objektov
+              key: Komplexný pohyb „sprite“ objektov
+            Collisions:
+              name: Kolízie "sprite" objektov
+              description_teacher: "**Otázka dňa: Ako môžu programátori stavať na abstrakciách, aby vytvorili ďalšie abstrakcie?**\\\\r\n\\\\r\nV tejto lekcii študenti naprogramujú postavy, aby interagovali novým spôsobom. Po krátkom zhodnotení toho, ako používali blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/), študenti premýšľajú o iných spôsoboch interakcie dvoch postáv. Potom používajú  [`isTouching`(#f78183)](/docs/gamelab/isTouching/), aby jedna postava vytlačila druhú cez obrazovku pred cvičením so štyrmi kolíznymi blokmi ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), a [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Kolízie "sprite" objektov
+            Functions:
+              name: Funkcie
+              key: Funkcie
+            The Game Design Process:
+              name: Proces tvorby hry
+              key: Proces tvorby hry
+            Using the Game Design Process:
+              name: Využitie procesu na tvorbu hry
+              key: Využitie procesu na tvorbu hry
+            Project - Design a Game:
+              name: Projekt - Vytvor vlastnú hru
+              key: Projekt - Vytvor vlastnú hru
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              key: lekcia-1
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba hier'
+            cspSurvey:
+              display_name: Dotazník
+        csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+            Analysis of Design:
+              key: Analýza dizajnu
+            Digital Design:
+              key: Digitálny dizajn
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+            cspSurvey:
+              display_name: Dotazník
+        csd5-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            csd5_2:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+            cspSurvey:
+              display_name: Dotazník
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Úvod do UI Labu
+              key: Úvod do UI Labu
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Dotazník
+        csd6-2022:
+          lessons:
+            Color LEDs:
+              name: Farebné LEDky
+            Combining Inputs and Outputs:
+              name: Zlúčenie vstupov
+            Functions:
+              name: Funkcie
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+            lessonGroup-4:
+              display_name: Dotazník
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Hodnotenie kurzu
+          title: 'Objavujeme informatiku: Záverečný dotazník'
+          description: Tento modul obsahuje Prieskum po kurze CS Discoveries. Tento model môže byť priradený potom, čo žiaci dokončia záverečný modul kurzu CS Discoveries.
+          student_description: Tento modul  obsahuje prieskum po dokončení tvojej vyučovacej hodiny modulov CS Discoveries. Tvoj učiteľ ti povie, kedy je čas vyplniť tento prieskum.

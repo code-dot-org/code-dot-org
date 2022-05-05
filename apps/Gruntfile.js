@@ -631,6 +631,8 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/fields/_animation':
       './src/sites/studio/pages/levels/editors/fields/_animation.js',
+    'levels/editors/fields/_bubble_choice_sublevel':
+      './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
     'levels/editors/fields/_blockly':
       './src/sites/studio/pages/levels/editors/fields/_blockly.js',
     'levels/editors/fields/_callouts':

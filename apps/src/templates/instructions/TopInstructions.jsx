@@ -75,7 +75,6 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
-    maxAvailableHeight: PropTypes.number,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
@@ -295,20 +294,6 @@ class TopInstructions extends Component {
   forceTabResizeToMaxHeight = () => {
     if (this.state.tabSelected === TabType.COMMENTS) {
       this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
-    }
-  };
-
-  /**
-   * Function to force the height of the instructions area to be the
-   * full size of the content area, up to the max available height. This is
-   * used when the review tab loads in order to make the instructions area
-   * show the whole contents of the review tab.
-   */
-  forceTabResizeToMaxOrAvailableHeight = () => {
-    if (this.state.tabSelected === TabType.REVIEW) {
-      this.props.setInstructionsRenderedHeight(
-        Math.min(this.adjustMaxNeededHeight(), this.props.maxAvailableHeight)
-      );
     }
   };
 
@@ -747,10 +732,7 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab
-                ref={ref => (this.reviewTab = ref)}
-                onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
-              />
+              <ReviewTab ref={ref => (this.reviewTab = ref)} />
             )}
             {tabSelected === TabType.COMMITS_AND_REVIEW && (
               <CommitsAndReviewTab
@@ -891,7 +873,6 @@ export default connect(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight
     ),
-    maxAvailableHeight: state.instructions.maxAvailableHeight,
     longInstructions: state.instructions.longInstructions,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,

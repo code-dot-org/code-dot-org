@@ -3728,7 +3728,13 @@
         "CSDU6 arrays select rainbow_2021": "Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)",
         "CSDU6 arrays select random_2021": "Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)",
         "CSDU6 arrays select variable_2021": "Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)",
-        "U4 Model Design 1_2021": "Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)"
+        "U4 Model Design 1_2021": "Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)",
+        "CourseD_EOC_artist": "Kendi çizimini oluştur!",
+        "CourseD_EOC_bounce1": "Kendi basketbol oyununu oluştur!",
+        "CourseD_EOC_dance": "Kendi dansını oluştur!",
+        "CourseD_EOC_starwars": "Kendi Stars Wars oyununu oluştur!",
+        "New Bounce Project": "Kendi zıplama oyununu oluştur. Tüm görünümü ve kuralları değiştirebilirsin. Bitirdiğinde, \"BİTİR\" düğmesine tıklayıp, arkadaşlarının oyununu telefonlarında denemelerine izin ver.",
+        "course2_artist_prog_challenge2": "_Bu yoldaki sarı çizgileri boyamama yardım et!_"
       }
     }
   }
