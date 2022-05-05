@@ -1,6 +1,7 @@
 require 'cdo/chat_client'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
+require 'oj'
 
 class DynamicConfigController < ApplicationController
   before_action :authenticate_user!
@@ -94,7 +95,7 @@ class DynamicConfigController < ApplicationController
           when "String"
             raw_value
           else
-            new_value = JSON.parse(raw_value)
+            new_value = Oj.load(raw_value)
             if new_value.class.to_s != data_type
               raise "#{new_value} does not match data type \"#{data_type}\""
             end
@@ -107,7 +108,7 @@ class DynamicConfigController < ApplicationController
       ChatClient.log log_msg
       flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
       redirect_to action: :dcdo_show
-    rescue JSON::ParserError, NoMethodError, ArgumentError => e
+    rescue Oj::ParseError, NoMethodError, ArgumentError => e
       flash[:alert] = "Failed to update, value and data type mismatch: #{e}"
       redirect_to action: :dcdo_show
     rescue StandardError => e
