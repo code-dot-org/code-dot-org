@@ -864,6 +864,8 @@
   "parent": "Tuismitheoir",
   "parents": "Tuismitheoirí",
   "parentsAndStudents": "Tuismitheoirí agus Daltaí",
+  "participantTypeStudentTitle": "Daltaí",
+  "participantTypeTeacherTitle": "Múinteoirí",
   "partner": "Comhpháirtí: {partner}",
   "password": "Focal faire",
   "passwordConfirmation": "Deimhniú an fhocail faire",

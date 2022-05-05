@@ -266,6 +266,8 @@
   "overview": "সংক্ষিপ্ত বিবরণ",
   "pairingNavigatorWarning": "{driver} সাথে একত্রিত হয়ে এই ধাঁধা সম্পন্ন করা হয়েছে । এই ধাঁধা থেকে দল হিসেবে তুমি যে সমাধান দিয়েছ তা উনাদের সমাধান এর সাথে মিলিয়ে দেখে নিতে পারো ।",
   "parent": "মা-বাবা",
+  "participantTypeStudentTitle": "ছাত্র",
+  "participantTypeTeacherTitle": "শিক্ষকদের",
   "password": "পাসওআর্ড",
   "passwordConfirmation": "পাসওআর্ড নিশ্চিতকরণ",
   "personalLoginDialog_button": "পরবর্তী",
