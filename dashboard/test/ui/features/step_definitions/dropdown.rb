@@ -33,9 +33,8 @@ Then /^I select item (\d+) from the dropdown$/ do |n|
 end
 
 Then /^the dropdown field has text "(.*?)"$/ do |text|
-  id_selector = get_id_selector
-  # This step definition is only used in dropdown.feature, where the relevant dropdown is on the 15th block.
-  element_has_text("[#{id_selector}='15'] .blocklyEditableText", text)
+  # This step definition is only used in dropdown.feature, where the relevant dropdown is on first block in the DOM.
+  element_has_text(".blocklyEditableText:first", text)
 end
 
 And /^I press the image dropdown$/ do
