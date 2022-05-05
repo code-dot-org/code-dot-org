@@ -4,8 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "pilot_experiment": "csa-getting-started-preview"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
