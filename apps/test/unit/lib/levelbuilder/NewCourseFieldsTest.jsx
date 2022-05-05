@@ -5,10 +5,11 @@ import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
 import sinon from 'sinon';
 
 describe('NewCourseFieldsTest', () => {
-  let defaultProps, setFamilyName, setVersionYear;
+  let defaultProps, setFamilyName, setVersionYear, setFamilyAndCourseType;
   beforeEach(() => {
     setFamilyName = sinon.spy();
     setVersionYear = sinon.spy();
+    setFamilyAndCourseType = sinon.spy();
     defaultProps = {
       families: ['family-1', 'family-2'],
       versionYearOptions: ['1991', '1992', 'unversioned'],
@@ -18,7 +19,8 @@ describe('NewCourseFieldsTest', () => {
       setVersionYear,
       instructorAudience: '',
       participantAudience: '',
-      instructionType: ''
+      instructionType: '',
+      setFamilyAndCourseType
     };
   });
 
@@ -30,7 +32,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
-    expect(setFamilyName).to.have.been.calledWith('family-1');
+    expect(setFamilyAndCourseType).to.have.been.calledWith('family-1');
     wrapper.setProps({
       familyName: 'family-1',
       instructorAudience: 'teacher',
@@ -42,7 +44,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: ''}});
-    expect(setFamilyName).to.have.been.calledWith('');
+    expect(setFamilyAndCourseType).to.have.been.calledWith('');
     wrapper.setProps({
       familyName: '',
       instructorAudience: '',
@@ -61,7 +63,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
-    expect(setFamilyName).to.have.been.calledWith('family-1');
+    expect(setFamilyAndCourseType).to.have.been.calledWith('family-1');
     wrapper.setProps({
       familyName: 'family-1',
       instructorAudience: 'teacher',
@@ -112,7 +114,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
-    expect(setFamilyName).to.have.been.calledWith('family-1');
+    expect(setFamilyAndCourseType).to.have.been.calledWith('family-1');
     wrapper.setProps({
       familyName: 'family-1',
       instructorAudience: 'teacher',
@@ -175,7 +177,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
-    expect(setFamilyName).to.have.been.calledWith('family-1');
+    expect(setFamilyAndCourseType).to.have.been.calledWith('family-1');
     wrapper.setProps({
       familyName: 'family-1',
       instructorAudience: 'teacher',
