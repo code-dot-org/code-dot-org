@@ -348,10 +348,11 @@ uk-UA:
         title: Множинний вибір
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Коли ви заходите на code.org, до якої ІР-адреси Вас найімовірніше
@@ -359,10 +360,11 @@ uk-UA:
         title: Множинний вибір
       4-5 Internet Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: DNS скерував до ІР-адреси 100.42.50.110, який це сайт?
@@ -373,11 +375,16 @@ uk-UA:
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
           correct: true
-        - {}
-        - {}
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Який найбільший фрагмент пісні можна виділити як приспів, щоб він
+            повторювався щоразу однаково?
         title: Множинний вибір
       4-5 Suncatchers Match 1:
         answers:
@@ -448,6 +455,9 @@ uk-UA:
         questions:
         - text: Вибери найкращі блоки.
         title: Бджілка - умови - вибір
+        content2: Фіолетова квітка може мати 3, 2 або 1 нектар, але ми не знаємо скільки
+          саме. Які блоки правильно перевірять та зберуть весь нектар з фіолетової
+          квітки?
       4-5 bee debug multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"

@@ -1,0 +1,23 @@
+{
+  "vi-VN": {
+    "data": {
+      "category": {
+        "csta2011/CPP": {
+          "description": "Luyện tập sử dụng máy tính & lập trình"
+        },
+        "csta2011/CT": {
+          "description": "Tư duy máy tính"
+        },
+        "ccela/L": {
+          "description": "Ngôn ngữ"
+        },
+        "csta2011/CL": {
+          "description": "Hợp tác"
+        },
+        "csta/IC": {
+          "description": "Tác động của máy tính"
+        }
+      }
+    }
+  }
+}

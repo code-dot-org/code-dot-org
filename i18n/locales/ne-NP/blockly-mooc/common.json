@@ -417,6 +417,8 @@
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
   "pairProgramming": "Pair Programming",
   "parent": "Parent",
+  "participantTypeStudentTitle": "Students",
+  "participantTypeTeacherTitle": "Teachers",
   "password": "पासवर्ड",
   "passwordConfirmation": "पासवर्ड  निश्चितिकरण",
   "personalLoginDialog_button": "अर्को",

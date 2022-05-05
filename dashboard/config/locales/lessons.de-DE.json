@@ -4,10 +4,12 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
         },
         "hero/Minecraft Hour of Code": {
@@ -17,15 +19,23 @@
           "overview": "In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.. \n\nDie Stunde kann als einstündiger eigenständiger Unterricht durchgeführt werden. Sie kann jedoch auch die erste Stunde des Unterrichtsmoduls [Code ist Poesie](http://studio.code.org/s/poetry-2021) sein.",
           "preparation": "-   Überprüfen Sie das Online-Tutorial und führen Sie es zunächst selbst durch: [Gedichtkunst](http://studio.code.org/s/poem-art).\n\n-   Probieren Sie die Aktivitäten zuerst aus, bevor Sie sie Ihre SchülerInnen bearbeiten lassen. \n\n-   Überprüfen Sie Ihre technischen Voraussetzungen und entscheiden Sie, ob Sie vorher noch Fehlerbehebungen vornehmen müssen.\n\n-   Einige Levels erfordern das Abspielen von Tönen. Verteilen Sie vorab Kopfhörer. \n\n-   [Optional] 2 Haftnotizen pro SchülerIn für die Bewertung."
         },
+        "flappy/Flappy Code": {
+          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
+          "preparation": "### Eine Woche vor deiner Hour of Code\n\n-   Überprüfe das Lehrerhandbuch [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/), um danach mit der Planung deines Hour of Code Events anzufangen. \n-   Registriere den Event [Register your Hour of Code event](http://hourofcode.com).\n-   Überprüfe und komplettiere das Online-Tutorial selbst.\n-   Stelle sicher, dass du das Tutorial erst selbst überprüfst, bevor du deine Studenten bittest es abzuarbeiten. Überprüfe deine technischen Ressourcen und entscheide, ob etwas noch einer Fehlersuche unterworfen werden muss, vor dem Start deiner Hour of Code.\n\n### Ein Tag vor deiner Hour of Code\n\n-   Schreibe die Worte “coding”, “programming” und “debugging” auf deine Tafel, oder füge sie an deine Pinnwand für Wörter hinzu.\n-   Jeder Student sollte eine Urkunde erhalten, wenn er dieses Tutorial erfolgreich abgeschlossen hat. Drucke [Print one](http://code.org/certificates) eine solche Urkunde für alle Studenten vorher aus, um es am Ende deiner Hour of Code einfacher zu machen.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken."
+        },
         "hourofcode/Maze": {
           "overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden."
         },
         "frozen/Artist": {
           "overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden."
         },
         "iceage/Ice Age Play Lab": {
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
         "hello-world-emoji-2021/Hello World": {
@@ -37,8 +47,12 @@
           "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
           "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
         },
+        "gumball/Gumball Play Lab": {
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken."
+        },
         "dance/Dance Party": {
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "hello-world-food-2021/Hello World": {
@@ -51,6 +65,8 @@
         },
         "hoc-encryption/Simple Encryption": {
           "overview": "In dieser Lektion werden die Schüler mit der Notwendigkeit der Verschlüsselung und einfachen Techniken der Entschlüsselung geheimer Nachrichten (Knacken) vertraut gemacht. Sie werden selbst eine mit der klassischen Caesar-Chiffre und einer zufälligen Substitutions-Chiffre verschlüsselte Nachricht entschlüsseln.  Sie sollten sich mit dem Gedanken vertraut machen, dass die Verschlüsselungstechniken im Zeitalter leistungsfähiger Computerwerkzeuge immer ausgefeilter werden müssen. Der wichtigste Aspekt dieser Stunde besteht darin, zu verstehen, wie und warum Verschlüsselung in unserem täglichen Leben im Internet eine Rolle spielt und dass eine gute Verschlüsselung nicht trivial ist.  Die Schülerinnen und Schüler erfahren, welche Aspekte bei der Entwicklung einer starken Verschlüsselung zu berücksichtigen sind, wenn man bedenkt, dass es mächtige Computerwerkzeuge gibt, mit denen sie geknackt werden können. Geheimhaltung beim Versenden von Bits über das Internet ist für jeden, der das Internet nutzt, wichtig.",
+          "preparation": "-   Untersuche beide Versionen des Widgets",
+          "purpose": "“Encryption” (Verschlüsselung) Ist ein Prozess für die Umwandlung einer Nachricht, sodass das Original vor all denen \"versteckt“ ist, die nicht als vorausgesehener Empfänger vorgesehen sind. Verschlüsselung ist nicht mehr nur für das Militär oder für Spione gemeint. Wir benutzen Verschlüsselung jeden Tag auf dem Internet, vor allem um kommerzielle Transaktionen auszuführen, und ohne Verschlüsselung würde unsere Wirtschaft zum Stillstand kommen.\n\nDiese Lektion gibt Studenten einen ersten Eindruck der Denkweise, welche mit der Verschlüsselung von Botschaften zusammenhängt und angesichts der computergestützten Werkzeuge. Diese Werkzeuge erhöhen die Stärke und Komplexität von Algorithmen, welche wir zur Verschlüsselung benutzen, auf dramatische Weise. Dieselben Werkzeuge, aber, erhöhen unsere Fähigkeit, eine verschlüsselte Nachricht zu lesen. Die Entwicklung einer starken Verschlüsselungsmethode verlässt sich auf einen Know-how der Probleme, welche \"schwierig“ für Computer zu lösen sind und, die Nutzung dieses Wissens um Botschaften zu verschlüsseln. Als Hilfsmittel bei diesem Thema möchtest du vielleicht das ganze Kapitel 5, _Blown to bits_ lesen. Es erklärt die sozialen Rahmenbedingungen für Verschlüsselung, die du vielleicht in deiner Klasse besprechen möchtest.",
           "student_overview": "In dieser Lektion werden die Schüler mit der Notwendigkeit der Verschlüsselung und einfachen Techniken der Entschlüsselung geheimer Nachrichten (Knacken) vertraut gemacht. Sie werden selbst eine mit der klassischen Caesar-Chiffre und einer zufälligen Substitutions-Chiffre verschlüsselte Nachricht entschlüsseln.  Sie sollten sich mit dem Gedanken vertraut machen, dass die Verschlüsselungstechniken im Zeitalter leistungsfähiger Computerwerkzeuge immer ausgefeilter werden müssen. Der wichtigste Aspekt dieser Stunde besteht darin, zu verstehen, wie und warum Verschlüsselung in unserem täglichen Leben im Internet eine Rolle spielt und dass eine gute Verschlüsselung nicht trivial ist.  Die Schülerinnen und Schüler erfahren, welche Aspekte bei der Entwicklung einer starken Verschlüsselung zu berücksichtigen sind, wenn man bedenkt, dass es mächtige Computerwerkzeuge gibt, mit denen sie geknackt werden können. Geheimhaltung beim Versenden von Bits über das Internet ist für jeden, der das Internet nutzt, wichtig."
         },
         "hello-world-animals-2021/Hello World": {
@@ -59,13 +75,16 @@
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Diese Lektion führt in die Kernkonzepte der Informatik ein, für Kodierung, Programmierung und inklusive Sequenzierung und Events. Die JavaScript Version des Tutorials gibt den Studenten außerdem Erfahrung, in der Eingabe von Code mit einer Tastatur.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. "
         },
         "mc/Hour of Code 2015": {
           "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir."
         },
         "playlab/Play Lab": {
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
         "applab-intro/Intro to App Lab": {
@@ -77,9 +96,13 @@
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Diese Lektion führt in die Kernkonzepte der Informatik ein, für Kodierung, Programmierung und inklusive Sequenzierung und Events. Die JavaScript Version des Tutorials gibt den Studenten außerdem Erfahrung, in der Eingabe von Code mit einer Tastatur.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. "
         },
         "text-compression/Text Compression": {
+          "overview": "An irgendeinem Punkt erreichen wir eine physikalische Grenze, von wie schnell wir Bits verschicken können. Wenn wir also eine größere Menge von Information schneller verschicken wollen, dann müssen wir eine Manier finden dieselbe Information mit weniger Bits zu kodieren, d.h. wir müssen die Daten **komprimieren**. In dieser Lektion werden die Studenten den \"Text Compression Widget\" benutzen, um Segmente eines englischen Text zu komprimieren. Dies tun wir in dem wir nach Mustern Ausschau halten und größere Muster von Text durch Symbole ersetzen.",
+          "preparation": "-   Mache einen Test mit dem Text Compression Widget\n-   Überprüfe die Tipps für Lehrer, um zu entscheiden welche Optionen du benutzen möchtest",
+          "purpose": "Das Grundprinzip hinter Komprimierung ist, die Entwicklung einer Methode oder eines Protokolls für die Nutzung von weniger Bits, für die Darstellung der ursprünglichen Information. Komprimierte Daten werden in dieser Lektion mit einem \"Wörterbuch“ von wiederholten Mustern dargestellt, was ähnlich ist zu [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), aber es sollte betont werden, dass LZW etwas anders ist, von dem was die Studenten in dieser Lektion tun. Hier finden die Studenten ihren eigenen Weg. LZW wird nicht nur für Text (ZIP-Dateien) benutzt, sondern auch mit Dateien in einem GIF-Format.",
           "student_overview": "Irgendwann erreichen wir eine physikalische Grenze, wie schnell wir Bits senden können, und wenn wir eine große Menge an Informationen schneller senden wollen, müssen wir eine Möglichkeit finden, die gleichen Informationen mit weniger Bits darzustellen, d. h. wir müssen die Daten komprimieren"
         },
         "outbreak/Outbreak": {
@@ -90,14 +113,19 @@
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
         "infinity/Infinity": {
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
         "basketball/Bounce": {
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein."
+        },
         "dance-2019/Dance Party": {
           "overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde."
         },
         "oceans/Oceans": {
@@ -145,6 +173,7 @@
         },
         "coursef-2021/For Loops in Artist": {
           "overview": "In dieser Lektion üben die SchülerInnen weiterhin `für` Schleifen, diesmal aber mit Artist. Die SchülerInnen werden Aufgaben lösen, bei denen sie die Ideen von Variablen, Schleifen und \"Für\"-Schleifen kombinieren, um komplexe Designs zu erstellen. Am Ende haben sie die Möglichkeit, ihre eigene Kunst in einem Level für freie Gestaltung zu kreieren.",
+          "purpose": "Kreativität und kritisches Denkvermögen arbeiten herrlich zusammen in dieser Lektion. Die Studenten werden ihre Übungen mit 'for'-Schleifen und Variablen weiterführen, während sie unglaubliche Bilder erzeugen. Diese Lektion inspiriert einen kreativen Kopf und lehrt gleichzeitig die Kernkonzepte der Informatik.",
           "student_overview": "Machen Sie sich bereit für Ihr nächstes Meisterwerk. Hier werden Sie `für`-Schleifen verwenden, um einige atemberaubende Bilder zu erstellen."
         },
         "coursef-2021/Simulating Experiments": {
@@ -392,6 +421,7 @@
         },
         "coursed-2021/Dance Party": {
           "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
           "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -454,6 +484,7 @@
         },
         "express-2021/lesson-1": {
           "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Ereignisprogrammierung (unter Einsatz von Blöcken) ein.",
           "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
         },
         "express-2021/Loops with Rey and BB-8": {
@@ -523,6 +554,7 @@
         },
         "express-2021/For Loops with Artist": {
           "overview": "In dieser Lektion üben die SchülerInnen weiterhin `für` Schleifen, diesmal aber mit Artist. Die SchülerInnen werden Aufgaben lösen, bei denen sie die Ideen von Variablen, Schleifen und \"Für\"-Schleifen kombinieren, um komplexe Designs zu erstellen. Am Ende haben sie die Möglichkeit, ihre eigene Kunst in einem Level für freie Gestaltung zu kreieren.",
+          "purpose": "Kreativität und kritisches Denkvermögen arbeiten herrlich zusammen in dieser Lektion. Die Studenten werden ihre Übungen mit 'for'-Schleifen und Variablen weiterführen, während sie unglaubliche Bilder erzeugen. Diese Lektion inspiriert einen kreativen Kopf und lehrt gleichzeitig die Kernkonzepte der Informatik.",
           "student_overview": "Machen Sie sich bereit für Ihr nächstes Meisterwerk. Hier werden Sie `für`-Schleifen verwenden, um einige atemberaubende Bilder zu erstellen."
         },
         "express-2021/End of Course Project": {
@@ -649,6 +681,9 @@
         },
         "csd7-2021/Similarity Models": {
           "overview": "In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.\n\n**Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Zum Auftakt der letzten Lerneinheit dieses Kurses werden die SchülerInnen einige Untersuchungen zu interessanten Innovationen im Bereich der Informatik durchführen. In dieser Lektion werden die SchülerInnen mit einer größeren Vielfalt von Formfaktoren für Computer (wie ein Computer aussieht) und Bereichen konfrontiert, die von Computern beeinflusst werden. Später in dieser Lektion werden die SchülerInnen sich noch einmal mit Geräten auseinandersetzen, die sie in dieser Lektion kennengelernt haben, während sie ihre eigenen physischen Computergeräte entwickeln."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "In dieser Lektion erhalten die SchülerInnen zum ersten Mal die Gelegenheit, Programme zu schreiben, die Circuit Playground verwenden. Nach einer ersten visuellen Untersuchung der Platine und der Aufstellung von Hypothesen über mögliche Funktionalitäten gehen die SchülerInnen online, wo sie lernen, Apps zu schreiben, die eine LED steuern. Durch die Kombination von App Lab-Bildschirmen mit Circuit Playground können die SchülerInnen allmählich damit beginnen, Elemente der Platine als Outputgerät zu integrieren, während sie beim Benutzerinput App Lab verwenden."

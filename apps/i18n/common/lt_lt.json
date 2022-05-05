@@ -397,6 +397,8 @@
   "pairingNavigatorWarning": "Šis galvosūkis buvo išspręstas kartu su {driver}. Norint peržiūrėti kartu sukurtą šio uždavinio sprendimą, pažvelk į porininko paskyroje esantį uždavinį.",
   "pairProgramming": "Programavimas poroje",
   "parent": "Vienas iš tėvų",
+  "participantTypeStudentTitle": "Mokiniai",
+  "participantTypeTeacherTitle": "Mokytojai",
   "password": "Slaptažodis",
   "passwordConfirmation": "Slaptažodžio patvirtinimas",
   "personalLoginDialog_button": "Kitas",
