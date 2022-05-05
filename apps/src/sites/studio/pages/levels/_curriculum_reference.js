@@ -17,7 +17,10 @@ $(document).ready(() => {
   if (refGuideElement) {
     const referenceGuide = getScriptData('referenceGuide');
     ReactDOM.render(
-      <ReferenceGuide referenceGuide={referenceGuide} />,
+      <>
+        <h1>{referenceGuide.display_name}</h1>
+        <ReferenceGuide referenceGuide={referenceGuide} />
+      </>,
       refGuideElement
     );
   }
