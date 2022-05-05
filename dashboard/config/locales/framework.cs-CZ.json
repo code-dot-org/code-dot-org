@@ -1,0 +1,20 @@
+{
+  "cs-CZ": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Obecné základní normy umění v anglickém jazyce"
+        },
+        "ccmath": {
+          "name": "Obecné základní normy matematiky"
+        },
+        "csta2011": {
+          "name": "Normy počítačových věd CSTA K-12 (2011)"
+        },
+        "iste": {
+          "name": "Normy ISTE pro studenty"
+        }
+      }
+    }
+  }
+}

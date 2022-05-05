@@ -94,7 +94,17 @@ ur:
     invalid_password: "پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے"
     mismatch_password: "داخل کے گئے دونوں پاس ورڈزمختلف ہیں"
     additional_information: "ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے."
+    user_type_button: "اکاؤنٹ کی قسم اپڈیٹ کریں"
+    user_type_label: "اکاؤنٹ کی قسم"
     user_type_student: "Talib-e-ilm"
+    user_type_student_desc: "ہماری تمام کورسیں اور سرگرمیاں دریافت کریں، مزید برآں:"
+    user_type_student_ability_1: "اپنی پیشرفت اور پراجیکٹس محفوظ کریں"
+    user_type_student_ability_2: "اپنے استاد کے کلاسروم سیکشن میں شامل ہوں"
+    user_type_teacher_desc: "وہ سب کچھ جنہیں طلباء کو رسائی حاصل ہو، اور مزید برآں:"
+    user_type_teacher_ability_1: "کلاسروم کے سیکشن بنائیں"
+    user_type_teacher_ability_2: "طلباء کو کام سونپیں اور پیشرفت ٹریک کریں"
+    user_type_teacher_ability_3: "پیشہ ورانہ سیکھنے کے کورسوں میں داخلے لیں"
+    user_type_teacher_ability_4: "ہمارے اساتذہ پلیٹ فارم پر روابط قائم کریں"
     field_is_required: "مطلوب ہے"
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: "جی"
@@ -137,6 +147,10 @@ ur:
   crud:
     edit: 'تدوین کریں'
     submit: 'جمع کرائیں'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "آپ کا فراہم کردہ ایمیل ایڈرس اس اکاؤنٹ سے جڑے ایمیل سے مطابقت نہیں رکھتا"
   nav:
     header:
       finished_hoc: "میں نے ختم کیا!"

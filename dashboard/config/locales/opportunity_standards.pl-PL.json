@@ -7,6 +7,9 @@
         },
         "ngss/K-2-ETS1-2": {
           "description": "Opracuj prosty szkic, rysunek lub model fizyczny, aby zilustrować, w jaki sposób kształt obiektu pomaga mu funkcjonować zgodnie z potrzebami, aby rozwiązać dany problem."
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "Kąt, który obraca się n razy o kąt jednostopniowy, ma n stopni."
         }
       }
     }

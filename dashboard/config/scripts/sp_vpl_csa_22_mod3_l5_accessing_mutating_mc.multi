@@ -12,7 +12,7 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-Given the following array, which element is stored at index 3?
+Given the following array, what is the value of the element stored at index 3?
 
 ```
 int[] ages = {3, 5, 6, 8, 11, 12};

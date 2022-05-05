@@ -2697,6 +2697,21 @@
           "url": "",
           "type": ""
         },
+        "pspe-image/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "designing_with_empathy/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "designing_with_empathy_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "reacting-as-your-user-exemplar-19/csd/2021": {
           "name": "",
           "url": "",
@@ -3037,6 +3052,26 @@
           "name": "",
           "url": ""
         },
+        "computing-innovations/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "internet-of-things-video/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": "ویدیو"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": "ویدیو"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "",
           "url": "",
@@ -3048,11 +3083,6 @@
           "type": ""
         },
         "responding_to_user_input_1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "csd_unit_6_-_physical_computing/csd/2021": {
           "name": "",
           "url": "",
           "type": ""
@@ -3276,6 +3306,21 @@
           "type": ""
         },
         "unit-5-data-society/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "representation-matters/csd/2021": {
           "name": "",
           "url": "",
           "type": ""
@@ -3573,6 +3618,21 @@
           "name": "",
           "url": ""
         },
+        "cs-entertainment-activity/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "cs_in_entertainment/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "",
           "url": "",
@@ -3589,11 +3649,6 @@
           "type": ""
         },
         "drawing_shapes_version_a_/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "",
           "url": "",
           "type": ""
@@ -3951,6 +4006,25 @@
           "url": "",
           "type": ""
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": "ویدیو"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "solving-problems-exemplar-2020/csd/2021": {
           "name": "",
           "url": "",
@@ -4120,12 +4194,22 @@
           "name": "",
           "url": ""
         },
-        "exemplar-text-website/csd/2021": {
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "exploring-web-pages/csd/2021": {
           "name": "",
           "url": "",
           "type": ""
         },
         "csd_unit_2_-_web_development/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "exemplar-text-website/csd/2021": {
           "name": "",
           "url": "",
           "type": ""

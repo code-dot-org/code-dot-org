@@ -4,6 +4,7 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
         "minecraft/Minecraft Hour of Code Designer": {
@@ -35,6 +36,7 @@
         },
         "dance/Dance Party": {
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
         "hello-world-food-2021/Hello World": {
@@ -81,8 +83,12 @@
         "infinity/Infinity": {
           "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
         "dance-2019/Dance Party": {
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
         "oceans/Oceans": {
@@ -95,6 +101,12 @@
         "coursec-2021/Loops with Rey and BB-8": {
           "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
           "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursed-2021/Dance Party": {
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2021/lesson-1": {
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
         },
         "express-2021/Loops with Rey and BB-8": {
           "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "

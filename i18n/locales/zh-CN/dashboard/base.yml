@@ -63,7 +63,7 @@ zh-CN:
   previous_page: 上一页
   next_page: 下一页
   next_resource: 下一个资源
-  done_with_module: 完成本学习模块
+  done_with_module: 已完成本学习模块
   cancel: "取消"
   okay: "好吧"
   or: "或"
@@ -121,25 +121,25 @@ zh-CN:
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。"
     use_clever: "对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。"
-    invalid_provider: "对不起，%{provider} 的账号不可以被连接到 Code.org 账号。"
+    invalid_provider: "对不起，%{provider} 的账号无法关联到 Code.org 账号。"
     migration_required: "对不起，我们不能链接或断接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。"
     unable_to_connect_provider: "无法将您的 Code.org 帐户连接到 %{provider}。请重试。"
-    disconnect_successful: "我们成功将你的第三方账号从你的Code.org 账号中移除。"
+    disconnect_successful: "已成功将第三方账号从你的Code.org 账号中移除。"
     already_in_use: "你的 %{provider} 已连接到另一个 Code.org 帐户。"
     already_linked: "你的 %{provider} 已连接到了 Code.org 帐户。"
     existing_account:
       account_exists: "恭喜！已经有了 Code.org 的账户 %{email}。"
-      sign_in: "请登录，我们将连接 %{provider} 的个人资料。"
-      sign_up: "不是你的邮箱？ 想用其他邮箱创建新帐户？ 如果选择创建新帐户，我们仍将链接 %{provider} 的个人资料。"
+      sign_in: "请登录你的账号，你就可以在账号设置页面关联你 %{provider} 的个人资料。"
+      sign_up: "不是你的邮箱？ 想用其他邮箱创建新帐户？ 如果选择创建新帐户，你依然可以在你的账户设置页面关联你 %{provider} 的个人资料。"
   signup_form:
     email_signup: '用电子邮件地址登录'
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
-    overview: '注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。'
-    overview_markdown: '注册一个帐户来跟踪进度或管理教室。可以不需要帐户来[浏览不同阶段和谜题](/)，但需要注册才能保存进度和项目。'
+    overview: '注册一个帐户来跟踪你的进度或管理您的教室。 无需账户<a href="/">您就可以浏览多种多样的课程和级别</a>，但你需要登录账户来保存进度和项目。'
+    overview_markdown: '注册一个帐户来跟踪您的进度或您孩子的进度或管理您的教室。 [您可以浏览多种多样的课程和级别](/)而不需要一个帐户，但你需要注册以保存进度和项目。'
     hoc_already_signed_up_heading: '使用访客身份开始'
     hoc_already_signed_up_content: '你已经注册教授《编程一小时》！你和你的学生不需要登录到代码工作室来参加该活动。想要开始，为你的班级 <a href="%{learn_url}">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢《编程一小时》并希望更深入地使用，你可以在下面设置一个密码并创建一个代码工作室账号，以为你的学生在我们所有的 <a href="%{educate_url}">大型课程</a>里注册。'
-    hoc_already_signed_up_content_post_hoc: '谢谢你主办编程一小时。要登录到代码工作室，你需要设置您的帐户的密码。这将允许您保存您的进展和管理你的教室。你将能够分配课程给学生，并跟踪其进度。<a href="%{studio_url}"> 你还可以继续浏览各个阶段和谜题</a> 而无需创建一个帐户。'
+    hoc_already_signed_up_content_post_hoc: '谢谢你主办编程一小时。你需要设置您的帐户的密码来登录到代码工作室。这将允许您保存您的进展和管理你的教室。你将能够分配课程给学生，并跟踪其进度。无需创建账户<a href="%{studio_url}"> 你依然可以继续浏览各类课程和级别</a> 。'
     hoc_already_signed_up_content_post_hoc_markdown: '感谢主办编程一小时！要登录到代码工作室，需要设置帐户的密码。这样能保存进度并管理教室。还可以将课程分配给学生，并跟踪进度。也可以不创建帐户，[继续浏览各个阶段和谜题](%{studio_url})。'
     teacher_educator_guide: '请参阅教师指南'
     title: "注册 Code.org"
@@ -362,7 +362,7 @@ zh-CN:
       about_team: "全体成员"
       about_news: "新闻室"
       about_evaluation: "评估"
-      about_jobs: "招聘"
+      about_jobs: "职业机会"
       about_contact: "联系我们"
       about_faqs: "常见问答"
       learn: "学习"
@@ -421,6 +421,7 @@ zh-CN:
       starwars: '星球大战'
       starwarsblocks: '星球大战(块)'
       starwarsblocks_hour: '星球大战(块)'
+      thebadguys: '坏人'
       loading: '正在载入...​​​'
       weblab: '网络实验室'
       view_all: '查看所有项目……'
@@ -992,6 +993,11 @@ zh-CN:
   no_course_access_teacher: "不能访问此课程。如果确定应该能访问次课程，请写信给 support@code.org，以便能修复此情况。"
   no_script_access_student: "无权访问此单元。请询问教师，应该访问什么单元。"
   no_script_access_teacher: "你不能进入这个单元。如果你认为可以访问这个单元，请写信给 support@code.org，以便我们可以解决这种情况。"
+  no_level_access_student: "无权访问此等级。请询问教师，应该访问什么等级。"
+  no_level_access_teacher: "你不能进入这个等级。如果你认为可以访问这个等级，请写信给 support@code.org，以便我们可以解决这种情况。"
+  no_exemplar: "这个级别没有范例。"
+  no_exemplar_access_student: "学生无法访问示例代码。请询教师，应该访问什么等级。"
+  no_exemplar_access_teacher: "只有经过认证的教师才能访问示例代码。如果你想成为一名认证教师，请写信给support@code.org."
   return_unit_overview: '转到单元概述'
   return_course_overview: '转到课程概述'
   view_all_units: '查看所有单元'

@@ -2,6 +2,9 @@
   "de-DE": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "event/dance-extras/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -9,6 +12,9 @@
         "program/dance-extras/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/minecraft/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -26,6 +32,9 @@
           "word": "Schleife",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
+        "code/hero/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/hero/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -35,7 +44,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "function/hero/unversioned": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
         },
         "code/poem-art/2021": {
           "word": "Code",
@@ -57,6 +67,10 @@
           "word": "Programm",
           "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
         },
+        "code/flappy/unversioned": {
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/flappy/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -64,6 +78,9 @@
         "program/flappy/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -73,6 +90,9 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/frozen/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/frozen/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -80,6 +100,9 @@
         "program/frozen/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/iceage/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -90,7 +113,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "code/artist/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/artist/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -99,6 +123,9 @@
         "program/artist/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/gumball/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -116,6 +143,12 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/dance/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/aquatic/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -125,17 +158,43 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "condition/aquatic/unversioned": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
         },
         "loops/aquatic/unversioned": {
           "word": "Schleifen",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Caesar-Verschlüsselung",
+          "definition": "Eine Technik der Verschlüsselung, die das Alphabet um eine Anzahl von Zeichen verschiebt"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Verschlüsselungsverfahren (Chiffre)",
+          "definition": "Der generische Namen für eine Technik (oder einen Algorithmus) die den Prozess der Verschlüsselung ausführt"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Knacken der Verschlüsselung",
+          "definition": "Wenn du probierst eine geheime Nachricht zu dekodieren, ohne alle Einzelheiten der Chiffreschrift zu kennen, dann versuchst du die Verschlüsselung zu \"knacken“."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Entschlüsselung",
+          "definition": "Ein Prozess der eine Verschlüsselung umkehrt, wodurch eine geheime Botschaft in dem originellen Klartext wiedergegeben wird."
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Verschlüsselung"
+          "word": "Verschlüsselung",
+          "definition": "Ein Prozess um Botschaften zu verschlüsseln, sodass diese geheim bleiben und, dass diese nur durch \"genehmigtes“ Personal gelesen werden kann."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Verschlüsselungsverfahren mit zufälligem Austausch",
+          "definition": "Eine Verschlüsselungstechnik, die jeden Buchstaben des Alphabets mit einem anderen, zufällig ausgewählten Buchstaben des Alphabets verbindet."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/starwars/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -145,6 +204,9 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/mc/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/mc/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -153,6 +215,9 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/playlab/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/playlab/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -160,6 +225,9 @@
         "program/playlab/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -170,7 +238,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Verlustlose Kompression"
+          "word": "Verlustlose Kompression",
+          "definition": "Ein Algorithmus für die Datenkompression, der eine perfekte Rekonstruktion der originellen Daten aus komprimierten Daten möglich macht. Meistens für die Komprimierung von Text benutzt  (z.B. ZIP-Komprimierung)"
         },
         "event/outbreak/unversioned": {
           "word": "Ereignis",
@@ -191,6 +260,9 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/infinity/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/infinity/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -203,6 +275,9 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "code/basketball/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "debugging/basketball/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -211,6 +286,9 @@
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -218,6 +296,9 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Programm",
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
         "event/dance-2019/unversioned": {
           "word": "Ereignis",
@@ -228,7 +309,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Maschinelles Lernen"
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
         },
         "code/poem-art/unversioned": {
           "word": "Code",
@@ -275,6 +357,9 @@
           "word": "Variable",
           "definition": "Ein Platzhalter für Information die sich noch ändern kann."
         },
+        "prompt/coursef/2021": {
+          "word": "Eingabeaufforderung"
+        },
         "input/coursef/2021": {
           "word": "Eingabe"
         },
@@ -291,7 +376,8 @@
           "definition": "Schleifen mit einem voreingestellter Anfang, Ende und einem vorher eingestelltem Zuwachs (Schrittweite)."
         },
         "machine_learning/coursef/2021": {
-          "word": "Maschinelles Lernen"
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -521,6 +607,9 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "code/coursed/2021": {
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
         "repeat/coursed/2021": {
           "word": "Wiederholen:",
           "definition": "Um wieder etwas zu tun."
@@ -530,10 +619,12 @@
           "definition": "Eine Anweisung für den Computer. Algorithmen und Computerprogramme bestehen aus einer Kombination von vielen Befehlen."
         },
         "conditionals/coursed/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
         },
         "condition/coursed/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "while_loop/coursed/2021": {
           "word": "'while'-Schleife",
@@ -586,17 +677,20 @@
           "definition": "Eine Anweisung für den Computer. Algorithmen und Computerprogramme bestehen aus einer Kombination von vielen Befehlen."
         },
         "condition/express/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "conditionals/express/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
         },
         "while_loop/express/2021": {
           "word": "'while'-Schleife",
           "definition": "Eine Schleife die so lange wiederholt wird, solange wie die Bedingung wahr ist."
         },
         "function/express/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
         },
         "variable/express/2021": {
           "word": "Variable",
@@ -696,13 +790,16 @@
           "definition": "Um wieder etwas zu tun."
         },
         "function/coursee/2021": {
-          "word": "Funktion"
+          "word": "Funktion",
+          "definition": "Ein Stück Code, welches du auf einfache Weise wieder und wieder aufrufen kannst."
         },
         "condition/coursee/2021": {
-          "word": "Bedingung"
+          "word": "Bedingung",
+          "definition": "Etwas das von einem Programm überprüft wird, um zu sehen ob es wahr ist, bevor eine bestimmte Aktion ausgeführt werden kann."
         },
         "conditionals/coursee/2021": {
-          "word": "Bedingungen"
+          "word": "Bedingungen",
+          "definition": "Statements that only run under certain conditions."
         },
         "while_loop/coursee/2021": {
           "word": "'while'-Schleife",
@@ -725,7 +822,11 @@
           "definition": "Versuche etwas zu tun"
         },
         "machine_learning/csd/2021": {
-          "word": "Maschinelles Lernen"
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
+        },
+        "user/csd/2021": {
+          "word": "Benutzer"
         },
         "user_interface/csd/2021": {
           "word": "Benutzeroberfläche"

@@ -5709,14 +5709,14 @@ pl-PL:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
-        - text: Roślina biegacz będzie dryfować do górnej części ekranu.
-          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
-        - text: Roślina biegacz zacznie się toczyć.
+          feedback: Niepoprawnie. Złota rybka zacznie wędrować.
+        - text: Złota rybka będzie płynąć do góry ekranu.
+          feedback: Niepoprawnie. Złota rybka zacznie wędrować.
+        - text: Złota rybka zacznie wędrować.
           correct: true
           feedback: Poprawnie!
-        - text: Roślina biegacz będzie mrugać.
-          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Złota rybka będzie mrugać.
+          feedback: Niepoprawnie. Złota rybka zacznie wędrować.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_EOC_2021:

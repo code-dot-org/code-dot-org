@@ -33,11 +33,10 @@ Kilka wskazówek
 - [Podstawowe zasady tworzenia zajęć "Godzina kodowania ™" [Hour of Code™] ](#guidelines)
 - [Jak to przedłożyć](#submit)
 - [Jak będzie przebiegać ocena zajęć](#inclusion)
-- [Wytyczne do przedkładania wczesnej weryfikacji jakościowej NEW](#earlyreview)
-- [Sugestie w zakresie projektowania Twoich zajęć](#design)
-- [Wytyczne dotyczące znaków towarowych](#tm)
-- [Piksel śledzący](#pixel)
-- [Promocja swoich zajęć: "Tydzień Edukacji Informatycznej" [CSEdWeek] lub "Godzina kodowania" [Hour of Code]](#promote)
+- [Wytyczne do przedkładania wczesnej weryfikacji jakościowej NEW](#design)
+- [Sugestie w zakresie projektowania Twoich zajęć](#tm)
+- [Wytyczne dotyczące znaków towarowych](#pixel)
+- [Piksel śledzący](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -185,75 +184,55 @@ Ponadto, zajęcia, aby znaleźć się w wykazie:
 - muszą nadawać się dla uczniów szkół publicznych (nie można w nich przedstawiać broni palnej/ nie mogą zawierać treści jednoznacznych/ przeznaczonych dla osób dorosłych, nie mogą zawierać treści religijnych, itp.)
 - nie mogą wymagać rejestracji 
 - nie mogą być płatne (z wyjątkiem zajęć z robotyki, do których może być potrzebne nabycie robota/ zestawu). W przypadku zajęć prowadzonych samodzielnie dla nowych nauczycieli i uczniów komisja weryfikacyjna będzie sprawdzać:
-- czy nauczyciele mogą korzystać z samouczka lub zajęć bez wykształcenia informatycznego.
-- czy uczniowie mogą sobie porazić bez wykształcenia informatycznego.
-- czy uczniowie mogą sami przejść samouczek bez wsparcia ze strony rodziców lub nauczyciela.
 
-czy nauczyciele i uczniowie będą w stanie przeszukać i przefiltrować nasza listę zajęć korzystając z filtrów takich jak stopień, poziom doświadczenia, temat, sprzęt, itp. Domyślnie najpierw pokażemy plany lekcji i zajęcia, które:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - otrzymają najwyższe oceny od komisji weryfikacyjnej
 - są jednogodzinnymi zajęciami samodzielnie prowadzonymi przeznaczonymi dla osób początkujących (uczniów i nauczycieli)
 - przemawiają do jak największego zakresu użytkowników (w różnych platformach, językach i w różnym wieku)
-- nie wymagają instalacji
-- które są w tym roku nowe
 
-[**Powrót do góry**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## Wytyczne do przedkładania wczesnej weryfikacji jakościowej (NEW)
-
-Każde zajęcia przedłożone pomiędzy 30 kwietnia a 16 sierpnia przejdzie weryfikację przynajmniej trzech członków [komisji weryfikacyjnej zajęć Godzina kodowania](/review-committee).
-
-Opiniujący będą się skupiać na podaniu następujących informacji:
-
-* Pozytywne informacje zwrotne: Co się sprawdza?
-* Krytyczne informacje zwrotne - Co można poprawić?
-* Błędy komputerowe [bugs] czy inne błędy - Czy pojawiają się jakieś błędy komputerowe [bugs], błędy składni czy błędy gramatyczne? Jeśli tak, w jakich zajęciach?
-* Czy te zajęcia zachęcają uczniów do stworzenia czegoś niepowtarzalnego?
-
-Prosimy zauważyć: Są to wytyczne ogólne dotyczące przekazywania informacji zwrotnej. Wczesna weryfikacja naszych zajęć może uwzględniać informację zwrotną dotyczącą tych wszystkich kategorii lub może uwzględniać informację zwrotną tylko z jednej kategorii lub dwóch. Poza tym **nie ma gwarancji, że w trakcie tych zajęć wyłapiemy wszystkie błędy lub problemy**.
-
-**Wczesna weryfikacja nie stanowi okazji do zebrania informacji zwrotnej na temat niezakończonych zajęć. Wszelkie zajęcia, które zostaną uznane przez weryfikatora ze niezrealizowane w zbyt dużym zakresie, aby je oceniać, nie będą weryfikowane.**
-
-Informacje zwrotne na temat wszystkich zajęć przedłożonych do wczesnej weryfikacji wpłyną do 1 września. Podamy również link do formularza, którego można użyć do wyjaśnienia konkretnych zmian dokonanych w zajęciach w odpowiedzi na informację zwrotną.
-
-Każde zajęcia przedłożone przez 1 października będą przedmiotem standardowej weryfikacji, bez względu na to, czy zostanie uzyskana wczesna weryfikacja, czy nie. W okresie weryfikacji standardowej (wrzesień-październik) osoby opiniujące będą się koncentrować na ocenie zajęć według kryteriów opisanych w ww. części "Jak będzie przebiegać ocena zajęć". O ile nie zostaną zauważone konkretne zmiany w zajęciach, osoby opiniujące mogą i z dużym prawdopodobieństwem będą opierać się na informacji zwrotnej w ocenie zajęć.
+- Pozytywne informacje zwrotne: Co się sprawdza?
+- Krytyczne informacje zwrotne - Co można poprawić?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- Czy te zajęcia zachęcają uczniów do stworzenia czegoś niepowtarzalnego?
+- Are new this year
 
 [**Powrót do góry**](#top)
 
 <a id="design"></a>
 
-## Wskazówki dotyczące projektowania jednogodzinnych samouczków prowadzonych samodzielnie
+## Wytyczne do przedkładania wczesnej weryfikacji jakościowej (NEW)
 
-Możesz uwzględnić [logo Godziny kodowania](https://hourofcode.com/us/promote/resources#logo) w swoim samouczku, ale nie jest to wymagane. Jeśli korzystasz z logo "Godziny kodowania", zapoznaj się z poniższymi wytycznymi dotyczącymi znaków towarowych. <u>W żadnych okolicznościach nie można korzystać z logo Code.org ani nazwy.</u> Obie rzeczy są oznaczone znakiem towarowym i nie można ich mieszać z nazwami marek zewnętrznych bez wyraźnego zezwolenia w formie pisemnej.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Upewnij się, czy przeciętny uczeń jest w stanie komfortowo ukończyć zajęcia w ciągu godziny.** Rozważ możliwość dodania na koniec zadania otwartego dla uczniów, którzy zaliczą lekcję nieco szybciej. Pamiętaj, że w gronie dzieci większość stanowić będą osoby początkujące w dziedzinie informatyki i kodowania.
+Prosimy zauważyć: Są to wytyczne ogólne dotyczące przekazywania informacji zwrotnej. Wczesna weryfikacja naszych zajęć może uwzględniać informację zwrotną dotyczącą tych wszystkich kategorii lub może uwzględniać informację zwrotną tylko z jednej kategorii lub dwóch. 
 
-**Uwzględnij uwagi nauczyciela.** Większość zajęć powinna być ukierunkowana na ucznia, ale jeśli zajęcia są wspomagane lub kierowane przez nauczyciela, prosimy uwzględnić czytelne i proste instrukcje dla nauczyciela w formie uwag nauczyciela na odrębnym URL przedłożonym wraz z Twoimi zajęciami. Nie tylko uczniowie są nowicjuszami, niektórzy nauczyciele również. Uwzględnij takie informacje jak:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - Na jakich platformach i przeglądarkach samouczek działa najlepiej?
 - Czy działa na smartfonach? Tabletach?
 - Czy zalecasz programowanie w parach? 
 - Rozważania dotyczące użycia w klasie? Przykładowo, jeśli są filmy wideo doradź nauczycielom, aby pokazali filmy wideo na ekranie do projektora, aby cała klasa mogła je obejrzeć wspólnie
 
-**Podaj informację zwrotną pod koniec zajęć.** (Na przykład: “Ukończyłeś 10 poziomów i zdobyłeś wiadomości o pętlach! Świetnie Ci poszło!")
+Informacje zwrotne na temat wszystkich zajęć przedłożonych do wczesnej weryfikacji wpłyną do 1 września. Podamy również link do formularza, którego można użyć do wyjaśnienia konkretnych zmian dokonanych w zajęciach w odpowiedzi na informację zwrotną.
 
-**Zachęcaj uczniów do zamieszczania informacji na mediach społecznościowych (w zależności od okoliczności), gdy ukończą.** Na przykład: "Zaliczyłem "Godzinę kodowania u ________ A Ty? #HourOfCode” albo “Zaliczyłem #HourOfCode w ramach #CSEdWeek. A Ty? @Scratch.” Użyj hasztaga **#HourOfCode** (zapisując wielkimi literami H, O, C)
+Każde zajęcia przedłożone przez 1 października będą przedmiotem standardowej weryfikacji, bez względu na to, czy zostanie uzyskana wczesna weryfikacja, czy nie. W okresie weryfikacji standardowej (wrzesień-październik) osoby opiniujące będą się koncentrować na ocenie zajęć według kryteriów opisanych w ww. części "Jak będzie przebiegać ocena zajęć". O ile nie zostaną zauważone konkretne zmiany w zajęciach, osoby opiniujące mogą i z dużym prawdopodobieństwem będą opierać się na informacji zwrotnej w ocenie zajęć. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Utwórz swoje zajęcia w języku hiszpańskim lub innych językach oprócz angielskiego.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Wyjaśnij lub połącz zajęcia z ważnym społecznie kontekstem.** Programowanie komputerowe staje się supersiłą, gdy uczniowie wiedzą jak może zmieniać świat na lepsze!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Upewnij się, czy można używać samouczka w paradygmacie [programowania w parach](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Jest to szczególnie przydatne w przypadku "Godziny kodowania" ponieważ w wielu klasach nie ma sprzętu 1:1 dla wszystkich uczniów.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Powrót do góry**](#top)
 
 <a id="tm"></a>
 
-## Wytyczne dotyczące znaków towarowych
+## Wskazówki dotyczące projektowania jednogodzinnych samouczków prowadzonych samodzielnie
 
-Wielu partnerów w zakresie naszych samouczków posłużyło się naszym znakiem towarowym "Godzina kodowania" na swoich stronach internetowych. Nie chcemy zabraniać używania w tym trybie, ale chcemy mieć pewność, że odbywa się to zgodnie z następującymi zasadami:
+**Podaj informację zwrotną pod koniec zajęć.** (Na przykład: “Ukończyłeś 10 poziomów i zdobyłeś wiadomości o pętlach! Świetnie Ci poszło!")
 
 1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej. Dobry przykład użycia: "Weź udział w Godzinie kodowania™ na ACMECorp.com". Zły przykład użycia: "Weź udział w Godzinie kodowania ACME Corp".
 2. Stosuj górny indeks "TM" w najbardziej widocznych miejscach, gdzie używasz frazy "Godzina kodowania", zarówno na swojej stronie jak i w opisach aplikacji.
@@ -264,17 +243,17 @@ Wielu partnerów w zakresie naszych samouczków posłużyło się naszym znakiem
 
 <a id="pixel"></a>
 
-## Piksel śledzący
+## Wytyczne dotyczące znaków towarowych
 
-W celu śledzenia uczestnictwa w sposób bardziej dokładny zwracamy się do każdego partnera samouczka, aby uwzględnili 1-pikselowy obraz śledzenia na pierwszej stronie ich samouczków "Godziny kodowania". Obraz pikselowy musi być tylko na stronie startowej. Nie uwzględniaj żadnych stron przejściowych swojego samouczka.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-To pozwoli nam liczyć użytkowników, którzy realizują samouczek "Godzina kodowania". To doprowadzi do bardziej dokładnych zliczeń udziału dla Twojego samouczka.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Jeśli Twój samouczek zostanie zatwierdzony i uwzględniony na ostatniej stronie samouczka, Code.org przekaże Ci niepowtarzalny piksel śledzenia, abyś mógł go włączyć do swojego samouczka. Zobacz poniższy przykład.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-UWAGA: nie jest to ważne w przypadku możliwych do zainstalowania aplikacji (aplikacji na iOSa/Androida lub aplikacje do zainstalowania na komputerze stacjonarnym)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Przykład śledzenia pikseli na potrzeby "Potańcówki":
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -283,9 +262,9 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## Promocja Twoich zajęć: "Tydzień Edukacji Informatycznej" [CSEdWeek] lub "Godzina kodowania" [Hour of Code]
+## Piksel śledzący
 
-Prosimy o promocję swoich zajęć na swojej sieci! Przekieruj ich do swojej strony "Godziny kodowania". Występuje wyższe prawdopodobieństwo, że Twoi użytkownicy zareagują na akcję mailingową od Ciebie o Twoich zajęciach. Skorzystaj z kampanii "Godzina kodowania" w trakcie "Tygodnia Edukacji Informatycznej" jako fortelu do zachęcania użytkowników do zaproszenia innych, aby dołączyli oraz pomogli nam sięgać do większej grupy uczniów!
+To pozwoli nam liczyć użytkowników, którzy realizują samouczek "Godzina kodowania". To doprowadzi do bardziej dokładnych zliczeń udziału dla Twojego samouczka. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Zamieść "Godzinę kodowania" oraz "Tydzień Edukacji Informatycznej" na swojej stronie internetowej. Przykład: <http://www.tynker.com/hour-of-code>
 - Promuj "Godzinę kodowania" używając portali społecznościowych, tradycyjnych mediów, list mailingowych, itp., używając hashtaga #HourOfCode (z wielkimi literami H, O, C)
@@ -294,4 +273,4 @@ Prosimy o promocję swoich zajęć na swojej sieci! Przekieruj ich do swojej str
 
 [**Powrót do góry**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+UWAGA: nie jest to ważne w przypadku możliwych do zainstalowania aplikacji (aplikacji na iOSa/Androida lub aplikacje do zainstalowania na komputerze stacjonarnym)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

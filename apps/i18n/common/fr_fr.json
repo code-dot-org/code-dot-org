@@ -1326,6 +1326,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org accorde la plus haute importance à la sûreté et à la sécurité des étudiants. Code.org a signé le [Student Privacy Pledge] ({pledgeLink}) et leurs pratiques en matière de confidentialité ont reçu [l'un des scores globaux les plus élevés de Common Sense Media] ({commonSenseLink}). Vous pouvez trouver plus de détails en consultant la [Politique de confidentialité] ({privacyPolicyLink}) de Code.org.",
   "parentLetterWhy": "Pourquoi l'informatique",
   "parentLetterWhyDetails": "[Six études différentes démontrent]({researchLink}) : que les enfants qui étudient l'informatique obtiennent de meilleurs résultats dans d'autres matières, qu'ils excellent dans la résolution de problèmes et sont 17 % plus susceptibles d'aller à l'université. L'informatique enseigne aux étudiants la pensée critique, la résolution de problèmes et la citoyenneté numérique, et profite à tous les étudiants, quelles que soient les opportunités qu'ils recherchent à l'avenir, car de plus, apprendre à créer des animations interactives, du code-art, des jeux et des applications sur Code.org encourage la créativité et rend l'apprentissage amusant.",
+  "participantTypeStudentTitle": "Élèves",
+  "participantTypeTeacherTitle": "Enseignants",
   "partner": "Partenaire : {partner}",
   "password": "Mot de passe",
   "passwordConfirmation": "Confirmation du mot de passe",
