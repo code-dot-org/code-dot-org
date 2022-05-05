@@ -1624,8 +1624,6 @@ class Script < ApplicationRecord
       lesson_data = {
         'key' => lesson.key,
         'name' => lesson.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
       }
       data['lessons'][lesson.key] = lesson_data
     end
