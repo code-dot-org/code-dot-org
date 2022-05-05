@@ -5,6 +5,8 @@ import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResource
 import {nextLevelCourses} from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
 
 const GraduateToNextLevel = ({nextCourse}) => {
+  // TODO: Create a pattern to make course identifiers are mapped to their titles correctly
+  // look at 'pre-express' and 'accelerated' courses too
   const nextCourseInfo = nextLevelCourses.find(
     course => course.title.toLowerCase().replace(' ', '') === nextCourse
   );
@@ -20,7 +22,7 @@ const GraduateToNextLevel = ({nextCourse}) => {
           link={nextCourseInfo.link}
           image={nextCourseInfo.image}
           buttonText={nextCourseInfo.buttonText}
-          jumbo={true}
+          hasAdjustableHeight={true}
         />
       </div>
     </>
