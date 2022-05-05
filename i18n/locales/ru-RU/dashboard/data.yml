@@ -618,6 +618,7 @@ ru:
         poetry_module_multichoiceprompts: Подсказки с несколькими вариантами - Кодирование и поэзия
         poetry_module_conditionals: Условные операторы - Кодирование и поэзия
         poemart_intro: Введение в поэтическое искусство
+        CSA-PL-debugging-temp: Введение в отладку в лаборатории Java - шаблон
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

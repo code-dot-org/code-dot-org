@@ -1100,6 +1100,12 @@
           "preparation": "crwdns2877034:0crwdne2877034:0",
           "student_overview": "crwdns2877036:0crwdne2877036:0"
         },
+        "csd4-2021/Analysis of Design": {
+          "overview": "crwdns2910278:0crwdne2910278:0",
+          "preparation": "crwdns2910280:0crwdne2910280:0",
+          "purpose": "crwdns2910282:0crwdne2910282:0",
+          "student_overview": "crwdns2910284:0crwdne2910284:0"
+        },
         "csd4-2021/Understanding Your User": {
           "overview": "crwdns2870284:0crwdne2870284:0",
           "preparation": "crwdns2870286:0crwdne2870286:0",
@@ -1218,6 +1224,12 @@
           "purpose": "crwdns2871916:0crwdne2871916:0",
           "student_overview": "crwdns2871918:0crwdne2871918:0"
         },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "crwdns2911406:0crwdne2911406:0",
+          "preparation": "crwdns2911408:0[0]crwdnd2911408:0[1]crwdne2911408:0",
+          "purpose": "crwdns2911410:0crwdne2911410:0",
+          "student_overview": "crwdns2911412:0crwdne2911412:0"
+        },
         "csd6-2021/Designing Screens with Code": {
           "overview": "crwdns2872186:0[0]crwdnd2872186:0[1]crwdne2872186:0",
           "purpose": "crwdns2872188:0[0]crwdnd2872188:0[1]crwdnd2872188:0[2]crwdne2872188:0",
@@ -1299,6 +1311,12 @@
           "preparation": "crwdns2873564:0crwdne2873564:0",
           "purpose": "crwdns2873568:0crwdne2873568:0",
           "student_overview": "crwdns2873574:0crwdne2873574:0"
+        },
+        "csd5-2021/Representation Matters": {
+          "overview": "crwdns2913276:0crwdne2913276:0",
+          "preparation": "crwdns2913278:0crwdne2913278:0",
+          "purpose": "crwdns2913280:0crwdne2913280:0",
+          "student_overview": "crwdns2913282:0crwdne2913282:0"
         },
         "csd5-2021/Patterns and Representation": {
           "overview": "crwdns2877976:0crwdne2877976:0",
@@ -1382,6 +1400,12 @@
           "preparation": "crwdns2879184:0crwdne2879184:0",
           "purpose": "crwdns2879186:0crwdne2879186:0",
           "student_overview": "crwdns2879188:0crwdne2879188:0"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "overview": "crwdns2909482:0crwdne2909482:0",
+          "preparation": "crwdns2909484:0crwdne2909484:0",
+          "purpose": "crwdns2909486:0crwdne2909486:0",
+          "student_overview": "crwdns2909488:0crwdne2909488:0"
         },
         "csd3-2021/Plotting Shapes": {
           "overview": "crwdns2868120:0crwdne2868120:0",
@@ -1530,6 +1554,12 @@
           "purpose": "crwdns2881316:0crwdne2881316:0",
           "student_overview": "crwdns2881318:0crwdne2881318:0"
         },
+        "csd1-2021/The Problem Solving Process": {
+          "overview": "crwdns2915364:0crwdne2915364:0",
+          "preparation": "crwdns2915366:0crwdne2915366:0",
+          "purpose": "crwdns2915368:0crwdne2915368:0",
+          "student_overview": "crwdns2915370:0crwdne2915370:0"
+        },
         "csd1-2021/Exploring Problem Solving": {
           "overview": "crwdns2881436:0[0]crwdnd2881436:0[1]crwdne2881436:0",
           "preparation": "crwdns2881438:0crwdne2881438:0",
@@ -1594,6 +1624,12 @@
           "preparation": "crwdns2882546:0crwdne2882546:0",
           "purpose": "crwdns2882548:0crwdne2882548:0",
           "student_overview": "crwdns2882550:0crwdne2882550:0"
+        },
+        "csd2-2021/Exploring Web Pages": {
+          "overview": "crwdns2914148:0crwdne2914148:0",
+          "preparation": "crwdns2914150:0crwdne2914150:0",
+          "purpose": "crwdns2914152:0crwdne2914152:0",
+          "student_overview": "crwdns2914154:0crwdne2914154:0"
         },
         "csd2-2021/Intro to HTML": {
           "overview": "crwdns2879346:0crwdne2879346:0",

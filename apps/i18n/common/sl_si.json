@@ -413,6 +413,8 @@
   "pairingNavigatorWarning": "Ta uganka je bila končana med seznanjanjem z {driver}. Za rešitev te uganke, ki ste jo ustvarili kot skupina, poglejte na njihovih računih.",
   "pairProgramming": "Programiranje parov",
   "parent": "Starš",
+  "participantTypeStudentTitle": "Učenci",
+  "participantTypeTeacherTitle": "Učitelji",
   "password": "Geslo",
   "passwordConfirmation": "Potrditev gesla",
   "passwordsMustMatch": "Gesli se ne ujemata",

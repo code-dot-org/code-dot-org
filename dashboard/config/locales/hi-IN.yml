@@ -204,7 +204,16 @@ hi:
     user_type_button: खाता प्रकार अद्यतन करें
     user_type_label: खाता प्रकार
     user_type_student: छात्र
+    user_type_student_desc: 'हमारे सभी पाठ्यक्रमों और गतिविधियों का अन्वेषण करें,
+      साथ ही:'
+    user_type_student_ability_1: अपनी प्रगति और परियोजनाओं को सेव करें
+    user_type_student_ability_2: अपने शिक्षक के कक्षा अनुभाग में शामिल हों
     user_type_teacher: अध्यापक
+    user_type_teacher_desc: 'छात्रों की हर चीज तक पहुंच है, साथ ही:'
+    user_type_teacher_ability_1: कक्षा अनुभाग बनाएं
+    user_type_teacher_ability_2: छात्र कार्य असाइन करें और ट्रैक करें
+    user_type_teacher_ability_3: व्यावसायिक शिक्षा में नामांकन करें
+    user_type_teacher_ability_4: हमारे शिक्षक मंच पर बातचीत करें
     field_is_required: की आवश्यकता है
     accept_terms: खाता बनाने के लिए आपको सहमति देनी होगी।
     error: एक त्रुटि घटित हुई है।

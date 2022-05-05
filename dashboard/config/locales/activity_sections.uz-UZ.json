@@ -134,6 +134,9 @@
             null
           ]
         },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Labirint"
+        },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
             null
@@ -436,6 +439,9 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Matnni Zichlash"
         },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Haqiqiy hayot: Zip ni Siqish**\n\n-   Turli xil tarkibdagi matnli fayllar yordamida zip bilan tajriba qiling.  Kichik fayllar uchun natijalar katta hajmdagi fayllar kabi yaxshi emasmi? (Mac-larda Finder-da faylning haqiqiy bayt sonini ko‘rish uchun fayl uchun “get info”-ni tanlang, chunki Finder displeyi undan kam bo‘lgan har qanday fayl uchun 4KB-ni ko‘rsatadi.)\n    -   Ogohlantirish: natijalar farq qilishi mumkin.  Zip matn bilan juda yaxshi ishlaydi, lekin u boshqa fayllarni yaxshi siqmasligi mumkin, chunki ular allaqachon siqilgan yoki matnli hujjatlar singari ichki shablonlarga ega emas.\n\n**Qo‘shimcha topshiriq:  LZW algoritmini o‘rganing**\n\n-   .zip shu asosda siqiladi [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Matnni siqish vositasi g’oyasi LZW (zip) algoritmiga o‘xshash bo‘lsa-da, siqish va dekompressiya yo‘lini kuzatish biroz qiyin.  LZW haqida ko‘proq bilib olish va ushbu algoritm jarayonida nima sodir bo‘lishi ba’zi odamlar uchun ajoyib kengaytma loyihasi bo‘ladi."
+        },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Kirish"
         },
@@ -469,6 +475,9 @@
           "tips": [
             null
           ]
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Meni to‘p o‘yiniga olib boring\n\n Talabalarni tashqariga chiqarib, qandaydir to‘p o‘yini o‘ynang. Voqealar va harakatlarni kuzatib boring. Masalan, basketbolda dribling qilmaslik qoidabuzarlikka olib keladi va boshqa jamoa to‘pni oladi. Futbolda to‘pni chegaradan chiqarib yuborish boshqa jamoaning to‘pni tepishiga olib keladi. To‘pni darvozaga yetkazish ochkoga olib keladi! Agar sizning o‘quvchilaringiz bunga qo‘shilsa, ko‘proq voqealarni o‘ylab toping. Bitta jamoa sardori ochko to‘plaganida, talabalarning hammasi \"Yippiee\" deb baqirishsin. Agar talaba ketma-ket ikkita gol urgan bo‘lsa, hamma yerga yiqilib, aylansin!"
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -668,6 +677,10 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Kurs E. Sprite Lab loyihasi",
           "progression_name": "Kurs E. Sprite Lab loyihasi"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Dastur shabloni",
+          "progression_name": "Dastur shabloni"
         },
         "b44b4f32-2417-442d-812d-10bba9a6edc0": {
           "progression_name": "Rasm chizish"
@@ -2071,6 +2084,10 @@
           "name": "Loyiha",
           "progression_name": "Loyiha"
         },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Dastur shabloni",
+          "progression_name": "Dastur shabloni"
+        },
         "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
           "progression_name": "Rasm chizish"
         },
@@ -2229,6 +2246,16 @@
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Reflection",
           "progression_name": "Reflection"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Xususiyatlarni sozlash"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Hodisalar va xususiyatlar"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Ilova yaratis",
+          "progression_name": "Ilova yaratis"
         },
         "a5137285-e816-46c8-b7d3-d0b37dc9ae64": {
           "progression_name": "LED-dan foydalanish"
@@ -2444,6 +2471,10 @@
           "name": "Reflection",
           "progression_name": "Reflection"
         },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: Muammoni yechish jarayoni",
+          "progression_name": "Video: Muammoni yechish jarayoni"
+        },
         "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
           "name": "Video: Kompyuter kompyuter boʻlishi uchun nima kerak?",
           "progression_name": "Video: Kompyuter kompyuter boʻlishi uchun nima kerak?"
@@ -2612,6 +2643,10 @@
         },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "Kurs yakuni loyihalari"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Dastur shabloni",
+          "progression_name": "Dastur shabloni"
         },
         "2af454bc-9b55-4205-b0fd-247af66b3d13": {
           "progression_name": "Rasm chizish"
@@ -3209,6 +3244,7 @@
           "name": "Kirish"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Sprayt yasash",
           "tips": [
             null
           ],
@@ -4980,6 +5016,7 @@
           "name": "Kirish"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Sprayt yasash",
           "tips": [
             null
           ],
@@ -6562,6 +6599,26 @@
           ],
           "progression_name": "Kursdan keyingi so'rovnoma bo'yicha yo'riqnoma"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -7103,6 +7160,24 @@
           ],
           "progression_name": "Kursdan keyingi so'rovnoma bo'yicha yo'riqnoma"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Ilhomlaning"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -7477,6 +7552,39 @@
             null
           ],
           "progression_name": "Kursdan keyingi so'rovnoma bo'yicha yo'riqnoma"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Reflection"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -7893,6 +8001,24 @@
             null
           ],
           "progression_name": "Kursdan keyingi so'rovnoma bo'yicha yo'riqnoma"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Dastur shabloni"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -8736,6 +8862,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Muammoni yechish jarayoni",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Muammoni yechish jarayoni"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -9108,6 +9267,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Exploring Websites",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]
