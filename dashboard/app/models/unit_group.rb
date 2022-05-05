@@ -321,6 +321,7 @@ class UnitGroup < ApplicationRecord
       description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: units_for_user(user).map do |unit|
+        include_lessons = false
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
       teacher_resources: teacher_resources,
