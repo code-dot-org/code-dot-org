@@ -1,12 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 
 $(document).ready(() => {
   registerGetResult();
 
   // handle click on continue (results in navigating to next puzzle)
   $('.submitButton').click(onContinue);
+
+  const refGuideElement = document.getElementById('reference-guide');
+
+  if (refGuideElement) {
+    const referenceGuide = getScriptData('referenceGuide');
+    ReactDOM.render(
+      <ReferenceGuide referenceGuide={referenceGuide} />,
+      refGuideElement
+    );
+  }
 });
 
 /**
