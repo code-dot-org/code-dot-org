@@ -79,6 +79,7 @@ ko:
       screenHeight: 화면높이
       screenWidth: 화면너비
       shout: 소리지름
+      sides: 변
       size: 크기
       speed: 스피드
       variable: 변수

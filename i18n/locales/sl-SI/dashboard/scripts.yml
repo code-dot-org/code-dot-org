@@ -2574,3 +2574,21 @@ sl:
             Variables:
               name: Spremenljivke
               key: Spremenljivke
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Spremenljivke
+              key: Spremenljivke
+            Text:
+              name: Besedilo
+              key: Besedilo
+            Conditionals:
+              name: Pogoji
+              key: Pogoji
+            Functions:
+              name: Funkcije
+              key: Funkcije
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funkcije
