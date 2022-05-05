@@ -250,6 +250,7 @@
     "filesaver.js": "0.2.0",
     "jshint": "^2.9.5",
     "jszip": "3.0.0",
+    "karma-parallel": "^0.3.1",
     "memoize-one": "^5.1.1",
     "ml-knn": "^3.0.0",
     "object-fit-images": "^3.2.3",
