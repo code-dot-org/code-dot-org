@@ -9,8 +9,12 @@ const clickSpy = sinon.spy();
 const defaultProps = {
   style: {},
   children: [
-    <a onClick={clickSpy}>onclick</a>,
-    <a onClick={clickSpy}>onclick2</a>
+    <button onClick={clickSpy} type="button">
+      onclick
+    </button>,
+    <button onClick={clickSpy} type="button">
+      onclick2
+    </button>
   ]
 };
 
