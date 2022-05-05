@@ -842,6 +842,8 @@ eu:
               name: Funtzioak
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
         grade2:
@@ -1039,6 +1041,10 @@ eu:
           lessons:
             Introduction:
               name: Sarrera
+            Sprites:
+              name: Pertsonaiak
+            Input:
+              name: Sarrera
         coursed-ramp:
           lessons:
             Introduction:
@@ -1065,6 +1071,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -1085,6 +1093,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -1331,6 +1341,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -1341,6 +1353,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -1603,6 +1617,8 @@ eu:
               display_name: For begiztak
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
           lessons:
@@ -1645,6 +1661,8 @@ eu:
               name: Irudi bitarrak
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
@@ -1678,6 +1696,8 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
           lessons:
             Relay Programming:
               name: Txandaka programatzen
@@ -1778,6 +1798,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -1815,6 +1837,9 @@ eu:
             required:
               display_name: Bista orokorra
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -1912,6 +1937,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Conditionals:
               name: Baldintzak
             Velocity:
@@ -2043,6 +2070,8 @@ eu:
               display_name: Baldintzak
             csf_events:
               display_name: Gertaerak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
           lessons:
@@ -2056,6 +2085,8 @@ eu:
               display_name: Baldintzak
             csf_events:
               display_name: Gertaerak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
           lessons:
@@ -2097,6 +2128,8 @@ eu:
               name: Funtzioak
             Text:
               name: Testua
+            Sprites:
+              name: Pertsonaiak
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2167,6 +2200,8 @@ eu:
               name: Hiritartasun digitala
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
@@ -2186,6 +2221,8 @@ eu:
               display_name: Datu
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
           lessons:
             Envelope Variables:
               name: Gutun-azaleko aldagarriak
@@ -2207,6 +2244,8 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -2268,6 +2307,8 @@ eu:
           lessons:
             Variables:
               name: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
             Sprite Properties:
               name: Sprite-n Propietateak
             Text:
@@ -2291,6 +2332,9 @@ eu:
             Variables:
               key: Aldagaiak
               name: Aldagaiak
+            Sprites:
+              key: Pertsonaiak
+              name: Pertsonaiak
             Sprite Properties:
               key: Sprite-n Propietateak
               name: Sprite-n Propietateak
@@ -2414,6 +2458,8 @@ eu:
           lesson_groups:
             ramp_up:
               display_name: Kabiatutako begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
@@ -2432,6 +2478,8 @@ eu:
               key: Begizta jostarirako
               name: Begizta jostarirako
           lesson_groups:
+            ramp_up:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_variables:
@@ -2456,6 +2504,8 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
             lessonGroup-9:
               display_name: Gertaerak
         pre-express-2021:
@@ -2470,6 +2520,8 @@ eu:
               display_name: Sarrera
             lessonGroup-3:
               display_name: Aldagaiak
+            Sprites:
+              display_name: Pertsonaiak
             variables:
               display_name: Aldagaiak
         k5-onlinepd-2021:
@@ -2545,6 +2597,8 @@ eu:
               display_name: Kode Ordua
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
             lessonGroup-3:
               display_name: Aldagaiak
         csd6-pilot-2022:
@@ -2566,6 +2620,8 @@ eu:
               display_name: Gertaerak
         express-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             lessonGroup-9:
               display_name: Gertaerak
             csf_loops:
@@ -2661,6 +2717,8 @@ eu:
             Conditionals:
               key: Baldintzak
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             ramp_up:
@@ -2680,6 +2738,8 @@ eu:
               key: Internet
               name: Internet
           lesson_groups:
+            ramp_up:
+              display_name: Pertsonaiak
             lessonGroup-7:
               display_name: Hiritartasun digitala
             lessonGroup-8:
@@ -2710,6 +2770,10 @@ eu:
               name: Arazketa
             lesson-19:
               name: Arazketa
+        csa4-2022:
+          lessons:
+            lesson-11:
+              name: Ausazkoa
         csa1-2022-exemplars:
           lessons:
             lesson-9:
@@ -2722,6 +2786,8 @@ eu:
           lesson_groups:
             lessonGroup-7:
               display_name: Hiritartasun digitala
+            ramp_up:
+              display_name: Pertsonaiak
             lessonGroup-8:
               display_name: Aldagaiak
         csa2-2022-exemplars:
@@ -2748,3 +2814,30 @@ eu:
             For Loops:
               name: For begiztak
               key: For begiztak
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Aldagaiak
+              key: Aldagaiak
+            Sprites:
+              name: Pertsonaiak
+              key: Pertsonaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+              key: Sprite-n Propietateak
+            Text:
+              name: Testua
+              key: Testua
+            Conditionals:
+              name: Baldintzak
+              key: Baldintzak
+            Velocity:
+              name: Abiadura
+              key: Abiadura
+            Functions:
+              name: Funtzioak
+              key: Funtzioak
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funtzioak

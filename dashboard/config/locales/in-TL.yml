@@ -405,6 +405,7 @@ in:
       starwars: crwdns404164:0crwdne404164:0
       starwarsblocks: crwdns404166:0crwdne404166:0
       starwarsblocks_hour: crwdns404168:0crwdne404168:0
+      thebadguys: crwdns2905992:0crwdne2905992:0
       loading: crwdns2715439:0crwdne2715439:0
       weblab: crwdns404170:0crwdne404170:0
       view_all: crwdns245580:0crwdne245580:0
@@ -558,8 +559,8 @@ in:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0
-    art_from_html_old: crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0
+    art_from_html: crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0
+    art_from_html_old: crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0
     code_from_html: crwdns56267:0crwdne56267:0
     powered_by_aws: crwdns24789:0crwdne24789:0
     built_on_github: crwdns2474796:0crwdne2474796:0
@@ -998,6 +999,9 @@ in:
   no_script_access_teacher: crwdns401136:0crwdne401136:0
   no_level_access_student: crwdns2883586:0crwdne2883586:0
   no_level_access_teacher: crwdns2883588:0crwdne2883588:0
+  no_exemplar: crwdns2905994:0crwdne2905994:0
+  no_exemplar_access_student: crwdns2905996:0crwdne2905996:0
+  no_exemplar_access_teacher: crwdns2905998:0crwdne2905998:0
   return_unit_overview: crwdns91105:0crwdne91105:0
   return_course_overview: crwdns60153:0crwdne60153:0
   view_all_units: crwdns84693:0crwdne84693:0

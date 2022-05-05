@@ -2820,9 +2820,9 @@ hr:
               display_name: Likovi
             lessonGroup-8:
               display_name: Varijable
-        vpl-csd1-summer-pilot-2022:
+        vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-3:
               name: Nastavni plan
         csa2-2022-exemplars:
           lessons:
@@ -2850,3 +2850,34 @@ hr:
               key: Petlja brojača
             Lesson Planning:
               key: Nastavni plan
+        csd1-2022:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
+              key: Što je računalo?
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Varijable
+              key: Varijable
+            Sprites:
+              name: Likovi
+              key: Likovi
+            Text:
+              name: tekst
+              key: tekst
+            Conditionals:
+              name: Uvjeti
+              key: Uvjeti
+            Functions:
+              name: Funkcije
+              key: Funkcije
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Uvod u AI laboratorij
+              key: Uvod u AI laboratorij
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funkcije

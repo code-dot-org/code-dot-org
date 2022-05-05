@@ -462,6 +462,7 @@ bg:
         csd_pair_programming: Програмиране по двойки
         csd_applab_parameters: Функции с параметри
         csd_debugging: Отстраняване на грешки
+        csf_private_and_personal_information: Лична Информация
         playlab_2021: Въведение в игрална лаборатория
         playlab_2021_reader: Въведение в игрална лаборатория
     callout:

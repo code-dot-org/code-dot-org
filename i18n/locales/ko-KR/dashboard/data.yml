@@ -618,6 +618,9 @@ ko:
         outbreak_events: '발생: 이벤트'
         outbreak_scientist: '발생 시뮬레이터: 과학자처럼 생각하기'
         outbreak_outro: '발생 시뮬레이터: 프리플레이'
+        CSA-PL-debugging-temp: 자바 연구소에서의 디버깅 소개 - 임시
+        csd_u6_circuit_playground: 물리적 컴퓨팅
+        csd_u6_input_output: 인풋 및 아웃풋
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
