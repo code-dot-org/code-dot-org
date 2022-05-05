@@ -50,7 +50,7 @@ class CollapserButton extends Component {
           <div style={{display: 'grid'}}>
             <div
               style={{
-                opacity: this.props.collapsed ? 0 : 1,
+                opacity: this.props.collapsed ? 1 : 0,
                 gridRow: 1,
                 gridColumn: 1
               }}
@@ -59,7 +59,7 @@ class CollapserButton extends Component {
             </div>
             <div
               style={{
-                opacity: this.props.collapsed ? 1 : 0,
+                opacity: this.props.collapsed ? 0 : 1,
                 gridRow: 1,
                 gridColumn: 1
               }}
