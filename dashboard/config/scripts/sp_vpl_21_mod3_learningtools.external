@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Tools across the course
 
-#### CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+##### CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
 
 <div style="clear:both"/>
 
