@@ -38,6 +38,8 @@
   "online": "Онлайн",
   "other": "Дигар",
   "parent": "Волид",
+  "participantTypeStudentTitle": "Хонандагон",
+  "participantTypeTeacherTitle": "Муаллимон",
   "password": "Парол",
   "passwordConfirmation": "Тасдиқи парол",
   "personalLoginDialog_button": "Навбатӣ",

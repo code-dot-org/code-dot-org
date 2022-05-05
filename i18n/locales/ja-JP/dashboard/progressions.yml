@@ -201,6 +201,7 @@ ja:
       Motorcycle: オートバイ
       Move It Move it Video  - Unplugged Activity: '「うごかせ、うごかせ」ビデオ - アンプラグドアクティビティ'
       Movement with the Counter Pattern: カウンターパターンを使った動き
+      Multi-Screen Apps: マルチスクリーンアプリ
       Multiframe Animations: マルチフレームのアニメーション
       Musical Arrays: ミュージカル配列
       My Loopy Robotic Friends - Unplugged Activity: '「ループの達人 ロボットのお友だち」 - アンプラグドアクティビティ'
@@ -254,6 +255,7 @@ ja:
       Repeat Unit Statements: '「Until」ステートメントの繰り返し'
       Repeat Until Statements: '「Until」ステートメントの繰り返し'
       Representing Images: 画像の表現
+      Responding to User Input: ユーザー情報に返答
       Review: 確認する
       Revise Artist Project: アーティストの復習
       Revise Sprite Lab Project: スプライト ラボの復習
@@ -278,6 +280,7 @@ ja:
       Sprite Lab Example Project: スプライト ラボのサンプル
       Sprite Lab Project: スプライトラボプロジェクト
       Sprite Movement: スプライトの動き
+      Sprite Properties: スプライトのプロパティ
       Sprites and the Draw Loop: スプライトと描画ループ
       Star Chaser: スターチェイサー
       Styling Text: テキストの様式設定
@@ -299,6 +302,7 @@ ja:
       The Right App - Unplugged Activity: 正しいアプリ - アンプラグドアクティビティ
       Top Websites: トップウェブサイト
       Train AI to Clean the Ocean: 人工知能（AI）をトレーニングして海をきれいにする
+      Train an AI to Clean the Ocean: 人工知能（AI）をトレーニングして海をきれいにする
       UI Element Properties: UI要素のプロパティ
       Unit 5 Lesson 1 Overview: ユニット5レッスン1の概要
       User Interface: ユーザーインタフェース
@@ -336,6 +340,7 @@ ja:
       'Video: Debugging with the Step Button': 'ビデオ：ステップボタンでデバッグする'
       'Video: Events': ' イベント'
       'Video: Follow The Digital Trail': ' ビデオ：デジタル証跡をたどる'
+      'Video: For Loops': 'ビデオ：Forループ'
       'Video: Getting Loopy': ' ルーピーをゲット'
       'Video: Happy Maps - Unplugged Activity': 'ビデオ：「ハッピーマップ」 - アンプラグドアクティビティ'
       'Video: Harvesting with Conditionals': ' 農夫と学ぶ条件文'
@@ -395,6 +400,7 @@ ja:
       'Widget: Text Compression': 'ウィジェット - テキスト圧縮'
       Wrap-up: ラップアップ
       Your Personal Website: パーソナルウェブサイト
+      getNumber: getNumber
       getText vs getNumber: テキスト受信 vs 番号受信
       isTouching: isTouching
       setProperty: プロパティを設定

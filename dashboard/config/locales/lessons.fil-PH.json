@@ -4,6 +4,7 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
         },
         "minecraft/Minecraft Hour of Code Designer": {
@@ -34,6 +35,7 @@
         },
         "dance/Dance Party": {
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
         },
         "hello-world-food-2021/Hello World": {
@@ -86,8 +88,12 @@
         "basketball/Bounce": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
+        },
         "dance-2019/Dance Party": {
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
         },
         "oceans/Oceans": {
@@ -156,8 +162,14 @@
           "overview": "Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.",
           "student_overview": "Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito."
         },
+        "coursed-2021/Dance Party": {
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
+        },
         "coursed-2021/End of Course Project": {
           "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "express-2021/lesson-1": {
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
         "express-2021/Functions with Artist": {
           "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
@@ -203,6 +215,9 @@
         "coursee-2021/Conditionals": {
           "overview": "Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.",
           "student_overview": "Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito."
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Para simulan ang huling yunit ng kursong ito, ang mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang pisikal na mga pag-compute na mga kagamitan."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Sa araling ito, ang mga estudyante ay makakakuha sa kanilang unang pagkakataon na magsulat ng mga programa na gumagamit ng Circuit Playground. Pagkatapos sa unang pagsisiyasat sa board sa paningin at sa pag-iisip sa mga posibleng kakayahan, ang mga estudyante ay pupunta online kung saan matutunan nila ang pagsulat ng mga aplikasyon na kumukontrol sa LED. Sa pamamagitan ng pagsama-sama sa mga App Lab na mga screen kasama ang Circuit Playgrounds, ang mga estudyante ay unti-unting magsimulang pagsamahin ang mga elemento ng board bilang output na kagamitan habang gumagamit ng App Lab para sa input ng gumagamit."
