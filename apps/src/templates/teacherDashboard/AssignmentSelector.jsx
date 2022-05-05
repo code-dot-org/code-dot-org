@@ -8,6 +8,7 @@ import {
   CourseOfferingCategories,
   ParticipantAudiencesByType
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -261,7 +262,7 @@ export default class AssignmentSelector extends Component {
             {filteredCategories.map(category => (
               <optgroup
                 key={category}
-                label={CourseOfferingCategories[category]}
+                label={translatedCourseOfferingCategories[category]}
               >
                 {courseOfferingsByCategories[category]?.map(courseOffering => (
                   <option key={courseOffering.id} value={courseOffering.id}>
