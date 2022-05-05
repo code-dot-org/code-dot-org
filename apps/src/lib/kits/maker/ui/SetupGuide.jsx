@@ -83,7 +83,7 @@ export default class SetupGuide extends React.Component {
     this.setupChecker = new SetupChecker(wrappedPort);
 
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
-      return <SetupChecklist setupChecker={this.setupChecker} />;
+      return <SetupChecklist webSerialPort={wrappedPort} />;
     }
     return (
       <Provider store={store}>
