@@ -776,7 +776,7 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def copy_to_unit(destination_unit, destination_professional_learning_course, new_level_suffix = nil)
+  def copy_to_unit(destination_unit, new_level_suffix = nil, destination_professional_learning_course = nil)
     return if script == destination_unit
     raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
     raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? && destination_professional_learning_course.nil?
