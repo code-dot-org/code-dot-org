@@ -460,7 +460,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit_name},
       lesson_groups: '[]',
       is_migrated: true,
-      instruction_type: 'self-paced',
+      instruction_type: 'self_paced',
       instructor_audience: 'universal_instructor',
       participant_audience: 'teacher'
     }

@@ -469,7 +469,7 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self-paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self_paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
     ug = UnitGroup.find_by_name!('pl-csp-1991')
     assert_equal ug.instruction_type, 'self_paced'
     assert_equal ug.instructor_audience, 'universal_instructor'
