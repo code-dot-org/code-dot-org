@@ -1,0 +1,20 @@
+name 'CSA U6L7-L5v2_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+String originalTitle = "Once Upon a Time";
+String newTitle = originalTitle.substring(0, 2) + originalTitle.substring(3, 5) + originalTitle.substring(12);
+System.out.println(newTitle);
+```
+
+What is printed as a result of executing the code segment?
+MARKDOWN

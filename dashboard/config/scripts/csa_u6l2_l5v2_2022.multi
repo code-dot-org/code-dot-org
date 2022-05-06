@@ -1,0 +1,22 @@
+name 'CSA U6L2-L5v2_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+int days = 365;
+Integer weeks = 52;
+int weekends = weeks;
+int months = new Integer(12);
+Integer numOfSeasons = new Integer(4);
+```
+
+Which variables have the primitive data type `int`?
+MARKDOWN

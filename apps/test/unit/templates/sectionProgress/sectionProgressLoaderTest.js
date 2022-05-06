@@ -24,7 +24,7 @@ const timeInSeconds = 321;
 const serverProgressResponse = {
   pagination: {
     page: 1,
-    per: 50,
+    per: 20,
     total_pages: 1
   },
   student_last_updates: {
@@ -331,7 +331,7 @@ describe('sectionProgressLoader.loadScript', () => {
               sections: {
                 [selectedSectionId]: {}
               },
-              selectedStudents: new Array(60)
+              selectedStudents: new Array(30) // this is 1.5 * NUM_STUDENTS_PER_PAGE in sectionProgressLoaders
             }
           };
         },

@@ -119,7 +119,6 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family" do
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -131,7 +130,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csd'
     ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -145,7 +143,6 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_unit_group for family name with no stable versions does not redirect" do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csd'
     ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
@@ -156,7 +153,6 @@ class CoursesControllerTest < ActionController::TestCase
 
   test 'redirect to latest standards in course family' do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all")
 
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
@@ -456,6 +452,28 @@ class CoursesControllerTest < ActionController::TestCase
     post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     UnitGroup.find_by_name!('csp-1991')
     assert_redirected_to '/courses/csp-1991/edit'
+  end
+
+  test "create: defaults to teacher led, teacher to student course if nothing provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    ug = UnitGroup.find_by_name!('csp-1991')
+    assert_equal ug.instruction_type, 'teacher_led'
+    assert_equal ug.instructor_audience, 'teacher'
+    assert_equal ug.participant_audience, 'student'
+  end
+
+  test "create: sets course type if info is provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self_paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    ug = UnitGroup.find_by_name!('pl-csp-1991')
+    assert_equal ug.instruction_type, 'self_paced'
+    assert_equal ug.instructor_audience, 'universal_instructor'
+    assert_equal ug.participant_audience, 'teacher'
   end
 
   test "create: writes course json file" do

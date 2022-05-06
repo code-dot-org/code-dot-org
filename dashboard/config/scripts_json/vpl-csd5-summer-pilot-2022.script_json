@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-06 18:38:14 UTC",
+    "serialized_at": "2022-05-04 15:29:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,14 +96,14 @@
     },
     {
       "key": "lesson-3",
-      "name": "Making a Plan",
+      "name": "Teacher Resource Exploration",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. \n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. "
+        "overview": "**Overview:**\nDuring this session, participants will explore resources that are designed to support teachers in implementing CS Discoveries with their students. There will be opportunities for collaboration and sharing of ideas during this session. \n\n**Participants will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. \n\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -298,8 +298,19 @@
       }
     },
     {
-      "key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e",
+      "key": "1c73982e-f99b-41c7-9044-e51a2ccd8c46",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c73982e-f99b-41c7-9044-e51a2ccd8c46",
+        "lesson_activity.key": "40cb45be-646c-42ba-93ec-1d40ada947e2"
+      }
+    },
+    {
+      "key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e",
+      "position": 2,
       "properties": {
         "progression_name": "Set up your class sections"
       },
@@ -310,7 +321,7 @@
     },
     {
       "key": "3f45fa00-9775-490c-8f45-521c64a45e5e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Assign content to your class sections"
       },
@@ -321,7 +332,7 @@
     },
     {
       "key": "465869aa-2987-4443-b436-633b23f4514e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Prepare for the first day of class"
       },
@@ -368,6 +379,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod5-lesson4"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod5-lesson4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "1c73982e-f99b-41c7-9044-e51a2ccd8c46"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod5-lesson4"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid"
+        ],
         "progression": "Set up your class sections"
       },
       "bonus": false,
@@ -385,11 +424,14 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection"
+        ],
         "progression": "Set up your class sections"
       },
       "bonus": false,
@@ -407,11 +449,14 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-overview-assignContent"
+        ],
         "progression": "Assign content to your class sections"
       },
       "bonus": false,
@@ -429,11 +474,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-task-assignContent"
+        ],
         "progression": "Assign content to your class sections"
       },
       "bonus": false,
@@ -451,11 +499,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-overview-addingStudents"
+        ],
         "progression": "Prepare for the first day of class"
       },
       "bonus": false,
@@ -473,11 +524,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-task-PrepareForDay1"
+        ],
         "progression": "Prepare for the first day of class"
       },
       "bonus": false,
@@ -496,6 +550,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod5-lesson4",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod5-lesson4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "1c73982e-f99b-41c7-9044-e51a2ccd8c46"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "SP-VPL-21-mod2-ClassSection-vid",
@@ -571,6 +637,61 @@
   ],
   "resources": [
     {
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview\t",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview\t",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview\t",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview\t",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview\t",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
+      }
+    },
+    {
       "name": "Curriculum Guide",
       "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
       "key": "curriculum_guide",
@@ -602,7 +723,36 @@
     }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "csd_programming_levels_guide"
+      }
+    }
   ],
   "scripts_resources": [
     {

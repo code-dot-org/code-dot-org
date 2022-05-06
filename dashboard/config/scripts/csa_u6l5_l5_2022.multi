@@ -1,0 +1,26 @@
+name 'CSA U6L5-L5_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+What is the purpose of the following method?
+
+```
+public boolean mystery(ArrayList<Dessert> desserts) {
+  boolean flag = true;
+
+  for (Dessert d : desserts) {
+     if (d.getPrice() < 1) {
+      flag = false;
+    }
+  }
+
+  return flag;
+}
+```
+MARKDOWN

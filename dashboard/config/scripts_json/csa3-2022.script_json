@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 12:41:18 UTC",
+    "serialized_at": "2022-05-04 15:27:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -177,9 +193,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How can I create and use arrays of objects?**\n\nStudents explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.",
+        "overview": "**How can I create and use arrays of different objects?**\n\nStudents explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.",
         "preparation": "* Print copies of the Investigating Polymorphism handout (one for each pair of students)",
-        "student_overview": "**How can I create and use arrays of objects?**\n\nYou have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods."
+        "student_overview": "**How can I create and use arrays of different objects?**\n\nYou have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -231,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nStudents learn about nested loops and practice tracing these to explore their functionality. Using nested loops, students develop an algorithm to determine whether there are duplicate elements in a 1D array. Students plan their algorithms using manipulatives to identify the steps to solve the problem and write pseudocode before implementing them in Java.",
-        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 3 Study Guide (one for each student)",
         "student_overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nSometimes software engineers need to repeat an action on data to solve more complex problems. In this lesson, you learn about nested loops and practice tracing these to explore their functionality. Using nested loops, you develop an algorithm to determine whether there are duplicate elements in a 1D array. You plan your algorithm using manipulatives to identify the steps to solve the problem and write pseudocode before implementing it in Java."
       },
       "seeding_key": {
@@ -536,7 +552,7 @@
       "key": "7190192b-175a-46eb-985e-b7f236791912",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -550,7 +566,7 @@
       "key": "fcc90f4b-d59b-4849-a16f-3411d67254ca",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 25,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1087,7 +1103,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students recall `null` and the `NullPointerException`, and ask students what the `scores` variable points to when it is declared but not initialized. Use the visual on the slide to remind students that declaring a reference variable but not initializing it means its value is `null`."
+            "markdown": "Have students recall `null`, and ask students what the `scores` variable points to when it is declared but not initialized. Use the visual on the slide to remind students that declaring a reference variable but not initializing it means its value is `null`."
           }
         ]
       },
@@ -1474,7 +1490,7 @@
       "key": "d24e9939-fe7a-45b2-b124-8eb39f9416ab",
       "position": 1,
       "properties": {
-        "description": "To find this type of information from a set of data, software engineers use loops to go through a data structure and perform searches and calculations. In the previous lesson, we used a while loop to access and print all the values in a 1D array.",
+        "description": "To find this type of information from a set of data, software engineers use loops to go through a data structure and perform searches and calculations. In the previous lesson, we used a `while` loop to access and print all the values in a 1D array.",
         "duration": "15",
         "name": "For Loops",
         "remarks": true
@@ -1522,11 +1538,11 @@
       "key": "bfa43821-b69e-4457-957a-50cff8a017bd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define traverse and demonstrate traversing a 1D array with a `for` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How can we tell how many times a `for` loop will execute?*\n\n**Discussion Goal:** Students note that the number of times is determined by counting from the value the loop control variable is initialized to and the value that stops the loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define traverse and demonstrate traversing a 1D array with a `for` loop.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students refer to the Tracing Loops handout if they struggle to identify the number of times a `for` loop will execute. Ask students to compare their trace table to the starting value of the loop control variable and the condition to identify the relationship."
+            "markdown": "Point out to students that the condition is less than the length of the array rather than less than or equal to its length. Have students identify the length and the last index of the array in the code segment. Ask students to predict what might happen if the condition was less than or equal to the length and trace the code to demonstrate the result."
           }
         ]
       },
@@ -1536,8 +1552,25 @@
       }
     },
     {
-      "key": "8f535b53-c512-4583-8ed2-dc739d75bc3e",
+      "key": "a82431d8-f5fb-4e44-a813-53354bb7ae48",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How can we tell how many times a `for` loop will execute?*\n\n**Discussion Goal:** Students note that the number of times is determined by counting from the value the loop control variable is initialized to and the value that stops the loop.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students refer to the Tracing Loops handout if they struggle to identify the number of times a `for` loop will execute. Ask students to compare their trace table to the starting value of the loop control variable and the condition to identify the relationship."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a82431d8-f5fb-4e44-a813-53354bb7ae48",
+        "lesson_activity.key": "1cd28ab5-aad9-4a49-a140-cb4313a025ae"
+      }
+    },
+    {
+      "key": "8f535b53-c512-4583-8ed2-dc739d75bc3e",
+      "position": 6,
       "properties": {
         "description": "`for` loops are much easier to use with 1D arrays, but both a `while` loop and a `for` loop can be used interchangeably.",
         "duration": "15",
@@ -1551,7 +1584,7 @@
     },
     {
       "key": "59043f0f-f2ca-4bb7-97b7-f012a31e5807",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to convert a `while` loop to a `for` loop. On Level 3, students complete a choice level to use a `for` loop with a 1D array in the console or The Neighborhood.",
         "progression_name": "Using for Loops"
@@ -1563,7 +1596,7 @@
     },
     {
       "key": "98120312-d141-4bd8-9d2c-d9e584f61e8c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Using for Loops"
@@ -1951,7 +1984,7 @@
       "position": 6,
       "properties": {
         "description": "Enhanced `for` loops are useful for when we need to traverse an entire array from first to last. We can also use enhanced `for` loops with standard algorithms, such as to the sum or average of all the values in a 1D array.",
-        "duration": "15",
+        "duration": "10",
         "name": "Using Enhanced For Loops",
         "remarks": true
       },
@@ -2520,11 +2553,11 @@
       "key": "b22ca038-6c64-4f48-9380-192ad26eb847",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How can reading a file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n**Do This:** Click through the animated slides to explain the code segment for reading a file:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Packages to import and the constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using a `try/catch` to instantiate the `Scanner` object or notify if the file is not found\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reading the file into an array and returning the array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the class and method",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How can reading a file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What do you notice about the packages that are imported? Why do you think we need these?*\n* *What do you think the instance variables represent?*\n\n**Discussion Goal:** Students identify the packages that are imported and predict that these are needed to provide access to the `Scanner`, `File`, and `FileNotFoundException` classes. Students note that the instance variables represent a `Scanner` object to read the file and a `File` object for the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What do you notice about the constructor?*\n* *What do you think is the purpose of the `setFile()` method?*\n\n**Discussion Goal:** Students notice that the constructor calls the `setFile()` method. Students realize that the `setFile()` method instantiates the `File` and `Scanner` object. Students note that this method is a mutator method so it can be used to change the file and update the `Scanner` object to read a different file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What do you think is the purpose of the `createScanner()` method?*\n* *What do you notice about the code in this method?*\n\n**Discussion Goal:** Students note that the method returns a `Scanner` object to read the file. Students notice that the code uses a `try/catch` block that instantiates the `Scanner` object or notifies the user that the file cannot be found if a `FileNotFoundException` occurs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What do you think is the purpose of the `getIntData()` method?*\n* *How is this similar to how we have read input from a user? How is it different?*\n\n**Discussion Goal:** Students note that the method returns a 1D array of int values. Students realize that the `Scanner` object is used to check if there is a value to be read and reads the value into the array if a value is found. Students notice that the contents of the file are read using the same methods that they used to read user input, but that it first checks if there is data to read.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While `try/catch` is not assessed on the AP CSA Exam, it is useful for managing errors in a program.\n\nTo help students understand the need and purpose of a `try/catch`, have students recall the types of exceptions they have encountered so far, such as the `NullPointerException` and `ArrayIndexOutOfBoundsException`. Ask students why these exceptions occurred, what happened to the program, and what was displayed in the console.\n\nEmphasize that a `try/catch` allows them to attempt code that might cause an error and display a more specific error message if the exception occurs. In this case, the file that a user wants to use may be missing, which causes a `FileNotFoundException`. The `try` attempts to read the file, and the catch displays a `\"File not found\"` message if the `FileNotFoundException` occurs.\n\nBe sure to highlight that the `Scanner` constructor takes the `File` object as its parameter instead of `System.in`. A `Scanner` object can be constructed to read input from the console or a `File` object."
+            "markdown": "Students are not expected to know how to write code to read files on their own. Any activities in the curriculum that use file input provide the code for reading a file to students. The purpose here is to expose students to the functionality of the code so they understand how to use it when it is provided to them in upcoming activities."
           }
         ]
       },
@@ -2776,7 +2809,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "There are multiple ways students can solve this problem. For example, students can swap the values in the original array to reverse the order, or students may choose to create a new array and copy the values from the original array to the new array in reverse order."
+            "markdown": "Using the manipulatives is optional but helps students identify the steps in a task by physically acting out the algorithm. Encourage students to use the manipulatives to act out the problem and write down the steps they are taking to develop a solution.\n\nThere are multiple ways students can solve this problem. For example, students can swap the values in the original array to reverse the order, or students may choose to create a new array and copy the values from the original array to the new array in reverse order."
           }
         ]
       },
@@ -2904,7 +2937,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students consider their personal interests or topics of interest. Ask students about things they might want to know about these interests or topics."
+            "markdown": "Have students consider their personal interests or topics of interest. Ask students about things they might want to know about these interests or topics and what datasets they might look for to answer these questions."
           }
         ]
       },
@@ -3022,7 +3055,13 @@
       "key": "c21c45d4-51f9-4147-a77b-92aa8a17d13a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Data for Social Good Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 3 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Data for Social Good Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also choose to preview the user stories and data sets for the project and allow students to choose their user stories for the project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c21c45d4-51f9-4147-a77b-92aa8a17d13a",
@@ -3030,8 +3069,19 @@
       }
     },
     {
-      "key": "6c1c3f17-5b02-4a4f-99f4-1f3623ee8fbb",
+      "key": "dc333cbe-b3d7-4ddb-8370-73b4c0e6aefb",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc333cbe-b3d7-4ddb-8370-73b4c0e6aefb",
+        "lesson_activity.key": "f997425c-c6ac-42a7-a860-a65bf04829f1"
+      }
+    },
+    {
+      "key": "6c1c3f17-5b02-4a4f-99f4-1f3623ee8fbb",
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -3042,7 +3092,7 @@
     },
     {
       "key": "3a7ea74a-c69b-496b-9945-c4c2a21f83d0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3055,7 +3105,7 @@
     },
     {
       "key": "12368e41-3738-4137-baa4-5875df922d54",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
@@ -3158,7 +3208,13 @@
       "key": "3dfcba97-7c5d-4a1c-8ed5-7c7d98cc00e7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3dfcba97-7c5d-4a1c-8ed5-7c7d98cc00e7",
@@ -3395,7 +3451,7 @@
       "key": "754816a1-d970-43f3-b462-ba09f9d3ea45",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3445,7 +3501,7 @@
       "key": "b67823cd-bb2c-4fd9-93c0-1cee2b526ce5",
       "position": 3,
       "properties": {
-        "description": "Congratulations! You have completed your store management project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "description": "Congratulations! You have completed your data for social good project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
         "name": "Peer Presentations",
         "remarks": true
@@ -3504,6 +3560,18 @@
       },
       "seeding_key": {
         "activity_section.key": "112e54c3-69e9-4608-add6-364328fb92e7",
+        "lesson_activity.key": "fa5d5516-f2b4-442a-a7f0-2143ed5f2427"
+      }
+    },
+    {
+      "key": "492650a3-c354-40be-bfe4-7f45c06b8ffc",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 3 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "492650a3-c354-40be-bfe4-7f45c06b8ffc",
         "lesson_activity.key": "fa5d5516-f2b4-442a-a7f0-2143ed5f2427"
       }
     },
@@ -5096,6 +5164,31 @@
     },
     {
       "chapter": 57,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3-2022"
+        ],
+        "progression": "Unit 3 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa3-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "492650a3-c354-40be-bfe4-7f45c06b8ffc"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa3-2022"
+      ]
+    },
+    {
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5120,7 +5213,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5144,7 +5237,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5169,7 +5262,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5869,6 +5962,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa3-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa3-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "492650a3-c354-40be-bfe4-7f45c06b8ffc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 3 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 3 Assessment 2022"
@@ -6539,6 +6644,18 @@
       }
     },
     {
+      "name": "Unit 3 Study Guide",
+      "url": "https://docs.google.com/document/d/18GNeBwMCD1vkzp3glRuANNJw8FhbX6g5qMR2-USB924/edit?usp=sharing",
+      "key": "unit_3_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide"
+      }
+    },
+    {
       "name": "Unlocking Assessments",
       "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
       "key": "unlocking_assessments",
@@ -6676,6 +6793,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unit_3_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_3_study_guide"
       }
     },
     {
@@ -6952,7 +7075,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "unit_3_guide",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_3_overview",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide",
         "script.name": "csa3-2022"
       }
     }
@@ -6974,7 +7109,7 @@
     {
       "key": "arrayindexoutofboundsexception",
       "word": "ArrayIndexOutOfBoundsException",
-      "definition": "an error that occurs when attempting to access an index greater than or equal to the size of the array",
+      "definition": "an error that occurs when attempting to access an index that is negative, greater than, or equal to the size of the array",
       "properties": {
       },
       "seeding_key": {
@@ -7092,6 +7227,16 @@
       }
     },
     {
+      "key": "off_by_one_error",
+      "word": "off-by-one error",
+      "definition": "an error that occurs when we try to access an index value that is greater than the length of the array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
+    {
       "key": "one_dimensional_d_array",
       "word": "one-dimensional (1D) array",
       "definition": "a data structure that holds multiple values of the same data type",
@@ -7163,6 +7308,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-10",

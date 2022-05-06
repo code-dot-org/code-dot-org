@@ -18,7 +18,6 @@ import reducer, {
   editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
-  editSectionLoginType,
   asyncLoadSectionData,
   assignmentNames,
   assignmentPaths,
@@ -34,7 +33,6 @@ import reducer, {
   sectionProvider,
   isSectionProviderManaged,
   getVisibleSections,
-  isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
   sortedSectionsList,
@@ -60,7 +58,7 @@ const sections = [
     location: '/v2/sections/11',
     name: 'My Section',
     login_type: 'picture',
-    participantType: 'student',
+    participant_type: 'student',
     grade: '2',
     code: 'PMTKVH',
     lesson_extras: false,
@@ -81,7 +79,7 @@ const sections = [
     location: '/v2/sections/12',
     name: 'My Other Section',
     login_type: 'picture',
-    participantType: 'student',
+    participant_type: 'student',
     grade: '11',
     code: 'DWGMFX',
     lesson_extras: false,
@@ -102,7 +100,7 @@ const sections = [
     location: '/v2/sections/307',
     name: 'My Third Section',
     login_type: 'email',
-    participantType: 'student',
+    participant_type: 'student',
     grade: '10',
     code: 'WGYXTR',
     lesson_extras: true,
@@ -310,7 +308,7 @@ describe('teacherSectionsRedux', () => {
         name: '',
         loginType: undefined,
         grade: '',
-        participantType: 'student',
+        participantType: undefined,
         providerManaged: false,
         lessonExtras: true,
         ttsAutoplayEnabled: false,
@@ -337,7 +335,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         loginType: 'picture',
         grade: '11',
-        participantType: undefined,
+        participantType: 'student',
         providerManaged: false,
         code: 'DWGMFX',
         lessonExtras: false,
@@ -498,6 +496,7 @@ describe('teacherSectionsRedux', () => {
       id: 13,
       name: 'Untitled Section',
       login_type: 'email',
+      participant_type: 'student',
       grade: undefined,
       providerManaged: false,
       lesson_extras: false,
@@ -651,7 +650,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           loginType: 'picture',
           grade: '3',
-          participantType: undefined,
+          participantType: 'student',
           providerManaged: false,
           lessonExtras: false,
           ttsAutoplayEnabled: false,
@@ -703,95 +702,6 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(finishEditingSection()).catch(() => {});
       server.respond();
       expect(state().sections).to.equal(originalSections);
-    });
-  });
-
-  describe('editSectionLoginType', () => {
-    let server;
-
-    // Fake server responses to reuse in our tests
-    const newSectionDefaults = {
-      id: 13,
-      name: 'Untitled Section',
-      login_type: 'email',
-      grade: undefined,
-      providerManaged: false,
-      lesson_extras: false,
-      tts_autoplay_enabled: false,
-      pairing_allowed: true,
-      student_count: 0,
-      code: 'BCDFGH',
-      course_id: null,
-      course_offering_id: null,
-      course_version_id: null,
-      hidden: false,
-      restrict_section: false,
-      post_milestone_disabled: false
-    };
-
-    function successResponse(sectionId, customProps = {}) {
-      const existingSection = sections.find(s => s.id === sectionId);
-      return [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify({
-          ...(existingSection || newSectionDefaults),
-          id: existingSection ? sectionId : 13,
-          ...customProps
-        })
-      ];
-    }
-
-    function state() {
-      return getState().teacherSections;
-    }
-
-    beforeEach(function() {
-      // Stub server responses
-      server = sinon.fakeServer.create();
-
-      // Test with a real redux store, not just the reducer, because this
-      // action depends on the redux-thunk extension.
-      store.dispatch(setSections(sections));
-    });
-
-    afterEach(function() {
-      server.restore();
-    });
-
-    it('sets and clears saveInProgress', () => {
-      const sectionId = 12;
-      server.autoRespond = true;
-      server.respondWith(
-        'PATCH',
-        `/dashboardapi/sections/${sectionId}`,
-        successResponse(sectionId)
-      );
-
-      expect(isSaveInProgress(getState())).to.be.false;
-
-      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
-      expect(isSaveInProgress(getState())).to.be.true;
-      return expect(promise).to.be.fulfilled.then(() => {
-        expect(isSaveInProgress(getState())).to.be.false;
-      });
-    });
-
-    it('updates an edited section in the section map on success', () => {
-      const sectionId = 12;
-      server.autoRespond = true;
-      server.respondWith(
-        'PATCH',
-        `/dashboardapi/sections/${sectionId}`,
-        successResponse(sectionId, {login_type: 'word'})
-      );
-
-      expect(state().sections[sectionId].loginType).to.equal('picture');
-
-      const promise = store.dispatch(editSectionLoginType(sectionId, 'word'));
-      return expect(promise).to.be.fulfilled.then(() => {
-        expect(state().sections[sectionId].loginType).to.equal('word');
-      });
     });
   });
 
@@ -1377,8 +1287,8 @@ describe('teacherSectionsRedux', () => {
       );
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_course_offerings',
-        successResponse([])
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respondWith(
         'GET',
@@ -1681,6 +1591,7 @@ describe('teacherSectionsRedux', () => {
           studentCount: 10,
           code: 'PMTKVH',
           grade: '2',
+          participantType: 'student',
           providerManaged: false,
           hidden: false,
           assignmentNames: ['CS Discoveries 2017'],
@@ -1693,6 +1604,7 @@ describe('teacherSectionsRedux', () => {
           studentCount: 1,
           code: 'DWGMFX',
           grade: '11',
+          participantType: 'student',
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],

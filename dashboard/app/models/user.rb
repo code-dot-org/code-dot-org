@@ -1426,6 +1426,10 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def mute_music?
+    !!mute_music
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
@@ -1768,6 +1772,14 @@ class User < ApplicationRecord
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
     user_course_data + user_script_data
+  end
+
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
   end
 
   def all_sections
