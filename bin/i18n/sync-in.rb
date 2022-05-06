@@ -134,10 +134,15 @@ def get_i18n_strings(level)
 
       # Spritelab behaviors
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      unless behaviors.empty?
+        i18n_strings['behavior_names'] = Hash.new
+        i18n_strings['behavior_descriptions'] = Hash.new
+      end
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
+        description = behavior.at_xpath('./mutation/description')
         i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings['behavior_descriptions'][description.content] = description.content if description
       end
 
       ## Variable Names

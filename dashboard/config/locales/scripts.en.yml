@@ -6117,8 +6117,8 @@ en:
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
               name: Loops in Artist
-              description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_student: 
+              description_teacher: 
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
@@ -6199,6 +6199,8 @@ en:
               name: Build a Flappy Game
             Events in Play Lab:
               name: Events in Play Lab
+              description_student: 
+              description_teacher: 
             Screen Out the Mean:
               name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
@@ -31427,6 +31429,10 @@ en:
               name: The Neighborhood
               description_student: 
               description_teacher: 
+            lesson-23:
+              name: CSA Pre-Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -33035,6 +33041,12 @@ en:
               description_teacher: 
             lesson-2:
               name: Project Mercury Pastries Food Truck
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus
               description_student: 
               description_teacher: 
           lesson_groups: {}
