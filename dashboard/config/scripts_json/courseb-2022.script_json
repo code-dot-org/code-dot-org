@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-04-21 16:36:48 UTC",
+    "serialized_at": "2022-05-04 15:29:52 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -94,8 +94,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "End of Course Project",
-        "description": "\n\n![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
+        "display_name": "End of Course Project"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",

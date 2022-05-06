@@ -46,6 +46,16 @@
       }
     },
     {
+      "name": "Class Discussions",
+      "url": "https://docs.google.com/document/d/1ztS7uq4psChwgi3KnKgIfaZNQ8CGngxrs46GyUte0OQ/preview",
+      "key": "class_discussions",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "class_discussions"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -82,6 +92,48 @@
       }
     },
     {
+      "name": "Debugging",
+      "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
+      "key": "debugging",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "debugging"
+      }
+    },
+    {
+      "name": "Journaling",
+      "url": "https://docs.google.com/document/d/1c26sQ91SxSsztR6sG-7Y55mbiUxobTGjLQ0j5BHx3go/preview",
+      "key": "journaling",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "journaling"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://docs.google.com/document/d/1fLhPTocHW6gsLkmOs_oQkOd4XGVs4clWqz76nz_uQqo/preview",
+      "key": "pair_programming_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming_1"
+      }
+    },
+    {
+      "name": "Peer Feedback",
+      "url": "https://docs.google.com/document/d/1DoskXfKfgDkfEpl1ZCj_S100n6M9ytD8nB77R9ZDGHA/preview",
+      "key": "peer_feedback",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -91,6 +143,16 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Unplugged and Plugged",
+      "url": "https://docs.google.com/document/d/1vwZH1nYXFB-YZ9yLWzpJdjiUycf3hCmrAG5Ps5guvvY/preview",
+      "key": "unplugged_and_plugged",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_and_plugged"
       }
     }
   ],
