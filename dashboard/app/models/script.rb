@@ -1328,7 +1328,8 @@ class Script < ApplicationRecord
 
   # This method updates scripts.en.yml with i18n data from the units.
   # There are three types of i18n data
-  # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
+  # 1. Lesson names are passed in as lessons_i18n here. The script edit page
+  #   will add to these when creating a new lesson.
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {}, log_event_type: 'write_other')
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
