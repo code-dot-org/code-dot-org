@@ -85,7 +85,9 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, message: ->(object, _data) do
+    "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
+  end
 
   include CodespanOnlyMarkdownHelper
 
@@ -270,9 +272,9 @@ class Lesson < ApplicationRecord
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_student = get_localized_property('student_overview') || ''
       description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
-      description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_teacher = get_localized_property('overview') || ''
       description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
 
       lesson_data = {
@@ -824,15 +826,12 @@ class Lesson < ApplicationRecord
       "[v #{new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}]"
     end
 
-    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.overview, update_resource_link_on_clone) if copied_lesson.overview
-    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.overview, update_vocab_definition_on_clone) if copied_lesson.overview
-    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.student_overview, update_resource_link_on_clone) if copied_lesson.student_overview
-    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.student_overview, update_vocab_definition_on_clone) if copied_lesson.student_overview
-    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.preparation, update_resource_link_on_clone) if copied_lesson.preparation
-    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.preparation, update_vocab_definition_on_clone) if copied_lesson.preparation
-    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.assessment_opportunities, update_resource_link_on_clone) if copied_lesson.assessment_opportunities
-    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.assessment_opportunities, update_vocab_definition_on_clone) if copied_lesson.assessment_opportunities
-    copied_lesson.save!
+    %w(overview student_overview preparation assessment_opportunities).each do |field|
+      next unless copied_lesson.try(field)
+      Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.try(field), update_resource_link_on_clone)
+      Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.try(field), update_vocab_definition_on_clone)
+    end
+    copied_lesson.save! if copied_lesson.changed?
 
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
@@ -844,10 +843,20 @@ class Lesson < ApplicationRecord
         copied_activity_section = original_activity_section.dup
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+
         if copied_activity_section.description
           Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.description, update_resource_link_on_clone)
           Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
         end
+
+        unless copied_activity_section.tips.blank?
+          copied_activity_section.tips.each do |tip|
+            next unless tip && tip['markdown']
+            Services::MarkdownPreprocessor.sub_resource_links!(tip['markdown'], update_resource_link_on_clone)
+            Services::MarkdownPreprocessor.sub_vocab_definitions!(tip['markdown'], update_vocab_definition_on_clone)
+          end
+        end
+
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
           # Only include active level and discard variants

@@ -24,10 +24,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Hallo Welt!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Hallo Welt!"
+          "ed076287532e86365e841e92bfc50d8c": "Hallo Welt!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hallo!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Hallo Welt!"
+          "ed076287532e86365e841e92bfc50d8c": "Hallo Welt!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hallo!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "blau",
@@ -78,7 +80,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben"
+          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Punktzahl ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Level "
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
@@ -184,15 +188,18 @@
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben"
+          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben",
+          "ae096fbf24d913754b01a1601672bf62": " auch!"
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben"
+          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Wie alt bist du?"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben"
+          "30fcc1693fa8402931d13ac3a5f396fd": "Titel hier eingeben",
+          "f6429fe0f1a76611670df7e1234af936": "Wie heißt du?"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Text hier eingeben",
@@ -456,10 +463,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage",
+          "f6429fe0f1a76611670df7e1234af936": "Wie heißt du?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage",
+          "f6429fe0f1a76611670df7e1234af936": "Wie heißt du?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "meine Frage"
@@ -503,6 +512,45 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "auswahl 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "auswahl 3",
           "6cd3556deb0da54bca060b4c39479839": "Hallo, Welt!"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Level: "
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Ein Hund!",
+          "336ad881e37e713ba0325500a8fa1f00": "Hunde!",
+          "27944770529dd15319a983bee8951560": "Eine Katze!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "Katzen!",
+          "1c64ef29c853587fbe94f69f05272b79": "Ein Vogel!",
+          "5b402e6ea05e847a076e03ad74420c45": "Vögel!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Ein Drache!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " Drachen!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Zähle alle Tiere!",
+          "f62038e77820419cd978f7b722da560a": "Wie viele werden gezeigt?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Zähle die Haustiere"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Ein Hund!",
+          "336ad881e37e713ba0325500a8fa1f00": "Hunde!",
+          "27944770529dd15319a983bee8951560": "Eine Katze!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "Katzen!",
+          "1c64ef29c853587fbe94f69f05272b79": "Ein Vogel!",
+          "5b402e6ea05e847a076e03ad74420c45": "Vögel!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Ein Drache!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " Drachen!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Zähle alle Tiere!",
+          "f62038e77820419cd978f7b722da560a": "Wie viele werden gezeigt?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Zähle die Haustiere"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Das bin ich! Rikki! Ich programmiere gerne, hänge mit Thuy ab und esse Eis!",
+          "810896b14fc6615f0c76628b9b6a727e": "Das ist meine beste Freundin Thuy! Sie ist wirklich sehr sportlich!",
+          "6f97975a0bda0c9219915161149cbb26": "Das ist mein Computer! Ich programmiere die ganze Zeit darauf!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Das bin ich! Rikki! Ich programmiere gerne, hänge mit Thuy ab und esse Eis!",
+          "810896b14fc6615f0c76628b9b6a727e": "Das ist meine beste Freundin Thuy! Sie ist wirklich sehr sportlich!",
+          "6f97975a0bda0c9219915161149cbb26": "Das ist mein Computer! Ich programmiere die ganze Zeit darauf!"
         }
       }
     }

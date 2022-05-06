@@ -544,6 +544,9 @@ hi:
         poetry_module_multichoiceprompts: मल्टीपल चॉइस संकेत - कोडिंग विद पोएट्री
         poetry_module_conditionals: कंडीशनल - कोडिंग विद पोएट्री
         poemart_intro: कविता कला परिचय
+        CSA-PL-debugging-temp: जावा लैब में डिबगिंग का परिचय - अस्थायी
+        csd_u6_circuit_playground: भौतिक कंप्यूटिंग
+        csd_u6_input_output: इनपुट और आउटपुट
     callout:
       text:
         drag_blocks: '"मूव करें" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें'

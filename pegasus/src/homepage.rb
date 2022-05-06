@@ -342,8 +342,8 @@ class Homepage
                 url: CDO.studio_url("/")
               },
               {
-                text: "homepage_slot_text_link_local",
-                url: "/learn/local"
+                text: "homepage_slot_text_link_thebadguys",
+                url: "/thebadguys"
               },
               {
                 text: "homepage_slot_text_link_othercourses",

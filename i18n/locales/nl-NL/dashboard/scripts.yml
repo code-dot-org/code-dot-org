@@ -930,6 +930,8 @@ nl:
           lessons:
             Lesson Overviews:
               name: Lesoverzichten
+        cspunit4draft:
+          description_short: Data
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1240,6 +1242,8 @@ nl:
               name: Vasthouden
             Classes:
               name: Lessen
+        CSDU5-Draft:
+          description_short: Data
         CSF_Secret_Sample_Story:
           description_audience: Leeftijd 8+
         MikeTest:
@@ -2972,6 +2976,8 @@ nl:
               display_name: Inleiding
             csf_variables:
               display_name: Variabelen
+            csf_data:
+              display_name: Data
             csf_for_loops:
               display_name: For-lussen
             csf_internet:
@@ -3146,6 +3152,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
@@ -4508,6 +4516,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
           lessons:
             Binary Bracelets:
               name: Binaire armbanden
@@ -4576,6 +4586,8 @@ nl:
               display_name: Digitaal Burgerschap
             csf_variables:
               display_name: Variabelen
+            csf_data:
+              display_name: Data
             csf_for_loops:
               display_name: For-lussen
             csf_sprites:
@@ -5425,6 +5437,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2021:
           description_audience: 'Leeftijden: 7-11'
@@ -7003,6 +7017,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
           description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
@@ -7057,6 +7073,8 @@ nl:
               display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: Vragenlijst
         csp8-2022:
           lessons:
             lesson-4:
@@ -7217,6 +7235,7 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+          description_audience: 'Leeftijden: 4-8'
         csa2-2022:
           lessons:
             lesson-6:
@@ -7413,6 +7432,9 @@ nl:
             lessonGroup-5:
               display_name: Sandbox
         csa7-2022:
+          lessons:
+            lesson-6:
+              name: Intellectuele Eigendom
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -7425,6 +7447,30 @@ nl:
             lessonGroup-5:
               display_name: Sandbox
         vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welkom
+            lesson-11:
+              name: Afronden
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welkom
+            lesson-9:
+              name: Afronden
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welkom
+            lesson-8:
+              name: Afronden
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Welkom
+            lesson-14:
+              name: Afronden
+        vpl-csd5-summer-pilot-2022:
           lessons:
             lesson-1:
               name: Welkom
@@ -7459,3 +7505,97 @@ nl:
               key: Volgende stappen
         hello-world-csc:
           title: Hallo Wereld
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Poëzie
+              description_teacher: 'In deze geïntegreerde CS en ELA-les voor nieuwe programmeurs, gaan leerlingen een gedicht animeren met code om de stemming van een gedicht te illustreren. Studenten zullen leerlingen een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden vinden om de stemming van het gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering in stemming te illustreren of de introductie van nieuwe beelden in een gedicht te animeren. '
+        csd1-2022:
+          lessons:
+            Storage:
+              name: Opslag
+              key: Opslag
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Headings
+              key: Headings
+            Intellectual Property:
+              name: Intellectuele Eigendom
+              key: Intellectuele Eigendom
+            Using Images:
+              name: Afbeeldingen gebruiken
+              key: Afbeeldingen gebruiken
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variabelen
+              key: Variabelen
+            Sprites:
+              name: Sprites
+              key: Sprites
+            Text:
+              name: Tekst
+              key: Tekst
+            Conditionals:
+              name: Voorwaardelijke instructies
+              key: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+              key: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+              key: Botsingdetectie
+            Collisions:
+              description_teacher: "**Vraag van de dag: hoe kunnen programmeurs bouwen op abstracties om nog meer abstracties te creëren?**\\\\r\n\\\\r\nIn deze les programmeren studenten hun eigen sprites om op nieuwe manieren te interacteren. Na een korte evaluatie over hoe zij het blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/) hebben gebruikt, kunnen studenten brainstormen over andere manieren hoe twee sprites kunnen interacteren. Ze kunnen [`isTouching`(#f78183)](/docs/gamelab/isTouching/) gebruiken om een sprite een andere sprite over het scherm te duwen voordat ze gaan oefenen met de vier botsingsblokken ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), en [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+            Functions:
+              name: Functies
+              key: Functies
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2022:
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+              key: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              name: Het voorstellen van getallen
+              key: Het voorstellen van getallen
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            cspSurvey:
+              display_name: Vragenlijst
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
+        csd6-2022:
+          lessons:
+            Combining Inputs and Outputs:
+              name: Invoer combineren
+            Functions:
+              name: Functies
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            lessonGroup-4:
+              display_name: Vragenlijst
+        csd-post-survey-2022:
+          description: Deze unit bevat de CS Discoveries Post-cursus enquête. Deze unit kan worden toegewezen nadat studenten hun laatste unit in CS Discoveries hebben afgerond.
+          student_description: Deze unit bevat een enquête voor wanneer je klas klaar is met de units in CS Discoveries. Je leraar zal je vertellen wanneer het tijd is om deze enquête in te vullen.

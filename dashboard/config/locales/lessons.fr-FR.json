@@ -633,6 +633,7 @@
         "express-2021/lesson-3": {
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les étudiants écriront des programmes qui répondent à des événements chronométrés et à des entrées utilisateur. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous travaillerez à travers les niveaux de programmation et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
@@ -889,6 +890,9 @@
         },
         "csd7-2021/Similarity Models": {
           "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Pour démarrer le dernière partie de ce module, les élèves vont rechercher quelques innovations intéressantes en informatique. Cette leçon montrera aux élèves une grande variété dans la forme des ordinateurs et les activités impactées par l'informatique. Plus tard dans le module, les étudiants pourront comparer le résultat de leur recherche avec leur propre expérimentation sur un microcontrôleur."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Dans cette leçon, les élèves vont avoir la possibilité d'écrire leur premier programme utilisant le Circuit Playground. Après avoir étudier le circuit visuellement et formuler des hypothèses sur ses différentes fonctions, les élèves se connectent et apprennent à écrire des applications qui contrôlent une LED. En utilisant les écrans d'App Lab avec le Circuit Playground, les élèves vont pouvoir commencer à utiliser le circuit comme un appareil de sortie, tout en bénéficiant de App Lab pour les entrées utilisateurs."

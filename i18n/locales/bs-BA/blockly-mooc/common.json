@@ -332,6 +332,8 @@
   "pairProgramming": "Programiranje u Paru",
   "parent": "Roditelj",
   "parentsAndStudents": "Roditelji i učenici",
+  "participantTypeStudentTitle": "Učenici",
+  "participantTypeTeacherTitle": "Učitelji",
   "password": "Šifra",
   "passwordConfirmation": "Potvrda šifre",
   "personalLoginDialog_button": "Sljedeći",

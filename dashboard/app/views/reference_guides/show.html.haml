@@ -1,6 +1,6 @@
 %link{href: asset_path('css/reference_guides.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/curriculum_navigation.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/reference_guides/show.js'),
-  data: {referenceGuide: @reference_guide.summarize_for_show.to_json, referenceGuides: @reference_guides.to_json}}
+  data: {referenceGuide: @reference_guide.summarize_for_show.to_json, referenceGuides: @reference_guides.to_json, baseUrl: @base_url.to_json}}
 
 #show-container
