@@ -59,7 +59,7 @@ const AboutYou = props => {
         workshop => workshop.id
       )
     });
-  }, [regionalPartner, onChange]);
+  }, [regionalPartner]);
 
   const resetCountry = () => onChange({country: US});
   const exitApplication = () => (window.location = PD_RESOURCES_URL);
