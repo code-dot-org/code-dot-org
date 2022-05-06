@@ -719,6 +719,7 @@ cs:
         poemart_events: Básnické umění Události
         poemart_imagery: Básnické umění Obrazotvornost
         poemart_celebration: Básnické umění Gratulace
+        CSA-PL-debugging-temp: Příprava na ladění v prostředí Java Lab – dočasné
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

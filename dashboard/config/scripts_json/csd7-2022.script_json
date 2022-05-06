@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-29 17:23:41 UTC",
+    "serialized_at": "2022-05-04 18:30:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -393,7 +393,7 @@
       "relative_position": 15,
       "properties": {
         "assessment_opportunities": "A rubric is provided to assess the mini-project",
-        "overview": "In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
+        "overview": "In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Choose from several real-world datasets to train a model and create an app that uses machine learning"
       },

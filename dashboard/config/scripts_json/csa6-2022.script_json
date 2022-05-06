@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-02 23:16:21 UTC",
+    "serialized_at": "2022-05-05 21:45:42 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1785,7 +1785,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
-        "progression_name": "Changing Values in an ArrayList"
+        "progression_name": "Working with ArrayLists"
       },
       "seeding_key": {
         "activity_section.key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
@@ -1932,7 +1932,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. On Level 2, students translate the given code with a 1D array to an `ArrayList`. On Level 3, students complete a choice level to apply standard algorithms to an `ArrayList`.",
-        "progression_name": "ArrayLists of Objects"
+        "progression_name": "ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "b4920d1d-b2f0-43f2-816c-7cb73504ce83",
@@ -1944,7 +1944,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
-        "progression_name": "Code Review: ArrayLists of Objects"
+        "progression_name": "Code Review: ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "91c82164-a515-4d04-b4f9-e97712efedeb",
@@ -2308,7 +2308,7 @@
       "key": "f96bd7c0-e240-4629-9c9c-8b6639a696dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from a sentence and counting the most frequent words in the text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
         "progression_name": "Keywords and Parts-of-Speech"
       },
       "seeding_key": {
@@ -3846,7 +3846,7 @@
         "level_keys": [
           "CSA U6L4-L2v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3871,7 +3871,7 @@
         "level_keys": [
           "CSA U6L4-L3v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3946,7 +3946,7 @@
         "level_keys": [
           "CSA U6L5-L2v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3971,7 +3971,7 @@
         "level_keys": [
           "CSA U6L5-L3v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3996,7 +3996,7 @@
         "level_keys": [
           "CSA U6L5-L4 CR_2022"
         ],
-        "progression": "Code Review: ArrayLists of Objects"
+        "progression": "Code Review: ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {

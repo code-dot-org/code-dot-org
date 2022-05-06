@@ -244,10 +244,12 @@ ms:
         mc_2017_puzzle_8: Jam Kod Minecraft - Fungsi
         mc_2017_puzzle_12: Jam Kod Minecraft - Permainan Bebas
         CSF_loops_AB: Gelung
+        CSF_SpriteLabIntro_CDEF: Ini ialah Makmal Peperi
         CSF_StarWars_ProjectIntro: Pengenalan kepada Projek Star Wars
         hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
         hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
         csd_applab_parameters: Fungsi-fungsi dengan parameter
+        CSF_Spritelab_MakeSprite_v2: Cara Membuat Peperi
         csd_debugging: Penyahpepijatan
         how-to-k5-workshops: 'Asas CS Code.org: Kanak-kanak Diuji, Guru Meluluskan'
         hoc_dance_congrats_2019: Majlis Tari-Menari 2019 - Majlis Bermula!
@@ -281,11 +283,23 @@ ms:
           Puisi
         poetry_module_conditionals: Bersyarat - Pengekodan dengan Puisi
         poemart_intro: Pengenalan Seni Puisi
+        CSA-PL-debugging-temp: Pengenalan kepada Penyahpepijatan dalam Makmal Java
+          - temp
     callout:
       text:
         run: |2-
 
-          Tekan "Run" untuk mencuba program anda
+
+          Tekan "Jalankan" untuk mencuba atur cara anda
         craft_run_button_callout: |2-
 
-          Tekan "Run" untuk mencuba program anda
+
+          Tekan "Jalankan" untuk mencuba atur cara anda
+        craft_callout_preplaced: Kami telah meletakkan beberapa blok di sini untuk
+          membantu anda bermula
+        craft_inside_repeat: Ulangi tindakan dengan meletakkan blok di sini
+        craft_callout_preplaced_house: Kod ini akan mula membina rumah anda. Bolehkah
+          anda menyiapkan rumah itu?
+        craft_what_is_iron: Melombong besi ini!
+        craft_callout_moveforward: Kod ini akan memeriksa lahar, bolehkah anda tambahkan
+          perintah untuk bergerak ke hadapan?

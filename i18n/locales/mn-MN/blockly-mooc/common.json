@@ -935,6 +935,8 @@
   "parent": "Эцэг эх",
   "parents": "Эцэг эх",
   "parentsAndStudents": "Эцэг эх, сурагчид",
+  "participantTypeStudentTitle": "Сурагчид",
+  "participantTypeTeacherTitle": "Багш нар",
   "partner": "Түнш: {partner}",
   "password": "Нууц үг",
   "passwordConfirmation": "Нууц үгийн баталгаажуулалт",

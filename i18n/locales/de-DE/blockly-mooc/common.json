@@ -1316,6 +1316,8 @@
   "parentLetterStudentPrivacy": "Code.org's Engagement für die Privatspäre der Studenten",
   "parentLetterWhy": "Warum Informatik",
   "parentLetterWhyDetails": "Die Computer Wissenschaft lehrt den Schülern kritisches Denken, Problemlösung und digitale Staatsbürgerschaft und bringt Vorteile für alle Schüler, ganz gleich welche Herausforderungen sie in Zukunft verfolgen. Und das Lernen interaktive Animationen zu erstellen, Code-Kunst, Spiele und Apps auf Code.org ermutigt kreativ zuwerden und bringt viel Spaß.",
+  "participantTypeStudentTitle": "Schüler",
+  "participantTypeTeacherTitle": "Lehrer",
   "partner": "Partner: {partner}",
   "password": "Passwort",
   "passwordConfirmation": "Passwort Bestätigung",

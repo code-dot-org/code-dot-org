@@ -4,6 +4,7 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.",
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc."
         },
         "minecraft/Minecraft Hour of Code Designer": {
@@ -16,6 +17,9 @@
         "poem-art-2021/Poem Art": {
           "overview": "Trong bài học kết hợp KHMT và ELA này, học sinh sẽ dùng mã lệnh tạo hình chuyển động trong bài thơ để minh họa một cảm xúc trong một bài thơ. Học sinh sẽ đọc và tìm ra cảm xúc trong bài thơ. Sau đó, họ sẽ tìm các hiệu ứng và hình ảnh tương ứng để giúp minh họa cảm xúc trong bài thơ. Cuối cùng, học sinh sẽ sử dụng các sự kiện (mã lệnh) để minh họa sự thay đổi cảm xúc hoặc tạo chuyển động mở hình ảnh mới trong một bài thơ. \n\nBài học này có thể hoàn thành dưới dạng bài học một giờ độc lập. Có một tùy chọn sử dụng bài học này với tư cách là bài đầu tiên trong học phần gồm nhiều bài học có tên gọi [Lập trình với thơ ca](http://studio.code.org/s/poetry-2021).",
           "preparation": "-   Tự xem lại và hoàn thành phần hướng dẫn trực tuyến: [Nghệ Thuật Thơ Ca](http://studio.code.org/s/poem-art).- Nhớ thử các hoạt động trước trước khi yêu cầu học viên hoàn thành chúng. - Kiểm tra kỹ thuật và quyết định xem bạn có cần khắc phục sự cố trước hay không.- Một số cấp độ yêu cầu phát âm thanh. Phát tai nghe trước khi bắt đầu. - [Không bắt buộc] 2 tờ giấy nhớ cho mỗi học viên cho Bài đánh giá."
+        },
+        "flappy/Flappy Code": {
+          "preparation": "### Một tuần trước Giờ lập trình của bạn\n\n-   Xem lại [Hướng dẫn Giờ lập trình cho giáo viên](http://hourofcode.com/resources/how-to/) và [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) để bắt đầu lập kế hoạch cho sự kiện Giờ lập trình của bạn.\n-   [Đăng ký sự kiện Giờ lập trình của bạn](http://hourofcode.com) nếu bạn muốn nhận được hỗ trợ lớp học hoặc sản phẩm quảng cáo.\n-   Tự xem lại và hoàn thành bài hướng dẫn trực tuyến: [Tạo game dạng Flappy Bird](https://studio.code.org/flappy/1)\n-   Hãy kiểm tra kỹ trước khi yêu cầu học sinh của bạn hoàn thành bài hướng dẫn. Hãy kiểm tra thiết bị của bạn và quyết định xem bạn có cần khắc phục bất kỳ điều gì trước Giờ lập trình của mình hay không.\n\n### Một ngày trước Giờ lập trình của bạn\n\n-   Viết các từ “viết mã lệnh”, “lập trình” và “sửa lỗi” lên bảng hoặc thêm vào bảng từ vựng nếu có.\n-   Mỗi học sinh hoàn thành hoạt động sẽ nhận được một chứng chỉ. [In chứng chỉ](http://code.org/certificates) trước cho các em học sinh để thuận tiện hơn khi kết thúc Giờ lập trình."
         },
         "hourofcode/Maze": {
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho những học viên nhỏ tuổi, từ 4-10 tuổi, nhưng có thể điều chỉnh cho những học viên lớn hơn bằng cách sử dụng các gợi ý phân hóa đã cho.",
@@ -39,6 +43,7 @@
         },
         "dance/Dance Party": {
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.",
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc."
         },
         "hello-world-food-2021/Hello World": {
@@ -59,6 +64,7 @@
           "purpose": "Bài học này nhằm chuẩn bị cho học sinh tạo các dự án lập trình đơn giản trong Sprite Lab. Với kỹ năng này, học sinh sau đó có thể tạo dự án về bất kỳ chủ đề nào, chẳng hạn như chủ đề trường học khác hoặc chủ đề nào đó liên quan đến cá nhân họ. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Bài học này giới thiệu các khái niệm KHMT cơ bản về viết mã lệnh và lập trình, bao gồm sắp xếp thứ tự và sự kiện. Phiên bản JavaScript của bài hướng dẫn còn cho học sinh trải nghiệm gõ mã lệnh.",
           "student_overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này có hai phiên bản."
         },
         "mc/Hour of Code 2015": {
@@ -69,6 +75,7 @@
           "student_overview": "Trong bài học này, học viên sẽ nhận được trải nghiệm nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản."
         },
         "applab-intro/Intro to App Lab": {
+          "purpose": "Bài học này là bước đầu tiên của học sinh với App Lab. Bản thân bài hướng dẫn này phải là bài giới thiệu đơn giản để tiếp cận một công cụ mạnh mẽ với chức năng đa dạng. Học sinh sẽ có trải nghiệm tích cực trong suốt quá trình hướng dẫn và quan trọng hơn là phải có động lực để tiếp tục phát triển ứng dụng trong App Lab. Ở bước này, các em chỉ đang tìm hiểu sơ bộ về khả năng của công cụ. Sau đó, các em nên sử dụng trang code.org/applab hoặc thư viện dự án để lấy cảm hứng cho các loại dự án phức tạp hơn mà các em muốn thực hiện.",
           "student_overview": "Vào cuối bài hướng dẫn này, bạn có thể mở rộng dự án mà bạn đã bắt đầu xây dựng thành ứng dụng “Lựa chọn cuộc phiêu lưu của riêng bạn”, “Thiệp mừng” hoặc “Bài trắc nghiệm tính cách”. Bạn cũng có thể tiếp tục xây dựng các dự án khác trên trang code.org/applab.\n\nChúc bạn vui vẻ khi hoàn thành Giờ lập trình với App Lab nhé!"
         },
         "hello-world-retro-2021/Hello World": {
@@ -77,9 +84,11 @@
           "purpose": "Bài học này nhằm chuẩn bị cho học sinh tạo các dự án lập trình đơn giản trong Sprite Lab. Với kỹ năng này, học sinh sau đó có thể tạo dự án về bất kỳ chủ đề nào, chẳng hạn như chủ đề trường học khác hoặc chủ đề nào đó liên quan đến cá nhân họ. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Bài học này giới thiệu các khái niệm KHMT cơ bản về viết mã lệnh và lập trình, bao gồm sắp xếp thứ tự và sự kiện. Phiên bản JavaScript của bài hướng dẫn còn cho học sinh trải nghiệm gõ mã lệnh.",
           "student_overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này có hai phiên bản."
         },
         "text-compression/Text Compression": {
+          "overview": "Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải **nén** dữ liệu. Trong bài học này, học sinh sẽ sử dụng Widget Nén văn bản để nén các đoạn văn bản tiếng Anh bằng cách tìm kiếm các mẫu và ký hiệu thay thế cho các mẫu văn bản lớn hơn.",
           "student_overview": "Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải nén dữ liệu."
         },
         "outbreak/Outbreak": {
@@ -99,12 +108,17 @@
           "overview": "Trong hoạt động trực tuyến này, học sinh sẽ tìm hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình với tốc độ và âm thanh khác nhau.",
           "student_overview": "Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!"
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối)."
+        },
         "dance-2019/Dance Party": {
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.",
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc."
         },
         "oceans/Oceans": {
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.",
+          "purpose": "Bài hướng dẫn này được thiết kế để giới thiệu nhanh cho học sinh về **học máy**, một loại **trí tuệ nhân tạo**. Học sinh sẽ khám phá cách sử dụng **dữ liệu huấn luyện** để tạo điều kiện cho mô hình học máy phân loại dữ liệu mới. Học sinh nên có trải nghiệm tích cực trong suốt bài hướng dẫn và quan trọng hơn là phải có động lực để tiếp tục học môn khoa học máy tính.",
           "student_overview": "Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới."
         },
         "jigsaw/Jigsaw": {
@@ -484,6 +498,7 @@
         },
         "coursed-2021/Dance Party": {
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.\n-   Cân nhắc nhu cầu dùng tai nghe. Hoạt động này phụ thuộc vào âm thanh.",
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -576,6 +591,7 @@
         },
         "express-2021/lesson-1": {
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   Đảm bảo mỗi học sinh đều có Nhật ký suy nghĩ.\n-   Cân nhắc nhu cầu dùng tai nghe. Hoạt động này phụ thuộc vào âm thanh.",
+          "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
           "student_overview": "Đã đến lúc ăn mừng rồi! Trong bài học này, bạn sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình."
         },
         "express-2021/Loops with Rey and BB-8": {

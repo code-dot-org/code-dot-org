@@ -2,18 +2,58 @@
   "tr-TR": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
         "debugging/minecraft/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/hero/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "function/hero/unversioned": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": "Tekrar tekrar kolaylıkla arayabileceğiniz bir kod parçası."
         },
         "code/poem-art/2021": {
           "word": "Kod",
           "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
+        },
+        "event/poem-art/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "line/poem-art/2021": {
           "word": "Satır",
@@ -24,76 +64,264 @@
           "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
         },
         "program/poem-art/2021": {
+          "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
         },
+        "code/flappy/unversioned": {
+          "word": "kod",
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
         "debugging/flappy/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/frozen/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/iceage/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/artist/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/gumball/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "event/dance/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Koşul",
+          "definition": "Bir programın bir harekete izin vermeden önce doğru olup olmadığını görmek için kontrol ettiği bir şey."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": "Yalnızca belirli koşullar altında çalışan ifadeler."
         },
         "loops/aquatic/unversioned": {
-          "word": "Döngüler"
+          "word": "Döngüler",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Sezar Şifreleme ",
+          "definition": "alfabeyi birkaç karakter kaydıran bir şifreleme tekniği"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Şifre",
+          "definition": "şifrelemeyi gerçekleştiren bir tekniğe (veya algoritma) yönelik gelen terim"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Şifrelemeyi kırma",
+          "definition": "Şifrenin tüm detaylarını bilmeden bir gizli mesajı çözmeye çalıştığınızda, şifrelemeyi kırmaya çalışırsınız."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Şifre çözme",
+          "definition": "bir gizli mesajı alarak ve orijinal düz metin oluşturarak şifrelemeyi tersine çeviren bir işlem."
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Şifreleme"
+          "word": "Şifreleme",
+          "definition": "bunları gizli tutmak için mesajları şifreleme işlemi, bu yüzden yalnızca \"yetkili\" taraflar bunu okuyabilir."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Rastgele İkame Şifresi",
+          "definition": "Alfabenin her harfini, alfabenin rastgele seçilen diğer harfleri ile eşleştiren bir şifreleme tekniği."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/starwars/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/mc/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/playlab/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Kayıpsız Sıkıştırma"
+          "word": "Kayıpsız Sıkıştırma",
+          "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "event/sports/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "code/sports/unversioned": {
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/infinity/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "event/basketball/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
         },
         "debugging/basketball/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Makine Öğrenimi"
+          "word": "Makine Öğrenimi",
+          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
         },
+        "event/poem-art/unversioned": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
         "program/poem-art/unversioned": {
+          "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
         },
         "mood/poem-art/unversioned": {
@@ -116,9 +344,17 @@
           "word": "Davranış",
           "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
         "algorithm/coursef/2021": {
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için adımların listesi."
+        },
+        "event/coursef/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "variable/coursef/2021": {
           "word": "Değişken",
@@ -132,6 +368,10 @@
           "word": "Girdi",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
+        "loop/coursef/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
         "repeat/coursef/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
@@ -141,7 +381,8 @@
           "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
         },
         "machine_learning/coursef/2021": {
-          "word": "Makine Öğrenimi"
+          "word": "Makine Öğrenimi",
+          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -204,7 +445,8 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/courseb/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
         },
         "click/courseb/2021": {
           "word": "tıklayın",
@@ -222,6 +464,10 @@
           "word": "Çift Tıklama",
           "definition": "Fare butonuna hızlıca basın"
         },
+        "program/courseb/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
         "programming/courseb/2021": {
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
@@ -230,16 +476,29 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "loop/courseb/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
         "repeat/courseb/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/courseb/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "algorithm/coursea/2021": {
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
         },
         "debugging/coursea/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "click/coursea/2021": {
           "word": "tıklayın",
@@ -265,9 +524,17 @@
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
         },
+        "loop/coursea/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
         "repeat/coursea/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/coursea/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "algorithm/coursec/2021": {
           "word": "Algoritma",
@@ -278,7 +545,12 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursec/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/coursec/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "sequencing/coursec/2021": {
           "word": "Sıralama",
@@ -288,9 +560,17 @@
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
         },
+        "loop/coursec/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
         "repeat/coursec/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/coursec/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "binary/coursec/2021": {
           "word": "İkili",
@@ -300,12 +580,21 @@
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
         },
+        "program/coursed/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
         "bug/coursed/2021": {
           "word": "Hata",
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursed/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "loop/coursed/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
         },
         "programming/coursed/2021": {
           "word": "Programlama",
@@ -319,6 +608,13 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "event/coursed/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "code/coursed/2021": {
+          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+        },
         "repeat/coursed/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
@@ -328,11 +624,16 @@
           "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
         "conditionals/coursed/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": "Yalnızca belirli koşullar altında çalışan ifadeler."
         },
         "pseudocode/coursed/2021": {
           "word": "pseudocode",
           "definition": "Algoritmadaki adımların düz bir dil açıklaması"
+        },
+        "condition/coursed/2021": {
+          "word": "Koşul",
+          "definition": "Bir programın bir harekete izin vermeden önce doğru olup olmadığını görmek için kontrol ettiği bir şey."
         },
         "while_loop/coursed/2021": {
           "word": "Süresince Döngüsü",
@@ -351,11 +652,16 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/express/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
         },
         "sequencing/express/2021": {
           "word": "Sıralama",
           "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
+        },
+        "program/express/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "programming/express/2021": {
           "word": "Programlama",
@@ -369,8 +675,16 @@
           "word": "Hareketli nesne",
           "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
         },
+        "event/express/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
         "code/express/2021": {
           "definition": "kod yazmak veya bir bilgisayar için yönergeler yazmak için."
+        },
+        "loop/express/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
         },
         "repeat/express/2021": {
           "word": "Tekrarla",
@@ -380,8 +694,13 @@
           "word": "Komut",
           "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
+        "condition/express/2021": {
+          "word": "Koşul",
+          "definition": "Bir programın bir harekete izin vermeden önce doğru olup olmadığını görmek için kontrol ettiği bir şey."
+        },
         "conditionals/express/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": "Yalnızca belirli koşullar altında çalışan ifadeler."
         },
         "while_loop/express/2021": {
           "word": "Süresince Döngüsü",
@@ -392,7 +711,8 @@
           "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
         },
         "function/express/2021": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": "Tekrar tekrar kolaylıkla arayabileceğiniz bir kod parçası."
         },
         "variable/express/2021": {
           "word": "Değişken",
@@ -447,7 +767,12 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/pre-express/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/pre-express/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "programming/pre-express/2021": {
           "word": "Programlama",
@@ -457,9 +782,17 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "loop/pre-express/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
+        },
         "repeat/pre-express/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/pre-express/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "behavior/coursee/2021": {
           "word": "Davranış",
@@ -469,18 +802,32 @@
           "word": "Hareketli nesne",
           "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
         },
+        "event/coursee/2021": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
         "copyright/coursee/2021": {
           "word": "Telif Hakkı"
+        },
+        "loop/coursee/2021": {
+          "word": "Döngü",
+          "definition": "Bir şeyi tekrar tekrar yapma hareketi."
         },
         "repeat/coursee/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
         },
         "function/coursee/2021": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": "Tekrar tekrar kolaylıkla arayabileceğiniz bir kod parçası."
+        },
+        "condition/coursee/2021": {
+          "word": "Koşul",
+          "definition": "Bir programın bir harekete izin vermeden önce doğru olup olmadığını görmek için kontrol ettiği bir şey."
         },
         "conditionals/coursee/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": "Yalnızca belirli koşullar altında çalışan ifadeler."
         },
         "while_loop/coursee/2021": {
           "word": "Süresince Döngüsü",
@@ -503,7 +850,12 @@
           "definition": "Bir şey yapma girişimi"
         },
         "machine_learning/csd/2021": {
-          "word": "Makine Öğrenimi"
+          "word": "Makine Öğrenimi",
+          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
+        },
+        "user/csd/2021": {
+          "word": "Kullanıcı",
+          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
         },
         "user_interface/csd/2021": {
           "word": "Kullanıcı Arayüzü"
@@ -517,7 +869,12 @@
           "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
         },
         "debugging/csd/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "variable/csd/2021": {
           "word": "Değişken",
@@ -525,6 +882,9 @@
         },
         "sprite/csd/2021": {
           "word": "Hareketli nesne"
+        },
+        "condition/csd/2021": {
+          "word": "Koşul"
         },
         "conditionals/csd/2021": {
           "word": "Koşullar"

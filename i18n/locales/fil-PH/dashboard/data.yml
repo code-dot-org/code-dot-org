@@ -486,6 +486,7 @@ fil:
         hello_world_events: Hello World - Pag-program gamit ang Mga Kaganapan
         hello_world_congrats: Hello World - Gawin ang Gusto Mo
         poemart_intro: Introduksiyon sa Sining ng Tula
+        csd_u6_input_output: Input at Output
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke
