@@ -21,7 +21,7 @@
       "name": "sprite",
       "type": "",
       "required": true,
-      "description": "A sprite or group of sprites. Examples of blocks to attach here are `sprite name`, `costume` and `this/other sprite`. `gamelab_allSpritesWithAnimation`"
+      "description": "A sprite or group of sprites. Examples of blocks to attach here are [`sprite name`(#df9399)](/docs/spritelab/codestudio_spriteName/), [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) and `this/other sprite`. `gamelab_allSpritesWithAnimation`"
     },
     {
       "name": "direction",

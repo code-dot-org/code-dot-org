@@ -1,6 +1,6 @@
 name 'CSA U4L1-L5_2022'
-display_name 'Exploring The Theater'
-description 'Practice playing sounds in The Theater.'
+display_name 'Playing Sounds'
+description 'Create a scene that plays sounds and play your scene in The Theater.'
 
 sublevels
 level 'CSA U4L1-L5a_2022'

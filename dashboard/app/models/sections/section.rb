@@ -21,7 +21,6 @@
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
-#  code_review_enabled  :boolean          default(TRUE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #
@@ -82,9 +81,10 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
+  validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
 
   validate :pl_sections_must_use_email_logins
+  validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
@@ -92,6 +92,14 @@ class Section < ApplicationRecord
   def pl_sections_must_use_email_logins
     if pl_section? && login_type != LOGIN_TYPE_EMAIL
       errors.add(:login_type, 'must be email for professional learning sections.')
+    end
+  end
+
+  # PL courses which are run with adults should have the grade type of 'pl'.
+  # This value was recommended by RED team.
+  def pl_sections_must_use_pl_grade
+    if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
+      errors.add(:grade, 'must be pl for pl section.')
     end
   end
 
@@ -148,7 +156,7 @@ class Section < ApplicationRecord
   end
 
   def self.valid_grade?(grade)
-    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
+    SharedConstants::STUDENT_GRADE_LEVELS.include?(grade) || grade == PL_GRADE_VALUE
   end
 
   # Override default script accessor to use our cache
@@ -214,6 +222,8 @@ class Section < ApplicationRecord
   # Checks if a user can join a section as a participant by
   # checking if they meet the participant_type for the section
   def can_join_section_as_participant?(user)
+    return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
+
     if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
     elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
@@ -223,6 +233,12 @@ class Section < ApplicationRecord
     end
 
     false
+  end
+
+  # Sections can not be assigned courses where participants in the section
+  # can not be participants in the course
+  def self.can_be_assigned_course?(participant_audience, participant_type)
+    SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
@@ -418,7 +434,7 @@ class Section < ApplicationRecord
     end
   end
 
-  # One of the contstraints for teachers looking for discount codes is that they
+  # One of the constraints for teachers looking for discount codes is that they
   # have a section in which 10+ students have made progress on 5+ levels in both
   # csd2 and csd3
   # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
@@ -448,12 +464,13 @@ class Section < ApplicationRecord
     false
   end
 
-  # Returns the ids of all scripts which any student in this section has ever
-  # been assigned to or made progress on.
-  def student_script_ids
+  # Returns the ids of all units which any participant in this section has ever
+  # been assigned to or made progress on if the instructor of the section can
+  # be an instructor for that unit
+  def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 04:43:29 UTC",
+    "serialized_at": "2022-05-04 19:35:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,8 +80,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview:**\nThis session serves as an introduction to Day 4. The session also includes a demonstration of the Circuit Playground used in Unit 6 of CS Discoveries.  \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration."
+        "overview": "**Overview:**\nThis session serves as both an introduction to Day 4 and a space to debrief the asynchronous work from Day 3. \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -140,14 +140,14 @@
     },
     {
       "key": "lesson-8",
-      "name": "Differentiation",
+      "name": "Make an Implementation Plan",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Overview:**\nDuring these asynchronous activities, participants will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.\n\n**Participants will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
+        "overview": "**Overview:**\nNow that participants have been introduced to the content within the full course, participants will utilize the CS Discoveries implementation guide to determine which units they will teach and in which order. This is an important step to take before moving into the curriculum investigation. \n\n**Participants will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units they will teach and in which order. \n\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you will teach and in which order. \n\n**Suggested time:** 60 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -156,46 +156,12 @@
       }
     },
     {
-      "key": "lesson-9",
-      "name": "Navigating Support",
+      "key": "lesson-11",
+      "name": "Asynchronous Debrief",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
-      "properties": {
-        "overview": "**Overview:**\n During these asynchronous activities, participants will navigate to and explore the additional supports available to them while teaching CS Discoveries: help and support, report a problem, teacher forum. \n\n**Participants will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "Building Community in Support of CS Education",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
-      "properties": {
-        "overview": "**Overview:**\nThe goal of these asynchronous activities is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. For some teachers, computer science can be isolating because CS teachers often do not have a built in community in their schools like math or English teachers naturally have. This activity is about expanding our idea of community to include our local community and the national computer science community.\n\n**Participants will:**\n\n* Identify potential community resources that could be used to enhance the learning experience for students and raise awareness of CS education within their local community. \n* Identify ways to connect with CS educators outside of their school community. \n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n\n* Identify potential community resources that could be used to enhance the learning experience for students and raise awareness of CS education within your local community. \n* Identify ways to connect with CS educators outside of your school community. \n\n**Suggested time:** 30 minutes"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
-      "key": "lesson-11",
-      "name": "Asynchronous Debrief",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 7,
       "properties": {
         "overview": "**Overview:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Participants will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "
@@ -209,10 +175,10 @@
     {
       "key": "lesson-12",
       "name": "Equity in CS Education",
-      "absolute_position": 8,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 6,
       "properties": {
         "overview": "**Overview:**\nDuring this session, participants will share their 30-60-90 plans and expand the plan to include a concrete and actionable commitment to equity in CS education. \n\n**Participants will:**\n\n* Define a commitment you/they will pursue in support of equity in CS education. \n* Outline the strategies you/they will use to pursue that commitment along with how they will monitor progress toward that commitment. \n\n**Suggested time:** 40 minutes",
         "student_overview": "**You will:**\n\n* Define a commitment you/they will pursue in support of equity in CS education. \n* Outline the strategies you/they will use to pursue that commitment along with how they will monitor progress toward that commitment. "
@@ -224,29 +190,12 @@
       }
     },
     {
-      "key": "lesson-13",
-      "name": "Modularity Planning",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-        "overview": "**Overview:**\nNow that participants have been introduced to the content within the full course, participants will utilize the CS Discoveries implementation guide to determine which units they will teach and in which order. This is an important step to take before moving into the curriculum investigation in the next session. \n\n**Participants will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you/they will teach and in which order. \n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you/they will teach and in which order. "
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
       "key": "lesson-14",
       "name": "Wrap Up",
-      "absolute_position": 10,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 7,
       "properties": {
         "overview": "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience. \n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 5 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
@@ -260,10 +209,10 @@
     {
       "key": "lesson-1",
       "name": "[TEMPLATE] Introduction to...",
-      "absolute_position": 11,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 8,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes"
@@ -277,10 +226,10 @@
     {
       "key": "lesson-3",
       "name": "[TEMPLATE] Content lessons",
-      "absolute_position": 12,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 9,
       "properties": {
         "overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes",
         "student_overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes"
@@ -294,10 +243,10 @@
     {
       "key": "lesson-2",
       "name": "[TEMPLATE] Unit Wrap Up",
-      "absolute_position": 13,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 10,
       "properties": {
         "overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes",
         "student_overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
@@ -458,30 +407,6 @@
       }
     },
     {
-      "key": "afda5f42-4fe8-4405-b105-d1149ec5ee2b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "afda5f42-4fe8-4405-b105-d1149ec5ee2b",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
-      "key": "8e87a427-f3cd-4a49-865d-30f29ada7672",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8e87a427-f3cd-4a49-865d-30f29ada7672",
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
       "key": "1e3009f2-b039-4a9d-bab7-7f5a7384086a",
       "position": 1,
       "properties": {
@@ -501,18 +426,6 @@
       "seeding_key": {
         "lesson_activity.key": "e80ccc1d-c2c7-4603-8a36-901b5bee705c",
         "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "vpl-csd4-summer-pilot-2022"
-      }
-    },
-    {
-      "key": "097b0182-a8b3-40ca-b0c1-fa3ed88882b4",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "097b0182-a8b3-40ca-b0c1-fa3ed88882b4",
-        "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "vpl-csd4-summer-pilot-2022"
       }
@@ -1113,35 +1026,25 @@
       }
     },
     {
-      "key": "ec21f135-46cb-45d6-81ed-46170031e460",
-      "position": 1,
-      "properties": {
-        "progression_name": "Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec21f135-46cb-45d6-81ed-46170031e460",
-        "lesson_activity.key": "afda5f42-4fe8-4405-b105-d1149ec5ee2b"
-      }
-    },
-    {
-      "key": "cfe470d3-64cf-45f2-b215-54e9eac1cc54",
+      "key": "7f23f179-aa35-446c-9b50-86a51291ec7f",
       "position": 2,
       "properties": {
+        "progression_name": "Make a plan"
       },
       "seeding_key": {
-        "activity_section.key": "cfe470d3-64cf-45f2-b215-54e9eac1cc54",
-        "lesson_activity.key": "afda5f42-4fe8-4405-b105-d1149ec5ee2b"
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f",
+        "lesson_activity.key": "ff0c491e-a6df-4631-9a5f-e75cdb97f4e9"
       }
     },
     {
-      "key": "a27e7467-9617-40fb-bddb-04f3b7782998",
-      "position": 1,
+      "key": "d88c22b5-39db-483e-aa10-8096f1220aa8",
+      "position": 3,
       "properties": {
-        "progression_name": "Overview"
+        "progression_name": "Wrap up"
       },
       "seeding_key": {
-        "activity_section.key": "a27e7467-9617-40fb-bddb-04f3b7782998",
-        "lesson_activity.key": "8e87a427-f3cd-4a49-865d-30f29ada7672"
+        "activity_section.key": "d88c22b5-39db-483e-aa10-8096f1220aa8",
+        "lesson_activity.key": "ff0c491e-a6df-4631-9a5f-e75cdb97f4e9"
       }
     },
     {
@@ -1162,16 +1065,6 @@
       "seeding_key": {
         "activity_section.key": "e29b962d-89c8-404a-9df5-3d975d280a8e",
         "lesson_activity.key": "e80ccc1d-c2c7-4603-8a36-901b5bee705c"
-      }
-    },
-    {
-      "key": "4e90d4df-7dd1-4e3d-a638-7c8f3c21c6f0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4e90d4df-7dd1-4e3d-a638-7c8f3c21c6f0",
-        "lesson_activity.key": "097b0182-a8b3-40ca-b0c1-fa3ed88882b4"
       }
     },
     {
@@ -1505,6 +1398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1527,6 +1423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1549,6 +1448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -1571,6 +1473,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_vpl-summer-pilot-2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1593,6 +1498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson5"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1611,50 +1519,116 @@
     },
     {
       "chapter": 15,
-      "position": 1,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Overview"
+        "progression": "Make a plan"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson6"
+          "VPL-CSD-PILOT-S22-Mod4-ImplementationOptions"
         ],
-        "lesson.key": "lesson-9",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd4-summer-pilot-2022",
-        "activity_section.key": "ec21f135-46cb-45d6-81ed-46170031e460"
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson6"
+        "VPL-CSD-PILOT-S22-Mod4-ImplementationOptions"
       ]
     },
     {
       "chapter": 16,
-      "position": 1,
-      "activity_section_position": 1,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Overview"
+        "progression": "Make a plan"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson7"
+          "VPL-CSD-PILOT-S22-mod4-UnitCalendar"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd4-summer-pilot-2022",
-        "activity_section.key": "a27e7467-9617-40fb-bddb-04f3b7782998"
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson7"
+        "VPL-CSD-PILOT-S22-mod4-UnitCalendar"
       ]
     },
     {
       "chapter": 17,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Make a plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-Chapters"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-mod4-Chapters"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Make a plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-implementation timeline"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-mod4-implementation timeline"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day4Lesson4-WrapUp"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "d88c22b5-39db-483e-aa10-8096f1220aa8"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async-Day4Lesson4-WrapUp"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1679,7 +1653,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1704,7 +1678,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1729,7 +1703,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1754,7 +1728,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1779,7 +1753,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -1804,7 +1778,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1829,7 +1803,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1854,7 +1828,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1879,7 +1853,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2075,26 +2049,62 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson6",
+        "level.key": "VPL-CSD-PILOT-S22-Mod4-ImplementationOptions",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson6"
+          "VPL-CSD-PILOT-S22-Mod4-ImplementationOptions"
         ],
-        "lesson.key": "lesson-9",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd4-summer-pilot-2022",
-        "activity_section.key": "ec21f135-46cb-45d6-81ed-46170031e460"
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson7",
+        "level.key": "VPL-CSD-PILOT-S22-mod4-UnitCalendar",
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson7"
+          "VPL-CSD-PILOT-S22-mod4-UnitCalendar"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd4-summer-pilot-2022",
-        "activity_section.key": "a27e7467-9617-40fb-bddb-04f3b7782998"
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-mod4-Chapters",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-Chapters"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-mod4-implementation timeline",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-implementation timeline"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7f23f179-aa35-446c-9b50-86a51291ec7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async-Day4Lesson4-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day4Lesson4-WrapUp"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "d88c22b5-39db-483e-aa10-8096f1220aa8"
       }
     },
     {
@@ -2246,6 +2256,17 @@
       }
     },
     {
+      "name": "CS Discoveries Implementation Guide",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview#",
+      "key": "cs_discoveries_implementation_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cs_discoveries_implementation_guide"
+      }
+    },
+    {
       "name": "Curriculum Guide",
       "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
       "key": "curriculum_guide_4",
@@ -2288,6 +2309,17 @@
       }
     },
     {
+      "name": "Implementation Planning Template",
+      "url": "https://docs.google.com/document/d/1Ah0-Ibd7SNKoNdfTkVSfp6MKrKW9sTwTpL2poRkp5l4/copy?usp=sharing",
+      "key": "implementation_planning_template",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_planning_template"
+      }
+    },
+    {
       "name": "Introduction to Machine Learning",
       "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
       "key": "introduction_to_machine_learning",
@@ -2297,6 +2329,17 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "Make a Plan: Equity in CS Education",
+      "url": "https://docs.google.com/document/d/1VDWd_sAMJEIPZ6Jei-LEpTFHPsepkGNRvJ6AXUjQ3Z4/copy?usp=sharing",
+      "key": "make_a_plan_equity_in_cs_education",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_plan_equity_in_cs_education"
       }
     },
     {
@@ -2377,6 +2420,24 @@
       "seeding_key": {
         "lesson.key": "Updating Screen Elements",
         "resource.key": "updating_screen_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "make_a_plan_equity_in_cs_education"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "cs_discoveries_implementation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "implementation_planning_template"
       }
     }
   ],

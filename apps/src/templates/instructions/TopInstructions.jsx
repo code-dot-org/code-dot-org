@@ -13,6 +13,7 @@ import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
 import ReviewTab from './ReviewTab';
+import CommitsAndReviewTab from './CommitsAndReviewTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -36,6 +37,7 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -48,7 +50,8 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only'
+  TEACHER_ONLY: 'teacher-only',
+  COMMITS_AND_REVIEW: 'commits-and-review'
 };
 
 // Minecraft-specific styles
@@ -72,7 +75,6 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
-    maxAvailableHeight: PropTypes.number,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
@@ -100,6 +102,7 @@ class TopInstructions extends Component {
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
+    hasBackgroundMusic: PropTypes.bool.isRequired,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -291,20 +294,6 @@ class TopInstructions extends Component {
   forceTabResizeToMaxHeight = () => {
     if (this.state.tabSelected === TabType.COMMENTS) {
       this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
-    }
-  };
-
-  /**
-   * Function to force the height of the instructions area to be the
-   * full size of the content area, up to the max available height. This is
-   * used when the review tab loads in order to make the instructions area
-   * show the whole contents of the review tab.
-   */
-  forceTabResizeToMaxOrAvailableHeight = () => {
-    if (this.state.tabSelected === TabType.REVIEW) {
-      this.props.setInstructionsRenderedHeight(
-        Math.min(this.adjustMaxNeededHeight(), this.props.maxAvailableHeight)
-      );
     }
   };
 
@@ -574,6 +563,7 @@ class TopInstructions extends Component {
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
+      hasBackgroundMusic,
       user,
       mainStyle,
       containerStyle,
@@ -617,7 +607,8 @@ class TopInstructions extends Component {
       isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
         : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody
+      isMinecraft && craftStyles.instructionsBody,
+      tabSelected === TabType.COMMITS_AND_REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -635,6 +626,9 @@ class TopInstructions extends Component {
       !!rubric ||
       (!displayReviewTab && teacherViewingStudentWork) ||
       (this.isViewingAsStudent && !!latestFeedback);
+
+    const displayCommitsAndReviewTab =
+      displayReviewTab && experiments.isEnabled('code_review_v2');
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -662,6 +656,7 @@ class TopInstructions extends Component {
       teacherMarkdown,
       isEmbedView,
       isCollapsed,
+      hasBackgroundMusic,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -681,7 +676,9 @@ class TopInstructions extends Component {
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
+          displayCommitsAndReviewTab={displayCommitsAndReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
+          hasBackgroundMusic={hasBackgroundMusic}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -693,6 +690,9 @@ class TopInstructions extends Component {
             this.handleTabClick(TabType.DOCUMENTATION)
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
+          handleCommitsAndReviewTabClick={() =>
+            this.handleTabClick(TabType.COMMITS_AND_REVIEW)
+          }
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -732,8 +732,11 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab
-                ref={ref => (this.reviewTab = ref)}
+              <ReviewTab ref={ref => (this.reviewTab = ref)} />
+            )}
+            {tabSelected === TabType.COMMITS_AND_REVIEW && (
+              <CommitsAndReviewTab
+                ref={ref => (this.commitsAndReviewTab = ref)}
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}
@@ -827,6 +830,15 @@ const styles = {
     right: 0,
     overflow: 'hidden'
   },
+  commitAndReview: {
+    backgroundColor: color.background_gray,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'auto'
+  },
   embedView: {
     height: undefined,
     bottom: 0
@@ -861,7 +873,6 @@ export default connect(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight
     ),
-    maxAvailableHeight: state.instructions.maxAvailableHeight,
     longInstructions: state.instructions.longInstructions,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,
@@ -880,6 +891,7 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
+    hasBackgroundMusic: !!state.pageConstants.hasBackgroundMusic,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,

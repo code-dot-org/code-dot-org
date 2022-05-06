@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 00:04:39 UTC",
+    "serialized_at": "2022-05-05 21:45:42 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1347,10 +1347,27 @@
       }
     },
     {
-      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider the similarities and differences between creating `Integer` and `Double` objects and `String` objects. Have students make predictions about what might be happening when `Integer` and `Double` objects are created without the `new` keyword."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1359,7 +1376,7 @@
     },
     {
       "key": "adf69d73-a52d-4d84-940d-b41b0844563e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "The `Integer` and `Double` classes have methods to work with integer and decimal values. Let's take a look at some of their methods and capabilities.",
         "duration": "10",
@@ -1373,7 +1390,7 @@
     },
     {
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
@@ -1384,7 +1401,7 @@
     },
     {
       "key": "df2d7f1f-a6a2-42e4-89bb-361c709cc63c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "When you were exploring the program, you might have noticed something interesting that happens when you add one to the maximum value for an integer or subtract one from the minimum value for an integer.",
         "remarks": true
@@ -1396,7 +1413,7 @@
     },
     {
       "key": "03056206-b674-4ff0-994f-7153bccab613",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did you notice about the maximum and minimum values for an `int`?*\n* *What happens when you add or subtract one from the maximum or minimum values?*\n\n**Discussion Goal:** Students share the maximum and minimum values and their findings from adding to the maximum value or subtracting from the minimum value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the minimum and maximum values for integers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *overflow* and *underflow*."
       },
@@ -1407,7 +1424,7 @@
     },
     {
       "key": "430d4997-36f0-4b3e-a512-8550550bada2",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Representing integer and decimal values as objects are useful for specific scenarios. When represented as objects, we can use the methods in the `Integer` and `Double` classes to work with these values.",
         "duration": "15",
@@ -1421,7 +1438,7 @@
     },
     {
       "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
@@ -1550,7 +1567,13 @@
       "key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to predict the size of the `ArrayList` before and after the values are added. Have students identify how initializing an `ArrayList` is different from initializing a 1D or 2D array, including that they do not need to specify the size of the `ArrayList` like they did for a 1D or 2D array."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
@@ -1558,8 +1581,19 @@
       }
     },
     {
-      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
+        "lesson_activity.key": "9d42c3ff-5a59-448b-8bc1-ea9b37f8f505"
+      }
+    },
+    {
+      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "position": 5,
       "properties": {
         "description": "Because `ArrayList` is a class, it has the same three parts that we’ve seen in other classes: instance variables, constructors, and methods. Let's take a look at some of the source code for the `ArrayList` class.",
         "remarks": true
@@ -1571,7 +1605,7 @@
     },
     {
       "key": "9b2d6b34-88e0-48f9-99c4-8c829a06949c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the purpose of each instance variable?*\n* *What is the relationship between an array and an `ArrayList`?*\n\n**Discussion Goal:** Students identify that the `DEFAULT_CAPACITY` instance variable is the default size of an `ArrayList`, the `size` instance variable is the number of elements in the `ArrayList`, and the `data` instance variable is a 1D array. Students suggest that the relationship between an `ArrayList` and an array is a has-a relationship and an `ArrayList` stores data in the array instance variable.\n\n**Do This:** Explain the purpose of each instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `DEFAULT_CAPACITY` constant\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `size` instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `data` instance variable",
         "tips": [
@@ -1588,7 +1622,7 @@
     },
     {
       "key": "0045fddd-7806-4e40-8ea8-ed0623e499c6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "An `ArrayList` is useful when we are working with an unknown amount of data or we need the flexibility to add elements at specific locations or expand the size of the list.",
         "name": "Using ArrayLists",
@@ -1601,7 +1635,7 @@
     },
     {
       "key": "7329cb11-a543-405f-909c-43c65783eb4e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to declare and initialize an `ArrayList`. On Level 4, students complete a choice level to add elements to an `ArrayList`.",
         "progression_name": "Using ArrayLists"
@@ -1751,7 +1785,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
-        "progression_name": "Changing Values in an ArrayList"
+        "progression_name": "Working with ArrayLists"
       },
       "seeding_key": {
         "activity_section.key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
@@ -1898,7 +1932,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. On Level 2, students translate the given code with a 1D array to an `ArrayList`. On Level 3, students complete a choice level to apply standard algorithms to an `ArrayList`.",
-        "progression_name": "ArrayLists of Objects"
+        "progression_name": "ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "b4920d1d-b2f0-43f2-816c-7cb73504ce83",
@@ -1910,7 +1944,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
-        "progression_name": "Code Review: ArrayLists of Objects"
+        "progression_name": "Code Review: ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "91c82164-a515-4d04-b4f9-e97712efedeb",
@@ -2274,7 +2308,7 @@
       "key": "f96bd7c0-e240-4629-9c9c-8b6639a696dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from a sentence and counting the most frequent words in the text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
         "progression_name": "Keywords and Parts-of-Speech"
       },
       "seeding_key": {
@@ -2630,23 +2664,11 @@
       }
     },
     {
-      "key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
+      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
       "position": 1,
       "properties": {
-        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Pyramid.",
-        "name": "CS Pyramid",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
-        "lesson_activity.key": "0c6a557d-91ed-4acb-89f2-3486a1a8731b"
-      }
-    },
-    {
-      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to solve the problem, then compare their solutions with another group.",
+        "name": "Breaking Up a Number"
       },
       "seeding_key": {
         "activity_section.key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
@@ -2671,7 +2693,7 @@
       "key": "0db16726-5417-4dc0-8e48-f14465b19ee3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Obtaining Individual Digits"
       },
       "seeding_key": {
@@ -2792,7 +2814,7 @@
       "key": "5b3bcb30-a210-467b-b990-b4e196294820",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the **Natural Language Processing Project 1 Day Lesson Plan**, which includes a one-day version of the **Natural Language Processing Project Planning Guide**. Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Natural Language Processing Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1ir0g4bRHiT0oRJmj-4drZPTqrxIdIGHox1KbP-5V7QY/edit?usp=sharing), which includes a one-day version of the [**Natural Language Processing Project Planning Guide**](https://docs.google.com/document/d/1L3bPdd1hvNTxseCVBy08Ln7U2hvaXm4HjYrcj16m-k8/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "5b3bcb30-a210-467b-b990-b4e196294820",
@@ -3824,7 +3846,7 @@
         "level_keys": [
           "CSA U6L4-L2v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3849,7 +3871,7 @@
         "level_keys": [
           "CSA U6L4-L3v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3924,7 +3946,7 @@
         "level_keys": [
           "CSA U6L5-L2v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3949,7 +3971,7 @@
         "level_keys": [
           "CSA U6L5-L3v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3974,7 +3996,7 @@
         "level_keys": [
           "CSA U6L5-L4 CR_2022"
         ],
-        "progression": "Code Review: ArrayLists of Objects"
+        "progression": "Code Review: ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -4771,6 +4793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6-2022"
+        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -4818,6 +4843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4839,6 +4867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4861,6 +4892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4883,6 +4917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {

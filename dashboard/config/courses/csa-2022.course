@@ -22,7 +22,39 @@
     "version_year": "2022"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/csa-2022/resources",
+      "key": "all_resources_11",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_11"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csa-2022/standards",
+      "key": "all_standards_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_10"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csa-2022/vocab",
+      "key": "all_vocabulary_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_10"
+      }
+    }
   ],
   "student_resources": [
 

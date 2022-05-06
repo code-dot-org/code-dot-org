@@ -74,6 +74,7 @@ ms:
             Play Lab:
               description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
           student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
+          name: makmal mainan
         artist:
           title: Artis
           description: Lukis gambar and reka bentuk menarik dengan Artis!
@@ -84,6 +85,7 @@ ms:
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
               description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok ke kanan sebanyak 90 darjah '.
           student_description: Lukis gambar and reka bentuk menarik dengan Artis!
+          name: artis
         hourofcode:
           title: Pagar Sesat Klasik
           description: Cuba asas sains komputer dengan watak daripada Angry Birds, Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
@@ -145,6 +147,7 @@ ms:
             Infinity:
               description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
+          name: infiniti
         K5PD:
           lessons:
             Unplugged lessons:
@@ -229,6 +232,7 @@ ms:
             Jigsaw:
               description_student: Klik dan tarik untuk menyelesaikan teka-teki.
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
+          name: susun suai
         step:
           title: Langkah
           lessons:
@@ -295,6 +299,10 @@ ms:
           lessons:
             Wrap-Up:
               name: Wrap-up
+        equity-pd:
+          lessons:
+            Codeorg Equity PD:
+              name: PD Ekuiti Code.org
         science-PD2:
           lessons:
             Wrap-Up:
@@ -334,6 +342,7 @@ ms:
           lessons:
             Ice Age Play Lab:
               description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
+          name: zaman ais
         starwars:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
@@ -367,6 +376,7 @@ ms:
               name: Kecerdasan Buatan (AI) untuk Lautan
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.'
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pertama, pelajar mengelaskan objek sama ada "ikan" atau "bukan ikan" untuk cuba membuang sampah dari lautan. Kemudian, pelajar perlu mengembangkan set data latihan mereka untuk memasukkan makhluk laut lain yang berada di dalam air. Dalam bahagian kedua aktiviti, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dijana secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang kemudiannya boleh melabelkan imej baharu sendiri.
+          name: lautan
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -1511,6 +1521,8 @@ ms:
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: lain
             Thanks:
               name: Terima kasih
         applab-intro:
@@ -3607,6 +3619,8 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+            Sprite Properties:
+              name: Sifat Peperi
         maddie-test:
           lessons:
             stage 1:
@@ -3862,6 +3876,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprite Properties:
+              name: Sifat Peperi
             Conditionals:
               name: Bersyarat
             Functions:
@@ -4593,6 +4609,8 @@ ms:
               name: Pembolehubah
             Sprites:
               name: Jin
+            Sprite Properties:
+              name: Sifat Peperi
             Text:
               name: teks
             Conditionals:
@@ -4671,6 +4689,8 @@ ms:
               name: Teks dan Prom
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            Making Sprites:
+              name: Membuat Peperi
             blank space stories:
               name: Cerita Ruang Kosong
             End of Course Project:
@@ -4690,6 +4710,9 @@ ms:
             Sprites:
               key: Jin
               name: Jin
+            Sprite Properties:
+              key: Sifat Peperi
+              name: Sifat Peperi
             Text:
               key: teks
               name: teks
@@ -5282,6 +5305,7 @@ ms:
             lesson-6:
               description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
             lesson-7:
+              name: Membuat Peperi
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-8:
               description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
@@ -5430,6 +5454,7 @@ ms:
               name: Majlis Tari-Menari
               description_student: Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
             lesson-2:
+              name: Membuat Peperi
               description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-3:
@@ -5526,6 +5551,8 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            Making Sprites:
+              name: Membuat Peperi
             blank space stories:
               name: Cerita Ruang Kosong
             texts-and-prompts:
@@ -5797,6 +5824,7 @@ ms:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Menavigasi platform pembelajaran Code.org"
               description_teacher: |-
                 **Anda akan belajar cara untuk:**
 
@@ -6619,6 +6647,7 @@ ms:
             Introducing Sprite Lab:
               description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
             Making Sprites:
+              name: Membuat Peperi
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             Sprites in Action:
               description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
@@ -6865,6 +6894,7 @@ ms:
             Swimming Fish in Sprite Lab:
               description_student: Pelajari cara mencipta dan mengedit peperi.
             Making Sprites:
+              name: Membuat Peperi
               description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             Sprites in Action:
@@ -6947,6 +6977,7 @@ ms:
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu meneliti kod sedia ada untuk mengenal pasti ralatnya.
             lesson-2:
               key: pelajaran-2
+              name: Membuat Peperi
               description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-3:
@@ -7489,6 +7520,7 @@ ms:
             Introducing Sprite Lab:
               description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
             Making Sprites:
+              name: Membuat Peperi
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             Sprites in Action:
               description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
@@ -7558,6 +7590,7 @@ ms:
               key: pelajaran-6
             lesson-7:
               key: pelajaran-7
+              name: Membuat Peperi
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-8:
               key: pelajaran-8
@@ -7639,41 +7672,70 @@ ms:
               name: Gelung
             lesson-21:
               name: Konsol
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Pelajari Tarik dan Lepas
               name: Pelajari Tarik dan Lepas
+              description_student: Klik dan tarik untuk menyelesaikan teka-teki.
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
             Sequencing with Scrat:
               key: Penjujukan dengan Scrat
               name: Penjujukan dengan Scrat
+              description_student: Atur cara Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear.
             Programming with Angry Birds:
               key: Pengaturcaraan dengan Angry Birds
               name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
             Programming with Rey and BB-8:
               key: Pengaturcaraan dengan Rey dan BB-8
               name: Pengaturcaraan dengan Rey dan BB-8
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8.
             Programming with Harvester:
               key: Pengaturcaraan dengan Penuai
               name: Pengaturcaraan dengan Penuai
+              description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan. '
             Loops with Scrat:
               key: Gelung dengan Scrat
               name: Gelung dengan Scrat
+              description_student: Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan konsep gelung dalam pengaturcaraan teka-teki apabila matlamatnya ialah membantu tupai mendapatkan buah oak.
             Loops with Laurel:
               key: Gelung dengan Laurel
               name: Gelung dengan Laurel
+              description_teacher: Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Ocean Scene with Loops:
               key: Pemandangan Lautan dengan Gelung
               name: Pemandangan Lautan dengan Gelung
+              description_student: Gunakan gelung dan corak untuk menyiapkan imej.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, gelung mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.
             Drawing Gardens with Loops:
               key: Melukis Taman dengan Gelung
               name: Melukis Taman dengan Gelung
+              description_student: Gunakan corak dan gelung untuk menyiapkan imej.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, pelajar menggunakan gelung untuk mencipta corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.
             On the Move with Events:
               key: Bergerak bersama Acara
               name: Bergerak bersama Acara
+              description_student: Cipta permainan dan cerita anda sendiri.
+              description_teacher: Dalam **projek mini** ini, pelajar berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi. Sudah tiba masanya menjadi kreatif dan mencipta cerita di dalam Makmal Mainan!
             A Royal Battle with Events:
               key: Pertempuran Diraja bersama Acara
               name: Pertempuran Diraja bersama Acara
+              description_student: Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif.
+              description_teacher: Dalam **projek mini** ini, pelajar akan berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi.
+            Programming in with Angry Birds:
+              name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
+            Programming in Harvester:
+              name: Pengaturcaraan dengan Penuai
+              description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan. '
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -7681,16 +7743,48 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+          description_audience: 'Umur: 4-8 tahun'
+          description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan kursus tadika dan gred satu yang terbaik.'
+          description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
         csa2-2022:
           lessons:
             lesson-6:
               name: Pembolehubah
             lesson-16:
               name: Konsol
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Tatasusunan Satu Dimensi (1D)
+            lesson-4:
+              name: Elemen Tatasusunan
+            lesson-6:
+              name: Algoritma Tatasusunan
+            lesson-7:
+              name: Dipertingkatkan Untuk Gelung
+            lesson-8:
+              name: Pembolehubah Statik dan Pemalar
+            lesson-9:
+              name: Polimorfisme
+            lesson-10:
+              name: Lagi Algoritma Tatasusunan
+            lesson-11:
+              name: Tatasusunan Terbalik
+            lesson-13:
+              name: Data untuk Projek Kebaikan Sosial – Hari 1
+            lesson-14:
+              name: Data untuk Projek Kebaikan Sosial – Hari 2
+            lesson-15:
+              name: Data untuk Projek Kebaikan Sosial – Hari 3
             lesson-16:
               name: Konsol
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -7705,12 +7799,72 @@ ms:
               name: Inspirasi Projek
             lesson-19:
               name: Penyahpepijatan
+        csa5-2022:
+          lessons:
+            lesson-7:
+              name: Dipertingkatkan Untuk Gelung
         csa1-2022-exemplars:
           lessons:
             lesson-2:
               name: Java Lab
             lesson-9:
               name: Gelung
+        pltess:
+          lessons:
+            lesson-2:
+              name: pelajaran 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Jika kenyataan dalam Java
+              description_student: |-
+                **Anda akan:**
+
+                -   Nilaikan ungkapan boolean
+                -   Tulis dan baca pernyataan jika, jika-lain, jika-lain-jika-lain
+                -   Terangkan perbezaan antara pengendali tugasan dan pengendali perbandingan
+
+                **Anggaran masa:** 90 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Nilaikan ungkapan boolean
+                -   Tulis dan baca pernyataan jika, jika-lain, jika-lain-jika-lain
+                -   Terangkan perbezaan antara pengendali tugasan dan pengendali perbandingan
+
+                **Anggaran masa:** 90 minit
+            lesson-4:
+              name: Gelung dalam Java
+              description_student: |-
+                \*Anda akan:\*\*
+
+                -   Baca, tulis dan nyahpepijat untuk gelung dalam Java
+
+                **Anggaran masa:** 90 minit
+              description_teacher: |-
+                \*Anda akan:\*\*
+
+                -   Baca, tulis dan nyahpepijat untuk gelung dalam Java
+
+                **Anggaran masa:** 90 minit
+            lesson-5:
+              name: Susunan dalam Java
+              description_student: |-
+                **Anda akan:**
+
+                -   Mengisytiharkan dan memulakan tatasusunan 1D jenis data primitif
+                -   Mengakses dan mengubah suai elemen dalam tatasusunan
+                -   Melintasi tatasusunan
+
+                **Anggaran masa:** 120 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mengisytiharkan dan memulakan tatasusunan 1D jenis data primitif
+                -   Mengakses dan mengubah suai elemen dalam tatasusunan
+                -   Melintasi tatasusunan
+
+                **Anggaran masa:** 120 minit
         csa7-pilot-extra:
           lessons:
             Java Lab:
@@ -7806,7 +7960,9 @@ ms:
             Introducing Sprite Lab:
               description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
             Making Sprites:
+              name: Membuat Peperi
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+              key: Membuat Peperi
             Sprites in Action:
               description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
@@ -7929,6 +8085,96 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              description_student: |-
+                **Anda akan:**
+
+                -   Dapat memahami lebih mendalam tentang kurikulum CS Discoveries.
+              description_teacher: "**Gambaran Keseluruhan:**\nAktiviti tak segerak ini akan memberi peserta gambaran keseluruhan mengenai kurikulum CS Discoveries termasuk gambaran keseluruhan peringkat tinggi mengenai kandungan dan alat kursus, cara kursus disusun, dan pratonton tentang proses penyelesaian masalah yang digunakan sepanjang kursus. \n\n**Peserta akan:**\n\n-   Dapat memahami lebih mendalam tentang kurikulum CS Discoveries. \n\n\\*\\* Masa yang dicadangkan:\\*\\* 40 minit"
+            lesson-5:
+              name: Taklimat Asynchronous
+            lesson-6:
+              name: Model Pelajaran 2 - Unit 2 Pelajaran 2
+            lesson-7:
+              name: Identiti
+            lesson-8:
+              name: Tugasan Pelajaran
+            lesson-10:
+              description_student: |-
+                **Anda akan:**
+
+                -   Mempertimbangkan peranan anda sebagai guru dalam bilik darjah CS Discoveries.
+              description_teacher: |-
+                **Ikhtisar:**
+                Aktiviti tak segerak ini akan memberikan peserta pengenalan tentang peranan guru sebagai peneraju pelajar. Peserta akan digesa untuk mempertimbangkan bagaimana pengalaman dan kepercayaan mereka tentang CS mempengaruhi cara mereka melihat peranan mereka sebagai guru dalam bilik darjah CS. Refleksi ini akan menjadi keutamaan peserta untuk sesi pengenalan diri di bengkel nanti.
+
+                **Peserta akan:**
+
+                -   Mempertimbangkan peranan anda/mereka sebagai guru dalam bilik darjah CS Discoveries.
+
+                **Masa yang dicadangkan:** 20 minit
+            lesson-11:
+              name: Penggulungan
+            Intro to HTML:
+              name: Model Pelajaran 2 - Unit 2 Pelajaran 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Taklimat Asynchronous
+            lesson-9:
+              name: Penggulungan
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Taklimat Asynchronous
+            lesson-8:
+              name: Penggulungan
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Unit Penyelesai"
+              description_student: |-
+                **Anda akan:**
+
+                -   Menerokai projek akhir bab.
+
+                **Masa yang dicadangkan:** 10 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Menerokai projek akhir bab.
+
+                **Masa yang dicadangkan:** 10 minit
+            lesson-3:
+              name: "[TEMPLATE] Isi pelajaran"
+              description_student: |-
+                **Anda akan:**
+
+                -   Masukkan objektif pelajaran.
+
+                **Masa yang dicadangkan:** \_\_\_\_ minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Masukkan objektif pelajaran.
+
+                **Masa yang dicadangkan:** \_\_\_\_ minit
+            lesson-7:
+              name: Async Prep
+            lesson-11:
+              name: Taklimat Asynchronous
+            lesson-14:
+              name: Penggulungan
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Taklimat Asynchronous
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -7953,5 +8199,258 @@ ms:
             Variables:
               name: Pembolehubah
               key: Pembolehubah
+        vpl-csd1-ci-pilot-2022:
+          title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Pengenalan kepada Pembangunan Web
+              description_student: |-
+                **Anda akan:**
+
+                -   Mendapat pengenalan tentang unit Pembangunan Web code.org.
+                -   Mendapat pratonton minggu pertama kandungan unit Pembangunan Web.
+
+                **Masa yang dicadangkan:** 10 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mendapat pengenalan tentang unit Pembangunan Web code.org.
+                -   Mendapat pratonton minggu pertama kandungan unit Pembangunan Web.
+
+                **Masa yang dicadangkan:** 10 minit
+            lesson-2:
+              name: Bina tapak web dengan HTML
+              description_student: |-
+                **Anda akan:**
+
+                -   Mendapat pengenalan tentang cara menggunakan Makmal Web.
+                -   Tambahkan struktur pada halaman web menggunakan HML.
+                -   Tambahkan imej pada halaman web.
+
+                **Masa yang dicadangkan:** 30 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mendapat pengenalan tentang cara menggunakan Makmal Web.
+                -   Tambahkan struktur pada halaman web menggunakan HML.
+                -   Tambahkan imej pada halaman web.
+
+                **Masa yang dicadangkan:** 30 minit
+            lesson-3:
+              name: Gayakan tapak web dengan CSS
+              description_student: |-
+                **Anda akan:**
+
+                -   Menggayakan teks halaman web menggunakan CSS.
+                -   Memautkan helaian gaya CSS ke indeks halaman web.
+                -   Meneroka sifat tambahan untuk menggayakan elemen pada halaman web.
+
+                **Masa yang dicadangkan:** 25 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Menggayakan teks halaman web menggunakan CSS.
+                -   Memautkan helaian gaya CSS ke indeks halaman web.
+                -   Meneroka sifat tambahan untuk menggayakan elemen pada halaman web.
+
+                **Masa yang dicadangkan:** 25 minit
+            lesson-4:
+              name: Pertimbangkan peranan dan tanggungjawab yang berkaitan dengan media digital
+              description_student: |-
+                **Anda akan:**
+
+                -   Menerokai cara pelajar berusaha memahami peranan dan tanggungjawab mereka sebagai pencipta dan pengguna media digital.
+
+                **Masa yang dicadangkan:** 15 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Menerokai cara pelajar berusaha memahami peranan dan tanggungjawab mereka sebagai pencipta dan pengguna media digital.
+
+                **Masa yang dicadangkan:** 15 minit
+            lesson-5:
+              description_student: |-
+                **Anda akan:**
+
+                -   Menerokai projek akhir bab.
+
+                **Masa yang dicadangkan:** 10 minit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Menerokai projek akhir bab.
+
+                **Masa yang dicadangkan:** 10 minit
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran Pembangunan Web
+          title: 'Modul 2: Persediaan untuk Mengajar Pembangunan Web'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Pengenalan kepada Animasi dan Permainan Interaktif
+            lesson-2:
+              name: Cipta adegan
+            lesson-3:
+              name: Animasikan adegan dengan menggunakan sprite
+            lesson-4:
+              name: Terokai reka bentuk permainan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bersedia untuk Mengajar Animasi dan Permainan Interaktif
+          title: 'Modul 3: Persediaan untuk Mengajar Animasi dan Permainan Interaktif'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+        vpl-csd4-ci-pilot-2022:
+          title: 'Modul 4: Persediaan untuk Mengajar Proses Reka Bentuk'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd5-ci-pilot-2022:
+          title: 'Modul 5: Persediaan mengajar data dan masyarakat'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd6-ci-pilot-2022:
+          title: 'Modul 6: Bersedia untuk Mengajar Pengkomputeran Fizikal'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Pengkomputeran Fizikal Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Pengkomputeran Fizikal.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan aplikasi pembuat.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Pengkomputeran Fizikal Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Pengkomputeran Fizikal.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan aplikasi pembuat.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Proses Reka Bentuk
+            Engage with machine learning apps:
+              name: Proses Reka Bentuk
+          title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Helo CSC Dunia
+              description_student: Dalam pelajaran ini, anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
           title: Helo Dunia
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Kemas Kini Level
+          title: Taman Permainan CSD
+          description_audience: Penulis Kurikulum
+          description_short: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
+          description: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Helo CSC Dunia
+              description_student: Dalam pelajaran ini, anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Seni Puisi
+              description_teacher: Dalam pelajaran bersepadu SK dan ELA untuk pengekod baharu ini, pelajar akan menghidupkan puisi dengan kod untuk menggambarkan suasana puisi. Pelajar akan membaca dan mengesan suasana sesebuah puisi. Mereka kemudian akan mencari kesan dan imej yang sepadan untuk membantu menggambarkan suasana puisi. Akhir sekali, pelajar akan menggunakan peristiwa (kod) untuk menggambarkan perubahan suasana atau menghidupkan pengenalan imej baharu dalam puisi.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Helo CSC Dunia
+              description_student: Dalam pelajaran ini, anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+        csd2-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Pembolehubah
+              key: Pembolehubah
+            Sprites:
+              name: Jin
+              key: Jin
+            Sprite Properties:
+              name: Sifat Peperi
+              key: Sifat Peperi
+            Text:
+              name: teks
+              key: teks
+            Conditionals:
+              name: Bersyarat
+              key: Bersyarat
+            Collisions:
+              description_teacher: "**Soalan Hari Ini: Bagaimanakah pengaturcara boleh membina abstraksi untuk mencipta abstraksi selanjutnya?**\\\\r\n\\\\r\nDalam pelajaran ini, pelajar memprogram sprite mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/), pelajar menyumbang saran cara lain yang boleh berinteraksi dengan dua sprite. Mereka kemudian menggunakan [`isTouching`(#f78183)](/docs/gamelab/isTouching/) untuk membuat satu sprite menolak satu lagi merentasi skrin sebelum berlatih dengan empat blok perlanggaran ([`collide`(#f78183)](</docs /gamelab/collide/>), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), dan [`bounceOff` (#f78183)](/docs/gamelab/bounceOff/))."
+            Functions:
+              name: Fungsi
+              key: Fungsi
+            lesson-1:
+              key: pelajaran-1
+        csd6-2022:
+          lessons:
+            Combining Inputs and Outputs:
+              name: Menggabungkan Input
+            Functions:
+              name: Fungsi
+        csd-post-survey-2022:
+          description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit ini boleh ditugaskan selepas pelajar melengkapkan unit terakhir mereka dalam Penemuan CS.
+          student_description: Unit ini mengandungi tinjauan untuk apabila kelas anda selesai dengan unit dalam Penemuan CS. Guru anda akan memberitahu anda masa yang sesuai untuk mengambil tinjauan ini.

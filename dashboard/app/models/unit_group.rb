@@ -240,8 +240,11 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
         unit.course_version.destroy if unit.course_version
+
+        unit.reload
+        unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -278,28 +281,6 @@ class UnitGroup < ApplicationRecord
     transaction {reload}
   end
 
-  # Get the assignable info for this course, then update translations
-  # @return AssignableInfo
-  def assignable_info(user = nil)
-    info = ScriptConstants.assignable_info(self)
-    # ScriptConstants gives us untranslated versions of our course name, and the
-    # category it's in. Set translated strings here
-    info[:name] = localized_title
-    info[:assignment_family_name] = family_name || name
-    info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
-    info[:version_title] = localized_version_title
-    info[:is_stable] = stable?
-    info[:pilot_experiment] = pilot_experiment
-    info[:category] = I18n.t('courses_category')
-    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
-    info[:category_priority] = -1
-    info[:script_ids] = user ?
-      units_for_user(user).map(&:id) :
-      default_unit_group_units.map(&:script_id)
-    info
-  end
-
   def self.all_courses
     return all.to_a unless should_cache?
     @@all_courses ||= course_cache.values.uniq.compact.freeze
@@ -307,28 +288,6 @@ class UnitGroup < ApplicationRecord
 
   def self.family_names
     CourseVersion.course_offering_keys('UnitGroup')
-  end
-
-  # Get the set of valid courses for the dropdown in our sections table.
-  # @param [User] user Whose experiments to check for possible unit substitutions.
-  # @return [Array<UnitGroup>]
-  def self.valid_courses(user: nil)
-    courses = all_courses.select(&:launched?)
-
-    if user && has_any_pilot_access?(user)
-      pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
-      courses += pilot_courses
-    end
-
-    if user && user.permission?(UserPermission::LEVELBUILDER)
-      courses += all_courses.select(&:in_development?)
-    end
-
-    courses
-  end
-
-  def self.valid_course_infos(user: nil)
-    return UnitGroup.valid_courses(user: user).map {|c| c.assignable_info(user)}
   end
 
   # @param user [User]
@@ -363,7 +322,7 @@ class UnitGroup < ApplicationRecord
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: units_for_user(user).map do |unit|
         include_lessons = false
-        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
+        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
       teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
@@ -404,6 +363,10 @@ class UnitGroup < ApplicationRecord
       description: I18n.t("data.course.name.#{name}.description_short", default: ''),
       link: link,
     }
+  end
+
+  def included_in_units?(unit_ids)
+    default_units.any? {|unit| unit_ids.include? unit.id}
   end
 
   # Returns summary object of all the course versions that an instructor can

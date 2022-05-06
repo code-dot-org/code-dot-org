@@ -3,7 +3,7 @@
   "name": "strokeWeight()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the width of the stroke used for lines, points, and the border around shapes.\r\n\r\nThe stroke weight controls, for the future drawing, the thickness of lines drawn with `line()`, `point()`, and borders around shapes. The width is measured in pixels. As the stroke width increases, the lines drawn get thicker equally on both sides. Any lines or shapes that have already been drawn are not affected.",
+  "content": "Sets the width of the stroke used for lines, points, and the border around shapes.\r\n\r\nThe stroke weight controls, for the future drawing, the thickness of lines drawn with [`line()`(#f78183)](/docs/applab/line/), `point()`, and borders around shapes. The width is measured in pixels. As the stroke width increases, the lines drawn get thicker equally on both sides. Any lines or shapes that have already been drawn are not affected.",
   "examples": [
     {
       "name": "",
@@ -53,5 +53,5 @@
   "return_value": "No return value. Changes future output to the display only.",
   "short_description": "Sets the width of the stroke used for lines, points, and the border around shapes.",
   "syntax": "strokeWeight(size)",
-  "tips": "- *strokeWeight* only affects future drawing.\r\n- The default *strokeWeight* is 1 pixel.\r\n- When drawing thick lines, the width and length of the shape is relative to the center of the perimeter line. The outside perimeter of the shape will be one half the stroke weight larger than the shape's defined dimensions all around.\r\n- `noStroke()` is used to turn off line drawing."
+  "tips": "- *strokeWeight* only affects future drawing.\r\n- The default *strokeWeight* is 1 pixel.\r\n- When drawing thick lines, the width and length of the shape is relative to the center of the perimeter line. The outside perimeter of the shape will be one half the stroke weight larger than the shape's defined dimensions all around.\r\n- [`noStroke()`(#4dd0e1)](/docs/gamelab/noStroke/) is used to turn off line drawing."
 }

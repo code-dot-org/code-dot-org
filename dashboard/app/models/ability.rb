@@ -78,7 +78,7 @@ class Ability
       can? :update, level
     end
 
-    can [:read, :docs_show, :docs_index], ProgrammingEnvironment do |environment|
+    can [:read, :docs_show, :docs_index, :get_summary_by_name], ProgrammingEnvironment do |environment|
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
@@ -121,6 +121,9 @@ class Ability
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
       end
       can :destroy, ReviewableProject, user_id: user.id
+      can :project_commits, ProjectVersion do |_, project_owner, project_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
+      end
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -418,6 +421,12 @@ class Ability
 
         can :get_access_token, :javabuilder_session
       end
+    end
+
+    # Allow pilot users to have access to run override_sources java lab code, which is how we run exemplars.
+    # TODO: Change this to authorized_instructors once we have throttling in place.
+    if user.persisted? && (user.has_pilot_experiment?(CSA_PILOT) || user.has_pilot_experiment?(CSA_PILOT_FACILITATORS))
+      can :get_access_token_with_override_sources, :javabuilder_session
     end
 
     # This action allows levelbuilders to work on exemplars and validation in levelbuilder
