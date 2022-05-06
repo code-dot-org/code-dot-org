@@ -4,10 +4,12 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir.",
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir."
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, okuyabilecek yaştaki tüm öğrenciler için uygundur (6+ yaş). Daha genç öğrenciler muhtemelen öğreticiyi bitirmeseler de bir saat boyunca yapbozlar üzerinde çalışırken çok eğlenecekler. Lise öğrencileri çoğunlukla öğreticiyi bitirecek ve sonunda serbest oyun seviyesinde oynamak için biraz zamanları olacaktır.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, okuyabilecek yaştaki tüm öğrenciler için uygundur (6+ yaş). Daha genç öğrenciler muhtemelen öğreticiyi bitirmeseler de bir saat boyunca yapbozlar üzerinde çalışırken çok eğlenecekler. Lise öğrencileri çoğunlukla öğreticiyi bitirecek ve sonunda serbest oyun seviyesinde oynamak için biraz zamanları olacaktır."
         },
         "hero/Minecraft Hour of Code": {
@@ -17,15 +19,23 @@
           "overview": "Bu BB ve İDB entegre dersinde, öğrenciler bir şiirin ruh halini göstermek için kodla bir şiiri canlandıracaklar. Öğrenciler bir şiirin ruh halini okuyacak ve tespit edeceklerdir. Daha sonra şiirin ruh halini açıklamaya yardımcı olacak ilgili efektleri ve görüntüleri bulacaklar. Son olarak, öğrenciler ruh halindeki bir değişikliği göstermek veya bir şiirdeki yeni görüntülerin dahil oluşunu canlandırmak için olayları (kod) kullanacaklardır.\n\nBu ders 1 saatlik bağımsız ders olarak tamamlanabilir. Bu dersi, [Şiirle Kodlama](http://studio.code.org/s/poetry-2021) adlı çoklu ders modülünün ilk dersi olarak kullanma seçeneği de sunulmaktadır.",
           "preparation": "-   Çevrimiçi öğreticiyi kendiniz inceleyin ve tamamlayın: [Şiir Sanatı](http://studio.code.org/s/poem-art).\n\n-   Öğrencilerinizden tamamlamalarını istemeden önce etkinlikleri denediğinizden emin olun.\n\n-   Teknolojinizi kontrol edin ve herhangi bir sorunu önceden gidermeniz gerekip gerekmediğine karar verin.\n\n-   Bazı seviyeler oynamak için ses gerektirir. Kulaklıkları önceden dağıtın.\n\n-   [İsteğe bağlı] Değerlendirme için öğrenci başına 2 yapışkan not."
         },
+        "flappy/Flappy Code": {
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
+          "preparation": "### Hour of Code'dan Bir Hafta Önce\n\n-   Hour of Code etkinliğinizi planlamaya başlamak için [Hour of Code Eğitmen Kılavuzu](http://hourofcode.com/resources/how-to/) ve \\[Başarılı Eğitmenlerden En İyi Uygulamalar[1]’ı inceleyin. \n-   Sınıf desteği veya promosyon ürünleri almak istiyorsanız [Hour of Code etkinliğinizi Kaydedin](http://hourofcode.com).\n-   Çevrimiçi anlatımı inceleyin ve tamamlayın: [Bir Flappy Oyunu Yap](https://studio.code.org/flappy/1) \n-   Öğrencilerinizden tamamlamalarını istemeden önce siz test edin. Hour of Code'dan önce teknolojinizi kontrol edin ve herhangi bir konuda sorun gidermeye ihtiyaç olup olmadığına karar verin.\n\n### Hour of Code'dan Bir Gün Önce\n\n-   Tahtaya \"kodlama\", \"programlama\" ve \"hata ayıklama\" sözcüklerini yazın ve elinizde varsa bunları sözcük duvarınıza ekleyin.\n-   Aktiviteyi tamamlayan her öğrenci bir sertifika almalıdır. Hour of Code'un sonunda işinizi kolaylaştırması için önceden herkes için [bir tane yazdırın](http://code.org/certificates).",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+        },
         "hourofcode/Maze": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders 4-10 yaş arası küçük öğrenciler için tasarlanmıştır, ancak sağlanan farklılaştırma önerileri kullanılarak daha büyük öğrenciler için uyarlanabilir.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders 4-10 yaş arası küçük öğrenciler için tasarlanmıştır, ancak sağlanan farklılaştırma önerileri kullanılarak daha büyük öğrenciler için uyarlanabilir."
         },
         "frozen/Artist": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, 10-13 yaş arası orta sınıftaki öğrenciler için tasarlanmıştır, ancak sağlanan farklılaştırma önerileri kullanılarak daha küçük veya daha büyük öğrenciler için uyarlanabilir. Öğrenciler basit geometri ve çizim açıları hakkında temel bir anlayışa sahip olmalıdır.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, 10-13 yaş arası orta sınıftaki öğrenciler için tasarlanmıştır, ancak sağlanan farklılaştırma önerileri kullanılarak daha küçük veya daha büyük öğrenciler için uyarlanabilir. Öğrenciler basit geometri ve çizim açıları hakkında temel bir anlayışa sahip olmalıdır."
         },
         "iceage/Ice Age Play Lab": {
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
         "hello-world-emoji-2021/Hello World": {
@@ -37,8 +47,12 @@
           "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
           "student_overview": "Sanatçıyı programlayarak güzel resimler oluşturun."
         },
+        "gumball/Gumball Play Lab": {
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+        },
         "dance/Dance Party": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir.",
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir."
         },
         "hello-world-food-2021/Hello World": {
@@ -51,6 +65,8 @@
         },
         "hoc-encryption/Simple Encryption": {
           "overview": "Bu derste, öğrencilere şifreleme ihtiyacı ve gizli mesajları çözmek (veya kırmak) için basit teknikler tanıtılır. Öğrenciler, klasik Sezar şifresi ve ayrıca Rastgele Değişim Şifresi ile kodlanmış bir mesajı kırmak için kendilerini test eder. Öğrenciler, güçlü hesaplama araçlarının olduğu bir çağda, şifreleme tekniklerinin daha karmaşık olması gerektiği fikrini iyi bir şekilde öğrenmelidir. Bu dersin en önemli yönü, şifrelemenin internette her gün hayatımızda nasıl ve neden bir rol oynadığını ve iyi şifreleme yapmanın önemsiz olmadığını anlamaktır. Öğrenciler, onu kırmak için kullanılabilecek güçlü hesaplama araçları karşısında güçlü şifreleme yapmak için göz önünde bulundurulması gereken hususları anlayarak kendilerini ilk kez deneyecekler. İnternet üzerinden bitlerle iletim yaparkenki gizlilik ihtiyacı, İnternet kullanan herkes için önemlidir.",
+          "preparation": "-   Widget'ın her iki versiyonunu da inceleyin.",
+          "purpose": "\"Şifreleme\", amaçlanan alıcı olmayan bir kişiden mesajın orijinal halini \"saklamak\" amacıyla bir mesajın dönüştürülmesine yönelik bir süreçtir. Şifreleme artık yalnızca askerler veya casuslara yönelik değil. Şifrelemeyi öncelikle ticari işlemler gerçekleştirmek için her gün internette kullanıyoruz, yani şifreleme olmadan ekonomimiz durma noktasına gelebilir. \n\nBu ders, öğrencilere hesaplama araçlarıyla mesajları şifrelemeye dair düşünce biçimine giriş deneyimi sunar. Hesaplama araçları, bilgi şifrelemek için kullandığımız algoritmaların gücünü ve karmaşıklığını büyük ölçüde artırır, ancak bu araçlar aynı zamanda bizim şifre kırma becerimizi de geliştirir. Güçlü bir şifrelemenin geliştirilmesi, bilgisayarların çözemeyeceği kadar \"zor\" olan problemlere dair bilgiye ve mesajları şifrelerken bu bilgilerin kullanılmasına dayanır. Kaynak olarak, _Blown to Bits_'teki 5'inci Bölümün tamamını okuyabilirsiniz. Bu bölüm, sınıfınızda yer vermek isteyebileceğiniz sosyal bağlamı sağlıyor. ",
           "student_overview": "Bu derste, öğrencilere şifreleme ihtiyacı ve gizli mesajları çözmek (veya kırmak) için basit teknikler tanıtılır. Öğrenciler, klasik Sezar şifresi ve ayrıca Rastgele Değişim Şifresi ile kodlanmış bir mesajı kırmak için kendilerini test eder. Öğrenciler, güçlü hesaplama araçlarının olduğu bir çağda, şifreleme tekniklerinin daha karmaşık olması gerektiği fikrini iyi bir şekilde öğrenmelidir. Bu dersin en önemli yönü, şifrelemenin internette her gün hayatımızda nasıl ve neden bir rol oynadığını ve iyi şifreleme yapmanın önemsiz olmadığını anlamaktır. Öğrenciler, onu kırmak için kullanılabilecek güçlü hesaplama araçları karşısında güçlü şifreleme yapmak için göz önünde bulundurulması gereken hususları anlayarak kendilerini ilk kez deneyecekler. İnternet üzerinden bitlerle iletim yaparkenki gizlilik ihtiyacı, İnternet kullanan herkes için önemlidir."
         },
         "hello-world-animals-2021/Hello World": {
@@ -59,13 +75,16 @@
           "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Bu ders, sıralama ve olaylar da dahil olmak üzere kodlama ve programlamaya dair temel Bilgisayar Bilimi kavramlarını tanıtır. Eğitimin JavaScript versiyonu, öğrencilerin kod yazmayı deneyimlemesini sağlar.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu dersin iki versiyonu vardır."
         },
         "mc/Hour of Code 2015": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, okuyabilecek yaştaki tüm öğrenciler için uygundur (6+ yaş). Daha genç öğrenciler muhtemelen öğreticiyi bitirmeseler de bir saat boyunca yapbozlar üzerinde çalışırken çok eğlenecekler. Lise öğrencileri çoğunlukla öğreticiyi bitirecek ve sonunda serbest oyun seviyesinde oynamak için biraz zamanları olacaktır.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders, okuyabilecek yaştaki tüm öğrenciler için uygundur (6+ yaş). Daha genç öğrenciler muhtemelen öğreticiyi bitirmeseler de bir saat boyunca yapbozlar üzerinde çalışırken çok eğlenecekler. Lise öğrencileri çoğunlukla öğreticiyi bitirecek ve sonunda serbest oyun seviyesinde oynamak için biraz zamanları olacaktır."
         },
         "playlab/Play Lab": {
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
         "applab-intro/Intro to App Lab": {
@@ -77,9 +96,13 @@
           "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Bu ders, sıralama ve olaylar da dahil olmak üzere kodlama ve programlamaya dair temel Bilgisayar Bilimi kavramlarını tanıtır. Eğitimin JavaScript versiyonu, öğrencilerin kod yazmayı deneyimlemesini sağlar.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu dersin iki versiyonu vardır."
         },
         "text-compression/Text Compression": {
+          "overview": "Bir noktada bitleri gönderme hızında fiziksel bir sınıra erişiriz ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak, aynı bilgiyi daha az bitle temsil etmenin bir yolunu bulmalı, yani verileri **sıkıştırmalıyız**. Bu derste öğrenciler, örüntüler arayarak ve daha büyük metin örüntüleri yerine semboller koyarak İngilizce metnin çeşitli bölümlerini sıkıştırmak için Metin Sıkıştırma Widget’ını kullanacaklar. ",
+          "preparation": "-   Metin Sıkıştırma Widget'ını test edin\n-   Hangi seçenekleri kullanmak istediğinize karar vermek için öğretmen ipuçlarını gözden geçirin",
+          "purpose": "Sıkıştırmanın ardındaki temel prensip, orijinal bilgiti temsil edecek daha az sayıda bitin kullanılmasına dair bir yöntem veya protokol geliştirmektir. Bu derste, bir tekrarlı örüntü \"sözlüğü\" ile sıkıştırılmış verileri temsil etme yöntemimiz, [LZW sıkıştırma şeması](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)'na benzerdir, ancak LZW'nun, öğrencilerin bu derste yaptıklarından bir miktar farklı olduğu göz önünde bulundurulmalıdır. Burada öğrenciler kendi yöntemlerini bulur. LZW ise yalnızca metinler (zip dosyaları) için değil, aynı zamanda GIF görüntü dosyası formatı için de kullanılır.",
           "student_overview": "Bir noktada, bitleri gönderebileceğimiz fiziksel hız sınırına ulaşırız ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak, aynı bilgiyi daha az bit ile temsil etmenin bir yolunu bulmalıyız, yani verileri sıkıştırmalıyız."
         },
         "outbreak/Outbreak": {
@@ -90,18 +113,24 @@
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
         },
         "infinity/Infinity": {
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
         "basketball/Bounce": {
           "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
           "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır."
+        },
         "dance-2019/Dance Party": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir.",
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır.",
           "student_overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir. Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir."
         },
         "oceans/Oceans": {
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. İlk olarak, öğrenciler okyanustaki çöpleri çıkarmaya çalışmak için nesneleri \"balık\" veya \"balık değil\" olarak sınıflandırır. Ardından, öğrencilerin eğitim veri setlerini suya ait diğer deniz canlılarını da içerecek şekilde genişletmeleri gerekecektir. Etkinliğin ikinci bölümünde, öğrenciler rastgele oluşturulmuş balık resimlerine uygulayacakları etiketlerini seçeceklerdir. Bu eğitim verileri, daha sonra yeni görüntüleri kendi başına etiketleyebilmesi gereken bir makine öğrenimi modeli için kullanılacaktır.",
+          "purpose": "Bu eğitim, öğrencilere bir **yapay zeka** türü olan **makine öğrenmesini** hızlıca tanıtmak için tasarlandı. Bir makine öğrenmesi modelinin yeni verileri sınıflandırmasını sağlamak için **eğitim verisinin** nasıl kullanıldığını keşfedecek. Öğrenciler eğitim sırasında pozitif bir deneyim yaşamalılar ve daha da önemlisi bilgisayar bilimi öğrenmeye devam etmek konusunda motivasyon kazanmalılar. ",
           "student_overview": "Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır."
         },
         "jigsaw/Jigsaw": {
@@ -491,6 +520,7 @@
         "coursed-2021/Dance Party": {
           "overview": "Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir yansıma dergisi olduğundan emin olun.\n-   Kulaklık ihtiyacını göz önünde bulundurun. Bu etkinlik sese dayanır.",
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır.",
           "student_overview": "Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -588,6 +618,7 @@
         "express-2021/lesson-1": {
           "overview": "Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.",
           "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak için bulmacaları oynayın.\n-   Her öğrencinin bir Yansıma Dergisi olduğundan emin olun.\n-   Kulaklık ihtiyacını göz önünde bulundurun. Bu etkinlik sese dayanır.",
+          "purpose": "Bu ders, kodlamanın ve (blokları kullanarak) etkinlik programlamanın temel CS kavramlarını anlatır.",
           "student_overview": "Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız."
         },
         "express-2021/Loops with Rey and BB-8": {
@@ -844,6 +875,9 @@
         },
         "csd7-2021/Similarity Models": {
           "overview": "Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.\n\n**Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Bu dersin son bölümünü başlatmak için, öğrenciler bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır. Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara bakacaklardır."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Bu derste öğrenciler, Devre Oyun Alanını kullanan programları ilk kez yazma fırsatını bulurlar. Önce kartı görsel olarak inceledikten ve olası işlevlere dair varsayımda bulunduktan sonra öğrenciler bir LED'i kontrol eden uygulamaları yazmayı öğrenecekleri ortama çevrimiçi geçer. Öğrenciler Uygulama Laboratuvarı ekranlarını Devre Oyun Alanları ile birleştirerek, kullanıcı girişi için Uygulama Laboratuvarı'na güvenirken yavaş yavaş kart ögelerini bir çıkış cihazı olarak entegre etmeye başlayabilirler."

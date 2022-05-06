@@ -176,6 +176,7 @@ zh-TW:
               name: Play Lab
               description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 在 Play Lab 上創作故事或是遊戲！
+          name: 游戲實驗室
         artist:
           title: 藝術家
           description: 和小畫家一起畫圖和設計！
@@ -188,6 +189,7 @@ zh-TW:
                 forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉
                 90 度）等。
           student_description: 和小畫家一起畫圖和設計！
+          name: 藝術家
         hourofcode:
           title: 經典迷宮
           description: 和來自憤怒鳥、植物大戰殭屍、冰原歷險記的角色一起學習計算機科學的基礎知識！
@@ -357,6 +359,7 @@ zh-TW:
               name: 迪士尼無限 Play Lab
               description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
+          name: 無限
         algebrademo:
           title: 代數演示
           description: 一些關卡以演示在 Code.org 中 CS 代數的環境和編程語言
@@ -537,6 +540,7 @@ zh-TW:
               description_student: 以點擊與拖放的方式完成謎題。
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
           student_description: 試試我們的拼圖教程。
+          name: 拼圖
         step:
           title: 步進
           description: 步驟教程
@@ -1311,6 +1315,8 @@ zh-TW:
           student_description: 階段 2 暑假的線上混合式學習
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: Code.org公平PD
             Necessary Background:
               name: 前備知識
         science-PD2:
@@ -1710,6 +1716,7 @@ zh-TW:
               name: 冰原歷險記 Play Lab
               description_student: 在這節課中，學習者將獲得電腦科學的入門經驗，並使用基本的積木代碼創建一個遊戲。
           student_description: 用冰原歷險記的 Play Lab 來創作一個故事或遊戲!！
+          name: 冰河時代
         CSPPD3-Unit3:
           title: 計算機科學原理：單元 3 專業發展
           lessons:
@@ -1820,6 +1827,7 @@ zh-TW:
                 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。
               description_teacher: 在本課中，所有年齡段的學習者都能在安全、支持性的環境中獲得編碼和電腦科學的入門體驗。首先，學生將物件分類為“魚”或“非魚”，試圖清除海洋中的垃圾。然後，學生將需要擴展他們的訓練資料集，以覆蓋水中的其他海洋生物。在活動的第二部分，學生將選擇他們自己的標籤以應用于隨機生成的魚的圖像。該訓練資料用於能夠自行標記新圖像的機器學習模型。
           student_description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
+          name: 海洋
         CSPPD3-Unit3-pt2:
           title: 計算機科學原理：單元 3 專業發展挑戰
           lessons:
@@ -19243,6 +19251,7 @@ zh-TW:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Code.org學習平臺導航"
               description_teacher: |-
                 **你將學習如何：**
 
@@ -21189,11 +21198,15 @@ zh-TW:
             'Lesson 11: Assessment Day':
               key: 課堂 11：評估日
               name: 評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
           lesson_groups:
             csp_parameters_return_values:
               display_name: 參數及函數回傳值
             csp_libraries:
               display_name: 程式庫
+            lessonGroup-3:
+              display_name: 問卷
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -21713,41 +21726,72 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: 學習滑鼠的拖放
               name: 學習滑鼠的拖放
+              description_student: 以點擊與拖放的方式完成謎題。
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Sequencing with Scrat:
               key: 和鼠奎特一起學序列
               name: 和鼠奎特一起學序列
+              description_student: 為鼠奎特設計程式，讓他能夠拿到橡樹果實。
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Programming with Angry Birds:
               key: 與憤怒鳥一起編程
               name: 與憤怒鳥一起編程
+              description_teacher: 學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。
             Programming with Rey and BB-8:
               key: 和 BB-8 與 Rey 一起寫程式
               name: 和 BB-8 與 Rey 一起寫程式
+              description_teacher: 在本課堂中，學生會以更複雜的方式運用新的程式設計技巧，與 BB-8 一起完成更巧妙的關卡。
             Programming with Harvester:
               key: 和農夫一起學程式
               name: 和農夫一起學程式
+              description_student: 幫助收割者在路上收集蔬菜。
+              description_teacher: 學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。
             Loops with Scrat:
               key: 和鼠奎特一起學迴圈（Loop）
               name: 和鼠奎特一起學迴圈（Loop）
+              description_student: 使用迴圈，幫助鼠奎特更快完成任務。
             Loops with Laurel:
               key: 與 Laurel 一起學習迴圈
               name: 與 Laurel 一起學習迴圈
+              description_teacher: 在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get
+                treasure」（取得寶藏）積木，協助她完成旅程。
             Ocean Scene with Loops:
               key: 海洋場景與迴圈（Loop）
               name: 海洋場景與迴圈（Loop）
+              description_student: 使用迴圈與模式完成圖像。
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Drawing Gardens with Loops:
               key: 使用迴圈（Loop）在花園中繪畫
               name: 使用迴圈（Loop）在花園中繪畫
+              description_student: 使用模式與迴圈完成圖像。
+              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             On the Move with Events:
               key: 讓事件活動起來
               name: 讓事件活動起來
+              description_student: 創作自己的遊戲或故事。
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的故事！
             A Royal Battle with Events:
               key: 以事件（Event）展開皇家大戰
               name: 以事件（Event）展開皇家大戰
+              description_student: 使用事件製作故事或互動遊戲。
+              description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
+                Play Lab 創造出你的遊戲！
+            Programming in with Angry Birds:
+              name: 與憤怒鳥一起編程
+              description_teacher: 學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。
+            Programming in Harvester:
+              key: 和農夫一起學程式
+              name: 和農夫一起學程式
+              description_student: 幫助收割者在路上收集蔬菜。
+              description_teacher: 學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -21755,6 +21799,8 @@ zh-TW:
               display_name: 迴圈
             csf_events:
               display_name: 事件
+          description_audience: 年齡：4-8
+          description_short: 為學前兒童提供的電腦科學簡介：結合我們的最佳幼稚園與一年級課程。
         csa2-2022:
           lessons:
             lesson-5:
@@ -21766,15 +21812,41 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         csa3-2022:
           lessons:
+            lesson-3:
+              name: 一維（1D）陣列
+            lesson-4:
+              name: 陣列元素
             lesson-5:
               name: 計次迴圈（For Loops）
+            lesson-6:
+              name: 陣列演算法
+            lesson-7:
+              name: 增强For迴圈
+            lesson-8:
+              name: 靜態變數和常量
+            lesson-9:
+              name: 多態性
+            lesson-10:
+              name: 更多陣列演算法
+            lesson-11:
+              name: 反轉陣列
+            lesson-13:
+              name: 社會公益項目數據 – 第1天
+            lesson-14:
+              name: 社會公益項目數據 – 第2天
+            lesson-15:
+              name: 社會公益項目數據 – 第3天
             lesson-16:
               name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 沙盒
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -21793,6 +21865,8 @@ zh-TW:
           lessons:
             lesson-2:
               name: 單元 4 評估
+            lesson-11:
+              name: 隨機
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -21800,6 +21874,8 @@ zh-TW:
           lessons:
             lesson-2:
               name: 單元 5 評估
+            lesson-7:
+              name: 增强For迴圈
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -21812,6 +21888,62 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        pltess:
+          lessons:
+            lesson-2:
+              name: 第3課
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Java中的if語句
+              description_student: |-
+                **你將：**
+
+                -   計算布林運算式
+                -   編寫和閱讀if、if-else、if-else-if-else語句
+                -   描述賦值操作符和比較操作符的區別
+
+                **預計時間：** 90分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   計算布林運算式
+                -   編寫和閱讀if、if-else、if-else-if-else語句
+                -   描述賦值操作符和比較操作符的區別
+
+                **預計時間：** 90分鐘
+            lesson-4:
+              name: Java中的迴圈
+              description_student: |-
+                **你將：**
+
+                -   閱讀、編寫和調試Java中的迴圈
+
+                **預計時間：** 90分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   閱讀、編寫和調試Java中的迴圈
+
+                **預計時間：** 90分鐘
+            lesson-5:
+              name: Java中的陣列
+              description_student: |-
+                **你將：**
+
+                -   聲明並初始化一個原始數據類型的1維陣列
+                -   訪問和修改陣列中的元素
+                -   遍歷陣列
+
+                **預計時間：** 120分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   聲明並初始化一個原始數據類型的1維陣列
+                -   訪問和修改陣列中的元素
+                -   遍歷陣列
+
+                **預計時間：** 120分鐘
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -22029,6 +22161,8 @@ zh-TW:
             Java Lab:
               name: Java 實驗室
               key: Java 實驗室
+            lesson-6:
+              name: 知識產權
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -22051,8 +22185,98 @@ zh-TW:
           lessons:
             lesson-1:
               name: 歡迎
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **你將：**
+
+                -   對CS Discoveries課程有高層次的理解。
+              description_teacher: "**概述：**\n這些非同步活動將為參與者提供CS Discoveries課程的高級概述，包括課程內容和工具的高級概述，課程結構的概述以及如何在整個課程中使用問題解決流程的預覽。
+                \n\n**參與者將：**\n\n-   對CS Discoveries課程有高層次的理解。 \n\n**建議時間：** 40分鐘"
+            lesson-5:
+              name: 非同步彙報
+            lesson-6:
+              name: 示範課2 - 第2單元第2課
+            lesson-7:
+              name: 身份
+            lesson-8:
+              name: 課程作業
+            lesson-10:
+              description_student: |-
+                **你將：**
+
+                -   思考你作為電腦科學發現課堂教師的角色。
+              description_teacher: "**概述：**\n這些非同步的活動將為參與者介紹教師作為主導學習者的角色。將提示參與者思考電腦科學方面的經驗和信念如何影響他們如何看待自己作為電腦科學課堂教師的角色。這個反思將讓參與者為稍後研討會的身份環節做好準備。
+                \n\n**參與者將：**\n\n-   思考你/他們作為電腦科學發現課堂教師的角色。 \n\n**建議時間：** 20分鐘"
+            lesson-11:
+              name: 總結
+            Intro to HTML:
+              name: 示範課2 - 第2單元第2課
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+            lesson-3:
               name: 教學計畫
+            lesson-4:
+              name: 非同步準備
+            lesson-6:
+              name: 非同步彙報
+            lesson-9:
+              name: 總結
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+            lesson-5:
+              name: 非同步彙報
+            lesson-8:
+              name: 總結
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] 單元總結"
+              description_student: |-
+                **你將：**
+
+                -   探索章節項目的結尾。
+
+                **建議時間：** 10分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   探索章節項目的結尾。
+
+                **建議時間：** 10分鐘
+            lesson-3:
+              name: "[TEMPLATE] 內容課程"
+              description_student: |-
+                **你將：**
+
+                -   插入課程目標。
+
+                **建議時間：** \_\_\_\_分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   插入課程目標。
+
+                **建議時間：** \_\_\_\_分鐘
+            lesson-4:
+              name: 歡迎
+            lesson-7:
+              name: 非同步準備
+            lesson-11:
+              name: 非同步彙報
+            lesson-14:
+              name: 總結
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+            lesson-4:
+              name: 非同步準備
+            lesson-6:
+              name: 非同步彙報
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -22100,13 +22324,660 @@ zh-TW:
               key: 教學計畫
             Next steps:
               key: 下一步
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: 實體運算
+          title: 模組1：準備問題解決和計算教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Web開發概論
+              description_student: |-
+                **你將：**
+
+                -   認識Code.org的Web開發單元。
+                -   預覽Web開發單元第一周的內容。
+
+                **建議時間：** 10分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   認識Code.org的Web開發單元。
+                -   預覽Web開發單元第一周的內容。
+
+                **建議時間：** 10分鐘
+            lesson-2:
+              name: 使用HTML創建一個網站
+              description_student: "**你將：**\n\n-   瞭解如何使用Web實驗室。\n-   使用HML向網頁添加結構。
+                \n-   向網頁添加圖像。 \n\n**建議時間：** 30分鐘"
+              description_teacher: "**你將：**\n\n-   瞭解如何使用Web實驗室。\n-   使用HML向網頁添加結構。
+                \n-   向網頁添加圖像。 \n\n**建議時間：** 30分鐘"
+            lesson-3:
+              name: 使用CSS設計網站樣式
+              description_student: |-
+                **你將：**
+
+                -   使用CSS設計網頁文本的樣式。
+                -   連結一個CSS樣式表到網頁索引。
+                -   探索網頁上的樣式元素的附加屬性。
+
+                **建議時間：** 25分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   使用CSS設計網頁文本的樣式。
+                -   連結一個CSS樣式表到網頁索引。
+                -   探索網頁上的樣式元素的附加屬性。
+
+                **建議時間：** 25分鐘
+            lesson-4:
+              name: 思考與數位媒體相關的角色和責任
+              description_student: |-
+                **你將**
+
+                -   探索學生理解作為數字媒體創造者和消費者的角色和責任的方式。
+
+                **建議時間** 15分鐘
+              description_teacher: |-
+                **你將**
+
+                -   探索學生理解作為數字媒體創造者和消費者的角色和責任的方式。
+
+                **建議時間** 15分鐘
             lesson-5:
               name: 實體運算
+              description_student: |-
+                **你將：**
+
+                -   探索章節項目的結尾。
+
+                **建議時間：** 10分鐘
+              description_teacher: |-
+                **你將：**
+
+                -   探索章節項目的結尾。
+
+                **建議時間：** 10分鐘
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Web開發教學
+          title: 模組2：準備Web開發教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
         vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 互動動畫和遊戲概論
+            lesson-2:
+              name: 創建場景
+            lesson-3:
+              name: 使用精靈圖動畫化一個場景
+            lesson-4:
+              name: 探索遊戲設計
+            lesson-5:
+              name: 實體運算
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 準備互動動畫和遊戲教學
+          title: 模組3：準備互動動畫和遊戲教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+        vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-5:
               name: 實體運算
+          title: 模組4：準備設計進程教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: 資料與社會
+            lesson-5:
+              name: 實體運算
+          title: 模組5：準備數據和社會教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 實體運算
+          title: 模組6：準備物理計算教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的物理計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識物理計算。\n-   實踐單元中包含的關鍵概念。\n-   參與製作者應用。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的物理計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識物理計算。\n-   實踐單元中包含的關鍵概念。\n-   參與製作者應用。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-2:
+              name: 互動式動畫和遊戲
+            lesson-3:
+              name: 設計流程
+            lesson-4:
+              name: 資料與社會
+            lesson-5:
+              name: 實體運算
+            Introduction to AI and machine learning:
+              name: Web 開發
+            Train a machine learning model:
+              name: 互動式動畫和遊戲
+            Engage with machine learning apps:
+              name: 設計流程
+            Consider real world implications:
+              name: 資料與社會
+            Unit wrap up:
+              name: 實體運算
+          title: 模組7：準備人工智慧和機器學習教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-
+            \  制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-
+            \  制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: 你好世界CSC
+              description_student: 在這個課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+              description_teacher: 在這個**技能建設**課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
           title: 你好世界
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: 級別更新
+            Innovations in Computing:
+              name: 運算上的創新
+              description_teacher: 在這個本課程的最後一個單元中，學生首先會做一些研究，瞭解電腦運算的有趣創新成果。本課堂會讓學生瞭解更多電腦運算的形式（電腦的外觀看起來怎樣），以及受電腦運算影響的範疇。在本單元的後期，學生會在開發自己的運算裝置時，回顧本課堂中看到的裝置。
+          title: CSD遊樂場
+          description_audience: 課程作者
+          description_short: 用於課程版本之間的課程或級別分階段更新
+          description: 用於課程版本之間的課程或級別分階段更新
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: 你好世界CSC
+              description_student: 在這個課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+              description_teacher: 在這個**技能建設**課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: 詩歌藝術
+              description_teacher: 在這個電腦科學和ELA綜合課程中，學生們將用代碼動畫化一首詩來展現詩歌的意境。學生將閱讀和發現一首詩的意境。然後學生會找到相應的效果和圖像，以説明展現詩歌的意境。最後，學生將使用事件（代碼）來展現意境的變化或在詩歌中動畫引入新形象。
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: 你好世界CSC
+              description_student: 在這個課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+              description_teacher: 在這個**技能建設**課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: 電腦科學探索課前問卷調查
+              key: 電腦科學探索課前問卷調查
+            Intro to Problem Solving:
+              name: 問題解決能力的介紹
+              key: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+              key: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
+              key: 問題解決探索
+            What is a Computer?:
+              name: 電腦是什麼？
+              description_teacher: "In this lesson students develop a preliminary
+                definition of a computer. To begin the lesson, the class will brainstorm
+                possible definitions for a computer and place the results of this
+                brainstorm on the board. Next, students will work in groups to sort
+                pictures into “is a computer” or “is not a computer” on poster paper.
+                Groups will place their posters around the room and briefly explain
+                their motivations for choosing some of their most difficult categorizations.
+                \ The teacher will then introduce a definition of the computer and
+                allow students to revise their posters according to the new definition.\\\r"
+              key: 電腦是什麼？
+            Input and Output:
+              name: 輸入與輸出
+              key: 輸入與輸出
+            Processing:
+              name: 處理
+              description_teacher: Students complete two unplugged card sorting activities
+                to explore the meaning of processing and its relationship to problem-solving.
+                The first activity has few constraints and is used to introduce a
+                high-level definition of processing. The next introduces more constraints
+                that force students to develop an algorithm that will always successfully
+                process the cards. Students iteratively develop, test, and share their
+                algorithms with classmates. A wrap-up discussion has students reflect
+                on the different types of problem-solving they used in these activities
+                and the value of producing an algorithm to solve a problem.
+              key: 處理
+            Storage:
+              name: 儲存
+              key: 儲存
+            Project - Propose an App:
+              name: 專案 - 提出應用程式建議
+              description_teacher: To conclude their study of the problem solving
+                process and the input/output/store/process model of a computer, students
+                will propose an app designed to solve a real world problem. This project
+                will be completed across multiple days and will result in students
+                creating a poster highlighting the features of their app that they
+                will present to their classmates. A project guide provides step by
+                step instructions for students and helps them organize their thoughts.
+                The project is designed to be completed in pairs though it can be
+                completed individually.
+              key: 專案 - 提出應用程式建議
+            Post-Project Test:
+              name: 專案後測驗
+              key: 專案後測驗
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: 第 1 章：解決問題的流程
+            csd1_2:
+              display_name: 第 2 章：計算機與問題解決能力
+            csd1_3:
+              display_name: 替代課程
+          description_short: 瞭解人類與何與電腦一起解決問題。
+        csd2-2022:
+          lessons:
+            Exploring Web Pages:
+              name: 瀏覽網頁
+              key: 瀏覽網頁
+            Intro to HTML:
+              name: HTML 簡介
+              key: HTML 簡介
+            Headings:
+              name: 標題
+              key: 標題
+            'Mini-Project: HTML Web Page':
+              name: '迷你專案: HTML網頁'
+              key: '迷你專案: HTML網頁'
+            Digital Footprint:
+              name: 數位足跡
+              key: 數位足跡
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
+              key: 透過 CSS 修改文字樣式
+            'Mini-Project: Your Personal Style':
+              name: '迷你專案: 你的個人風格'
+              key: '迷你專案: 你的個人風格'
+            Intellectual Property:
+              name: 知識產權
+              key: 知識產權
+            Using Images:
+              name: 使用圖片
+              key: 使用圖片
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+              description_teacher: This lesson continues the introduction to CSS style
+                properties, this time focusing more on non-text elements. Students
+                begin this lesson by looking at a website about Desserts of the World.
+                They investigate and modify the new CSS styles on this website, adding
+                their own styles to the page. After working on the Desserts page,
+                students apply their knowledge of new CSS properties to do more styling
+                of their personal websites.
+              key: 透過 CSS 修改元素樣式
+            Your Web Page - Prepare:
+              name: 你的網頁 - 準備
+              key: 你的網頁 - 準備
+            Project - Personal Web Page:
+              name: 專案 - 個人網頁
+              key: 專案 - 個人網頁
+            Websites for a Purpose:
+              name: 有目的的網站
+              key: 有目的的網站
+            Team Problem Solving:
+              name: 團隊問題解決
+              key: 團隊問題解決
+            Sources and Research:
+              name: 資料來源與研究
+              key: 資料來源與研究
+            Linking Pages:
+              name: 鏈接頁面
+              key: 鏈接頁面
+            Project - Website for a Purpose:
+              name: 專案 - 為達成目的而製作網站
+              key: 專案 - 為達成目的而製作網站
+            Peer Review and Final Touches:
+              name: 同儕審查與最後修訂
+              key: 同儕審查與最後修訂
+            Post-Project Test:
+              name: 專案後測驗
+              key: 專案後測驗
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+            'Websites for Expression ':
+              key: 建立網站，表達內容
+            Planning a Multi-page Website:
+              key: 規劃多頁網站
+            lesson-1:
+              key: 第1課
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd2_1v2:
+              display_name: '第1章: 建立網頁'
+            csd2_2v2:
+              display_name: '第2章: 多網頁網站'
+            cspSurvey:
+              display_name: 問卷
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+          description_short: 在 Web Lab 中學習製作自己的網站。
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+              key: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+              key: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+              description_teacher: Students are introduced to Game Lab, the programming
+                environment for this unit, and begin to use it to position shapes
+                on the screen. They learn the basics of sequencing and debugging,
+                as well as a few simple commands. At the end of the lesson, students
+                will be able to program images like the ones they made with the drawing
+                tool in the previous lesson.
+              key: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+              key: 變數
+            Random Numbers:
+              name: 隨機取數
+              key: 隨機取數
+            Sprites:
+              name: 角色
+              key: 角色
+            Text:
+              name: 文字
+              key: 文字
+            The Draw Loop:
+              name: draw（繪圖）迴圈
+              description_teacher: In this lesson students are introduced to the draw
+                loop, one of the core programming paradigms in Game Lab. To begin
+                the lesson students look at some physical flipbooks to see that having
+                many frames with different images creates the impression of motion.
+                Students then watch a video explaining how the draw loop in Game Lab
+                helps to create this same impression in their programs. Students combine
+                the draw loop with random numbers to manipulate some simple animations
+                with dots and then with sprites. At the end of the lesson students
+                use what they learned to update their sprite scene from the previous
+                lesson.
+              key: draw（繪圖）迴圈
+            Sprite Movement:
+              name: 角色動作
+              key: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+              key: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
+              key: 鍵盤輸入
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+              key: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+              description_teacher: After a brief review of how they used the counter
+                pattern to move sprites in previous lessons, students are introduced
+                to the properties that set velocity and rotation speed directly.   As
+                they use these new properties in different ways, they build up the
+                skills they need to create a basic side scroller game.
+              key: 速度
+            Collision Detection:
+              name: 碰撞檢測
+              key: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+              key: 複合角色動作
+            Collisions:
+              name: 碰撞
+              description_teacher: "**今日問題：程式師如何在抽象的基礎上構建進一步的抽象？**\\\r\n\\\r\n在這節課中，學生進行程式設計，讓精靈圖以新的方式互動。在簡要回顧他們如何使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)積木之後，學生們就兩個精靈圖的其他互動方式進行頭腦風暴。然後他們使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)以便在練習4個碰撞積木之前，讓一個精靈圖在螢幕上推動另一個精靈圖([`collide`(#f78183)](/docs/gamelab/collide/)，[`displace`(#f78183)](/docs/gamelab/displace/)，[`bounce`(#f78183)](/docs/gamelab/bounce/)，[`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))。"
+              key: 碰撞
+            Functions:
+              name: 函式
+              description_teacher: Students learn how to create functions to organize
+                their code, make it more readable, and remove repeated blocks of code.
+                An unplugged warmup explores how directions at different levels of
+                detail can be useful depending on context. Students learn that higher
+                level or more abstract steps make it easier to understand and reason
+                about steps. Afterwards students learn to create functions in Game
+                Lab. They will use functions to remove long blocks of code from their
+                draw loop and to replace repeated pieces of code with a single function.
+                At the end of the lesson students use these skills to organize and
+                add functionality to the final version of their side scroller game.
+              key: 函式
+            The Game Design Process:
+              name: 遊戲設計流程
+              key: 遊戲設計流程
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+              key: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+              key: 專案 - 設計一個遊戲
+            Post-Project Test:
+              name: 專案後測驗
+              key: 專案後測驗
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+            lesson-1:
+              key: 第1課
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd3_1:
+              display_name: 第 1 章：圖像和動畫
+            csd3_2:
+              display_name: 第 2 章：創建遊戲
+            cspSurvey:
+              display_name: 問卷
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: 瞭解您的使用者
+              key: 瞭解您的使用者
+            User Interfaces:
+              name: 使用者介面
+              key: 使用者介面
+            Feedback and Testing:
+              name: 回饋與測試
+              key: 回饋與測試
+            Identifying User Needs:
+              name: 確定使用者需求
+              key: 確定使用者需求
+            Project - Paper Prototype:
+              name: 專案 - 紙上原型
+              key: 專案 - 紙上原型
+            Designing Apps for Good:
+              name: 設計良好的應用程式
+              key: 設計良好的應用程式
+            Market Research:
+              name: 市場研究
+              key: 市場研究
+            Prototype Testing:
+              name: 原型測試
+              key: 原型測試
+            Testing the App:
+              name: 測試應用程式
+              key: 測試應用程式
+            Project - App Presentation:
+              name: 專案 - 應用程式簡報
+              key: 專案 - 應用程式簡報
+            Post-Project Test:
+              name: 專案後測驗
+              key: 專案後測驗
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+              key: 電腦科學探索課後問卷調查
+            Analysis of Design:
+              key: 設計分析
+            Paper Prototypes:
+              key: 紙上原型
+            Digital Design:
+              key: 數位設計
+            Linking Screens:
+              key: 連結不同畫面
+          lesson_groups:
+            csd4_1:
+              display_name: 第 1 章：用戶為中心的設計
+            csd4_2:
+              display_name: 第 2 章︰ 應用程式原型
+            cspSurvey:
+              display_name: 問卷
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+          description_short: 學習如何設計程式，以符合使用者的需要。
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: 表示事項
+              key: 表示事項
+            Patterns and Representation:
+              name: 模式和標記法
+              key: 模式和標記法
+            ASCII and Binary Representation:
+              name: ASCII 和 二進位表示法
+              key: ASCII 和 二進位表示法
+            Representing Images:
+              name: 表示圖像
+              key: 表示圖像
+            Representing Numbers:
+              name: 數字表示法
+              key: 數字表示法
+            Combining Representations:
+              name: 組合表示
+              key: 組合表示
+            Keeping Data Secret:
+              name: 讓資料保密
+              key: 讓資料保密
+            Problem Solving and Data:
+              name: 問題解決與數據
+              key: 問題解決與數據
+            Structuring Data:
+              name: 資料的建構
+              key: 資料的建構
+            Interpreting Data:
+              name: 解譯數據
+              key: 解譯數據
+            Making Decisions with Data:
+              name: 依數據來做決定
+              key: 依數據來做決定
+            Automating Data Decisions:
+              name: 自動化數據決策
+              key: 自動化數據決策
+            Problem Solving with Big Data:
+              name: 用大數據解決問題
+              key: 用大數據解決問題
+            Post-Project Test:
+              name: 專案後測驗
+              key: 專案後測驗
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+              key: 電腦科學探索課後問卷調查
+            Project - Create a Representation:
+              key: 專案 - 創建標記法
+          lesson_groups:
+            csd5_1:
+              display_name: 第 1 章：表達信息
+            csd5_2:
+              display_name: 第 2 章：解決數據問題
+            cspSurvey:
+              display_name: 問卷
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+        csd7-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
+            Survey Planning:
+              name: 設計數據收集
+              key: 設計數據收集
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+              key: 電腦科學探索課後問卷調查
+            Similarity Models:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 問卷
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: 運算上的創新
+              description_teacher: 在這個本課程的最後一個單元中，學生首先會做一些研究，瞭解電腦運算的有趣創新成果。本課堂會讓學生瞭解更多電腦運算的形式（電腦的外觀看起來怎樣），以及受電腦運算影響的範疇。在本單元的後期，學生會在開發自己的運算裝置時，回顧本課堂中看到的裝置。
+            The Circuit Playground:
+              name: 電路（Circuit ）遊樂場
+            Board Events:
+              name: 電路板事件
+            Color LEDs:
+              name: 彩色顯示器
+            Combining Inputs and Outputs:
+              name: 組合輸入
+            Accelerometer:
+              name: 加速計
+              description_teacher: 在本課堂中，學生會學習加速計和它的功能。他們會熟習事件與屬性，並製作多個利用加速計的程式，這些程式和現實世界中可能遇到過的程式相似。
+            Making Music:
+              name: 製作音樂
+            Functions:
+              name: 函式
+            Project - Prototype an Innovation:
+              description_teacher: 在課程的這個期末專案中，學生會以團隊方式開發並測試一款創新運算裝置的原型，這個原型以 Circuit
+                Playground 為基礎。各小組會使用電路板上可用的輸入與輸出來製作程式，讓程式可與使用者進行有趣且獨一無二的互動。
+            Post-Project Test:
+              name: 專案後測驗
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章：建立物理原型
+            lessonGroup-4:
+              display_name: 問卷
+          description_short: 在實體裝置上開發程式
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: 課後調查
+          title: 電腦科學探索課後問卷調查
+          description: 本單元包含《電腦科學探索》課後調查問卷。本單元可在學生們完成《電腦科學探索》最後一個單元後進行分配。
+          student_description: 本單元包含一個調查問卷，待完成《電腦科學探索》所有單元後進行填寫。教師將告訴你何時填寫該調查問卷。
+        csp-post-survey-2022:
+          title: 電腦科學原理課後問卷調查

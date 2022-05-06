@@ -1108,6 +1108,8 @@
   "parents": "Rodičia",
   "parentsAndStudents": "Rodičia a študenti",
   "parentLetterHello": "Ahoj!",
+  "participantTypeStudentTitle": "Študenti",
+  "participantTypeTeacherTitle": "Učitelia",
   "partner": "Partner: {partner}",
   "password": "Heslo",
   "passwordConfirmation": "Potvrdenie hesla",

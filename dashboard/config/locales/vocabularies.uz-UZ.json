@@ -58,6 +58,7 @@
           "word": "Dastur"
         },
         "code/flappy/unversioned": {
+          "word": "Kod",
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
         "debugging/flappy/unversioned": {
@@ -158,8 +159,29 @@
           "word": "Sikllar",
           "definition": "Biror narsani qayta-qayta bajarish."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Sezar Shifri ",
+          "definition": "Alifbo belgilarini biror songa siljitish yordamida shifrlash texnikasi"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Shifr",
+          "definition": "Shifrlashni amalga oshiradigan texnika (yoki algoritm) uchun umumiy atama"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Shifrlashni yechish",
+          "definition": "Shifrning barcha xususiyatlarini bilmasdan maxfiy xabarni dekodlashga urinayotganda, siz shifrlashni \"buzishga\" harakat qilasiz."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Deshifrlash (Decryption)",
+          "definition": "shifrlashni teskari yo‘naltiradigan, maxfiy xabarni qabul qiladigan va asl matnni qayta tiklaydigan jarayon"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Encryption"
+          "word": "Encryption",
+          "definition": "xabarlarni ularni faqat \"vakolatli\" tomonlar o‘qiy olishi va maxfiy saqlash uchun kodlash jarayoni."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Tasodifiy almashtirish shifri",
+          "definition": "alifboning har bir harfini tasodifiy tanlangan boshqa alifbo harfiga mos qiladigan shifrlash texnikasi."
         },
         "code/starwars/unversioned": {
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
@@ -206,7 +228,8 @@
           "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression"
+          "word": "Lossless Compression",
+          "definition": "dastlabki ma'lumotlarni siqilgan ma'lumotlardan mukammal qayta tiklashga imkon beradigan ma'lumotlarni siqish algoritmi. Matnni siqish uchun eng ko'p ishlatiladi (masalan .zip siqish)"
         },
         "event/outbreak/unversioned": {
           "word": "Hodisa",
@@ -795,6 +818,9 @@
         },
         "ethics/csd/2021": {
           "word": "Etika"
+        },
+        "user/csd/2021": {
+          "word": "Foydalanuvchi"
         },
         "user_interface/csd/2021": {
           "word": "UI - Foydalanuvchi interfeysi"

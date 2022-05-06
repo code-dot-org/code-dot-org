@@ -140,7 +140,15 @@ ja:
     user_type_button: "アカウントタイプを更新"
     user_type_label: "アカウントの種類"
     user_type_student: "生徒"
+    user_type_student_desc: "コースとアクティビティをすべて見る:"
+    user_type_student_ability_1: "進捗とプロジェクトを保存"
+    user_type_student_ability_2: "教師のクラスルーム セクションに参加"
     user_type_teacher: "先生"
+    user_type_teacher_desc: "生徒はすべてにアクセスでき、他にも:"
+    user_type_teacher_ability_1: "クラスルーム セクションを作成"
+    user_type_teacher_ability_2: "生徒の作業の割り当ておよび追跡"
+    user_type_teacher_ability_3: "専門的学習に参加\n"
+    user_type_teacher_ability_4: "先生用フォーラムで交流"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
     error: "エラーが発生しました。"
@@ -747,6 +755,7 @@ ja:
     privacy_notice: "プライバシーについて"
     accept_label: 'わたしは、更新された <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および <a href="%{privacy_url}"target="_blank"> プライバシー ポリシー</a> に同意します。'
     accept_label_markdown: わたしは、更新された [サービス利用規約](%{tos_url}) および [プライバシー ポリシー](%{privacy_url}) に同意します。
+    accept_tos: Code.orgに登録すると、あなたは更新された [サービス利用規約](%{tos_url}) および [プライバシー ポリシー](%{privacy_url}) に同意したことになります。
     accept: "同意する"
     print: "プリント"
     reminder_desc: '私たちは <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および <a href="%{privacy_url}"target="_blank"> プライバシー ポリシー</a> を更新しました。それらを受け入れる前に、これらを慎重にお読みください。更新された条項に同意されない場合、JavaScript を教えるツールが無いかもしれないことに、注意してください。'

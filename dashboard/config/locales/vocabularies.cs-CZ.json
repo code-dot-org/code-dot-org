@@ -2,29 +2,45 @@
   "cs-CZ": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
         "event/dance-extras/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/dance-extras/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/minecraft/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/minecraft/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/minecraft/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "event/minecraft/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "loop/minecraft/unversioned": {
           "word": "Cyklus"
         },
+        "code/hero/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
         "debugging/hero/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/hero/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "function/hero/unversioned": {
           "word": "Funkce"
@@ -34,7 +50,8 @@
           "definition": "(v) zápis instrukcí pro počítač."
         },
         "event/poem-art/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "line/poem-art/2021": {
           "word": "Verš",
@@ -48,56 +65,95 @@
           "word": "Program ",
           "definition": "Řada kroků, které byly zakódovány do něčeho, co může být spuštěno strojem."
         },
+        "code/flappy/unversioned": {
+          "word": "Programovat ",
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
         "debugging/flappy/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/flappy/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/hourofcode/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/frozen/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/frozen/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/frozen/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/iceage/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/iceage/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/iceage/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "code/artist/unversioned": {
-          "word": "Kód"
+          "word": "Kód",
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/artist/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/artist/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/gumball/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/gumball/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/gumball/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "event/dance/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/dance/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/dance/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
+        "code/aquatic/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/aquatic/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "condition/aquatic/unversioned": {
           "word": "Podmínka"
@@ -108,84 +164,131 @@
         "loops/aquatic/unversioned": {
           "word": "Cykly"
         },
+        "code/starwars/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
         "debugging/starwars/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/starwars/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/mc/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/mc/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/mc/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/playlab/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/playlab/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/playlab/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/starwarsblocks/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "event/outbreak/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modely a simulace"
         },
         "event/sports/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "code/sports/unversioned": {
           "word": "Kód"
         },
         "debugging/sports/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/sports/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/infinity/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/infinity/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/infinity/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "event/basketball/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "code/basketball/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/basketball/unversioned": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/basketball/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "event/dance-extras-2019/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "event/dance-2019/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/dance-2019/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Strojové učení"
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
         },
         "code/poem-art/unversioned": {
           "word": "Kód",
           "definition": "(v) zápis instrukcí pro počítač."
         },
         "event/poem-art/unversioned": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/poem-art/unversioned": {
           "word": "Program ",
@@ -212,14 +315,16 @@
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "program/coursef/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "algorithm/coursef/2021": {
           "word": "Algoritmus",
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "event/coursef/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "variable/coursef/2021": {
           "word": "Proměnná",
@@ -248,7 +353,8 @@
           "word": "Modely a simulace"
         },
         "machine_learning/coursef/2021": {
-          "word": "Strojové učení"
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -311,7 +417,8 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/courseb/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "click/courseb/2021": {
           "word": "Kliknout",
@@ -330,7 +437,8 @@
           "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "program/courseb/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "programming/courseb/2021": {
           "word": "Programování",
@@ -348,17 +456,20 @@
           "definition": "Znovu něco udělat."
         },
         "event/courseb/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "algorithm/coursea/2021": {
           "word": "Algoritmus",
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "debugging/coursea/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/coursea/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "click/coursea/2021": {
           "word": "Kliknout",
@@ -392,7 +503,8 @@
           "definition": "Znovu něco udělat."
         },
         "event/coursea/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "algorithm/coursec/2021": {
           "word": "Algoritmus",
@@ -403,10 +515,12 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursec/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/coursec/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "sequencing/coursec/2021": {
           "word": "Sekvence",
@@ -424,7 +538,8 @@
           "definition": "Znovu něco udělat."
         },
         "event/coursec/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "binary/coursec/2021": {
           "word": "Binární",
@@ -435,14 +550,16 @@
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "program/coursed/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "bug/coursed/2021": {
           "word": "Chyba",
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursed/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "loop/coursed/2021": {
           "word": "Cyklus"
@@ -460,7 +577,11 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "event/coursed/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "code/coursed/2021": {
+          "definition": " psát kód, neboli instrukce pro počítač."
         },
         "repeat/coursed/2021": {
           "word": "Opakovat",
@@ -497,14 +618,16 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/express/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "sequencing/express/2021": {
           "word": "Sekvence",
           "definition": "Zadání povelů ve správném pořadí, aby je počítače mohly přečíst."
         },
         "program/express/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "programming/express/2021": {
           "word": "Programování",
@@ -519,7 +642,8 @@
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/express/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "code/express/2021": {
           "definition": " psát kód nebo psát pokyny pro počítač."
@@ -605,10 +729,12 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/pre-express/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/pre-express/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "programming/pre-express/2021": {
           "word": "Programování",
@@ -626,7 +752,8 @@
           "definition": "Znovu něco udělat."
         },
         "event/pre-express/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "behavior/coursee/2021": {
           "word": "Chování",
@@ -641,7 +768,8 @@
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/coursee/2021": {
-          "word": "Událost"
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "copyright/coursee/2021": {
           "word": "Autorská práva",
@@ -684,7 +812,12 @@
           "definition": "Pokus něco udělat"
         },
         "machine_learning/csd/2021": {
-          "word": "Strojové učení"
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
+        },
+        "user/csd/2021": {
+          "word": "Uživatel",
+          "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
         "bug/csd/2021": {
           "word": "Chyba",
@@ -695,10 +828,12 @@
           "definition": "Cykly, které mají předem určený začátek, konec a přírůstek (krokový interval)."
         },
         "debugging/csd/2021": {
-          "word": "Ladění"
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
         "program/csd/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "variable/csd/2021": {
           "word": "Proměnná",

@@ -3083,3 +3083,21 @@ si:
             For Loops:
               name: ලූපයන් සඳහා
               key: ලූපයන් සඳහා
+        csd3-2022:
+          lessons:
+            Variables:
+              name: විචල්‍යන්
+              key: විචල්‍යන්
+            Text:
+              name: පෙළ
+              key: පෙළ
+            Conditionals:
+              name: කන්ඩිෂනලස්
+              key: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+              key: ශ්‍රිතයන්
+        csd6-2022:
+          lessons:
+            Functions:
+              name: ශ්‍රිතයන්
