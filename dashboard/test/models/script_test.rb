@@ -1992,7 +1992,7 @@ class ScriptTest < ActiveSupport::TestCase
       @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
       create :course_version, content_root: @standalone_unit
 
-      @deeper_learning_unit = create :script, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
+      @deeper_learning_unit = create :script, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
 
       @unit_group = create :unit_group
       create :course_version, content_root: @unit_group
@@ -2017,6 +2017,8 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal 'dlp-2022', cloned_unit.name
       assert_equal 'Deeper Learning 2022', cloned_unit.professional_learning_course
       assert_equal cloned_unit.instruction_type, @deeper_learning_unit.instruction_type
+      puts cloned_unit.inspect
+      puts @deeper_learning_unit.inspect
       assert_equal cloned_unit.instructor_audience, @deeper_learning_unit.instructor_audience
       assert_equal cloned_unit.participant_audience, @deeper_learning_unit.participant_audience
       refute_equal [level1, level2], cloned_unit.levels
