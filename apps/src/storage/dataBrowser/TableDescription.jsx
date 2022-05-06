@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
 import {getDatasetInfo} from '@cdo/apps/storage/dataBrowser/dataUtils';
+import {Link} from '@dsco_/link';
 
 export default class TableDescription extends React.Component {
   static propTypes = {
@@ -16,23 +17,15 @@ export default class TableDescription extends React.Component {
     const {tableName, libraryTables} = this.props;
 
     const datasetInfo = getDatasetInfo(tableName, libraryTables);
-    let moreInfo;
     if (datasetInfo) {
-      if (datasetInfo.docUrl) {
-        moreInfo = (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={datasetInfo.docUrl}
-          >
-            {msg.moreInfo()}
-          </a>
-        );
-      }
       return (
         <div>
-          <span style={{display: 'block'}}>{datasetInfo.description}</span>
-          {moreInfo}
+          <p>{datasetInfo.description}</p>
+          {datasetInfo.docUrl && (
+            <Link href={datasetInfo.docUrl} openInNewTab external>
+              {msg.moreInfo()}
+            </Link>
+          )}
         </div>
       );
     }
