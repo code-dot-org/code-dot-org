@@ -367,6 +367,10 @@ class Script < ApplicationRecord
         }.to_json
       }
       FirehoseClient.instance.put_record(:analysis, record)
+
+      # Firehose events do not log reliably on levelbuilder. For now, also
+      # write them to the syslog so we can reliably find them there.
+      CDO.log.info "Logging firehose event: #{record}"
     end
   end
 
