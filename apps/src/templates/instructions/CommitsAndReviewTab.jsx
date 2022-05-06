@@ -74,6 +74,16 @@ const CommitsAndReviewTab = props => {
     }
   };
 
+  const closeReview = async () => {
+    try {
+      const closedReview = await dataApi.closeReview(openReviewData);
+      setTimelineData([...timelineData, closedReview]);
+      setOpenReviewData(null);
+    } catch (err) {
+      // TODO: what happens when review fails to close
+    }
+  };
+
   // channelId is not available on projects where the student has not edited the starter code.
   // comments cannot be made on projects in this state.
   if (!channelId) {
@@ -125,6 +135,7 @@ const CommitsAndReviewTab = props => {
           ...(openReviewData ? [openReviewData] : [])
         ]}
         addCodeReviewComment={addCodeReviewComment}
+        closeReview={closeReview}
       />
       {!openReviewData && (
         <Button
