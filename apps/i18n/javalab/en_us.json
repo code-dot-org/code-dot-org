@@ -124,6 +124,7 @@
   "timeout": "Your project has stopped.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
+  "startReview": "Start Review",
   "teacherLabel": "teacher",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "unauthorizedJavabuilderConnectionNotLoggedIn": "You need to be logged in to run your code in Java Lab. Log in and try again.",

@@ -170,7 +170,6 @@ class LessonOverview extends Component {
           })}
         </h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
-
         <div style={styles.frontPage}>
           <div style={styles.left}>
             {lesson.overview && (
@@ -314,11 +313,18 @@ class LessonOverview extends Component {
             )}
           </div>
         </div>
-
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}
+        <div>
+          <a href="https://creativecommons.org/">
+            <img src="https://curriculum.code.org/static/img/creativeCommons-by-nc-sa.png" />
+          </a>
+          <SafeMarkdown
+            markdown={i18n.licenseMaterials({link: 'https://code.org/contact'})}
+          />
+        </div>
       </div>
     );
   }
