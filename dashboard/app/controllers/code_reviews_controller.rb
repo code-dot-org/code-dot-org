@@ -42,7 +42,7 @@ class CodeReviewsController < ApplicationController
     render json: code_review.summarize
   end
 
-  # PATCH /code_reivews/:id
+  # PATCH /code_reviews/:id
   # Currently, closing the code review is the only allowed update.
   def update
     params.require(:id)

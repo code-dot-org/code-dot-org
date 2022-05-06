@@ -45,7 +45,6 @@ class CodeReviewsControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    puts response.body
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
     assert_equal script_id, response_json['scriptId']
