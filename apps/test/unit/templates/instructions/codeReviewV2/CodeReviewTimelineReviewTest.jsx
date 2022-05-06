@@ -11,11 +11,7 @@ const DEFAULT_REVIEW = {
   createdAt: '2022-03-31T04:58:42.000Z',
   isClosed: false,
   projectVersion: 'asdfjkl',
-  isVersionExpired: false
-};
-
-const DEFAULT_PROPS = {
-  review: DEFAULT_REVIEW,
+  isVersionExpired: false,
   comments: [
     {
       id: 123,
@@ -31,7 +27,11 @@ const DEFAULT_PROPS = {
       timestampString: '2022-03-31T04:58:42.000Z',
       isResolved: false
     }
-  ],
+  ]
+};
+
+const DEFAULT_PROPS = {
+  review: DEFAULT_REVIEW,
   isLastElementInTimeline: false
 };
 
