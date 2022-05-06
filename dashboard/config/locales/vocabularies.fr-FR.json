@@ -830,6 +830,10 @@
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
+        "user/csd/2021": {
+          "word": "Utilisateur",
+          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
+        },
         "bug/csd/2021": {
           "word": "Bug",
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."

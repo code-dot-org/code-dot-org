@@ -1,27 +1,16 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {assert} from 'chai';
 
-import {
-  stubRedux,
-  restoreRedux,
-  getStore,
-  registerReducers
-} from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import foorm from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import {DropdownButton, MenuItem} from 'react-bootstrap';
-import FoormEntityLoadButtons from '../../../../../src/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
-import SingleCheckbox from '../../../../../src/code-studio/pd/form_components/SingleCheckbox';
+import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
+import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
+import {Button} from 'react-bootstrap';
+import sinon from 'sinon';
 
 describe('FoormEntityLoadButtons', () => {
-  let defaultProps, store, wrapper;
+  let defaultProps, wrapper, showCodeMirrorStub;
+  showCodeMirrorStub = sinon.stub();
   beforeEach(() => {
-    stubRedux();
-    registerReducers({foorm});
-
-    store = getStore();
-
     defaultProps = {
       foormEntities: [
         {
@@ -40,22 +29,24 @@ describe('FoormEntityLoadButtons', () => {
           metadata: {name: 'c_library', version: 0},
           text: 'c_library, version 0'
         }
-      ]
+      ],
+      showCodeMirror: showCodeMirrorStub,
+      resetCodeMirror: () => {},
+      resetSelectedData: () => {},
+      setLastSaved: () => {},
+      setSaveError: () => {},
+      setHasJSONError: () => {},
+      setHasLintError: () => {},
+      setLastSavedQuestions: () => {}
     };
   });
 
-  afterEach(() => {
-    restoreRedux();
-  });
-
   it('filters and sorts menu items by default with toggle', () => {
-    wrapper = mount(
-      <Provider store={store}>
-        <FoormEntityLoadButtons
-          {...defaultProps}
-          showVersionFilterToggle={true}
-        />
-      </Provider>
+    wrapper = shallow(
+      <FoormEntityLoadButtons
+        {...defaultProps}
+        showVersionFilterToggle={true}
+      />
     );
 
     const expectedOrder = [
@@ -65,27 +56,21 @@ describe('FoormEntityLoadButtons', () => {
     ];
 
     assert.equal(
-      wrapper
-        .find(DropdownButton)
-        .at(0)
-        .find(MenuItem).length,
+      wrapper.find('.load-buttons-search').prop('options').length,
       3
     );
     wrapper
-      .find(DropdownButton)
-      .at(0)
-      .find(MenuItem)
-      .every((menuItem, i) => assert.equal(menuItem.text(), expectedOrder[i]));
+      .find('.load-buttons-search')
+      .prop('options')
+      .every((menuItem, i) => assert.equal(menuItem.label, expectedOrder[i]));
   });
 
   it("sorts, but doesn't filter menu items when toggled off", () => {
-    wrapper = mount(
-      <Provider store={store}>
-        <FoormEntityLoadButtons
-          {...defaultProps}
-          showVersionFilterToggle={true}
-        />
-      </Provider>
+    wrapper = shallow(
+      <FoormEntityLoadButtons
+        {...defaultProps}
+        showVersionFilterToggle={true}
+      />
     );
 
     wrapper
@@ -102,27 +87,21 @@ describe('FoormEntityLoadButtons', () => {
     ];
 
     assert.equal(
-      wrapper
-        .find(DropdownButton)
-        .at(0)
-        .find(MenuItem).length,
+      wrapper.find('.load-buttons-search').prop('options').length,
       4
     );
     wrapper
-      .find(DropdownButton)
-      .at(0)
-      .find(MenuItem)
-      .every((menuItem, i) => assert.equal(menuItem.text(), expectedOrder[i]));
+      .find('.load-buttons-search')
+      .prop('options')
+      .every((menuItem, i) => assert.equal(menuItem.label, expectedOrder[i]));
   });
 
   it("sorts, but doesn't filter menu items with no toggle", () => {
-    wrapper = mount(
-      <Provider store={store}>
-        <FoormEntityLoadButtons
-          {...defaultProps}
-          showVersionFilterToggle={false}
-        />
-      </Provider>
+    wrapper = shallow(
+      <FoormEntityLoadButtons
+        {...defaultProps}
+        showVersionFilterToggle={false}
+      />
     );
 
     const expectedOrder = [
@@ -133,16 +112,18 @@ describe('FoormEntityLoadButtons', () => {
     ];
 
     assert.equal(
-      wrapper
-        .find(DropdownButton)
-        .at(0)
-        .find(MenuItem).length,
+      wrapper.find('.load-buttons-search').prop('options').length,
       4
     );
     wrapper
-      .find(DropdownButton)
-      .at(0)
-      .find(MenuItem)
-      .every((menuItem, i) => assert.equal(menuItem.text(), expectedOrder[i]));
+      .find('.load-buttons-search')
+      .prop('options')
+      .every((menuItem, i) => assert.equal(menuItem.label, expectedOrder[i]));
+  });
+
+  it('shows blank editor on new library click', () => {
+    wrapper.find(Button).prop('onClick')();
+
+    sinon.assert.calledOnce(showCodeMirrorStub);
   });
 });

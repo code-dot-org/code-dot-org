@@ -265,6 +265,8 @@
   "overview": "Overview",
   "pairProgramming": "Զույգ Ծրագրավորում",
   "parent": "Ծնող",
+  "participantTypeStudentTitle": "Ուսանողներ",
+  "participantTypeTeacherTitle": "Teachers",
   "password": "գաղտնաբառ",
   "passwordConfirmation": "Գաղտնաբառ հաստատումը",
   "personalLoginDialog_button": "Next",

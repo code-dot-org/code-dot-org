@@ -169,6 +169,8 @@ kn:
     startover_ok: ಮೊದಲಿನಿಂದ ಆರಂಭ
     startover_cancel: ರದ್ದುಮಾಡಿ
   terms_interstitial:
+    accept_tos: Code.org ಗೆ ಸೈನ್ ಇನ್ ಮಾಡುವ ಮೂಲಕ, ನೀವು ನಮ್ಮ [ಸೇವಾ ನಿಯಮಗಳು](%{tos_url})
+      ಮತ್ತು [ಗೌಪ್ಯತೆ ನೀತಿ](%{privacy_url}) ಒಪ್ಪುತ್ತೀರಿ.
     print: ಮುದ್ರಿಸಿ
   school_info_interstitial:
     save: ಉಳಿಸಿ

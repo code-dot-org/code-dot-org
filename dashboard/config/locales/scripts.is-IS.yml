@@ -8403,6 +8403,8 @@ is:
               display_name: Stikar og skilagildi
             csp_libraries:
               display_name: Söfn
+            lessonGroup-3:
+              display_name: Könnun
         csp9-2022:
           lessons:
             Machine Learning:
@@ -8559,6 +8561,9 @@ is:
             Loops with Laurel:
               key: Lykkjur með Láru
               name: Lykkjur með Láru
+            Programming in Harvester:
+              key: Forritun með Hirðinum
+              name: Forritun með Hirðinum
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -8566,6 +8571,10 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          description_audience: 'Aldur: 4 - 8'
+          description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir
+            að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta
+            bekk.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -8670,9 +8679,9 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
-        vpl-csd1-summer-pilot-2022:
+        vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-3:
               name: Gerð kennsluáætlana
         csa2-2022-exemplars:
           lessons:
@@ -8709,3 +8718,132 @@ is:
               key: Frá lykkjur
             Lesson Planning:
               key: Gerð kennsluáætlana
+        csd1-2022:
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+              key: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+              key: Vinnsla
+            Storage:
+              name: Vistun
+              key: Vistun
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
+              key: Verkefni - Tillaga að Appi
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csd1_1:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            csd1_2:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            csd1_3:
+              display_name: Annað kennsluefni
+          description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Kynning á HTML
+              key: Kynning á HTML
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+          description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
+        csd3-2022:
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+              key: Teikning í Leikjasmiðju
+            Variables:
+              name: Breytur
+              key: Breytur
+            Sprites:
+              name: Kvikar
+              key: Kvikar
+            Sprite Properties:
+              name: Eiginleikar kvika
+              key: Eiginleikar kvika
+            Text:
+              name: texti
+              key: texti
+            Sprite Movement:
+              name: Hreyfing kvika
+              key: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+              key: Skilyrði
+            Velocity:
+              name: Hraði
+              key: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+              key: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+              key: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+              key: Árekstrar
+            Functions:
+              name: Föll
+              key: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+              key: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
+              key: Notkun leikjahönnunarferlisins
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            csd3_2:
+              display_name: 'Kafli 2: Gerð leikja'
+            cspSurvey:
+              display_name: Könnun
+        csd4-2022:
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
+              key: Greining á þörfum notenda
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            csd4_2:
+              display_name: 'Kafli 2: Frumgerðir appa'
+            cspSurvey:
+              display_name: Könnun
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál
+            með gögn.
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: Söfnun gagna hönnuð
+              key: Söfnun gagna hönnuð
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Könnun
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions:
+              name: Föll
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+            lessonGroup-4:
+              display_name: Könnun
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Könnun eftir námskeið

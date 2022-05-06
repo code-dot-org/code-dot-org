@@ -17,7 +17,6 @@ import Button from '@cdo/apps/templates/Button';
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
 const CommitsAndReviewTab = ({
-  onLoadComplete,
   channelId,
   serverLevelId,
   serverScriptId,
@@ -37,7 +36,6 @@ const CommitsAndReviewTab = ({
   const refresh = () => {
     setLoadingReviewData(true);
     // TODO: load review data
-    onLoadComplete();
     setLoadingReviewData(false);
   };
 
@@ -76,6 +74,39 @@ const CommitsAndReviewTab = ({
     isVersionExpired: false
   };
 
+  const fakeClosedReview = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    isClosed: true,
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
+  const fakeReview = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    isClosed: false,
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
+  const fakeComments = [
+    {
+      id: 123,
+      commentText: 'Great work on this!',
+      name: 'Steve',
+      timestampString: '2022-03-31T04:58:42.000Z',
+      isResolved: false
+    },
+    {
+      id: 124,
+      commentText: 'Could you add more comments?',
+      name: 'Karen',
+      timestampString: '2022-03-31T04:58:42.000Z',
+      isResolved: false
+    }
+  ];
+
   return (
     <div style={styles.reviewsContainer}>
       <div style={styles.header}>
@@ -106,10 +137,14 @@ const CommitsAndReviewTab = ({
       <div>Example timeline:</div>
       <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
       <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineReview
+        review={fakeClosedReview}
+        comments={fakeComments}
+      />
       <CodeReviewTimelineCommit commit={fakeCommit} />
-      <CodeReviewTimelineReview />
-      <CodeReviewTimelineCommit
-        commit={fakeCommit}
+      <CodeReviewTimelineReview
+        review={fakeReview}
+        comments={fakeComments}
         isLastElementInTimeline={true}
       />
     </div>
@@ -128,7 +163,6 @@ export default connect(state => ({
 }))(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
-  onLoadComplete: PropTypes.func,
   // Populated by redux
   codeReviewEnabled: PropTypes.bool,
   viewAsCodeReviewer: PropTypes.bool.isRequired,
@@ -146,7 +180,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '0px 5% 25px 5%'
+    margin: '0px 5px 25px 16px'
   },
   header: {
     display: 'flex',

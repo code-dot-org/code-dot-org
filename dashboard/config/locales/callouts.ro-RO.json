@@ -606,6 +606,126 @@
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
           "": "[șir gol]"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Apasă mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Apasă mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Apasă mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Apasă mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Trage cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Încercați să schimbați when (când) cu while (în timp ce)."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Noi blocuri aici!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Utilizați noul bloc de evenimente găsit aici."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Acest bloc nu este în ordinea corectă."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "courseF_events_time": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Faceți clic aici pentru a deschide categoria Sprites."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Faceți clic aici pentru a deschide categoria Locuri."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Căutați un nou bloc aici."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Căutați un nou bloc aici!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "S-a schimbat fundalul când ați răspuns la întrebare? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Ați terminat? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Căutați două noi blocuri aici!",
+          "text_answer_finish": "S-a afișat ecranul cu titlu timp de 3 secunde? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Căutați noi blocuri aici!"
+        },
+        "courseF_text_events": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_text_print": {
+          "print_block": "Găsiți blocul imprimare aici!",
+          "text_print_finish": "S-a imprimat mesajul mai sus? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Găsiți blocul cu promptul aici!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         }
       }
     }
