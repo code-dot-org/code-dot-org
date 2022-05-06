@@ -1,6 +1,6 @@
 {
   "category_key": "general",
-  "content": "",
+  "content": "Java methods are blocks of code that are only executed when the specific method is called. Methods are extremely useful tools to reuse code without re-writing the same lines of code multiple times. Methods can accept a few parameters and return an object as well. Methods are oftentimes called functions as well. ",
   "examples": "[]",
   "external_documentation": "",
   "fields": "[]",
