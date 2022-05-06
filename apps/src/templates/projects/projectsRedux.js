@@ -16,6 +16,8 @@ const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
+const SET_LOADING_PERSONAL_PROJECTS_LIST =
+  'projects/SET_LOADING_PERSONAL_PROJECTS_LIST';
 const UPDATE_PERSONAL_PROJECT_DATA = 'projects/UPDATE_PERSONAL_PROJECT_DATA';
 
 const UNPUBLISH_REQUEST = 'projects/UNPUBLISH_REQUEST';
@@ -74,6 +76,10 @@ export function setHasOlderProjects(hasOlderProjects, projectType) {
 
 export function setPersonalProjectsList(personalProjectsList) {
   return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
+}
+
+export function setLoadingPersonalProjectsList(isLoading) {
+  return {type: SET_LOADING_PERSONAL_PROJECTS_LIST, isLoading};
 }
 
 export function updatePersonalProjectData(projectId, data) {
@@ -195,7 +201,10 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
-const initialPersonalProjectsList = [];
+const initialPersonalProjectsList = {
+  projects: [],
+  isLoading: false
+};
 
 function personalProjectsList(state = initialPersonalProjectsList, action) {
   switch (action.type) {
@@ -203,6 +212,11 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: action.personalProjectsList
+      };
+    case SET_LOADING_PERSONAL_PROJECTS_LIST:
+      return {
+        ...state,
+        isLoading: action.isLoading
       };
     case UPDATE_PERSONAL_PROJECT_DATA:
       var projectsList = [...state.projects];
@@ -216,7 +230,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: projectsList
       };
     case PUBLISH_SUCCESS:
-      if (!state.projects) {
+      if (!state.projects?.length) {
         // We haven't loaded the projects and therefore have nothing to update.
         return state;
       }
@@ -428,13 +442,19 @@ export const setPublicProjects = () => {
 
 export const setPersonalProjects = () => {
   return dispatch => {
+    dispatch(setLoadingPersonalProjectsList(true));
     $.ajax({
       method: 'GET',
       url: '/api/v1/projects/personal',
       dataType: 'json'
-    }).done(personalProjectsList => {
-      dispatch(setPersonalProjectsList(personalProjectsList));
-    });
+    })
+      .done(personalProjectsList => {
+        dispatch(setPersonalProjectsList(personalProjectsList));
+        dispatch(setLoadingPersonalProjectsList(false));
+      })
+      .fail(() => {
+        dispatch(setLoadingPersonalProjectsList(false));
+      });
   };
 };
 

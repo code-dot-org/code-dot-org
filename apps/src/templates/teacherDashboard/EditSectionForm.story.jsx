@@ -18,7 +18,8 @@ export default storybook => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: loginType
+          loginType: loginType,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -28,7 +29,7 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('no students yet', () => (
+    storybook = storybook.add(`no students yet/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}
@@ -38,7 +39,8 @@ export default storybook => {
         sections={{}}
         section={{
           ...testSection,
-          studentCount: 0
+          studentCount: 0,
+          participantType: 'student'
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -48,7 +50,7 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('save in progress', () => (
+    storybook = storybook.add(`save in progress/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}
@@ -56,7 +58,10 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={testSection}
+        section={{
+          ...testSection,
+          participantType: 'student'
+        }}
         isSaveInProgress={true}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}

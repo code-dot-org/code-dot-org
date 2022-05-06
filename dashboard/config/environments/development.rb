@@ -16,14 +16,9 @@ Dashboard::Application.configure do
 
   # Make sure to support our custom localhost-shadowing subdomains. See
   # https://guides.rubyonrails.org/configuring.html#configuring-middleware
-  #
-  # Note that the `hosts` option was added in Rails 6; we use an if clause here
-  # to provide backwards compatibility for Rails 5. Once we are fully upgraded
-  # to 6+, this can be simplified.
-  if config.respond_to?(:hosts)
-    config.hosts << "localhost-studio.code.org"
-    config.hosts << "localhost.code.org"
-  end
+  config.hosts << "localhost-studio.code.org"
+  config.hosts << "localhost.code.org"
+  config.hosts << "localhost.hourofcode.com"
 
   # Do not eager load code on boot.
   config.eager_load = false

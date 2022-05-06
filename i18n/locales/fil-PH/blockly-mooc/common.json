@@ -1310,6 +1310,8 @@
   "parentLetterStudentPrivacyDetails": "Nagtatalaga ang Code.org ng lubos na kahalagahan sa kaligtasan at seguridad ng mag-aaral. Nilagdaan ng Code.org ang [Student Privacy Pledge]({pledgeLink}) at ang kanilang mga kasanayan sa privacy ay nakatanggap ng [isa sa pinakamataas na kabuuang marka mula sa Common Sense Media]({commonSenseLink}). Makakahanap ka ng mga karagdagang detalye sa pamamagitan ng pagtingin sa [Patakaran sa Privacy] ng Code.org({privacyPolicyLink}).",
   "parentLetterWhy": "Bakit computer science",
   "parentLetterWhyDetails": "[Ipinapakita ng anim na magkakaibang pag-aaral]({researchLink}): ang mga batang nag-aaral ng computer science ay mas mahusay na gumaganap sa iba pang mga paksa, mahusay sa paglutas ng problema, at 17% na mas malamang na pumasok sa kolehiyo. Nagtuturo sa mga mag-aaral ang computer science ng kritikal na pag-iisip, paglutas ng problema, at digital citizenship, at nakikinabang sa lahat ng mga mag-aaral, anuman ang mga pagkakataon na kanilang hahabulin sa hinaharap. At ang pag-aaral na gumawa ng mga interactive na animation, code-art, laro, at app sa Code.org ay humihikayat ng pagkamalikhain at ginagawang masaya ang pag-aaral.",
+  "participantTypeStudentTitle": "Mga mag-aaral",
+  "participantTypeTeacherTitle": "Mga guro",
   "partner": "Partner: {partner}",
   "password": "Password",
   "passwordConfirmation": "Kumpirmahin ang password",

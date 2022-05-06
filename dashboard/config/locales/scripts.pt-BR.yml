@@ -206,6 +206,7 @@ pt:
                 com a ciência da computação e criarão um jogo utilizando código em
                 blocos básico.
           student_description: Crie uma história ou um jogo no Laboratório!
+          name: playlab
         artist:
           title: Artista
           description: Faça desenhos e figuras legais com o Artista!
@@ -219,6 +220,7 @@ pt:
                 que os alunos criem imagens de complexidade crescente usando novos
                 blocos como "avançar em 100 pixels" e "virar à direita em 90 graus".
           student_description: Faça desenhos e figuras legais com o Artista!
+          name: artista
         hourofcode:
           title: Labirinto clássico
           description: Conheça os conceitos básicos da ciência da computação com os
@@ -436,6 +438,7 @@ pt:
                 blocos básico.
           student_description: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
+          name: infinitude
         algebrademo:
           title: Demonstração de algébra
           description: Vários desafios para demonstrar o ambiente e a linguagem de
@@ -633,6 +636,7 @@ pt:
                 laboratório de informática, então eles irão progredir usando um computador
                 para completar quebra-cabeças online.
           student_description: Experimente nosso tutorial sobre quebra-cabeça
+          name: serra tico-tico
         step:
           title: Passo
           description: Etapa do tutorial
@@ -1477,6 +1481,8 @@ pt:
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: PD patrimonial da Code.org
             Necessary Background:
               name: Fundo necessário
         science-PD2:
@@ -1860,6 +1866,7 @@ pt:
                 blocos básico.
           student_description: Crie uma história ou faça um jogo com o Laboratório
             da Era do Gelo!
+          name: era do gelo
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -2034,6 +2041,7 @@ pt:
                 os alunos poderão identificar novas imagens por conta própria.
           student_description: Aprenda como a Inteligência Artificial e aprendizado
             de máquina pode ser usado para resolver problemas mundiais.
+          name: oceanos
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -4963,7 +4971,7 @@ pt:
             soluções tanto no papel quanto no App Lab e testam soluções com usuários
             reais para obter feedback e avançar iteração.
         minecraft:
-          title: Designer Minecraft Hora do Código
+          title: Designer do Minecraft da Hora do Código
           description_short: Crie animais e outras criaturas de Minecraft em sua própria
             versão do Minecraft.
           description: Crie animais e outras criaturas de Minecraft em sua própria
@@ -5162,6 +5170,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -5211,6 +5221,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Digital Citizenship:
               name: Cidadania digital
@@ -5431,6 +5443,8 @@ pt:
               name: Resumo
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             content:
               display_name: Conteúdo
           lessons:
@@ -7521,6 +7535,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -7761,6 +7777,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
@@ -8431,6 +8449,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programação desconectada: Meus amigos robóticos'
@@ -8767,6 +8787,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -8897,6 +8919,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmos: Programação em papel milimétrico'
@@ -8992,6 +9016,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -9054,6 +9080,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -9518,6 +9546,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -9586,6 +9616,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -11011,6 +11043,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -11224,6 +11258,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
@@ -13614,6 +13650,8 @@ pt:
               display_name: Sprite
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -13837,6 +13875,7 @@ pt:
             Data from Sprite Lab:
               name: Dados do Sprite Lab
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas cinco lições proporcionam aos alunos
@@ -13930,6 +13969,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação em papel quadriculado
@@ -14135,6 +14176,8 @@ pt:
               display_name: Laços aninhados
             csf_functions:
               display_name: funções
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -14374,6 +14417,7 @@ pt:
                 criativos. Essa atividade é fantástica para a produção de artefatos
                 para portfólios ou conferências de pais/professores.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas quatro lições proporcionam aos alunos
@@ -14560,6 +14604,8 @@ pt:
               name: Comportamentos no Lab Sprite
             Virtual Pet with Sprite Lab:
               name: Pet Virtual com Sprite Lab
+            Build A Project:
+              name: Projeto de Fim do Curso
             Dance Party:
               name: Festa dançante
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -14824,6 +14870,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Programming in Maze:
               name: Programando com Angry Birds
@@ -14937,6 +14985,7 @@ pt:
             Create a Design with Loops:
               name: Criar um design com loops
             'End of Course Project: Create a Play Lab Game':
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo
@@ -19719,6 +19768,8 @@ pt:
               display_name: Laços aninhados
             csf_functions:
               display_name: funções
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -19738,6 +19789,8 @@ pt:
               name: Funções em Colheitadeira
             Functions in Artist:
               name: Funções no Artista
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Nested Loops in the Maze:
               name: Laços Aninhados no Labirinto
         time4cs-experiment-unit-2:
@@ -21302,6 +21355,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Screen Out the Mean:
               name: Tela fora da média
@@ -21455,6 +21510,7 @@ pt:
                 lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão
                 usando diferentes tipos de gráficos.
             'End of Course Project: Create a Play Lab Game':
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo
@@ -21490,6 +21546,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação em papel quadriculado
@@ -21668,6 +21726,7 @@ pt:
             Dance Part:
               name: Festa dançante
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
           student_description: Os alunos desenvolvem sua compreensão de loops, condicionais
@@ -21694,6 +21753,8 @@ pt:
               display_name: funções
             csf_impacts:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
@@ -21852,6 +21913,7 @@ pt:
                 no Artista. Para padrões mais complicados, os alunos aprenderão sobre
                 aninhamento de funções, chamando uma função dentro de outra.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas quatro lições proporcionam aos alunos
@@ -21914,6 +21976,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Functions in Minecraft:
               name: Funções com Minecraft
@@ -22087,6 +22151,7 @@ pt:
                 Estudantes deveriam ser encorajados a respeitar os direitos dos artistas
                 como uma parte importante de ser um cidadão digital ético.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas cinco lições proporcionam aos alunos
@@ -22142,6 +22207,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Dance Party:
               name: Festa dançante
@@ -22201,6 +22268,8 @@ pt:
               name: Desenvolva um projeto
             Swimming Fish with Sprite Lab:
               name: Peixe nadando com o Sprite Lab
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Programming with Angry Birds:
               name: Programando com Angry Birds
             Debugging with Scrat:
@@ -23124,6 +23193,8 @@ pt:
               name: Codificação da simulação
             Sprites in Action:
               name: Sprites em Ação
+            End of Course Project:
+              name: Projeto de Fim do Curso
           lesson_groups:
             introduction:
               display_name: Introdução
@@ -24123,6 +24194,8 @@ pt:
                 todas as habilidades de programação que eles aprenderam para criar
                 um jogo animado. É hora de ser criativo e criar uma história no Laboratório
                 de Jogos!
+            lesson-1:
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -24132,6 +24205,8 @@ pt:
               display_name: laços
             csf_events:
               display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -24247,6 +24322,8 @@ pt:
                 de aprender a usar eventos no Play Lab e aplicar todas as habilidades
                 de codificação que aprenderam para criar um jogo animado. É hora de
                 ser criativo e criar um jogo no Play Lab!
+            lesson-1:
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -24258,6 +24335,8 @@ pt:
               display_name: Impacto da computação
             csf_events:
               display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -24399,6 +24478,7 @@ pt:
                 usando diferentes tipos de gráficos.
             'End of Course Project: Create a Play Lab Game':
               key: 'Projeto de fim de curso: criar um jogo no Play Lab'
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo
@@ -24420,6 +24500,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           student_description: Crie programas com sequenciamento, loops e eventos.
             Traduza suas iniciais em binário, investigue diferentes técnicas de solução
             de problemas e aprenda a responder ao cyberbullying. No final do curso,
@@ -24585,6 +24667,8 @@ pt:
               description_teacher: Esta série de aulas on-line fará com que os alunos
                 aprendam a criar imagens usando e desativando.
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
             lesson-6:
@@ -24615,6 +24699,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-6:
               display_name: Cidadania digital
         coursee-2021:
@@ -24783,6 +24869,8 @@ pt:
                 e o valor da empatia por meio de brainstorming e design de soluções
                 acessíveis para aplicativos hipotéticos. '
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas quatro lições proporcionam aos alunos
@@ -24818,6 +24906,8 @@ pt:
               display_name: funções
             csf_impacts:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-7:
               display_name: Impacto da computação
         coursef-2021:
@@ -24996,6 +25086,8 @@ pt:
                 do animal. Eles então usarão eventos, comportamentos e outros conceitos
                 que aprenderam para dar vida própria ao animal de estimação!
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
             lesson-1:
@@ -25027,6 +25119,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-8:
               display_name: variáveis
             lessonGroup-9:
@@ -25270,6 +25364,8 @@ pt:
                 do animal. Eles então usarão eventos, comportamentos e outros conceitos
                 que aprenderam para dar vida própria ao animal de estimação!
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
             lesson-1:
@@ -25298,6 +25394,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-9:
               display_name: Eventos
         pre-express-2021:
@@ -26730,6 +26828,7 @@ pt:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: Navegue pela plataforma de aprendizagem da Code.org
               description_teacher: "**Você vai aprender a:**\n\n-   Navegar pelo site
                 Code.org e pelas ferramentas para professores. \n\n**Tempo sugerido:**30
                 minutos"
@@ -28206,6 +28305,8 @@ pt:
               display_name: Sprite
             lessonGroup-3:
               display_name: variáveis
+            lessonGroup-4:
+              display_name: Projeto de Fim do Curso
         csd6-pilot-2022:
           lessons:
             Project - Prototype an Innovation:
@@ -28428,6 +28529,8 @@ pt:
                 todas as habilidades de programação que eles aprenderam para criar
                 um jogo animado. É hora de ser criativo e criar uma história no Laboratório
                 de Jogos!
+            End of Course Project:
+              name: Projeto de Fim do Curso
             'Programming: Happy Maps':
               key: 'Programação: Mapas felizes'
               name: Mapas divertidos
@@ -28489,6 +28592,7 @@ pt:
                 de Jogos!
             lesson-1:
               key: lição 1
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -28498,6 +28602,8 @@ pt:
               display_name: laços
             csf_events:
               display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -28711,8 +28817,10 @@ pt:
                 arte em um nível de freeplay.
               key: Para Loops com o artista
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
+              key: Projeto de Fim do Curso
             Debugging with Scrat:
               key: Depurando com Scrat
               name: Depurando no Labirinto
@@ -28795,6 +28903,8 @@ pt:
               display_name: variáveis
             csf_for_loops:
               display_name: Laços para
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_short: 'Uma introdução à ciência da computação: combina o melhor
             do nosso currículo do ensino fundamental para alunos mais velhos.'
           description_audience: 9-18 anos de idade
@@ -29130,6 +29240,8 @@ pt:
                 de aprender a usar eventos no Play Lab e aplicar todas as habilidades
                 de codificação que aprenderam para criar um jogo animado. É hora de
                 ser criativo e criar um jogo no Play Lab!
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Sequencing in Maze:
               key: Sequenciamento no labirinto
               name: Sequenciando com Angry Birds
@@ -29215,6 +29327,7 @@ pt:
                 ser criativo e criar um jogo no Play Lab!
             lesson-1:
               key: lição 1
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -29226,6 +29339,8 @@ pt:
               display_name: Impacto da computação
             csf_events:
               display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -29348,6 +29463,7 @@ pt:
                 de prós e contras.
               key: Pulseiras binárias
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo
@@ -29433,6 +29549,7 @@ pt:
                 ser criativo e criar um jogo no Play Lab!
             'End of Course Project: Create a Play Lab Game':
               key: 'Projeto de fim de curso: criar um jogo no Play Lab'
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo
@@ -29452,6 +29569,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           student_description: Crie programas com sequenciamento, loops e eventos.
             Traduza suas iniciais em binário, investigue diferentes técnicas de solução
             de problemas e aprenda a responder ao cyberbullying. No final do curso,
@@ -29518,11 +29637,15 @@ pt:
             'Lesson 11: Assessment Day':
               key: 'Lição 11: Dia de Avaliação'
               name: Dia de Avaliação
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parâmetros e valores de retorno
             csp_libraries:
               display_name: Bibliotecas
+            lessonGroup-3:
+              display_name: Questionário
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -29753,8 +29876,10 @@ pt:
                 repetir ações até atingirem o ponto de parada desejado.
               key: Até Loops no Labirinto
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
+              key: Projeto de Fim do Curso
             lesson-5:
               key: lição 5
               description_student: Nesta lição, você aprenderá sobre como as senhas
@@ -29833,6 +29958,8 @@ pt:
               display_name: laços
             csf_conditionals:
               display_name: Condições
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           title: Curso D (2021)
           description_short: Aprenda sobre declarações condicionais. Crie sua própria
             arte, jogos e até uma festa de dança.
@@ -29959,6 +30086,7 @@ pt:
                 e o valor da empatia por meio de brainstorming e design de soluções
                 acessíveis para aplicativos hipotéticos. '
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: "As próximas quatro lições proporcionam aos alunos
@@ -29976,6 +30104,7 @@ pt:
                 em outra interface com a qual se familiarizarem (esse é provavelmente
                 o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar
                 seus trabalhos concluídos aos colegas."
+              key: Projeto de Fim do Curso
             Simon Says:
               key: Simon diz
               description_student: Jogue um jogo e pense em quais comandos são necessários
@@ -30092,6 +30221,8 @@ pt:
               display_name: Condições
             lessonGroup-7:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_audience: De 8 a 12 anos
         coursef-2022:
           lessons:
@@ -30203,8 +30334,10 @@ pt:
                 pela Internet, aprendendo o tempo todo sobre conexões, URLs, endereços
                 IP e DNS.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              key: Projeto de Fim do Curso
             lesson-6:
               key: lição 6
             lesson-7:
@@ -30318,6 +30451,8 @@ pt:
               display_name: Cidadania digital
             lessonGroup-8:
               display_name: variáveis
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
           description_audience: 'Idades: 9-13'
@@ -30332,41 +30467,118 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Áreas restritas
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Aprenda a arrastar e soltar
               name: Aprenda a arrastar e soltar
+              description_student: Clique e arraste para finalizar os quebra-cabeças.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que
+                esperar quando eles vão para o laboratório de informática. A lição
+                começa com uma breve discussão introduzindo à eles as condutas do
+                laboratório de informática, então eles irão progredir usando um computador
+                para completar quebra-cabeças online.
             Sequencing with Scrat:
               key: Sequenciando com Scrat
               name: Sequenciando com Scrat
+              description_student: Programe Scrat para alcançar a bolota.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que
+                esperar quando eles vão para o laboratório de informática. A lição
+                começa com uma breve discussão introduzindo à eles as condutas do
+                laboratório de informática, então eles irão progredir usando um computador
+                para completar quebra-cabeças online.
             Programming with Angry Birds:
               key: Programando com Angry Birds
               name: Programando com Angry Birds
+              description_teacher: Usando personagens da Era do Gelo, os alunos desenvolverão
+                algoritmos seqüenciais para mover o Scrat de um lado de um labirinto
+                para a bolota do outro lado. Para fazer isso, eles empilharão os blocos
+                de código em uma sequência linear, fazendo com que eles se movam reto,
+                vire à esquerda ou vire à direita.
             Programming with Rey and BB-8:
               key: Programação com Rey e BB-8
               name: Programação com Rey e BB-8
+              description_teacher: Nesta lição, os alunos usarão suas novas habilidades
+                de programação de maneiras mais complicadas para navegar em um curso
+                complicado com o BB-8.
             Programming with Harvester:
               key: Programação com Colheitadeira
               name: Programação com Colheitadeira
+              description_student: Ajude a colheitadeira a coletar vegetais ao longo
+                de um caminho.
+              description_teacher: 'Os alunos aplicarão os conceitos de programação
+                que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir
+                o objetivo, os alunos precisam coletar milho usando um novo bloco.
+                Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial
+                e começarão a usar o processo de depuração. '
             Loops with Scrat:
               key: Repetições com Scrat
               name: Repetições com Scrat
+              description_student: Ajude Scrat a cobrir mais terreno usando loops.
             Loops with Laurel:
               key: Repetições com Laurel
               name: Repetições com Laurel
+              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito
+                de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros
+                em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros
+                é introduzido para ajudá-la em sua jornada.
             Ocean Scene with Loops:
               key: Cena do Oceano com Repetições
               name: Cena do Oceano com Repetições
+              description_student: Use loops e padrões para finalizar as imagens.
+              description_teacher: Retornando às repetições, os alunos aprendem a
+                desenhar imagens repetindo sequências simples de instruções. Na última
+                lição online, repetições foram utilizadas para atravessar um labirinto
+                e coletar tesouro. Aqui, as repetições estão criando padrões. No fim
+                deste nível, os alunos terão a oportunidade de criar as suas próprias
+                imagens usando repetições.
             Drawing Gardens with Loops:
               key: Desenho jardins com repetições
               name: Desenho jardins com repetições
+              description_student: Use padrões e loops para finalizar as imagens.
+              description_teacher: Voltando aos loops, os alunos aprendem a desenhar
+                imagens repetindo sequências simples de instruções. Na lição on-line
+                anterior, loops foram usados ​​para atravessar um labirinto e coletar
+                tesouros. Aqui, os alunos usam loops para criar padrões. No final
+                desta etapa, os alunos terão a oportunidade de criar suas próprias
+                imagens usando loops.
             On the Move with Events:
               key: Em Movimento com os Eventos
               name: Em Movimento com os Eventos
+              description_student: Crie seu próprio jogo ou história.
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade
+                de aprender a como utilizar eventos no Laboratório de Jogos e aplicar
+                todas as habilidades de programação que eles aprenderam para criar
+                um jogo animado. É hora de ser criativo e criar uma história no Laboratório
+                de Jogos!
             A Royal Battle with Events:
               key: Um Battle Royal com eventos
               name: Um Battle Royal com eventos
+              description_student: Use eventos para criar uma história ou criar um
+                jogo interativo.
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade
+                de aprender a usar eventos no Play Lab e aplicar todas as habilidades
+                de codificação que aprenderam para criar um jogo animado. É hora de
+                ser criativo e criar um jogo no Play Lab!
+            Programming in with Angry Birds:
+              name: Programando com Angry Birds
+              description_teacher: Usando personagens da Era do Gelo, os alunos desenvolverão
+                algoritmos seqüenciais para mover o Scrat de um lado de um labirinto
+                para a bolota do outro lado. Para fazer isso, eles empilharão os blocos
+                de código em uma sequência linear, fazendo com que eles se movam reto,
+                vire à esquerda ou vire à direita.
+            Programming in Harvester:
+              key: Programação em Harvester
+              name: Programação com Colheitadeira
+              description_student: Ajude a colheitadeira a coletar vegetais ao longo
+                de um caminho.
+              description_teacher: 'Os alunos aplicarão os conceitos de programação
+                que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir
+                o objetivo, os alunos precisam coletar milho usando um novo bloco.
+                Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial
+                e começarão a usar o processo de depuração. '
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciamento
@@ -30374,6 +30586,9 @@ pt:
               display_name: laços
             csf_events:
               display_name: Eventos
+          description_audience: 'Idades: 4-8'
+          description_short: 'Uma introdução à ciência da computação para pré-leitores:
+            combina o melhor do nosso jardim de infância e cursos de primeira série.'
         csa2-2022:
           lessons:
             lesson-5:
@@ -30385,15 +30600,41 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Áreas restritas
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Matrizes unidimensionais (1D)
+            lesson-4:
+              name: Elementos das matrizes
             lesson-5:
               name: Laços para
+            lesson-6:
+              name: Algoritmos das matrizes
+            lesson-7:
+              name: Otimizado para circuitos
+            lesson-8:
+              name: Variáveis estáticas e constantes
+            lesson-9:
+              name: Polimorfismo
+            lesson-10:
+              name: Mais algoritmos de matrizes
+            lesson-11:
+              name: Matrizes de reversão
+            lesson-13:
+              name: Dados para bons projetos sociais – Dia 1
+            lesson-14:
+              name: Dados para bons projetos sociais – Dia 2
+            lesson-15:
+              name: Dados para bons projetos sociais – Dia 3
             lesson-16:
               name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Áreas restritas
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -30412,6 +30653,8 @@ pt:
           lessons:
             lesson-2:
               name: Unidade 4 Avaliação
+            lesson-11:
+              name: Aleatório
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -30419,6 +30662,8 @@ pt:
           lessons:
             lesson-2:
               name: Avaliação Unidade 5
+            lesson-7:
+              name: Otimizado para circuitos
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -30429,6 +30674,38 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        pltess:
+          lessons:
+            lesson-2:
+              name: lição 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Se houver declarações em Java
+              description_student: "\\*\\*Você vai:\n\n-   Avaliar expressões booleanas
+                \n-   Ler e escrever declarações if, if-then, if-else-if-else\n-   Descrever
+                a diferença entre o operador da tarefa e o operador da comparação
+                \n\n\\*\\*Tempo estimado: \\*\\* 90 minutos"
+              description_teacher: "\\*\\*Você vai:\n\n-   Avaliar expressões booleanas
+                \n-   Ler e escrever declarações if, if-then, if-else-if-else\n-   Descrever
+                a diferença entre o operador da tarefa e o operador da comparação
+                \n\n\\*\\*Tempo estimado: \\*\\* 90 minutos"
+            lesson-4:
+              name: Ciclos em Java
+              description_student: "\\*\\* Você vai:\n\n-   Ler, escrever e depurar
+                circuitos em Java \n\n\\*\\* Tempo estimado: \\*\\* 90 minutos"
+              description_teacher: "\\*\\* Você vai:\n\n-   Ler, escrever e depurar
+                circuitos em Java \n\n\\*\\* Tempo estimado: \\*\\* 90 minutos"
+            lesson-5:
+              name: Matrizes em Java
+              description_student: "\\*\\* Você vai: \n\n-   Declarar e inicializar
+                uma matriz 1D com tipos de dados primitivos\n-   Acessar e alterar
+                elementos em uma matriz\n-   Percorrer uma matriz \n\n\\*\\* Tempo
+                estimado: \\*\\* 120 minutos"
+              description_teacher: "\\*\\* Você vai: \n\n-   Declarar e inicializar
+                uma matriz 1D com tipos de dados primitivos\n-   Acessar e alterar
+                elementos em uma matriz\n-   Percorrer uma matriz \n\n\\*\\* Tempo
+                estimado: \\*\\* 120 minutos"
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -30567,8 +30844,10 @@ pt:
                 IP e DNS.
               key: A Internet
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento.
                 Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              key: Projeto de Fim do Curso
           lesson_groups:
             lessonGroup-7:
               display_name: Cidadania digital
@@ -30576,6 +30855,8 @@ pt:
               display_name: Sprite
             lessonGroup-8:
               display_name: variáveis
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
@@ -30794,6 +31075,8 @@ pt:
             Assessment Day:
               name: Dia de Avaliação
               key: Dia de Avaliação
+            lesson-6:
+              name: Propriedade intelectual
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -30813,8 +31096,91 @@ pt:
           lessons:
             lesson-1:
               name: Bem-vindo
-            lesson-9:
+            lesson-4:
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Obter um alto
+                nível de compreensão do currículo de descobertas em CS."
+              description_teacher: "\\*\\* Visão geral: \\*\\*\nEssas atividades assíncronas
+                vão permitir aos participantes uma visão geral de alto nível do currículo
+                de descobertas de CS, incluindo uma visão geral de alto nível do conteúdo
+                e das ferramentas do curso, um esquema descrevendo como o curso foi
+                estruturado e uma pré-visualização de como o processo de solução de
+                problemas é utilizado no curso.  \n\n\\*\\* Os participantes vão:
+                \\*\\* \n\n-   Obter um alto nível de compreensão do currículo de
+                descobertas em CS. \n\n\\*\\* Tempo sugerido: \\*\\* 40 minutos"
+            lesson-5:
+              name: Painel de discussão assíncrono
+            lesson-6:
+              name: Lição-modelo 2 – Unidade 2 Lição 2
+            lesson-7:
+              name: Identidade
+            lesson-8:
+              name: Tarefa da lição
+            lesson-10:
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Considerar sua
+                função como professor em uma sala de aula de descobertas em CS."
+              description_teacher: "\\*\\* Visão geral: \\*\\* \nEssas atividades
+                assíncronas vão oferecer aos participantes uma introdução à função
+                de professor como aprendiz líder do grupo. Os participantes deverão
+                responder como suas experiências e suas crenças sobre a influência
+                do CS, como eles veem seu papel como professores em uma sala de aula
+                de CS. Esta reflexão vai preparar os alunos para a sessão de identidade
+                que ocorrerá mais tarde no workshop. \n\n\\*\\* Os participantes vão:
+                \\*\\*\n\n-   Considerar sua função como professores na sala de aula
+                de descobertas em CS. \n\n\\*\\* Tempo sugerido: \\*\\* 20 minutos"
+            lesson-11:
+              name: Resumo
+            Intro to HTML:
+              name: Lição-modelo 2 – Unidade 2 Lição 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bem-vindo
+            lesson-3:
               name: Planejamento de aula
+            lesson-4:
+              name: Prep. assínc.
+            lesson-6:
+              name: Painel de discussão assíncrono
+            lesson-9:
+              name: Resumo
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bem-vindo
+            lesson-5:
+              name: Painel de discussão assíncrono
+            lesson-8:
+              name: Resumo
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[MODELO] Encerramento da unidade"
+              description_student: "\\*\\* Você vai: \\*\\*\n\n-   Explorar os projetos
+                no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 10 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\*\n\n-   Explorar os projetos
+                no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 10 minutos"
+            lesson-3:
+              name: "[MODELO] Lições sobre conteúdo"
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Definir os objetivos
+                das lições. \n\n\\*\\* Tempo sugerido: \\*\\* \\_\\_\\_\\_ minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\* \n\n-   Definir os objetivos
+                das lições. \n\n\\*\\* Tempo sugerido: \\*\\* \\_\\_\\_\\_ minutos"
+            lesson-4:
+              name: Bem-vindo
+            lesson-7:
+              name: Prep. assínc.
+            lesson-11:
+              name: Painel de discussão assíncrono
+            lesson-14:
+              name: Resumo
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bem-vindo
+            lesson-4:
+              name: Prep. assínc.
+            lesson-6:
+              name: Painel de discussão assíncrono
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30862,13 +31228,667 @@ pt:
               key: Planejamento de aula
             Next steps:
               key: Próximos passos
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Computação Física
+          title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e
+            computação'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de Solução de Problemas
+            e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de Solução de Problemas
+            e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Introdução ao desenvolvimento via internet
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Assistir a uma
+                introdução à unidade de desenvolvimento via internet do Code.org.
+                \n-   Obter uma pré-visualização da primeira semana do conteúdo da
+                unidade de desenvolvimento via internet. \n\n\\*\\* Tempo sugerido:
+                \\*\\* 10 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\* \n\n-   Assistir a uma
+                introdução à unidade de desenvolvimento via internet do Code.org.
+                \n-   Obter uma pré-visualização da primeira semana do conteúdo da
+                unidade de desenvolvimento via internet. \n\n\\*\\* Tempo sugerido:
+                \\*\\* 10 minutos"
+            lesson-2:
+              name: Desenvolva um site com HTML
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Ver uma introdução
+                ao uso do Laboratório da Internet. \n-   Adicionar uma estrutura a
+                uma página na internet, utilizando HML. \n-   Adicionar imagens a
+                uma página na internet. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\* \n\n-   Ver uma introdução
+                ao uso do Laboratório da Internet. \n-   Adicionar uma estrutura a
+                uma página na internet, utilizando HML. \n-   Adicionar imagens a
+                uma página na internet. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+            lesson-3:
+              name: Defina o estilo de um site com CSS
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Definir o estilo
+                do texto de um página na internet, utilizando CSS. \n-   Associar
+                uma folha de estilo CSS ao índice da página na internet. \n-   Explorar
+                propriedades adicionais para definir o estilo de elementos em uma
+                página na internet. \n\n\\*\\* Tempo sugerido: \\*\\* 25 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\* \n\n-   Definir o estilo
+                do texto de um página na internet, utilizando CSS. \n-   Associar
+                uma folha de estilo CSS ao índice da página na internet. \n-   Explorar
+                propriedades adicionais para definir o estilo de elementos em uma
+                página na internet. \n\n\\*\\* Tempo sugerido: \\*\\* 25 minutos"
+            lesson-4:
+              name: Considerar funções e responsabilidades relativas à mídia digital
+              description_student: "\\*\\* Você vai: \\*\\* \n\n-   Explorar métodos
+                de que os alunos dispõem para trabalhar e compreender sua função e
+                suas responsabilidades, tanto como criadores quanto como clientes
+                de mídia digital. \n\n\\*\\* Tempo sugerido: \\*\\* 15 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\* \n\n-   Explorar métodos
+                de que os alunos dispõem para trabalhar e compreender sua função e
+                suas responsabilidades, tanto como criadores quanto como clientes
+                de mídia digital. \n\n\\*\\* Tempo sugerido: \\*\\* 15 minutos"
             lesson-5:
               name: Computação Física
+              description_student: "\\*\\* Você vai: \\*\\*\n\n-   Explorar os projetos
+                no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 10 minutos"
+              description_teacher: "\\*\\* Você vai: \\*\\*\n\n-   Explorar os projetos
+                no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 10 minutos"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ensino de desenvolvimento via internet
+          title: 'Módulo 2: Preparação para ensinar o desenvolvimento via internet'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de Desenvolvimento via
+            Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet.
+            \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se
+            com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo.
+            \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de Desenvolvimento
+            via Internet do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\*\n\n – Ver uma introdução ao desenvolvimento via internet.
+            \n– Praticar conceitos-chave lecionados na unidade. \n\n-   Envolver-se
+            com o laboratório de jogos. \n    – Explorar os projetos no final do capítulo.
+            \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
         vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introdução às animações e jogos interativos
+            lesson-2:
+              name: Crie uma cena
+            lesson-3:
+              name: Anime uma cena com fadas
+            lesson-4:
+              name: Explore o projeto do jogo
+            lesson-5:
+              name: Computação Física
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparação para lecionar sobre animações e jogos interativos
+          title: 'Módulo 3: Preparação para lecionar sobre animações e jogos interativos '
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de animações e jogos
+            interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com
+            o laboratório de jogos. \n– Explorar os projetos no final do capítulo.
+            \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de animações e
+            jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem
+            profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e
+            jogos interativos. \n– Praticar conceitos-chave lecionados na unidade.
+            \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no
+            final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-5:
               name: Computação Física
+          title: 'Módulo 4: Preparação para lecionar sobre o processo de elaboração
+            de projetos'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de processo de elaboração
+            de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n\n– Ver uma introdução ao processo de elaboração de
+            projetos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se
+            no laboratório de jogos. \n– Explorar os projetos no final do capítulo.
+            \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de processo de
+            elaboração de projetos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem
+            profissional, você vai: \\*\\* \n\n– Ver uma introdução ao processo de
+            elaboração de projetos. \n– Praticar conceitos-chave lecionados na unidade.
+            \n– Envolver-se no laboratório de jogos. \n– Explorar os projetos no final
+            do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Dados e Sociedade
+            lesson-5:
+              name: Computação Física
+          title: 'Módulo 5: Preparação para lecionar sobre dados e a sociedade'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de dados e a sociedade
+            do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você
+            vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar
+            conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final
+            do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de dados e a sociedade
+            do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você
+            vai: \\*\\* \n\n– Ver uma introdução aos dados e a sociedade. \n– Praticar
+            conceitos-chave lecionados na unidade. \n– Explorar o os projetos no final
+            do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computação Física
+          title: 'Módulo 6: Preparação para lecionar sobre computação física'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de computação física
+            do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você
+            vai: \\*\\* \n\n– Ver uma introdução ao computação física. \n– Praticar
+            conceitos-chave lecionados na unidade. \n– Envolver-se com o aplicativo
+            de desenvolvedores. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\*
+            Tempo sugerido: \\*\\* 90 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de computação física
+            do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você
+            vai: \\*\\* \n\n– Ver uma introdução ao computação física. \n– Praticar
+            conceitos-chave lecionados na unidade. \n– Envolver-se com o aplicativo
+            de desenvolvedores. \n– Explorar o os projetos no final do capítulo. \n\n\\*\\*
+            Tempo sugerido: \\*\\* 90 minutos"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Animações interativas e jogos
+            lesson-3:
+              name: O processo de design
+            lesson-4:
+              name: Dados e Sociedade
+            lesson-5:
+              name: Computação Física
+            Train a machine learning model:
+              name: Animações interativas e jogos
+            Engage with machine learning apps:
+              name: O processo de design
+            Consider real world implications:
+              name: Dados e Sociedade
+            Unit wrap up:
+              name: Computação Física
+          title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de IA e aprendizagem
+            de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n– Planejar a implementação da unidade com seus
+            alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de IA e aprendizagem
+            de máquina do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n\n– Ver uma introdução à IA e aprendizagem de máquina.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n– Planejar a implementação da unidade com seus
+            alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Olá, Mundo do CSC
+              description_student: Nesta lição, você vai aprender a criar e animar
+                fadas e torná-las interativas utilizando eventos.
+              description_teacher: Nesta lição de  \*_desenvolvimento de habilidades_,
+                os aprendizes vão aprender a criar e animar fadas e torná-las interativas
+                utilizando eventos.
           title: Olá Mundo
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Atualização de níveis
+            Innovations in Computing:
+              name: Inovações em Computação
+              description_teacher: Para iniciar a unidade final deste curso, os alunos
+                farão algumas pesquisas sobre inovações interessantes na computação.
+                Esta lição irá expor os alunos a uma variedade mais ampla de fatores
+                de forma de computação (aparência de um computador) e campos afetados
+                pela computação. Posteriormente nesta unidade, os alunos analisarão
+                os dispositivos que encontraram nesta lição à medida que desenvolvem
+                seus próprios dispositivos físicos de computação.
+          title: Playground de CSD
+          description_audience: Escritores de currículos
+          description_short: Para escalonar as atualizações das lições ou os níveis
+            entre versões de currículos
+          description: Para escalonar as atualizações das lições ou os níveis entre
+            versões de currículos
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Olá, Mundo do CSC
+              description_student: Nesta lição, você vai aprender a criar e animar
+                fadas e torná-las interativas utilizando eventos.
+              description_teacher: Nesta lição de  \*_desenvolvimento de habilidades_,
+                os aprendizes vão aprender a criar e animar fadas e torná-las interativas
+                utilizando eventos.
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Arte poética
+              description_teacher: Nesta lição com CS e ELA integradas, os alunos
+                vão animar um poema com código para ilustrar o astral do poema. Os
+                alunos vão ler e detectar o astral de um poema. Em seguida, eles vão
+                encontrar os efeitos e imagens correspondentes para ilustrar o astral
+                do poema. Finalmente, os alunos vão utilizar eventos (código) para
+                ilustrar uma mudança de astral ou animar a introdução de novas imagens
+                no poema.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Olá, Mundo do CSC
+              description_student: Nesta lição, você vai aprender a criar e animar
+                fadas e torná-las interativas utilizando eventos.
+              description_teacher: Nesta lição de  \*_desenvolvimento de habilidades_,
+                os aprendizes vão aprender a criar e animar fadas e torná-las interativas
+                utilizando eventos.
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: CS Descobertas pré-pesquisa
+              key: CS Descobertas pré-pesquisa
+            Intro to Problem Solving:
+              name: Introdução a Resolução de problemas
+              key: Introdução a Resolução de problemas
+            The Problem Solving Process:
+              name: O Processo de Resolução de Problemas
+              key: O Processo de Resolução de Problemas
+            Exploring Problem Solving:
+              name: Explorando a solução de problemas
+              key: Explorando a solução de problemas
+            What is a Computer?:
+              name: O que é um computador?
+              key: O que é um computador?
+            Input and Output:
+              name: Entrada e saída
+              key: Entrada e saída
+            Processing:
+              name: Processando
+              key: Processando
+            Storage:
+              name: Armazenamento
+              key: Armazenamento
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
+              key: Projeto - Propor um Aplicativo
+            Post-Project Test:
+              name: Teste pós-projeto
+              key: Teste pós-projeto
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+          description_short: "  Aprenda como os humanos trabalham com computadores
+            para resolver problemas."
+        csd2-2022:
+          lessons:
+            Exploring Web Pages:
+              name: Explorando páginas da Web
+              key: Explorando páginas da Web
+            Intro to HTML:
+              name: Introdução a HTML
+              key: Introdução a HTML
+            Headings:
+              name: Cabeçalhos
+              key: Cabeçalhos
+            Digital Footprint:
+              name: Pegada Digital
+              key: Pegada Digital
+            Styling Text with CSS:
+              name: Estilo de texto com CSS
+              key: Estilo de texto com CSS
+            Intellectual Property:
+              name: Propriedade intelectual
+              key: Propriedade intelectual
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
+              key: Estilizando elementos com CSS
+            Team Problem Solving:
+              name: Solução de problemas da equipe
+              key: Solução de problemas da equipe
+            Sources and Research:
+              name: Fontes e Pesquisa
+              key: Fontes e Pesquisa
+            CSS Classes:
+              name: Classes CSS
+              key: Classes CSS
+            Linking Pages:
+              name: Vinculando páginas
+              key: Vinculando páginas
+            Project - Website for a Purpose:
+              name: Projeto - Site para uma finalidade
+              key: Projeto - Site para uma finalidade
+            Peer Review and Final Touches:
+              name: Revisão por pares e retoques finais
+              key: Revisão por pares e retoques finais
+            Post-Project Test:
+              name: Teste pós-projeto
+              key: Teste pós-projeto
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+            'Websites for Expression ':
+              key: 'Sites para Expressão '
+            Planning a Multi-page Website:
+              key: Planejando um site com várias páginas
+            lesson-1:
+              key: lição 1
+              name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+          description_short: " Aprenda a criar seu próprio site no Web Lab."
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Programação para entretenimento
+              key: Programação para entretenimento
+            Plotting Shapes:
+              name: Formas de plotagem
+              key: Formas de plotagem
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+              key: Desenhando no Laboratório de Jogos
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+              key: Formas e Parâmetros
+            Variables:
+              name: variáveis
+              key: variáveis
+            Random Numbers:
+              name: Números Aleatórios
+              key: Números Aleatórios
+            Sprites:
+              name: Sprite
+              key: Sprite
+            Sprite Properties:
+              name: Propriedades do Sprite
+              key: Propriedades do Sprite
+            Text:
+              name: Texto
+              key: Texto
+            The Draw Loop:
+              name: O laço de desenho
+              key: O laço de desenho
+            Sprite Movement:
+              name: Movimento sprite
+              key: Movimento sprite
+            Conditionals:
+              name: Condições
+              key: Condições
+            Keyboard Input:
+              name: Entrada do teclado
+              key: Entrada do teclado
+            Project - Interactive Card:
+              name: Projeto - Cartão Interativo
+              key: Projeto - Cartão Interativo
+            Velocity:
+              name: Velocidade
+              key: Velocidade
+            Collision Detection:
+              name: Detecção de Colisão
+              key: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
+              key: Movimento complexo de Sprite
+            Collisions:
+              name: Colisões
+              description_teacher: "**Pergunta do dia: Como um programador pode explorar
+                extrações para criar mais extrações?**\\\r \\\r\nNesta lição, os alunos
+                programam nova maneira para suas fadas interagirem. Depois de uma
+                breve análise de como utilizaram o bloco [`isTouching`(#f78183)](/docs/gamelab/isTouching/),
+                os alunos avaliam em grupo as formas alternativas de interação entre
+                duas fadas. Em seguida, eles utilizam o [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                para fazer com que uma fada empurre a outra por toda a tela, antes
+                de praticar com os blocos de colisão ([`collide`(#f78183)](/docs/gamelab/collide/),
+                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
+                and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Colisões
+            Functions:
+              name: funções
+              key: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+              key: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
+              key: Usando o processo de design de jogos
+            Project - Design a Game:
+              name: Projeto - Projetar um Jogo
+              key: Projeto - Projetar um Jogo
+            Post-Project Test:
+              name: Teste pós-projeto
+              key: Teste pós-projeto
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+            lesson-1:
+              key: lição 1
+              name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
+          student_description: " Na Unidade 3, você aproveitará sua experiência de
+            codificação ao programar animações, arte interativa e jogos no Laboratório
+            de Jogos. A unidade começa com formas simples e cria jogos sofisticados
+            baseados em sprites, usando os mesmos conceitos de programação e o processo
+            de design que os cientistas da computação usam diariamente. No projeto
+            final, você desenvolverá um programa interativo personalizado."
+          description_short: Programação
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Entendendo seu usuário
+              key: Entendendo seu usuário
+            User Interfaces:
+              name: Interfaces de Usuário
+              key: Interfaces de Usuário
+            Feedback and Testing:
+              name: Teste e Feedback
+              key: Teste e Feedback
+            Identifying User Needs:
+              name: Identificando Necessidades do Usuário
+              key: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
+              key: Projeto - Protótipo de Papel
+            Designing Apps for Good:
+              name: Criando aplicativos para o bem
+              key: Criando aplicativos para o bem
+            Market Research:
+              name: Pesquisa de mercado
+              key: Pesquisa de mercado
+            Prototype Testing:
+              name: Protótipo de Teste
+              key: Protótipo de Teste
+            Testing the App:
+              name: Testando o aplicativo
+              key: Testando o aplicativo
+            Project - App Presentation:
+              name: Projeto - Apresentação do App
+              key: Projeto - Apresentação do App
+            Post-Project Test:
+              name: Teste pós-projeto
+              key: Teste pós-projeto
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+              key: Pesquisa pós-curso da CS Discoveries
+            Analysis of Design:
+              key: Análise de Design
+            Paper Prototypes:
+              key: Protótipos de papel
+            Digital Design:
+              key: Design digital
+            Linking Screens:
+              key: Telas de vinculação
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
+            cspSurvey:
+              display_name: Questionário
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos
+            da computação. Através de uma série de desafios de design, você aprenderá
+            a entender melhor as necessidades de outras pessoas enquanto desenvolve
+            uma solução para um problema. A segunda metade da unidade consiste em
+            um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade
+            de identificar uma necessidade com a qual se preocupam, protótipos de
+            soluções tanto no papel quanto no App Lab e testam soluções com usuários
+            reais para obter feedback e avançar iteração.
+          description_short: "  Aprenda a criar um programa que atenda às necessidades
+            de seus usuários."
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: Representação Importa
+              key: Representação Importa
+            Patterns and Representation:
+              name: Padrões e Representações
+              key: Padrões e Representações
+            ASCII and Binary Representation:
+              name: ASCII e Representações Binárias
+              key: ASCII e Representações Binárias
+            Representing Images:
+              name: Representando Imagens
+              key: Representando Imagens
+            Representing Numbers:
+              name: Representando Números
+              key: Representando Números
+            Combining Representations:
+              name: Combinando Representações
+              key: Combinando Representações
+            Keeping Data Secret:
+              name: Mantendo o segredo dos dados
+              key: Mantendo o segredo dos dados
+            Problem Solving and Data:
+              name: Resolução de Problemas e Dados
+              key: Resolução de Problemas e Dados
+            Structuring Data:
+              name: Estruturação de dados
+              key: Estruturação de dados
+            Interpreting Data:
+              name: Interpretando Dados
+              key: Interpretando Dados
+            Making Decisions with Data:
+              name: Tomando Decisões com Dados
+              key: Tomando Decisões com Dados
+            Automating Data Decisions:
+              name: Automatizando decisões de dados
+              key: Automatizando decisões de dados
+            Problem Solving with Big Data:
+              name: Solução de Problemas com Big Data
+              key: Solução de Problemas com Big Data
+            Post-Project Test:
+              name: Teste pós-projeto
+              key: Teste pós-projeto
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+              key: Pesquisa pós-curso da CS Discoveries
+            Project - Create a Representation:
+              key: Projeto - Criando uma Representação
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
+          student_description: A unidade 5 trata da importância dos dados na solução
+            de problemas e destaca como os computadores podem ajudar nesse processo.
+            O primeiro capítulo explora os diferentes sistemas usados ​​para representar
+            informações em um computador e os desafios e as vantagens e desvantagens
+            do uso deles. No segundo capítulo, você aprenderá como as coleções de
+            dados são usadas para resolver problemas e como os computadores ajudam
+            a automatizar as etapas desse processo. O capítulo conclui considerando
+            como o processo de solução de problemas de dados pode ser aplicado a uma
+            área de sua escolha.
+          description_short: Aprenda como as pessoas usam computadores para resolver
+            problemas de dados.
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: Projetando a coleta de dados
+              key: Projetando a coleta de dados
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+              key: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: Inovações em Computação
+              description_teacher: Para iniciar a unidade final deste curso, os alunos
+                farão algumas pesquisas sobre inovações interessantes na computação.
+                Esta lição irá expor os alunos a uma variedade mais ampla de fatores
+                de forma de computação (aparência de um computador) e campos afetados
+                pela computação. Posteriormente nesta unidade, os alunos analisarão
+                os dispositivos que encontraram nesta lição à medida que desenvolvem
+                seus próprios dispositivos físicos de computação.
+            The Circuit Playground:
+              name: O parque de diversões do circuito
+            Board Events:
+              name: Eventos de borda
+            Color LEDs:
+              name: LEDs Coloridos
+            Combining Inputs and Outputs:
+              name: Combinação de entradas
+            Accelerometer:
+              name: Acelerômetro
+              description_teacher: Nesta lição, os alunos explorarão o acelerômetro
+                e seus recursos. Eles se familiarizarão com seus eventos e propriedades,
+                além de criarem vários programas utilizando o acelerômetro semelhante
+                aos que provavelmente encontraram em aplicativos do mundo real.
+            Making Music:
+              name: Fazendo Música
+            Functions:
+              name: funções
+            Project - Prototype an Innovation:
+              description_teacher: 'Neste projeto final do curso, os alunos se unem
+                para desenvolver e testar um protótipo para um dispositivo de computação
+                inovador baseado no parque de diversões do circuito. Usando as entradas
+                e saídas disponíveis no quadro, os grupos criarão programas que permitem
+                interações interessantes e exclusivas do usuário. '
+            Post-Project Test:
+              name: Teste pós-projeto
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            lessonGroup-4:
+              display_name: Questionário
+          description_short: Aprenda a programar com dispositivos físicos.
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Pesquisa Pós-Curso
+          title: Pesquisa pós-curso da CS Discoveries
+          description: Esta unidade contém a Pesquisa Após o Curso das Descobertas
+            CS. Esta unidade pode ser atribuída depois que os alunos completarem a
+            sua unidade final de Descobertas CS.
+          student_description: Esta unidade contém uma pesquisa para quando e a sua
+            aula de Descobertas CS e as unidades forem concluídas. O seu professor
+            lhe dirá quando você deverá fazer essa pesquisa.
+        csp-post-survey-2022:
+          title: Pesquisa pós-curso de princípios do CS

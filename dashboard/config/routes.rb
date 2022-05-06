@@ -97,7 +97,6 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
-        get 'student_script_ids'
         get 'code_review_groups'
         post 'code_review_groups', to: 'sections#set_code_review_groups'
         post 'code_review_enabled', to: 'sections#set_code_review_enabled'
@@ -304,11 +303,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy, :index], param: 'key', path: 'guides' do
-      member do
-        get 'edit'
-      end
-    end
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -341,7 +336,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
 
   resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
@@ -354,12 +349,17 @@ Dashboard::Application.routes.draw do
   end
 
   resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
+    member do
+      get :get_summary_by_name
+    end
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end
     end
   end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do
@@ -960,6 +960,7 @@ Dashboard::Application.routes.draw do
 
   resources :project_versions, only: [:create]
   get 'project_versions/get_token', to: 'project_versions#get_token'
+  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'

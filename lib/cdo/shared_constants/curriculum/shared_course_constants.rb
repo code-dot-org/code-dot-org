@@ -60,6 +60,9 @@ module SharedCourseConstants
 
   # All the categories options used to group course offerings in the assignment dropdown
   COURSE_OFFERING_CATEGORIES = OpenStruct.new(
+    pl_self_paced: 'Self-Paced Professional Learning',
+    pl_virtual: 'Virtual Professional Learning',
+    pl_other: 'Other Professional Learning',
     full_course: 'Full Courses',
     csf: 'CS Fundamentals',
     csc: 'CS Connections',
@@ -68,9 +71,18 @@ module SharedCourseConstants
     csf_international: 'CS Fundamentals International',
     math: 'Math',
     twenty_hour: '20-hour',
-    other: 'Other',
-    pl_self_paced: 'Self-Paced Professional Learning',
-    pl_virtual: 'Virtual Professional Learning',
-    pl_other: 'Other Professional Learning'
+    other: 'Other'
+  ).freeze
+
+  # Sections have a participant_type and courses have a participant_audience. A section
+  # should never be assigned a course where the participants in the section can not be
+  # participants in the course. There this will tell you give the participant_audience of the
+  # course what the valid participant_types of a section are.
+  PARTICIPANT_AUDIENCES_BY_TYPE = OpenStruct.new(
+    {
+      student: ['student'],
+      teacher: ['student', 'teacher'],
+      facilitator: ['student', 'teacher', 'facilitator']
+    }
   ).freeze
 end

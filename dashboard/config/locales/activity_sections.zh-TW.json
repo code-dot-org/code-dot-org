@@ -556,6 +556,9 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "文字壓縮"
         },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "\"**現實世界：Zip 壓縮**\n\n-   用不同內容的文字檔案進行 zip 實驗。  小檔案的效果和大檔案的效果一樣好嗎？（在 Mac 上，要在 Finder 中選擇「獲取資訊」來檢視檔案的實際位元組數，因為 Finder 對小於 4KB 的檔案都會顯示成 4KB。)\n    -   警告：結果可能會有差異。  Zip 對文字檔案非常有效，但它可能不能很有效地壓縮其他檔案，因為它們本身已經被壓縮過了，或者沒有像文字檔案那樣有相同的內嵌規律。\n\n**挑戰：  研究 LZW 演算法**\n\n-   .zip 壓縮是基於 [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) 實現的\n\n-   雖然這個文字壓縮工具背後的思路與 LZW(zip) 演算法類似，但追蹤壓縮和解壓縮的路徑有點難度。  學習 LZW 以及在這個演算法的過程中會發生什麼，對於某些人來說是一個很好的拓展專案。\""
+        },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "介紹"
         },
@@ -603,6 +606,9 @@
           "tips": [
             null
           ]
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "\"#### 帶我去打球吧\n\n帶學生到外面去玩一些球類遊戲。記錄下事件和動作。例如，在籃球比賽中，不運球會導致走步違例，另一隊將得到球權。在足球比賽中，把球踢出界外的結果是由對方將球踢進來。把球踢進球門的結果是得分！如果你的學生喜歡，可以編出更多的活動。當某一隊的隊長得分時，讓所有的學生大喊「耶」。如果一個學生連續進了兩個球，讓每個人都倒在地上打滾！\""
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -712,6 +718,9 @@
           "tips": [
             null
           ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "訓練AI來清潔海洋"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "人工智慧：訓練資料與偏差 - 視訊"
@@ -847,6 +856,13 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "課程 E 精靈實驗室專案",
           "progression_name": "課程 E 精靈實驗室專案"
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "教學內容概覽"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "範例程式",
+          "progression_name": "範例程式"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "教學內容概覽"
@@ -2722,6 +2738,20 @@
           "name": "專案",
           "progression_name": "專案"
         },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "教學內容概覽"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "範例程式",
+          "progression_name": "範例程式"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "教學內容概覽"
+        },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "圖形的繪製",
+          "progression_name": "圖形的繪製"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "教學內容概覽"
         },
@@ -3000,6 +3030,25 @@
           "name": "反思",
           "progression_name": "反思"
         },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "教學內容概覽"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "教學內容概覽"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "設定屬性"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "以程式碼設計螢幕畫面"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "事件與屬性"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "構建一個手機應用程式",
+          "progression_name": "構建一個手機應用程式"
+        },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "教學內容概覽"
         },
@@ -3234,6 +3283,14 @@
           "name": "反思",
           "progression_name": "反思"
         },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "教學內容概覽",
+          "progression_name": "教學內容概覽"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "教學內容概覽",
+          "progression_name": "教學內容概覽"
+        },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -3321,6 +3378,14 @@
           "name": "反思",
           "progression_name": "反思"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "教學內容概覽",
+          "progression_name": "教學內容概覽"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "教學內容概覽",
+          "progression_name": "教學內容概覽"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -3406,6 +3471,13 @@
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "教學內容概覽"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "影片：問題的解決流程",
+          "progression_name": "影片：問題的解決流程"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "教學內容概覽",
           "progression_name": "教學內容概覽"
@@ -3435,6 +3507,12 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "反思",
           "progression_name": "反思"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "教學內容概覽"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "教學內容概覽"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "教學內容概覽"
@@ -3624,6 +3702,20 @@
         },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "課程項目結束"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "教學內容概覽"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "範例程式",
+          "progression_name": "範例程式"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "教學內容概覽"
+        },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "圖形的繪製",
+          "progression_name": "圖形的繪製"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "教學內容概覽"
@@ -3953,6 +4045,9 @@
           "name": "反思",
           "progression_name": "反思"
         },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "教學內容概覽"
+        },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "教學內容概覽"
         },
@@ -4196,6 +4291,9 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "反思",
           "progression_name": "反思"
+        },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "教學內容概覽"
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "教學內容概覽"
@@ -4480,6 +4578,10 @@
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "反思",
           "progression_name": "反思"
+        },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "教學內容概覽",
+          "progression_name": "教學內容概覽"
         },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "教學內容概覽",
@@ -8108,6 +8210,26 @@
           ],
           "progression_name": "課後問券指示"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -8649,6 +8771,24 @@
           ],
           "progression_name": "課後問券指示"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "獲得啟發"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -9036,6 +9176,39 @@
             null
           ],
           "progression_name": "課後問券指示"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "反思"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -9456,6 +9629,24 @@
             null
           ],
           "progression_name": "課後問券指示"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "範例程式"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -10325,6 +10516,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "問題解決流程",
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：問題的解決流程"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -10697,6 +10921,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "探索不同網站",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]

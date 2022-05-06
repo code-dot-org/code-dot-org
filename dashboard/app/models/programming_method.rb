@@ -14,10 +14,12 @@
 #  external_link        :string(255)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
-#  overloaded_by        :string(255)
+#  overload_of          :string(255)
+#  return_value         :string(255)
 #
 # Indexes
 #
+#  index_programming_methods_on_class_id_and_overload_of      (programming_class_id,overload_of)
 #  index_programming_methods_on_key_and_programming_class_id  (key,programming_class_id) UNIQUE
 #
 class ProgrammingMethod < ApplicationRecord
@@ -28,6 +30,12 @@ class ProgrammingMethod < ApplicationRecord
   before_validation :generate_key, on: :create
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
   validate :validate_key_format
+
+  # The validate logic could hit a race condition in seeding
+  # As this should run when the models are updated in levelbuilder,
+  # just skip it for seeding.
+  attr_accessor :seed_in_progress
+  validate :validate_overload, unless: :seed_in_progress
 
   def generate_key
     return key if key
@@ -48,5 +56,64 @@ class ProgrammingMethod < ApplicationRecord
 
   def serialize
     attributes.except('id', 'programming_class_id', 'created_at', 'updated_at')
+  end
+
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      parameters: parsed_parameters,
+      examples: parsed_examples,
+      syntax: syntax,
+      externalLink: external_link,
+      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
+      overloadOf: overload_of
+    }
+  end
+
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      returnValue: return_value,
+      parameters: parsed_parameters,
+      examples: parsed_examples,
+      syntax: syntax,
+      externalLink: external_link,
+      overloads: ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).map(&:summarize_for_show)
+    }
+  end
+
+  private
+
+  def parsed_parameters
+    parameters.blank? ? [] : JSON.parse(parameters)
+  end
+
+  def parsed_examples
+    examples.blank? ? [] : JSON.parse(examples)
+  end
+
+  def validate_overload
+    # No overload is always valid
+    return if overload_of.blank?
+    if overload_of == key
+      errors.add(:overload_of, "Cannot overload self")
+      return
+    end
+    if ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).count > 0
+      errors.add(:overload_of, "This method cannot have non-blank overload_of if another method overloads it")
+      return
+    end
+    overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overload_of)
+    if overload
+      errors.add(:overload_of, "Overloaded method cannot have overload_of be non-blank") unless overload.overload_of.blank?
+    else
+      errors.add(:overload_of, "Overload method must exist")
+    end
   end
 end

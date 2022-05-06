@@ -1,0 +1,68 @@
+{
+  "name": "javalab",
+  "published": true,
+  "editor_language": "java",
+  "title": "Java Lab",
+  "categories": [
+    {
+      "key": "general",
+      "name": "General",
+      "color": "#53d5fd",
+      "position": 0
+    },
+    {
+      "key": "org_code_theater",
+      "name": "org.code.theater",
+      "color": "#aaaaaa",
+      "position": 1
+    },
+    {
+      "key": "org_code_media",
+      "name": "org.code.media",
+      "color": "#e0edd4",
+      "position": 2
+    },
+    {
+      "key": "org_code_neighborhood",
+      "name": "org.code.neighborhood",
+      "color": "#d9cafe",
+      "position": 3
+    },
+    {
+      "key": "java_io",
+      "name": "java.io",
+      "color": "#b1dd8c",
+      "position": 4
+    },
+    {
+      "key": "java_util",
+      "name": "java.util",
+      "color": "#f4a4c0",
+      "position": 5
+    },
+    {
+      "key": "java_lang",
+      "name": "java.lang",
+      "color": "#94e3fe",
+      "position": 6
+    },
+    {
+      "key": "org_junit_jupiter_api",
+      "name": " org.junit.jupiter.api",
+      "color": null,
+      "position": 7
+    },
+    {
+      "key": "control_structures",
+      "name": "Control Structures",
+      "color": "#fefcdd",
+      "position": 8
+    },
+    {
+      "key": "data_structures",
+      "name": "Data Structures",
+      "color": "#d9cafe",
+      "position": 9
+    }
+  ]
+}

@@ -1181,6 +1181,8 @@
   "parentLetterStudentPrivacyDetails": "Code.org o‘quvchilar xavfsizligi va xavfsizligiga juda katta ahamiyat beradi. Code.org [Talabalar uchun maxfiylik garovi]({pledgeLink}) ni imzoladi va ularning shaxsiy hayoti amaliyoti [Common Sense Media tomonidan olingan eng yuqori natijalardan biri]({commonSenseLink}) Siz batafsil ma'lumotni Code.org-ning [Maxfiylik siyosati]({privacyPolicyLink}) bilan tanishishingiz mumkin. ",
   "parentLetterWhy": "Nega informatika",
   "parentLetterWhyDetails": "[Olti xil tadqiqotlar shuni ko‘rsatadiki]({researchLink}): informatika fanini o‘rganadigan bolalar boshqa mavzularda yaxshi natijalarga erishadilar, muammolarni hal qilishda ustunlik qiladilar va kollejga 17% ga ko‘proq kirishadi. Kompyuter fanlari o‘quvchilarni tanqidiy fikrlashga, muammolarni hal qilishga va raqamli fuqarolikka o'rgatadi va kelajakda qanday imkoniyatlarga ega bo‘lishidan qat'iy nazar barcha talabalarga foyda keltiradi. Code.org saytida interfaol animatsiyalar, san'at, o‘yinlar va dasturlarni tayyorlashni o‘rganish orqali ijodkorlikni rag‘batlantiradi va o‘rganishni qiziqarli qiladi.",
+  "participantTypeStudentTitle": "Oʻquvchilar",
+  "participantTypeTeacherTitle": "O‘qituvchilar",
   "partner": "Hamkor: {partner}",
   "password": "Kalit so‘z",
   "passwordConfirmation": "Kalitni so‘zni tasdiqlash",

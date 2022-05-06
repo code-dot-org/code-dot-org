@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-04-11 20:18:45 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-05-05 15:28:33 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -186,8 +186,8 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. ",
-        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
-        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.\n",
+        "preparation": "- Play through the puzzles to find any potential problem areas for your class.\n- [Optional] Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. Students will learn how to make sprites say things, which is a skill they will use in the following About Me lesson.\n",
         "student_overview": "In this lesson, you will learn to create and animate sprites and make them interactive using events."
       },
       "seeding_key": {
@@ -715,6 +715,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2ae44a38-4141-461c-a9d1-291a952c3bec",
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6",
         "lesson.key": "Hello World: Food",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
@@ -1945,6 +1958,17 @@
       "seeding_key": {
         "activity_section.key": "ebbcd2fa-1991-41d3-a054-232b53cf8f17",
         "lesson_activity.key": "2ae44a38-4141-461c-a9d1-291a952c3bec"
+      }
+    },
+    {
+      "key": "6fd1ff5b-fb1a-4780-ac80-cb2780555f36",
+      "position": 1,
+      "properties": {
+        "description": "With skills learned in this Hello World lesson, students are able to  create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects."
+      },
+      "seeding_key": {
+        "activity_section.key": "6fd1ff5b-fb1a-4780-ac80-cb2780555f36",
+        "lesson_activity.key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6"
       }
     },
     {

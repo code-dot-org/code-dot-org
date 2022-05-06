@@ -420,6 +420,7 @@ pl:
       starwars: 'Gwiezdne Wojny'
       starwarsblocks: 'Star Wars (Bloki)'
       starwarsblocks_hour: 'Star Wars (Bloki)'
+      thebadguys: 'Źli faceci'
       loading: 'Trwa pobieranie ...'
       weblab: 'Web Lab'
       view_all: 'Obejrzyj wszystkie projekty...'
@@ -573,8 +574,8 @@ pl:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: 'Szczególnie chcielibyśmy podziękować inżynierom z firm Amazon, Google i Microsoft, którzy pomogli nam utworzyć te materiały.'
     help_from_html_old: 'Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć te materiały.'
-    art_from_html: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. <br /> Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone.<br />Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br />Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br />The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
     built_on_github: 'Oparty na GitHub firmy Microsoft'
@@ -992,6 +993,9 @@ pl:
   no_script_access_teacher: "Nie masz dostępu do tej jednostki. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tej jednostki, proszę napisać na adres: support@code.org tak, abyśmy mogli naprawić sytuację."
   no_level_access_student: "Nie masz dostępu do tego poziomu. Proszę spytać swojego nauczyciela, na jakim powinieneś być poziomie."
   no_level_access_teacher: "Nie masz dostępu do tego poziomu. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tego poziomu, to proszę napisać pod adresem: support@code.org tak, abyśmy mogli naprawić tę sytuację."
+  no_exemplar: "Nie ma żadnego przykładu dla tego poziomu."
+  no_exemplar_access_student: "Studenci nie mają dostępu do przykładowego kodu. Zapytaj swojego nauczyciela, na jakim poziomie powinieneś być."
+  no_exemplar_access_teacher: "Tylko zweryfikowani nauczyciele mają dostęp do przykładowego kodu. Jeśli chcesz zostać zweryfikowanym nauczycielem, napisz na adres support@code.org."
   return_unit_overview: 'Przejdź do przeglądu jednostek'
   return_course_overview: 'Przejdź do omówienia kursu'
   view_all_units: 'Zobacz wszystkie jednostki'

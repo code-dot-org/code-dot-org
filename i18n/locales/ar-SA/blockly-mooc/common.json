@@ -1189,6 +1189,8 @@
   "parentsAndStudents": "الآباء و الطلاب",
   "parentLetterHello": "مرحباً !",
   "parentLetterIntro": "في الصف الذي أدرّس فيه، يتعلم {studentName} علم الحاسوب على [Code.org] ({homeLink})، وهو نظام أساسي ممتع وإبداعي لتعلم علم الحاسوب والبرمجة الأساسية لإنشاء رسوم متحركة أوألعاب أو تطبيقات تفاعلية. إن اهتمامك بما يتعلمه طفلك أمر بالغ الأهمية، وبفضل برنامج Code.org يَسهُل الاستمرار في المشاركة.",
+  "participantTypeStudentTitle": "الطلاب",
+  "participantTypeTeacherTitle": "المعلمون",
   "partner": "الشريك: {partner}",
   "password": "كلمة المرور",
   "passwordConfirmation": "تأكيد كلمة المرور",

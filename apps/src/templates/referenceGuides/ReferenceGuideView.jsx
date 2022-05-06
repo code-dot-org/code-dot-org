@@ -7,11 +7,7 @@ import {
   NavigationItem
 } from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
-
-const baseUrl = window.location.href
-  .split('/')
-  .slice(0, -1)
-  .join('/');
+import {Link} from '@dsco_/link';
 
 const referenceGuideShape = PropTypes.shape({
   display_name: PropTypes.string,
@@ -20,7 +16,11 @@ const referenceGuideShape = PropTypes.shape({
   parent_reference_guide_key: PropTypes.string
 });
 
-export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
+export default function ReferenceGuideView({
+  referenceGuide,
+  referenceGuides,
+  baseUrl
+}) {
   let rootCategory = referenceGuide;
   while (rootCategory.parent_reference_guide_key !== null) {
     rootCategory = referenceGuides.find(
@@ -63,7 +63,15 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
             </NavigationCategory>
           ))}
         </NavigationBar>
-        <EnhancedSafeMarkdown markdown={referenceGuide.content} />
+        <div>
+          <EnhancedSafeMarkdown markdown={referenceGuide.content} />
+          <p>
+            Found a bug in the documentation? Let us know at{' '}
+            <Link href={`mailto:documentation@code.org`}>
+              documentation@code.org
+            </Link>
+          </p>
+        </div>
       </div>
     </>
   );
@@ -71,5 +79,6 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
 
 ReferenceGuideView.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
-  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
+  baseUrl: PropTypes.string.isRequired
 };

@@ -12,6 +12,18 @@ export function getBlockFields(block) {
   return fields;
 }
 
+export function workspaceSvgResize(workspace) {
+  return Blockly.svgResize(workspace);
+}
+
 export function isWorkspaceReadOnly(workspace) {
   return false; // TODO - used for feedback
+}
+
+export function blockLimitExceeded() {
+  return false;
+}
+
+export function getBlockLimit(blockType) {
+  return 0;
 }
