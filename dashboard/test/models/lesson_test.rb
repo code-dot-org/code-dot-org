@@ -514,8 +514,6 @@ class LessonTest < ActiveSupport::TestCase
         'lessons' => {
           'dummy-key' => {
             'name' => 'Dummy Name',
-            'description_student' => 'student overview',
-            'description_teacher' => 'teacher overview'
           }
         }
       }
