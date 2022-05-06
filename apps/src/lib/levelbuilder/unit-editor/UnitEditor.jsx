@@ -679,8 +679,9 @@ class UnitEditor extends React.Component {
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
             <p>
-              This unit is part of a course. Go to the course edit page to set
-              the course type settings for the course and its units.
+              Settings in this section change depending on whether this unit is
+              grouped with other units in a course. If this does not look as
+              expected, please add or remove this unit from a course.
             </p>
           </CollapsibleEditorSection>
         )}
@@ -701,14 +702,6 @@ class UnitEditor extends React.Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
-
-        <CollapsibleEditorSection title="Announcements">
-          <AnnouncementsEditor
-            announcements={this.state.announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
@@ -750,8 +743,10 @@ class UnitEditor extends React.Component {
                 this.state.publishedState !== PublishedState.in_development && (
                   <div>
                     <p>
-                      This unit is part of a course. Go to the course edit page
-                      to publish the course and its units.
+                      Settings in this section change depending on whether this
+                      unit is grouped with other units in a course. If this does
+                      not look as expected, please add or remove this unit from
+                      a course.
                     </p>
                     {/*
                    Just use a checkbox instead of a dropdown to set the
@@ -823,6 +818,14 @@ class UnitEditor extends React.Component {
               )}
             </div>
           )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={this.state.announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
