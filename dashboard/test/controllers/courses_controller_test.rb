@@ -665,6 +665,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: cannot change course version for unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
     script = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
@@ -728,6 +729,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: does not work for plc_course" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :plc_course, name: 'plc-course'
 
     assert_raises ActiveRecord::ReadOnlyRecord do
@@ -738,6 +740,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
@@ -748,6 +751,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated
@@ -767,6 +771,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated
