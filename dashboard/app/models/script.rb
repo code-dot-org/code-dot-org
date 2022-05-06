@@ -357,7 +357,6 @@ class Script < ApplicationRecord
         study: 'scripts_en_yml',
         event: log_event_type,
         data_string: unit_name,
-        user_id: current_user&.id,
         data_json: {
           old_size: old_size,
           new_size: new_size,
