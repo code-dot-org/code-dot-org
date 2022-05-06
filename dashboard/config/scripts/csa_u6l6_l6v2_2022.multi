@@ -8,5 +8,16 @@ wrong 'wrong'
 wrong 'wrong'
 
 markdown <<MARKDOWN
-question
+What is printed as a result of the following code segment?
+
+```
+ArrayList<Integer> zipCodes = new ArrayList<Integer>();
+zipcodes.add(22032);
+zipcodes.add(30351);
+zipcodes.add(24301);
+zipcodes.add(2, 7804);
+zipcodes.remove(2);
+zipcodes.remove(2);
+System.out.println(zipcodes);
+```
 MARKDOWN

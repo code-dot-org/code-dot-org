@@ -20,7 +20,7 @@
         "isVisible": true
       },
       "song.txt": {
-        "text": "",
+        "text": "There's an old friend that I once heard say\nSomethin' that touched my heart, and it began this way:\n\nI was born by the river, in a little tent;\nAnd just like the river, I've been runnin' every since...\nHe said, \"It's been a long time comin', but I know my change is gonna come...\"\nOh, yeah...\n\nHe said, \"It's been too hard livin', but I'm afraid to die;\nI might not be if I knew what was up there beyond the sky...\nIt's been a long, a long time comin', but I know my change has got to come...\"\nOh, yeah...\n\nI went... I went to my brother\nAnd I asked him, \"Brother, could you help me, please?\"\nHe said, \"Good sister, I'd like to, but I'm not able...\"\nAnd when I, when I looked around, I was right back down, down on my bended knees,\nYes, I was! Oh!\n\nThere've been times that I thought... I thought that I wouldn't last for long,\nBut somehow, right now, I believe that I'm able, I'm able to carry on...\nI tell you that it's been a long... and, oh, it's been an uphill journey all the way,\nBut I know, I know, I know, I know my change is gonna come...\n\nSometimes, I've had to cry all night long - yes, I did;\nSometimes, I had to give up right for what I knew was wrong...\nYeah, it's been an uphill journey!\nIt's sure been a long way comin'... yes, it has...\nIt's been real hard every step of the way,\nBut I believe, I believe, this evenin', my change has come...\nYeah! I tell you that my change has come",
         "isVisible": true
       }
     }
@@ -30,6 +30,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:25:42.849+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3a PBT_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3a PBT_2022\"},{\"changed_at\":\"2022-04-14 19:25:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:10:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:06:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:25:42.849+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3a PBT_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L3a PBT_2022\"},{\"changed_at\":\"2022-04-14 19:25:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:10:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 23:06:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 13:16:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
