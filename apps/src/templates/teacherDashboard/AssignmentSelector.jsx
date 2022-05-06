@@ -235,12 +235,11 @@ export default class AssignmentSelector extends Component {
      * teachers will not be able to see PL course offerings because they
      * can not assign them so they should not see the PL course offerings either
      */
-    const filteredCategories = _.filter(
-      Object.keys(CourseOfferingCategories),
-      function(category) {
-        return courseOfferingsByCategories[category];
-      }
-    );
+    const filteredCategories = _.filter(CourseOfferingCategories, function(
+      category
+    ) {
+      return courseOfferingsByCategories[category];
+    });
 
     return (
       <div>

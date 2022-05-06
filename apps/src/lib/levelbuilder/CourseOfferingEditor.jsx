@@ -5,6 +5,7 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -70,9 +71,9 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('category', e.target.value)}
         >
-          {Object.keys(CourseOfferingCategories).map(category => (
+          {CourseOfferingCategories.map(category => (
             <option key={category} value={category}>
-              {CourseOfferingCategories[category]}
+              {translatedCourseOfferingCategories[category]}
             </option>
           ))}
         </select>
