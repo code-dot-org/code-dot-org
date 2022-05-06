@@ -89,7 +89,7 @@ class ScriptsController < ApplicationController
   def new
     @versioned_unit_families = []
     @unit_families_course_types = []
-    UnitGroup.family_names.map do |cf|
+    Script.family_names.map do |cf|
       co = CourseOffering.find_by(key: cf)
       first_cv = co.course_versions.first
       unit = first_cv.content_root
