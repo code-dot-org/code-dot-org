@@ -11,7 +11,7 @@ var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-var sass = require('node-sass');
+var sass = require('sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
 
