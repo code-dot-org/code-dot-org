@@ -11,6 +11,10 @@ import {
 } from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
+// CodeReviewTimeline dynamically renders the timeline based on commit and code review data.
+// It first renders a created node, then renders either commit or review timeline elements
+// ordered by oldest at the top to most recent at the bottom. When the data has loaded, there
+// is an automatic scroll to the bottom to orient the viewer to the latest changes.
 const CodeReviewTimeline = props => {
   const {timelineData, addCodeReviewComment, closeReview} = props;
 
