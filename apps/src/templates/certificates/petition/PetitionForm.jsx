@@ -23,10 +23,6 @@ const PetitionForm = ({gaPagePath}) => {
     e => {
       e.persist();
       setData(data => ({...data, [e.target.name]: e.target.value}));
-      console.log('setting data to', {
-        ...data,
-        [e.target.name]: e.target.value
-      });
       setInvalidFields(without(invalidFields, e.target.name)); // Remove error from field until next submit
     },
     [invalidFields]
@@ -34,7 +30,6 @@ const PetitionForm = ({gaPagePath}) => {
 
   const handleSubmit = useCallback(
     e => {
-      console.log('SUBMIT ATTEMPTED!!', data);
       e.preventDefault();
 
       let sanitizedData = data;
