@@ -538,9 +538,7 @@ class Lesson < ApplicationRecord
       script.name => {
         'lessons' => {
           key => {
-            'name' => name,
-            'description_student' => student_overview,
-            'description_teacher' => overview
+            'name' => name
           }
         }
       }

@@ -154,7 +154,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
-    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
@@ -1330,11 +1329,6 @@ class ScriptTest < ActiveSupport::TestCase
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
-        'name' => 'Report Lesson 1',
-        'descriptionStudent' => 'lesson 1 is pretty neat',
-        'descriptionTeacher' => 'This is what you should know as a teacher'
-      }].to_json
     }
 
     updated = Script.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
@@ -1344,8 +1338,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Report Script Name', updated_report_unit['title']
     assert_equal 'This is what Report Script is all about', updated_report_unit['description']
     assert_equal 'report-lesson-1', updated_report_unit['lessons']['Report Lesson 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_unit['lessons']['Report Lesson 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_unit['lessons']['Report Lesson 1']['description_teacher']
   end
 
   test "update_i18n with new lesson display name" do
@@ -1813,10 +1805,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csd_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
-    assert_equal(
-      [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
     assert_equal(
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
@@ -1825,10 +1814,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csc_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     )
-    assert_equal(
-      [@hoc_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
   end
 
   test "under_curriculum_umbrella and helpers" do
