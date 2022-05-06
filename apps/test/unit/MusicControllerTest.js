@@ -5,36 +5,44 @@ import Sounds from '@cdo/apps/Sounds';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('MusicController', () => {
+  const track = {
+    volume: 1,
+    hasOgg: false,
+    name: 'win',
+    isloaded: false,
+    group: 'mygroup'
+  };
+
   let musicController, sound, sounds, sourceURL;
 
-  sounds = new Sounds();
-  sourceURL = winMp3;
-  sounds.register({id: sourceURL, mp3: sourceURL});
-  sound = sounds.soundsById[sourceURL];
-
-  const defaultProps = {
-    audioPlayer: new Sounds.getSingleton(),
-    assetUrl: winMp3,
-    trackDefinitions: [track],
-    loopRandomWithDelay: null,
-    muteMusic: false
-  };
-
-  const track = {
-    name: 'track',
-    assetUrls: winMp3,
-    volume: 1,
-    sound: sinon.stub(sound, 'play'),
-    isLoaded: true,
-    group: null
-  };
+  beforeEach(() => {
+    sounds = new Sounds();
+    sourceURL = winMp3;
+    sounds.register({
+      id: winMp3,
+      mp3: winMp3
+    });
+    sound = sounds.soundsById[sourceURL];
+    sinon.spy(sound, 'play');
+    sinon.stub(Sounds.prototype, 'registerByFilenamesAndID').returns(sound);
+  });
 
   afterEach(() => {
     sinon.restore();
   });
 
   it('mutes itself when requested', () => {
-    musicController = new MusicController(defaultProps);
+    musicController = new MusicController(
+      new Sounds.getSingleton(),
+      function(filename) {
+        return `../audio/assets/${filename}`;
+      },
+      [track],
+      null,
+      false
+    );
+    musicController.preload();
+    sound.onLoad();
     musicController.setMuteMusic(true);
 
     musicController.play();
@@ -43,10 +51,22 @@ describe('MusicController', () => {
   });
 
   it('updates status and plays music when unmuted', () => {
-    musicController = new MusicController(defaultProps, {muteMusic: true});
+    musicController = new MusicController(
+      new Sounds.getSingleton(),
+      function(filename) {
+        return `../audio/assets/${filename}`;
+      },
+      [track],
+      null,
+      true
+    );
+
+    musicController.setGroup('mygroup');
+    musicController.preload();
+    sound.onLoad();
     musicController.setMuteMusic(false);
 
     expect(musicController.muteMusic_).to.be.false;
-    //expect(sound.play).to.have.been.called;
+    expect(sound.play).to.have.been.called;
   });
 });
