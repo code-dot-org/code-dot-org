@@ -20,7 +20,7 @@
       # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
       DBParameterGroupName: !Ref AuroraWriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
-      DBInstanceClass: !Ref DBInstanceType
+      DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
