@@ -624,7 +624,6 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
-    assert_nil summary[:scripts][0][:lessonDescriptions]
   end
 
   test 'summarize with numbered units' do

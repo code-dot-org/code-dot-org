@@ -1348,9 +1348,9 @@ class Script < ApplicationRecord
 
   # This method updates scripts.en.yml with i18n data from the units.
   # There are three types of i18n data
-  # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
+  # 1. Lesson names are passed in as lessons_i18n here. The script edit page
+  #   will add to these when creating a new lesson.
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {}, log_event_type: 'write_other')
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     old_size = `wc -l #{units_yml.dump}`.to_i
@@ -1383,18 +1383,6 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
-      metadata_i18n['lessons'] = {}
-      unless lesson_descriptions.nil?
-        JSON.parse(lesson_descriptions).each do |lesson|
-          lesson_name = lesson['name']
-          lesson_data = {
-            'description_student' => lesson['descriptionStudent'],
-            'description_teacher' => lesson['descriptionTeacher']
-          }
-          metadata_i18n['lessons'][lesson_name] = lesson_data
-        end
-      end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
@@ -1641,10 +1629,7 @@ class Script < ApplicationRecord
     data['lessons'] = {}
     lessons.each do |lesson|
       lesson_data = {
-        'key' => lesson.key,
         'name' => lesson.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
       }
       data['lessons'][lesson.key] = lesson_data
     end
@@ -1652,7 +1637,7 @@ class Script < ApplicationRecord
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n_for_edit(include_lessons=true)
+  def summarize_i18n_for_edit
     data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
@@ -1660,21 +1645,11 @@ class Script < ApplicationRecord
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
     data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
-    if include_lessons
-      data[:lessonDescriptions] = lessons.map do |lesson|
-        {
-          key: lesson.key,
-          name: lesson.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
-        }
-      end
-    end
     data
   end
 
-  def summarize_i18n_for_display(include_lessons=true)
-    data = summarize_i18n_for_edit(include_lessons)
+  def summarize_i18n_for_display
+    data = summarize_i18n_for_edit
     data[:title] = title_for_display
     data
   end
