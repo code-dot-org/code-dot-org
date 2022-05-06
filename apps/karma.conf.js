@@ -16,6 +16,8 @@ if (envConstants.COVERAGE) {
 // Use the babel test env defined in .babelrc
 process.env.BABEL_ENV = 'test';
 
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = function(config) {
   var browser = envConstants.BROWSER || 'ChromeHeadless';
   config.set({
@@ -85,7 +87,7 @@ module.exports = function(config) {
       fixWebpackSourcePaths: true
     },
     mochaReporter: {
-      output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
+      output: 'full',
       showDiff: true
     },
 

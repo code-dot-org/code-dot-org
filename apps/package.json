@@ -255,6 +255,7 @@
     "object-fit-images": "^3.2.3",
     "pa11y-ci": "^2.3.0",
     "prop-types": "^15.6.2",
+    "puppeteer": "^13.7.0",
     "qrcode.react": "^0.8.0",
     "query-string": "4.1.0",
     "react-ace": "^9.2.1",
