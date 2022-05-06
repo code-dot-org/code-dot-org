@@ -2,6 +2,18 @@
   "el-GR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
         "lesson_plans/courseb/2018": {
           "name": "Σχέδια μαθήματος"
         },
@@ -275,6 +287,9 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
@@ -299,6 +314,9 @@
         "sprites_in_action/express/2021": {
           "name": "Χαρακτήρες σε Δράση"
         },
+        "dance-party-playlist/express/2021": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
         "variables_video/express/2021": {
           "name": "Μεταβλητές"
         },
@@ -313,6 +331,9 @@
         },
         "design_mode_1/csd/2021": {
           "name": "Κατάσταση Σχεδίασης"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα"
         },
         "random_numbers_1/csd/2021": {
           "name": "Τυχαίοι αριθμοί"

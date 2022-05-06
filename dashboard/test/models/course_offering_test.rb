@@ -386,7 +386,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @partner_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@partner).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@partner)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'get assignable course offerings for pl pilot instructor should return offerings where pl pilot instructor can be instructor' do

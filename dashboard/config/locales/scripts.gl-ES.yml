@@ -2717,3 +2717,21 @@ gl:
             For Loops:
               name: Bucles "Para" (For)
               key: Bucles "Para" (For)
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+              key: Variables
+            Text:
+              name: Texto
+              key: Texto
+            Conditionals:
+              name: Condicionais
+              key: Condicionais
+            Functions:
+              name: Funcións
+              key: Funcións
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funcións
