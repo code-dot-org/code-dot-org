@@ -373,14 +373,14 @@ module LevelsHelper
         # connection (ScriptLevel#show, for example), so
         # make sure that we're using the write connection
         # here.
-        MultipleDatabasesTransitionHelper.use_writer_connection do
+        ActiveRecord::Base.connected_to(role: :writing) do
           section.save(validate: false)
         end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:muteMusic] = !!current_user.mute_music
+      @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
@@ -438,7 +438,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options

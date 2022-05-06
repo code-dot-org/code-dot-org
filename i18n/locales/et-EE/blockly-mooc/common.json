@@ -511,6 +511,8 @@
   "pairingNavigatorWarning": "See pusle valmis üheskoos {driver}. Vaata seda puslet nende kontol, et näha lahendust, mille te ühe meeskonnana lõite.",
   "pairProgramming": "Paarisprogrammeerimine",
   "parent": "Lapsevanem",
+  "participantTypeStudentTitle": "Õpilased",
+  "participantTypeTeacherTitle": "Õpetajad",
   "password": "Salasõna",
   "passwordConfirmation": "Salasõna kinnitus",
   "personalLoginDialog_button": "Järgmine",

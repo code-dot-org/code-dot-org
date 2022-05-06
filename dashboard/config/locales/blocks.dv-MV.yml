@@ -790,7 +790,7 @@ dv:
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"

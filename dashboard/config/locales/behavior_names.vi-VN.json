@@ -2587,7 +2587,17 @@
           "moving north": "di chuyển lên trên",
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
-          "patrolling": "tuần tra"
+          "patrolling": "tuần tra",
+          "wandering2": "lang thang2",
+          "moving east2": "sang phải2",
+          "spinning right2": "xoay phải2",
+          "growing2": "phóng to2",
+          "moving south2": "xuống dưới2",
+          "swimming left and right2": "bơi trái và phải2",
+          "moving north2": "lên trên2",
+          "jittering2": "rung rinh2",
+          "moving west2": "sang trái2",
+          "patrolling2": "tuần tra2"
         },
         "Virtual Pet 3_2020": {
           "wandering": "lang thang",
@@ -2603,7 +2613,17 @@
           "moving north": "di chuyển lên trên",
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
-          "patrolling": "tuần tra"
+          "patrolling": "tuần tra",
+          "wandering2": "lang thang2",
+          "moving east2": "sang phải2",
+          "spinning right2": "xoay phải2",
+          "growing2": "phóng to2",
+          "moving south2": "xuống dưới2",
+          "swimming left and right2": "bơi trái và phải2",
+          "moving north2": "lên trên2",
+          "jittering2": "rung rinh2",
+          "moving west2": "sang trái2",
+          "patrolling2": "tuần tra2"
         },
         "Virtual Pet 4": {
           "shrinking": "thu nhỏ",
@@ -2693,7 +2713,9 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "mystery behavior": "hành vi bí ẩn",
+          "running east": "chạy sang phải"
         },
         "behaviors 1_2020": {
           "wandering": "lang thang",
@@ -2707,7 +2729,9 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "mystery behavior": "hành vi bí ẩn",
+          "running east": "chạy sang phải"
         },
         "behaviors 2": {
           "wandering": "lang thang",
@@ -2721,7 +2745,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "behaviors 2_2020": {
           "wandering": "lang thang",
@@ -2735,7 +2760,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "behaviors 3": {
           "wandering": "lang thang",
@@ -2805,7 +2831,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "behaviors 4_2020": {
           "wandering": "lang thang",
@@ -2819,7 +2846,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "behaviors 6": {
           "spinning left": "xoay trái",
@@ -2833,7 +2861,8 @@
           "moving north": "di chuyển lên trên",
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
-          "patrolling": "tuần tra"
+          "patrolling": "tuần tra",
+          "running east": "chạy sang phải"
         },
         "behaviors 6_2020": {
           "spinning left": "xoay trái",
@@ -2847,7 +2876,8 @@
           "moving north": "di chuyển lên trên",
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
-          "patrolling": "tuần tra"
+          "patrolling": "tuần tra",
+          "running east": "chạy sang phải"
         },
         "behaviors 7": {
           "moving north": "di chuyển lên trên",
@@ -2861,7 +2891,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "behaviors 7_2020": {
           "moving north": "di chuyển lên trên",
@@ -2875,7 +2906,8 @@
           "jittering": "phập phồng",
           "moving west": "di chuyển sang trái",
           "patrolling": "tuần tra",
-          "moving east": "di chuyển sang phải"
+          "moving east": "di chuyển sang phải",
+          "running east": "chạy sang phải"
         },
         "courseE_Dogger_2": {
           "wandering": "lang thang",

@@ -4326,6 +4326,10 @@ he:
               display_name: אירועים
             end_of_course_project:
               display_name: פרויקט סיום קורס
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -4457,6 +4461,17 @@ he:
             Loops with Scrat:
               key: לולאות עם סקראט
               name: לולאות עם סקראט
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            On the Move with Events:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Programming in with Angry Birds:
+              name: תכנות עם ציפורים כועסות
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -4527,3 +4542,83 @@ he:
             For Loops:
               name: בשביל לולאות
               key: בשביל לולאות
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-2022:
+          lessons:
+            Variables:
+              name: משתנים
+              key: משתנים
+            Sprites:
+              name: דמויות
+              key: דמויות
+            Sprite Properties:
+              name: מאפייני ספרייט
+              key: מאפייני ספרייט
+            Text:
+              name: טקסט
+              key: טקסט
+            Conditionals:
+              name: תנאים
+              key: תנאים
+            Functions:
+              name: פונקציות
+              key: פונקציות
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            cspSurvey:
+              display_name: סקר
+        csd5-2022:
+          lessons:
+            ASCII and Binary Representation:
+              name: ייצוג ASCII וייצוג בינארי
+              key: ייצוג ASCII וייצוג בינארי
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csd6-2022:
+          lessons:
+            Functions:
+              name: פונקציות
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-4:
+              display_name: סקר
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: סקר שלאחר הקורס

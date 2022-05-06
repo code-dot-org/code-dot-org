@@ -155,6 +155,7 @@ ne:
             Play Lab:
               name: Play Lab
           student_description: Create a story or make a game with Play Lab!
+          name: playlab
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -163,6 +164,7 @@ ne:
             Artist:
               name: Artist
           student_description: Draw cool pictures and designs with the Artist!
+          name: artiste
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -171,6 +173,7 @@ ne:
             Maze:
               name: Maze
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          name: hourOfCode
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -179,6 +182,7 @@ ne:
             Artist:
               name: Code with Anna and Elsa
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          name: frozen
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -279,6 +283,7 @@ ne:
             Infinity:
               name: Disney Infinity Play Lab
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          name: infinity
         algebrademo:
           lessons:
             The Design Recipe:
@@ -366,6 +371,7 @@ ne:
             Flappy Code:
               name: Flappy Code
           student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          name: flappy
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial.
@@ -374,6 +380,7 @@ ne:
             Jigsaw:
               name: Jigsaw
           student_description: Try our Jigsaw tutorial.
+          name: jigsaw
         step:
           title: Step
           description: Step tutorial
@@ -2900,6 +2907,46 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Async Prep
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[MODÈLE] Résumé de l'unité"
+              description_student: |-
+                **Vous devrez :**
+
+                -   Explorer les projets de fin de chapitre.
+
+                \*\*Temps suggéré : 10 minutes.
+              description_teacher: |-
+                **Vous devrez :**
+
+                -   Explorer les projets de fin de chapitre.
+
+                \*\*Temps suggéré : 10 minutes.
+            lesson-3:
+              name: "[MODÈLE] Leçons de contenu"
+              description_student: |-
+                **Vous devrez :**
+
+                -   Insérez les objectifs de la leçon.
+
+                \*\*Temps suggéré : \_\_\_\_ minutes.
+              description_teacher: |-
+                **Vous devrez :**
+
+                -   Insérez les objectifs de la leçon.
+
+                \*\*Temps suggéré : \_\_\_\_ minutes.
+            lesson-7:
+              name: Async Prep
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Async Prep
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -2927,3 +2974,63 @@ ne:
             For Loops:
               name: For Loops
               key: For Loops
+        vpl-csd1-ci-pilot-2022:
+          name: vpl-csd1-ci-pilot-2022
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes et de l''informatique'
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              description_student: |-
+                **Vous devrez :**
+
+                -   Explorer les projets de fin de chapitre.
+
+                \*\*Temps suggéré : 10 minutes.
+              description_teacher: |-
+                **Vous devrez :**
+
+                -   Explorer les projets de fin de chapitre.
+
+                \*\*Temps suggéré : 10 minutes.
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+              key: Variables
+            Text:
+              name: Text
+              key: Text
+            Conditionals:
+              name: Conditionals
+              key: Conditionals
+            Functions:
+              name: Functions
+              key: Functions
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Functions
