@@ -284,6 +284,7 @@ class ActivitySectionCardButtons extends Component {
           addLevel={this.props.addLevel}
           activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
+          allowMajorCurriculumChanges={this.props.allowMajorCurriculumChanges}
         />
 
         <UploadImageDialog
