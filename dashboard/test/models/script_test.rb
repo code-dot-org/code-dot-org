@@ -154,11 +154,10 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
-    create :course_offering, key: 'courseq'
     error = assert_raises do
-      Script.get_from_cache('courseq')
+      Script.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: courseq', error.message
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
   test 'get_family_from_cache uses unit_family_cache' do
@@ -1576,6 +1575,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not Script.modern_elementary_courses_available?("ch-ch")
     assert_not Script.modern_elementary_courses_available?("it-it")
     assert_not Script.modern_elementary_courses_available?("fr-fr")
+  end
+
+  test 'locale_english_name_map' do
+    english_names = Script.locale_english_name_map
+    assert english_names.key?('en-US')
+    assert_equal english_names['en-US'], 'English'
+    assert english_names.key?('fr-FR')
+    assert_equal english_names['fr-FR'], 'French'
+  end
+
+  test 'locale_native_name_map' do
+    native_names = Script.locale_native_name_map
+    assert native_names.key?('en-US')
+    assert_equal native_names['en-US'], 'English'
+    assert native_names.key?('fr-FR')
+    assert_equal native_names['fr-FR'], 'Français'
   end
 
   test 'supported_locale_codes' do

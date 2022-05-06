@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Upcoming panel for high school students: Internships & computer science opportunities beyond software engineering",
-          "details": "Join us Wed, April 27 at 8pm EDT as college women majoring in CS share experiences and advice surrounding internships and roles that a CS degree can lead to outside of software engineering. ",
-          "link": "https://bit.ly/3uRlvsl",
-          "type": "bullhorn",
-          "visibility": "Teacher and student"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -26,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 20:51:39 UTC",
+    "serialized_at": "2022-04-26 17:20:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
