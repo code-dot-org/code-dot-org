@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-backpack-2022",
-    "serialized_at": "2022-04-30 13:30:40 UTC",
+    "serialized_at": "2022-05-05 16:12:02 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -74,6 +74,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "TextProcessor",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022"
       }
@@ -724,6 +739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6 ImagePlus"
+        ],
         "progression": "Unit 5 Lessons 6 and 8"
       },
       "bonus": false,
@@ -746,6 +764,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8 ImagePlus"
+        ],
         "progression": "Unit 5 Lessons 6 and 8"
       },
       "bonus": false,
@@ -768,6 +789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10 ImagePlus"
+        ],
         "progression": "Unit 5 Lesson 10"
       },
       "bonus": false,
