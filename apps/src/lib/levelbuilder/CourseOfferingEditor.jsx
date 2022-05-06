@@ -5,7 +5,7 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
+import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
