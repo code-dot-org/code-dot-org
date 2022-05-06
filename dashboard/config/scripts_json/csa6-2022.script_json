@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 21:14:47 UTC",
+    "serialized_at": "2022-05-05 21:45:42 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2308,7 +2308,7 @@
       "key": "f96bd7c0-e240-4629-9c9c-8b6639a696dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from a sentence and counting the most frequent words in the text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
         "progression_name": "Keywords and Parts-of-Speech"
       },
       "seeding_key": {

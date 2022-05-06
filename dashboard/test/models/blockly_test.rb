@@ -832,6 +832,66 @@ XML
     assert_equal level.authored_hints, level.localized_authored_hints
   end
 
+  test 'localizes default behavior blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize default behavior blocks'
+    original_this_sprite_str = 'this sprite'
+    original_description_str = 'move a sprite, changing its direction randomly'
+    localized_this_sprite_str = 'test sprite'
+    localized_name_str = 'test wandering'
+    localized_description_str = 'test wandering description'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'behaviors' => {
+        'this_sprite' => localized_this_sprite_str
+      },
+      'data' => {
+        'behavior_names' => {
+          level.name => {
+            'wandering' => localized_name_str
+          }
+        },
+        'behavior_descriptions' => {
+          level.name => {
+            'wandering' => localized_description_str
+          }
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    block_xml = <<~XML
+      <block type="behavior_definition" deletable="false" movable="false" editable="false">
+        <mutation>
+          <arg name="this sprite" type="Sprite"/>
+          <description>move a sprite, changing its direction randomly</description>
+        </mutation>
+        <title name="NAME" id="wandering">wandering</title>
+      </block>
+    XML
+    localized_block_xml = level.localized_function_blocks(block_xml)
+    parsed_xml = Nokogiri::XML(block_xml, &:noblanks)
+
+    # Replacing using xpath because we only want to replace the content. `id` should be untouched
+    parsed_xml.xpath("//title[@id='wandering']").first.content = localized_name_str
+    expected_localized_block_xml = parsed_xml.serialize(save_with: Blockly::XML_OPTIONS)
+
+    expected_localized_block_xml.gsub!(original_this_sprite_str, localized_this_sprite_str)
+    expected_localized_block_xml.gsub!(original_description_str, localized_description_str)
+    expected_localized_block_xml.strip!.gsub!(/\s*\n\s*/, '')
+
+    assert_equal expected_localized_block_xml, localized_block_xml
+  end
+
   test 'uses_droplet for StudioEC levels' do
     level = Level.new(
       name: 'test studioEC level',

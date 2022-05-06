@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -160,9 +159,7 @@ class UnitEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
-      hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
@@ -379,10 +376,6 @@ class UnitEditor extends React.Component {
       use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
-
-    if (this.state.hasImportedLessonDescriptions) {
-      dataToSave.stage_descriptions = this.state.lessonDescriptions;
-    }
 
     $.ajax({
       url: `/s/${this.props.id}`,
@@ -679,8 +672,9 @@ class UnitEditor extends React.Component {
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
             <p>
-              This unit is part of a course. Go to the course edit page to set
-              the course type settings for the course and its units.
+              Settings in this section change depending on whether this unit is
+              grouped with other units in a course. If this does not look as
+              expected, please add or remove this unit from a course.
             </p>
           </CollapsibleEditorSection>
         )}
@@ -701,14 +695,6 @@ class UnitEditor extends React.Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
-
-        <CollapsibleEditorSection title="Announcements">
-          <AnnouncementsEditor
-            announcements={this.state.announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
@@ -750,8 +736,10 @@ class UnitEditor extends React.Component {
                 this.state.publishedState !== PublishedState.in_development && (
                   <div>
                     <p>
-                      This unit is part of a course. Go to the course edit page
-                      to publish the course and its units.
+                      Settings in this section change depending on whether this
+                      unit is grouped with other units in a course. If this does
+                      not look as expected, please add or remove this unit from
+                      a course.
                     </p>
                     {/*
                    Just use a checkbox instead of a dropdown to set the
@@ -823,6 +811,14 @@ class UnitEditor extends React.Component {
               )}
             </div>
           )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={this.state.announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
@@ -911,21 +907,6 @@ class UnitEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.isMigrated && (
-            <LessonDescriptions
-              scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.lessonDescriptions}
-              updateLessonDescriptions={(
-                lessonDescriptions,
-                hasImportedLessonDescriptions
-              ) =>
-                this.setState({
-                  lessonDescriptions,
-                  hasImportedLessonDescriptions
-                })
-              }
-            />
-          )}
           {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
