@@ -3,7 +3,15 @@ require 'test_helper'
 class UnitGroupTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
+  setup do
+    File.stubs(:write)
+  end
+
   class CachingTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     def populate_cache_and_disconnect_db
       UnitGroup.stubs(:should_cache?).returns true
       @@course_cache ||= UnitGroup.course_cache_to_cache
@@ -37,6 +45,10 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class NameValidationTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     test "should allow valid unit_group names" do
       create(:unit_group, name: 'valid-name')
     end
@@ -266,6 +278,10 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     test "add UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -733,6 +749,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @unit_group = create(:unit_group, name: 'my-unit-group')
 
       @course_teacher = create :teacher
@@ -828,6 +846,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class RedirectCourseUrl < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     end
 
@@ -875,6 +895,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @student = create :student
       @teacher = create :teacher
       @facilitator = create :facilitator
@@ -947,6 +969,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
@@ -971,6 +994,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class ProgressTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
