@@ -34,6 +34,7 @@ const DEFAULT_PROPS = {
   isMinecraft: false,
   isBlockly: false,
   isRtl: false,
+  hasBackgroundMusic: false,
   displayReviewTab: false,
   exampleSolutions: [],
   isViewingAsInstructorInTraining: false
