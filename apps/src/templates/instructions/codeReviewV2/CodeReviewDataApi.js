@@ -2,7 +2,7 @@
 import {findProfanity} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 
-export const timelineDataType = {
+export const timelineElementType = {
   review: 'review',
   commit: 'commit'
 };
@@ -56,29 +56,33 @@ export default class CodeReviewDataApi {
       this.getCommits()
     ]);
 
-    let labeledReviewData = codeReviews.map(review => {
-      review.type = timelineDataType.review;
-      return review;
+    // Separates the closed reviews from the open review (if present)
+    // and labels the data as timelineElementType.review
+    let labeledClosedReviewData = [];
+    let openReview = null;
+    codeReviews.forEach(review => {
+      review.timelineElementType = timelineElementType.review;
+      if (review.isClosed) {
+        labeledClosedReviewData.push(review);
+      } else {
+        openReview = review;
+      }
     });
 
-    const openReview = labeledReviewData.find(review => !review.isClosed);
-    if (openReview) {
-      labeledReviewData = labeledReviewData.filter(
-        review => review.id !== openReview.id
-      );
-    }
-
+    // Labels the commit data as timelineElementType.commit
     const labeledCommitData = commits.map(commit => {
-      commit.type = timelineDataType.commit;
+      commit.timelineElementType = timelineElementType.commit;
       return commit;
     });
 
-    const mergedData = labeledReviewData.concat(labeledCommitData);
-    mergedData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    // Combines the closed reviews with the commits and orders the elements by
+    // created at asc, the order that they will be rendered on the timeline.
+    const timelineData = labeledClosedReviewData.concat(labeledCommitData);
+    timelineData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
     return {
-      timelineData: mergedData,
-      openReview
+      timelineData, // Sorted closed reviews and commits
+      openReview // Single open review if present
     };
   };
 
@@ -227,5 +231,10 @@ export default class CodeReviewDataApi {
         })
         .fail(error => reject(error));
     });
+  }
+
+  closeReview(review) {
+    // TODO: call API for close review
+    return {...review, isClosed: true};
   }
 }

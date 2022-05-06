@@ -9,10 +9,10 @@ import {
   commitShape,
   reviewShape
 } from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import {timelineDataType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 const CodeReviewTimeline = props => {
-  const {timelineData, addCodeReviewComment} = props;
+  const {timelineData, addCodeReviewComment, closeReview} = props;
 
   const timelineEndRef = useRef(null);
 
@@ -32,7 +32,7 @@ const CodeReviewTimeline = props => {
       />
       {timelineData.map((data, i) => {
         const lastElementInTimeline = i === timelineData.length - 1;
-        if (data.type === timelineDataType.commit) {
+        if (data.timelineElementType === timelineElementType.commit) {
           return (
             <CodeReviewTimelineCommit
               key={`commit-${data.id}`}
@@ -42,13 +42,14 @@ const CodeReviewTimeline = props => {
           );
         }
 
-        if (data.type === timelineDataType.review) {
+        if (data.timelineElementType === timelineElementType.review) {
           return (
             <CodeReviewTimelineReview
               key={`review-${data.id}`}
               review={data}
               isLastElementInTimeline={lastElementInTimeline}
               addCodeReviewComment={addCodeReviewComment}
+              closeReview={closeReview}
             />
           );
         }
@@ -60,9 +61,10 @@ const CodeReviewTimeline = props => {
 
 CodeReviewTimeline.propTypes = {
   timelineData: PropTypes.arrayOf(
-    PropTypes.oneOfType(reviewShape, commitShape)
+    PropTypes.oneOfType([reviewShape, commitShape])
   ),
-  addCodeReviewComment: PropTypes.func.isRequired
+  addCodeReviewComment: PropTypes.func.isRequired,
+  closeReview: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimeline;

@@ -14,7 +14,8 @@ import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes'
 const CodeReviewTimelineReview = ({
   review,
   isLastElementInTimeline,
-  addCodeReviewComment
+  addCodeReviewComment,
+  closeReview
 }) => {
   const {
     createdAt,
@@ -48,7 +49,7 @@ const CodeReviewTimelineReview = ({
               <Button
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
-                onClick={() => {}}
+                onClick={closeReview}
                 text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
               />
@@ -83,7 +84,8 @@ const CodeReviewTimelineReview = ({
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
   review: reviewShape,
-  addCodeReviewComment: PropTypes.func.isRequired
+  addCodeReviewComment: PropTypes.func.isRequired,
+  closeReview: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimelineReview;
