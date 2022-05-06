@@ -2,6 +2,8 @@ bg:
   data:
     variable_names:
       "???": "???"
+      Actor_1_Counter: Актъор_1_Брояч
+      Actor_2_Counter: Актъор_2_Брояч
       Blue: Синьо
       Green: Зелено
       Red: Червено
@@ -12,18 +14,24 @@ bg:
       animal2score: животно2точки
       animal2speed: животно2скорост
       answer: oтговор
+      armlength: дължинаРъка
       binary: двоичен код
       birds: птици
+      bit: бит
       blue1: синьо1
       blue2: синьо2
+      bodylength: дължинанатяло
       buttonHeight: бутонВисочина
       buttonWidth: бутонШирочина
       cat_score: котка_точки
       cat_speed: котка_скорост
       cats: котки
       choice: избор
+      circ: кръг
       codeName: кодИме
       color: цвят
+      controllerHeight: контролерВисочина
+      controllerWidth: контролерШирочина
       counter: брояч
       counter2: брояч2
       direction: посока
@@ -50,6 +58,7 @@ bg:
       myName: моетоИме
       name: Име
       nectar: нектар
+      nectars: нектар
       planet: планета
       player_score: играч_точки
       points: точки

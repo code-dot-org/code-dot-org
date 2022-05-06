@@ -1000,7 +1000,7 @@ ur-PK:
         title: کثیر انتخاب
       K-1 Word Search Multi 3:
         answers:
-        - {}
+        - text: رکهنا
         - correct: true
         - {}
         questions:
@@ -1010,6 +1010,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1018,6 +1019,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1026,6 +1028,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1034,6 +1037,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1043,7 +1047,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1051,7 +1056,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1059,7 +1065,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
@@ -1067,7 +1074,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1075,8 +1083,9 @@ ur-PK:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: درست!
         - text: '15'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1084,8 +1093,9 @@ ur-PK:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: درست!
         - text: '15'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1093,8 +1103,9 @@ ur-PK:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: درست!
         - text: '15'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
@@ -1102,32 +1113,36 @@ ur-PK:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: درست!
         - text: '15'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
@@ -1135,39 +1150,43 @@ ur-PK:
         - {}
         - correct: true
         - correct: true
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1175,6 +1194,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - text: مے نی جانتا
         questions:
         - {}
@@ -1183,6 +1203,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - text: مے نی جانتا
         questions:
         - {}
@@ -1191,6 +1212,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - text: مے نی جانتا
         questions:
         - {}
@@ -1199,6 +1221,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - text: مے نی جانتا
         questions:
         - {}
@@ -1206,32 +1229,36 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1241,6 +1268,7 @@ ur-PK:
         - text: سی
         - text: ڈی
           correct: true
+          feedback: درست!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1250,6 +1278,7 @@ ur-PK:
         - text: سی
         - text: ڈی
           correct: true
+          feedback: درست!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1259,6 +1288,7 @@ ur-PK:
         - text: سی
         - text: ڈی
           correct: true
+          feedback: درست!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
@@ -1268,114 +1298,128 @@ ur-PK:
         - text: سی
         - text: ڈی
           correct: true
+          feedback: درست!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: ایے
           correct: true
+          feedback: درست!
         - text: بی
         - text: سی
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: ایے
           correct: true
+          feedback: درست!
         - text: بی
         - text: سی
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: ایے
           correct: true
+          feedback: درست!
         - text: بی
         - text: سی
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: ایے
           correct: true
+          feedback: درست!
         - text: بی
         - text: سی
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1383,7 +1427,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1391,7 +1436,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1399,7 +1445,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
@@ -1407,7 +1454,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1415,8 +1463,9 @@ ur-PK:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: درست!
         - text: '12'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
@@ -1424,8 +1473,9 @@ ur-PK:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: درست!
         - text: '12'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
@@ -1433,8 +1483,9 @@ ur-PK:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: درست!
         - text: '12'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
@@ -1442,8 +1493,9 @@ ur-PK:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: درست!
         - text: '12'
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
@@ -1451,7 +1503,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1459,7 +1512,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1467,7 +1521,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1475,7 +1530,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
@@ -1483,47 +1539,53 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1531,7 +1593,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -1539,7 +1602,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -1547,7 +1611,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
@@ -1555,79 +1620,89 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1635,7 +1710,7 @@ ur-PK:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1644,6 +1719,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -1651,6 +1727,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -1659,6 +1736,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -1667,6 +1745,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -1714,24 +1793,27 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1739,7 +1821,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -1747,7 +1830,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -1755,7 +1839,8 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -1763,69 +1848,78 @@ ur-PK:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: درست!
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1834,6 +1928,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1842,6 +1937,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1850,6 +1946,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1859,7 +1956,7 @@ ur-PK:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -1867,13 +1964,14 @@ ur-PK:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1882,6 +1980,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1890,6 +1989,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1898,6 +1998,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -1906,32 +2007,36 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       outbreak_story:
@@ -2110,6 +2215,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2118,6 +2224,7 @@ ur-PK:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: درست!
         - text: '15'
         - text: '20'
         questions:
@@ -2134,6 +2241,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2143,6 +2251,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2150,6 +2259,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2158,6 +2268,7 @@ ur-PK:
         answers:
         - text: ایے
           correct: true
+          feedback: درست!
         - text: بی
         - text: سی
         - {}
@@ -2167,6 +2278,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2175,13 +2287,15 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
-        - {}
+        - text: مے نی جانتا.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
         - {}
@@ -2192,6 +2306,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2200,6 +2315,7 @@ ur-PK:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: درست!
         - text: '10'
         - text: '12'
         questions:
@@ -2209,6 +2325,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2216,6 +2333,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2225,12 +2343,14 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
         - {}
@@ -2240,6 +2360,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2249,6 +2370,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2257,6 +2379,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2281,6 +2404,7 @@ ur-PK:
         - {}
         - {}
         - correct: true
+          feedback: درست!
         - {}
         questions:
         - {}
@@ -2304,6 +2428,7 @@ ur-PK:
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
+          feedback: درست!
         - {}
         - {}
         - {}
@@ -2313,6 +2438,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2337,6 +2463,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -2345,6 +2472,7 @@ ur-PK:
         answers:
         - {}
         - correct: true
+          feedback: درست!
         - {}
         - {}
         questions:
@@ -3086,3 +3214,12 @@ ur-PK:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness_2021:
         content1: تفصیل یہاں
+      courseD_EOC_examples_2021:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+      courseF_EOC_samples_2021:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+      express_EOC_examples_2021:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔

@@ -299,6 +299,9 @@
         "implementation_guide/coursee/2021": {
           "name": "Inplementazio Gida"
         },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Informatika dena aldatzen ari da"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Ordenagailuen funtzionamendua: Hardwarea eta softwarea"
         },
@@ -319,6 +322,9 @@
         },
         "the_animation_tab/csd/2021": {
           "name": "Animazio fitxa"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Pertsonaiak"
         },
         "sprite_properties/csd/2021": {
           "name": "Sprite-n Propietateak"
