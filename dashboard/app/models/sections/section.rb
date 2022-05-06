@@ -434,7 +434,7 @@ class Section < ApplicationRecord
     end
   end
 
-  # One of the contstraints for teachers looking for discount codes is that they
+  # One of the constraints for teachers looking for discount codes is that they
   # have a section in which 10+ students have made progress on 5+ levels in both
   # csd2 and csd3
   # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication

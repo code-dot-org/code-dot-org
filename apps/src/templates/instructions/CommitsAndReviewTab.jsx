@@ -7,12 +7,16 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
+import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
 const CommitsAndReviewTab = ({
-  onLoadComplete,
   channelId,
   serverLevelId,
   serverScriptId,
@@ -32,7 +36,6 @@ const CommitsAndReviewTab = ({
   const refresh = () => {
     setLoadingReviewData(true);
     // TODO: load review data
-    onLoadComplete();
     setLoadingReviewData(false);
   };
 
@@ -63,6 +66,47 @@ const CommitsAndReviewTab = ({
     );
   }
 
+  const fakeCommit = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    comment: 'This is a comment from your teacher',
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
+  const fakeClosedReview = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    isClosed: true,
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
+  const fakeReview = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    isClosed: false,
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
+  const fakeComments = [
+    {
+      id: 123,
+      commentText: 'Great work on this!',
+      name: 'Steve',
+      timestampString: '2022-03-31T04:58:42.000Z',
+      isResolved: false
+    },
+    {
+      id: 124,
+      commentText: 'Could you add more comments?',
+      name: 'Karen',
+      timestampString: '2022-03-31T04:58:42.000Z',
+      isResolved: false
+    }
+  ];
+
   return (
     <div style={styles.reviewsContainer}>
       <div style={styles.header}>
@@ -90,6 +134,19 @@ const CommitsAndReviewTab = ({
           />
         </div>
       </div>
+      <div>Example timeline:</div>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineReview
+        review={fakeClosedReview}
+        comments={fakeComments}
+      />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineReview
+        review={fakeReview}
+        comments={fakeComments}
+        isLastElementInTimeline={true}
+      />
     </div>
   );
 };
@@ -106,7 +163,6 @@ export default connect(state => ({
 }))(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
-  onLoadComplete: PropTypes.func,
   // Populated by redux
   codeReviewEnabled: PropTypes.bool,
   viewAsCodeReviewer: PropTypes.bool.isRequired,
@@ -124,7 +180,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '0px 5% 25px 5%'
+    margin: '0px 5px 25px 16px'
   },
   header: {
     display: 'flex',

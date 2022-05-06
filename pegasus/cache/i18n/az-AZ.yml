@@ -1117,7 +1117,7 @@ az-AZ:
   dashboard_correctness: Düzgünlük
   dashboard_correctness_free_response: Azad cavab
   dashboard_correctness_unsubmitted: Göndərilməyib
-  dashboard_correctness_correct: Doğru
+  dashboard_correctness_correct: Düzgün
   dashboard_correctness_incorrect: Yalnış
   dashboard_submission_submitted: Göndərilib
   dashboard_submission_in_progress: Tamamlanmayıb

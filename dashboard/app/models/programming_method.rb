@@ -73,6 +73,21 @@ class ProgrammingMethod < ApplicationRecord
     }
   end
 
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      returnValue: return_value,
+      parameters: parsed_parameters,
+      examples: parsed_examples,
+      syntax: syntax,
+      externalLink: external_link,
+      overloads: ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).map(&:summarize_for_show)
+    }
+  end
+
   private
 
   def parsed_parameters
