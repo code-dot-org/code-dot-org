@@ -353,22 +353,20 @@ class Script < ApplicationRecord
     end
 
     def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'scripts_en_yml',
-          event: log_event_type,
-          data_string: unit_name,
-          user_id: current_user&.id,
-          data_json: {
-            old_size: old_size,
-            new_size: new_size,
-            delta: (new_size - old_size),
-            lessons_i18n: lessons_i18n,
-            metadata_i18n: metadata_i18n,
-          }.to_json
-        }
-      )
+      record = {
+        study: 'scripts_en_yml',
+        event: log_event_type,
+        data_string: unit_name,
+        user_id: current_user&.id,
+        data_json: {
+          old_size: old_size,
+          new_size: new_size,
+          delta: (new_size - old_size),
+          lessons_i18n: lessons_i18n,
+          metadata_i18n: metadata_i18n,
+        }.to_json
+      }
+      FirehoseClient.instance.put_record(:analysis, record)
     end
   end
 
