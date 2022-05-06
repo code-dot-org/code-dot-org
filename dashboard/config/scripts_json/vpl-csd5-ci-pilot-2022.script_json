@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 06:30:42 UTC",
+    "serialized_at": "2022-05-05 20:30:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -265,6 +265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -337,6 +340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U5"
+        ],
         "progression": "Learning tools"
       },
       "bonus": false,
@@ -359,6 +365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -381,6 +390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -403,6 +415,180 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing data"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-ASCII"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing numbers"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_2022"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_2022"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -420,11 +606,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -442,11 +631,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -535,6 +727,102 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd5-ci-pilot-2022",
         "activity_section.key": "8d2ed8c6-7e2b-4364-b075-49976e09d15e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing data",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-ASCII",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing numbers",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "b18b5c45-488c-4db8-9dd6-819067e11e7f"
       }
     },
     {
