@@ -7,6 +7,42 @@
         },
         "ccela/L": {
           "description": "Език"
+        },
+        "csta/IC": {
+          "description": ""
+        },
+        "csta/AP": {
+          "description": ""
+        },
+        "csta/CS": {
+          "description": ""
+        },
+        "csta/NI": {
+          "description": ""
+        },
+        "csta/DA": {
+          "description": ""
+        },
+        "ngss/ETS1": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": ""
         }
       }
     }

@@ -14,6 +14,12 @@
         "iste": {
           "name": "Estándares ISTE para estudiantes"
         },
+        "csp2021": {
+          "name": "Marco Conceptual de CSP"
+        },
+        "csta": {
+          "name": "Estándares de Ciencias de la Computación K-12 de la CSTA (2017)"
+        },
         "ngss": {
           "name": "Estándares Científicos de la Próxima Generación"
         }

@@ -464,6 +464,7 @@ bg:
       infinity: Инфинити
       makerlab: Maker toolkit
       minecraft_adventurer: Minecraft авантюрист
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Кодова Връзка'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft герой
@@ -1223,19 +1224,27 @@ bg:
     учителя си на кое ниво трябва да бъдете.
   return_unit_overview: Прегледайте тази част
   return_course_overview: Прегледайте тази част
+  view_all_units: Покажи всички уроци
   pd:
     form_labels:
       first_name: Име
+      first_name_preferred: Предпочитано Първо Име
       last_name: Фамилия
       email: Имейл
+      email_alternate: Допълнителен Имейл
+      gender: Пол
       school: Училище
       school_name: Име на училището
       school_city: 'Града на Училището '
+      school_city_district: Град на Училището
       school_country: Училищен район
+      school_department_region: Регион на Училището
       colombian_school_city: 'Града на Училището '
+      colombian_chilean_school_department: Регион на Училището
       colombian_chilean_school_name: Име на училището
       ages: На кои класове преподавате тази година?
       subjects: Кои предмети преподавате тази година?
+      resources: Кои от следните обучителни ресурси по КН използвате?
     form_entries:
       gender:
         male: Мъж
@@ -1271,10 +1280,13 @@ bg:
         art: Изкуство
         other: 'Друго:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
         scratch: Scratch
+        tynker: Tynker
         other: 'Друго:'
       robotics:
         kodable: Kodable
@@ -1289,11 +1301,17 @@ bg:
       email_opt_in:
         opt_in_yes: Да
         opt_in_no: Не
+    international_opt_in:
+      organizer_not_listed: Моят организатор не е в списъка
     logged_out:
       body: За да апочнете, първо трябва да сте влезли във вашия Code.org акоунт.
         Ако желаете повече информация за програмата преди да започнете приложението
         си, моле погледнете <a href="%{url}">Преглед на Програмата за Професионално
         Обучение</a>.
+    no_teacher_email:
+      body_markdown: Вашият акоунт няма имейл адрес. Моле [посетете настройките на
+        акоунта си](%{user_registration}), за да добавите имейл адрес преди да завършите
+        тази анкета.
   courses_category: Пълните курсове
   cookie_banner:
     message: Като продължите да разглеждате нашия сайт или щракнете "Съгласен", вие
@@ -1305,6 +1323,11 @@ bg:
   confirm: Потвърдете
   maker:
     google_oauth:
+      login_with_google: Влезте в Maker App с Google
+      enter_code: Моля въведете кода предоставен когато сте влезли чрез Google на
+        браузъра по подразбиране.
+      copy_code: Моля копирайте и поставете този код в Maker App за да влезете в Code.org.
+      error_no_code: Моля въведете вашия код за влизане.
       confirm_login: Селектирайте "Потвърждавам" за да влезете с вашив Google акоунт.
   parent_email_banner:
     text: "**Вие родител или настойник ли сте?** Свържете имейла си с този акоунт
@@ -1313,5 +1336,5 @@ bg:
     not_now: Не сега
   behaviors:
     this_sprite: този спрайт
-  unit_prefix: Единица %{n}
+  unit_prefix: Урок %{n}
   code_org_logo_alt: Начална страница Code.org

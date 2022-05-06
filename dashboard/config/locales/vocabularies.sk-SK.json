@@ -258,7 +258,8 @@
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "code/sports/unversioned": {
-          "word": "Kód"
+          "word": "Kódovať",
+          "definition": "(sloveso) Písanie kódu/písanie inštrukcií pre počítač."
         },
         "debugging/sports/unversioned": {
           "word": "Ladenie",
@@ -440,7 +441,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/coursef/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/coursef/2021": {
@@ -748,7 +749,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/express/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/express/2021": {
@@ -860,7 +861,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/coursee/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/coursee/2021": {

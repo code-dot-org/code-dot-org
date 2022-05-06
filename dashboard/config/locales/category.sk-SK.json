@@ -2,11 +2,35 @@
   "sk-SK": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Čítanie literatúry"
+        },
+        "csta/AP": {
+          "description": "Algoritmy a programovanie"
+        },
         "csta2011/CT": {
           "description": "Algoritmické myslenie"
         },
         "ccela/L": {
           "description": "Jazyk"
+        },
+        "ccmath/OA": {
+          "description": "Operácie a algebraické myslenie"
+        },
+        "csta2011/CD": {
+          "description": "Počítače a komunikačné zariadenia"
+        },
+        "csta2011/CI": {
+          "description": "Komunitné, globálne a etické vplyvy"
+        },
+        "ccela/W": {
+          "description": "Písanie"
+        },
+        "csta2011/CL": {
+          "description": "Spolupráca"
+        },
+        "iste/2": {
+          "description": "Žiaci používajú digitálne médiá a prostredia na komunikáciu a spoluprácu, a to aj na diaľku, aby podporili individuálne učenie a prispeli k učeniu ostatných."
         },
         "csta/IC": {
           "description": "Vplyv Informatiky"

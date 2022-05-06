@@ -7450,7 +7450,7 @@
         },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
         },
         "courseE_farmer_functions10b": {
           "courseE_farmer_functions10b_a": "Deberás volver a crear tu primera función.",
@@ -7459,30 +7459,30 @@
         },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
         },
         "courseE_farmer_functions1_2019": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
         },
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
         },
         "courseE_farmer_functions1a": {
           "courseE_farmer_functions1a_a": "Piensa en las afirmaciones \"si/si no\" paso a paso. ¿Que debes hacer si estás parado en una planta de maíz?",
           "courseE_farmer_functions1a_b": "¡Utiliza un bloque \"repetir hasta\" para llegar a la calabaza!"
         },
         "courseE_farmer_functions1a_2018": {
-          "courseE_farmer_functions1a_a": "Asegúrese de que leer a través de la definición de función. ¿Puede decir lo que hace?",
+          "courseE_farmer_functions1a_a": "Asegúrate de revisar la definición de la función . ¿Puede decir lo que hace?",
           "courseE_farmer_functions1a_b": "¡Utiliza un bloque \"repetir hasta\" para llegar a la calabaza!"
         },
         "courseE_farmer_functions1a_2019": {
-          "courseE_farmer_functions1a_a": "Asegúrese de que leer a través de la definición de función. ¿Puede decir lo que hace?",
+          "courseE_farmer_functions1a_a": "Asegúrate de revisar la definición de la función . ¿Puede decir lo que hace?",
           "courseE_farmer_functions1a_b": "¡Utiliza un bloque \"repetir hasta\" para llegar a la calabaza!"
         },
         "courseE_farmer_functions1a_2020": {
-          "courseE_farmer_functions1a_a": "Asegúrese de que leer a través de la definición de función. ¿Puede decir lo que hace?",
+          "courseE_farmer_functions1a_a": "Asegúrate de revisar la definición de la función . ¿Puede decir lo que hace?",
           "courseE_farmer_functions1a_b": "¡Utiliza un bloque \"repetir hasta\" para llegar a la calabaza!"
         },
         "courseE_farmer_functions2b": {
@@ -7523,16 +7523,16 @@
           "courseE_farmer_functions3c_b": "No olvides llamar a tu función en el programa principal siempre que quites los bloques."
         },
         "courseE_farmer_functions3c1_2018": {
-          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'pick along path' tres veces para resolver este desafío.",
-          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para llegar a las esquinas?"
+          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este rompecabezas.",
+          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para doblar las esquinas?"
         },
         "courseE_farmer_functions3c1_2019": {
-          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'pick along path' tres veces para resolver este desafío.",
-          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para llegar a las esquinas?"
+          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este rompecabezas.",
+          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para doblar las esquinas?"
         },
         "courseE_farmer_functions3c1_2020": {
-          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'pick along path' tres veces para resolver este desafío.",
-          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para llegar a las esquinas?"
+          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este rompecabezas.",
+          "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para doblar las esquinas?"
         },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabeza.",
@@ -7549,15 +7549,15 @@
           "courseE_farmer_functions6c_c": "¡No olvides seguir buscando maíz!"
         },
         "courseE_farmer_functions7a1_2018": {
-          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' en la caja de herramientas.",
+          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' de la caja de herramientas.",
           "courseE_farmer_functions7a1_2018_b": "¡No olvides usar tu función cuando hayas terminado de crearla!"
         },
         "courseE_farmer_functions7a1_2019": {
-          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' en la caja de herramientas.",
+          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' de la caja de herramientas.",
           "courseE_farmer_functions7a1_2018_b": "¡No olvides usar tu función cuando hayas terminado de crearla!"
         },
         "courseE_farmer_functions7a1_2020": {
-          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' en la caja de herramientas.",
+          "courseE_farmer_functions7a1_2018_a": "Crea tu función en la sección de 'funciones' de la caja de herramientas.",
           "courseE_farmer_functions7a1_2018_b": "¡No olvides usar tu función cuando hayas terminado de crearla!"
         },
         "courseE_farmer_functions7b": {
@@ -7566,16 +7566,16 @@
           "courseE_farmer_functions7b_c": "Un loop 'repetir hasta calabaza' puede ayudarte a llegar al final del laberinto."
         },
         "courseE_farmer_functions8a1_2018": {
-          "courseE_farmer_functions8a1_2018a": "Empieza este desafío codificando la misma función que hiciste en el último desafío.",
-          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, necesitarás hacer un giro adicional antes de que se pueda ejecutar otra vez."
+          "courseE_farmer_functions8a1_2018a": "Empieza este rompecabezas codificando la misma función que hiciste en el último rompecabezas.",
+          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, tendrás que hacer un giro adicional antes de que se pueda ejecutar otra vez."
         },
         "courseE_farmer_functions8a1_2019": {
-          "courseE_farmer_functions8a1_2018a": "Empieza este desafío codificando la misma función que hiciste en el último desafío.",
-          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, necesitarás hacer un giro adicional antes de que se pueda ejecutar otra vez."
+          "courseE_farmer_functions8a1_2018a": "Empieza este rompecabezas codificando la misma función que hiciste en el último rompecabezas.",
+          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, tendrás que hacer un giro adicional antes de que se pueda ejecutar otra vez."
         },
         "courseE_farmer_functions8a1_2020": {
-          "courseE_farmer_functions8a1_2018a": "Empieza este desafío codificando la misma función que hiciste en el último desafío.",
-          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, necesitarás hacer un giro adicional antes de que se pueda ejecutar otra vez."
+          "courseE_farmer_functions8a1_2018a": "Empieza este rompecabezas codificando la misma función que hiciste en el último rompecabezas.",
+          "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, tendrás que hacer un giro adicional antes de que se pueda ejecutar otra vez."
         },
         "courseE_farmer_functions8b": {
           "courseE_farmer_functions8b_a": "Intenta ejecutar el código dado para ver lo que hace. ¿Qué se necesita después de esto?",
@@ -7583,18 +7583,18 @@
           "courseE_farmer_functions8b_c": "¿Cuantas veces necesitas llamar a la función?"
         },
         "courseE_farmer_functions9a1_2018": {
-          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que hiciste en los últimos desafíos.",
-          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del desafío anterior para resolver la primera mitad de este desafío.",
+          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos rompecabezas.",
+          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del rompecabezas anterior para resolver la primera mitad de este rompecabezas.",
           "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último cultivo de lechuga antes de que puedas llamar a tu función de nuevo."
         },
         "courseE_farmer_functions9a1_2019": {
-          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que hiciste en los últimos desafíos.",
-          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del desafío anterior para resolver la primera mitad de este desafío.",
+          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos rompecabezas.",
+          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del rompecabezas anterior para resolver la primera mitad de este rompecabezas.",
           "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último cultivo de lechuga antes de que puedas llamar a tu función de nuevo."
         },
         "courseE_farmer_functions9a1_2020": {
-          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que hiciste en los últimos desafíos.",
-          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del desafío anterior para resolver la primera mitad de este desafío.",
+          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos rompecabezas.",
+          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del rompecabezas anterior para resolver la primera mitad de este rompecabezas.",
           "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último cultivo de lechuga antes de que puedas llamar a tu función de nuevo."
         },
         "courseE_farmer_functions9b": {
@@ -7631,52 +7631,52 @@
           "courseE_farmer_ramp11b_a": "Puedes anidar tu bucle (loop) de`while` en el interior de un bucle (loop) de \\`repetir' para hacer tu código más corto."
         },
         "courseE_farmer_ramp12_forswap": {
-          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un loop 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
+          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un bucle (loop) de 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
         },
         "courseE_farmer_ramp12_forswap_2018": {
-          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un loop 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
+          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un bucle (loop) de 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
         },
         "courseE_farmer_ramp12_forswap_2019": {
-          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un loop 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
+          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un bucle (loop) de 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
         },
         "courseE_farmer_ramp12_forswap_2020": {
-          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un loop 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
+          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un bucle (loop) de 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
         },
         "courseE_farmer_ramp12c": {
-          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un loop 'hasta', luego use un loop 'mientras' una vez que llegues a la lechuga."
+          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un bucle (loop) de 'hasta', luego use un bucle (loop) de 'mientras' una vez que llegues a la lechuga."
         },
         "courseE_farmer_ramp12c_2018": {
-          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un loop 'hasta', luego use un loop 'mientras' una vez que llegues a la lechuga."
+          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un bucle (loop) de 'hasta', luego use un bucle (loop) de 'mientras' una vez que llegues a la lechuga."
         },
         "courseE_farmer_ramp12c_2019": {
-          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un loop 'hasta', luego use un loop 'mientras' una vez que llegues a la lechuga."
+          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un bucle (loop) de 'hasta', luego use un bucle (loop) de 'mientras' una vez que llegues a la lechuga."
         },
         "courseE_farmer_ramp12c_2020": {
-          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un loop 'hasta', luego use un loop 'mientras' una vez que llegues a la lechuga."
+          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un bucle (loop) de 'hasta', luego use un bucle (loop) de 'mientras' una vez que llegues a la lechuga."
         },
         "courseE_farmer_ramp12d": {
           "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops `hasta y mientras` dentro de un loop `repetir` para resolver este desafío!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops 'hasta`y 'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus bucles (loops) de 'hasta`y 'mientras` dentro de un bucle (loop) de 'repetir' para resolver este rompecabezas!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops 'hasta`y 'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus bucles (loops) de 'hasta`y 'mientras` dentro de un bucle (loop) de 'repetir' para resolver este rompecabezas!"
         },
         "courseE_farmer_ramp12d_2020": {
-          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops 'hasta`y 'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus bucles (loops) de 'hasta`y 'mientras` dentro de un bucle (loop) de 'repetir' para resolver este rompecabezas!"
         },
         "courseE_farmer_ramp12e": {
           "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
         },
         "courseE_farmer_ramp12e_2018": {
-          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+          "courseE_farmer_ramp12e_b": "La solución a este rompecabezas se parecerá mucho a la solución al último rompecabezas, pero girando en la otra dirección."
         },
         "courseE_farmer_ramp12e_2019": {
-          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+          "courseE_farmer_ramp12e_b": "La solución a este rompecabezas se parecerá mucho a la solución al último rompecabezas, pero girando en la otra dirección."
         },
         "courseE_farmer_ramp12e_2020": {
-          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+          "courseE_farmer_ramp12e_b": "La solución a este rompecabezas se parecerá mucho a la solución al último rompecabezas, pero girando en la otra dirección."
         },
         "courseE_farmer_ramp12f": {
           "courseE_farmer_ramp12f_b": "Usa un bloque `si/ si no` para ayudar la granjera a decidir si necesita girar a la derecha o a la izquierda."
@@ -8724,10 +8724,10 @@
           "courseD_artist_ramp12_c": "Para dibujar cada lado, deberás avanzar 100 píxeles, luego girar a la derecha 120 grados. ¿Cuántos lados necesitas?"
         },
         "courseE_bee_ramp14": {
-          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops 'hasta`y 'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus bucles (loops) de 'hasta`y 'mientras` dentro de un bucle (loop) de 'repetir' para resolver este rompecabezas!"
         },
         "courseE_farmer_predict2": {
-          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+          "courseE_farmer_ramp12e_b": "La solución a este rompecabezas se parecerá mucho a la solución al último rompecabezas, pero girando en la otra dirección."
         },
         "courseD_bee_conditionals5_2019": {
           "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle (loop) anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
@@ -9620,12 +9620,12 @@
           "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
-          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Si utiliza el bloque para hacerme 'avanzar 100 píxeles', sacaré una línea automáticamente.",
+          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas"
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un loop en este puzle."
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Para terminar el cohete, ¡simplemente dibuja el triángulo en la parte superior!",
@@ -9645,10 +9645,10 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
-          "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
+          "courseC_artist_prog7_b": "¿Funciona en el primer paso?  \n¿Y en el segundo?  \n¿Dónde se equivoca?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
-          "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
+          "courseC_artist_prog7_d": "Querrás:\n- avanzar\n- girar a la derecha 45 grados\n- avanzar\n- girar a la derecha 90 grados\n- avanzar\n- girar a la derecha 45 grados\n\nRepite este patrón 2 veces",
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog_challenge1_2021": {
           "courseC_artist_prog_challenge1_a": "¡Puedes dibujar esto como un rectángulo con una línea en el medio o dos cuadrados diferentes!"
@@ -10115,7 +10115,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
           "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n- repite 4\n   - repite 3\n      - repite 12\n          - obtener néctar\n      - avanza\n   - girar a la derecha\n\n"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Deberías tener estos dos eventos en tu código:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10453,7 +10453,7 @@
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
         },
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_a": "Asegúrate de revisar la definición de la función . ¿Puede decir lo que hace?",
@@ -10468,7 +10468,7 @@
           "courseE_farmer_functions2ba_a": "¡Utiliza el bloque verde 'obtener todas las calabazas' para asegurarte de conseguir todas las calabazas!"
         },
         "courseE_farmer_functions3c1_2021": {
-          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este puzle.",
+          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este rompecabezas.",
           "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para doblar las esquinas?"
         },
         "courseE_farmer_functions7a1_2021": {
@@ -10476,13 +10476,13 @@
           "courseE_farmer_functions7a1_2018_b": "¡No olvides usar tu función cuando hayas terminado de crearla!"
         },
         "courseE_farmer_functions8a1_2021": {
-          "courseE_farmer_functions8a1_2018a": "Empieza este puzle creando la misma función que hiciste en el último puzle.",
+          "courseE_farmer_functions8a1_2018a": "Empieza este rompecabezas codificando la misma función que hiciste en el último rompecabezas.",
           "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, tendrás que hacer un giro adicional antes de que se pueda ejecutar otra vez."
         },
         "courseE_farmer_functions9a1_2021": {
-          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos puzles.",
-          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del puzle anterior para resolver la primera mitad de este puzle.",
-          "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último sembrado de lechugas antes de que puedas activar tu función de nuevo."
+          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos rompecabezas.",
+          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del rompecabezas anterior para resolver la primera mitad de este rompecabezas.",
+          "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último cultivo de lechuga antes de que puedas llamar a tu función de nuevo."
         },
         "courseE_farmer_ramp11a_2021": {
           "courseE_farmer_ramp12_a": "En lugar de usar un bucle (loop) de 'repetir' para decirle a la granjera cuántas veces recoger tierra, ahora puedes usar un bloque 'mientras hay tierra'.  ",
@@ -10492,16 +10492,16 @@
           "courseE_farmer_ramp11b_a": "Puedes anidar tu bucle (loop) de`while` en el interior de un bucle (loop) de \\`repetir' para hacer tu código más corto."
         },
         "courseE_farmer_ramp12_forswap_2021": {
-          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un loop 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
+          "courseE_farmer_ramp12_b": "Todavía necesitarás usar un bucle (loop) de 'repetir' en el exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga."
         },
         "courseE_farmer_ramp12c_2021": {
-          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un loop 'hasta', luego use un loop 'mientras' una vez que llegues a la lechuga."
+          "courseE_farmer_ramp12b_b": "Todavía necesitarás usar primero un bucle (loop) de 'hasta', luego use un bucle (loop) de 'mientras' una vez que llegues a la lechuga."
         },
         "courseE_farmer_ramp12d_2021": {
-          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus loops 'hasta`y 'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+          "courseE_farmer_ramp12d_b": "¡De todos modos tendrás que poner sus bucles (loops) de 'hasta`y 'mientras` dentro de un bucle (loop) de 'repetir' para resolver este rompecabezas!"
         },
         "courseE_farmer_ramp12e_2021": {
-          "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
+          "courseE_farmer_ramp12e_b": "La solución a este rompecabezas se parecerá mucho a la solución al último rompecabezas, pero girando en la otra dirección."
         },
         "courseE_farmer_ramp12f_2021": {
           "courseE_farmer_ramp12f_b": "Usa un bloque `si/ si no` para ayudar la granjera a decidir si necesita girar a la derecha o a la izquierda."
@@ -10572,11 +10572,11 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "¿Puedes encontrar un patrón entre el número de pasos que necesitas tomar y el numero de néctares a recolectar?",
           "courseF_bee_for10_b": "El primer conjunto de flores tiene un total de **14 flores**. Para llegar al primer conjunto, la abeja debe volar **7 cuadros** (o 14 cuadros divididos por 2). ¿Cuántas flores hay en el siguiente conjunto y cuántos cuadros tendrá que viajar la abeja para llegar ahí?",
-          "courseF_bee_for10_c": "En el desafío, el primer conjunto de flores tiene **14 flores**, el segundo, **10**; el tercero, **6**, y el cuarto, **2**. \n\nEn este dibujo, ten en cuenta que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n¿Cómo se relacionan los números?",
+          "courseF_bee_for10_c": "En el rompecabezas, el primer conjunto de flores tiene **14** flores, el segundo conjunto tiene **10** flores, el tercer conjunto tiene **6** flores y el cuarto conjunto tiene **2** flores.\n\nEn este dibujo, observa que hay **7** cuadrados rojos, **5** cuadrados naranjas, **3** cuadrados verdes y **1** bloque azul. \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n¿Cómo se relacionan los números?",
           "courseF_bee_for10_d": "Necesitas 2 repeticiones, y una usará un bloque matemático."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?\\\n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón'?"
+          "courseF_bee_for11_a": "¿Cuánto menos es 12 que 15?  \n¿Cuánto menos es 9 que 12?\n\n¿Ves un patrón?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Necesitas dos bloques en tu bucle 'repetir' para recoger todo el néctar."
@@ -10608,7 +10608,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Si tu bucle está contando hacia arriba, el incremento se agrega a tu variable de contador cada vez.\n\n¿Qué necesitas añadir a cada número para obtener la próxima cantidad de néctar?",
           "courseF_bee_for8_b": "En este puzle, tendrás que moverte en un patrón de escaleras para llegar a las flores.",
-          "courseF_bee_for8_c": "Tu bucle contará _de 3 a 15_ con algún incremento. ¿Cuál es?"
+          "courseF_bee_for8_c": "Tu bucle contará *de 3 a 15* con algún incremento. ¿Qué es?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Intenta hacer algunos cálculos con la variable contador.\n\n¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de néctar que necesitas recolectar?",
@@ -10631,7 +10631,7 @@
           "courseF_bee_variables_4_2021_1": "En lugar de añadir 1 a la variable, añade 2 cada vez."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"escala\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"criatura_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -10640,7 +10640,7 @@
           "behavior_list": "Pruebe a utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples preguntas, utilice la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples solicitudes, utilice la etiqueta de la *última* solicitud que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"

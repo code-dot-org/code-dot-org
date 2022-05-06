@@ -88,31 +88,119 @@
           "word": "Отстраняване на грешки"
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Машинно Обучение",
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
         "code/poem-art/unversioned": {
           "word": "Код"
         },
+        "sprite/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "user/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "behavior/coursef/2021": {
-          "word": "Поведение"
+          "word": "Поведение",
+          "definition": ""
+        },
+        "program/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
-          "word": "Променлива"
+          "word": "Променлива",
+          "definition": ""
+        },
+        "prompt/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "input/coursef/2021": {
-          "word": "Поле за въвеждане"
+          "word": "Поле за въвеждане",
+          "definition": ""
         },
         "loop/coursef/2021": {
-          "word": "Цикъл"
+          "word": "Цикъл",
+          "definition": ""
+        },
+        "repeat/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/coursef/2021": {
+          "word": "Машинно Обучение",
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
+        "dns/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "internet/coursef/2021": {
-          "word": "Интернет"
+          "word": "Интернет",
+          "definition": ""
+        },
+        "packets/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "servers/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "url/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ip_address/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "wi_fi/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/coursef/2021": {
-          "word": "Дефиниране"
+          "word": "Дефиниране",
+          "definition": ""
+        },
+        "prepare/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "try/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/courseb/2021": {
           "word": "Отстраняване на грешки"
@@ -126,17 +214,53 @@
         "loop/courseb/2021": {
           "word": "Цикъл"
         },
+        "algorithm/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/coursea/2021": {
-          "word": "Отстраняване на грешки"
+          "word": "Отстраняване на грешки",
+          "definition": ""
+        },
+        "program/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "click/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/coursea/2021": {
+          "word": "",
+          "definition": ""
         },
         "drop/coursea/2021": {
-          "word": "Капка"
+          "word": "Капка",
+          "definition": ""
+        },
+        "double_click/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursea/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/coursea/2021": {
-          "word": "Програмиране"
+          "word": "Програмиране",
+          "definition": ""
         },
         "loop/coursea/2021": {
-          "word": "Цикъл"
+          "word": "Цикъл",
+          "definition": ""
+        },
+        "repeat/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursea/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/coursec/2021": {
           "word": "Отстраняване на грешки"
@@ -150,49 +274,173 @@
         "binary/coursec/2021": {
           "word": "Двоичен код"
         },
+        "algorithm/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/coursed/2021": {
-          "word": "Отстраняване на грешки"
+          "word": "Отстраняване на грешки",
+          "definition": ""
         },
         "loop/coursed/2021": {
-          "word": "Цикъл"
+          "word": "Цикъл",
+          "definition": ""
         },
         "programming/coursed/2021": {
-          "word": "Програмиране"
+          "word": "Програмиране",
+          "definition": ""
+        },
+        "frustrated/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "command/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/coursed/2021": {
-          "word": "Условия"
+          "word": "Условия",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/coursed/2021": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
+        "while_loop/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/express/2021": {
-          "word": "Отстраняване на грешки"
+          "word": "Отстраняване на грешки",
+          "definition": ""
+        },
+        "sequencing/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/express/2021": {
-          "word": "Програмиране"
+          "word": "Програмиране",
+          "definition": ""
         },
         "behavior/express/2021": {
-          "word": "Поведение"
+          "word": "Поведение",
+          "definition": ""
+        },
+        "sprite/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "loop/express/2021": {
-          "word": "Цикъл"
+          "word": "Цикъл",
+          "definition": ""
+        },
+        "repeat/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "command/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/express/2021": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
         "conditionals/express/2021": {
-          "word": "Условия"
+          "word": "Условия",
+          "definition": ""
+        },
+        "while_loop/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "function/express/2021": {
-          "word": "Функция"
+          "word": "Функция",
+          "definition": ""
         },
         "variable/express/2021": {
-          "word": "Променлива"
+          "word": "Променлива",
+          "definition": ""
+        },
+        "prompt/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/express/2021": {
-          "word": "Дефиниране"
+          "word": "Дефиниране",
+          "definition": ""
+        },
+        "prepare/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "try/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "drop/pre-express/2021": {
           "word": "Капка"
@@ -229,28 +477,152 @@
           "word": "Дефиниране"
         },
         "machine_learning/csd/2021": {
+          "word": "Машинно Обучение",
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
+        "features/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ethics/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "innovation/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "analog/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "digital/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "array/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "parameter/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/csd/2021": {
-          "word": "Отстраняване на грешки"
+          "word": "Отстраняване на грешки",
+          "definition": ""
+        },
+        "program/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "variable/csd/2021": {
-          "word": "Променлива"
+          "word": "Променлива",
+          "definition": ""
+        },
+        "property/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "dot_notation/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/csd/2021": {
-          "word": "Условие"
+          "word": "Условие",
+          "definition": ""
         },
         "conditionals/csd/2021": {
-          "word": "Условия"
+          "word": "Условия",
+          "definition": ""
+        },
+        "boolean_expression/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "abstraction/csd/2021": {
-          "word": "Абстракция"
+          "word": "Абстракция",
+          "definition": ""
         },
         "function/csd/2021": {
-          "word": "Функция"
+          "word": "Функция",
+          "definition": ""
+        },
+        "computer/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "input/csd/2021": {
-          "word": "Поле за въвеждане"
+          "word": "Поле за въвеждане",
+          "definition": ""
+        },
+        "output/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "processing/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "storage/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "copyright/csd/2021": {
           "word": "Авторско право"

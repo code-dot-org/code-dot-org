@@ -1,0 +1,14 @@
+{
+  "ko-KR": {
+    "data": {
+      "parent_category": {
+        "ngss/ETS": {
+          "description": "과학 내 엔지니어링"
+        },
+        "ai4k12-2021/BI-3": {
+          "description": ""
+        }
+      }
+    }
+  }
+}

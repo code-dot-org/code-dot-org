@@ -2,6 +2,15 @@
   "ko-KR": {
     "data": {
       "standards": {
+        "csta/1B-AP-10": {
+          "description": "시퀸스와 이벤트, 루프, 조건문이 포함된 프로그램 만들기."
+        },
+        "csta/1B-AP-12": {
+          "description": "기존 프로그램의 일부를 수정 또는 리믹스하여 자신의 작품에 통합하여 새로운 것을 개발하거나 또는 더 앞선 특징을 추가합니다."
+        },
+        "csta/1B-AP-15": {
+          "description": "프로그램 또는 알고리즘이 의도했던 대로 실행되는지 보기 위해 테스트하고 디버깅 (오류를 식별하고 고침)합니다. "
+        },
         "ccela/6.SL.1": {
           "description": "6학년 수준의 주제와 텍스트에 관한 광범위한 협력적 토론 (일대일, 그룹 내, 교사 주도)을 다양한 파트너와 함께 효과적으로 참여하고, 다른 이의 아이디어에 자신의 아이디어를 덧붙이며, 의견을 명확히 표현합니다."
         },
@@ -173,8 +182,26 @@
         "iste/4.d": {
           "description": "복수 프로세스를 사용하고 관점을 다양화하여 대안 솔루션을 탐구합니다."
         },
+        "csta/1A-AP-11": {
+          "description": "문제를 풀기 위해 필요한 단계를 지침의 정확한 시퀸스로 분해 (나눔)합니다."
+        },
+        "csta/1A-AP-09": {
+          "description": "숫자 또는 기호로 정보를 나타냄으로써 프로그램이 데이터를 저장하고 조작하는 방식을 이해하기 쉽게 표현합니다. "
+        },
+        "csta/1A-AP-14": {
+          "description": "시퀸스와 간단한 루프를 포함한 알고리즘 또는 프로그램에서 오류 디버깅 (식별 및 고침). "
+        },
+        "csta/1B-CS-01": {
+          "description": "컴퓨팅 기기의 내부 및 외부 부품이 하나의 시스템을 형성하기 위해 어떻게 기능하는지 설명하세요."
+        },
+        "csta/1B-CS-02": {
+          "description": "컴퓨터 하드웨어와 소프트웨어가 과제를 완수하기 위해 하나의 시스템으로서 어떻게 함께 일하는지 보여주세요."
+        },
         "csta/1A-CS-03": {
           "description": "적절한 용어를 사용하여 기초 하드웨어 및 소프트웨어 문제를 기술합니다."
+        },
+        "csta/1A-AP-10": {
+          "description": "아이디어를 표현하고 문제를 다루기 위해 시퀸스와 간단한 루프로 프로그램 개발."
         },
         "csta/1B-IC-18": {
           "description": "세상을 바꾸는 컴퓨팅 기술에 관해 토론하고 그러한 기술이 문화적 관행에 영향을 미치고 또한 그것에 의해 영향을 받는 방식을 표현합니다."
@@ -184,6 +211,192 @@
         },
         "csta/1B-NI-05": {
           "description": "현실에 존재하는 사이버 보안 문제와 개인정보 보호방법에 대해 토론합니다. "
+        },
+        "csta/1B-AP-08": {
+          "description": ""
+        },
+        "csta/1B-AP-09": {
+          "description": "변수를 사용하여 데이터를 저장 및 수정하는 프로그램 만들기."
+        },
+        "csta/1B-DA-06": {
+          "description": ""
+        },
+        "csta/1B-DA-07": {
+          "description": ""
+        },
+        "csta/1B-NI-04": {
+          "description": ""
+        },
+        "csta/1B-IC-20": {
+          "description": ""
+        },
+        "csta/1B-IC-21": {
+          "description": "공용 도메인 또는 창의적인 공동 매체를 이용하고 타인의 창작물을 무단으로 복제 또는 이용하지 말아야 합니다."
+        },
+        "csta/1B-AP-13": {
+          "description": ""
+        },
+        "csta/1B-AP-14": {
+          "description": "프로그램 창작 또는 리믹스 시 지적재산권을 준수하고 적절하게 저작권 정보를 표시해야 합니다. "
+        },
+        "csta/1B-AP-16": {
+          "description": ""
+        },
+        "csta/1B-AP-17": {
+          "description": "프로그램을 개발하는 동안에 했던 선택을 코드 코멘트와 프레젠테이션, 시범 등으로 기술하세요. "
+        },
+        "csta/1B-CS-03": {
+          "description": ""
+        },
+        "csta/1B-IC-19": {
+          "description": ""
+        },
+        "csta/1A-IC-16": {
+          "description": ""
+        },
+        "csta/1A-IC-17": {
+          "description": ""
+        },
+        "csta/1A-IC-18": {
+          "description": ""
+        },
+        "csta/1A-NI-04": {
+          "description": ""
+        },
+        "csta/1A-AP-08": {
+          "description": ""
+        },
+        "csta/1A-AP-12": {
+          "description": ""
+        },
+        "csta/1A-CS-01": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv.3-5": {
+          "description": ""
+        },
+        "csta/2-AP-17": {
+          "description": ""
+        },
+        "csta/2-IC-21": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i.6-8": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i.9-12": {
+          "description": ""
+        },
+        "csta/2-IC-20": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.K-2": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.K-2": {
+          "description": ""
+        },
+        "csta/2-DA-09": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii.6-8": {
+          "description": ""
+        },
+        "csta/3A-DA-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.6-8": {
+          "description": ""
+        },
+        "csta/3B-DA-05": {
+          "description": ""
+        },
+        "csta/2-AP-13": {
+          "description": ""
+        },
+        "csta/3A-AP-16": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i.9-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii.3-5": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii.6-8": {
+          "description": ""
+        },
+        "csta/3A-IC-25": {
+          "description": ""
+        },
+        "csta/2-AP-19": {
+          "description": ""
+        },
+        "csta/2-AP-11": {
+          "description": ""
+        },
+        "csta/2-AP-12": {
+          "description": ""
+        },
+        "csta/3A-IC-24": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii.9-12": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": ""
+        },
+        "csta/2-AP-15": {
+          "description": ""
+        },
+        "csta/2-IC-22": {
+          "description": ""
+        },
+        "csta/2-DA-08": {
+          "description": ""
+        },
+        "csta/2-CS-01": {
+          "description": ""
+        },
+        "csta/2-CS-02": {
+          "description": ""
+        },
+        "csta/2-AP-10": {
+          "description": ""
+        },
+        "csta/2-AP-16": {
+          "description": ""
+        },
+        "csta/2-AP-18": {
+          "description": ""
+        },
+        "csta/2-AP-14": {
+          "description": ""
+        },
+        "csta/2-DA-07": {
+          "description": ""
+        },
+        "csta/2-NI-05": {
+          "description": ""
+        },
+        "csta/2-NI-06": {
+          "description": ""
+        },
+        "csta/2-IC-23": {
+          "description": ""
+        },
+        "csta/3A-AP-20": {
+          "description": ""
         }
       }
     }

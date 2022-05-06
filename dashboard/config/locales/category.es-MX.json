@@ -44,6 +44,12 @@
         "ccmath/MD": {
           "description": "Usando Probabilidades para Tomar Decisiones"
         },
+        "ccmath/NBT": {
+          "description": "Números y Operaciones en Base Diez"
+        },
+        "ccmath/G": {
+          "description": "Geometría"
+        },
         "ccela/W": {
           "description": "Escribir"
         },
@@ -58,6 +64,12 @@
         },
         "csta/NI": {
           "description": "Redes e Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Compara los algoritmos de compresión de datos para determinar cuál es el mejor en un contexto determinado."
+        },
+        "csta/DA": {
+          "description": "Datos y Análisis"
         },
         "csta/CS": {
           "description": "Sistemas de computación"

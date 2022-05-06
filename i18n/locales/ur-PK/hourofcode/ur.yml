@@ -12,12 +12,12 @@ ur:
   campaign_date_full: 6 تا 12 دسمبر
   campaign_date_year: '2021'
   campaign_date_full_year: 6-12، 2021
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_start_short: 1 اکتوبر
+  latam_campaign_date_start_long: 1 اکتوبر
+  latam_campaign_date_short: 1 اکتوبر - 12 دسمبر
+  latam_campaign_date_full: 1 اکتوبر - 12 دسمبر
   latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
+  latam_campaign_date_full_year: 1 اکتوبر 2021 - 12 دسمبر 2021
   europe_campaign_date_start_short: دسمبر 6
   europe_campaign_date_start_long: 6 دسمبر
   europe_campaign_date_short: دسمبر 7-13
@@ -30,15 +30,15 @@ ur:
   africa_campaign_date_full: 6 تا 12 دسمبر
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 6-12، 2021
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  social_hoc2021_cse: "#HourOfCode کے دوران، ہم ہر جگہ #CSE کا جشن منا رہے ہیں۔ کنکشن
+    دریافت کریں!"
   hoc2020_header: اج سیکھیں، اور اپنا مستقبل روشن بنائیں.
   hoc2020_header_with_line_break_markdown: |-
     آج سیکھیں،
 
     اور اپنا مستقبل روشن بنائیں.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: کمپیوٹر سائنس پہلے سے کہیں زیادہ اہم ہے۔ آئیے اپنے
+    مستقبل کی تعمیر کریں۔ CSforGood#
   social_hoc2020_hoc_is_about_csforgood: "#HourOfCode کا تعلق #CSforGood سے ہے. آج
     سیکھیں، تاکہ روشن مستقبل بنا سکیں."
   social_hoc2020_global_movement: کوڈ کا قیام ایک گلوبل تحریک ہے جس میں دس لاکھ طالب
@@ -53,18 +53,18 @@ ur:
   hoc2019_header: کمپیوٹر سائینس سیکھیے اوردنیا بدلیے
   hoc2019_header_line1_mobile: کمپیوٹر سائینس سیکھیے
   hoc2019_header_line2_mobile: دنیا بدلیے
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
+  social_hoc2019_every_sudent: ہر طالب علم دنیا کو بدلنے کی صلاحیت رکھتا ہے۔ شروع
+    کرنے میں ان کی مدد کریں۔ CSforGood#
+  social_hoc2019_learn_computer_science: 'کمپیوٹر سائنس سیکھیں۔ دنیا بدل دو. CSforGood
+    #HourOfCode#'
   social_hoc_is_coming: آور آف کوڈ آرہا ہے۔
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  social_hoc2019_hoc_is_about_csforgood: " HourOfCode# ہے CSforGood# کے بارے میں ۔
+    کمپیوٹر سائنس سیکھیں۔ دنیا بدل دو."
   social_hoc2019_coming_dates: آور آف کوڈ 9-15 دسمبر، 2019 کو آ رہا ہے۔ کمپیوٹر سائنس
     ہر طالب علم کے سیکھنے کے لئے بنیادی ہے۔.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc_anybody: 'آور-آف-کوڈ : کوئی بھی سیکھ سکتا ہے.        '
   oceans_landing_title: سمندروں کے مصنوعی ذہانت
   oceans_landing_description: مشین لرننگ اور AI کے اخلاقی استعمال کے بارے جانیں.
   cs_for_good_hashtag: "#CSforGood"
@@ -195,14 +195,14 @@ ur:
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: ہائی اسکول
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
     of languages.
   ai_activity_quick_draw: Quick, Draw!
   ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable: قابل تعلیم مشین
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
   ai_activity_experiments: AI Experiments with Google
@@ -246,7 +246,7 @@ ur:
     resources for learning at home.
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
-  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_special2020_link_text: شروغ کیجیے
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
   codeorg_homepage_code_break_link_text: مزید جانیں
@@ -1658,20 +1658,20 @@ ur:
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: فیس ٹریکنگ
   tutorial_educodemaze_name: Design Your Own Maze!
   tutorial_educoderace_name: Code your own racing game!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
-  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
-  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
-  tutorial_educodekingdom_name: Defend the Kingdom!
-  tutorial_codehsdata_name: Coding with Data Visualizations
-  tutorial_educodecake_name: Bake a Cake With HTML!
-  tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: Trivia Game Maker
-  tutorial_csfirstdialogue_name: Dialogue
-  tutorial_codemonkeybeaver_name: Beaver Achiever
-  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
+  tutorial_gamefrootgames_name: 'گیمز انڈسٹری کی سرگرمی: پلیٹ فارمر گیم کو کوڈ کریں۔'
+  tutorial_codespeakgrandparent_name: دادا دادی کارڈ کو سکریچ میں کوڈ کریں۔
+  tutorial_educodekingdom_name: بادشاہی کا دفاع کریں!
+  tutorial_codehsdata_name: ڈیٹا ویژولائزیشن کے ساتھ کوڈنگ
+  tutorial_educodecake_name: HTML کے ساتھ کیک بنائیں!
+  tutorial_ttsecond_name: دوسری ٹیم
+  tutorial_bsdtrivia_name: ٹریویا گیم میکر
+  tutorial_csfirstdialogue_name: مکالمہ
+  tutorial_codemonkeybeaver_name: بیور حاصل کرنے والا
+  tutorial_codestersdistance_name: 'کوڈسٹرز: سوشل ڈسٹنسنگ اسپرائٹس'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
   tutorial_vidcodemagices_name: SFX Magic

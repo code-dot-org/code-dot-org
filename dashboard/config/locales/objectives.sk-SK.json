@@ -30,10 +30,10 @@
           "description": "Identifikovať miesta, kde budú môcť pokračovať v štúdiu informatiky a programovania"
         },
         "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Ilustrujte zmeny v nálade básne."
+          "description": "Ilustrovať zmeny v nálade básne."
         },
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Predstavte v texte obrazný a doslovný jazyk."
+          "description": "Vyjadriť v texte obrazný a doslovný jazyk."
         },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Vytvárať programy, ktoré reagujú na udalosti podmienené časom."
@@ -215,6 +215,9 @@
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Podeliť sa o kreatívny výtvor s ostatnými žiakmi."
         },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Definovať pojmy „kódovanie“ a „informatika“."
+        },
         "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
           "description": "Rozoznať kľúčovú slovnú zásobu z oblasti informatiky."
         },
@@ -241,6 +244,9 @@
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Podeliť sa o kreatívny výtvor s ostatnými žiakmi."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Definovať pojmy „kódovanie“ a „informatika“."
         },
         "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
           "description": "Rozoznať kľúčovú slovnú zásobu z oblasti informatiky."
@@ -1276,6 +1282,21 @@
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Zamyslieť sa nad tým, akú úlohu zohrávajú ľudské predsudky v strojovom učení."
+        },
+        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "71eb384e-9034-406d-a8fc-3e410e869985": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "4682c681-72e1-43df-8443-27ba6ff068de": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
         }
       }
     }

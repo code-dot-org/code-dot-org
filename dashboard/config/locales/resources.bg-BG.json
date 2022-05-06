@@ -33,14 +33,17 @@
           "type": "Видео"
         },
         "ai-ml/oceans/unversioned": {
+          "name": "",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-societal/oceans/unversioned": {
+          "name": "",
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Видео"
         },
         "ai-training/oceans/unversioned": {
+          "name": "",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
@@ -261,6 +264,10 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csd-18/unit1/vocab/"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/coursea/2019": {
           "name": "Планове на уроци",
           "url": "https://curriculum.code.org/csf-19/coursea/"
@@ -277,17 +284,29 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-19/coursea/vocab/"
         },
+        "curriculum_guide/courseb/2019": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/courseb/2019": {
-          "name": "Планове на уроци"
+          "name": "Планове на уроци",
+          "url": ""
         },
         "standard_mappings/courseb/2019": {
-          "name": "Стандартни съпоставяния"
+          "name": "Стандартни съпоставяния",
+          "url": ""
         },
         "teacher_forum/courseb/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/courseb/2019": {
-          "name": "Речник"
+          "name": "Речник",
+          "url": ""
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursed/2019": {
           "name": "Планове на уроци",
@@ -298,11 +317,16 @@
           "url": "https://curriculum.code.org/csf-19/coursed/standards/"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursed/2019": {
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-19/coursed/vocab/"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursef/2019": {
           "name": "Планове на уроци",
@@ -313,11 +337,16 @@
           "url": "https://curriculum.code.org/csf-19/coursef/standards/"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursef/2019": {
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-19/coursef/vocab/"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursee/2019": {
           "name": "Планове на уроци",
@@ -328,7 +357,8 @@
           "url": "https://curriculum.code.org/csf-19/coursee/standards/"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursee/2019": {
           "name": "Речник",
@@ -349,20 +379,29 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-19/express/vocab/"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/coursec/2019": {
-          "name": "Планове на уроци"
+          "name": "Планове на уроци",
+          "url": ""
         },
         "standard_mappings/coursec/2019": {
-          "name": "Стандартни съпоставяния"
+          "name": "Стандартни съпоставяния",
+          "url": ""
         },
         "teacher_forum/coursec/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursec/2019": {
-          "name": "Речник"
+          "name": "Речник",
+          "url": ""
         },
         "teacher_forum/csd/2019": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "code_introduced_1/csd/2019": {
           "name": "Въведение в кода",
@@ -563,61 +602,265 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csd/unit4/vocab/"
         },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Въведение в Sprite Lab",
+          "url": "",
+          "type": ""
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Въведение в Sprite Lab",
+          "url": "",
           "type": "Видео"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "making_sprites/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Спрайтове в Действие",
+          "url": "",
+          "type": ""
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "pause_and_think_online/coursef/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Повторения за забавление"
+          "name": "Повторения за забавление",
+          "url": "",
+          "type": ""
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Повторения за забавление"
+          "name": "Повторения за забавление",
+          "url": "",
+          "type": ""
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Повторения за забавление"
+          "name": "Повторения за забавление",
+          "url": "",
+          "type": ""
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Повторения за забавление"
+          "name": "Повторения за забавление",
+          "url": "",
+          "type": ""
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Повторения за забавление",
+          "url": "",
           "type": "Оценка"
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "running-simulations/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "ai-ml/coursef/2021": {
+          "name": "",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-training/coursef/2021": {
+          "name": "",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
         "ai-societal/coursef/2021": {
+          "name": "",
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Видео"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "Интернет"
+          "name": "Интернет",
+          "url": "",
+          "type": ""
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Интернет",
+          "url": "",
           "type": "Оценка"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Интернет"
+          "name": "Интернет",
+          "url": "",
+          "type": ""
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "design-process/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "rubric-csf-final-projects/coursef/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "implementation_guide/coursef/2021": {
-          "name": "Ръководство за използване"
+          "name": "Ръководство за използване",
+          "url": "",
+          "type": ""
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": "",
+          "type": ""
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "mimi-activity/courseb/2021": {
           "name": "Преместете го, преместете го"
@@ -677,71 +920,254 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Учителски форум"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "pair-programming-vid/coursea/2021": {
-          "name": "Програмиране по двойки"
+          "name": "Програмиране по двойки",
+          "url": "",
+          "type": ""
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles-Go Noodle ( Шаващи Макарони) ",
+          "url": "",
           "type": "Видео"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Щастливи карти"
+          "name": "Щастливи карти",
+          "url": "",
+          "type": ""
         },
         "happy-map-cards/coursea/2021": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "",
+          "type": ""
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "",
+          "type": ""
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "wiggles_-_gonoodle/coursea/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Честитни Картички Размер XL с Навигационни Карти"
+          "name": "Честитни Картички Размер XL с Навигационни Карти",
+          "url": "",
+          "type": ""
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "pair-programming/coursea/2021": {
           "name": "Програмиране по Двойки",
+          "url": "",
           "type": "Видео"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "common-sense-media-pause-think/coursea/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "Голямото събитие"
+          "name": "Голямото събитие",
+          "url": "",
+          "type": ""
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Голямото събитие",
+          "url": "",
           "type": "Оценка"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "Голямото събитие"
+          "name": "Голямото събитие",
+          "url": "",
+          "type": ""
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "",
+          "url": ""
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "course_vocabulary/coursea/2021": {
-          "name": "Лексика на Курса "
+          "name": "Лексика на Курса ",
+          "url": "",
+          "type": ""
         },
         "implementation_guide/coursea/2021": {
-          "name": "Ръководство за използване"
+          "name": "Ръководство за използване",
+          "url": "",
+          "type": ""
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "Наръчник за Тип Урок"
+          "name": "Наръчник за Тип Урок",
+          "url": "",
+          "type": ""
         },
         "debugging_guide/coursea/2021": {
-          "name": "Наръчник за Отстраняване на Грешки "
+          "name": "Наръчник за Отстраняване на Грешки ",
+          "url": "",
+          "type": ""
         },
         "curriculum_guide_1/coursea/2021": {
-          "name": "Учебната Програма"
+          "name": "Учебната Програма",
+          "url": "",
+          "type": ""
         },
         "2021_change_log/coursea/2021": {
-          "name": "2021 Регистър на Промените"
+          "name": "2021 Регистър на Промените",
+          "url": "",
+          "type": ""
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": "",
+          "type": ""
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Моите приятели роботи"
@@ -797,104 +1223,384 @@
         "teacher_forum_1/coursec/2021": {
           "name": "Учителски форум"
         },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "graph-paper-programming/coursed/2021": {
-          "name": "Програмиране на милиметрова хартия"
+          "name": "Програмиране на милиметрова хартия",
+          "url": "",
+          "type": ""
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Програмиране на милиметрова хартия"
+          "name": "Програмиране на милиметрова хартия",
+          "url": "",
+          "type": ""
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Програмиране на милиметрова хартия"
+          "name": "Програмиране на милиметрова хартия",
+          "url": "",
+          "type": ""
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Програмиране на милиметрова хартия"
+          "name": "Програмиране на милиметрова хартия",
+          "url": "",
+          "type": ""
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Програмиране на милиметрова хартия",
+          "url": "",
           "type": "Оценка"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Програмиране на милиметрова хартия"
+          "name": "Програмиране на милиметрова хартия",
+          "url": "",
+          "type": ""
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Програмиране по двойки"
+          "name": "Програмиране по двойки",
+          "url": "",
+          "type": ""
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
         },
         "relay-assessment/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Повтори програмирането"
+          "name": "Повтори програмирането",
+          "url": "",
+          "type": ""
+        },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "pause_and_think_online/coursed/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "pause_and_think_online_1/coursed/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Условия с карти"
+          "name": "Условия с карти",
+          "url": "",
+          "type": ""
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Условия с карти"
+          "name": "Условия с карти",
+          "url": "",
+          "type": ""
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Условия с карти",
+          "url": "",
           "type": "Оценка"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Условия с карти"
+          "name": "Условия с карти",
+          "url": "",
+          "type": ""
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Условия с карти"
+          "name": "Условия с карти",
+          "url": "",
+          "type": ""
         },
         "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "implementation_guide/coursed/2021": {
-          "name": "Ръководство за използване"
+          "name": "Ръководство за използване",
+          "url": "",
+          "type": ""
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": "",
+          "type": ""
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "pair_programming/express/2021": {
           "name": "Програмиране по двойки",
+          "url": "",
           "type": "Видео"
         },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "",
+          "url": ""
+        },
         "artist_introduction/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "turns_angles/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "making_sprites/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Спрайтове в Действие",
+          "url": "",
+          "type": ""
         },
         "pause_and_think_online/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "open-ended_programming_levels/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "pair_programming_video/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "text_and_prompts/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "variables_video/express/2021": {
-          "name": "Променливи"
+          "name": "Променливи",
+          "url": "",
+          "type": ""
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
         "rubric-csf-final-projects/express/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "csta_standards_mapping/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "teacher_forum_1/express/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": "",
+          "type": ""
+        },
+        "debugging_guide/express/2021": {
+          "name": "",
+          "url": ""
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Програмиране по двойки"
@@ -932,55 +1638,442 @@
         "teacher_forum_1/coursee/2021": {
           "name": "Учителски форум"
         },
+        "classifying_fish/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "introduction_to_machine_learning/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "ai_what_is_machine_learning_/csd/2021": {
+          "name": "",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
+        "types_of_machine_learning/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "types_of_machine_learning_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "types_of_machine_learning_2/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "innovations_in_ai/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "innovations_in_ai_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "seeing_ai/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "finding_patterns_in_data/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "patterns_in_data/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "patterns_in_data_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "shoe_survey/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "patterns_in_data_3/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "_key_classification_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "classification_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "classification_models_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "fruit_veggie_cards/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Въведение в AI Lab",
+          "url": "",
+          "type": ""
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Въведение в AI Lab",
+          "url": "",
           "type": "Видео"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Обучение и Тестване в AI Lab",
+          "url": "",
           "type": "Видео"
         },
+        "_key_training_a_model_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "accuracy_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "selecting_features/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "using_data_with_categorical_features/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "importing_models_in_app_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "ai_training_data_bias/csd/2021": {
+          "name": "",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
+        "model_cards/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "model_cards_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "saving_models_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "zoo_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "_key_zoo_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "selecting_a_label/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "if-statements_in_app_lab/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "model_cards_in_app_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "numerical_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "zombie_prediction_-_answer_key/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "_key_numerical_accuracy/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "using_data_with_numerical_features/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "customizing_apps/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "ai_code_of_ethics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "our_ai_code_of_ethics_template_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "create_an_ml_app_-_project_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "make_a_machine_learning_app/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "create_an_ml_app/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "issue_statements/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "survey_planning/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "survey_planning_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "survey_template_google_form_/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "creating_a_survey/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "kim_s_survey_data_-_student_resource/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "survey_data_in_ai_lab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "cleaning_survey_data/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "view_and_download_survey_data/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "troubleshooting_models/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "troubleshooting_models_-_activity_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "creating_an_app/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "_template_5_why_s/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "design_an_ai_app/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "design_an_ai_app_-_project_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "exemplar_-_design_an_ai_app/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "model_card_-_digital_template/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "model_card_-_printable_template/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "design_an_ai_app_1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
+        },
+        "csd_curriculum_guide/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csd_implementation_guide/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_code_5/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_resources_7/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards_7/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "the-design-thinking-process/csd/2021": {
           "type": "Видео"
         },
         "computer-science-practices/csd/2021": {
-          "type": "Отражение"
+          "type": "Отражение",
+          "name": "",
+          "url": ""
         },
         "paper-prototypes/csd/2021": {
           "type": "Рубрика"
@@ -1001,53 +2094,261 @@
           "type": "Рубрика"
         },
         "teacher_forum/csd/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
+        },
+        "computing-innovations/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "internet-of-things-video/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "innovation-video-1-1/csd/2021": {
+          "name": "Компютърните Науки Променят Всичко",
+          "url": "",
           "type": "Видео"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "how_computers_word_hardware_software/csd/2021": {
+          "name": "Как Компютрите Работят: Хардуер и Софтуер",
+          "url": "",
           "type": "Видео"
+        },
+        "circuit_playground/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "input-and-events/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "board_events/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "physical_input/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "physical_output/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "taking_input_with_getproperty/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "analog-digital-video/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "changing_sensor_scale/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "date_and_change_events/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "emoji-race-guide/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "functions_2/csd/2021": {
-          "name": "Функции"
+          "name": "Функции",
+          "url": "",
+          "type": ""
+        },
+        "if_statements_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "make-game-guide/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "make_a_game_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "make_a_game_1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "introduction_to_arrays/csd/2021": {
+          "name": "Въведение в Масиви",
+          "url": "",
           "type": "Видео"
         },
+        "arrays/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "circuits_and_leds/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "color_lights/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "playing_notes/csd/2021": {
-          "name": "Пускане на Ноти"
+          "name": "Пускане на Ноти",
+          "url": "",
+          "type": ""
+        },
+        "producing_output/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "loops_in_app_lab/csd/2021": {
           "name": "За циклите",
+          "url": "",
           "type": "Видео"
         },
         "for_loops/csd/2021": {
-          "name": "За циклите"
+          "name": "За циклите",
+          "url": "",
+          "type": ""
+        },
+        "modifying_arrays/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "the_accelerometer/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "circuits-logic-video/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "physical-prototyping-project/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
+        "circuits_and_buttons/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "prototype-an-innovation-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
         "planning-your-innovation/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
+        },
+        "peer_review_1_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer_review_2_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "prototype_an_innovation_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csd_guide_to_using_resources/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_code_4/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_resources_6/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards_6/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary_6/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "circuit_playground_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Видео"
@@ -1086,116 +2387,581 @@
         "solve-a-data-problem/csd/2021": {
           "type": "Проектен Пътеводител"
         },
+        "cs-entertainment-activity/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "cs_in_entertainment/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "colored-shape-drawing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "drawing_shapes_version_b_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "drawing_shapes_version_a_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "drawing_in_game_lab_-_part_1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "introduction-to-variables/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "naming_variables/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "variables_1/csd/2021": {
-          "name": "Променливи"
+          "name": "Променливи",
+          "url": "",
+          "type": ""
+        },
+        "random_numbers/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "introduction_to_sprites/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "the_animation_tab/csd/2021": {
           "name": "Раздел \"Анимация\"",
+          "url": "",
           "type": "Видео"
         },
+        "animation_tab/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "sprites_1/csd/2021": {
-          "name": "Спрайт"
+          "name": "Спрайт",
+          "url": "",
+          "type": ""
         },
         "sprite_properties/csd/2021": {
-          "name": "Свойства на Спрайта"
+          "name": "Свойства на Спрайта",
+          "url": "",
+          "type": ""
+        },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "captioned-scenes/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "sprite-scene-planning/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "random-dot-flipbook/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "random-sprite-flipbook/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "youtube-flipbook/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
         "introduction_to_the_draw_loop/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "animating-sprites/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "the_counter_pattern/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "animated-scene-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
+        "animated-scene/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "boolean_expressions/csd/2021": {
+          "name": "Булеви Изрази",
+          "url": "",
           "type": "Видео"
         },
         "conditional_statements/csd/2021": {
+          "name": "Условия",
+          "url": "",
           "type": "Видео"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "if_statements/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "if_else_statements/csd/2021": {
+          "name": "Условия Ако/Иначе",
+          "url": "",
           "type": "Видео"
         },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "interactive-card-project-guide-2019/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
         "interactive-card-1-2-3-4/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Вашаят отзив"
         },
         "interactive_card/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
+        },
+        "interactive_card_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "extra_code_in_challenge_levels_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "velocity_1/csd/2021": {
           "name": "Скорост",
+          "url": "",
           "type": "Видео"
         },
         "velocity_2/csd/2021": {
-          "name": "Скорост"
+          "name": "Скорост",
+          "url": "",
+          "type": ""
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "collision_detection_version_b_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "collision_detection_version_a_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "collision_detection/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "side-scroller-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
         "side-scroller/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "flyer-game-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
         },
         "flyer-game/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Функции",
+          "url": "",
           "type": "Видео"
         },
         "functions_1/csd/2021": {
-          "name": "Функции"
+          "name": "Функции",
+          "url": "",
+          "type": ""
+        },
+        "project-guide-defender-game/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "platform-game-project-guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "make-your-own-game/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Проектен Пътеводител"
         },
         "make-your-own-game-1-2-3/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Вашаят отзив"
         },
         "make_your_own_game/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
+        },
+        "make_your_own_game_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "teacher_forum_1/csd/2021": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
+        },
+        "all_code_1/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_resources_2/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards_2/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "",
+          "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
+          "type": ""
+        },
+        "how-to-videos/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "problem-solving-process-1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Процеса за Решаване на Проблеми",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "solving-problems-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Какво е Компютър?",
+          "url": "",
+          "type": ""
         },
         "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
+        },
+        "what-is-a-computer-version-b/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "what-is-a-computer-version-a/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "processing-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "apps-with-processing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "what-do-computers-do/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Видео"
         },
+        "storage-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "storage/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Вашаят отзив"
         },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer_review_exemplar/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "apps_and_problem_solving/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "Рубрика"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "build-a-newspaper-table/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "spaghetti-bridge-activity-guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "paper-planes/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "plane-how-to-videos/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solving-problems-tangrams-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "all_resources/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Видео"
@@ -1303,6 +3069,10 @@
         "vocabulary/express/2020": {
           "name": "Речник"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/courseb/2020": {
           "name": "Планове на уроци",
           "url": "https://curriculum.code.org/csf-20/courseb/"
@@ -1312,11 +3082,16 @@
           "url": "https://curriculum.code.org/csf-20/courseb/standards/"
         },
         "teacher_forum/courseb/2020": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/courseb/2020": {
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursed/2020": {
           "name": "Планове на уроци",
@@ -1327,11 +3102,16 @@
           "url": "https://curriculum.code.org/csf-20/coursed/standards/"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursed/2020": {
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-20/coursed/vocab/"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursec/2020": {
           "name": "Планове на уроци",
@@ -1342,23 +3122,36 @@
           "url": "https://curriculum.code.org/csf-20/coursec/standards/"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursec/2020": {
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-20/coursec/vocab/"
         },
+        "curriculum_guide/coursee/2020": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/coursee/2020": {
-          "name": "Планове на уроци"
+          "name": "Планове на уроци",
+          "url": ""
         },
         "standard_mappings/coursee/2020": {
-          "name": "Стандартни съпоставяния"
+          "name": "Стандартни съпоставяния",
+          "url": ""
         },
         "teacher_forum/coursee/2020": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursee/2020": {
-          "name": "Речник"
+          "name": "Речник",
+          "url": ""
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "",
+          "url": ""
         },
         "lesson_plans/coursea/2020": {
           "name": "Планове на уроци",
@@ -1376,17 +3169,25 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
+        "curriculum_guide/coursef/2020": {
+          "name": "",
+          "url": ""
+        },
         "lesson_plans/coursef/2020": {
-          "name": "Планове на уроци"
+          "name": "Планове на уроци",
+          "url": ""
         },
         "standard_mappings/coursef/2020": {
-          "name": "Стандартни съпоставяния"
+          "name": "Стандартни съпоставяния",
+          "url": ""
         },
         "teacher_forum/coursef/2020": {
-          "name": "Учителски форум"
+          "name": "Учителски форум",
+          "url": ""
         },
         "vocabulary/coursef/2020": {
-          "name": "Речник"
+          "name": "Речник",
+          "url": ""
         }
       }
     }

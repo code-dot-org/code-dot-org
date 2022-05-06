@@ -380,6 +380,10 @@
           "word": "For 루프",
           "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "machine_learning/coursef/2021": {
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
@@ -627,6 +631,10 @@
           "word": "조건",
           "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
+        "pseudocode/coursed/2021": {
+          "word": "유사 부호",
+          "definition": "알고리즘 내 단계에 대한 간단한 설명"
+        },
         "condition/coursed/2021": {
           "word": "조건",
           "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
@@ -675,6 +683,9 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "code/express/2021": {
+          "definition": "코드 작성, 또는 컴퓨터에게 내릴 지시사항 작성."
+        },
         "loop/express/2021": {
           "word": "루프",
           "definition": "뭔가를 계속 다시 하는 동작."
@@ -712,6 +723,7 @@
           "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
         },
         "prompt/express/2021": {
+          "word": "프롬프트",
           "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
         },
         "for_loop/express/2021": {
@@ -790,6 +802,10 @@
           "word": "행동",
           "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
         },
+        "algorithm/coursee/2021": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록"
+        },
         "sprite/coursee/2021": {
           "word": "스프라이트",
           "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
@@ -846,23 +862,113 @@
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
+        "features/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "ethics/csd/2021": {
-          "word": "윤리"
+          "word": "윤리",
+          "definition": ""
+        },
+        "empathy/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "user/csd/2021": {
           "word": "사용자",
           "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
         },
+        "usability/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "user_interface/csd/2021": {
-          "word": "사용자 인터페이스"
+          "word": "사용자 인터페이스",
+          "definition": ""
         },
         "bug/csd/2021": {
           "word": "버그",
           "definition": "정상 작동하지 않는 프로그램 부분."
         },
+        "feature/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "for_loop/csd/2021": {
           "word": "For 루프",
           "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
+        },
+        "decode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "debugging/csd/2021": {
           "word": "디버깅",
@@ -872,24 +978,45 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
+        "parameter/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "variable/csd/2021": {
           "word": "변수",
           "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
         },
+        "property/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "sprite/csd/2021": {
-          "word": "스프라이트"
+          "word": "스프라이트",
+          "definition": ""
+        },
+        "dot_notation/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "condition/csd/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": ""
         },
         "conditionals/csd/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": ""
+        },
+        "boolean_expression/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "abstraction/csd/2021": {
-          "word": "추상화"
+          "word": "추상화",
+          "definition": ""
         },
         "function/csd/2021": {
-          "word": "함수"
+          "word": "함수",
+          "definition": ""
         },
         "input/csd/2021": {
           "word": "입력"
@@ -897,12 +1024,61 @@
         "processing/csd/2021": {
           "word": "프로세싱"
         },
+        "html/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_element/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_tag/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_content/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_structure/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "heading/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "digital_footprint/csd/2021": {
-          "word": "디지털 발자국"
+          "word": "디지털 발자국",
+          "definition": ""
+        },
+        "css/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_selector/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "copyright/csd/2021": {
           "word": "저작권",
           "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
+        },
+        "relevant/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "trustworthy/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "search_engine/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_class/csd/2021": {
+          "word": "",
+          "definition": ""
         }
       }
     }

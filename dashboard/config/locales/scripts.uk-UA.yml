@@ -5640,6 +5640,10 @@ uk:
             For Loop Fun:
               key: Ігри з циклами
               name: Ігри з циклами
+            For Loops in Bee:
+              name: Цикл For з Бджілкою
+            For Loops in Artist:
+              name: Цикл For з Художником
             Virtual Pet:
               name: 'Міні-проект: Віртуальний вихованець'
             lesson-6:
@@ -5649,6 +5653,7 @@ uk:
             lesson-5:
               name: Спалах
             lesson-2:
+              name: Сила Слів
               description_student: Залякування - це завжди погано. Цей урок навчить
                 вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
