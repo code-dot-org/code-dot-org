@@ -850,7 +850,23 @@ class Script < ApplicationRecord
   def k5_course?
     return false if twenty_hour?
 
-    csf? || csc? || Script.unit_in_category?('hoc', name)
+    # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
+    k5_csc_course = [
+      Script::POETRY_2021_NAME,
+      Script::AI_ETHICS_2021_NAME,
+      Script::COUNTING_CSC_2021_NAME,
+      Script::EXPLORE_DATA_1_2021_NAME,
+      Script::SPELLING_BEE_2021_NAME
+    ].include?(name)
+    hoc_course = [
+      Script::POEM_ART_2021_NAME,
+      Script::HELLO_WORLD_FOOD_2021_NAME,
+      Script::HELLO_WORLD_ANIMALS_2021_NAME,
+      Script::HELLO_WORLD_EMOJI_2021_NAME,
+      Script::HELLO_WORLD_RETRO_2021_NAME
+    ].include?(name)
+
+    csf? || k5_csc_course || hoc_course
   end
 
   def csf?
