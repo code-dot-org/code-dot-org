@@ -219,7 +219,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil_or_empty?
+    !professional_learning_course.blank?
   end
 
   def generate_plc_objects
@@ -1954,7 +1954,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !get_pilot_experiment.nil_or_empty?
+    !get_pilot_experiment.blank?
   end
 
   def has_pilot_access?(user = nil)
