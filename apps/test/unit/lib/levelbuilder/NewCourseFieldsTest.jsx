@@ -15,6 +15,7 @@ describe('NewCourseFieldsTest', () => {
       versionYearOptions: ['1991', '1992', 'unversioned'],
       familyName: '',
       setFamilyName,
+      setFamilyAndCourseType,
       versionYear: '',
       setVersionYear,
       instructorAudience: '',
