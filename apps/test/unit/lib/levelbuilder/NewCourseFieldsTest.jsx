@@ -20,8 +20,7 @@ describe('NewCourseFieldsTest', () => {
       setVersionYear,
       instructorAudience: '',
       participantAudience: '',
-      instructionType: '',
-      setFamilyAndCourseType
+      instructionType: ''
     };
   });
 
