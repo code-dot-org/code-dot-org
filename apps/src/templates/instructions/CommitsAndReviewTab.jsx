@@ -25,9 +25,8 @@ const CommitsAndReviewTab = props => {
   } = props;
 
   const [loadingReviewData, setLoadingReviewData] = useState(false);
-  const [closedReviewData, setClosedReviewData] = useState([]);
   const [openReviewData, setOpenReviewData] = useState(null);
-  const [commitsData, setCommitsData] = useState([]);
+  const [timelineData, setTimelineData] = useState([]);
 
   const dataApi = useMemo(
     () => new CodeReviewDataApi(channelId, serverLevelId, serverScriptId),
@@ -41,12 +40,9 @@ const CommitsAndReviewTab = props => {
   const refresh = useCallback(async () => {
     setLoadingReviewData(true);
     try {
-      const [codeReviews, commits] = await Promise.all([
-        dataApi.getCodeReviews(),
-        dataApi.getCommits()
-      ]);
-      setCommitsData(commits);
-      setCodeReviewData(codeReviews);
+      const {timelineData, openReview} = await dataApi.getInitialTimelineData();
+      setTimelineData(timelineData);
+      setOpenReviewData(openReview);
     } catch (err) {
       // TODO: display error message TBD
       console.log(err);
@@ -54,18 +50,6 @@ const CommitsAndReviewTab = props => {
     onLoadComplete();
     setLoadingReviewData(false);
   }, [dataApi, onLoadComplete]);
-
-  const setCodeReviewData = codeReviews => {
-    if (codeReviews.length) {
-      const lastReview = codeReviews[codeReviews.length - 1];
-      if (lastReview.isClosed) {
-        setClosedReviewData(codeReviews);
-      } else {
-        setClosedReviewData(codeReviews.slice(0, -1));
-        setOpenReviewData(lastReview);
-      }
-    }
-  };
 
   const loadPeers = async (onSuccess, onFailure) => {
     try {
@@ -136,11 +120,10 @@ const CommitsAndReviewTab = props => {
         </div>
       </div>
       <CodeReviewTimeline
-        reviewData={[
-          ...closedReviewData,
+        timelineData={[
+          ...timelineData,
           ...(openReviewData ? [openReviewData] : [])
         ]}
-        commitsData={commitsData}
         addCodeReviewComment={addCodeReviewComment}
       />
       {!openReviewData && (
