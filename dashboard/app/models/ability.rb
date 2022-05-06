@@ -411,27 +411,22 @@ class Ability
       end
     end
 
-    # Checks if user is directly enrolled in pilot or has a teacher enrolled
+    # Checks if user is a verified instructor or the student of a verified instructor. On
     if user.persisted?
-      if user.permission?(UserPermission::LEVELBUILDER) ||
-        user.has_pilot_experiment?(CSA_PILOT) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
-        user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
-
+      if user.verified_instructor? || user.student_of_verified_instructor?
         can :get_access_token, :javabuilder_session
       end
     end
 
-    # Allow pilot users to have access to run override_sources java lab code, which is how we run exemplars.
-    # TODO: Change this to authorized_instructors once we have throttling in place.
-    if user.persisted? && (user.has_pilot_experiment?(CSA_PILOT) || user.has_pilot_experiment?(CSA_PILOT_FACILITATORS))
+    # Allow verified instructors to have access to run override_sources java lab code, which is how we run exemplars.
+    # This
+    if user.persisted? && user.verified_instructor?
       can :get_access_token_with_override_sources, :javabuilder_session
     end
 
-    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
+    # This action allows levelbuilders to work on validation in levelbuilder.
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+      can :get_access_token_with_override_validation, :javabuilder_session
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
