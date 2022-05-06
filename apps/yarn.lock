@@ -1585,7 +1585,8 @@
   integrity sha512-5mFoa0MNiFoywz6xVUl6/erAZQmFJ8rBmAMFdthCkyx1ihe4DoMLVCHfjhLkBFoGAalh/758lpx1zT3AmHo6Iw==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.1.0"
+  version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -3769,10 +3770,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-blockly@7.20211209.1:
-  version "7.20211209.1"
-  resolved "https://registry.yarnpkg.com/blockly/-/blockly-7.20211209.1.tgz#e20a537cfbfcd764cd0b8748fbb2f3c27a250aa4"
-  integrity sha512-TzrE55MUhBuUZ3vaCmnBJsbmR5sh2LnYl36ZkK/Jd0yHqb/2ZMxXY8pHyqHu2ZUWwGVcaJM9qK7c2Yk6TfxyEA==
+blockly@8.0.1-beta.0:
+  version "8.0.1-beta.0"
+  resolved "https://registry.yarnpkg.com/blockly/-/blockly-8.0.1-beta.0.tgz#aa24a0fde6a867a304aa7c554e512db92d20a756"
+  integrity sha512-+/vvswpcVROCDYuvJ8WZ39Y2In65/ovKyj4LN+GPvzB6Dip/k38ip1z2nHiz86tDypp+UJgYtSg8GGo1MignUQ==
   dependencies:
     jsdom "15.2.1"
 
