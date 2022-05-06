@@ -26,9 +26,9 @@ function linuxNumProcs() {
 }
 
 if [ "$(uname)" = "Darwin" ]; then
-  PROCS=2 # TODO: set this dynamically like in linux
+  PROCS=1 # TODO: set this dynamically like in linux
 elif [ "$(uname)" = "Linux" ]; then
-  PROCS=$(linuxNumProcs)
+  PROCS=1
 else
   echo "$(uname) not supported"
   exit 1
