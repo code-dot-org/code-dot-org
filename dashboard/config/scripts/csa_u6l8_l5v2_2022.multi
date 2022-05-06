@@ -8,5 +8,19 @@ wrong 'wrong'
 wrong 'wrong'
 
 markdown <<MARKDOWN
-question
+Consider the following method.
+
+```
+public static boolean mystery(String str) {
+  String temp = "";
+
+  for (int index = str.length(); index > 0; index--) {
+    temp = temp + str.substring(index - 1, index);
+  }
+
+  return temp.equals(str);
+}
+```
+
+Which of the following calls to `mystery` will return `true`?
 MARKDOWN
