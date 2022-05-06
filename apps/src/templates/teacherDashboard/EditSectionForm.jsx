@@ -376,7 +376,16 @@ const AssignmentField = ({
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
-    <FieldDescription>{i18n.whichCourse()}</FieldDescription>
+    <FieldDescription>
+      {i18n.whichCourse()}
+      <a
+        href="https://support.code.org/hc/en-us/articles/204874337-What-happens-when-I-assign-a-course-to-a-section-Can-I-assign-2-at-once-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {i18n.explainCourseAssignmentsLearnMore()}
+      </a>
+    </FieldDescription>
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}

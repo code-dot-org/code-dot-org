@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 22:26:38 UTC",
+    "serialized_at": "2022-05-03 19:33:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3694,7 +3694,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp-u5-hackathon-submission-on-ap-classroom/csp/2021] for instructions on how to set up an assessment on AP Classroom.\n"
+            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp_u5_hackathon_submission_on_ap_classroom/csp/2022] for instructions on how to set up an assessment on AP Classroom.\n"
           }
         ]
       },
