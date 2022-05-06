@@ -4,6 +4,22 @@ it:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra piccolo
+            '0.75': piccolo
+            '1.00': mediamente
+            '2.00': grande
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra piccolo
+            '0.75': piccolo
+            '1.00': mediamente
+            '2.00': grande
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
@@ -1062,7 +1078,7 @@ it:
         text: Disegna la linea {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: i bordi impediscono a {SPRITE} di muoversi
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ripeti ogni {N} {UNIT} '
         options:
           UNIT:
@@ -1222,8 +1238,6 @@ it:
             '"pop"': pop
             '"rain"': pioggia
             '"spiral"': spirale
-      gamelab_makeNewScaledSprite:
-        text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:

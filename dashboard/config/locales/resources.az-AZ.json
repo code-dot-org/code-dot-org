@@ -1522,6 +1522,13 @@
         "teacher_forum/csd/2021": {
           "name": "Müəllim Forumu"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Kompüterlər hər şeyi dəyişir",
+          "type": "Video"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Kod ilə ekran dizaynı "
         },
@@ -1621,7 +1628,7 @@
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Avtomatlaşdırma öyrənilməsi",
+          "name": "Video: Maşın öyrənməsi",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -1773,6 +1780,12 @@
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "name": "CSD Bölmə 1- Məsələ həlli və programlaşdırma"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Məsələnin həlli prosesi"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Kompüter nədir?"

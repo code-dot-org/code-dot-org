@@ -9234,6 +9234,8 @@ ka:
             While Loops with the Farmer:
               key: While ციკლები ფერმერში
               name: While ციკლები ფერმერში
+            "[New] Counting with Variables":
+              name: დათვლა ცვლადებით
           lesson_groups:
             csf_sprites:
               display_name: სპრაიტები
@@ -9400,6 +9402,10 @@ ka:
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
           description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
           description_audience: 'ასაკი: 6-10'
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: გამოკითხვა
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -9560,6 +9566,8 @@ ka:
             Internet:
               key: ინტერნეტი
               name: ინტერნეტი
+            "[New] Counting with Variables":
+              name: დათვლა ცვლადებით
           lesson_groups:
             ramp_up:
               display_name: სპრაიტები
@@ -9578,6 +9586,10 @@ ka:
               display_name: შიგთავსი
         pre-express-2022:
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Sequencing with Scrat:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             Programming with Angry Birds:
               key: პროგრამირება ლაბირინთში
               name: პროგრამირება ლაბირინთში
@@ -9596,14 +9608,18 @@ ka:
             On the Move with Events:
               key: მოვლენები სათამაშო ლაბორატორიაში
               name: მოვლენები სათამაშო ლაბორატორიაში
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
             A Royal Battle with Events:
               key: მოვლენები სათამაშო ლაბორატორიაში
               name: მოვლენები სათამაშო ლაბორატორიაში
+            Programming in with Angry Birds:
+              name: პროგრამირება ლაბირინთში
           lesson_groups:
             csf_loops:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
+          description_audience: 'ასაკი: 4-8'
         csa2-2022:
           lessons:
             lesson-6:
@@ -9629,6 +9645,9 @@ ka:
             lesson-19:
               name: გამართვა
         csa4-2022:
+          lessons:
+            lesson-11:
+              name: შემთხვევითი
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
@@ -9683,6 +9702,9 @@ ka:
             lessonGroup-2:
               display_name: შიგთავსი
         csa7-2022:
+          lessons:
+            lesson-6:
+              name: ინტელექტუალური ქონება
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
@@ -9691,6 +9713,30 @@ ka:
             lessonGroup-2:
               display_name: შიგთავსი
         vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: კეთილი იყოს თქვენი მობრძანება
+            lesson-11:
+              name: შეჯამება
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: კეთილი იყოს თქვენი მობრძანება
+            lesson-9:
+              name: შეჯამება
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: კეთილი იყოს თქვენი მობრძანება
+            lesson-8:
+              name: შეჯამება
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: კეთილი იყოს თქვენი მობრძანება
+            lesson-14:
+              name: შეჯამება
+        vpl-csd5-summer-pilot-2022:
           lessons:
             lesson-1:
               name: კეთილი იყოს თქვენი მობრძანება
@@ -9724,3 +9770,203 @@ ka:
             For Loops:
               name: '"მიზნისთვის" ციკლები'
               key: '"მიზნისთვის" ციკლები'
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: დიზაინის პროცესი
+            Engage with machine learning apps:
+              name: დიზაინის პროცესი
+        csd1-2022:
+          lessons:
+            Intro to Problem Solving:
+              name: შესავალი პრობლემების გადაწყვეტაში
+              key: შესავალი პრობლემების გადაწყვეტაში
+            The Problem Solving Process:
+              name: პროებლემების გადაჭრის პროცესი
+              key: პროებლემების გადაჭრის პროცესი
+            What is a Computer?:
+              name: რა არის კომპიუტერი?
+              key: რა არის კომპიუტერი?
+            Input and Output:
+              name: შესაყვანი და გამოსაყვანი ინფორმაცია
+              key: შესაყვანი და გამოსაყვანი ინფორმაცია
+            Processing:
+              name: დამუშავება
+              key: დამუშავება
+            Storage:
+              name: საცავი
+              key: საცავი
+            Project - Propose an App:
+              name: პროექტი - შემოგვთავაზეთ აპლიკაცია
+              key: პროექტი - შემოგვთავაზეთ აპლიკაცია
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csd1_1:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            csd1_2:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+          description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან პრობლემების გადასაჭრელად."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: შესავალი HTML-ში
+              key: შესავალი HTML-ში
+            Headings:
+              name: სათაურები
+              key: სათაურები
+            Digital Footprint:
+              name: ციფრული ნაკვალევი
+              key: ციფრული ნაკვალევი
+            Styling Text with CSS:
+              name: ტექსტის გასტილვა CSS-ით
+              key: ტექსტის გასტილვა CSS-ით
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+              key: ინტელექტუალური ქონება
+            Styling Elements with CSS:
+              name: ელემენტების გასტილვა CSS-ით
+              key: ელემენტების გასტილვა CSS-ით
+            'Websites for Expression ':
+              key: 'ვებ-საიტები გამოხატვისათვის '
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+          description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: პროგრამირება გართობისათვის
+              key: პროგრამირება გართობისათვის
+            Drawing in Game Lab:
+              name: ხატვა თამაშების ლაბორატორიაში
+              key: ხატვა თამაშების ლაბორატორიაში
+            Variables:
+              name: ცვლადები
+              key: ცვლადები
+            Sprites:
+              name: სპრაიტები
+              key: სპრაიტები
+            Text:
+              name: ტექსტი
+              key: ტექსტი
+            The Draw Loop:
+              name: ხატვის ციკლი
+              key: ხატვის ციკლი
+            Sprite Movement:
+              name: სპრაიტების მოძრაობა
+              key: სპრაიტების მოძრაობა
+            Conditionals:
+              name: პირობითი ბრძანებები
+              key: პირობითი ბრძანებები
+            Keyboard Input:
+              name: კლავიატურიდან შეყვანილი ინფორმაცია
+              key: კლავიატურიდან შეყვანილი ინფორმაცია
+            Project - Interactive Card:
+              name: პროექტი - ინტერაქტიული ბარათი
+              key: პროექტი - ინტერაქტიული ბარათი
+            Velocity:
+              name: სიჩქარე
+              key: სიჩქარე
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+              key: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+              key: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+              key: შეჯახებები
+            Functions:
+              name: ფუნქციები
+              key: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+              key: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+              key: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+              key: პროექტი - შექმენით თამაშის დიზაინი
+          lesson_groups:
+            csd3_1:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            csd3_2:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
+        csd4-2022:
+          lessons:
+            Identifying User Needs:
+              name: მომხმარებლის მოთხოვნილებების განსაზღვრა
+              key: მომხმარებლის მოთხოვნილებების განსაზღვრა
+            Prototype Testing:
+              name: პროტოტიპების ტესტირება
+              key: პროტოტიპების ტესტირება
+            Testing the App:
+              name: აპლიკაციების ტესტირება
+              key: აპლიკაციების ტესტირება
+            Analysis of Design:
+              key: დიზაინის ანალიზი
+            Paper Prototypes:
+              key: ქაღალდის პროტოტიპები
+            Digital Design:
+              key: ციფრული დიზაინი
+            Linking Screens:
+              key: ეკრანების დაკავშირება
+          lesson_groups:
+            csd4_1:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            csd4_2:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            cspSurvey:
+              display_name: გამოკითხვა
+        csd5-2022:
+          lessons:
+            Representing Numbers:
+              name: რიცხვების წარმოდგენა
+              key: რიცხვების წარმოდგენა
+            Problem Solving and Data:
+              name: პრობლემათა გადაჭრა და მონაცემები
+              key: პრობლემათა გადაჭრა და მონაცემები
+            Interpreting Data:
+              name: მონაცემთა ინტერპრეტაცია
+              key: მონაცემთა ინტერპრეტაცია
+            Making Decisions with Data:
+              name: გადაწყვეტილების მიღება მონაცემებთან ერთად
+              key: გადაწყვეტილების მიღება მონაცემებთან ერთად
+            Automating Data Decisions:
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
+              key: მონაცემთა გადაწყვეტილებების ავტომატიზირება
+            Project - Create a Representation:
+              key: პროექტი - შექმენით წარმოდგენა
+          lesson_groups:
+            csd5_1:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            csd5_2:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            cspSurvey:
+              display_name: გამოკითხვა
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან დაკავშირებული პრობლემების გადასაჭრელად.
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: გამოკითხვა
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: მუსიკის შექმნა
+            Functions:
+              name: ფუნქციები
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            lessonGroup-4:
+              display_name: გამოკითხვა
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: კურსის შემდგომი გამოკითხვა
