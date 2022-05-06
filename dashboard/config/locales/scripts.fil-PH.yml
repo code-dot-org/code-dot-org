@@ -22468,6 +22468,10 @@ fil:
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pagsisiyasat
         csp8-2022:
           lessons:
             lesson-4:
@@ -22812,17 +22816,50 @@ fil:
             Learn to Drag and Drop:
               key: Matutong Mag-Drag at Mag-Drop
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming with Angry Birds:
               key: Pag-Program sa Maze
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               key: Pag-Program kasama sina Rey at BB-8
               name: Pag-Program kasama sina Rey at BB-8
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            On the Move with Events:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
+            Programming in with Angry Birds:
+              name: Pag-Program sa Maze
           lesson_groups:
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          description_audience: 'Mga Edad: 4-8'
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi
+            marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
+            unang baitang na mga kurso.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -22985,6 +23022,8 @@ fil:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            lesson-6:
+              name: Intelektwal na Pag-aari
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -22997,6 +23036,30 @@ fil:
             lessonGroup-5:
               display_name: Kahon ng buhangin
         vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Maligayang Pagdating
+            lesson-11:
+              name: Tapusin Na
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Maligayang Pagdating
+            lesson-9:
+              name: Tapusin Na
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Maligayang Pagdating
+            lesson-8:
+              name: Tapusin Na
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Maligayang Pagdating
+            lesson-14:
+              name: Tapusin Na
+        vpl-csd5-summer-pilot-2022:
           lessons:
             lesson-1:
               name: Maligayang Pagdating
@@ -23027,5 +23090,352 @@ fil:
             For Loops:
               name: For Loops
               key: For Loops
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Ang Proseso ng Pag-Disenyo
+            Engage with machine learning apps:
+              name: Ang Proseso ng Pag-Disenyo
         hello-world-csc:
           title: Hello World
+        csd-playground:
+          lessons:
+            Innovations in Computing:
+              name: Mga Pagbabago sa Pag-Compute
+              description_teacher: Para simulan ang huling yunit ng kursong ito, ang
+                mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong
+                likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante
+                sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto
+                sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga
+                puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang
+                mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang
+                natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang
+                pisikal na mga pag-compute na mga kagamitan.
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Sining ng Tula
+              description_teacher: Sa pinagsama-samang aralin ng CS at ELA na ito
+                para sa mga bagong coder, gagawin ng mga mag-aaral ang tula na may
+                code upang ilarawan ang mood ng nito. Babasahin at makikita ng mga
+                mag-aaral ang mood ng tula. Makakahanap sila pagkatapos ng kaukulang
+                mga effect at mga imahe upang makatulong na ilarawan ang mood ng tula.
+                Pagkatapos, gagamit ang mga mag-aaral ng mga kaganapan (code) upang
+                ilarawan ang pagbabago sa mood o bigyang-buhay ang pagpapakilala ng
+                mga bagong larawan sa tula.
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Pre-surbey ng CS Discoveries
+              key: Pre-surbey ng CS Discoveries
+            Intro to Problem Solving:
+              name: Panimula sa Paglutas ng Problema
+              key: Panimula sa Paglutas ng Problema
+            The Problem Solving Process:
+              name: Ang Proseso ng Pagtuklas ng Problema
+              key: Ang Proseso ng Pagtuklas ng Problema
+            Exploring Problem Solving:
+              name: Pagtuklas sa Paglutas ng Problema
+              key: Pagtuklas sa Paglutas ng Problema
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?
+              key: Ano ang isang Kompyuter?
+            Input and Output:
+              name: Input at Output
+              key: Input at Output
+            Processing:
+              name: Pagproseso
+              key: Pagproseso
+            Storage:
+              name: Imbakan
+              key: Imbakan
+            Project - Propose an App:
+              name: Proyekto - Pagmungkahi ng App
+              key: Proyekto - Pagmungkahi ng App
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+          description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
+            para lutasan ang mga problema."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Panimula sa HTML
+              key: Panimula sa HTML
+            Headings:
+              name: Mga Heading
+              key: Mga Heading
+            Digital Footprint:
+              name: Digital na Bakas
+              key: Digital na Bakas
+            Styling Text with CSS:
+              name: Pag-style ng Teksto gamit ang CSS
+              key: Pag-style ng Teksto gamit ang CSS
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+              key: Intelektwal na Pag-aari
+            Styling Elements with CSS:
+              name: Pag-istilo sa mga Elemento gamit ang CSS
+              key: Pag-istilo sa mga Elemento gamit ang CSS
+            'Websites for Expression ':
+              key: 'Mga Website para sa Pagpapahayag '
+            lesson-1:
+              key: aralin-1
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+          description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Pag-program para sa Libangan
+              key: Pag-program para sa Libangan
+            Plotting Shapes:
+              name: Pag-plot ng mga Hugis
+              key: Pag-plot ng mga Hugis
+            Drawing in Game Lab:
+              name: Pagguhit sa Game Lab
+              key: Pagguhit sa Game Lab
+            Variables:
+              name: Mga variable
+              key: Mga variable
+            Sprites:
+              name: Mga Sprites
+              key: Mga Sprites
+            Text:
+              name: Text
+              key: Text
+            The Draw Loop:
+              name: Ang Draw na Loop
+              key: Ang Draw na Loop
+            Sprite Movement:
+              name: Galaw ng mga Sprite
+              key: Galaw ng mga Sprite
+            Conditionals:
+              name: Mga conditional
+              key: Mga conditional
+            Keyboard Input:
+              name: Keyboard na Input
+              key: Keyboard na Input
+            Project - Interactive Card:
+              name: Proyekto - Inter-aktib na Baraha
+              key: Proyekto - Inter-aktib na Baraha
+            Velocity:
+              name: Belosidad
+              key: Belosidad
+            Collision Detection:
+              name: Pagtukoy sa mga Banggaan
+              key: Pagtukoy sa mga Banggaan
+            Complex Sprite Movement:
+              name: Kumplikadong Sprite na Kilusan
+              key: Kumplikadong Sprite na Kilusan
+            Collisions:
+              name: Mga Banggaan
+              description_teacher: "**Tanong Ngayon: Paano makakabuo ang mga programmer
+                sa mga abstrakto upang lumikha ng mga karagdagang abstraction?**\\\r\n\\\r\nSa
+                araling ito, pinoprograma ng mga mag-aaral ang mga tiyanak nila upang
+                makipag-ugnay sa mga bagong paraan. Pagkatapos ng maikling pagsusuri
+                kung paano nila ginamit ang [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                block, mag-iisip ang mga mag-aaral ng iba pang paraan kung saan maaaring
+                magpalitan ang dalawang tiyanak. Gagamitin nila pagkatapos ang [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                upang hayaan ang isang tiyanak na itulak ang isa pa sa screen bago
+                magsanay sa apat na block ng banggaan  ([`collide`(#f78183)](/docs/gamelab/collide/),
+                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
+                at [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Mga Banggaan
+            Functions:
+              name: Mga function
+              key: Mga function
+            The Game Design Process:
+              name: Ang Proseso ng Pagdisenyo ng Laro
+              key: Ang Proseso ng Pagdisenyo ng Laro
+            Using the Game Design Process:
+              name: Gamitin ang Proseso ng Pagdisenyo ng Laro
+              key: Gamitin ang Proseso ng Pagdisenyo ng Laro
+            Project - Design a Game:
+              name: Proyekto - Pagdisenyo ng Laro
+              key: Proyekto - Pagdisenyo ng Laro
+            lesson-1:
+              key: aralin-1
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
+          description_short: " Matutong mag-program ng mga animasyon, inter-aktib
+            na sining, at mga laro sa Game Lab."
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Pag-uunawa sa Iyong Gumagamit
+              key: Pag-uunawa sa Iyong Gumagamit
+            User Interfaces:
+              name: Mga interface ng Gumagamit
+              key: Mga interface ng Gumagamit
+            Feedback and Testing:
+              name: Feedback at Pagsubok
+              key: Feedback at Pagsubok
+            Identifying User Needs:
+              name: Pagtukoy sa mga Pangangailangan ng Gumagamit
+              key: Pagtukoy sa mga Pangangailangan ng Gumagamit
+            Project - Paper Prototype:
+              name: Proyekto - Papel na Prototype
+              key: Proyekto - Papel na Prototype
+            Designing Apps for Good:
+              name: Pagdidisenyo ng mga App para sa Ikabubuti
+              key: Pagdidisenyo ng mga App para sa Ikabubuti
+            Market Research:
+              name: Pananaliksik sa Merkado
+              key: Pananaliksik sa Merkado
+            Prototype Testing:
+              name: Prototype na Pagsusuri
+              key: Prototype na Pagsusuri
+            Testing the App:
+              name: Pag-test ng App
+              key: Pag-test ng App
+            Project - App Presentation:
+              name: Proyekto - Pagpapakita ng App
+              key: Proyekto - Pagpapakita ng App
+            Analysis of Design:
+              key: Pagsusuri ng Disenyo
+            Paper Prototypes:
+              key: Papel na mga Prototype
+            Digital Design:
+              key: Digital na Disenyo
+            Linking Screens:
+              key: Pag-uugnay sa mga Screen
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            cspSurvey:
+              display_name: Pagsisiyasat
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto
+            ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
+            na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan
+            ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang
+            bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung
+            saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan
+            na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa
+            papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga
+            gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: Ang Representasyon ay Mahalaga
+              key: Ang Representasyon ay Mahalaga
+            Patterns and Representation:
+              name: Mga Pattern at Representasyon
+              key: Mga Pattern at Representasyon
+            ASCII and Binary Representation:
+              name: ASCII at Binary na Representasyon
+              key: ASCII at Binary na Representasyon
+            Representing Images:
+              name: Pagkakatawan sa mga Larawan
+              key: Pagkakatawan sa mga Larawan
+            Representing Numbers:
+              name: Pagrepresenta ng mga Numero
+              key: Pagrepresenta ng mga Numero
+            Combining Representations:
+              name: Pagsasama-sama ng mga Representasyon
+              key: Pagsasama-sama ng mga Representasyon
+            Keeping Data Secret:
+              name: Pagiging Sekreto ng mga Datos
+              key: Pagiging Sekreto ng mga Datos
+            Problem Solving and Data:
+              name: Paglutas ng mga Problema at mga Datos
+              key: Paglutas ng mga Problema at mga Datos
+            Structuring Data:
+              name: Pagsasaayos ng mga Datos
+              key: Pagsasaayos ng mga Datos
+            Interpreting Data:
+              name: Pag-intindi ng mga Datos
+              key: Pag-intindi ng mga Datos
+            Making Decisions with Data:
+              name: Paggawa ng mga Desisyon na may mga Datos
+              key: Paggawa ng mga Desisyon na may mga Datos
+            Automating Data Decisions:
+              name: Pag-Automate ng mga Datos na mga Desisyon
+              key: Pag-Automate ng mga Datos na mga Desisyon
+            Problem Solving with Big Data:
+              name: Paglutas ng Problema kasama ang Malalaking mga Datos
+              key: Paglutas ng Problema kasama ang Malalaking mga Datos
+            Project - Create a Representation:
+              key: Proyekto - Paglikha ng Representasyon
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos
+            sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter
+            maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw
+            sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon
+            sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang
+            kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit
+            para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong
+            sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos
+            sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema
+            sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
+          description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter
+            para malutas ang mga problem sa mga datos.
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: Pagdidisenyo ng Koleksyon ng mga Datos
+              key: Pagdidisenyo ng Koleksyon ng mga Datos
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: Mga Pagbabago sa Pag-Compute
+              description_teacher: Para simulan ang huling yunit ng kursong ito, ang
+                mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong
+                likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante
+                sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto
+                sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga
+                puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang
+                mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang
+                natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang
+                pisikal na mga pag-compute na mga kagamitan.
+            The Circuit Playground:
+              name: Ang Circuit na Playground
+            Board Events:
+              name: Mga Pangyayari sa Board
+            Combining Inputs and Outputs:
+              name: Pinagsasama-sama ang mga Input
+            Accelerometer:
+              name: Accelerometer
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
+                sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado
+                sa mga pangyayari nito at mga katangian, pati na rin ang paglikha
+                ng maraming mga programa na gumagamit sa accelerometer katulad sa
+                mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
+            Making Music:
+              name: Paglikha ng Musika
+            Functions:
+              name: Mga function
+            Project - Prototype an Innovation:
+              description_teacher: 'Sa huling proyektong ito para sa kurso, ang mga
+                estudyante ay maggrupo-grupo para makagawa at makasubok ng isang prototype
+                para sa isang malikhain na computing na kagamitan na nakabase sa Circuit
+                na Playground. Gamit ang mga input at mga output na nasa board, ang
+                mga grupo ay lilikha ng mga programa na nagbibigay-daan para sa isang
+                mas kawili-wili at pambihirang mga pakikipag-ugnayan sa mga gumagamit. '
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kabanata 2: Input ng Hardware'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
+          description_short: Matutong mag-program sa mga pisikal na mga kagamitan.

@@ -154,7 +154,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
-    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
@@ -1813,10 +1812,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csd_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
-    assert_equal(
-      [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
     assert_equal(
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
@@ -1825,10 +1821,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csc_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     )
-    assert_equal(
-      [@hoc_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
   end
 
   test "under_curriculum_umbrella and helpers" do

@@ -667,6 +667,8 @@
   "pairProgramming": "პროგრამირება წყვილებში",
   "parent": "მშობელი",
   "parents": "მშობლები",
+  "participantTypeStudentTitle": "მოსწავლეები",
+  "participantTypeTeacherTitle": "მასწავლებლები",
   "password": "პაროლი",
   "passwordConfirmation": "პაროლის დადასტურება",
   "passwordsMustMatch": "პაროლები უნდა ემთხვეოდეს",

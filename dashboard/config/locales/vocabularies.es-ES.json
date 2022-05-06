@@ -68,6 +68,7 @@
           "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
         },
         "code/flappy/unversioned": {
+          "word": "Programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -868,6 +869,10 @@
         },
         "ethics/csd/2021": {
           "word": "Ética"
+        },
+        "user/csd/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
         },
         "user_interface/csd/2021": {
           "word": "Pantalla de Usuario"
