@@ -329,7 +329,8 @@ describe('entry tests', () => {
     all: {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
-        outputStyle: 'nested',
+        // dart-sass: Only the "expanded" and "compressed" values of outputStyle are supported.
+        outputStyle: 'expanded',
         includePaths: ['node_modules', '../shared/css/'],
         implementation: sass
       },
