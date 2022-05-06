@@ -33075,6 +33075,8 @@ en:
               description_teacher: 
             lesson-4:
               name: TextProcessor
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: ImagePlus
               description_student: 
@@ -33433,7 +33435,7 @@ en:
               description_student: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
-                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.
+                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply your algorithm to various scenarios to find the overall sentiment value of text.
               description_teacher: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
@@ -33482,6 +33484,10 @@ en:
               name: Unit 6 Assessment
               description_student: Assess your progress through the Unit 6 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            Console:
+              name: Console
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -34684,8 +34690,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Explore data at a small scale
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
+              description_teacher: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
             lesson-3:
               name: Explore data at a large scale
               description_student: 
