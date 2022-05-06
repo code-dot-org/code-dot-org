@@ -12,6 +12,7 @@ class ReferenceGuidesController < ApplicationController
 
   # GET /courses/:course_name/guides/:key
   def show
+    @base_url = "/courses/#{params[:course_course_name]}/guides"
   end
 
   # GET /courses/:course_name/guides

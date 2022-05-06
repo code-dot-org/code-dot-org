@@ -960,6 +960,7 @@ Dashboard::Application.routes.draw do
 
   resources :project_versions, only: [:create]
   get 'project_versions/get_token', to: 'project_versions#get_token'
+  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
