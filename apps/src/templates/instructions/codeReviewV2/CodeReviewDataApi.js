@@ -2,6 +2,11 @@
 import {findProfanity} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 
+export const timelineDataType = {
+  review: 'review',
+  commit: 'commit'
+};
+
 export default class CodeReviewDataApi {
   constructor(channelId, levelId, scriptId) {
     this.channelId = channelId;
@@ -44,6 +49,38 @@ export default class CodeReviewDataApi {
       }
     ];
   }
+
+  getInitialTimelineData = async () => {
+    const [codeReviews, commits] = await Promise.all([
+      this.getCodeReviews(),
+      this.getCommits()
+    ]);
+
+    let labeledReviewData = codeReviews.map(review => {
+      review.type = timelineDataType.review;
+      return review;
+    });
+
+    const openReview = labeledReviewData.find(review => !review.isClosed);
+    if (openReview) {
+      labeledReviewData = labeledReviewData.filter(
+        review => review.id !== openReview.id
+      );
+    }
+
+    const labeledCommitData = commits.map(commit => {
+      commit.type = timelineDataType.commit;
+      return commit;
+    });
+
+    const mergedData = labeledReviewData.concat(labeledCommitData);
+    mergedData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+    return {
+      timelineData: mergedData,
+      openReview
+    };
+  };
 
   getCodeReviews() {
     // Enable when the API is ready

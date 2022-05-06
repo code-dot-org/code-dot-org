@@ -9,14 +9,10 @@ import {
   commitShape,
   reviewShape
 } from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-
-const dataType = {
-  review: 'review',
-  commit: 'commit'
-};
+import {timelineDataType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 const CodeReviewTimeline = props => {
-  const {reviewData, commitsData, addCodeReviewComment} = props;
+  const {timelineData, addCodeReviewComment} = props;
 
   const timelineEndRef = useRef(null);
 
@@ -26,28 +22,17 @@ const CodeReviewTimeline = props => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [reviewData, commitsData]);
-
-  const labeledReviewData = reviewData.map(review => {
-    review.type = dataType.review;
-    return review;
-  });
-  const labeledCommitData = commitsData.map(commit => {
-    commit.type = dataType.commit;
-    return commit;
-  });
-  const mergedData = labeledReviewData.concat(labeledCommitData);
-  mergedData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+  }, []);
 
   return (
     <div style={styles.wrapper}>
       <CodeReviewTimelineElement
         type={codeReviewTimelineElementType.CREATED}
-        isLast={mergedData.length === 0}
+        isLast={timelineData.length === 0}
       />
-      {mergedData.map((data, i) => {
-        const lastElementInTimeline = i === mergedData.length - 1;
-        if (data.type === dataType.commit) {
+      {timelineData.map((data, i) => {
+        const lastElementInTimeline = i === timelineData.length - 1;
+        if (data.type === timelineDataType.commit) {
           return (
             <CodeReviewTimelineCommit
               key={`commit-${data.id}`}
@@ -57,7 +42,7 @@ const CodeReviewTimeline = props => {
           );
         }
 
-        if (data.type === dataType.review) {
+        if (data.type === timelineDataType.review) {
           return (
             <CodeReviewTimelineReview
               key={`review-${data.id}`}
@@ -74,8 +59,9 @@ const CodeReviewTimeline = props => {
 };
 
 CodeReviewTimeline.propTypes = {
-  reviewData: PropTypes.arrayOf(reviewShape),
-  commitsData: PropTypes.arrayOf(commitShape),
+  timelineData: PropTypes.arrayOf(
+    PropTypes.oneOfType(reviewShape, commitShape)
+  ),
   addCodeReviewComment: PropTypes.func.isRequired
 };
 
