@@ -9,13 +9,16 @@
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Replace Words",
+    "bubble_choice_description": "Replace words of a specific part of speech with different words.",
+    "thumbnail_url": "https://images.code.org/2ac404184b3f645160024d24dfcf9b1b-replace.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-14T19:34:18.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:34:18.368+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L4c_2022\\\"\"],\"cloned_from\":\"CSA U6L7-L4c_2022\"},{\"changed_at\":\"2022-04-14 19:34:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:34:18.368+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L4c_2022\\\"\"],\"cloned_from\":\"CSA U6L7-L4c_2022\"},{\"changed_at\":\"2022-04-14 19:34:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 16:28:20 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 16:37:53 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
