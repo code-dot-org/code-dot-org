@@ -198,7 +198,7 @@
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
     "sass": "^1.51.0",
-    "sass-loader": "6.0.7",
+    "sass-loader": "7.3.1",
     "save-csv": "^4.0.6",
     "script-loader": "^0.7.0",
     "seedrandom": "2.4.2",
