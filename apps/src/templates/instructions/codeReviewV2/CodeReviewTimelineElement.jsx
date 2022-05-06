@@ -65,7 +65,7 @@ const CodeReviewTimelineElement = ({
   if (type === codeReviewTimelineElementType.CODE_REVIEW) {
     return (
       <div style={styles.element}>
-        <div style={styles.eyeColumn}>
+        <div style={{...styles.eyeColumn, ...styles.reviewEye}}>
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
@@ -144,6 +144,9 @@ const styles = {
     color: color.light_gray,
     fontSize: '20px'
   },
+  reviewEye: {
+    marginTop: '20px'
+  },
   timeline: {
     display: 'flex',
     flexDirection: 'column',
@@ -153,7 +156,8 @@ const styles = {
   codeReviewTimeline: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '11px'
+    marginLeft: '11px',
+    width: '100%'
   },
   dot: {
     width: dotHeight,
