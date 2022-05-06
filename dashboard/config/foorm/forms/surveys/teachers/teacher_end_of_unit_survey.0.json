@@ -254,7 +254,8 @@
         },
         {
           "type": "html",
-          "name": "question3",
+          "name": "unit_specific_header",
+          "visibleIf": "{unit_number} notempty",
           "html": "<h2>CSA Unit {unit_number} Objectives</h2><p>We're interested in how effective the lessons and materials in this unit were in helping your students learn. We will use this feedback to learn how we might improve the course.</p><h3>By the end of this unit, how many of your students can...</h3>"
         },
         {
@@ -309,7 +310,7 @@
             },
             {
               "type": "rating",
-              "name": "question2",
+              "name": "explain_inheritance",
               "title": "Explain the purpose and functionality of inheritance.",
               "rateValues": [
                 {
@@ -622,6 +623,11 @@
             }
           ],
           "visibleIf": "{unit_number} = 3"
+        },
+        {
+          "type": "html",
+          "name": "thank_you_message",
+          "html": "<h2>Thank you for your feedback!</h2>"
         }
       ]
     }
