@@ -1,6 +1,6 @@
 name 'SP-VPL-CSA-22-mod3-L3-matching'
 title 'Check for understanding'
-description 'For each of the statements below, assume that the variable `num` has been declared and initialized to the value 15.  Match the boolean expression to the correct boolean value.'
+description 'Match the vocabulary word to the correct definition.'
 height '90'
 question 'Boolean expression'
 answer ' code segment that evaluates to a boolean value'
