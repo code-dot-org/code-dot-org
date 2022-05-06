@@ -28,6 +28,7 @@ When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, 
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
 end
 
+# To-Do: Make work for Google Blockly (and for star_labs_bounce, star_labs_bouncedrag, star_labs_flappy, star_labs_flappydrag)
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
   @browser.execute_script code
@@ -58,6 +59,7 @@ When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do
   @browser.execute_script code
 end
 
+# To-Do: Make work for Google Blockly (and for star_labs_blocklayout)
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
   expect(point.x).to be_within(3).of(x.to_i)
@@ -117,6 +119,7 @@ Then /^block "([^"]*)" is visible in the workspace$/ do |block|
   expect(block_right).to be > block_space_left + block_margin + toolbox_width
 end
 
+# To-Do: Make Work for Google Blockly (and star_labs_sharepage)
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   id_selector = get_id_selector
   @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
