@@ -1,0 +1,17 @@
+{
+  "sk-SK": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Algoritmické myslenie"
+        },
+        "ccela/L": {
+          "description": "Jazyk"
+        },
+        "csta/IC": {
+          "description": "Vplyv Informatiky"
+        }
+      }
+    }
+  }
+}

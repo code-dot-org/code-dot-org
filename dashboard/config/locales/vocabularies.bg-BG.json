@@ -17,8 +17,17 @@
         "code/poem-art/2021": {
           "word": "Код"
         },
+        "code/flappy/unversioned": {
+          "word": "Код",
+          "definition": "(v) да напишеш код или да напишеш инструкции за компютър."
+        },
         "debugging/flappy/unversioned": {
-          "word": "Отстраняване на грешки"
+          "word": "Отстраняване на грешки",
+          "definition": "Намиране и управяна на проблеми в алгоритъм или програма"
+        },
+        "program/flappy/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритъм, който е бил написан на език който може да бъде разчет и изпълнен от машина."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Отстраняване на грешки"

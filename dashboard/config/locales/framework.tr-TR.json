@@ -1,0 +1,20 @@
+{
+  "tr-TR": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Ortak Temel İngilizce Dil Sanatları Standartları"
+        },
+        "ccmath": {
+          "name": "Ortak Temel Matematik Standartları"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Bilgisayar Bilimi Standartları (2011)"
+        },
+        "iste": {
+          "name": "Öğrenciler için ISTE Standartları"
+        }
+      }
+    }
+  }
+}

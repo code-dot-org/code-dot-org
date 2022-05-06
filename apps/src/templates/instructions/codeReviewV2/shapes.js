@@ -8,7 +8,7 @@ export const commitShape = PropTypes.shape({
   isVersionExpired: PropTypes.bool
 });
 
-const commentShape = PropTypes.shape({
+const reviewCommentShape = PropTypes.shape({
   id: PropTypes.number,
   commentText: PropTypes.string,
   name: PropTypes.string,
@@ -22,5 +22,5 @@ export const reviewShape = PropTypes.shape({
   isClosed: PropTypes.bool,
   projectVersion: PropTypes.string,
   isVersionExpired: PropTypes.bool,
-  comments: PropTypes.arrayOf(commentShape)
+  comments: PropTypes.arrayOf(reviewCommentShape)
 });

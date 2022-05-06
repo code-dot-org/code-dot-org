@@ -38,7 +38,8 @@ class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     styleAsText: PropTypes.bool,
@@ -148,6 +149,7 @@ class Button extends React.Component {
               style={{...styles.icon, ...iconStyle}}
             />
           )}
+          {this.props.children && this.props.children}
           {isPending && pendingText && (
             <span>
               {pendingText}&nbsp;

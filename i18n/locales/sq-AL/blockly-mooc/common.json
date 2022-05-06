@@ -422,6 +422,8 @@
   "pairingNavigatorWarning": "Kjo enigmë është kompletuar duke u çiftuar me {driver}. Shikoni këtë enigmë në llogarinë e tyre që të shikoni zgjidhjen që e keni krijuar si një ekip .",
   "pairProgramming": "Programim në çift",
   "parent": "Prindi",
+  "participantTypeStudentTitle": "Studentët",
+  "participantTypeTeacherTitle": "Mesuesit",
   "password": "Fjalëkalimi",
   "passwordConfirmation": "Konfirmimi i fjalëkalimit",
   "pause": "Ndërprerje",
