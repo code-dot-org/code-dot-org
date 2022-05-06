@@ -90,7 +90,11 @@ export default function StylizedBaseDialog(props) {
   ];
 
   return (
-    <BaseDialog {...passThroughProps()} useUpdatedStyles>
+    <BaseDialog
+      {...passThroughProps()}
+      useUpdatedStyles
+      useFlexbox={props.stickyHeaderFooter}
+    >
       {props.title && (
         <>
           <div style={styles.container}>{renderTitle()}</div>
@@ -100,7 +104,8 @@ export default function StylizedBaseDialog(props) {
       <div
         style={{
           ...styles.container,
-          ...(styles.body[props.type] || {})
+          ...(styles.body[props.type] || {}),
+          overflowY: props.stickyHeaderFooter && 'auto'
         }}
       >
         {props.body ? props.body : props.children}
@@ -141,7 +146,8 @@ StylizedBaseDialog.propTypes = {
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,
-  type: PropTypes.oneOf(Object.keys(DialogStyle))
+  type: PropTypes.oneOf(Object.keys(DialogStyle)),
+  stickyHeaderFooter: PropTypes.bool
 };
 
 StylizedBaseDialog.defaultProps = {
