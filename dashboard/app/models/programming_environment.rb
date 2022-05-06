@@ -132,7 +132,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_navigation
-    Rails.cache.fetch("#{cache_key_with_version}/categories_for_navigation", force: !Script.should_cache?) do
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_navigation", force: !Script.should_cache?) do
       categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
     end
   end
