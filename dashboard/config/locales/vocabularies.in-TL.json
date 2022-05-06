@@ -930,6 +930,14 @@
           "word": "crwdns2876506:0crwdne2876506:0",
           "definition": "crwdns2876508:0crwdne2876508:0"
         },
+        "empathy/csd/2021": {
+          "word": "crwdns2910360:0crwdne2910360:0",
+          "definition": "crwdns2910362:0crwdne2910362:0"
+        },
+        "user/csd/2021": {
+          "word": "crwdns2910364:0crwdne2910364:0",
+          "definition": "crwdns2910366:0crwdne2910366:0"
+        },
         "usability/csd/2021": {
           "word": "crwdns2870386:0crwdne2870386:0",
           "definition": "crwdns2870388:0crwdne2870388:0"
@@ -949,6 +957,10 @@
         "feature/csd/2021": {
           "word": "crwdns2871850:0crwdne2871850:0",
           "definition": "crwdns2871852:0crwdne2871852:0"
+        },
+        "innovation/csd/2021": {
+          "word": "crwdns2911486:0crwdne2911486:0",
+          "definition": "crwdns2911488:0crwdne2911488:0"
         },
         "analog/csd/2021": {
           "word": "crwdns2872546:0crwdne2872546:0",

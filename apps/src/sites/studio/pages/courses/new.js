@@ -8,6 +8,7 @@ $(document).ready(() => {
     <NewCourseForm
       families={getScriptData('families')}
       versionYearOptions={getScriptData('versionYearOptions')}
+      familiesCourseTypes={getScriptData('familiesCourseTypes')}
     />,
     document.getElementById('form')
   );

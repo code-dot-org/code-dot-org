@@ -321,7 +321,8 @@
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Strojové učenie"
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
         },
         "code/poem-art/unversioned": {
           "word": "Kód",
@@ -392,7 +393,8 @@
           "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
         "machine_learning/coursef/2021": {
-          "word": "Strojové učenie"
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -866,7 +868,12 @@
           "definition": "Pokus urobiť niečo"
         },
         "machine_learning/csd/2021": {
-          "word": "Strojové učenie"
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "user/csd/2021": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
         },
         "user_interface/csd/2021": {
           "word": "Užívateľské prostredie"

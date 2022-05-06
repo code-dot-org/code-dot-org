@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_what_computers_do",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "#### This video is included in the CS Discoveries curriculum to reinforce the process of computing.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### Think of something your students do on the computer. \r\n* What sort of input, output, storage, and processing are happening?\r\n* How might you incorporate this example into a class discussion?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThis discussion should allow students to review the input, output, storage, and processing model that they have been exploring in the past few lessons.  While they should be familiar with how the model works with apps, there may still be questions around other computing devices, and around the examples shown later in the lesson.  For example, one common source of controversy around processing is whether some devices are processing information themselves, or whether the user is processing the information, while the device simply stores information (e.g. the abacus).",
+    "display_name": "IOSP Model",
+    "parent_level_id": 21735,
+    "name_suffix": "_2022"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2022-04-28T16:06:37.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-04-28T16:06:37.251+00:00\",\"changed\":[\"cloned from \\\"CSD U1 storage video_2022\\\"\"],\"cloned_from\":\"CSD U1 storage video_2022\"},{\"changed_at\":\"2022-04-28 20:15:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

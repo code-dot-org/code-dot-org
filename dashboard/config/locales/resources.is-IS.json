@@ -847,6 +847,13 @@
         "teacher_forum/csd/2021": {
           "name": "Kennaraspjall"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Myndband"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Tölvunarfræði er að breyta öllu",
+          "type": "Myndband"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Hvernig tölvur virka: vélbúnaður og hugbúnaður",
           "type": "Myndband"
@@ -975,6 +982,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Kennaraspjall"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Myndband"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Myndband"

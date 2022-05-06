@@ -412,9 +412,9 @@ hu:
           kódrészlet. A jobb oldalon lévő üres területet munkaterületnek nevezik,
           és itt készítjük majd el a programunkat.
       4:
-        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
-          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
-          a sárga vonalig, és akkor majd összekapcsolódnak.
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "futtatáskor"
+          blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga
+          vonalig, és akkor majd összekapcsolódnak.
       5:
         text: Ebben az első feladványban a szereplőnk egy pingvin, akit ráveszünk
           arra, hogy mondjon egy "Helló!"-t. Ehhez áthúzzuk a "szereplő mondja" blokkot,
@@ -1385,9 +1385,9 @@ hu:
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
-        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
-          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
-          a sárga vonalig, és akkor majd összekapcsolódnak.
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "futtatáskor"
+          blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga
+          vonalig, és akkor majd összekapcsolódnak.
     iceage_intro:
       4:
         text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
@@ -1396,9 +1396,9 @@ hu:
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
-        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
-          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
-          a sárga vonalig, és akkor majd összekapcsolódnak.
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "futtatáskor"
+          blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga
+          vonalig, és akkor majd összekapcsolódnak.
     mc_2016_intro:
       8:
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
