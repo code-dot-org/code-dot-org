@@ -13,8 +13,7 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
-import msg from '@cdo/locale';
-import {getDatasetInfo} from '@cdo/apps/storage/dataBrowser/dataUtils';
+import TableDescription from './TableDescription';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -93,36 +92,15 @@ class DataTableView extends React.Component {
     return JSON.stringify(records, null, 2);
   }
 
-  renderMoreInfoDescription() {
-    const datasetInfo = getDatasetInfo(
-      this.props.tableName,
-      this.props.libraryManifest.tables
-    );
-    let moreInfo;
-    if (datasetInfo) {
-      if (datasetInfo.docUrl) {
-        moreInfo = (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={datasetInfo.docUrl}
-          >
-            {msg.moreInfo()}
-          </a>
-        );
-      }
-      return (
-        <div>
-          <span style={{display: 'block'}}>{datasetInfo.description}</span>
-          {moreInfo}
-        </div>
-      );
-    }
-    return null;
-  }
-
   render() {
-    const visible = DataView.TABLE === this.props.view;
+    const {
+      view,
+      tableListMap,
+      tableName,
+      onViewChange,
+      libraryManifest
+    } = this.props;
+    const visible = DataView.TABLE === view;
     const containerStyle = [
       styles.container,
       {
@@ -135,8 +113,7 @@ class DataTableView extends React.Component {
         display: this.state.showDebugView ? '' : 'none'
       }
     ];
-    const readOnly =
-      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
+    const readOnly = tableListMap[tableName] === tableType.SHARED;
 
     return (
       <div id="dataTable" style={containerStyle} className="inline-flex">
@@ -145,7 +122,7 @@ class DataTableView extends React.Component {
             <a
               id="tableBackToOverview"
               style={dataStyles.link}
-              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+              onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
               &nbsp;Back to data
@@ -165,10 +142,15 @@ class DataTableView extends React.Component {
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
-          tableName={this.props.tableName}
+          tableName={tableName}
           readOnly={readOnly}
         />
-        {this.renderMoreInfoDescription()}
+        {libraryManifest.tables && (
+          <TableDescription
+            tableName={tableName}
+            libraryTables={libraryManifest.tables}
+          />
+        )}
         <div style={debugDataStyle}>{this.getTableJson()}</div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
