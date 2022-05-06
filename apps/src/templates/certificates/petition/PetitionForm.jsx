@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 /* global ga */
 
 const PetitionForm = ({gaPagePath}) => {
-  // data starts with all required fields having an empty value to ensure proper validation
+  // data starts with all fields having an empty value to ensure consistent data shape
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
@@ -87,35 +87,39 @@ const PetitionForm = ({gaPagePath}) => {
         <div className={'petition-space'}>{errorMessage}</div>
         <ControlledFieldGroup
           id="name"
+          name="name_s"
           placeholderOrLabel={i18n.name()}
           isErrored={invalidFields.includes('name')}
           onChange={handleChange}
-          value={data['name'] || ''}
+          value={data.name_s || ''}
         />
         <ControlledFieldGroup
           id="email"
+          name="email_s"
           placeholderOrLabel={i18n.email()}
           isErrored={invalidFields.includes('email')}
           helpText={i18n.usedForInfrequentUpdates()}
           onChange={handleChange}
-          value={data.email || ''}
+          value={data.email_s || ''}
         />
         <ControlledFieldGroup
           id="zip-or-country"
+          name="zip_code_or_country_s"
           placeholderOrLabel={i18n.zipOrCountry()}
           isErrored={invalidFields.includes('zip-or-country')}
           helpText={i18n.enterCountry()}
           onChange={handleChange}
-          value={data['zip-or-country'] || ''}
+          value={data.zip_code_or_country_s || ''}
         />
         <ControlledFieldGroup
           id="age"
+          name="age_i"
           placeholderOrLabel={i18n.age()}
           isErrored={invalidFields.includes('age')}
           helpText={<a href="/privacy">{i18n.privacyPracticesForChildren()}</a>}
           componentClass="select"
           onChange={handleChange}
-          value={data['age'] || ''}
+          value={data.age_i || ''}
         >
           {['-', ...range(1, 101)].map((age, index) => (
             <option key={index} value={age}>
@@ -125,11 +129,12 @@ const PetitionForm = ({gaPagePath}) => {
         </ControlledFieldGroup>
         <ControlledFieldGroup
           id="profession"
+          name="role_s"
           placeholderOrLabel={i18n.iAmA()}
           isErrored={invalidFields.includes('profession')}
           componentClass="select"
           onChange={handleChange}
-          value={data['profession'] || ''}
+          value={data.role_s || ''}
         >
           {[
             '-',

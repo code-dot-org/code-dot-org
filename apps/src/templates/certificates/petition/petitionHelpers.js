@@ -2,17 +2,20 @@ import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import {forEach, has, merge} from 'lodash';
 
 export const keyValidation = {
-  name: {
-    isValid: value => !!value,
-    errorText: 'include your name'
+  name_s: {
+    isValid: value => !!value
   },
-  email: {
-    isValid: isEmail,
-    errorText: 'enter a valid email address'
+  email_s: {
+    isValid: isEmail
   },
-  age: {
-    isValid: isInt,
-    errorText: 'select your age'
+  zip_code_or_country_s: {
+    isValid: () => true
+  },
+  age_i: {
+    isValid: isInt
+  },
+  role_s: {
+    isValid: () => true
   }
 };
 
