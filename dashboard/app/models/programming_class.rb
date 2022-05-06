@@ -124,7 +124,8 @@ class ProgrammingClass < ApplicationRecord
       externalDocumentation: external_documentation,
       categoryKey: programming_environment_category&.key || '',
       color: programming_environment_category&.color || '',
-      category: programming_environment_category&.name || ''
+      category: programming_environment_category&.name || '',
+      methods: summarize_programming_methods
     }
   end
 
@@ -135,6 +136,17 @@ class ProgrammingClass < ApplicationRecord
       syntax: syntax,
       link: "/programming_classes/#{id}"
     }
+  end
+
+  def summarize_programming_methods
+    # Create a list of the top level programming methods, i.e. the
+    # ones without overload_of set
+    methods = []
+    programming_methods.each do |m|
+      next unless m.overload_of.blank?
+      methods += [m.summarize_for_show]
+    end
+    methods
   end
 
   private

@@ -87,6 +87,11 @@ class ScriptsController < ApplicationController
   end
 
   def new
+    @unit_families_course_types = Script.family_names.map do |cf|
+      unit = CourseOffering.find_by(key: cf)&.course_versions&.first&.content_root
+      next unless unit
+      [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+    end.compact.to_h
   end
 
   def create
@@ -101,18 +106,18 @@ class ScriptsController < ApplicationController
     updated_unit_params = unit_params.merge(
       {
         published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
     updated_general_params = general_params.merge(
       {
         published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
@@ -328,7 +333,6 @@ class ScriptsController < ApplicationController
       :description_short,
       :description,
       :student_description,
-      :stage_descriptions
     ).to_h
   end
 
