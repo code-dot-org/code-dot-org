@@ -63,7 +63,6 @@ describe('UnitEditor', () => {
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
-        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
