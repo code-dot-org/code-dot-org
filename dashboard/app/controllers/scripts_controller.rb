@@ -91,6 +91,9 @@ class ScriptsController < ApplicationController
     @unit_families_course_types = []
     Script.family_names.map do |cf|
       co = CourseOffering.find_by(key: cf)
+
+      # There are some old family names for connecting between units in a course which will not be a course offering
+      next unless co
       first_cv = co.course_versions.first
       unit = first_cv.content_root
       @versioned_unit_families << cf unless first_cv.key == 'unversioned'
