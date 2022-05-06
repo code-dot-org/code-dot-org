@@ -12,7 +12,6 @@
   "properties": {
     "family_name": "self-paced-pl-csa",
     "has_numbered_units": true,
-    "pilot_experiment": "csa-getting-started-preview",
     "version_year": "2022"
   },
   "resources": [
