@@ -35,8 +35,9 @@ class CodeReview < ApplicationRecord
 
   # Returns an array of all code reviews (open and closed) that match the given
   # identifying attributes. Returns an empty array if there are no matches.
-  def self.get_all(user_id:, script_id:, level_id:)
-    CodeReview.where(user_id: user_id, script_id: script_id, level_id: level_id).to_a
+  def self.get_all(project_id:, script_id:, level_id:)
+    # TODO: Add an index to the db that covers this query
+    CodeReview.where(project_id: project_id, script_id: script_id, level_id: level_id).to_a
   end
 
   # Returns whether the code review is open for adding more comments.
@@ -47,6 +48,7 @@ class CodeReview < ApplicationRecord
   # Marks the code review as closed. Caller must call `save` to commit the
   # change to the database.
   def close
+    return unless closed_at.nil?
     self.closed_at = DateTime.now
   end
 

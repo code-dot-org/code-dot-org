@@ -7,6 +7,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
     @project_owner = create :student
     @storage_id = create_storage_id_for_user(@project_owner.id)
     @channel_id = create :project, storage_id: @storage_id
+    _,  @project_id = storage_decrypt_channel_id(@channel_id)
   end
 
   setup do
@@ -18,11 +19,15 @@ class CodeReviewsControllerTest < ActionController::TestCase
     level_id = 5
 
     closed_at = DateTime.now
-    create :code_review, user_id: @project_owner.id, script_id: script_id, level_id: level_id, closed_at: closed_at
-    create :code_review, user_id: @project_owner.id, script_id: script_id, level_id: level_id, closed_at: closed_at + 1.second
-    create :code_review, user_id: @project_owner.id, script_id: script_id, level_id: level_id, closed_at: nil
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
+      script_id: script_id, level_id: level_id, closed_at: closed_at
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
+      script_id: script_id, level_id: level_id, closed_at: closed_at + 1.second
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
+      script_id: script_id, level_id: level_id, closed_at: nil
 
     get :index, params: {
+      channelId: @channel_id,
       scriptId: script_id,
       levelId: level_id
     }
@@ -93,5 +98,27 @@ class CodeReviewsControllerTest < ActionController::TestCase
 
     code_review.reload
     refute code_review.open?
+  end
+
+  test 'update fails when trying to re-open a closed review' do
+    code_review = create :code_review, user_id: @project_owner.id, closed_at: DateTime.now
+    assert !code_review.open?
+
+    patch :update, params: {
+      id: code_review.id,
+      isClosed: false
+    }
+    assert_response :bad_request
+  end
+
+  test 'update fails when unexpected params are passed' do
+    code_review = create :code_review, user_id: @project_owner.id
+
+    assert_raises ActionController::UnpermittedParameters do
+      patch :update, params: {
+        id: code_review.id,
+        scriptId: 5
+      }
+    end
   end
 end
