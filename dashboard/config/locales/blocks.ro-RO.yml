@@ -1244,6 +1244,12 @@ ro:
             '90': jos
             '180': stânga
             '270': sus
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': mic
+            '50': mediu
+            '100': mare
       gamelab_mirrorSprite:
         text: "{SPRITE} îndreptat {DIRECTION}"
         options:
