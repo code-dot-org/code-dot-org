@@ -58,9 +58,9 @@ class ParentLevelsChildLevel < ApplicationRecord
         error_message = "cannot add contained level of type #{child_level.type}"
         errors.add(:child_level_id, error_message)
 
-        # Explicitly surface this error to the associated parent level, to make
-        # it visible to levelbuilders.
-        parent_level.errors.add(:child_level, error_message)
+        # Explicitly surface this error to the associated parent level if
+        # possible, to make it visible to levelbuilders.
+        parent_level&.errors&.add(:child_level, error_message)
       end
     end
   end
