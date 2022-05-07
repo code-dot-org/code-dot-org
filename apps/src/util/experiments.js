@@ -38,6 +38,7 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
 experiments.STUDIO_CERTIFICATE = 'studioCertificate';
 experiments.JAVALAB_DOCUMENTATION = 'javalabDocumentation';
+experiments.DROPLET_CREATE_SOCKET_FOR_KNOWN_BLOCK = 'createSocketForKnownBlock';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
