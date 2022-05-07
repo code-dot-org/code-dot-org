@@ -1241,6 +1241,12 @@ vi:
             '90': xuống
             '180': trái
             '270': trên
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': nhỏ
+            '50': trung bình
+            '100': lớn
       gamelab_mirrorSprite:
         text: "{SPRITE} mặt {DIRECTION}"
         options:
