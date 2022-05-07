@@ -110,15 +110,4 @@ class CodeReviewsControllerTest < ActionController::TestCase
     }
     assert_response :bad_request
   end
-
-  test 'update fails when unexpected params are passed' do
-    code_review = create :code_review, user_id: @project_owner.id
-
-    assert_raises ActionController::UnpermittedParameters do
-      patch :update, params: {
-        id: code_review.id,
-        scriptId: 5
-      }
-    end
-  end
 end

@@ -1,6 +1,4 @@
 class CodeReviewsController < ApplicationController
-  ActionController::Parameters.action_on_unpermitted_parameters = :raise
-
   before_action :authenticate_user!
 
   # Make sure we don't forget to authorize each action
@@ -10,7 +8,6 @@ class CodeReviewsController < ApplicationController
   # Returns the list of code reviews and associated comments for the given
   # project (identified by channel id), script, and level.
   def index
-    params.permit(:channelId, :scriptId, :levelId)
     params.require([:channelId, :scriptId, :levelId])
 
     storage_id, project_id = storage_decrypt_channel_id(params[:channelId])
@@ -31,7 +28,6 @@ class CodeReviewsController < ApplicationController
 
   # POST /code_reviews
   def create
-    params.permit(:scriptId, :levelId, :channelId, :version)
     params.require([:scriptId, :levelId, :channelId, :version])
 
     storage_id, project_id = storage_decrypt_channel_id(params[:channelId])
@@ -56,7 +52,6 @@ class CodeReviewsController < ApplicationController
   # PATCH /code_reviews/:id
   # Currently, closing the code review is the only allowed update.
   def update
-    params.permit(:id, :isClosed)
     params.require(:id)
 
     code_review = CodeReview.find(params[:id])
