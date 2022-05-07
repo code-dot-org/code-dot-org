@@ -158,6 +158,13 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validate :deeper_learning_courses_cannot_be_launched
+
+  def deeper_learning_courses_cannot_be_launched
+    if old_professional_learning_course? && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
+    end
+  end
 
   after_save :check_course_type_settings
 
@@ -212,7 +219,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil?
+    !professional_learning_course.blank?
   end
 
   def generate_plc_objects
@@ -1928,7 +1935,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!get_pilot_experiment
+    !get_pilot_experiment.blank?
   end
 
   def has_pilot_access?(user = nil)

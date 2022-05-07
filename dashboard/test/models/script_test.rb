@@ -1196,7 +1196,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'teacher_led', unit_group.instruction_type
     assert_equal 'beta', unit_group.published_state
 
-    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'in_development')
 
     unit.reload
     unit_group = unit.plc_course_unit.plc_course.unit_group
@@ -1204,7 +1204,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'universal_instructor', unit_group.instructor_audience
     assert_equal 'teacher', unit_group.participant_audience
     assert_equal 'self_paced', unit_group.instruction_type
-    assert_equal 'stable', unit_group.published_state
+    assert_equal 'in_development', unit_group.published_state
   end
 
   test 'generate plc objects will use defaults if script has null values' do
@@ -2161,6 +2161,16 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if deeper learning course is being launched' do
+    unit = create(:standalone_unit, professional_learning_course: 'my-deeper-learning-course')
+    error = assert_raises do
+      unit.published_state = 'stable'
+      unit.save!
+    end
+
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
   end
 
   test 'should raise error if participant audience is nil for standalone unit' do
