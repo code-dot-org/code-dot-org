@@ -59,12 +59,66 @@
         "CourseE_Project_SpriteLab_cupcake_examples_2021": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "growing": "mărire",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "moving east": "deplasare către est",
+          "patrolling": "patrulare",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "moving west2": "deplasare către vest2",
+          "spinning right2": "învârtit spre dreapta2",
+          "growing2": "mărire2",
+          "swimming left and right2": "înotat către stânga și către dreapta2",
+          "moving east2": "deplasare către est2",
+          "moving north2": "deplasare către nord2",
+          "patrolling2": "patrulare2",
+          "moving south2": "deplasare către sud2",
+          "jittering2": "tremurat2",
+          "wandering2": "rătăcit2",
+          "shrinking2": "micșorare2",
+          "spinning left2": "învârtit spre stânga2",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "growing": "mărire",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "moving east": "deplasare către est",
+          "patrolling": "patrulare",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "moving west2": "deplasare către vest2",
+          "spinning right2": "învârtit spre dreapta2",
+          "growing2": "mărire2",
+          "swimming left and right2": "înotat către stânga și către dreapta2",
+          "moving east2": "deplasare către est2",
+          "moving north2": "deplasare către nord2",
+          "patrolling2": "patrulare2",
+          "moving south2": "deplasare către sud2",
+          "jittering2": "tremurat2",
+          "wandering2": "rătăcit2",
+          "shrinking2": "micșorare2",
+          "spinning left2": "învârtit spre stânga2",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
@@ -114,12 +168,38 @@
         "Virtual Pet 1_2021": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "patrolling": "patrulare",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseE_aboutme_1_2021": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wobbling": "clătinat",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "courseF_apps_aquarium": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
@@ -169,32 +249,122 @@
         "courseF_events_practice_reorder": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "moving east": "deplasare către est",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_conversation": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_events": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_freeplay": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_interview": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_multiprompt": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "driving with arrow keys": "condus cu tastele cu săgeți",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_variables_card": {
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
@@ -245,7 +415,17 @@
         },
         "CourseE_Project_SpriteLab_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "CourseE_hoops": {
           "wandering": "เคลื่อนที่",
@@ -277,7 +457,17 @@
         },
         "Dance Party 2_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "spinning left": "rotire spre stânga",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "swimming left and right": "înotat către stânga și către dreapta"
         },
         "Dance Party 3_2019": {
           "wandering": "เคลื่อนที่",
@@ -289,7 +479,17 @@
         },
         "Dance Party 3_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "spinning left": "rotire spre stânga",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "swimming left and right": "înotat către stânga și către dreapta"
         },
         "Dance Party 4_2019": {
           "wandering": "เคลื่อนที่",
@@ -301,7 +501,17 @@
         },
         "Dance Party 4_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "spinning left": "rotire spre stânga",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "swimming left and right": "înotat către stânga și către dreapta"
         },
         "Dance Party 5_2019": {
           "wandering": "เคลื่อนที่",
@@ -313,7 +523,17 @@
         },
         "Dance Party 5_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "spinning left": "rotire spre stânga",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "swimming left and right": "înotat către stânga și către dreapta"
         },
         "Dance Party 6": {
           "wandering": "เคลื่อนที่",
@@ -329,7 +549,16 @@
         },
         "Dance Party 6_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "jittering": "tremurat",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Dance Party 7_2019": {
           "wandering": "เคลื่อนที่",
@@ -341,7 +570,16 @@
         },
         "Dance Party 7_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "jittering": "tremurat",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Dance Party Freeplay": {
           "wandering": "เคลื่อนที่",
@@ -357,7 +595,16 @@
         },
         "Fish Tank 2-validated_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Fish Tank 3-validated_2019": {
           "wandering": "เคลื่อนที่",
@@ -369,7 +616,16 @@
         },
         "Fish Tank 3-validated_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Fish Tank 4-validated_2019": {
           "wandering": "เคลื่อนที่",
@@ -381,7 +637,16 @@
         },
         "Fish Tank 4-validated_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Fish Tank 5-validated_2019": {
           "wandering": "เคลื่อนที่",
@@ -393,7 +658,16 @@
         },
         "Fish Tank 5-validated_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "Fish Tank 6-validated_2019": {
           "wandering": "เคลื่อนที่",
@@ -405,7 +679,16 @@
         },
         "Fish Tank 6-validated_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "growing": "mărire",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta"
         },
         "OPD-K5-spritelab-2": {
           "wandering": "เคลื่อนที่",
@@ -449,7 +732,17 @@
         },
         "Virtual Pet 2_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "Virtual Pet 3_2019": {
           "wandering": "เคลื่อนที่",
@@ -461,7 +754,29 @@
         },
         "Virtual Pet 3_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wandering2": "rătăcit2",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "moving east2": "deplasare către est2",
+          "shrinking": "micșorare",
+          "spinning left2": "învârtit spre stânga2",
+          "growing": "mărire",
+          "spinning right2": "învârtit spre dreapta2",
+          "moving south": "deplasare către sud",
+          "shrinking2": "micșorare2",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "growing2": "mărire2",
+          "moving south2": "deplasare către sud2",
+          "swimming left and right2": "înotat către stânga și către dreapta2",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "moving north2": "deplasare către nord2",
+          "patrolling": "patrulare",
+          "jittering2": "tremurat2",
+          "moving west2": "deplasare către vest2",
+          "patrolling2": "patrulare2"
         },
         "Virtual Pet 4": {
           "wandering": "เคลื่อนที่",
@@ -565,7 +880,17 @@
         },
         "courseE_aboutme_2_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "courseE_aboutme_3": {
           "wandering": "เคลื่อนที่",
@@ -577,7 +902,17 @@
         },
         "courseE_aboutme_3_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "courseE_aboutme_4": {
           "wandering": "เคลื่อนที่",
@@ -589,7 +924,17 @@
         },
         "courseE_aboutme_4_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "courseE_aboutme_5": {
           "wandering": "เคลื่อนที่",
@@ -601,27 +946,103 @@
         },
         "courseE_aboutme_5_2021": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare"
         },
         "courseF_events_choice_conflict": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_choice_conflict2": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_choice_penguin": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_choice_pufferfish": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_conflict": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_freeplay_air": {
           "wandering": "เคลื่อนที่",
@@ -637,7 +1058,19 @@
         },
         "courseF_events_freeplay_blank": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east": "deplasare către est",
+          "moving east and looping": "deplasare către est și buclă",
+          "moving west": "deplasare către vest",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat"
         },
         "courseF_events_freeplay_food": {
           "wandering": "เคลื่อนที่",
@@ -649,48 +1082,172 @@
         },
         "courseF_events_key": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_predict": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "mystery behavior": "comportament necunoscut",
+          "running east": "alergare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "patrolling": "patrulare",
+          "moving east": "deplasare către est"
         },
         "courseF_events_review": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_ship": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_stops": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "moving east": "deplasare către est",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_events_time": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "wobbling": "clătinat",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_label_predict": {
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ"
         },
         "courseF_place_fruit": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_project_1": {
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ"
         },
         "courseF_sprites_behaviors": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest"
         },
         "courseF_sprites_clouds": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_desert": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_freeplay_air": {
           "wandering": "เคลื่อนที่",
@@ -706,7 +1263,19 @@
         },
         "courseF_sprites_freeplay_blank": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east": "deplasare către est",
+          "moving east and looping": "deplasare către est și buclă",
+          "moving west": "deplasare către vest",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat"
         },
         "courseF_sprites_freeplay_food": {
           "wandering": "เคลื่อนที่",
@@ -717,59 +1286,247 @@
           "moving north": "เคลื่อนที่ไปทางเหนือ"
         },
         "courseF_sprites_make": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_moreSprites": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_positioning": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_predict": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "moving west": "deplasare către vest",
+          "mystery behavior": "comportament necunoscut",
+          "running east": "alergare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "patrolling": "patrulare"
         },
         "courseF_sprites_properties": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_sprites_ship": {
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "moving west": "deplasare către vest",
+          "fluttering": "fluturat",
+          "wobbling": "clătinat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_answer": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_color": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_choice_title": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_concat": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_events": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_print": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_prompts": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_text_review": {
           "moving north": "เคลื่อนที่ไปทางเหนือ",
-          "wandering": "เคลื่อนที่"
+          "wandering": "เคลื่อนที่",
+          "patrolling": "patrulare",
+          "moving forward": "deplasare înainte",
+          "growing": "mărire",
+          "moving west": "deplasare către vest",
+          "spinning right": "rotire spre dreapta",
+          "moving east": "deplasare către est",
+          "moving south": "deplasare către sud",
+          "jittering": "tremurat",
+          "shrinking": "micșorare",
+          "spinning left": "rotire spre stânga",
+          "fluttering": "fluturat",
+          "moving west and looping": "deplasare către vest și buclă",
+          "moving east and looping": "deplasare către est și buclă"
         },
         "courseF_variables_predict": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving east": "deplasare către est",
+          "moving west": "deplasare către vest",
+          "mystery behavior": "comportament necunoscut",
+          "running east": "alergare către est",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
+          "shrinking": "micșorare",
+          "growing": "mărire",
+          "moving south": "deplasare către sud",
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "jittering": "tremurat",
+          "patrolling": "patrulare"
         },
         "international_outbreak_freeplay": {
           "recovering": "การรักษาตัว",
