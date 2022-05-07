@@ -4742,6 +4742,10 @@ hu:
               display_name: Leckék
             lessonGroup-4:
               display_name: Bemutatók és erőforrások
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lecke 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -5378,10 +5382,6 @@ hu:
               display_name: Kurzus Projekt vége
           student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
           description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Kérdőív
         csp8-2022:
           lessons:
             lesson-4:
@@ -5521,6 +5521,8 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Kérdőív
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
@@ -5739,7 +5741,7 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
-              display_name: Homokozó
+              display_name: Kérdőív
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -5860,3 +5862,63 @@ hu:
         csd-post-survey-2022:
           description: Ez az egység tartalmazza a CS Discoveries Kurzus utáni felmérést. Ezt az egységet azután lehet kijelölni, hogy a tanulók befejezték a CS Discoveries utolsó egységét.
           student_description: Ez az egység egy felmérést tartalmaz, ha az osztályod befejezte a CS Discoveries egységeit. A tanárod megmondja, mikor kell elvégezni ezt a felmérést.
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: 4.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-8:
+              key: 8.  lecke
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
