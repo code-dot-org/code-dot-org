@@ -12001,20 +12001,20 @@ es-MX:
             clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - text: La granjera recogerá dos calabazas.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá dos calabazas.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La granjera recogerá todas las calabazas.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá todas las calabazas.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La granjera recogerá la lechuga.
+        - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La granjera recogerá el maíz.
-          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
+        - text: La cosechadora recogerá el maíz.
+          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
       courseE_prediction_artistFunction1_2021:
         answers:
         - text: Nada. No se usa la función en el programa.
