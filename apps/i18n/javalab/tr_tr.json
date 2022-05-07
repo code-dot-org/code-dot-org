@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "Sırt çantanıza kaydedilen dosyalar buradan görünecek.",
   "enablePeerReview": "Akran İncelemesini Etkinleştir",
   "errorJavabuilderConnectionGeneral": "Sunucumuza bağlanırken bir hata ile karşılaştık. Tekrar deneyin.",
-  "errorJavabuilderConnectionNotAuthorized": "Javalab'a erişim izniniz yok. Oturum açmanız mı yoksa bir bölüme katılmanız mı gerekiyor?",
   "errorLoadingClassmates": "Sınıf arkadaşlarınızın listesi yüklenirken bir hata oluştu. Lütfen tekrar deneyin.",
   "errorMediaImageLoadError": "Görsel yüklenirken bir hata oluştu.",
   "errorNeighborhoodInvalidGrid": "Mahalle düzeyi yüklenirken bir hata oluştu. Lütfen support@code.org adresinden bizimle iletişime geçin ve mesajınıza bu sayfanın URL'sini eklemeyi unutmayın.",
