@@ -5139,7 +5139,6 @@ tr:
               description_teacher: '"Mutlu Döngüler"den talimatların tekrarlanması kavramına dayanarak bu aşama, Code.org''da hazineyi daha etkili bir şekilde toplamak için öğrencilerin döngüleri kullanmasını sağlayacaktır.'
             Loops in Artist:
               name: Sanatçı- Döngüler
-              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
@@ -18706,6 +18705,10 @@ tr:
           lessons:
             lesson-1:
               name: BBA Klonunu Test Etme
+            lesson-2:
+              name: Ders 2
+            lesson-3:
+              name: Ders 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -19809,6 +19812,8 @@ tr:
             'Lesson 18: Assessment Day':
               key: 'Ders 18: Değerlendirme Günü'
               name: Değerlendirme Günü
+            CS Principles Post-Course Survey:
+              name: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
           lesson_groups:
             csp_lists:
               display_name: Listeler
@@ -19818,6 +19823,8 @@ tr:
               display_name: Gezinmeler
             csp_project:
               display_name: Proje
+            lessonGroup-5:
+              display_name: Kurs-Sonrası Anketi
         courseb-2022:
           lessons:
             Digital Trails:
@@ -20080,9 +20087,13 @@ tr:
             'Lesson 6: Assessment Day':
               key: 'Ders 6: Değerlendirme Günü'
               name: Değerlendirme Günü
+            CS Principles Post-Course Survey:
+              name: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Ünite 6: Algoritmalar'
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -20125,7 +20136,7 @@ tr:
             csp_libraries:
               display_name: Kütüphaneler
             lessonGroup-3:
-              display_name: Anket
+              display_name: Kurs-Sonrası Anketi
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -20136,6 +20147,13 @@ tr:
               key: Performans Görevi Oluştur - Bir Plan Hazırla
             Create PT - Complete the Task:
               key: Performans Görevini Oluştur - Görevi Tamamla
+            CS Principles Post-Course Survey:
+              name: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Performans Görevi Oluştur
+            lessonGroup-3:
+              display_name: Kurs-Sonrası Anketi
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -20167,9 +20185,13 @@ tr:
             'Lesson 9: Assessment Day':
               key: 'Ders 9: Değerlendirme Günü'
               name: Değerlendirme Günü
+            CS Principles Post-Course Survey:
+              name: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Ünite 9: Veriler'
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -20215,9 +20237,13 @@ tr:
             'Lesson 14: Unit Assessment Day':
               key: 'Ders 14: Ünite Değerlendirme Günü'
               name: Değerlendirme Günü
+            CS Principles Post-Course Survey:
+              name: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -20650,6 +20676,8 @@ tr:
               display_name: İçerik
             lessonGroup-4:
               display_name: Sandbox'lar
+            lessonGroup-5:
+              display_name: Anket
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -20732,8 +20760,6 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
-            lessonGroup-4:
-              display_name: Sandbox'lar
         csa3-2022:
           lessons:
             lesson-3:
@@ -20765,8 +20791,6 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
-            lessonGroup-4:
-              display_name: Sandbox'lar
         tessplayground:
           name: tessoyunalanı
         cs4all-invasive-species:
@@ -21082,7 +21106,7 @@ tr:
             lessonGroup-2:
               display_name: İçerik
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Anket
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -21858,6 +21882,8 @@ tr:
             Keeping Data Secret:
               name: Verileri Gizli Tutmak
               key: Verileri Gizli Tutmak
+            Create a Representation:
+              name: Proje - bir ifade oluşturun
             Problem Solving and Data:
               name: Problem çözme ve veri
               key: Problem çözme ve veri
@@ -21957,3 +21983,123 @@ tr:
           student_description: Bu ünite, sınıfınızın CS Keşifleri'ndeki ünitelerle ne zaman bittiğine ilişkin bir anket içerir. Öğretmeniniz bu anketi ne zaman doldurmanız gerektiğini size söyleyecektir.
         csp-post-survey-2022:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
+        aiml-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.
+
+                **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
+            Survey Planning:
+              name: Veri toplama tasarımı
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modül 1
+              key: Modül 1
+            Module 2:
+              name: Modül 2
+              key: Modül 2
+            Module 3:
+              name: Modül 3
+              key: Modül 3
+            Module 4:
+              name: Modül 4
+              key: Modül 4
+            Module 5:
+              name: Modül 5
+              key: Modül 5
+            Module 6:
+              name: Modül 6
+              key: Modül 6
+            Module 7:
+              name: Modül 7
+              key: Modül 7
+            Module 8:
+              name: Modül 8
+              key: Modül 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modül 1
+              key: Modül 1
+            Module 2:
+              name: Modül 2
+              key: Modül 2
+            Module 3:
+              name: Modül 3
+              key: Modül 3
+            Module 4:
+              name: Modül 4
+              key: Modül 4
+            Module 5:
+              key: Modül 5
+            Module 6:
+              key: Modül 6
+            Module 7:
+              key: Modül 7
+            Module 8:
+              key: Modül 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoşgeldiniz
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: ders-4
+            lesson-3:
+              key: ders-3
+            lesson-8:
+              key: ders-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
