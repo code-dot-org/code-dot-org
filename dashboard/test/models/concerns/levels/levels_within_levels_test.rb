@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'cannot delete levels that other levels reference as children' do
-    child = create(:level, parent_levels: [create(:level)])
+    child = create(:multi, parent_levels: [create(:level)])
 
     refute child.destroy
 
@@ -12,7 +12,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'can delete levels that other levels reference as parents' do
-    child = create(:level)
+    child = create(:free_response)
     parent = create(:level, child_levels: [child])
 
     assert parent.destroy
@@ -22,7 +22,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'deleting a parent level will also remove associations' do
-    child = create(:level)
+    child = create(:multi)
     parent = create(:level, child_levels: [child])
     assert child.levels_parent_levels.present?
 
@@ -54,7 +54,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'scoped parent/child relationships' do
     parent = create :level
 
-    contained = create :level
+    contained = create :free_response
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: contained,
@@ -140,16 +140,16 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
   test 'clone_child_levels clones child levels' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
     Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
   test 'clone_child_levels returns update params' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: child,
       kind: ParentLevelsChildLevel::CONTAINED
