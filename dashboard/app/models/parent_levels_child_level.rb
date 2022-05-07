@@ -50,4 +50,18 @@ class ParentLevelsChildLevel < ApplicationRecord
   VALID_KINDS.each do |kind|
     scope kind, -> {where(kind: kind)}
   end
+
+  validate :validate_child_level_type
+  def validate_child_level_type
+    if kind == CONTAINED
+      unless %w(Multi FreeResponse).include?(child_level.type)
+        error_message = "cannot add contained level of type #{child_level.type}"
+        errors.add(:child_level_id, error_message)
+
+        # Explicitly surface this error to the associated parent level, to make
+        # it visible to levelbuilders.
+        parent_level.errors.add(:child_level, error_message)
+      end
+    end
+  end
 end
