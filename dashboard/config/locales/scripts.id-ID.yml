@@ -7125,12 +7125,6 @@ id:
                 harta karun dengan lebih efisien di Code.org.
             Loops in Artist:
               name: Loops in Artist
-              description_teacher: Kembali ke loop, murid belajar menggambar dengan
-                mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
-                sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
-                harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini,
-                murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan
-                loop.
             'Events: The Big Event':
               name: 'Event: Event Besar'
               description_teacher: Event adalah cara yang bagus untuk menambahkan
@@ -29080,6 +29074,10 @@ id:
           lessons:
             lesson-1:
               name: Mengetes Klon CSA
+            lesson-2:
+              name: Pelajaran ke- 2
+            lesson-3:
+              name: Pelajaran ke- 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -30858,6 +30856,8 @@ id:
             'Lesson 18: Assessment Day':
               key: 'Pelajaran 18: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_lists:
               display_name: List
@@ -30867,6 +30867,8 @@ id:
               display_name: Melintang
             csp_project:
               display_name: Proyek
+            lessonGroup-5:
+              display_name: Survei Pasca Kursus
         courseb-2022:
           lessons:
             Digital Trails:
@@ -31345,9 +31347,13 @@ id:
             'Lesson 6: Assessment Day':
               key: 'Pelajaran 6: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithm'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -31390,7 +31396,7 @@ id:
             csp_libraries:
               display_name: Perpustakaan
             lessonGroup-3:
-              display_name: Survei
+              display_name: Survei Pasca Kursus
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -31401,6 +31407,13 @@ id:
               key: Membuat PT - Membuat Rencana
             Create PT - Complete the Task:
               key: Membuat PT - Menyelesaikan tugas
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buat PT
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -31432,9 +31445,13 @@ id:
             'Lesson 9: Assessment Day':
               key: 'Pelajaran 9: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -31474,9 +31491,13 @@ id:
             'Lesson 14: Unit Assessment Day':
               key: 'Pelajaran 14: Hari Penilaian Unit'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit10_2020:
               display_name: Unit 10 - Cybersecurity dan Dampak Global
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -32251,6 +32272,8 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Survei
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -32394,8 +32417,6 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
-            lessonGroup-4:
-              display_name: Sandbox
         csa3-2022:
           lessons:
             lesson-3:
@@ -32427,8 +32448,6 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
-            lessonGroup-4:
-              display_name: Sandbox
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -32910,7 +32929,7 @@ id:
             lessonGroup-2:
               display_name: Konten
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Survei
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -33803,6 +33822,8 @@ id:
             Keeping Data Secret:
               name: Menjaga Kerahasiaan Data
               key: Menjaga Kerahasiaan Data
+            Create a Representation:
+              name: Proyek - Membuat Representasi
             Problem Solving and Data:
               name: Pemecahan masalah dan Data
               key: Pemecahan masalah dan Data
@@ -33921,3 +33942,120 @@ id:
             tahu kapan saatnya mengikuti survei ini.
         csp-post-survey-2022:
           title: Survei Pascakursus CS Principles
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Pengantar Lab AI
+            Survey Planning:
+              name: Merancang Pengumpulan Data
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              name: Modul 5
+              key: Modul 5
+            Module 6:
+              name: Modul 6
+              key: Modul 6
+            Module 7:
+              name: Modul 7
+              key: Modul 7
+            Module 8:
+              name: Modul 8
+              key: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Selamat Datang
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-8:
+              key: pelajaran ke- 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3

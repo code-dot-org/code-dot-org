@@ -257,6 +257,12 @@ si:
             '90': යට
             '180': වම
             '270': උඩ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': මධ්‍යස්ත
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

@@ -1165,6 +1165,12 @@ tr:
             '90': aşağı
             '180': sol
             '270': yukarı
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': Küçük
+            '50': orta
+            '100': Büyük
       gamelab_mirrorSprite:
         text: "{SPRITE} yüz {DIRECTION}"
         options:

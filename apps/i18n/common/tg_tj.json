@@ -17,6 +17,7 @@
   "delete": "Нест мекунед",
   "deleteConfirm": "Нест мекунед?",
   "edit": "Таҳрир кардан",
+  "educator": "Устод",
   "email": "Почтаи электронӣ",
   "explainRestrictedSectionLearnMore": "Маълумоти бештар",
   "fallbackVideoClosedCaptioningDialogClose": "Пӯшидан",
@@ -24,6 +25,7 @@
   "genderMale": "Мард",
   "genderFemale": "Зан",
   "hintPrompt": "Кумак лозим аст?",
+  "iAgree": "Ман розӣ ҳастам",
   "ifCode": "агар",
   "inProgress": "Иҷро мешавад",
   "joinUs": "Ба мо ҳамроҳ шавед",
@@ -71,5 +73,6 @@
   "teacherTabProjects": "Лоиҳаҳо",
   "teacherTabStats": "Омор",
   "tryIt": "Дида бароед",
-  "update": "Навсозӣ кардан"
+  "update": "Навсозӣ кардан",
+  "zipOrCountry": "Рамзи ZIP ё кишвар"
 }

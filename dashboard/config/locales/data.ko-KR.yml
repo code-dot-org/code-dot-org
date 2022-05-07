@@ -722,6 +722,8 @@ ko:
         CSA-PL-debugging-temp: 자바 연구소에서의 디버깅 소개 - 임시
         csd_u6_circuit_playground: 물리적 컴퓨팅
         csd_u6_input_output: 인풋 및 아웃풋
+        csp_applab_parameters: 함수(값 전달)
+        CSA-PL-intro-to-arrays: 1차원 (1D) 어레이
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

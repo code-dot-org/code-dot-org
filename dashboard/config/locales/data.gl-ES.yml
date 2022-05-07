@@ -653,6 +653,7 @@ gl:
         csd_applab_parameters: Funcións con parámetros
         playlab_2021: Introdución ao Laboratorio
         playlab_2021_reader: Introdución ao Laboratorio
+        csp_applab_parameters: Funcións con parámetros
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque

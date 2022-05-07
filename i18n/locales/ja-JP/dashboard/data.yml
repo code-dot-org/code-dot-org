@@ -571,6 +571,9 @@ ja:
         CSA-PL-debugging-temp: Java Labへのデバッグ入門 - temp
         csd_u6_circuit_playground: 物理コンピューティング
         csd_u6_input_output: 入出力
+        PL_CS_Journeys_Overview: コンピュータサイエンスジャーニー
+        csp_applab_parameters: パラメーター付き関数
+        CSA-PL-intro-to-arrays: 1次元 (1D) 配列
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "الملفات المحفوظة سوف تظهر هنا",
   "enablePeerReview": "تمكين مراجعة الأقران",
   "errorJavabuilderConnectionGeneral": "لقد حدث خطأ أثناء الاتصال بخادمنا. حاول مجددا.",
-  "errorJavabuilderConnectionNotAuthorized": "غير مصرح لك بالوصول إلى Javalab. هل تحتاج إلى تسجيل الدخول أو الانضمام إلى قسم؟",
   "errorLoadingClassmates": "حدث خطأ أثناء تحميل قائمة زملائك في الفصل. حاول مرة أخرى.",
   "errorMediaImageLoadError": "حدث خطأ أثناء معالجة معلومات البطاقة.",
   "errorNeighborhoodInvalidGrid": "حدث خطأ أثناء تحميل مستوى الحي. يرجى الاتصال بنا على support@code.org ، وتأكد من تضمين عنوان URL لهذه الصفحة في رسالتك.",

@@ -1248,6 +1248,12 @@ sk:
             '90': dole
             '180': vľavo
             '270': hore
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': Malé
+            '50': stredný
+            '100': Veľké
       gamelab_mirrorSprite:
         text: "{SPRITE} smeruje {DIRECTION}"
         options:

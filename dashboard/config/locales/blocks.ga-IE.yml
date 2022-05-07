@@ -1170,6 +1170,12 @@ ga:
             '90': síos
             '180': ar chlé
             '270': suas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': tamall
+            '100': large
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:

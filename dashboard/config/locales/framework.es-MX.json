@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Normas básicas comunes para artes del lenguaje"
         },
+        "csta": {
+          "name": "Estándares de Ciencias de la Computación K-12 de la CSTA (2017)"
+        },
         "ccmath": {
           "name": "Normas básicas comunes para matemáticas"
         },
@@ -13,6 +16,9 @@
         },
         "iste": {
           "name": "Estándares ISTE para estudiantes"
+        },
+        "csp2021": {
+          "name": "Marco Conceptual de CSP"
         },
         "ngss": {
           "name": "Estándares Científicos de la Próxima Generación"

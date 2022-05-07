@@ -1151,6 +1151,12 @@ mr:
             '90': खाली
             '180': डावा
             '270': वर
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': लहान
+            '50': मध्यम
+            '100': मोठे
       gamelab_mirrorSprite:
         text: "{SPRITE} फेस  {DIRECTION}"
         options:

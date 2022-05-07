@@ -3416,6 +3416,10 @@ et:
           lessons:
             lesson-2:
               name: Vidinad
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Õppetund 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3581,10 +3585,6 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Uuring
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -3651,6 +3651,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3724,6 +3726,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
         csa2-2022-exemplars:
           lessons:
             lesson-1:

@@ -41,7 +41,6 @@
   "emptyBackpackMessage": "保存到背包的文件将出现在这里。",
   "enablePeerReview": "启用同行评审",
   "errorJavabuilderConnectionGeneral": "连接到服务器时发生错误。请重试。",
-  "errorJavabuilderConnectionNotAuthorized": "你未被授权访问Javalab。你需要登录或加入一个部分吗？",
   "errorLoadingClassmates": "加载你的同学名单时出错。请重试。",
   "errorMediaImageLoadError": "加载图像时出错。",
   "errorNeighborhoodInvalidGrid": "加载邻域级别时出错。请通过support@code.org与我们联系，并确保在你的消息中包含此页面的网址。",

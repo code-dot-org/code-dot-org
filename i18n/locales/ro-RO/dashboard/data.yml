@@ -568,6 +568,9 @@ ro:
         poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul poeziei
         poemart_intro: Introducere În Arta Poemului
         CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
+        PL_CS_Journeys_Overview: Călătorii CS
+        csp_applab_parameters: Funcții cu Parametrii
+        CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
