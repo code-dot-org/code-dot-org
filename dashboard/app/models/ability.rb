@@ -131,6 +131,7 @@ class Ability
         project_owner_id == user.id
       end
       can :edit, CodeReview, user_id: user.id
+      # TODO: teachers and peers should also be able to see the code review
       can :read, CodeReview, user_id: user.id
 
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
