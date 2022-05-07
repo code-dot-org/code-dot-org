@@ -808,7 +808,7 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    name === '20-hour'
+    name == '20-hour'
   end
 
   def hoc?
@@ -816,7 +816,7 @@ class Script < ApplicationRecord
   end
 
   def flappy?
-    name === 'flappy'
+    name == 'flappy'
   end
 
   def csf_international?
