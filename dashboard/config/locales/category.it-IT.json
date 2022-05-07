@@ -2,6 +2,9 @@
   "it-IT": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Leggere"
+        },
         "ccela/SL": {
           "description": "Parlare e ascoltare"
         },
@@ -25,6 +28,21 @@
         },
         "ccela/RI": {
           "description": "Lettura informativa"
+        },
+        "ccmath/OA": {
+          "description": "Operazioni e pensiero algebrico"
+        },
+        "csta2011/CD": {
+          "description": "Computer e dispositivi di comunicazione"
+        },
+        "csta2011/CI": {
+          "description": "Impatti a livello comunitario, globale ed etico"
+        },
+        "ccmath/NBT": {
+          "description": "Numeri e operazioni a base dieci"
+        },
+        "ccmath/G": {
+          "description": "Geometria"
         },
         "ccela/W": {
           "description": "Scrivere"
