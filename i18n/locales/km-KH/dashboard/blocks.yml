@@ -322,6 +322,12 @@ km:
             '90': ចុះ
             '180': ឆ្វេង
             '270': ឡើង
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': មធ្យម
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
