@@ -4904,7 +4904,6 @@ fil:
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org.
             Loops in Artist:
               name: Mga Loop sa Artist
-              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
@@ -12736,6 +12735,10 @@ fil:
               display_name: Mga Aralin
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Aralin 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -13423,16 +13426,15 @@ fil:
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Pagsisiyasat
         csp8-2022:
           lessons:
             lesson-4:
               key: aralin-4
             Create PT - Complete the Task:
               key: Lumkiha ng PT - Kompletuhin ang Gawain
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maglikha ng PT
         csp9-2022:
           lessons:
             lesson-10:
@@ -13638,6 +13640,9 @@ fil:
               name: Mga loop
             lesson-21:
               name: Console
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -13829,7 +13834,7 @@ fil:
               key: Java Lab
           lesson_groups:
             lessonGroup-5:
-              display_name: Kahon ng buhangin
+              display_name: Pagsisiyasat
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -14109,6 +14114,8 @@ fil:
             Keeping Data Secret:
               name: Pagiging Sekreto ng mga Datos
               key: Pagiging Sekreto ng mga Datos
+            Create a Representation:
+              name: Proyekto - Paglikha ng Representasyon
             Problem Solving and Data:
               name: Paglutas ng mga Problema at mga Datos
               key: Paglutas ng mga Problema at mga Datos
@@ -14172,3 +14179,70 @@ fil:
             lessonGroup-4:
               display_name: Pagsisiyasat
           description_short: Matutong mag-program sa mga pisikal na mga kagamitan.
+        aiml-2022:
+          lessons:
+            Survey Planning:
+              name: Pagdidisenyo ng Koleksyon ng mga Datos
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maligayang Pagdating
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: aralin-4
+            lesson-3:
+              key: aralin-3
+            lesson-8:
+              key: aralin-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
