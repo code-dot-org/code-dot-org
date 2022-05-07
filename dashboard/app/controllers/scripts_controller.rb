@@ -95,8 +95,11 @@ class ScriptsController < ApplicationController
       # There are some old family names for connecting between units in a course which will not be a course offering
       next unless co
       first_cv = co.course_versions.first
-      unit = first_cv.content_root
+      next unless first_cv
       @versioned_unit_families << cf unless first_cv.key == 'unversioned'
+
+      unit = first_cv.content_root
+      next unless unit
       @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
     end
 
