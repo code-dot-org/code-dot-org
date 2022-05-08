@@ -103,7 +103,7 @@ class ScriptsController < ApplicationController
       @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
     end
 
-    @unit_families_course_types.compact.to_h
+    @unit_families_course_types = @unit_families_course_types.compact.to_h
   end
 
   def create
