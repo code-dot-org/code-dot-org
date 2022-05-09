@@ -49,6 +49,7 @@ const Dialog = makeEnum(
   'COMMIT_FILES'
 );
 const DEFAULT_FILE_NAME = '.java';
+const EDITOR_LOAD_PAUSE_MS = 100;
 
 // Custom theme overrides (exported for tests)
 export const editorDarkModeThemeOverride = EditorView.theme(
@@ -305,6 +306,21 @@ class JavalabEditor extends React.Component {
         contextTarget: null,
         activeTabKey: key
       });
+      // scroll the new editor to whatever its current selection is.
+      // If this editor has no selection it will stay at the top of the file.
+      this.editors[key].dispatch({
+        scrollIntoView: true
+      });
+      // It takes a second for the editor to show up. We can't
+      // focus on it until it is visible, so we set a delay to focus
+      // on the new editor.
+      const timer = setInterval(() => {
+        this.editors[key].focus();
+        if (this.editors[key].hasFocus) {
+          // stop trying to focus once we have focused.
+          clearInterval(timer);
+        }
+      }, EDITOR_LOAD_PAUSE_MS);
     }
   }
 
@@ -611,7 +627,8 @@ class JavalabEditor extends React.Component {
       position: 'fixed',
       top: this.state.menuPosition.top,
       left: this.state.menuPosition.left,
-      backgroundColor: '#F0F0F0'
+      backgroundColor: '#F0F0F0',
+      zIndex: 1000
     };
     return (
       <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
@@ -728,6 +745,25 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
+            <div style={menuStyle}>
+              <JavalabEditorTabMenu
+                cancelTabMenu={this.cancelTabMenu}
+                renameFromTabMenu={this.renameFromTabMenu}
+                deleteFromTabMenu={this.deleteFromTabMenu}
+                changeFileTypeFromTabMenu={(isVisible, isValidation) =>
+                  this.updateFileType(activeTabKey, isVisible, isValidation)
+                }
+                showVisibilityOption={isEditingStartSources}
+                fileIsVisible={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isVisible
+                }
+                fileIsValidation={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isValidation
+                }
+              />
+            </div>
             <Tab.Content id="tab-content" animation={false}>
               {orderedTabKeys.map(tabKey => {
                 return (
@@ -747,25 +783,6 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
           </div>
         </Tab.Container>
-        <div style={menuStyle}>
-          <JavalabEditorTabMenu
-            cancelTabMenu={this.cancelTabMenu}
-            renameFromTabMenu={this.renameFromTabMenu}
-            deleteFromTabMenu={this.deleteFromTabMenu}
-            changeFileTypeFromTabMenu={(isVisible, isValidation) =>
-              this.updateFileType(activeTabKey, isVisible, isValidation)
-            }
-            showVisibilityOption={isEditingStartSources}
-            fileIsVisible={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isVisible
-            }
-            fileIsValidation={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isValidation
-            }
-          />
-        </div>
         <JavalabDialog
           isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}

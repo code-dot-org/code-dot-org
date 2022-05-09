@@ -1,33 +1,33 @@
 ---
-title: موارد المعلم - متغيرات ببطاقات
+title: موارد المعلم - الجمل الشرطية بالبطاقات
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# متغيرات ببطاقات: دورة تعليمية لـAn Hour of Code
+# متغيرات ببطاقات: دورة تعليمية لـساعة البرمجة
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### Lesson Plans:
+### خطط الدرس
 
-- [متغيرات ببطاقات](/files/ConditionalsHoC.pdf)
-- مقطع فيديو:[كيف تبسط المتغيرات بالبطاقات في فصلك](https://youtu.be/IcEL5ibSvTs)
+- [العبارات الشرطية باستخدام البطاقات](/files/ConditionalsHoC.pdf)
+- مقطع فيديو:[كيف تبسط المتغيرات بالبطاقات في صفك](https://youtu.be/IcEL5ibSvTs)
 
-### أنشطة الامتداد:
+### أنشطة إضافية
 
-- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
 - [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
 ### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
 - [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- حدث يبث مباشرةً:[دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,11 +35,11 @@ video_player: true
 
 ## نظرة عامة
 
-تعلم عن الخوارزميات والعبارات الشرطية في هذا النشاط "غير الموصول" باستخدام حزمة من البطاقات. يقوم الدارسون بهذا النشاط في فرق وكل فريق يحتاج حزمة من البطاقات.
+تعلم عن الخوارزميات والعبارات الشرطية في هذا النشاط "غير البرمجي" باستخدام حزمة من البطاقات. يعمل الطلاب في هذا النشاط في فرق وكل فريق يحتاج حزمة من البطاقات.
 
-**الفئة العمرية الموصى بها:** 8-12
+**الفئة العمرية الموصى بها:** ٨-١٢
 
-**متطلبات التكنولوجيا:** لا شيء! يمكن أن يتم تدريس هذا النشاط "غير الموصول" باستخدام حزمة من البطاقات فحسب.
+**متطلبات التكنولوجيا:** لا شيء! يمكن أن يتم تدريس هذا النشاط "غير البرمجي" باستخدام حزمة من البطاقات فحسب.
 
 <a href="/files/ConditionalsHoC.pdf"><button>حمِّل هذا النشاط</button></a>
 

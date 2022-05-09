@@ -23,8 +23,18 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_unit = create :csd_script, name: 'csd1'
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
-    @csc_unit = create :csc_script, name: 'csc1'
-    @hoc_unit = create :hoc_script, name: 'hoc1'
+
+    @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
+    CourseOffering.add_course_offering(@csc_unit)
+    @csc_unit.course_version.course_offering.category = 'csc'
+    @csc_unit.course_version.course_offering.save!
+    @csc_unit.reload
+
+    @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
+    CourseOffering.add_course_offering(@hoc_unit)
+    @hoc_unit.course_version.course_offering.category = 'hoc'
+    @hoc_unit.course_version.course_offering.save!
+    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -154,7 +164,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
-    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
@@ -1197,7 +1206,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'teacher_led', unit_group.instruction_type
     assert_equal 'beta', unit_group.published_state
 
-    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'in_development')
 
     unit.reload
     unit_group = unit.plc_course_unit.plc_course.unit_group
@@ -1205,7 +1214,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'universal_instructor', unit_group.instructor_audience
     assert_equal 'teacher', unit_group.participant_audience
     assert_equal 'self_paced', unit_group.instruction_type
-    assert_equal 'stable', unit_group.published_state
+    assert_equal 'in_development', unit_group.published_state
   end
 
   test 'generate plc objects will use defaults if script has null values' do
@@ -1330,11 +1339,6 @@ class ScriptTest < ActiveSupport::TestCase
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
-        'name' => 'Report Lesson 1',
-        'descriptionStudent' => 'lesson 1 is pretty neat',
-        'descriptionTeacher' => 'This is what you should know as a teacher'
-      }].to_json
     }
 
     updated = Script.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
@@ -1344,8 +1348,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Report Script Name', updated_report_unit['title']
     assert_equal 'This is what Report Script is all about', updated_report_unit['description']
     assert_equal 'report-lesson-1', updated_report_unit['lessons']['Report Lesson 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_unit['lessons']['Report Lesson 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_unit['lessons']['Report Lesson 1']['description_teacher']
   end
 
   test "update_i18n with new lesson display name" do
@@ -1547,36 +1549,6 @@ class ScriptTest < ActiveSupport::TestCase
     # feedback2 assertions
     feedback2_result = feedback_for_section[feedback2.id]
     assert_equal("Waiting for review", feedback2_result[:reviewStateLabel])
-  end
-
-  # This test checks that all categories that may show up in the UI have
-  # translation strings.
-  test 'all visible categories have translations' do
-    I18n.locale = 'en-US'
-
-    # A course can belong to more than one category and only the first
-    # category is shown in the UI (and thus needs a translation).
-
-    # To determine the set of categories that must be translated, we first
-    # collect the list of all units that are mapped to categories in
-    # ScriptConstants::CATEGORIES.
-    all_units = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
-      scripts | scripts_in_category
-    end
-
-    # Add a unit that is not in any category so that the 'other' category
-    # will be tested.
-    all_units |= ['uncategorized-script']
-
-    untranslated_categories = Set.new
-    all_units.each do |unit|
-      category = ScriptConstants.categories(unit)[0] || ScriptConstants::OTHER_CATEGORY_NAME
-      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
-      untranslated_categories.add(category) if translation.nil?
-    end
-
-    assert untranslated_categories.empty?,
-      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
@@ -1813,10 +1785,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csd_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
-    assert_equal(
-      [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
     assert_equal(
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
@@ -1825,10 +1794,7 @@ class ScriptTest < ActiveSupport::TestCase
       [@csc_unit.name],
       Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     )
-    assert_equal(
-      [@hoc_unit.name],
-      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
-    )
+    assert Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -1843,7 +1809,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
-    assert @hoc_unit.hour_of_code?
+    assert @hoc_unit.hoc?
   end
 
   test "middle_high?" do
@@ -2175,6 +2141,16 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if deeper learning course is being launched' do
+    unit = create(:standalone_unit, professional_learning_course: 'my-deeper-learning-course')
+    error = assert_raises do
+      unit.published_state = 'stable'
+      unit.save!
+    end
+
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
   end
 
   test 'should raise error if participant audience is nil for standalone unit' do
