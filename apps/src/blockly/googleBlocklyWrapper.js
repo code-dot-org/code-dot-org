@@ -260,6 +260,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     oldMixin.call(this, mixinObj, true);
   };
 
+  blocklyWrapper.BlockSvg.prototype.getHexColour = function() {
+    // In cdo Blockly labs, getColour() returns a numerical hue value, while
+    // in newer Google Blockly it returns a hexademical color value string.
+    // This is only used for locationPicker blocks and can likely be deprecated
+    // once Sprite Lab is using Google Blockly.
+    return this.getColour();
+  };
+
   blocklyWrapper.BlockSvg.prototype.isVisible = function() {
     // TODO (eventually) - All Flappy/Poetry/Bounce blocks are visible.
     // This shouldn't be a problem until we convert other labs.
