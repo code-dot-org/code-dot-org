@@ -33075,6 +33075,8 @@ en:
               description_teacher: 
             lesson-4:
               name: TextProcessor
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: ImagePlus
               description_student: 
@@ -33433,7 +33435,7 @@ en:
               description_student: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
-                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.
+                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply your algorithm to various scenarios to find the overall sentiment value of text.
               description_teacher: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
@@ -33482,6 +33484,10 @@ en:
               name: Unit 6 Assessment
               description_student: Assess your progress through the Unit 6 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            Console:
+              name: Console
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -34649,24 +34655,58 @@ en:
           lessons:
             lesson-1:
               name: Introduction to The Design Process
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Design Process unit.
+                * Get a preview of the first week of the Deign Process unit content.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Design Process unit.
+                * Get a preview of the first week of the Deign Process unit content.
+
+                **Suggested time:** 10 minutes
             lesson-2:
               name: Use a paper prototype
               description_student: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
               description_teacher: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
             lesson-3:
               name: Build a digital prototype in App Lab
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Use design mode in App Lab to create a digital prototype.
+                *  Create events that detect and respond to user input.
+
+                **Suggested time:** 40 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Use design mode in App Lab to create a digital prototype.
+                *  Create events that detect and respond to user input.
+
+                **Suggested time:** 40 minutes
             lesson-4:
               name: Consider how apps can be used for good
               description_student: 
               description_teacher: 
             lesson-5:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 15 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Preparing to Teach the Design Process
@@ -34680,31 +34720,63 @@ en:
           lessons:
             lesson-1:
               name: Introduction to Data and Society
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Data and Society unit.
+                * Get a preview of the first week of the Data and Society unit content.
+
+                **Suggested time:** 5 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Data and Society unit.
+                * Get a preview of the first week of the Data and Society unit content.
+
+                **Suggested time:** 5 minutes
             lesson-2:
               name: Explore data at a small scale
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
+              description_teacher: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
             lesson-3:
               name: Explore data at a large scale
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Apply the problem solving process to solve data problems.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Apply the problem solving process to solve data problems.
+
+                **Suggested time:** 20 minutes
             lesson-4:
               name: Consider real world implications
               description_student: 
               description_teacher: 
             lesson-5:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 10 minutes
           lesson_groups: {}
           name: vpl-csd5-ci-pilot-2022
           title: 'Module 5: Preparing to Teach Data and Society'
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 60 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 60 minutes"
         vpl-csd6-ci-pilot-2022:
           lessons:
             lesson-1:

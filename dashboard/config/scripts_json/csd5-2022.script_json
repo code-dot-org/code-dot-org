@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-29 16:17:50 UTC",
+    "serialized_at": "2022-05-06 15:40:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6225,18 +6225,6 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
-      "key": "keeping_data_secret",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "keeping_data_secret"
-      }
-    },
-    {
-      "name": "Keeping Data Secret",
       "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
       "key": "keeping_data_secret_1",
       "properties": {
@@ -6595,7 +6583,7 @@
       "properties": {
         "audience": "Teacher",
         "download_url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/export?format=pdf",
-        "type": "Rubric"
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "representing_images"
@@ -6971,12 +6959,6 @@
       "seeding_key": {
         "lesson.key": "Interpreting Data",
         "resource.key": "interpreting_data_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
-        "resource.key": "keeping_data_secret"
       }
     },
     {
