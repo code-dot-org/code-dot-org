@@ -3,21 +3,29 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Overview of Differentation
+# Make an Implementation Plan
 
-##### In this lesson you will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.
+##### CS Discoveries can be flexibly taught as a single semester, two semesters over multiple years, or as a full-year course. Options are even available for less than one semester. As you begin planning for your CS class, the first step is to decide which content you will include in your course.
 
-<img src="https://images.code.org/417e5607fd678bb056c9311d09d70aed-image-1650339700026.JPG" alt="Image of the teacher differeientation guide" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/68a3ae71de9e6be399d9179dbfda2b93-image-1651680899766.jpg" alt="Image of a computer" style="border-radius:10px; float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 ## In this lesson, you will:
 
-* ##### Explore opportunities for differentiation while using the CS Discoveries curriculum. 
+* ##### Review the CS Discoveries implementation guide. 
+* ##### Consider the various ways in which the curriculum can be implemented. 
+* ##### Determine which units you will teach and in which order. 
+ 
 
-### **Suggested time:** 15 minutes
+### **Suggested time:** 60 minutes
 
+## Resources
+
+*  ##### <a href="https://docs.google.com/document/d/1Ah0-Ibd7SNKoNdfTkVSfp6MKrKW9sTwTpL2poRkp5l4/copy?usp=sharing" target="blank" rel="noopener noreferrer">Optional planning template</a>
+*  ##### <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview#" target="blank" rel="noopener noreferrer">CS Discoveries Implementation Guide</a>
 
 ## Let's get started!
 
 <div style="clear:both"/>
+
 
 MARKDOWN
