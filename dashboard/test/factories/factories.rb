@@ -496,6 +496,18 @@ FactoryGirl.define do
     participant_type 'student'
 
     initialize_with {Section.new(attributes)}
+
+    trait :teacher_participants do
+      participant_type 'teacher'
+      login_type 'email'
+      grade 'pl'
+    end
+
+    trait :facilitator_participants do
+      participant_type 'facilitator'
+      login_type 'email'
+      grade 'pl'
+    end
   end
 
   factory :game do
@@ -1561,6 +1573,12 @@ FactoryGirl.define do
     association :user, factory: :student
     association :level
     association :script
+  end
+
+  factory :project_version do
+    sequence(:project_id)
+    sequence(:object_version_id)
+    comment 'a commit comment'
   end
 
   factory :teacher_score do

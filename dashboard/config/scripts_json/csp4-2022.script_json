@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 22:44:40 UTC",
+    "serialized_at": "2022-04-27 18:28:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Variables",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n* **Intro to EIPM:** This unit is students' first experience with the Explore, Investigate, Practice, Make lesson sequence, or EIPM. This structured approach to teaching programming is covered in detail in the curriculum guide. We highly recommend watching the [accompanying video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3) to better understand what EIPM should look like in the classroom. When used effectively, it supports deep learning of content and helps maintain a collaborative classroom culture, even as you move into more complex programming concepts.\n\n* **Scaffolding Towards Independent Projects:** A major goal of this course is to empower students to design and build projects independently. The Create PT in Unit 8 offers students enormous freedom to scope and build projects, and even this unit begins scaffolding towards that goal. Individual EIPM sequences of lessons gradually prepare students for scoped, independent Make projects. The unit project has a few requirements, but students are largely free to choose the design, topic, and implementation of their ideas. As you teach the unit, look for the opportunities to scaffold the skills and knowledge students will need to creatively and independently tackle the unit project.\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to design an app that makes a recommendation based on information from user input. Students are given a great deal of freedom to choose their topic, design their user interface, and decide how to actually program their app's behavior. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.4 Identifying and Correcting Errors\n* 3.1 Variables and Assignment\n* 3.3 Mathematical Expressions\n* 3.5 Boolean Expressions\n* 3.6 Conditionals\n* 3.7 Nested Conditionals\n* 3.15 Random Values\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii"
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **Intro to EIPM:** This unit is students' first experience with the Explore, Investigate, Practice, Make lesson sequence, or EIPM. This structured approach to teaching programming is covered in detail in the curriculum guide. We highly recommend watching the [accompanying video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3) to better understand what EIPM should look like in the classroom. When used effectively, it supports deep learning of content and helps maintain a collaborative classroom culture, even as you move into more complex programming concepts.\n\n* **Scaffolding Towards Independent Projects:** A major goal of this course is to empower students to design and build projects independently. The Create PT in Unit 8 offers students enormous freedom to scope and build projects, and even this unit begins scaffolding towards that goal. Individual EIPM sequences of lessons gradually prepare students for scoped, independent Make projects. The unit project has a few requirements, but students are largely free to choose the design, topic, and implementation of their ideas. As you teach the unit, look for the opportunities to scaffold the skills and knowledge students will need to creatively and independently tackle the unit project.\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to design an app that makes a recommendation based on information from user input. Students are given a great deal of freedom to choose their topic, design their user interface, and decide how to actually program their app's behavior. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.4 Identifying and Correcting Errors\n* 3.1 Variables and Assignment\n* 3.3 Mathematical Expressions\n* 3.5 Boolean Expressions\n* 3.6 Conditionals\n* 3.7 Nested Conditionals\n* 3.15 Random Values\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii"
       },
       "seeding_key": {
         "lesson_group.key": "csp_variables",
@@ -1846,7 +1846,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reviewing a Map Level:** Level 9 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in Level 9 prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\r\n"
+            "markdown": "**Reviewing a Map Level:** Level 8 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in Level 8 prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\n"
           }
         ]
       },
@@ -1872,9 +1872,15 @@
       "key": "697cdbc1-a1ed-460a-9226-3286d84f9655",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** These levels ask students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.\n * **Level 10a:** - Students practice using code from one button to make others work.\n * **Level 10b:** - Students add code to keep track of different variables depending on the event.\n * **Level 10c:** - Students practice using string concatenation to add captions to a photo.",
         "name": "Putting it Together",
-        "progression_name": "Putting it Together"
+        "progression_name": "Putting it Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Consider providing opportunities for students to demonstrate and explain their solutions to certain choice levels to the entire class. This helps center students as classroom leaders and challenges students to explain their thinking process.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "697cdbc1-a1ed-460a-9226-3286d84f9655",
@@ -2666,25 +2672,31 @@
       }
     },
     {
-      "key": "400100c6-51bf-4c9a-9006-f7fd87dcade1",
+      "key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
       "position": 10,
+      "properties": {
+        "description": "* Level 12 Students complete a choice level\n  * Level 12a - Students practice adding logical operators to if-else-if statements\n  * Level 12b - Students rewrite an if-else-if statement based on a flowchart\n  * Level 12c - Students practice using the MOD operator and also writing the most specific condition first in their if-else-if statements",
+        "progression_name": "Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** To help normalize mistakes and support debugging, consider having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
+        "lesson_activity.key": "7d2fb412-add9-4cbf-930b-2532d011b4d8"
+      }
+    },
+    {
+      "key": "400100c6-51bf-4c9a-9006-f7fd87dcade1",
+      "position": 11,
       "properties": {
         "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
       },
       "seeding_key": {
         "activity_section.key": "400100c6-51bf-4c9a-9006-f7fd87dcade1",
-        "lesson_activity.key": "7d2fb412-add9-4cbf-930b-2532d011b4d8"
-      }
-    },
-    {
-      "key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
-      "position": 11,
-      "properties": {
-        "description": "* Level 12 Students complete a choice level",
-        "progression_name": "Putting It Together"
-      },
-      "seeding_key": {
-        "activity_section.key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
         "lesson_activity.key": "7d2fb412-add9-4cbf-930b-2532d011b4d8"
       }
     },
@@ -2842,7 +2854,7 @@
       "key": "25c33e5f-c858-4b06-8a09-50b1ad97b9cf",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -3183,11 +3195,12 @@
       "key": "ce90af5b-b156-44c5-9c67-eafd89ef3bbb",
       "position": 9,
       "properties": {
-        "description": "**Level 8 - 9 Creating Functions:** In these levels students revisit the Movie Ticket app and are challenged to think through the process of declaring a function with code that they anticipate could be repeated. Level 9 is a map level about when students should decide to create functions.",
+        "description": "**Level 8 Creating Functions:** In these levels students are challenged to think through the process of declaring a function with code that they anticipate could be repeated. \n * **Level 8a** - Revisit the Museum Ticket App\n * **Level 8b** - Write functions for a Basketball Stats App\n * **Level 8c** - Revisit the Hydration App",
+        "progression_name": "Putting It Together",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Never - After - During - Before:** In the map level students are introduced to a framework for thinking about their development with using functions. The primary question is \"when should I make a function\". In general, you want students to make their functions earlier, as this both improves the process of writing code and reflects deeper understanding of code structure. Throughout this course, you want to see them moving along the \"never - after - during - before\" scale. \n\nAt this point students are still learning to identify repeated code and replace it with a function. This would align with the \"after\" level. In the Functions Make project and the Unit 4 project they are encouraged to anticipate the need for functions in advance. Rather than write code twice and then remove the duplicate code by creating a function later, they should begin deciding early that they'll need a function. The \"updateScreen() pattern\" helps reinforce this point. \n\nReinforce this language in the classroom, though remember it's only a guide. Not every student will immediately be able to move on to \"during\" or \"before\". Different approaches also work better in different contexts, and many experienced programmers will typically operate in the \"during\" mode unless they're building a large and complex project.\n"
+            "markdown": "**Choice Level:**  Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing."
           }
         ]
       },
@@ -3200,7 +3213,14 @@
       "key": "c3a04233-a047-4b4a-a594-d6c9097c67d8",
       "position": 10,
       "properties": {
-        "progression_name": "When to Declare Functions"
+        "description": "**Level 9 Creating Functions:** A map level about when students should decide to create functions.",
+        "progression_name": "When to Declare Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Never - After - During - Before:** In the map level students are introduced to a framework for thinking about their development with using functions. The primary question is \"when should I make a function\". In general, you want students to make their functions earlier, as this both improves the process of writing code and reflects deeper understanding of code structure. Throughout this course, you want to see them moving along the \"never - after - during - before\" scale. \n\nAt this point students are still learning to identify repeated code and replace it with a function. This would align with the \"after\" level. In the Functions Make project and the Unit 4 project they are encouraged to anticipate the need for functions in advance. Rather than write code twice and then remove the duplicate code by creating a function later, they should begin deciding early that they'll need a function. The \"updateScreen() pattern\" helps reinforce this point. \n\nReinforce this language in the classroom, though remember it's only a guide. Not every student will immediately be able to move on to \"during\" or \"before\". Different approaches also work better in different contexts, and many experienced programmers will typically operate in the \"during\" mode unless they're building a large and complex project.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8",
@@ -5367,6 +5387,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSP U4L10 Choice"
+        ],
+        "progression": "Putting It Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L10 Choice"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2022",
+        "activity_section.key": "ce90af5b-b156-44c5-9c67-eafd89ef3bbb"
+      },
+      "level_keys": [
+        "CSP U4L10 Choice"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "When to Make Functions Map2022"
         ],
         "progression": "When to Declare Functions"
@@ -5383,31 +5428,6 @@
       },
       "level_keys": [
         "When to Make Functions Map2022"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U4L10 Choice"
-        ],
-        "progression": "When to Declare Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U4L10 Choice"
-        ],
-        "lesson.key": "Functions Practice",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2022",
-        "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8"
-      },
-      "level_keys": [
-        "CSP U4L10 Choice"
       ]
     },
     {
@@ -6459,21 +6479,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "When to Make Functions Map2022",
+        "level.key": "CSP U4L10 Choice",
         "script_level.level_keys": [
-          "When to Make Functions Map2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2022",
-        "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8"
+        "activity_section.key": "ce90af5b-b156-44c5-9c67-eafd89ef3bbb"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSP U4L10 Choice",
+        "level.key": "When to Make Functions Map2022",
         "script_level.level_keys": [
-          "CSP U4L10 Choice"
+          "When to Make Functions Map2022"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -6641,7 +6661,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp4-2021/resources",
+      "url": "/s/csp4-2022/resources",
       "key": "all_resources_3",
       "properties": {
         "is_rollup": true
@@ -6652,7 +6672,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp4-2021/standards",
+      "url": "/s/csp4-2022/standards",
       "key": "all_standards_3",
       "properties": {
         "is_rollup": true
@@ -6852,7 +6872,7 @@
     },
     {
       "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
       "key": "guide_to_eipm_lessons",
       "properties": {
         "audience": "Teacher",
@@ -7033,18 +7053,6 @@
       },
       "seeding_key": {
         "resource.key": "u4_mid_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -7450,12 +7458,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp4-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp4-2022"
       }
     }

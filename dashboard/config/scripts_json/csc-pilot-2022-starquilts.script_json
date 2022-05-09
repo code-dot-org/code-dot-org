@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-21 22:26:11 UTC",
+    "serialized_at": "2022-04-28 16:51:50 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,8 +44,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In the unplugged lesson for this activity, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online portions of the activity later on. ",
-        "preparation": "- Review the lesson slides.\n- Place pattern blocks at student desks\n- Print worksheet and make copies for each student\n"
+        "overview": "In this Unplugged lesson, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online coding portions of the activity later on. ",
+        "preparation": "- Review the lesson slides\n- Cut out [rhombus shapes](https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview) \n- Distribute pattern blocks to students\n- Print copies of the worksheet for each student\n",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -61,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "The first online lesson provides an opportunity for students to become familiar with the Artist Tool and build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.",
+        "overview": "This skill-building lesson provides an opportunity for students to become familiar with the Artist Tool and to build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.",
         "preparation": "- Review the lesson slides.\n- Play through the levels and review the lesson slides.\n- Place pattern blocks at student desks\n"
       },
       "seeding_key": {
@@ -247,7 +248,7 @@
       "key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” video\n \n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
@@ -261,7 +262,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Give students 10 seconds of **think time** before allowing responses. This will allow more students to participate and responses may be more thoughtful. \n\nHave students **turn & talk** to share initial ideas. This will allow all students to be involved in the discussion rather than just a few. "
+            "markdown": "Give students 10 seconds of **think time** before allowing responses. This will allow more students to participate and responses may be more thoughtful. \n\nHave students **turn & talk** to share initial ideas. This will allow all students to be involved in the discussion. \n\nThen bring the **whole class** together for a discussion. Have a few students share out what they discussed with their partners."
           }
         ]
       },
@@ -274,7 +275,7 @@
       "key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
       "position": 5,
       "properties": {
-        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n"
+        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Great Plains** - A broad expanse of flat land, much of it covered in prairie and grassland from North Dakota to Texas.\n- **Buffalo** - A large mammal with long legs, hooves, and horns, closely related to cattle\n- **Textile** - Cloth created with needle and thread\n- **Honor** - Recognize and show admiration\n- **Generosity** - Willingness to give or to share\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n- **Pattern** - Something that happens or appears in a regular and repeated way\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
@@ -285,7 +286,7 @@
       "key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
       "position": 1,
       "properties": {
-        "description": "**Overview**: There are two options for this activity that you can choose from depending on the materials in your classroom: using pattern block manipulatives or cutting a rhombus shape out of paper. You will find a worksheet that corresponds with either option. Students will trace a rhombus shape repeatedly on the worksheet creating a 6-point star. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slides\n\n**Do This**: Hand out pattern blocks and worksheets."
+        "description": "**Overview**: There are two options for this activity that you can choose from depending on the materials in your classroom: using pattern block manipulatives or cutting a rhombus shape out of paper. You will find a worksheet that corresponds with either option. Students will trace a rhombus shape repeatedly on the worksheet in order to create a 6-pointed star. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slides\n\n**Do This**: Cut out rhombus shapes for students in advance of the lesson. Hand out rhombus cutouts (or pattern block manipulatives) and worksheets to students."
       },
       "seeding_key": {
         "activity_section.key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
@@ -312,7 +313,7 @@
       "key": "c7843cc0-96b5-4bc5-a758-447de32d58ea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slides\n \n**Discuss**: What patterns do you see in the star? \n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slides\n\n**Discuss**: How would you describe just one point of the star? What patterns do you see?\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then get smaller again.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slide\n \n**Discuss**: _What patterns do you see in the star?_\n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slide\n\n**Discuss**: _How would you describe just one point of the star? What patterns do you see?_\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then smaller again.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7843cc0-96b5-4bc5-a758-447de32d58ea",
@@ -326,7 +327,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use circles and arrows to show the visual patterns that the students name. This could be done virtually or by printing out multiple of the star shapes. By adding student names next to their ideas you can give students ownership.\n\nConsider Introducing a hand signal for students to show they have the same idea as another classmate, such as a thumbs-up or having students snap when they hear something they agree with."
+            "markdown": "Use circles and arrows to show the visual patterns that the students name. This could be done virtually or by printing out multiple of the star shapes. By adding student names next to their ideas you can give students ownership.\n\nConsider introducing a hand signal for students to show they have the same idea as another classmate, such as a thumbs-up or having students snap when they hear something they agree with."
           }
         ]
       },
@@ -339,7 +340,8 @@
       "key": "f0832f05-9448-4fe0-ae69-2b8e5cc59dc4",
       "position": 3,
       "properties": {
-        "description": "**Remarks**: These star quilts have a lot of patterns and repetition! Luckily, computers are really good at drawing based on patterns and repetition! Tomorrow we’ll see how we can use a computer to create different designs based on the patterns we noticed today!"
+        "description": "These star quilts have a lot of patterns and repetition! Luckily, computers are really good at drawing based on patterns and repetition! Tomorrow we’ll see how we can use a computer to create different designs based on the patterns we noticed today!",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "f0832f05-9448-4fe0-ae69-2b8e5cc59dc4",
@@ -350,7 +352,7 @@
       "key": "beee4676-b02d-40c7-bc67-d5be08b7819a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are less petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are less petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n"
       },
       "seeding_key": {
         "activity_section.key": "beee4676-b02d-40c7-bc67-d5be08b7819a",
@@ -361,7 +363,8 @@
       "key": "8e44f441-e634-439f-9a03-058bc89e3bd6",
       "position": 2,
       "properties": {
-        "description": "**Say**: Today we’re going to learn how to create our own visual patterns with a tool called the Artist.\n"
+        "description": "Today we’re going to learn how to create our own visual patterns with a tool called the Artist.\n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "8e44f441-e634-439f-9a03-058bc89e3bd6",
@@ -369,10 +372,23 @@
       }
     },
     {
-      "key": "508f8102-cbd5-437d-95f9-7768c5723ad0",
+      "key": "cce0e882-9959-4bc1-a94d-1eb16ef67b72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to create a 6 point star. Students will start by stamping a rhombus shape. Then they learn how to repeatedly turn the Artist and stamp more rhombus shapes. In Level 4, students will learn looping and add in a repeat block to simplify the code.\n\n**Debugging Tips**:\n\n- **Level 1**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 2**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 3**: Students must continue coding the rest of the star shape. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introducing the Artist” video",
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "cce0e882-9959-4bc1-a94d-1eb16ef67b72",
+        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
+      }
+    },
+    {
+      "key": "508f8102-cbd5-437d-95f9-7768c5723ad0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to create a 6 point star. Students will start by stamping a rhombus shape. Then they learn how to repeatedly turn the Artist and stamp more rhombus shapes. In Level 4, students will learn looping and add in a repeat block to simplify the code.\n\n**Debugging Tips**:\n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students must continue coding the rest of the star shape. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "508f8102-cbd5-437d-95f9-7768c5723ad0",
@@ -381,9 +397,10 @@
     },
     {
       "key": "fbcd4188-645f-4453-8254-18a3a43d1ff2",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Repeat Blocks” video\n\n- **Level 4**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Repeat Blocks” video\n\n- **Level 5**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n",
+        "progression_name": "Video - Repeat Blocks"
       },
       "seeding_key": {
         "activity_section.key": "fbcd4188-645f-4453-8254-18a3a43d1ff2",
@@ -391,10 +408,22 @@
       }
     },
     {
-      "key": "079a7a28-1eba-4027-bffe-50be6f81bfa0",
-      "position": 3,
+      "key": "a39fa8cc-65aa-4dc6-9005-e6a2e44ccce4",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-6 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 5**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 6**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\nIn these levels students will alter the turn angle to see how it affects the number of points in a star. In level 5, students will turn 90 degrees and create a 4 point star. In level 6, students will turn 30 degrees and create a 12 point star. If students are done early, they can try to create stars with other numbers of points. Discuss the relationship between angle measurement and number of points with students."
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "a39fa8cc-65aa-4dc6-9005-e6a2e44ccce4",
+        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
+      }
+    },
+    {
+      "key": "079a7a28-1eba-4027-bffe-50be6f81bfa0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0",
@@ -403,34 +432,13 @@
     },
     {
       "key": "98267be9-ec3e-40d9-808b-22fa394dd382",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 7**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382",
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
-      }
-    },
-    {
-      "key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Bonus” slide\n\n**Level 8**: Students select the border that they would like to use. Students use the function **startBorder** to be in the right position to start their border. Talk to students about what this function does."
-      },
-      "seeding_key": {
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
-      }
-    },
-    {
-      "key": "8e18453f-b73b-4df3-a9a9-23fa0b984041",
-      "position": 6,
-      "properties": {
-        "description": "**Level 9-10**: Students draw the border of one point in the star. Guide students in figuring out the correct way to turn and move. \n\n**Level 11**: Students use the repeat block to continue the border all around the star. Students should set it to repeat 6 times."
-      },
-      "seeding_key": {
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041",
         "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
       }
     },
@@ -441,7 +449,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged.The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
           }
         ]
       },
@@ -454,7 +462,7 @@
       "key": "9d90f3f3-dd24-4d05-9d73-e70cae7e7874",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: _What patterns do you notice?_\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create less points in a star.\n\n**Say**: Today we learned how to use the Artist tool to create our very own star designs. Tomorrow, we’ll extend that to make our very own star quilts!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: _What patterns do you notice?_\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create less points in a star.",
         "duration": "10",
         "name": "Wrap Up"
       },
@@ -464,10 +472,22 @@
       }
     },
     {
+      "key": "3a1207a6-7347-4a37-a963-d74bf866ec20",
+      "position": 2,
+      "properties": {
+        "description": "Today we learned how to use the Artist tool to create our very own star designs. Tomorrow, we’ll extend that to make our very own star quilts!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a1207a6-7347-4a37-a963-d74bf866ec20",
+        "lesson_activity.key": "69ae9763-229f-4217-aa66-5af2ffcc1989"
+      }
+    },
+    {
       "key": "6367ff80-f323-426a-9bdb-7d022c3ae95b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-point star shape and a 8-point Star Quilt?_\n\n**Discussion Goal**: The class looks at an image of a 6-pointed star shape, just like they created in Lesson 2. Students compare the image to a 8-pointed Star Quilt, which they will create today. Students should notice:\nStar shape has 6 points and Star Quilt has 8 points\nStar Quilt has more rows \n\nAnticipated student responses (similarities):\nThey are both stars\nThey are both made out of rhombus shapes\nThe rhombus shapes are in a pattern\nThe rhombus shapes fit together perfectly\nThe Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n* **Comments** - Notes to yourself that explain a section of code. They do not alter the program but help keep your code in order.\n* **Chombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n* **Point** - One part of the star shape\n* **Row** - In this case, a orderly line of rhombuses\n* **Loop** - A sequence of code that is repeated\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-point star shape and a 8-point Star Quilt?_\n\n**Discussion Goal**: The class looks at an image of a 6-pointed star shape, just like they created in Lesson 2. Students compare the image to a 8-pointed Star Quilt, which they will create today. Students should notice:\nStar shape has 6 points and Star Quilt has 8 points\nStar Quilt has more rows \n\nAnticipated student responses (similarities):\nThey are both stars\nThey are both made out of rhombus shapes\nThe rhombus shapes are in a pattern\nThe rhombus shapes fit together perfectly\nThe Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n* **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n* **Point** - One part of the star shape\n* **Row** - In this case, a orderly line of rhombuses\n* **Loop** - A sequence of code that is repeated\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -480,7 +500,7 @@
       "key": "defde4a1-a6c3-41f3-ba02-1ff54f10806f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-5 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Comments” slide\n\n**Say**: _In this lesson there will be a lot of rhombuses!_ \n\n_In order to stay organized you will use comments._ \n\n_**Comments** - Notes to yourself that explain a section of code. They do not alter the program but help keep your code in order._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-5 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section.",
         "name": "Star Quilts - Skill Building"
       },
       "seeding_key": {
@@ -492,7 +512,8 @@
       "key": "33f0e314-803b-4206-a891-97cdac309fd0",
       "position": 2,
       "properties": {
-        "description": "**Overview**:  In the first few levels of this lesson, students will be programming just one point of their Star Quilt. Students will add rhombuses row by row. There are a lot of rhombuses to keep track of so students will use `comment` blocks to organize their code. Students will be using a functions like `diagonalLeft`, `diagonalRight`, `bumpLeft`, and `bumpRight` to make the Artist jump to the correct position to start drawing a new rhombus. \n\n**Debugging Tips**:\n\n**Level 1**: This level is just to get the project setup. Remind students that their code will carry over from level to level so they can keep building their project from where they left off. \n\n**Level 2**: Remind students of the work they did in Lesson 2. Remind students of the importance of using the `comment` blocks to stay organized. Click on the lightbulb next to the Artist icon to see what the code should look like. \n\n**Level 3**: Here is where students will try out the new function blocks - `diagonalRight` and `bumpLeft`. Help students understand what it is that these functions do. `diagonalRight` makes the artist jump diagonally to the right of the rhombus he just drew. `bumpLeft` makes the Artist jump left to setup for the next rhombus. Because this is row 2 and the point is widening, the Artist will need to stamp two rhombuses.\n\n**Level 4**: In row 3 the point is still widening, this time the Artist should stamp three rhombuses. There are two new functions. `diagonalLeft` makes the artist jump diagonally to the left of the rhombus he just drew. `bumpRight` makes the Artist jump right to setup for the next rhombus. \n\n**Level 5**: In row 4 the point is starting to taper in, so the Artist should only stamp two rhombuses.\n\n"
+        "description": "**Overview**:  In the first few levels of this lesson, students will be programming just one point of their Star Quilt. Students will add rhombuses row by row. There are a lot of rhombuses to keep track of so students will use `comment` blocks to organize their code. Students will be using a functions like `diagonalLeft`, `diagonalRight`, `bumpLeft`, and `bumpRight` to make the Artist jump to the correct position to start drawing a new rhombus. \n\n**Debugging Tips**:\n\n**Level 1**: This level is just to get the project setup. Remind students that their code will carry over from level to level so they can keep building their project from where they left off. \n\n**Level 2**: Remind students of the work they did in Lesson 2. Remind students of the importance of using the `comment` blocks to stay organized. Click on the lightbulb next to the Artist icon to see what the code should look like. \n\n**Level 3**: Here is where students will try out the new function blocks - `diagonalRight` and `bumpLeft`. Help students understand what it is that these functions do. `diagonalRight` makes the artist jump diagonally to the right of the rhombus he just drew. `bumpLeft` makes the Artist jump left to setup for the next rhombus. Because this is row 2 and the point is widening, the Artist will need to stamp two rhombuses.\n\n**Level 4**: In row 3 the point is still widening, this time the Artist should stamp three rhombuses. There are two new functions. `diagonalLeft` makes the artist jump diagonally to the left of the rhombus he just drew. `bumpRight` makes the Artist jump right to setup for the next rhombus. \n\n**Level 5**: In row 4 the point is starting to taper in, so the Artist should only stamp two rhombuses.\n\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "33f0e314-803b-4206-a891-97cdac309fd0",
@@ -503,7 +524,8 @@
       "key": "76a256e8-1a47-4f30-9e29-a7a527c3099c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Skill Building” slide\n\n**Level 6**: There is only one rhombus in row 5. Students are done creating their point! Early finishers can experiment with colors. Early finishers can start anticipating how to create the full Star Quilt.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Skill Building” slide\n\n**Level 6**: There is only one rhombus in row 5. Students are done creating their point! Early finishers can experiment with colors. Early finishers can start anticipating how to create the full Star Quilt.\n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "76a256e8-1a47-4f30-9e29-a7a527c3099c",
@@ -514,7 +536,8 @@
       "key": "ef404c31-b945-4e88-91ea-8ab5649cfaea",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops\" video\n\n**Overview**: Students have finished making one point of their star. Now they need the Artist to repeat this point several times to create the other points in the star. Students will be re-watching a video about looping. This will be familiar from Lesson 2. Stop and discuss looping as a class.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Repeat Blocks\" video\n\n**Overview**: Students have finished making one point of their star. Now they need the Artist to repeat this point several times to create the other points in the star. Students will be re-watching a video about looping. This will be familiar from Lesson 2. Stop and discuss looping as a class.\n",
+        "progression_name": "Video - Repeat Blocks"
       },
       "seeding_key": {
         "activity_section.key": "ef404c31-b945-4e88-91ea-8ab5649cfaea",
@@ -525,7 +548,8 @@
       "key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
       "position": 5,
       "properties": {
-        "description": "**Debugging Tips**:\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
@@ -536,7 +560,8 @@
       "key": "49a016a6-e801-4c59-884e-c27c13319db8",
       "position": 6,
       "properties": {
-        "description": "**Level 9**: Early finishers can move on to level 9 and free play. Make sure the Artist has jumped back to the middle center and turned 45 degrees so the loop works. \n\n**Overview**: This is a free play level for students to make an awesome Star Quilt. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles, borders, loops to make a unique star shape."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: Early finishers can move on to level 9 and free play. Make sure the Artist has jumped back to the middle center and turned 45 degrees so the loop works. \n\n**Overview**: This is a free play level for students to make an awesome Star Quilt. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles, borders, loops to make a unique star shape.",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "49a016a6-e801-4c59-884e-c27c13319db8",
@@ -564,6 +589,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_star_quilts_artist_intro"
+        ],
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -573,7 +602,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "508f8102-cbd5-437d-95f9-7768c5723ad0"
+        "activity_section.key": "cce0e882-9959-4bc1-a94d-1eb16ef67b72"
       },
       "level_keys": [
         "csc_star_quilts_artist_intro"
@@ -582,9 +611,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus1"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -603,9 +636,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus2"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -624,9 +661,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus3"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -636,7 +677,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "fbcd4188-645f-4453-8254-18a3a43d1ff2"
+        "activity_section.key": "508f8102-cbd5-437d-95f9-7768c5723ad0"
       },
       "level_keys": [
         "csc-starquilts-rhombus3"
@@ -648,6 +689,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_video_loops2"
+        ],
+        "progression": "Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -657,7 +702,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
+        "activity_section.key": "a39fa8cc-65aa-4dc6-9005-e6a2e44ccce4"
       },
       "level_keys": [
         "csc_video_loops2"
@@ -666,30 +711,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-6point-repeat"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
-      },
-      "level_keys": [
-        "csc-starquilts-6point-repeat"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-4point-repeat"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -699,10 +727,35 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       },
       "level_keys": [
         "csc-starquilts-4point-repeat"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc-starquilts-12point-repeat"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc-starquilts-12point-repeat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-starquilts",
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
+      },
+      "level_keys": [
+        "csc-starquilts-12point-repeat"
       ]
     },
     {
@@ -712,95 +765,34 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc-starquilts-12point-repeat"
-        ]
+          "csc-starquilts-rhombus-freeplay"
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-12point-repeat"
+          "csc-starquilts-rhombus-freeplay"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817"
+        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
       },
       "level_keys": [
-        "csc-starquilts-12point-repeat"
+        "csc-starquilts-rhombus-freeplay"
       ]
     },
     {
       "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "challenge": true
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-one"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-one"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "challenge": true
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-two"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-two"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "challenge": true
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-three"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-three"
-      ]
-    },
-    {
-      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-comment"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -817,11 +809,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row1"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -838,11 +834,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row2"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -859,11 +859,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row3"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -880,11 +884,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row4"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -901,11 +909,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-row5"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -922,11 +934,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_video_loops"
+        ],
+        "progression": "Video - Repeat Blocks"
       },
       "bonus": false,
       "seeding_key": {
@@ -943,14 +959,15 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 16,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csc-starquilts-repeat"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -967,11 +984,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_starquilts_freeplay"
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -998,7 +1019,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "508f8102-cbd5-437d-95f9-7768c5723ad0"
+        "activity_section.key": "cce0e882-9959-4bc1-a94d-1eb16ef67b72"
       }
     },
     {
@@ -1034,7 +1055,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "fbcd4188-645f-4453-8254-18a3a43d1ff2"
+        "activity_section.key": "508f8102-cbd5-437d-95f9-7768c5723ad0"
       }
     },
     {
@@ -1046,19 +1067,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-6point-repeat",
-        "script_level.level_keys": [
-          "csc-starquilts-6point-repeat"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
+        "activity_section.key": "a39fa8cc-65aa-4dc6-9005-e6a2e44ccce4"
       }
     },
     {
@@ -1070,7 +1079,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       }
     },
     {
@@ -1082,43 +1091,19 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-bonus-one",
+        "level.key": "csc-starquilts-rhombus-freeplay",
         "script_level.level_keys": [
-          "csc-starquilts-bonus-one"
+          "csc-starquilts-rhombus-freeplay"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-bonus-two",
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-two"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-bonus-three",
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-three"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
+        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
       }
     },
     {
@@ -1236,7 +1221,7 @@
       "url": "https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview",
       "key": "cut_a_rhombus_shape",
       "properties": {
-        "audience": "Student",
+        "audience": "Teacher",
         "type": "Handout"
       },
       "seeding_key": {

@@ -1,7 +1,8 @@
 # Helper steps for creating and managing sections
 
 And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type}))
+  grade = participant_type == 'student' ? 'Other' : 'pl'
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type, grade: grade}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
@@ -276,11 +277,17 @@ Then /^I add the first student to the first code review group$/ do
   STEPS
 end
 
-Then /^I create a new code review group for the section I saved$/ do
+Then /^I open the code review groups management dialog$/ do
   steps <<-STEPS
     And I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
+  STEPS
+end
+
+Then /^I create a new code review group for the section I saved$/ do
+  steps <<-STEPS
+    And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
   STEPS

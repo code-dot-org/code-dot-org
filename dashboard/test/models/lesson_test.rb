@@ -514,8 +514,6 @@ class LessonTest < ActiveSupport::TestCase
         'lessons' => {
           'dummy-key' => {
             'name' => 'Dummy Name',
-            'description_student' => 'student overview',
-            'description_teacher' => 'teacher overview'
           }
         }
       }
@@ -971,12 +969,13 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
     end
 
-    test "resource markdown is updated when cloning lesson" do
+    test "resource markdown is updated in activity sections when cloning lesson" do
       resource_in_lesson = create :resource, key: 'original_key', name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
       resource_not_in_lesson = create :resource, name: 'resource2', course_version: @original_course_version, lessons: []
 
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       create :activity_section, lesson_activity: lesson_activity, description: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
+      create :activity_section, lesson_activity: lesson_activity, tips: [{'markdown': "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]"}, {markdown: "description without resource"}]
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -988,10 +987,32 @@ class LessonTest < ActiveSupport::TestCase
       refute_nil copied_resource1
       copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
       refute_nil copied_resource2
-      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.first.description, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
+      assert_equal 2, @destination_script.lessons.last.lesson_activities.last.activity_sections.last.tips.length
+      assert_equal ["Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]", "description without resource"], @destination_script.lessons.last.lesson_activities.last.activity_sections.last.tips.map {|t| t['markdown']}
     end
 
-    test "vocabulary markdown is updated when cloning lesson" do
+    test "preparation resource markdown is updated when cloning lesson" do
+      resource_in_lesson = create :resource, key: 'original_key', name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      resource_not_in_lesson = create :resource, name: 'resource2', course_version: @original_course_version, lessons: []
+
+      @original_lesson.preparation = "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
+      @original_lesson.save!
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 1, copied_lesson.resources.length
+      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+
+      copied_resource1 = @destination_course_version.resources.find_by_name('resource1')
+      refute_nil copied_resource1
+      copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
+      refute_nil copied_resource2
+      assert_equal @destination_script.lessons.last.preparation, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
+    end
+
+    test "vocabulary markdown is updated in activity sections when cloning lesson" do
       vocabulary_in_lesson = create :vocabulary, key: 'original_key', word: 'vocabulary one', course_version: @original_course_version, lessons: [@original_lesson]
       vocabulary_not_in_lesson = create :vocabulary, word: 'vocabulary two', course_version: @original_course_version, lessons: []
 
@@ -1008,6 +1029,25 @@ class LessonTest < ActiveSupport::TestCase
       copied_vocabulary2 = @destination_course_version.vocabularies.find_by_word('vocabulary two')
       refute_nil copied_vocabulary2
       assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary1)}]. Vocab 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary2)}]."
+    end
+
+    test "student overview vocab markdown is updated when cloning lesson" do
+      vocabulary_in_lesson = create :vocabulary, key: 'original_key', word: 'vocabulary one', course_version: @original_course_version, lessons: [@original_lesson]
+      vocabulary_not_in_lesson = create :vocabulary, word: 'vocabulary two', course_version: @original_course_version, lessons: []
+
+      @original_lesson.student_overview = "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_in_lesson)}]. Vocab 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_not_in_lesson)}]."
+      @original_lesson.save!
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 1, copied_lesson.vocabularies.length
+
+      copied_vocabulary1 = @destination_course_version.vocabularies.find_by_word('vocabulary one')
+      refute_nil copied_vocabulary1
+      copied_vocabulary2 = @destination_course_version.vocabularies.find_by_word('vocabulary two')
+      refute_nil copied_vocabulary2
+      assert_equal @destination_script.lessons.last.student_overview, "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary1)}]. Vocab 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary2)}]."
     end
 
     test "variants are removed when cloning lesson into another script" do
@@ -1199,6 +1239,25 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @destination_script, copied_lesson.script
       assert_equal 4, copied_lesson.absolute_position
       assert_equal 2, copied_lesson.relative_position
+    end
+
+    test 'unit cannot have two lessons with the same key' do
+      unit = create :script, :with_lessons, name: 'unit-name'
+      e = assert_raises do
+        unit.lessons.last.update!(key: unit.lessons.first.key)
+      end
+      assert_includes e.message, "lesson with key \"#{unit.lessons.first.key}\" is already taken within unit \"unit-name\""
+    end
+
+    test 'cannot clone lesson when lesson name is already taken' do
+      create :lesson, lesson_group: @destination_lesson_group, key: 'conflicting-key'
+      @destination_script.reload
+      # cloning uses the original lesson name as the new lesson key
+      @original_lesson.update!(name: 'conflicting-key')
+      e = assert_raises do
+        @original_lesson.copy_to_unit(@destination_script)
+      end
+      assert_includes e.message, "lesson with key \"conflicting-key\" is already taken within unit \"#{@destination_script.name}\""
     end
 
     test "creates lesson group if script has none" do

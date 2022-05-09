@@ -1688,10 +1688,10 @@
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
 
-"@code-dot-org/piskel@0.13.0-cdo.8":
-  version "0.13.0-cdo.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.8.tgz#085226f893790d36c56bef010659f2144093c6a9"
-  integrity sha512-cVfDjshCctXNtCU+VKKf2RZGXABkal59K06ZTBhfBWd7qAJGx6BL1yeRx4iO8tsKrSK425rNrXiIHO+IDLEV5A==
+"@code-dot-org/piskel@0.13.0-cdo.9":
+  version "0.13.0-cdo.9"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.9.tgz#84b8ad23bd73e2821229061fa1bcb52e461236de"
+  integrity sha512-BhbuhlxFkXd3+OmnaK9DGIOY+v6qMLH3UJmkBBAF9SEh88mb+MMvT/vXT8Txv1b4/RrnXZJD1nEMUsya5gx3vQ==
   dependencies:
     messageformat "^2.3.0"
 
@@ -15263,10 +15263,10 @@ supports-color@^7.2.0:
   dependencies:
     has-flag "^4.0.0"
 
-survey-react@1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.4.tgz#41194f0c4c4a96a88676a19f812ff362aa62f243"
-  integrity sha512-s6MsZvHUbp9YYoMsmpxcGEL3hz0iWLUQQ3aR+C1V6EBQrHwnhUN0nl7llpQsTc5pn0l4r0kwlGpKMFArVVInIA==
+survey-react@^1.9.28:
+  version "1.9.28"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.9.28.tgz#b2d43815a8198dc7292220ba10086280b629a630"
+  integrity sha512-xWoxcCi/cICb3t5zUH8Uo+rjOQk6T6HIoyK+EwjF+WacxG5nor62nM8IM4dCRp023+bZkUSRcO9JCVYuk66ycg==
 
 svg-url-loader@^2.3.2:
   version "2.3.2"

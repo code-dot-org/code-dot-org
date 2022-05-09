@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 22:44:39 UTC",
+    "serialized_at": "2022-05-03 19:32:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Unit 3: Intro to App Design",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -94,7 +94,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
-        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
+        "preparation": "* Read over the [r app_development_planning_guide/csp/2022]",
         "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
@@ -176,7 +176,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
-        "preparation": "* Review the steps of the debugging process\r\n* Review the levels students will need to complete on Code Studio",
+        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2022] one-pager\n* Review the levels students will need to complete on Code Studio",
         "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
         "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate."
       },
@@ -1912,7 +1912,7 @@
       "key": "66c31275-2536-4cda-aa45-044cfeec16fc",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n    \n**Level 1:** This level requires students to recognize that strings need to go in quotes.\n\n**Level 2:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\n\n**Level 3:** The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\n\n**Level 4:** Again this code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\n\n**Level 5:** In this level an entire event handler is missing. Students will need to add it to the app.\n\n**Level 6:** This level explicitly introduces the fact that event handlers ([`onEvent`(#fff176)](/docs/applab/onEvent/)) should not go inside other [`onEvent`(#fff176)](/docs/applab/onEvent/) blocks. This is explicitly addressed in the concluding slide show as well.\n\n**Level 7:** This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app."
+        "description": "**Group:** Place students in pairs.\n    \n**Level 1:** This level requires students to recognize that strings need to go in quotes.\n\n**Level 2:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\n\n**Level 3:** This code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\n\n**Level 4:** This level explicitly introduces the fact that event handlers ([`onEvent`(#fff176)](/docs/applab/onEvent/)) should not go inside other [`onEvent`(#fff176)](/docs/applab/onEvent/) blocks. This is explicitly addressed in the concluding slide show as well.\n"
       },
       "seeding_key": {
         "activity_section.key": "66c31275-2536-4cda-aa45-044cfeec16fc",
@@ -1934,7 +1934,14 @@
       "key": "bb62cd1e-3124-4e56-bed5-3839f7976b00",
       "position": 5,
       "properties": {
-        "progression_name": "Choice Level"
+        "description": "**Level 5:** Have students complete at least one of the levels in this choice level\n * **5a** - The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\n * **5b** - In this level, an entire event handler is missing. Students will need to add it to the app.\n * **5c** - This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app.\n",
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Students tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bb62cd1e-3124-4e56-bed5-3839f7976b00",
@@ -3297,7 +3304,7 @@
         "level_keys": [
           "CSP U3L7 Choice"
         ],
-        "progression": "Choice Level"
+        "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3948,7 +3955,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp3-2021/resources",
+      "url": "/s/csp3-2022/resources",
       "key": "all_resources_2",
       "properties": {
         "is_rollup": true
@@ -3959,7 +3966,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp3-2021/standards",
+      "url": "/s/csp3-2022/standards",
       "key": "all_standards_2",
       "properties": {
         "is_rollup": true
@@ -4014,6 +4021,18 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_3_-_intro_to_app_design"
+      }
+    },
+    {
+      "name": "Debugging",
+      "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
+      "key": "debugging",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "debugging"
       }
     },
     {
@@ -4114,18 +4133,6 @@
       "seeding_key": {
         "resource.key": "u3_mid_score_sample_planning_guide_rubric"
       }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
-      }
     }
   ],
   "lessons_resources": [
@@ -4145,6 +4152,12 @@
       "seeding_key": {
         "lesson.key": "Debugging",
         "resource.key": "csp_unit_3_-_intro_to_app_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "debugging"
       }
     },
     {
@@ -4302,12 +4315,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp3-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp3-2022"
       }
     }

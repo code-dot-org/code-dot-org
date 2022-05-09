@@ -688,6 +688,13 @@ en:
         csc-poem-art-outro: Outro Video
         csd_u6_call_define_functions: 'CSD: Calling and Defining Functions'
         csp_applab_parameters: Functions with Parameters
+        starquilts_intro_artist: Intro to Star Quilts
+        CSA-PL-intro-to-arrays: One-Dimensional (1D) Arrays
+        CSA-PL-1d-arrays-new-values: Entering values in 1D arrays
+        CSA-PL-conditionals: Conditional Statements in Java
+        CSA-PL-two-way-selection: Two-way selection
+        CSA-PL-Printing-in-Java: Printing in Java
+        CSA-PL-multi-selection-statements: Multi-selection Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
