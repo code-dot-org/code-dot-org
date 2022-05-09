@@ -13,14 +13,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.unusedSvg_.render(this.svgGroup_);
   }
 
-  /**
-   * @override
-   * Disable overwrite checks
-   */
-  mixin(mixinObj, opt_disableCheck) {
-    super.mixin(mixinObj, true);
-  }
-
   isUnused() {
     const isTopBlock = this.previousConnection === null;
     const hasParentBlock = !!this.parentBlock_;
