@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "आपके बैकपैक में सेव की हुई फाइलें यहां दिखाई देंगी।",
   "enablePeerReview": "पियर रिव्यु चालू करें",
   "errorJavabuilderConnectionGeneral": "हमारे सर्वर से कनेक्ट करते समय हमें गड़बड़ी का संकेत मिल रहे हैं। दुबारा प्रयास करें।",
-  "errorJavabuilderConnectionNotAuthorized": "आपको Javalab में एक्सेस का अधिकार नहीं है। क्या आपको लॉग इन करने या सेक्शन को ज्वाइन करने की जरूरत है?",
   "errorLoadingClassmates": "आपके सहपाठियों की सूची लोड करते समय कुछ गड़बड़ी हुई थी। कृपया दुबारा प्रयास करें।",
   "errorMediaImageLoadError": "इमेज लोड करते समय गड़बड़ी हुई थी।",
   "errorNeighborhoodInvalidGrid": "साथ बैठे छात्र का लेवल लोड करते समय गड़बड़ी हुई थी। कृपया हमें support@code.org पर संपर्क करें और अपने मैसेज में इस पेज का URL अवश्य शामिल करें।",

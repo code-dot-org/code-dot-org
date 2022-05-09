@@ -4,6 +4,22 @@ kn:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
+            '0.75': ಸಣ್ಣ
+            '1.00': ಮಧ್ಯಮ
+            '2.00': ದೊಡ್ಡ
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
+            '0.75': ಸಣ್ಣ
+            '1.00': ಮಧ್ಯಮ
+            '2.00': ದೊಡ್ಡ
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -283,6 +299,7 @@ kn:
             '"diamond"': ವಜ್ರ
             '"x"': x
             '"y"': 'y'
+            '"1"': '1'
       Dancelab_whenKey:
         options:
           KEY:
@@ -293,6 +310,7 @@ kn:
             '"space"': ಸ್ಪೇಸ್
             '"x"': x
             '"y"': 'y'
+            '"1"': '1'
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -353,7 +371,7 @@ kn:
         text: ಈ ಸಾಲು ಎಳೆಯಿರಿ {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: "{SPRITE} ಇಂದ ಸಾಗುವ ಬ್ಲಾಕ್ ಅಂಚುಗಳು"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': ಸೆಕೆಂಡುಗಳು
@@ -389,6 +407,19 @@ kn:
         text: |-
           ಇದ್ದರೆ {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ಕಾಸ್ಟ್ಯೂಮ್‌ {COSTUME}"
       gamelab_isKeyPressed:
@@ -444,8 +475,6 @@ kn:
             '"pop"': ಪಾಪ್
             '"rain"': ಮಳೆ
             '"spiral"': ಸ್ಪೈರಲ್
-      gamelab_makeNewScaledSprite:
-        text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeNumSprites:
@@ -458,6 +487,12 @@ kn:
             '90': ಕೆಳಕ್ಕೆ
             '180': ಎಡಕ್ಕೆ
             '270': ಮೇಲಕ್ಕೆ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': ಸಣ್ಣ
+            '50': ಮಧ್ಯಮ
+            '100': ದೊಡ್ಡ
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ಕಡೆಗೆ"
         options:
@@ -1114,6 +1149,19 @@ kn:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
         text: ಸಾಲು {N} ತೋರಿಸಿದಾಗ
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
       RyanLab_moveForward:

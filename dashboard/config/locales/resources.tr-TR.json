@@ -2,6 +2,9 @@
   "tr-TR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
+        },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
@@ -19,19 +22,60 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Oyuncu Tanıtımı"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Dönüşler & Açılar",
+          "type": "Öğrenci Notu"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Dönüşler & Açılar"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Şifreleme ve Ortak Anahtarlar",
           "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Kod Stüdyosunda Şifreleme Widget'ları"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Aktivite Kılavuzu - Metin Sıkıştırma"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Aktivite Tekrarı - Bu Mesajı Çözme",
+          "type": "Aktivite Tekrarı"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Bu mesajı çöz"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Stüdyosunda Metin Sıkıştırma Widget'ı",
+          "type": "Widget"
         },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: Aloe Blacc ile Metin Sıkıştırma",
           "type": "Video"
         },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
+        },
         "ai-ml/oceans/unversioned": {
+          "name": "Yapay Zeka: Makine Öğrenimi",
           "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
+          "name": "Yapay Zeka: Toplum üzerindeki Etki",
           "type": "Video"
         },
         "ai-training/oceans/unversioned": {
+          "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
           "type": "Video"
         },
         "lesson_plans/courseb/2018": {
@@ -551,7 +595,8 @@
         },
         "flf-assessment-teacher-key/coursef/2021": {
           "name": "İçin Döngüsü Eğlencesi - Değerlendirme Anahtarı",
-          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "type": "Öğretmen Anahtarı"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Şununla Say Döngüsü Eğlencesi",
@@ -579,12 +624,15 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
+          "name": "Yapay Zeka: Makine Öğrenimi",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
+          "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
+          "name": "Yapay Zeka: Toplum üzerindeki Etki",
           "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -678,15 +726,18 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Dijital Parklar: Dijital Trail Kareler",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Öğrenci Notu"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Dijital Yollar: Hayvan Parçaları",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Öğrenci Notu"
         },
         "mimi-activity/courseb/2021": {
           "name": "Çabuk, Çabuk Taşı",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Harita Aktivitesi"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Çabuk, Çabuk Taşı",
@@ -868,7 +919,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Duraklat ve Düşün Anını",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Öğrenci Notu"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Eşli Programlama",
@@ -1067,7 +1119,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Öğrenci Notu"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Robot dostlarım",
@@ -1114,8 +1167,16 @@
           "name": " Bağlantısız Bloklar (Kurslar C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Oyuncu Tanıtımı"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Dönüşler & Açılar"
+        },
         "csf-turns-angles-doc/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Dönüşler & Açılar",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Öğrenci Notu"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Hissediyorum Yüzler Duygu Görüntüsü",
@@ -1337,6 +1398,9 @@
           "name": "Dans Partisi Proje Rehberi",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
+        },
         "dance_party_unplugged/coursed/2021": {
           "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
@@ -1440,12 +1504,15 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
+          "name": "Oyuncu Tanıtımı",
           "type": "Video"
         },
         "turns_angles/express/2021": {
+          "name": "Dönüşler & Açılar",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
+          "name": "Dönüşler & Açılar",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1476,6 +1543,9 @@
         "dance-party-project-guide/express/2021": {
           "name": "Dans Partisi Proje Rehberi",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify Oynatma Listesi (her yaştan)"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Açık uçlu Programlama Düzeyleri",
@@ -1580,6 +1650,9 @@
           "name": "Hata Ayıklama Kılavuzu",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
+        "follow_the_algorithm/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+        },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Yüzme Balığı Öğretmeni Sandbox",
           "url": "https://studio.code.org/levels/18623"
@@ -1588,42 +1661,82 @@
           "name": "Peri Laboratuvar Belgelendirmesi",
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Öğrenci Notu"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Dur ve Çevrimiçi Düşün",
           "type": "Video"
         },
         "digital-sharing-lesson/coursee/2021": {
-          "name": "Dijital Paylaşım Ders Planı"
+          "name": "Dijital Paylaşım Ders Planı",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Dijital Paylaşım Etik (Video)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Dönüşler & Açılar",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Öğrenci Notu"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Dönüşler & Açılar"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Fonksiyonlarla Şarkı Yazma"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma",
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma",
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
           "type": "Değerlendirme"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma",
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": " Bağlantısız Bloklar (Kurslar C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Erişilebilirlik için Tasarlama"
+          "name": "Erişilebilirlik için Tasarlama",
+          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
+        },
+        "types_of_disabilities/coursee/2021": {
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "CS Fundamentals Final Projesi",
@@ -1634,7 +1747,8 @@
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "Öğrencilerinize Neleri Bildiklerini Göstermenin 72 Yaratıcı Yolu"
+          "name": "Öğrencilerinize Neleri Bildiklerini Göstermenin 72 Yaratıcı Yolu",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "CSTA Standartları Haritalama",
@@ -1700,6 +1814,7 @@
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
+          "name": "Yapay Zeka: Eğitim Verileri & Önyargı",
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -1710,6 +1825,9 @@
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Öğrenci Notu"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
@@ -1761,6 +1879,16 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Öğretmen forumu"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "Bilgi İşlem Yenilikleri"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Bilgisayar Bilimi, Her Şeyi Değiştiriyor.",
+          "type": "Video"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "Kod ile Ekranlar Tasarlama"
@@ -1816,6 +1944,12 @@
         "circuits-logic-video/csd/2021": {
           "name": "Bilgisayarlar Nasıl Çalışır: Devreler & Mantık",
           "type": "Video"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Konuları ifade etme"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Konuları ifade etme"
         },
         "representing-information-1/csd/2021": {
           "name": "Sunulan Bilgi"
@@ -2006,6 +2140,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "Öğretmen forumu"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Problem Çözme Süreci"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Problem Çözme Süreci",
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Problem çözme süreci"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Problem Çözme Süreci"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Bilgisayar nedir?"
         },
@@ -2030,6 +2177,12 @@
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Uygulamalar ve Problem çözme"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Web Sayfalarını Keşfetme"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Web Sayfalarını Keşfetme"
         },
         "html_tags/csd/2021": {
           "name": "HTML Etiketleri"

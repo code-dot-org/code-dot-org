@@ -2,6 +2,9 @@
   "vi-VN": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "event/dance-extras/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -9,6 +12,9 @@
         "program/dance-extras/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/minecraft/unversioned": {
           "word": "Sửa lỗi",
@@ -25,6 +31,9 @@
         "loop/minecraft/unversioned": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "code/hero/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/hero/unversioned": {
           "word": "Sửa lỗi",
@@ -58,6 +67,10 @@
           "word": "Chương trình",
           "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
         },
+        "code/flappy/unversioned": {
+          "word": "Viết mã lệnh",
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/flappy/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -65,6 +78,9 @@
         "program/flappy/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Sửa lỗi",
@@ -74,6 +90,9 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/frozen/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/frozen/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -81,6 +100,9 @@
         "program/frozen/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/iceage/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/iceage/unversioned": {
           "word": "Sửa lỗi",
@@ -91,7 +113,8 @@
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "code/artist/unversioned": {
-          "word": "Mã"
+          "word": "Mã",
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/artist/unversioned": {
           "word": "Sửa lỗi",
@@ -100,6 +123,9 @@
         "program/artist/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/gumball/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/gumball/unversioned": {
           "word": "Sửa lỗi",
@@ -117,6 +143,12 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/dance/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/aquatic/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -132,6 +164,9 @@
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
         },
+        "code/starwars/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/starwars/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -139,6 +174,9 @@
         "program/starwars/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/mc/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/mc/unversioned": {
           "word": "Sửa lỗi",
@@ -148,6 +186,9 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/playlab/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/playlab/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -155,6 +196,9 @@
         "program/playlab/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Sửa lỗi",
@@ -187,6 +231,9 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/infinity/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/infinity/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -199,6 +246,9 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
+        "code/basketball/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "debugging/basketball/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -207,6 +257,9 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -214,6 +267,9 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
         "event/dance-2019/unversioned": {
           "word": "Sự kiện",
@@ -531,6 +587,9 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
+        "code/coursed/2021": {
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
         "repeat/coursed/2021": {
           "word": "Lặp lại",
           "definition": "Làm lại một việc."
@@ -758,6 +817,10 @@
         "machine_learning/csd/2021": {
           "word": "Học máy",
           "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "user/csd/2021": {
+          "word": "Người dùng",
+          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
         },
         "bug/csd/2021": {
           "word": "Lỗi",

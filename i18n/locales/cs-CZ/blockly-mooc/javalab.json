@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "Tady se budou zobrazovat soubory uložené do Vašeho batohu.",
   "enablePeerReview": "Povolit recenze",
   "errorJavabuilderConnectionGeneral": "Narazili jsme na chybu připojení k našemu serveru. Zkuste to znovu.",
-  "errorJavabuilderConnectionNotAuthorized": "Přístup k jazyku Javalab nemáte povolen. Potřebujete se přihlásit nebo se přidat do nějaké sekce?",
   "errorLoadingClassmates": "Při načítání seznamu Vašich spolužáků došlo k chybě. Zkuste to prosím znovu.",
   "errorMediaImageLoadError": "Při načítání obrázku došlo k chybě.",
   "errorNeighborhoodInvalidGrid": "Došlo k chybě při načítání úrovně sousedství. Kontaktujte nás prosím na adrese support@code.org a nezapomeňte uvést ve své zprávě adresu URL této stránky.",

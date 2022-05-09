@@ -3510,6 +3510,10 @@ et:
           lessons:
             lesson-2:
               name: Vidinad
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Õppetund 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3741,6 +3745,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3814,6 +3820,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -3841,3 +3849,50 @@ et:
             For Loops:
               name: For tsükkel
               key: For tsükkel
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Muutujad
+              key: Muutujad
+            Text:
+              name: Tekst
+              key: Tekst
+            Conditionals:
+              name: Tingimuslaused
+              key: Tingimuslaused
+            Velocity:
+              name: Velocity
+              key: Velocity
+            Functions:
+              name: Funktsioonid
+              key: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funktsioonid
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring

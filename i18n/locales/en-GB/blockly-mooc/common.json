@@ -270,8 +270,10 @@
   "or": "or",
   "orientationLock": "Turn off orientation lock in device settings.",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}. Look at this puzzle on their account to view the solution you created as a team.",
+  "participantTypeTeacherTitle": "Teachers",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
+  "petitionMessage": "Every student in every school should have the opportunity to learn computer science",
   "play": "play",
   "predictionInstructions": "Make a prediction before you run the program.",
   "projectGroupMath": "Mathematics",
@@ -368,5 +370,6 @@
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Yes",
-  "yourSchoolHeading": "Expand computer science in your school or district"
+  "yourSchoolHeading": "Expand computer science in your school or district",
+  "zipOrCountry": "ZIP code or country"
 }

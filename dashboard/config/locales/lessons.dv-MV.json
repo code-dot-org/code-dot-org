@@ -2,17 +2,14 @@
   "dv-MV": {
     "data": {
       "lessons": {
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "dance-2019/Dance Party": {
+          "name": "ޑާންސް ޕާޓީ 2019"
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "oceans/Oceans": {
+          "name": "އޭއައި ފޯރ އޯޝަންސް"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "އޭއައި ފޯރ އޯޝަންސް"
         }
       }
     }
