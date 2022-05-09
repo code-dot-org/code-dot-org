@@ -3,7 +3,15 @@ require 'test_helper'
 class UnitGroupTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
+  setup do
+    File.stubs(:write)
+  end
+
   class CachingTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     def populate_cache_and_disconnect_db
       UnitGroup.stubs(:should_cache?).returns true
       @@course_cache ||= UnitGroup.course_cache_to_cache
@@ -37,6 +45,10 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class NameValidationTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     test "should allow valid unit_group names" do
       create(:unit_group, name: 'valid-name')
     end
@@ -266,6 +278,10 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
     test "add UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -296,6 +312,20 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit1.reload
       assert_nil unit1.published_state
       refute unit1.course_version
+    end
+
+    test "set pilot experiment to nil for new UnitGroupUnits" do
+      File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/scripts_json/unit1.script_json"}.once
+
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1', published_state: 'pilot', pilot_experiment: 'unit-going-to-unit-group-pilot')
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      assert_nil unit1.published_state
+      assert_nil unit1.pilot_experiment
     end
 
     test "set published state to nil for new UnitGroupUnits" do
@@ -610,7 +640,6 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
-    assert_nil summary[:scripts][0][:lessonDescriptions]
   end
 
   test 'summarize with numbered units' do
@@ -720,6 +749,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @unit_group = create(:unit_group, name: 'my-unit-group')
 
       @course_teacher = create :teacher
@@ -815,6 +846,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class RedirectCourseUrl < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     end
 
@@ -862,6 +895,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
+
       @student = create :student
       @teacher = create :teacher
       @facilitator = create :facilitator
@@ -934,6 +969,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
@@ -958,6 +994,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class ProgressTests < ActiveSupport::TestCase
     setup do
+      File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
