@@ -414,7 +414,7 @@ class Ability
     if user.persisted?
       # Checks if user is a verified instructor or the student of a verified instructor.
       can :get_access_token, :javabuilder_session do
-        user.verified_instructor? || (user.student_of_verified_instructor? && user.sections_as_student.any?(&:assigned_csa))
+        user.verified_instructor? || (user.student_of_verified_instructor? && user.sections_as_student.any?(&:assigned_csa?))
       end
 
       # Allow verified instructors to have access to run override_sources java lab code, which is how we run exemplars.
