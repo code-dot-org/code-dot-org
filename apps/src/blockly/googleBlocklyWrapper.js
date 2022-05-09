@@ -11,7 +11,8 @@ import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
-import CdoInput from './addons/cdoInput';
+// import CdoInput from './addons/cdoInput';
+import './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
 import CdoTheme from './addons/cdoTheme';
@@ -167,7 +168,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
-  blocklyWrapper.blockly_.Input = CdoInput;
+  // blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
