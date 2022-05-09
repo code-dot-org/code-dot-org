@@ -1,6 +1,7 @@
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap';
 import {range, mapValues, without} from 'lodash';
+import i18n from '@cdo/locale';
 import {
   keyValidation,
   getInvalidFields,
@@ -48,34 +49,32 @@ const PetitionForm = () => {
         <div className={'petition-space'}>{errorMessage}</div>
         <ControlledFieldGroup
           id="name"
-          placeholderOrLabel="Name"
+          placeholderOrLabel={i18n.name()}
           isErrored={invalidFields.includes('name')}
           onChange={handleChange}
           value={data['name'] || ''}
         />
         <ControlledFieldGroup
           id="email"
-          placeholderOrLabel="Email"
+          placeholderOrLabel={i18n.email()}
           isErrored={invalidFields.includes('email')}
-          helpText="Only used for infrequent updates"
+          helpText={i18n.usedForInfrequentUpdates()}
           onChange={handleChange}
           value={data.email || ''}
         />
         <ControlledFieldGroup
           id="zip-or-country"
-          placeholderOrLabel="ZIP code or country"
+          placeholderOrLabel={i18n.zipOrCountry()}
           isErrored={invalidFields.includes('zip-or-country')}
-          helpText="Enter country if outside the United States"
+          helpText={i18n.enterCountry()}
           onChange={handleChange}
           value={data['zip-or-country'] || ''}
         />
         <ControlledFieldGroup
           id="age"
-          placeholderOrLabel="Age"
+          placeholderOrLabel={i18n.age()}
           isErrored={invalidFields.includes('age')}
-          helpText={
-            <a href="/privacy">See our privacy practices for children</a>
-          }
+          helpText={<a href="/privacy">{i18n.privacyPracticesForChildren()}</a>}
           componentClass="select"
           onChange={handleChange}
           value={data['age'] || ''}
@@ -88,7 +87,7 @@ const PetitionForm = () => {
         </ControlledFieldGroup>
         <ControlledFieldGroup
           id="profession"
-          placeholderOrLabel="I am a"
+          placeholderOrLabel={i18n.iAmA()}
           isErrored={invalidFields.includes('profession')}
           componentClass="select"
           onChange={handleChange}
@@ -96,12 +95,12 @@ const PetitionForm = () => {
         >
           {[
             '-',
-            'Student',
-            'Parent',
-            'Educator',
-            'School Administrator',
-            'Software Engineer',
-            'None of the Above'
+            i18n.student(),
+            i18n.parent(),
+            i18n.educator(),
+            i18n.administrator(),
+            i18n.softwareEngineer(),
+            i18n.noneOfTheAbove()
           ].map((profession, index) => (
             <option key={index} value={profession}>
               {profession}
@@ -115,7 +114,7 @@ const PetitionForm = () => {
           id="submit"
           type="submit"
         >
-          I agree
+          {i18n.iAgree()}
         </Button>
       </form>
     </>
