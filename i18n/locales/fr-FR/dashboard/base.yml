@@ -168,7 +168,15 @@ fr:
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
     user_type_student: "Élève"
+    user_type_student_desc: "Découvrez tous nos cours et activités et bien d'autres :"
+    user_type_student_ability_1: "Sauvegardez vos progrès et vos projets"
+    user_type_student_ability_2: "Rejoignez la section de classe de votre professeur"
     user_type_teacher: "Professeur"
+    user_type_teacher_desc: "Tout ce dont les étudiants ont accès et bien d'autres :"
+    user_type_teacher_ability_1: "Créer des sections de classe"
+    user_type_teacher_ability_2: "Donner et suivre les devoirs des élèves"
+    user_type_teacher_ability_3: "S'inscrire à une formation professionnelle"
+    user_type_teacher_ability_4: "Intervenez dans notre forum des enseignants"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter pour créer un compte"
     error: "Une erreur est survenue."
@@ -309,7 +317,7 @@ fr:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "L’adresse e-mail fournie ne correspond pas à l’adresse e-mail pour ce compte"
+        user_type_change_email_mismatch: "L’adresse e-mail fournie ne correspond pas à l’adresse e-mail de ce compte"
         personal_login_created_email: 'Vous vous êtes enregistré avec succès. Vous pouvez désormais vous connecter à votre compte avec votre e-mail et votre mot de passe'
         personal_login_created_username: 'Vous vous êtes enregistré avec succès. Vous pouvez désormais vous connecter à votre compte avec votre nom d''utilisateur (%{username}) et votre mot de passe '
   nav:
@@ -573,7 +581,7 @@ fr:
     copyright: 'Copyright'
     more: 'Plus'
     feedback: 'Fournir un commentaire'
-    translate: 'Aidez-nous à traduire dans votre langue'
+    translate: 'Portez-vous volontaire pour traduire vers votre langue'
     support: 'Assistance'
     support_url: 'http://support.code.org'
     tos_short: 'Conditions Générales'
@@ -654,6 +662,10 @@ fr:
       title: 'Soirée Dansante'
     dance-2019:
       title: 'Soirée Dansante'
+    hello-world:
+      title: 'Bonjour tout le monde !'
+    poem-art:
+      title: 'Art du poème'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'
@@ -816,14 +828,6 @@ fr:
     reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
     reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url}) et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: "Consulter les éléments modifiés"
-  donor_interstitial:
-    title: "Vos leçons CS gratuites sont rendues possibles par..."
-    subtitle: "Nous voudrions remercier les généreux donateurs dont le soutien a fait de Code.org un réel succès. Nous nous engageons à maintenir Code.org gratuit pour les écoles et les étudiants, mondialement, grâce à la générosité continue de nos donateurs [donors](%{donors_url})!"
-    local_supporters: "Soutiens Locaux"
-    global_supporters: "Soutiens Mondiaux"
-    support_codeorg_1: "Chaque dollar donné à Code.org apporte des opportunités à plus d'étudiants."
-    support_codeorg_2: "[Faire un don maintenant](%{donate_url}) pour soutnenir Code.org."
-    get_started: "Débuter avec Code.org"
   school_info_interstitial:
     title: "Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous à suivre notre progression !"
     message: "Veuillez saisir les informations de l’école ci-dessous."

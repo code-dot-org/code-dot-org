@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-27 16:30:24 UTC",
+    "serialized_at": "2022-04-28 16:51:50 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -45,7 +45,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this Unplugged lesson, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online coding portions of the activity later on. ",
-        "preparation": "- Review the lesson slides\n- Distribute pattern blocks to students\n- Print copies of the worksheet for each student\n",
+        "preparation": "- Review the lesson slides\n- Cut out [rhombus shapes](https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview) \n- Distribute pattern blocks to students\n- Print copies of the worksheet for each student\n",
         "unplugged": true
       },
       "seeding_key": {
@@ -275,7 +275,7 @@
       "key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
       "position": 5,
       "properties": {
-        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n"
+        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Great Plains** - A broad expanse of flat land, much of it covered in prairie and grassland from North Dakota to Texas.\n- **Buffalo** - A large mammal with long legs, hooves, and horns, closely related to cattle\n- **Textile** - Cloth created with needle and thread\n- **Honor** - Recognize and show admiration\n- **Generosity** - Willingness to give or to share\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n- **Pattern** - Something that happens or appears in a regular and repeated way\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9c55f5d7-cb1d-4975-ad15-4c9f7723dbe1",
@@ -286,7 +286,7 @@
       "key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
       "position": 1,
       "properties": {
-        "description": "**Overview**: There are two options for this activity that you can choose from depending on the materials in your classroom: using pattern block manipulatives or cutting a rhombus shape out of paper. You will find a worksheet that corresponds with either option. Students will trace a rhombus shape repeatedly on the worksheet in order to create a 6-pointed star. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slides\n\n**Do This**: Hand out pattern blocks and worksheets to students."
+        "description": "**Overview**: There are two options for this activity that you can choose from depending on the materials in your classroom: using pattern block manipulatives or cutting a rhombus shape out of paper. You will find a worksheet that corresponds with either option. Students will trace a rhombus shape repeatedly on the worksheet in order to create a 6-pointed star. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slides\n\n**Do This**: Cut out rhombus shapes for students in advance of the lesson. Hand out rhombus cutouts (or pattern block manipulatives) and worksheets to students."
       },
       "seeding_key": {
         "activity_section.key": "6182c176-10ae-45ee-82e5-fd7bcd4244ab",
@@ -313,7 +313,7 @@
       "key": "c7843cc0-96b5-4bc5-a758-447de32d58ea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slides\n \n**Discuss**: _What patterns do you see in the star?_\n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slides\n\n**Discuss**: _How would you describe just one point of the star? What patterns do you see?_\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then smaller again.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slide\n \n**Discuss**: _What patterns do you see in the star?_\n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slide\n\n**Discuss**: _How would you describe just one point of the star? What patterns do you see?_\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then smaller again.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7843cc0-96b5-4bc5-a758-447de32d58ea",
@@ -434,7 +434,7 @@
       "key": "98267be9-ec3e-40d9-808b-22fa394dd382",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1221,7 +1221,7 @@
       "url": "https://docs.google.com/document/d/18FVMGR1NTsxOtl9gaM37arBRHvPDaKyFpx9_lfpCCPs/template/preview",
       "key": "cut_a_rhombus_shape",
       "properties": {
-        "audience": "Student",
+        "audience": "Teacher",
         "type": "Handout"
       },
       "seeding_key": {

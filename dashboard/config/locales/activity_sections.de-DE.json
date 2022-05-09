@@ -34,6 +34,9 @@
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Nächste Schritte"
         },
+        "2c451b2f-6820-47bb-94e0-966633757f93": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
           "name": "￼Erweitern Sie Ihr Wissen"
         },
@@ -204,6 +207,9 @@
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Nächste Schritte"
         },
+        "144b447f-1c5d-413b-a08c-65dda905a706": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "￼Erweitern Sie Ihr Wissen"
         },
@@ -301,6 +307,9 @@
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Nächste Schritte"
+        },
+        "0600e9df-03bd-4d61-9876-7516a87c2d30": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "description": "\\_In dieser Aktivität gestaltest du mit viel Spaß eine interaktive Welt mit lustigen Figuren, den Sprites. Du kannst die Sprites mit Sprechblasen wie in einem Comic oder einer Graphic Novel sprechen lassen und siehst, wie sie automatisch reagieren, wenn sie von dir oder anderen angeklickt werden.\n\nHeute wirst du einen \"Code\" schreiben, d. h. eine Reihe von Anweisungen, die ein Computer versteht. Wenn du eine Geschichte schreibst, musst du dir genau überlegen, welche Wörter du verwendest. Wenn du einen Code schreibst, musst du sorgfältig über die Anweisungen nachdenken, die du deinem Computer gibst.",
@@ -426,6 +435,9 @@
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "￼Erweitern Sie Ihr Wissen"
         },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Einführung"
         },
@@ -531,6 +543,9 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "￼Erweitern Sie Ihr Wissen"
         },
+        "b0fff664-80cc-4318-b031-edf88ad1aebc": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
             null
@@ -543,6 +558,9 @@
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Text-Kompression"
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Im echten Leben: Zip-Komprimierung**\n\n-   Experimentiere  mit Zip, indem du Textdateien mit unterschiedlichem Inhalten komprimierst.\n    Sind die Ergebnisse für kleine Dateien genauso gut wie für große Dateien? (Auf Macs im Finder \"Information“ für eine Datei wählen, um die tatsächliche Anzahl der Bytes in der Datei zu sehen, da die Finder-Anzeige 4KB für jede Datei anzeigt, die kleiner ist als dieser Wert)\n\n-   Achtung: Die Ergebnisse können unterschiedlich ausfallen.\n    Zip funktioniert wirklich gut für Text, aber andere Dateien werden möglicherweise nicht sehr gut komprimiert, weil sie bereits komprimiert sind oder nicht die gleichen Arten von eingebetteten Mustern aufweisen wie Textdokumente.\n\n**Aufgabe:**  Recherchiere den LZW-Algorithmus\\*\\*\n\n-   Die .zip-Komprimierung basiert auf dem [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Obwohl das Konzept des Werkzeugs zur Textkomprimierung dem LZW-Algorithmus (Zip-Algorithmus) ähnelt, ist es etwas schwierig, den Pfad der Komprimierung und Dekomprimierung nachzuvollziehen.\n    Für einige Interessierte wäre es ein ausgezeichnetes Erweiterungsprojekt, mehr über LZW und darüber, was im Laufe dieses Algorithmus geschieht,  zu erfahren."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Einführung"
@@ -594,6 +612,9 @@
         },
         "95cc8163-fcee-44bd-95c8-606999d2c378": {
           "description": "\\*\\* Korrekte Reihenfolge: D, B, A, C\\*\\*"
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "##### Ballspiele\n\nGehen Sie mit den SchülerInnen nach draußen, um ein Ballspiel zu spielen.Notieren Sie die Ereignisse und Aktionen.Wenn beispielsweise beim Basketball nicht gedribbelt wird, ist das ein Foul und die andere Mannschaft bekommt den Ball.Beim Fußball hat ein Ausschießen des Balls zur Folge, dass die andere Mannschaft eine Einwurf bekommt.Wenn man den Ball ins Tor bringt, gibt es einen Punkt!Suchen Sie mehr Ereignisse, wenn Ihre SchülerInnen sich dafür interessieren.Lassen Sie alle SchülerInnen \"Juchuu\" rufen, wenn der Kapitän einer Mannschaft einen Punkt erzielt.Dann sollen sich alle auf den Boden fallen lassen und herumrollen, wenn ein Schüler zwei Tore hintereinander erzielt!"
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -671,6 +692,9 @@
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Nächste Schritte"
         },
+        "7905508e-c354-4909-93eb-38e2e9ef5661": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
@@ -689,6 +713,9 @@
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Nächste Schritte"
         },
+        "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
+        },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
@@ -700,6 +727,9 @@
           "tips": [
             null
           ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Trainiere eine KI, das Meer zu reinigen"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "KI: Trainingdaten und Vorurteile"
@@ -833,6 +863,13 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Lektion E Fee Lab-Projekt",
           "progression_name": "Lektion E Fee Lab-Projekt"
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Beispiel-Programme",
+          "progression_name": "Beispiel-Programme"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Unterrichtsübersicht"
@@ -2744,6 +2781,16 @@
           "name": "Projekt",
           "progression_name": "Projekt"
         },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Beispiel-Programme",
+          "progression_name": "Beispiel-Programme"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "Unterrichtsübersicht"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Unterrichtsübersicht"
         },
@@ -3007,6 +3054,25 @@
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
         },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Eigenschaften einstellen"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "Bildschirme mit Code gestalten"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Ereignisse und Eigenschaften"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Einer App erstellen",
+          "progression_name": "Einer App erstellen"
+        },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Unterrichtsübersicht"
         },
@@ -3229,6 +3295,14 @@
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
         },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "Unterrichtsübersicht",
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "Unterrichtsübersicht",
+          "progression_name": "Unterrichtsübersicht"
+        },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "Unterrichtsübersicht",
           "progression_name": "Unterrichtsübersicht"
@@ -3330,6 +3404,14 @@
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "Unterrichtsübersicht",
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "Unterrichtsübersicht",
+          "progression_name": "Unterrichtsübersicht"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "Unterrichtsübersicht",
           "progression_name": "Unterrichtsübersicht"
@@ -3415,6 +3497,13 @@
           "name": "Unterrichtsübersicht",
           "progression_name": "Unterrichtsübersicht"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: Problemlösungs-Prozess",
+          "progression_name": "Video: Problemlösungs-Prozess"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Unterrichtsübersicht",
           "progression_name": "Unterrichtsübersicht"
@@ -3444,6 +3533,12 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "Unterrichtsübersicht"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "Unterrichtsübersicht"
@@ -3648,6 +3743,16 @@
         },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "Projekte am Ende des Kurses"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "Unterrichtsübersicht"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Beispiel-Programme",
+          "progression_name": "Beispiel-Programme"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "Unterrichtsübersicht"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Unterrichtsübersicht"
@@ -3960,6 +4065,9 @@
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
         },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "Unterrichtsübersicht"
+        },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "Unterrichtsübersicht"
         },
@@ -4194,6 +4302,9 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
+        },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "Unterrichtsübersicht"
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Unterrichtsübersicht"
@@ -4494,6 +4605,10 @@
           "name": "Reflektieren",
           "progression_name": "Reflektieren"
         },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "Unterrichtsübersicht",
+          "progression_name": "Unterrichtsübersicht"
+        },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "Unterrichtsübersicht",
           "progression_name": "Unterrichtsübersicht"
@@ -4661,28 +4776,56 @@
           "name": "Einführung",
           "description": "In diesem Kurs werden wir lernen, wie man Code schreibt. Code wird verwendet, um Apps, Spiele, Webseiten, Simulationen und alle möglichen Dinge zu programmieren, die wir auf einem Computer benutzen."
         },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "**Vorgehensweise:** Zeigen Sie den SchülerInnen ein T-Diagramm auf den Folien und einem Whiteboard mit der Aufschrift \"Lieblingsapps und Spiele\" auf der linken Seite und \"Warum sie uns gefallen\" auf der rechten Seite. Lassen Sie die SchülerInnen nach einem Beispiel Vorschläge für die Liste machen. Wenn die SchülerInnen erklären, warum ihnen eine bestimmte App gefällt, wiederholen Sie ihre Ideen und konzentrieren Sie sich auf _Auswahlmöglichkeiten_ und Zeiten, in denen der/die BenutzerIn _auswählen_ kann, wie er/sie spielt oder verwendet. Fahren Sie fort, wenn die SchülerInnen den Zusammenhang erkennen, dass Menschen es vorziehen, Entscheidungen treffen zu können."
+        },
+        "bee82cce-d1ce-452a-b733-b9e750e54b90": {
+          "description": "Bei der Entwicklung von Apps und Spielen steht der Benutzer im Mittelpunkt. Der Benutzer sind Sie oder die Person, die die App verwendet und mit ihr spielt. Die Entwickler haben Ideen, wie ihre Apps genutzt werden sollten, aber die Entscheidung liegt beim Benutzer! Heute sehen wir uns an, wie (und warum) die uns App- und Spieleentwickler Entscheidungen treffen lassen."
+        },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "description": "**Vorgehensweise:** Zeigen Sie die Folie \"Auswahlmöglichkeiten des Benutzers\", die Sie oben im Abschnitt \"Ressourcen\" finden.\n\n**Diskussion:** Was denken Sie, welche Auswahlmöglichkeiten bieten die App-Entwickler den/der BenutzerIn bei jedem dieser Spiele oder Apps?\n\n**Ziel:** Die SchülerInnen sollen in der Diskussion nicht nur darüber diskutieren, worum es bei den Apps geht, sondern auch über die spezifischen Entscheidungen, die der/die BenutzerIn treffen kann. Mit Talk Box können die BenutzerInnen zum Beispiel einen Avatar oder eine digitale Darstellung von sich auswählen. Das ist eine Wahlmöglichkeit, weil sie dem Benutzer das Gefühl gibt, dass die App für ihn bestimmt ist.",
           "tips": [
-            null
+            "In dieser Unterrichtsstunde diskutieren Sie mithilfe einer Foliensammlung über fiktive Apps. Sie können stattdessen auch andere Beispiele verwenden, für die sich Ihre SchülerInnen interessieren."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Wir wir sehen, haben die Benutzer in allen diesen Apps die Auswahl, wie sie die App nutzen möchten. Diese Auswahlmöglichkeiten motivieren möglicherweise andere Benutzer dazu, die App zu verwenden."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Reflektieren:** Was ist Ihr Liebelings-Spiel oder Ihre bevorzugte App? Welche Auswahl- und Entscheidungsmöglichkeiten haben Sie in dem Spiel bzw. in der App?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
           "name": "Einführung Sprite Lab",
+          "description": "**Vorgehensweise:** Zeigen Sie das Video **\\*Einführung in Sprite Lab**.",
           "progression_name": "Video: Einführung in das Sprite Lab"
+        },
+        "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
+          "description": "Bald lernen wir, Code zu schreiben und erstellen unsere eigenen Sprite Lab Projekte. Wir werden zunächst erkunden, was möglich ist. Heute sind Sie der/die BenutzerIn! Sie haben die Aufgabe, die Beispielprogramme, die Sie Website Code.org finden, zu spielen und zu verwenden. Probiere die Programme aus und beschreibe die Sprit-Kostüme und die Auswahlmöglichkeiten, über die Sie im Spiel entscheiden können,  jedes Programm, das du ausprobierst."
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Apps erforschen",
+          "description": "_Erkunde mindestens 3 Sprit Lab Programme von Code.org. Liste die Sprits jedes angesehenen Programms auf und beschreiben Sie Ihre Auswahlmöglichkeiten als Benutzer._\n\n**Vorgehensweise:** \n\n-   Teilen Sie ein ausgedrucktes oder digitales Exemplar des Arbeitsblatts **\\*Erkunden der Apps** aus. \n\n-   Weisen Sie die SchülerInnen auf Level 2 von Code Studio hin (Erkundung: Beispiel-Apps). \n\n-   Überlegen Sie, ob eine App mit der Klasse analysieren, bevor die SchülerInnen selbständig arbeiten.",
           "tips": [
-            null
+            "Wenn Ihre Schülerinnen und Schüler Code.org zum ersten Mal nutzen, sollten Sie sich etwas mehr Zeit nehmen. Erklären Sie den SchülerInnen, wie sie auf der Website navigieren und sich bei ihrem Konten anmelden."
           ],
           "progression_name": "Erkundung: Beispiel-Apps"
         },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Teilen Sie aus",
+          "description": "**Diskussion:** Was waren die interessantesten Auswahlmöglichkeiten und Entscheidungen in der App? Gab in der App etwas, was Sie gerne geändert hätten, aber Sie hatten keine Möglichkeit dazu?\n\n**Ziel:** Die SchülerInnen sollten in der Lage sein, bestimmte Entscheidungen zu benennen, die sie getroffen haben, aber auch darüber diskutieren, warum sie denken, dass der/die EntwicklerIn uns diese Wahl gelassen hat. Hervorzuhebende Entscheidungsmöglichkeiten sind Texteingaben (z. B. Chat Bot), die verwendeten Sprites-Typen (z. B. Sammlerspiel) oder wie Sie mit Spielelementen interagieren. "
+        },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Verbesserungsvorschlag",
+          "description": "**Anregung:** Denken Sie an eine verwendete Apps und machen Sie Vorschläge, wie sie durch mehr Auswahlmöglichkeiten für die BenutzerInnen verbessert werden könnte.\n\nWenn es die Zeit erlaubt, lassen Sie die SchülerInnen die obige Aufforderung mit einer oder mehreren der folgenden Methoden prüfen:\n\n–  Bitten Sie Freiwillige, ihre Ideen in der Gruppendiskussion vorzutragen.\n–   Lassen Sie die SchülerInnen in Paaren oder kleinen Gruppen diskutieren.\n–   Lassen Sie die SchülerInnen ihre Ideen zeichnen oder auf einem Poster darstellen."
+        },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
-          "name": "Reflektieren"
+          "name": "Reflektieren",
+          "description": "Heute haben wir mehr darüber erfahren, wie App-Entwickler den BenuterInnen die Wahl lassen. Wir haben auch etwas über Sprites gelernt. Sprites sind Grafiken auf dem Bildschirm mit bestimmten Eigenschaften wie Größe, Drehung und Ort. Sprites haben auch ein Kostüm, das bestimmt, wie sie aussehen."
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "description": "**Anregung: (eine Option auswählen)**\n\n–  Was wäre beispielsweise eine Auswahlmöglichkeit in den von Ihnen verwendeten Spielen oder App, über die Sie gerne entscheiden würden ?\n–   Welche Art App oder Spiel würden Sie gern entwickeln?",
           "tips": [
-            null
+            "Reflexionsanregungen wie diese können auf verschiedene Arten durchgeführt werden. Ein Tagebuch oder eine Diskussion (mit Gruppen oder Partnern) sind großartige Optionen! "
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
@@ -4766,6 +4909,9 @@
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflektieren"
         },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Wortschatz"
+        },
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "Die Macht der Worte - Aktivität ohne Computer"
         },
@@ -4829,6 +4975,7 @@
           "progression_name": "Erkundung: Beispielprogramme"
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
+          "name": "Benutzereingabeprogramme",
           "tips": [
             null
           ],
@@ -4947,6 +5094,9 @@
         },
         "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b": {
           "name": "### Vorschau von Online-Aufgaben als Klasse ansehen"
+        },
+        "30ee92f3-9378-4f76-acea-3c22d8df60dd": {
+          "name": "\\`Für´-Schleifen mit der Biene"
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Überprüfung"
@@ -5139,6 +5289,9 @@
           "tips": [
             null
           ]
+        },
+        "de8956c3-6f81-4290-9b7a-b90fd6f630d0": {
+          "name": "Präsentationen – 6.. Tag"
         },
         "b240c1ca-bdb8-4b45-80da-5acf76d4ca7b": {
           "description": "Wenn Ihre SchülerInnen bereits mit Codierungskonzepten vertraut sind, versuchen Sie, sie ihre Projekte auf einer anderen Plattform wie [Scratch](https://scratch.mit.edu/) oder [Alice](http://www.alice.org/index.php) erstellen zu lassen."
@@ -5985,6 +6138,9 @@
           "name": "Schaukasten",
           "description": "Um die Arbeit der SchülerInnen zu würdigen, sollten Sie ihnen in den letzten 10 Minuten die Möglichkeit geben, ihre Projekte zu zeigen. Das geht auf viele Arten, hier sind ein paar davon:\n\n-   **Präsentation**: wähle. Lassen Sie sie dabei erzählen, wie die Erfahrung von der Planung bis zur Programmierung für sie war. \n-   **Geschichtenerzählen zu zweit**: Wenn Sie eine große Klasse haben oder die Zeit knapp ist, lassen Sie SchülerInnen Gruppen oder Paare bilden und ihre Projekte so vorstellen. \n-   **Mobile Galerie**: Achten Sie darauf, dass alle SchülerInnen ihre Projekte zum Testen bereit haben. Lassen Sie die SchülerInnen nach dem Prinzip \"Reise nach Jerusalem\" ab einen anderen Computer gehen und das Projekt dort starten und die Geschichte lesen. Wenn sie ein Signal von Ihnen erhalten, sollten sie an einen anderen Computer gehen. Wiederholen Sie dies alle paar Minuten. Zwar gibt es dabei weniger Gelegenheit zu strukturierter Kommunikation, aber so können die SchülerInnen möglichst viele Projekte ihrer MitschülerInnen testen."
         },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Wortschatz"
+        },
         "69edb680-3657-4056-82ba-59c74c6a0e96": {
           "description": "Hier finden Sie zusätzliche Ressourcen, die Sie SchülerInnen zur Verfügung stellen können, um ihren Lernprozess zu unterstützen:\n\n-   [Aktivität für die ganze Familie](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Tipps für Familien](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
@@ -6384,6 +6540,9 @@
         "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
           "name": "Schaukasten"
         },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Wortschatz"
+        },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Einführung"
         },
@@ -6561,7 +6720,8 @@
           "name": "Reflektieren"
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
-          "name": "Prüfung"
+          "name": "Prüfung",
+          "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door.Versuchen Sie, das Brett mit möglichst vielen tollen Ideen darüber zu füllen, was CS ist und warum es wichtig ist."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
           "name": "Fächerübergreifende Gelegenheit"
@@ -7564,6 +7724,7 @@
           "name": "Einführung"
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "\\`Für´-Schleifen mit dem Künstler",
           "tips": [
             null
           ],
@@ -7970,7 +8131,7 @@
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Reflektieren",
           "tips": [
-            null
+            "Reflexionsanregungen wie diese können auf verschiedene Arten durchgeführt werden. Ein Tagebuch oder eine Diskussion (mit Gruppen oder Partnern) sind großartige Optionen! "
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
@@ -8037,8 +8198,14 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflektieren"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Wortschatz"
+        },
         "c350027b-7b9e-4782-af88-dc1015043bac": {
           "progression_name": "Werden Sie ein digitaler Super-Bürger"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Wortschatz"
         },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Einführung"
@@ -8050,6 +8217,9 @@
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "Über mich mit Sprite Lab"
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Teilen Sie aus"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Reflektieren"
@@ -8837,6 +9007,26 @@
           ],
           "progression_name": "Anleitung zur Umfrage nach dem Kurs"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -9379,6 +9569,24 @@
           ],
           "progression_name": "Anleitung zur Umfrage nach dem Kurs"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Lass dich inspirieren"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -9765,6 +9973,39 @@
             null
           ],
           "progression_name": "Anleitung zur Umfrage nach dem Kurs"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Reflektieren"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -10185,6 +10426,24 @@
             null
           ],
           "progression_name": "Anleitung zur Umfrage nach dem Kurs"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Beispiel-Programme"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -11036,6 +11295,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Der Problemlösungsprozess",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Problemlösungs-Prozess"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -11408,6 +11700,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Erkunde Webseiten",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]

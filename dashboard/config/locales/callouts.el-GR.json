@@ -246,13 +246,16 @@
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
@@ -381,7 +384,8 @@
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"

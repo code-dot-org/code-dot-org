@@ -211,6 +211,7 @@ it:
                 introduttiva con l'informatica e creeranno un gioco usando i codici
                 dei blocchi di base.
           student_description: Crea una storia o inventa un gioco col Laboratorio!
+          name: playlab
         artist:
           title: Artista
           description: Disegna fantastiche immagini e decorazioni con l'artista!
@@ -225,6 +226,7 @@ it:
                 crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel`
                 e `gira a destra di 90 gradi`.
           student_description: Disegna fantastiche immagini e decorazioni con l'artista!
+          name: artista
         hourofcode:
           title: Labirinto Classico
           description: Impara i concetti base dell'informatica con i personaggi di
@@ -443,6 +445,7 @@ it:
                 dei blocchi di base.
           student_description: Usa il Laboratorio per creare una storia o inventare
             un gioco con i personaggi di Disney Infinity.
+          name: infinito
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
@@ -644,6 +647,7 @@ it:
                 per completare degli esercizi online.
           student_description: Esercitazione introduttiva per imparare come "trascinare
             e rilasciare" (drag and drop)
+          name: puzzle
         step:
           title: Fai un passo
           description: Passo del corso
@@ -1171,6 +1175,8 @@ it:
               name: Laboratorio dei Personaggi
             AI Lab:
               name: Laboratorio di Intelligenza Artificiale
+            Java Lab:
+              name: Laboratorio di Java
           student_description: Tutte le tipologie di livello per il test dell'interfaccia
             utente
         algebraPD2b:
@@ -1283,6 +1289,10 @@ it:
               name: Conclusione
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
+        equity-pd:
+          lessons:
+            Codeorg Equity PD:
+              name: PD Equità Code.org
         science-PD2:
           lessons:
             Thinking Ahead to Implementation:
@@ -1535,6 +1545,7 @@ it:
                 dei blocchi di base.
           student_description: Crea una storia oppure fai un gioco con il Laboratorio
             con L'Era Glaciale!
+          name: età del ghiaccio
         CSPPD3-Unit3:
           lessons:
             Complete the Challenge:
@@ -1664,6 +1675,7 @@ it:
                 quindi essere in grado di etichettare le nuove immagini da soli.
           student_description: Impara come si può usare l'Intelligenza Artificiale
             per risolvere i problemi del mondo di oggi.
+          name: oceani
         CSPPD3-Unit3-pt2:
           lessons:
             Complete the Challenge:
@@ -3176,12 +3188,6 @@ it:
                 cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
             Loops in Artist:
               name: Cicli con l'artista
-              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
-                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
-                lezione, i cicli sono stati utilizzati per attraversare un labirinto
-                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
-                Alla fine di questa lezione, gli studenti avranno l'opportunità di
-                creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Il grande evento
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere
@@ -11465,6 +11471,9 @@ it:
             intro:
               name: Lezione 1
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11474,6 +11483,8 @@ it:
           lessons:
             lesson-1:
               name: Sondaggio Pilota Unità 2
+            lesson-16:
+              name: Laboratorio di Java
           lesson_groups:
             lesson group:
               display_name: Contenuto
@@ -11483,6 +11494,8 @@ it:
           lessons:
             lesson-16:
               name: Sondaggio Pilota Unità 3
+            lesson-17:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11549,12 +11562,17 @@ it:
                 condizionali "se" nidificate e gli operatori logici vengono quindi
                 implementati nel gioco Scoppia i palloni per migliorarne la modalità
                 di gioco e la funzionalità complessiva.
+            lesson-16:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Sandbox
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11562,6 +11580,8 @@ it:
               display_name: Sandbox
         csa6-pilot:
           lessons:
+            Java Lab:
+              name: Laboratorio di Java
             lesson-1:
               description_student: I progetti che hai sviluppato durante il corso
                 hanno dato vita a molta creatività nella community! Si terrà un Neighborhood
@@ -11764,12 +11784,18 @@ it:
             lessonGroup-5:
               display_name: Sandbox
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11991,6 +12017,7 @@ it:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Navigare nella piattaforma di apprendimento di Code.org"
               description_teacher: |-
                 **Imparerai a:**
 
@@ -12040,6 +12067,7 @@ it:
           lessons:
             lesson-1:
               key: lezione-1
+              name: Laboratorio di Java
             lesson-2:
               key: lezione-2
             lesson-3:
@@ -12120,6 +12148,7 @@ it:
               key: lezione-16
             lesson-1:
               key: lezione-1
+              name: Laboratorio di Java
           lesson_groups:
             lesson group:
               display_name: Contenuto
@@ -12132,6 +12161,7 @@ it:
               name: Sondaggio Pilota Unità 3
             lesson-1:
               key: lezione-1
+              name: Laboratorio di Java
             lesson-2:
               key: lezione-2
             lesson-3:
@@ -12254,6 +12284,7 @@ it:
                 di gioco e la funzionalità complessiva.
             lesson-1:
               key: lezione-1
+              name: Laboratorio di Java
             lesson-3:
               key: lezione-3
             lesson-4:
@@ -12320,6 +12351,8 @@ it:
               key: lezione-14
             lesson-15:
               key: lezione-16
+            Java Lab:
+              name: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -12450,6 +12483,10 @@ it:
           lessons:
             lesson-1:
               name: Testing CSA Clone
+            lesson-2:
+              name: Lezione 2
+            lesson-3:
+              name: Lezione 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -12837,6 +12874,9 @@ it:
                 precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti
                 hanno valutato il raggiungimento degli obiettivi di apprendimento
                 dell'unità e le competenze su una valutazione a scelta multipla.
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-1:
               key: lezione-1
             lesson-2:
@@ -13332,6 +13372,9 @@ it:
               display_name: Contenuto
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-10:
               key: lezione-10
             lesson-6:
@@ -13371,6 +13414,9 @@ it:
               display_name: Sandbox
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-1:
               key: lezione-1
             lesson-2:
@@ -13782,6 +13828,8 @@ it:
               display_name: Traversali
             csp_project:
               display_name: Progetto
+            lessonGroup-5:
+              display_name: Sondaggio Post-corso
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -14022,16 +14070,25 @@ it:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           description_audience: Da 6 a 10 anni
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametri e Valori di Ritorno
             csp_libraries:
               display_name: Librerie
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
         csp8-2022:
           lessons:
             lesson-4:
               key: lezione-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
         csp9-2022:
           lessons:
             Machine Learning:
@@ -14043,6 +14100,8 @@ it:
           lesson_groups:
             csp_unit9_2020:
               display_name: Princìpi dell'Informatica - Unità 9
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -14053,6 +14112,9 @@ it:
               description_student: Panoramica della Lezione
             'Project: Innovation Simulation Part 7':
               description_student: Panoramica della Lezione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -14519,6 +14581,8 @@ it:
           description_audience: Da 9 a 13 anni
         csa1-2022:
           lessons:
+            lesson-2:
+              name: Laboratorio di Java
             lesson-9:
               name: Cicli
             lesson-21:
@@ -14526,14 +14590,28 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Sondaggio
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Impara come Trascinare i Blocchi
               name: Impara come Trascinare i Blocchi
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Sequencing with Scrat:
               key: Sequenze di istruzioni con Scrat
               name: Sequenze di istruzioni con Scrat
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             Programming with Angry Birds:
               key: Programmare con Angry Bird
               name: Programmare con Angry Bird
@@ -14549,18 +14627,49 @@ it:
             Loops with Laurel:
               key: Cicli con la collezionista
               name: Cicli con la collezionista
+              description_teacher: In questa lezione, gli alunni continuano ad apprendere
+                il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere
+                diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo
+                blocco "Prendi diamanti" per aiutarla nel suo viaggio.
             Ocean Scene with Loops:
               key: Al mare con i cicli
               name: Al mare con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             Drawing Gardens with Loops:
               key: Disegnare giardini con i cicli
               name: Disegnare giardini con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             On the Move with Events:
               key: In movimento con gli eventi
               name: In movimento con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
             A Royal Battle with Events:
               key: Una battaglia con gli eventi
               name: Una battaglia con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
+            Programming in with Angry Birds:
+              name: Programmare con Angry Bird
+            Programming in Harvester:
+              key: Programmazione con la contadina
+              name: Programmare con la contadina
           lesson_groups:
             csf_sequencing:
               display_name: Sequenze di istruzioni
@@ -14568,6 +14677,10 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+          description_audience: Da 4 a 8 anni
+          description_short: 'Introduzione all''informatica per studenti pre-scolari:
+            mette insieme il meglio dei nostri corsi per la scuola dell''infanzia
+            e per la prima classe della scuola primaria.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -14579,8 +14692,30 @@ it:
               display_name: Contenuto
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Array unidimensionale (1D)
+            lesson-4:
+              name: Elementi degli array
             lesson-5:
               name: Cicli con contatore
+            lesson-6:
+              name: Algoritmi degli array
+            lesson-7:
+              name: Cicli con contatore migliorati
+            lesson-8:
+              name: Variabili statiche e costanti
+            lesson-9:
+              name: Polimorfismo
+            lesson-10:
+              name: Altri Algoritmi degli array
+            lesson-11:
+              name: Array d'inversione
+            lesson-13:
+              name: Dati per il Progetto per il bene sociale - Giorno 1
+            lesson-14:
+              name: Dati per il Progetto per il bene sociale - Giorno 2
+            lesson-15:
+              name: Dati per il Progetto per il bene sociale - Giorno 3
             lesson-16:
               name: Console
           lesson_groups:
@@ -14601,22 +14736,89 @@ it:
             lesson-19:
               name: Correzione errori (debugging)
         csa4-2022:
+          lessons:
+            lesson-11:
+              name: Casuale
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
         csa5-2022:
+          lessons:
+            lesson-7:
+              name: Cicli con contatore migliorati
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
         csa1-2022-exemplars:
           lessons:
+            lesson-2:
+              name: Laboratorio di Java
             lesson-9:
               name: Cicli
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        pltess:
+          lessons:
+            lesson-2:
+              name: lezione 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Istruzioni If in Java
+              description_student: |-
+                **Imparerai a:**
+
+                -   Valutare le espressioni booleane
+                -   Scrivere e leggere le istruzioni if, if-else, if-else-if-else
+                -   Descrivere la differenza tra l'operatore di assegnazione e l'operatore di confronto.
+
+                **Tempo stimato:** 90 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Valutare le espressioni booleane
+                -   Scrivere e leggere le istruzioni if, if-else, if-else-if-else
+                -   Descrivere la differenza tra l'operatore di assegnazione e l'operatore di confronto.
+
+                **Tempo stimato:** 90 minuti
+            lesson-4:
+              name: Loop in Java
+              description_student: |-
+                **Imparerai a:**
+
+                -   Leggere, scrivere ed eseguire il debug per i loop in Java
+
+                **Tempo stimato :** 90 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Leggere, scrivere ed eseguire il debug per i loop in Java
+
+                **Tempo stimato :** 90 minuti
+            lesson-5:
+              name: Array in Java
+              description_student: |-
+                **Imparerai a:**
+
+                -   Dichiarare e inizializzare un array 1D di tipi di dati primitivi
+                -   Accedere e modificare gli elementi di un array
+                -   Aprire un array
+
+                **Tempo stimato:** 120 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Dichiarare e inizializzare un array 1D di tipi di dati primitivi
+                -   Accedere e modificare gli elementi di un array
+                -   Aprire un array
+
+                **Tempo stimato:** 120 minuti
         csa7-pilot-extra:
           lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-10:
               key: lezione-10
             lesson-6:
@@ -14656,6 +14858,9 @@ it:
               display_name: Sandbox
         csa8-pilot-extra:
           lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-1:
               key: lezione-1
             lesson-2:
@@ -14943,6 +15148,9 @@ it:
                 precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti
                 hanno valutato il raggiungimento degli obiettivi di apprendimento
                 dell'unità e le competenze su una valutazione a scelta multipla.
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
             lesson-1:
               key: lezione-1
           lesson_groups:
@@ -14951,21 +15159,117 @@ it:
             lessonGroup-5:
               display_name: Sandbox
         csa7-2022:
+          lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
         csa8-2022:
+          lessons:
+            Java Lab:
+              name: Laboratorio di Java
+              key: Laboratorio di Java
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Sondaggio
         vpl-csd1-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **Imparerai a:**
+
+                -   Acquisire una una comprensione di alto livello del curriculum Alla scoperta dell'informatica.
+              description_teacher: "**Panoramica:**\nQueste attività asincrone forniranno
+                ai partecipanti una panoramica di alto livello del curriculum Alla
+                scoperta dell'informatica, inclusa una panoramica i alto livello dei
+                contenuti del corso e degli strumenti, uno schema di com'è strutturato
+                il corso e un'anteprima del modo in cui il processo di risoluzione
+                del problema è utilizzato per tutta la durata del corso. \n\n**I partecipanti
+                dovranno:**\n\n-   Acquisire una comprensione di alto livello del
+                curriculum Alla scoperta dell'informatica. \n\n**Tempo suggerito:**
+                40 minuti"
+            lesson-5:
+              name: Rapporto asincrono
+            lesson-6:
+              name: Lezione Modello 2 - Unità 2 Lezione 2
+            lesson-7:
+              name: Identità
+            lesson-8:
+              name: Assegnazione della Lezione
+            lesson-10:
+              description_student: |-
+                **Imparerai a:**
+
+                -   Riflettere sul ruolo d'insegnante in una lezione del curriculum Alla scoperta dell'informatica.
+              description_teacher: "**Panoramica:**\nQueste attività asincrone forniranno
+                ai partecipanti un'introduzione al ruolo dell'insegnante in qualità
+                di potenziale studente. Ai particepanti verrà chiesto di considerare
+                il modo in cui le loro esperienze e convinzioni sull'infomratica.
+                Questa riflessione preparerà i partecipanti alle lezioni sull'identità
+                che dovranno seguire in un secondo momento nel seminario. \n\n**I
+                partecipanti dovranno:**\n\n-   Riflettere sul proprio ruolo di insegnante
+                in una lezione del curriculum Alla scoperta dell'informatica. \n\n**Tempo
+                suggerito:** 20 minuti"
+            lesson-11:
+              name: Conclusione
+            Intro to HTML:
+              name: Lezione Modello 2 - Unità 2 Lezione 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-3:
               name: Pianificazione Lezione
+            lesson-4:
+              name: Prep Asinc
+            lesson-6:
+              name: Rapporto asincrono
+            lesson-9:
+              name: Conclusione
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Rapporto asincrono
+            lesson-8:
+              name: Conclusione
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Conclusione dell'unità"
+              description_student: "**Imparerai a:**\n\n-   Scprire la fine dei progetti
+                dei capitoli. \n\n**Tempo suggerito:** 10 minuti"
+              description_teacher: "**Imparerai a:**\n\n-   Scprire la fine dei progetti
+                dei capitoli. \n\n**Tempo suggerito:** 10 minuti"
+            lesson-3:
+              name: "[TEMPLATE] Lezioni con contenuti"
+              description_student: |-
+                **Imparerai a:**
+
+                -   Inserire gli obiettivi della lezione.
+
+                **Tempo suggerito:** \_\_\_\_ minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Inserire gli obiettivi della lezione.
+
+                **Tempo suggerito:** \_\_\_\_ minuti
+            lesson-7:
+              name: Prep Asinc
+            lesson-11:
+              name: Rapporto asincrono
+            lesson-14:
+              name: Conclusione
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Prep Asinc
+            lesson-6:
+              name: Rapporto asincrono
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -15011,5 +15315,472 @@ it:
               key: Pianificazione Lezione
             Next steps:
               key: Passi successivi
+        vpl-csd1-ci-pilot-2022:
+          title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi
+            e dell''informatica'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introduzione allo Sviluppo Web
+              description_student: |-
+                **Imparerai a:**
+
+                -   Ottenere un'introduzione sull'unità Sviluppo Web di code.org.
+                -   Avere un'anteprima dei contenuti dell'unità Sviluppo Web trattati nella prima settimana.
+
+                **Tempo suggerito:** 10 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Ottenere un'introduzione sull'unità Sviluppo Web di code.org.
+                -   Avere un'anteprima dei contenuti dell'unità Sviluppo Web trattati nella prima settimana.
+
+                **Tempo suggerito:** 10 minuti
+            lesson-2:
+              name: Crea un sito Web con HTML
+              description_student: "**Imparerai a:**\n\n-   Ottenere un'introduzione
+                all'utilizzo del Web Lab.\n-   Aggiungere strutture a una pagina web
+                usando HML. \n-   Aggiungere immagini a una pagina web . \n\n**Tempo
+                suggerito:** 30 minuti"
+              description_teacher: "**Imparerai a:**\n\n-   Ottenere un'introduzione
+                all'utilizzo del Web Lab.\n-   Aggiungere strutture a una pagina web
+                usando HML. \n-   Aggiungere immagini a una pagina web . \n\n**Tempo
+                suggerito:** 30 minuti"
+            lesson-3:
+              name: Formattare un sito web con CSS
+              description_student: |-
+                **Imparerai a:**
+
+                -   Formattare il testo di una pagina web usando CSS.
+                -   Collegare un foglio di stile in CSS all'indice della pagina web.
+                -   Scoprire proprietà aggiuntive per formattare gli elementi di una pagina web.
+
+                **Tempo suggerito:** 25 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Formattare il testo di una pagina web usando CSS.
+                -   Collegare un foglio di stile in CSS all'indice della pagina web.
+                -   Scoprire proprietà aggiuntive per formattare gli elementi di una pagina web.
+
+                **Tempo suggerito:** 25 minuti
+            lesson-4:
+              name: Riflettere su ruoli e responsabilità nei media digitali
+              description_student: |-
+                **Imparerai a:**
+
+                -   Scoprire i modi in cui gli studenti lavoreranno per comprendere il loro ruolo e responsabilità in qualità di creatori e consumatori di media digitali.
+
+                **Tempo suggerito:** 15 minuti
+              description_teacher: |-
+                **Imparerai a:**
+
+                -   Scoprire i modi in cui gli studenti lavoreranno per comprendere il loro ruolo e responsabilità in qualità di creatori e consumatori di media digitali.
+
+                **Tempo suggerito:** 15 minuti
+            lesson-5:
+              description_student: "**Imparerai a:**\n\n-   Scprire la fine dei progetti
+                dei capitoli. \n\n**Tempo suggerito:** 10 minuti"
+              description_teacher: "**Imparerai a:**\n\n-   Scprire la fine dei progetti
+                dei capitoli. \n\n**Tempo suggerito:** 10 minuti"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Insegnamento dello Sviluppo Web
+          title: 'Modulo 2: preparazione all''insegnamento dello Sviluppo Web'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Sviluppo Web di
+            Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione allo Sviluppo Web.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Sviluppo Web di
+            Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione allo Sviluppo Web.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introduzione ad animazioni e giochi interattivi
+            lesson-2:
+              name: Crea una scena
+            lesson-3:
+              name: Anima una scena con personaggi
+            lesson-4:
+              name: Scopri la progettazione dei giochi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparazione all'insegnamento di animazioni e giochi interattivi
+          title: 'Modulo 3: preparazione all''insegnamento di Animazioni e Giochi
+            interattivi'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+        vpl-csd4-ci-pilot-2022:
+          title: " Modulo 4: preparazione all'insegnamento del Processo di progettazione"
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Processo di progettazione
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Il Processo di progettazione.\n-
+            \  Esercitarti con i concetti chiave inclusi nell'unità.\n-   Impegnarti
+            con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 90 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Processo di progettazione
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Il Processo di progettazione.\n-
+            \  Esercitarti con i concetti chiave inclusi nell'unità.\n-   Impegnarti
+            con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 90 minuti"
+        vpl-csd5-ci-pilot-2022:
+          title: 'Modulo 5: preparazione all''insegnamento dei Dati e della Società'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Dati e Società
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Dati e Società.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti
+            dei capitoli.\n\n**Tempo stimato:** 90 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Dati e Società
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione su Dati e Società.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti
+            dei capitoli.\n\n**Tempo stimato:** 90 minuti"
+        vpl-csd6-ci-pilot-2022:
+          title: 'Modulo 6: preparazione all''insegnamento del Calcolo fisico'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Calcolo fisico
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione sul Calcolo fisico.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Calcolo fisico
+            di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai
+            a:**\n\n-   Ottenere un'introduzione sul Calcolo fisico.\n-   Esercitarti
+            con i concetti chiave inclusi nell'unità.\n-   Impegnarti con il Web Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n\n**Tempo stimato:** 90
+            minuti"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Il Processo di Progettazione
+            Engage with machine learning apps:
+              name: Il Processo di Progettazione
+          title: 'Modulo 7: preparazione all''insegnamento dell''intelligenza Artificiale
+            e dell''Apprendimento Automatico'
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Intelligenza artificiale
+            e Apprendimento automatico di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Ottenere un'introduzione su Dati
+            e Società.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Laboratorio di Intelligenza Artificiale e l'App Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n-   Creare un piano per
+            l'implementazione dell'unità con i tuoi studenti.\n\n**Tempo stimato:**
+            120 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento dell'unità Intelligenza artificiale
+            e Apprendimento automatico di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Ottenere un'introduzione su Dati
+            e Società.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Laboratorio di Intelligenza Artificiale e l'App Lab.\n-
+            \  Scoprire la fine dei progetti dei capitoli.\n-   Creare un piano per
+            l'implementazione dell'unità con i tuoi studenti.\n\n**Tempo stimato:**
+            120 minuti"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Ciao Mondo del CSC
+              description_student: In questa lezione, imparerai a creare e animare
+                personaggi e a renderli interattivi utilizzando gli eventi.
+              description_teacher: 'In questa lezione **per creare abilità**, gli
+                studenti impareranno a creare e animare personaggi e a renderli interattivi
+                utilizzando gli eventi. '
           title: Ciao Mondo
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Aggiornamenti del livello
+          title: Alla Scoperta dell'informatica Parco giochi
+          description_audience: Scrittori di curriculum
+          description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli
+            tra le versioni del curriculum
+          description: Per allestire gli aggiornamenti nelle lezioni o nei livelli
+            tra le versioni del curriculum
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Ciao Mondo del CSC
+              description_student: In questa lezione, imparerai a creare e animare
+                personaggi e a renderli interattivi utilizzando gli eventi.
+              description_teacher: 'In questa lezione **per creare abilità**, gli
+                studenti impareranno a creare e animare personaggi e a renderli interattivi
+                utilizzando gli eventi. '
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: L'arte della poesia
+              description_teacher: In questa lezione integrata di informatica interdisciplinare
+                e letteratura, gli studenti creeranno animazioni associate a delle
+                poesie, per evidenziarne lo stato d'animo. Gli studenti leggeranno
+                e capiranno lo stato d'animo indotto da una poesia. Cercheranno effetti
+                ed immagini capaci ad illustrarne lo stato d'animo. Infine useranno
+                il concetto di evento per mostrare un cambiamento nello stato d'animo,
+                oppure per creare animazioni per l'introduzione di nuove immagini
+                in una poesia.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Ciao Mondo del CSC
+              description_student: In questa lezione, imparerai a creare e animare
+                personaggi e a renderli interattivi utilizzando gli eventi.
+              description_teacher: 'In questa lezione **per creare abilità**, gli
+                studenti impareranno a creare e animare personaggi e a renderli interattivi
+                utilizzando gli eventi. '
+        csd1-2022:
+          lessons:
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+              key: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+              key: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
+              key: Test finale
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csd2-2022:
+          lessons:
+            Digital Footprint:
+              name: Orme digitali
+              key: Orme digitali
+            Post-Project Test:
+              name: Test finale
+              key: Test finale
+            lesson-1:
+              key: lezione-1
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
+            Web."
+        csd3-2022:
+          lessons:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+              key: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              name: Forme e Parametri
+              key: Forme e Parametri
+            Variables:
+              name: Variabili
+              key: Variabili
+            Random Numbers:
+              name: Numeri Casuali
+              key: Numeri Casuali
+            Sprites:
+              name: Personaggi
+              key: Personaggi
+            Text:
+              name: Testo
+              key: Testo
+            Conditionals:
+              name: Istruzioni condizionali
+              key: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+              key: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+              key: Rilevamento delle Collisioni
+            Collisions:
+              description_teacher: "**Domanda del giorno: come possono i programmatore
+                sulle astrazioni per creare ulteriori astrazioni?**\\\r\n\\\r\nIn
+                questa lezione, gli studenti programmano i loro personaggi per farli
+                interagire in modi nuovi. Dopo una breve rassegna del modo in cui
+                hanno utilizzato il blocco [\"sta toccando\" (#f78183)](/docs/gamelab/isTouching/),
+                gli studenti penseranno ad altri modi in cui i personaggi potrebbero
+                interagire. Dopodiché useranno [\"sta toccando\" (#f78183)](/docs/gamelab/isTouching/)
+                per fare in modo che un personaggio spinga un altro attraverso lo
+                schermo, prima di fare pratica con i quattro blocchi di collisione
+                ([\"entra in collisione\" (#f78183)](/docs/gamelab/collide/), [\"rimuovi\"
+                (#f78183)](/docs/gamelab/displace/), [\"rimbalza\" (#f78183)](/docs/gamelab/bounce/),
+                e [\"fai rimbalzare contro\" (#f78183)](/docs/gamelab/bounceOff/))."
+            Functions:
+              name: Funzioni
+              key: Funzioni
+            Post-Project Test:
+              name: Test finale
+              key: Test finale
+            lesson-1:
+              key: lezione-1
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
+        csd4-2022:
+          lessons:
+            Post-Project Test:
+              name: Test finale
+              key: Test finale
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2022:
+          lessons:
+            Post-Project Test:
+              name: Test finale
+              key: Test finale
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Lezione 6
+              key: Lezione 6
+            Survey Planning:
+              name: Progettare la Raccolta dei Dati
+              key: Progettare la Raccolta dei Dati
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sondaggio
+        csd6-2022:
+          lessons:
+            Color LEDs:
+              name: LED colorati
+            Combining Inputs and Outputs:
+              name: Combinazione degli input
+            Functions:
+              name: Funzioni
+            Post-Project Test:
+              name: Test finale
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Input Hardware'
+            lessonGroup-4:
+              display_name: Sondaggio
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Sondaggio Post-corso
+          description: Questa unità contiene il sondaggio post-corso CS Discoveries.
+            Questa unità può essere assegnata dopo che gli studenti hanno completato
+            la loro unità finale in CS Discoveries.
+          student_description: Questa unità contiene un sondaggio per quando la tua
+            classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
+            quando è il momento di fare questo sondaggio.
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Lezione 6
+            Survey Planning:
+              name: Progettare la Raccolta dei Dati
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: lezione-4
+            lesson-3:
+              key: lezione-3
+            lesson-8:
+              key: lezione-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3

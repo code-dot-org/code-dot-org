@@ -2639,6 +2639,10 @@ fa:
           lessons:
             lesson-1:
               name: بررسی اجمالی
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: درس 3
         spelling-bee:
           lessons:
             lesson-1:
@@ -2866,3 +2870,21 @@ fa:
             For Loops:
               name: حلقه های "برای"
               key: حلقه های "برای"
+        csd3-2022:
+          lessons:
+            Variables:
+              name: متغیرها
+              key: متغیرها
+            Text:
+              name: متن
+              key: متن
+            Conditionals:
+              name: شرطی ها
+              key: شرطی ها
+            Functions:
+              name: توابع
+              key: توابع
+        csd6-2022:
+          lessons:
+            Functions:
+              name: توابع
