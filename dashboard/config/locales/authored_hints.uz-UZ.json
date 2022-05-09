@@ -495,10 +495,12 @@
           "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing."
         },
         "courseC_artist_loops2a_2019": {
-          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing."
+          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing.",
+          "courseC_artist_loops2a_a": "Sizning siklingiz ichida siz o'rtaga sakrashni, keyin burilishni, keyin stikerni chizishni xohlaysiz."
         },
         "courseC_artist_loops2a_2020": {
-          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing."
+          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing.",
+          "courseC_artist_loops2a_a": "Sizning siklingiz ichida siz o'rtaga sakrashni, keyin burilishni, keyin stikerni chizishni xohlaysiz."
         },
         "courseC_artist_loops3a": {
           "courseC_artist_loops3a_a": "Qush stikeridan keyin siklingiz ichiga bittagina bo‘lak qo‘shishingiz to‘g‘ri keladi.",
@@ -515,10 +517,12 @@
           "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!"
+          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!",
+          "courseC_artist_loops4a_b": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
-          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!"
+          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!",
+          "courseC_artist_loops4a_b": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5a_2018": {
           "courseC_artist_loops5a_a": "Rasmlarini ošzgartirish uchun `draw sticker` (stiker chizish) blokida ochiladigan menyulardan foydalaning."
@@ -539,11 +543,13 @@
         },
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "Ushbu kod bo‘lakni chiziqlardagi o‘xshashliklarni o‘zgartirish uchun ishlating:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak."
+          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak.",
+          "courseC_artist_loops5b_c": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "Ushbu kod bo‘lakni chiziqlardagi o‘xshashliklarni o‘zgartirish uchun ishlating:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak."
+          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak.",
+          "courseC_artist_loops5b_c": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops6a_2018": {
           "courseC_artist_loops6a_a": "Yuqoridagi kabi dizaynni yaratish uchun har bir stiker orasida 75 pikseldan kamroq oldinga siljiting."
@@ -3321,11 +3327,13 @@
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Agar sizga kerak bo'lgan yo'l noaniq bo'lsa, barmog'ingiz bilan qushdan cho'chqaga boradigan yo'lni izlang.",
-          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring."
+          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring.",
+          "courseA_maze_seq13_c": "Ushbu <xml><block type=\"maze_moveNorth\"/></xml> \n<xml><block type=\"maze_moveEast\"/></xml> \nbloklari sizga cho'chqaga yaqinlashishga yordam beradi."
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Agar sizga kerak bo'lgan yo'l noaniq bo'lsa, barmog'ingiz bilan qushdan cho'chqaga boradigan yo'lni izlang.",
-          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring."
+          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring.",
+          "courseA_maze_seq13_c": "Ushbu <xml><block type=\"maze_moveNorth\"/></xml> \n<xml><block type=\"maze_moveEast\"/></xml> \nbloklari sizga cho'chqaga yaqinlashishga yordam beradi."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Agar siz qushni harakatga keltirishda muammolarga duch kelgan bo'lsangiz, <xml>\n  <block type=\"when_run\"/>\n</xml> ostiga bloklar qo'yilganligiga ishonch hosil qiling.",
@@ -3992,10 +4000,12 @@
           "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang."
+          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang.",
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> siklidan foydalanib ko'ring!"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang."
+          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang.",
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> siklidan foydalanib ko'ring!"
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "Laurel bosib o'tadigan masofani o'zgartirish uchun siklning necha marta ishlashini o'zgartiring.",
@@ -4369,10 +4379,14 @@
           "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring."
         },
         "courseC_PlayLab_eventsFP_2019": {
-          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring."
+          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring.",
+          "idea1": "_G'oya kerakmi?_\n\n**Kim bor u yerda?** Qahramonlarni tasodifiy ko'rinishga ega qiling, shunda hech kim keyin nima chiqishini bilmaydi.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_G'oya kerakmi?_\n\n\\*\\* Sarguzashtlarga borish \\*\\* - Fonni o'zgartiring, keyin qahramonlar hozir qayerda ekanliklari haqida gapirib beradigan qiling.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_eventsFP_2020": {
-          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring."
+          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring.",
+          "idea1": "_G'oya kerakmi?_\n\n**Kim bor u yerda?** Qahramonlarni tasodifiy ko'rinishga ega qiling, shunda hech kim keyin nima chiqishini bilmaydi.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_G'oya kerakmi?_\n\n\\*\\* Sarguzashtlarga borish \\*\\* - Fonni o'zgartiring, keyin qahramonlar hozir qayerda ekanliklari haqida gapirib beradigan qiling.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1_2018": {
           "courseC_PlayLab_events_challenge_a": "Ushbu blokdan aktyorlarni o‘yin maydonidagi turli joylariga ko‘chirish uchun foydalanishingiz mumkin.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -5020,7 +5034,8 @@
           "courseD_farmer_condLoops_challenge1_b": "Odatda siz qovoq yonida bo‘lsangiz, shunchaki \"qovoq terasiz\". Agar siz qovoqdasiz bo‘lsa, yana nima qilishingiz kerak?"
         },
         "course3_maze_debugging_challenge1": {
-          "courseC_maze_debugging_challenge1_a": "Chapga yoki o‘ngga? Bu sizga bog‘liq!"
+          "courseC_maze_debugging_challenge1_a": "Chapga yoki o‘ngga? Bu sizga bog‘liq!",
+          "courseC_maze_debugging_challenge1_b": "Scratning yo‘li to‘g‘ri to‘rtburchakning shakli bilan bir hil. U har doim bir hil tomonga burilishi kerak!"
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_a": "Ushbu jumboqni yechish uchun blok qo'shish yoki olib tashlashning hojati yo'q."
@@ -6438,10 +6453,12 @@
           "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring."
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring."
+          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring.",
+          "courseA_harvester_loops2_a": "Kodingizda **to'rtta** \"g'arbga yirish\"\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\nbloki va **to'rtta** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloki bo'lish kerak. "
         },
         "courseA_harvester_loops2_2020": {
-          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring."
+          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring.",
+          "courseA_harvester_loops2_a": "Kodingizda **to'rtta** \"g'arbga yirish\"\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\nbloki va **to'rtta** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloki bo'lish kerak. "
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_a": "Shunga o'xshash \"takrorlash\" blokidan foydalanib ko'ring!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -8539,7 +8556,8 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Agar sizga kerak bo'lgan yo'l noaniq bo'lsa, barmog'ingiz bilan qushdan cho'chqaga boradigan yo'lni izlang.",
-          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring."
+          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring.",
+          "courseA_maze_seq13_c": "Ushbu <xml><block type=\"maze_moveNorth\"/></xml> \n<xml><block type=\"maze_moveEast\"/></xml> \nbloklari sizga cho'chqaga yaqinlashishga yordam beradi."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Agar siz qushni harakatga keltirishda muammolarga duch kelgan bo'lsangiz, <xml>\n  <block type=\"when_run\"/>\n</xml> ostiga bloklar qo'yilganligiga ishonch hosil qiling.",
@@ -8957,14 +8975,17 @@
           "courseC_artist_loops1a_b": "Stikerni chizish uchun ushbu bo‘lakdan foydalaning!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops2a_2021": {
-          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing."
+          "courseC_artist_loops2a_b": "Nechi marta takrorlanishini o‘zgartirish uchun `repeat` siklini tepasidagi raqamga bosing.",
+          "courseC_artist_loops2a_a": "Sizning siklingiz ichida siz o'rtaga sakrashni, keyin burilishni, keyin stikerni chizishni xohlaysiz."
         },
         "courseC_artist_loops4a_2021": {
-          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!"
+          "courseC_artist_loops4a_a": "Oldinga sakrab o‘tish uchun ushbu kod bo‘lagini ishlating. :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nMasofani kirishni unutmang!",
+          "courseC_artist_loops4a_b": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2021": {
           "courseC_artist_loops5b_a": "Ushbu kod bo‘lakni chiziqlardagi o‘xshashliklarni o‘zgartirish uchun ishlating:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak."
+          "courseC_artist_loops5b_b": "Yuqoridagi dizaynga o‘xshashini yaratish uchun orqaga harakat qilishingiz miqdori oldinga harakat bilan bir hil bo‘lishi kerak.",
+          "courseC_artist_loops5b_c": "Sizning dasturingiz bu kabi bo'lishi kerak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops6a_2021": {
           "courseC_artist_loops6a_a": "Yuqoridagi kabi dizaynni yaratish uchun har bir stiker orasida 75 pikseldan kamroq oldinga siljiting."
@@ -9271,7 +9292,7 @@
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "Ushbu muammoni kichik qismlarga bo‘lib o‘ylab ko‘ring. Shoshilmang. Buni birinchi urinishda hal qilishningiz shart emas!",
           "course_starWars_loops8_b": "Ushbu muammoning birinchi yarmini zinapoyalar muammosi sifatida tasavvur qiling. Buni oldin qanday hal qildingiz?",
-          "course_starWars_loops8_c": "Ushbu yo‘lni ko‘rib chiqing.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Ushbu yo‘lni ko‘rib chiqing.\n\n[][0]"
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "Siz `repeat` sikli ichiga bir nechta blok qo‘yishingiz mumkin.",
@@ -9414,7 +9435,7 @@
           "courseD_bee_conditionals4_hintVid1": "Boshlashda yordam kerakmi? Videoni tomosha qiling!",
           "courseD_bee_conditionals4_a": "Hali ham har qanday bo‘shliqqa xuddi bulut bor kabi muomala qilishingiz mumkin, garchi butun yo‘lni ko‘rsangiz ham.",
           "courseD_bee_conditionals4_b": "Har bir bo‘sh joyni nektar uchun tekshirish uchun siklingiz ichidagi `if` ifodasidan foydalaning.",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml>  blokidan foydalanib, oldinga siljish va gul borligini tekshirish kerak. Agar gul bo'lsa, asalari nima qilishi kerak?",
+          "courseD_bee_conditionals4_c": "[blockly block][0]  blokidan foydalanib, oldinga siljish va gul borligini tekshirish kerak. Agar gul bo'lsa, asalari nima qilishi kerak?",
           "courseD_bee_conditionals4_hintVid2": "Ushbu jumboqni yechishda yordam olish uchun ushbu videoni tomosha qiling."
         },
         "courseD_bee_conditionals5_2021": {
@@ -9746,7 +9767,7 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "Siz yozadigan funksiya sizning butun dasturingizni o'z ichiga olmasligi kerak, faqat 100 piksel tomoni bilan kvadrat chizadigan qismini olishi kerak.",
-          "courseD_artist_functions2_c": "Yashil \"kvadrat chizish\" funksiyangizni \"chaqirish\" uchun uni \"Ishlayotgan paytda\" bloki ostiga joylang. Aks holda, sizning funksiyangizdagi kod ishlamaydi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Yashil \"kvadrat chizish\" funksiyangizni \"chaqirish\" uchun uni \"Ishlayotgan paytda\" bloki ostiga joylang. Aks holda, sizning funksiyangizdagi kod ishlamaydi.\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "Sizning dasturingiz quyidagilarni qilish kerak:\n\n-   Funksiyadan foydalanish\n-   100 + 75 piksel oldinga siljitish\n-   Funksiyadan foydalanish"
         },
         "courseE_artist_functions3_dani": {
@@ -9992,6 +10013,48 @@
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Agent yordamida Aleks yoki Stiv xaritaning chetidan o'tib ketishi uchun bir nechta ko'priklarni qurishga harakat qiling."
+        },
+        "course2_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_a": "_Agar meni orqaga qaytarib yuborsangiz, to‘g’ri yo‘nalishga burilishim uchun juda ehtiyot bo‘ling!_"
+        },
+        "courseB_iceage_loops3_2019": {
+          "courseB_iceage_loops3_a": "Bu yangi blokdan foydalaning!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Kodni takrorlash uchun `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> siklini olib keling, so‘ngra kerakli blokni ichiga qo‘ying."
+        },
+        "courseB_iceage_loops3_2020": {
+          "courseB_iceage_loops3_a": "Bu yangi blokdan foydalaning!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Kodni takrorlash uchun `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> siklini olib keling, so‘ngra kerakli blokni ichiga qo‘ying."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Bu yangi blokdan foydalaning!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Kodni takrorlash uchun `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> siklini olib keling, so‘ngra kerakli blokni ichiga qo‘ying."
+        },
+        "courseC_PlayLab_eventsA_embed_2019": {
+          "courseC_PlayLab_eventsA_a": "Pingvinni harakatlantirish uchun strelka tugmalaridan foydalaning. Bu darajani tugatish uchun hech qanday kod yozishning hojati yo'q."
+        },
+        "courseC_PlayLab_eventsA_embed_2020": {
+          "courseC_PlayLab_eventsA_a": "Pingvinni harakatlantirish uchun strelka tugmalaridan foydalaning. Bu darajani tugatish uchun hech qanday kod yozishning hojati yo'q."
+        },
+        "courseC_artist_loops1b_2019": {
+          "courseC_artist_loops1b_a": "Bu sizga kerak bo'lgan birinchi blok:\n\n[bloklangan] [0]\n\nSiz chap yoki o'ng va istalgan gradusga burilishni tanlashingiz mumkin."
+        },
+        "courseC_artist_loops1b_2020": {
+          "courseC_artist_loops1b_a": "Bu sizga kerak bo'lgan birinchi blok:\n\n[bloklangan] [0]\n\nSiz chap yoki o'ng va istalgan gradusga burilishni tanlashingiz mumkin."
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Bu sizga kerak bo'lgan birinchi blok:\n\n[bloklangan] [0]\n\nSiz chap yoki o'ng va istalgan gradusga burilishni tanlashingiz mumkin."
+        },
+        "courseC_artist_loops3a_2019": {
+          "courseC_artist_loops3a_a": "Birinchi stikerdan keyin siklingiz ichiga bittagina blok qo‘shishingiz to‘g‘ri keladi.",
+          "courseC_artist_loops3a_b": "Sizning dasturingiz shunday bo'lishi kerak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nSiz xohlagan stikerlardan foydalanishingiz mumkin!"
+        },
+        "courseC_artist_loops3a_2020": {
+          "courseC_artist_loops3a_a": "Birinchi stikerdan keyin siklingiz ichiga bittagina blok qo‘shishingiz to‘g‘ri keladi.",
+          "courseC_artist_loops3a_b": "Sizning dasturingiz shunday bo'lishi kerak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nSiz xohlagan stikerlardan foydalanishingiz mumkin!"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Birinchi stikerdan keyin siklingiz ichiga bittagina blok qo‘shishingiz to‘g‘ri keladi.",
+          "courseC_artist_loops3a_b": "Sizning dasturingiz shunday bo'lishi kerak!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nSiz xohlagan stikerlardan foydalanishingiz mumkin!"
         }
       }
     }

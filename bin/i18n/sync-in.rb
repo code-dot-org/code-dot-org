@@ -134,10 +134,15 @@ def get_i18n_strings(level)
 
       # Spritelab behaviors
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      unless behaviors.empty?
+        i18n_strings['behavior_names'] = Hash.new
+        i18n_strings['behavior_descriptions'] = Hash.new
+      end
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
+        description = behavior.at_xpath('./mutation/description')
         i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings['behavior_descriptions'][description.content] = description.content if description
       end
 
       ## Variable Names
@@ -286,7 +291,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.unit_in_category?(:hoc, script.name)
+        if Script.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")

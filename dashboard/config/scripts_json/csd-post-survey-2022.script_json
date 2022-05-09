@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-08 22:02:15 UTC",
+    "serialized_at": "2022-04-22 18:46:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -83,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2022"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -116,12 +119,10 @@
   ],
   "resources": [
     {
-      "name": "Unlocking t",
+      "name": "Unlocking the Post-Course Survey",
       "url": "https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view",
       "key": "unlocking_t",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unlocking_t"

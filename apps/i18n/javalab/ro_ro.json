@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "Fișierele salvate în ghiozdanul tău vor apărea aici.",
   "enablePeerReview": "Activează Evaluarea Inter Pares",
   "errorJavabuilderConnectionGeneral": "Am întâlnit o eroare la încărcarea imaginii.",
-  "errorJavabuilderConnectionNotAuthorized": "Nu ești autorizat să accesezi Javalab. Trebuie să te autorizezi sau să intri într-o secțiune?",
   "errorLoadingClassmates": "S-a produs o eroare la încărcarea listei colegilor tăi de clasă. Te rugăm să încerci din nou.",
   "errorMediaImageLoadError": "S-a produs o eroare la încărcarea imaginii.",
   "errorNeighborhoodInvalidGrid": "S-a produs o eroare la încărcarea nivelului vecin. Te rugăm să ne contactezi la support@code.org și asigură-te să incluzi URL-ul acestei pagini în mesajul tău.",

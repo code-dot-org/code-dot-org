@@ -1794,16 +1794,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "laturi"
+            },
+            "name": "desenați o morișcă"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1813,8 +1820,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "laturi"
+            },
+            "name": "desenați o formă"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1825,8 +1834,21 @@
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส",
             "parameters": {
-              "length": "ความยาว"
+              "length": "ความยาว",
+              "sides": "laturi"
             }
+          },
+          "small flower": {
+            "name": "floare mică"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORI LOGICE 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FLORI LOGICE"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORI LOGICE"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -1876,16 +1898,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "laturi"
+            },
+            "name": "desenați o morișcă"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1895,8 +1924,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "laturi"
+            },
+            "name": "desenați o formă"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1917,16 +1948,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "laturi"
+            },
+            "name": "desenați o morișcă"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1936,8 +1974,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "laturi"
+            },
+            "name": "desenați o formă"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1990,7 +2030,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "desenați flacără"
+          },
+          "draw fire": {
+            "name": "desenați foc"
           }
         },
         "courseC_data wizard_2021": {
@@ -2004,11 +2048,17 @@
           },
           "draw hexagon": {
             "name": "วาดรูปหกเหลี่ยม"
+          },
+          "draw line of hexagons": {
+            "name": "desenează un rând de hexagoane"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw ear stems": {
+            "name": "desenează urechi"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -2045,6 +2095,9 @@
           },
           "draw square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2075,11 +2128,20 @@
           },
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "draw triangle": {
+            "name": "desenați un triunghi"
+          },
+          "draw line of triangles": {
+            "name": "desenați un rând de triunghiuri"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2091,16 +2153,28 @@
           },
           "draw square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw line of hexagons": {
+            "name": "desenează un rând de hexagoane"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "designul meu"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "designul meu"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -2116,6 +2190,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "draw line of polygons": {
+            "name": "desenează un rând de poligoane"
+          },
+          "draw polygon": {
+            "name": "desenează poligon"
           }
         },
         "courseF_apps_collector": {
@@ -2130,12 +2210,124 @@
         },
         "Course E: Artist Project_examples_2021": {
           "my function": {
-            "name": "ฟังก์ชันของฉัน"
+            "name": "funcția mea"
           }
         },
         "Standalone_Artist_9": {
           "my function": {
             "name": "ฟังก์ชันของฉัน"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "soluție potențială"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "propulsor"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "desenați o fereastră"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          },
+          "pumpkin square": {
+            "name": "pătrat dovleac"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "pumpkin square": {
+            "name": "pătrat dovleac"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get produce": {
+            "name": "obțineți legume"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check for corn": {
+            "name": "caută porumb"
+          },
+          "corn rectangle": {
+            "name": "pătrat porumb"
+          },
+          "lettuce stairs": {
+            "name": "scări salată"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "pătrat grădină"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "pătrat grădină"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "pătrat grădină"
           }
         }
       }

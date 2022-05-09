@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "Tệp tin đã lưu vào ba lô của bạn sẽ xuất hiện tại đây.",
   "enablePeerReview": "Bật chế độ Đánh giá của bạn học",
   "errorJavabuilderConnectionGeneral": "Chúng tôi gặp lỗi khi kết nối đến máy chủ. Hãy thử lại.",
-  "errorJavabuilderConnectionNotAuthorized": "Bạn không có quyền truy cập Javalab. Bạn có cần đăng nhập hoặc tham gia nhóm đào tạo không?",
   "errorLoadingClassmates": "Có lỗi khi tải danh sách bạn cùng lớp. Vui lòng thử lại.",
   "errorMediaImageLoadError": "Có lỗi khi tải ảnh.",
   "errorNeighborhoodInvalidGrid": "Có lỗi khi tải cấp độ liên quan. Vui lòng liên hệ với chúng tôi tại địa chỉ support@code.org và đảm bảo điền URL tới trang này trong lời nhắn.",

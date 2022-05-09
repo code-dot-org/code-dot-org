@@ -597,6 +597,11 @@ id:
         csd_ml_ethics_ai: 'Etika dan AI'
         PL_overview_CSP: Apa prinsip-prinsip Ilmu Komputer?
         PL_CSP_EIPMOverview: Panduan Belajar EIPM
+        CSA-PL-debugging-temp: Pengantar Debugging dalam Java Lab - temp
+        csd_u6_circuit_playground: Komputasi Fisik
+        csd_u6_input_output: Input dan Output
+        csp_applab_parameters: Fungsi dengan parameter
+        CSA-PL-intro-to-arrays: Array 1 Dimensi/ One-Dimensional (1D)
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

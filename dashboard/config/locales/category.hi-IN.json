@@ -1,0 +1,17 @@
+{
+  "hi-IN": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "अभिकलनात्मक चिंतन"
+        },
+        "ccela/L": {
+          "description": "भाषा"
+        },
+        "csta/IC": {
+          "description": "कंप्यूटिंग के प्रभाव"
+        }
+      }
+    }
+  }
+}

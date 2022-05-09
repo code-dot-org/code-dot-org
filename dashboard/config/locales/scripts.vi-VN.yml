@@ -196,6 +196,7 @@ vi:
                 nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
             phòng thí nghiệm trò chơi!
+          name: playlab
         artist:
           title: Họa sĩ
           description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
@@ -210,6 +211,7 @@ vi:
                 dụng các khối mới như `di chuyển về phía trước 100 pixel` và `quay
                 sang phải 90 độ`.
           student_description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
+          name: họa sĩ
         hourofcode:
           title: Mê cung cổ điển
           description: Hãy thử những nền tảng của khoa học máy tính với các nhân vật
@@ -419,6 +421,7 @@ vi:
                 nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
             hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
+          name: vô cực
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -598,6 +601,7 @@ vi:
                 phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành
                 các bài tập trực tuyến.
           student_description: Thử các trò chơi xếp hình của chúng tôi.
+          name: ghép hình
         step:
           title: Thực hiện từng bước
           description: Hướng dẫn các bước
@@ -1275,6 +1279,8 @@ vi:
           student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: Code.org Equity PD
             Necessary Background:
               name: Nền tảng cần thiết
         science-PD2:
@@ -1649,6 +1655,7 @@ vi:
                 nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
             Ice Age Play Lab!
+          name: kỷbănghà
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1804,6 +1811,7 @@ vi:
                 học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.
           student_description: Tìm hiểu cách AI và học máy có thể được sử dụng để
             giải quyết các vấn đề của thế giới.
+          name: đạidương
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -2304,6 +2312,8 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Multi-Screen Apps:
+              name: Ứng dụng đa màn hình
             '"if" Statements Unplugged':
               name: Câu lệnh "If"
             Boolean Expressions and "if" Statements:
@@ -4253,12 +4263,6 @@ vi:
                 sử dụng các vòng lặp để thu thập kho báu hiệu quả hơn trên Code.org.
             Loops in Artist:
               name: Vòng lặp trong Artist
-              description_teacher: Quay trở lại với vòng lặp, học sinh sẽ học cách
-                vẽ hình ảnh bằng cách lặp lại các chuỗi hướng dẫn đơn giản. Trong
-                bài học sử dụng thiết bị điện tử trước đó, vòng lặp được sử dụng để
-                đi qua mê cung và thu thập kho báu. Ở đây, vòng lặp tạo thành các
-                mô hình. Vào cuối giai đoạn này, học sinh sẽ có cơ hội tạo ra hình
-                ảnh của riêng mình bằng cách sử dụng vòng lặp.
             'Events: The Big Event':
               name: 'Sự kiện: Sự kiện lớn'
               description_teacher: Sự kiện là một cách tuyệt vời để bổ sung sự đa
@@ -10130,6 +10134,8 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
         maddie-test:
           lessons:
             stage 1:
@@ -10608,6 +10614,8 @@ vi:
               name: Bản vẽ trong Kho trò chơi
             Variables:
               name: Các biến
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -12277,6 +12285,8 @@ vi:
               name: Các biến
             Sprites:
               name: Nhân vật
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
             Text:
               name: Văn bản
             Conditionals:
@@ -12457,6 +12467,9 @@ vi:
             Sprites:
               key: Nhân vật
               name: Nhân vật
+            Sprite Properties:
+              key: Thuộc tính của nhân vật
+              name: Thuộc tính của nhân vật
             Text:
               key: Văn bản
               name: Văn bản
@@ -14442,6 +14455,7 @@ vi:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Điều hướng trên nền tảng học tập Code.org"
               description_teacher: |-
                 \*\*Bạn sẽ học cách: \*\*
 
@@ -15011,6 +15025,8 @@ vi:
           lessons:
             lesson-1:
               name: Thử nghiệm Bản sao CSA
+            lesson-3:
+              name: Bài học 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -16442,6 +16458,8 @@ vi:
               display_name: Danh sách
             csp_loops:
               display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Khảo sát sau khoá học
         courseb-2022:
           lessons:
             Digital Trails:
@@ -16729,12 +16747,25 @@ vi:
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính
             và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
           description_audience: 'Độ tuổi: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
         csp8-2022:
           lessons:
             lesson-4:
               key: lesson-4
             Create PT - Complete the Task:
               key: Tạo PT - hoàn thành nhiệm vụ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tạo PT
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
         csp9-2022:
           lessons:
             Machine Learning:
@@ -16746,6 +16777,13 @@ vi:
             lesson-10:
               key: lesson-10
               name: Định kiến của thuật toán
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -17365,41 +17403,72 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
+            lessonGroup-5:
+              display_name: Khảo sát
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Học cách kéo và thả
               name: Học cách kéo và thả
+              description_student: Nhấp chuột và kéo để hoàn thành các bài tập.
             Sequencing with Scrat:
               key: Học về chuỗi tuần tự cùng sóc Scrat
               name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming with Angry Birds:
               key: Lập trình với Angry Birds
               name: Lập trình với Angry Birds
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ tiếp tục phát triển các thuật toán trình tự.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
             Programming with Harvester:
               key: Lập trình với game Người thu hoạch
               name: Lập trình với game Người thu hoạch
+              description_student: Giúp Người thu hoạch thu thập các loại rau trên
+                đường đi.
             Loops with Scrat:
               key: Vòng lặp với Scrat
               name: Vòng lặp với Scrat
+              description_student: Giúp Scrat lấp đất nhiều hơn bằng cách sử dụng
+                vòng lặp.
             Loops with Laurel:
               key: Vòng lặp với Laurel
               name: Vòng lặp với Laurel
+              description_teacher: Trong bài học này, học sinh tiếp tục tìm hiểu khái
+                niệm vòng lặp. Tại đây, Nhà thám hiểm Laurel sử dụng vòng lặp để thu
+                thập kho báu trong không gian hang động mở. Một khối `lấy kho báu`
+                mới hiện ra để giúp cô trong cuộc hành trình của mình.
             Ocean Scene with Loops:
               key: Vòng lặp trong câu chuyện về biển
               name: Vòng lặp trong câu chuyện về biển
+              description_student: Sử dụng vòng lặp và các mô hình để hoàn thành hình
+                ảnh.
             Drawing Gardens with Loops:
               key: Vẽ khu vườn bằng vòng lặp
               name: Vẽ khu vườn bằng vòng lặp
+              description_student: Sử dụng mô hình và vòng lặp để hoàn thành các hình
+                ảnh.
             On the Move with Events:
               key: Di chuyển cùng sự kiện
               name: Di chuyển cùng sự kiện
+              description_student: Làm game hoặc sáng tạo câu chuyện của riêng bạn.
             A Royal Battle with Events:
               key: Trận chiến hoàng gia với các sự kiện
               name: Trận chiến hoàng gia với các sự kiện
+              description_student: Sử dụng sự kiện để tạo một câu chuyện hoặc làm
+                game tương tác.
+            Programming in with Angry Birds:
+              name: Lập trình với Angry Birds
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ tiếp tục phát triển các thuật toán trình tự.
+            Programming in Harvester:
+              name: Lập trình với game Người thu hoạch
+              description_student: Giúp Người thu hoạch thu thập các loại rau trên
+                đường đi.
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -17407,6 +17476,20 @@ vi:
               display_name: Vòng lặp
             csf_events:
               display_name: Các sự kiện
+          description_audience: 'Độ tuổi: 4-8'
+          description_short: 'Giới thiệu về khoa học máy tính cho người đọc trước:
+            kết hợp những gì tốt nhất của các khóa học mẫu giáo và lớp một của chúng
+            tôi.'
+          description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài học dưới
+            đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình máy tính,
+            phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách thú vị!
+            Hãy làm game và các dự án sáng tạo để chia sẻ với bạn bè, gia đình và
+            giáo viên.
+          student_description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài
+            học dưới đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình
+            máy tính, phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách
+            thú vị! Hãy làm game và các dự án sáng tạo để chia sẻ với bạn bè, gia
+            đình và giáo viên.
         csa2-2022:
           lessons:
             lesson-6:
@@ -17418,8 +17501,30 @@ vi:
               display_name: Nội dung
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Mảng một chiều (1D)
+            lesson-4:
+              name: Phần tử mảng
             lesson-5:
               name: Cho vòng lặp
+            lesson-6:
+              name: Thuật toán mảng
+            lesson-7:
+              name: Vòng lặp for nâng cao
+            lesson-8:
+              name: Biến tĩnh và hằng số
+            lesson-9:
+              name: Đa hình
+            lesson-10:
+              name: Thuật toán mảng khác
+            lesson-11:
+              name: Mảng đảo ngược
+            lesson-13:
+              name: Dữ liệu cho Dự án vì cộng đồng - Ngày 1
+            lesson-14:
+              name: Dữ liệu cho Dự án vì cộng đồng - Ngày 2
+            lesson-15:
+              name: Dữ liệu cho Dự án vì cộng đồng - Ngày 3
             lesson-16:
               name: Bảng điều khiển
           lesson_groups:
@@ -17447,6 +17552,8 @@ vi:
           lessons:
             lesson-2:
               name: Phần 5 Đánh giá
+            lesson-7:
+              name: Vòng lặp for nâng cao
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -17457,6 +17564,62 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        pltess:
+          lessons:
+            lesson-2:
+              name: bài 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Câu lệnh if trong Java
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Đánh giá biểu thức boolean
+                -   Viết và đọc các câu lệnh if, if-else, if-else-if-else
+                -   Mô tả sự khác biệt giữa toán tử gán và toán tử so sánh
+
+                **Thời gian ước tính:**90 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Đánh giá biểu thức boolean
+                -   Viết và đọc các câu lệnh if, if-else, if-else-if-else
+                -   Mô tả sự khác biệt giữa toán tử gán và toán tử so sánh
+
+                **Thời gian ước tính:**90 phút
+            lesson-4:
+              name: Vòng lặp trong Java
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Đọc, ghi và gỡ lỗi cho các vòng lặp for trong Java
+
+                **Thời gian ước tính:**90 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Đọc, ghi và gỡ lỗi cho các vòng lặp for trong Java
+
+                **Thời gian ước tính:**90 phút
+            lesson-5:
+              name: Mảng trong Java
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Khai báo và khởi tạo mảng 1D cho các kiểu dữ liệu nguyên thủy
+                -   Truy cập và sửa đổi các phần tử trong một mảng
+                -   Duyệt mảng
+
+                **Thời gian dự kiến:** 120 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Khai báo và khởi tạo mảng 1D cho các kiểu dữ liệu nguyên thủy
+                -   Truy cập và sửa đổi các phần tử trong một mảng
+                -   Duyệt mảng
+
+                **Thời gian dự kiến:** 120 phút
         csa7-pilot-extra:
           lessons:
             lesson-10:
@@ -17876,6 +18039,9 @@ vi:
             lessonGroup-5:
               display_name: Hộp cát
         csa7-2022:
+          lessons:
+            lesson-6:
+              name: Sở hữu trí tuệ
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -17886,11 +18052,107 @@ vi:
             lessonGroup-2:
               display_name: Nội dung
             lessonGroup-5:
-              display_name: Hộp cát
+              display_name: Khảo sát
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
               name: Chào mừng bạn
+            lesson-4:
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Tìm hiểu kỹ về giáo trình Khám phá KHMT.
+              description_teacher: "**Tổng quan:**\nCác hoạt động không đồng bộ này
+                sẽ mang đến cho người tham gia cái nhìn tổng quan ở cấp độ cao về
+                giáo trình Khám phá KHMT, bao gồm tổng quan cấp cao về nội dung và
+                công cụ của khóa học, sơ lược về cấu trúc khóa học và xem trước cách
+                sử dụng quy trình giải quyết vấn đề trong suốt khóa học. \n\n**Người
+                tham gia sẽ:**\n\n-   Hiểu kỹ về giáo trình Khám phá KHMT.\n\n**Thời
+                gian đề xuất:** 40 phút"
+            lesson-5:
+              name: Thảo luận không đồng bộ
+            lesson-6:
+              name: Bài học mẫu 2 - Học phần 2 Bài 2
+            lesson-7:
+              name: Nhận thức bản thân
+            lesson-8:
+              name: Chỉ định bài học
+            lesson-10:
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Xem xét vai trò của mình với tư cách là giáo viên trong lớp học Khám phá KHMT.
+              description_teacher: "**Tổng quan:**\nCác hoạt động không đồng bộ này
+                sẽ giới thiệu cho người tham gia về vai trò của giáo viên với tư cách
+                là học viên dẫn dắt. Người tham gia sẽ được gợi ý suy nghĩ về ảnh
+                hưởng của kinh nghiệm và niềm tin dành cho KHMT đến cách họ nhìn nhận
+                vai trò của bản thân với tư cách là giáo viên trong một lớp học KHMT.
+                Quá trình suy nghĩ này sẽ dẫn dắt người tham gia vào phần nhận thức
+                bản thân ở giai đoạn sau trong hội thảo này. \n\n**Người tham gia
+                sẽ:**\n\n-   Xem xét vai trò của bản thân với tư cách là giáo viên
+                trong lớp học Khám phá KHMT.\n\n**Thời gian đề xuất:** 20 phút"
+            lesson-11:
+              name: Tổng kết
+            Intro to HTML:
+              name: Bài học mẫu 2 - Học phần 2 Bài 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Chào mừng bạn
+            lesson-3:
+              name: Lập kế hoạch bài học
+            lesson-4:
+              name: Chuẩn bị không đồng bộ
+            lesson-6:
+              name: Thảo luận không đồng bộ
+            lesson-9:
+              name: Tổng kết
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Chào mừng bạn
+            lesson-5:
+              name: Thảo luận không đồng bộ
+            lesson-8:
+              name: Tổng kết
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[MẪU] Tổng kết học phần"
+              description_student: "**Bạn sẽ:**\n\n-   Khám phá các dự án cuối bài
+                học. \n\n**Thời gian đề xuất:** 10 phút"
+              description_teacher: "**Bạn sẽ:**\n\n-   Khám phá các dự án cuối bài
+                học. \n\n**Thời gian đề xuất:** 10 phút"
+            lesson-3:
+              name: "[MẪU] Nội dung bài học"
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Nêu mục tiêu bài học.
+
+                **Thời gian đề xuất:** \_\_\_\_ phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Nêu mục tiêu bài học.
+
+                **Thời gian đề xuất:** \_\_\_\_ phút
+            lesson-4:
+              name: Chào mừng bạn
+            lesson-7:
+              name: Chuẩn bị không đồng bộ
+            lesson-11:
+              name: Thảo luận không đồng bộ
+            lesson-14:
+              name: Tổng kết
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Chào mừng bạn
+            lesson-4:
+              name: Chuẩn bị không đồng bộ
+            lesson-6:
+              name: Thảo luận không đồng bộ
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -17924,5 +18186,478 @@ vi:
             For Loops:
               name: Cho vòng lặp
               key: Cho vòng lặp
+        vpl-csd1-ci-pilot-2022:
+          title: 'Học phần 1: Chuẩn bị giảng dạy về Giải quyết vấn đề và máy tính'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Giới thiệu về Phát triển Web
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Làm quen với học phần Phát triển Web của code.org.
+                -   Xem trước nội dung học phần Phát triển Web trong tuần đầu tiên.
+
+                **Thời gian đề xuất:** 10 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Làm quen với học phần Phát triển Web của code.org.
+                -   Xem trước nội dung học phần Phát triển Web trong tuần đầu tiên.
+
+                **Thời gian đề xuất:** 10 phút
+            lesson-2:
+              name: Lập trình web bằng HTML
+              description_student: "**Bạn sẽ:**\n\n-   Làm quen với cách sử dụng Web
+                Lab.\n-   Thêm cấu trúc vào trang web bằng HTML. \n-   Thêm hình ảnh
+                vào trang web. \n\n**Thời gian đề xuất:** 30 phút"
+              description_teacher: "**Bạn sẽ:**\n\n-   Làm quen với cách sử dụng Web
+                Lab.\n-   Thêm cấu trúc vào trang web bằng HTML. \n-   Thêm hình ảnh
+                vào trang web. \n\n**Thời gian đề xuất:** 30 phút"
+            lesson-3:
+              name: Định dạng web bằng CSS
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Định dạng văn bản trong trang web bằng CSS.
+                -   Liên kết trang định dạng kiểu CSS với chỉ mục trang web.
+                -   Khám phá các thuộc tính bổ sung để định dạng cho các phần tử trên trang web.
+
+                **Thời gian đề xuất:** 25 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Định dạng văn bản trong trang web bằng CSS.
+                -   Liên kết trang định dạng kiểu CSS với chỉ mục trang web.
+                -   Khám phá các thuộc tính bổ sung để định dạng cho các phần tử trên trang web.
+
+                **Thời gian đề xuất:** 25 phút
+            lesson-4:
+              name: Suy nghĩ về vai trò và trách nhiệm liên quan đến phương tiện kỹ
+                thuật số
+              description_student: |-
+                **Bạn sẽ:**
+
+                -   Khám phá cách làm việc của học sinh để hiểu vai trò và trách nhiệm của họ với tư cách vừa là người sáng tạo, vừa là người sử dụng phương tiện kỹ thuật số.
+
+                **Thời gian đề xuất:** 15 phút
+              description_teacher: |-
+                **Bạn sẽ:**
+
+                -   Khám phá cách làm việc của học sinh để hiểu vai trò và trách nhiệm của họ với tư cách vừa là người sáng tạo, vừa là người sử dụng phương tiện kỹ thuật số.
+
+                **Thời gian đề xuất:** 15 phút
+            lesson-5:
+              description_student: "**Bạn sẽ:**\n\n-   Khám phá các dự án cuối bài
+                học. \n\n**Thời gian đề xuất:** 10 phút"
+              description_teacher: "**Bạn sẽ:**\n\n-   Khám phá các dự án cuối bài
+                học. \n\n**Thời gian đề xuất:** 10 phút"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Giảng dạy về Phát triển web
+          title: 'Học phần 2: Chuẩn bị giảng dạy về Phát triển web'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Phát triển Web của Code.org. \n\n**Trong học
+            phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Phát
+            triển web.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương
+            tác với Web Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian
+            đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Phát triển Web của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Phát triển web.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với Web Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Giới thiệu về Hoạt ảnh và game tương tác
+            lesson-2:
+              name: Tạo cảnh
+            lesson-3:
+              name: Tạo hoạt ảnh cho cảnh với các nhân vật
+            lesson-4:
+              name: Khám phá thiết kế trò chơi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác
+          title: 'Học phần 3: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác '
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org. \n\n**Trong
+            Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm chính có trong
+            học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các dự án cuối bài
+            học.\n\n**Thời gian đề xuất:** 120 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org.
+            \n\n**Trong Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm
+            chính có trong học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các
+            dự án cuối bài học.\n\n**Thời gian đề xuất:** 120 phút"
+        vpl-csd4-ci-pilot-2022:
+          title: " Học phần 4: Chuẩn bị giảng dạy về Quy trình thiết kế"
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Quy trình thiết kế của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Quy trình thiết kế.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với App Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Quy trình thiết kế của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Quy trình thiết kế.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với App Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 90 phút"
+        vpl-csd5-ci-pilot-2022:
+          title: 'Học phần 5: Chuẩn bị giảng dạy về Dữ liệu và xã hội'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Dữ liệu và xã hội của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Dữ liệu và xã hội.\n-   Thực hành các khái niệm chính có trong bài học.\n-
+            \  Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Dữ liệu và xã hội của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Dữ liệu và xã hội.\n-   Thực hành các khái niệm chính có trong bài học.\n-
+            \  Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 90 phút"
+        vpl-csd6-ci-pilot-2022:
+          title: 'Học phần 6: Chuẩn bị giảng dạy về Điện toán vật lý'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Điện toán vật lý của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Điện toán vật lý.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với ứng dụng The Maker.\n-   Khám phá các dự án cuối bài
+            học.\n\n**Thời gian đề xuất:** 90 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Điện toán vật lý của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Điện toán vật lý.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với ứng dụng The Maker.\n-   Khám phá các dự án cuối bài
+            học.\n\n**Thời gian đề xuất:** 90 phút"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Quy trình thiết kế
+            Engage with machine learning apps:
+              name: Quy trình thiết kế
+          title: 'Học phần 7: Chuẩn bị giảng dạy về AI và máy học'
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong học
+            phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần AI
+            và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương
+            tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-   Lên
+            kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:** 120
+            phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong
+            học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            AI và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-
+            \  Tương tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-
+            \  Lên kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:**
+            120 phút"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới CSC
+              description_student: Trong bài học này, bạn sẽ học cách tạo và làm nhân
+                vật chuyển động cũng như thêm tính tương tác cho chúng bằng cách sử
+                dụng sự kiện.
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học
+                sinh sẽ học cách tạo và làm nhân vật chuyển động cũng như thêm tính
+                tương tác cho chúng bằng cách sử dụng sự kiện. '
           title: Xin chào cả thế giới
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Cập nhật cấp độ
+          title: Sân chơi CSD
+          description_audience: Người biên soạn giáo trình
+          description_short: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ
+            giữa các phiên bản giáo trình
+          description: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ giữa
+            các phiên bản giáo trình
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Xin chào cả thế giới CSC
+              description_student: Trong bài học này, bạn sẽ học cách tạo và làm nhân
+                vật chuyển động cũng như thêm tính tương tác cho chúng bằng cách sử
+                dụng sự kiện.
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học
+                sinh sẽ học cách tạo và làm nhân vật chuyển động cũng như thêm tính
+                tương tác cho chúng bằng cách sử dụng sự kiện. '
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Tranh thơ ca
+              description_teacher: Trong bài học kết hợp KHMT và ELA dành cho các
+                lập trình viên nhập môn này, học sinh sẽ dùng mã lệnh tạo hình chuyển
+                động trong bài thơ để minh họa một cảm xúc trong một bài thơ. Học
+                sinh sẽ đọc và tìm ra cảm xúc trong bài thơ. Sau đó, họ sẽ tìm các
+                hiệu ứng và hình ảnh tương ứng để giúp minh họa cảm xúc trong bài
+                thơ. Cuối cùng, học sinh sẽ sử dụng các sự kiện (mã lệnh) để minh
+                họa sự thay đổi cảm xúc hoặc tạo chuyển động mở hình ảnh mới trong
+                một bài thơ.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Xin chào cả thế giới CSC
+              description_student: Trong bài học này, bạn sẽ học cách tạo và làm nhân
+                vật chuyển động cũng như thêm tính tương tác cho chúng bằng cách sử
+                dụng sự kiện.
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học
+                sinh sẽ học cách tạo và làm nhân vật chuyển động cũng như thêm tính
+                tương tác cho chúng bằng cách sử dụng sự kiện. '
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Tiền khảo sát CS Discoveries
+              key: Tiền khảo sát CS Discoveries
+            Intro to Problem Solving:
+              name: Giới thiệu phần giải quyết vấn đề
+              key: Giới thiệu phần giải quyết vấn đề
+            The Problem Solving Process:
+              name: Quá trình giải quyết vấn đề
+              key: Quá trình giải quyết vấn đề
+            Exploring Problem Solving:
+              name: Khám phá Giải quyết vấn đề
+              key: Khám phá Giải quyết vấn đề
+            What is a Computer?:
+              name: Máy tính là gì?
+              key: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd2-2022:
+          lessons:
+            Digital Footprint:
+              name: Dấu vết số
+              key: Dấu vết số
+            Styling Text with CSS:
+              name: Tạo phong cách cho văn bản với CSS
+              key: Tạo phong cách cho văn bản với CSS
+            Intellectual Property:
+              name: Sở hữu trí tuệ
+              key: Sở hữu trí tuệ
+            Styling Elements with CSS:
+              name: Tạo phong cách cho các thành phần với CSS
+              key: Tạo phong cách cho các thành phần với CSS
+            lesson-1:
+              key: lesson-1
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+          description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
+            Kho Dữ liệu Web."
+        csd3-2022:
+          lessons:
+            Drawing in Game Lab:
+              name: Bản vẽ trong Kho trò chơi
+              key: Bản vẽ trong Kho trò chơi
+            Variables:
+              name: Các biến
+              key: Các biến
+            Sprites:
+              name: Nhân vật
+              key: Nhân vật
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
+              key: Thuộc tính của nhân vật
+            Text:
+              name: Văn bản
+              key: Văn bản
+            Conditionals:
+              name: Điều kiện
+              key: Điều kiện
+            Project - Interactive Card:
+              name: 'Dự án: Thẻ tương tác'
+              key: 'Dự án: Thẻ tương tác'
+            Collision Detection:
+              name: Phát hiện va chạm
+              key: Phát hiện va chạm
+            Complex Sprite Movement:
+              name: Di chuyển nhân vật phức tạp
+              key: Di chuyển nhân vật phức tạp
+            Collisions:
+              name: Va chạm
+              description_teacher: "**Câu hỏi trong ngày: Các lập trình viên dùng
+                yếu tố trừu tượng để sáng tạo thêm các yếu tố trừu tượng khác như
+                thế nào?**\\\r\n\\\r\nTrong bài học này, học sinh sẽ lập trình cho
+                nhân vật của mình phản ứng theo những cách mới. Sau khi ôn lại nhanh
+                về cách sử dụng khối [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                (đang chạm), học sinh sẽ động não để tìm ra những cách tương tác khác
+                giữa hai nhân vật. Sau đó, họ sẽ dùng [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                để cho một nhân vật đẩy nhân vật còn lại trên màn hình trước khi luyện
+                tập với bốn khối va chạm là ([`collide`(#f78183)](/docs/gamelab/collide/)
+                (va chạm), [`displace`(#f78183)](/docs/gamelab/displace/) (chiếm chỗ),
+                [`bounce`(#f78183)](/docs/gamelab/bounce/) (nảy) và [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))
+                (bật lại)."
+              key: Va chạm
+            Functions:
+              name: Các hàm
+              key: Các hàm
+            The Game Design Process:
+              name: Quá trình thiết kế trò chơi
+              key: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              name: Sử dụng quy trình thiết kế trò chơi
+              key: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              name: Dự án - thiết kế một trò chơi
+              key: Dự án - thiết kế một trò chơi
+            lesson-1:
+              key: lesson-1
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Tìm hiểu về người dùng của bạn
+              key: Tìm hiểu về người dùng của bạn
+            Designing Apps for Good:
+              name: Thiết kế ứng dụng nhằm mục đích tốt
+              key: Thiết kế ứng dụng nhằm mục đích tốt
+            Market Research:
+              name: Nghiên cứu thị trường
+              key: Nghiên cứu thị trường
+            Prototype Testing:
+              name: Thử nghiệm nguyên mẫu
+              key: Thử nghiệm nguyên mẫu
+            Testing the App:
+              name: Thử Ứng dụng
+              key: Thử Ứng dụng
+            Analysis of Design:
+              key: Phân tích thiết kế
+            Paper Prototypes:
+              key: Nguyên mẫu giấy
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd7-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
+            Survey Planning:
+              name: Bộ sưu tập Thiết kế dữ liệu
+              key: Bộ sưu tập Thiết kế dữ liệu
+            Similarity Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        csd6-2022:
+          lessons:
+            Combining Inputs and Outputs:
+              name: Kết hợp các yếu tố đầu vào
+            Making Music:
+              name: Tạo âm nhạc
+            Functions:
+              name: Các hàm
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          description: Học phần này có chứa Khảo sát sau khóa học Khám phá Khoa học
+            Máy tính. Học phần này có thể được chỉ định sau khi học viên hoàn thành
+            học phần cuối cùng của họ trong khóa học Khám phá Khoa học Máy tính.
+          student_description: Học phần này chứa một khảo sát sau khi lớp học của
+            bạn đã hoàn thành các học phần trong khóa học Khám phá Khoa học Máy tính.
+            Giáo viên của bạn sẽ cho bạn biết khi nào nên thực hiện khảo sát này.
+        aiml-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
+            Survey Planning:
+              name: Bộ sưu tập Thiết kế dữ liệu
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chào mừng bạn
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: lesson-4
+            lesson-3:
+              key: lesson-3
+            lesson-8:
+              key: lesson-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3

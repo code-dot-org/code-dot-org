@@ -4428,7 +4428,7 @@
         },
         "Overworld Chop Tree_2021": {
           "mc_2_b": "คำสั่ง`ทำลายบล็อก` จะตัดต้นไม้ที่อยู่ตรงหน้าคุณลง",
-          "mc_2_a": "คุณต้อง 'ไปข้างหน้า' สองครั้งเพื่อยืนอยู่หน้าต้นไม้"
+          "mc_2_a": "Trebuie să vă „deplasați înainte” de două ori pentru a vă afla în fața copacului."
         },
         "Overworld Chop Trees_2021": {
           "mc_4_a": "คุณสามารถตัดต้นไม้ลงในลำดับใดก็ได้ เส้นทางใดจะใช้บล็อกจำนวนน้อยที่สุด?  ",
@@ -4526,7 +4526,8 @@
           "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseA_collector_loops3_a": "Încercați să folosiți o buclă\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
@@ -4550,16 +4551,21 @@
           "courseA_collector_loops8_c": "จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด \" เริ่ม\" เพื่อดูว่าคุณควรจะทำอะไรต่อไป"
         },
         "courseA_collector_loops9_2021": {
-          "courseA_collector_loops9_a": "ถ้าคุณไม่สามารถหาได้ว่า จุดที่ดีที่สุดที่จะใช้ลูปอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทีละขั้นตอนและมองหารูปแบบ "
+          "courseA_collector_loops9_a": "ถ้าคุณไม่สามารถหาได้ว่า จุดที่ดีที่สุดที่จะใช้ลูปอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทีละขั้นตอนและมองหารูปแบบ ",
+          "courseA_collector_loops9_b": "Încercați să puneți 2 dintre buclele <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> în interiorul unei alte bucle pentru a face codul mai scurt!"
         },
         "courseA_collector_loops_challenge1_2021": {
-          "courseA_collector_loops_challenge1_b": "คุณไม่จำเป็นต้องใช้ ลูป ถ้าคุณแค่ทำบางอย่างแค่เพียงครั้งเดียวเท่านั้น"
+          "courseA_collector_loops_challenge1_b": "คุณไม่จำเป็นต้องใช้ ลูป ถ้าคุณแค่ทำบางอย่างแค่เพียงครั้งเดียวเท่านั้น",
+          "courseA_collector_loops_challenge1_a": "Încercați să schimbați numerele din fiecare buclă dacă ceva pare a fi în neregulă.",
+          "courseA_collector_loops_challenge1_c": "Atunci când începeți în partea dreaptă a peșterii sunt 6 pietre prețioase, dar trebuie să strângeți comori de 5 ori, prin deplasare către sud. Știți de ce?",
+          "courseA_collector_loops_challenge1_d": "Programul cu care începeți nu strânge ultimele 2 pietre prețioase. Încercați să adăugați acest cod la sfârșit:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_harvester_loops1_2021": {
           "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2_2021": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> "
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_b": "Dacă încă întâmpinați probleme, încercați să spuneți care sunt pașii cu voce tare."
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
@@ -4599,7 +4605,8 @@
         },
         "courseA_harvester_seq10_2021": {
           "courseA_harvester_seq10_a": "ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน",
-          "courseA_harvester_seq10_c": "ลองใช้เส้นทางนี้ในการเก็บข้าวโพดทั้งหมด"
+          "courseA_harvester_seq10_c": "ลองใช้เส้นทางนี้ในการเก็บข้าวโพดทั้งหมด",
+          "courseA_harvester_seq10_b": "Trebuie să vă deplasați spre est, apoi spre nord. Faceți aceasta de două ori. Nu uitați să culegeți tot porumbul!"
         },
         "courseA_harvester_seq13_2021": {
           "courseA_bee_seq1_a": "ใช้บล็อกอันนี้เพื่อให้เกษตรกรเก็บข้าวโพด\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
@@ -4699,10 +4706,12 @@
           "courseA_playlab_events_challenge1_a": "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_b": "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_c": "ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น เมื่อคุณคลิกบู เจ้าผีน้อย!",
-          "courseA_playlab_events_challenge1_d": "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_d": "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Faceți-l pe Vrăjitorul Wendel să apară atunci când faceți clic pe Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2021": {
-          "2": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!"
+          "2": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!",
+          "1": "Dacă Scrat nu face ceea ce doriți, asigurați-vă că ambele blocuri au fost complet apăsate împreună, apoi faceți din nou clic pe \"Rulează\"."
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -4720,19 +4729,26 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้"
+          "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
+          "courseB_artist_loops2_b": "Încercați să rulați codul mai întâi pentru a vedea unde ajunge artistul."
         },
         "courseB_artist_loops9_2021": {
-          "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
+          "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
+          "courseB_artist_loops9_a": "Amintiți-vă că blocurile pentru săritură pot fi folosite pentru a vă deplasa fără a trasa o linie.",
+          "courseB_artist_loops9_b": "Va trebui să folosiți blocul W pentru a rezolva acest puzzle."
         },
         "courseB_collector_loops2_2021": {
-          "courseB_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้"
+          "courseB_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
+          "courseB_collector_loops2_b": "Când ajungeți într-un loc în care se află o comoară, folosiți blocul <xml><block type=\"collector_collect\"/></xml> pentru a o strânge."
         },
         "courseB_collector_loops3_2021": {
-          "courseB_collector_prog3_b": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปทำซ้ำ"
+          "courseB_collector_prog3_b": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปทำซ้ำ",
+          "courseB_collector_prog3_a": "Încercați să folosiți un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pentru a strânge comoara."
         },
         "courseB_collector_loops4_2021": {
-          "courseB_collector_loops4_b": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ"
+          "courseB_collector_loops4_b": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
+          "courseB_collector_loops4_a": "Încercați să folosiți butonul pentru etape pentru a afla care este locul în care codul nu funcționează cum ar trebui.",
+          "courseB_collector_loops4_c": "Laurel trebuie să se deplaseze în jos și să strângă comoara după ce termină bucla `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
@@ -4758,7 +4774,9 @@
           "courseB_iceage_loops4_c": "ที่เห็นอยู่นี่ เป็นแนวทางที่เจ้ากระรอกเขี้ยวกดาบสแกรทน่าจะใช้"
         },
         "courseB_iceage_loops6_2021": {
-          "courseB_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!"
+          "courseB_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!",
+          "courseB_iceage_loops6_a": "Codul vostru final va avea **trei** blocuri de mișcare.",
+          "courseB_iceage_loops6_c": "Traseul final trebuie să arate ca mai jos."
         },
         "courseB_iceage_loops7_2021": {
           "courseB_iceage_loops7_a": "หากคุณติด คิดไม่ออก ให้ลองเขียนขั้นตอนต่าง ๆ ลงบนกระดาษ คุณเห็นรูปแบบไหมครับ?",
@@ -4766,7 +4784,8 @@
         },
         "courseB_iceage_loops8_2021": {
           "courseB_iceage_loops8_b": "ลูปแรกควรทำซ้ำ **3** ครั้ง ลูปที่สองควรทำซ้ำ **5** ลูปที่สามควรทำซ้ำ **4** และลูปสุดท้ายควรทำซ้ำ **4** ครั้ง",
-          "courseB_iceage_loops8_c": "ใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทให้เดินไปตามทางเส้นนี้"
+          "courseB_iceage_loops8_c": "ใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทให้เดินไปตามทางเส้นนี้",
+          "courseB_iceage_loops8_a": "Sunt corecte blocurile de mișcare? Ce altceva mai puteți schimba?"
         },
         "courseB_iceage_loops9_2021": {
           "courseB_iceage_loops9_a": "มีปัญหาอะไรไหมครับ? ลองแบ่งปริศนานี้เป็นชิ้นเล็กๆ และไม่ต้องกลัวที่จะลองเรียกใช้งานโค้ดของคุณในขณะที่คุณยังเขียนโค้ดไม่สมบูรณ์!",
@@ -4774,10 +4793,14 @@
           "courseB_iceage_loops9_c": "เจ้ากระรอกเขี้ยวดาบควรลองใช้เส้นทางนี้ดู เพื่อไปให้ถึงลูกโอ๊ค"
         },
         "courseB_maze_seq6_2021": {
-          "courseB_maze_seq6_a": "โค้ดที่ถูกต้องควรประกอบด้วยบล็อกที่ทำให้มีการเคลื่อนไหวจำนวนสามบล็อก"
+          "courseB_maze_seq6_a": "โค้ดที่ถูกต้องควรประกอบด้วยบล็อกที่ทำให้มีการเคลื่อนไหวจำนวนสามบล็อก",
+          "courseB_maze_seq6_b": "Dacă vă blocați, încercați să rezolvați puzzle-ul din două părți, din lateral și de sus în jos.",
+          "courseB_maze_seq5_c": "Există două soluții pentru acest puzzle.",
+          "courseB_maze_seq5_d": "Nu sunteți siguri cum să ajungeți la ghindă? Încercați acest traseu!"
         },
         "courseB_maze_seq_challenge2_2021": {
-          "courseB_maze_seq_challenge2_a": "ไม่มีความจำเป็นสำหรับคุณในการแก้ปริศนานี้ ที่จะต้องเพิ่มบล็อกใหม่เข้าไปหรือลบบล็อกที่มีอยู่ในพื้่นที่ทำงานออก"
+          "courseB_maze_seq_challenge2_a": "ไม่มีความจำเป็นสำหรับคุณในการแก้ปริศนานี้ ที่จะต้องเพิ่มบล็อกใหม่เข้าไปหรือลบบล็อกที่มีอยู่ในพื้่นที่ทำงานออก",
+          "courseB_maze_seq_challenge2_b": "Aranjați blocurile în altă ordine și urmați traseul cu modelul în formă de scară."
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
@@ -4824,7 +4847,8 @@
         },
         "courseC_PlayLab_events3_2021": {
           "courseC_PlayLab_events3_a": "คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.",
-          "courseC_PlayLab_events3_b": "มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?"
+          "courseC_PlayLab_events3_b": "มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?",
+          "courseC_PlayLab_events3_c": "Atașați acest bloc la blocul `when run`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "จอร์จต้องขยับไปทางขวา 100 พิกเซลเพื่อไปให้ถึงแมว",
@@ -4836,14 +4860,16 @@
         },
         "courseC_PlayLab_events6_2021": {
           "courseC_PlayLab_events6_b": "ใช้เมนูแบบดร็อปดาว์นลงบนบล็อก `ย้ายนักแสดงที่ 1` เพื่อเปลี่ยนทิศทางที่ แวดเดิลเคลื่อนที่",
-          "courseC_PlayLab_events6_c": "เมื่อคุณเสร็จแล้ว คุณควรจะสามารถย้าย แวดเดิลไปรอบๆ โดยใช้ปุ่มลูกศรบนคอมพิวเตอร์ของคุณ"
+          "courseC_PlayLab_events6_c": "เมื่อคุณเสร็จแล้ว คุณควรจะสามารถย้าย แวดเดิลไปรอบๆ โดยใช้ปุ่มลูกศรบนคอมพิวเตอร์ของคุณ",
+          "courseC_PlayLab_events6_a": "Fiecare bloc `when arrow` de culoare verde trebuie să aibă o acțiune sub el."
         },
         "courseC_PlayLab_events7_2021": {
           "courseC_PlayLab_events7_a": "ใช้บล็อกทั้งสอง `ให้นักแสดง 2 ขยับ ขึ้นข้างบน 400 พิกเซล` และ ให้นักแสดง 2 ขยับ ลงข้างล่าง 400 พิกเซล ไว้ภายในลูป `ทำซ้ำตลอดไป` เพื่อแก้ปริศนาด่านนี้ ",
           "courseC_PlayLab_events7_b": "ลูป `ทำซ้ำตลอดไป` ไม่จำเป็นต้องเชื่อมต่อกับบล็อกอีเวนท์อื่นๆ มันจะทำงานด้วยตัวของมันเอง"
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_b": "บล็อก `นักแสดง.... พูดว่า`และ`เล่นเสียง....` ในกล่องเครื่องมือจะช่วยคุณได้!"
+          "courseC_PlayLab_events8_b": "บล็อก `นักแสดง.... พูดว่า`และ`เล่นเสียง....` ในกล่องเครื่องมือจะช่วยคุณได้!",
+          "courseC_PlayLab_events8_a": "Va trebui să conectați blocurile la blocul `when actor touches` pentru ca acest lucru să se întâmple."
         },
         "courseC_PlayLab_events9_2021": {
           "courseC_PlayLab_events9_a": "บล็อก ' ได้คะแนน ' จะช่วยคุณแก้ปริศนานี้",
@@ -4867,11 +4893,13 @@
           "courseC_artist_loops3a_b": "ใช้เมนูแบบดรอปดาว์นที่อยู่บนบล็อก `วาดสติ๊กเกอร์` เพื่อค้นหาสติ๊กเกอร์ค้างคาว"
         },
         "courseC_artist_loops4a_2021": {
-          "courseC_artist_loops4a_a": "ใช้บล็อกนี้เพื่อกระโดดไปข้างหน้า:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nอย่าลืมเปลี่ยนระยะทาง"
+          "courseC_artist_loops4a_a": "ใช้บล็อกนี้เพื่อกระโดดไปข้างหน้า:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nอย่าลืมเปลี่ยนระยะทาง",
+          "courseC_artist_loops4a_b": "Programul vostru ar trebui să arate așa!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2021": {
           "courseC_artist_loops5b_a": "ใช้บล็อกนี้สำหรับตั้งค่ารูปแบบของเส้นต่างๆ:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
-          "courseC_artist_loops5b_b": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น คุณจะต้องเดินถอยหลังไปด้วยระยะทางเดียวกับที่คุณเดินไปข้างหน้า"
+          "courseC_artist_loops5b_b": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น คุณจะต้องเดินถอยหลังไปด้วยระยะทางเดียวกับที่คุณเดินไปข้างหน้า",
+          "courseC_artist_loops5b_c": "Programul vostru ar trebui să arate așa!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops6a_2021": {
           "courseC_artist_loops6a_a": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซล โดยอยู่ระหว่างสติกเกอร์แต่ละอัน"
@@ -4891,7 +4919,9 @@
         },
         "courseC_artist_prog5_2021": {
           "courseC_artist_prog5_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
-          "courseC_artist_prog5_c": "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกเพื่อเปลี่ยนขนาดให้เป็นไปตามที่คุณต้องการ!"
+          "courseC_artist_prog5_c": "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกเพื่อเปลี่ยนขนาดให้เป็นไปตามที่คุณต้องการ!",
+          "courseC_artist_prog5_a": "Deplasați încet cursorul până când puteți rula codul linie cu linie, pentru a vedea unde nu funcționează cum trebuie.",
+          "courseC_artist_prog5_d": "Fiecare întoarcere trebuie să fie de 90 de grade la dreapta."
         },
         "courseC_artist_prog6_2021": {
           "courseC_artist_prog6_a": "ศิลปินได้หันหน้าไปในทิศทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา",
@@ -4916,15 +4946,18 @@
         },
         "courseC_collector_prog4_2021": {
           "courseC_collector_prog4_a": "หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ",
-          "courseC_collector_prog4_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+          "courseC_collector_prog4_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_collector_prog4_c": "Încercați această opțiune pentru un traseu."
         },
         "courseC_collector_prog5_2021": {
           "courseC_collector_prog5_b": "ถ้าคุณแก้ไขข้อผิดพลาดหนึ่งและโปรแกรมยังคงไม่ทำงาน ให้ใช้ขั้นตอนข้างต้นเพื่อค้นหาบั๊กเพิ่มเติม",
           "courseC_collector_prog5_c": "หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ",
-          "courseC_collector_prog5_d": "เดินตามเส้นทางไปเพื่อเก็บรวบรวมสมบัติ"
+          "courseC_collector_prog5_d": "เดินตามเส้นทางไปเพื่อเก็บรวบรวมสมบัติ",
+          "courseC_collector_prog5_a": "„Funcționează totul în prima etapă?\nDar în a doua?\nUnde nu funcționează?”"
         },
         "courseC_collector_prog6_2021": {
-          "courseC_collector_prog6_a": "เจอสิ่งที่ผิดไหม?\n\nลองใช้ปุ่ม  \"ขั้นตอน\" เพื่อค้นหาข้อผิดพลาดโดยการเรียกใช้งานโค้ดของคุณทีละบรรทัด"
+          "courseC_collector_prog6_a": "เจอสิ่งที่ผิดไหม?\n\nลองใช้ปุ่ม  \"ขั้นตอน\" เพื่อค้นหาข้อผิดพลาดโดยการเรียกใช้งานโค้ดของคุณทีละบรรทัด",
+          "courseC_collector_prog6_b": "V-ați blocat? Încercați acest traseu pentru a strânge comoara."
         },
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_a": "มีโค้ดที่ดีอยู่แล้วจำนวนมากในพื้นที่ทำงาน คุณไม่จำเป็นต้องลบอันไหนออกไป เพื่อแก้ปริศนาด่านนี้  ",
@@ -4932,7 +4965,8 @@
           "courseC_collector_prog7_c": "มีปัญหาในการวางเส้นทางการเก็บรวบรวมสมบัติทั้งหมดหรือไม่ ลองเส้นทางนี้ดู!"
         },
         "courseC_flappy_events2_2021": {
-          "courseC_flappy_events2_a": "บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `กำหนดความเร็ว...`. "
+          "courseC_flappy_events2_a": "บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `กำหนดความเร็ว...`. ",
+          "courseC_flappy_events2_b": "Conectați blocul `set speed` la blocul `when run` pentru a rezolva acest puzzle."
         },
         "courseC_flappy_events3_2021": {
           "courseC_flappy_events3_a": "ถ้ามีบางอย่างทำงานไม่ถูกต้องให้ตรวจสอบให้แน่ใจว่าบล็อกของคุณเชื่อมต่อกับอีเวนท์อย่างถูกต้องในพื้นที่ทำงาน"
@@ -5004,11 +5038,13 @@
           "courseC_maze_debugging3_b": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น"
         },
         "courseC_maze_debugging4_2021": {
-          "courseC_maze_debugging4_a": "ใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่"
+          "courseC_maze_debugging4_a": "ใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่",
+          "courseC_maze_debugging4_b": "Una dintre întoarceri îl face pe Scrat să se îndrepte în direcția greșită. Despre care dintre ele este vorba?"
         },
         "courseC_maze_debugging7_2021": {
           "courseC_maze_debugging7_b": "อย่าลืมที่จะใช้ปุ่ม \"ขั้นตอน \" เพื่อเรียกใช้งานโปรแกรมทีละบรรทัด!",
-          "courseC_maze_debugging7_c": "หลังจากที่คุณค้นหาและแก้ไขข้อผิดพลาดแรกแล้วให้ตรวจสอบให้แน่ใจว่าได้ใช้กระบวนการตรวจแก้จุดบกพร่องหรือดีบั๊กอีกครั้งเพื่อค้นหาข้อผิดพลาดรายการถัดไป\n\nทำซ้ำกระบวนการดีบั๊กจนกว่าโปรแกรมจะทำงาน!"
+          "courseC_maze_debugging7_c": "หลังจากที่คุณค้นหาและแก้ไขข้อผิดพลาดแรกแล้วให้ตรวจสอบให้แน่ใจว่าได้ใช้กระบวนการตรวจแก้จุดบกพร่องหรือดีบั๊กอีกครั้งเพื่อค้นหาข้อผิดพลาดรายการถัดไป\n\nทำซ้ำกระบวนการดีบั๊กจนกว่าโปรแกรมจะทำงาน!",
+          "courseC_maze_debugging7_a": "-   Funcționează totul în prima etapă?\n-   Dar în a doua?\n-   Unde nu funcționează?"
         },
         "courseC_maze_programming1_2021": {
           "courseC_maze_programming1_0": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
@@ -5018,7 +5054,8 @@
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nเมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน\n\nแล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ\n\nสุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่"
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nเมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน\n\nแล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ\n\nสุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่",
+          "courseC_maze_programming3_a": "Încercați să rulați codul mai întâi pentru a vedea ce nu funcționează."
         },
         "courseC_maze_programming6_2021": {
           "courseC_maze_programming6_a": "มีวิธีแก้ปริศนานี้สองวิธี",
@@ -5027,10 +5064,12 @@
           "courseC_maze_programming6_d": "รู้สีกว่าทางตันหรือเปล่า  ลองดูเส้นทางสีแดงทีให้ไว้สิ!"
         },
         "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_b": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
+          "courseC_maze_programming7_b": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ",
+          "courseC_maze_programming7_a": "Nu uitați să folosiți butonul „Step” pentru a verifica bloc cu bloc și pentru a căuta erorile."
         },
         "courseC_maze_programming8_2021": {
-          "courseC_maze_programming8_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+          "courseC_maze_programming8_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_maze_programming8_a": "Nu uitați că puteți utiliza butonul „Step” pentru a analiza codul linie cu linie dacă vă blocați."
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "รูปแบบนี้ดูเหมือนจะเป็นรูปแบบขั้นบันได-ขนาดยักษ์? มาดูซิว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้มาใช้ในการหันซ้ายหันขวาได้อย่างถูกต้องเพียงไร",
@@ -5081,7 +5120,8 @@
           "courseC_starWars_loops7_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
         },
         "courseC_starWars_loops9_2021": {
-          "course_starWars_loops9_c": "คุณไม่จำเป็นต้องหันซ้ายเพื่อแก้ปริศนานี้ การเหันทั้งหมดของคุณสามารถหันไปทางขวาอย่างเดียว\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "คุณไม่จำเป็นต้องหันซ้ายเพื่อแก้ปริศนานี้ การเหันทั้งหมดของคุณสามารถหันไปทางขวาอย่างเดียว\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)",
+          "course_starWars_loops9_b": "Nu uitați că puteți introduce mai multe blocuri în interiorul unei bucle `repeat`."
         },
         "courseD_artist_nestedLoops1_2021": {
           "courseD_artist_nestedLoops1_a": "วิธีที่ง่ายที่สุดในการวาดรูปนี้คือการวาดเส้นไปข้างหน้าและหันไปทางขวา",
@@ -5090,7 +5130,8 @@
         },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_a": "คุณจะต้องวาดรูปสามเหลี่ยมรวม 6 รูป หลังจากเสร็จการวาดสามเหลี่ยมแต่ละรูปให้หัน 60 องศาและเริ่มต้นวาดรูปสามเหลี่ยมถัดไป",
-          "courseD_artist_nestedLoops1a_b": "ถ้าคุณสร้างสามเหลี่ยมของคุณด้วยลูป ศิลปินควรจะหันหน้าไปทางเดียวกันกับที่พวกเขาเริ่มต้น อันนี้จะทำให้ การหันไป 60 องศาง่ายขึ้นมาก"
+          "courseD_artist_nestedLoops1a_b": "ถ้าคุณสร้างสามเหลี่ยมของคุณด้วยลูป ศิลปินควรจะหันหน้าไปทางเดียวกันกับที่พวกเขาเริ่มต้น อันนี้จะทำให้ การหันไป 60 องศาง่ายขึ้นมาก",
+          "courseD_artist_nestedLoops1a_c": "Dacă vreți să folosiți culori, folosiți blocul `set color` (setează culoare) în cod. Nu trebuie să coordonați culorile din imaginea din model."
         },
         "courseD_artist_nestedLoops2_2021": {
           "courseD_artist_nestedLoops2_a": "ซ้อนลูปของคุณโดยล้อมรอบโค้ดสามเหลี่ยมของคุณด้วยลูป `ทำซ้ำ`อีกอันหนึ่ง",
@@ -5112,24 +5153,31 @@
           "courseD_artist_nestedLoops5_b": "เมื่อต้องการทำวงกลม ให้ตั้งค่าลูปทำซ้ำให้ทำซ้ำ 360 ครั้ง ภายในลูป วาดเส้นไปข้างหน้า1พิกเซลและหันไป 1 องศา."
         },
         "courseD_artist_nestedLoops7_2021": {
-          "courseD_artist_nestedLoops7_b": "ใช้ลูปที่ซ้อนกันซึ่งลูปภายในเป็นโค้ดสำหรับวาดสี่เหลี่ยม\n\n-   ทำซ้ำ 6 ครั้ง\n-   วาดสี่เหลี่ยม\n-   กระโดดไปข้างหน้า **50 พิกเซล**\n-   หมุน **60 องศา**"
+          "courseD_artist_nestedLoops7_b": "ใช้ลูปที่ซ้อนกันซึ่งลูปภายในเป็นโค้ดสำหรับวาดสี่เหลี่ยม\n\n-   ทำซ้ำ 6 ครั้ง\n-   วาดสี่เหลี่ยม\n-   กระโดดไปข้างหน้า **50 พิกเซล**\n-   หมุน **60 องศา**",
+          "courseD_artist_nestedLoops7_a": "Aici va trebui să folosiți bucle imbricate. Mai întâi, utilizați o buclă pentru a desena un pătrat. Ce va face bucla exterioară dacă bucla interioară desenează un pătrat?"
         },
         "courseD_artist_nestedLoops8_2021": {
-          "courseD_artist_nestedLoops8_b": "ถ้าเกิดการติดขัดขึ้นมา ให้เริ่มด้วยการดูปริศนาสุดท้าย และเปลี่ยนให้แตกต่างไป"
+          "courseD_artist_nestedLoops8_b": "ถ้าเกิดการติดขัดขึ้นมา ให้เริ่มด้วยการดูปริศนาสุดท้าย และเปลี่ยนให้แตกต่างไป",
+          "courseD_artist_nestedLoops8_a": "Pentru a obține 8 hexagoane în desen, va trebui să faceți întoarceri de **45 de grade** între fiecare dintre ele. De ce? Pentru că 360 de grade (o întoarcere completă) împărțit la 8 (numărul de hexagoane) este egal cu 45 de grade.",
+          "courseD_artist_nestedLoops8_c": "Utilizați o buclă imbricată:\n\n-   Repetați de 8 ori\n    -   desenați un hexagon\n    -   faceți un salt înainte de 50 de pixeli\n    -   faceți o întoarcere la dreapta cu 45 de grade"
         },
         "courseD_artist_nestedLoops9_2021": {
-          "courseD_artist_nestedLoops9_a": "เริ่มต้นด้วยการใช้ลูปที่ซ้อนกันเช่นเดียวกับก่อนหน้านี้ แต่คราวนี้ให้สร้างด้วยสี่เหลี่ยมแทน"
+          "courseD_artist_nestedLoops9_a": "เริ่มต้นด้วยการใช้ลูปที่ซ้อนกันเช่นเดียวกับก่อนหน้านี้ แต่คราวนี้ให้สร้างด้วยสี่เหลี่ยมแทน",
+          "courseD_artist_nestedLoops9_b": "Adăugați un al doilea set de bucle imbricate la sfârșitul primului set, dar de data aceasta folosiți triunghiuri.",
+          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetați de 8 ori\n    -   desenați un pătrat\n    -   faceți un salt înainte de 50 de pixeli\n    -   faceți o întoarcere la dreapta cu 45 de grade\n-   Repetați de 8 ori\n    -   desenați un triunghi\n    -   faceți un salt înainte de 50 de pixeli\n    -   faceți o întoarcere la dreapta cu 45 de grade"
         },
         "courseD_artist_nestedLoopsFP_2021": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nรูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำหกเหลี่ยม (ที่มีด้าน 50px) 15 ครั้งโดยใช้การหันไป 48 องศา",
-          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nรูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา"
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nรูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nAceastă imagine a fost realizată folosind un cod similar cu cel din nicelurile pe care le-ați parcurs înainte, dar cu cercuri (repetare de 360 de ori: deplasare înainte 1, întoarcere 1 grad)."
         },
         "courseD_artist_nestedLoops_challenge2_2021": {
           "courseD_artist_nestedLoops_challenge2_a": "เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง",
           "courseD_artist_nestedLoops_challenge2_b": "เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง"
         },
         "courseD_bee_conditionals2_2021": {
-          "courseD_bee_conditionals2_a": "บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`"
+          "courseD_bee_conditionals2_a": "บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`",
+          "courseD_bee_conditionals2_c": "Nu trebuie să verificați dacă există faguri de miere, sub nori vor fi doar flori sau spații goale."
         },
         "courseD_bee_conditionals2_dani": {
           "courseD_bee_conditionals2_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
@@ -5147,7 +5195,8 @@
           "courseD_bee_conditionals3_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
         },
         "courseD_bee_conditionals4_2021": {
-          "courseD_bee_conditionals4_a": "คุณถือเสมือนว่า ทุกพื้นที่นั้นหมือนกับว่ามีเมฆปกคลุมอยู่ แม้ว่าคุณจะสามารถมองเห็นเส้นทางทั้งหมดก็ตาม"
+          "courseD_bee_conditionals4_a": "คุณถือเสมือนว่า ทุกพื้นที่นั้นหมือนกับว่ามีเมฆปกคลุมอยู่ แม้ว่าคุณจะสามารถมองเห็นเส้นทางทั้งหมดก็ตาม",
+          "courseD_bee_conditionals4_b": "Folosiți un enunț `if` în interiorul buclei pentru a vă uita în fiecare spațiu după nectar."
         },
         "courseD_bee_conditionals4_dani": {
           "courseD_bee_conditionals4_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
@@ -5161,7 +5210,8 @@
         },
         "courseD_bee_conditionals6_2021": {
           "courseD_bee_conditionals6_a": "ให้แน่ใจว่า คุณใช้คำลั่ง `ถ้า(if)` เพื่อเช็คดูรวงผึ้งใต้เมฆแต่ละก้อน",
-          "courseD_bee_conditionals6_b": "ในกรณีนี้ คุณไม่จำเป็นต้องเช็คดูว่ามีดอกไม้อยู่ใต้เมฆหรือไม่"
+          "courseD_bee_conditionals6_b": "ในกรณีนี้ คุณไม่จำเป็นต้องเช็คดูว่ามีดอกไม้อยู่ใต้เมฆหรือไม่",
+          "courseD_bee_conditionals6_c": "Există o buclă pe care o puteți folosi pentru a simplifica codul?"
         },
         "courseD_bee_conditionals7_2021": {
           "courseD_bee_conditionals7_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้",
@@ -5171,10 +5221,12 @@
           "courseD_bee_conditionals7_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
         },
         "courseD_bee_conditionals8_2021": {
-          "courseD_bee_conditionals8_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
+          "courseD_bee_conditionals8_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้",
+          "courseD_bee_conditionals8_b": "Acest puzzle este complicat, deoarece nu puteți verifica pătratele goale, nectarul și mierea cu o singură relație de condiționalitate.\n\nVerificați doar dacă există nectar și miere la capătul căii pe care ați ales-o."
         },
         "courseD_bee_conditionals_challenge1_2021": {
-          "courseD_bee_conditionals_challenge1_b": "สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้ รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น `ถ้า/ไม่เช่นนั้น (if/else)` ในแต่ละช่องที่ผึ้งบินผ่านไป"
+          "courseD_bee_conditionals_challenge1_b": "สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้ รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น `ถ้า/ไม่เช่นนั้น (if/else)` ในแต่ละช่องที่ผึ้งบินผ่านไป",
+          "courseD_bee_conditionals_challenge1_a": "Puteți găsi calea care ajunge la fiecare floare și la fiecare fagure de miere fără a vă lovi de un copac? Cea mai bună cale are forma unei spirale."
         },
         "courseD_farmer_condLoops1_2021": {
           "courseD_farmer_condLoops1_a": "คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้บล็อกลูปทำซ้ำ",
@@ -5190,13 +5242,17 @@
           "courseD_farmer_condLoops3_b": "สำหรับปริศนาอันนี้ คุณควรที่จะมี คำสั่ง`ถ้า นอกจากนั้น(if/else)` สองคำสั่งและคำสั่ง`ถ้า(if)` แบบธรรมดาๆอีกหนึ่งคำสั่ง"
         },
         "courseD_farmer_condLoops4_2021": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "ลูปข`ขณะที่....` จะรองรับกรณีที่ว่างเปล่าด้วยเช่นกัน! เมื่อไม่มีผักสลัด ก็จะไม่มีการเก็บแต่อย่างใดและปล่อยให้โค้ดดำเนินต่อไป"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "ลูปข`ขณะที่....` จะรองรับกรณีที่ว่างเปล่าด้วยเช่นกัน! เมื่อไม่มีผักสลัด ก็จะไม่มีการเก็บแต่อย่างใดและปล่อยให้โค้ดดำเนินต่อไป",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nimeni nu știe câte căpățâni de salată vor crește din fiecare răsad.\n\nFolosiți o buclă `while there is lettuce` (cât timp există salată) pentru a continua să culegeți până când toate bucățile au fost culese.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puteți utiliza fie o buclă `while path ahead` (cât există cale în față), fie o buclă `repeat` pentru a trece prin toate culturile."
         },
         "courseD_farmer_condLoops5_2021": {
-          "courseD_farmer_condLoops5_a": "มีลูปใหม่ `ทำซ้ำจนกว่านี่คือฟักทอง` คุณเห็นวิธีใช้มันในปริศนานี้หรือไม่?"
+          "courseD_farmer_condLoops5_a": "มีลูปใหม่ `ทำซ้ำจนกว่านี่คือฟักทอง` คุณเห็นวิธีใช้มันในปริศนานี้หรือไม่?",
+          "courseD_farmer_condLoops5_b": "Este posibil să existe mai multe plante de porumb sau de salată în fiecare spațiu. Folosiți o buclă `while` pentru a le culege pe toate!"
         },
         "courseD_farmer_while1_2021": {
-          "courseD_farmer_while1_b": "ใช้บล็อก `ตักดินออก 1 ครั้ง` เมื่อคุณยืนอยู่บนกองดินเพื่อปรับหน้าดินให้เรียบ"
+          "courseD_farmer_while1_b": "ใช้บล็อก `ตักดินออก 1 ครั้ง` เมื่อคุณยืนอยู่บนกองดินเพื่อปรับหน้าดินให้เรียบ",
+          "courseD_farmer_while1_a": "Va trebui să vă deplasați înainte de patru ori pentru a ajunge la grămadă. Puteți folosi o buclă `repeat` pentru acest lucru?"
         },
         "courseD_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
@@ -5213,7 +5269,8 @@
           "courseD_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseD_iceage_loops3_2021": {
-          "courseB_iceage_loops3_b": "ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน"
+          "courseB_iceage_loops3_b": "ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน",
+          "courseB_iceage_loops3_a": "Folosiți acest nou bloc!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
         },
         "courseD_iceage_loops4_2021": {
           "courseD_iceage_loops4_a": "อย่ากลัวที่จะเรียกใช้งานโค้ดของคุณ และดูว่าจะเกิดอะไรขึ้น!",
@@ -5222,7 +5279,8 @@
         },
         "courseD_iceage_loops6_2021": {
           "courseD_iceage_loops6_a": "โค้ดของคุณที่เสร็จสมบูรณ์จะประกอบไปด้วยบล็อก `ไปข้างหน้า` จำนวน**สาม**บล็อก",
-          "courseD_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!"
+          "courseD_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!",
+          "courseD_iceage_loops6_c": "Traseul final trebuie să arate ca mai jos."
         },
         "courseD_iceage_loops7_2021": {
           "courseB_iceage_loops7_a": "หากคุณติด คิดไม่ออก ให้ลองเขียนขั้นตอนต่าง ๆ ลงบนกระดาษ คุณเห็นรูปแบบไหมครับ?",
@@ -5239,13 +5297,18 @@
           "courseD_iceage_loops9_c": "เจ้ากระรอกเขี้ยวดาบควรลองใช้เส้นทางนี้ดู เพื่อไปให้ถึงลูกโอ๊ค"
         },
         "courseD_maze_intro5a_2021": {
-          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_maze_programming5_a": "Încercați să utilizați butonul „Step” pentru a rula codul linie cu linie. Știți ce trebuie să faceți în continuare?",
+          "courseC_maze_programming5_b": "Nu uitați că întoarcerile se fac din perspectiva lui Red."
         },
         "courseD_maze_nestedLoops4_2021": {
-          "courseD_maze_nestedLoops4_b": "ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน"
+          "courseD_maze_nestedLoops4_b": "ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน",
+          "courseD_maze_nestedLoops4_a": "Încercați să folosiți acest traseu prin labirint.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_c": "Încercați să folosiți o buclă `repeat` în interiorul alteia pentru a scurta codul de care aveți nevoie."
         },
         "courseD_maze_nestedLoops5_2021": {
-          "courseD_maze_nestedLoops5_a": "มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้"
+          "courseD_maze_nestedLoops5_a": "มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้",
+          "courseD_maze_nestedLoops5_b": "Nu știți unde să puneți buclele? Încercați să scrieți codul pe hârtie, pas cu pas, apoi căutați un model care se repetă."
         },
         "courseD_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก \"เริ่ม\" อีกครั้ง",
@@ -5256,10 +5319,14 @@
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกถูกคลิกเอามาต่อเข้ากันกับบล็อก `เมื่อเรียกใช้งาน`"
         },
         "courseD_maze_ramp5_2021": {
-          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_maze_programming5_a": "Încercați să utilizați butonul „Step” pentru a rula codul linie cu linie. Știți ce trebuie să faceți în continuare?",
+          "courseC_maze_programming5_b": "Nu uitați că întoarcerile se fac din perspectiva păsării."
         },
         "courseD_maze_ramp5b_2021": {
-          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_maze_programming5_a": "Încercați să utilizați butonul „Step” pentru a rula codul linie cu linie. Știți ce trebuie să faceți în continuare?",
+          "courseC_maze_programming5_b": "Nu uitați că întoarcerile se fac din perspectiva păsării."
         },
         "courseD_maze_until1_2021": {
           "courseD_maze_until1_a": "มีลำดับขั้นตินใด ที่คุณสามารถลูปเพื่อจะทำให้โค้ดของคุณสั้นลง?",
@@ -5294,13 +5361,17 @@
           "courseE_artist_functions1_b": "โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ"
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
+          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน",
+          "courseD_artist_functions2_b": "Funcția nu trebuie să conțină întregul program, ci doar partea care desenează un pătrat cu laturile de 100 de pixeli.",
+          "courseD_artist_functions2_c": "Asigurați-vă că folosiți blocul `draw a square` (desenează un pătrat) de culoare verde pentru a „apela” funcția. În caz contrar, codul din funcția voastră nu va fi rulat.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
         },
         "courseF_bee_for5_2021": {
-          "courseF_bee_for5_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
+          "courseF_bee_for5_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม",
+          "courseF_bee_for5_a": "De data aceasta, blocul `move forward` și blocul `get nectar` vor trebui să se afle în bucle `repeat` separate, ambele situate în interiorul aceleiași bucle `for`.",
+          "courseF_bee_for5_b": "Folosiți variabila `counter` în fiecare buclă pentru ca albina să se deplaseze la distanțe diferite între fiecare floare."
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น เช็คดูให้แน่ใจว่าบล็อกทั้งสองถูกคลิกต่อกันอย่างสมบูรณ์ แล้วคลิก \" เริ่ม \" อีกครั้งหนึ่ง",
@@ -5311,7 +5382,7 @@
           "iceage_sound_and_points_b": "คุณจะต้องใช้ทั้งบล็อก `ให้หนึ่งคะแนน` และบล็อก 'เล่น \\_\\_\\_\\_ เสียง' เพื่อผ่านด่านนี้"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "คุณสามารถเปลี่ยนภาพพื้นหลังด้วยการเชื่อมต่อบล็อก `ตั้งภาพพื้นหลัง` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "คุณสามารถเปลี่ยนภาพพื้นหลังด้วยการเชื่อมต่อบล็อก `ตั้งภาพพื้นหลัง` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_หมายเหตุ:_ ในการเพิ่มพฤติกรรมให้สไปร์ทนั้น คุณจำเป็นต้องใช้บล็อก `เริ่มต้นสไปร์ท` พร้อมกับบล็อกพฤติกรรมสีเขียว เช่น `หมุนไปทางขวา`\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -5321,10 +5392,10 @@
           "hw_click_sprites": "คลิกที่สไปรท์ในขณะที่โปรแกรมกำลังทำงาน"
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "ลองเชื่อมต่อบล็อก `เปลี่ยนเครื่องแต่งกาย` ไว้ใต้บล็อกอีเวนต์ `เมื่อคลิก`\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "ลองเชื่อมต่อบล็อก `เปลี่ยนเครื่องแต่งกาย` ไว้ใต้บล็อกอีเวนต์ `เมื่อคลิก`\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "เชื่อมต่อบล็อก `พูด` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "เชื่อมต่อบล็อก `พูด` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "คลิกที่หมุดในบล็อกสถานที่แล้วเลือกที่ที่ต้องการไปเพื่อเปลี่ยนสถานที่ของสไปร์ท\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -5336,7 +5407,7 @@
           "hello-world-first-solution-bear": "ต่อบล็อกโค้ดในลักษณะนี้จะทำให้หมีพูดได้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "คุณสามารถใช้บล็อกนี้เพื่อตั้งค่าขนาดของสไปร์ทเพียงครั้งเดียวได้:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "คุณสามารถใช้บล็อกนี้เพื่อตั้งค่าขนาดของสไปร์ทเพียงครั้งเดียวได้:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "หากคุณต้องการเปลี่ยนขนาดของสไปร์ทหลายๆครั้ง(ด้วยอีเวนต์) ให้ใช้บล็อกนี้:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -5398,7 +5469,7 @@
           "storyboard_changePropBy": "หากคุณต้องการเปลี่ยนขนาดของสไปร์ทหลายๆครั้ง(ด้วยอีเวนต์) ให้ใช้บล็อกนี้:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "คุณสามารถเปลี่ยนภาพพื้นหลังด้วยการเชื่อมต่อบล็อก `ตั้งภาพพื้นหลัง` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "คุณสามารถเปลี่ยนภาพพื้นหลังด้วยการเชื่อมต่อบล็อก `ตั้งภาพพื้นหลัง` ใต้บล็อกอีเวนต์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_หมายเหตุ:_ ในการเพิ่มพฤติกรรมให้สไปร์ทนั้น คุณจำเป็นต้องใช้บล็อก `เริ่มต้นสไปร์ท` พร้อมกับบล็อกพฤติกรรมสีเขียว เช่น `หมุนไปทางขวา`\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -5417,7 +5488,7 @@
           "location_pin_hint": "คลิกที่หมุดในบล็อกสถานที่แล้วเลือกที่ที่ต้องการไปเพื่อเปลี่ยนสถานที่ของสไปร์ท\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "ตรวจดูว่าเครื่องแต่งกายนั้นตรงกับสไปร์ทแต่ละตัวหรือไม่\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ตรวจดูว่าเครื่องแต่งกายนั้นตรงกับสไปร์ทแต่ละตัวหรือไม่\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "ต่อบล็อกโค้ดในลักษณะนี้จะทำให้สิ่งมีชีวิตพูดได้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -5427,8 +5498,8 @@
           "hw_retro_changePropBy": "หากคุณต้องการเปลี่ยนขนาดของสไปร์ทหลายๆครั้ง(ด้วยอีเวนต์) ให้ใช้บล็อกนี้:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "สไปร์ทแต่ละตัวมี **สถานที่** คุณสามารถตั้งค่าสถานที่ได้ด้วยการคลิกที่หมุดในบล็อกนี้: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   คลิกที่หมุด ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ที่บล็อกสถานที่ จากนั้นเลือกตำแหน่งใหม่บนหน้าจอให้กับสไปร์ท\n-   กดปุ่ม \"ใช้งาน\" เมื่อเขียนโค้ดเสร็จสิ้น",
-          "remove_hint": "คุณสามารถย้ายสไปร์ทไปที่เส้นหมายเลขใดก็ได้ เพิ่มสไปร์ทตัวใหม่ตรงนี้: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "สไปร์ทแต่ละตัวมี **สถานที่** คุณสามารถตั้งค่าสถานที่ได้ด้วยการคลิกที่หมุดในบล็อกนี้: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   คลิกที่หมุด ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) ที่บล็อกสถานที่ จากนั้นเลือกตำแหน่งใหม่บนหน้าจอให้กับสไปร์ท\n-   กดปุ่ม \"ใช้งาน\" เมื่อเขียนโค้ดเสร็จสิ้น",
+          "remove_hint": "คุณสามารถย้ายสไปร์ทไปที่เส้นหมายเลขใดก็ได้ เพิ่มสไปร์ทตัวใหม่ตรงนี้: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "ค้นหาบล็อกภาพพื้นหลังแบบนี้:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nและค้นหาบล็อกเอฟเฟกต์ข้อความแบบนี้: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nเชื่อมต่อบล็อกเหล่านี้ใต้คำสั่ง `เมื่อใช้งาน` ในฉาก",
@@ -5440,14 +5511,14 @@
           "more_events_hint": "คุณสามารถใช้อีเวนต์มากกว่าหนึ่งตัวในโปรแกรม ลองใช้อีเวนต์สองตัวที่มีเอฟเฟกต์ต่างกันเพื่อจับคู่ให้ตรงกับบรรทัดใหม่ในบทกวี \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "ค้นหาบล็อกนี้:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nหรือบล็อกนี้: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nเชื่อต่อไว้ใต้คำสั่ง `เมื่อใช้งาน` ในฉาก",
-          "more_code": "เพิ่มเอฟเฟกต์และสีสันเพื่อให้เข้ากับเสียงที่คุณเลือก \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "ค้นหาบล็อกนี้:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nหรือบล็อกนี้: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nเชื่อต่อไว้ใต้คำสั่ง `เมื่อใช้งาน` ในฉาก",
+          "more_code": "เพิ่มเอฟเฟกต์และสีสันเพื่อให้เข้ากับเสียงที่คุณเลือก \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "เพิ่มบล็อก `เริ่มต้นสไปร์ท` ในโค้ด ตรวจดูให้แน่ใจว่าคุณได้สร้างพฤติกรรมให้สไปร์ทแล้ว\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "เพิ่มบล็อก `เริ่มต้นสไปร์ท` ในโค้ด ตรวจดูให้แน่ใจว่าคุณได้สร้างพฤติกรรมให้สไปร์ทแล้ว\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "ค้นหาบล็อกนี้แล้วคลิก `150`\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nจะเกิดอะไรขึ้นหากเป็นหมายเลข `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "ค้นหาบล็อกนี้แล้วคลิก `150`\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nจะเกิดอะไรขึ้นหากเป็นหมายเลข `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "iceage_click_hello": {
           "iceage_click_hello_a": "เพิ่มบล็อก \"นักแสดง 1 คน\" อย่างน้อย 1 บล็อกในกิจกรรม \"เมื่อคลิก\" เพื่อแก้ปริศนานี้ให้สำเร็จ"
@@ -5490,6 +5561,746 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "คุณควรต้องเพิ่มสองบล็อกในที่ที่ควรเพิ่มเท่านั้นเพื่อไขปริศนานี้",
           "iceage_warn_ice_age_b": "เพิ่มบล็อกใหม่ทั้งสองอันใต้เหตุการณ์ \\` เมื่อวิ่ง ' เพื่อให้เกิดขึ้นทันทีหลังจากที่โปรแกรมเริ่มทำงาน"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "Cu ajutorul blocurilor <xml>  <block type=\"simple_move_up_left\"/></xml> Artistul se va deplasa pe diagonală!",
+          "courseA_artist_loops_challenge2_b": "Când terminați unul dintre corturi, săriți cu `jump` de două ori pentru a ajunge la următorul!",
+          "courseA_artist_loops_challenge2_c": "Toate blocurile trebuie să se afle în interiorul unei bucle pentru a rezolva  acest puzzle."
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Încercați această cale pentru a ajunge la o soluție.",
+          "courseA_collector_loops_challenge2kp_a": "Puteți folosi bucle pentru a rezolva acest puzzle?"
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Codul final trebuie să conțină **4** blocuri de mișcare și **2** blocuri de culegere."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Există două soluții pentru acest puzzle."
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "Căutați un bloc care să îl facă pe câine să spună ceva.",
+          "courseA_playLab_events2_b": "Acesta este codul de care aveți nevoie pentru a rezolva puzzle-ul:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Trageți blocul <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> afară și fixați-l în partea de jos a <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
+          "courseA_playLab_events3_b": "Nu uitați să folosiți tasta săgeată stânga pentru a-l deplasa pe Jorge la steag după ce ați scris programul. Când steagul devine verde, ați terminat!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "Acesta este blocul eveniment de care aveți nevoie pentru a-l deplasa pe Jorge la dreapta:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "Acesta este codul de care aveți nevoie pentru a rezolva puzzle-ul:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "Acesta este blocul de evenimente de care aveți nevoie pentru a-l deplasa pe Jorge în sus și în jos:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nși\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Știați că puteți schimba tasta pentru săgeata evenimentului făcând clic pe imaginea din bloc și alegând o nouă tastă?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "Acesta este blocul de eveniment de care aveți nevoie pentru ca Jorge să întreprindă o acțiune când se face clic pe el:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "Acesta este blocul pe care trebuie să-l folosiți pentru a schimba fundalul:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "Acesta este blocul pe care trebuie să-l folosiți pentru a reda un sunet aleatoriu:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Utilizați acest bloc pentru a controla ce se întâmplă atunci când actorii se ciocnesc.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Puteți face o pasăre să cânte.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Puteți face un robot să emită un bip.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Puteți face un mostru furios să mârâie.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Nu uitați să folosiți o buclă `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pentru un cod mai eficient!",
+          "courseB_artist_loops3_b": "Artistul va dori să se deplaseze spre sud pentru a trasa această linie."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Blocul salt vă lasă să vă deplasați înainte fără a trasa o linie.",
+          "courseB_artist_loops4_b": "Va trebui să adăugați un bloc în interiorul buclei repeat pentru a rezolva acest puzzle.",
+          "courseB_artist_loops4_c": "Nu uitați să schimbați numărul de repetări ale buclei."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Trageți o buclă `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, apoi introduceți celelalte blocuri în interiorul acesteia. De câte ori trebuie să repetați?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Încercați să scrieți mișcările pe o bucată de hârtie și căutați un model care se repetă."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Această provocare folosește **4** bucle, una după alta!",
+          "courseB_artist_loops7_b": "Observați că fiecare buclă creează un model de scări care se îndreaptă într-o direcție diferită.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Buclele ar trebui să facă aceasta:\n\n-   Bucla 1\n    -   Dreapta\n    -   Jos\n\n-   Bucla 2\n    -   Dreapta\n    -   Sus\n\n-   Bucla 3\n    -   Stânga\n    -   Sus\n\n-   Bucla 4\n    -   Stânga\n    -   Jos"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "De câte ori ar trebui să repetați modelul pentru a face scara?",
+          "courseB_artist_loops8_b": "Încercați să rulați codul dat pentru a vedea ce face."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Cu ajutorul blocurilor <xml>  <block type=\"simple_move_up_right\"/></xml> Artistul se va deplasa pe diagonală!",
+          "courseB_artist_loops_challenge1_b": "Când terminați unul dintre zaruri, săriți cu `jump` la următorul!",
+          "courseB_artist_loops_challenge1_c": "Va trebui să vă deplasați cu `move` sau să săriți cu `jump` peste unele linii de două ori."
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Aveți deja codul pentru a desena un X. Tot ce trebuie să faceți este să repetați X-ul și să săriți cu `jump` în următorul loc.",
+          "courseB_artist_loops_challenge2_b": "Puteți folosi blocurile `jump` pentru a vă deplasa în alte spații fără a desena."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Dacă nu știți unde să includeți buclele `repeat`, scrieți codul pe hârtie, pas cu pas, apoi căutați un model care se repetă.",
+          "courseB_collector_loops10_b": "Încercați să scrieți mișcările pe o bucată de hârtie și căutați un model care se repetă."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Blocul <xml><block type=\"collector_collect_simplified\"/></xml> poate fi folosit pentru a strânge o comoară atunci când vă aflați deasupra lui."
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Folosiți mai multe bucle pentru a vă atinge obiectivul.",
+          "courseB_collector_loops5_b": "Încercați să rulați codul de câteva ori pentru a vedea ce se întâmplă."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Nu vă dați seama unde lucrurile nu par să funcționeze cum ar trebui? Folosiți butonul „Etapă” pentru a parcurge programul bloc cu bloc.",
+          "courseB_collector_loops6_b": "Puteți modifica numărul de repetări ale buclei repeat făcând clic pe „3” și alegând un număr diferit.",
+          "courseB_collector_loops6_c": "Va trebui să folosiți 3 bucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pentru a rezolva acest puzzle.",
+          "courseB_collector_loops6_d": "Dacă nu înțelegeți prea bine, încercați să împărțiți acest puzzle în 3 secțiuni."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Dacă nu vă descurcați cu puzzle-ul, încercați să îl desenați pe hârtie pentru a-l înțelege.",
+          "courseB_collector_loops7_b": "Veți avea nevoie de 3 bucle repeat pentru a rezolva acest puzzle și nu uitați de comoara suplimentară de la sfârșit!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Dacă nu știți unde să includeți buclele repeat, scrieți codul pe hârtie, pas cu pas, apoi căutați un model care se repetă."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Vi se pare prea greu? Împărțiți-l în 3 probleme mai mici, va părea mai ușor.",
+          "courseB_collector_loops9_b": "Veți avea nevoie de 3 bucle repeat, una după alta, pentru această soluție."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Începeți prin a rula în buclă următoarele comenzi:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Deplasați-vă către este de două ori pe fiecare cale.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nPuteți face aceasta cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.",
+          "courseB_collector_loops_challenge1_d": "Încercați aceasta!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Dacă ceva nu funcționează, încercați să remediați eroarea. Nu renunțați!",
+          "courseB_collector_loops_challenge2a_b": "Analizați această opțiune pentru a traversa labirintul. Vedeți un model pe care îl puteți repeta?",
+          "courseB_collector_loops_challenge2a_c": "Pentru a strânge toate comorile, va trebui fie să adăugați două blocuri <xml> <block type=\"collector_collect\"/></xml> în interiorul buclei, fie să puneți blocul în interiorul propriului bloc `repeat`."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Conectați blocurile la blocul <xml><block type=\"when_run\"/></xml> pentru a-l face pe Scrat să se deplaseze!",
+          "courseB_maze_seq1_b": "Trageți trei dintre aceste săgeți <xml><block type=\"maze_moveSouth\"/></xml> și conectați-le la blocul <xml><block type=\"when_run\"/></xml> pentru a-l duce pe Scrat la ghindă."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Încercați să adăugați câte o instrucțiune, pe rând, până când ajungeți la ghindă.",
+          "courseB_maze_seq4_b": "Va trebui să folosiți blocul <xml><block type=\"maze_moveEast\"/></xml> pentru a rezolva acest puzzle."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Dacă vă blocați, încercați să desenați traseul pe hârtie.",
+          "courseB_maze_seq5_b": "Există două soluții pentru acest puzzle!",
+          "courseB_maze_seq5_c": "Nu sunteți siguri cum să ajungeți la ghindă? Încercați acest traseu."
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Folosiți 1 bloc pentru a-l deplasa pe Scrat la ghindă.",
+          "courseB_maze_seq7_b": "Încercați să rulați codul dat și vedeți unde ajungeți.",
+          "courseB_maze_seq7_c": "Nu sunteți siguri cum să ajungeți la ghindă? Încercați acest traseu!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Încercați să adăugați câte un bloc, pe rând, până când rezolvați puzzle-ul.",
+          "courseB_maze_seq8_b": "Există mai multe soluții pentru acest puzzle!",
+          "courseB_maze_seq8_c": "Nu știți încotro s-o luați? Încercați acest traseu!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Încercați să scrieți mai întâi toți pașii pe o foaie de hârtie.",
+          "courseB_maze_seq9_b": "Realizați programul pe etape și testați-l pe măsură ce îl creați.",
+          "courseB_maze_seq9_c": "Există două soluții pentru acest puzzle.",
+          "courseB_maze_seq9_d": "V-ați blocat? Încercați acest traseu!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Este posibil ca de data aceasta să nu funcționeze calea cea mai scurtă.",
+          "courseB_maze_seq_challenge1_b": "Încercați să folosiți un bloc <xml><block type=\"maze_moveWest\"/></xml> pentru a începe."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "Acesta este blocul cu care o faceți pe Daisy să spună ceva:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "Acesta este blocul pe care ar trebui să-l folosiți pentru a adăuga evenimentul:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "Acesta este blocul de care aveți nevoie pentru a schimba starea de spirit a lui Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Acesta este evenimentul care controlează săgeata stânga:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "Acesta este blocul cu care cavalerul se deplasează la stânga:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "Acesta este blocul eveniment care controlează săgeata dreapta:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "Acesta este blocul cu care cavalerul fuge:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Veți avea nevoie de aceste blocuri de evenimente:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "Folosiți săgețile derulante de pe blocurile de evenimente verzi \\`when \\_\\_\\_ arrow pressed pentru a alege direcții diferite.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "Strângeți toate steagurile pentru a merge mai departe!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "Acesta este blocul eveniment de care aveți nevoie:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "Acesta este blocul de care aveți nevoie pentru a reda un sunet.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "Acesta este blocul de care aveți nevoie pentru a-l face pe cavaler să dispară.\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Faceți animalele să se deplaseze în jos atunci când apăsați `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Schimbați viteza animalelor cu ajutorul acestui bloc:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Ce va spune toată lumea când se va termina cursa? Faceți-i să vorbească folosind acest eveniment:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Fiecare animal din joc trebuie să dispară atunci când se face clic pe el. Acesta trebuie să revină în joc după o secundă sau două!",
+          "courseB_playlab_events_challenge2_b": "Folosiți alte blocuri de evenimente pentru a le face pe celelalte animale să dispară!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "Folosiți comenzi suplimentare pentru a reda sunete sau pentru a obține puncte atunci când faceți clic pe animale!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Variați!\n\nAtribuiți unor animale mai multe puncte decât altora.\nFolosiți sunete diferite.\nSchimbați starea de spirit a animalelor!"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "Blocul `set actor 1 to ???? image` poate fi folosit pentru a adăuga un actor pe scenă.",
+          "courseE_playLab_scaffold1_b": "Puneți blocul `set actor` sub `when run`, pentru ca actorul să apară la începutul programului.",
+          "courseE_playLab_scaffold1_c": "Folosiți `set ???? background` pentru a alege un fundal pentru scena voastră."
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "Trebuie să aveți patru blocuri de evenimente `when arrow`, iar sub fiecare trebuie să existe o direcție de deplasare.",
+          "playlab_up": "Pentru a deplasa actorul în sus, puteți conecta aceste blocuri:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Pentru a deplasa actorul în jos, puteți conecta aceste blocuri:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Pentru a deplasa actorul la stânga, puteți conecta aceste blocuri:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Pentru a deplasa actorul la dreapta, puteți conecta aceste blocuri:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "courseE_playLab_scaffold1_c": "Când ați terminat, trebuie să puteți să vă deplasați eroul cu ajutorul tastelor săgeată!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "Folosiți `score point` pentru a adăuga un punct și `remove point` pentru a scădea un punct."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "Atașați acest bloc la blocul `when run`:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Folosiți tastele săgeată pentru a deplasa pinguinul. Nu este nevoie să scrieți cod pentru a termina acest nivel."
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_În pană de idei?_\n\n**Cine-i acolo?** Faceți personajele să apară împreună cu imagini aleatorii, astfel încât nimeni să nu știe cine va apărea în continuare.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_În pană de idei?_\n\n**Plecăm într-o aventură** - Schimbați fundalul, apoi puneți personajele să vorbească despre locul în care se află acum.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_În pană de idei?_\n\n**Pinball** - Puneți un personaj să se miște folosind tastele săgeată (folosiți blocurile `when up arrow`, `when down arrow`), apoi redați sunete aleatorii atunci când se ciocnește de alte personaje de pe ecran."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Puteți folosi acest bloc pentru a deplasa actorii în diferite locuri din spațiul de joc.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Încercați să folosiți `set actor 1 to the middle left position` când atinge pe oricare dintre ceilalți actori. Jocul se va reseta, pentru ca jucătorul să încerce în continuare!",
+          "courseC_PlayLab_events_challenge_c": "Puteți încerca să schimbați viteza actorilor pentru a face jocul mai ușor sau mai dificil!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Acesta este primul bloc de care veți avea nevoie:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuteți alege stânga sau dreapta și un număr de grade."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "Un cerc are 360 de grade. Înmulțiți gradele din întoarcerea voastră cu numărul de repetări. Este rezultatul egal cu 360?\nConsultați numărul de rotații sugerat pentru a vedea dacă funcționează!"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Puteți face acest desen sub forma unui dreptunghi cu o linie în mijloc sau folosind două pătrate diferite!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "După ce ați desenat prima linie, întoarceți-vă către stânga înainte de a desena a doua linie.",
+          "courseC_artist_prog_challenge2_b": "După ce ați desenat a doua linie, întoarceți-vă către dreapta înainte de a desena a treia linie."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Folosiți bucle pentru a nu rămâne fără blocuri `collect`!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Când ajungeți într-un loc în care se află o comoară, folosiți blocul <xml><block type=\"collector_collect\"/></xml> pentru a o strânge.",
+          "courseC_collector_prog1_b": "Cea mai simplă soluție ar fi să vă deplasați înainte o dată, apoi să strângeți comoara."
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Puteți folosi blocul `collect` de mai multe ori pentru a strânge orice comori suplimentare."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Puteți utiliza mai multe blocuri `collect` pentru fiecare spațiu.",
+          "courseC_collector_prog_challenge1_b": "V-ați rătăcit? Încercați această cale pentru a rezolva puzzle-ul!"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "Este foarte greu fără bucle!",
+          "courseC_harvester_loops_challenge1_b": "Puteți repeta  `move forward` și `pick corn` de câte ori aveți nevoie, apoi `turn right` la fiecare colț.",
+          "courseC_harvester_loops_challenge1_c": "Cel mai bun mod de a strânge porumbul din mijloc este de a folosi un bloc `repeat` în interiorul unui alt bloc `repeat`.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "O modalitate de a rezolva acest puzzle este o deplasare în zig-zag. O alta arată ca o spirală! Există o mulțime de soluții diferite pentru acest puzzle. Fiți perseverenți!",
+          "courseC_harvester_loops_challenge2_b": "Puteți repeta `move forward` și `pick lettuce` de câte ori aveți nevoie, apoi trebuie să vă întoarceți la fiecare colț.",
+          "courseC_harvester_loops_challenge2_c": "Acest model în zig-zag poate fi repetat de două ori pentru a rezolva puzzle-ul cu doar 20 de blocuri!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Puteț scrie codul pentru acest model în spirală cu doar 18 blocuri!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Există deja mai multe blocuri utile în spațiul de lucru. Nu le ștergeți pe toate! \n\nFolosiți butonul „Step” pentru a le parcurge și a afla care dintre porțiunile de cod este incorectă.",
+          "courseC_maze_debugging5_c": "Puteți schimba direcția blocului de întoarcere făcând clic pe meniul derulant.",
+          "courseC_maze_debugging5_b": "Încercați să spuneți cu voce tare ce ar trebui să facă Scrat. Coincide cu codul din spațiul de lucru? Ce nu funcționează cum trebuie?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Ce ar trebui să facă Scrat?\n-   Ce face Scrat?\n-   Ce vă spune aceasta?",
+          "courseC_maze_debugging6_b": "După ce ați găsit și ați rezolvat prima eroare, treceți din nou prin procesul de depanare pentru a o găsi pe cea de-a doua.\n\nRepetați procesul până când programul funcționează!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Stânga sau dreapta? Depinde de voi!",
+          "courseC_maze_debugging_challenge1_b": "Traseul lui Scrat are forma unui dreptunghi! El trebuie să se întoarcă în aceeași direcție de fiecare dată.",
+          "courseC_maze_debugging_challenge1_c": "Dacă vă blocați, puteți să o luați de la capăt oricând și să găsiți o nouă cale!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Dacă vă blocați, încercați să depanați codul. Unde nu funcționează cum trebuie?",
+          "courseC_maze_debugging_challenge2_c": "Există două căi diferite pe care le puteți urma mergând înainte și întorcându-vă de patru ori. Dacă găsiți o modalitate de a folosi o buclă, s-ar putea să găsiți mai multe modalități!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Gândiți-vă la acest traseu ca și cum ar fi format din două piese diferite. Fiecare dintre ele are un model pe care îl puteți repeta.",
+          "courseC_maze_loops_challenge1_b": "Vă amintiți cum puteți folosi buclele pentru a repeta un model de scări?"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Nu uitați că atunci când vă întoarceți, o faceți din perspectiva _păsării_. Dacă vă întoarceți la dreapta, pasărea va fi orientată cu fața în jos.",
+          "courseC_maze_programming4_b": "Pentru a urma cărarea:\n\n-   deplasare înainte\n-   întoarcere într-o direcție\n-   deplasare înainte\n-   întoarcere în direcția opusă\n-   deplasare înainte"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Încercați să utilizați butonul „Step” pentru a rula codul linie cu linie. Știți ce trebuie să faceți în continuare?",
+          "courseC_maze_programming5_b": "Pasărea trebuie să se mai întoarcă o dată pentru a rezolva acest puzzle. Știți în ce direcție?",
+          "courseC_maze_programming5_c": "Soluția va avea două blocuri `move forward`, o întoarcere și încă două blocuri `move forward`."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Există mai multe moduri de a ajunge la porc. Trasează calea cu degetul, apoi programeaz-o!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_„Dacă mă trimiți înapoi, ai grijă să mă întorc în direcția corectă!”_",
+          "courseC_maze_programming_challenge2_b": "Soluția cea mai rapidă folosește doar 5 blocuri, dar folosește acest bloc:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "Cea mai bună soluție include un singur bloc `move forward`, apoi o întoarcere, apoi o buclă."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Încercați să reflectați la această problemă pe secțiuni mici. Nu vă grăbiți. Nu trebuie să o rezolvați din prima încercare!",
+          "course_starWars_loops8_b": "Gândiți-vă la prima jumătate a acestei probleme ca la o problemă cu trepte. Cum ați rezolvat acea problemă?",
+          "course_starWars_loops8_c": "Aruncați o privire la acest traseu.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "Utilizați meniul derulant de pe blocurile `turn` pentru a alege unghiul de care aveți nevoie!",
+          "courseD_artist_project1_b": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_b": "Nu uitați că `move` desenează o linie, iar `jump` nu o desenează.",
+          "courseD_artist_project1_a": "Utilizați meniul derulant de pe blocurile `turn` pentru a alege unghiul de care aveți nevoie!"
+        },
+        "courseD_artist_5_2021": {
+          "1": "Dacă schimbați formele, nu uitați că va trebui să le schimbați și unghiurile!"
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "Începeți prin a schimba culoarea în albastru, apoi creați un octogon cu laturi de 50 de pixeli și întoarceri de 45 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adăugați cod pentru a schimba culoarea în verde, apoi creați un triunghi cu laturi de 50 de pixeli și întoarceri de 120 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_c": "După ce ați desenat ambele forme, va trebui să faceți un salt înainte de 50 de pixeli înainte de a face o întoarcere de 90 de grade la dreapta.",
+          "courseD_artist_nestedLoops_challenge1_d": "Puneți tot codul în interiorul unei bucle `repeat 4 times` (repetă de 4 ori) pentru a termina."
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "Utilizați meniul derulant de pe blocurile `turn` pentru a alege unghiul de care aveți nevoie!",
+          "courseD_artist_project1_b": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "Pentru această treaptă se folosește o întoarcere de 76 de grade și se repetă de 4 ori.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
+          "courseD_artist_project2_b": "După ce desenați și mutați prima dată, puteți repeta codul adăugând o buclă în jurul exteriorului."
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "Acest desen a fost realizat prin introducerea unei bucle de 4 scări și a unui bloc `turn right 180 degrees` (întoarcere la dreapta cu 180 de grade) în interiorul unui bloc `repeat 2 times` (repetă de 2 ori).\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "Utilizați meniul derulant de pe blocurile `turn` pentru a alege unghiul de care aveți nevoie!",
+          "courseD_artist_project3_b": "Încercați buclele imbricate!\n\nFolosiți codul pe care l-ați creat pentru a desena un rând de forme și introduceți-l în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa. \n\n-   Încercați o întoarcere de 72 de grade dacă repetați bucla exterioară de 5 ori.\n-   Încercați o întoarcere de 60 de grade dacă repetați bucla exterioară de 6 ori."
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "Puteți alege diferite numere pentru rotirea formei! Ce spuneți de 18 ori cu o întoarcere de 20 de grade între rotiri?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "Acesta este fulgul de zăpadă care are forma unui pentagon, cu o întoarcere de 36 de grade, înainte de un fulg de zăpadă triunghiular:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nIată un set de hexagoane cu pătrate:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pentru a încerca acest lucru, desenați primul fulg de zăpadă, faceți o întoarcere, apoi desenați un al doilea fulg de zăpadă."
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "Iată doi fulg de zăpadă cu lungimi diferite, desenați unul după altul (cu o întoarcere de 30 de grade între ei.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "Rânduri cu 2 hexagoane și 4 triunghiuri:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "Va trebui să folosiți un bloc `if` pentru a vedea dacă există o floare sub nor, înainte de a încerca să strângeți nectar."
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "Dacă folosiți un bloc `if at flower`, puteți rezolva acest puzzle folosind o buclă imbricata. Scrieți un program pentru căile din stânga și de jos, apoi repetați totul de două ori!",
+          "courseD_bee_conditionals5_c": "Pentru a continua pe această cale, albina va trebui să `move forward` (să se deplaseze înainte). Pe măsură ce se mișcă, albina trebuie să verifice dacă există o floare. `If there is a flower` (dacă există o floare), albina trebuie să `get nectar` (să strângă nectar)."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "La fel ca în cazul blocurilor `if at flower`, codul din interiorul `while nectar > 0` va fi executat numai dacă albina se află lângă o floare. Diferența constă în faptul că codul din interior va rula la nesfârșit, până când nu mai există nectar. Încercați acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Nu funcționează? Încercați să utilizați butonul „Step” pentru a vedea ce se întâmplă linie cu linie.",
+          "courseD_bee_nestedLoops1_b": "Încercați să scrieți mai întâi codul pentru o latură a pătratului. Puteți crea o buclă pentru a strânge tot nectarul?",
+          "courseD_bee_nestedLoops1_c": "Nu uitați să folosiți blocul `get nectar` atunci când vă aflați pe un pătrat cu o floare."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Nu funcționează? Încercați să utilizați butonul „Step” pentru a vedea ce se întâmplă linie cu linie.",
+          "courseD_bee_nestedLoops1_c": "Nu uitați să folosiți blocul `get nectar` atunci când vă aflați pe un pătrat cu o floare."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Pentru a rezolva acest puzzle, va trebui să folosiți o buclă imbricată `repeat` în interiorul alteia.",
+          "courseD_bee_nestedLoops2_b": "Nu știți unde să puneți buclele? Încercați să scrieți codul pe hârtie, pas cu pas, apoi căutați un model care se repetă.",
+          "courseD_bee_nestedLoops2_c": "Nu uitați că puteți introduce mai multe blocuri în interiorul unei bucle."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Va trebui să repetați `get nectar` în interiorul unui alt `repeat`, care are în interior și blocul `move forward`.",
+          "courseD_bee_nestedLoops7_b": "Va trebui să folosiți toate cele trei blocuri `repeat` disponibile pentru a rezolva acest puzzle.",
+          "courseD_bee_nestedLoops7_c": "Folosiți blocuri imbricate pe trei niveluri, ca în exemplul de mai jos:\n\n-   repetă 4\n-   repetă 3\n    -   repetă 12\n        -   strânge nectar\n    -   deplasare înainte\n-   întoarcere la dreapta"
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "Codul vostru trebuie să conțină aceste două evenimente:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "Va trebui să aruncați o minge când începe jocul, când loviți coșul și când mâna ratează mingea."
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "Puteți face ca mingea de baschet sau mâna să se miște mai repede atașând aceste blocuri la evenimentul `when run`.",
+          "courseD_bounce_events12s_b": "Încercați să procedați în așa fel încât fiecare lovitură să valoreze 2 puncte și schimbați logo-ul echipei cu cel al orașului vostru!"
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "Trebuie să adăugați blocul `move left` la evenimentul `when left arrow` pentru ca acest joc să funcționeze:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Nu uitați să apăsați pe „Rulează” și să duceți mâna la coș pentru a rezolva acest puzzle."
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "Va trebui să aveți două seturi de evenimente `move` incluse în cod pentru ca acesta să funcționeze:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "Nu este nevoie să mutați mâna pentru a rezolva acest puzzle.",
+          "courseD_bounce_events5s_b": "Asigurați-vă că ați adăugat acest cod în spațiul de lucru:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "Aveți un eveniment care arată așa?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Dacă ați scris codul corect, nu trebuie să mutați mâna pentru a câștiga."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "Puteți adăuga sunete în mai multe locuri dacă vreți să faceți asta!"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Folosiți butonul „Step” pentru a vedea dacă totul funcționează cum trebuie în prima etapă.\n\nDar în a doua?\n\nUnde nu funcționează?",
+          "courseD_collector_debugging1_c": "Nu uitați să folosiți blocul `collect` pentru a strânge comorile după ce v-ați deplasat către ele."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Folosiți butonul „Step” pentru a vedea dacă totul funcționează cum trebuie în prima etapă.\n\nDar în a doua?\n\nUnde nu funcționează?",
+          "courseD_collector_debugging2a_c": "Ce se întâmplă?\n\nCe ar trebui să se întâmple?\n\nCe vă spune aceasta?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "Există vreun loc în care Laurel face ceva care nu are sens? Ce se întâmplă când schimbați acele blocuri?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "Încercați să utilizați procesul de depanare de câteva ori la rând. \n\nCare este cauza primei probleme?\n\nOdată ce problema este rezolvată, ce nu funcționează?",
+          "courseD_collector_debugging4_b": "Dacă vă vine greu să vă dați seama cum trebuie să procedați pentru a face modelul în trepte, încercați să îl trasați cu degetul și să spuneți comenzile cu voce tare. \n\nNu uitați să indicați direcția întoarcerilor!"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "Ce face?\n\nCe ar trebui să facă?\n\nCe vă spune aceasta?",
+          "courseD_collector_debugging5a_b": "După ce ați strâns primul rând de comori, ce a mai rămas din codul vostru?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "Încercați să rulați codul folosind butonul „Step”. Funcționează totul cum trebuie în prima etapă?\n\nDar în a doua\n\nUnde nu funcționează lucrurile?",
+          "courseD_collector_debugging6_b": "Se pare că toate blocurile de care aveți nevoie se află în spațiul de lucru. Încercați să faceți clic pe „start over” (pornește de la început) dacă lucrurile devin prea încurcate."
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "Nu uitați că puteți „repeta” o singură comandă sau un model mai lung. Puteți chiar să „repetați” un bloc `repeat`!",
+          "courseD_bee_nested_loops_challenge2_b": "Pentru a strânge toate cele 4 pietre prețioase, folosiți mai întâi o buclă pentru a vă îndepărta de centru. Întoarceți-vă la stânga sau la dreapta, apoi folosiți o buclă imbricată pentru a vă deplasa de la prima grămadă de comori la cea de-a doua. Dacă repetați bucla imbricată, colecționarul se va deplasa în jurul _întregii_ peșteri!",
+          "courseD_bee_nested_loops_challenge2_c": "Cel mai scurt program care ajunge la toate comorile folosește doar un singur bloc `collect` și două întoarceri.",
+          "courseD_bee_nested_loops_challenge2_d": "**Soluție:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "Folosiți o buclă `while path ahead` (cât există cale înainte) sau un bloc `if path ahead / else` (dacă există cale înainte/atunci) pentru a muta fermierul pe fiecare bucată a spiralei.",
+          "courseD_farmer_condLoops6_b": "Trebuie să verificați dacă există porumb în cea mai mare parte a recoltei. Culegeți un dovleac la sfârșitul programului."
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "Rețineți că cea mai ușoară cale pentru a culege toate culturile este tot spirala.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Încercați să folosiți `while path ahead` (cât există cale înainte) pentru a o face pe culegătoare să se deplaseze cu numărul corect de pași."
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "Butonul „Step” poate fi foarte util pentru această provocare.",
+          "courseD_farmer_condLoops_challenge1_b": "În mod normal, dacă vă aflați lângă un dovleac, ar trebui să alegeți doar `pick pumpkin` (culege dovleac). Ce altceva trebuie să faceți dacă vă aflați lângă un dovleac?"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "Cantitatea de legume din fiecare spațiu se poate modifica. Buclele `while` pot fi de ajutor!"
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "Va trebui să vă deplasați o singură dată pentru a ajunge la groapă.",
+          "courseD_farmer_while2_b": "Veți avea nevoie de blocul `fill 1` de șase ori. Puteți folosi o buclă pentru a simplifica lucrurile?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "O buclă vă poate ajuta să simplificați codul aici.",
+          "courseD_farmer_while3_b": "Nu ar trebui să aveți nevoie de niciun bloc `turn` pentru a ajunge la grămadă."
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "În loc să folosiți o buclă `repeat`, folosiți o buclă `while` pentru a continua să săpați până când grămada dispare.",
+          "courseD_farmer_conditionals4_b": "Acesta este foarte asemănător cu un puzzle anterior, singura diferență este bucla de care aveți nevoie."
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "Încercați să introduceți o buclă `while` în interiorul unei bucle `repeat`.",
+          "courseD_farmer_conditionals5a_b": "Fermierul trebuie să se deplaseze înainte de cinci ori în total pentru a ajunge la capătul rândului. Ce mai trebuie să facă fermierul?",
+          "courseD_farmer_conditionals5a_c": "Deplasați-vă înainte de 5 ori. De fiecare dată când înaintați, îndepărtați grămada de pământ folosind blocul `while there is a pile` (cât există o grămadă)."
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "Asigurați-vă că folosiți bucla `while` pentru a vă da seama de câte ori trebuie să umpleți fiecare groapă.",
+          "courseD_farmer_conditionals6_b": "Rețineți că fermierul trebuie să se deplaseze înainte și în jos de mai multe ori, într-un model cu trepte.",
+          "courseD_farmer_conditionals6_c": "Pentru modelul cu trepte se folosesc următoarele blocuri\n\n-   deplasare înainte\n-   umplere groapă\n-   întoarcere la dreapta\n-   deplasare înainte\n-   umplere groapă\n-   întoarcere la stânga\n\nDe câte ori trebuie să folosiți acest model cu trepte?\n\nAsigurați-vă că folosiți `while there is a hole` (cât există o groapă) pentru a umple groapa."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "Blocul `while path ahead` (cât există o cale în față) vă permite să continuați, chiar dacă nu știți câte pătrate sunt în cale.",
+          "courseD_farmer_conditionals8_b": "Dacă introduceți o buclă `while path ahead` (cât există o cale în față) într-o buclă repeat, veți rezolva acest puzzle mai ușor.",
+          "courseD_farmer_conditionals8_c": "Ce trebuie să faceți la sfârșitul fiecărei căi?"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "Va trebui să folosiți mai multe bucle `while`.",
+          "courseD_farmer_conditionals8_b": "Fiecare gaură se află la capătul unei căi, așa că folosiți `while path ahead` (cât există o cale în față) înainte de a folosi `while there is a hole` (cât timp există o groapă).",
+          "courseD_farmer_conditionals8_c": "Rețineți că trebuie să repetați codul `while path ahead` (cât există o cale în față), `while there is a hole` (cât timp există o groapă) de șase ori."
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "Fiecare groapă sau grămadă este situată cu un spațiu **înapoi** față de capătul căii.",
+          "courseD_farmer_while_challenge1_b": "Dacă folosiți o buclă `while`, îi puteți spune fermierului să îndepărteze o grămadă sau să umple o groapă, chiar dacă aceasta nu există. Aceasta înseamnă că o puteți programa să îndepărteze pământul sau să umple groapa, indiferent unde se află.",
+          "courseD_farmer_conditionals8_c": "Acest puzzle poate fi rezolvat fără a folosi bucle `repeat`. Pentru a face aceasta, va trebui să folosiți patru bucle `while`."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "Încercați să urmați acest traseu pentru a ajunge la tot porumbul!",
+          "courseD_harvester_nested_loops_challenge1_b": "Pentru a aduna mai multe unități de porumb, trebuie să folosiți `pick corn` de mai multe ori.",
+          "courseD_harvester_nested_loops_challenge1_c": "Va trebui să introduceți o buclă mică în interiorul buclei principale pentru a rezolva acest puzzle!"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Puteți să vă întoarceți la dreapta sau la stânga din perspectiva lui Red. Dacă sunteți cu fața spre dreapta, atunci când vă întoarceți  spre dreapta veți fi cu fața în jos.",
+          "courseC_maze_programming4_b": "Pentru a urma traseul, mergeți înainte și întoarceți-vă într-o direcție, apoi deplasați-vă din nou și întoarceți-vă în direcția opusă. Apoi mergeți din nou înainte pentru a ajunge la ghindă."
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "Pentru a rezolva acest puzzle, va trebui să folosiți o buclă `repeat` în interiorul altei bucle `repeat`.",
+          "courseD_maze_nestedLoops3_b": "Nu știți unde să puneți buclele? Încercați să scrieți codul pe hârtie, pas cu pas, apoi căutați un model care se repetă.",
+          "courseD_maze_nestedLoops3_c": "Încercați să scrieți codul pentru o bucată în linie dreaptă și pentru o întoarcere. Puteți să îl repetați pentru a ajunge la floarea-soarelui?"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "Dacă v-ați blocat, încercați să scrieți mai întâi codul pe hârtie fără bucle și căutați modele care se repetă.",
+          "courseD_maze_nestedLoops6_b": "Atunci când folosiți bucle `repeat` imbricate, veți reduce numărul de blocuri utilizate.",
+          "courseD_maze_nestedLoops6_c": "Veți avea nevoie de două seturi de bucle `repeat` imbricate pentru a rezolva acest puzzle."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPentru a șterge un bloc aflat în mijlocul codului, trageți toate blocurile de sub el spre dreapta și lăsați-le să stea în spațiul de lucru pentru o perioadă.  \n\nFaceți clic pe blocul pe care doriți să îl ștergeți și trageți-l înapoi în cutia de instrumente.\n\nLa sfârșit, puneți celelalte blocuri la locul lor."
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "Acest desen seamănă foarte mult cu ultimul desen, dar funcția `draw line` (desenează rând) va desena acum o formă diferită.",
+          "courseD_artist_functions10_a": "Pentru a evita utilizarea mai multor blocuri `move forward` (deplasare înainte), creați o funcție `draw hexagon` (desenează hexagon) și apelați-o de mai multe ori.",
+          "courseD_artist_functions10_c": "Vedeți unde v-ar fi utilă, pentru acest desen, o funcție numită `line of hexagons` (șir de hexagoane)?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "Nu renunțați!  Amintiți-vă ce ați învățat.",
+          "courseD_artist_functions5_b": "Cu ajutorul funcțiilor este ușor să apelați codul salvat în orice moment, nu doar din interiorul unei bucle!",
+          "courseD_artist_functions5_c": "Începeți prin a crea funcția `draw a star` (desenează o stea), apoi folosiți această funcție pentru a desena cele trei stele!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "Încercați să creați mai întâi funcția, apoi adăugați ferestrele pe rând.",
+          "courseD_artist_functions7_b": "Pentru a ajunge de la ferestrele de sus la cele de jos, faceți artistul să se întoarcă la dreapta, faceți un salt de 150 de pixeli, apoi întoarceți din nou artistul spre dreapta! Acum artistul va fi orientat în direcția corectă pentru a termina restul casei!"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "Aveți nevoie doar de un bloc `move forward`, dar veți avea nevoie de câteva blocuri `jump forward` (salt înainte) și/sau `jump backward` (salt înapoi)!",
+          "courseD_artist_functions8_a": "Începeți prin a crea o funcție pentru un pătrat, apoi încercați să creați o funcție pentru un rând de pătrate.\n\nCum ați folosi funcția `draw a line of squares` (desenează un rând de pătrate) pentru a desena această imagine?",
+          "courseD_artist_functions8_d": "Pentru a desena un rând de pătrate,\n\n-   repetați de 3 ori\n    -   desenați un pătrat cu lungimea laturii de **50 de pixeli**\n    -   faceți un salt înainte de **100 de pixeli**",
+          "courseD_artist_functions8_b": "Gândiți-vă la fiecare rând din această imagine ca la un rând de 3 pătrate. Câte rânduri de pătrate există și de unde începeți să le desenați pe fiecare dintre ele?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "La capătul fiecărui set de pătrate așezate în zig-zag, artistul va trebui să facă un salt în jos și înapoi înainte de a desena următorul set de pătrate așezate în zig-zag."
+        },
+        "courseE_artist_functions8b_2021": {
+          "courseD_artist_functions8_f": "Aveți nevoie doar de un singur bloc `move forward` (deplasare înainte) dacă faceți lucrurile corect!",
+          "courseD_artist_functions8_a": "Începeți prin a crea o funcție pentru un pătrat, apoi încercați să creați o funcție pentru un rând de pătrate.",
+          "courseD_artist_functions8_d": "Pentru a crea un rând de pătrate,\n\n-   repetați de 3 ori\n    -   desenați un pătrat\n    -   faceți un salt înainte de **100 de pixeli**"
+        },
+        "courseE_artist_functions8c_2021": {
+          "courseD_artist_functions8_f": "Este mai ușor decât pare! Nu ar trebui să aveți nevoie de blocuri `move` sau `jump` aici!",
+          "courseD_artist_functions8_a": "Singura diferență dintre al doilea rând de pătrate și primul este întoarcerea de 180 de grade!",
+          "courseD_artist_functions8_c": "La capătul fiecărui rând de pătrate, artistul trebuie doar să se întoarcă la 180 de grade înainte de a desena următorul rând de pătrate. Introduceți totul într-o buclă repeat pentru a vă pregăti pentru următorul exercițiu!"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "Puteți identifica toate cele patru locuri în care poate fi folosit `line of triangles` (rândul de triunghiuri) în acest desen?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Acest puzzle poate fi împărțit în trei părți:\n\n-   creați funcția `draw a triangle` (desenează un triunghi)\n-   creați funcția `draw a line of triangles` (desenează un rând de triunghiuri)\n-   folosiți funcția `draw a line of triangles` (desenează un rând de triunghiuri) de patru ori pentru a termina desenul",
+          "courseD_artist_functions9_b": "Acest desen este realizat prin desenarea unui rând de triunghiuri de 4 ori și întoarceri la 60 sau 120 de grade înainte de a desena următorul rând de triunghiuri.",
+          "courseD_artist_functions9_c": "Pentru a desena un rând de triunghiuri:\n\n-   repetați de 4 ori\n    -   desenați un triunghi\n    -   faceți un salt înainte de 50 de pixeli",
+          "courseD_artist_functions9_d": "Pentru a desena un diamant:\n\n-   repetați de 2 ori\n    -   desenați un rând de triunghiuri\n    -   faceți o întoarcere de 60 de grade\n    -   desenați un rând de triunghiuri\n    -   faceți o întoarcere de 120 de grade"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "Dacă apelați funcția încă o dată, puteți crea același design în ultimul colț.",
+          "courseE_artist_functions_challenge1_b": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nAcest bloc `jump to` (salt la) vă permite să deplasați artistul zombi la orice pixel din grilă, oricând doriți. Acesta este deplasat cu un număr de pixeli spre dreapta și cu un număr de pixeli în jos. Numărătoarea începe întotdeauna din colțul din stânga sus, ceea ce înseamnă că nu contează unde se află artistul zombi _înainte_ de executarea comenzii!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție.",
+          "courseE_farmer_functions1_b": "Trebuie să culegeți doar un singur dovleac, dar puteți folosi o buclă pentru a ajunge la el?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_a": "Citiți definiția funcției. Ne puteți spune ce face aceasta?",
+          "courseE_farmer_functions1a_b": "Folosiți un bloc `repeat until` (repetă până când) pentru a ajunge la dovleac!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "Puteți folosi `repeat until pumpkin` (repetă până la dovleac) pentru a ajunge la capătul celor două căi.",
+          "courseE_farmer_functions2b_b": "Pe drumul de legătură nu există porumb, așa că puteți să vă deplasați de-a lungul ei și să vă întoarceți.",
+          "courseE_farmer_functions2b_c": "Veți avea nevoie de două blocuri `repeat until` (repetă până când) pentru a strânge toate recoltele."
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "Folosiți blocul `get all the pumpkins` (strânge toți dovlecii) de culoare verde pentru a te asigura că ai strâns toți dovlecii!"
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "coursee_farmer_functions3c1_2018_a": "Va trebui să folosiți funcția `pick along path` de trei ori pentru a rezolva acest puzzle.",
+          "coursee_farmer_functions3c1_2018_b": "Ce cod trebuie să adăugați pentru a ocoli colțurile?"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "Creați funcția din secțiunea `functions` (funcții) din cutia de instrumente.",
+          "courseE_farmer_functions7a1_2018_b": "Nu uitați să folosiți funcția după ce ați creat-o!"
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "courseE_farmer_functions8a1_2018a": "Începeți acest puzzle scriind cod pentru aceeași funcție pe care ați creat-o la ultimul puzzle.",
+          "courseE_farmer_functions8a1_2018b": "După ce funcția este executată pentru prima dată, va trebui să efectuați o întoarcere suplimentară înainte de a o executa din nou."
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "courseE_farmer_functions9a1_2018a": "Veți folosi aceeași funcție pe care ați creat-o pentru ultimele două puzzle-uri.",
+          "courseE_farmer_functions9a1_2018b": "Folosiți aceiași pași ca în puzzle-ul anterior pentru a rezolva prima jumătate a acestui puzzle.",
+          "courseE_farmer_functions9a1_2018c": "Va trebui să folosiți `turn` (întoarcere) de câteva ori și `move forward` (deplasare înainte) pentru a ajunge la ultima cultură de salată, înainte de a apela din nou funcția."
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "În loc să folosiți o buclă `repeat` pentru a-i spune fermierului de câte ori să dea cu lopata, acum puteți folosi un bloc `while there is a pile` (cât există o grămadă).",
+          "courseE_farmer_ramp12_b": "Va trebui să vă deplasați o singură dată pentru a lua pământul."
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "Puteți introduce bucla `while` în interiorul unei bucle `repeat` pentru a scurta codul."
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "Va trebui să folosiți în continuare o buclă `repeat` în exteriorul acesteia pentru a-i spune fermierului de câte ori să se deplaseze înainte și să strângă salata."
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "Va trebui să folosiți mai întâi o buclă `until`, apoi să folosiți o buclă `while` după ce ajungeți la salată."
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "Va trebui să introduceți buclele `until` și `while` în interiorul buclei `repeat` pentru a rezolva acest puzzle!"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "Soluția acestui puzzle seamănă foarte mult cu soluția ultimului puzzle, dar întoarcerea se efectuează în cealaltă direcție."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "Imaginea din desen a fost realizată folosind un contor pentru `set alpha` și `counter` / 10 ca dimensiune a pensulei.",
+          "courseF_artist_for10_b": "Pentru imaginea din desen s-a folosi o întoarcere cu 61 de grade.",
+          "courseF_artist_for10_c": "Vreți să știți cum a fost realizată imaginea de probă?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Puteți desena ceva de genul acesta:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "Bucla voastră `for` trebuie să numere de la 15 la 300 cu pas de 15.",
+          "courseF_artist_for6_b": "Introduceți un bloc `move forward` și un bloc `turn` în această buclă `for`.",
+          "courseF_artist_for6_c": "Tot ce trebuie să modificați este numărul de grade din blocul `turn`."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "Creionul este mai subțire în acest puzzle. Va trebui să îl setați la `1` înainte de a începe.",
+          "courseF_artist_for7_b": "Rețineți că această spirală se întoarce spre dreapta, nu spre stânga!",
+          "courseF_artist_for7_c": "Bucla `for` din acest puzzle numără de la 15 la 300 cu pas de 2.",
+          "courseF_artist_for7_d": "Această imagine este creată prin întoarcerea cu 89 de grade."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Nu schimbați nimic în cod cu excepția unghiului de întoarcere.",
+          "courseF_artist_for8_b": "Dacă doriți, puteți alege o culoare diferită pentru spirală!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Dacă introduceți blocul `set alpha` în interiorul buclei `for` și folosiți variabila `counter` pentru a o modifica, puteți crea un model ca acesta.",
+          "courseF_artist_for9_b": "Blocul `set alpha` modifică opacitatea culorii. Cu cât valoarea este mai mică, cu atât culoarea este mai transparentă."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`pen width` este 1. Primul pătrat are laturile de 50 de pixeli, iar fiecare pătrat este cu 50 de pixeli mai lat decât ultimul.",
+          "courseF_artist_for_challenge1_b": "Opacitatea pensulei este întotdeauna `counter`/2.",
+          "courseF_artist_for_challenge1_c": "După ce creați fiecare pătrat, nu uitați să săriți înapoi, să vă întoarceți, să săriți din nou, apoi să vă întoarceți înapoi!",
+          "courseF_artist_for_challenge1_d": "**Soluție:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "Bucla `for` din acest puzzle numără de la 5 la 250 cu pas de 2.",
+          "courseF_artist_for_challenge2_a": "Schimbarea culorii se efectuează cu ajutorul blocului `set color with red, green, blue`.  Culoarea roșie este setată constant la 255, verdele are întotdeauna valoarea lui `counter`, iar albastrul are întotdeauna valoarea `255 - counter`.",
+          "courseF_artist_for_challenge2_b": "Codul pentru această operațiune este mai simplu decât credeți. Trebuie doar să setați culoarea în interiorul buclei for, să vă deplasați înainte, apoi să vă întoarceți.",
+          "courseF_artist_for_challenge2_d": "**Soluție:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Distrați-vă cu acest nivel! Vedeți cum se schimbă codul vostru atunci când faceți mici modificări.",
+          "courseF_artist_variables10_b": "Puteți încerca să faceți mai multe lucruri și puteți executa codul de mai multe ori."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Începeți codul folosind blocul `set length`. Setați variabila pentru lungime la 150.",
+          "courseF_artist_variables7_b": "Puteți utiliza o buclă `repeat` pentru simplificarea codului pentru triunghi.",
+          "courseF_artist_variables7_c": "Trebuie să vă întoarceți la stânga cu 120 de grade pentru a crea colțurile triunghiului."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "Nu uitați să începeți codul pentru triunghi cu blocul `set length` și să îl începeți la 150 de pixeli.",
+          "courseF_artist_variables8_c": "Asigurați-vă că folosiți bucla `repeat` pentru a desena triunghiul.",
+          "courseF_artist_variables8_a": "Încercați să puneți blocul \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nîn interiorul buclei, la sfârșit."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "Pentru acest puzzle, tot ce trebuie să faceți este să schimbați numărul de repetiții ale buclei.",
+          "courseF_artist_variables9_b": "Asigurați-vă că blocul care modifică `length` se află în interiorul buclei, astfel încât liniile să fie tot mai lungi."
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "Doriți să încercați și alte poligoane? \n\nFolosiți numărul de laturi din blocul `repeat` și unghiul din blocul `turn`.\nÎncercați variantele de mai jos:\n\n|   Formă  | Laturi | Unghi |\n| :------: | :----: | :---: |\n| triunghi |    3   |  120° |\n|  pătrat  |    4   |  90°  |\n| pentagon |    5   |  72°  |\n|  hexagon |    6   |  60°  |\n|  octogon |    8   |  45°  |\n|  nonagon |    9   |  40°  |\n|  decagon |   10   |  36°  |"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Puteți găsi un model care se repetă între numărul de pași pe care trebuie să-i faceți și numărul de unități de nectar care trebuie să fie strâns?",
+          "courseF_bee_for10_b": "Primul set de flori cuprinde un număr total de **14 flori**. Pentru a ajunge la acest prim set, albina trebuie să coboare **7 pătrate** (sau 14 pătrate împărțite la 2.) Câte flori sunt în următorul set și câte pătrate va trebui să parcurgă albina pentru a ajunge acolo?",
+          "courseF_bee_for10_c": "În acest puzzle, primul set de flori are **14** flori, al doilea set are **10** flori, al treilea set are **6** flori, iar al patrulea set are **2** flori.\n\nÎn acest desen, observați că există **7** pătrate roșii, **5** pătrate portocalii, **3** pătrate verzi și **1** bloc albastru.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nCare este legătura dintre numere?",
+          "courseF_bee_for10_d": "Va trebui să aveți 2 repetări, iar pentru una se va folosi un bloc de matematică."
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "Cu cât este mai mic 12 față de 15?\\\nCu cât este mai mic 9 față de 12?\n\nSesizați un model care se repetă?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Veți avea nevoie de două blocuri în bucla \"repeat\" pentru a colecta tot nectarul."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Dacă lucrurile sunt neclare, lucrați la câte o floare pe rând și testați des.",
+          "courseF_bee_for2_b": "Nu uitați să vă deplasați înainte după fiecare buclă, astfel încât să ajungeți la fiecare floare."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Folosiți o buclă `for` care merge de la 1 la 7 cu un pas de 1 pentru a rezolva acest puzzle.",
+          "courseF_bee_for4_b": "În bucla `for` trebuie să aveți o comandă `move forward` și o buclă pentru strângerea nectarului.",
+          "courseF_bee_for4_c": "Asigurați-vă că folosiți variabila `counter` din interiorul buclei `repeat` imbricate pentru a strânge o cantitate suficientă de nectar!"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Nu uitați să folosiți o variabilă `counter` în interiorul buclei `repeat`.",
+          "courseF_bee_for6_b": "În bucla `for` trebuie să aveți o comandă `move forward` și o buclă pentru strângerea nectarului.",
+          "courseF_bee_for6_c": "Bucla voastră trebuie să numere **de la 5 la 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Bucla voastră `for` trebuie să numere de la 1 la 7 cu pas de 2.",
+          "courseF_bee_for7_b": "În bucla `for` trebuie să aveți o comandă `move forward` și o buclă pentru strângerea nectarului.",
+          "courseF_bee_for7_c": "Nu uitați să folosiți o variabilă `counter` în interiorul buclei `repeat`."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "În cazul în care bucla voastră numără în ordine crescătoare, pasul este adăugat la variabila de numărare de fiecare dată. \n\nCe trebuie să adăugați la fiecare număr pentru a obține următoarea cantitate de nectar?",
+          "courseF_bee_for8_b": "În acest puzzle, va trebui să vă deplasați într-un model de tip treaptă de scară pentru a ajunge la flori.",
+          "courseF_bee_for8_c": "Bucla voastră va număra _de la 3 la 15_ cu un anumit pas. Care este acesta?"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "Încercați să faceți niște calcule matematice cu variabila de numărare.\n\nCe trebuie să faceți cu contorul de la fiecare floare pentru a obține o cantitate egală cu cantitatea de nectar pe care trebuie să o strângeți?",
+          "courseF_bee_for9_c": "Se pare că va trebui să întoarceți albina la începutul fiecărei iterații a buclei dacă vreți să rezolvați puzzle-ul.",
+          "courseF_bee_for9_b": "**Rețineți:** În cazul în care bucla voastră numără în ordine crescătoare, pasul este adăugat la variabila `counter` de fiecare dată."
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "Aruncați o privire la această opțiune pentru deplasare:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Încercați să folosiți două bucle `for`: una pentru a urca și a lua nectarul, iar cealaltă pentru a coborî și a obține miere.",
+          "courseF_bee_for_challenge2_c": "Observați că o buclă `for` are nevoie de mai multe bucle obișnuite în interior, care se repetă de `counter` ori pentru a crea modelul în formă de scară cu mișcare crescătoare. \n\nCealaltă buclă `for` are nevoie doar de o buclă obișnuită pentru a face o cantitate de `counter` unități de miere.",
+          "courseF_bee_for_challenge2_d": "**Soluție:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "Pentru a continua modelul, creșteți numărul de repetări:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "Pentru a adăuga valoarea 1 la variabilă, puteți utiliza acest cod în program:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "În loc să adăugați valoarea 1 la variabilă, adăugați valoarea 2 de fiecare dată."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "Veți avea nevoie și de acest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "Veți avea nevoie și de acest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Încercați să folosiți comportamente precum „deplasare spre est și buclă”, „rotire spre dreapta” și „rătăcit”."
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "Încercați să schimbați eticheta variabilei din blocul `when answered`. Deoarece există mai multe prompturi, utilizați eticheta pentru _ultimul_ prompt la care se va răspunde.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

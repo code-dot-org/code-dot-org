@@ -168,7 +168,15 @@ sk:
     user_type_button: "Zmeniť typ účtu"
     user_type_label: "Typ účtu"
     user_type_student: "Študent"
+    user_type_student_desc: "Preskúmajte všetky naše kurzy a aktivity plus:"
+    user_type_student_ability_1: "Uložte si svoju prácu a projekty"
+    user_type_student_ability_2: "Pripojte sa k triede svojho učiteľa"
     user_type_teacher: "Učiteľ"
+    user_type_teacher_desc: "Všetko, k čomu majú študenti prístup, plus:"
+    user_type_teacher_ability_1: "Vytvorte sekcie v triede"
+    user_type_teacher_ability_2: "Priraďte a sledujte prácu študentov"
+    user_type_teacher_ability_3: "Prihláste sa na odborné vzdelávanie"
+    user_type_teacher_ability_4: "Komunikujte na našom fóre pre učiteľov"
     field_is_required: "je povinné"
     accept_terms: "Musíte súhlasiť s vytvorením účtu."
     error: "Vyskytla sa chyba."
@@ -641,6 +649,10 @@ sk:
       title: 'Tanečná Párty'
     dance-2019:
       title: 'Tanečná Párty'
+    hello-world:
+      title: 'Ahoj Svet'
+    poem-art:
+      title: 'Básnické umenie'
     hoc:
       title: 'Klasické bludisko'
       body: 'Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.'
@@ -799,14 +811,6 @@ sk:
     reminder_desc: 'Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné podmienky</a> a <a href="%{privacy_url}" target="_blank"> Zásady ochrany osobných údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.'
     reminder_desc_markdown: Aktualizovali sme naše [Zmluvné podmienky](%{tos_url}) a [Zásady ochrany osobných údajov](%{privacy_url}). Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.
     review_terms: "Prezrieť aktualizované podmienky"
-  donor_interstitial:
-    title: "Bezplatné kurzy Informatiky vám prinášajú..."
-    subtitle: "Ďakujeme štedrým darcom, ktorých podpora umožnila úspech Code.org. Zaviazali sme sa, že udržíme Code.org zadarmo pre školy a študentov na celom svete, a to vďaka neustálej štedrosti našich [donors](%{donors_url})!"
-    local_supporters: "Miestni podporovatelia"
-    global_supporters: "Svetoví podporovatelia"
-    support_codeorg_1: "Každý príspevok pre Code.org prináša príležitosť ďalším študentom."
-    support_codeorg_2: "[Prispejte teraz](%{donate_url}) na podporu Code.org."
-    get_started: "Začnite s Code.org"
   school_info_interstitial:
     title: "Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať náš pokrok!"
     message: "Zadajte informácie o Vašej škole nižšie."

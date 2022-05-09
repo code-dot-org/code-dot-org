@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "Lalabas dito ang mga file na naka-save sa backpack mo.",
   "enablePeerReview": "Paganahin ang Peer Review",
   "errorJavabuilderConnectionGeneral": "Nagkaroon kami ng error sa pagkonekta sa server namin. Subukang muli.",
-  "errorJavabuilderConnectionNotAuthorized": "Hindi ka awtorisadong i-access ang Javalab. Kailangan mo bang mag-log in o sumali sa isang seksyon?",
   "errorLoadingClassmates": "Nagkaroon ng error sa paglo-load ng listahan ng mga kaklase mo. Subukang muli.",
   "errorMediaImageLoadError": "May error sa paglo-load ng larawan.",
   "errorNeighborhoodInvalidGrid": "Nagkaroon ng error sa paglo-load sa neighborhood level. Makipag-ugnayan sa amin sa support@code.org, at tiyaking isama ang URL sa pahinang ito sa mensahe mo.",
