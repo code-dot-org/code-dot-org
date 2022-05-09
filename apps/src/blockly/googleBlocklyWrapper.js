@@ -260,6 +260,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     oldMixin.call(this, mixinObj, true);
   };
 
+  const oldRender = blocklyWrapper.BlockSvg.prototype.render;
+  blocklyWrapper.BlockSvg.prototype.render = function(opt_bubble) {
+    console.log('new render');
+    oldRender.call(this, opt_bubble);
+    this.removeUnusedBlockFrame();
+  };
+
   blocklyWrapper.BlockSvg.prototype.getHexColour = function() {
     // In cdo Blockly labs, getColour() returns a numerical hue value, while
     // in newer Google Blockly it returns a hexademical color value string.
