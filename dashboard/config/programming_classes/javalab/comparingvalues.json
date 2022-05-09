@@ -1,14 +1,37 @@
 {
   "category_key": "general",
-  "content": "",
-  "examples": "[]",
+  "content": "There are multiple ways to compare two Strings in Java. We can utilize java methods or use operators. Comparison can be an important tool to use in *if statements*, *for loops*, and performing other functions. \n\n**Mechanisms to Compare Two Strings**\n\n1. the == operator \n2. the equals() method \n3. the compareTo() method \n4. the compareToIgnoreCase() method //operates the same as compareTo() but not case sensitive ",
+  "examples": "[{\"name\":\"Using == to Compare Two Strings\",\"description\":\"The equals operator compares two references, not the values themselves. The result of comparing two Strings using an equals operator will be a boolean. \",\"code\":\"```\\nString name1 = \\\"Alyssa\\\";\\nString name2 = \\\"John\\\";\\nString name3 = \\\"Alyssa\\\";\\n\\nSystem.out.println(name1 == name2); //prints false\\nSystem.out.println(name1 == name3); //prints true\"}]",
   "external_documentation": "",
   "fields": "[]",
   "key": "ComparingValues",
-  "name": "ComparingValues",
+  "name": "ComparingStrings",
   "syntax": "",
   "tips": "",
   "methods": [
-
+    {
+      "name": "equals",
+      "position": 0,
+      "key": "equals",
+      "overload_of": null,
+      "content": "The equals() method will compare the string that it is called on as well as the string passed as a parameter. The expression returns a boolean: true if the two Strings are equal to each other, false otherwise.",
+      "parameters": "[{\"name\":\"stringTwo\",\"type\":\"String\",\"required\":true,\"description\":\"the second string being compared to the first.\"}]",
+      "examples": "[{\"name\":\"Using equals()\",\"code\":\"```\\nStringOne = \\\"Apple\\\";\\nStringTwo = \\\"Pear\\\";\\nStringThree = \\\"Apple\\\";\\n\\n//check if stringOne is equal to stringTwo\\nSystem.out.println(stringOne.equals(stringTwo)); \\n// prints false\\n\\n\\n//check if stringOne is equal to stringThree\\nSystem.out.println(stringOne.equals(stringThree)); \\n// prints true\\n\\n\\n\\n\"}]",
+      "syntax": "stringOne.equals(stringTwo);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "compareTo",
+      "position": 1,
+      "key": "compareto",
+      "overload_of": null,
+      "content": "The compareTo() method compares the String values and returns an int. The returned int is the number difference between two strings. Both strings are compared by the Unicode value of each character in the String. \n\n- if *stringOne > stringTwo*, the method will return a positive number. \"Greater Than\" means lexicographically greater than, so when stringOne has more characters than stringTwo.\n- if *stringOne < stringTwo*, the method will return a negative number. \"Less Than\" means lexicographically less than, so when stringOne has less characters than stringTwo.\n- if *stringOne == stringTwo*, the method will return 0.\n\n**The compareTo() method is case sensitive, meaning that capitalization does affect the calculation. The compareToIgnoreCase() method can be used if you want to compare two strings without regard for cases.",
+      "parameters": "[{\"name\":\"stringTwo\",\"type\":\"String\",\"required\":true,\"description\":\"The String to be compared to the first String\"}]",
+      "examples": "[{\"name\":\"Using CompareTo()\",\"code\":\"```\\nString name1 = \\\"James\\\";\\nString name2 = \\\"Bill\\\";\\nString name3 = \\\"James\\\";\\n\\nSystem.out.println(name1.compareTo(name2)); //Prints 8 because James \\u003e Bill lexicographically \\nSystem.out.println(name1.compareTo(name3));//Prints 0 because both are the same\"}]",
+      "syntax": "stringOne.compareTo(stringTwo);",
+      "external_link": null,
+      "return_value": null
+    }
   ]
 }
