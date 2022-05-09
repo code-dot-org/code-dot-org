@@ -1,11 +1,11 @@
 name 'CSA U6L4-L4v2_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+right '`racoon and koala`'
+wrong '`racoon and otter`'
+wrong '`hedgehog and otter`'
+wrong '`hedgehog and koala`'
+wrong 'Nothing is printed due to an `ArrayIndexOutOfBoundsException`.'
 
 markdown <<MARKDOWN
 Consider the following code segment.
