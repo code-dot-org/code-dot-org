@@ -3348,12 +3348,6 @@ sk:
                 na zbieranie pokladov na Code.org efektívnejšie.
             Loops in Artist:
               name: Cykly s Umelcom
-              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
-                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
-                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
-                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
-                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
-                obrazy.
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -11286,6 +11280,7 @@ sk:
             debugging:
               display_name: Ladenie
         csd1-2021:
+          title: Riešenie problémov a výpočtová technika (2021/2022)
           lessons:
             Intro to Problem Solving:
               key: Úvod do riešenia problémov
@@ -13813,6 +13808,12 @@ sk:
               display_name: Projekt
             lessonGroup-4:
               display_name: Ukážky a zdroje informácií
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Hodina 2
+            lesson-3:
+              name: Hodina 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -15333,6 +15334,8 @@ sk:
               display_name: Prechody
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: Hodnotenie kurzu
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -15603,6 +15606,10 @@ sk:
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
           description_audience: 'Vek: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -15610,11 +15617,14 @@ sk:
             csp_libraries:
               display_name: Knižnice
             lessonGroup-3:
-              display_name: Dotazník
+              display_name: Hodnotenie kurzu
         csp8-2022:
           lessons:
             lesson-4:
               key: lekcia-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
         csp9-2022:
           lessons:
             Machine Learning:
@@ -15626,6 +15636,8 @@ sk:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(staré) Lekcia 9: Údaje"
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -15636,6 +15648,9 @@ sk:
               description_student: Prehľad lekcie
             'Project: Innovation Simulation Part 7':
               description_student: Prehľad lekcie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -16284,6 +16299,8 @@ sk:
               display_name: Obsah
             lessonGroup-4:
               display_name: Sandboxy
+            lessonGroup-5:
+              display_name: Dotazník
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -16403,8 +16420,6 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
-            lessonGroup-4:
-              display_name: Sandboxy
         csa3-2022:
           lessons:
             lesson-3:
@@ -16436,8 +16451,6 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
-            lessonGroup-4:
-              display_name: Sandboxy
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -16936,7 +16949,7 @@ sk:
             lessonGroup-2:
               display_name: Obsah
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Dotazník
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -17672,3 +17685,67 @@ sk:
           student_description: Tento modul  obsahuje prieskum po dokončení tvojej
             vyučovacej hodiny modulov CS Discoveries. Tvoj učiteľ ti povie, kedy je
             čas vyplniť tento prieskum.
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Úvod do UI Labu
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: lekcia-4
+            lesson-3:
+              key: lekcia-3
+            lesson-8:
+              key: lekcia-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3

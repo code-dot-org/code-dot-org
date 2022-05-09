@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "File yang disimpan ke backpack Anda akan muncul di sini.",
   "enablePeerReview": "Aktifkan Ulasan Sejawat",
   "errorJavabuilderConnectionGeneral": "Kami mengalami kesalahan saat menyambung ke server. Coba lagi.",
-  "errorJavabuilderConnectionNotAuthorized": "Anda tidak diizinkan untuk mengakses Javalab. Apakah Anda ingin masuk atau bergabung dengan sebuah seksi?",
   "errorLoadingClassmates": "Terjadi kesalahan saat memuat daftar teman sekelas Anda. Silakan coba lagi.",
   "errorMediaImageLoadError": "Terjadi kesalahan saat memuat gambar.",
   "errorNeighborhoodInvalidGrid": "Terjadi kesalahan saat memuat level neighborhood. Silakan hubungi kami di support@code.org, dan pastikan untuk menyertakan URL ke halaman ini dalam pesan Anda.",

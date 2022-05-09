@@ -2971,6 +2971,12 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: 2 pamoka
+            lesson-3:
+              name: 3 pamoka
         csa4-exemplars:
           lesson_groups:
             lesson group:

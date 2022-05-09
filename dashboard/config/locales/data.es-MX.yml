@@ -955,6 +955,9 @@ es-MX:
         PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
         csd_u6_circuit_playground: Computación física
         csd_u6_input_output: Entrada y salida
+        PL_CS_Journeys_Overview: Jornadas CS
+        csp_applab_parameters: Funciones con parámetros
+        CSA-PL-intro-to-arrays: Matrices Unidimensionales (1D)
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

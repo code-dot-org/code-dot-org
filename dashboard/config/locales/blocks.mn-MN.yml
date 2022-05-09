@@ -1175,6 +1175,12 @@ mn:
             '90': доошоо
             '180': зүүн
             '270': дээшээ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': дундаж
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:

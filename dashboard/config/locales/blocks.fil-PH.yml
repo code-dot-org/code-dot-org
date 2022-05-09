@@ -1233,6 +1233,12 @@ fil:
             '90': baba
             '180': kaliwa
             '270': paitaas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': maliit
+            '50': katamtaman
+            '100': malaki
       gamelab_mirrorSprite:
         text: "{SPRITE} mukha {DIRECTION}"
         options:

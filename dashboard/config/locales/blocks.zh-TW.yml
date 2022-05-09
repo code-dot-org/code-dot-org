@@ -1256,6 +1256,12 @@ zh-TW:
             '90': 向下
             '180': " 向左"
             '270': 向上
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': 小
+            '50': 中
+            '100': 大
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:

@@ -535,6 +535,9 @@
         "courseF_text_choice_interview": {
           "34088af1fb721900963462375b3bbe23": "الربوت!",
           "5bd698afd23bccde289bb0b4aa72a518": "اذكر اسم الروبوت"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "ما اسمك؟"
         }
       }
     }

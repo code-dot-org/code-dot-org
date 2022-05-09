@@ -4940,7 +4940,6 @@ uz:
               description_teacher: '"Xursand sikllar"dan takrorlanuvchi ko‘rsatmalar tushunchasiga asoslangan holda, bu bosqichda Code.orgdagi xazinani samaraliroq usulda yig‘ish uchun talabalar sikllardan foydalanadi.'
             Loops in Artist:
               name: Rassom bilan sikllar
-              description_teacher: Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi. Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.
             'Events: The Big Event':
               name: 'Hodisalar: Katta Hodisa'
               description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
@@ -17308,6 +17307,12 @@ uz:
               display_name: Darslar
             lessonGroup-3:
               display_name: Loyiha
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: 2-dars
+            lesson-3:
+              name: 3-dars
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -17980,6 +17985,8 @@ uz:
             'Lesson 18: Assessment Day':
               key: '18-dars: Baholash kuni'
               name: Baholash kuni
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           lesson_groups:
             csp_lists:
               display_name: Ro‘yxatlar
@@ -17987,6 +17994,8 @@ uz:
               display_name: Sikllar
             csp_project:
               display_name: Loyiha
+            lessonGroup-5:
+              display_name: Post-Course Survey
         courseb-2022:
           lessons:
             Digital Trails:
@@ -18228,9 +18237,13 @@ uz:
             'Lesson 6: Assessment Day':
               key: '6-dars: Baholash kuni'
               name: Baholash kuni
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algoritmlar'
+            lessonGroup-2:
+              display_name: Post-Course Survey
         csp7-2022:
           lessons:
             Assessment Day:
@@ -18248,11 +18261,18 @@ uz:
               name: CS Principles Post-Course Survey
           lesson_groups:
             lessonGroup-3:
-              display_name: Survey
+              display_name: Post-Course Survey
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
         csp9-2022:
           lessons:
             Machine Learning:
@@ -18264,6 +18284,11 @@ uz:
             'Lesson 9: Assessment Day':
               key: '9-dars: Baholash kuni'
               name: Baholash kuni
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 1:
@@ -18306,6 +18331,11 @@ uz:
             'Lesson 14: Unit Assessment Day':
               key: '14-dars: Baholash kuni'
               name: Baholash kuni
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -18705,6 +18735,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+            lessonGroup-5:
+              display_name: Survey
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -18926,6 +18958,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+            lessonGroup-5:
+              display_name: Survey
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -19357,6 +19391,8 @@ uz:
             Keeping Data Secret:
               name: Keeping Data Secret
               key: Keeping Data Secret
+            Create a Representation:
+              name: Project - Create a Representation
             Problem Solving and Data:
               name: Problem Solving and Data
               key: Problem Solving and Data
@@ -19448,3 +19484,68 @@ uz:
           title: CS Discoveries Post-Course Survey
         csp-post-survey-2022:
           title: CS Principles Post-Course Survey
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: 6-dars
+            AI Code of Ethics:
+              description_student: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+              description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+            Survey Planning:
+              name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              name: Modul 5
+              key: Modul 5
+            Module 6:
+              name: Modul 6
+              key: Modul 6
+            Module 7:
+              name: Modul 7
+              key: Modul 7
+            Module 8:
+              name: Modul 8
+              key: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Xush kelibsiz
