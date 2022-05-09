@@ -1,7 +1,7 @@
 name 'SP-VPL-CSA-22-mod3-L3-boolean-matching'
 title 'Check for understanding'
 description 'For each of the statements below, assume that the variable `num` has been declared and initialized to the value 15.  Match the boolean expression to the correct boolean value.'
-height '40'
+height '90'
 question '`num * 2 == num + 15`'
 answer '`true`'
 
