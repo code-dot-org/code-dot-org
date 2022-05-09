@@ -158,6 +158,13 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validate :deeper_learning_courses_cannot_be_launched
+
+  def deeper_learning_courses_cannot_be_launched
+    if old_professional_learning_course? && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
+    end
+  end
 
   after_save :check_course_type_settings
 
@@ -212,7 +219,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil?
+    !professional_learning_course.blank?
   end
 
   def generate_plc_objects
@@ -313,20 +320,12 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def self.frozen_unit
-    Script.get_from_cache(Script::FROZEN_NAME)
-  end
-
   def self.course1_unit
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
   def self.flappy_unit
     Script.get_from_cache(Script::FLAPPY_NAME)
-  end
-
-  def self.artist_unit
-    Script.get_from_cache(Script::ARTIST_NAME)
   end
 
   def self.maker_units(user)
@@ -799,6 +798,10 @@ class Script < ApplicationRecord
     name
   end
 
+  def self.unit_in_category?(category, script)
+    return Script.get_from_cache(script)&.course_version&.course_offering&.category == category
+  end
+
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
@@ -812,19 +815,19 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    ScriptConstants.unit_in_category?(:twenty_hour, name)
+    name == '20-hour'
   end
 
   def hoc?
-    ScriptConstants.unit_in_category?(:hoc, name)
+    Script.unit_in_category?('hoc', name)
   end
 
   def flappy?
-    ScriptConstants.unit_in_category?(:flappy, name)
+    name == 'flappy'
   end
 
   def csf_international?
-    ScriptConstants.unit_in_category?(:csf_international, name)
+    Script.unit_in_category?('csf_international', name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -853,6 +856,8 @@ class Script < ApplicationRecord
 
   def k5_course?
     return false if twenty_hour?
+
+    # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
     k5_csc_course = [
       Script::POETRY_2021_NAME,
       Script::AI_ETHICS_2021_NAME,
@@ -867,6 +872,7 @@ class Script < ApplicationRecord
       Script::HELLO_WORLD_EMOJI_2021_NAME,
       Script::HELLO_WORLD_RETRO_2021_NAME
     ].include?(name)
+
     csf? || k5_csc_course || hoc_course
   end
 
@@ -887,17 +893,13 @@ class Script < ApplicationRecord
   end
 
   def csc?
-    under_curriculum_umbrella?('CSC')
+    Script.unit_in_category?('csc', name)
   end
 
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
     csd? || csp? || csa?
-  end
-
-  def hour_of_code?
-    under_curriculum_umbrella?('HOC')
   end
 
   def get_script_level_by_id(script_level_id)
@@ -1928,7 +1930,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!get_pilot_experiment
+    !get_pilot_experiment.blank?
   end
 
   def has_pilot_access?(user = nil)

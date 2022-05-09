@@ -76,6 +76,7 @@
   "codeMode": "Код",
   "codeTooltip": "Погледни го генерираниот JavaScript code.",
   "completedWithoutRecommendedBlock": "Честитки! Ти ја заврши задачката. ( Но би можеле да искористите различна коцка за појак код)",
+  "congratsNextLevelHeading": "Дипломиај за следното ниво",
   "continue": "Продолжи",
   "copy": "копирај",
   "courseBlocksToolsGameLab": "Работилница за апликации",
@@ -154,6 +155,7 @@
   "or": "или",
   "orientationLock": "Исклучување ориентација заклучување во прилагодувања на уредот.",
   "participantTypeTeacherTitle": "Наставници",
+  "petitionMessage": "Секој ученик во секое училиште треба да добие шанса да учи компјутерски науки",
   "play": "Пушти",
   "projectGroupMath": "Математика",
   "projectType": "Тип",
@@ -212,5 +214,6 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: "
+  "workspaceHeaderShort": "Работна површина: ",
+  "zipOrCountry": "ZIP код или држава"
 }

@@ -9,6 +9,125 @@
   "syntax": "",
   "tips": "",
   "methods": [
-
+    {
+      "key": "string",
+      "position": 0,
+      "name": "String",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "charat",
+      "position": 1,
+      "name": "charAt",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "compareto",
+      "position": 2,
+      "name": "compareTo",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "equals",
+      "position": 3,
+      "name": "equals",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "indexof",
+      "position": 4,
+      "name": "indexOf",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "length",
+      "position": 5,
+      "name": "length",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "substring",
+      "position": 6,
+      "name": "substring",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "tostring",
+      "position": 7,
+      "name": "toString",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "tolowercase",
+      "position": 8,
+      "name": "toLowerCase",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "touppercase",
+      "position": 9,
+      "name": "toUpperCase",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    }
   ]
 }

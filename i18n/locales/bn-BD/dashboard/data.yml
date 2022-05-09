@@ -136,6 +136,7 @@ bn:
         csp_applab_loops: চক্র
         CSF_loops_AB: চক্র
         csd_applab_parameters: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+        csp_applab_parameters: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
     callout:
       text:
         jigsaw_click: ব্লকটিতে ক্লিক করুন!

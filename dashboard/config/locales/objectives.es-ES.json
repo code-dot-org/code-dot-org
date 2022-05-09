@@ -1292,6 +1292,15 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
         },
+        "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
+          "description": "Identifica las innovaciones informáticas en un campo determinado"
+        },
+        "494a4afe-5479-4e4f-b656-99ddc4781740": {
+          "description": "Para un dispositivo determinado, articula las entradas y salidas probables"
+        },
+        "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
+          "description": "Plantea mejoras para que un dispositivo resuelva mejor un problema concreto"
+        },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
           "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
         },
@@ -1333,6 +1342,66 @@
         },
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
           "description": "Representar el valor de un sensor de varias maneras"
+        },
+        "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
+          "description": "Desarrolla un programa que responda a los eventos de una entrada de hardware"
+        },
+        "5e15877a-55c0-434e-b794-1277ca716016": {
+          "description": "Crea una función que utilice parámetros para generalizar el comportamiento"
+        },
+        "ae74915c-b485-44a1-a60b-a4051c1abca7": {
+          "description": "Utiliza los manejadores de eventos para responder a la interacción del usuario"
+        },
+        "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
+          "description": "Diseñar un programa informático que utilice hardware para la entrada y salida no tradicionales"
+        },
+        "84079c5a-326d-4fda-9439-acd6478673b3": {
+          "description": "Prototipo de un programa que integra software y hardware"
+        },
+        "34585635-155a-4032-b653-6cfaa0832b7e": {
+          "description": "Acceder a un elemento de un array mediante su índice"
+        },
+        "57704d64-7732-445a-a82a-81f3b6955df8": {
+          "description": "Utiliza el array de LEDs de colores para controlar individualmente cada LED "
+        },
+        "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
+          "description": "Crear y modificar un array"
+        },
+        "f739947f-be77-462b-b0ef-3823349016ef": {
+          "description": "Utilizar el zumbador para producir secuencias de notas"
+        },
+        "4449a257-a6e6-426f-a87b-a1ef39ea777f": {
+          "description": "Reconocer un array como una lista de elementos sobre los que se puede operar secuencialmente."
+        },
+        "8a9102e9-704c-452b-b063-62f6b63d2627": {
+          "description": "Modifica la condición de salida de un bucle `for` para controlar el número de veces que se repite"
+        },
+        "bb5539ee-e0af-4379-9179-2bebc947c741": {
+          "description": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "eb28a603-8753-4a84-ad3e-fe5566c8ee76": {
+          "description": "Reconocer el uso y la necesidad de la orientación del acelerómetro (cabeceo y balanceo)."
+        },
+        "cbd66e36-6a02-4227-8674-70636d61b455": {
+          "description": "Utiliza los eventos de datos para actualizar continuamente las propiedades de un elemento."
+        },
+        "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
+          "description": "Utiliza los parámetros para generalizar el propósito de una función."
+        },
+        "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
+          "description": "Crear y depurar circuitos sencillos"
+        },
+        "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
+          "description": "Desarrollar un prototipo físico interactivo que combine software y hardware"
+        },
+        "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
+          "description": "Tener en cuenta las necesidades de los distintos usuarios al diseñar un producto"
+        },
+        "46a593f4-3334-477c-9bac-f1fa12e83979": {
+          "description": "Prototipo de un dispositivo informático físico"
+        },
+        "5ae2739b-3776-43ba-973f-50fa22302e32": {
+          "description": "Aplicar un plan para desarrollar un programa informático que integre entradas y salidas de hardware"
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."

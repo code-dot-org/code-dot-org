@@ -885,6 +885,12 @@ et:
             '90': alla
             '180': vasakule
             '270': üles
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': keskmine
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

@@ -172,6 +172,6 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def set_expression_by_keys
-    @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
+    @programming_expression = ProgrammingExpression.get_from_cache(params[:programming_environment_name], params[:programming_expression_key])
   end
 end

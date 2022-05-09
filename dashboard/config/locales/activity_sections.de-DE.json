@@ -4776,31 +4776,56 @@
           "name": "Einführung",
           "description": "In diesem Kurs werden wir lernen, wie man Code schreibt. Code wird verwendet, um Apps, Spiele, Webseiten, Simulationen und alle möglichen Dinge zu programmieren, die wir auf einem Computer benutzen."
         },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "**Vorgehensweise:** Zeigen Sie den SchülerInnen ein T-Diagramm auf den Folien und einem Whiteboard mit der Aufschrift \"Lieblingsapps und Spiele\" auf der linken Seite und \"Warum sie uns gefallen\" auf der rechten Seite. Lassen Sie die SchülerInnen nach einem Beispiel Vorschläge für die Liste machen. Wenn die SchülerInnen erklären, warum ihnen eine bestimmte App gefällt, wiederholen Sie ihre Ideen und konzentrieren Sie sich auf _Auswahlmöglichkeiten_ und Zeiten, in denen der/die BenutzerIn _auswählen_ kann, wie er/sie spielt oder verwendet. Fahren Sie fort, wenn die SchülerInnen den Zusammenhang erkennen, dass Menschen es vorziehen, Entscheidungen treffen zu können."
+        },
+        "bee82cce-d1ce-452a-b733-b9e750e54b90": {
+          "description": "Bei der Entwicklung von Apps und Spielen steht der Benutzer im Mittelpunkt. Der Benutzer sind Sie oder die Person, die die App verwendet und mit ihr spielt. Die Entwickler haben Ideen, wie ihre Apps genutzt werden sollten, aber die Entscheidung liegt beim Benutzer! Heute sehen wir uns an, wie (und warum) die uns App- und Spieleentwickler Entscheidungen treffen lassen."
+        },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "description": "**Vorgehensweise:** Zeigen Sie die Folie \"Auswahlmöglichkeiten des Benutzers\", die Sie oben im Abschnitt \"Ressourcen\" finden.\n\n**Diskussion:** Was denken Sie, welche Auswahlmöglichkeiten bieten die App-Entwickler den/der BenutzerIn bei jedem dieser Spiele oder Apps?\n\n**Ziel:** Die SchülerInnen sollen in der Diskussion nicht nur darüber diskutieren, worum es bei den Apps geht, sondern auch über die spezifischen Entscheidungen, die der/die BenutzerIn treffen kann. Mit Talk Box können die BenutzerInnen zum Beispiel einen Avatar oder eine digitale Darstellung von sich auswählen. Das ist eine Wahlmöglichkeit, weil sie dem Benutzer das Gefühl gibt, dass die App für ihn bestimmt ist.",
           "tips": [
-            null
+            "In dieser Unterrichtsstunde diskutieren Sie mithilfe einer Foliensammlung über fiktive Apps. Sie können stattdessen auch andere Beispiele verwenden, für die sich Ihre SchülerInnen interessieren."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Wir wir sehen, haben die Benutzer in allen diesen Apps die Auswahl, wie sie die App nutzen möchten. Diese Auswahlmöglichkeiten motivieren möglicherweise andere Benutzer dazu, die App zu verwenden."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Reflektieren:** Was ist Ihr Liebelings-Spiel oder Ihre bevorzugte App? Welche Auswahl- und Entscheidungsmöglichkeiten haben Sie in dem Spiel bzw. in der App?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
           "name": "Einführung Sprite Lab",
+          "description": "**Vorgehensweise:** Zeigen Sie das Video **\\*Einführung in Sprite Lab**.",
           "progression_name": "Video: Einführung in das Sprite Lab"
+        },
+        "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
+          "description": "Bald lernen wir, Code zu schreiben und erstellen unsere eigenen Sprite Lab Projekte. Wir werden zunächst erkunden, was möglich ist. Heute sind Sie der/die BenutzerIn! Sie haben die Aufgabe, die Beispielprogramme, die Sie Website Code.org finden, zu spielen und zu verwenden. Probiere die Programme aus und beschreibe die Sprit-Kostüme und die Auswahlmöglichkeiten, über die Sie im Spiel entscheiden können,  jedes Programm, das du ausprobierst."
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Apps erforschen",
+          "description": "_Erkunde mindestens 3 Sprit Lab Programme von Code.org. Liste die Sprits jedes angesehenen Programms auf und beschreiben Sie Ihre Auswahlmöglichkeiten als Benutzer._\n\n**Vorgehensweise:** \n\n-   Teilen Sie ein ausgedrucktes oder digitales Exemplar des Arbeitsblatts **\\*Erkunden der Apps** aus. \n\n-   Weisen Sie die SchülerInnen auf Level 2 von Code Studio hin (Erkundung: Beispiel-Apps). \n\n-   Überlegen Sie, ob eine App mit der Klasse analysieren, bevor die SchülerInnen selbständig arbeiten.",
           "tips": [
-            null
+            "Wenn Ihre Schülerinnen und Schüler Code.org zum ersten Mal nutzen, sollten Sie sich etwas mehr Zeit nehmen. Erklären Sie den SchülerInnen, wie sie auf der Website navigieren und sich bei ihrem Konten anmelden."
           ],
           "progression_name": "Erkundung: Beispiel-Apps"
         },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Teilen Sie aus",
+          "description": "**Diskussion:** Was waren die interessantesten Auswahlmöglichkeiten und Entscheidungen in der App? Gab in der App etwas, was Sie gerne geändert hätten, aber Sie hatten keine Möglichkeit dazu?\n\n**Ziel:** Die SchülerInnen sollten in der Lage sein, bestimmte Entscheidungen zu benennen, die sie getroffen haben, aber auch darüber diskutieren, warum sie denken, dass der/die EntwicklerIn uns diese Wahl gelassen hat. Hervorzuhebende Entscheidungsmöglichkeiten sind Texteingaben (z. B. Chat Bot), die verwendeten Sprites-Typen (z. B. Sammlerspiel) oder wie Sie mit Spielelementen interagieren. "
+        },
         "efa336e3-b101-4300-9bce-45771a6e114d": {
-          "name": "Verbesserungsvorschlag"
+          "name": "Verbesserungsvorschlag",
+          "description": "**Anregung:** Denken Sie an eine verwendete Apps und machen Sie Vorschläge, wie sie durch mehr Auswahlmöglichkeiten für die BenutzerInnen verbessert werden könnte.\n\nWenn es die Zeit erlaubt, lassen Sie die SchülerInnen die obige Aufforderung mit einer oder mehreren der folgenden Methoden prüfen:\n\n–  Bitten Sie Freiwillige, ihre Ideen in der Gruppendiskussion vorzutragen.\n–   Lassen Sie die SchülerInnen in Paaren oder kleinen Gruppen diskutieren.\n–   Lassen Sie die SchülerInnen ihre Ideen zeichnen oder auf einem Poster darstellen."
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
-          "name": "Reflektieren"
+          "name": "Reflektieren",
+          "description": "Heute haben wir mehr darüber erfahren, wie App-Entwickler den BenuterInnen die Wahl lassen. Wir haben auch etwas über Sprites gelernt. Sprites sind Grafiken auf dem Bildschirm mit bestimmten Eigenschaften wie Größe, Drehung und Ort. Sprites haben auch ein Kostüm, das bestimmt, wie sie aussehen."
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "description": "**Anregung: (eine Option auswählen)**\n\n–  Was wäre beispielsweise eine Auswahlmöglichkeit in den von Ihnen verwendeten Spielen oder App, über die Sie gerne entscheiden würden ?\n–   Welche Art App oder Spiel würden Sie gern entwickeln?",
           "tips": [
-            null
+            "Reflexionsanregungen wie diese können auf verschiedene Arten durchgeführt werden. Ein Tagebuch oder eine Diskussion (mit Gruppen oder Partnern) sind großartige Optionen! "
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
@@ -7699,6 +7724,7 @@
           "name": "Einführung"
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "\\`Für´-Schleifen mit dem Künstler",
           "tips": [
             null
           ],
@@ -8105,7 +8131,7 @@
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Reflektieren",
           "tips": [
-            null
+            "Reflexionsanregungen wie diese können auf verschiedene Arten durchgeführt werden. Ein Tagebuch oder eine Diskussion (mit Gruppen oder Partnern) sind großartige Optionen! "
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
@@ -8191,6 +8217,9 @@
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
           "progression_name": "Über mich mit Sprite Lab"
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Teilen Sie aus"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Reflektieren"

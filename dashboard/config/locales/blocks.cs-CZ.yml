@@ -1229,6 +1229,12 @@ cs:
             '90': dolů
             '180': vlevo
             '270': nahoru
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': malý
+            '50': středně
+            '100': velký
       gamelab_mirrorSprite:
         text: "{SPRITE} tvář {DIRECTION}"
         options:

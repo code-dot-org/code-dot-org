@@ -2,6 +2,18 @@
   "es-MX": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, distinguiendo el lenguaje literal del no literal."
+        },
+        "ccela/4.RL.7": {
+          "description": "Establecer conexiones entre el texto de una historia o drama y una presentación visual u oral del texto, identificando dónde se reflejan en cada versión las descripciones e indicaciones específicas del texto."
+        },
+        "ccela/5.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, incluyendo el lenguaje figurado como las metáforas y los símiles."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analizar cómo los elementos visuales y multimedia contribuyen al significado, el tono o la belleza de un texto (por ejemplo, novela gráfica, presentación multimedia de ficción, cuento popular, mito, poema)."
+        },
         "csta/1B-AP-10": {
           "description": "Crear programas que incluyan secuencias, eventos, bucles y condicionales."
         },
@@ -194,6 +206,33 @@
         "csta/1A-AP-14": {
           "description": "Depurar (identificar y corregir) errores en un algoritmo o programa que incluye secuencias y ciclos (bucles) simples."
         },
+        "csp2021/IOC-2.B.5": {
+          "description": "El encriptado es el proceso de codificación de los datos para evitar el acceso no autorizado. El descifrado es el proceso de descodificación de los datos. Dos enfoques comunes de encriptación son: ● El cifrado de clave simétrica implica una clave para el cifrado y el descifrado.● El cifrado de clave pública empareja una clave pública para el cifrado y una clave privada para el descifrado. El emisor no necesita la clave privada del receptor para cifrar un mensaje, pero la clave privada del receptor es necesaria para descifrar el mensaje. DECLARACIÓN DE EXCLUSIÓN(EKIOC-2.B.5): Los procedimientos matemáticos específicos para el cifrado y el descifrado no están dentro del objetivo de este curso ni del examen AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Recomienda medidas de seguridad para hacer frente a diversos escenarios basándose en factores como la eficiencia, la viabilidad y los impactos éticos."
+        },
+        "csta/3A-NI-07": {
+          "description": "Compara diversas medidas de seguridad, teniendo en cuenta las compensaciones entre la usabilidad y la seguridad de un sistema informático."
+        },
+        "csta/3B-NI-04": {
+          "description": "Compara las formas en que los desarrolladores de software protegen los dispositivos y la información del acceso no autorizado."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "La compresión de datos puede reducir el tamaño (número de bits) de los datos transmitidos o almacenados."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Menos bits no significa necesariamente menos información."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "La cantidad de reducción de tamaño de la compresión depende tanto de la cantidad de redundancia en la representación de datos original como del algoritmo de compresión aplicado."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Los algoritmos de compresión de datos sin pérdidas suelen reducir el número de bits almacenados o transmitidos garantizando la reconstrucción completa de los datos originales."
+        },
+        "csta/3A-DA-10": {
+          "description": "Evalúa las ventajas y desventajas de cómo se organizan los elementos de los datos y dónde se almacenan."
+        },
         "csta/1B-CS-01": {
           "description": "Describir cómo funcionan las partes internas y externas de los dispositivos computacionales para formar un sistema."
         },
@@ -245,6 +284,9 @@
         "csta/1B-DA-06": {
           "description": "Organizar y presentar visualmente los datos recogidos para destacar las relaciones y respaldar una reclamación."
         },
+        "csta/1B-DA-07": {
+          "description": "Utilizar los datos para resaltar o proponer relaciones de causa y efecto, predecir resultados o comunicar una idea."
+        },
         "csta/1B-NI-04": {
           "description": "Hacer un ejemplo de cómo la información se divide en trozos más pequeños, se transmite en forma de paquetes a través de múltiples dispositivos en las redes e Internet y se vuelve a ensamblar en el destino."
         },
@@ -258,13 +300,13 @@
           "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
         },
         "csta/1B-AP-14": {
-          "description": "Observar los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
+          "description": "Prestar atención a los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
         },
         "csta/1B-AP-16": {
           "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
         },
         "csta/1B-AP-17": {
-          "description": "Describir las elecciones realizadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
+          "description": "Describir las deciciones tomadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
         },
         "csta/1B-CS-03": {
           "description": "Determinar posibles soluciones para resolver problemas sencillos de hardware y software utilizando estrategias comunes de resolución de problemas."
@@ -288,13 +330,16 @@
           "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
         },
         "csta/2-AP-17": {
-          "description": "Probar y refinar programas sistemáticamente  utilizando un rango de casos de prueba."
+          "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
         },
         "csta/2-AP-13": {
           "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
         },
+        "csta/3A-AP-16": {
+          "description": "Diseñar y desarrollar de forma iterativa dispositivos informáticos con fines prácticos, de expresión personal o para abordar un problema social utilizando eventos para iniciar instrucciones."
+        },
         "csta/2-AP-19": {
-          "description": "Documentar programas con el objetivo de hacerlos más simples de llevar seguimiento, probar y depurar."
+          "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
         },
         "csta/2-AP-11": {
           "description": "Crear variables con nombres claros que representen distintos tipos de datos y realicen operaciones con sus valores."
@@ -317,8 +362,17 @@
         "csta/2-AP-14": {
           "description": "Crear procedimientos con parámetros para organizar el código y hacer más fácil su reutilización."
         },
+        "csta/2-CS-03": {
+          "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
+        },
         "csta/2-DA-07": {
           "description": "Representar datos usando múltiples esquemas de codificación."
+        },
+        "csta/2-NI-05": {
+          "description": "Explicar cómo las medidas de la seguridad física y digital pueden proteger la información."
+        },
+        "csta/2-NI-06": {
+          "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
         },
         "csta/3A-AP-20": {
           "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."

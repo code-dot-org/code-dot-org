@@ -6659,11 +6659,6 @@ mn:
                 үр дүнтэй цуглуулахын тулд гогцоо ашигладаг.'
             Loops in Artist:
               name: Зураач дээрх гогцоо
-              description_teacher: Гогцоонууд руу буцаж ирэхэд сурагчид зааврын энгийн
-                дарааллыг давтаж зураг зурж сурдаг. Өмнөх залгуурын хичээл дээр гогцоо
-                нь ээдрээг туулах, эрдэнэс цуглуулахад ашиглагддаг байв. Энд гогцоо
-                хэв маягийг бий болгож байна. Энэ үе шатны төгсгөлд сурагчдад гогцоо
-                ашиглан өөрсдийн зургийг бүтээх боломжийг олгоно.
             'Events: The Big Event':
               name: 'Үйл явдал: Том үйл явдал'
               description_teacher: Үйл явдал бол урьдчилан бичсэн алгоритмд төрөл
@@ -24729,6 +24724,10 @@ mn:
               display_name: Хичээлүүд
             lessonGroup-3:
               display_name: Төсөл
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Хичээл 3
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -25544,6 +25543,8 @@ mn:
               key: Семестрийн Hackathon Хэсэг 5
             'Lesson 18: Assessment Day':
               key: 'Хичээл 18: Үнэлгээний өдөр'
+            CS Principles Post-Course Survey:
+              name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
           lesson_groups:
             csp_lists:
               display_name: Жагсаалтууд
@@ -25553,6 +25554,8 @@ mn:
               display_name: Нэвтрэлтүүд
             csp_project:
               display_name: Төсөл
+            lessonGroup-5:
+              display_name: Хичээлийн дараах судалгаа
         courseb-2022:
           lessons:
             Digital Trails:
@@ -25997,9 +26000,13 @@ mn:
               key: Зэрэгцээ ба тархсан алгоритмууд
             'Lesson 6: Assessment Day':
               key: 'Хичээл 6: Үнэлгээний өдөр'
+            CS Principles Post-Course Survey:
+              name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Нэгж 6: Алгоритмууд'
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
         csp7-2022:
           lessons:
             Libraries Explore:
@@ -26018,11 +26025,18 @@ mn:
             csp_libraries:
               display_name: Номын сангууд
             lessonGroup-3:
-              display_name: Судалгаа
+              display_name: Хичээлийн дараах судалгаа
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
               key: PT үүсгэх - Даалгаврыг дуусгах
+            CS Principles Post-Course Survey:
+              name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            lessonGroup-2:
+              display_name: РТ-г үүсгэх
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
         csp9-2022:
           lessons:
             Machine Learning:
@@ -26031,9 +26045,13 @@ mn:
               name: Машины сургалт
             'Lesson 9: Assessment Day':
               key: 'Хичээл 9: Үнэлгээний өдөр'
+            CS Principles Post-Course Survey:
+              name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Нэгж 9: Өгөгдөл'
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -26064,6 +26082,11 @@ mn:
               key: 'Төсөл: Инновацийн симуляци хэсэг 7'
             'Lesson 14: Unit Assessment Day':
               key: 'Хичээл 14: Нэгжийн үнэлгээний өдөр'
+            CS Principles Post-Course Survey:
+              name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -26741,6 +26764,9 @@ mn:
           lessons:
             lesson-9:
               name: Гогцоонууд
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -26956,6 +26982,10 @@ mn:
           lessons:
             lesson-6:
               name: Оюуны өмч
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -27347,6 +27377,8 @@ mn:
             Keeping Data Secret:
               name: Мэдээллийг нууцлах
               key: Мэдээллийг нууцлах
+            Create a Representation:
+              name: Төсөл - Төлөөлөл бий болгох
             Problem Solving and Data:
               name: Асуудлыг шийдвэрлэх ба өгөгдөл
               key: Асуудлыг шийдвэрлэх ба өгөгдөл
@@ -27450,3 +27482,59 @@ mn:
           title: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
         csp-post-survey-2022:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        aiml-2022:
+          lessons:
+            Survey Planning:
+              name: Өгөгдөл цуглуулах ажлыг зохион бүтээх
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1
+              key: Модуль 1
+            Module 2:
+              name: Модуль 2
+              key: Модуль 2
+            Module 3:
+              name: Модуль 3
+              key: Модуль 3
+            Module 4:
+              name: Модуль 4
+              key: Модуль 4
+            Module 5:
+              name: Модуль 5
+              key: Модуль 5
+            Module 6:
+              name: Модуль 6
+              key: Модуль 6
+            Module 7:
+              name: Модуль 7
+              key: Модуль 7
+            Module 8:
+              name: Модуль 8
+              key: Модуль 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1
+              key: Модуль 1
+            Module 2:
+              name: Модуль 2
+              key: Модуль 2
+            Module 3:
+              name: Модуль 3
+              key: Модуль 3
+            Module 4:
+              name: Модуль 4
+              key: Модуль 4
+            Module 5:
+              key: Модуль 5
+            Module 6:
+              key: Модуль 6
+            Module 7:
+              key: Модуль 7
+            Module 8:
+              key: Модуль 8
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Мэндчилгээ

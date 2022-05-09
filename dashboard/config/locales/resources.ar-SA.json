@@ -617,7 +617,7 @@
           "type": "فيديو نشاط"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "حلقة For للمرح - مفتاح التقييم",
+          "name": "حلقة \"لِ\" المحددة الممتعة - الإجابة النموذجية للتقييم",
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
           "type": "مفتاح المعلم"
         },
@@ -642,7 +642,7 @@
           "type": "التقييم"
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
@@ -821,7 +821,7 @@
           "type": "فيديو المعلم"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)",
+          "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "أدوات التعلم"
         },
@@ -915,9 +915,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
+          "name": "الحدث الكبير (الدورتان التدريبيتان \"أ\" و\"ب\")",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "الصورة المتحكمة"
+          "type": "صورة وحدة التحكم"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "دليل تخطيط مشروع مختبر الألعاب",
@@ -1014,7 +1014,7 @@
           "type": "مصدر"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "الرقص- جنون المعكرونة",
+          "name": "الاهتزاز- جنون المعكرونة",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "فيديو"
         },
@@ -1049,7 +1049,7 @@
           "type": "مصدر"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)",
+          "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "أدوات التعلم"
         },
@@ -1144,9 +1144,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
+          "name": "الحدث الكبير (الدورتان التدريبيتان \"أ\" و\"ب\")",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "الصورة المتحكمة"
+          "type": "صورة وحدة التحكم"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "صورة مشاعر الوجوه",
@@ -1271,7 +1271,7 @@
           "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "قوالب المتاهة غير المتصلة",
+          "name": "قطع المتاهة البرمجية غير المتصلة",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": "أدوات التعلم"
         },
@@ -1291,7 +1291,7 @@
           "type": "مصدر"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
@@ -1329,9 +1329,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "الحدث الكبير (الدورة \"ج\")",
+          "name": "الحدث الكبير (الدورة التريبية \"ج\")",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
-          "type": "جهاز التحكم في الأحداث"
+          "type": "أداة التحكم في الأحداث"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
@@ -1339,7 +1339,7 @@
           "type": "فيديو"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "مستويات برمجة مفتوحة",
+          "name": "عينة من حلول المراحل",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "الحل النموذجي"
         },
@@ -1354,7 +1354,7 @@
           "type": "ورقة عمل"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "وحدات البت ووحدات البايت",
+          "name": "وحدات البت مقابل وحدات البايت",
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
           "type": "فيديو الطالب"
         },
@@ -1549,7 +1549,7 @@
           "type": "حزمة النشاط"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
@@ -1567,7 +1567,7 @@
           "type": "الحل النموذجي"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "مستويات برمجة مفتوحة",
+          "name": "عينة من حلول المراحل",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "الحل النموذجي"
         },
@@ -1689,7 +1689,7 @@
           "type": "مصدر"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "قوالب المتاهة غير المتصلة",
+          "name": "قطع المتاهة البرمجية غير المتصلة",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": "مصدر"
         },
@@ -1716,7 +1716,7 @@
           "type": "نشرة"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
+          "name": "صندوق أدوات المعلم - السمكة السبّاحة",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
@@ -1775,11 +1775,11 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
@@ -1872,7 +1872,7 @@
           "type": "شرائح"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
+          "name": "صندوق أدوات المعلم - السمكة السبّاحة",
           "url": "https://studio.code.org/levels/18623",
           "type": "مرحلة البرمجة"
         },
@@ -1943,32 +1943,32 @@
           "type": "فيديو الطالب"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "كتابة الأغاني مع الدوال",
+          "name": "كتابة الأغاني مع الوظائف",
           "url": "https://youtu.be/5iDCKkI6y2Y",
           "type": "فيديو نشاط"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
           "type": "فيديو الدرس العملي"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
           "type": "ورقة عمل"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
           "type": "التقييم"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
           "type": "الحل النموذجي للتقييم"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
@@ -1997,7 +1997,7 @@
           "type": "دليل إعداد المعلمين"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
+          "name": "٧٢ طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
           "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
           "type": "مصدر"
         },
@@ -2229,14 +2229,10 @@
           "type": "مصدر"
         },
         "csd_curriculum_guide/csd/2021": {
-          "type": "مصدر",
-          "name": "",
-          "url": ""
+          "type": "مصدر"
         },
         "csd_implementation_guide/csd/2021": {
-          "type": "مصدر",
-          "name": "",
-          "url": ""
+          "type": "مصدر"
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "شرائح"
@@ -2254,9 +2250,7 @@
           "type": "مصدر"
         },
         "computer-science-practices/csd/2021": {
-          "type": "تأملات",
-          "name": "",
-          "url": ""
+          "type": "تأملات"
         },
         "paper-prototypes/csd/2021": {
           "name": "النماذج الورقية الأولية"
@@ -2310,8 +2304,7 @@
           "name": "عرض التطبيق"
         },
         "teacher_forum/csd/2021": {
-          "name": "منتدى المعلم",
-          "url": ""
+          "name": "منتدى المعلم"
         },
         "computing-innovations/csd/2021": {
           "name": "ابتكارات الحوسبة"
@@ -2710,382 +2703,106 @@
           "type": "مصدر"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
-          "name": "استكشاف صفحات الويب",
-          "url": "",
-          "type": ""
+          "name": "استكشاف صفحات الويب"
         },
         "exploring-web-pages/csd/2021": {
-          "name": "استكشاف صفحات الويب",
-          "url": "",
-          "type": ""
+          "name": "استكشاف صفحات الويب"
         },
         "csd_unit_2_-_web_development/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "exemplar-text-website/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "html_tags/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "intro_to_web_lab_part_2/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_pair_programming/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "headings_and_paragraphs/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "video_debugging/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "project-guide-html-project-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer-review-html-web-page-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "html-web-page-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "mini-project-html-page/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "html-web-page/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "html-page/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "formatting_html/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "lists/csd/2021": {
           "name": "القوائم",
-          "url": "",
           "type": "مصدر"
         },
         "digital-footprint/csd/2021": {
           "name": "البصمة الرقمية",
-          "url": "",
           "type": "شرائح"
-        },
-        "social-sleuth-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "social-sleuth/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "مدخل للغة CSS -الجزء 1",
-          "url": "",
           "type": "فيديو"
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "مدخل للغة CSS -الجزء 2",
-          "url": "",
           "type": "فيديو"
         },
         "style_sheets/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "text_properties/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "your-personal-style-1-2-3/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "your-personal-style-1/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "your-personal-style/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "licensing-your-work-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "licensing-your-work-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "creative-commons-video/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "creative_commons_search/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "images_in_html/csd/2021": {
           "name": "الصور بصيغة HTML",
-          "url": "",
           "type": "مصدر"
         },
-        "define-your-webpage-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "define-your-web-page/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "body-styling/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "layout-properties/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "person-web-page-prepare/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "practices-reflection-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer-review-personal-website-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "personal-web-page-1/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "person-web-page-reflect/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "personal-web-page/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "publishing_your_website/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "extra_code_in_challenge_levels/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "websites-for-a-purpose-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "websites-for-a-purpose/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "website-team-plan-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "teamwork-dealing-with-disagreement/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "how-teamwork-works/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
-        },
-        "website-team-plan/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "links-and-research-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "links-and-research/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "how-search-works-video/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
-        },
-        "internet-scavenger-hunt/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "classes/csd/2021": {
           "name": "الفصول الدراسية",
-          "url": "",
           "type": "مصدر"
-        },
-        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "website-for-a-purpose-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "plan-a-multi-page-website/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "website_for_a_purpose_-_student_checklist/csd/2021": {
-          "name": "",
-          "url": ""
         },
         "hyperlinks/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "practices-reflection-l21-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "website-for-a-purpose/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
-        },
-        "website-for-a-purpose-reflect/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "all_code_2/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_3/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_3/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_3/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_debugging/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation/csd/2021": {
-          "name": "",
-          "url": ""
         },
         "lesson_plans/pre-express/2020": {
           "name": "مخطّطات الدّروس"

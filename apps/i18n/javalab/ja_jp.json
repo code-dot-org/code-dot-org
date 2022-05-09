@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "バックパックに保存されたファイルがここに表示されます。",
   "enablePeerReview": "ピアレビューを有効にする",
   "errorJavabuilderConnectionGeneral": "サーバーへの接続中にエラーが発生しました。もう一度試してください。",
-  "errorJavabuilderConnectionNotAuthorized": "Javalabへのアクセスが許可されていません。ログインする必要がありますか？それとも、セクションに登録する必要がありますか？",
   "errorLoadingClassmates": "クラスメートのリストの読み込み中にエラーが発生しました。もう一度やり直してください。",
   "errorMediaImageLoadError": "画像の読み込み中にエラーが発生しました。",
   "errorNeighborhoodInvalidGrid": "近隣レベルの読み込み中にエラーが発生しました。support@code.orgまでご連絡ください。その際、メッセージにこのページのURLを必ず入れてください。",

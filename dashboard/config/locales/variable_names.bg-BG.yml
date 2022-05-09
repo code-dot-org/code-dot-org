@@ -76,6 +76,7 @@ bg:
       screenWidth: екранШирина
       set sides: задайте страни
       shout: викам
+      sides: страни
       size: размер
       speed: скорост
       startX: стартX

@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "Dateien, welche in deinem Profil gespeichert sind, erscheinen hier.",
   "enablePeerReview": "Beurteilung zulassen",
   "errorJavabuilderConnectionGeneral": "Beim Verbinden mit unserem Server ist ein Fehler aufgetreten. Versuche es erneut.",
-  "errorJavabuilderConnectionNotAuthorized": "Du kannst nicht auf Javalab zugreifen. Möchtest du dich anmelden oder einer Sektion anschließen?",
   "errorLoadingClassmates": "Beim Laden der Liste deiner Klassenkameraden ist ein Fehler aufgetreten. Bitte versuche es erneut.",
   "errorMediaImageLoadError": "Beim Laden des Bildes ist ein Fehler aufgetreten.",
   "errorNeighborhoodInvalidGrid": "Beim Laden des Nachbarlevels ist ein Fehler aufgetreten. Bitte kontaktiere uns unter support@code.org und füge die URL zu dieser Seite in die Mitteilung ein.",
