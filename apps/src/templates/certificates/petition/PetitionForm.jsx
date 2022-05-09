@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap';
-import {range, mapValues, without} from 'lodash';
+import {range, mapValues, without, find} from 'lodash';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 import {
@@ -8,7 +8,7 @@ import {
   getInvalidFields,
   getErrorMessage,
   getAgeSafeData,
-  professionToDataString
+  professionOptions
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import PropTypes from 'prop-types';
@@ -33,14 +33,17 @@ const PetitionForm = ({gaPagePath}) => {
     e => {
       e.preventDefault();
 
-      // ensure profession data is sent in english, and trim inputted strings
-      let sanitizedData = data;
-      sanitizedData.role_s = professionToDataString[data.role_s] || 'other';
-      Object.keys(sanitizedData).forEach(field => {
+      let sanitizedData = {};
+      Object.keys(data).forEach(field => {
         if (typeof data[field] === 'string') {
           sanitizedData = {...sanitizedData, [field]: data[field].trim()};
+        } else {
+          sanitizedData = {...sanitizedData, [field]: data[field]};
         }
       });
+      // ensure profession data is sent in english
+      sanitizedData.role_s =
+        find(professionOptions, {text: data.role_s})?.dataString || 'other';
 
       const currentInvalidFields = getInvalidFields(sanitizedData);
       if (currentInvalidFields.length !== 0) {
@@ -138,11 +141,22 @@ const PetitionForm = ({gaPagePath}) => {
           onChange={handleChange}
           value={data.role_s || ''}
         >
-          {Object.keys(professionToDataString).map(profession => (
-            <option key={profession} value={profession}>
-              {profession}
-            </option>
-          ))}
+          {[
+            'placeholder',
+            'student',
+            'parent',
+            'educator',
+            'administrator',
+            'engineer',
+            'none'
+          ].map(option => {
+            const {text} = professionOptions[option];
+            return (
+              <option key={option} value={text}>
+                {text}
+              </option>
+            );
+          })}
         </ControlledFieldGroup>
         <Button
           className="petition-button"

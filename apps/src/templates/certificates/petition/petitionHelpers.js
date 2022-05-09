@@ -55,12 +55,12 @@ export const getAgeSafeData = data => {
 };
 
 // TODO: Ask RED – What should be displayed if user doesn't select anything?
-export const professionToDataString = {
-  '-': 'other',
-  [i18n.student()]: 'student',
-  [i18n.parent()]: 'parent',
-  [i18n.educator()]: 'educator',
-  [i18n.administrator()]: 'administrator',
-  [i18n.softwareEngineer()]: 'engineer',
-  [i18n.noneOfTheAbove()]: 'other'
+export const professionOptions = {
+  placeholder: {text: '-', dataString: 'other'},
+  student: {text: i18n.student(), dataString: 'student'},
+  parent: {text: i18n.parent(), dataString: 'parent'},
+  educator: {text: i18n.educator(), dataString: 'educator'},
+  administrator: {text: i18n.administrator(), dataString: 'administrator'},
+  engineer: {text: i18n.softwareEngineer(), dataString: 'engineer'},
+  none: {text: i18n.noneOfTheAbove(), dataString: 'other'}
 };
