@@ -20,7 +20,7 @@
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       DBClusterIdentifier: !Ref AuroraCluster
-      DBInstanceClass: db.r5.2xlarge
+      DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
