@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "A hátizsákodba mentett fájlaid itt fognak megjelenni",
   "enablePeerReview": "Engedélyezze a társ általi átnézést",
   "errorJavabuilderConnectionGeneral": "Hiba történt a szerverhez csatlakozás közben. Próbáld újra.",
-  "errorJavabuilderConnectionNotAuthorized": "Nem vagy felhatalmazva arra, hogy belépj a Javalab-ba. Be kell jeletkezned vagy csatlakoznod egy szekcióba?",
   "errorLoadingClassmates": "Hiba történt az osztálytársaid listájának betöltésekor. Kérjük, próbáld meg újra.",
   "errorMediaImageLoadError": "Hiba történt a kép betöltése közben",
   "errorNeighborhoodInvalidGrid": "Hiba történt a szomszédos szint betöltése közben. Kérjük lépjen kapcsolatba velünk a support@code.org email-en és az üzenetedben legyen benne ennek az oldalnak az URL címe.",

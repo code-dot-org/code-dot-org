@@ -114,427 +114,565 @@
           "type": "Vídeo"
         },
         "lesson_plans/courseb/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/courseb/"
         },
         "standard_mappings/courseb/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/courseb/standards/"
         },
         "teacher_forum/courseb/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/courseb/vocab/"
         },
         "lesson_plans/coursea/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/coursea/"
         },
         "standard_mappings/coursea/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/coursea/standards/"
         },
         "teacher_forum/coursea/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/coursea/vocab/"
         },
         "lesson_plans/coursed/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/coursed/"
         },
         "standard_mappings/coursed/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/coursed/standards/"
         },
         "teacher_forum/coursed/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/coursed/vocab/"
         },
         "lesson_plans/coursef/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/coursef/"
         },
         "standard_mappings/coursef/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/coursef/standards/"
         },
         "teacher_forum/coursef/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/coursef/vocab/"
         },
         "lesson_plans/express/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/express/"
         },
         "standard_mappings/express/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/express/standards/"
         },
         "teacher_forum/express/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/express/vocab/"
         },
         "lesson_plans/coursee/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/coursee/"
         },
         "standard_mappings/coursee/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/coursee/standards/"
         },
         "teacher_forum/coursee/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/coursee/vocab/"
         },
         "lesson_plans/coursec/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-18/coursec/"
         },
         "standard_mappings/coursec/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-18/coursec/standards/"
         },
         "teacher_forum/coursec/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-18/coursec/vocab/"
         },
         "code_introduced_1/csd/2018": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-18/unit3/code/"
         },
         "lesson_plans_2/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit3/"
         },
         "standard_mappings_2/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit3/standards/"
         },
         "teacher_forum_2/csd/2018": {
           "name": "Foro de profesores"
         },
         "vocabulary_2/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit3/vocab/"
         },
         "code_introduced_3/csd/2018": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-18/unit6/code/"
         },
         "lesson_plans_5/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit6/"
         },
         "standard_mappings_5/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit6/standards/"
         },
         "teacher_forum_5/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd6"
         },
         "vocabulary_5/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit6/vocab/"
         },
         "lesson_plans_4/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit5/"
         },
         "standard_mappings_4/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit5/standards/"
         },
         "teacher_forum_4/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd5"
         },
         "vocabulary_4/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit5/vocab"
         },
         "code_introduced_2/csd/2018": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-18/unit4/code/"
         },
         "lesson_plans_3/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit4/"
         },
         "standard_mappings_3/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit4/standards/"
         },
         "teacher_forum_3/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd4"
         },
         "vocabulary_3/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit4/vocab/"
         },
         "code_introduced/csd/2018": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-18/unit2/code/"
         },
         "lesson_plans_1/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit2/"
         },
         "standard_mappings_1/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit2/standards/"
         },
         "teacher_forum_1/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd2"
         },
         "vocabulary_1/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit2/vocab/"
         },
         "lesson_plans/csd/2018": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-18/unit1"
         },
         "standard_mappings/csd/2018": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-18/unit1/standards/"
         },
         "teacher_forum/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd1"
         },
         "vocabulary/csd/2018": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-18/unit1/vocab/"
         },
         "curriculum_guide/coursea/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursea/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/coursea/"
         },
         "standard_mappings/coursea/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/coursea/standards/"
         },
         "teacher_forum/coursea/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/coursea/vocab/"
         },
         "curriculum_guide/courseb/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/courseb/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/courseb/"
         },
         "standard_mappings/courseb/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/courseb/standards/"
         },
         "teacher_forum/courseb/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/courseb/vocab/"
         },
         "curriculum_guide/coursed/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursed/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/coursed/"
         },
         "standard_mappings/coursed/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/coursed/standards/"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/coursed/vocab/"
         },
         "curriculum_guide/coursef/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursef/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/coursef/"
         },
         "standard_mappings/coursef/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/coursef/standards/"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/coursef/vocab/"
         },
         "curriculum_guide/coursee/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursee/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/coursee/"
         },
         "standard_mappings/coursee/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/coursee/standards/"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/coursee/vocab/"
         },
         "lesson_plans/express/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/express/"
         },
         "standard_mappings/express/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/express/standards/"
         },
         "teacher_forum/express/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/express/vocab/"
         },
         "curriculum_guide/coursec/2019": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursec/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-19/coursec/"
         },
         "standard_mappings/coursec/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-19/coursec/standards/"
         },
         "teacher_forum/coursec/2019": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-19/coursec/vocab/"
         },
         "teacher_forum/csd/2019": {
           "name": "Foro de profesores"
         },
         "code_introduced_1/csd/2019": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-19/unit3/code/"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit3/"
         },
         "standard_mappings_2/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit3/standards/"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit3/vocab/"
         },
         "code_introduced_3/csd/2019": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-19/unit6/code/"
         },
         "lesson_plans_5/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit6/"
         },
         "standard_mappings_5/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit6/standards/"
         },
         "vocabulary_5/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit6/vocab/"
         },
         "code_introduced_2/csd/2019": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-19/unit4/code/"
         },
         "lesson_plans_3/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit4/"
         },
         "standard_mappings_3/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit4/standards/"
         },
         "vocabulary_3/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit4/vocab/"
         },
         "lesson_plans_4/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit5/"
         },
         "standard_mappings_4/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit5/standards/"
         },
         "vocabulary_4/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit5/vocab"
         },
         "lesson_plans/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit1"
         },
         "standard_mappings/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit1/standards/"
         },
         "vocabulary/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit1/vocab/"
         },
         "code_introduced/csd/2019": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd-19/unit2/code/"
         },
         "lesson_plans_1/csd/2019": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd-19/unit2/"
         },
         "standard_mappings_1/csd/2019": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd-19/unit2/standards/"
         },
         "vocabulary_1/csd/2019": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd-19/unit2/vocab/"
         },
         "code_introduced_1/csd/2017": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd/unit3/code/"
         },
         "lesson_plans_2/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit3/"
         },
         "standard_mappings_2/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
           "name": "Foro de profesores"
         },
         "vocabulary_2/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
         "code_introduced_3/csd/2017": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd/unit6/code/"
         },
         "lesson_plans_5/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit6/"
         },
         "standard_mappings_5/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit6/standards/"
         },
         "teacher_forum_5/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd6"
         },
         "vocabulary_5/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit6/vocab/"
         },
         "code_introduced/csd/2017": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd/unit2/code/"
         },
         "lesson_plans_1/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit2/"
         },
         "standard_mappings_1/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit2/standards/"
         },
         "teacher_forum_1/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd2"
         },
         "vocabulary_1/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit2/vocab/"
         },
         "lesson_plans/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit1"
         },
         "standard_mappings/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit1/standards/"
         },
         "teacher_forum/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd1"
         },
         "vocabulary/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit1/vocab/"
         },
         "lesson_plans_4/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit5/"
         },
         "standard_mappings_4/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit5/standards/"
         },
         "teacher_forum_4/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd5"
         },
         "vocabulary_4/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit5/vocab"
         },
         "code_introduced_2/csd/2017": {
-          "name": "Código introducido"
+          "name": "Código introducido",
+          "url": "https://curriculum.code.org/csd/unit4/code/"
         },
         "lesson_plans_3/csd/2017": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csd/unit4/"
         },
         "standard_mappings_3/csd/2017": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csd/unit4/standards/"
         },
         "teacher_forum_3/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd4"
         },
         "vocabulary_3/csd/2017": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csd/unit4/vocab/"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista de Poemas",
@@ -2423,6 +2561,25 @@
         "teacher_forum/csd/2021": {
           "name": "Foro de profesores"
         },
+        "computing-innovations/csd/2021": {
+          "name": "Innovaciones informáticas",
+          "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit"
+        },
+        "internet-of-things-video/csd/2021": {
+          "name": "El Internet de las Cosas",
+          "url": "https://youtu.be/xQGsubJNbQw",
+          "type": "Vídeo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Las Ciencias de la Computación están cambiando todo",
+          "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
+          "type": "Vídeo"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "name": "CSD Unidad 6 - Computación Física",
+          "url": "https://docs.google.com/presentation/d/1kP-ZflfE6KTH8DC71qVEnptEs_m4eirbgyYpHRammkE/copy",
+          "type": "Diapositivas"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Diseñar pantallas a través del código",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
@@ -2436,11 +2593,6 @@
         "responding_to_user_input_1/csd/2021": {
           "name": "Responder a las contribuciones de los usuarios",
           "type": "Recurso"
-        },
-        "csd_unit_6_-_physical_computing/csd/2021": {
-          "name": "CSD Unidad 6 - Computación Física",
-          "url": "https://docs.google.com/presentation/d/1kP-ZflfE6KTH8DC71qVEnptEs_m4eirbgyYpHRammkE/copy",
-          "type": "Diapositivas"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Cómo funcionan las computadoras: hardware y software",
@@ -2492,91 +2644,172 @@
           "type": "Recurso"
         },
         "date_and_change_events/csd/2021": {
+          "name": "Eventos de Fecha y Cambio",
+          "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
           "type": "Recurso"
         },
         "emoji-race-guide/csd/2021": {
+          "name": "Carrera de Emojis",
+          "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
           "type": "Guía de Proyecto"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "Operadores booleanos y de comparación",
+          "url": "https://drive.google.com/file/d/1HUDl6xDoxNWJUptqMA1B9DXE0XFTeD3a/view?usp=sharing",
           "type": "Recurso"
         },
         "functions_2/csd/2021": {
           "name": "Funciones",
+          "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
           "type": "Recurso"
         },
         "if_statements_1/csd/2021": {
           "name": "Sentencias si",
+          "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
           "type": "Recurso"
         },
+        "make-game-guide/csd/2021": {
+          "name": "Crear un Juego",
+          "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit"
+        },
+        "make_a_game_-_student_checklist/csd/2021": {
+          "name": "Crear un Juego - Lista de Control del Alumno",
+          "url": "https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view"
+        },
         "make_a_game_1/csd/2021": {
+          "name": "Crear un Juego",
+          "url": "https://docs.google.com/document/d/1FcvT4qD9obqusSkeC0OHYGjKVg5lQ26qgpV62aUB528/view",
           "type": "Rúbrica"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "name": "Crear un Juego - Ejemplo de Rúbricas Marcadas",
+          "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "Introducción a los arreglos",
+          "url": "https://youtu.be/seBDTeZmb-k",
           "type": "Vídeo"
         },
         "arrays/csd/2021": {
           "name": "Arreglos",
+          "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
           "type": "Recurso"
         },
         "circuits_and_leds/csd/2021": {
           "name": "Circuitos y LED",
+          "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
           "type": "Recurso"
         },
         "color_lights/csd/2021": {
+          "name": "Luces de Colores",
+          "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
           "type": "Recurso"
         },
         "playing_notes/csd/2021": {
           "name": "Sonando notas",
+          "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
           "type": "Recurso"
         },
         "producing_output/csd/2021": {
+          "name": "Generando la Salida",
           "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Recurso"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Bucles Para",
+          "url": "https://youtu.be/WqmyVZnMWHY",
           "type": "Vídeo"
         },
         "for_loops/csd/2021": {
           "name": "Bucles Para",
+          "url": "https://drive.google.com/file/d/1m96-bXSMQwkgpJ0MBgagEBRhJ8NYvDcN/view?usp=sharing",
           "type": "Recurso"
         },
         "modifying_arrays/csd/2021": {
           "name": "Modificar arreglos",
+          "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
           "type": "Recurso"
         },
         "accelerometer_events/csd/2021": {
           "name": "Eventos de Acelerómetro",
+          "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
           "type": "Recurso"
         },
         "the_accelerometer/csd/2021": {
           "name": "El acelerómetro",
+          "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
           "type": "Recurso"
         },
         "circuits-logic-video/csd/2021": {
           "name": "Cómo funcionan las computadoras: circuitos y lógica",
+          "url": "https://youtu.be/ZoqMiFKspAA",
           "type": "Vídeo"
         },
         "physical-prototyping-project/csd/2021": {
+          "name": "Prototipos Físicos",
+          "url": "https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit",
           "type": "Guía de Proyecto"
         },
         "circuits_and_buttons/csd/2021": {
+          "name": "Circuitos y Pulsadores",
+          "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
           "type": "Recurso"
         },
         "prototype-an-innovation-1/csd/2021": {
+          "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
           "type": "Rúbrica"
         },
         "planning-your-innovation/csd/2021": {
+          "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
           "type": "Guía de Proyecto"
+        },
+        "peer_review_1_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg"
+        },
+        "peer_review_2_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0"
+        },
+        "prototype_an_innovation_-_student_checklist/csd/2021": {
+          "name": "Prototipo de una Innovación - Lista de Comprobación del Alumno",
+          "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit"
+        },
+        "csd_guide_to_using_resources/csd/2021": {
+          "name": "Guía del CSD para el Uso de los Recursos",
+          "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+        },
+        "all_code_4/csd/2021": {
+          "url": "/s/csd6-2021/código"
+        },
+        "all_resources_6/csd/2021": {
+          "url": "/s/csd6-2021/recursos"
+        },
+        "all_standards_6/csd/2021": {
+          "url": "/s/csd6-2021/normas"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "url": "/s/csd6-2021/vocabulario"
         },
         "circuit_playground_1/csd/2021": {
           "name": "Circuit Playground",
+          "url": "https://code.org/circuitplayground",
           "type": "Recurso"
         },
         "unit-5-data-society/csd/2021": {
           "type": "Diapositivas"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Asuntos de representación"
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "type": "Recurso"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Asuntos de representación"
         },
         "representing-information-1/csd/2021": {
           "name": "Representación de la información"
@@ -2685,11 +2918,11 @@
         "unit_5_data_society_2/csd/2021": {
           "type": "Diapositivas"
         },
-        "drawing-shapes-exemplar-2020/csd/2021": {
-          "name": "Dibujar formas"
-        },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "Diapositivas"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Dibujar formas"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Vídeo"
@@ -2864,8 +3097,35 @@
         "teacher_forum_1/csd/2021": {
           "name": "Foro de profesores"
         },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "Barcos de Aluminio",
+          "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit"
+        },
+        "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "Barcos de Aluminio",
+          "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/"
+        },
+        "how-to-videos/csd/2021": {
+          "name": "Vídeos Prácticos de Code.org",
+          "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
+        },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
+          "name": "CSD Unidad 1 - Resolución de Problemas y Computación",
+          "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
           "type": "Diapositivas"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Proceso de resolución de problemas"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Proceso de resolución de problemas",
+          "type": "Vídeo"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "El proceso de resolución de problemas"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Proceso de resolución de problemas"
         },
         "solving-problems-exemplar-2020/csd/2021": {
           "type": "Clave de Respuesta"
@@ -2901,6 +3161,12 @@
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "Recurso"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Exploración de páginas web"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Exploración de páginas web"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "Diapositivas"
@@ -3055,118 +3321,156 @@
           "type": "Guía de Proyecto"
         },
         "lesson_plans/pre-express/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/express/"
         },
         "standard_mappings/pre-express/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/express/standards"
         },
         "teacher_forum/pre-express/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/pre-express/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
         },
         "lesson_plans/express/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/express/"
         },
         "standard_mappings/express/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/express/standards/"
         },
         "teacher_forum/express/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
         },
         "curriculum_guide/courseb/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/courseb/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/courseb/"
         },
         "standard_mappings/courseb/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/courseb/standards/"
         },
         "teacher_forum/courseb/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
         },
         "curriculum_guide/coursed/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursed/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/coursed/"
         },
         "standard_mappings/coursed/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/coursed/standards/"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/coursed/vocab/"
         },
         "curriculum_guide/coursec/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursec/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/coursec/"
         },
         "standard_mappings/coursec/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/coursec/standards/"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/coursec/vocab/"
         },
         "curriculum_guide/coursee/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursee/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/coursee/"
         },
         "standard_mappings/coursee/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/coursee/standards/"
         },
         "teacher_forum/coursee/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/coursee/vocab/"
         },
         "curriculum_guide/coursea/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursea/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/coursea/"
         },
         "standard_mappings/coursea/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/coursea/standards/"
         },
         "teacher_forum/coursea/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
         "curriculum_guide/coursef/2020": {
-          "name": "Guía del plan de estudios"
+          "name": "Guía del plan de estudios",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursef/2020": {
-          "name": "Plan de estudio"
+          "name": "Plan de estudio",
+          "url": "https://curriculum.code.org/csf-20/coursef/"
         },
         "standard_mappings/coursef/2020": {
-          "name": "Asignaciones estándar"
+          "name": "Asignaciones estándar",
+          "url": "https://curriculum.code.org/csf-20/coursef/standards/"
         },
         "teacher_forum/coursef/2020": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2020": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "url": "https://curriculum.code.org/csf-20/coursef/vocab/"
         }
       }
     }

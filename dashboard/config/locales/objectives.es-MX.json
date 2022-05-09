@@ -1292,6 +1292,15 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
+        "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
+          "description": "Identifica las innovaciones informáticas en un campo determinado"
+        },
+        "494a4afe-5479-4e4f-b656-99ddc4781740": {
+          "description": "Para un dispositivo determinado, articula las entradas y salidas probables"
+        },
+        "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
+          "description": "Plantea mejoras para que un dispositivo resuelva mejor un problema concreto"
+        },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
           "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
         },
@@ -1335,16 +1344,169 @@
           "description": "Representar el valor de un sensor de varias maneras"
         },
         "52c81204-19e3-433f-a6f2-9c7342c37b72": {
-          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada"
+        },
+        "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
+          "description": "Desarrolla un programa que responda a los eventos de una entrada de hardware"
+        },
+        "5e15877a-55c0-434e-b794-1277ca716016": {
+          "description": "Crea una función que utilice parámetros para generalizar el comportamiento"
+        },
+        "ae74915c-b485-44a1-a60b-a4051c1abca7": {
+          "description": "Utiliza los manejadores de eventos para responder a la interacción del usuario"
+        },
+        "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
+          "description": "Diseñar un programa informático que utilice hardware para la entrada y salida no tradicionales"
+        },
+        "84079c5a-326d-4fda-9439-acd6478673b3": {
+          "description": "Prototipo de un programa que integra software y hardware"
+        },
+        "34585635-155a-4032-b653-6cfaa0832b7e": {
+          "description": "Acceder a un elemento de un array mediante su índice"
+        },
+        "57704d64-7732-445a-a82a-81f3b6955df8": {
+          "description": "Utiliza el array de LEDs de colores para controlar individualmente cada LED "
+        },
+        "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
+          "description": "Crear y modificar un array"
+        },
+        "f739947f-be77-462b-b0ef-3823349016ef": {
+          "description": "Utilizar el zumbador para producir secuencias de notas"
+        },
+        "4449a257-a6e6-426f-a87b-a1ef39ea777f": {
+          "description": "Reconocer un array como una lista de elementos sobre los que se puede operar secuencialmente."
+        },
+        "8a9102e9-704c-452b-b063-62f6b63d2627": {
+          "description": "Modifica la condición de salida de un bucle `for` para controlar el número de veces que se repite"
+        },
+        "bb5539ee-e0af-4379-9179-2bebc947c741": {
+          "description": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "eb28a603-8753-4a84-ad3e-fe5566c8ee76": {
+          "description": "Reconocer el uso y la necesidad de la orientación del acelerómetro (cabeceo y balanceo)."
+        },
+        "cbd66e36-6a02-4227-8674-70636d61b455": {
+          "description": "Utiliza los eventos de datos para actualizar continuamente las propiedades de un elemento."
+        },
+        "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
+          "description": "Utiliza los parámetros para generalizar el propósito de una función."
+        },
+        "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
+          "description": "Crear y depurar circuitos sencillos"
+        },
+        "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
+          "description": "Desarrollar un prototipo físico interactivo que combine software y hardware"
+        },
+        "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
+          "description": "Tener en cuenta las necesidades de los distintos usuarios al diseñar un producto"
         },
         "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
           "description": "Explorar las características de una pieza de programa de forma independiente."
+        },
+        "46a593f4-3334-477c-9bac-f1fa12e83979": {
+          "description": "Prototipo de un dispositivo informático físico"
+        },
+        "5ae2739b-3776-43ba-973f-50fa22302e32": {
+          "description": "Aplicar un plan para desarrollar un programa informático que integre entradas y salidas de hardware"
+        },
+        "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
+          "description": "Brindar ejemplos de cómo las distintas formas de representar los datos puede afectar la forma en cómo se resuelven los problemas."
+        },
+        "5d843877-4608-49b0-a6a5-c33fdab204ba": {
+          "description": "Escoger la mejor forma de representar la información en función de su uso."
+        },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": "Describir las características necesarias de un sistema para representar la información."
+        },
+        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
+          "description": "Crear y utilizar un sistema para representar información."
+        },
+        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
+          "description": "Definir un sistema binario como uno que utiliza dos estados posibles para representar información"
+        },
+        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
+          "description": "Utilizar el sistema ASCII para codificar y decodificar información de texto en sistema binario"
+        },
+        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
+          "description": "Crear y manipular patrones binarios para representar imágenes en blanco y negro"
+        },
+        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
+          "description": "Describir características comunes de los sistemas utilizados para representar información en binario"
+        },
+        "3a37860e-7f85-4921-a622-4c0435783261": {
+          "description": "Utilizar un sistema binario para representar números."
+        },
+        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
+          "description": "Extender un sistema de representación basado en patrones."
+        },
+        "572e2633-ed9c-4957-9399-4cdd236c9da9": {
+          "description": "Utilizar múltiples sistemas binarios para decodificar la información."
+        },
+        "7db30b84-9106-4f12-9a6b-3d4119423ec7": {
+          "description": "Determinar el sistema de codificación más apropiado para una determinada pieza de información. "
+        },
+        "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4": {
+          "description": "Describir las razones por las cuales el encriptado es necesario para proteger datos personales"
+        },
+        "42021a55-c97c-432b-9420-a62927cc2bba": {
+          "description": "Aplicar métodos de encriptación para garantizar el traspaso de datos seguro"
+        },
+        "e537dea9-f777-4037-8c48-d20298ba53b2": {
+          "description": "Escoger y justificar el uso de distintos sistemas de representación binaria dependiendo de la información que esté siendo representada"
+        },
+        "e4ff5379-6af0-43ba-8611-535630489148": {
+          "description": "Codificar y decodificar información representada en números binarios y texto ASCII"
+        },
+        "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
+          "description": "Crear un sistema de representación generalizado para una variedad instancias de tipos complejos de información"
+        },
+        "d7b16ab2-6683-4efa-93d9-d425024858bf": {
+          "description": "Usar el proceso de resolución de problemas para responder una pregunta utilizando datos."
+        },
+        "550ed66e-4795-428a-aee8-9a77e03f667d": {
+          "description": "Identificar y recolectar datos relevantes para ayudar a resolver el problema."
+        },
+        "88327c34-dbb7-4b44-8c32-c76166910b39": {
+          "description": "Utilizar datos para sacar conclusiones."
+        },
+        "87ac4c51-43bc-4219-93ba-29f517c309ef": {
+          "description": "Identificar y eliminar datos irrelevantes de un conjunto de datos."
+        },
+        "98d5856a-9dc5-4d14-bfc1-c79f4d9191d0": {
+          "description": "Crear un gráfico de barras basado en un conjunto de datos."
+        },
+        "5ac58714-911b-460c-b34b-73d1e67c160e": {
+          "description": "Explicar por qué un conjunto de datos debe limpiarse antes de que una computadora pueda utilizarlo."
+        },
+        "fd6610c2-f7c5-4e4a-ac5a-b1e358c8a11d": {
+          "description": "Organizar datos visualmente para destacar las relaciones y respaldar una declaración."
+        },
+        "8d396418-f31f-438e-b9d8-43730f49868f": {
+          "description": "Utilizar tabulación cruzada para encontrar patrones y relaciones en los datos"
+        },
+        "1d63355b-8406-4aba-a3e7-a4a559c67c5f": {
+          "description": "Utilizar tablas y visualizaciones que resuman los datos para respaldar una decisión"
+        },
+        "a656b8a6-b4f4-4014-9c91-ed44f25b2831": {
+          "description": "Identificar datos adicionales que pueden ser recolectados para mejorar una decisión"
+        },
+        "e645e06c-9cb1-479c-91b6-1b81b8961d54": {
+          "description": "Diseñar e implementar un algoritmo para tomar decisiones utilizando datos como entradas."
+        },
+        "b17ebfe7-f8da-40c2-82d1-43b00a7e8364": {
+          "description": "Explicar las ventajas y desventajas de utilizar computadoras para la toma de decisiones automática."
+        },
+        "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
+          "description": "Interpretar datos recolectados para identificar patrones"
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
+        },
+        "b2682f90-e600-48aa-aef4-def3798b261d": {
+          "description": "Identificar cómo se utilizan las ciencias de la computación en el ámbito del entretenimiento"
         },
         "27e5577c-a619-4ef6-8f34-b252c18deb58": {
           "description": "Razonar acerca de las ubicaciones en la cuadrícula de coordenadas del Game Lab"
@@ -1362,10 +1524,10 @@
           "description": "Usar y analizar comandos de dibujo con parámetros múltiples."
         },
         "5fc17aef-b130-416f-8746-54fe3f0ed390": {
-          "description": "Identificar a una variable como una forma de etiquetar y referenciar un valor en un programa."
+          "description": "Identificar una variable como una forma de etiquetar y referenciar un valor en un programa"
         },
         "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
-          "description": "Usar variables en un programa para almacenar información que pueda utilizarse varias veces."
+          "description": "Usar variables en un programa para almacenar información que pueda utilizarse varias veces"
         },
         "557e9ade-ee71-4196-9dce-44f742180fa8": {
           "description": "Generar y utilizar números aleatorios en un programa"
@@ -1389,16 +1551,16 @@
           "description": "Utilizar un proceso estructurado para planificar y desarrollar un programa."
         },
         "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
-          "description": "Explicar cómo el bucle dibujar permite la creación de animaciones en el Game Lab"
+          "description": "Explicar cómo el ciclo de dibujo permite la creación de animaciones en el Game Lab"
         },
         "9ed14237-271b-4890-b05c-04bde1c706fc": {
-          "description": "Utilizar el ciclo dibujar en conjunto con el comando de números aleatorios randomNumber(), formas, y sprites para elaborar animaciones simples."
+          "description": "Utilizar el ciclo de dibujo en conjunto con el comando de números aleatorios randomNumber(), formas, y sprites para elaborar animaciones simples."
         },
         "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
-          "description": "Utilizar el patrón contador para incrementar o reducir las propiedades de los sprite"
+          "description": "Utilizar el patrón de contador para incrementar o reducir las propiedades de los sprite"
         },
         "32725306-4405-48d1-871c-ce44cd180b0c": {
-          "description": "Identificar que propiedades de sprite deberían cambiarse y de que manera, para lograr un movimiento específico"
+          "description": "Identificar qué propiedades de sprite deberían cambiarse, y de qué manera, para lograr un movimiento específico"
         },
         "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
           "description": "Utilizar condicionales para reaccionar a los cambios en las variables y propiedades de sprite"
@@ -1419,10 +1581,10 @@
           "description": "Utilizar las condicionales para reaccionar a las entradas de teclado o a los cambios en las variables o propiedades"
         },
         "286ec7b0-0776-4049-9174-3deeb1d80c14": {
-          "description": "Secuenciar comandos para dibujar en un orden correcto."
+          "description": "Secuenciar comandos para dibujar en un orden correcto"
         },
         "899e51b2-2cb8-4948-9987-aaada64c6a85": {
-          "description": "Aplicar un patrón iterador a las variables o propiedades en un bucle"
+          "description": "Aplicar un patrón iterador a las variables o propiedades en un ciclo"
         },
         "ebf0954f-2190-4e20-8420-f0275aceee0a": {
           "description": "Utilizar los bloques de velocidad y la velocidad de rotación para crear y cambiar los movimientos de un sprite."
@@ -1431,22 +1593,22 @@
           "description": "Describir las ventajas y desventajas de simplificar el código utilizando los bloques de alto nivel"
         },
         "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
-          "description": "Detectar cuando los sprites se tocan o superponen y cambian el programa en respuesta."
+          "description": "Detectar cuándo los sprites se tocan o superponen y cambian el programa en respuesta. "
         },
         "d3aa02b0-9340-47ab-b258-5446686c77b4": {
           "description": "Describir cómo las abstracciones ayudan a gestionar la complejidad del código"
         },
         "63135326-7d2f-4974-af73-f8d7a801cd04": {
-          "description": "Utilizar la velocidad de un sprite con el patrón contador para crear distintos tipos de movimientos."
+          "description": "Utilizar la velocidad de un sprite con el patrón de contador para crear distintos tipos de movimientos."
         },
         "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
-          "description": "Explicar como las construcciones de programación individuales pueden combinarse para crear comportamientos más complejos"
+          "description": "Explicar cómo las construcciones de programación individuales pueden combinarse para crear comportamientos más complejos"
         },
         "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
           "description": "Modelar distintos tipos de interacciones entre sprites."
         },
         "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
-          "description": "Describir cómo las abstracciones pueden construirse para desarrollar nuevas abstracciones."
+          "description": "Describir cómo las abstracciones pueden construirse para desarrollar nuevas abstracciones"
         },
         "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
           "description": "Crear y utilizar funciones para bloques de código que realicen una sola tarea de alto nivel dentro de un programa."
@@ -1458,13 +1620,13 @@
           "description": "Explicar de qué forma las funciones permiten a los programadores razonar sobre un programa en un alto nivel"
         },
         "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
-          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada"
         },
         "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
           "description": "Identificar las principales construcciones necesarias para construir distintos componentes de un juego"
         },
         "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
-          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+          "description": " Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
         },
         "0b62d335-144f-495a-971c-fb1ee82f154a": {
           "description": "Explorar las características de una pieza de programa de forma independiente."
@@ -1483,6 +1645,12 @@
         },
         "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
           "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
+        },
+        "3c206514-27ee-4c05-a9b7-f84176d23ebe": {
+          "description": "Al enfrentar un problema, identifica acciones individuales que pueden ser parte de cada paso del proceso de resolución de problemas"
+        },
+        "1383b94a-1a14-4579-8da9-47114eec604d": {
+          "description": "Identifica estrategias útiles dentro de cada paso del proceso de resolución de problemas"
         },
         "e8cad68d-4922-47bd-9b73-c22e8af10879": {
           "description": "Aplicar el proceso de resolución de problemas en distintas situaciones"
@@ -1503,31 +1671,31 @@
           "description": "Seleccionar las entradas y salidas utilizadas para realizar tareas informáticas cotidianas"
         },
         "372ca368-9509-4398-b84c-21ac4c890a1d": {
-          "description": "Explique el papel que desempeñan la entrada y la salida cuando se utilizan computadoras para resolver problemas de información"
+          "description": "Explique el papel que desempeñan la entrada y la salida cuando se utilizan computadoras para resolver problemas de información."
         },
         "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
           "description": "Definir procesamiento como el trabajo realizado (posiblemente por una computadora) para convertir una entrada en una salida"
         },
         "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
-          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática"
+          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática."
         },
         "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
-          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático específico"
+          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático específico."
         },
         "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
           "description": "Determinar qué información de un problema computacional debe ser almacenada para su uso posterior"
         },
         "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
-          "description": "Identificar las directrices respecto a la información que debe y no debe almacenarse como parte del proceso computacional"
+          "description": "Identificar las directrices respecto a la información que debe y no debe almacenarse como parte del proceso computacional."
         },
         "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
-          "description": "Utilizar el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso computacional"
+          "description": "Utilizar el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso computacional."
         },
         "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
           "description": "Identificar y definir un problema que pueda ser resuelto con la computación"
         },
         "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
-          "description": "Diseñar una aplicación que incluya la entrada, salida, almacenamiento, y procesamiento de información para resolver el problema"
+          "description": "Diseñar una aplicación que incluya la entrada, salida, almacenamiento y procesamiento de información para resolver el problema"
         },
         "5caf913a-779e-4174-9e9f-b6a87756263e": {
           "description": "Dar e incorporar opiniones de sus pares para mejorar un artefacto computacional"
@@ -1571,8 +1739,14 @@
         "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
           "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
         },
+        "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
+          "description": "Identificar las razones por las que alguien visitaría un sitio web"
+        },
+        "d8ec162b-7a19-496b-8f90-2ffb596be6a7": {
+          "description": "Identificar las razones por las que las personas crean sitios web"
+        },
         "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
-          "description": "Explicar que el HMTL es una herramienta que permite a un programador comunicar la forma en la que el contenido de una página debe estructurarse"
+          "description": "Explicar que el HTML es una herramienta que permite a un programador comunicar la forma en la que el contenido de una página debe estructurarse"
         },
         "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
           "description": "Escribir un documento HTLM simple, utilizando etiquetas de apertura y cierre para estructurar el contenido"
@@ -1584,7 +1758,7 @@
           "description": "Usar las etiquetas de encabezado para cambiar la apariencia de un texto en una página web."
         },
         "8301013f-1346-4f62-a416-ed9371bf3588": {
-          "description": "Estructurar el contenido en encabezados, sub encabezados y párrafos."
+          "description": "Estructurar el contenido en encabezados, subencabezados y párrafos."
         },
         "6b4d8978-99c8-4541-9213-fa14c4132c62": {
           "description": "Usar una práctica estructurada y colaborativa para crear un artefacto digital."
@@ -1599,13 +1773,13 @@
           "description": "Comprender y justificar las pautas para publicar información en línea de forma segura. "
         },
         "f37f28fd-4bc2-4e94-9dc0-6f33f4cb4788": {
-          "description": "Usar los selectores CSS para dar estilo a los elementos HTML"
+          "description": "Usar los selectores CSS para dar estilo a los elementos HTML."
         },
         "11d70e24-1663-4d02-a703-df9dc90d95ce": {
-          "description": "Enlace a una hoja de estilo externa"
+          "description": "Enlace a una hoja de estilo externa."
         },
         "841a5265-0723-41ea-b44b-d400888b94b3": {
-          "description": "Explicar cuales son las diferencias entre HTML y CSS tanto en su uso como en su sintaxis."
+          "description": "Explicar cuáles son las diferencias entre HTML y CSS, tanto en su uso como en su sintaxis."
         },
         "c90f8313-22ae-45e6-9450-a0714af452cc": {
           "description": "Explicar el propósito de los derechos de autor."
@@ -1614,7 +1788,7 @@
           "description": "Identificar los derechos y restricciones otorgados por diversas licencias Creative Commons."
         },
         "47b9c8f4-c0ee-4b41-9eb6-a30052d7c23c": {
-          "description": "Respetar la ley de derechos de autor, atribuir al usar su trabajo."
+          "description": "Respetar la ley de derechos de autor, atribuir al usar su trabajo.\n\nSiga la ley de derechos de autor, atribuyendo a otros cuando use su trabajo."
         },
         "9aafa27a-70aa-484d-badc-18eb0a076314": {
           "description": "Agregar una imagen a una página web."
@@ -1671,7 +1845,7 @@
           "description": "Dar y recibir comentarios"
         },
         "c2b66c71-919f-4bbb-bdc4-9fbb244e4991": {
-          "description": "Dar prioridad e implementar mejoras progresivamente"
+          "description": "Priorizar e implementar mejoras progresivamente"
         }
       }
     }

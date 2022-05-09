@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "Tu sa zobrazia súbory uložené v tvojom batohu.",
   "enablePeerReview": "Povoliť vzájomné hodnotenie",
   "errorJavabuilderConnectionGeneral": "Pri pripájaní k nášmu serveru sa vyskytla chyba. Skús to znova.",
-  "errorJavabuilderConnectionNotAuthorized": "Nemáš oprávnenie na prístup do prostredia Java Lab. Potrebuješ sa prihlásiť alebo pripojiť k triede?",
   "errorLoadingClassmates": "Pri načítavaní zoznamu tvojich spolužiakov sa vyskytla chyba. Skús to znova.",
   "errorMediaImageLoadError": "Pri nahrávaní obrázka sa vyskytla chyba.",
   "errorNeighborhoodInvalidGrid": "Pri nahrávaní úrovne so susedstvom sa vyskytla chyba. Obráť sa na adresu support@code.org a nezabudni do svojej správy pridať aj URL adresu tejto stránky.",

@@ -4,6 +4,22 @@ fi:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskipitkä
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskipitkä
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} vaihtele jokaisen {N} tahdin \nvälillä {MOVE1} ja {MOVE2}"
         options:
@@ -1009,7 +1025,7 @@ fi:
         text: on vedettävä
       gamelab_edgesDisplace:
         text: reunat estävät {SPRITE} liikkumasta
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'joka {N} {UNIT} '
         options:
           UNIT:
@@ -1139,8 +1155,6 @@ fi:
         options:
           EFFECT:
             '"rain"': sade
-      gamelab_makeNewScaledSprite:
-        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeProjectile:
@@ -1150,6 +1164,12 @@ fi:
             '90': alas
             '180': vasemmalle
             '270': ylös
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': keskipitkä
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:

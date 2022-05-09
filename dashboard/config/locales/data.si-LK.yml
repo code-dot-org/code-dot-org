@@ -447,6 +447,7 @@ si:
         csd_applab_parameters: පරාමිතියන් සහිත ශ්‍රිත
         playlab_2021: ක්‍රීඩා පරීක්ෂණාගාරය වෙත හඳුන්වාදීම
         playlab_2021_reader: ක්‍රීඩා පරීක්ෂණාගාරය වෙත හඳුන්වාදීම
+        csp_applab_parameters: පරාමිතියන් සහිත ශ්‍රිත
     callout:
       text:
         drag_blocks: '"move" කොටසක් අරගෙන අනික් කොටසේ යටට හයි කරන්න'

@@ -4,6 +4,22 @@ ur:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': انتہائی چھوٹا
+            '0.75': چھوٹا
+            '1.00': متوسط
+            '2.00': بڑا
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': انتہائی چھوٹا
+            '0.75': چھوٹا
+            '1.00': متوسط
+            '2.00': بڑا
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} ہر {N} پیمائشوں
@@ -1043,7 +1059,7 @@ ur:
         text: خط کھینچ لیں {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: کناروں کو منتقل کرنے سے {SPRITE} بلاک کریں
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ہر ایک کو دہرائیں {N} {UNIT} '
         options:
           UNIT:
@@ -1069,6 +1085,7 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+            '"other"': دیگر
       gamelab_getTime:
         text: "{UNIT} میں ٹائم"
         options:
@@ -1201,8 +1218,6 @@ ur:
             '"pop"': پاپ
             '"rain"': بارش
             '"spiral"': پیچ دار
-      gamelab_makeNewScaledSprite:
-        text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_makeNumSprites:
@@ -1217,6 +1232,12 @@ ur:
             '90': نیچے
             '180': بائیں
             '270': اوپر
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': چھوٹا
+            '50': متوسط
+            '100': بڑا
       gamelab_mirrorSprite:
         text: "{SPRITE} چہرہ {DIRECTION}"
         options:

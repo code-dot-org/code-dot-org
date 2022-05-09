@@ -3425,6 +3425,9 @@ el:
           lessons:
             lesson-9:
               name: Βρόχοι
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3469,9 +3472,13 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-8:
               display_name: Μεταβλητές
-        vpl-csd1-summer-pilot-2022:
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-3:
               name: Σχεδιασμός μαθημάτων
         csa2-2022-exemplars:
           lessons:
@@ -3499,3 +3506,59 @@ el:
               key: Βρόχοι Για
             Lesson Planning:
               key: Σχεδιασμός μαθημάτων
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Μεταβλητές
+              key: Μεταβλητές
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+              key: Τυχαίοι αριθμοί
+            Sprites:
+              name: Χαρακτήρας
+              key: Χαρακτήρας
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+              key: Ιδιότητες Χαρακτήρα
+            Text:
+              name: κείμενο
+              key: κείμενο
+            Conditionals:
+              name: Συνθήκες
+              key: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+              key: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+              key: Συναρτήσεις
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Συναρτήσεις
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα

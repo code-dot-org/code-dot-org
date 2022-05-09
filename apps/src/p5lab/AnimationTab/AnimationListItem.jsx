@@ -38,7 +38,7 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired,
+    isSpriteLab: PropTypes.bool.isRequired,
     labType: PropTypes.string.isRequired
   };
 
@@ -89,7 +89,7 @@ class AnimationListItem extends React.Component {
   };
 
   deleteAnimation = () => {
-    this.props.deleteAnimation(this.props.animationKey);
+    this.props.deleteAnimation(this.props.animationKey, this.props.isSpriteLab);
   };
 
   setAnimationLooping = looping => {
@@ -207,7 +207,7 @@ class AnimationListItem extends React.Component {
           isSelected={this.props.isSelected}
           singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
-        {!this.props.spriteLab && animationName}
+        {!this.props.isSpriteLab && animationName}
         {this.props.isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
@@ -294,15 +294,15 @@ export default connect(
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
-    spriteLab: state.pageConstants.isBlockly
+    isSpriteLab: state.pageConstants.isBlockly
   }),
   dispatch => {
     return {
       cloneAnimation(animationKey) {
         dispatch(cloneAnimation(animationKey));
       },
-      deleteAnimation(animationKey) {
-        dispatch(deleteAnimation(animationKey));
+      deleteAnimation(animationKey, isSpriteLab) {
+        dispatch(deleteAnimation(animationKey, isSpriteLab));
       },
       selectAnimation(animationKey) {
         dispatch(selectAnimation(animationKey));
