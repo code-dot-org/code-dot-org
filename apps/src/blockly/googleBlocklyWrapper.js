@@ -282,6 +282,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.removeUnusedBlockFrame();
   };
 
+  blocklyWrapper.BlockSvg.prototype.isUnused = function() {
+    const isTopBlock = this.previousConnection === null;
+    const hasParentBlock = !!this.parentBlock_;
+    return !(isTopBlock || hasParentBlock);
+  };
+
   blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
     if (this.unusedSvg_) {
       this.unusedSvg_.dispose();
