@@ -104,8 +104,9 @@ export default class JavabuilderConnection {
 
     const ajaxPayload = {
       url: url,
-      type: 'get',
-      data: data
+      type: 'post',
+      contentType: 'application/json',
+      data: JSON.stringify(data)
     };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);

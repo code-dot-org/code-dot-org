@@ -26,8 +26,8 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
-  # GET /javabuilder/access_token_with_override_sources
-  def get_access_token_with_override_sources
+  # POST /javabuilder/access_token_with_override_sources
+  def access_token_with_override_sources
     unless has_required_params?([:overrideSources])
       return render status: :bad_request, json: {}
     end
