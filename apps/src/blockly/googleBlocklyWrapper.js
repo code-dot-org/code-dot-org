@@ -252,6 +252,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.FieldTextInput;
   };
 
+  const oldMixin = blocklyWrapper.BlockSvg.prototype.mixin;
+  blocklyWrapper.BlockSvg.prototype.mixin = function(
+    mixinObj,
+    opt_disableCheck
+  ) {
+    oldMixin.call(this, mixinObj, true);
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
