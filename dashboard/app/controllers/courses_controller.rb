@@ -15,6 +15,20 @@ class CoursesController < ApplicationController
 
   authorize_resource class: 'UnitGroup', except: [:index], instance_name: 'unit_group', id_param: :course_name
 
+  def new
+    @versioned_course_families = []
+    @course_families_course_types = []
+    UnitGroup.family_names.map do |cf|
+      co = CourseOffering.find_by(key: cf)
+      first_cv = co.course_versions.first
+      ug = first_cv.content_root
+      @versioned_course_families << cf unless first_cv.key == 'unversioned'
+      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
+    end
+
+    @course_families_course_types = @course_families_course_types.to_h
+  end
+
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
@@ -53,14 +67,14 @@ class CoursesController < ApplicationController
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
-  def new
-  end
-
   def create
     @unit_group = UnitGroup.new(
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
+      instruction_type: params[:instruction_type] ? params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      participant_audience: params[:participant_audience] ? params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       has_numbered_units: true
     )
     if @unit_group.save

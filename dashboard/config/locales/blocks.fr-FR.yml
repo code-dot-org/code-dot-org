@@ -4,6 +4,22 @@ fr:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': très petit
+            '0.75': petit
+            '1.00': intermédiaire
+            '2.00': grand
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': très petit
+            '0.75': petit
+            '1.00': intermédiaire
+            '2.00': grand
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
@@ -1065,7 +1081,7 @@ fr:
         text: tracer la ligne {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: les bords empêchent {SPRITE} de bouger
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'répéter toutes les {N} {UNIT} '
         options:
           UNIT:
@@ -1225,8 +1241,6 @@ fr:
             '"pop"': pop
             '"rain"': pluie
             '"spiral"': spirale
-      gamelab_makeNewScaledSprite:
-        text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_makeNumSprites:
@@ -1240,6 +1254,12 @@ fr:
             '90': vers le bas
             '180': vers la gauche
             '270': vers le haut
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': petit
+            '50': intermédiaire
+            '100': grand
       gamelab_mirrorSprite:
         text: "{SPRITE} orienté vers {DIRECTION}"
         options:

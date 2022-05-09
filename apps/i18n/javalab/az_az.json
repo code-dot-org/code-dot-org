@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "Sırt çantanızda saxlanılan fayllar burada görünəcək.",
   "enablePeerReview": "Həmyaşıdların nəzərdən keçirilməsini aktiv edin",
   "errorJavabuilderConnectionGeneral": "Serverimizə qoşularkən xəta baş verdi. Yenidən cəhd elə.",
-  "errorJavabuilderConnectionNotAuthorized": "Javalab -a daxil olmaq üçün icazəniz yoxdur. Daxil olmaq və ya bir hissəyə qoşulmaq lazımdırmı?",
   "errorLoadingClassmates": "Sinif yoldaşlarınızın siyahısı yüklənərkən xəta baş verdi. Zəhmət olmasa bir daha cəhd edin.",
   "errorMediaImageLoadError": "Şəkli yükləyərkən xəta baş verdi.",
   "errorNeighborhoodInvalidGrid": "Qonşuluq səviyyəsini yükləyərkən xəta baş verdi. Zəhmət olmasa support@code.org ünvanından bizimlə əlaqə saxlayın və mesajınıza bu səhifənin URL -ni daxil etməyi unutmayın.",

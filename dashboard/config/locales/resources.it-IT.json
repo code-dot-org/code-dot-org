@@ -11,14 +11,17 @@
         },
         "poem_art_celebration/poem-art/2021": {
           "name": "L'arte della poesia 4 - Celebrazione",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
           "name": "Celebration 2 - Eventi",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
           "name": "L'arte della poesia 3 - Metafore",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -30,7 +33,8 @@
           "name": "Introduzione all'artista"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Curve e angoli"
+          "name": "Curve e angoli",
+          "type": "Dispensa per gli alunni"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Curve e angoli"
@@ -39,9 +43,28 @@
           "name": "Playlist Spotify (tutte le età)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Crittografia e chiavi pubbliche",
           "type": "Video"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Componente di crittografia su Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Guida alle attività - Compressione del testo"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Riepilogo attività - Decodifica questo messaggio",
+          "type": "Riepilogo attività"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Decodifica questo messaggio"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Componente per la compressione del testo su Code Studio",
+          "type": "Componente"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Video: compressione del testo con Aloe Blacc",
           "type": "Video"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -707,11 +730,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Percorsi digitali: Digital Trail Squares",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Dispensa per gli alunni"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Percorsi digitali: tracce di animali",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Dispensa per gli alunni"
         },
         "mimi-activity/courseb/2021": {
           "name": "Muovilo, muovilo",
@@ -897,7 +922,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Sicurezza nel mio quartiere online: pausa e momento di riflessione",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Dispensa per gli alunni"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programmazione in coppia",
@@ -1096,7 +1122,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Fermare la cattiveria online: STOP Online Meanness",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Dispensa per gli alunni"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "I miei amici robotici",
@@ -1151,7 +1178,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Curve e angoli",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Dispensa per gli alunni"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Feeling Faces Emozione",
@@ -1634,6 +1662,9 @@
           "name": "Documentazione Sviluppo App",
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Dispensa per gli alunni"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Fermati e pensa online",
           "type": "Video"
@@ -1647,7 +1678,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Curve e angoli",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Dispensa per gli alunni"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Curve e angoli"
@@ -1764,6 +1796,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Dispensa per gli alunni"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
         },
@@ -1796,6 +1831,13 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Forum dell'insegnante"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "L'informatica sta cambiando ogni cosa",
+          "type": "Video"
         },
         "random_numbers_1/csd/2021": {
           "name": "Numeri Casuali"
@@ -1960,6 +2002,12 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum dell'insegnante"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Il Processo di Risoluzione dei Problemi"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Cos'è un Computer?"

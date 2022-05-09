@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 22:54:50 UTC",
+    "serialized_at": "2022-05-06 15:40:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1145,6 +1145,19 @@
       }
     },
     {
+      "key": "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee",
+        "lesson.key": "Project - Make a Recommendation",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2022"
+      }
+    },
+    {
       "key": "193cb70c-4f25-45e7-a0fa-6b8961671e54",
       "position": 1,
       "properties": {
@@ -1257,7 +1270,13 @@
       "key": "384bdd56-c982-4818-8992-b99c712a0447",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into groups of 3-5\n\n**Distribute:** Give each group a copy of the activity guide and one of the four versions of the Meals Data resource.  Make sure at least one group has a picture resource, one the menu resource, one group the nutrition resource, and one group the recipe resource."
+        "description": "**Group:** Put students into groups of 3-5\n\n**Distribute:** Give each group a copy of the activity guide and one of the four versions of the Meals Data resource.  Make sure at least one group has a picture resource, one the menu resource, one group the nutrition resource, and one group the recipe resource.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "384bdd56-c982-4818-8992-b99c712a0447",
@@ -2742,10 +2761,27 @@
       }
     },
     {
-      "key": "86100090-98fb-48c0-9518-5db9ff8f04d3",
+      "key": "436698db-a532-4140-a499-439275b977cf",
       "position": 1,
       "properties": {
-        "description": "**Group:** Have students sit in pairs so they can work collaboratively on this project.\n\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can. You don’t need to write down anything yet.\n\n**Distribute:** Give students copies of the Project Guide\n\n\n\n#### ***Project Guide - Create a Representation***\n\n\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\n\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
+        "description": "**Group:** Have students sit in pairs so they can work collaboratively on this project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "436698db-a532-4140-a499-439275b977cf",
+        "lesson_activity.key": "5b44cfa8-86de-4ae9-a288-42985ed29e6b"
+      }
+    },
+    {
+      "key": "86100090-98fb-48c0-9518-5db9ff8f04d3",
+      "position": 2,
+      "properties": {
+        "description": "\n\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can. You don’t need to write down anything yet.\n\n**Distribute:** Give students copies of the Project Guide\n\n\n\n#### ***Project Guide - Create a Representation***\n\n\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\n\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
       },
       "seeding_key": {
         "activity_section.key": "86100090-98fb-48c0-9518-5db9ff8f04d3",
@@ -2754,7 +2790,7 @@
     },
     {
       "key": "4465daca-68f4-43e3-b1f3-be0a5e9cd954",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Step 3 - Identify Information:** Have students assign the information about their perfect day to one of three categories, Numbers, Characters, or Images.",
         "tips": [
@@ -2771,7 +2807,7 @@
     },
     {
       "key": "b145440e-10a7-47b3-bbf1-2ca0856ee57a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Step 4 - Review Information Choices:** Students should get back together with their partner and compare notes on how they assigned different pieces of information to different categories."
       },
@@ -2782,7 +2818,7 @@
     },
     {
       "key": "e8b5c523-65a9-43d1-a4bd-0532e307c2e3",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "Hopefully, you noticed both you and your partner had some common information when describing your perfect day. I wonder if there are more things we have in common as an entire class? Let’s see if we can find enough pieces of common information that we can use to create a class-wide punchcard for all of us to represent our perfect day",
         "remarks": true
@@ -2794,7 +2830,7 @@
     },
     {
       "key": "3cafa0aa-ee2c-4ffb-963c-dd1283526c32",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Display:** Display the punch card from the project guide. Emphasize that the card has space for three numbers, an eight-character word, and an image. Explain that the class will need to agree on how they are going to use each row from the numbers, characters, and image sections of the punch card."
       },
@@ -2805,7 +2841,7 @@
     },
     {
       "key": "3ce88e08-4bf9-472a-9514-7522190cfd22",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:**  Have partners share the categories of information they wish to represent, recording them in the front of the room. Have the class decide what information they want to use for each number, their word, and their image.",
         "tips": [
@@ -2822,12 +2858,40 @@
     },
     {
       "key": "e4d45b09-0747-4ec3-8047-0002e2a49cb5",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "\n**Step 6 - Fill Out Punch Card:** Display the system somewhere all students can see it. Have students fill out their punch cards using this class system.\n\n**Step 7 - Trade and Decode Punch Cards:** Students should find a new partner who is unfamiliar with their perfect day. They should trade punch cards and decode the information encoded their. There is space on the back of the activity guide to write\n\n* The number information and its meaning\n* The character information and its meaning\n* What they believe the image is showing\n\nAfterwards students should write what they believe happens in their classmate's perfect day in the space provided\n\n**Step 8 - Share and Reflect:** Partners should meet back up and compare their description of their classmate's perfect day to what they originally intended. what were they still able to capture? What was lost?"
+        "description": "**Step 6 - Fill Out Punch Card:** Display the system somewhere all students can see it. Have students fill out their punch cards using this class system."
       },
       "seeding_key": {
         "activity_section.key": "e4d45b09-0747-4ec3-8047-0002e2a49cb5",
+        "lesson_activity.key": "5b44cfa8-86de-4ae9-a288-42985ed29e6b"
+      }
+    },
+    {
+      "key": "17447913-407d-4ab8-b163-3b5092b28b77",
+      "position": 9,
+      "properties": {
+        "description": "**Step 7 - Trade and Decode Punch Cards:** Students should find a new partner who is unfamiliar with their perfect day. They should trade punch cards and decode the information encoded their. There is space on the back of the activity guide to write\n\n* The number information and its meaning\n* The character information and its meaning\n* What they believe the image is showing\n\nAfterwards students should write what they believe happens in their classmate's perfect day in the space provided"
+      },
+      "seeding_key": {
+        "activity_section.key": "17447913-407d-4ab8-b163-3b5092b28b77",
+        "lesson_activity.key": "5b44cfa8-86de-4ae9-a288-42985ed29e6b"
+      }
+    },
+    {
+      "key": "e42ba6e9-b2bf-485f-8508-5c23d2aed69c",
+      "position": 10,
+      "properties": {
+        "description": "**Step 8 - Share and Reflect:** Partners should meet back up and compare their description of their classmate's perfect day to what they originally intended. what were they still able to capture? What was lost?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e42ba6e9-b2bf-485f-8508-5c23d2aed69c",
         "lesson_activity.key": "5b44cfa8-86de-4ae9-a288-42985ed29e6b"
       }
     },
@@ -4480,10 +4544,27 @@
       }
     },
     {
-      "key": "9faf6871-9df9-4b23-8908-7457317068af",
+      "key": "3f9bd4ac-771a-469d-bc19-c1cf2d53f6d2",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide. Also give students either a copy of the rubric or the student checklist.",
+        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3f9bd4ac-771a-469d-bc19-c1cf2d53f6d2",
+        "lesson_activity.key": "7f34d9dc-d8b8-4dbf-a5b4-c771d005d163"
+      }
+    },
+    {
+      "key": "9faf6871-9df9-4b23-8908-7457317068af",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give students copies of the project guide. Also give students either a copy of the rubric or the student checklist.",
         "name": "Day 1 Activity (40 mins)",
         "tips": [
           {
@@ -4499,7 +4580,7 @@
     },
     {
       "key": "375bc2b0-7e2e-46ca-a9ca-d0ab73bad9d0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "####***Project Guide - Make a Recommendation***\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n\n**Sample App:** Display the Sample App. Have the class participate in the quiz multiple times.",
         "progression_name": "Sample App"
@@ -4511,7 +4592,7 @@
     },
     {
       "key": "3965a4d3-9081-49cf-b5ec-16dcec0a1713",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Starting Off:** Have students answer the following question on their project guide:\n\n- What choice does the app help the user to make?\n- What data does it use to make that recommendation?\n- How do you think the creators of the app decided on the algorithm that they use to make the choice?",
         "tips": [
@@ -4528,7 +4609,7 @@
     },
     {
       "key": "a1e56a51-1c48-4a5a-aac6-a578c809fbdf",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "In this project, we're going to use the data problem solving process to help us create our algorithm. We'll survey people to find the relationships between their preferences, then use what we've learned to create an algorithm that can recommend something to the user. You’ll be working with a partner, and your first step will be to think about the type of recommendation that you want to make, and the three questions that you will ask to help you make that recommendation.",
         "remarks": true
@@ -4540,7 +4621,7 @@
     },
     {
       "key": "393b96de-e90f-41f7-a4bb-2f76b28f1e80",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Step 1 - Define Your Problem:** Give students a few minutes to decide on their recommendation topic with their partner."
       },
@@ -4551,7 +4632,7 @@
     },
     {
       "key": "25a6af85-19a0-42b6-a40a-f818f77b9f60",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "####Prepare\n\n**Step 2 - Decide What Data You Need:** Give students time to think of the data that they need to help them make the recommendation to the user.",
         "tips": [
@@ -4567,10 +4648,27 @@
       }
     },
     {
-      "key": "21c3b9f4-0344-4353-ab64-37bb65e25b34",
-      "position": 7,
+      "key": "849f06fe-e199-40d7-9d2d-a5a156fdc261",
+      "position": 8,
       "properties": {
-        "description": "\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend.\n\n####Day 1 Wrap-up\n\n**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Before tomorrow’s lesson, students may also use this time to collect survey data from people outside the classroom."
+        "description": "\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "849f06fe-e199-40d7-9d2d-a5a156fdc261",
+        "lesson_activity.key": "7f34d9dc-d8b8-4dbf-a5b4-c771d005d163"
+      }
+    },
+    {
+      "key": "21c3b9f4-0344-4353-ab64-37bb65e25b34",
+      "position": 9,
+      "properties": {
+        "description": "\n\n####Day 1 Wrap-up\n\n**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Before tomorrow’s lesson, students may also use this time to collect survey data from people outside the classroom."
       },
       "seeding_key": {
         "activity_section.key": "21c3b9f4-0344-4353-ab64-37bb65e25b34",
@@ -4579,7 +4677,7 @@
     },
     {
       "key": "f7a8e4db-c326-4c02-8a8d-182c004f2395",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "####Day 2 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####***Project Guide - Make a Recommendation***\n\n**Step 4 - Collect Your Survey Data:** Have students survey each other in the classroom. Ideally, students should give the survey to at least twenty people in order to make sure there is enough data to interpret in the next step. This will take a large portion of this class period.",
         "name": "Day 2 Activity (45 mins)"
@@ -4591,7 +4689,7 @@
     },
     {
       "key": "3c45816d-b2b3-4ce8-90c3-634a8e782d8a",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "**Step 5 - Interpret Your Data:** Guide students in using cross-tabulation to find relationships between the different user preferences. If students are having trouble with this part of the project, you may want to share the exemplar with them or complete a few tables as a class."
       },
@@ -4602,7 +4700,7 @@
     },
     {
       "key": "0518bac2-14a4-4835-b9ce-d5e22936b367",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "**Step 6 - Define Your Algorithm:** Students use the relationships to create rules for their recommendation algorithm.",
         "tips": [
@@ -4619,7 +4717,7 @@
     },
     {
       "key": "299c8fa1-248c-46df-a81a-a28acd5bfb11",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "####Day 2 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track.\n\n"
       },
@@ -4630,7 +4728,7 @@
     },
     {
       "key": "75c523ec-1917-4941-a1fb-603ac8804700",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "####Day 3 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####***Project Guide - Make a Recommendation***",
         "name": "Day 3 Activity (45 mins)"
@@ -4642,7 +4740,7 @@
     },
     {
       "key": "3a97c04e-1062-4e85-b310-2bca1e6ab271",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "**Step 7 - Try Out Your Algorithm:** Give students time to use their algorithm to make a recommendation to three of their classmates, then reflect on whether they believe the algorithm is effective.\n\n**Step 8 - Peer Review:** Read the instructions for Step 8 in the Project Guide. Clarify that the intent is to generate new ideas for how to improve your recommendation algorithm by having another team peer review it.\n\n**Distribute:** Pass out the Peer Review - Make a Recommendation worksheet to each student.\n\n####Peer Review - Make a Recommendation\n\n**Peer Review:** Have teams trade projects and complete a Peer Review for the other team. They should complete the chart and offer feedback to the team on their recommendation algorithm.\n\n**Creator’s Reflection:** Have teams look over the feedback and complete the Creator’s Reflection section of the activity guide. Teams should make edits to their Project Guide based on the feedback provided by another team.\n\n####Day 3 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track."
       },
@@ -4653,7 +4751,7 @@
     },
     {
       "key": "11248237-21d2-42d2-867a-5d5e79a50790",
-      "position": 14,
+      "position": 16,
       "properties": {
         "description": "####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.",
         "name": "Days 4 and 5 Activity (85 mins)"
@@ -4665,7 +4763,7 @@
     },
     {
       "key": "2d9a4aa2-3e55-4963-9a65-c4645d1b685d",
-      "position": 15,
+      "position": 17,
       "properties": {
         "description": "**Step 9 - Finalize and Present:** Students should design some kind of presentation of their work to share with their classmates. While you may choose many different formats, suggested content for the presentation is provided. The presentation should include:\n\n- What choice you are helping the user to make\n- The types of data you collect to help the user make that choice\n- The relationships that you found when interpreting your survey data\n- The way you used this information to create your recommendation algorithm\n- The results of testing the algorithm on users",
         "tips": [
@@ -4682,7 +4780,7 @@
     },
     {
       "key": "8e68627a-92d4-4ff2-9dc0-54d771f5a788",
-      "position": 16,
+      "position": 18,
       "properties": {
         "description": "**Presentations:** Give teams time to present. Projects can be assessed using the rubric based on their presentation and project guide."
       },
@@ -4704,15 +4802,27 @@
       }
     },
     {
-      "key": "947efdb9-edff-4396-8f74-8bf9f784fb48",
+      "key": "63bed78d-f5a0-44ae-8f02-99c0bb81ba05",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "63bed78d-f5a0-44ae-8f02-99c0bb81ba05",
+        "lesson_activity.key": "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee"
+      }
+    },
+    {
+      "key": "f2080a46-283c-4dce-924f-cf21e474f07e",
       "position": 2,
       "properties": {
         "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
-        "activity_section.key": "947efdb9-edff-4396-8f74-8bf9f784fb48",
-        "lesson_activity.key": "f8be9839-437c-4dc5-8668-54b3f62acfc3"
+        "activity_section.key": "f2080a46-283c-4dce-924f-cf21e474f07e",
+        "lesson_activity.key": "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee"
       }
     },
     {
@@ -6115,18 +6225,6 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
-      "key": "keeping_data_secret",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "keeping_data_secret"
-      }
-    },
-    {
-      "name": "Keeping Data Secret",
       "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
       "key": "keeping_data_secret_1",
       "properties": {
@@ -6485,7 +6583,7 @@
       "properties": {
         "audience": "Teacher",
         "download_url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/export?format=pdf",
-        "type": "Rubric"
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "representing_images"
@@ -6861,12 +6959,6 @@
       "seeding_key": {
         "lesson.key": "Interpreting Data",
         "resource.key": "interpreting_data_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
-        "resource.key": "keeping_data_secret"
       }
     },
     {

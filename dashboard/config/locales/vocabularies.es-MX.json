@@ -68,6 +68,7 @@
           "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
         },
         "code/flappy/unversioned": {
+          "word": "programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -869,12 +870,20 @@
         "ethics/csd/2021": {
           "word": "Ética"
         },
+        "user/csd/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
         "user_interface/csd/2021": {
           "word": "Pantalla de Usuario"
         },
         "bug/csd/2021": {
           "word": "Bug",
           "definition": "Una parte de un programa que no funciona correctamente."
+        },
+        "innovation/csd/2021": {
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
         },
         "analog/csd/2021": {
           "word": "Analógico",
@@ -884,6 +893,10 @@
           "word": "Digital",
           "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
         },
+        "array/csd/2021": {
+          "word": "Array",
+          "definition": "Una estructura de datos en JavaScript utilizada para representar una lista."
+        },
         "for_loop/csd/2021": {
           "word": "Bucle desde",
           "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
@@ -891,6 +904,42 @@
         "parameter/csd/2021": {
           "word": "Parámetro",
           "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+        },
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
+        },
+        "encode/csd/2021": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
+        },
+        "decrypt/csd/2021": {
+          "word": "Desencriptar",
+          "definition": "cambiar la información con el objetivo de revelar su significado"
+        },
+        "encrypt/csd/2021": {
+          "word": "Encriptar",
+          "definition": "cambiar la información con el objetivo de ocultar su significado"
         },
         "debugging/csd/2021": {
           "word": "Depurar",
@@ -906,7 +955,7 @@
         },
         "property/csd/2021": {
           "word": "Propiedades",
-          "definition": "Una etiqueta para una característica de una sprite, como su ubicación y su apariencia"
+          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
         },
         "sprite/csd/2021": {
           "word": "Sprite",
@@ -914,7 +963,7 @@
         },
         "dot_notation/csd/2021": {
           "word": "Notación de puntos",
-          "definition": "La forma en la que las propiedades de las sprites se utilizan en el Game Lab. Conectando a la sprite y a sus propiedades mediante un punto."
+          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
         },
         "condition/csd/2021": {
           "word": "Condición",
@@ -925,8 +974,8 @@
           "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
         },
         "boolean_expression/csd/2021": {
-          "word": "Expresión booleana",
-          "definition": "En programación, una expresión evalúa verdadero o falso."
+          "word": "Expresión Booleana",
+          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
         },
         "abstraction/csd/2021": {
           "word": "Abstracción",
@@ -950,7 +999,7 @@
         },
         "processing/csd/2021": {
           "word": "Procesamiento",
-          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida"
+          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
         },
         "storage/csd/2021": {
           "word": "almacenamiento",
@@ -966,7 +1015,7 @@
         },
         "html_tag/csd/2021": {
           "word": "Etiqueta HTML",
-          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y que tipo de elemento es"
+          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
         },
         "website_content/csd/2021": {
           "word": "Contenido de sitio web",
@@ -1002,11 +1051,11 @@
         },
         "trustworthy/csd/2021": {
           "word": "Confiable",
-          "definition": "fiable, honesto, verdadero "
+          "definition": "fiable, honesto, y verdadero "
         },
         "search_engine/csd/2021": {
           "word": "Motor de búsqueda",
-          "definition": "Un programa que busca elementos en la red informática mundial (World wide web)."
+          "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
         },
         "css_class/csd/2021": {
           "word": "Clase CSS",

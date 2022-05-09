@@ -870,6 +870,12 @@ de:
           mit Poesie
         poetry_module_conditionals: Bedingungen - Programmieren mit Poesie
         poemart_intro: Einführung in die Gedichtkunst
+        CSA-PL-debugging-temp: Einführung in die Fehlerbehebung in Java – Temp
+        csd_u6_circuit_playground: Physische Datenverarbeitung
+        csd_u6_input_output: Input und Output
+        PL_CS_Journeys_Overview: Informatik-Erlebnis
+        csp_applab_parameters: Funktionen mit Parametern
+        CSA-PL-intro-to-arrays: Eindimensionale (1D) Arrays
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

@@ -29,6 +29,7 @@
   "compilingProgram": "'Kompilowanie programu...",
   "connecting": "Łączenie...",
   "console": "Konsola",
+  "created": "Utworzono",
   "delete": "Usuń",
   "deleteFileConfirmation": "Czy na pewno chcesz usunąć {filename}?",
   "duplicateProjectFilenameError": "Nazwa pliku {filename} jest już używana w tym projekcie. Wybierz inną nazwę",
@@ -40,7 +41,6 @@
   "emptyBackpackMessage": "Tutaj pojawią się pliki zapisane w Twoim plecaku.",
   "enablePeerReview": "Umożliwij recenzję rówieśniczą ",
   "errorJavabuilderConnectionGeneral": "Wystąpił błąd podczas łączenia się z naszym serwerem. Spróbuj ponownie.",
-  "errorJavabuilderConnectionNotAuthorized": "Nie masz uprawnień dostępu do Javalab. Musisz się zalogować lub dołączyć do sekcji?",
   "errorLoadingClassmates": "Podczas wczytywania listy Twoich kolegów z klasy wystąpił błąd. Proszę spróbuj ponownie.",
   "errorMediaImageLoadError": "Podczas pobierania obrazu wystąpił błąd.",
   "errorNeighborhoodInvalidGrid": "Podczas wczytywania poziomu sąsiedztwa wystąpił błąd. Skontaktuj się z nami pod adresem support@code.org i pamiętaj, aby w wiadomości umieścić adres URL tej strony.",
@@ -120,7 +120,11 @@
   "saving": "Zapisywanie...",
   "teacherLabel": "nauczyciel",
   "togglePeerReviewError": "Błąd podczas włączania/wyłączania wzajemnej oceny, spróbuj ponownie.",
+  "unauthorizedJavabuilderConnectionNotLoggedIn": "Musisz być zalogowany, aby uruchomić swój kod w Java Lab. Zaloguj się i spróbuj ponownie.",
+  "unauthorizedJavabuilderConnectionTeacher": "Aby uruchomić swój kod w Java Lab, musisz zostać „zweryfikowany” lub dołączyć do sekcji CSA, należącej do zweryfikowanego nauczyciela. Przeczytaj [ten artykuł](https://support.code.org/hc/en-us/articles/115001550131), aby dowiedzieć się, jak zostać zweryfikowanym.",
+  "unauthorizedJavabuilderConnectionStudent": "Aby uruchomić swój kod w Java Lab, musisz być przypisany do sekcji CSA, a Twój nauczyciel musi zostać „zweryfikowany”. Poproś nauczyciela o pomoc i spróbuj ponownie. Twój nauczyciel może znaleźć więcej informacji w [tym artykule.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Ups. Natrafiliśmy na błąd po naszej stronie. Spróbuj ponownie uruchomić program. Jeśli ten błąd będzie się powtarzał, skontaktuj się z nami pod adresem support@code.org. Pamiętaj o podaniu w wiadomości identyfikatora połączenia {connectionId}.\n{type}",
   "userBlocked": "Uruchomiłeś kod zbyt wiele razy i Twoje konto zostało zablokowane. Skontaktuj się z support@code.org, aby odblokować swoje konto.",
+  "youHaveProjectsToReview": "Masz projekty do sprawdzenia...",
   "yourPeer": "twój rówieśnik"
 }

@@ -9879,7 +9879,7 @@
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "Essaie de décomposer ce problème en plusieurs petites parties. Prend ton temps. Tu n'as pas besoin de le résoudre du premier coup!",
           "course_starWars_loops8_b": "Pense à la première moitié de ce problème comme un problème pour monter des marches. Comment as-tu résolu ça auparavant?",
-          "course_starWars_loops8_c": "Regarde ce trajet.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Regarde ce trajet.\n\n[][0]"
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "Tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`.",
@@ -10022,7 +10022,7 @@
           "courseD_bee_conditionals4_hintVid1": "Besoin d'aide pour démarrer? Regarde la vidéo!",
           "courseD_bee_conditionals4_a": "Tu peux toujours traiter chaque espace comme s'il y avait un nuage au-dessus, même si tu peux voir tout le chemin.",
           "courseD_bee_conditionals4_b": "Utilise une déclaration `if` à l'intérieur de ta boucle pour vérifier le nectar dans chaque espace.",
-          "courseD_bee_conditionals4_c": "En utilisant le bloc <xml><block type=\"maze_untilBlocked\"/></xml>, tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
+          "courseD_bee_conditionals4_c": "En utilisant le bloc [blockly block][0], tu dois pouvoir avancer et vérifier si une fleur est présente. S'il y a une fleur, qu'est ce que l'abeille doit faire?",
           "courseD_bee_conditionals4_hintVid2": "Regarde cette vidéo pour t'aider à résoudre ce puzzle."
         },
         "courseD_bee_conditionals5_2021": {
@@ -10354,7 +10354,7 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
-          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "Ton programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions3_dani": {
@@ -10638,20 +10638,20 @@
           "when_answered_var": "Essayez de changer l'étiquette de la variable dans le bloc « une fois la réponse faite». Comme il existe plusieurs invites, utilisez le libellé de la _dernière_ invite qui recevra une réponse. \n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant le bloc `Arrière-plan défini` sous le bloc événement `lorsqu'on clique` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
-          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `sprite begins` en plus d'un des blocs de comportement de couleur verte, comme par exemple `spinning right`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
           "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
           "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "Connectez le bloc 'changer de costume' à un bloc d'événement \"lorsqu'on clique\".\n\n[blockly block] [0]"
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -10663,7 +10663,7 @@
           "hello-world-first-solution-bear": "Pour amener l'ours à parler, connectez les blocs de code de la manière suivante :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "Utilisez ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
           "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         },
         "helloworld_emoji_backgrounds": {
@@ -10699,7 +10699,7 @@
           "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors": {
-          "storyboard_behavior_example": "Remarque : Pour amener le sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
           "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
@@ -10725,7 +10725,7 @@
           "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10754,8 +10754,8 @@
           "hw_retro_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Chaque sprite a un **emplacement**. Vous pouvez définir l'emplacement en cliquant sur l'épingle qui se trouve au niveau de ce bloc :\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Cliquez sur l'épingle ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) du bloc d'emplacement puis choisissez un nouvel emplacement pour votre sprite qui s'affiche à l'écran.\n-   Appuyez sur le bouton \"Exécuter\" après avoir saisi votre code.",
-          "remove_hint": "Vous pouvez supprimer le sprite d'un certain numéro de ligne. Et ajouter un nouveau sprite pour prendre sa place :\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Chaque sprite a un **emplacement**. Vous pouvez définir l'emplacement en cliquant sur l'épingle qui se trouve au niveau de ce bloc :\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Cliquez sur l'épingle ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) du bloc d'emplacement puis choisissez un nouvel emplacement pour votre sprite qui s'affiche à l'écran.\n-   Appuyez sur le bouton \"Exécuter\" après avoir saisi votre code.",
+          "remove_hint": "Vous pouvez supprimer le sprite d'un certain numéro de ligne. Et ajouter un nouveau sprite pour prendre sa place :\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Trouvez un bloc d'arrière-plan semblable à celui-ci :\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\net trouvez un bloc d'effet de texte semblable à celui-ci : \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConnectez ces blocs à la section `lorsqu'on exécute` dans votre espace de travail.",
@@ -10767,14 +10767,14 @@
           "more_events_hint": "Vous pouvez utiliser plus d'un événement dans votre programme. Essayez d'utiliser deux événements avec des effets différents qui correspondent aux nouvelles lignes du poème. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
+          "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
           "more_code": "Ajoutez plus d'effets et de couleurs pour correspondre au son que vous avez choisi.\n[blockly block] [0]"
         },
         "poetry_hoc_spriteBehaviors": {
           "add_behavior": "Ajoutez un bloc `lancement du sprite` à votre code. Assurez-vous d'avoir déjà créé le sprite pour lequel vous voulez définir le comportement.\n\n[blockly block] [0]"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte."

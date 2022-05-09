@@ -1793,7 +1793,7 @@
           "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
         },
         "helloworld_animals_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_animals_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -1822,7 +1822,7 @@
           "hello_world_new": "Nowy blok!"
         },
         "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_emoji_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -1851,7 +1851,7 @@
           "hello_world_new": "Nowy blok!"
         },
         "helloworld_food_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -2141,6 +2141,21 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Zmień liczbę tutaj"
+        },
+        "CSD U3 platform background1": {
+          "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
+        },
+        "CSD U3 platform background1_2018": {
+          "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
+        },
+        "CSD U3 platform background1_2019": {
+          "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Kliknij tutaj, aby dodać kostiumy do swojego projektu."
         }
       }
     }

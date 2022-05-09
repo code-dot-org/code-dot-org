@@ -828,6 +828,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Направи Преположение
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -836,6 +837,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Направи Преположение
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -844,6 +846,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Направи Преположение
       Internet Simulator Setup:
         content1: опишете тук
       Internet Simulator Setup 2:
@@ -2406,3 +2409,29 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Направи Преположение
+      CSD games cake challenge choice_2021:
+        display_name: Предизвикателства
+      CSD games platform challenge choice_2021:
+        display_name: Предизвикателства
+      ml-club app-choice parent:
+        display_name: Персонализирай Своето Приложение
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Персонализирай Своето Приложение
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Добавяне на Снимки
+      CSD U2 Image practice_pilot_2021:
+        display_name: Добавяне на Снимки
+      CSD U3 drawing practice choice_2021:
+        display_name: Упражнение
+      CSD web draw loop practice choice_2021:
+        display_name: Упражнение
+      CSD web movement practice choice_2021:
+        display_name: Упражнение
+      CSD web text practice choice_2021:
+        display_name: Упражнение
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Моите Приятели Роботи
+
+          Научи се да програмираш като пишеш код с приятели!

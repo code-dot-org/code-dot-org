@@ -28,7 +28,8 @@
           "type": "فيديو الطالب"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "type": "نشرة الطالب"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "لفات وزوايا",
@@ -38,9 +39,28 @@
           "name": "Spotify Playlist (كل الأعمار)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "التشفير والمفاتيح العامة",
           "type": "فيديو"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "عنصر واجهة شفرة في Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "دليل النشاط - ضغط النص"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "ملخص النشاط - فك شفرة هذه الرسالة",
+          "type": "ملخص النشاط"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "فك شفرة هذه الرسالة"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "عنصر واجهة ضغط النص على Code Studio",
+          "type": "عنصر الواجهة"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "فيديو: ضغط النص مع آلو بلاك",
           "type": "فيديو"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -516,6 +536,7 @@
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/",
           "type": "مصدر"
         },
         "sprites_in_action/coursef/2021": {
@@ -524,71 +545,110 @@
           "type": "شرائح"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "قوة الكلمات: شرائح الدرس",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
           "type": "شرائح"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "قوة الكلمات: قوة الكلمات",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
           "type": "فيديو"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "قوة الكلمات: الكلمات يمكن أن تؤذي",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
           "type": "نشرة"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "قوة الكلمات: اختبار الدرس",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
           "type": "مصدر"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "قوة الكلمات: اختبار الدرس",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
           "type": "الحل النموذجي"
         },
         "variables_blank_space_stories/coursef/2021": {
+          "name": "المتغيرات: قصص الفضاء الفارغة",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
           "type": "شرائح"
         },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "قصة مساحة فارغة",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
         "blank_space_stories/coursef/2021": {
+          "name": "قصة مساحة فارغة",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "الحل النموذجي"
         },
         "text_and_prompts/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "شرائح"
         },
+        "user_input_programs/coursef/2021": {
+          "name": "برامج إدخال المستخدم",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
         "mini_project_user_input_programs/coursef/2021": {
+          "name": "مشروع صغير: برامج إدخال المستخدم",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
           "type": "شرائح"
         },
         "teacher_sandbox_level/coursef/2021": {
+          "name": "صندوق أدوات المعلم",
+          "url": "https://studio.code.org/levels/27300",
           "type": "مصدر"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "مشروع صغير: برامج إدخال المستخدم",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
           "type": "الحل النموذجي"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
           "type": "فيديو"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "حلقة التكرار المسلّية",
+          "url": "https://youtu.be/mX857v5B4gE",
           "type": "فيديو نشاط"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "حلقة For للمرح - مفتاح التقييم"
+          "name": "حلقة \"لِ\" المحددة الممتعة - الإجابة النموذجية للتقييم",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "type": "مفتاح المعلم"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "حلقة التكرار المسلّية",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM",
           "type": "فيديو الدرس العملي"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "حلقة التكرار المسلّية",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
           "type": "ورقة عمل"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "حلقة التكرار المسلّية",
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit",
           "type": "الحل النموذجي لورقة العمل"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "حلقة التكرار المسلّية",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "التقييم"
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
         "running-simulations/coursef/2021": {
           "name": "تشغيل المحاكاة",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "ورقة عمل"
         },
         "ai-ml/coursef/2021": {
@@ -605,69 +665,96 @@
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "الانترنت",
+          "url": "https://youtu.be/mFOUbqYv1Sc",
           "type": "فيديو نشاط"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
           "name": "بطاقات عناوين بروتوكول الإنترنت (IP Address) وبطاقات نوع التسليم",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
           "type": "أدوات التعلم"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "الإنترنت",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "التقييم"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "الإنترنت",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
           "type": "الحل النموذجي للتقييم"
         },
         "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/",
           "type": "مصدر"
         },
         "design-process/coursef/2021": {
           "name": "عملية التصميم",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
           "type": "دليل إعداد المعلمين"
         },
         "final-project-design-worksheet/coursef/2021": {
           "name": "تصميم المشروع النهائي",
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
           "type": "ورقة عمل"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/coursef/2021": {
+          "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر",
+          "url": "https://studio.code.org/s/coursef-2021/standards",
           "type": "مصدر"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "الأساسيات المشتركة وتوجيهات معايير جيل العلوم الحديث",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
           "type": "مصدر"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "مصدر"
         },
         "course_vocabulary/coursef/2021": {
+          "name": "مفردات الدورة التدريبية",
+          "url": "https://studio.code.org/s/coursef-2021/vocab",
           "type": "مصدر"
         },
         "implementation_guide/coursef/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/coursef/2021": {
+          "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide/coursef/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "دليل المقرر الدراسي",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "مصدر"
         },
         "2021_change_log/coursef/2021": {
+          "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursef/2021": {
@@ -686,11 +773,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "المسارات الرقمية: مربعات المسار الرقمي",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "نشرة الطالب"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "المسارات الرقمية: مسارات الحيوانات",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "نشرة الطالب"
         },
         "mimi-activity/courseb/2021": {
           "name": "حرّكها، حرّكها",
@@ -732,7 +821,7 @@
           "type": "فيديو المعلم"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)",
+          "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "أدوات التعلم"
         },
@@ -826,9 +915,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
+          "name": "الحدث الكبير (الدورتان التدريبيتان \"أ\" و\"ب\")",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "الصورة المتحكمة"
+          "type": "صورة وحدة التحكم"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "دليل تخطيط مشروع مختبر الألعاب",
@@ -852,6 +941,7 @@
         },
         "cross-curricular_extension_activities/courseb/2021": {
           "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "مصدر"
         },
         "course_vocabulary/courseb/2021": {
@@ -861,14 +951,17 @@
         },
         "implementation_guide/courseb/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/courseb/2021": {
           "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide/courseb/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/courseb/2021": {
@@ -878,10 +971,12 @@
         },
         "2021_change_log/courseb/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/courseb/2021": {
@@ -905,7 +1000,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "نشرة الطالب"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية",
@@ -918,7 +1014,7 @@
           "type": "مصدر"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "الرقص- جنون المعكرونة",
+          "name": "الاهتزاز- جنون المعكرونة",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "فيديو"
         },
@@ -953,7 +1049,7 @@
           "type": "مصدر"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)",
+          "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
           "type": "أدوات التعلم"
         },
@@ -1048,9 +1144,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
+          "name": "الحدث الكبير (الدورتان التدريبيتان \"أ\" و\"ب\")",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
-          "type": "الصورة المتحكمة"
+          "type": "صورة وحدة التحكم"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "صورة مشاعر الوجوه",
@@ -1103,14 +1199,17 @@
         },
         "implementation_guide/coursea/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide/coursea/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -1120,10 +1219,12 @@
         },
         "2021_change_log/coursea/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursea/2021": {
@@ -1137,7 +1238,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "وضع حد للدناءة علي الانترنت: أوقف الدناءة على الانترنت",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "نشرة الطالب"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "أصدقائي من الروبوت",
@@ -1169,7 +1271,7 @@
           "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "قوالب المتاهة غير المتصلة",
+          "name": "قطع المتاهة البرمجية غير المتصلة",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": "أدوات التعلم"
         },
@@ -1184,11 +1286,13 @@
           "type": "توصيات الدرس"
         },
         "debugging_guide/coursec/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
           "type": "مصدر"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
         "csf-artist-intro-video/coursec/2021": {
@@ -1201,7 +1305,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "لفات وزوايا",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "نشرة الطالب"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "صورة مشاعر الوجوه",
@@ -1224,9 +1329,9 @@
           "type": "الحل النموذجي للتقييم"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "الحدث الكبير (الدورة \"ج\")",
+          "name": "الحدث الكبير (الدورة التريبية \"ج\")",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
-          "type": "جهاز التحكم في الأحداث"
+          "type": "أداة التحكم في الأحداث"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
@@ -1234,7 +1339,7 @@
           "type": "فيديو"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "مستويات برمجة مفتوحة",
+          "name": "عينة من حلول المراحل",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "الحل النموذجي"
         },
@@ -1249,7 +1354,7 @@
           "type": "ورقة عمل"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "وحدات البت ووحدات البايت",
+          "name": "وحدات البت مقابل وحدات البايت",
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
           "type": "فيديو الطالب"
         },
@@ -1300,6 +1405,7 @@
         },
         "cross-curricular_extension_activities/coursec/2021": {
           "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "مصدر"
         },
         "course_vocabulary/coursec/2021": {
@@ -1309,14 +1415,17 @@
         },
         "implementation_guide/coursec/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/coursec/2021": {
           "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide_1/coursec/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursec/2021": {
@@ -1326,10 +1435,12 @@
         },
         "2021_change_log/coursec/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursec/2021": {
@@ -1438,7 +1549,8 @@
           "type": "حزمة النشاط"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
@@ -1455,7 +1567,7 @@
           "type": "الحل النموذجي"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "مستويات برمجة مفتوحة",
+          "name": "عينة من حلول المراحل",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "الحل النموذجي"
         },
@@ -1533,6 +1645,7 @@
         },
         "cross-curricular_extension_activities/coursed/2021": {
           "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "مصدر"
         },
         "course_vocabulary/coursed/2021": {
@@ -1542,14 +1655,17 @@
         },
         "implementation_guide/coursed/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/coursed/2021": {
           "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide/coursed/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -1559,10 +1675,12 @@
         },
         "2021_change_log/coursed/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/coursed/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursed/2021": {
@@ -1571,7 +1689,7 @@
           "type": "مصدر"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "قوالب المتاهة غير المتصلة",
+          "name": "قطع المتاهة البرمجية غير المتصلة",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": "مصدر"
         },
@@ -1581,7 +1699,8 @@
           "type": "فيديو"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "قطع غير برمجية (الدورات ج - و)"
+          "name": "قطع غير برمجية (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
           "name": "تقديم الفنان",
@@ -1597,11 +1716,12 @@
           "type": "نشرة"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
+          "name": "صندوق أدوات المعلم - السمكة السبّاحة",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/",
           "type": "مصدر"
         },
         "making_sprites/express/2021": {
@@ -1611,6 +1731,7 @@
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/",
           "type": "مصدر"
         },
         "sprites_in_action/express/2021": {
@@ -1637,25 +1758,32 @@
           "type": "الحل النموذجي"
         },
         "pair_programming_video/express/2021": {
+          "name": "فيديو البرمجة مع صديق",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "فيديو"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "قطع غير برمجية (الدورات ج - و)"
+          "name": "قطع غير برمجية (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "قطع غير برمجية (الدورات ج - و)"
+          "name": "قطع غير برمجية (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "قطع غير برمجية (الدورات ج - و)"
+          "name": "قطع غير برمجية (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "شرائح"
         },
         "variables_video/express/2021": {
@@ -1664,24 +1792,30 @@
           "type": "فيديو الطالب"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "دليل تخطيط نهاية الدورة التدريبية \"مبادئ علوم الكمبيوتر\"",
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/express/2021": {
+          "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر",
           "url": "https://studio.code.org/s/express-2021/standards",
           "type": "مصدر"
         },
         "course_vocabulary_1/express/2021": {
+          "name": "مفردات الدورة التدريبية",
           "url": "https://studio.code.org/s/express-2021/vocab",
           "type": "مصدر"
         },
         "teacher_forum_1/express/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "debugging_guide/express/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
@@ -1726,6 +1860,7 @@
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "debugging_guide/pre-express/2021": {
@@ -1737,12 +1872,13 @@
           "type": "شرائح"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
+          "name": "صندوق أدوات المعلم - السمكة السبّاحة",
           "url": "https://studio.code.org/levels/18623",
           "type": "مرحلة البرمجة"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/",
           "type": "مصدر"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -1764,7 +1900,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "المعلومات الخاصة والشخصية: تذكرة الخروج",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "نشرة الطالب"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "المعلومات الخاصة والشخصية: اختبار قصير",
@@ -1798,39 +1935,41 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "لفات وزوايا",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "نشرة الطالب"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "لفات وزوايا",
           "type": "فيديو الطالب"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "كتابة الأغاني مع الدوال",
+          "name": "كتابة الأغاني مع الوظائف",
           "url": "https://youtu.be/5iDCKkI6y2Y",
           "type": "فيديو نشاط"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
           "type": "فيديو الدرس العملي"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
           "type": "ورقة عمل"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
           "type": "التقييم"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني",
+          "name": "الوظائف غير المتصلة: تأليف الأغاني",
           "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
           "type": "الحل النموذجي للتقييم"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "name": "قطع برمجية غير متصلة (الدورات ج - و)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
           "type": "أدوات التعلم"
         },
         "designing_for_accessibility_1/coursee/2021": {
@@ -1849,14 +1988,16 @@
           "type": "ورقة عمل"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "design-process/coursee/2021": {
           "name": "عملية التصميم",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
           "type": "دليل إعداد المعلمين"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
+          "name": "٧٢ طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
           "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
           "type": "مصدر"
         },
@@ -1872,6 +2013,7 @@
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "نشاط إضافي عبر المناهج",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "مصدر"
         },
         "course_vocabulary/coursee/2021": {
@@ -1881,14 +2023,17 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "دليل التنفيذ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "مصدر"
         },
         "lesson_type_guide/coursee/2021": {
           "name": "دليل نوع الدرس",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "مصدر"
         },
         "debugging_guide/coursee/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -1898,14 +2043,17 @@
         },
         "2021_change_log/coursee/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "مصدر"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "منتدى المعلم",
+          "url": "https://forum.code.org/c/csf/",
           "type": "مصدر"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "وثائق مختبر الرسوم المتحركة"
+          "name": "وثائق مختبر الرسوم المتحركة",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "تعديلات الدرس الافتراضي",
@@ -2031,6 +2179,9 @@
         "ai_code_of_ethics/csd/2021": {
           "type": "شرائح"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "نشرة الطالب"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "فيديو"
         },
@@ -2155,6 +2306,19 @@
         "teacher_forum/csd/2021": {
           "name": "منتدى المعلم"
         },
+        "computing-innovations/csd/2021": {
+          "name": "ابتكارات الحوسبة"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "فيديو"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "علم الحاسوب غيّر كل شيء",
+          "type": "فيديو"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "type": "شرائح"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "تصميم الشاشات باستخدام الكود",
           "type": "مصدر"
@@ -2164,9 +2328,6 @@
         },
         "responding_to_user_input_1/csd/2021": {
           "type": "مصدر"
-        },
-        "csd_unit_6_-_physical_computing/csd/2021": {
-          "type": "شرائح"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "كيف تعمل أجهزة الحاسوب: الأجهزة والبرامج",
@@ -2260,6 +2421,15 @@
         },
         "unit-5-data-society/csd/2021": {
           "type": "شرائح"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "مسائل التمثيل"
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "type": "مصدر"
+        },
+        "representation-matters/csd/2021": {
+          "name": "مسائل التمثيل"
         },
         "representing-information-1/csd/2021": {
           "name": "تمثيل المعلومات"
@@ -2403,6 +2573,7 @@
           "type": "مصدر"
         },
         "sprite_properties/csd/2021": {
+          "name": "خصائص الكائنات",
           "type": "مصدر"
         },
         "youtube-flipbook/csd/2021": {
@@ -2484,6 +2655,19 @@
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "type": "شرائح"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "عملية حل المشكلات",
+          "type": "فيديو"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
         "solving-problems-exemplar-2020/csd/2021": {
           "type": "الحل النموذجي"
         },
@@ -2517,6 +2701,12 @@
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "مصدر"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "استكشاف صفحات الويب"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "استكشاف صفحات الويب"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "شرائح"
