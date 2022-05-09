@@ -28,6 +28,7 @@ import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
+import BlockSvgUnused from './addons/blockSvgUnused';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -258,6 +259,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     opt_disableCheck
   ) {
     oldMixin.call(this, mixinObj, true);
+  };
+
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function(
+    helpClickFunc
+  ) {
+    console.log('new addUnusedBlockFrame');
+    if (!this.unusedSvg_) {
+      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+    }
+    this.unusedSvg_.render(this.svgGroup_);
   };
 
   const oldRender = blocklyWrapper.BlockSvg.prototype.render;
