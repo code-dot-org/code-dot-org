@@ -30,7 +30,7 @@ describe('JavalabSettings', () => {
   it('shows children when clicked', () => {
     const wrapper = shallow(<JavalabSettings {...defaultProps} />);
     wrapper.instance().toggleDropdown();
-    assert.strictEqual(wrapper.find('a').length, 2);
+    assert.strictEqual(wrapper.find('button').length, 2);
   });
 
   it('passes through onClick and closes dropdown', () => {
@@ -38,18 +38,18 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
     assert(
       wrapper
-        .find('a')
+        .find('button')
         .at(1)
         .props().onClick
     );
     wrapper
-      .find('a')
+      .find('button')
       .at(1)
       .props()
       .onClick();
     assert(clickSpy.calledOnce);
 
     // dropdown is closed
-    assert.equal(wrapper.find('a').length, 0);
+    assert.equal(wrapper.find('button').length, 0);
   });
 });
