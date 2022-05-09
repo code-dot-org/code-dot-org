@@ -24,10 +24,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.removeUnusedBlockFrame();
   }
 
-  isUserVisible() {
-    return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
-  }
-
   render(opt_bubble) {
     super.render(opt_bubble);
     this.removeUnusedBlockFrame();

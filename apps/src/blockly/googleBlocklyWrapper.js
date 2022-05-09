@@ -266,6 +266,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return true;
   };
 
+  blocklyWrapper.BlockSvg.prototype.isUserVisible = function() {
+    // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
+    return false;
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
