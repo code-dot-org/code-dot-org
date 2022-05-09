@@ -264,7 +264,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function(
     helpClickFunc
   ) {
-    console.log('new addUnusedBlockFrame');
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
     }
