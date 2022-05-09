@@ -91,8 +91,6 @@ class Lesson < ApplicationRecord
 
   include CodespanOnlyMarkdownHelper
 
-  MARKDOWN_FIELDS = %w(overview student_overview preparation assessment_opportunities purpose)
-
   def self.update_lessons_in_migrated_unit(unit, lesson_group, raw_lessons, counters)
     raw_lessons.map do |raw_lesson|
       lesson = fetch_lesson(raw_lesson, unit)
@@ -175,16 +173,6 @@ class Lesson < ApplicationRecord
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
-    unless MARKDOWN_FIELDS.include?(property_name)
-      Honeybadger.notify(
-        error_message: "Rendering #{property_name} which is not in MARKDOWN_FIELDS",
-        error_class: "Lesson.render_property",
-        context: {
-          property_name: property_name,
-          markdown_fields: MARKDOWN_FIELDS
-        }
-      )
-    end
     result = get_localized_property(property_name)
     result = Services::MarkdownPreprocessor.process(result || '')
     return result
@@ -836,7 +824,7 @@ class Lesson < ApplicationRecord
       "[v #{new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}]"
     end
 
-    MARKDOWN_FIELDS.each do |field|
+    %w(overview student_overview preparation assessment_opportunities).each do |field|
       next unless copied_lesson.try(field)
       Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.try(field), update_resource_link_on_clone)
       Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.try(field), update_vocab_definition_on_clone)
