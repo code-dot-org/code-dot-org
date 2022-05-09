@@ -262,14 +262,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   const oldRender = blocklyWrapper.BlockSvg.prototype.render;
   blocklyWrapper.BlockSvg.prototype.render = function(opt_bubble) {
-    console.log('new render');
     oldRender.call(this, opt_bubble);
     this.removeUnusedBlockFrame();
   };
 
   const oldDispose = blocklyWrapper.BlockSvg.prototype.dispose;
   blocklyWrapper.BlockSvg.prototype.dispose = function() {
-    console.log('new dispose');
     oldDispose.call(this);
     this.removeUnusedBlockFrame();
   };
