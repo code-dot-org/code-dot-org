@@ -28,44 +28,42 @@ describe('MusicController', () => {
   });
 
   afterEach(() => {
-    sinon.restore();
+    Sounds.prototype.registerByFilenamesAndID.restore();
+    sound.play.restore();
   });
 
-  it('mutes itself when requested', () => {
-    musicController = new MusicController(
-      new Sounds.getSingleton(),
-      function(filename) {
-        return `../audio/assets/${filename}`;
+  function musicControllerSetup(isMutedToStart) {
+    return new MusicController(
+      Sounds.getSingleton(),
+      filename => {
+        `../audio/assets/${filename}`;
       },
       [track],
       null,
-      false
+      isMutedToStart
     );
+  }
+
+  it('mutes itself when requested', () => {
+    musicController = musicControllerSetup(false);
     musicController.preload();
     sound.onLoad();
     musicController.setMuteMusic(true);
 
-    musicController.play();
     expect(musicController.muteMusic_).to.be.true;
+    // Make sure attempts to play do not work since muting
+    musicController.play();
     expect(sound.play).to.not.have.been.called;
   });
 
   it('updates status and plays music when unmuted', () => {
-    musicController = new MusicController(
-      new Sounds.getSingleton(),
-      function(filename) {
-        return `../audio/assets/${filename}`;
-      },
-      [track],
-      null,
-      true
-    );
-
+    musicController = musicControllerSetup(true);
     musicController.setGroup('mygroup');
     musicController.preload();
     sound.onLoad();
-    musicController.setMuteMusic(false);
 
+    expect(sound.play).to.not.have.been.called;
+    musicController.setMuteMusic(false);
     expect(musicController.muteMusic_).to.be.false;
     expect(sound.play).to.have.been.called;
   });
