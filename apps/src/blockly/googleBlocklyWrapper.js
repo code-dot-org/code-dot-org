@@ -260,6 +260,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     oldMixin.call(this, mixinObj, true);
   };
 
+  blocklyWrapper.BlockSvg.prototype.isVisible = function() {
+    // TODO (eventually) - All Flappy/Poetry/Bounce blocks are visible.
+    // This shouldn't be a problem until we convert other labs.
+    return true;
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
