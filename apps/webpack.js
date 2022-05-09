@@ -4,6 +4,7 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var sass = require('sass');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
@@ -135,7 +136,10 @@ var baseConfig = {
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
-          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
+          {
+            loader: 'sass-loader',
+            options: {includePaths: [scssIncludePath], implementation: sass}
+          }
         ]
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},

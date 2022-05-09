@@ -627,7 +627,8 @@ class JavalabEditor extends React.Component {
       position: 'fixed',
       top: this.state.menuPosition.top,
       left: this.state.menuPosition.left,
-      backgroundColor: '#F0F0F0'
+      backgroundColor: '#F0F0F0',
+      zIndex: 1000
     };
     return (
       <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
@@ -744,6 +745,25 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
+            <div style={menuStyle}>
+              <JavalabEditorTabMenu
+                cancelTabMenu={this.cancelTabMenu}
+                renameFromTabMenu={this.renameFromTabMenu}
+                deleteFromTabMenu={this.deleteFromTabMenu}
+                changeFileTypeFromTabMenu={(isVisible, isValidation) =>
+                  this.updateFileType(activeTabKey, isVisible, isValidation)
+                }
+                showVisibilityOption={isEditingStartSources}
+                fileIsVisible={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isVisible
+                }
+                fileIsValidation={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isValidation
+                }
+              />
+            </div>
             <Tab.Content id="tab-content" animation={false}>
               {orderedTabKeys.map(tabKey => {
                 return (
@@ -763,25 +783,6 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
           </div>
         </Tab.Container>
-        <div style={menuStyle}>
-          <JavalabEditorTabMenu
-            cancelTabMenu={this.cancelTabMenu}
-            renameFromTabMenu={this.renameFromTabMenu}
-            deleteFromTabMenu={this.deleteFromTabMenu}
-            changeFileTypeFromTabMenu={(isVisible, isValidation) =>
-              this.updateFileType(activeTabKey, isVisible, isValidation)
-            }
-            showVisibilityOption={isEditingStartSources}
-            fileIsVisible={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isVisible
-            }
-            fileIsValidation={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isValidation
-            }
-          />
-        </div>
         <JavalabDialog
           isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}
