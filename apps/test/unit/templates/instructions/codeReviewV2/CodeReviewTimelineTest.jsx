@@ -52,7 +52,8 @@ const DEFAULT_PROPS = {
       timelineElementType: timelineElementType.commit
     }
   ],
-  addCodeReviewComment: () => {}
+  addCodeReviewComment: () => {},
+  closeReview: () => {}
 };
 
 const setUp = (overrideProps = {}) => {

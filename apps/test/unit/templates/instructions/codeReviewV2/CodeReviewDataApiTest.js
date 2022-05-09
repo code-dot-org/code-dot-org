@@ -83,16 +83,17 @@ const fakeScriptId = 3;
 
 describe('CodeReviewDataApi', () => {
   describe('getInitialTimelineData', () => {
-    sinon.stub(CodeReviewDataApi.prototype, 'getCommits').callsFake(() => {
-      return Promise.resolve(fakeCommitData);
-    });
-    sinon.stub(CodeReviewDataApi.prototype, 'getCodeReviews').callsFake(() => {
-      return Promise.resolve(fakeReviewData);
-    });
-
     let dataApi;
     before(() => {
       dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+      sinon.stub(CodeReviewDataApi.prototype, 'getCommits').callsFake(() => {
+        return Promise.resolve(fakeCommitData);
+      });
+      sinon
+        .stub(CodeReviewDataApi.prototype, 'getCodeReviews')
+        .callsFake(() => {
+          return Promise.resolve(fakeReviewData);
+        });
     });
 
     it('returns timelineData commits and closed code reviews sorted by createdAt', async () => {
