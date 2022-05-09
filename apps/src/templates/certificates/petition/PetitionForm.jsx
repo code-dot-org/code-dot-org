@@ -63,13 +63,10 @@ const PetitionForm = ({gaPagePath}) => {
 
   const sendDataToEndpoint = data => {
     const handleSuccessfulSubmit = () => {
-      console.log('submit successful');
-      //  TODO: Redirect to /promote/thanks
-      // window.location.href = "/promote/thanks";
+      window.location.href = '/promote/thanks';
     };
     const handleFailedSubmit = () => {
-      console.log('submit failed');
-      // TODO: Show error message
+      setErrorMessage(i18n.formServerError());
     };
 
     $.ajax({
