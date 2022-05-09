@@ -20,7 +20,6 @@ import reducers from '@cdo/apps/p5lab/reducers';
 import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
-import loadSpritelab from '@cdo/apps/sites/studio/pages/init/loadSpritelab';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 const backgroundSprite = {
@@ -270,56 +269,6 @@ describe('SpriteLab', () => {
           store.dispatch(setIsRunning(true));
           expect(eventSpy).not.to.have.been.called;
         });
-      });
-    });
-  });
-});
-
-describe('loadSpriteLab', () => {
-  it('loads back-up defaultSprites lists if fetch fails', () => {
-    return loadSpritelab({baseUrl: 'test.url'}).then(spritelab => {
-      let defaultAnimations = spritelab.defaultAnimations;
-      expect(defaultAnimations.orderedKeys.length).to.equal(2);
-      let firstSpriteKey = defaultAnimations.orderedKeys[0];
-      expect(firstSpriteKey).to.equal('2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2');
-      expect(defaultAnimations.propsByKey[firstSpriteKey].name).to.equal(
-        'bear'
-      );
-    });
-  });
-
-  describe('when fetch succeeds', () => {
-    let fetchedSprites = {
-      orderedKeys: ['123456'],
-      propsByKey: {
-        123456: {
-          name: 'fruit',
-          sourceUrl: 'test.url/fruit'
-        }
-      }
-    };
-    let fetchResponse = new window.Response(JSON.stringify(fetchedSprites), {
-      status: 200,
-      headers: {'Content-type': 'application/json'}
-    });
-    let fetchStub;
-
-    before(() => {
-      fetchStub = sinon.stub(window, 'fetch');
-      fetchStub.onCall(0).returns(Promise.resolve(fetchResponse));
-    });
-    after(() => {
-      fetchStub.restore();
-    });
-
-    it('use defaultSprites from S3', () => {
-      return loadSpritelab({baseUrl: 'test.url'}).then(spritelab => {
-        let defaultAnimations = spritelab.defaultAnimations;
-        expect(defaultAnimations.orderedKeys.length).to.equal(1);
-        let firstSpriteKey = defaultAnimations.orderedKeys[0];
-        expect(defaultAnimations.propsByKey[firstSpriteKey].name).to.equal(
-          'fruit'
-        );
       });
     });
   });
