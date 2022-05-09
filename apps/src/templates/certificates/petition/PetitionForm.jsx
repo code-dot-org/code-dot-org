@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import PropTypes from 'prop-types';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 /* global ga */
 
 const PetitionForm = ({gaPagePath}) => {
@@ -63,14 +64,14 @@ const PetitionForm = ({gaPagePath}) => {
 
   const sendDataToEndpoint = data => {
     const handleSuccessfulSubmit = () => {
-      window.location.href = '/promote/thanks';
+      window.location.href = pegasus('/promote/thanks');
     };
     const handleFailedSubmit = () => {
       setErrorMessage(i18n.formServerError());
     };
 
     $.ajax({
-      url: '/forms/Petition',
+      url: pegasus('/forms/Petition'),
       type: 'post',
       dataType: 'json',
       data: data
@@ -118,7 +119,11 @@ const PetitionForm = ({gaPagePath}) => {
           name="age_i"
           placeholderOrLabel={i18n.age()}
           isErrored={invalidFields.includes('age_i')}
-          helpText={<a href="/privacy">{i18n.privacyPracticesForChildren()}</a>}
+          helpText={
+            <a href={pegasus('/privacy')}>
+              {i18n.privacyPracticesForChildren()}
+            </a>
+          }
           componentClass="select"
           onChange={handleChange}
           value={data.age_i || ''}
