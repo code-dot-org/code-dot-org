@@ -1,5 +1,6 @@
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import {forEach, has, merge} from 'lodash';
+import i18n from '@cdo/locale';
 
 export const keyValidation = {
   name_s: {
@@ -19,9 +20,6 @@ export const keyValidation = {
   }
 };
 
-// Returns an error message of "Please (do x), ..., and (do y)."
-// or "Please (do x)." based on the errors found in the data from
-// keyValidation. If there are no errors, returns an empty string.
 export const getInvalidFields = data => {
   if (!Object.keys(keyValidation).every(key => has(data, key))) {
     throw new Error('The data must have keys from all fields in keyValidation');
@@ -50,8 +48,19 @@ export const getErrorMessage = data => {
 
 export const getAgeSafeData = data => {
   const safeData = {
-    email: 'anonymous@code.org',
-    name: ''
+    email_s: 'anonymous@code.org',
+    name_s: ''
   };
-  return data.age < 16 ? merge(data, safeData) : data;
+  return data.age_i < 16 ? merge(data, safeData) : data;
+};
+
+// TODO: Ask RED – What should be displayed if user doesn't select anything?
+export const professionToDataString = {
+  '-': 'other',
+  [i18n.student()]: 'student',
+  [i18n.parent()]: 'parent',
+  [i18n.educator()]: 'educator',
+  [i18n.administrator()]: 'administrator',
+  [i18n.softwareEngineer()]: 'engineer',
+  [i18n.noneOfTheAbove()]: 'other'
 };

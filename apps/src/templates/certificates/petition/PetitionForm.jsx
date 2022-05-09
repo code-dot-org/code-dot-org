@@ -7,7 +7,8 @@ import {
   keyValidation,
   getInvalidFields,
   getErrorMessage,
-  getAgeSafeData
+  getAgeSafeData,
+  professionToDataString
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import PropTypes from 'prop-types';
@@ -32,20 +33,21 @@ const PetitionForm = ({gaPagePath}) => {
     e => {
       e.preventDefault();
 
+      // ensure profession data is sent in english, and trim inputted strings
       let sanitizedData = data;
-      Object.entries(data).forEach(field => {
-        let value = data[field];
-        if (typeof value === 'string') {
-          sanitizedData = {...sanitizedData, [field]: value.trim()};
+      sanitizedData.role_s = professionToDataString[data.role_s] || 'other';
+      Object.keys(sanitizedData).forEach(field => {
+        if (typeof data[field] === 'string') {
+          sanitizedData = {...sanitizedData, [field]: data[field].trim()};
         }
       });
-      setData(sanitizedData);
 
       const currentInvalidFields = getInvalidFields(sanitizedData);
       if (currentInvalidFields.length !== 0) {
         setInvalidFields(currentInvalidFields);
         setErrorMessage(getErrorMessage(sanitizedData));
       } else {
+        setErrorMessage('');
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
         ga('send', 'event', 'petition', 'click', {
@@ -89,7 +91,7 @@ const PetitionForm = ({gaPagePath}) => {
           id="name"
           name="name_s"
           placeholderOrLabel={i18n.name()}
-          isErrored={invalidFields.includes('name')}
+          isErrored={invalidFields.includes('name_s')}
           onChange={handleChange}
           value={data.name_s || ''}
         />
@@ -97,7 +99,7 @@ const PetitionForm = ({gaPagePath}) => {
           id="email"
           name="email_s"
           placeholderOrLabel={i18n.email()}
-          isErrored={invalidFields.includes('email')}
+          isErrored={invalidFields.includes('email_s')}
           helpText={i18n.usedForInfrequentUpdates()}
           onChange={handleChange}
           value={data.email_s || ''}
@@ -106,7 +108,7 @@ const PetitionForm = ({gaPagePath}) => {
           id="zip-or-country"
           name="zip_code_or_country_s"
           placeholderOrLabel={i18n.zipOrCountry()}
-          isErrored={invalidFields.includes('zip-or-country')}
+          isErrored={invalidFields.includes('zip_code_or_country_s')}
           helpText={i18n.enterCountry()}
           onChange={handleChange}
           value={data.zip_code_or_country_s || ''}
@@ -115,7 +117,7 @@ const PetitionForm = ({gaPagePath}) => {
           id="age"
           name="age_i"
           placeholderOrLabel={i18n.age()}
-          isErrored={invalidFields.includes('age')}
+          isErrored={invalidFields.includes('age_i')}
           helpText={<a href="/privacy">{i18n.privacyPracticesForChildren()}</a>}
           componentClass="select"
           onChange={handleChange}
@@ -131,21 +133,13 @@ const PetitionForm = ({gaPagePath}) => {
           id="profession"
           name="role_s"
           placeholderOrLabel={i18n.iAmA()}
-          isErrored={invalidFields.includes('profession')}
+          isErrored={invalidFields.includes('role_s')}
           componentClass="select"
           onChange={handleChange}
           value={data.role_s || ''}
         >
-          {[
-            '-',
-            i18n.student(),
-            i18n.parent(),
-            i18n.educator(),
-            i18n.administrator(),
-            i18n.softwareEngineer(),
-            i18n.noneOfTheAbove()
-          ].map((profession, index) => (
-            <option key={index} value={profession}>
+          {Object.keys(professionToDataString).map(profession => (
+            <option key={profession} value={profession}>
               {profession}
             </option>
           ))}
