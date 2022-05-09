@@ -4,10 +4,10 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import javalabMsg from '@cdo/javalab/locale';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
-  onLoadComplete: () => {},
   channelId: 'asdfjkl',
   serverLevelId: 1,
   serverScriptId: 2,
@@ -44,8 +44,12 @@ describe('CommitsAndReviewTab', () => {
 
   it('displays refresh button', () => {
     const wrapper = setUp();
-    const refreshButton = wrapper.find(Button);
-    expect(refreshButton).to.have.length(1);
+    const refreshButton = wrapper.find(Button).first();
     expect(refreshButton.props().icon).to.equal('refresh');
+  });
+
+  it('displays a CodeReviewTimeline', () => {
+    const wrapper = setUp();
+    expect(wrapper.find(CodeReviewTimeline)).to.have.length(1);
   });
 });

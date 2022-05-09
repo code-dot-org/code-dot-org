@@ -6147,8 +6147,8 @@ en:
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
               name: Loops in Artist
-              description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_student: 
+              description_teacher: 
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
@@ -6229,6 +6229,8 @@ en:
               name: Build a Flappy Game
             Events in Play Lab:
               name: Events in Play Lab
+              description_student: 
+              description_teacher: 
             Screen Out the Mean:
               name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
@@ -31457,6 +31459,10 @@ en:
               name: The Neighborhood
               description_student: 
               description_teacher: 
+            lesson-23:
+              name: CSA Pre-Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -31813,11 +31819,11 @@ en:
             lesson-9:
               name: Polymorphism
               description_student: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 You have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods.
               description_teacher: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 Students explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.
             lesson-10:
@@ -33067,6 +33073,14 @@ en:
               name: Project Mercury Pastries Food Truck
               description_student: 
               description_teacher: 
+            lesson-4:
+              name: TextProcessor
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: ImagePlus
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: csa-backpack-2022
           title: CSA Backpack Versions ['22-'23]
@@ -33421,7 +33435,7 @@ en:
               description_student: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
-                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.
+                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply your algorithm to various scenarios to find the overall sentiment value of text.
               description_teacher: |-
                 **How can I modify standard algorithms to implement natural language processing techniques?**
 
@@ -33470,6 +33484,10 @@ en:
               name: Unit 6 Assessment
               description_student: Assess your progress through the Unit 6 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            Console:
+              name: Console
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -33925,7 +33943,7 @@ en:
               description_student: |
                 **You will:**
                 * Consider your role as the teacher in a CS Discoveries classroom.
-              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider your/their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
+              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
             lesson-11:
               name: Wrap Up
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
@@ -34213,9 +34231,9 @@ en:
             lesson-7:
               name: Async Prep
             lesson-8:
-              name: Differentiation
-              description_student: "**You will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
-              description_teacher: "**Overview:**\nDuring these asynchronous activities, participants will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.\n\n**Participants will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
+              name: Make an Implementation Plan
+              description_student: "**You will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you will teach and in which order. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nNow that participants have been introduced to the content within the full course, participants will utilize the CS Discoveries implementation guide to determine which units they will teach and in which order. This is an important step to take before moving into the curriculum investigation. \n\n**Participants will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units they will teach and in which order. \n\n\n**Suggested time:** 60 minutes"
             lesson-9:
               name: Navigating Support
               description_student: "**You will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes"
@@ -34247,6 +34265,10 @@ en:
                 Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
 
                 **Question of the Day:** How can you update design elements of an app?
+            Introduction to Machine Learning:
+              name: TLO 7 - Unit 7 Lesson 1
+              description_student: "**You will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. "
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 7 Lesson 1: Introduction to Machine Learning. In this lesson, participants will train a robot to solve problems. This TLO lesson will also share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Participants will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Suggested time:** 60 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -34273,9 +34295,9 @@ en:
               description_student: "**You will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. "
               description_teacher: "**Overview:**\nThis session is intended to be flexible to meet the needs of the workshop participants. The goal is that participants leave the workshop feeling confident and prepared to start teaching the content from at least one unit of the CS Discoveries curriculum.\n\n**Participants will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. \n\n**Suggested time:** 60 minutes"
             lesson-3:
-              name: Making a Plan
-              description_student: "**You will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. "
-              description_teacher: "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. \n\n**Suggested time:** 60 minutes"
+              name: Teacher Resource Exploration
+              description_student: "**You will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. "
+              description_teacher: "**Overview:**\nDuring this session, participants will explore resources that are designed to support teachers in implementing CS Discoveries with their students. There will be opportunities for collaboration and sharing of ideas during this session. \n\n**Participants will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. \n\n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
@@ -34633,24 +34655,58 @@ en:
           lessons:
             lesson-1:
               name: Introduction to The Design Process
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Design Process unit.
+                * Get a preview of the first week of the Deign Process unit content.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Design Process unit.
+                * Get a preview of the first week of the Deign Process unit content.
+
+                **Suggested time:** 10 minutes
             lesson-2:
               name: Use a paper prototype
               description_student: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
               description_teacher: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
             lesson-3:
               name: Build a digital prototype in App Lab
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Use design mode in App Lab to create a digital prototype.
+                *  Create events that detect and respond to user input.
+
+                **Suggested time:** 40 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Use design mode in App Lab to create a digital prototype.
+                *  Create events that detect and respond to user input.
+
+                **Suggested time:** 40 minutes
             lesson-4:
               name: Consider how apps can be used for good
               description_student: 
               description_teacher: 
             lesson-5:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 15 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Preparing to Teach the Design Process
@@ -34664,31 +34720,63 @@ en:
           lessons:
             lesson-1:
               name: Introduction to Data and Society
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Data and Society unit.
+                * Get a preview of the first week of the Data and Society unit content.
+
+                **Suggested time:** 5 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Data and Society unit.
+                * Get a preview of the first week of the Data and Society unit content.
+
+                **Suggested time:** 5 minutes
             lesson-2:
               name: Explore data at a small scale
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
+              description_teacher: "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
             lesson-3:
               name: Explore data at a large scale
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Apply the problem solving process to solve data problems.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Apply the problem solving process to solve data problems.
+
+                **Suggested time:** 20 minutes
             lesson-4:
               name: Consider real world implications
               description_student: 
               description_teacher: 
             lesson-5:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+
+                **Suggested time:** 10 minutes
           lesson_groups: {}
           name: vpl-csd5-ci-pilot-2022
           title: 'Module 5: Preparing to Teach Data and Society'
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 60 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 60 minutes"
         vpl-csd6-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -35980,10 +36068,10 @@ en:
                 **Question of the Day:** What are guidelines we can use to create ethical machine learning apps?
               key: AI Code of Ethics
             'Mini-Project: Make a Machine Learning App':
-              name: 'Mini-Project: Make a Machine Learning App'
+              name: 'Project: Make a Machine Learning App'
               description_student: Choose from several real-world datasets to train a model and create an app that uses machine learning
               description_teacher: |-
-                In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+                In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
 
                 **Question of the Day:** Can I use real-world data to create an app that uses machine learning?
               key: 'Mini-Project: Make a Machine Learning App'
