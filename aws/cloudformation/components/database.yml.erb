@@ -11,7 +11,10 @@
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
 
-<% 2.times do |i| %>
+<%
+  # Integer range identifying each of the DB Instances to provision in the cluster.
+  DB_INSTANCE_RANGE=(1..1)
+  DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
@@ -69,7 +72,8 @@
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
-    DependsOn: [Aurora0, Aurora1]
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
     Properties:
       DBProxyName: !Ref DBProxy
       DBClusterIdentifiers: [!Ref AuroraCluster]
