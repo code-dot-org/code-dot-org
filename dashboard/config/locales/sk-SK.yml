@@ -795,6 +795,10 @@ sk:
       title: Tanečná Párty
     dance-2019:
       title: Tanečná Párty
+    hello-world:
+      title: Ahoj Svet
+    poem-art:
+      title: Básnické umenie
     hoc:
       title: Klasické bludisko
       body: Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.
@@ -1005,16 +1009,6 @@ sk:
       aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné
       vašim študentom.
     review_terms: Prezrieť aktualizované podmienky
-  donor_interstitial:
-    title: Bezplatné kurzy Informatiky vám prinášajú...
-    subtitle: Ďakujeme štedrým darcom, ktorých podpora umožnila úspech Code.org. Zaviazali
-      sme sa, že udržíme Code.org zadarmo pre školy a študentov na celom svete, a
-      to vďaka neustálej štedrosti našich [donors](%{donors_url})!
-    local_supporters: Miestni podporovatelia
-    global_supporters: Svetoví podporovatelia
-    support_codeorg_1: Každý príspevok pre Code.org prináša príležitosť ďalším študentom.
-    support_codeorg_2: "[Prispejte teraz](%{donate_url}) na podporu Code.org."
-    get_started: Začnite s Code.org
   school_info_interstitial:
     title: Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať
       náš pokrok!

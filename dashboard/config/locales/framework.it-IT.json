@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Competenze linguistiche"
         },
+        "csta": {
+          "name": "CSTA K-12 Computer Science Standards (2017)"
+        },
         "ccmath": {
           "name": "Competenze matematiche"
         },

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The increment operator
 
-Let’s look at another example, imagine I have a variable that stores the age of a person as shown below.  
+Let’s look at another example. Imagine I have a variable that stores the age of a person as shown below:  
 
 ```
 // declare and initialize a variable of type int to 22.

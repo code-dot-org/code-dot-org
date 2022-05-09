@@ -1238,6 +1238,12 @@ ms:
             '90': bawah
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kecil
+            '50': sederhana
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:

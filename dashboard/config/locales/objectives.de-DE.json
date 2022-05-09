@@ -278,6 +278,12 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
         },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Beschreiben Sie die Bedeutung der BenutzerInnen im Design-Prozess."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identifizieren Sie Sprite in einem laufenden Computerprogramm."
+        },
         "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
           "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
         },

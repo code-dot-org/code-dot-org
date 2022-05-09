@@ -825,6 +825,10 @@ id:
       title: Pesta Tari
     dance-2019:
       title: Pesta Tari
+    hello-world:
+      title: Halo Dunia
+    poem-art:
+      title: Seni Puisi
     hoc:
       title: Labirin Klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -1043,18 +1047,6 @@ id:
       tidak tersedia bagi murid Anda sebelum secara tegas menerima persyaratan yang
       diperbarui.
     review_terms: Tinjau ketentuan yang diperbarui
-  donor_interstitial:
-    title: Kursus gratis CS anda dibuat mungkin oleh...
-    subtitle: Kami ingin mengucapkan terimakasih kepada para donatur yang murah hati
-      yang dengan dukungannya membuat Code.org sukses. Kami berkomitmen agar Code.org
-      tetap gratis untuk sekolah dan para siswa,secara global, terimakasih kepada
-      kemurahan hati yang berkelanjutan dari [donors](%{donors_url}) kami!
-    local_supporters: Pendukung lokal
-    global_supporters: Pendukung global
-    support_codeorg_1: Setiap dolar yang diberikan kepada Code.org membawa kesempatan  untuk
-      lebih banyak siswa.
-    support_codeorg_2: "[Berdonasi sekarang](%{donate_url}) untuk mendukung Code.org."
-    get_started: Memulai di Code.org
   school_info_interstitial:
     title: Kami ingin menghadirkan Ilmu Komputer kepada setiap murid - bantu kami
       memantau kemajuan kami!

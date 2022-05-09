@@ -1212,6 +1212,12 @@ uz:
             '90': pastga
             '180': chap
             '270': yuqoriga
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': o‘rta
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:

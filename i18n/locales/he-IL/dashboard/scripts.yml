@@ -1297,8 +1297,7 @@ he:
             Going Places Safely: {}
             'Loops: Happy Loops': {}
             Loops in Collector: {}
-            Loops in Artist:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Loops in Artist: {}
             'Events: The Big Event': {}
             Events in Play Lab:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
@@ -1320,6 +1319,7 @@ he:
               name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
+            Events in Play Lab: {}
             Binary Bracelets:
               name: 'מעבר לתכנות: צמידים בינארים'
         coursed-2017:
@@ -1643,6 +1643,8 @@ he:
         allthesurveys:
           lessons:
             lesson-20: {}
+            CS Principles Pre-survey: {}
+            Course Survey: {}
         k1hoc2017: {}
         hero:
           title: 'מיינקראפט: המסע של הירו'
@@ -4911,7 +4913,9 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
-        tesstest921: {}
+        tesstest921:
+          lessons:
+            lesson-2: {}
         hello-world-animals:
           lessons:
             lesson-1: {}
@@ -5280,6 +5284,7 @@ he:
         csp5-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
           lesson_groups:
             csp_lists:
               display_name: רשימות
@@ -5287,6 +5292,8 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -5347,22 +5354,38 @@ he:
         csp6-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
         csp7-2022:
           lessons:
             CS Principles Post-Course Survey: {}
             EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             lessonGroup-3:
-              display_name: סקר
+              display_name: סקר שלאחר הקורס
         csp8-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
         csp9-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
         csp10-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -5477,6 +5500,10 @@ he:
               name: חזרות
             lesson-21: {}
             lesson-22: {}
+            lesson-23: {}
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         pre-express-2022:
           lessons:
             Programming with Angry Birds:
@@ -5591,6 +5618,7 @@ he:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-3: {}
         csd6-projects:
           lessons:
             'Project: Human Device Interaction': {}
@@ -5637,6 +5665,9 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         ui-test-csa-family-script: {}
         csa-preview:
           lessons:
@@ -5752,16 +5783,22 @@ he:
             lesson-3: {}
         csc-pilot-2022-timecapsule:
           lessons:
+            lesson-2: {}
             lesson-3: {}
+            lesson-4: {}
             Poem Art:
               name: אומנות השירה
         csc-pilot-2022-starquilts:
           lessons:
+            lesson-1: {}
             lesson-2: {}
             lesson-3: {}
         csc-pilot-2022-fables:
           lessons:
             lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey: {}
@@ -5864,6 +5901,43 @@ he:
           lessons:
             Post-Course Survey:
               name: סקר שלאחר הקורס
+        testtess2: {}
         csp-post-survey-2022:
           lessons:
             Course Survey: {}
+        aiml-2022: {}
+        vpl-csd-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        vpl-csp-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return': {}
+            'Module 6: Introduction to the Create Performance Task': {}
+            'Module 7: Tools and Structure in Unit 9 - Data': {}
+            'Module 8: Building Community and Preparing Students for the AP Exam': {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        self-paced-pl-csd1-2022: {}
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg: {}
+            Welcome to "Teaching CS Discoveries": {}
+        self-paced-pl-csd3-2022: {}
+        self-paced-pl-csd4-2022: {}
+        self-paced-pl-csp1-2022: {}
+        self-paced-pl-csp2-2022: {}
+        self-paced-pl-csp3-2022: {}
+        self-paced-pl-csp4-2022: {}

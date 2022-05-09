@@ -991,17 +991,6 @@ is:
       okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað
       hinir uppfærðu skilmálar eru samþykktir.
     review_terms: Skoða uppfærða skilmála
-  donor_interstitial:
-    title: Þessi ókeypis námskeið í tölvunarfræði eru studd af...
-    subtitle: Við viljum þakka þeim örlátu stuðningsaðilum sem með stuðningi sínum
-      hafa gert góðan árangur Code.org mögulegan. Við erum ákveðin í að Code.org verði
-      áfram ókeypis fyrir skóla og nemendur um allan heim, þökk sé áframhaldandi örlæti
-      [stuðningsaðila okkar](%{donors_url})!
-    local_supporters: Staðbundir stuðningsaðilar
-    global_supporters: Stuðningsaðilar á heimsvísu
-    support_codeorg_1: Hver dollar sem gefinn er Code.org veitir fleiri nemendum tækifæri.
-    support_codeorg_2: "[Gefðu núna](%{donate_url}) til að styðja Code.org."
-    get_started: Byrjaðu á Code.org
   school_info_interstitial:
     title: Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur
       að fylgjast með árangri okkar!

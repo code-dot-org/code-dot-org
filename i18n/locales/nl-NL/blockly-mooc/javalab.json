@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "De in uw backpack opgeslagen bestanden zullen hier verschijnen.",
   "enablePeerReview": "Collegiale toetsing inschakelen",
   "errorJavabuilderConnectionGeneral": "Er vond een fout plaats toen er contact werd gemaakt met onze server. Probeer het nog een keer.",
-  "errorJavabuilderConnectionNotAuthorized": "We hebben geen toestemming om Javalab te openen. Moet u inloggen of deelnemen aan een sectie?",
   "errorLoadingClassmates": "Tijdens het laden van de lijst met klasgenoten vond er een fout plaats. Probeer het nog een keer.",
   "errorMediaImageLoadError": "Het laden van de afbeelding verliep niet goed.",
   "errorNeighborhoodInvalidGrid": "Er vond een fout plaats tijdens het laden van het buurtniveau. Neem contact met ons op via support@code.org, en vergeet niet de URL van deze pagina te vermelden in uw bericht.",

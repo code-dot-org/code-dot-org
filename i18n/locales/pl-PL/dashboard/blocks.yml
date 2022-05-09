@@ -1275,6 +1275,13 @@ pl:
             '90': do dołu
             '180': w lewo
             '270': do góry
+      gamelab_makeSpritesWithSize:
+        text: utwórz {NUM} nowych {SIZE} {COSTUME} duszków
+        options:
+          SIZE:
+            '30': mały
+            '50': średni
+            '100': duży
       gamelab_mirrorSprite:
         text: "{SPRITE} skierowany {DIRECTION}"
         options:
@@ -1474,7 +1481,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1487,6 +1494,46 @@ pl:
         text: "{SPRITE} powiedz {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
+      gamelab_spriteThink:
+        text: "{SPRITE} myśl {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} myśl {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Jestem również głodny.
+            '"I only want the biggest goat."': Chcę tylko największej kozy.
+            '"I''m a green troll."': Jestem zielonym trollem.
+            '"No one will cross my bridge."': Nikt nie przekroczy mojego mostu.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} myśl {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Czas zaprzyjaźnić się z owcami.
+            '"She''ll never recognize me now."': Ona mnie teraz nie rozpozna.
+            '"This costume keeps me warm."': Ten kostium mnie ogrzewa.
+            '"I am actually a wolf."': Właściwie jestem wilkiem.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} myśl {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Czuję się śpiący.
+            '"No one could ever beat me."': Nikt nigdy nie mógł mnie pokonać.
+            '"I''ve done this race before."': Uczestniczyłem w tym wyścigu już wcześniej.
+            '"My feet are bigger than Turtle''s feet."': Moje stopy są większe niż stopy Żółwia.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} myśl {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Jestem bardzo głodny!
+            '"I''m a visitor in this town."': Jestem gościem w tym mieście.
+            '"If we share, we''ll all have something to eat. "': Jeśli się podzielimy, wszyscy będziemy mieli coś do jedzenia.
+            '"I''ll trick everyone into giving me their food."': Oszukam wszystkich, żeby dali mi swoje jedzenie.
       gamelab_startAvoiding:
         text: "{SPRITE} zaczyna unikać {TARGET}"
       gamelab_startFollowing:
@@ -1848,7 +1895,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
