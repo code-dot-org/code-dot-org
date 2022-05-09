@@ -54,7 +54,6 @@ export const getAgeSafeData = data => {
   return data.age_i < 16 ? merge(data, safeData) : data;
 };
 
-// TODO: Ask RED – What should be displayed if user doesn't select anything?
 export const professionOptions = {
   placeholder: {text: '-', dataString: 'other'},
   student: {text: i18n.student(), dataString: 'student'},
