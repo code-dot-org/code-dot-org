@@ -411,21 +411,21 @@ class Ability
       end
     end
 
-    # Checks if user is a verified instructor or the student of a verified instructor.
     if user.persisted?
-      if user.verified_instructor? || user.student_of_verified_instructor?
-        can :get_access_token, :javabuilder_session
+      # Checks if user is a verified instructor or the student of a verified instructor.
+      can :get_access_token, :javabuilder_session do
+        user.verified_instructor? || user.student_of_verified_instructor?
       end
-    end
 
-    # Allow verified instructors to have access to run override_sources java lab code, which is how we run exemplars.
-    if user.persisted? && user.verified_instructor?
-      can :get_access_token_with_override_sources, :javabuilder_session
-    end
+      # Allow verified instructors to have access to run override_sources java lab code, which is how we run exemplars.
+      can :get_access_token_with_override_sources, :javabuilder_session do
+        user.verified_instructor?
+      end
 
-    # This action allows levelbuilders to work on validation in levelbuilder.
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can :get_access_token_with_override_validation, :javabuilder_session
+      # This action allows levelbuilders to work on validation in levelbuilder.
+      can :get_access_token_with_override_validation, :javabuilder_session do
+        user.permission?(UserPermission::LEVELBUILDER)
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
