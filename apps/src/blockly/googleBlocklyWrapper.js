@@ -272,6 +272,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.removeUnusedBlockFrame();
   };
 
+  blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
+    if (this.unusedSvg_) {
+      this.unusedSvg_.dispose();
+      this.unusedSvg_ = null;
+    }
+  };
+
   blocklyWrapper.BlockSvg.prototype.getHexColour = function() {
     // In cdo Blockly labs, getColour() returns a numerical hue value, while
     // in newer Google Blockly it returns a hexademical color value string.
