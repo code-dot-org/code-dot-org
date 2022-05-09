@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-06 21:24:42 UTC",
+    "serialized_at": "2022-05-07 01:13:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -41,6 +41,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 5 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -56,8 +58,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
+        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -73,6 +75,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**You will:**\n\n* Apply the problem solving process to solve data problems.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Apply the problem solving process to solve data problems.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -88,6 +92,8 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -159,19 +165,8 @@
       }
     },
     {
-      "key": "171445e5-ecbb-475f-9296-313cec35681d",
-      "position": 2,
-      "properties": {
-        "progression_name": "Learning tools"
-      },
-      "seeding_key": {
-        "activity_section.key": "171445e5-ecbb-475f-9296-313cec35681d",
-        "lesson_activity.key": "73657e35-148b-4b71-a0c1-d0bdb432ebc0"
-      }
-    },
-    {
       "key": "8d2ed8c6-7e2b-4364-b075-49976e09d15e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Explore the first week of curriculum"
       },
@@ -385,31 +380,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U5"
-        ],
-        "progression": "Learning tools"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U5"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd5-ci-pilot-2022",
-        "activity_section.key": "171445e5-ecbb-475f-9296-313cec35681d"
-      },
-      "level_keys": [
-        "VPL-CSD-pilot-S22-CI-Unit_tools-U5"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "VPL-CSD-pilot-S22-2-week1-U5L5"
         ],
         "progression": "Explore the first week of curriculum"
@@ -429,7 +399,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -451,7 +421,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -476,7 +446,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -502,7 +472,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -524,7 +494,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -547,7 +517,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -569,7 +539,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -591,7 +561,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -614,7 +584,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 9,
       "activity_section_position": 4,
       "assessment": true,
@@ -636,7 +606,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -659,7 +629,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -681,7 +651,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -704,7 +674,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -726,7 +696,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -748,7 +718,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -770,7 +740,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -793,7 +763,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -815,7 +785,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -838,7 +808,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -860,12 +830,11 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "instructor_in_training": true,
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -883,7 +852,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -908,7 +877,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -933,7 +902,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -993,18 +962,6 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd5-ci-pilot-2022",
         "activity_section.key": "c3b2db4f-4178-465a-ba8b-76673621e782"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-U5",
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_tools-U5"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd5-ci-pilot-2022",
-        "activity_section.key": "171445e5-ecbb-475f-9296-313cec35681d"
       }
     },
     {

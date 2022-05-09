@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-06 16:47:07 UTC",
+    "serialized_at": "2022-05-08 13:38:15 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1912,7 +1912,7 @@
       "key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Generic Types*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the example."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Generic Types*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
       },
       "seeding_key": {
         "activity_section.key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
@@ -5819,6 +5819,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1d6wlrYMUCmyMxHdUAi-n-KZIDQbUW1F8cWNv6apnzhc/edit?usp=sharing",
+      "key": "cs_bingo_cards_4",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1ywaPCOCsqkJtQAGvbTwYvD1T5nF-1qWfU_TMYWdnILE/edit?usp=sharing",
+      "key": "cs_bingo_definitions_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_6"
+      }
+    },
+    {
       "name": "Java Quick Reference",
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
@@ -6238,6 +6262,18 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u6l4_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_definitions_6"
       }
     },
     {
