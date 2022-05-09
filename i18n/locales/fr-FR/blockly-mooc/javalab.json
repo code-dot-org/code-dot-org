@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "Les fichiers enregistrés dans votre sac à dos apparaîtront ici.",
   "enablePeerReview": "Activer l'évaluation par les pairs",
   "errorJavabuilderConnectionGeneral": "Une erreur est survenue lors de la connexion à notre serveur. Veuillez réessayer.",
-  "errorJavabuilderConnectionNotAuthorized": "Vous n'êtes pas autorisé à accéder à Javalab. Souhaitez-vous vous connecter ou ouvrir une section ?",
   "errorLoadingClassmates": "Une erreur est survenue lors du chargement de la liste de vos camarades de classe. Veuillez réessayer.",
   "errorMediaImageLoadError": "Une erreur s'est produite lors du chargement de l'image.",
   "errorNeighborhoodInvalidGrid": "Une erreur est survenue lors du chargement du niveau de voisinage. Veuillez nous contacter à l'adresse support@code.org, et n'oubliez pas de mentionner l'URL de cette page dans votre courrier.",

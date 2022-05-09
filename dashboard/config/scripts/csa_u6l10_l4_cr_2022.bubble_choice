@@ -1,6 +1,6 @@
 name 'CSA U6L10-L4 CR_2022'
 display_name 'Code Review: Finding the Sentiment Value'
-description 'level description here'
+description 'Request a code review from your peers.'
 
 sublevels
 level 'CSA U6L10-L4a CR_2022'

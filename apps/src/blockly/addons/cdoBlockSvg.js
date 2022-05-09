@@ -4,8 +4,6 @@ import BlockSvgUnused from './blockSvgUnused';
 export default class BlockSvg extends GoogleBlockly.BlockSvg {
   constructor(workspace, prototypeName, opt_id) {
     super(workspace, prototypeName, ++Blockly.uidCounter_); // Use counter instead of randomly generated IDs
-
-    this.canDisconnectFromParent_ = true;
   }
 
   addUnusedBlockFrame(helpClickFunc) {
@@ -35,10 +33,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return true;
   }
 
-  setCanDisconnectFromParent(canDisconnect) {
-    this.canDisconnectFromParent_ = canDisconnect;
-  }
-
   dispose() {
     super.dispose();
     this.removeUnusedBlockFrame();
@@ -46,13 +40,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   isUserVisible() {
     return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
-  }
-
-  onMouseDown_(e) {
-    if (!Blockly.utils.isRightButton(e) && !this.canDisconnectFromParent_) {
-      return;
-    }
-    super.onMouseDown_(e);
   }
 
   render(opt_bubble) {

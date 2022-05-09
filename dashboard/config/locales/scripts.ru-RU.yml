@@ -188,6 +188,7 @@ ru:
                 возрастов с использованием предоставляемых советов по дифференциации
                 материала.
           student_description: Создай историю или игру с Лабораторией игр!
+          name: лаборатория игр
         artist:
           title: Художник
           description: Рисуйте картины и узоры вместе с Художником!
@@ -201,6 +202,7 @@ ru:
                 новых блоков, таких как "переместиться вперед на 100 точек" или "повернуть
                 на 90 градусов направо".
           student_description: Рисуйте картины и узоры вместе с Художником!
+          name: художник
         hourofcode:
           title: Классический лабиринт
           description: Постигай азы программирования с персонажами Angry Birds, Plants
@@ -407,6 +409,7 @@ ru:
                 материала.
           student_description: Используйте лабораторию игр, чтобы создать историю
             или игру с персонажами Disney Infinity.
+          name: бесконечность
         algebrademo:
           title: Демонстрация алгебры
           description: Несколько задач, демонстрирующие среду и язык программирования,
@@ -584,6 +587,7 @@ ru:
                 которого они знакомятся с правилами пребывания в компьютерном классе,
                 затем речь идет об использовании компьютера и создании онлайн-головоломок.
           student_description: Попробуйте наш учебник по пазл.
+          name: головоломка
         step:
           title: Шаг
           description: Пошаговое обучение
@@ -1009,6 +1013,10 @@ ru:
             Wrap-Up:
               name: Итоги
           student_description: 'Этап 2 онлайн: Смешанное летнее обучение'
+        equity-pd:
+          lessons:
+            Codeorg Equity PD:
+              name: Руководство по равенству Code.org
         science-PD2:
           lessons:
             Welcome!:
@@ -1154,6 +1162,7 @@ ru:
                 материала.
           student_description: Создай сказку или игру с игровой лабораторией Ледниковый
             период!
+          name: ледниковый период
         CSPPD3-Unit3:
           lessons:
             Getting Started:
@@ -1272,6 +1281,7 @@ ru:
                 самостоятельно помечать новые изображения.
           student_description: Узнайте, как AI и машинное обучение могут быть использованы
             для решения мировых проблем.
+          name: океаны
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -2089,6 +2099,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -2122,6 +2134,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Digital Citizenship:
               name: Цифровое гражданство
@@ -2236,6 +2250,8 @@ ru:
               name: Итоги
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Конец проекта курса
             content:
               display_name: Содержимое
           lessons:
@@ -2573,12 +2589,6 @@ ru:
                 для более эффективного сбора сокровищ на Code.org.
             Loops in Artist:
               name: Циклы в исполнителе Художник
-              description_teacher: Возвращаясь к циклам, ученики учатся рисовать изображения,
-                организуя в циклы простые последовательности команд. В предыдущем
-                онлайн-уроке циклы использовались для прохождения лабиринта и сбора
-                сокровищ. Здесь циклы используются для создания элементов изображений.
-                В конце данного этапа ученикам дается возможность создать с помощью
-                циклов собственные изображения.
             'Events: The Big Event':
               name: 'События: Большое событие'
               description_teacher: События предоставляют замечательную возможность
@@ -2779,6 +2789,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -2925,6 +2937,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Tangrams':
               name: 'Алгоритмы: Танграмы'
@@ -3182,6 +3196,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: 'Офлайн-занятие по программированию: "Мои друзья-роботы"'
@@ -3348,6 +3364,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3417,6 +3435,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Introduction:
               name: Введение
@@ -3478,6 +3498,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3511,6 +3533,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -3656,6 +3680,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3695,6 +3721,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -4127,6 +4155,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -4261,6 +4291,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Programming: My Robotic Friends':
               name: Мои друзья роботы
@@ -4882,6 +4914,8 @@ ru:
               display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -4984,6 +5018,8 @@ ru:
                 полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего
                 творчества. Это занятие – прекрасная возможность создания произведений
                 искусства для портфолио или для собраний родителей или учителей.
+            End of Course Project:
+              name: Конец проекта курса
             Internet:
               name: Интернет
               description_student: Вы когда-либо задумывались над тем, как информация
@@ -5031,6 +5067,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -5142,6 +5180,8 @@ ru:
               display_name: Вложенные циклы
             csf_functions:
               display_name: функции
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -5257,6 +5297,8 @@ ru:
                 полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего
                 творчества. Это занятие – прекрасная возможность создания произведений
                 искусства для портфолио или для собраний родителей или учителей.
+            End of Course Project:
+              name: Конец проекта курса
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
             Access Ability:
@@ -5338,6 +5380,8 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Build A Project:
+              name: Конец проекта курса
             Dance Party:
               name: Танцевальная вечеринка
         csd1-2019:
@@ -5384,6 +5428,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Programming in Maze:
               description_student: Изучайте последовательности и алгоритмы с Angry
@@ -5449,6 +5495,8 @@ ru:
                 информацию всех видов в двоичной форме. Этот урок помогает продемонстрировать,
                 каким образом возможно взять что-либо из реальной жизни и преобразовать
                 это что-то в серию сигналов "вкл."/"выкл.".
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
             'Programming: My Robotic Friends':
               description_teacher: Используя вместо кода набор символов, учащиеся
                 разрабатывают алгоритмы, дающие "роботу" команды по составлению чашек
@@ -6155,6 +6203,8 @@ ru:
               name: функции
             Random Numbers:
               name: Случайные числа
+            Sprite Properties:
+              name: Свойства спрайтов
         maddie-test:
           lessons:
             stage 1:
@@ -6394,6 +6444,8 @@ ru:
               display_name: Вложенные циклы
             csf_functions:
               display_name: функции
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Crowdsourcing:
               name: Краудсорсинг
@@ -6407,6 +6459,8 @@ ru:
               name: Вложенные циклы в игре на тему "Ледяного сердца"
             Functions in Harvester:
               name: Функции в игре "Жнец"
+            End of Course Project:
+              name: Конец проекта курса
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -6617,6 +6671,8 @@ ru:
               name: Переменные
             Random Numbers:
               name: Случайные числа
+            Sprite Properties:
+              name: Свойства спрайтов
             Conditionals:
               name: Условные команды
             Keyboard Input:
@@ -6781,6 +6837,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Screen Out the Mean:
               name: Барьер против негатива
@@ -6868,6 +6926,8 @@ ru:
                 игры. Пора творчески поработать и создать игру в Лаборатории игр!
             Picturing Data:
               name: Изображение данных
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
         coursed-2020:
           title: Курс D (2020)
           description_audience: 'Возраст: 7-11'
@@ -6884,6 +6944,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -6975,6 +7037,8 @@ ru:
                 Этот урок научит вас различать безопасную и конфиденциальную информацию.
             Dance Party:
               name: Танцевальная вечеринка
+            End of Course Project:
+              name: Конец проекта курса
         coursee-2020:
           title: Курс E (2020)
           description_audience: 'Возраст: 8-12'
@@ -6991,6 +7055,8 @@ ru:
               display_name: функции
             csf_impacts:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Sequencing in the Maze:
               description_student: На этом уроке вы поймете как писать собственные
@@ -7060,6 +7126,8 @@ ru:
                 "Пчела", а сегодня они будут использовать функции для сбора урожая
                 в игре "Жнец". Этот урок побудит учащихся использовать функции по-новому,
                 комбинируя их с циклами "пока" и операторами "если-иначе".
+            End of Course Project:
+              name: Конец проекта курса
             Digital Sharing:
               name: Публикация цифровых произведений
               description_teacher: Предоставленный курсу "Основы компьютерных наук"
@@ -7088,6 +7156,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Loops with the Artist:
               description_teacher: Посмотрите как загораются глаза учеников, когда
@@ -7184,6 +7254,8 @@ ru:
                 права собственности и авторского права, особенно в цифровой среде.
                 Учащимся следует объяснить, что, не уважая прав артистов, невозможно
                 быть этичным цифровым гражданином.
+            End of Course Project:
+              name: Конец проекта курса
             AI for Oceans:
               name: AI для океанов
               description_student: 'Краткое содержание урока: сначала ученики классифицируют
@@ -7227,6 +7299,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Dance Party:
               name: Танцевальная вечеринка
@@ -7248,6 +7322,8 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            End of Course Project:
+              name: Конец проекта курса
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
             Nested Loops in Maze:
@@ -7508,6 +7584,8 @@ ru:
               name: Случайные числа
             Sprites:
               name: Спрайты
+            Sprite Properties:
+              name: Свойства спрайтов
             Text:
               name: Текст
             Conditionals:
@@ -7620,6 +7698,8 @@ ru:
               name: Создание спрайтов
             Sprites in Action:
               name: Спрайты в действии
+            End of Course Project:
+              name: Конец проекта курса
           lesson_groups:
             introduction:
               display_name: Введение
@@ -7677,6 +7757,9 @@ ru:
             Sprites:
               key: Спрайты
               name: Спрайты
+            Sprite Properties:
+              key: Свойства спрайтов
+              name: Свойства спрайтов
             Text:
               key: Текст
               name: Текст
@@ -7929,6 +8012,8 @@ ru:
               key: 'События: Большое событие'
             Events in Play Lab:
               key: События в Лаборатории игр
+            lesson-1:
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -7938,6 +8023,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            lessonGroup-5:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности.
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
@@ -7966,6 +8053,8 @@ ru:
               key: 'События: Большое событие'
             Events in Play Lab:
               key: События в Лаборатории игр
+            lesson-1:
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -7977,6 +8066,8 @@ ru:
               display_name: Воздействие компьютерной техники
             csf_events:
               display_name: События
+            lessonGroup-6:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности.
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
@@ -8002,6 +8093,8 @@ ru:
             Picturing Data:
               key: Изображение данных
               name: Изображение данных
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -8015,6 +8108,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
@@ -8066,6 +8161,9 @@ ru:
               name: Двоичный Художник
               description_teacher: Эта серия онлайн-уроков научит учеников создавать
                 изображения с помощью включения и выключения.
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Digital Citizenship
           lesson_groups:
@@ -8081,6 +8179,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-6:
               display_name: Цифровое гражданство
         coursee-2021:
@@ -8129,6 +8229,9 @@ ru:
             Designing for Accessibility:
               key: Разработка для обеспечения доступности
               name: Разработка для обеспечения доступности
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Разработка для обеспечения доступности
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного
@@ -8147,6 +8250,8 @@ ru:
               display_name: функции
             csf_impacts:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-7:
               display_name: Воздействие компьютерной техники
         coursef-2021:
@@ -8216,6 +8321,9 @@ ru:
             Virtual Pet:
               key: Виртуальный питомец
               name: 'Мини-проект: Виртуальный питомец'
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Разработка для обеспечения доступности
             lesson-6:
@@ -8244,6 +8352,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-8:
               display_name: Переменные
             lessonGroup-9:
@@ -8273,6 +8383,9 @@ ru:
             For Loops with Artist:
               key: Цикл for в Художнике
               name: Цикл for в Художнике
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Танцевальная вечеринка
             lesson-2:
@@ -8296,6 +8409,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-9:
               display_name: События
         pre-express-2021:
@@ -8915,6 +9030,7 @@ ru:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Навигация по обучающей платформе Code.org"
               description_teacher: |-
                 **Вы узнаете, как:**
 
@@ -9372,6 +9488,8 @@ ru:
           lessons:
             lesson-1:
               name: Тестирование клона CSA
+            lesson-3:
+              name: Урок 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -10149,6 +10267,8 @@ ru:
               display_name: Спрайты
             lessonGroup-3:
               display_name: Переменные
+            lessonGroup-4:
+              display_name: Конец проекта курса
         csd6-pilot-2022:
           lessons:
             Board Events:
@@ -10291,6 +10411,8 @@ ru:
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
               key: Циклы в исполнителе Художник
+            End of Course Project:
+              name: Конец проекта курса
             'Programming: Happy Maps':
               name: Весёлые карты
             Programming in Ice Age:
@@ -10313,6 +10435,7 @@ ru:
               key: События в Лаборатории игр
             lesson-1:
               key: урок-1
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -10322,6 +10445,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            lessonGroup-5:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности.
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
@@ -10347,6 +10472,9 @@ ru:
             For Loops with Artist:
               name: Цикл for в Художнике
               key: Цикл for в Художнике
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-2:
               key: урок-2
               name: Создание спрайтов
@@ -10380,6 +10508,8 @@ ru:
               display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 9-18'
           name: ускоренный курс-2022
         csp1-2022:
@@ -10431,6 +10561,8 @@ ru:
               display_name: Обходов
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опрос после окончания курса
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -10445,6 +10577,8 @@ ru:
             The Right App:
               name: The Right App
               key: The Right App
+            End of Course Project:
+              name: Конец проекта курса
             Programming in Maze:
               key: Программирование в Лабиринте
             'Loops: Getting Loopy':
@@ -10463,6 +10597,7 @@ ru:
               key: События в Лаборатории игр
             lesson-1:
               key: урок-1
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -10474,6 +10609,8 @@ ru:
               display_name: Воздействие компьютерной техники
             csf_events:
               display_name: События
+            lessonGroup-6:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности.
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
@@ -10488,6 +10625,8 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
               key: Двоичные браслеты
+            End of Course Project:
+              name: Конец проекта курса
             Programming in Maze:
               key: Программирование в Лабиринте
             Programming in Collector:
@@ -10501,6 +10640,8 @@ ru:
               name: Большое Событие
             Events in Play Lab:
               key: События в Лаборатории игр
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -10512,17 +10653,28 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметры и возвращаемые значения
             csp_libraries:
               display_name: Библиотеки
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
         csp8-2022:
           lessons:
             lesson-4:
               key: урок-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
         csp9-2022:
           lessons:
             Machine Learning:
@@ -10537,6 +10689,8 @@ ru:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Урок 9: Данные'
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -10547,6 +10701,9 @@ ru:
               description_student: Обзор урока
             'Project: Innovation Simulation Part 7':
               description_student: Обзор урока
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -10573,6 +10730,9 @@ ru:
             While Loops in Farmer:
               name: Цикл while в Фермере
               key: Цикл while в Фермере
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-5:
               key: урок-5
             'Algorithms: Graph Paper Programming':
@@ -10598,6 +10758,8 @@ ru:
               display_name: Циклы
             csf_conditionals:
               display_name: Условные команды
+            end_of_course_project:
+              display_name: Конец проекта курса
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
         coursee-2022:
@@ -10624,6 +10786,9 @@ ru:
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного
                 обсуждения и разработки решений в области доступа для гипотетических
                 приложений. '
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             Simon Says:
               key: Саймон говорит
             lesson-4:
@@ -10672,6 +10837,8 @@ ru:
               display_name: Условные команды
             lessonGroup-7:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 8-12'
         coursef-2022:
           lessons:
@@ -10728,6 +10895,9 @@ ru:
                 В любой момент они могут поделиться своими находками с вами или одноклассником.\\\\р"
             The Internet:
               name: Интернет
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-6:
               key: урок-6
             lesson-7:
@@ -10797,6 +10967,8 @@ ru:
               display_name: Цифровое гражданство
             lessonGroup-8:
               display_name: Переменные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_short: Изучи все понятия в Основах компьютерных наук и создай
             собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
@@ -10811,14 +10983,25 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+            lessonGroup-4:
+              display_name: Песочницы
+            lessonGroup-5:
+              display_name: Опрос
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Изучение перетаскивания
               name: Изучение перетаскивания
+              description_student: Щелкните и перетащите, чтобы закончить головоломки.
+              description_teacher: Этот урок направлен на развитие навыков, он даст
+                учащимся представление о том, что их ожидает в компьютерном классе.
+                Урок начинается с краткого обсуждения, в котором ученики знакомятся
+                с правилами пребывания в компьютерном классе. Затем они используют
+                компьютер для решения онлайн-головоломок.
             Sequencing with Scrat:
               key: Последовательность в "Скрат"
               name: Последовательность в "Скрат"
+              description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
             Programming with Rey and BB-8:
               key: Программирование с Реем и BB-8
               name: Программирование с Реем и BB-8
@@ -10841,6 +11024,7 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+          description_audience: 'Возраст: 4-8'
         csa2-2022:
           lessons:
             lesson-6:
@@ -10852,8 +11036,30 @@ ru:
               display_name: Содержимое
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Одномерные (1D) массивы
+            lesson-4:
+              name: Элементы массивов
             lesson-5:
               name: Циклы с параметром
+            lesson-6:
+              name: Алгоритмы массивов
+            lesson-7:
+              name: Улучшения для циклов
+            lesson-8:
+              name: Статические переменные и константы
+            lesson-9:
+              name: Полиморфизм
+            lesson-10:
+              name: Больше алгоритмов для массивов
+            lesson-11:
+              name: Реверс массивов
+            lesson-13:
+              name: Данные для общественно полезного проекта – День 1
+            lesson-14:
+              name: Данные для общественно полезного проекта – День 2
+            lesson-15:
+              name: Данные для общественно полезного проекта – День 3
             lesson-16:
               name: Консоль
           lesson_groups:
@@ -10878,6 +11084,9 @@ ru:
             lessonGroup-2:
               display_name: Содержимое
         csa5-2022:
+          lessons:
+            lesson-7:
+              name: Улучшения для циклов
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -10890,6 +11099,62 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        pltess:
+          lessons:
+            lesson-2:
+              name: урок 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Операторы If в Java
+              description_student: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Определение логических выражений
+                -   Написание и чтение операторов if, if-else, if-else-if
+                -   Описание разницы между оператором присваивания и оператором сравнения
+
+                **Примерное время:** 90 минут
+              description_teacher: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Определение логических выражений
+                -   Написание и чтение операторов if, if-else, if-else-if
+                -   Описание разницы между оператором присваивания и оператором сравнения
+
+                **Примерное время:** 90 минут
+            lesson-4:
+              name: Циклы в Java
+              description_student: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Написание, чтение и отладка циклов в Java
+
+                **Примерное время:** 90 минут
+              description_teacher: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Написание, чтение и отладка циклов в Java
+
+                **Примерное время:** 90 минут
+            lesson-5:
+              name: Массивы в Java
+              description_student: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Объявление и инициализация одномерных массивов с элементарными типами данных
+                -   Доступ к элементам массива и их изменение
+                -   Реверс массива
+
+                **Примерное время:** 120 минут
+              description_teacher: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Объявление и инициализация одномерных массивов с элементарными типами данных
+                -   Доступ к элементам массива и их изменение
+                -   Реверс массива
+
+                **Примерное время:** 120 минут
         csa7-pilot-extra:
           lessons:
             Java Lab:
@@ -11027,6 +11292,9 @@ ru:
             The Internet:
               name: Интернет
               key: Интернет
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
           lesson_groups:
             lessonGroup-7:
               display_name: Цифровое гражданство
@@ -11034,6 +11302,8 @@ ru:
               display_name: Спрайты
             lessonGroup-8:
               display_name: Переменные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 9-13'
           description_short: Изучи все понятия в Основах компьютерных наук и создай
             собственную картинку, игру или историю!
@@ -11265,13 +11535,98 @@ ru:
             lessonGroup-2:
               display_name: Содержимое
             lessonGroup-5:
-              display_name: Песочница
+              display_name: Опрос
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
               name: Добро пожаловать
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Глубокое понимание учебной программы CS Discoveries.
+              description_teacher: "**Описание:**\nЭти асинхронные занятия позволяют
+                участникам глубже понять содержание курса CS Discoveries, познакомиться
+                с содержанием, инструментами и структурой курса, понять, как в курсе
+                используется процесс решения задач. \n\n**Что узнаю участники:**\n\n-
+                \  Глубокое понимание курса CS Discoveries. \n\n**Примерное время:**
+                40 minutes"
+            lesson-5:
+              name: Асинхронное ознакомление
+            lesson-6:
+              name: Образцовый урок 2 - Модуль 2 Урок 2
+            lesson-7:
+              name: Идентичность
+            lesson-8:
+              name: Цель урока
+            lesson-10:
+              description_student: |-
+                **Какие темы будут рассмотрены:**
+
+                -   Рассмотрение вашей роли в качестве учителя на занятиях CS Discoveries.
+              description_teacher: "**Описание:**\nЭти асинхронные занятия помогут
+                участникам понять роль учителя для успешного обучения. Участники ответят
+                на вопросы о своем опыте и ожиданиях от CS, а также о том, в чем,
+                по их мнению, заключается роль учителя на занятиях CS. Эти размышления
+                позже понадобятся участникам на семинаре по идентичности. \n\n**Какие
+                темы будут рассмотрены:**\n\n-   Рассмотрение роли учителя на занятиях
+                CS Discoveries. \n\n**Примерное время:** 20 минут"
+            Intro to HTML:
+              name: Образцовый урок 2 - Модуль 2 Урок 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Добро пожаловать
+            lesson-3:
               name: Планирование урока
+            lesson-4:
+              name: Асинхронная подготовка
+            lesson-6:
+              name: Асинхронное ознакомление
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Добро пожаловать
+            lesson-5:
+              name: Асинхронное ознакомление
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Завершение модуля"
+              description_student: "**Какие темы будут рассмотрены:**\n\n-   Знакомство
+                с проектами, выполняемыми в конце главы. \n\n**Примерное время:**
+                10 минут"
+              description_teacher: "**Какие темы будут рассмотрены:**\n\n-   Знакомство
+                с проектами, выполняемыми в конце главы. \n\n**Примерное время:**
+                10 минут"
+            lesson-3:
+              name: "[TEMPLATE] Содержание уроков"
+              description_student: |-
+                **Рассматриваемые темы:**
+
+                -   Вставить цели урока.
+
+                **Примерное время:** \_\_\_\_ минут(а)
+              description_teacher: |-
+                **Рассматриваемые темы:**
+
+                -   Вставить цели урока.
+
+                **Примерное время:** \_\_\_\_ минут(а)
+            lesson-4:
+              name: Добро пожаловать
+            lesson-7:
+              name: Асинхронная подготовка
+            lesson-11:
+              name: Асинхронное ознакомление
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Добро пожаловать
+            lesson-4:
+              name: Асинхронная подготовка
+            lesson-6:
+              name: Асинхронное ознакомление
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -11307,5 +11662,489 @@ ru:
               key: Циклы с параметром
             Lesson Planning:
               key: Планирование урока
+        vpl-csd1-ci-pilot-2022:
+          title: 'Модуль 1: Подготовка к преподаванию по теме "Решения задач и вычисления"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию по модулю \"Решение задач и вычисления\" на Code.org. \n\n**В
+            этом модуле профессионального обучения вы познакомитесь со следующими
+            темами:**\n\n-   Введение в решение задач и вычисления.\n-   Знакомство
+            с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми
+            в конце главы.\n\n**Примерное время:** 30 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию по модулю \"Решение задач и вычисления\"
+            на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь
+            со следующими темами:**\n\n-   Введение в решение задач и вычисления.\n-
+            \  Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами,
+            выполняемыми в конце главы.\n\n**Примерное время:** 30 минут"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Введение в веб-разработку
+              description_student: |-
+                **Рассматриваемые темы:**
+
+                -   Введение в модуль "Веб-разработка"и на code.org.
+                -   Просмотр предварительного содержания первой недели модуля "Веб-разработка".
+
+                **Примерное время:** 10 минут
+              description_teacher: |-
+                **Рассматриваемые темы:**
+
+                -   Введение в модуль "Веб-разработка"и на code.org.
+                -   Просмотр предварительного содержания первой недели модуля "Веб-разработка".
+
+                **Примерное время:** 10 минут
+            lesson-2:
+              name: Создание веб-сайта с помощью HTML
+              description_student: "**Рассматриваемые темы:**\n\n-   Введение в Web
+                Lab.\n-   Добавление структуры веб-страницы с помощью HTML. \n-   Добавление
+                изображения на страницу. \n\n**Примерное время:** 30 минут"
+              description_teacher: "**Рассматриваемые темы:**\n\n-   Введение в Web
+                Lab.\n-   Добавление структуры веб-страницы с помощью HTML. \n-   Добавление
+                изображения на страницу. \n\n**Примерное время:** 30 минут"
+            lesson-3:
+              name: Определение стиля веб-сайта с помощью CSS
+              description_student: |-
+                **Рассматриваемые темы:**
+
+                -   Определение стиля текста на веб-странице с помощью CSS.
+                -   Связь таблицы стилей CSS с индексом веб-страницы.
+                -   Знакомство с дополнительными свойствами стиля элементов на веб-странице.
+
+                **Примерное время:** 25 минут
+              description_teacher: |-
+                **Рассматриваемые темы:**
+
+                -   Определение стиля текста на веб-странице с помощью CSS.
+                -   Связь таблицы стилей CSS с индексом веб-страницы.
+                -   Знакомство с дополнительными свойствами стиля элементов на веб-странице.
+
+                **Примерное время:** 25 минут
+            lesson-4:
+              name: Знакомство с ролями и ответственностями в цифровых медиа
+              description_student: |-
+                **Рассматриваемые темы:**
+
+                -   Изучение способов, с помощью которых ученики смогут понять их роль и ответственность в качестве создателей и потребителей цифровых медиа.
+
+                **Примерное время:** 15 минут
+              description_teacher: |-
+                **Рассматриваемые темы:**
+
+                -   Изучение способов, с помощью которых ученики смогут понять их роль и ответственность в качестве создателей и потребителей цифровых медиа.
+
+                **Примерное время:** 15 минут
+            lesson-5:
+              description_student: "**Какие темы будут рассмотрены:**\n\n-   Знакомство
+                с проектами, выполняемыми в конце главы. \n\n**Примерное время:**
+                10 минут"
+              description_teacher: "**Какие темы будут рассмотрены:**\n\n-   Знакомство
+                с проектами, выполняемыми в конце главы. \n\n**Примерное время:**
+                10 минут"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Преподавание по теме "Веб-разработка"
+          title: 'Модуль 2: Подготовка к преподаванию по теме "Веб-разработка"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию по модулю \"Веб-разработка\" на Code.org. \n\n**В этом
+            модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-
+            \  Введение в веб-разработку.\n-   Знакомство с ключевыми понятиями модуля.\n-
+            \  Работа в Web Lab.\n-   Знакомство с проектами, выполняемыми в конце
+            главы.\n\n**Примерное время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию по модулю \"Веб-разработка\" на Code.org.
+            \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими
+            темами:**\n\n-   Введение в веб-разработку.\n-   Знакомство с ключевыми
+            понятиями модуля.\n-   Работа в Web Lab.\n-   Знакомство с проектами,
+            выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Введение в интерактивную анимацию и игры
+            lesson-2:
+              name: Создание сцены
+            lesson-3:
+              name: Анимация сцены с помощью спрайтов
+            lesson-4:
+              name: Знакомство с дизайном игры
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Подготовка к преподаванию по теме "Интерактивная анимация
+                и игры"
+          title: 'Модуль 3: Подготовка к преподаванию по теме "Интерактивная анимация
+            и игры" '
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию по теме \"Интерактивная анимация и игры\" на Code.org.
+            \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-
+            \  Введение в интерактивную анимацию и игры.\n-   Знакомство с ключевыми
+            понятиями модуля.\n-   Работа в Лаборатории игр.\n-   Знакомство с проектами,
+            выполняемыми в конце главы.\n\n**Примерное время:** 120 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию по теме \"Интерактивная анимация и игры\"
+            на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со
+            следующими темами:**\n\n-   Введение в интерактивную анимацию и игры.\n-
+            \  Знакомство с ключевыми понятиями модуля.\n-   Работа в Лаборатории
+            игр.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное
+            время:** 120 минут"
+        vpl-csd4-ci-pilot-2022:
+          title: ' Модуль 4: Подготовка к преподаванию по теме "Процесс дизайна"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию по теме \"Процесс дизайна\" на Code.org. \n\n**В этом профессиональном
+            модуле вы познакомитесь со следующими темами:**\n\n-   Введение в процесс
+            дизайна.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории
+            приложений.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное
+            время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию по теме \"Процесс дизайна\" на Code.org.
+            \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-
+            \  Введение в процесс дизайна.\n-   Знакомство с ключевыми понятиями модуля\n-
+            \  Работа в лаборатории приложений.\n-   Знакомство с проектами, выполняемыми
+            в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd5-ci-pilot-2022:
+          title: 'Модуль 5: Подготовка к преподаванию по теме "Данные и общество"'
+          description: "Этот модуль профессионального обучения поможет вам приготовиться
+            к преподаванию по теме \"Данные и общество\" на Code.org. \n\n**В этом
+            модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-
+            \  Введение в тему \"Данные и общество\".\n-   Знакомство с ключевыми
+            понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное
+            время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            приготовиться к преподаванию по теме \"Данные и общество\" на Code.org.
+            \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими
+            темами:**\n\n-   Введение в тему \"Данные и общество\".\n-   Знакомство
+            с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми
+            в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd6-ci-pilot-2022:
+          title: 'Модуль 6: Подготовка к преподаванию по теме "Физические вычисления"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию модуля по теме \"Физическое обучение\" на Code.org. \n\n**В
+            этом модуле профессионального обучения вы познакомитесь со следующими
+            темами:**\n\n-   Введение в физические вычисления.\n-   Знакомство с ключевыми
+            понятиями модуля.\n-   Работа с приложение Maker.\n-   Знакомство с проектами,
+            выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию модуля по теме \"Физическое обучение\" на
+            Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь
+            со следующими темами:**\n\n-   Введение в физические вычисления.\n-   Знакомство
+            с ключевыми понятиями модуля.\n-   Работа с приложение Maker.\n-   Знакомство
+            с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Процесс разработки схемы
+            Engage with machine learning apps:
+              name: Процесс разработки схемы
+          title: 'Модуль 7: Подготовка к преподаванию по теме "Искусственный интеллект
+            и машинное обучение"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться
+            к преподаванию по теме \"Искусственный интеллект и машинное обучение\"
+            на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со
+            следующими темами:**\n\n-   Введение в искусственный интеллект и машинное
+            обучение.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории
+            искусственного интеллекта и в лаборатории приложений.\n-   Знакомство
+            с проектами, выполняемыми в конце главы.\n-   Подготовка плана работы
+            по модулю с учащимися.\n\n**Примерное время:** 120 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам
+            подготовиться к преподаванию по теме \"Искусственный интеллект и машинное
+            обучение\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь
+            со следующими темами:**\n\n-   Введение в искусственный интеллект и машинное
+            обучение.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории
+            искусственного интеллекта и в лаборатории приложений.\n-   Знакомство
+            с проектами, выполняемыми в конце главы.\n-   Подготовка плана работы
+            по модулю с учащимися.\n\n**Примерное время:** 120 минут"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Привет, мир CSC!
+              description_student: В этом уроке вы научитесь создавать и анимировать
+                спрайты и делать их интерактивными, используя события.
+              description_teacher: 'В этом уроке, посвященном **получению навыков**,
+                ученики научатся создавать и анимировать спрайты, а также делать их
+                интерактивными, используя события. '
           title: Привет, мир
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Обновления уровня
+          title: Игровая площадка CSD
+          description_audience: Руководство для авторов
+          description_short: Для поэтапныъ обновлений в уроках или уровней между версиями
+            учебной программы
+          description: Для поэтапныъ обновлений в уроках или уровней между версиями
+            учебной программы
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Привет, мир CSC!
+              description_student: В этом уроке вы научитесь создавать и анимировать
+                спрайты и делать их интерактивными, используя события.
+              description_teacher: 'В этом уроке, посвященном **получению навыков**,
+                ученики научатся создавать и анимировать спрайты, а также делать их
+                интерактивными, используя события. '
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              description_teacher: 'В этом уроке для начинающих программистов, объединяющем
+                информатику и филологию, ученики будут анимировать стихотворение с
+                помощью кода таким образом, чтобы проиллюстрировать настроение стихотворения.
+                Ученики прочитают стихотворение и определят его настроение. Они подберут
+                соответствующие эффекты и изображения, которые помогут проиллюстрировать
+                настроение стихотворения. Затем учащиеся используют события (код)
+                для иллюстрации изменений настроения или анимации введения новых изображений
+                в стихотворение. '
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Привет, мир CSC!
+              description_student: В этом уроке вы научитесь создавать и анимировать
+                спрайты и делать их интерактивными, используя события.
+              description_teacher: 'В этом уроке, посвященном **получению навыков**,
+                ученики научатся создавать и анимировать спрайты, а также делать их
+                интерактивными, используя события. '
+        csd1-2022:
+          lessons:
+            The Problem Solving Process:
+              name: Процесс решения проблем
+              key: Процесс решения проблем
+            What is a Computer?:
+              name: Что такое компьютер?
+              key: Что такое компьютер?
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        csd2-2022:
+          lessons:
+            Headings:
+              name: Заголовки
+              key: Заголовки
+            Digital Footprint:
+              name: Цифровое присутствие
+              key: Цифровое присутствие
+            CSS Classes:
+              name: CSS классы
+              key: CSS классы
+            Linking Pages:
+              name: Связывание страниц
+              key: Связывание страниц
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+            lesson-1:
+              key: урок-1
+              name: 'Занимательная информатика: опрос по окончании курса'
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+        csd3-2022:
+          lessons:
+            Plotting Shapes:
+              name: Рисование фигур
+              key: Рисование фигур
+            Variables:
+              name: Переменные
+              key: Переменные
+            Random Numbers:
+              name: Случайные числа
+              key: Случайные числа
+            Sprites:
+              name: Спрайты
+              key: Спрайты
+            Sprite Properties:
+              name: Свойства спрайтов
+              key: Свойства спрайтов
+            Text:
+              name: Текст
+              key: Текст
+            Conditionals:
+              name: Условные команды
+              key: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
+              key: Ввод с клавиатуры
+            Velocity:
+              name: Скорость
+              key: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+              key: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
+              description_teacher: "**Вопрос дня: как программисты могут строить абстракции
+                для создания других абстракций?**\\\r\n\\\r\nВ этом уроке ученики
+                будут программировать своих спрайтов для взаимодействия новыми способами.
+                Вспомнив, как они использовали блок [`прикасается`(#f78183)](/docs/gamelab/isTouching/),
+                ученики обдумают другие способы взаимодействия двух спрайтов. Затем
+                они используют блок [`прикасается`(#f78183)](/docs/gamelab/isTouching/),
+                чтобы один спрайт толкнул другого, а затем сделают задание с четырьмя
+                блокам столкновения ([`столкновение`(#f78183)](/docs/gamelab/collide/),
+                [`смещение`(#f78183)](/docs/gamelab/displace/), [`удар`(#f78183)](/docs/gamelab/bounce/)
+                и [`отскок`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Столкновения
+            Functions:
+              name: функции
+              key: функции
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+            lesson-1:
+              key: урок-1
+              name: 'Занимательная информатика: опрос по окончании курса'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
+        csd4-2022:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+              key: 'Занимательная информатика: опрос по окончании курса'
+            Linking Screens:
+              key: Связывание окон
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            cspSurvey:
+              display_name: Опрос
+        csd5-2022:
+          lessons:
+            ASCII and Binary Representation:
+              name: ASCII и Двоичное Представление
+              key: ASCII и Двоичное Представление
+            Representing Images:
+              name: Представление изображений
+              key: Представление изображений
+            Representing Numbers:
+              name: Представления чисел
+              key: Представления чисел
+            Combining Representations:
+              name: Комбинирование представлений
+              key: Комбинирование представлений
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+              key: Сохранение данных в тайне
+            Making Decisions with Data:
+              name: Использование данных для принятия решений
+              key: Использование данных для принятия решений
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+              key: 'Занимательная информатика: опрос по окончании курса'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Введение в AI лаборатории
+              key: Введение в AI лаборатории
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+              key: 'Занимательная информатика: опрос по окончании курса'
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опрос
+        csd6-2022:
+          lessons:
+            Board Events:
+              name: События на доске
+            Color LEDs:
+              name: Цветные светодиоды
+            Combining Inputs and Outputs:
+              name: Комбинирование введенных данных
+            Functions:
+              name: функции
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание физических прототипов'
+            lessonGroup-4:
+              display_name: Опрос
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Опрос после окончания курса
+          title: 'Занимательная информатика: опрос по окончании курса'
+          description: В этом блоке содержатся опрос после окончания курса CS Discoveries.
+            Этот блок можно назначить после того, как учащиеся завершат свой последний
+            блок в CS Discoveries.
+          student_description: В этом разделе содержится опрос, который должен проводиться
+            после завершения блоков в CS Discoveries. Ваш преподаватель сообщит вам,
+            когда будет необходимо принять участие в этом опросе.
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Введение в AI лаборатории
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Добро пожаловать
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: урок-4
+            lesson-3:
+              key: урок-3
+            lesson-8:
+              key: урок-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3

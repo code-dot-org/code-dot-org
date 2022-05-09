@@ -3053,6 +3053,10 @@ sq:
           lessons:
             lesson-3:
               name: Veglat
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lekcioni 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3359,3 +3363,21 @@ sq:
             For Loops:
               name: Për Ciklet
               key: Për Ciklet
+        csd3-2022:
+          lessons:
+            Variables:
+              name: variabla
+              key: variabla
+            Text:
+              name: Tekst
+              key: Tekst
+            Conditionals:
+              name: Kushtet
+              key: Kushtet
+            Functions:
+              name: funksione
+              key: funksione
+        csd6-2022:
+          lessons:
+            Functions:
+              name: funksione

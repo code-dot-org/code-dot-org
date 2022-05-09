@@ -454,6 +454,28 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-1991/edit'
   end
 
+  test "create: defaults to teacher led, teacher to student course if nothing provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    ug = UnitGroup.find_by_name!('csp-1991')
+    assert_equal ug.instruction_type, 'teacher_led'
+    assert_equal ug.instructor_audience, 'teacher'
+    assert_equal ug.participant_audience, 'student'
+  end
+
+  test "create: sets course type if info is provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self_paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    ug = UnitGroup.find_by_name!('pl-csp-1991')
+    assert_equal ug.instruction_type, 'self_paced'
+    assert_equal ug.instructor_audience, 'universal_instructor'
+    assert_equal ug.participant_audience, 'teacher'
+  end
+
   test "create: writes course json file" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -643,6 +665,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: cannot change course version for unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
     script = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
@@ -706,6 +729,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: does not work for plc_course" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :plc_course, name: 'plc-course'
 
     assert_raises ActiveRecord::ReadOnlyRecord do
@@ -716,6 +740,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
@@ -726,6 +751,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated
@@ -745,6 +771,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated

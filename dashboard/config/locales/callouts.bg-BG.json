@@ -518,6 +518,150 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Промене номера тук"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Добавете това нлокче към програмата си!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Добавете това нлокче към програмата си!"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Добавете това нлокче към програмата си!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Добавете това нлокче към програмата си!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Добавете това нлокче към програмата си!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Добавете вашия нов танцьор тук"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Нов блок!",
+          "dance_callout_11_b": "Нов блок!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потърсете тук за всички блокчета от вида \"всички патета\""
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Добавете това нлокче към програмата си!"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Нов блок!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Добавете това нлокче към програмата си!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Добавете това нлокче към програмата си!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Добавете това нлокче към програмата си!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Добавете вашия нов танцьор тук"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Нов блок!",
+          "dance_callout_11_b": "Нов блок!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потърсете тук за всички блокчета от вида \"всички патета\""
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Натисни \"Старт\", за да запазим и пробваш твоята програма"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Натисни \"Старт\", за да запазим и пробваш твоята програма"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Нов блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Нов блок!",
+          "poetry_foreground": "Нов блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Нов блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Нов блок!",
+          "poetry_music": "Нов блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Нов блок!",
+          "poetry_sprite_stops": "Нов блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Нов блок!",
+          "poetry_remove_sprite": "Нов блок!"
         }
       }
     }

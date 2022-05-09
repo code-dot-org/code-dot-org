@@ -4742,6 +4742,10 @@ hu:
               display_name: Leckék
             lessonGroup-4:
               display_name: Bemutatók és erőforrások
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lecke 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -5517,11 +5521,14 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+            lessonGroup-5:
+              display_name: Kérdőív
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
               key: Programozás Rey és BB-8 segítségével
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -5734,7 +5741,7 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
-              display_name: Homokozó
+              display_name: Kérdőív
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -5767,3 +5774,151 @@ hu:
               key: Számláló ciklusok
         hello-world-csc:
           title: Helló világ
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Versművészet
+              description_teacher: 'Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. '
+        csd1-2022:
+          lessons:
+            Intro to Problem Solving:
+              name: Bevezetés a problémamegoldásba
+              key: Bevezetés a problémamegoldásba
+            The Problem Solving Process:
+              name: A probléma-megoldási folyamat
+              key: A probléma-megoldási folyamat
+            What is a Computer?:
+              name: Mi az a számítógép?
+              key: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+          description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
+        csd2-2022:
+          lessons:
+            CSS Classes:
+              name: CSS osztályok
+              key: CSS osztályok
+            lesson-1:
+              key: 1.  lecke
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd3-2022:
+          lessons:
+            Variables:
+              name: változók
+              key: változók
+            Random Numbers:
+              name: Véletlen számok
+              key: Véletlen számok
+            Sprites:
+              name: sprite-ok
+              key: sprite-ok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+              key: Sprite tulajdonságok
+            Text:
+              name: szöveg
+              key: szöveg
+            Conditionals:
+              name: Feltételek
+              key: Feltételek
+            Collisions:
+              description_teacher: "**A nap kérdése: Hogyan tudnak a programozók absztrakciókra alapozni, hogy további absztrakciókat hozzanak létre?**\\\\r\n\\\\r\nEbben a leckében a diákok úgy programozzák a sprite-okat, hogy azok új módon lépjenek kapcsolatba egymással. Röviden áttekintik, hogy hogyan kell a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/) blokkot használni, majd a diákok ötletbörzét tartanak arról, hogy a sprite-ok még milyen más módokon léphetnek kapcsolatba egymással. Majd a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/) segítségével az egyik sprite-tal átlökik a másik sprite-ot a képernyőn, majd a négy ütközőblokkal gyakorolnak: ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+            Functions:
+              name: funkciók
+              key: funkciók
+            lesson-1:
+              key: 1.  lecke
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        csd6-2022:
+          lessons:
+            Combining Inputs and Outputs:
+              name: Bemenetek kombinálása
+            Functions:
+              name: funkciók
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        csd-post-survey-2022:
+          description: Ez az egység tartalmazza a CS Discoveries Kurzus utáni felmérést. Ezt az egységet azután lehet kijelölni, hogy a tanulók befejezték a CS Discoveries utolsó egységét.
+          student_description: Ez az egység egy felmérést tartalmaz, ha az osztályod befejezte a CS Discoveries egységeit. A tanárod megmondja, mikor kell elvégezni ezt a felmérést.
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: 4.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-8:
+              key: 8.  lecke
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
