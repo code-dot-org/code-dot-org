@@ -735,6 +735,10 @@ ko:
       title: 댄스 파티
     dance-2019:
       title: 댄스 파티
+    hello-world:
+      title: 헬로우 월드
+    poem-art:
+      title: 시학
     hoc:
       title: 고전 미로게임
       body: 컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.
@@ -920,16 +924,6 @@ ko:
       하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 자바스크립트를 가르치는 툴은 업데이트된 약관을 명시적으로 수락하기 전에는 학생들에게
       제공하지 않을 수도 있습니다."
     review_terms: 업데이트된 약관 검토
-  donor_interstitial:
-    title: 무료 CS 과정은...에 의해 가능해집니다.
-    subtitle: 지원을 통해 Code.org의 성공을 가능하게 만들어 준 관대하신 기부자들에게 감사를 드립니다. 우리는 계속해서 전 세계
-      학교와 학생을 위해 Code.org를 무료로  유지하기 위해 노력할 것이며 우리 [donors](%{donors_url})의 계속적인 관대함에
-      감사 드립니다!
-    local_supporters: 로컬 지지자
-    global_supporters: 세계 지지자
-    support_codeorg_1: Code.org에게 지원된 모든 금액은 더 많은 학생들에게 기회를 가져다 줍니다.
-    support_codeorg_2: Code.org를 지원하기 위해 [지금 기부하세요](%{donate_url})
-    get_started: Code.org에서 시작하기
   school_info_interstitial:
     title: 모든 학생들에게 컴퓨터 과학을 전해주고 싶습니다! - 지켜봐주시고 도움을 주세요!
     message: 아래에 학교 정보를 입력해주새요.

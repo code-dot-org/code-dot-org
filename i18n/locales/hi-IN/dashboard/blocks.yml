@@ -1238,6 +1238,12 @@ hi:
             '90': नीचे
             '180': बाएं
             '270': ऊपर
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': छोटा
+            '50': मध्यम
+            '100': बड़ा
       gamelab_mirrorSprite:
         text: "{SPRITE} सामने की ओर {DIRECTION} "
         options:

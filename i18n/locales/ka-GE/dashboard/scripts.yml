@@ -9036,6 +9036,10 @@ ka:
           lessons:
             lesson-2:
               name: ვიჯეტები
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: გაკვეთილი 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -9295,6 +9299,8 @@ ka:
               display_name: სიები
             csp_loops:
               display_name: ციკლები
+            lessonGroup-5:
+              display_name: კურსის შემდგომი გამოკითხვა
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -9402,14 +9408,28 @@ ka:
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
           description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
           description_audience: 'ასაკი: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
         csp7-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: გამოკითხვა
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: კურსის შემდგომი გამოკითხვა
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(ძველი) სექცია 9: მონაცემები"
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -9584,6 +9604,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+            lessonGroup-5:
+              display_name: გამოკითხვა
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -9712,6 +9734,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+            lessonGroup-5:
+              display_name: გამოკითხვა
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -9928,6 +9952,8 @@ ka:
             Representing Numbers:
               name: რიცხვების წარმოდგენა
               key: რიცხვების წარმოდგენა
+            Create a Representation:
+              name: პროექტი - შექმენით წარმოდგენა
             Problem Solving and Data:
               name: პრობლემათა გადაჭრა და მონაცემები
               key: პრობლემათა გადაჭრა და მონაცემები
@@ -9970,3 +9996,7 @@ ka:
           lessons:
             Post-Course Survey:
               name: კურსის შემდგომი გამოკითხვა
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კეთილი იყოს თქვენი მობრძანება

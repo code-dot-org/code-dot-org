@@ -1210,6 +1210,12 @@ nl:
             '90': omlaag
             '180': links
             '270': omhoog
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': klein
+            '50': middellang
+            '100': groot
       gamelab_mirrorSprite:
         text: "{SPRITE} gezicht {DIRECTION}"
         options:

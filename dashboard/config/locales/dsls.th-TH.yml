@@ -2249,76 +2249,155 @@ th-TH:
         content1: ดูคำอธิบายที่นี่
       courseAB_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
+          să-l creați.
       courseB_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
+          să-l creați.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Artistul va desena un triunghi cu trei laturi egale.
+          feedback: Greșit.  Artistul desenează un pătrat.
+        - text: Artistul va desena o singură linie.
+          feedback: Greșit.  Artistul desenează un pătrat.
+        - text: Artistul va desena un pătrat.
+          correct: true
+          feedback: Corect!
+        - text: Artistul va desena un pentagon.
+          feedback: Greșit. Artistul desenează un pătrat.
         questions:
-        - {}
+        - text: Analizați cu atenție codul care urmează. Ce se va întâmpla atunci
+            când veți face clic pe „Rulează”?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
         - text: '20'
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Câți dovleci va culege
+            fermierul după ce veți face click pe „Rulează”?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat va ajunge la ghindă. Nu există erori în cod.
+          feedback: Greșit. Mai întâi, Scrat se întoarce în direcția greșită, apoi
+            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
+        - text: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția greșită.
+          correct: true
+          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
+            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
+        - text: Scrat nu va ajunge la ghindă pentru că nu sunt suficiente blocuri
+            `move forward`.
+          correct: true
+          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
+            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
+        - text: Scrat nu se va deplasa de pe primul bloc.
+          feedback: Există două erori în acest cod. Mai întâi, Scrat se întoarce în
+            direcția greșită, apoi Scrat nu se deplasează înainte de suficiente ori
+            pentru a ajunge la ghindă.
         questions:
-        - {}
+        - text: Căutați erorile din acest cod. Va ajunge Scrat la ghindă sau există
+            o problemă?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pasărea va ajunge la distanță de un pas de porc.
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
+        - text: Pasărea va ajunge la porc.
+          correct: true
+          feedback: Corect!
+        - text: Pasărea va ajunge la TNT.
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
+        - text: Pasărea se va lovi de perete.
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
         questions:
-        - {}
+        - text: Citiți codul care urmează cu atenție. Ce se va întâmpla atunci când
+            faceți clic pe „Rulează”?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: BB-8 nu se va mișca.
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
+        - text: BB-8 se va deplasa doar cu un spațiu
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
+        - text: BB-8 se va deplasa de 5 ori și va strânge tot fierul vechi.
+          correct: true
+          feedback: Corect!
+        - text: BB-8 se va deplasa doar cu 3 spații.
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
         questions:
-        - {}
+        - text: Ce credeți că se va întâmpla atunci când faceți clic pe „Rulează”?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 se va deplasa prea mult în prima buclă.
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
+        - text: BB-8 nu se va deplasa suficient de mult în prima buclă pentru a strânge
+            tot fierul vechi.
+          correct: true
+          feedback: Corect!
+        - text: BB-8 va strânge tot fierul vechi fără probleme.
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
+        - text: BB-8 se va întoarce în direcția greșită după prima buclă.
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla atunci
+            când veți face clic pe „Rulează”?
       courseD_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la ultima lecție din cursul D! Selectați un proiect
+          pe care doriți să-l creați.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: ก
           correct: true
+          feedback: Corect!
         - text: ข
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: ค
-        - {}
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
+        - text: Niciuna dintre varianele de mai sus
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Albina se va deplasa spre nor și va încerca să strângă nectar, indiferent
+            de situație.
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar doar dacă există o floare sub nor.
+        - text: Albina se va deplasa spre nor și va încerca să strângă nectar dacă
+            există o floare sub acesta.
+          correct: true
+          feedback: Corect!
+        - text: Albina se va deplasa spre nor și nu va face nimic, indiferent de situație.
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar dacă există o floare sub nor.
+        - text: Albina nu va ajunge la nor.
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar doar dacă există o floare sub nor.
         questions:
-        - {}
+        - text: Norul blochează vederea. Este posibil să existe o floare sub acest
+            nor. Dacă există o floare, albina va trebui să strângă nectarul o dată.
+            Dacă nu există o floare, albina nu ar trebui să facă nimic. Analizaț cu
+            atenție codul de mai jos. Ce credeți că se va întâmpla după ce faceți
+            clic pe „Rulează”?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2329,97 +2408,215 @@ th-TH:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Albina va strânge nectar de la fiecare floare și va produce miere
+            la fiecare fagure de miere.
+          correct: true
+          feedback: Corect!
+        - text: Albina va încerca să strângă nectar atât de la flori, cât și din fagurele
+            de miere.
+          feedback: Greșit. Blocul `if at flower` o lasă pe albină să strângă nectarul
+            de la fiecare floare și să producă miere în fiecare fagure.
+        - text: Albina va încerca să strângă miere atât de la flori, cât și de la
+            fagurele de miere.
+          feedback: Greșit. Greșit. Blocul `if at flower` o lasă pe albină să strângă
+            nectarul de la fiecare floare și să producă miere în fiecare fagure.
+        - text: Albina va încerca să strângă miere și nectar atât de la flori, cât
+            și din fagurele de miere.
+          feedback: Greșit. Greșit. Blocul `if at flower` o lasă pe albină să strângă
+            nectarul de la fiecare floare și să producă miere în fiecare fagure.
         questions:
-        - {}
+        - text: 'Priviți cu atenție codul de mai jos. Ce credeți că se va întâmpla
+            după ce faceți clic pe „Rulează”? Nu uitați: în spatele fiecărui nor va
+            exista doar *un* fagure de miere sau *o* floare.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Albinuța se va deplasa înainte și va strânge nectarul o singură dată.
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
+        - text: Albina va strânge doar 2 unități de nectar.
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
+        - text: Albina va strânge tot nectarul.
+          correct: true
+          feedback: Corect!
+        - text: Albina se va întoarce în direcția greșită.
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
         questions:
-        - {}
+        - text: Priviți cu atenție buclele imbricate de mai jos. Ce se va întâmpla
+            atunci când faceți clic pe „Rulează”?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '10'
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
         - text: '12'
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Câtă miere va face albina
+            atunci când veți face click pe „Rulează”?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Culegătoarea va strânge toate recoltele.
+          feedback: Greșit. Nu există niciun cod aici pentru a culege dovleacul.
+        - text: Culegătoarea nu va strânge niciuna dintre recolte pe calea aleasă.
+          feedback: Greșit. Codul o va face pe culegătoare să parcurgă în mod repetat
+            un traseu cu trepte și să culeagă cât mai mult din porumbul sau salata
+            pe care le întâlnește. Ea nu va culege dovleacul.
+        - text: Culegătoarea va strânge toate recoltele, cu excepția dovleacului.
+          correct: true
+          feedback: Corect!
+        - text: Culegătoarea va strânge doar dovleacul.
+          feedback: Greșit. Codul o va face pe culegătoare să parcurgă în mod repetat
+            un traseu cu trepte și să culeagă cât mai mult din porumbul sau salata
+            pe care le întâlnește. Ea nu va culege dovleacul.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce se va întâmpla atunci
+            când faceți clic pe „Rulează”?
+        markdown: |
+          Răsadurile din acest puzzle sunt fie de porumb, fie de salată.
+          <br/>
       courseD_multi_farmer_while10_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Nimic. Cu acest cod veți obține doar teren nivelat.
+          feedback: Greșit. Nu există niciun cod care să îndepărteze pământ din grămadă.
+        - text: Acest cod va lăsa grămada neatinsă.
+          correct: true
+          feedback: Corect!
+        - text: Acest cod va lăsa gropile neatinse.
+          feedback: Greșit. Bucla `while` acceptă bucle de orice dimensiune, dar nu
+            există niciun cod pentru a îndepărta pământ din grămadă.
+        - text: Acest cod va lăsa ultima groapă neatinsă.
+          feedback: Greșit. Nu există niciun cod care să îndepărteze pământ din grămadă.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce va rămâne la sfârșitul
+            acestui puzzle?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Nu se va întâmpla nimic.
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
+        - text: Fermierul nu se va opri niciodată din a îndepărta pământul.
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
+        - text: Fermierul va îndepărta pământul atâta timp cât există o grămadă, apoi
+            se va opri când grămada nu mai există.
+          correct: true
+          feedback: Corect!
+        - text: Fermierul va îndepărta pământul o singură dată.
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe „Rulează”?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Zombiul va trece de calea corectă și se va deplasa înainte și înapoi
+            la nesfârșit.
+          correct: true
+          feedback: Corect!
+        - text: Zombiul va ajunge la floarea-soarelui.
+          feedback: Greșit. Zombi-ul va trece de calea corectă și se va deplasa înainte
+            și înapoi la nesfârșit.
+        - text: Zombiul se va întoarce la dreapta pe prima cărare și se va învârti
+            în cerc la nesfârșit.
+          feedback: Greșit. Zombi-ul va trece de calea corectă și se va deplasa înainte
+            și înapoi la nesfârșit.
+        - text: Zombiul va fi blocat la capătul căii care merge înainte.
+          feedback: În acest cod, zombiul va trece de calea corectă și se va deplasa
+            înainte și înapoi la nesfârșit.
         questions:
-        - {}
+        - text: Analizați cu atenție codul care urmează. Ce se va întâmpla după ce
+            veți face clic pe „Rulează”?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pasărea nu se va deplasa deloc.
+          feedback: Greșit. Codul face ca pasărea să se deplaseze înainte cât timp
+            există o cale, apoi să se întoarcă la stânga. Aceasta va continua să facă
+            acest lucru până când ajunge la porc!
+        - text: Pasărea va ajunge la porc.
+          correct: true
+          feedback: Corect!
+        - text: Pasărea se va deplasa înainte și va ajunge la TNT.
+          feedback: Greșit. Codul face ca pasărea să se deplaseze înainte cât timp
+            există o cale sigură, apoi să se întoarcă la stânga. Aceasta va continua
+            să facă acest lucru până când ajunge la porc!
+        - text: Pasărea se întoarce în direcția greșită.
+          feedback: Codul face ca pasărea să se deplaseze înainte cât timp există
+            o cale, apoi să se întoarcă la stânga. Aceasta va continua să facă acest
+            lucru până când ajunge la porc!
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce credeți că se va întâmpla
+            atunci când faceți clic pe „Rulează”?
       courseE_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
       courseE_EOC_examples_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Nu se va întâmpla nimic.
+          feedback: Greșit. Extraterestrul va începe să se deplaseze în sus și în
+            jos pe ecran.
+        - text: Extraterestrul va începe să patruleze de la dreapta la stânga.
+          feedback: Greșit. Extraterestrul va începe să se deplaseze în sus și în
+            jos pe ecran.
+        - text: Extraterestrul va începe să se deplaseze în sus și în jos pe ecran.
+          correct: true
+          feedback: Corect!
+        - text: Extraterestrul va dispărea în partea de sus a ecranului.
+          feedback: Greșit. Extraterestrul albastru va începe să se deplaseze în sus
+            și în jos pe ecran.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe extraterestru?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Culegătoarea va strânge doi dovleci.
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
+        - text: Culegătoarea va strânge toți dovlecii.
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
+        - text: Culegătoarea va strânge salata.
+          correct: true
+          feedback: Corect!
+        - text: Culegătoarea va strânge porumbul.
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la funcțiile definite mai jos. Ce va culege culegătoarea?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nimic. Funcția nu este apelată în program.
+          feedback: Greșit. Funcția este de fapt apelată de două ori în program.
+        - text: Artistul va desena un singur pătrat.
+          feedback: Greșit. Funcția este de fapt apelată de două ori în program.
+        - text: Artistul va desena două pătrate care se suprapun.
+          feedback: Greșit. Lungimea fiecărei laturi a pătratului este de numai 100
+            de pixeli, dar artistul sare cu 175 de pixeli între funcții.
+        - text: Artistul va desena două pătrate separate de un mic spațiu.
+          correct: true
+          feedback: Corect! Funcția este apelată de două ori în program, cu un salt
+            între ele.
         questions:
-        - {}
+        - text: Ce se va întâmpla când apăsați „Rulează”?
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
@@ -2430,26 +2627,42 @@ th-TH:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Nu se va întâmpla nimic.
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+        - text: Ghemul de ierburi va pluti către partea de sus a ecranului
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+        - text: Ghemul de ierburi va începe să se rostogolească
+          correct: true
+          feedback: Corect!
+        - text: Tumbleweed va clipi intermitent.
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe „Rulează”?
       courseF_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
       courseF_EOC_examples_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
       courseF_EOC_samples_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Acest sprite se va roti la dreapta.
+          feedback: Greșit. Sprite se va și deplasa către est.
+        - text: Sprite se va deplasare către est.
+          feedback: Greșit. Acest sprite nu s-a oprit din rotit, așa că va întreprinde
+            ambele acțiuni simultan.
+        - text: Acest sprite se va roti și se va deplasa în același timp.
+          correct: true
+          feedback: Corect! Ambele comportamente vor avea loc simultan.
+        - text: Acest sprite se va roti mai întâi și se va deplasa după aceea.
+          feedback: Greșit. În Laboratorul cu sprite-uri, acțiunile asociate blocurilor
+            conectate se produc imediat după ce acțiunea anterioară s-a încheiat,
+            așa că ambele comportamente se vor produce simultan.
         questions:
-        - {}
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -2461,54 +2674,118 @@ th-TH:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artistul va desena un triunghi cu laturile de 50 de pixeli.
+          correct: true
+          feedback: Corect!
+        - text: Artistul va desena un poligon cu 50 de laturi, cu laturile de câte
+            3 de pixeli.
+          feedback: Greșit. Variabila `length` ar trebui să fie inclusă în bucla `repeat`
+            pentru ca acest lucru să se întâmple.
+        - text: Artistul va desena trei laturi deschise cu întoarceri de câte 50 de
+            grade.
+          feedback: Greșit. Variabila `length` ar trebui să fie folosită în blocul
+            `turn` pentru ca acest lucru să se întâmple.
+        - text: Calculatorul va solicita utilizatorului să specifice un număr.
+          feedback: Variabila `length` este setată la 50 și este folosită în blocul
+            `move forward by`, iar artistul va desena un triunghi cu laturile de 50
+            de pixeli.
         questions:
-        - {}
+        - text: Am setat variabila `length` la 50. Ce se va întâmpla atunci când veți
+            face clic pe „Rulează”?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare.
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
+        - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare, cu excepția uneia.
+          correct: true
+          feedback: Corect!
+        - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare.
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
+        - text: Albinuța se va deplasa înainte și va strânge o unitate de nectar de
+            la florile cu numerele 1 și 4.
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
         questions:
-        - {}
+        - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
+            clic pe „Rulează”?
+        markdown: Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult mai
+          ușor!
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ambele avioane se vor deplasa un spațiu de-a lungul grilei, apoi se
+            vor opri.
+          feedback: Greșit. Aceste sprite-uri au „comportamente” care continuă să
+            se desfășoare până când li se spune să se oprească.
+        - text: Ambele avioane se vor deplasa și nu se vor opri.
+          correct: true
+          feedback: Corect! Aceste comportamente le transmit avioanelor să înceapă
+            să se deplaseze și să continue să se deplaseze.
+        - text: Unul dintre avioane se va deplasa primul, iar apoi celălalt avion
+            se va deplasa și el mai târziu.
+          feedback: Greșit. Fiecare bloc de cod din Laboratorul cu sprite-uri este
+            executat instantaneu după blocul următor.
+        - text: Avioanele se vor prăbuși.
+          feedback: Greșit. Poziția avioanelor nu le permite să se atingă.
         questions:
-        - {}
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Programul va imprima mesajul „Bună ziua, nume!”
+          feedback: Greșit. Blocul nume va fi înlocuit cu ceea ce introduci.
+        - text: Programul te va întâmpina cu numele pe care l-ai introdus.
+          correct: true
+          feedback: Corect! Datele introduse vor fi utilizate în locul blocului nume.
+        - text: Sprite își va schimba dimensiunile.
+          feedback: Greșit. Pe ecran va fi afișat text.
+        - text: Calculatorul va pune o altă întrebare.
+          feedback: Greșit. Se pune o singură întrebare, la începutul programului.
         questions:
-        - {}
+        - text: 'Acest program îți permite să răspunzi la o întrebare tastând răspunsul
+            cu ajutorul tastaturii. Blocul `print` afișează textul pe ecran. Fă o
+            predicție: ce se va întâmpla după ce răspunzi la întrebare?'
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Artistul va rezolva corect puzzle-ul.
+          feedback: Greșit. Bucla folosește „draw polygon” (desenează poligon) în
+            loc de „draw line of polygons” (desenează un rând de poligoane).
+        - text: Artistul va desena patru pătrate care vor forma o fereastră.
+          correct: true
+          feedback: Corect!
+        - text: Artistul va desena numai un singur rând de pătrate.
+          feedback: Greșit. Programul nu apelează „draw line of polygons” (desenează
+            un rând de poligoane).
+        - text: Artistul va desena patru pătrate suprapuse.
+          feedback: Greșit. Bucla se întoarce la 90 de grade între apeluri pentru
+            a „desena poligonul”.
         questions:
-        - {}
+        - text: Ce se va întâmpla atunci când apăsați butonul „Rulează”?
       express_EOC_2021:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel va strânge cel puțin 4 comori folosind acest cod.
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
+        - text: Laurel va încerca să strângă comori, dar acestea nu există și aceasta
+            cauzează o eroare.
+          correct: true
+          feedback: Corect!
+        - text: Laurel va strânge toate comorile.
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
+        - text: Laurel va strânge 1 comoară folosind acest cod.
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la acest cod. Ce credeți că se va întâmpla atunci
+            când va rula programul?
       CourseF_outbreak_story:
         markdown: "# การระบาด: เขียนโค้ดการจำลองของคุณเอง\n\n## ยินดีต้อนรับสู่ดินแดนมอนสเตอร์!\nดินแดนมอนสเตอร์เป็นสถานที่ที่ดีและมีความสุข
           มอนสเตอร์ในเมืองมอนสเตอร์ชื่นชอบที่จะไปเยี่ยมเยียนเพื่อนบ้าน \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -2961,15 +3238,42 @@ th-TH:
       csf_be_a_super_digital_citizen:
         content1: ดูคำอธิบายที่นี่
       csf_be_a_super_digital_citizen_2021:
-        content1: ดูคำอธิบายที่นี่
+        content1: descriere aici
+        markdown: |
+          # Supercetățeanul digital
+
+          ## Cum putem fi un exemplu pentru cei din jur atunci când asistăm la cyberbullying?
       csf_password_power-up:
         content1: ดูคำอธิบายที่นี่
       csf_password_power-up_2021:
-        content1: ดูคำอธิบายที่นี่
+        content1: descriere aici
+        markdown: |
+          #  Îmbunătățiți-vă parolele
+
+          ## Sfaturi de reținut cu privire la parole
+
+          * Începeți cu o **frază** memorabilă.
+          * Numai **părinții** voștri trebuie să știe care este parola voastră.
+          * Nu folosiți niciodată în parolă informații **private** care vă pot dezvălui identitatea.
+          * Creați parole care au cel puțin **opt** caractere.
+          * Folosiți litere, cifre și **simboluri** în parola voastră.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: ดูคำอธิบายที่นี่
       csf_putting_a_stop_to_online_meanness_2021:
-        content1: ดูคำอธิบายที่นี่
+        content1: descriere aici
+        markdown: |
+          # STOP comportamentelor răutăcioase
+
+          ## Ce ar trebui să faceți dacă cineva se poartă urât cu voi online?
+
+          * **Să vă ridicați-vă de la calculator.
+          * **Să îi spuneți ce se întâmplă unui adult în care aveți încredere.
+          * **Să aveți OK-ul pentru site-uri înainte de a le accesa.
+          * **Să faceți o pauză de gândire online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -3073,3 +3377,110 @@ th-TH:
         - correct: true
         questions:
         - {}
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # Marele eveniment
+
+          În știința calculatoarelor, evenimentele sunt acțiuni monitorizate de un computer. În această lecție veți reacționa diferit în funcție de butonul care este apăsat.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Brățări binare
+
+          Creați o brățară care vă reprezintă numele, într-un sistem care să fie înțeles de computere!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Relații de condiționalitate cu cărți de joc
+
+          Jucați un joc de cărți și creați reguli precum: „Dacă trag o carte roșie, primesc un punct” și „Dacă trag o carte neagră, adversarul primește un punct”.
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # Design pentru accesibilitate
+
+          * În universul științei calculatoarelor, **accesibilitatea** se referă la crearea de tehnologie pentru persoanele cu dizabilități.
+          * Dizabilitățile pot fi fizice, auditive, vizuale și de multe alte feluri.
+          * Dizabilitățile sunt diverse și îi afectează pe oameni în moduri diferite, inclusiv în ceea ce privește utilizarea tehnologiei, cum ar fi **aplicațiile pentru smartphone**.
+          * Proiectarea de aplicații care sunt accesibile pentru persoanele cu dizabilități face ca aceste aplicații să fie mai bune și pentru toți ceilalți!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Partajare digitală
+
+          În această lecție veți înțelege provocările și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor de autor, în special în mediile digitale.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Cum e să ai mintea creață
+
+          În această lecție este prezentat conceptul de bucle în programare, prin dans.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Programare cu hârtie de copiat
+
+          Scrieți algoritmi pe care colegii voștri îi pot folosi pentru a desena imagini.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Hărți vesele
+
+          Creați un algoritm pentru a mișca un personaj printr-un labirint.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Mișcă-te, mișcă-te!
+
+          Folosiți o hartă și transmiteți comenzi pentru a vă atinge obiectivul.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Prietenii mei, roboții trăsniți
+
+          Scurtați programele cu ajutorul buclelor!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Prietenii mei, roboții
+
+          Învățați să programați scriind cod pentru prietenii voștri!
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |
+          # Informații private și informații personale
+
+          ## Ce informații despre voi puteți partaja online?
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Programare cu ștafetă
+
+          Organizați-vă în echipe și lucrați împreună pentru a scrie programe care să deseneze imagini.
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Urmați algoritmul
+
+          Jucați un joc și gândiți-vă la comenzile necesare pentru a obține rezultatul corect.
+      Songwriting-Unplugged_2021:
+        markdown: |
+          # Compoziți muzicale
+
+          Folosiți conceptul de refren dintr-un cântec pentru a învăța despre definirea și apelarea funcțiilor.
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# Aplicația potrivită\n\n* Toată lumea folosește computere în zilele
+          noastre, în special smartphone-uri. \n* Aplicațiile pentru smartphone-uri
+          îi ajută pe oameni să vorbească cu prietenii, să asculte muzică, să facă
+          cumpărături sau pur și simplu să navigheze pe internet.\n* Este important
+          ca programatorii să înțeleagă nevoile celorlalți și să conceapă aplicațiile
+          ținând cont de ele!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      courseD_EOC_examples_2021:
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
+        display_name: Exemple de proiecte
+      csf_digital_trails_2021:
+        markdown: |
+          # Urma digitală
+
+          ## Ce informații puteți include în amprenta digitală?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Cartierul meu online
+
+          ## Cum vizitați în siguranță locuri online?
+      express_EOC_examples_2021:
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
+        display_name: Exemple de proiecte

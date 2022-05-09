@@ -9431,6 +9431,10 @@ se:
           lessons:
             lesson-2:
               name: Modulat
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lekšuvdna 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -9543,6 +9547,10 @@ se:
             Routers and Redundancy:
               name: Routarat ja Dárbbašmeahttumat
               key: Routarat ja Dárbbašmeahttumat
+        csp5-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         courseb-2022:
           lessons:
             Getting Loopy:
@@ -9576,14 +9584,31 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         csp7-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: Iskkadeapmi
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
               key: Ráhkat PT - Válbme Barggu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
         coursed-2022:
           lessons:
             Build a Star Wars Game:
@@ -9634,6 +9659,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         pre-express-2022:
           lesson_groups:
             csf_events:
@@ -9691,6 +9718,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-11:
@@ -9864,3 +9893,7 @@ se:
           lessons:
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
+        aiml-2022:
+          lessons:
+            Survey Planning:
+              name: Designe Data Čoakkaldaga

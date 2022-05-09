@@ -1180,6 +1180,12 @@ ru:
             '90': вниз
             '180': влево
             '270': вверх
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': маленький
+            '50': средне
+            '100': большой
       gamelab_mirrorSprite:
         text: "{SPRITE} Лицо {DIRECTION}"
         options:

@@ -942,6 +942,9 @@ it:
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
         CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        PL_CS_Journeys_Overview: Avventure CS
+        csp_applab_parameters: Funzioni con parametri
+        CSA-PL-intro-to-arrays: Array unidimensionale (1D)
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

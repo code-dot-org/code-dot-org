@@ -1237,6 +1237,12 @@ ko:
             '90': 아래로
             '180': 왼쪽으로
             '270': 위로
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': 작음
+            '50': 보통
+            '100': 큰
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:

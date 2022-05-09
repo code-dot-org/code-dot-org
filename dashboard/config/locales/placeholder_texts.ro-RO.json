@@ -240,7 +240,7 @@
           "83e4a96aed96436c621b9809e258b309": "peşte",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "creatură",
           "f655df68ec33643278de7e69794e8d76": "Acvariul virtual",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ce vei adăuga?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ce veți adăuga?",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "alta",
           "0d3e73168beb875063ea0f0302fe32bd": "Ce pește?",
           "caaf8264ca397dba2d35ef902bbbd953": "Ce creatură?",
@@ -248,8 +248,8 @@
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Ai câştigat!",
-          "077449fb290b51b9d70c9f2f3d3213bc": "secunde",
-          "490082498449bd20ff0199737dfa4916": "Selectează tipul de joc:",
+          "077449fb290b51b9d70c9f2f3d3213bc": " secunde",
+          "490082498449bd20ff0199737dfa4916": "Selectați tipul de joc:",
           "41f2b2212de0105c2a942ebb4a44e449": "Jocul Marele Colecționar!"
         },
         "New Play Lab Project": {
@@ -279,11 +279,11 @@
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Jocuri de petrecere",
           "bf08dd3d1961874f13e77c936aad27e5": "O poveste cu spații necompletate",
-          "514b8d5320196898a9ced3efe0d4c802": "Introduce un adjectiv:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdu un obiect:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdu o parte a corpului:",
-          "e522ee28f39133b45497637539ff429b": "Introdu un număr:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": "jocuri.",
+          "514b8d5320196898a9ced3efe0d4c802": "Introduceți un adjectiv:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introduceți un obiect:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introduceți o parte a corpului:",
+          "e522ee28f39133b45497637539ff429b": "Introduceți un număr:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocuri.",
           "5306eed2fd2c43fe033efd6016c0c38b": "cursă!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "întrebarea mea"
         },
@@ -307,17 +307,17 @@
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Jocuri de petrecere",
           "bf08dd3d1961874f13e77c936aad27e5": "O poveste cu spații necompletate",
-          "514b8d5320196898a9ced3efe0d4c802": "Introduce un adjectiv:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdu un obiect:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdu o parte a corpului:",
-          "e522ee28f39133b45497637539ff429b": "Introdu un număr:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introduceți un adjectiv:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introduceți un obiect:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introduceți o parte a corpului:",
+          "e522ee28f39133b45497637539ff429b": "Introduceți un număr:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": "jocuri.",
           "5306eed2fd2c43fe033efd6016c0c38b": "cursă!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "întrebarea mea"
         },
         "courseF_label_predict": {
           "f15045cb7e57652546d4a0b2c695356f": "Ce veți mânca?",
-          "937dc37c06cc5d89a7096eb048b73590": "vine imediat!"
+          "937dc37c06cc5d89a7096eb048b73590": " vine imediat!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "întrebarea mea"
@@ -382,6 +382,58 @@
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "Te rugăm să încerci din nou.",
           "af142a90df4becc2aa7ae0d3acb3cc90": "Jocul s-a terminat!"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "alegerea 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "alegerea 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "alegerea 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "alegerea 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "alegerea 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "alegerea 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Dansatorul dintre nori",
+          "78d989e01047ba7043a38650d695abaa": "Selectați jucătorul",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "alegerea 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "alegerea 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "alegerea 3"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "Ea este Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila încearcă să își protejeze planeta de robotul spațial.",
+          "df8312187449c70820d7c58229a6b17e": "Robotul spațial le sperie pe celelalte animale.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila vrea să-l ajute pe robotul spațial să învețe să fie prietenos.",
+          "b2f02bf648ce32c4362afe1578d41f70": "A funcționat! Neila i-a arătat robotului spațial cât de important este să fie bun.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Celelalte animale nu se mai tem de el!",
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un câine!",
+          "336ad881e37e713ba0325500a8fa1f00": "câini!",
+          "27944770529dd15319a983bee8951560": "O pisică!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " pisici!",
+          "1c64ef29c853587fbe94f69f05272b79": "O pasăre!",
+          "5b402e6ea05e847a076e03ad74420c45": " păsări!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un dragon!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dragoni!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Numărați toate animalele!",
+          "f62038e77820419cd978f7b722da560a": "Câte vor apărea?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Numărați animalele de companie"
         }
       }
     }

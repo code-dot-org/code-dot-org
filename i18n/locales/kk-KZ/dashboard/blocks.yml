@@ -199,6 +199,12 @@ kk:
             '90': төмен
             '180': солға
             '270': жоғары
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': орта
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

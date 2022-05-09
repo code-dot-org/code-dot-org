@@ -805,6 +805,10 @@ pt:
       title: Festa dançante
     dance-2019:
       title: Festa dançante
+    hello-world:
+      title: Olá Mundo
+    poem-art:
+      title: Arte poética
     hoc:
       title: Labirinto clássico
       body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
@@ -1026,9 +1030,6 @@ pt:
       de aceitar explicitamente os termos atualizados, observe que nossas ferramentas
       para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
-  donor_interstitial:
-    support_codeorg_1: Cada dólar doado ao Code.org gera oportunidades para mais estudantes.
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos
       a acompanhar o nosso progresso!

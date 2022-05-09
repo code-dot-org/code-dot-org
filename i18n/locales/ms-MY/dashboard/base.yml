@@ -533,6 +533,10 @@ ms:
       title: 'Majlis Tari-Menari'
     dance-2019:
       title: 'Majlis Tari-Menari'
+    hello-world:
+      title: 'Helo Dunia'
+    poem-art:
+      title: 'Seni Puisi'
     hoc:
       title: 'Pagar Sesat Klasik'
       body: 'Cuba asas sains komputer. Jutaan individu telah mencubanya.'
@@ -668,8 +672,6 @@ ms:
     reminder_desc: 'Kami telah mengemas kini <a href="%{tos_url}" target="_blank">Syarat Perkhidmatan</a> dan <a href="%{privacy_url}" target="_blank">Dasar Privasi</a> kami . Sila baca ini dengan teliti sebelum menerimanya. Harap maklum bahawa alatan kami yang mengajar JavaScript mungkin tidak tersedia kepada pelajar anda sebelum menerima syarat yang dikemas kini secara eksplisit.'
     reminder_desc_markdown: Kami telah mengemas kini [Syarat Perkhidmatan](%{tos_url}) dan [Dasar Privasi](%{privacy_url}). Sila baca ini dengan teliti sebelum menerimanya. Harap maklum bahawa alatan kami yang mengajar JavaScript mungkin tidak tersedia kepada pelajar anda sebelum menerima syarat yang dikemas kini secara eksplisit.
     review_terms: "Semak syarat yang dikemas kini"
-  donor_interstitial:
-    title: "Kursus SK percuma anda dimungkinkan oleh..."
   school_info_interstitial:
     save: "Simpan"
   race_interstitial:

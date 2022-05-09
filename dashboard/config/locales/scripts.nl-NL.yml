@@ -7084,6 +7084,12 @@ nl:
               display_name: Project
             lessonGroup-4:
               display_name: Demo's en middelen
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Les 2
+            lesson-3:
+              name: Les 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -8246,8 +8252,6 @@ nl:
               display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
-            lessonGroup-3:
-              display_name: Vragenlijst
         csp8-2022:
           lessons:
             lesson-4:
@@ -8413,6 +8417,8 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-5:
+              display_name: Vragenlijst
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -8779,7 +8785,7 @@ nl:
             lessonGroup-2:
               display_name: Content
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Vragenlijst
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -8953,3 +8959,114 @@ nl:
           student_description: Deze unit bevat een enquête voor wanneer je klas klaar
             is met de units in CS Discoveries. Je leraar zal je vertellen wanneer
             het tijd is om deze enquête in te vullen.
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              key: Module 1
+            Module 2:
+              name: Module 2
+              key: Module 2
+            Module 3:
+              name: Module 3
+              key: Module 3
+            Module 4:
+              name: Module 4
+              key: Module 4
+            Module 5:
+              name: Module 5
+              key: Module 5
+            Module 6:
+              name: Module 6
+              key: Module 6
+            Module 7:
+              name: Module 7
+              key: Module 7
+            Module 8:
+              name: Module 8
+              key: Module 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              key: Module 1
+            Module 2:
+              name: Module 2
+              key: Module 2
+            Module 3:
+              name: Module 3
+              key: Module 3
+            Module 4:
+              name: Module 4
+              key: Module 4
+            Module 5:
+              key: Module 5
+            Module 6:
+              key: Module 6
+            Module 7:
+              key: Module 7
+            Module 8:
+              key: Module 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welkom
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: Les 4
+            lesson-3:
+              key: Les 3
+            lesson-8:
+              key: Les 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: Les 1
+            lesson-2:
+              key: Les 2
+            lesson-3:
+              key: Les 3
