@@ -323,6 +323,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       this.flyout_.resize();
     }
   };
+
+  blocklyWrapper.WorkspaceSvg.prototype.events = {
+    dispatchEvent: () => {} // TODO
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
