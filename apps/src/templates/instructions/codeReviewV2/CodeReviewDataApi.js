@@ -1,4 +1,3 @@
-/* global appOptions */
 import {findProfanity} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -8,10 +7,11 @@ export const timelineElementType = {
 };
 
 export default class CodeReviewDataApi {
-  constructor(channelId, levelId, scriptId) {
+  constructor(channelId, levelId, scriptId, locale) {
     this.channelId = channelId;
     this.levelId = levelId;
     this.scriptId = scriptId;
+    this.locale = locale;
   }
 
   // Temp method only used to set this.token
@@ -196,7 +196,7 @@ export default class CodeReviewDataApi {
 
   submitNewCodeReviewComment(commentText) {
     return new Promise((resolve, reject) => {
-      findProfanity(commentText, appOptions.locale, this.token)
+      findProfanity(commentText, this.locale, this.token)
         .done(profaneWords => {
           if (profaneWords?.length > 0) {
             reject({

@@ -81,7 +81,7 @@
   "genericErrorMessage": "Please try again",
   "import": "Import",
   "includeFiles": "Include Files",
-  "insertCodeblock": "Insert Codeblock",
+  "insertCode": "Insert code",
   "internalCompilerException": "Oops. We hit an error on our side while compiling your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalException": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalRuntimeException": "Oops. We hit an error on our side while running your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
