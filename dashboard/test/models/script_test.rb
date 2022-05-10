@@ -2017,8 +2017,6 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal 'dlp-2022', cloned_unit.name
       assert_equal 'Deeper Learning 2022', cloned_unit.professional_learning_course
       assert_equal cloned_unit.instruction_type, @deeper_learning_unit.instruction_type
-      puts cloned_unit.inspect
-      puts @deeper_learning_unit.inspect
       assert_equal cloned_unit.instructor_audience, @deeper_learning_unit.instructor_audience
       assert_equal cloned_unit.participant_audience, @deeper_learning_unit.participant_audience
       refute_equal [level1, level2], cloned_unit.levels

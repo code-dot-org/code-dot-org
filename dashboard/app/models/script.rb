@@ -1196,6 +1196,8 @@ class Script < ApplicationRecord
           CourseOffering.add_course_offering(copied_unit)
         end
 
+        copied_unit.save! if copied_unit.changed?
+
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
