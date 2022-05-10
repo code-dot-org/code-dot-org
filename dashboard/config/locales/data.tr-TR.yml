@@ -845,6 +845,8 @@ tr:
         CSA-PL-debugging-temp: Java Lab'da Hata ayıklamaya giriş - geçici
         csd_u6_circuit_playground: Fiziksel Bilişim
         csd_u6_input_output: Girdiler ve çıktılar
+        csp_applab_parameters: Fonksiyon parametreleri
+        CSA-PL-intro-to-arrays: Bir Boyutlu (1D) Diziler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

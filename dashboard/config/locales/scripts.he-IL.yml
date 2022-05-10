@@ -1292,11 +1292,6 @@ he:
               name: 'אלגוריתמים מהחיים: שתול זרעון'
             Programming in Maze:
               name: תכנות במבוך
-            Loops in Artist:
-              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
-                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
-                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
-                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             Events in Play Lab:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
@@ -4269,6 +4264,8 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -4326,10 +4323,26 @@ he:
               display_name: אירועים
             end_of_course_project:
               display_name: פרויקט סיום קורס
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
         csp7-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: סקר
+              display_name: סקר שלאחר הקורס
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -4453,6 +4466,9 @@ he:
           lessons:
             lesson-9:
               name: חזרות
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         pre-express-2022:
           lessons:
             Programming with Angry Birds:
@@ -4518,6 +4534,10 @@ he:
               display_name: משתנים
             end_of_course_project:
               display_name: פרויקט סיום קורס
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         csa2-2022-exemplars:
           lessons:
             lesson-1:

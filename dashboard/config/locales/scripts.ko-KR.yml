@@ -5925,9 +5925,6 @@ ko:
                 루프를 사용하여 보물을 더 효과적으로 수집하게 할 것입니다.'
             Loops in Artist:
               name: 아티스트 내 루프
-              description_teacher: 루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을
-                배웁니다. 이전 플러그드 레슨에서, 루프는 미로를 이동하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들
-                것입니다. 이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다.
             'Events: The Big Event':
               name: '이벤트: 빅 이벤트'
               description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의
@@ -23699,6 +23696,8 @@ ko:
           lessons:
             lesson-1:
               name: CSA 복제 테스트
+            lesson-3:
+              name: 레슨 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -25196,6 +25195,8 @@ ko:
             'Lesson 18: Assessment Day':
               key: '레슨 18: 평가일'
               name: 평가일
+            CS Principles Post-Course Survey:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_lists:
               display_name: 리스트
@@ -25205,6 +25206,8 @@ ko:
               display_name: " 트래버스"
             csp_project:
               display_name: 프로젝트
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
         courseb-2022:
           lessons:
             Digital Trails:
@@ -25549,9 +25552,13 @@ ko:
             'Lesson 6: Assessment Day':
               key: '레슨 6: 평가일'
               name: 평가일
+            CS Principles Post-Course Survey:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit6_2020:
               display_name: '단원 6: 알고리즘'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -25603,7 +25610,7 @@ ko:
             csp_libraries:
               display_name: 라이브러리
             lessonGroup-3:
-              display_name: 설문조사
+              display_name: 과정 후 설문조사
         csp8-2022:
           lessons:
             Create PT   Review the Task:
@@ -25623,6 +25630,13 @@ ko:
             Create PT - Complete the Task:
               key: PT 만들기 준비 -과제 완료
               name: PT 만들기 -작업 완료 (12시간)
+            CS Principles Post-Course Survey:
+              name: CS 원리 과정 후 설문 조사
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -25663,9 +25677,13 @@ ko:
             'Lesson 9: Assessment Day':
               key: '레슨 9: 평가일'
               name: 평가일
+            CS Principles Post-Course Survey:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit9_2020:
               display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 1:
@@ -25726,9 +25744,13 @@ ko:
             'Lesson 14: Unit Assessment Day':
               key: '레슨 14: 단원  평가일'
               name: 평가일
+            CS Principles Post-Course Survey:
+              name: CS 원리 과정 후 설문 조사
           lesson_groups:
             csp_unit10_2020:
               display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -26325,6 +26347,8 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: Sandboxes
+            lessonGroup-5:
+              display_name: 설문조사
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -26431,8 +26455,6 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
-            lessonGroup-4:
-              display_name: Sandboxes
         csa3-2022:
           lessons:
             lesson-3:
@@ -26464,8 +26486,6 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
-            lessonGroup-4:
-              display_name: Sandboxes
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -26884,7 +26904,7 @@ ko:
             lessonGroup-2:
               display_name: 컨텐츠
             lessonGroup-5:
-              display_name: 샌드박스
+              display_name: 설문조사
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -27680,7 +27700,7 @@ ko:
               name: 데이터 기밀 유지
               key: 데이터 기밀 유지
             Create a Representation:
-              name: 표현 만들기
+              name: 프로젝트 - 표현 만들기
             Problem Solving and Data:
               name: 문제 해결 및 데이터
               key: 문제 해결 및 데이터
@@ -27796,3 +27816,141 @@ ko:
             해야 할 때가 오면 선생님이 알려줄 것입니다.
         csp-post-survey-2022:
           title: CS 원리 과정 후 설문 조사
+        aiml-2022:
+          lessons:
+            Introduction to Machine Learning:
+              name: 머신 러닝 소개
+            AI Code of Ethics:
+              description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
+                기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
+                원칙을 발전시킵니다. 그러한 원칙은 그 다음 AI 창작자와 입법가를 위해 학급 차원의 “우리의  AI 윤리강령” 리소스
+                (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
+              description_teacher: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
+                기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
+                원칙을 발전시킵니다. 그러한 원칙은 그 다음 AI 창작자와 입법가를 위해 학급 차원의 “우리의  AI 윤리강령” 리소스
+                (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
+            Survey Planning:
+              name: 데이터 수집 설계
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: 모듈 1
+              key: 모듈 1
+            Module 2:
+              name: 모듈 2
+              key: 모듈 2
+            Module 3:
+              name: 모듈 3
+              key: 모듈 3
+            Module 4:
+              name: 모듈 4
+              key: 모듈 4
+            Module 5:
+              name: 모듈 5
+              key: 모듈 5
+            Module 6:
+              name: 모듈 6
+              key: 모듈 6
+            Module 7:
+              name: 모듈 7
+              key: 모듈 7
+            Module 8:
+              name: 모듈 8
+              key: 모듈 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: 모듈 1
+              key: 모듈 1
+            Module 2:
+              name: 모듈 2
+              key: 모듈 2
+            Module 3:
+              name: 모듈 3
+              key: 모듈 3
+            Module 4:
+              name: 모듈 4
+              key: 모듈 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: '모듈 5: 단원 7 및 매개변수와 반환이 있는 함수 이해'
+            'Module 6: Introduction to the Create Performance Task':
+              name: '모듈 6: 만들기 수행과제 소개'
+            'Module 7: Tools and Structure in Unit 9 - Data':
+              name: '모듈 7: 단원 9 내 툴 및 구조 -데이터'
+            'Module 8: Building Community and Preparing Students for the AP Exam':
+              name: '모듈 8: 공동체 구축 및 AP 시험 대비 '
+            Module 5:
+              key: 모듈 5
+              name: '모듈 5: 단원 7 및 매개변수와 반환이 있는 함수 이해'
+            Module 6:
+              key: 모듈 6
+              name: '모듈 6: 만들기 수행과제 소개'
+            Module 7:
+              key: 모듈 7
+              name: '모듈 7: 단원 9 내 툴 및 구조 -데이터'
+            Module 8:
+              key: 모듈 8
+              name: '모듈 8: 공동체 구축 및 AP 시험 대비 '
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 환영합니다
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: 레슨-4
+            lesson-3:
+              key: 레슨--3
+            lesson-8:
+              key: 레슨-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3

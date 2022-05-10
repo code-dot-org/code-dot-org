@@ -662,6 +662,8 @@ az:
       title: 'Rəqs şənliyi'
     dance-2019:
       title: 'Rəqs şənliyi'
+    hello-world:
+      title: 'Salam Dünya'
     hoc:
       title: 'Ənənəvi labirint'
       body: 'İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.'
@@ -820,14 +822,6 @@ az:
     reminder_desc: ' <a href="%{tos_url}" target="_blank">Xidmət Şərtlərimizi</a> və <a href="%{privacy_url}" target="_blank">Gizlilik Siyasətini</a> yeniləmişik. Zəhmət olmasa qəbul etməzdən əvvəl bunları diqqətlə oxuyun. Nəzərə alın ki, JavaScript-i öyrədən vasitələrimiz yenilənmiş şərtləri açıq şəkildə qəbul etməmişdən əvvəl tələbələriniz üçün əlçatan olmaya bilər.'
     reminder_desc_markdown: '[Xidmət Şərtlərimizi] (%{tos_url}) və [Məxfilik Siyasətini] (%{privacy_url}) yenilədik. Zəhmət olmasa bunları qəbul etməzdən əvvəl bunları diqqətlə oxuyun. Qeyd edək ki, yenilənmiş şərtləri açıq şəkildə qəbul etməzdən əvvəl JavaScript öyrədən vasitələrimiz tələbələriniz üçün əlçatmaz ola bilər.'
     review_terms: "Şərtlərə yenidən baxış"
-  donor_interstitial:
-    title: "Pulsuz CS kurslarınız ..."
-    subtitle: "Dəstəyi Code.org-un uğurunu mümkün edən səxavətli donorlara təşəkkür etmək istərdik. Biz [donorlarımızın](%{donors_url}) davamlı səxavəti sayəsində Code.org-u bütün dünyada məktəblər və tələbələr üçün pulsuz saxlamağa sadiqik!"
-    local_supporters: "Yerli Dəstəkçilər"
-    global_supporters: "Qlobal dəstəkçilər"
-    support_codeorg_1: "Code.org-a verilən hər dollar daha çox tələbəyə imkan yaradır."
-    support_codeorg_2: "Code.ord-a dəstək olmaq üçün indi bağışla (%{donate_url})"
-    get_started: "Code.orga başlayın."
   school_info_interstitial:
     title: "Biz hər bir tələbəyə Kompüter Elmlərini öyrətmək istəyirik - tərəqqinizi izləməkdə bizə kömək edin!"
     message: "Zəhmət olmasa məktəb məlumatınızı aşağıya daxil edin."

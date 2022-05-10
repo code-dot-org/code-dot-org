@@ -1228,6 +1228,12 @@ sv:
             '90': ner
             '180': vänster
             '270': upp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': liten
+            '50': medel
+            '100': stor
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:

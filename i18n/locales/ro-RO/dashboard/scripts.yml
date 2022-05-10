@@ -2468,7 +2468,6 @@ ro:
               description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Bucle vesele”, în această etapă elevii vor folosi bucle pentru a strânge comori mai eficient pe Code.org.
             Loops in Artist:
               name: Cicluri cu Artistul
-              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
             'Events: The Big Event':
               name: 'Evenimente: Marele Eveniment'
               description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
@@ -3482,6 +3481,8 @@ ro:
             CSD pre-survey 21-2:
               name: Pre-cercetare CSD 21-22
             lesson-20: {}
+            CS Principles Pre-survey: {}
+            Course Survey: {}
         k1hoc2017: {}
         hero:
           title: 'Minecraft: Călătoria eroului'
@@ -7485,7 +7486,7 @@ ro:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             End of Course Project:
@@ -8235,7 +8236,7 @@ ro:
             lesson-6:
               name: Prezentând Laboratorul de Desen
             lesson-7:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-8:
               name: Spiriduși în acțiune
             lesson-5:
@@ -8366,7 +8367,7 @@ ro:
               description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
               description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
             lesson-2:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-3:
               name: Spiriduși în acțiune
           lesson_groups:
@@ -8459,7 +8460,7 @@ ro:
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             introducing-spritelab:
@@ -9449,7 +9450,11 @@ ro:
               display_name: Lecții
             lessonGroup-4:
               display_name: Demonstrații și Resurse
-        tesstest921: {}
+        tesstest921:
+          lessons:
+            lesson-2: {}
+            lesson-3:
+              name: Lecția 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -9954,7 +9959,7 @@ ro:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -10223,7 +10228,7 @@ ro:
               description_student: Află cum poți crea și edita sprites.
               description_teacher: 'În această lecție, elevii vor învăța despre cele două concepte esențiale ale Laboratorului cu sprites: sprites și comportamente. Sprites sunt personaje sau obiecte de pe ecran pe care elevii le pot muta, modifica și manipula. Comportamentele sunt acțiuni pe care sprites le vor întreprinde încontinuu, până când sunt opriți.'
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             Virtual Pet with Sprite Lab:
@@ -10301,7 +10306,7 @@ ro:
               description_teacher: Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
             lesson-2:
               key: lecția-2
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-3:
               key: lecția-3
               name: Spiriduși în acțiune
@@ -10391,11 +10396,14 @@ ro:
         csp5-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
           lesson_groups:
             csp_lists:
               display_name: Liste
             csp_loops:
               display_name: Bucle
+            lessonGroup-5:
+              display_name: Chestionar după curs
         courseb-2022:
           lessons:
             Digital Trails:
@@ -10625,18 +10633,26 @@ ro:
         csp6-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         csp7-2022:
           lessons:
             CS Principles Post-Course Survey: {}
             EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             lessonGroup-3:
-              display_name: Sondaj
+              display_name: Chestionar după curs
         csp8-2022:
           lessons:
             lesson-4:
               key: lecția-4
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp9-2022:
           lessons:
             Machine Learning:
@@ -10646,12 +10662,19 @@ ro:
             lesson-10:
               key: lecția-10
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
         csp10-2022:
           lessons:
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -10891,7 +10914,7 @@ ro:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -10942,7 +10965,7 @@ ro:
               key: lecția-6
             lesson-7:
               key: lecția-7
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-8:
               key: lecția-8
               name: Spiriduși în acțiune
@@ -11009,11 +11032,14 @@ ro:
             lesson-21:
               name: Consolă
             lesson-22: {}
+            lesson-23: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
             lessonGroup-4:
               display_name: Cutii cu nisip
+            lessonGroup-5:
+              display_name: Sondaj
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -11093,8 +11119,6 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-            lessonGroup-4:
-              display_name: Cutii cu nisip
         csa3-2022:
           lessons:
             lesson-3:
@@ -11127,8 +11151,6 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-            lessonGroup-4:
-              display_name: Cutii cu nisip
         tessplayground: {}
         cs4all-invasive-species:
           lessons:
@@ -11342,6 +11364,7 @@ ro:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-3: {}
         csd6-projects:
           lessons:
             'Project: Human Device Interaction': {}
@@ -11357,8 +11380,8 @@ ro:
               name: Prezentând Laboratorul de Desen
               key: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
-              key: Crearea de sprites
+              name: Crearea de sprite-uri
+              key: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
               key: Spiriduși în acțiune
@@ -11486,7 +11509,7 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
             lessonGroup-5:
-              display_name: Cutie cu nisip
+              display_name: Sondaj
         ui-test-csa-family-script: {}
         csa-preview:
           lessons:
@@ -11790,12 +11813,15 @@ ro:
               name: Salutare Lume CSC
         csc-pilot-2022-timecapsule:
           lessons:
+            lesson-2: {}
             lesson-3: {}
+            lesson-4: {}
             Poem Art:
               name: Arta Poeziei
               description_teacher: În această lecție integrată de CS și ELA pentru codificatori noi, elevii vor anima un poem cu codul de ilustrare a unei stări de spirit a poemului. Elevii vor citi și detecta starea de spirit a unui poem. Apoi, ei găsesc efecte și imagini corespondente, pentru a-i ajuta să ilustreze starea de spirit a poemului. În final, elevii vor utiliza evenimente (coduri) pentru a ilustra o schimbare a stării de spirit sau a anima introducerea de noi imagini într-un poem.
         csc-pilot-2022-starquilts:
           lessons:
+            lesson-1: {}
             lesson-2: {}
             lesson-3: {}
         csc-pilot-2022-fables:
@@ -11803,6 +11829,9 @@ ro:
             lesson-3: {}
             Hello World CSC:
               name: Salutare Lume CSC
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey: {}
@@ -11923,6 +11952,94 @@ ro:
               name: Chestionar după curs
           description: Această unitate conține sondajul distribuit după cursul Descoperiri ȘC. Această unitate poate fi atribuită după ce elevii termină ultima unitate din modulul Descoperiri ȘC.
           student_description: Această unitate conține un sondaj care va fi distribuit când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți va spune când trebuie să răspunzi la acest sondaj.
+        testtess2: {}
         csp-post-survey-2022:
           lessons:
             Course Survey: {}
+        aiml-2022: {}
+        vpl-csd-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        vpl-csp-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return': {}
+            'Module 6: Introduction to the Create Performance Task': {}
+            'Module 7: Tools and Structure in Unit 9 - Data': {}
+            'Module 8: Building Community and Preparing Students for the AP Exam': {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg: {}
+            Welcome to "Teaching CS Discoveries": {}
+            lesson-4:
+              key: lecția-4
+            lesson-3:
+              key: lecția-3
+            lesson-8:
+              key: lecția-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3

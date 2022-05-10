@@ -1233,6 +1233,12 @@ th:
             '90': เป็นตำแหน่ง
             '180': ซ้าย
             '270': ขึ้นข้างบน
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': เล็ก
+            '50': ปานกลาง
+            '100': ใหญ่
       gamelab_mirrorSprite:
         text: "{SPRITE} หน้า {DIRECTION}"
         options:

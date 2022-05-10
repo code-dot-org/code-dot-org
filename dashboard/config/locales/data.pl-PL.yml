@@ -925,6 +925,21 @@ pl:
         csd_app_lab_events: CSD Zdarzenia w App Lab
         csd_u6_circuit_playground: Oiczenia fizyczne
         csd_u6_input_output: Wejście i Wyjście
+        CSA-PL-for-loops: Pętla "dla" w Javie
+        CSA-PL-variables: Tworzenie znmiennych  w Javie
+        PL_CS_Journeys_Overview: Podróże z informatyką
+        CSA-PL-intro-to-java-lab: Java Lab Basics
+        CSA-PL-first-program: Pisanie programu w Javie
+        CSD_u6_variables_part1: 'CSD: Zmienne'
+        csd_u6_if_statements: 'CSD: Instrukcje "jeśli"'
+        csc-poem-art-intro: Film wprowadzający
+        csc-poem-art-outro: Wideo końcowe
+        csd_u6_call_define_functions: 'CSD: Wywoływanie i definiowanie funkcji'
+        csp_applab_parameters: Funkcje z parametrami
+        starquilts_intro_artist: Wprowadzenie do kołder w gwiazdki
+        CSA-PL-1d-arrays-new-values: Wprowadzanie wartości w tablicach 1D
+        CSA-PL-conditionals: Instrukcje warunkowe w Javie
+        CSA-PL-Printing-in-Java: Drukowanie w Javie
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

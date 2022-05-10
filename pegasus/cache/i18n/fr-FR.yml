@@ -488,6 +488,7 @@ fr-FR:
   homepage_slot_text_link_buy: S'investir
   homepage_slot_text_link_donate: Faire un don
   homepage_slot_text_link_shop: T-shirts, casquettes & plus
+  homepage_slot_text_link_thebadguys: Codez avec Les Bad Guys.
   homepage_slot_text_link_administrators: Créer une classe d'informatique dans votre
     école
   homepage_gallery_header: Des %{project_count} millions de projets créés sur Code.org
@@ -1488,7 +1489,7 @@ fr-FR:
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
-  thinkersmithspanish_platformtext: Débranché
+  thinkersmithspanish_platformtext: Déconnecté
   khan_platformtext: Navigateurs web récents
   khanes_platformtext: Navigateurs web récents
   khanpt_platformtext: Navigateurs web récents

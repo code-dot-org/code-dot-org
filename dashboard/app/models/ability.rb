@@ -63,6 +63,7 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
+      CodeReview,
       CodeReviewComment,
       ReviewableProject
     ]
@@ -124,6 +125,15 @@ class Ability
       can :project_commits, ProjectVersion do |_, project_owner, project_id|
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
+
+      can :create, CodeReview do |code_review, project_owner_id|
+        code_review.user_id == user.id &&
+        project_owner_id == user.id
+      end
+      can :edit, CodeReview, user_id: user.id
+      # TODO: teachers and peers should also be able to see the code review
+      can :read, CodeReview, user_id: user.id
+
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
