@@ -412,17 +412,19 @@ class Ability
     end
 
     if user.persisted?
-      # Checks if user is a verified instructor or the student of a verified instructor.
+      # These checks control access to Javabuilder.
+      # All verified instructors and students of verified instructors can generate
+      # a Javabuilder session token to run Java code.
+      # Verified instructors can access and run Java Lab exemplars.
+      # Levelbuilders can access and update Java Lab validation code.
       can :get_access_token, :javabuilder_session do
         user.verified_instructor? || user.student_of_verified_instructor?
       end
 
-      # Allow verified instructors to have access to run override_sources java lab code, which is how we run exemplars.
       can :get_access_token_with_override_sources, :javabuilder_session do
         user.verified_instructor?
       end
 
-      # This action allows levelbuilders to work on validation in levelbuilder.
       can :get_access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
       end
