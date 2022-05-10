@@ -41,7 +41,3 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   traceOn() {} // TODO
 }
-
-WorkspaceSvg.prototype.events = {
-  dispatchEvent: () => {} // TODO
-};
