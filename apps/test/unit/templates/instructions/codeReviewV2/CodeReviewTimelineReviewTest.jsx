@@ -6,6 +6,7 @@ import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/co
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 const DEFAULT_REVIEW = {
   id: 1,
@@ -13,6 +14,7 @@ const DEFAULT_REVIEW = {
   isClosed: false,
   projectVersion: 'asdfjkl',
   isVersionExpired: false,
+  timelineElementType: timelineElementType.review,
   comments: [
     {
       id: 123,
