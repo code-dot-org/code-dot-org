@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 06:27:45 UTC",
+    "serialized_at": "2022-05-07 01:22:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -42,6 +42,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Get a preview of the first week of the Deign Process unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Get a preview of the first week of the Deign Process unit content.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -74,6 +76,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 40 minutes",
+        "student_overview": "**You will:**\n\n* Use design mode in App Lab to create a digital prototype.\n*  Create events that detect and respond to user input.\n\n**Suggested time:** 40 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -82,28 +86,15 @@
       }
     },
     {
-      "key": "lesson-4",
-      "name": "Consider how apps can be used for good",
+      "key": "lesson-5",
+      "name": "Unit wrap up",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd4-ci-pilot-2022"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Unit wrap up",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 5,
-      "properties": {
+        "overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -145,18 +136,6 @@
       "seeding_key": {
         "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "vpl-csd4-ci-pilot-2022"
-      }
-    },
-    {
-      "key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee",
-        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd4-ci-pilot-2022"
       }
@@ -286,16 +265,6 @@
       }
     },
     {
-      "key": "3766232e-ec33-42e6-ab2a-ba8f7546d23c",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3766232e-ec33-42e6-ab2a-ba8f7546d23c",
-        "lesson_activity.key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee"
-      }
-    },
-    {
       "key": "874cd06e-8af3-41cb-b4c9-d7d10bc8e1e3",
       "position": 1,
       "properties": {
@@ -325,6 +294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U4"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -397,6 +369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U4"
+        ],
         "progression": "Learning tools"
       },
       "bonus": false,
@@ -419,6 +394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -441,6 +419,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -1098,6 +1079,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview--U4L5"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1120,6 +1104,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-U4L5C1"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1142,6 +1129,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,

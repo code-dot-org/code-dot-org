@@ -166,7 +166,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if ScriptConstants.unit_in_category?(:csf, script.name) || ScriptConstants.unit_in_category?(:csf_2018, script.name)
+    return false if Script.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -175,7 +175,7 @@ class Lesson < ApplicationRecord
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
-    unless MARKDOWN_FIELDS.include?(property_name)
+    unless MARKDOWN_FIELDS.include?(property_name.to_s)
       Honeybadger.notify(
         error_message: "Rendering #{property_name} which is not in MARKDOWN_FIELDS",
         error_class: "Lesson.render_property",

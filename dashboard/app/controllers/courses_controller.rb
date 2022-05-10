@@ -16,10 +16,17 @@ class CoursesController < ApplicationController
   authorize_resource class: 'UnitGroup', except: [:index], instance_name: 'unit_group', id_param: :course_name
 
   def new
-    @course_families_course_types = UnitGroup.family_names.map do |cf|
-      ug = CourseOffering.find_by(key: cf).course_versions.first.content_root
-      [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
-    end.to_h
+    @versioned_course_families = []
+    @course_families_course_types = []
+    UnitGroup.family_names.map do |cf|
+      co = CourseOffering.find_by(key: cf)
+      first_cv = co.course_versions.first
+      ug = first_cv.content_root
+      @versioned_course_families << cf unless first_cv.key == 'unversioned'
+      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
+    end
+
+    @course_families_course_types = @course_families_course_types.to_h
   end
 
   def index
