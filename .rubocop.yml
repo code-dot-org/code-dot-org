@@ -58,9 +58,6 @@ Layout/SpaceInsideHashLiteralBraces:
 Style/WordArray:
   MinSize: 5
 
-AllCops:
-  SuggestExtensions: false
-
 # END CODE.ORG OVERRIDES
 
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
