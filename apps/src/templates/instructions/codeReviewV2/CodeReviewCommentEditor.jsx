@@ -32,10 +32,6 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     // TODO: handle submit failure
   };
 
-  const handleCancel = () => {
-    console.log('canceled - effect TBD');
-  };
-
   return (
     <>
       <Editor
@@ -52,7 +48,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
               name: 'codeblock',
               className: 'code toastui-editor-toolbar-icons',
               command: 'codeBlock',
-              tooltip: javalabMsg.insertCodeblock(),
+              tooltip: javalabMsg.insertCode(),
               state: 'codeBlock'
             }
           ]
@@ -61,14 +57,10 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
       />
       <div style={styles.buttons}>
         <Button
-          onClick={handleCancel}
-          text={javalabMsg.cancel()}
-          color={Button.ButtonColor.gray}
-        />
-        <Button
           onClick={handleSubmit}
           text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
+          style={styles.submitButton}
         />
       </div>
     </>
@@ -89,5 +81,8 @@ const styles = {
   buttons: {
     display: 'flex',
     justifyContent: 'end'
+  },
+  submitButton: {
+    marginTop: '10px'
   }
 };
