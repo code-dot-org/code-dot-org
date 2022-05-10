@@ -12,7 +12,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.5.0
+     ruby --version  # --> ruby 2.6.6
      node --version  # --> v14.17.1
      yarn --version  # --> 1.22.5
      ```
@@ -113,12 +113,12 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 8. Install **rbenv** via `brew install rbenv`
 
-9. Install **Ruby 2.5.0**
-    1. For non-M1 systems, `rbenv install 2.5.0` should be sufficient
+9. Install **Ruby 2.6.6**
+    1. For non-M1 systems, `rbenv install 2.6.6` should be sufficient
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
-      export optflags="-Wno-error=implicit-function-declaration"; export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"; export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"; export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" | rbenv install 2.5.0
+      export optflags="-Wno-error=implicit-function-declaration"; export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"; export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"; export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" | rbenv install 2.6.6
       ```
 
 10. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
@@ -227,9 +227,9 @@ Return to the [Overview](#overview) to continue installation. Note that there ar
     1. Run `rbenv init`
     1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby 2.5.0
-    1. `rbenv install 2.5.0`
-    1. Set the global version of Ruby: `rbenv global 2.5.0`
+1. Install Ruby 2.6.6
+    1. `rbenv install 2.6.6`
+    1. Set the global version of Ruby: `rbenv global 2.6.6`
     1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
     1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
@@ -304,11 +304,11 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
         1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
-1. Install Ruby 2.5.0 with rbenv
-    1. `rbenv install 2.5.0`
+1. Install Ruby 2.6.6 with rbenv
+    1. `rbenv install 2.6.6`
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
-    1. `rbenv global 2.5.0`
+    1. `rbenv global 2.6.6`
     1. `rbenv rehash`
 1. Install yarn
     1. `npm install -g yarn@1.22.5`.
