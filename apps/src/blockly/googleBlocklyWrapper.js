@@ -310,6 +310,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSvg.prototype.isUserVisible = function() {
     // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
     return false;
+  };
 
   blocklyWrapper.Input.prototype.setStrictCheck = function(check) {
     return this.setCheck(check);
