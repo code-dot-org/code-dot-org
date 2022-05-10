@@ -324,6 +324,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.getVariableMap().addVariables(variableList);
   };
 
+  blocklyWrapper.WorkspaceSvg.prototype.getContainer = function() {
+    return this.svgGroup_.parentNode;
+  };
+
   const oldBlocklyResize = blocklyWrapper.WorkspaceSvg.prototype.resize;
   blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
     oldBlocklyResize.call(this);
