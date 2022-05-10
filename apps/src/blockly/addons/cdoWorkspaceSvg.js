@@ -37,7 +37,4 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   getAllUsedBlocks() {
     return super.getAllBlocks().filter(block => !block.disabled);
   }
-
-  setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
-  traceOn() {} // TODO
 }

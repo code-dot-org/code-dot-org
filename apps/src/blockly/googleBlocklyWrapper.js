@@ -328,6 +328,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     dispatchEvent: () => {} // TODO
   };
 
+  // TODO - called by StudioApp, not sure whether they're still needed.
+  blocklyWrapper.WorkspaceSvg.prototype.setEnableToolbox = function(enabled) {};
+  blocklyWrapper.WorkspaceSvg.prototype.traceOn = function(armed) {};
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
