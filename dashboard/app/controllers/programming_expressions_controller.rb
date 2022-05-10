@@ -33,7 +33,7 @@ class ProgrammingExpressionsController < ApplicationController
     num_pages = (total_expressions / results_per_page.to_f).ceil
 
     @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page)
-    render json: {numPages: num_pages, expressions: @programming_expressions.map(&:summarize_for_all_code_docs)}
+    render json: {numPages: num_pages, results: @programming_expressions.map(&:summarize_for_all_code_docs)}
   end
 
   # GET /programming_expressions/search

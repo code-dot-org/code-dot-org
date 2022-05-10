@@ -111,6 +111,18 @@ class ProgrammingClass < ApplicationRecord
     }
   end
 
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: file_path
+    }
+  end
+
   def summarize_for_show
     {
       id: id,
