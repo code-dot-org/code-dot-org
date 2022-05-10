@@ -199,7 +199,7 @@ class Level < ApplicationRecord
 
   def available_callouts(script_level)
     if custom?
-      unless callout_json.blank?
+      if callout_json.present?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = (should_localize? &&
@@ -379,7 +379,7 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').
     to_a.reject {|level| level.try(:free_play)}
   end
@@ -745,7 +745,7 @@ class Level < ApplicationRecord
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
       ]
     }
   end

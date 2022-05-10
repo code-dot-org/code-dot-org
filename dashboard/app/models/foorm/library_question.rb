@@ -21,7 +21,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   class InvalidFoormConfigurationError < StandardError; end
 
-  belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
+  belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], optional: false
 
   validate :validate_question
   validates :question_name, :question, presence: true

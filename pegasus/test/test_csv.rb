@@ -30,7 +30,7 @@ class CSVTest < Minitest::Test
                  state_cs_t hs_t count_t higher_ed_t)
     columns.each do |column_name|
       column = state_policy_csv.first.find_index(column_name)
-      assert !column.nil?, "cdo-state-promote.csv missing column #{column_name}"
+      assert_not column.nil?, "cdo-state-promote.csv missing column #{column_name}"
     end
   end
 end

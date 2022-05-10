@@ -17,7 +17,7 @@
 #
 
 class Census::OtherCurriculumOffering < ApplicationRecord
-  belongs_to :school, required: true
+  belongs_to :school, optional: false
 
   validates_presence_of :curriculum_provider_name, :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}

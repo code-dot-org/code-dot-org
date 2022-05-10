@@ -37,7 +37,7 @@ module GitHub
 
     response = Octokit.pull_request_files(REPO, pr_number)
 
-    filenames = response.map {|resource| resource[:filename]}
+    filenames = response.pluck(:filename)
     filenames.select do |filename|
       (filename.start_with? DASHBOARD_DB_DIR) || (filename.start_with? PEGASUS_DB_DIR)
     end
@@ -120,7 +120,7 @@ module GitHub
     configure_octokit
     response = Octokit.update_issue(REPO, id, {labels: labels})
 
-    response['labels'].map {|label| label[:name]}
+    response['labels'].pluck(:name)
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method

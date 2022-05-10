@@ -240,6 +240,6 @@ class CertificateImage
   end
 
   def self.tutorial_codes
-    @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.map {|t| t[:code]}
+    @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.pluck(:code)
   end
 end

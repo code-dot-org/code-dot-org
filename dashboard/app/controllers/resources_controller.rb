@@ -22,7 +22,7 @@ class ResourcesController < ApplicationController
     if resource_params[:course_version_id]
       course_version = CourseVersion.find_by_id(resource_params[:course_version_id])
       unless course_version
-        render status: 400, json: {error: "course version not found"}
+        render status: :bad_request, json: {error: "course version not found"}
         return
       end
       resource.course_version = course_version if course_version
@@ -31,7 +31,7 @@ class ResourcesController < ApplicationController
       resource.serialize_scripts
       render json: resource.summarize_for_lesson_edit
     else
-      render status: 400, json: {error: resource.errors.full_message.to_json}
+      render status: :bad_request, json: {error: resource.errors.full_message.to_json}
     end
   end
 

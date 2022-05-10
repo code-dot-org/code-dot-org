@@ -76,7 +76,7 @@ class SoundLibraryApi < Sinatra::Base
   # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-setting-signed-cookie-custom-policy.html
   def has_signed_cookie?
     encoded_policy = request.cookies['CloudFront-Policy'].to_s
-    return false unless encoded_policy && !encoded_policy.empty?
+    return false unless encoded_policy.present?
     policy_json = Base64.decode64(encoded_policy.tr('-_~', '+=/'))
     return false unless policy_json
     policy = JSON.parse(policy_json)

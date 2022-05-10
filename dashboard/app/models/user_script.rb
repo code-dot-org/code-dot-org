@@ -55,8 +55,8 @@ class UserScript < ApplicationRecord
       joins(:script).
       where(user: for_user, scripts: {name: script_names}).
       pluck(:name)
-    script_names.map do |name|
-      [name, filtered_progress.include?(name)]
-    end.to_h
+    script_names.index_with do |name|
+      filtered_progress.include?(name)
+    end
   end
 end

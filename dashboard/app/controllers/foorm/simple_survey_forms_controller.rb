@@ -176,7 +176,7 @@ module Foorm
         key = "survey_data_key_#{id}".to_sym
         value = "survey_data_value_#{id}".to_sym
 
-        survey_data[params[key]] = params[value] unless params[key].blank?
+        survey_data[params[key]] = params[value] if params[key].present?
       end
 
       survey_data

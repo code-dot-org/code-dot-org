@@ -34,7 +34,7 @@ CSV.foreach(facilitators_csv, headers: true) do |row|
     if user_id.nil?
       User.find_by!(email: email) rescue raise "Unable to find user email #{email}"
     else
-      User.find_by!(id: user_id) rescue raise "Unable to find user id #{user_id}"
+      User.find(user_id) rescue raise "Unable to find user id #{user_id}"
     end
 
   courses = row[COL_COURSES].split(',').map(&:strip)

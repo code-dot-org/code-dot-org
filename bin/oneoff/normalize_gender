@@ -22,6 +22,6 @@ end_index = ARGV[1].to_i
 
 User.with_deleted.
   where(id: start_index..end_index).
-  where('gender IS NOT NULL').
+  where.not(gender: nil).
   where('gender != "-" AND gender != "f" AND gender != "m"').
   update_all(gender: nil)

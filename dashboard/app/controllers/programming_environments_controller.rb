@@ -92,7 +92,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def destroy
     @programming_environment.destroy!
-    render(status: 200, plain: "Destroyed #{@programming_environment.name}")
+    render(status: :ok, plain: "Destroyed #{@programming_environment.name}")
   rescue => e
     render(status: :not_acceptable, plain: e.message)
   end
