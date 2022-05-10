@@ -31,19 +31,11 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    respond_to do |format|
-      format.html do
-        @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
-        @is_english = request.language == 'en'
-        @is_signed_out = current_user.nil?
-        @force_race_interstitial = params[:forceRaceInterstitial]
-        @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
-      end
-      format.json do
-        course_infos = UnitGroup.valid_course_infos(user: current_user)
-        render json: course_infos
-      end
-    end
+    @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
+    @is_english = request.language == 'en'
+    @is_signed_out = current_user.nil?
+    @force_race_interstitial = params[:forceRaceInterstitial]
+    @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
   end
 
   def show
