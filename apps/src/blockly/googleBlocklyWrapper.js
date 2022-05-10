@@ -316,6 +316,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
+  // Used in levels with pre-defined "Blockly Variables"
+  blocklyWrapper.WorkspaceSvg.prototype.registerGlobalVariables = function(
+    variableList
+  ) {
+    this.globalVariables = variableList;
+    this.getVariableMap().addVariables(variableList);
+  };
+
   const oldBlocklyResize = blocklyWrapper.WorkspaceSvg.prototype.resize;
   blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
     oldBlocklyResize.call(this);
