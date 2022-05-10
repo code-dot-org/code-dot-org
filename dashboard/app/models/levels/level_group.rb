@@ -30,7 +30,7 @@ class LevelGroup < DSLDefined
   )
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
@@ -43,7 +43,7 @@ class LevelGroup < DSLDefined
       page
       level 'level 3'
       level 'level 4'
-    ruby
+    RUBY
   end
 
   def icon

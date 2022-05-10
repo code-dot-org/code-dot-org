@@ -155,7 +155,7 @@ class Resource < ApplicationRecord
     # to do something manual.
     key_prefix = name.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
     potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)
