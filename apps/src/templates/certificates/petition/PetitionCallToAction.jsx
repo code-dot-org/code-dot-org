@@ -2,7 +2,7 @@ import React from 'react';
 import PetitionForm from './PetitionForm';
 import i18n from '@cdo/locale';
 
-export default function PetitionCallToAction({...props}) {
+export default function PetitionCallToAction(props) {
   return (
     <>
       <div id="petition-block" className="petition-block">
