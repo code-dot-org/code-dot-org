@@ -316,6 +316,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
+  // Used in levels when starting over or resetting Version History
+  const oldBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
+  blocklyWrapper.WorkspaceSvg.prototype.clear = function() {
+    oldBlocklyClear.call(this);
+    // After clearing the workspace, we need to reinitialize global variables
+    // if there are any.
+    if (this.globalVariables) {
+      this.getVariableMap().addVariables(this.globalVariables);
+    }
+  };
+
   // Used in levels with pre-defined "Blockly Variables"
   blocklyWrapper.WorkspaceSvg.prototype.registerGlobalVariables = function(
     variableList
