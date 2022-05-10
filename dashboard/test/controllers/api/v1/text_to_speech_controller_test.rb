@@ -13,6 +13,15 @@ class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
     @default_limit = Api::V1::TextToSpeechController::REQUEST_LIMIT_PER_MIN_DEFAULT
   end
 
+  teardown do
+    # A list of keys used by our shared cache that should be cleared between every test.
+    [
+      ProfanityHelper::PROFANITY_PREFIX,
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
+  end
+
   test 'azure: returns 400 if speech not received from Azure' do
     AzureTextToSpeech.expects(:throttled_get_speech).once.yields(nil)
     post :azure
