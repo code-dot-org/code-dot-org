@@ -63,7 +63,7 @@ $wide-column-width: 121px;
     top: -15px;
     left: 50%;
     width: $netsim-alert-container-width;
-    margin-left: -($netsim-alert-container-width/2);
+    margin-left: -($netsim-alert-container-width*0.5);
     z-index: 99999;
   }
 
