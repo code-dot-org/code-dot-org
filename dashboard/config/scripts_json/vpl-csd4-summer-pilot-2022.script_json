@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 19:35:59 UTC",
+    "serialized_at": "2022-05-10 01:21:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1523,6 +1523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-Mod4-ImplementationOptions"
+        ],
         "progression": "Make a plan"
       },
       "bonus": false,
@@ -1545,6 +1548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-UnitCalendar"
+        ],
         "progression": "Make a plan"
       },
       "bonus": false,
@@ -1567,6 +1573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-Chapters"
+        ],
         "progression": "Make a plan"
       },
       "bonus": false,
@@ -1589,6 +1598,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-mod4-implementation timeline"
+        ],
         "progression": "Make a plan"
       },
       "bonus": false,
@@ -1611,6 +1623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day4Lesson4-WrapUp"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
