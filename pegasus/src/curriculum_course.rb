@@ -94,7 +94,7 @@ class CurriculumCourse
   end
 
   def valid_lesson_directory_name(lesson_dirname)
-    lesson_dirname != '.' && lesson_dirname != '..' && lesson_dirname.chars.first != '_'
+    lesson_dirname != '.' && lesson_dirname != '..' && lesson_dirname[0] != '_'
   end
 
   def self.virtual_to_v3_path(local_virtual_path)
