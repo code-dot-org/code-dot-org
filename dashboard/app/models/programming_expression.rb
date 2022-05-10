@@ -164,7 +164,6 @@ class ProgrammingExpression < ApplicationRecord
       name: name,
       syntax: syntax,
       link: documentation_path,
-      programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
     }
   end

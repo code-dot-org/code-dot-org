@@ -31,7 +31,11 @@ const descriptionFormatter = description => {
   }
 };
 
-export default function ParametersTable({parameters}) {
+export default function ParametersTable({
+  parameters,
+  programmingEnvironmentLanguage
+}) {
+  const hideRequiredColumn = programmingEnvironmentLanguage === 'java';
   const columns = [
     {
       property: 'name',
@@ -73,13 +77,19 @@ export default function ParametersTable({parameters}) {
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
+            width: '15%',
+            ...(hideRequiredColumn && {display: 'none'})
           }
         }
       },
       cell: {
         formatters: [requiredFormatter],
-        props: {style: tableLayoutStyles.cell}
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...(hideRequiredColumn && {display: 'none'})
+          }
+        }
       }
     },
     {
@@ -114,7 +124,8 @@ export default function ParametersTable({parameters}) {
 }
 
 ParametersTable.propTypes = {
-  parameters: PropTypes.arrayOf(PropTypes.object)
+  parameters: PropTypes.arrayOf(PropTypes.object),
+  programmingEnvironmentLanguage: PropTypes.string
 };
 
 const styles = {

@@ -6,7 +6,11 @@ import FieldsTable from './FieldsTable';
 import MethodWithOverloads from './MethodWithOverloads';
 import i18n from '@cdo/locale';
 
-export default function ProgrammingClassOverview({programmingClass}) {
+export default function ProgrammingClassOverview({
+  programmingClass,
+  programmingEnvironmentName,
+  programmingEnvironmentLanguage
+}) {
   return (
     <div style={{width: '100%'}}>
       <h1>{programmingClass.name}</h1>
@@ -39,9 +43,7 @@ export default function ProgrammingClassOverview({programmingClass}) {
             <Example
               key={idx}
               example={example}
-              programmingEnvironmentName={
-                programmingClass.programmingEnvironmentName
-              }
+              programmingEnvironmentName={programmingEnvironmentName}
             />
           ))}
         </div>
@@ -87,9 +89,8 @@ export default function ProgrammingClassOverview({programmingClass}) {
             <MethodWithOverloads
               key={method.key}
               method={method}
-              programmingEnvironmentName={
-                programmingClass.programmingEnvironmentName
-              }
+              programmingEnvironmentName={programmingEnvironmentName}
+              programmingEnvironmentLanguage={programmingEnvironmentLanguage}
             />
           ))}
         </div>
@@ -105,10 +106,11 @@ const programmingClassShape = PropTypes.shape({
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
   syntax: PropTypes.string,
-  tips: PropTypes.string,
-  programmingEnvironmentName: PropTypes.string
+  tips: PropTypes.string
 });
 
 ProgrammingClassOverview.propTypes = {
-  programmingClass: programmingClassShape.isRequired
+  programmingClass: programmingClassShape.isRequired,
+  programmingEnvironmentName: PropTypes.string,
+  programmingEnvironmentLanguage: PropTypes.string
 };
