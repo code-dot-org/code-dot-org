@@ -29,6 +29,7 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
+import {ToolboxType} from './constants';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -315,6 +316,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
+  const oldBlocklyResize = blocklyWrapper.WorkspaceSvg.prototype.resize;
+  blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
+    oldBlocklyResize.call(this);
+    if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+      this.flyout_.resize();
+    }
+  };
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
