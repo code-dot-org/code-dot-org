@@ -428,7 +428,7 @@ class Ability
       # Verified instructors can access and run Java Lab exemplars.
       # Levelbuilders can access and update Java Lab validation code.
       can :get_access_token, :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher.verified_instructor?}
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can :get_access_token_with_override_sources, :javabuilder_session do

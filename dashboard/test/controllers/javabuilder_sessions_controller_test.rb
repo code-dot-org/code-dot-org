@@ -94,7 +94,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
-    section.destroy
   end
 
   test 'student not in the authorized teachers csa section cannot get access token' do
@@ -106,7 +105,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
-    section.destroy
   end
 
   test 'student of authorized teacher in csa section can get access token' do
@@ -117,7 +115,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
-    section.destroy
   end
 
   test 'student of non-authorized teacher cannot get access token' do
@@ -202,9 +199,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     # verified teacher 2 is not teaching the student csa
     refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)
-
-    section_1.destroy
-    section_2.destroy
   end
 
   test 'levelbuilder has correct verified_teachers parameter' do
