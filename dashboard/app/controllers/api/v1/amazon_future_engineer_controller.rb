@@ -67,7 +67,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     end
   rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => e
     Honeybadger.notify e
-    render json: e.to_s, status: 400
+    render json: e.to_s, status: :bad_request
   end
 
   private

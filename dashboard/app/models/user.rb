@@ -697,7 +697,7 @@ class User < ApplicationRecord
 
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
-    return unless errors.blank?
+    return if errors.present?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&

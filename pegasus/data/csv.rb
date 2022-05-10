@@ -80,7 +80,7 @@ class CsvToSqlTable
       end
     end
 
-    [@db[@table], schema.map {|i| i[:name]}]
+    [@db[@table], schema.pluck(:name)]
   end
 
   def column_name_to_schema(name)

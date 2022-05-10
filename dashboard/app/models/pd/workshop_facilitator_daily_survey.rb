@@ -58,7 +58,7 @@ module Pd
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
-    belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
+    belongs_to :facilitator, class_name: 'User'
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
       message: 'already has a submission for this workshop, session, facilitator, and form'

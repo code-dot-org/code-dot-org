@@ -181,7 +181,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].pluck(:courseName)
   end
 
   def go_to_workshop(workshop, teacher)

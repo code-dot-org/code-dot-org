@@ -132,7 +132,7 @@ class CoursesController < ApplicationController
 
   def get_rollup_resources
     course_version = @unit_group.course_version
-    return render status: 400, json: {error: 'Course does not have course version'} unless course_version
+    return render status: :bad_request, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
     if @unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(@unit_group), course_version_id: course_version.id))

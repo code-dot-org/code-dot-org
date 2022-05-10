@@ -15,7 +15,7 @@
 #
 
 class Census::StateCsOffering < ApplicationRecord
-  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id, required: true
+  belongs_to :school, foreign_key: :state_school_id, primary_key: :state_school_id, optional: false
 
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}

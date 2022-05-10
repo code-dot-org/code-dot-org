@@ -41,7 +41,7 @@ class Plc::LearningModule < ApplicationRecord
   attr_readonly :plc_course_unit_id
 
   belongs_to :lesson, foreign_key: 'stage_id'
-  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'
+  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
 
   validates_presence_of :plc_course_unit_id

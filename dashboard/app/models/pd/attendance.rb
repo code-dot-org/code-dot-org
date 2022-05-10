@@ -23,9 +23,9 @@ class Pd::Attendance < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
-  belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
+  belongs_to :teacher, class_name: 'User'
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
-  belongs_to :marked_by_user, class_name: 'User', foreign_key: :marked_by_user_id
+  belongs_to :marked_by_user, class_name: 'User'
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 

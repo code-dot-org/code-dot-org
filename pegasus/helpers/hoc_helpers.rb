@@ -87,7 +87,7 @@ def session_status_for_row(row)
     pixel_finished: !!row[:pixel_finished_at],
     finished: !!row[:finished_at],
     name: row[:name],
-    certificate_sent: !row[:name].blank?,
+    certificate_sent: row[:name].present?,
   }
 end
 
@@ -126,8 +126,8 @@ def complete_tutorial(tutorial={})
       CDO.studio_url('', CDO.default_scheme) : "http://#{row[:referer]}"
 
     destination = "#{site}/congrats?i=#{row[:session]}"
-    destination += "&co=#{row[:company]}" unless row[:company].blank?
-    destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" unless tutorial[:code].blank?
+    destination += "&co=#{row[:company]}" if row[:company].present?
+    destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" if tutorial[:code].present?
   end
 
   dont_cache

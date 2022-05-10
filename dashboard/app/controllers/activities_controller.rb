@@ -44,7 +44,7 @@ class ActivitiesController < ApplicationController
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level in the script - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
-      head 503
+      head :service_unavailable
       return
     end
 
@@ -98,7 +98,7 @@ class ActivitiesController < ApplicationController
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable lesson, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
-        return head 403
+        return head :forbidden
       end
     end
 

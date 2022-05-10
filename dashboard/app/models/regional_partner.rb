@@ -33,7 +33,7 @@ class RegionalPartner < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
   has_many :mappings, -> {order :state, :zip_code}, class_name: 'Pd::RegionalPartnerMapping', dependent: :destroy
 
-  has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: 'regional_partner_id'
+  has_many :pd_workshops, class_name: 'Pd::Workshop'
 
   include Pd::SharedWorkshopConstants
 

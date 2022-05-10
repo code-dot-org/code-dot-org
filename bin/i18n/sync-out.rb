@@ -276,7 +276,7 @@ def serialize_i18n_strings(level, strings)
 
   if strings.key? "contained levels"
     contained_strings = strings.delete("contained levels")
-    unless contained_strings.blank?
+    if contained_strings.present?
       level.contained_levels.zip(contained_strings).each do |contained_level, contained_string|
         result.deep_merge! serialize_i18n_strings(contained_level, contained_string)
       end

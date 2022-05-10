@@ -33,7 +33,7 @@ class Queries::ScriptActivity
   #
   # return [UserScript]
   def self.completed_user_scripts(user)
-    user.user_scripts.where('user_scripts.completed_at is not null')
+    user.user_scripts.where.not(user_scripts: {completed_at: nil})
   end
 
   # return the primary unit with progress for all student units

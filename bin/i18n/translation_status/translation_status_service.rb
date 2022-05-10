@@ -25,7 +25,7 @@ module I18n
       # @param [TranslationService] translation_service Get information about translations.
       def update_translation_status(
         day_count = 7,
-        locales = Languages.get_locale.map {|lang| lang[:locale_s]},
+        locales = Languages.get_locale.pluck(:locale_s),
         current_time = Time.now.utc.strftime("%Y-%m-%d %H:%M:%S"),
         redshift_client = RedshiftClient.instance,
         translation_service = TranslationService.new

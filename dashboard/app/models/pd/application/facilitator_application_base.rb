@@ -324,7 +324,7 @@ module Pd::Application
           if !hash[:regional_partner_id]
             required << :csd_csp_no_partner_summer_workshop
           else
-            if hash[:summer_workshops] && !hash[:summer_workshops].empty?
+            if hash[:summer_workshops].present?
               required.concat [
                 :csd_csp_partner_with_summer_workshop,
                 :csd_csp_which_summer_workshop
@@ -332,7 +332,7 @@ module Pd::Application
             else
               required << :csd_csp_partner_but_no_summer_workshop
             end
-            if hash[:fit_workshops] && !hash[:fit_workshops].empty?
+            if hash[:fit_workshops].present?
               required << :csd_csp_which_fit_weekend
             end
           end
