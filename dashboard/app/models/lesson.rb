@@ -786,14 +786,13 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  # @param destination_professional_learning_course [string] - the professional learning course this lesson is going to be a part of
-  def copy_to_unit(destination_unit, new_level_suffix = nil, destination_professional_learning_course = nil)
+  def copy_to_unit(destination_unit, new_level_suffix = nil)
     return if script == destination_unit
     raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
-    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? && destination_professional_learning_course.nil?
+    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? && !destination_unit.old_professional_learning_course?
 
-    if destination_professional_learning_course.nil? && script.old_professional_learning_course?
-      raise 'Deeper learning learning must be copied to deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
+    if !destination_unit.old_professional_learning_course? && script.old_professional_learning_course?
+      raise 'Deeper learning lesson must be copied to deeper learning courses.'
     end
 
     copied_lesson = dup
@@ -814,7 +813,7 @@ class Lesson < ApplicationRecord
 
     copied_lesson.save!
 
-    if destination_professional_learning_course.nil?
+    unless destination_unit.old_professional_learning_course?
       # Copy objects that require course version, i.e. resources and vocab
       course_version = destination_unit.get_course_version
 
@@ -862,7 +861,7 @@ class Lesson < ApplicationRecord
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
 
-        if destination_professional_learning_course.nil?
+        unless destination_unit.old_professional_learning_course?
           if copied_activity_section.description
             Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.description, update_resource_link_on_clone)
             Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
