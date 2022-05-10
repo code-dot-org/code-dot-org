@@ -2180,6 +2180,13 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.', raise.message
     end
 
+    test 'clone raises exception if provide both destination unit group and deeper learning course' do
+      raise = assert_raises do
+        @deeper_learning_unit.clone_migrated_unit('my-name', destination_professional_learning_course: 'DLP', destination_unit_group_name: 'my-ug')
+      end
+      assert_equal 'Can not have both a destination unit group and a destination professional learning course.', raise.message
+    end
+
     test 'clone raises exception if script name has already been taken' do
       create :script, name: 'my-name'
       raise = assert_raises do

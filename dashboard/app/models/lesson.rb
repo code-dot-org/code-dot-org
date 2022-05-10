@@ -786,10 +786,15 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
+  # @param destination_professional_learning_course [string] - the professional learning course this lesson is going to be a part of
   def copy_to_unit(destination_unit, new_level_suffix = nil, destination_professional_learning_course = nil)
     return if script == destination_unit
     raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
     raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? && destination_professional_learning_course.nil?
+
+    if destination_professional_learning_course.nil? && script.old_professional_learning_course?
+      raise 'Deeper learning learning must be copied to deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
+    end
 
     copied_lesson = dup
     # scripts.en.yml cannot handle the '.' character in key names

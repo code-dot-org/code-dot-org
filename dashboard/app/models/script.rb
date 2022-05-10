@@ -1155,6 +1155,10 @@ class Script < ApplicationRecord
       raise 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
     end
 
+    if !destination_professional_learning_course.nil? && !destination_unit_group_name.nil?
+      raise 'Can not have both a destination unit group and a destination professional learning course.'
+    end
+
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
@@ -1163,37 +1167,33 @@ class Script < ApplicationRecord
     begin
       ActiveRecord::Base.transaction do
         copied_unit = dup
-        copied_unit.published_state = destination_unit_group.nil? ? SharedCourseConstants::PUBLISHED_STATE.in_development : nil
+
         copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
-        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.name = new_name
-        copied_unit.professional_learning_course = destination_professional_learning_course unless destination_professional_learning_course.nil?
-        copied_unit.peer_reviews_to_complete = peer_reviews_to_complete unless destination_professional_learning_course.nil?
+
+        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
+        copied_unit.published_state = destination_unit_group.nil? ? SharedCourseConstants::PUBLISHED_STATE.in_development : nil
         copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
         copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
         copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
 
-        if version_year
-          copied_unit.version_year = version_year
-        end
-
         copied_unit.save!
 
-        if destination_professional_learning_course.nil?
-          if destination_unit_group
-            raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
-            UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-            copied_unit.reload
-          else
-            copied_unit.is_course = true
-            raise "Must supply version year if new unit will be a standalone unit" unless version_year
-            copied_unit.version_year = version_year
-            raise "Must supply family name if new unit will be a standalone unit" unless family_name
-            copied_unit.family_name = family_name
-            CourseOffering.add_course_offering(copied_unit)
-          end
+        if !destination_professional_learning_course.nil?
+          copied_unit.professional_learning_course = destination_professional_learning_course
+          copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
+        elsif destination_unit_group
+          raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+          UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+          copied_unit.reload
+        else
+          raise "Must supply version year if new unit will be a standalone unit" unless version_year
+          copied_unit.version_year = version_year
+          raise "Must supply family name if new unit will be a standalone unit" unless family_name
+          copied_unit.family_name = family_name
+          CourseOffering.add_course_offering(copied_unit)
         end
 
         lesson_groups.each do |original_lesson_group|

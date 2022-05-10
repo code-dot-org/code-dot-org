@@ -977,6 +977,13 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
     end
 
+    test "can not  clone deeper learning lesson into a non deeper learning script" do
+      raise = assert_raises do
+        @original_dlp_lesson.copy_to_unit(@destination_script, nil, 'NEW_PLC_COURSE')
+      end
+      assert_equal 'Deeper learning learning must be copied to deeper learning courses. Include destination_professional_learning_course to set the professional learning course.', raise.message
+    end
+
     test "can clone deeper learning lesson into another deeper learning script" do
       lesson_activity = create :lesson_activity, lesson: @original_dlp_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
