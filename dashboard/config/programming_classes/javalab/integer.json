@@ -10,39 +10,39 @@
   "tips": "",
   "methods": [
     {
-      "name": "intValue",
-      "position": 0,
       "key": "intvalue",
-      "overload_of": null,
+      "position": 0,
+      "name": "intValue",
       "content": "Part of the Integer class within the java.lang package that returns the value of the Integer as an int.",
       "parameters": "[]",
       "examples": "[{\"name\":\"Using intValue()\",\"code\":\"```\\nInteger temp = new Integer(32);\\n\\nint i = temp.intValue();\\n\\nSystem.out.println(\\\"The integer value of i = \\\" + i); \\n```\\n**Output:**\\nThe integer value of i = 32\"}]",
       "syntax": "public int intValue()",
       "external_link": null,
+      "overload_of": null,
       "return_value": null
     },
     {
-      "name": "parseInt",
-      "position": 1,
       "key": "parseint",
-      "overload_of": null,
+      "position": 1,
+      "name": "parseInt",
       "content": "This method returns an integer value from a String input that is a decimal equivalent.",
       "parameters": "[{\"name\":\"s\",\"type\":\"String\",\"required\":true,\"description\":\"A string representation of a decimal.\"}]",
       "examples": "[{\"name\":\"Using parseInt()\",\"code\":\"```\\n\\nint temp = Integer.parseInt(\\\"10\\\");\\nSystem.out.println(\\\"Decimal Value of String 10: \\\" + temp);\\n\\n```\\n**Output:**\\nDecimal Value of String 10: 10\"}]",
       "syntax": "static int parseInt(String s)",
       "external_link": null,
+      "overload_of": null,
       "return_value": null
     },
     {
-      "name": "Integer",
-      "position": 2,
       "key": "integer",
-      "overload_of": null,
+      "position": 2,
+      "name": "Integer",
       "content": "new Integer(int value) is the constructor for the Integer class. It will return an Integer object with the value \"int value\".",
       "parameters": "[{\"name\":\"value\",\"type\":\"int\",\"description\":\"parameter is the value to be represented by the new Integer object. Note: the parameter can also be a parseable String.\"}]",
-      "examples": "[{\"name\":\"\"}]",
+      "examples": "[{\"name\":\"Using the Constructor\",\"description\":\"```\\nInteger a = new Integer(23);\\n```\"}]",
       "syntax": "new Integer(int value)",
       "external_link": null,
+      "overload_of": null,
       "return_value": null
     }
   ]
