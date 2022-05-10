@@ -1,6 +1,4 @@
 import GoogleBlockly from 'blockly/core';
-import {ToolboxType} from '../constants';
-import {getToolboxType} from './cdoUtils';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   registerGlobalVariables(variableList) {
@@ -43,14 +41,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   traceOn() {} // TODO
 }
-
-const oldBlocklyResize = GoogleBlockly.WorkspaceSvg.prototype.resize;
-WorkspaceSvg.prototype.resize = function() {
-  oldBlocklyResize.call(this);
-  if (getToolboxType() === ToolboxType.UNCATEGORIZED) {
-    this.flyout_.resize();
-  }
-};
 
 WorkspaceSvg.prototype.events = {
   dispatchEvent: () => {} // TODO
