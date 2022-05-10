@@ -6,15 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 165
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
-# SupportedHashRocketStyles: key, separator, table
-# SupportedColonStyles: key, separator, table
-# SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
-Layout/AlignHash:
-  Enabled: false
-
 # Offense count: 76
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, IndentOneStep, IndentationWidth.
@@ -37,12 +28,27 @@ Layout/EmptyLinesAroundArguments:
 Layout/EmptyLinesAroundExceptionHandlingKeywords:
   Enabled: false
 
+# Offense count: 165
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
+# SupportedHashRocketStyles: key, separator, table
+# SupportedColonStyles: key, separator, table
+# SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
+Layout/HashAlignment:
+  Enabled: false
+
 # Offense count: 81
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: auto_detection, squiggly, active_support, powerpack, unindent
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
+
+# Offense count: 10951
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Layout/LineLength:
+  Max: 801
 
 # Offense count: 318
 # Cop supports --auto-correct.
@@ -77,6 +83,9 @@ Lint/AmbiguousRegexpLiteral:
 Lint/DuplicateMethods:
   Enabled: false
 
+Lint/MissingSuper:
+  Enabled: false
+
 # Offense count: 32
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -88,11 +97,6 @@ Lint/RescueException:
 # Offense count: 76
 # Cop supports --auto-correct.
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UnneededDisable:
   Enabled: false
 
 # Offense count: 78
@@ -126,12 +130,6 @@ Naming/VariableNumber:
 # Offense count: 13
 # Cop supports --auto-correct.
 Performance/Casecmp:
-  Enabled: false
-
-# Offense count: 34
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect.
-Performance/HashEachMethods:
   Enabled: false
 
 # Offense count: 43
@@ -266,6 +264,12 @@ Style/FrozenStringLiteralComment:
 Style/GlobalVars:
   Enabled: false
 
+# Offense count: 34
+# Cop supports --auto-correct.
+# Configuration parameters: AutoCorrect.
+Style/HashEachMethods:
+  Enabled: false
+
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: InverseMethods, InverseBlocks.
@@ -279,8 +283,7 @@ Style/InverseMethods:
 Style/Lambda:
   Enabled: false
 
-# Offense count: 4
-Style/MethodMissing:
+Style/MissingRespondToMissing:
   Enabled: false
 
 # Offense count: 13
@@ -299,6 +302,11 @@ Style/MutableConstant:
 # Offense count: 52
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
+  Enabled: false
+
+# Offense count: 5
+# Cop supports --auto-correct.
+Style/RedundantPercentQ:
   Enabled: false
 
 # Offense count: 80
@@ -349,11 +357,6 @@ Style/TrailingMethodEndStatement:
 Style/TrailingUnderscoreVariable:
   Enabled: false
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/UnneededPercentQ:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Style/WhileUntilModifier:
@@ -365,9 +368,3 @@ Style/WhileUntilModifier:
 # SupportedStyles: all_comparison_operators, equality_operators_only
 Style/YodaCondition:
   Enabled: false
-
-# Offense count: 10951
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 801

@@ -19,7 +19,7 @@ Rails/Delegate:
   Include:
     - dashboard/**/*
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
 Layout/DotPosition:
@@ -56,6 +56,9 @@ Layout/SpaceInsideHashLiteralBraces:
 Style/WordArray:
   MinSize: 5
 
+AllCops:
+  SuggestExtensions: false
+
 # END CODE.ORG OVERRIDES
 
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
@@ -70,7 +73,7 @@ Metrics/AbcSize:
 Metrics/BlockNesting:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/ModuleLength:
@@ -80,9 +83,6 @@ Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
-  Enabled: false
-
-Style/BracesAroundHashParameters:
   Enabled: false
 
 Layout/ClosingParenthesisIndentation:
