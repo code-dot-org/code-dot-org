@@ -38,7 +38,6 @@ describe('TeacherHomepage', () => {
   ];
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    server.respondWith('POST', '/dashboardapi/courses', successResponse());
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
   afterEach(() => server.restore());
