@@ -1,12 +1,12 @@
 {
   "category_key": "general",
-  "content": "",
+  "content": "Inheritance is an important tool in Object Oriented Programming. When creating a new object, Inheritance is the concept that allows you to have this new object build upon the attributes of an existing object. When an object inherits from another, the new object is known to have an \"is a\" relationship with the parent object. \n\n***Key Terms to Note:***\n- Super Class: The class that the new class inherits from is generally called the **parent** or **super** class.\n- Sub Class: The class that inherits from the super class. \n",
   "examples": "[]",
   "external_documentation": "",
   "fields": "[]",
   "key": "Inheritance",
   "name": "Inheritance",
-  "syntax": "",
+  "syntax": "//class definition is as follows... \n\n//the extends keyword allows us to explicitly state the superClass\n\n```\nclass subClass extends superClass {\n     //body of class here (methods & variables)\n}",
   "tips": "",
   "methods": [
 
