@@ -12,7 +12,7 @@ describe('ProgrammingExpressionsTable', () => {
     fetchStub = sinon.stub(window, 'fetch');
     returnData = {
       numPages: 2,
-      expressions: [
+      results: [
         {
           id: 1,
           key: 'button',
@@ -98,19 +98,23 @@ describe('ProgrammingExpressionsTable', () => {
     fetchStub.restore();
   });
 
-  it('renders dropdowns with environments and categories', () => {
+  it('renders dropdowns with resultType, environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).to.equal(2);
+    expect(wrapper.find('select').length).to.equal(3);
   });
 
   it('renders dropdowns with environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).to.equal(2);
-    const environmentSelector = wrapper.find('select').first();
+    expect(wrapper.find('select').length).to.equal(3);
+
+    const resultTypeSelector = wrapper.find('select').first();
+    expect(resultTypeSelector.find('option').length).to.equal(2);
+
+    const environmentSelector = wrapper.find('select').at(1);
     expect(environmentSelector.find('option').length).to.equal(4);
     expect(environmentSelector.props().value).to.equal('all');
 
-    const categorySelector = wrapper.find('select').at(1);
+    const categorySelector = wrapper.find('select').at(2);
     expect(categorySelector.find('option').length).to.equal(4);
     expect(categorySelector.props().value).to.equal('all');
   });
@@ -118,10 +122,23 @@ describe('ProgrammingExpressionsTable', () => {
   it('updates category dropdown when environment is selected', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
 
-    const environmentSelector = wrapper.find('select').at(0);
+    const environmentSelector = wrapper.find('select').at(1);
     environmentSelector.simulate('change', {target: {value: 1}});
 
-    const categorySelector = wrapper.find('select').at(1);
+    const categorySelector = wrapper.find('select').at(2);
+    expect(categorySelector.find('option').length).to.equal(2);
+  });
+
+  it('updates resultType dropdown when resultType is selected', () => {
+    const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
+
+    const resultTypeSelector = wrapper.find('select').at(0);
+    resultTypeSelector.simulate('change', {target: {value: 1}});
+
+    const environmentSelector = wrapper.find('select').at(1);
+    environmentSelector.simulate('change', {target: {value: 1}});
+
+    const categorySelector = wrapper.find('select').at(2);
     expect(categorySelector.find('option').length).to.equal(2);
   });
 
@@ -137,7 +154,7 @@ describe('ProgrammingExpressionsTable', () => {
       // A reactabular table has a Header and a Body
       expect(wrapper.findAll('Header').length).to.equal(1);
       expect(wrapper.findAll('Body').length).to.equal(1);
-      expect(wrapper.findOne('Body').props.rows).to.eql(returnData.expressions);
+      expect(wrapper.findOne('Body').props.rows).to.eql(returnData.results);
     });
   });
 
