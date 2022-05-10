@@ -10,6 +10,7 @@
 
   header_class = 'header-wrapper'
   header_class = header_class + (rack_env?(:levelbuilder) ? ' levelbuilder-header' : '')
+    header_class = header_class + (CDO.use_local_header_color ? ' local-header' : '')
 
   if current_user
     if current_user.teacher?
