@@ -354,6 +354,12 @@ img.video_thumbnail {
   }
 }
 
+.local-header {
+  .header {
+    background-color: $orange;
+  }
+}
+
 
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
