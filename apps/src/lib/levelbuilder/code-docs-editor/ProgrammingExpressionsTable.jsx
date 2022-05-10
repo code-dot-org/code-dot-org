@@ -8,6 +8,11 @@ import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
 const DEFAULT_VALUE = 'all';
+const DEFAULT_TYPE = 'programming_expressions';
+const RESULT_TYPES = [
+  {id: DEFAULT_TYPE, formattedName: 'Programming Expressions'},
+  {id: 'programming_classes', formattedName: 'Programming Classes'}
+];
 
 /*
  * A component that fetches programming expressions and displays them in a
@@ -22,6 +27,7 @@ export default function ProgrammingExpressionsTable({
 }) {
   const [selectedEnvironment, setSelectedEnvironment] = useState(DEFAULT_VALUE);
   const [selectedCategory, setSelectedCategory] = useState(DEFAULT_VALUE);
+  const [selectedResultType, setSelectedResultType] = useState(DEFAULT_TYPE);
   const [programmingExpressions, setProgrammingExpressions] = useState([]);
   const [
     categoriesAvailableForSelect,
@@ -63,7 +69,7 @@ export default function ProgrammingExpressionsTable({
     );
   };
 
-  const fetchExpressions = (environmentId, categoryId, page) => {
+  const fetchExpressions = (environmentId, categoryId, resultType, page) => {
     const data = {};
     if (environmentId !== DEFAULT_VALUE) {
       data.programmingEnvironmentId = environmentId;
@@ -73,8 +79,7 @@ export default function ProgrammingExpressionsTable({
     }
     data.page = page;
     const url =
-      '/programming_expressions/get_filtered_expressions?' +
-      queryString.stringify(data);
+      `/${resultType}/get_filtered_expressions?` + queryString.stringify(data);
     let success = false;
     fetch(url)
       .then(response => {
@@ -87,7 +92,7 @@ export default function ProgrammingExpressionsTable({
       })
       .then(data => {
         if (success) {
-          setProgrammingExpressions(data.expressions);
+          setProgrammingExpressions(data.results);
           setNumPages(data.numPages);
         }
       })
@@ -103,7 +108,12 @@ export default function ProgrammingExpressionsTable({
     }).then(response => {
       if (response.ok) {
         setItemToDelete(null);
-        fetchExpressions(selectedEnvironment, selectedCategory, currentPage);
+        fetchExpressions(
+          selectedEnvironment,
+          selectedCategory,
+          selectedResultType,
+          currentPage
+        );
       } else {
         setError(response.statusText);
       }
@@ -111,8 +121,13 @@ export default function ProgrammingExpressionsTable({
   };
 
   useEffect(() => {
-    fetchExpressions(selectedEnvironment, selectedCategory, currentPage);
-  }, [selectedEnvironment, selectedCategory, currentPage]);
+    fetchExpressions(
+      selectedEnvironment,
+      selectedCategory,
+      selectedResultType,
+      currentPage
+    );
+  }, [selectedEnvironment, selectedCategory, selectedResultType, currentPage]);
 
   const onEnvironmentSelect = e => {
     const newSelectedEnvironment = e.target.value;
@@ -172,6 +187,19 @@ export default function ProgrammingExpressionsTable({
     return (
       <>
         <select
+          onChange={e => {
+            setSelectedResultType(e.target.value);
+            setCurrentPage(1);
+          }}
+          value={selectedResultType}
+        >
+          {RESULT_TYPES.map(resultType => (
+            <option key={resultType.id} value={resultType.id}>
+              {resultType.formattedName}
+            </option>
+          ))}
+        </select>
+        <select
           onChange={onEnvironmentSelect}
           value={selectedEnvironment}
           style={{marginRight: 7}}
@@ -210,12 +238,13 @@ export default function ProgrammingExpressionsTable({
               itemToDelete.key} and its associated code doc?`}
             handleConfirmation={() => {
               destroyExpression(
-                `/programming_expressions/${itemToDelete.id}`,
+                `/${selectedResultType}/${itemToDelete.id}`,
                 () => {
                   setItemToDelete(null);
                   fetchExpressions(
                     selectedEnvironment,
                     selectedCategory,
+                    selectedResultType,
                     currentPage
                   );
                 }
@@ -225,7 +254,7 @@ export default function ProgrammingExpressionsTable({
             isOpen
           />
         )}
-        {!!itemToClone && (
+        {!!itemToClone && selectedResultType === DEFAULT_TYPE && (
           <CloneProgrammingExpressionDialog
             itemToClone={itemToClone}
             programmingEnvironmentsForSelect={allProgrammingEnvironments}
@@ -235,6 +264,7 @@ export default function ProgrammingExpressionsTable({
               fetchExpressions(
                 selectedEnvironment,
                 selectedCategory,
+                selectedResultType,
                 currentPage
               );
             }}
