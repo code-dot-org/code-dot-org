@@ -1,4 +1,5 @@
 class ProgrammingClassesController < ApplicationController
+  include Rails.application.routes.url_helpers
   before_action :require_levelbuilder_mode_or_test_env
   load_and_authorize_resource
 

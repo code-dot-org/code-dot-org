@@ -23,6 +23,7 @@
 #
 class ProgrammingClass < ApplicationRecord
   include CurriculumHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
@@ -119,7 +120,7 @@ class ProgrammingClass < ApplicationRecord
       environmentId: programming_environment.id,
       environmentTitle: programming_environment.title,
       categoryName: programming_environment_category&.name,
-      editPath: file_path
+      editPath: edit_programming_class_url(self)
     }
   end
 
