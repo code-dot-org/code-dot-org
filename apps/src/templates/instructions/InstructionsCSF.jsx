@@ -72,7 +72,8 @@ class InstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsRef: PropTypes.func
   };
 
   static defaultProps = {
@@ -293,6 +294,15 @@ class InstructionsCSF extends React.Component {
     return this.instructions ? getOuterHeight(this.instructions, true) : 0;
   }
 
+  setInstructionsRef(instructions) {
+    this.instructions =
+      instructions && instructions.getWrappedInstance().instructions;
+
+    // TopInstructions, our parent, needs a ref to the body of the instructions
+    // to determine its height.
+    this.props?.setInstructionsRef(instructions);
+  }
+
   render() {
     const mainStyle = [
       styles.main,
@@ -327,10 +337,7 @@ class InstructionsCSF extends React.Component {
             setColHeight={this.setLeftColHeight}
           />
           <InstructionsCsfMiddleCol
-            ref={instructions =>
-              (this.instructions =
-                instructions && instructions.getWrappedInstance().instructions)
-            }
+            ref={instructions => this.setInstructionsRef(instructions)}
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
             adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
