@@ -106,7 +106,7 @@ class JavabuilderSessionsController < ApplicationController
     end
     teachers = []
     current_user.sections_as_student.each do |section|
-      next unless section.assigned_csa? && section.teacher.verified_instructor?
+      next unless section.assigned_csa? && section.teacher&.verified_instructor?
       teachers << section.teacher.id
     end
     teachers.uniq
