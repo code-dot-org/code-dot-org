@@ -311,7 +311,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :virtual,
       :suppress_email,
       :third_party_provider,
-      sessions_attributes: [:id, :start, :end, :_destroy],
+      {sessions_attributes: [:id, :start, :end, :_destroy]},
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

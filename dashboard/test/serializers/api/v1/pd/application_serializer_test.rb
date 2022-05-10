@@ -34,7 +34,7 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
         white_percent: 'N/A',
         two_or_more_races_percent: 'N/A'
       }, serialized[:school_stats].slice(
-        :urm_percent,
+           :urm_percent,
         :american_indian_alaskan_native_percent,
         :asian_percent,
         :black_or_african_american_percent,

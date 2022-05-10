@@ -65,77 +65,77 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts_json/**/*.script_json').sort.flatten.freeze
-  SPECIAL_UI_TEST_SCRIPTS = [
-    'ui-test-script-in-course-2017',
-    'ui-test-script-in-course-2019',
-    'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019',
-    'ui-test-csa-family-script',
-    'ui-test-teacher-pl-course',
-    'ui-test-facilitator-pl-course'
-  ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
-  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
-    '20-hour',
-    'algebra',
-    'allthehiddenthings',
-    'allthemigratedthings',
-    'alltheplcthings',
-    'alltheselfpacedplthings',
-    'allthethings',
-    'allthettsthings',
-    'artist',
-    'course1',
-    'course2',
-    'course3',
-    'course4',
-    'coursea-2017',
-    'courseb-2017',
-    'coursec-2017',
-    'coursed-2017',
-    'coursee-2017',
-    'coursef-2017',
-    'pre-express-2017',
-    'express-2017',
-    'coursea-2019',
-    'coursec-2019',
-    'coursee-2019',
-    'coursea-2020',
-    'csp1-2017',
-    'csp2-2017',
-    'csp3-2017',
-    'csp3-a',
-    'csp3-research-mxghyt',
-    'csp4-2017',
-    'csp5-2017',
-    'csp-ap',
-    'csp-explore-2017',
-    'csp-create-2017',
-    'csp-post-survey',
-    'csppostap-2017',
-    'csp1-2019',
-    'csp2-2019',
-    'csp3-2019',
-    'csp4-2019',
-    'csp5-2019',
-    'csp-explore-2019',
-    'csp-create-2019',
-    'csppostap-2019',
-    'dance',
-    'events',
-    'flappy',
-    'frozen',
-    'hero',
-    'hourofcode',
-    'infinity',
-    'mc',
-    'minecraft',
-    'playlab',
-    'starwars',
-    'starwarsblocks',
-    'step',
-    'oceans',
-    'sports',
-  ].map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  SPECIAL_UI_TEST_SCRIPTS = %w(
+    ui-test-script-in-course-2017
+    ui-test-script-in-course-2019
+    ui-test-versioned-script-2017
+    ui-test-versioned-script-2019
+    ui-test-csa-family-script
+    ui-test-teacher-pl-course
+    ui-test-facilitator-pl-course
+  ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
+  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
+    20-hour
+    algebra
+    allthehiddenthings
+    allthemigratedthings
+    alltheplcthings
+    alltheselfpacedplthings
+    allthethings
+    allthettsthings
+    artist
+    course1
+    course2
+    course3
+    course4
+    coursea-2017
+    courseb-2017
+    coursec-2017
+    coursed-2017
+    coursee-2017
+    coursef-2017
+    pre-express-2017
+    express-2017
+    coursea-2019
+    coursec-2019
+    coursee-2019
+    coursea-2020
+    csp1-2017
+    csp2-2017
+    csp3-2017
+    csp3-a
+    csp3-research-mxghyt
+    csp4-2017
+    csp5-2017
+    csp-ap
+    csp-explore-2017
+    csp-create-2017
+    csp-post-survey
+    csppostap-2017
+    csp1-2019
+    csp2-2019
+    csp3-2019
+    csp4-2019
+    csp5-2019
+    csp-explore-2019
+    csp-create-2019
+    csppostap-2019
+    dance
+    events
+    flappy
+    frozen
+    hero
+    hourofcode
+    infinity
+    mc
+    minecraft
+    playlab
+    starwars
+    starwarsblocks
+    step
+    oceans
+    sports
+  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
 
   # Update scripts in the database from their file definitions.

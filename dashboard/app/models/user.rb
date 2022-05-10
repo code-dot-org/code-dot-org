@@ -886,7 +886,7 @@ class User < ApplicationRecord
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?
@@ -1500,6 +1500,7 @@ class User < ApplicationRecord
   # reset their password with their email (by looking up the hash)
 
   attr_accessor :raw_token
+
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1514,6 +1515,7 @@ class User < ApplicationRecord
   end
 
   attr_accessor :child_users
+
   def send_reset_password_for_users(email, users)
     if users.empty?
       not_found_user = User.new(email: email)

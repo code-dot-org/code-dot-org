@@ -2,9 +2,8 @@ module Pd::Payment
   class TeacherPayment
     def initialize(
       summary:,
-      district_payment_term: nil,
-      amount:
-    )
+      amount:, district_payment_term: nil
+)
       @summary = summary
       @district_payment_term = district_payment_term
       @amount = amount

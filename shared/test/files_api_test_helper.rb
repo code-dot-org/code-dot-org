@@ -158,7 +158,7 @@ class FilesApiTestHelper
   end
 
   def add_random_suffix(key)
-    key + @random.bytes(10).unpack('H*')[0]
+    key + @random.bytes(10).unpack1('H*')
   end
 
   def ensure_aws_credentials

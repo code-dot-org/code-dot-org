@@ -546,7 +546,7 @@ class Documents < Sinatra::Base
       # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
       result = body
-      extensions.reverse.each do |extension|
+      extensions.reverse_each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
           # Symbolize the keys of the locals hash; previously, we supported

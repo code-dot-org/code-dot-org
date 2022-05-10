@@ -14,24 +14,7 @@
 
 require_relative '../../dashboard/config/environment'
 
-BEHAVIORAL_DEFINITION_NAMES = %w(
-  driving\ with\ arrow\ keys
-  growing
-  jittering
-  moving\ east
-  moving\ north
-  moving\ south
-  moving\ west
-  moving\ with\ arrow\ keys
-  patrolling
-  shrinking
-  spinning\ left
-  spinning\ right
-  swimming\ left\ and\ right
-  wandering
-  chasing
-  acting\ goofy
-).freeze
+BEHAVIORAL_DEFINITION_NAMES = ['driving with arrow keys', 'growing', 'jittering', 'moving east', 'moving north', 'moving south', 'moving west', 'moving with arrow keys', 'patrolling', 'shrinking', 'spinning left', 'spinning right', 'swimming left and right', 'wandering', 'chasing', 'acting goofy'].freeze
 
 SCRIPT_NAMES = %w(
   coursee-2022

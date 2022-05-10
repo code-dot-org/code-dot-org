@@ -33,7 +33,7 @@ Usage: #{$0}: red|yellow|green
  - green: all features turned on. SHOULD NOT BE USED UNTIL HOC IS OVER
 
  Public caching is enabled for all HOC scripts in all cases because this doesn't take away functionality
-EOF
+    EOF
     exit
   end
 

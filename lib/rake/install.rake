@@ -4,13 +4,13 @@ require 'cdo/rake_utils'
 namespace :install do
   desc 'Install Git hooks.'
   task :hooks do
-    files = [
-      'pre-commit',
-      'post-commit',
-      'post-checkout',
-      'post-merge',
-      'pre-push'
-    ]
+    files = %w(
+      pre-commit
+      post-commit
+      post-checkout
+      post-merge
+      pre-push
+    )
     git_path = ".git/hooks"
 
     files.each do |f|

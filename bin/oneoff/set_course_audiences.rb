@@ -15,16 +15,16 @@ def set_course_audiences
 
     script.instructor_audience = if [].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-                                 elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
-                                        'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
-                                        'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
-                                        'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test',
-                                        'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit',
-                                        'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3',
-                                        'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3',
-                                        'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview',
-                                        'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4',
-                                        'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
+                                 elsif %w(csd1-dlp-18 csd2-dlp-18 csd3-dlp-18 csd4-dlp-18 csd5-dlp-18
+                                          csd6-dlp-18 csp1-dlp-18 csp2-dlp-18 csp3-dlp-18 csp4-dlp-18
+                                          csp5-dlp-18 csp-create-dlp-18 csp-explore-dlp-18 csp-novice-18
+                                          csd-novice-18 csp-apprentice-18 csd-apprentice-18 fit-test
+                                          andrea-test fit2019-novice fit2019-apprentice dlp19-csp-mod-fit
+                                          dlp19-csd-mod-fit dlp19-csd-mod-w1 dlp19-csd-mod-w2 dlp19-csd-mod-w3
+                                          dlp19-csd-mod-w4 dlp19-csp-mod-w1 dlp19-csp-mod-w2 dlp19-csp-mod-w3
+                                          dlp19-csp-mod-w4 alltheplcthings dlp21-csp-mod1 dlp21-csd-overview
+                                          dlp21-csp-overview dlp21-csp-mod2 dlp21-csp-mod3 dlp21-csp-mod4
+                                          dlp21-csd-mod1 dlp21-csd-mod2 dlp21-csd-mod3 dlp21-csd-mod4).include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  elsif [].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor

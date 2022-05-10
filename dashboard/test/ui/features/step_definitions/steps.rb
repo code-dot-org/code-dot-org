@@ -1123,9 +1123,7 @@ end
 # Add @no_ie tag to your scenario to skip IE when using this step.
 When /^I press backspace to clear element "([^"]*)"$/ do |selector|
   element = @browser.find_element(:css, selector)
-  while @browser.execute_script("return $('#{selector}').val()") != ""
-    press_keys(element, ":backspace")
-  end
+  press_keys(element, ":backspace") while @browser.execute_script("return $('#{selector}').val()") != ""
 end
 
 When /^I press enter key$/ do

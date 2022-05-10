@@ -74,6 +74,7 @@ module Rack
     # before the response reaches the cache.
     class Upstream
       attr_reader :config
+
       def initialize(app, config)
         @app = app
         @config = config

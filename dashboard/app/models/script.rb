@@ -59,7 +59,7 @@ class Script < ApplicationRecord
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
-  belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
+  belongs_to :wrapup_video, class_name: 'Video'
   belongs_to :user
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
@@ -134,6 +134,7 @@ class Script < ApplicationRecord
   end
 
   attr_accessor :skip_name_format_validation
+
   include SerializedToFileValidation
 
   after_save :hide_pilot_units

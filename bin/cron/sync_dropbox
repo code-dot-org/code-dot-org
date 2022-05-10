@@ -61,7 +61,7 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
                         pegasus directory: #{value}
                         stdout: #{stdout}
                         stderr: #{stderr}
-                      ERROR_MSG
+      ERROR_MSG
       logger.record error_message
     end
   end

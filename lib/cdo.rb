@@ -188,9 +188,9 @@ module Cdo
         # the content for that language not updated regularly, but new content is not
         # added automatically. This means if you try to link to a recently-added
         # lesson plan, it may not be there for any of these languages.
-        additional_languages = [
-          'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
-        ]
+        additional_languages = %w(
+          de-de id-id ko-kr tr-tr zh-cn zh-tw
+        )
         @@curriculum_languages.merge(additional_languages)
 
         # Don't include English; we do of course _support_ English, but only as

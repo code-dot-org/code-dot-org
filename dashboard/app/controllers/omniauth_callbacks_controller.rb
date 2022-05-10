@@ -321,12 +321,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
     args = JSON.parse(auth.extra.response.message.to_json)['args']
     auth_info = auth.info.merge(OmniAuth::AuthHash.new(
-      user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
-      email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
-      name: {
-        first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
-        last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
-      },
+                                  user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
+                                  email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
+                                  name: {
+                                    first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
+                                    last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
+                                  },
       )
     )
     auth.info = auth_info
@@ -335,8 +335,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def extract_microsoft_data(auth)
     auth_info = auth.info.merge(OmniAuth::AuthHash.new(
-      email: auth[:extra][:raw_info][:userPrincipalName],
-      name: auth[:extra][:raw_info][:displayName]
+                                  email: auth[:extra][:raw_info][:userPrincipalName],
+                                  name: auth[:extra][:raw_info][:displayName]
       )
     )
     auth.info = auth_info

@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'sort_alphabetical'
 require_relative 'country_regions'
 

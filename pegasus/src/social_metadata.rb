@@ -14,35 +14,32 @@
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
-  # rubocop:disable UselessAssignment
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
     hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
     creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
-  # rubocop:enable UselessAssignment
-
   images = {
     kids_with_ipads: {path: "/images/default-og-image.png", width: 1220, height: 640},
-    celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.png", width: 1220, height: 640},
-    creativity: {path: "/images/social-media/code-2018-creativity.png", width: 1200, height: 630},
-    cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-    hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
-    hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
-    hoc_student_challenge_new: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
-    mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
-    mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
-    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
-    dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
-    hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
-    hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
-    codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
-    codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
-    hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
-    hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
-    coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
+  celeb_challenge: {path: "/images/fit-1220/social-media/celeb-challenge.png", width: 1220, height: 640},
+  creativity: {path: "/images/social-media/code-2018-creativity.png", width: 1200, height: 630},
+  cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
+  hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
+  hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
+  hoc_student_challenge_new: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
+  mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
+  mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
+  dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
+  dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
+  hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
+  hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
+  oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
+  codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
+  codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
+  hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
+  hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
+  coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
   }
 
   # Important:

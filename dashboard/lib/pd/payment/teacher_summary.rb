@@ -3,12 +3,8 @@ module Pd::Payment
     def initialize(
       workshop_summary:,
       teacher:,
-      enrollment: nil,
-      raw_days:,
-      raw_hours:,
-      days:,
-      hours:
-    )
+      raw_days:, raw_hours:, days:, hours:, enrollment: nil
+)
       @workshop_summary = workshop_summary
       @teacher = teacher
       @enrollment = enrollment
