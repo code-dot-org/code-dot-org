@@ -1281,6 +1281,13 @@ en:
             '90': down
             '180': left
             '0': right
+      gamelab_makeSpritesWithSize:
+        text: make {NUM} new {SIZE} {COSTUME} sprites
+        options:
+          SIZE:
+            '100': large
+            '50': medium
+            '30': small
       gamelab_mirrorSprite:
         text: "{SPRITE} face {DIRECTION}"
         options:
@@ -1497,6 +1504,46 @@ en:
         text: "{SPRITE} say {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}say{TEXT1}for{NUM}seconds"
+      gamelab_spriteThink:
+        text: "{SPRITE} think {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}think{TEXT1}for{NUM}seconds"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} think {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': I am hungry, too.
+            '"I only want the biggest goat."': I only want the biggest goat.
+            '"I''m a green troll."': I'm a green troll.
+            '"No one will cross my bridge."': No one will cross my bridge.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} think {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Time to make friends with the sheep.
+            '"She''ll never recognize me now."': She'll never recognize me now.
+            '"This costume keeps me warm."': This costume keeps me warm.
+            '"I am actually a wolf."': I am actually a wolf.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} think {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': I'm feeling sleepy.
+            '"No one could ever beat me."': No one could ever beat me.
+            '"I''ve done this race before."': I've done this race before.
+            '"My feet are bigger than Turtle''s feet."': My feet are bigger than Turtle's feet.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} think {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': I'm so hungry.
+            '"I''m a visitor in this town."': I'm a visitor in this town.
+            '"If we share, we''ll all have something to eat. "': If we share, we'll all have something to eat.
+            '"I''ll trick everyone into giving me their food."': I'll trick everyone into giving me their food.
       gamelab_startAvoiding:
         text: "{SPRITE} begins avoiding {TARGET}"
       gamelab_startFollowing:

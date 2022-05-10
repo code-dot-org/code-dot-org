@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
@@ -7,36 +7,58 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
-import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
-import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
-const CommitsAndReviewTab = ({
-  channelId,
-  serverLevelId,
-  serverScriptId,
-  viewAsCodeReviewer,
-  viewAsTeacher,
-  userIsTeacher,
-  codeReviewEnabled
-}) => {
-  const [loadingReviewData, setLoadingReviewData] = useState(false);
-
-  const dataApi = new CodeReviewDataApi(
+const CommitsAndReviewTab = props => {
+  const {
     channelId,
     serverLevelId,
-    serverScriptId
+    serverScriptId,
+    viewAsCodeReviewer,
+    viewAsTeacher,
+    userIsTeacher,
+    codeReviewEnabled
+  } = props;
+
+  const [loadingReviewData, setLoadingReviewData] = useState(false);
+  const [reviewData, setReviewData] = useState([]);
+  const [commitsData, setCommitsData] = useState([]);
+  const [hasOpenCodeReview, setHasOpenCodeReview] = useState(null);
+
+  const dataApi = useMemo(
+    () => new CodeReviewDataApi(channelId, serverLevelId, serverScriptId),
+    [channelId, serverLevelId, serverScriptId]
   );
 
-  const refresh = () => {
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
+
+  const refresh = useCallback(async () => {
     setLoadingReviewData(true);
-    // TODO: load review data
+    try {
+      const [codeReviews, commits] = await Promise.all([
+        dataApi.getCodeReviews(),
+        dataApi.getCommits()
+      ]);
+      setCommitsData(commits);
+      setReviewData(codeReviews);
+      setIsCodeReviewOpen(codeReviews);
+    } catch (err) {
+      // TODO: display error message TBD
+      console.log(err);
+    }
     setLoadingReviewData(false);
+  }, [dataApi]);
+
+  const setIsCodeReviewOpen = reviewData => {
+    if (reviewData.length) {
+      const mostRecentReview = reviewData[reviewData.length - 1];
+      setHasOpenCodeReview(!mostRecentReview.isClosed);
+    }
   };
 
   const loadPeers = async (onSuccess, onFailure) => {
@@ -66,47 +88,6 @@ const CommitsAndReviewTab = ({
     );
   }
 
-  const fakeCommit = {
-    id: 1,
-    createdAt: '2022-03-31T04:58:42.000Z',
-    comment: 'This is a comment from your teacher',
-    projectVersion: 'asdfjkl',
-    isVersionExpired: false
-  };
-
-  const fakeClosedReview = {
-    id: 1,
-    createdAt: '2022-03-31T04:58:42.000Z',
-    isClosed: true,
-    projectVersion: 'asdfjkl',
-    isVersionExpired: false
-  };
-
-  const fakeReview = {
-    id: 1,
-    createdAt: '2022-03-31T04:58:42.000Z',
-    isClosed: false,
-    projectVersion: 'asdfjkl',
-    isVersionExpired: false
-  };
-
-  const fakeComments = [
-    {
-      id: 123,
-      commentText: 'Great work on this!',
-      name: 'Steve',
-      timestampString: '2022-03-31T04:58:42.000Z',
-      isResolved: false
-    },
-    {
-      id: 124,
-      commentText: 'Could you add more comments?',
-      name: 'Karen',
-      timestampString: '2022-03-31T04:58:42.000Z',
-      isResolved: false
-    }
-  ];
-
   return (
     <div style={styles.reviewsContainer}>
       <div style={styles.header}>
@@ -134,19 +115,16 @@ const CommitsAndReviewTab = ({
           />
         </div>
       </div>
-      <div>Example timeline:</div>
-      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
-      <CodeReviewTimelineCommit commit={fakeCommit} />
-      <CodeReviewTimelineReview
-        review={fakeClosedReview}
-        comments={fakeComments}
-      />
-      <CodeReviewTimelineCommit commit={fakeCommit} />
-      <CodeReviewTimelineReview
-        review={fakeReview}
-        comments={fakeComments}
-        isLastElementInTimeline={true}
-      />
+      <CodeReviewTimeline reviewData={reviewData} commitsData={commitsData} />
+      {!hasOpenCodeReview && (
+        <Button
+          icon="comment"
+          onClick={() => {}}
+          text={javalabMsg.startReview()}
+          color={Button.ButtonColor.blue}
+          style={styles.openCodeReview}
+        />
+      )}
     </div>
   );
 };
@@ -202,5 +180,8 @@ const styles = {
   refreshButtonStyle: {
     fontSize: 13,
     margin: 0
+  },
+  openCodeReview: {
+    marginLeft: '30px'
   }
 };

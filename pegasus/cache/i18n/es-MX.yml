@@ -499,7 +499,7 @@ es-MX:
   homepage_gallery_header: Más de %{project_count} millones de proyectos de Code.org
     creados
   homepage_header_donors: Code.org agradece a sus colaboradores
-  homepage_donors_seall: Ver todo
+  homepage_donors_seall: Ver todos
   homepage_donors_donate: Dona
   homepage_below_hero_announcement_text: Nos importa su privacidad y estamos realizando
     algunas actualizaciones de nuestra política de privacidad, efectiva el 25 de mayo.
@@ -702,6 +702,8 @@ es-MX:
   video_title_marco_belinelli: La Hora del Código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh en Ciencias de la Computación
   video_title_my_name_is_aracely: Mi nombre es Aracely
+  video_title_change_face_of_cs: Cambia la Cara de la Informática
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -2298,6 +2300,7 @@ es-MX:
   header_educate_beyond: Más allá de Code.org
   header_educate_inspire: Inspira a un estudiante
   header_educate_community: Comunidad en línea
+  header_educate_requirements: Requisitos Técnicos
   header_educate_tools: Herramientas y videos
   header_about_us: Acerca de nosotros
   header_about_leadership: Liderazgo
@@ -2791,3 +2794,7 @@ es-MX:
   outbreak_tile_alt: Una simulación de cómo se propaga un virus a través de un grupo
     de monstruos morados.
   footer_cookie_notice: Aviso de Cookies
+  top_hoc_tutorial_applab_alt_text: Una mano marrón con el dedo índice tocando una
+    tableta de pantalla táctil que emite estrellas y rayos de luz sobre un fondo azul
+  minecraft_tile_alt: Dos personajes de Minecraft, Steve y Alex, sobre un fondo que
+    muestra una escena acuática de Minecraft con corales, delfines y algas
