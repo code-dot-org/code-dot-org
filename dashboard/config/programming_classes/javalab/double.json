@@ -1,0 +1,49 @@
+{
+  "category_key": "java_lang",
+  "content": "The Java Double class wraps the primitive type double in an object. An Double Class object contains one field of the type double. The Double class contains a variety of other methods to help with converting double values or dealing with the double type in general.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "Double",
+  "name": "Double",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "name": "Double",
+      "position": 0,
+      "key": "double",
+      "overload_of": null,
+      "content": "new Double(double value) will return a Double object with the value passed to it. ",
+      "parameters": "[{\"name\":\"value\",\"type\":\"double\",\"description\":\"intended value of the Double object\"}]",
+      "examples": "[]",
+      "syntax": "new Double(double value);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "doubleValue()",
+      "position": 1,
+      "key": "doublevalue",
+      "overload_of": null,
+      "content": "the doubleValue() method of the Integer class converts the value of an Integer to a Double type.",
+      "parameters": "[]",
+      "examples": "[{\"code\":\"```\\nInteger x = new Integer(12);\\ndouble y = x.doubleValue();\\nSystem.out.println(y);\\n\\n```\\n**Output:** 12.0\"}]",
+      "syntax": "public double doubleValue()",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "parseDouble",
+      "position": 2,
+      "key": "parsedouble",
+      "overload_of": null,
+      "content": "The parseDouble() method returns a double with the value of the specified String passed to it. ",
+      "parameters": "[{\"name\":\"s\",\"type\":\"String\",\"required\":true,\"description\":\"String s is the string to be parsed to a double.\"}]",
+      "examples": "[{\"name\":\"Using parseDouble(String s)\",\"code\":\"```\\ndouble x = Double.parseDouble(\\\"200\\\");\\nSystem.out.println(\\\"Value = \\\" + x);\\n```\\n**Output:** Value = 200.0\"}]",
+      "syntax": "public static double parseDouble(String s)",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

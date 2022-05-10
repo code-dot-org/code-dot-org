@@ -199,6 +199,7 @@ id:
                 awal tentang ilmu komputer dan membuat game menggunakan kode blok
                 dasar.
           student_description: Buat cerita atau buat permainan dengan Play Lab!
+          name: playlab
         artist:
           title: Artis
           description: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
@@ -215,6 +216,7 @@ id:
                 baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
           student_description: Gambarlah gambar dan desain-desain yang keren dengan
             the Artist!
+          name: artis
         hourofcode:
           title: Labirin Klasik
           description: Coba dasar-dasar ilmu komputer dengan karakter dari Angry Birds,
@@ -236,6 +238,7 @@ id:
                 lebih tua dengan menggunakan saran pembedaan yang telah disediakan.
           student_description: Coba dasar-dasar ilmu komputer dengan karakter dari
             Angry Birds, Plants vs. Zombies, dan Scrat from Ice Age!
+          name: hourofcode
         frozen:
           title: Koding dengan Anna dan Elsa
           description: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti
@@ -433,6 +436,7 @@ id:
                 dasar.
           student_description: Gunakan Play Lab untuk membuat sebuah cerita atau permainan
             yang dibintangi karakter Disney tak terbatas.
+          name: infinity
         algebrademo:
           title: Demo Aljabar
           description: Sejumlah puzzle untuk menunjukkan lingkungan dan bahasa pemrograman
@@ -625,6 +629,7 @@ id:
                 dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer
                 untuk menyelesaikan puzzle online.
           student_description: Coba tutorial Jigsaw kami.
+          name: jigsaw
         step:
           title: Langkah
           description: Langkah tutorial
@@ -1352,6 +1357,8 @@ id:
               name: Penutupan
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: Code.org Equity PD
             Necessary Background:
               name: Latar belakang dibutuhkan
         science-PD2:
@@ -1720,6 +1727,7 @@ id:
                 dasar.
           student_description: Membuat cerita atau membuat permainan dengan laboratorium
             bermain Ice Age!
+          name: zaman es
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1872,6 +1880,7 @@ id:
                 yang nantinya dapat melabeli gambar baru dengan sendirinya.
           student_description: Pelajari cara menggunakan AI dan pembelajaran mesin
             untuk menyelesaikan masalah dunia nyata.
+          name: lautan
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -7116,12 +7125,6 @@ id:
                 harta karun dengan lebih efisien di Code.org.
             Loops in Artist:
               name: Loops in Artist
-              description_teacher: Kembali ke loop, murid belajar menggambar dengan
-                mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
-                sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
-                harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini,
-                murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan
-                loop.
             'Events: The Big Event':
               name: 'Event: Event Besar'
               description_teacher: Event adalah cara yang bagus untuk menambahkan
@@ -19100,6 +19103,8 @@ id:
               name: Buat Adegan
             Text and Captioned Scenes:
               name: Teks dan Adegan Berteks
+            Sprite Properties:
+              name: Properti Sprite
           student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk
             sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game
             Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga
@@ -21652,6 +21657,8 @@ id:
               name: variabel
             Sprites and Animations:
               name: Sprite dan Animasi
+            Sprite Properties:
+              name: Properti Sprite
             Text and Captioned Scenes:
               name: Teks dan Adegan Berteks
             The Draw Loop:
@@ -24295,6 +24302,8 @@ id:
               name: variabel
             Sprites:
               name: Sprites
+            Sprite Properties:
+              name: Properti Sprite
             Text:
               name: Teks
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
@@ -24936,6 +24945,9 @@ id:
             Sprites:
               key: Sprites
               name: Sprites
+            Sprite Properties:
+              key: Properti Sprite
+              name: Properti Sprite
             Text:
               key: Teks
               name: Teks
@@ -28576,6 +28588,7 @@ id:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: Menjelajahi platform pembelajaran Code.org
               description_teacher: |-
                 **Anda akan belajar cara:**
 
@@ -29061,6 +29074,10 @@ id:
           lessons:
             lesson-1:
               name: Mengetes Klon CSA
+            lesson-2:
+              name: Pelajaran ke- 2
+            lesson-3:
+              name: Pelajaran ke- 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -30839,6 +30856,8 @@ id:
             'Lesson 18: Assessment Day':
               key: 'Pelajaran 18: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_lists:
               display_name: List
@@ -30848,6 +30867,8 @@ id:
               display_name: Melintang
             csp_project:
               display_name: Proyek
+            lessonGroup-5:
+              display_name: Survei Pasca Kursus
         courseb-2022:
           lessons:
             Digital Trails:
@@ -31326,9 +31347,13 @@ id:
             'Lesson 6: Assessment Day':
               key: 'Pelajaran 6: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithm'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -31363,11 +31388,15 @@ id:
             'Lesson 11: Assessment Day':
               key: 'Pelajaran 11: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter dan Nilai Balik
             csp_libraries:
               display_name: Perpustakaan
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -31378,6 +31407,13 @@ id:
               key: Membuat PT - Membuat Rencana
             Create PT - Complete the Task:
               key: Membuat PT - Menyelesaikan tugas
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buat PT
+            lessonGroup-3:
+              display_name: Survei Pasca Kursus
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -31409,9 +31445,13 @@ id:
             'Lesson 9: Assessment Day':
               key: 'Pelajaran 9: Hari Penilaian'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -31451,9 +31491,13 @@ id:
             'Lesson 14: Unit Assessment Day':
               key: 'Pelajaran 14: Hari Penilaian Unit'
               name: Hari Penilaian
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
           lesson_groups:
             csp_unit10_2020:
               display_name: Unit 10 - Cybersecurity dan Dampak Global
+            lessonGroup-2:
+              display_name: Survei Pasca Kursus
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -32226,41 +32270,122 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Survei
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Belajar Cara Drag and Drop
               name: Belajar Cara Drag and Drop
+              description_student: Klik dan drag untuk menyelesaikan puzzle.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
+                apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer.
+                Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka
+                dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer
+                untuk menyelesaikan puzzle online.
             Sequencing with Scrat:
               key: Pengurutan dengan Scrat
               name: Pengurutan dengan Scrat
+              description_student: Program Scrat untuk mencapai biji akorn.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
+                apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer.
+                Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka
+                dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer
+                untuk menyelesaikan puzzle online.
             Programming with Angry Birds:
               key: Pemrograman dengan Angry Birds
               name: Pemrograman dengan Angry Birds
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman
+                Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan
+                Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk
+                melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan
+                linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau
+                belok kanan.
             Programming with Rey and BB-8:
               key: Pemrograman dengan Rey dan BB-8
               name: Pemrograman dengan Rey dan BB-8
+              description_teacher: Dalam pelajaran ini, murid akan menggunakan keterampilan
+                pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks
+                untuk menyusuri jalur yang mengecoh dengan BB-8.
             Programming with Harvester:
               key: Pemrograman dengan Pemanen
               name: Pemrograman dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang
+                jalur.
+              description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman
+                yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu
+                membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan
+                blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial
+                dan mulai menggunakan proses debugging. '
             Loops with Scrat:
               key: Loop dengan Scrat
               name: Loop dengan Scrat
+              description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan
+                loop.
             Loops with Laurel:
               key: Loop dengan Laurel
               name: Loop dengan Laurel
+              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar
+                tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop
+                untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru
+                `get treasure` dimunculkan untuk membantunya dalam perjalanan.
             Ocean Scene with Loops:
               key: Adegan Laut dengan Loop
               name: Adegan Laut dengan Loop
+              description_student: Gunakan loop dan pola untuk menyelesaikan gambar.
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan
+                mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
+                sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
+                harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini,
+                murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan
+                loop.
             Drawing Gardens with Loops:
               key: Menggambar Taman dengan Loop
               name: Menggambar Taman dengan Loop
+              description_student: Gunakan pola dan loop untuk menyelesaikan gambar.
+              description_teacher: Kembali ke loop, murid belajar menggambar dengan
+                mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online
+                sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
+                harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada
+                akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri
+                menggunakan loop.
             On the Move with Events:
               key: Aktif bergerak dengan Event
               name: Aktif bergerak dengan Event
+              description_student: Buat permainan atau cerita Anda sendiri.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan
+                mempelajari cara menggunakan event di Play Lab dan menerapkan semua
+                keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
+                animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
             A Royal Battle with Events:
               key: Pertempuran Besar dengan Event
               name: Pertempuran Besar dengan Event
+              description_student: Gunakan event untuk membuat cerita atau permainan
+                interaktif.
+              description_teacher: Dalam aktivitas online ini, murid berkesempatan
+                mempelajari cara menggunakan event di Play Lab dan menerapkan semua
+                keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
+                animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            Programming in with Angry Birds:
+              name: Pemrograman dengan Angry Birds
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman
+                Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan
+                Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk
+                melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan
+                linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau
+                belok kanan.
+            Programming in Harvester:
+              key: Pemrograman dalam Pemanen
+              name: Pemrograman dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang
+                jalur.
+              description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman
+                yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu
+                membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan
+                blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial
+                dan mulai menggunakan proses debugging. '
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -32268,6 +32393,19 @@ id:
               display_name: Loop
             csf_events:
               display_name: kegiatan
+          description_audience: 'Usia: 4-8'
+          description_short: 'Pengenalan ilmu komputer bagi prabaca: menggabungkan
+            kursus terbaik kami untuk taman kanak-kanak dan kelas satu SD.'
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di
+            bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
+            di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
         csa2-2022:
           lessons:
             lesson-5:
@@ -32281,8 +32419,30 @@ id:
               display_name: Konten
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Array 1 Dimensi/ One-Dimensional (1D)
+            lesson-4:
+              name: Elemen Array
             lesson-5:
               name: For Loop
+            lesson-6:
+              name: Algoritma Array
+            lesson-7:
+              name: Ditingkatkan Untuk Loop
+            lesson-8:
+              name: Variabel Statis dan Konstanta
+            lesson-9:
+              name: Polimorfisme
+            lesson-10:
+              name: Algoritma Array Lainnya
+            lesson-11:
+              name: Membalikkan Array
+            lesson-13:
+              name: Data untuk Proyek Kebaikan Sosial – Hari 1
+            lesson-14:
+              name: Data untuk Proyek Kebaikan Sosial – Hari 2
+            lesson-15:
+              name: Data untuk Proyek Kebaikan Sosial – Hari 3
             lesson-16:
               name: Konsol
           lesson_groups:
@@ -32306,6 +32466,8 @@ id:
           lessons:
             lesson-2:
               name: Unit 4 Penillaian
+            lesson-11:
+              name: Acak
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32313,6 +32475,8 @@ id:
           lessons:
             lesson-2:
               name: Unit 5 Penilaian
+            lesson-7:
+              name: Ditingkatkan Untuk Loop
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32323,6 +32487,62 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        pltess:
+          lessons:
+            lesson-2:
+              name: pelajaran 3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: Pernyataan If di Java
+              description_student: |-
+                **Anda akan:**
+
+                -   Mengevaluasi pernyataan boolean
+                -   Menulis dan membaca pernyataan if, if-else, if-else-if-else
+                -   Menjelaskan perbedaan antara operator assignment dan operator perbandingan
+
+                **Perkiraan waktu:** 90 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mengevaluasi pernyataan boolean
+                -   Menulis dan membaca pernyataan if, if-else, if-else-if-else
+                -   Menjelaskan perbedaan antara operator assignment dan operator perbandingan
+
+                **Perkiraan waktu:** 90 menit
+            lesson-4:
+              name: Loop di Java
+              description_student: |-
+                **Anda akan:**
+
+                -   Membaca, menulis, dan men-debug loop di Java
+
+                **Perkiraan waktu:** 90 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Membaca, menulis, dan men-debug loop di Java
+
+                **Perkiraan waktu:** 90 menit
+            lesson-5:
+              name: Array di Java
+              description_student: |-
+                **Anda akan:**
+
+                -   Mendeklarasikan dan menginisiasi array 1D dari tipe data primitif
+                -   Mengakses dan mengubah elemen dalam suatu array
+                -   Melintasi sebuah array
+
+                **Perkiraan waktu:** 120 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mendeklarasikan dan menginisiasi array 1D dari tipe data primitif
+                -   Mengakses dan mengubah elemen dalam suatu array
+                -   Melintasi sebuah array
+
+                **Perkiraan waktu:** 120 menit
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -32693,6 +32913,8 @@ id:
             Assessment Day:
               name: Hari Penilaian
               key: Hari Penilaian
+            lesson-6:
+              name: Hak milik intelektual
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32707,13 +32929,107 @@ id:
             lessonGroup-2:
               display_name: Konten
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Survei
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
               name: Selamat Datang
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **Anda akan:**
+
+                -   Mendapatkan pemahaman tingkat tinggi tentang kurikulum CS Discoveries.
+              description_teacher: "**Gambaran Umum:**\nKegiatan asinkron ini akan
+                memberi gambaran umum tingkat tinggi kepada peserta tentang kurikulum
+                CS Discoveries termasuk gambaran umum tingkat tinggi tentang konten
+                dan alat kursus, garis besar tentang penyusunan kursusnya, dan pratinjau
+                tentang cara dalam menggunakan proses pemecahan masalah sepanjang
+                kursus. \n\n**Peserta akan:**\n\n-   Mendapatkan pemahaman tingkat
+                tinggi tentang kurikulum CS Discoveries. \n\n**Waktu yang disarankan:**
+                40 menit"
+            lesson-5:
+              name: Tanya Jawab Asinkron
+            lesson-6:
+              name: Model Pelajaran 2 - Unit 2 Pelajaran 2
+            lesson-7:
+              name: Identitas
+            lesson-8:
+              name: Tugas Pelajaran
+            lesson-10:
+              description_student: |-
+                **Anda akan:**
+
+                -   Berperan sebagai guru di kelas CS Discoveries.
+              description_teacher: "**Gambaran Umum:**\nKegiatan asinkron ini akan
+                memberi pengantar kepada peserta tentang peran guru sebagai pembelajar
+                utama. Peserta akan diminta untuk memikirkan bagaimana pengalaman
+                dan kepercayaan mereka tentang CS (Ilmu Komputer) dalam memengaruhi
+                cara mereka melihat perannya sebagai guru di kelas CS. Refleksi ini
+                akan melengkapi peserta untuk sesi identitas berikutnya di workshop.
+                \n\n**Peserta akan:**\n\n-   Berperan sebagai guru dalam kelas CS
+                Discoveries. \n\n**Waktu yang disarankan:** 20 menit"
+            lesson-11:
+              name: Penutupan
+            Intro to HTML:
+              name: Model Pelajaran 2 - Unit 2 Pelajaran 2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Selamat Datang
+            lesson-3:
               name: Perencanaan Pelajaran
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Tanya Jawab Asinkron
+            lesson-9:
+              name: Penutupan
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Selamat Datang
+            lesson-5:
+              name: Tanya Jawab Asinkron
+            lesson-8:
+              name: Penutupan
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Penutup Unit"
+              description_student: "**Kamu akan:**\n\n-   Menjelajahi proyek akhir
+                bab. \n\n**Waktu yang disarankan:** 10 menit"
+              description_teacher: "**Kamu akan:**\n\n-   Menjelajahi proyek akhir
+                bab. \n\n**Waktu yang disarankan:** 10 menit"
+            lesson-3:
+              name: "[TEMPLATE] Isi pelajaran"
+              description_student: |-
+                **Anda akan:**
+
+                -   Memasukkan tujuan pembelajaran.
+
+                **Waktu yang disarankan:** \_\_\_\_ menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Memasukkan tujuan pembelajaran.
+
+                **Waktu yang disarankan:** \_\_\_\_ menit
+            lesson-4:
+              name: Selamat Datang
+            lesson-7:
+              name: Async Prep
+            lesson-11:
+              name: Tanya Jawab Asinkron
+            lesson-14:
+              name: Penutupan
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Selamat Datang
+            lesson-4:
+              name: Async Prep
+            lesson-6:
+              name: Tanya Jawab Asinkron
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -32761,15 +33077,985 @@ id:
               key: Perencanaan Pelajaran
             Next steps:
               key: Langkah berikutnya
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Komputasi Fisik
+          title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Pengantar Pengembangan Web
+              description_student: |-
+                **Anda akan:**
+
+                -   Mendapatkan pengantar terhadap unit Pengembangan Web code.org.
+                -   Mendapatkan pratinjau minggu pertama dari konten unit Pengembangan Web.
+
+                **Waktu yang disarankan:** 10 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mendapatkan pengantar terhadap unit Pengembangan Web code.org.
+                -   Mendapatkan pratinjau minggu pertama dari konten unit Pengembangan Web.
+
+                **Waktu yang disarankan:** 10 menit
+            lesson-2:
+              name: Membuat situs web dengan HTML
+              description_student: "**Anda akan:**\n\n-   Mendapatkan pengantar dalam
+                menggunakan Web Lab.\n-   Menambahkan struktur ke halaman web menggunakan
+                HML. \n-   Menambahkan gambar ke halaman web.\n\n**Waktu yang disarankan:**
+                30 menit"
+              description_teacher: "**Anda akan:**\n\n-   Mendapatkan pengantar dalam
+                menggunakan Web Lab.\n-   Menambahkan struktur ke halaman web menggunakan
+                HML. \n-   Menambahkan gambar ke halaman web.\n\n**Waktu yang disarankan:**
+                30 menit"
+            lesson-3:
+              name: Membuat style situs web dengan CSS
+              description_student: |-
+                **Anda akan:**
+
+                -   Membuat style teks halaman web menggunakan CSS.
+                -   Membuat tautan style sheet CSS ke indeks halaman web.
+                -   Menelusuri properti tambahan untuk membuat style elemen pada suatu halaman web.
+
+                **Waktu yang disarankan:** 25 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Membuat style teks halaman web menggunakan CSS.
+                -   Membuat tautan style sheet CSS ke indeks halaman web.
+                -   Menelusuri properti tambahan untuk membuat style elemen pada suatu halaman web.
+
+                **Waktu yang disarankan:** 25 menit
+            lesson-4:
+              name: Mempertimbangkan peran dan tanggung jawab terkait dengan media
+                digital
+              description_student: |-
+                **Anda akan:**
+
+                -   Mencari cara di mana siswa akan mencoba memahami tugas dan tanggung jawabnya sebagai kreator dan pemakai media digital.
+
+                **Waktu yang disarankan:** 15 menit
+              description_teacher: |-
+                **Anda akan:**
+
+                -   Mencari cara di mana siswa akan mencoba memahami tugas dan tanggung jawabnya sebagai kreator dan pemakai media digital.
+
+                **Waktu yang disarankan:** 15 menit
             lesson-5:
               name: Komputasi Fisik
+              description_student: "**Kamu akan:**\n\n-   Menjelajahi proyek akhir
+                bab. \n\n**Waktu yang disarankan:** 10 menit"
+              description_teacher: "**Kamu akan:**\n\n-   Menjelajahi proyek akhir
+                bab. \n\n**Waktu yang disarankan:** 10 menit"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan Pengembangan Web
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pengembangan Web Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pengembangan Web.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Web Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pengembangan Web Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pengembangan Web.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Web Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
         vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Pengantar Animasi Interaktif dan Game
+            lesson-2:
+              name: Membuat adegan
+            lesson-3:
+              name: Membuat animasi adengan dengan sprite
+            lesson-4:
+              name: Membuat desain game
+            lesson-5:
+              name: Komputasi Fisik
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bersiap Mengajarkan Animasi Interaktif dan Game
+          title: 'Modul 3: Bersiap Mengajarkan Animasi Interaktif dan Game'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-5:
               name: Komputasi Fisik
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Proses Desain Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Proses Desain.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Proses Desain Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Proses Desain.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Data dan Masyarakat
+            lesson-5:
+              name: Komputasi Fisik
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Data dan Masyarakat Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Data dan Masyarakat.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Data dan Masyarakat Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Data dan Masyarakat.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Komputasi Fisik
+          title: 'Modul 6: Bersiap Mengajarkan Komputasi Fisik'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Komputasi Fisik Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Komputasi Fisik.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba aplikasi pembuat.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Komputasi Fisik Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Komputasi Fisik.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba aplikasi pembuat.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 90 menit
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Animasi dan Permainan Interaktif
+            lesson-3:
+              name: Proses Desain
+            lesson-4:
+              name: Data dan Masyarakat
+            lesson-5:
+              name: Komputasi Fisik
+            Train a machine learning model:
+              name: Animasi dan Permainan Interaktif
+            Engage with machine learning apps:
+              name: Proses Desain
+            Consider real world implications:
+              name: Data dan Masyarakat
+            Unit wrap up:
+              name: Komputasi Fisik
+          title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang AI dan Machine Learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang AI dan Machine Learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Halo Dunia CSC
+              description_student: Dalam pelajaran ini, Anda akan belajar cara membuat
+                dan menganimasikan sprite dan membuatnya interaktif dengan menggunakan
+                event.
+              description_teacher: Dalam pelajaran **skill-building** ini, siswa akan
+                belajar cara membuat dan menganimasikan sprite dan membuatnya interaktif
+                dengan menggunakan event.
           title: Halo Dunia
         csd-playground:
+          lessons:
+            lesson-1:
+              name: Pembaruan Level
+            Innovations in Computing:
+              name: Inovasi dalam Komputasi
+              description_teacher: Untuk memulai unit terakhir kursus ini, murid akan
+                melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi.
+                Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi
+                (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi
+                kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali
+                perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka
+                mengembangkan perangkat komputasi fisik mereka sendiri.
           name: csd-playground
+          title: CSD Playground
+          description_audience: Penulis Kurikulum
+          description_short: Untuk pembaruan tahapan atau level pembelajaran di antara
+            versi kurikulum
+          description: Untuk pembaruan tahapan atau level pembelajaran di antara versi
+            kurikulum
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Halo Dunia CSC
+              description_student: Dalam pelajaran ini, Anda akan belajar cara membuat
+                dan menganimasikan sprite dan membuatnya interaktif dengan menggunakan
+                event.
+              description_teacher: Dalam pelajaran **skill-building** ini, siswa akan
+                belajar cara membuat dan menganimasikan sprite dan membuatnya interaktif
+                dengan menggunakan event.
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: Seni Puisi
+              description_teacher: Dalam pelajaran terpadu ilmu komputer (CS) dan
+                seni bahasa (ELA) untuk pembuat kode baru ini, siswa akan menganimasikan
+                puisi dengan kode untuk menggambarkan mood puisi. Siswa akan membaca
+                dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan
+                gambar yang sesuai untuk membantu menggambarkan mood puisi tersebut.
+                Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan
+                perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah
+                puisi.
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: Halo Dunia CSC
+              description_student: Dalam pelajaran ini, Anda akan belajar cara membuat
+                dan menganimasikan sprite dan membuatnya interaktif dengan menggunakan
+                event.
+              description_teacher: Dalam pelajaran **skill-building** ini, siswa akan
+                belajar cara membuat dan menganimasikan sprite dan membuatnya interaktif
+                dengan menggunakan event.
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Prasurvei CS Discoveries
+              key: Prasurvei CS Discoveries
+            Intro to Problem Solving:
+              name: Pengenalan Pemecahan Masalah
+              key: Pengenalan Pemecahan Masalah
+            The Problem Solving Process:
+              name: Proses Pemecahan Masalah
+              key: Proses Pemecahan Masalah
+            Exploring Problem Solving:
+              name: Eksplorasi Pemecahan Masalah
+              key: Eksplorasi Pemecahan Masalah
+            What is a Computer?:
+              name: Apa itu Komputer?
+              description_teacher: "**Pertanyaan Hari Ini: Apa itu komputer?**\\\r\n\\\r\nDalam
+                pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer.
+                Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan
+                definisi untuk komputer dan menuliskan hasil penggodokan ini di papan.
+                Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan
+                gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer”
+                di kertas poster. Grup murid ini akan meletakkan poster mereka di
+                sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka
+                dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian
+                memperkenalkan definisi komputer dan mempersilakan murid merevisi
+                poster mereka berdasarkan definisi baru.\\\r"
+              key: Apa itu Komputer?
+            Input and Output:
+              name: Input dan Output
+              key: Input dan Output
+            Processing:
+              name: Sedang memproses
+              description_teacher: "**Pertanyaan Hari Ini: Apa saja ragam cara komputer
+                dapat memproses informasi?**\\\r\n\\\r\nPelajaran ini memperkenalkan
+                murid dengan empat jenis pemrosesan umum: jika/maka (kondisional),
+                menemukan padanan (pencarian), menghitung, dan membandingkan.  Murid
+                pertama kali diperkenalkan dengan jenis-jenis pemrosesan melalui beberapa
+                aplikasi contoh.  Mereka kemudian menyelidiki lebih banyak aplikasi
+                untuk menentukan jenis pemrosesan yang digunakan oleh masing-masing
+                aplikasi.  Mereka lantas mempertimbangkan aplikasi mereka sendiri
+                dan menentukan jenis pemrosesan yang dibutuhkannya untuk bisa bekerja.
+                Terakhir, mereka menggodok jenis-jenis pemrosesan lain yang mungkin
+                bermanfaat tetapi tidak dicantumkan dalam pelajaran utama."
+              key: Sedang memproses
+            Storage:
+              name: Penyimpanan
+              key: Penyimpanan
+            Project - Propose an App:
+              name: Proyek - Pengajuan Aplikasi
+              description_teacher: "**Pertanyaan Hari Ini:  Bagaimana model IOSP bisa
+                membantu kita merancang aplikasi yang memecahkan masalah?**\\\r\n\\\r\nUntuk
+                mengakhiri kajian mereka tentang proses pemecahan masalah dan model
+                input/output/penyimpanan/pemrosesan komputer, murid akan mengusulkan
+                aplikasi yang dirancang untuk memecahkan masalah dunia nyata. Proyek
+                ini akan diselesaikan selama beberapa hari dan akan diakhiri dengan
+                murid yang membuat poster yang menyoroti fitur-fitur aplikasi mereka
+                yang akan dipresentasikan ke teman-teman sekelas. Sebuah panduan proyek
+                memberikan instruksi langkah demi langkah bagi murid dan membantu
+                mereka menyusun pikiran. Proyek ini dirancang untuk dikerjakan secara
+                berpasangan meskipun dapat diselesaikan sendiri-sendiri."
+              key: Proyek - Pengajuan Aplikasi
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+              key: Pengujian Pascaproyek
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Pengenalan Pemecahan Masalah - Meja Surat Kabar (Pelajaran 1 Alternatif)
+              key: Pengenalan Pemecahan Masalah - Meja Surat Kabar (Pelajaran 1 Alternatif)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Pengenalan Pemecahan Masalah - Jembatan Spageti (Pelajaran 1 Alternatif)
+              key: Pengenalan Pemecahan Masalah - Jembatan Spageti (Pelajaran 1 Alternatif)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Pengenalan Pemecahan Masalah - Menara Kertas (Pelajaran 1 Alternatif)
+              key: Pengenalan Pemecahan Masalah - Menara Kertas (Pelajaran 1 Alternatif)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Mengeksplorasi Pemecahan Masalah - Tema Binatang (Pelajaran 3
+                Alternatif)
+              key: Mengeksplorasi Pemecahan Masalah - Tema Binatang (Pelajaran 3 Alternatif)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3
+                Alternatif)
+              key: Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3
+                Alternatif)
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            csd1_3:
+              display_name: Pelajaran Alternatif
+          description_short: "  Pelajari cara kerja manusia dengan komputer untuk
+            memecahkan masalah."
+        csd2-2022:
+          lessons:
+            Exploring Web Pages:
+              name: Mengeksplorasi Halaman Web
+              key: Mengeksplorasi Halaman Web
+            Intro to HTML:
+              name: Pengenalan HTML
+              key: Pengenalan HTML
+            Headings:
+              name: Tajuk
+              key: Tajuk
+            'Mini-Project: HTML Web Page':
+              name: 'Proyek Mini: Halaman Web HTML'
+              key: 'Proyek Mini: Halaman Web HTML'
+            Digital Footprint:
+              name: Jejak Digital
+              key: Jejak Digital
+            Styling Text with CSS:
+              name: Membuat Gaya Teks dengan CSS
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa mengubah
+                gaya teks di halaman web?**\\\r\n\\\r\nPelajaran ini memperkenalkan
+                CSS sebagai cara untuk membuat gaya elemen di halaman. Murid di kelas
+                mempelajari syntax dasar untuk set aturan CSS dan kemudian mengeksplorasi
+                properti yang memengaruhi elemen teks HTML. Mereka mengerjakan halaman
+                HTML tentang para pemegang Rekor Dunia Guinness dengan menambahkan
+                gaya mereka sendiri ke halaman yang tersedia. "
+              key: Membuat Gaya Teks dengan CSS
+            'Mini-Project: Your Personal Style':
+              name: 'Proyek Mini: Gaya Pribadi Anda'
+              key: 'Proyek Mini: Gaya Pribadi Anda'
+            Intellectual Property:
+              name: Hak milik intelektual
+              key: Hak milik intelektual
+            Using Images:
+              name: Menggunakan Gambar
+              key: Menggunakan Gambar
+            Styling Elements with CSS:
+              name: Membuat Gaya Elemen dengan CSS
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gaya gambar dan tata letak halaman?**\\\r\n\\\r\nPelajaran ini melanjutkan
+                pengenalan properti gaya CSS, kali ini lebih terfokus pada elemen-elemen
+                nonteks. Murid memulai pelajaran ini dengan mencermati situs web Desserts
+                of the World. Mereka menyelidiki dan memodifikasi gaya CSS baru di
+                situs web ini, dengan menambahkan gaya mereka sendiri ke halaman tersebut.
+                Setelah mengerjakan halaman Desserts, murid menerapkan pengetahuan
+                tentang properti CSS baru ini ke situs web pribadi mereka."
+              key: Membuat Gaya Elemen dengan CSS
+            Your Web Page - Prepare:
+              name: Halaman Web Anda - Persiapkan
+              key: Halaman Web Anda - Persiapkan
+            Project - Personal Web Page:
+              name: Proyek - Halaman Web Pribadi
+              key: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              name: Situs Web untuk suatu Tujuan
+              key: Situs Web untuk suatu Tujuan
+            Team Problem Solving:
+              name: Pemecahan Masalah Tim
+              key: Pemecahan Masalah Tim
+            Sources and Research:
+              name: Sumber dan Penelitian
+              key: Sumber dan Penelitian
+            CSS Classes:
+              name: Kelas CSS
+              key: Kelas CSS
+            Linking Pages:
+              name: Menautkan Halaman
+              key: Menautkan Halaman
+            Project - Website for a Purpose:
+              name: Proyek - Situs Web untuk suatu Tujuan
+              key: Proyek - Situs Web untuk suatu Tujuan
+            Peer Review and Final Touches:
+              name: Ulasan Sejawat dan Sentuhan Akhir
+              key: Ulasan Sejawat dan Sentuhan Akhir
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+              key: Pengujian Pascaproyek
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+            'Websites for Expression ':
+              key: 'Situs-situs untuk Ekspresi '
+            Planning a Multi-page Website:
+              key: Merencanakan Situs Web Multihalaman
+            lesson-1:
+              key: pelajaran ke-1
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
+            membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
+            yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur
+            dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan
+            pemrograman yang tak ternilai harganya, seperti debugging, menggunakan
+            materi pembelajaran, dan kerja tim. "
+          description_short: "  Belajar membuat situs web sendiri di Web Lab."
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+              key: Pemrograman untuk Hiburan
+            Plotting Shapes:
+              name: Merancang Bentuk
+              key: Merancang Bentuk
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+              key: Menggambar dalam lab permaianan
+            Variables:
+              name: variabel
+              key: variabel
+            Sprites:
+              name: Sprites
+              key: Sprites
+            Sprite Properties:
+              name: Properti Sprite
+              key: Properti Sprite
+            Text:
+              name: Teks
+              key: Teks
+            The Draw Loop:
+              name: Draw Loop
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa membuat
+                gambar animasi di Game Lab?**\\\r\n\\\r\nDalam pelajaran ini, murid
+                diperkenalkan dengan draw loop, salah satu paradigma pemrograman inti
+                di Game Lab. Untuk memulai pelajaran, murid mencermati beberapa buku
+                flip fisik untuk melihat bahwa frame yang banyak dengan gambar yang
+                berlainan memunculkan kesan bergerak. Murid kemudian menonton video
+                yang menjelaskan bagaimana draw loop di Game Lab membantu memunculkan
+                kesan yang sama ini dalam program mereka. Murid menggabungkan draw
+                loop dengan angka acak untuk memanipulasi beberapa animasi sederhana
+                dengan titik dan kemudian dengan sprite. "
+              key: Draw Loop
+            Sprite Movement:
+              name: Gerakan Sprite
+              key: Gerakan Sprite
+            Conditionals:
+              name: Kondisi
+              key: Kondisi
+            Keyboard Input:
+              name: Input Keyboard
+              key: Input Keyboard
+            Mouse Input:
+              name: Input Mouse
+              key: Input Mouse
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+              key: Proyek - kartu interaktif
+            Velocity:
+              name: Percepatan
+              key: Percepatan
+            Collision Detection:
+              name: Deteksi tumbukan
+              key: Deteksi tumbukan
+            Complex Sprite Movement:
+              name: Gerakan Sprite Kompleks
+              key: Gerakan Sprite Kompleks
+            Collisions:
+              name: Tumbukan
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana cara programmer
+                menghasilkan abstraksi untuk membuat abstraksi lainnya?**\\\r\n\\\r\nDalam
+                pelajaran kali ini, siswa memprogram sprite agar berinteraksi dengan
+                cara baru. Setelah melakukan evaluasi singkat tentang cara mereka
+                dalam menggunakan blok [`Bersentuhan`(#f78183)](/docs/gamelab/isTouching/),
+                siswa memikirkan cara lain agar dua sprite dapat berinteraksi. Mereka
+                lalu menggunakan [`Bersentuhan`(#f78183)](/docs/gamelab/isTouching/)
+                agar sebuah sprite mendorong sprite lain melintasi layar sebelum berlatih
+                dengan empat blok tabrakan ([`bertabrakan`(#f78183)](/docs/gamelab/collide/),
+                [`memindahkan`(#f78183)](/docs/gamelab/displace/), [`melambung`(#f78183)](/docs/gamelab/bounce/),
+                dan [`memantul`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Tumbukan
+            Functions:
+              name: fungsi
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana pemrogram bisa
+                menggunakan function untuk membuat abstraksinya sendiri?**\\\r\n\\\r\nMurid
+                mempelajari cara membuat function untuk mengatur code mereka, membuatnya
+                lebih mudah dibaca, dan menghapus blok code yang diulang-ulang. Murid
+                mula-mula memikirkan jenis blok baru apa saja yang mereka kehendaki
+                di Game Lab, dan code apa saja yang akan ditampung di dalam blok-blok
+                tersebut. Setelah itu murid belajar membuat function di Game Lab.
+                Mereka akan menggunakan function untuk menghilangkan blok-blok code
+                yang panjang dari draw loop dan menggantikan potongan code berulang-ulang
+                dengan satu function saja."
+              key: fungsi
+            The Game Design Process:
+              name: Proses perancangan permainan
+              key: Proses perancangan permainan
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+              key: Proses menggunakan desain permainan
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+              key: Proyek - merancang sebuah permainan
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+              key: Pengujian Pascaproyek
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+            'Mini-Project: Captioned Scenes':
+              key: 'Proyek Mini: Adegan Berteks'
+            'Mini-Project: Animation':
+              key: 'Proyek Mini: Animasi'
+            'Mini-Project: Side Scroller':
+              key: 'Proyek-Mini: Side Scroller'
+            'Mini-Project: Flyer Game':
+              key: 'Proyek Mini: Permainan Flyer'
+            lesson-1:
+              key: pelajaran ke-1
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
+          student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk
+            sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game
+            Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga
+            ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep pemrograman
+            dan proses desain yang sama yang digunakan sehari-hari oleh ilmuwan komputer.
+            Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang
+            sudah mendapat sentuhan pribadi."
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Memahami pengguna anda
+              key: Memahami pengguna anda
+            User Interfaces:
+              name: Antarmuka Pengguna
+              key: Antarmuka Pengguna
+            Feedback and Testing:
+              name: Umpan balik dan Pengujian
+              key: Umpan balik dan Pengujian
+            Identifying User Needs:
+              name: Mengidentifikasi Kebutuhan Pengguna
+              key: Mengidentifikasi Kebutuhan Pengguna
+            Project - Paper Prototype:
+              name: Proyek - Prototipe Kertas
+              key: Proyek - Prototipe Kertas
+            Designing Apps for Good:
+              name: Merancang aplikasi untuk kebaikan
+              key: Merancang aplikasi untuk kebaikan
+            Market Research:
+              name: Meneliti pasar
+              key: Meneliti pasar
+            Prototype Testing:
+              name: Pengujian Prototipe
+              key: Pengujian Prototipe
+            Testing the App:
+              name: Menguji Aplikasi
+              key: Menguji Aplikasi
+            Project - App Presentation:
+              name: Proyek - Presentasi Aplikasi
+              key: Proyek - Presentasi Aplikasi
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+              key: Pengujian Pascaproyek
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+              key: Survei Pascakursus CS Discoveries
+            Analysis of Design:
+              key: Analisis desain
+            Paper Prototypes:
+              key: Prototipe Kertas
+            Digital Design:
+              key: Desain Digital
+            Linking Screens:
+              key: Menautkan Layar
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            cspSurvey:
+              display_name: Survei
+          student_description: Unit 4 memperkenalkan dampak sosial yang lebih luas
+            dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari
+            cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan
+            solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim
+            berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan
+            yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab,
+            dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan
+            masukan dan mendorong pengulangan lebih lanjut.
+          description_short: "  Pelajari cara merancang sebuah program yang memenuhi
+            kebutuhan pengguna Anda."
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: Representasi Itu Penting
+              key: Representasi Itu Penting
+            Patterns and Representation:
+              name: Pola dan Representasi
+              key: Pola dan Representasi
+            ASCII and Binary Representation:
+              name: ASCII dan Representasi Binary
+              key: ASCII dan Representasi Binary
+            Representing Images:
+              name: Merepresentasikan Gambar
+              key: Merepresentasikan Gambar
+            Representing Numbers:
+              name: Merepresentasikan Angka
+              key: Merepresentasikan Angka
+            Combining Representations:
+              name: Menggabungkan Representasi
+              key: Menggabungkan Representasi
+            Keeping Data Secret:
+              name: Menjaga Kerahasiaan Data
+              key: Menjaga Kerahasiaan Data
+            Create a Representation:
+              name: Proyek - Membuat Representasi
+            Problem Solving and Data:
+              name: Pemecahan masalah dan Data
+              key: Pemecahan masalah dan Data
+            Structuring Data:
+              name: Penataan Data
+              key: Penataan Data
+            Interpreting Data:
+              name: Menginterpretasikan Data
+              key: Menginterpretasikan Data
+            Making Decisions with Data:
+              name: Mengambil Keputusan dengan Data
+              key: Mengambil Keputusan dengan Data
+            Automating Data Decisions:
+              name: Mengotomatisasi Data Keputusan
+              key: Mengotomatisasi Data Keputusan
+            Problem Solving with Big Data:
+              name: Pemecahan masalah dengan Data Besar
+              key: Pemecahan masalah dengan Data Besar
+            Project - Make a Recommendation:
+              name: Proyek - Membuat Rekomendasi
+              key: Proyek - Membuat Rekomendasi
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+              key: Pengujian Pascaproyek
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+              key: Survei Pascakursus CS Discoveries
+            Project - Create a Representation:
+              key: Proyek - Membuat Representasi
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
+          student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah
+            dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama
+            mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi
+            dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan
+            sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan
+            kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan
+            langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan
+            cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+          description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
+            masalah data.
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Pengantar Lab AI
+              key: Pengantar Lab AI
+            Survey Planning:
+              name: Merancang Pengumpulan Data
+              key: Merancang Pengumpulan Data
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+              key: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survei
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: Inovasi dalam Komputasi
+              description_teacher: Untuk memulai unit terakhir kursus ini, murid akan
+                melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi.
+                Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi
+                (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi
+                kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali
+                perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka
+                mengembangkan perangkat komputasi fisik mereka sendiri.
+            The Circuit Playground:
+              name: Sirkuit Bermain Anak
+            Board Events:
+              name: Event Papan
+            Color LEDs:
+              name: LED Berwarna
+            Combining Inputs and Outputs:
+              name: Menggabungkan Input
+            Accelerometer:
+              name: Akselerometer
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi
+                akselerometer dan kemampuannya. Mereka akan mengakrabi event dan propertinya,
+                serta membuat berbagai program dengan memanfaatkan akselerometer yang
+                mirip dengan akselerometer yang kemungkinan akan mereka jumpai dalam
+                aplikasi dunia nyata.
+            Making Music:
+              name: Membuat musik
+            Functions:
+              name: fungsi
+            Project - Prototype an Innovation:
+              description_teacher: 'Dalam proyek terakhir untuk kursus ini, murid
+                membentuk tim untuk mengembangkan dan menguji sebuah prototipe perangkat
+                komputasi inovatif berdasarkan Circuit Playground. Dengan menggunakan
+                input dan output yang tersedia di papan, grup-grup murid akan membuat
+                program yang memudahkan interaksi pengguna yang menarik dan unik. '
+            Post-Project Test:
+              name: Pengujian Pascaproyek
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            lessonGroup-4:
+              display_name: Survei
+          description_short: Belajar program dengan perangkat fisik.
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Survei Pasca Kursus
+          title: Survei Pascakursus CS Discoveries
+          description: Unit ini berisi Survei Pascakursus CS Discoveries. Unit ini
+            dapat ditugaskan setelah murid menyelesaikan unit terakhir dalam CS Discoveries.
+          student_description: Unit ini berisi survei untuk murid di kelas Anda ketika
+            selesai mempelajari unit-unit dalam CS Discoveries. Guru Anda akan memberi
+            tahu kapan saatnya mengikuti survei ini.
+        csp-post-survey-2022:
+          title: Survei Pascakursus CS Principles
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Pengantar Lab AI
+            Survey Planning:
+              name: Merancang Pengumpulan Data
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              name: Modul 5
+              key: Modul 5
+            Module 6:
+              name: Modul 6
+              key: Modul 6
+            Module 7:
+              name: Modul 7
+              key: Modul 7
+            Module 8:
+              name: Modul 8
+              key: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Selamat Datang
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-8:
+              key: pelajaran ke- 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3

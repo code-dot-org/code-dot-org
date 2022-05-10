@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "ไฟล์ที่บันทึกในแบ็กแพ็กจะปรากฎที่นี่",
   "enablePeerReview": "เปิดใช้งาน Peer Review",
   "errorJavabuilderConnectionGeneral": "พบข้อผิดพลาดในการเชื่อมต่อเซิฟเวอร์ โปรดลองอีกครั้ง",
-  "errorJavabuilderConnectionNotAuthorized": "คุณไม่ได้รับอนุญาตให้เข้าถึง Javalab คุณต้องการเข้าสู่ระบบหรือเข้าร่วมไหม?",
   "errorLoadingClassmates": "เกิดข้อผิดพลาดในการโหลดรายชื่อเพื่อนร่วมชั้นเรียน โปรดลองอีกครั้ง",
   "errorMediaImageLoadError": "เกิดข้อผิดพลาดในการโหลดรูปภาพ",
   "errorNeighborhoodInvalidGrid": "มีข้อผิดพลาดเกิดขึ้นในการโหลดระดับของเพื่อนบ้าน โปรดติดต่อ support@code.org พร้อมทั้งแนบ URL หน้านี้ในข้อความ",

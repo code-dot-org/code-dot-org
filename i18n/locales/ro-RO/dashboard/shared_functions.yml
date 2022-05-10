@@ -1,6 +1,23 @@
 ro:
   data:
     shared_functions:
+      driving with arrow keys: condus cu tastele cu săgeți
+      fluttering: fluturat
+      growing: creștere
+      jittering: tremurat
+      moving east: deplasare către est
+      moving east and looping: deplasare către est și buclă
+      moving north: deplasare către nord
       moving north and looping: mergând către nord și formarea de bucle
+      moving south: deplasare către sud
       moving south and looping: mergând către sud și formarea de bucle
+      moving west: deplasare către vest
+      moving west and looping: deplasare către vest și buclă
       moving with arrow keys: mutare cu tastele săgeată
+      patrolling: patrulare
+      shrinking: micșorare
+      spinning left: învârtit spre stânga
+      spinning right: învârtit spre dreapta
+      swimming left and right: înotat către stânga și către dreapta
+      wandering: rătăcit
+      wobbling: clătinat

@@ -348,6 +348,7 @@ es:
       educate_beyond: "Más allá de Code.org"
       educate_inspire: "Inspire a un estudiante"
       educate_community: "Comunidad en línea"
+      educate_requirements: "Requisitos Técnicos"
       educate_tools: "Herramientas y videos"
       about_us: "Acerca de nosotros"
       about_leadership: "Liderazgo"
@@ -415,6 +416,7 @@ es:
       starwars: 'Star Wars'
       starwarsblocks: 'La guerra de las galaxias (bloques)'
       starwarsblocks_hour: 'La guerra de las galaxias (bloques)'
+      thebadguys: 'Los Tipos Malos'
       loading: 'Cargando...'
       weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
@@ -659,6 +661,12 @@ es:
       title: 'Fiesta de Baile'
     dance-2019:
       title: 'Fiesta de Baile'
+    hello-world:
+      title: 'Hola Mundo'
+      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
+    poem-art:
+      title: 'Arte del Poema'
+      body: '¡Exprésate! Utiliza el código para crear poemas animados.'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la Ciencia de la Computación. Millones lo han intentado.'
@@ -817,14 +825,6 @@ es:
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
     reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.
     review_terms: "Revisa los términos actualizados"
-  donor_interstitial:
-    title: "Tus cursos gratis de Ciencia de Computación son posible por..."
-    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
-    local_supporters: "Simpatizantes Locales"
-    global_supporters: "Simpatizantes Globales"
-    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidad a más estudiantes."
-    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
-    get_started: "Empieza en Code.org"
   school_info_interstitial:
     title: "Queremos que cada estudiante pueda acceder a las Ciencias de la Computación. ¡Ayúdanos a seguir nuestro progreso!"
     message: "Ingresa la información de la escuela a continuación."
@@ -988,6 +988,9 @@ es:
   no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tenerlo, por favor escribe a support@code.org para que podamos solucionar el problema."
   no_level_access_student: "No tienes acceso a este nivel. Por favor, pregunta a tu profesor en qué nivel deberías estar."
   no_level_access_teacher: "No tienes acceso a este nivel. Si crees que deberías tener acceso a este nivel, escribe a support@code.org para que podamos resolver la situación."
+  no_exemplar: "No existe ningún ejemplo para este nivel."
+  no_exemplar_access_student: "Los alumnos no pueden acceder al código de ejemplo. Por favor, pregunta a tu profesor en qué nivel debes estar."
+  no_exemplar_access_teacher: "Sólo los profesores verificados pueden acceder al código de ejemplo. Si quieres convertirte en profesor verificado, escribe a support@code.org."
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ir al resumen del curso'
   view_all_units: 'Ver todas las unidades'

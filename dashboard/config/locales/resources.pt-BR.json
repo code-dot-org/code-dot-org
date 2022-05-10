@@ -23,10 +23,11 @@
           "type": "Vídeo"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Introdução ao Artist"
+          "name": "Introdução à Artista"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Ângulos e curvas"
+          "name": "Ângulos e curvas",
+          "type": "Apostila do aluno"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Ângulos e curvas"
@@ -35,9 +36,28 @@
           "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Criptografia e chaves públicas",
           "type": "Vídeo"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widgets de criptografia no Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Guia de atividades: compreensão de texto"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Recapitulando a atividade - decodifique esta mensagem",
+          "type": "Recapitulando a atividade"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Decifre esta mensagem"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widget de compactação de texto no Code Studio",
+          "type": "Widget"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Vídeo: Compactação de texto com Aloe Blacc",
           "type": "Vídeo"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -704,11 +724,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Trilhas digitais: quadrados de trilhas digitais",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Apostila do aluno"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Trilhas digitais: trilhas de animais",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Apostila do aluno"
         },
         "mimi-activity/courseb/2021": {
           "name": "Criando caminhos",
@@ -894,7 +916,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Segurança na minha vizinhança online: Momento de pausa e pense",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Apostila do aluno"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programação em duplas",
@@ -1093,7 +1116,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Colocando um STOP na maldade online: STOP Online Meanness",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Apostila do aluno"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Meus amigos robóticos",
@@ -1141,14 +1165,15 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Introdução ao Artist"
+          "name": "Introdução à Artista"
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "Ângulos e curvas"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Ângulos e curvas",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Apostila do aluno"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Sentimento Rostos Emoção Imagem",
@@ -1477,7 +1502,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "Introdução ao Artist",
+          "name": "Introdução à Artista",
           "type": "Vídeo"
         },
         "turns_angles/express/2021": {
@@ -1630,6 +1655,9 @@
           "name": "Documentação do Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Apostila do aluno"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Pare e pense on-line",
           "type": "Vídeo"
@@ -1639,7 +1667,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Ângulos e curvas",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Apostila do aluno"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Ângulos e curvas"
@@ -1751,6 +1780,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Vídeo"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Apostila do aluno"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Vídeo"
         },
@@ -1817,6 +1849,16 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Fórum do professor"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "Inovações em computação"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Ciência da Computação está Mudando Tudo",
+          "type": "Vídeo"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "Criando telas com código"
@@ -1887,6 +1929,12 @@
         "circuits-logic-video/csd/2021": {
           "name": "Como Computadores Funcionam: Circuitos e Lógica",
           "type": "Vídeo"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Representação Importa"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Representação Importa"
         },
         "representing-information-1/csd/2021": {
           "name": "Representando informação"
@@ -2088,6 +2136,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "Fórum do professor"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Processo de resolução de problemas"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Processo de resolução de problemas",
+          "type": "Vídeo"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "O Processo de Resolução de Problemas"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Processo de resolução de problemas"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "O que é um computador?"
         },
@@ -2112,6 +2173,12 @@
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Aplicativos e solução de problemas"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Explorando páginas da Web"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Explorando páginas da Web"
         },
         "html_tags/csd/2021": {
           "name": "Tags HTML"

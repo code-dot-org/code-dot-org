@@ -55,7 +55,7 @@ $debug-area-initial-height: 43px;
   left: 0;
   right: 0;
   z-index: 2;
-  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  max-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
 }
 
 // Make sure the workspace default lines up with the debug area default

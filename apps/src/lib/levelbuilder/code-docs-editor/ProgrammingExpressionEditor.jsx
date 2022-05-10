@@ -190,7 +190,7 @@ export default function ProgrammingExpressionEditor({
         updateImageUrl={imgUrl =>
           setProgrammingExpressionProperty('imageUrl', imgUrl)
         }
-        imageUrl={programmingExpression.imageUrl}
+        initialImageUrl={programmingExpression.imageUrl}
       />
       <label>
         Short Description
