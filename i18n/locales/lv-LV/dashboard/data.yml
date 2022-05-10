@@ -352,6 +352,7 @@ lv:
         csd_debugging: Atkļūdošana
         playlab_2021: Ievads spēļu laboratorijā
         playlab_2021_reader: Ievads spēļu laboratorijā
+        csp_applab_parameters: Funkcijas ar parametriem
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka

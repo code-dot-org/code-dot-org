@@ -320,6 +320,9 @@ th:
         poetry_module_conditionals: เงื่อนไข - การเขียนโค้ดด้วยบทกวี
         poemart_intro: ความรู้เบื้องต้นเกี่ยวกับศิลปะบทกวี
         CSA-PL-debugging-temp: การดีบั๊กเบื้องต้นใน Java Lab - temp
+        PL_CS_Journeys_Overview: CS Journeys
+        csp_applab_parameters: ฟังก์ชันกับพารามิเตอร์
+        CSA-PL-intro-to-arrays: อาร์เรย์มิติเดียว (1D)
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

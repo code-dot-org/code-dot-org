@@ -652,6 +652,10 @@ tr:
       title: 'Dans Partisi'
     dance-2019:
       title: 'Dans Partisi'
+    hello-world:
+      title: 'Merhaba Dünya'
+    poem-art:
+      title: 'Şiir Sanatı'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
@@ -814,13 +818,6 @@ tr:
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     reminder_desc_markdown: '[Hizmet şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url}) güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
-  donor_interstitial:
-    title: "Ücretsiz Bilgisayar Bilimi kurslarınız ... tarafından sağlanmaktadır"
-    local_supporters: "Yerel destekçiler"
-    global_supporters: "Evrensel Destekçiler"
-    support_codeorg_1: "Code.org'a verilen her para daha çok öğrenci için fırsat yaratacaktır."
-    support_codeorg_2: "[Bağış yap](%{donate_url}) böylece  Code.org u destekle"
-    get_started: "Code.org sitesinde başla"
   school_info_interstitial:
     title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
     message: "Lütfen aşağıya okul bilgilerinizi girin."

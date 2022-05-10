@@ -613,6 +613,10 @@ ja:
       title: 'ダンスパーティー'
     dance-2019:
       title: 'ダンスパーティー'
+    hello-world:
+      title: 'ハローワールド'
+    poem-art:
+      title: '詩のアート'
     hoc:
       title: '古典的な迷路'
       body: 'コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます'

@@ -1183,6 +1183,12 @@ ta:
             '90': கீழே
             '180': இடது
             '270': மேலே
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': சிறிய
+            '50': ஊடகம்
+            '100': பெரிய
       gamelab_mirrorSprite:
         text: "{SPRITE} முகம் {DIRECTION}"
         options:

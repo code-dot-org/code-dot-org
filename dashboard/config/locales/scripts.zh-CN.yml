@@ -22,11 +22,13 @@ zh-CN:
         csp_2021_category_name: 计算机原理('21-'22)
         cspexams_category_name: 计算机原理练习测试
         csp17_category_name: 计算机原理('17-'18)
+        aiml_2021_category_name: AL / ML
         full_course_category_name: 完整课程
         hoc_category_name: 编程一小时
         math_category_name: 数学
         research_studies_category_name: 研究工作
         twenty_hour_category_name: 20 小时
+        tts_category_name: 文本到语音转换
         other_category_name: 其他
       name:
         course1:
@@ -176,6 +178,7 @@ zh-CN:
             Play Lab:
               name: 游戏实验室
               description_student: 在这节课中，学习者将获得计算机科学的入门经验，并使用基本的模块代码创建一个游戏。
+              description_teacher: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
           student_description: 通过游戏实验室创建故事或制作游戏！
           name: 游戏实验室
         artist:
@@ -352,9 +355,11 @@ zh-CN:
             Infinity:
               name: 迪斯尼无限游戏实验室
               description_student: 在这节课中，学习者将获得计算机科学的入门经验，并使用基本的模块代码创建一个游戏。
+              description_teacher: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
           student_description: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
           name: 无限
         algebrademo:
+          title: 代数演示
           lessons:
             Defining Simple Functions:
               name: 定义简单函数
@@ -367,6 +372,9 @@ zh-CN:
             The Design Recipe:
               name: 设计食谱
         K5PD:
+          description: |-
+            这里是为小学老师准备的最新在线职业发展资源：
+            <https://studio.code.org/s/k5-onlinepd>
           lessons:
             Computer Science Pedagogy:
               name: 计算机科学教育
@@ -394,8 +402,13 @@ zh-CN:
               name: 编写计算机程序
             new stage:
               name: 新的阶段
+          student_description: |-
+            这里是为小学老师准备的最新在线职业发展资源：
+            <https://studio.code.org/s/k5-onlinepd>
         netsim:
           title: 互联网模拟器
+          description: 学习互联网是如何运行的
+          description_short: 学习互联网是如何运行的
           lessons:
             Automatic DNS node:
               name: 自动域名解析服务器节点
@@ -417,7 +430,10 @@ zh-CN:
               name: 点对点 - 发送数字
             Routers and addresses:
               name: 路由和地址
+          student_description: 学习互联网是如何运行的
         pixelation:
+          description: 使用比特和字节来创建图片
+          description_short: 使用比特和字节来创建图片
           lessons:
             Black & White Pixelation Freeplay:
               name: 黑白像素自由游戏
@@ -429,6 +445,7 @@ zh-CN:
               name: 彩色像素自由游戏
             Color Pixelation Tutorial:
               name: 彩色像素教程
+          student_description: 使用比特和字节来创建图片
         20-hour:
           title: 快速计算机科学课程介绍
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
@@ -513,6 +530,8 @@ zh-CN:
           lessons:
             Flappy Code:
               name: 飞扬的代码
+              description_student: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
+              description_teacher: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
           student_description: 想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！
         jigsaw:
           title: 拼图
@@ -542,14 +561,22 @@ zh-CN:
               name: "《编程一小时 2013》"
           student_description: 与愤怒的小鸟和植物大战僵尸中的角色一起来体验计算机科学的基础！
         CodeStudioPuzzleChallenge:
+          description: 试试这些有趣的编程题目。尽你所能！
+          description_short: 挑战自己！
           lessons:
             Puzzles:
               name: 关卡
+          student_description: 试试这些有趣的编程题目。尽你所能！
         Tutorial Video - Code Studio Puzzle Challenge:
+          description: 试试这些有趣的编程题目。尽你所能！
+          description_short: 挑战自己！
           lessons:
             Puzzles:
               name: 关卡
+          student_description: 试试这些有趣的编程题目。尽你所能！
         cspunit1:
+          description: 本单元探讨了在计算机上表达数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。这个单元是一个试用版本，不会再更新。你可以在
+            code.org/educate/csp 找到新单元。
           description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           lessons:
             Binary Numbers:
@@ -586,7 +613,10 @@ zh-CN:
               name: 发送数字
             Text Compression:
               name: 文本压缩
+          student_description: 本单元探讨了在计算机上表达数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。这个单元是一个试用版本，不会再更新。你可以在
+            code.org/educate/csp 找到新单元。
         algebraPD:
+          title: 代数中的计算机科学
           lessons:
             Course Overview:
               name: 课程概述
@@ -601,6 +631,9 @@ zh-CN:
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
         algPDmiami:
+          title: 代数中的计算机科学
+          description: 通过函数编程教授代数
+          description_short: 通过函数编程教授代数
           lessons:
             Booleans:
               name: 布尔值
@@ -624,8 +657,11 @@ zh-CN:
               name: 你的游戏-碰撞检测
             Your Game - Player Movement:
               name: 你的游戏-移动角色
+          student_description: 通过函数编程教授代数
         text-compression:
           title: 文本压缩
+          description: 识别重复的模式来压缩文本
+          description_short: 识别重复的模式来压缩文本
           lessons:
             Text Compression:
               name: 文本压缩
@@ -633,6 +669,7 @@ zh-CN:
                 - 我们必须压缩数据。 '
               description_teacher: "在某种程度上，我们达到了发送比特的物理速度极限，如果我们想更快地发送大量信息，我们必须找到一种用更少的比特量表示相同信息的方法
                 - 我们必须**压缩**数据。在本课中，学生将使用文本压缩工具来压缩英文文本片段，方法是查找模式并用符号替换较大的文本模式。\\\r"
+          student_description: 识别重复的模式来压缩文本
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -656,6 +693,7 @@ zh-CN:
             Lesson 15:
               name: 第 15 课
         ECSPD:
+          title: 探索计算机科学职业发展
           lessons:
             Growth Mindset:
               name: 增长思维
@@ -787,6 +825,7 @@ zh-CN:
             The Design Recipe:
               name: 设计食谱
         ECSPD-NexTech:
+          title: 探索计算机科学职业发展
           logo_image: nextech\_logo.png
           lessons:
             Growth Mindset:
@@ -802,6 +841,7 @@ zh-CN:
             What is ECS?:
               name: 什么是ECS？
         ECSPD-iZone:
+          title: 探索计算机科学职业发展
           logo_image: izone\_logo.png
           lessons:
             Growth Mindset:
@@ -817,6 +857,7 @@ zh-CN:
             What is ECS?:
               name: 什么是ECS？
         algebraPD-NexTech:
+          title: 代数中的计算机科学
           logo_image: nextech\_logo.png
           lessons:
             Course Overview:
@@ -832,6 +873,7 @@ zh-CN:
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
         algebraPD-iZone:
+          title: 代数中的计算机科学
           logo_image: izone\_logo.png
           lessons:
             Course Overview:
@@ -976,6 +1018,7 @@ zh-CN:
             The Need for DNS:
               name: 域名服务器的需要
         algebraPD2a:
+          title: 代数中的计算机科学
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
           lessons:
@@ -1105,6 +1148,7 @@ zh-CN:
             Java Lab:
               name: Java实验室
         algebraPD2b:
+          title: 代数中的计算机科学
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
           lessons:
@@ -1393,6 +1437,7 @@ zh-CN:
               name: 维吉尼亚
           student_description: 使用维吉尼亚的密码小部件来探索使用维吉尼亚密码加密和解密消息。
         algebraPD3a:
+          title: 代数中的计算机科学
           lessons:
             Lesson Prep:
               name: 课程准备
@@ -1559,6 +1604,7 @@ zh-CN:
             Wrap-Up:
               name: 总结
         algebraPD3b:
+          title: 代数中的计算机科学
           lessons:
             Close and Next Steps:
               name: 关闭并进入下一步
@@ -1616,6 +1662,7 @@ zh-CN:
             Ice Age Play Lab:
               name: 冰川时代实验室
               description_student: 在这节课中，学习者将获得计算机科学的入门经验，并使用基本的模块代码创建一个游戏。
+              description_teacher: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
           student_description: 用冰河世纪游戏实验室创造故事或游戏！
           name: 冰河时代
         CSPPD3-Unit3:
@@ -1686,6 +1733,8 @@ zh-CN:
           lessons:
             Gumball Play Lab:
               name: 陶阿甘游戏实验室
+              description_student: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
+              description_teacher: 在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。
           student_description: 用陶阿甘游戏实验室创造故事或游戏！
         starwars:
           title: '星球大战: 用代码来创造星系（JavaScript）'
@@ -1922,6 +1971,7 @@ zh-CN:
               name: Middle_School_Hackathon
         algebraPD1:
           title: 计算机科学中的代数 第一部分
+          description: 通过函数编程教授代数
           lessons:
             Course Overview:
               name: 课程概述
@@ -1935,7 +1985,9 @@ zh-CN:
               name: 教师的仪表板
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
+          student_description: 通过函数编程教授代数
         algebraPD3c:
+          title: 代数中的计算机科学
           lessons:
             Getting Started:
               name: 开始
@@ -2402,6 +2454,8 @@ zh-CN:
             'Classroom and workshop style ':
               name: '教室和工作室风格 '
         algebraFacilitator:
+          description: 通过函数编程教授代数
+          description_short: 通过函数编程教授代数
           lessons:
             Evaluation Blocks:
               name: 赋值模块
@@ -2411,6 +2465,7 @@ zh-CN:
               name: 教师的仪表板
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
+          student_description: 通过函数编程教授代数
         sciencePD1:
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -3288,6 +3343,7 @@ zh-CN:
             While Loops:
               name: 当循环
         algebrapdnext:
+          description: 通过函数编程教授代数
           lessons:
             Lesson Prep:
               name: 课程准备
@@ -3301,6 +3357,7 @@ zh-CN:
               name: 设计食谱
             Welcome!:
               name: 欢迎！
+          student_description: 通过函数编程教授代数
         csp-pre-survey:
           lessons:
             Anonymous student pre-survey:
@@ -5387,7 +5444,6 @@ zh-CN:
               description_teacher: 基于"快乐循环"中重复指令的概念，这个阶段会让学生用循环来在Code.org上更有效的收集宝藏。
             Loops in Artist:
               name: 艺术家里的循环
-              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
               name: '事件: 大事件'
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
@@ -19025,6 +19081,10 @@ zh-CN:
           lessons:
             lesson-1:
               name: 测试CSA克隆
+            lesson-2:
+              name: 第 2 课
+            lesson-3:
+              name: 第 3 课
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -20216,6 +20276,8 @@ zh-CN:
             'Lesson 18: Assessment Day':
               key: 第 18 单元：评估日
               name: 评估日
+            CS Principles Post-Course Survey:
+              name: 计算机科学原理课后调查
           lesson_groups:
             csp_lists:
               display_name: 列表
@@ -20225,6 +20287,8 @@ zh-CN:
               display_name: 遍历
             csp_project:
               display_name: 项目
+            lessonGroup-5:
+              display_name: 课后问卷
         courseb-2022:
           lessons:
             Digital Trails:
@@ -20489,9 +20553,13 @@ zh-CN:
             'Lesson 6: Assessment Day':
               key: 第 6 单元：评估日
               name: 评估日
+            CS Principles Post-Course Survey:
+              name: 计算机科学原理课后调查
           lesson_groups:
             csp_unit6_2020:
               display_name: '单元 6: 算法'
+            lessonGroup-2:
+              display_name: 课后问卷
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -20534,7 +20602,7 @@ zh-CN:
             csp_libraries:
               display_name: 库
             lessonGroup-3:
-              display_name: 调查
+              display_name: 课后问卷
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -20545,6 +20613,13 @@ zh-CN:
               key: 创建表演任务 - 制定计划
             Create PT - Complete the Task:
               key: 创建 表演任务- 完成任务
+            CS Principles Post-Course Survey:
+              name: 计算机科学原理课后调查
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 创建表演任务
+            lessonGroup-3:
+              display_name: 课后问卷
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -20576,9 +20651,13 @@ zh-CN:
             'Lesson 9: Assessment Day':
               key: 第 9 单元：评估日
               name: 评估日
+            CS Principles Post-Course Survey:
+              name: 计算机科学原理课后调查
           lesson_groups:
             csp_unit9_2020:
               display_name: '单元 9: 数据'
+            lessonGroup-2:
+              display_name: 课后问卷
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -20624,9 +20703,13 @@ zh-CN:
             'Lesson 14: Unit Assessment Day':
               key: 第 14 课：单元评估日
               name: 评估日
+            CS Principles Post-Course Survey:
+              name: 计算机科学原理课后调查
           lesson_groups:
             csp_unit10_2020:
               display_name: 第10单元：网络安全和全球影响
+            lessonGroup-2:
+              display_name: 课后问卷
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -21040,6 +21123,8 @@ zh-CN:
               display_name: 内容
             lessonGroup-4:
               display_name: 沙盒
+            lessonGroup-5:
+              display_name: 调查
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -21122,8 +21207,6 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
-            lessonGroup-4:
-              display_name: 沙盒
         csa3-2022:
           lessons:
             lesson-3:
@@ -21155,8 +21238,6 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
-            lessonGroup-4:
-              display_name: 沙盒
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -21490,7 +21571,7 @@ zh-CN:
             lessonGroup-2:
               display_name: 内容
             lessonGroup-5:
-              display_name: 沙盒
+              display_name: 调查
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -22126,6 +22207,8 @@ zh-CN:
             Keeping Data Secret:
               name: 数据保密
               key: 数据保密
+            Create a Representation:
+              name: 项目-创建表示
             Problem Solving and Data:
               name: 解决问题和数据
               key: 解决问题和数据
@@ -22232,3 +22315,127 @@ zh-CN:
           student_description: 本单元包含一个调查问卷，待完成《计算机科学探索》所有单元后进行填写。教师将告诉你何时填写该调查问卷。
         csp-post-survey-2022:
           title: 计算机科学原理课后调查
+        aiml-2022:
+          lessons:
+            Introduction to Machine Learning:
+              name: 机器学习的简介
+            Introduction to AI Lab:
+              name: 人工智能实验室的介绍
+            Numerical Models:
+              description_teacher: |-
+                在本课中，学生参与一个线下活动，模拟僵尸疫情爆发。学生必须利用邻近城镇的数据来预测城镇的哪一部分拥有最少的僵尸。学生们将使用相似度和平均值来预测某一特定地点的僵尸数量。然后，学生得到拯救，并将他们的预测与实际数字进行比较，以讨论数字数据与分类数据的准确性有何不同。
+
+                **今日问题。**计算机如何学习用数字数据进行预测？
+            Survey Planning:
+              name: 设计数据收集
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: 模块 1
+              key: 模块 1
+            Module 2:
+              name: 模块 2
+              key: 模块 2
+            Module 3:
+              name: 模块 3
+              key: 模块 3
+            Module 4:
+              name: 模块 4
+              key: 模块 4
+            Module 5:
+              name: 模块 5
+              key: 模块 5
+            Module 6:
+              name: 模块 6
+              key: 模块 6
+            Module 7:
+              name: 模块 7
+              key: 模块 7
+            Module 8:
+              name: 模块 8
+              key: 模块 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: 模块 1
+              key: 模块 1
+            Module 2:
+              name: 模块 2
+              key: 模块 2
+            Module 3:
+              name: 模块 3
+              key: 模块 3
+            Module 4:
+              name: 模块 4
+              key: 模块 4
+            Module 5:
+              key: 模块 5
+            Module 6:
+              key: 模块 6
+            Module 7:
+              key: 模块 7
+            Module 8:
+              key: 模块 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 欢迎
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: 第4课
+            lesson-3:
+              key: 第3课
+            lesson-8:
+              key: 第8课
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课

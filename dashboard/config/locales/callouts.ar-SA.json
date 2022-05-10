@@ -1464,7 +1464,7 @@
           "sticker2": "أضف هذه في منتصف برنامجك."
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق، سنريك كيفية استخدامها في دروس قادمة."
         },
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
@@ -1473,7 +1473,7 @@
           "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
         },
         "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
+          "courseC_maze_debugging5_1": "هذه القطع البرمجية مغلقة ولايمكن حذفها!"
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
@@ -1593,7 +1593,7 @@
           "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
         },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+          "express_maze_debugging9_2019_1": "اسحب القطع البرمجية من صندوق الأدوات إلى مساحة العمل الخاصة بك."
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "قطعة برمجية جديدة!"
@@ -1763,7 +1763,7 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "ابحث عن كتل للكود هنا.",
           "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر.",
-          "run_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر."
+          "run_button": "اختبر الكائنات المتحركة الخاصة بك مع هذا الزر."
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "؟"
@@ -1839,7 +1839,7 @@
           "whenToWhile": "حاول التغيير من \"عندما\" الى \"بينما\"."
         },
         "courseF_events_key": {
-          "whenKey": "استخدام قطعة الحدث البرمجي الجديدة الموجودة هنا."
+          "whenKey": "استخدم قطعة الحدث البرمجي الجديدة الموجودة هنا."
         },
         "courseF_events_time": {
           "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
@@ -1875,6 +1875,15 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "هل تحولت الشاشة إلى اللون الأخضر؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الرمز الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "أنت في طور التصميم الآن"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
         }
       }
     }

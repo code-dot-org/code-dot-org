@@ -35,7 +35,6 @@
   "emptyBackpackMessage": "Fail yang disimpan ke beg galas anda akan muncul di sini.",
   "enablePeerReview": "Benarkan Semakan Rakan",
   "errorJavabuilderConnectionGeneral": "Kami mengalami ralat semasa menyambung ke pelayan kami. Cuba lagi.",
-  "errorJavabuilderConnectionNotAuthorized": "Anda tidak dibenarkan untuk mengakses Javalab. Adakah anda perlu mengelog masuk atau menyertai bahagian?",
   "errorLoadingClassmates": "Terdapat ralat semasa memuatkan senarai rakan sekelas anda. Sila cuba lagi.",
   "errorMediaImageLoadError": "Terdapat ralat semasa memuatkan imej.",
   "errorNeighborhoodInvalidGrid": "Terdapat ralat semasa memuatkan peringkat kejiranan. Sila hubungi kami di support@code.org, dan pastikan anda memasukkan URL ke halaman ini dalam mesej anda.",

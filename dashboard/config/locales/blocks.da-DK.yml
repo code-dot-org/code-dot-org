@@ -1187,6 +1187,12 @@ da:
             '90': ned
             '180': venstre
             '270': op
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': mellem
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kigger i retning {DIRECTION}"
         options:

@@ -5,6 +5,7 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
+import {commitShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
 const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
   const {createdAt, comment, projectVersion, isVersionExpired} = commit;
@@ -27,13 +28,7 @@ const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
 };
 
 CodeReviewTimelineCommit.propTypes = {
-  commit: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    createdAt: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired,
-    projectVersion: PropTypes.string.isRequired,
-    isVersionExpired: PropTypes.bool
-  }),
+  commit: commitShape,
   isLastElementInTimeline: PropTypes.bool
 };
 

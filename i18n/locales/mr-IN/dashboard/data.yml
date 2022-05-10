@@ -133,6 +133,8 @@ mr:
         hello_world_congrats: हॅलो वर्ल्ड -  आपणास पाहिजे ते करा
         poemart_intro: कविता ह्या कलेची ओळख
         CSA-PL-debugging-temp: जावा लॅबमध्ये डीबगिंगची ओळख - टेम्प (temp)
+        PL_CS_Journeys_Overview: संगणक शास्त्राचा प्रवास
+        CSA-PL-intro-to-arrays: एक-आयामी (1D) अॅरेज
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

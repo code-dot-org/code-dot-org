@@ -659,6 +659,10 @@ ms:
       title: Majlis Tari-Menari
     dance-2019:
       title: Majlis Tari-Menari
+    hello-world:
+      title: Helo Dunia
+    poem-art:
+      title: Seni Puisi
     hoc:
       title: Pagar Sesat Klasik
       body: Cuba asas sains komputer. Jutaan individu telah mencubanya.
@@ -851,8 +855,6 @@ ms:
       Harap maklum bahawa alatan kami yang mengajar JavaScript mungkin tidak tersedia
       kepada pelajar anda sebelum menerima syarat yang dikemas kini secara eksplisit.
     review_terms: Semak syarat yang dikemas kini
-  donor_interstitial:
-    title: Kursus SK percuma anda dimungkinkan oleh...
   school_info_interstitial:
     save: Simpan
   race_interstitial:

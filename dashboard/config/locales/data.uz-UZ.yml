@@ -853,6 +853,7 @@ uz:
         csd_ml_intro_ai_lab_july2021: 6-dars
         csd_u6_circuit_playground: Jismoniy hisoblash
         csd_u6_input_output: Input and Output
+        csp_applab_parameters: Funksiyalar (parameterlari bilan)
     callout:
       text:
         drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'

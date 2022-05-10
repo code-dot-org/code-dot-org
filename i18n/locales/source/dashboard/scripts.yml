@@ -6164,8 +6164,8 @@ en:
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
               name: Loops in Artist
-              description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_student: 
+              description_teacher: 
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
@@ -6246,6 +6246,8 @@ en:
               name: Build a Flappy Game
             Events in Play Lab:
               name: Events in Play Lab
+              description_student: 
+              description_teacher: 
             Screen Out the Mean:
               name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
@@ -7894,6 +7896,14 @@ en:
               name: CSD pre-survey 21-22
             lesson-20:
               name: CSP post-survey 2021
+              description_student: 
+              description_teacher: 
+            CS Principles Pre-survey:
+              name: CSA Pre-Survey Draft
+              description_student: 
+              description_teacher: 
+            Course Survey:
+              name: CSA Post-Course Survey Draft
               description_student: 
               description_teacher: 
           student_description: ''
@@ -25384,6 +25394,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         sb-pt-cont:
           lessons:
             lesson-1:
@@ -26897,6 +26908,12 @@ en:
           lessons:
             lesson-1:
               name: Testing CSA Clone
+            lesson-2:
+              name: Lesson 2
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Lesson 3
           lesson_groups: {}
           name: tesstest921
           title: ''
@@ -29673,6 +29690,10 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_lists:
               display_name: Lists
@@ -29682,6 +29703,8 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
+            lessonGroup-5:
+              display_name: Post-Course Survey
           title: Lists, Loops, and Traversals ('22-'23)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
@@ -30009,9 +30032,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Algorithms ('22-'23)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
@@ -30105,7 +30134,7 @@ en:
             csp_libraries:
               display_name: Libraries
             lessonGroup-3:
-              display_name: Survey
+              display_name: Post-Course Survey
           title: Parameters, Return, and Libraries ('22-'23)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
@@ -30154,12 +30183,20 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           title: Create PT Prep ('22-'23)
           description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
           name: csp8-2022
         csp9-2022:
           lessons:
@@ -30245,9 +30282,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Data ('22-'23)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
@@ -30362,9 +30405,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Cybersecurity and Global Impacts ('22-'23)
           description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
           student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
@@ -31137,6 +31186,10 @@ en:
               name: The Neighborhood
               description_student: 
               description_teacher: 
+            lesson-23:
+              name: CSA Pre-Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -31144,6 +31197,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandboxes
+            lessonGroup-5:
+              display_name: Survey
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -31394,7 +31449,7 @@ en:
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students develop an understanding of data encapsulation and object-oriented design decisions.
           description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 1\n-   Personal Progress Check 5\n-   Personal Progress Check 9\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
         csa3-2022:
@@ -31476,11 +31531,11 @@ en:
             lesson-9:
               name: Polymorphism
               description_student: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 You have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods.
               description_teacher: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 Students explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.
             lesson-10:
@@ -31561,7 +31616,7 @@ en:
           name: csa3-2022
           title: Arrays and Algorithms ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
           description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n-   Personal Progress Check 6\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
         tessplayground:
@@ -31769,7 +31824,7 @@ en:
 
                 Sometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer.
               description_teacher: |-
-                *How can I use casting to temporarily convert a value to a different type or round to the nearest integer?*
+                **How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**
 
                 Students learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.
             lesson-11:
@@ -31827,10 +31882,12 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa4-2022
           title: Conditions and Logic ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students improve decision-making in their programs using relational and logical operators to evaluate primitive values and object references and use the Math class to perform calculations and generate random numbers.
           description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 3\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
         csa5-2022:
@@ -31972,10 +32029,12 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know Week
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa5-2022
           title: Two-Dimensional Arrays ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs.
           description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 8\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.
         tess-test-csa:
@@ -32217,7 +32276,7 @@ en:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
-              name: Introduction to JavaLab
+              name: Introduction to Java Lab
               description_student: 
               description_teacher: |-
                 **You will:**
@@ -32711,6 +32770,12 @@ en:
               name: Project Mercury Pastries Food Truck
               description_student: 
               description_teacher: 
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: csa-backpack-2022
           title: CSA Backpack Versions ['22-'23]
@@ -32945,8 +33010,8 @@ en:
               key: Java Lab
             The Neighborhood:
               name: The Neighborhood
-              description_student: ''
-              description_teacher: ''
+              description_student: 
+              description_teacher: 
               key: The Neighborhood
             The Theater:
               name: The Theater
@@ -33109,13 +33174,13 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Pilot Survey
+              display_name: Sandboxes
             lessonGroup-5:
               display_name: Sandbox
           title: ArrayLists and String Methods
           description: "This unit continues to expand on data structures to introduce students to creating lists using the `ArrayList` class. In the process, students learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. Students differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. Students apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, students learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, students further develop software engineering skills by writing Javadoc comments to create API documentation for their programs.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 2\n-   Personal Progress Check 7\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: This unit continues to expand on data structures to introduce you to creating lists using the `ArrayList` class. In the process, you learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. You differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. You apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, you learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, you further develop software engineering skills by writing Javadoc comments to create API documentation for your programs.
-          description_short: ''
+          description_short: Students use ArrayLists to store program data and work with methods in the String class to manipulate and evaluate String objects.
           description_audience: ''
           name: csa6-2022
         csa7-2022:
@@ -33224,28 +33289,68 @@ en:
               name: Project Planning
             lesson-2:
               name: Method Parameters
+              description_student: |-
+                **What are the similarities and differences between passing primitives and object references as parameters?**
+
+                In this lesson, you revisit passing primitives and object references as parameters to identify similarities and differences between each. You explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. You then learn about user stories and write user stories for your project to identify required program features.
+              description_teacher: |-
+                **What are the similarities and differences between passing primitives and object references as parameters?**
+
+                Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. Students then learn about user stories and write user stories for their projects to identify required program features.
             lesson-3:
               name: Overloading Methods
             lesson-4:
               name: Private Methods
             lesson-5:
               name: Overriding Methods
+              description_student: |-
+                **How can I override methods from other classes?**
+
+                You have overridden methods from the `Object` class and worked with class hierarchies that implemented overridden methods. In this lesson, you explore writing and calling overridden methods and how the `super` keyword can be used to call the superclass version of a method. You identify scenarios for overriding methods and practice writing and calling overridden methods using the console, The Neighborhood, or The Theater.
+              description_teacher: |-
+                **How can I override methods from other classes?**
+
+                Students have overridden methods from the `Object` class and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods and how the `super` keyword can be used to call the superclass version of a method. Students identify scenarios for overriding methods and practice writing and calling overridden methods using the console, The Neighborhood, or The Theater.
             lesson-6:
               name: Intellectual Property
             lesson-7:
               name: Recursion
             lesson-8:
               name: Recursion vs Iteration
+              description_student: |-
+                **What is the difference between recursion and iteration?**
+
+                Sometimes it's easier to write a method iteratively, and other times a recursive method is best! In this lesson, you explore how iterative solutions can be implemented using recursion and identify the similarities and differences in both algorithms. You practice converting iterative algorithms to recursion then continue development on your Creative Coding with The Theater Project.
+              description_teacher: |-
+                **What is the difference between recursion and iteration?**
+
+                Students explore how iterative solutions can be implemented using recursion and identify the similarities and differences in both algorithms. Students practice converting iterative algorithms to recursion then continue development on their Creative Coding with The Theater Project.
             lesson-9:
               name: Recursive Algorithms
             lesson-10:
               name: Maximizing System Reliability
             lesson-11:
               name: Creative Coding with The Theater – Day 1
+              description_student: |-
+                **How do I identify and prioritize the tasks I still need to complete for my project?**
+
+                You continue to develop your Creative Coding Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then continue developing your projects. You then conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks.
+              description_teacher: |-
+                **How do I identify and prioritize the tasks I still need to complete for my project?**
+
+                Students continue to develop their Creative Coding Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue developing their projects. Students then conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks.
             lesson-12:
               name: Creative Coding with The Theater – Day 2
             lesson-13:
               name: Creative Coding with The Theater – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-14:
               name: FRQ Practice
             lesson-15:
@@ -33256,13 +33361,13 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Pilot Survey
+              display_name: Sandboxes
             lessonGroup-5:
               display_name: Sandbox
-          title: Expanding Software Design
+          title: Method Decomposition and Recursion
           description: "This unit allows students to practice software design and development using the skills they have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. In the process, students learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, students practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1]."
-          student_description: In this unit, you practice software design and development using the skills you have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your project meets specified requirements. In the process, you learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, you practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills you acquired throughout the year, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
-          description_short: ''
+          student_description: This unit allows you to practice software design and development using the skills you have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your project meet specified requirements. In the process, you learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, you practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
+          description_short: Students practice software design and development using the skills and programming constructs they have learned and explore recursion.
           description_audience: ''
           name: csa7-2022
         csa8-2022:
@@ -33389,6 +33494,14 @@ en:
               name: Privacy and Security
             lesson-11:
               name: Creative Coding with the Console – Day 1
+              description_student: |-
+                **How do I identify and prioritize the tasks I still need to complete for my project?**
+
+                You continue to develop your Creative Coding Project to create a program that portrays a personal interest or solves a problem using the console. You first self-assess your work to evaluate your progress in completing project requirements, then continue developing your projects. You then conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks.
+              description_teacher: |-
+                **How do I identify and prioritize the tasks I still need to complete for my project?**
+
+                Students continue to develop their Creative Coding Project to create a program that portrays a personal interest or solves a problem using the console. Students first self-assess their work to evaluate their progress in completing project requirements, then continue developing their projects. Students then conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks.
             lesson-12:
               name: Creative Coding with the Console – Day 2
             lesson-13:
@@ -33403,10 +33516,10 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Pilot Survey
+              display_name: Sandboxes
             lessonGroup-5:
-              display_name: Sandbox
-          title: Giving Objects Life
+              display_name: Survey
+          title: Searching and Sorting
           description: "This unit expands on algorithms students have learned to introduce common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, students analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, students apply their programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, students consider the privacy and security of programs and users.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 10\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
           student_description: In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.
           description_short: ''
@@ -33451,9 +33564,9 @@ en:
               description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
               description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce themselves and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
             lesson-2:
-              name: Equity in CS
-              description_student: "**You will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. "
-              description_teacher: "**Overview:**\nThis session is designed to introduce participants to Code.org’s “why” related to CS education which will lay the foundation for the conversations around equity, access, diversity, and inclusion that are woven throughout the workshop agenda. Participants will also have the opportunity to define their personal “why” related to CS education.\n\n**Participants will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. \n\n**Suggested time:** 30 minutes"
+              name: Vision for CS Education
+              description_student: "**You will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion related to CS education.\n* Define your personal “why” related to CS education. \n* Set an intention for the workshop. "
+              description_teacher: "**Overview:**\nThis session is designed to introduce participants to Code.org’s “why” related to CS education which will lay the foundation for the conversations around equity, access, diversity, and inclusion that are woven throughout the workshop agenda. Participants will also have the opportunity to define their personal “why” related to CS education.\n\n**Participants will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion related to CS education.\n* Define their personal “why” related to CS education. \n* Set an intention for the workshop. \n\n**Suggested time:** 35 minutes"
             lesson-3:
               name: Model Lesson 1 - Unit 1 Lesson 2
               description_student: "**You will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. "
@@ -33474,24 +33587,24 @@ en:
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 2: Intro to HTML. This lesson will provide participants with an introduction to HTML and the Web Lab programming environment. This model lesson will also highlight the importance of student exploration before direct instruction in a CS Discoveries lesson.\n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes"
             lesson-7:
               name: Identity
-              description_student: "**You will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. "
-              description_teacher: "**Overview:**\nThis session is designed to establish a shared definition of identity and to provide participants with the space to reflect on how their identity, experiences, and beliefs shape how they see their role as CS teachers. A key takeaway of this session is that we all have identity markers that shape how we engage with students in our classrooms.  \n\n**Participants will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n\n**Suggested time:** 35 minutes"
+              description_student: "**You will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n* Define unconscious bias. \n* Reflect on your beliefs around who should have access to CS education."
+              description_teacher: "**Overview:**\nThis session is designed to establish a shared definition of identity and to provide participants with the space to reflect on how their identity, experiences, and beliefs shape how they see their role as CS teachers. A key takeaway of this session is that we all have identity markers that shape how we engage with students in our classrooms.  \n\n**Participants will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n* Define unconscious bias. \n* Reflect on their beliefs around who should have access to CS education. \n\n**Suggested time:** 35 minutes"
             lesson-8:
               name: Lesson Assignment
             lesson-9:
               name: Explore a Lesson
-              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
             lesson-10:
               name: The role of the teacher
               description_student: |
                 **You will:**
                 * Consider your role as the teacher in a CS Discoveries classroom.
-              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider your/their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
+              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
             lesson-11:
               name: Wrap Up
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
-              description_teacher: "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**Overview:**\nIn this session, participants will be introduced to their asynchronous assignment and reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 30 minutes"
             The Problem Solving Process:
               name: Model Lesson 1 - Unit 1 Lesson 2
               description_student: "**You will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. "
@@ -33527,8 +33640,8 @@ en:
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: Lesson Planning
-              description_student: "**You will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Create a plan for teaching your TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
@@ -33619,9 +33732,9 @@ en:
               description_student: "**You will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. "
               description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2.\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes"
             lesson-2:
-              name: Context and Bias
-              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
-              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes"
+              name: Barriers and Opportunities
+              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in your classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. "
+              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then prompts participants to reflect on their role in reducing barriers to access, diversity, and inclusion in CS education. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in their classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers they have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers they have the power to influence. \n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: TLO 3 - Unit 4 Lesson 3 - delete
               description_student: |-
@@ -33662,9 +33775,26 @@ en:
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n"
               description_teacher: "**Overview:**\nIn this session, you will reflect on what you have gotten out of the day along with what you still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n\n**Suggested time:** 5 minutes"
             lesson-9:
-              name: Barriers and Opportunities
-              description_student: "**You will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThese asynchronous activities will prompt participants to reflect on their role in expanding access, diversity, and inclusion in CS education. Participants will be asked to identify aspects of access, diversity, and inclusion in CS education that they have the power to control. They will then go further to articulate concrete steps they can take in the next 30, 60, and 90 days to impact equity CS in their areas of control. \n\n**Participants will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
+              name: Connect with the CS Community
+              description_student: |-
+                **You will:**
+
+                * Explore CS Journeys.
+                * Make a plan for connecting with your local community.
+                * Make a plan for connecting with other CS educators.
+
+                **Suggested time:** 60 minutes
+              description_teacher: |-
+                **Overview:**
+                The goal of these asynchronous activities is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. These activities will prompt participants to expand their idea of community to include both their local community and the national computer science community.
+
+                **Participants will:**
+
+                * Explore CS Journeys.
+                * Make a plan for connecting with their local community.
+                * Make a plan for connecting with other CS educators.
+
+                **Suggested time:** 60 minutes
             User Centered Design   Define and Prepare:
               name: TLO 3 - Unit 4 Lesson 3
               description_student: |-
@@ -33745,8 +33875,8 @@ en:
                 **Suggested time:** ____ minutes
             lesson-4:
               name: Welcome
-              description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration."
-              description_teacher: "**Overview:**\nThis session serves as an introduction to Day 4. The session also includes a demonstration of the Circuit Playground used in Unit 6 of CS Discoveries.  \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration.\n\n**Suggested time:** 15 minutes"
+              description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work."
+              description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 4 and a space to debrief the asynchronous work from Day 3. \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work.\n\n**Suggested time:** 15 minutes"
             lesson-5:
               name: TLO 6 - Unit 6 Lesson 3 - delete
               description_student: "**You will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. "
@@ -33758,9 +33888,9 @@ en:
             lesson-7:
               name: Async Prep
             lesson-8:
-              name: Differentiation
-              description_student: "**You will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
-              description_teacher: "**Overview:**\nDuring these asynchronous activities, participants will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.\n\n**Participants will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
+              name: Make an Implementation Plan
+              description_student: "**You will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you will teach and in which order. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nNow that participants have been introduced to the content within the full course, participants will utilize the CS Discoveries implementation guide to determine which units they will teach and in which order. This is an important step to take before moving into the curriculum investigation. \n\n**Participants will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units they will teach and in which order. \n\n\n**Suggested time:** 60 minutes"
             lesson-9:
               name: Navigating Support
               description_student: "**You will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes"
@@ -33792,6 +33922,10 @@ en:
                 Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
 
                 **Question of the Day:** How can you update design elements of an app?
+            Introduction to Machine Learning:
+              name: TLO 7 - Unit 7 Lesson 1
+              description_student: "**You will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. "
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 7 Lesson 1: Introduction to Machine Learning. In this lesson, participants will train a robot to solve problems. This TLO lesson will also share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Participants will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Suggested time:** 60 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33818,9 +33952,9 @@ en:
               description_student: "**You will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. "
               description_teacher: "**Overview:**\nThis session is intended to be flexible to meet the needs of the workshop participants. The goal is that participants leave the workshop feeling confident and prepared to start teaching the content from at least one unit of the CS Discoveries curriculum.\n\n**Participants will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. \n\n**Suggested time:** 60 minutes"
             lesson-3:
-              name: Making a Plan
-              description_student: "**You will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. "
-              description_teacher: "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. \n\n**Suggested time:** 60 minutes"
+              name: Teacher Resource Exploration
+              description_student: "**You will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. "
+              description_teacher: "**Overview:**\nDuring this session, participants will explore resources that are designed to support teachers in implementing CS Discoveries with their students. There will be opportunities for collaboration and sharing of ideas during this session. \n\n**Participants will:**\n\n* Explore teacher resources. \n* Share ideas for implementing CS Discoveries. \n\n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
@@ -34410,20 +34544,20 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: 'Ecosystems: Interactions, Energy & Dynamics'
+              name: Overfishing Simulation
               description_student: 
-              description_teacher: 
+              description_teacher: In this lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the number of algae in the water and to change the look of the coral when there is too much algae.
             lesson-3:
-              name: Biological Evolution
+              name: Model Animal Adaptations
               description_student: 
-              description_teacher: 
+              description_teacher: In this lesson, students will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. They will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where students create a hypothesis for a potential future aquatic animal adaptation due to overfishing.
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
-          title: ''
+          title: Ecosystems
           description_audience: ''
           description_short: ''
           description: ''
@@ -34433,20 +34567,24 @@ en:
             lesson-1:
               name: Visual Effects
             lesson-2:
-              name: My Time Capsule Story
+              name: The Time We Live In
+              description_student: 
+              description_teacher: 'In this lesson, students will plan out their time capsule app before coding it. Students will reflect on their favorite things to do and their own personal experiences in order to write a short story about the current time period. '
             lesson-3:
               name: Coding My Time Capsule
               description_student: 
-              description_teacher: 
+              description_teacher: "In this lesson, students will code their time capsule stories from the previous lesson. They will enhance the text by adding visual effects, imagery, and sound to their apps. \n"
             lesson-4:
               name: Gallery Walk
+              description_student: 
+              description_teacher: In this final lesson, students will share their apps with one another.  First they will copy and paste their app links into a new tab. Then students will walk around and run each other’s time capsule apps. Finally, the whole class will have a discussion on the importance of curation and how to decide what elements to keep in retelling history.
             Poem Art:
               name: Poem Art
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
               description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
-          title: ''
+          title: Time Capsule
           description_audience: ''
           description_short: ''
           description: ''
@@ -34455,17 +34593,19 @@ en:
           lessons:
             lesson-1:
               name: Native American Star Quilts
+              description_student: 
+              description_teacher: 'In this Unplugged lesson, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online coding portions of the activity later on. '
             lesson-2:
               name: Getting Started with The Artist
               description_student: 
-              description_teacher: 
+              description_teacher: This skill-building lesson provides an opportunity for students to become familiar with the Artist Tool and to build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.
             lesson-3:
               name: Code Your Star Quilt
               description_student: 
-              description_teacher: 
+              description_teacher: The final lesson for this activity students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.
           lesson_groups: {}
           name: csc-pilot-2022-starquilts
-          title: ''
+          title: Star Quilts Module
           description_audience: ''
           description_short: ''
           description: ''
@@ -34477,16 +34617,28 @@ en:
             lesson-2:
               name: Code Your Fable
             lesson-3:
-              name: Share Your Fable
+              name: Code Your Fable
               description_student: 
-              description_teacher: 
+              description_teacher: 'In this lesson, students will use their planning sheets to program two character’s dialogue in order to portray a moral. '
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
+            lesson-4:
+              name: "[Optional] Introduction to Fables"
+              description_student: 
+              description_teacher: 'Students will review and list the common morals and character traits of fables. In this lesson, students will develop a list of similar themes, topics and patterns of events in traditional literature from different cultures in order to begin writing and coding their own fable. '
+            lesson-5:
+              name: Plan Your Fable
+              description_student: 
+              description_teacher: 'In this lesson, students will choose their favorite fables to adapt, by picking a moral and two characters from two different fables. Students will begin drafting the characters and drafting the scene they plan to animate. '
+            lesson-6:
+              name: Share Your Fable
+              description_student: 
+              description_teacher: 'In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. '
           lesson_groups: {}
           name: csc-pilot-2022-fables
-          title: ''
+          title: Fables
           description_audience: ''
           description_short: ''
           description: ''
@@ -35041,7 +35193,7 @@ en:
               name: Designing With Empathy
               description_student: "**Question of the Day: How can we choose products based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of objects they use. "
               description_teacher: |-
-                **Question of the Day:** How can we choose products based on the needs of a user?
+                **Question of the Day: How can we choose products based on the needs of a user?**
 
                 To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one set of shoes that would make it more useful or usable.
             Understanding Your User:
@@ -35291,7 +35443,7 @@ en:
                 Students continue to explore how data is represented in a punchcard, and begin considering whether some data should be protected from public view because it is too personal or sensitive. Once students understand the reasons for protecting data, they learn a binary encryption system that lets them encrypt and decrypt data in their punchcards, and eventually they are able to send secret messages to one another using this method. Class concludes with a discussion on the importance of protecting our information and how encryption is one way we can accomplish this.
               key: Keeping Data Secret
             Create a Representation:
-              name: Create a Representation
+              name: Project - Create a Representation
               description_student: |-
                 **Question of the Day: How can I represent complex information using binary systems?**
 
@@ -35510,10 +35662,10 @@ en:
                 **Question of the Day:** What are guidelines we can use to create ethical machine learning apps?
               key: AI Code of Ethics
             'Mini-Project: Make a Machine Learning App':
-              name: 'Mini-Project: Make a Machine Learning App'
+              name: 'Project: Make a Machine Learning App'
               description_student: Choose from several real-world datasets to train a model and create an app that uses machine learning
               description_teacher: |-
-                In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+                In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
 
                 **Question of the Day:** Can I use real-world data to create an app that uses machine learning?
               key: 'Mini-Project: Make a Machine Learning App'
@@ -35559,10 +35711,10 @@ en:
                 **Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?
               key: Creating an App
             Design an AI App:
-              name: Design an AI App
-              description_student: To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+              name: Project - Design an AI App
+              description_student: Create an app that uses machine learning to solve a problem in your community
               description_teacher: |-
-                To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+                To conclude this unit, students develop an AI app that addresses the social issue of their interest. Students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app. Students perform a peer review and make any necessary updates to their projects while reflecting on the outcome.
 
                 **Question of the Day:** How can I create an AI App the solves a problem in my community?
               key: Design an AI App
@@ -35603,7 +35755,7 @@ en:
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][5]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
-          description_short: ''
+          description_short: Learn to about Artificial Intelligence and Machine Learning
           description_audience: ''
           name: csd7-2022
         csd6-2022:
@@ -35643,10 +35795,10 @@ en:
 
                 **Question of the Day:** How can I create more complex programs that keep track of information and make decisions?
             'Mini-Project: On-The-Go App':
-              name: 'Mini-Project: On-The-Go App'
-              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              name: 'Mini-Project: Field Collector App'
+              description_student: Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected
               description_teacher: |-
-                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
 
                 **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
             Color LEDs:
@@ -35780,6 +35932,12 @@ en:
         testtess2:
           lessons: {}
           lesson_groups: {}
+          name: testtess2
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         csp-post-survey-2022:
           lessons:
             Course Survey:
@@ -35793,3 +35951,978 @@ en:
           description_short: ''
           description: This unit contains the CS Principles Post-Course Survey.
           student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
+        aiml-2022:
+          lessons:
+            Introduction to Machine Learning:
+              name: Introduction to Machine Learning
+              description_student: Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean
+              description_teacher: |-
+                In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
+
+                **Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
+            Patterns in Data:
+              name: Patterns in Data
+              description_student: Explore three different ways computers can make recommendations and how important data can be in making accurate decisions.
+              description_teacher: |-
+                In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+
+                **Question of the Day:** What strategies do computer models use to make decisions?
+            Classification Models:
+              name: Classification Models
+              description_student: Learn how to create a machine learning model by helping a computer classify foods as fruits or veggies
+              description_teacher: |-
+                In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.
+
+                **Question of the Day:** How do computers learn to classify data?
+            Introduction to AI Lab:
+              name: Introduction to AI Lab
+              description_student: Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant.
+              description_teacher: |-
+                In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.
+
+                **Question of the Day:** How can we use machine learning to make recommendations?
+            Importing Models in App Lab:
+              name: Importing Models in App Lab
+              description_student: Learn how to import a model into App Lab to help create a Book Recommendation app for a middle school classroom.
+              description_teacher: |-
+                In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.
+
+                **Question of the Day:** How can I create an app using machine learning?
+            Model Cards:
+              name: Model Cards
+              description_student: Help decide which model a hospital should use for it's emergency room prioritization system, and determine which models include unintended biases. You will also learn how Model Cards can help evaluate and analyze machine learning models.
+              description_teacher: |-
+                In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.
+
+                **Question of the Day:** How can we evaluate machine learning models once they've been trained?
+            Saving Models in AI Lab:
+              name: Saving Models in AI Lab
+              description_student: Help train several models to help a zoo create educational apps for their customers. You will create Model Cards for each of your models, then import one of them into App Lab to create an app.
+              description_teacher: |-
+                Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab
+
+                **Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?
+            Model Cards in App Lab:
+              name: Model Cards in App Lab
+              description_student: Learn how to use Model Cards to improve a machine learning app, and how to update the final screen based on the model prediction.
+              description_teacher: |-
+                In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.
+
+                **Question of the Day:** How can I use a Model Card to improve my app?
+            Numerical Models:
+              name: Numerical Models
+              description_student: Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety.
+              description_teacher: |-
+                In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
+
+                **Question of the Day:** How do computers learn to make predictions with numerical data?
+            Numerical Data in AI Lab:
+              name: Numerical Data in AI Lab
+              description_student: Use AI Lab and numerical data to make predictions about real-world scenarios
+              description_teacher: |-
+                In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
+
+                **Question of the Day:** How can we use AI Lab to predict numerical data?
+            Customizing Apps:
+              name: Customizing Apps
+              description_student: Learn how to edit the code for a machine learning app by helping to create a driver alert system, where each sensor is on a different screen of the app.
+              description_teacher: |-
+                In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
+
+                **Question of the Day:** How can I customize the code for a machine learning app?
+            AI Code of Ethics:
+              name: AI Code of Ethics
+              description_student: What does it mean for artificial intelligence to be used ethically? In this lesson, you'll help create an AI Code of Ethics and research examples of artificial intelligence that are or are not following your code of ethics.
+              description_teacher: |-
+                In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+
+                **Question of the Day:** What are guidelines we can use to create ethical machine learning apps?
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Mini-Project: Make a Machine Learning App'
+              description_student: Choose from several real-world datasets to train a model and create an app that uses machine learning
+              description_teacher: |-
+                In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+
+                **Question of the Day:** Can I use real-world data to create an app that uses machine learning?
+            Survey Planning:
+              name: Survey Planning
+              description_student: Help the other team of students develop questions that would be useful to create a machine learning app, then learn how to use Google Forms to create a survey to collect data.
+              description_teacher: |-
+                This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can I create a survey to gather data for a machine learning app?
+            Survey Data in AI Lab:
+              name: Survey Data in AI Lab
+              description_student: Learn how to download survey data and use it in AI Lab to train a model. The skills in this lesson are important for completing the final lesson in this unit.
+              description_teacher: |-
+                This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.
+
+                **Question of the Day**:  How can I import data into AI Lab to train a machine learning model?
+            Troubleshooting Models:
+              name: Troubleshooting Models
+              description_student: Help students from the other team analyze their survey data and determine why they are unable to get accurate models _or_ they are unable to create usable models when tested.
+              description_teacher: |-
+                This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.
+
+                **Question of the Day**:  What are strategies to make sure our data generates an accurate model?
+            Creating an App:
+              name: Creating an App
+              description_student: The model is finally ready! Now it's time to import the model into App Lab and build the final Club Recommender app!
+              description_teacher: |-
+                This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?
+            Types of Machine Learning:
+              name: Types of Machine Learning
+              description_student: Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn.
+              description_teacher: |-
+                In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+
+                **Question of the Day:** What are different types of machine learning?
+            Innovations in AI:
+              name: Innovations in AI
+              description_student: Research different examples of how Artificial Intelligence is being used to solve problems in the world.
+              description_teacher: |-
+                In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+
+                **Question of the Day:** How is AI helping to solve problems around the world?
+            Issue Statements:
+              name: Issue Statements
+              description_student: Working with a team of students from another school, develop ideas for how machine learning can be used to address an issue in your community.
+              description_teacher: |+
+                This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can machine learning be used to address an issue in your community?
+
+            Design an AI App:
+              name: Design an AI App
+              description_student: To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+              description_teacher: |-
+                To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+
+                **Question of the Day:** How can I create an AI App the solves a problem in my community?
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1 - Understanding Machine Learning
+            lessonGroup-3:
+              display_name: Chapter 2 - Design a Machine Learning App
+          name: aiml-2022
+          title: AI and Machine Learning Module
+          description_audience: ''
+          description_short: Learn about Artificial Intelligence and Machine Learning
+          description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here][0] to learn more about recommendations for introducing students to App Lab before this unit.
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][1]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+          student_description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            **For Teachers:** [Click here][0] to see lesson plans and teacher resources for this unit.
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            Module 5:
+              name: Module 5
+              description_student: ''
+              description_teacher: ''
+              key: Module 5
+            Module 6:
+              name: Module 6
+              description_student: ''
+              description_teacher: ''
+              key: Module 6
+            Module 7:
+              name: Module 7
+              description_student: ''
+              description_teacher: ''
+              key: Module 7
+            Module 8:
+              name: Module 8
+              description_student: ''
+              description_teacher: ''
+              key: Module 8
+          title: CS Discoveries Virtual Professional Learning 2021 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: 
+              description_teacher: 
+            'Module 6: Introduction to the Create Performance Task':
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: 
+              description_teacher: 
+            'Module 7: Tools and Structure in Unit 9 - Data':
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: 
+              description_teacher: 
+            'Module 8: Building Community and Preparing Students for the AP Exam':
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: 
+              description_teacher: 
+            Module 5:
+              key: Module 5
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: ''
+              description_teacher: ''
+          title: CS Principles Virtual Professional Learning 21 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Welcome to Code.org
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries.
+
+                **Suggested Time:** 8 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries.
+
+                **Suggested Time:** 8 minutes
+            Welcome to "Teaching CS Discoveries":
+              name: Welcome to "Teaching CS Discoveries"
+              description_student: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course.
+
+                **Suggested Time:** 2 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course.
+
+                **Suggested Time:** 2 minutes
+            lesson-1:
+              key: lesson-1
+              name: Welcome to Code.org
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries.
+
+                **Suggested Time:** 8 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries.
+
+                **Suggested Time:** 8 minutes
+            lesson-2:
+              key: lesson-2
+              name: Welcome to "Teaching CS Discoveries"
+              description_student: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course.
+
+                **Suggested Time:** 2 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course.
+
+                **Suggested Time:** 2 minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          title: 'Module 1: Welcome '
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Welcome to Code.org
+              description_student: ''
+              description_teacher: ''
+              key: Welcome to Codeorg
+            Welcome to "Teaching CS Discoveries":
+              name: Welcome to "Teaching CS Discoveries"
+              description_student: ''
+              description_teacher: ''
+              key: Welcome to "Teaching CS Discoveries"
+            Navigating the Codeorg learning platform:
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            Navigating lesson plans and resources:
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            Navigating support:
+              name: Navigating support
+              description_student: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+              description_teacher: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+            lesson-4:
+              key: lesson-4
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            lesson-3:
+              key: lesson-3
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-8:
+              key: lesson-8
+              name: Navigating support
+              description_student: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+              description_teacher: "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd3-2022:
+          lessons:
+            Overview of course content:
+              name: Overview of course content
+              description_student: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+            Overview of learning tools:
+              name: Overview of learning tools
+              description_student: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 20 minutes
+            'Overview of implementation ':
+              name: 'Overview of implementation '
+              description_student: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
+            lesson-1:
+              key: lesson-1
+              name: Overview of course content
+              description_student: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+            lesson-2:
+              key: lesson-2
+              name: Overview of learning tools
+              description_student: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 20 minutes
+            lesson-3:
+              key: lesson-3
+              name: 'Overview of implementation '
+              description_student: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
+          title: 'Module 3: Overview of CS Discoveries'
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd4-2022:
+          lessons:
+            Role of the teacher:
+              name: Role of the teacher
+              description_student: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+              description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+            Learning CS Discoveries:
+              name: Learning CS Discoveries
+              description_student: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 25 minutes
+            Teaching CS Discoveries:
+              name: Teaching CS Discoveries
+              description_student: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
+              description_teacher: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
+            lesson-1:
+              key: lesson-1
+              name: Role of the teacher
+              description_student: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+              description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+            lesson-2:
+              key: lesson-2
+              name: Learning CS Discoveries
+              description_student: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 25 minutes
+            lesson-3:
+              key: lesson-3
+              name: Teaching CS Discoveries
+              description_student: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
+              description_teacher: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching and learning CS Discoveries
+          title: 'Module 4: Teaching and learning CS Discoveries'
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Welcome to Code.org
+              description_student: |-
+                You will:
+
+                * Get an introduction to Code.org and CS Principles.
+              description_teacher: |-
+                You will:
+
+                * Get an introduction to Code.org and CS Principles.
+            Welcome to “Teaching CS Principles”:
+              name: Welcome to “Teaching CS Principles”
+              description_student: |-
+                You will:
+
+                * Learn how to engage in these professional learning modules.
+              description_teacher: |-
+                You will:
+
+                * Learn how to engage in these professional learning modules.
+            lesson-1:
+              key: lesson-1
+              name: Welcome to Code.org
+              description_student: |-
+                You will:
+
+                * Get an introduction to Code.org and CS Principles.
+              description_teacher: |-
+                You will:
+
+                * Get an introduction to Code.org and CS Principles.
+            lesson-2:
+              key: lesson-2
+              name: Welcome to “Teaching CS Principles”
+              description_student: |-
+                You will:
+
+                * Learn how to engage in these professional learning modules.
+              description_teacher: |-
+                You will:
+
+                * Learn how to engage in these professional learning modules.
+          title: 'Module 1: Welcome'
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp2-2022:
+          lessons:
+            Navigating the Codeorg learning platform:
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            Navigating lesson plans and resources:
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            Navigating support:
+              name: Navigating support
+              description_student: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+            lesson-1:
+              key: lesson-1
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            lesson-2:
+              key: lesson-2
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-3:
+              key: lesson-3
+              name: Navigating support
+              description_student: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp3-2022:
+          lessons:
+            Overview of course content:
+              name: Overview of course content
+              description_student: |-
+                **You will**:
+
+                * Gain a high-level understanding of the CS Principles curriculum.
+                * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+
+                **Suggested time**: 45 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Gain a high-level understanding of the CS Principles curriculum.
+                * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+
+                **Suggested time**: 45 minutes
+            Overview of learning tools:
+              name: Overview of learning tools
+              description_student: |-
+                **You will**:
+
+                * Become familiar with the student learning tools used within CS Principles.
+
+                **Suggested time**: 15 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Become familiar with the student learning tools used within CS Principles.
+
+                **Suggested time**: 15 minutes
+            Overview of implementation:
+              name: Overview of implementation
+              description_student: |-
+                **You will**:
+
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+                * Build an implementation plan for the school year.
+
+                **Suggested Time**: 30 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+                * Build an implementation plan for the school year.
+
+                **Suggested Time**: 30 minutes
+            lesson-1:
+              key: lesson-1
+              name: Overview of course content
+              description_student: |-
+                **You will**:
+
+                * Gain a high-level understanding of the CS Principles curriculum.
+                * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+
+                **Suggested time**: 45 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Gain a high-level understanding of the CS Principles curriculum.
+                * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+
+                **Suggested time**: 45 minutes
+            lesson-2:
+              key: lesson-2
+              name: Overview of learning tools
+              description_student: |-
+                **You will**:
+
+                * Become familiar with the student learning tools used within CS Principles.
+
+                **Suggested time**: 15 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Become familiar with the student learning tools used within CS Principles.
+
+                **Suggested time**: 15 minutes
+            lesson-3:
+              key: lesson-3
+              name: Overview of implementation
+              description_student: |-
+                **You will**:
+
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+                * Build an implementation plan for the school year.
+
+                **Suggested Time**: 30 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+                * Build an implementation plan for the school year.
+
+                **Suggested Time**: 30 minutes
+          title: Overview of CS Principles
+          description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp4-2022:
+          lessons:
+            The role of the teacher:
+              name: The role of the teacher
+              description_student: |-
+                **You will**:
+
+                * Consider your role as the teacher of a CS Principles classroom.
+
+                **Suggested Time**: 5 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Consider your role as the teacher of a CS Principles classroom.
+
+                **Suggested Time**: 5 minutes
+            Learning CS Principles:
+              name: Learning CS Principles
+              description_student: |-
+                **You will**:
+
+                * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+
+                **Suggested Time**: 25 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+
+                **Suggested Time**: 25 minutes
+            Teaching CS Principles:
+              name: Teaching CS Principles
+              description_student: |-
+                **You will**:
+
+                * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+
+                **Suggested Time**: 20 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+
+                **Suggested Time**: 20 minutes
+            lesson-1:
+              key: lesson-1
+              name: The role of the teacher
+              description_student: |-
+                **You will**:
+
+                * Consider your role as the teacher of a CS Principles classroom.
+
+                **Suggested Time**: 5 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Consider your role as the teacher of a CS Principles classroom.
+
+                **Suggested Time**: 5 minutes
+            lesson-2:
+              key: lesson-2
+              name: Learning CS Principles
+              description_student: |-
+                **You will**:
+
+                * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+
+                **Suggested Time**: 25 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Learn about authentic CS practices that students will develop throughout the CS Principles course.
+
+                **Suggested Time**: 25 minutes
+            lesson-3:
+              key: lesson-3
+              name: Teaching CS Principles
+              description_student: |-
+                **You will**:
+
+                * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+
+                **Suggested Time**: 20 minutes
+              description_teacher: |-
+                **You will**:
+
+                * Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+
+                **Suggested Time**: 20 minutes
+          title: Teaching and learning CS Principles
+          description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            **Suggested Time**: 50 minutes
+          student_description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Discoveries classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            **Suggested Time**: 50 minutes
+          description_short: ''
+          description_audience: ''

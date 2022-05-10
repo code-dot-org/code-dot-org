@@ -660,6 +660,10 @@ pt:
       title: 'Festa dançante'
     dance-2019:
       title: 'Festa dançante'
+    hello-world:
+      title: 'Olá Mundo'
+    poem-art:
+      title: 'Arte poética'
     hoc:
       title: 'Labirinto clássico'
       body: 'Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.'
@@ -820,10 +824,6 @@ pt:
     reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
     reminder_desc_markdown: Atualizamos nossos [Termos de Serviço](%{tos_url}) e [Política de Privacidade](%{privacy_url}). Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: "Ver os termos atualizados"
-  donor_interstitial:
-    title: "Seus cursos gratuitos de CS são possíveis por..."
-    support_codeorg_1: "Cada dólar doado ao Code.org gera oportunidades para mais estudantes."
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: "Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos a acompanhar o nosso progresso!"
     message: "Por favor, digite abaixo as informações da sua escola."
