@@ -7,7 +7,7 @@ export function switchToSection(toSectionId, fromSectionId) {
   const baseUrl = `/teacher_dashboard/sections/${toSectionId}/`;
   const currentTab = _.last(_.split(window.location.pathname, '/'));
   const teacherNavigationTabs = _.values(TeacherDashboardPath);
-  const sectionUrl = _.includes(teacherNavigationTabs, `/${currentTab}`)
+  const sectionUrl = teacherNavigationTabs.includes(`/${currentTab}`)
     ? baseUrl.concat(currentTab)
     : baseUrl;
   navigateToHref(sectionUrl);
