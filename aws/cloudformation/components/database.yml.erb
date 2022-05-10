@@ -2,7 +2,7 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
       Engine: aurora-mysql
       # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
       EngineVersion: 5.7.12
@@ -19,6 +19,9 @@
     Type: AWS::RDS::DBInstance
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
+      # Resource name generated from db_parameters.yml.erb
+      # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
+      DBParameterGroupName: !Ref AuroraWriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
@@ -26,12 +29,16 @@
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
 <% end -%>
 
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
     Properties:
-      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
-      Parameters: {'innodb_monitor_enable': 'all'}
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
 
 <% db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
   DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
