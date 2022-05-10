@@ -1,10 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
-  getContainer() {
-    return this.svgGroup_.parentNode;
-  }
-
   clear() {
     super.clear();
 
