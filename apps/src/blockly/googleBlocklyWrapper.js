@@ -316,6 +316,23 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function(
+    helpClickFunc
+  ) {
+    blocklyWrapper.bindEvent_(
+      blocklyWrapper.mainBlockSpace.getCanvas(),
+      blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+      blocklyWrapper.mainBlockSpace,
+      function() {
+        this.getTopBlocks().forEach(block => {
+          if (block.disabled) {
+            block.addUnusedBlockFrame(helpClickFunc);
+          }
+        });
+      }
+    );
+  };
+
   // Used in levels when starting over or resetting Version History
   const oldBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
   blocklyWrapper.WorkspaceSvg.prototype.clear = function() {
