@@ -28,14 +28,14 @@ require "csv"
 
 class Multi < Match
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
       question 'Question'
       wrong 'wrong answer'
       right 'right answer'
-    ruby
+    RUBY
   end
 
   # Return a string containing the correct indexes.  e.g. "3" or "0,1"
