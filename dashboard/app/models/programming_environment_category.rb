@@ -79,7 +79,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
   def self.sanitize_key(key)
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
   end
 
   def name_with_environment

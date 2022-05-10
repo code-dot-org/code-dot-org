@@ -1286,7 +1286,7 @@ class LevelsControllerTest < ActionController::TestCase
   # Assert that the url is a real S3 url, and not a placeholder.
   def assert_s3_image_url(url)
     assert(
-      %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
+      %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
     )
   end
