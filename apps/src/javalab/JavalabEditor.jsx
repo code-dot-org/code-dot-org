@@ -192,6 +192,12 @@ class JavalabEditor extends React.Component {
       });
     }
 
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      Object.keys(this.editors).forEach(editorKey => {
+        console.log('update editor for readonly');
+      });
+    }
+
     const {fileMetadata} = this.state;
     if (
       !_.isEqual(Object.keys(prevState.fileMetadata), Object.keys(fileMetadata))
@@ -879,7 +885,7 @@ export default connect(
     validation: state.javalab.validation,
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     backpackEnabled: state.javalab.backpackEnabled
   }),
   dispatch => ({

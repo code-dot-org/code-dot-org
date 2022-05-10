@@ -9,6 +9,7 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
+import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -21,7 +22,8 @@ const CommitsAndReviewTab = props => {
     viewAsTeacher,
     userIsTeacher,
     codeReviewEnabled,
-    locale
+    locale,
+    setIsReadOnlyWorkspace
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
@@ -74,14 +76,21 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const closeReview = async () => {
+  const handleCloseReview = async () => {
     try {
       const closedReview = await dataApi.closeReview(openReviewData);
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
+      setIsReadOnlyWorkspace(false);
     } catch (err) {
       // TODO: what happens when review fails to close
     }
+  };
+
+  const handleOpenReview = async () => {
+    // Call API to open
+    // Assign to openReviewData state
+    setIsReadOnlyWorkspace(true);
   };
 
   // channelId is not available on projects where the student has not edited the starter code.
@@ -135,12 +144,12 @@ const CommitsAndReviewTab = props => {
           ...(openReviewData ? [openReviewData] : [])
         ]}
         addCodeReviewComment={addCodeReviewComment}
-        closeReview={closeReview}
+        closeReview={handleCloseReview}
       />
       {!openReviewData && (
         <Button
           icon="comment"
-          onClick={() => {}}
+          onClick={handleOpenReview}
           text={javalabMsg.startReview()}
           color={Button.ButtonColor.blue}
           style={styles.openCodeReview}
@@ -151,16 +160,22 @@ const CommitsAndReviewTab = props => {
 };
 
 export const UnconnectedCommitsAndReviewTab = CommitsAndReviewTab;
-export default connect(state => ({
-  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Instructor,
-  userIsTeacher: state.currentUser.userType === 'teacher',
-  channelId: state.pageConstants.channelId,
-  serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptId: state.pageConstants.serverScriptId,
-  locale: state.pageConstants.locale
-}))(CommitsAndReviewTab);
+export default connect(
+  state => ({
+    codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
+    viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+    viewAsTeacher: state.viewAs === ViewType.Instructor,
+    userIsTeacher: state.currentUser.userType === 'teacher',
+    channelId: state.pageConstants.channelId,
+    serverLevelId: state.pageConstants.serverLevelId,
+    serverScriptId: state.pageConstants.serverScriptId,
+    locale: state.pageConstants.locale
+  }),
+  dispatch => ({
+    setIsReadOnlyWorkspace: isReadOnly =>
+      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+  })
+)(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
   // Populated by redux
@@ -171,7 +186,8 @@ CommitsAndReviewTab.propTypes = {
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
 const styles = {

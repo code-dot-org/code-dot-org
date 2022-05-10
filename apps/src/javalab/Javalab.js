@@ -20,7 +20,8 @@ import javalab, {
   openPhotoPrompter,
   closePhotoPrompter,
   setBackpackEnabled,
-  appendMarkdownLog
+  appendMarkdownLog,
+  setIsReadOnlyWorkspace
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -268,6 +269,10 @@ Javalab.prototype.init = function(config) {
   // Set information about the current Javalab level being displayed.
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
+
+  // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
+  // the readOnly state can change when a code review is opened or closed
+  getStore().dispatch(setIsReadOnlyWorkspace(true));
 
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
