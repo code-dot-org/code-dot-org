@@ -13,19 +13,17 @@
         "isVisible": true
       },
       "StatesStats.java": {
-        "text": "/*\n * Stores and analyzes the list of states\n */\npublic class StatesStats {\n\n  private String[] states;   // The list of states\n\n  /*\n   * Constructor to create a StatesStats object with\n   * specified states list\n   */\n  public StatesStats(String[] states) {\n    this.states = states;\n  }\n\n  /*\n   * Prints the list of states\n   */\n  public void printStates() {\n    // TO DO #1: Use an enhanced for loop to print\n    // the elements in the states array.\n\n\n    \n  }\n  \n}",
+        "text": "/*\n * Stores and analyzes the list of states\n */\npublic class StatesStats {\n\n  private String[] states;   // The list of states\n\n  /*\n   * Constructor to create a StatesStats object with\n   * specified states list\n   */\n  public StatesStats(String[] states) {\n    this.states = states;\n  }\n\n  /*\n   * Prints the list of states\n   */\n  public void printStates() {\n    // TO DO #1: Refactor the loop to use an enhanced for loop.\n\n    for (int index = 0; index < states.length; index++) {\n      System.out.println(states[index]);\n    }\n    \n  }\n  \n}",
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2tXP3MuS7K0jISLmXe\nED0r9XJ1PKT7FZKVchILlZb4qfMznREHUSzDd66wSZXFLM+IzxK780tz7x+g\nRobh3lYRVs4IC4hsDov1t7bMOH/zWLwxdtaBOg7qoLNDoyd+ehy2gSfLUYZZ\n18gt+5sr/Pj1v6zcIYw8JcTiLngEzjEdtdeELmB9R7zdzisajhfIS04U7/Ij\nKnqYIPfE5XxKH1SULBFwWoSxgdID0A/owj3Kb5hrkKWiIaRF2rpHN+Z1wCgc\nCzCjox0PkFOpnfbgU8Y1FyZdG8ok2dwewlapJ7Cygi6N+fRosfKEJhpJodmN\nZ8Z0HEPBihDDuFUTEFJV7+2lRgb2QGOzloLaHQixpU1CbpCneyYwFY3rw/8l\n6TBAoOqpW3pOUIZw7YoN4mCAtfJ/oyaZmNOx4Oj3WIGT657/eBU/b6NjpZvE\nLRDgLU55R03N49XKSFJc2ojlROg+9EtQvmkz8IKNhlgRqeRiTmx1nl4yYrJC\nnm1s8P0d7mYpsCheF1LAO5ih91fI7eQ1mz9N9KLSaTTEUmmKj8inZxA5L/lM\nKqmT/ybVRwvwWDYU7AHnmGFEXAW7L0JDWv4bn3tHh0UDK9tkf/kAUaSYqW8N\nh/MrpP7wkwRTAt/QkY9m47YRIw1R1YClyNRs8dsC2OiWuhRbm+gHy+mmZ4LJ\nAIdW6Q7drp0TK/XhEVL6i7ONC/JATk+I8t40DFODQw73KPCKzJ2tOBYPy3k8\n6siDUJHQ+ZpEjZILlfk9xCDgHnbnXo74xfbbPehsVHjs5c4hcR8jILmDifJJ\nIfWqm0+JV2c0IU/+kEXRXhnY4woothawGNZmVB3MY2BtdHDEk+RmakOvKSwV\nBUHRQM9Z1igms8y4wgvtN/nSacxHLFJrAMTwS+y2qSDdeqGitfHLNAZxYHLf\nFG6BOox7Gep3D1z1p9D68H1ZXdja3H7Ir3QsUZqQlpYvVZVC/ByEApBx7obQ\n8OjysuCulY3RdEvT5+ZPZC6+mOVy8E3uffjEW5sK2XRuIyWsvMhuNbpwM8yU\nAon+tZm55H+rbXCSPF8x3sdLKrSgT35rlrFng7Nv7dTnAh69FChzxHFbxCEf\njm18cx17pJ9aEhTw9LcGbQft5yNAnHaZA/zL3zmpSCQ0f9qEm6F/ta0=\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T12:17:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:17:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:15:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:16:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:20:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:17:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:15:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:16:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:20:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 14:50:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 14:51:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

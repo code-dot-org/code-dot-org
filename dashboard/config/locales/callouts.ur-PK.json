@@ -251,7 +251,8 @@
           "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں"
         },
         "courseC_starWars_loops2_2018": {
           "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
@@ -352,7 +353,7 @@
           "pin": "پن"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "سپرائٹ سے باتے کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
           "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
         },
         "helloworld_food_backgrounds": {
@@ -424,6 +425,9 @@
         },
         "frozen square loop 3x": {
           "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
         }
       }
     }

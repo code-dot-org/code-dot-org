@@ -68,6 +68,7 @@
           "definition": "一系列已编码的步骤，可在设备上运行。"
         },
         "code/flappy/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/flappy/unversioned": {
@@ -168,8 +169,29 @@
           "word": "循环",
           "definition": "反复做某事的动作。"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "凯撒加密法 ",
+          "definition": "一种对字母表进行一定量位移的加密技术"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "加密法",
+          "definition": "实施加密的技术（或算法）的通用术语"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "破解加密",
+          "definition": "当你在不知道密码详情的情况下尝试解码密文时，就是在试图“破解”加密。 "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "解密",
+          "definition": "加密的反向过程，获取密文并复制原始的纯文本"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "加密"
+          "word": "加密",
+          "definition": "一种对消息进行编码以使其保密的过程，因此只有“授权”方可以读取。"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "随机替换加密法",
+          "definition": "将字母表中的每个字母映射到字母表中随机选择的其它字母的一种加密技术。"
         },
         "code/starwars/unversioned": {
           "definition": "(v) 编写代码或编写计算机指令。"
@@ -216,7 +238,8 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "无损压缩"
+          "word": "无损压缩",
+          "definition": "允许从压缩的数据中完美地重建原始数据的一种数据压缩算法。最常用于文本压缩（例如zip压缩）"
         },
         "event/outbreak/unversioned": {
           "word": "事件",
@@ -310,17 +333,24 @@
           "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
         },
         "sprite/coursef/2021": {
-          "word": "精灵"
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
+        },
+        "user/coursef/2021": {
+          "word": "用户",
+          "definition": "使用某物（包括软件和硬件）的人。"
         },
         "behavior/coursef/2021": {
-          "word": "行为"
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
         },
         "program/coursef/2021": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
         "algorithm/coursef/2021": {
-          "word": "算法"
+          "word": "算法",
+          "definition": "完成任务的步骤列表。"
         },
         "event/coursef/2021": {
           "word": "事件",
@@ -329,6 +359,10 @@
         "variable/coursef/2021": {
           "word": "变量",
           "definition": "程序中使用的一段信息的标签。"
+        },
+        "prompt/coursef/2021": {
+          "word": "提示符",
+          "definition": "计算机屏幕上等待用户输入的消息。"
         },
         "input/coursef/2021": {
           "word": "输入"
@@ -628,10 +662,12 @@
           "definition": "创建程序的技术。"
         },
         "behavior/express/2021": {
-          "word": "行为"
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
         },
         "sprite/express/2021": {
-          "word": "精灵"
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
         },
         "event/express/2021": {
           "word": "事件",
@@ -671,6 +707,9 @@
         "variable/express/2021": {
           "word": "变量",
           "definition": "程序中使用的一段信息的标签。"
+        },
+        "prompt/express/2021": {
+          "definition": "计算机屏幕上等待用户输入的消息。"
         },
         "for_loop/express/2021": {
           "word": "For循环",
@@ -745,10 +784,12 @@
           "definition": "导致某些事情发生的操作。"
         },
         "behavior/coursee/2021": {
-          "word": "行为"
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
         },
         "sprite/coursee/2021": {
-          "word": "精灵"
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
         },
         "event/coursee/2021": {
           "word": "事件",
@@ -800,6 +841,13 @@
         "machine_learning/csd/2021": {
           "word": "机器学习",
           "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "user/csd/2021": {
+          "word": "用户",
+          "definition": "使用某物（包括软件和硬件）的人。"
+        },
+        "user_interface/csd/2021": {
+          "word": "用户界面"
         },
         "bug/csd/2021": {
           "word": "Bug/错误",

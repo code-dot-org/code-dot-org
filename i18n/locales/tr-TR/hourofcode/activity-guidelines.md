@@ -32,11 +32,10 @@ Birkaç ipucu:
 - [Hour of Code™ aktivitesi yaratmak için genel bilgiler](#guidelines)
 - [Nasıl Gönderilmeli?](#submit)
 - [Aktiviteler nasıl değerlendirilecek?](#inclusion)
-- [Erken nitelik incelemesi için gönderim yönergeleri YENİ](#earlyreview)
-- [Aktivitenizi tasarlamak için öneriler](#design)
-- [Ticari Marka Yönergeleri](#tm)
-- [Takip Pikseli](#pixel)
-- [Aktivitelerinizin tanıtımı, Bilgisayar Bilimi Eğitim Haftası ve Hour of Code](#promote)
+- [Erken nitelik incelemesi için gönderim yönergeleri YENİ](#design)
+- [Aktivitenizi tasarlamak için öneriler](#tm)
+- [Ticari Marka Yönergeleri](#pixel)
+- [Takip Pikseli](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -184,75 +183,55 @@ Ek olarak, listeye alınması için tüm aktivitelerin:
 - Bir devlet okulu sınıfına uygun olması gerekir (silah yok, açık/yetişkin içeriği yok, dini içerik yok vb.)
 - Kayıt gerektirmemesi gerekir 
 - Paralı olmaması gerekir (robotik faaliyetler istisnaidir; bunlar robot/kit satın almayı gerektirebilir) Yeni öğretmenler ve öğrenciler için kendi kendine yönlendirmeli aktivitelerde değerlendirme komitesi aşağıdakileri araştıracaktır:
-- Öğretmenler, bilgisayar bilimlerinde deneyim sahibi olmadan öğreticiyi veya aktiviteyi kullanabiliyor mu?
-- Öğrenciler, bilgisayar bilimlerinde deneyim sahibi olmadan başarılı olabiliyor mu?
-- Öğrenciler, öğreticide ebeveyn veya öğretmen rehberliği olmadan kendileri ilerleyebiliyorlar mı?
 
-Öğretmenler ve öğrenciler; sınıf, deneyim seviyesi, konu, donanım vb. filtrelere göre aktivite listemizde arama ve filtreleme yapabileceklerdir. Varsayılan olarak, önce şu ders planlarını ve aktiviteleri gösteririz:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Değerlendirme komitesinden en yüksek puanları alanlar
 - Yeni başlayanlar (öğrenciler ve öğretmenler) için tasarlanmış bir saatlik kendi kendine yönlendirmeli aktiviteler
 - Çok çeşitli kullanıcılara hitap edenler (farklı platform, dil ve yaşlarda)
-- Kurulum gerektirmeyenler
-- Bu yılın yenileri
 
-[**Başa dön**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## Erken nitelik incelemesi için gönderim yönergeleri (YENİ)
-
-30 Nisan ile 16 Ağustos arasında gönderilen tüm aktiviteler, [Hour of Code Değerlendirme komitesinin](/review-committee) en az üç üyesi tarafından nitelik incelemesinden geçirilecektir.
-
-Komite üyeleri aşağıdakileri sağlamaya odaklanacaktır:
-
-* Olumlu geri bildirim - İyi çalışan yönleri nedir?
-* Eleştirel geri bildirim - Neler geliştirilebilir?
-* Hatalar veya kusurlar - Herhangi bir hata, sözdizimi hatası veya gramer hatası var mı? Varsa, aktivitenin neresinde?
-* Bu aktivite öğrencileri benzersiz bir şey yaratmaya teşvik ediyor mu?
-
-Lütfen unutmayın: Bunlar, geri bildirim sağlamaya yönelik genel yönergelerdir. Aktiviteniz erken incelendiğinde, tüm bu kategorilerde geri bildirim alabilir veya yalnızca bir veya ikisinde geri bildirim alabilir. Ayrıca, **bir aktivitedeki tüm hataları veya sorunları tespit edemeyebiliriz**.
-
-**Erken inceleme, tamamlanmamış bir aktivite için geri bildirim alma fırsatı değildir. Komite üyelerinin incelemeye alınamayacak kadar eksik olduğunu düşündükleri hiçbir aktivite incelenmeyecektir.**
-
-Erken inceleme için gönderilen tüm aktivitelere 1 Eylül'e kadar geri bildirim verilecektir. Ayrıca, geri bildirim karşılığında bir aktivitede yapılan değişiklikleri açıklamak için kullanabileceğiniz bir form bağlantısı da vereceğiz.
-
-1 Ekim'den önce gönderilen her aktivite, erken incelemeden geçenler dahil, standart bir incelemeden geçirilir. Standart inceleme döneminde (Eylül-Ekim), komite üyeleri yukarıdaki "Aktiviteler nasıl değerlendirilecek?" bölümünde açıklanan kriterlere göre aktivitelere puan vermeye odaklanacaklardır. Bir aktivitede yapılan değişiklikleri belirtmezseniz komite üyeleri, aktiviteleri puanlandırmada erken inceleme geri bildirimlerine güvenebilirler ve muhtemelen güveneceklerdir de.
+- Olumlu geri bildirim - İyi çalışan yönleri nedir?
+- Eleştirel geri bildirim - Neler geliştirilebilir?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- Bu aktivite öğrencileri benzersiz bir şey yaratmaya teşvik ediyor mu?
+- Are new this year
 
 [**Başa dön**](#top)
 
 <a id="design"></a>
 
-## Bir saatlik kendi kendine yönlendirmeli öğreticiler tasarlamak için öneriler
+## Erken nitelik incelemesi için gönderim yönergeleri (YENİ)
 
-Öğretici materyalinize [Hour of Code logosunu ](https://hourofcode.com/us/promote/resources#logo) ekleyebilirsiniz ancak bu zorunlu değildir. Hour of Code logosunu kullanıyorsanız aşağıdaki ticari marka yönergelerine bakın. <u>Code.org logosu ve adı hiçbir koşulda kullanılamaz.</u> İkisi de ticari markadır ve açık yazılı izin olmadan 3. taraf bir marka adıyla karıştırılamaz.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Ortalama bir öğrencinin aktiviteyi bir saat içerisinde rahatlıkla bitirebileceğinden emin olun.** Aktiviteyi çabuk bitiren öğrenciler için dersin sonuna ucu açık bir başka aktivite daha koymayı düşünebilirsiniz. Çoğu çocuğun bilgisayar bilimi ve kodlamaya tamamen yeni başlıyor olduğunu unutmayın.
+Lütfen unutmayın: Bunlar, geri bildirim sağlamaya yönelik genel yönergelerdir. Aktiviteniz erken incelendiğinde, tüm bu kategorilerde geri bildirim alabilir veya yalnızca bir veya ikisinde geri bildirim alabilir.
 
-**Öğretmen notlarını dahil edin.** Çoğu aktivite öğrenciye yönelik olmalıdır ancak bir aktivite öğretmen tarafından kolaylaştırılıyor veya yönetiliyorsa, lütfen aktivitenizle birlikte ayrı bir URL'de öğretmen için öğretmen notları şeklinde açık ve basit talimatlar sunun. Acemi olan sadece öğrenciler değil, bazı öğretmenler de bu konuda acemi olabilir. Şu bilgileri ekleyin:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - Öğretici en iyi hangi platformlarda ve tarayıcılarda çalışıyor?
 - Akıllı telefonlarda çalışıyor mu? Tabletlerde?
 - Çiftli programlamayı öneriyor musunuz? 
 - Sınıfta kullanım için dikkat edilmesi gerekenler? Örneğin video varsa öğretmene videoları projeksiyon kullanarak tüm sınıfın görebileceği şekilde izletmesini tavsiye edin
 
-** Aktivitenin sonuna geri bildirimi dahil edin.** (Ör. "10 seviyeyi bitirdiniz ve döngüleri öğrendiniz! Harikasın!")
+Erken inceleme için gönderilen tüm aktivitelere 1 Eylül'e kadar geri bildirim verilecektir. Ayrıca, geri bildirim karşılığında bir aktivitede yapılan değişiklikleri açıklamak için kullanabileceğiniz bir form bağlantısı da vereceğiz.
 
-**Öğrencileri bitirdiklerini sosyal medyada (uygun olduğunda) paylaşmaya teşvik edin.** Örneğin "________ ile Hour of Code yaptım? Ya sen? "#HourOfCode" veya "#CSEdWeek içinde bir #HourOfCode yaptım. Ya sen? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
+1 Ekim'den önce gönderilen her aktivite, erken incelemeden geçenler dahil, standart bir incelemeden geçirilir. Standart inceleme döneminde (Eylül-Ekim), komite üyeleri yukarıdaki "Aktiviteler nasıl değerlendirilecek?" bölümünde açıklanan kriterlere göre aktivitelere puan vermeye odaklanacaklardır. Bir aktivitede yapılan değişiklikleri belirtmezseniz komite üyeleri, aktiviteleri puanlandırmada erken inceleme geri bildirimlerine güvenebilirler ve muhtemelen güveneceklerdir de. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Aktivitenizi İspanyolca veya İngilizce dışında başka dillerde oluşturun.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Aktiviteyi toplum için önemli bir bağlamda anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Öğretici materyalinizin [Çiftli Programlama](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmasında kullanılabileceğinden emin olun.** Bu özellikle Hour of Code için kullanışlıdır çünkü birçok sınıfta tüm öğrenciler için birer donanım bulunmamaktadır.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Başa dön**](#top)
 
 <a id="tm"></a>
 
-## Ticari Marka Yönergeleri
+## Bir saatlik kendi kendine yönlendirmeli öğreticiler tasarlamak için öneriler
 
-Öğretici ortaklarımızın çoğu "Hour of Code"' ticari markamızı web sitelerinde kullandılar. Bu kullanıma engel olmak istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz:
+** Aktivitenin sonuna geri bildirimi dahil edin.** (Ör. "10 seviyeyi bitirdiniz ve döngüleri öğrendiniz! Harikasın!")
 
 1. "Hour of Code"a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü hareketi ifade etmelidir. Doğru kullanım: "ACMECorp.com'daki Hour of Code™a katılın". Yanlış kullanım: "ACME Corp'un Hour of Code'unu deneyin."
 2. Hem web sitenizde hem uygulama açıklamalarınızda "Hour of Code" yazdığınız her yerde "TM" işaretini kullanın.
@@ -263,17 +242,17 @@ Erken inceleme için gönderilen tüm aktivitelere 1 Eylül'e kadar geri bildiri
 
 <a id="pixel"></a>
 
-## Takip Pikseli
+## Ticari Marka Yönergeleri
 
-Katılımı daha doğru bir şekilde izlemek için, her öğretici iş ortağının Hour of Code öğreticilerinin ilk sayfasına 1 piksellik izleme resimleri eklemesi gerekir. Piksel görüntüsü yalnızca başlangıç ​​sayfasında olmalıdır. Öğretici materyalinizin ara sayfalarına koymayın.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-Bu, Hour of Code öğreticinizi kullanan kullanıcıları saymamıza olanak tanır. Öğreticiniz için daha doğru katılım sayıları elde edilmesini sağlayacaktır.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinize yerleştirmeniz için size verecektir. Aşağıdaki örneğe bakın.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları ya da masaüstüne indirilen uygulamalar)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Dans Partisi için örnek takip pikselleri:
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -282,9 +261,9 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## Aktivitelerinizin tanıtımı, Bilgisayar Bilimi Eğitim Haftası ve Hour of Code
+## Takip Pikseli
 
-Lütfen aktivitenizi ağınıza tanıtın! Lütfen onları kendi Hour of Code sayfanıza yönlendirin. Kullanıcılarınız aktiviteniz hakkında sizden e-posta aldıklarında harekete geçme olasılıkları çok daha yüksek olur. Bilgisayar Bilimi Eğitim Haftası boyunca uluslararası Hour of Code kampanyasını kullanarak kullanıcıları başkalarını davet etmeye teşvik edin ve daha fazla öğrenciye ulaşmamıza yardımcı olun!
+Bu, Hour of Code öğreticinizi kullanan kullanıcıları saymamıza olanak tanır. Öğreticiniz için daha doğru katılım sayıları elde edilmesini sağlayacaktır. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Web sitenizde Hour of Code ve CSEdWeek'i öne çıkarın. Örneğin: <http://www.tynker.com/hour-of-code>
 - Genel medya, sosyal medya, e-posta listeleri vs. aracılığıyla #HourOfCode (büyük H, O, C harfleriyle) etiketini kullanarak Hour of Code!u destekleyin
@@ -293,4 +272,4 @@ Lütfen aktivitenizi ağınıza tanıtın! Lütfen onları kendi Hour of Code sa
 
 [**Başa dön**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları ya da masaüstüne indirilen uygulamalar)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

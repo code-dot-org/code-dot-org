@@ -6,7 +6,8 @@
           "498cd895eb5a102c5aeb977e2b928dee": "شكرا لك!"
         },
         "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "لقد فزت!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "لقد فزت!",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "انتهت اللعبة."
         },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
@@ -21,10 +22,12 @@
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
+          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "مهلاً!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
+          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "مهلاً!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "أزرق",
@@ -73,7 +76,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
-          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "مجموع النقاط ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "المستوى "
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
@@ -178,11 +183,13 @@
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
-          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا",
+          "ae096fbf24d913754b01a1601672bf62": "أيضاً!"
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
-          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "كم عمرك؟"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
@@ -387,7 +394,10 @@
           "605f302ebc9f7fbacba60b15f551a633": "ما هو لونك المفضل؟",
           "91c4549fe2a5e9325c8f8d51afbb751b": "أدخل لونك المفضل:",
           "1f258d88a70309efc1435ef5daa277a0": "شكراً على محادثتك معي اليوم!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "كم عمرك؟",
+          "ae096fbf24d913754b01a1601672bf62": "أيضاً!",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "سنوات أيضا!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة",
@@ -410,7 +420,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "c529a06c3f8518b63ff6dfac482b335c": "اذكر اسم هذا الكوكب:",
+          "44506356d48394cd903b579df9de9117": "الأرض!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
@@ -432,19 +444,100 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "ماذا تريد لعيد ميلادك؟"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "46463b2e9f71f2f15b7238f56f09ba30": "النهاية",
+          "c757766b0a7e2017c79e1c94f60e44f7": "شكرا للدردشة!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "50d489a15105b987ec6d4410900c95dd": "أدخل كلمة عمل:"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "المستوى: "
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "إنه أنا! ريكي! أحب البرمجة، وأن أخرج مع صديقتي ثاي وأن آكل الآيسكريم!",
+          "810896b14fc6615f0c76628b9b6a727e": "هذه صديقتي المفضلة ثاي! إنها حقاً جيدة في الرياضة!",
+          "6f97975a0bda0c9219915161149cbb26": "هذا جهاز الكمبيوتر الخاص بي! أبرمج باستخدامه طوال الوقت!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "إنه أنا! ريكي! أحب البرمجة، وأن أخرج مع صديقتي ثاي وأن آكل الآيسكريم!",
+          "810896b14fc6615f0c76628b9b6a727e": "هذه صديقتي المفضلة ثاي! إنها حقاً جيدة في الرياضة!",
+          "6f97975a0bda0c9219915161149cbb26": "هذا جهاز الكمبيوتر الخاص بي! أبرمج باستخدامه طوال الوقت!"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "راقص السماء",
+          "78d989e01047ba7043a38650d695abaa": "اختر لاعباً",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "ما الذي سوف تأكله؟",
+          "937dc37c06cc5d89a7096eb048b73590": "يأتي فوراً"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "الربوت!",
+          "5bd698afd23bccde289bb0b4aa72a518": "اذكر اسم الروبوت"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "ما اسمك؟"
         }
       }
     }

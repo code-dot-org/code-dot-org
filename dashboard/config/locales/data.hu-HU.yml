@@ -719,6 +719,8 @@ hu:
         poetry_module_multichoiceprompts: Feleletválasztós promptok – Kódolás költészettel
         poetry_module_conditionals: Kondicionálisok – Kódolás költészettel
         poemart_intro: Költészet - bevezetés
+        PL_CS_Journeys_Overview: Számítástechnikai utazások
+        csp_applab_parameters: Paraméteres függvények
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

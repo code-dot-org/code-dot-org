@@ -21,10 +21,12 @@
           "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "こんにちは！"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "こんにちは！"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "青",
@@ -63,7 +65,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "スコア ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "レベル \n"
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -167,15 +171,18 @@
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "ae096fbf24d913754b01a1601672bf62": "同じです！"
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "あなたは何才ですか？"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -316,10 +323,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
@@ -466,7 +475,7 @@
           "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
         },
         "helloworld_retro_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "世界の皆さん、こんにちは!"
+          "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -477,6 +486,46 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "選択 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "選択 3",
           "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "イヌ！",
+          "336ad881e37e713ba0325500a8fa1f00": "イヌ！",
+          "27944770529dd15319a983bee8951560": "ネコ！",
+          "22f6f6821f4d6d0a08653935b466ac2f": "ネコ！",
+          "1c64ef29c853587fbe94f69f05272b79": "トリ！",
+          "5b402e6ea05e847a076e03ad74420c45": "トリ！",
+          "4b23c908b939eaf7918e07142b9e05e0": "ドラゴン！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "ドラゴン！",
+          "71fc859f3abd22273bad5d0d8eda2173": "どうぶつをぜんぶ数えよう！",
+          "f62038e77820419cd978f7b722da560a": "何匹出てきたかな？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "ペットを数えよう"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "イヌ！",
+          "336ad881e37e713ba0325500a8fa1f00": "イヌ！",
+          "27944770529dd15319a983bee8951560": "ネコ！",
+          "22f6f6821f4d6d0a08653935b466ac2f": "ネコ！",
+          "1c64ef29c853587fbe94f69f05272b79": "トリ！",
+          "5b402e6ea05e847a076e03ad74420c45": "トリ！",
+          "4b23c908b939eaf7918e07142b9e05e0": "ドラゴン！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "ドラゴン！",
+          "71fc859f3abd22273bad5d0d8eda2173": "どうぶつをぜんぶ数えよう！",
+          "f62038e77820419cd978f7b722da560a": "何匹出てきたかな？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "ペットを数えよう"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "それは私！リッキです！ 私はコードを書いたり、トゥイとブラブラしたり、アイスクリームを食べたりするのが大好き！",
+          "810896b14fc6615f0c76628b9b6a727e": "それは親友のトゥイ！ スポーツがとってもよくできます！",
+          "6f97975a0bda0c9219915161149cbb26": "それは私のコンピュータ！いつも、ここでコードを書いています！\n"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "それは私！リッキです！ 私はコードを書いたり、トゥイとブラブラしたり、アイスクリームを食べたりするのが大好き！",
+          "810896b14fc6615f0c76628b9b6a727e": "それは親友のトゥイ！ スポーツがとってもよくできます！",
+          "6f97975a0bda0c9219915161149cbb26": "それは私のコンピュータ！いつも、ここでコードを書いています！\n"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "もう一度試してみてください.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "ゲーム オーバー！"
         }
       }
     }

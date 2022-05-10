@@ -618,17 +618,17 @@
           "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld House Frame Chosen": {
-          "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
+          "mc_6_a": "Stlač šípku na bloku „umiestni“ a vyber, čo chceš umiestniť.",
           "mc_6_b": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld House Frame Chosen_2019": {
-          "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
+          "mc_6_a": "Stlač šípku na bloku „umiestni“ a vyber, čo chceš umiestniť.",
           "mc_6_b": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld House Frame Chosen_2020": {
-          "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
+          "mc_6_a": "Stlač šípku na bloku „umiestni“ a vyber, čo chceš umiestniť.",
           "mc_6_b": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
@@ -687,18 +687,18 @@
           "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Shear Sheep": {
-          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
-          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
+          "mc_3_a": "Blok „ostrihaj“ funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok „otoč sa“.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Shear Sheep_2019": {
-          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
-          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
+          "mc_3_a": "Blok „ostrihaj“ funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok „otoč sa“.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Shear Sheep_2020": {
-          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
-          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
+          "mc_3_a": "Blok „ostrihaj“ funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok „otoč sa“.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Avoiding Lava": {
@@ -7613,7 +7613,7 @@
           "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld House Frame Chosen_2021": {
-          "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
+          "mc_6_a": "Stlač šípku na bloku „umiestni“ a vyber, čo chceš umiestniť.",
           "mc_6_b": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
@@ -7636,8 +7636,8 @@
           "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
-          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
+          "mc_3_a": "Blok „ostrihaj“ funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok „otoč sa“.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Avoiding Lava_2021": {
@@ -8705,7 +8705,7 @@
         "courseD_bee_conditionals4_dani": {
           "courseD_bee_conditionals4_a": "Ku každému políčku pristupuj tak, akoby bol nad ním oblak, napriek tomu, že vidíš celú cestu.",
           "courseD_bee_conditionals4_b": "V cykle použi podmienku  `ak` a skontroluj každé pole, či sa tam nachádza nektár.",
-          "courseD_bee_conditionals4_c": "Použitím  bloku <xml><block type=\"maze_untilBlocked\"/></xml> by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
+          "courseD_bee_conditionals4_c": "Použitím  bloku [blockly block][0] by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
         },
         "courseD_bee_conditionals5_2021": {
           "courseD_bee_conditionals5_a": "Keď použiješ blok `ak pri kvete`, môžeš si pomôcť vnoreným cyklom. Napíš program pre ľavú a spodnú cestu a potom všetko dvakrát zopakuj!",
@@ -9229,37 +9229,37 @@
           "courseC_maze_programming1_b": "Neboj sa urobiť chybu! Vyskúšaj niečo, a keď to nefunguje, tak vyskúšaj niečo iné!"
         },
         "iceage_click_hello": {
-          "iceage_click_hello_a": "Na vyriešenie tejto úlohy pridaj k udalosti `po kliknutí na postavu 1` jeden alebo viac blokov `postava 1 povedz`."
+          "iceage_click_hello_a": "Na vyriešenie tejto úlohy pridaj k udalosti „po kliknutí na postavu 1“ jeden alebo viac blokov „postava 1 povedz“."
         },
         "iceage_hello1": {
-          "iceage_hello1_a": "Na vyriešenie tejto úlohy ti stačí pridať jeden blok. Vyber blok `postava ___ povedz` z panela nástrojov a pripoj ho k bloku s udalosťou `pri spustení`, ktorý už je pripravený na pracovnej ploche. Potom dovnútra napíš „Ahoj!“."
+          "iceage_hello1_a": "Na vyriešenie tejto úlohy ti stačí pridať jeden blok. Vyber blok „postava \\_\\_\\_ povedz“ v paneli s nástrojmi a pripoj ho k bloku s udalosťou „pri spustení“, ktorý už je pripravený na pracovnej ploche. Potom doň napíš „Ahoj!“."
         },
         "iceage_hello2": {
-          "iceage_hello2_a": "Na vyriešenie tejto úlohy musí Sid niečo povedať pomocou bloku `postava 1 povedz`. Okrem toho musí Manny niečo povedať pomocou bloku `postava 2 povedz`. "
+          "iceage_hello2_a": "Na vyriešenie tejto úlohy musí Sid niečo povedať pomocou bloku „postava 1 povedz“. Okrem toho musí Manny niečo povedať pomocou bloku „postava 2 povedz“. "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí `keď šípka ___` pripojiť iný príkaz `posuň postavu 1`. "
+          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí „keď šípka \\_\\_\\_“ pripojiť iný príkaz „posuň postavu 1“. "
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí `keď šípka ___` pripojiť iný príkaz `posuň postavu 1`. "
+          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí „keď šípka \\_\\_\\_“ pripojiť iný príkaz „posuň postavu 1“. "
         },
         "iceage_move_to_actor": {
           "iceage_move_to_actor_a": "Na vyriešenie tejto úlohy môžeš buď posunúť Diega o 200 pixelov dole, alebo posunúť Mannyho o 200 pixelov hore.",
-          "iceage_move_to_actor_b": "Na vyriešenie tejto úlohy pripoj blok `prehraj zvuk` k udalosti `keď postava 1 dotkne sa postavy 2`."
+          "iceage_move_to_actor_b": "Na vyriešenie tejto úlohy pripoj blok „prehraj zvuk“ k udalosti „keď postava 1 dotkne sa postavy 2“."
         },
         "iceage_move_to_flag": {
-          "iceage_hello3_a": "Na vyriešenie tejto úlohy použi blok `posuň postavu 1 vpravo 200 pixelov`."
+          "iceage_hello3_a": "Na vyriešenie tejto úlohy použi blok „posuň postavu 1 vpravo 200 pixelov“."
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Na vyriešenie tejto úlohy použi bloky `posuň postavu 1 vľavo` aj `posuň postavu 1 vpravo`."
+          "iceage_repeat_a": "Na vyriešenie tejto úlohy použi bloky „posuň postavu 1 vľavo“ aj „posuň postavu 1 vpravo“."
         },
         "iceage_sound_and_points": {
-          "iceage_sound_and_points_a": "Pod udalosť `keď postava 1 dotkne sa postavy 2` budeš musieť pridať dva bloky.",
-          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky `pridaj bod` aj `prehraj zvuk ___`."
+          "iceage_sound_and_points_a": "Pod udalosť „keď postava 1 dotkne sa postavy 2“ budeš musieť pridať dva bloky.",
+          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky „pridaj bod“ aj „prehraj zvuk \\_\\_\\_“."
         },
         "iceage_sound_and_points_dani": {
-          "iceage_sound_and_points_a": "Pod udalosť `keď postava 1 dotkne sa postavy 2` budeš musieť pridať dva bloky.",
-          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky `pridaj bod` aj `prehraj zvuk ___`."
+          "iceage_sound_and_points_a": "Pod udalosť „keď postava 1 dotkne sa postavy 2“ budeš musieť pridať dva bloky.",
+          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky „pridaj bod“ aj „prehraj zvuk \\_\\_\\_“."
         },
         "iceage_free_play": {
           "iceage_free_play_a": "Vieš naprogramovať, aby si Sid a Manny dali súboj s ľadovými kryštálmi?",
@@ -9272,11 +9272,11 @@
         },
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Na vyriešenie tejto úlohy by ti malo stačiť pridať dva bloky. ",
-          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť `pri spustení`, aby sa spustili hneď po spustení programu."
+          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť „pri spustení“, aby sa spustili hneď po spustení programu."
         },
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Na vyriešenie tejto úlohy by ti malo stačiť pridať dva bloky. ",
-          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť `pri spustení`, aby sa spustili hneď po spustení programu."
+          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť „pri spustení“, aby sa spustili hneď po spustení programu."
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "Takéto bloky <xml>  <block type=\"simple_move_up_left\"/></xml> umožnia tvojmu umelcovi hýbať sa šikmo!",
@@ -9438,7 +9438,7 @@
           "card_idea3": "Svoj program môžeš urobiť interaktívnym tak, aby sa po stlačení klávesu alebo uplynutí určitého času stali ďalšie veci.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"keď\"</title>\n    <title name=\"KEY\">\"hore\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"škála\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Pozadie môžeš zmeniť pripojením bloku „nastaviť pozadie“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Pozadie môžeš zmeniť pripojením bloku „nastaviť pozadie“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_Poznámka:_ Ak chceš postavičke priradiť správanie, musíš použiť blok postavička začína\" s jedným zo zelených blokov správania, ako je \"otáčať sa doprava\"."
@@ -9448,10 +9448,10 @@
           "hw_no_changes": "Na tejto úrovni nemusíš meniť žiadny kód."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "Skús pripojiť blok „zmeniť kostým“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "Skús pripojiť blok „zmeniť kostým“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Pripoj blok „povedz“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "Pripoj blok „povedz“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Ak chce zmeniť umiestnenie postavičky, klikni na špendlík na bloku umiestnenia a potom na miesto, kam ho chce umiestniť.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -9463,7 +9463,7 @@
           "hello-world-first-solution-bear": "Ak chceš, aby medveď niečo povedal, spoj bloky kódu takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "Ak chceš nastaviť veľkosť postavičky len raz, môžeš použiť tento blok:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "Ak chceš nastaviť veľkosť postavičky len raz, môžeš použiť tento blok:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "Ak chceš zmeniť veľkosť postavičky opakovane (s udalosťami), použi tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -9525,7 +9525,7 @@
           "storyboard_changePropBy": "Ak chceš zmeniť veľkosť postavičky opakovane (s udalosťami), použi tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Pozadie môžeš zmeniť pripojením bloku „nastaviť pozadie“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Pozadie môžeš zmeniť pripojením bloku „nastaviť pozadie“ ku bloku udalosti „pri kliknutí“:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_Poznámka:_ Ak chceš postavičke priradiť správanie, musíš použiť blok postavička začína\" s jedným zo zelených blokov správania, ako je \"otáčať sa doprava\"."
@@ -9544,7 +9544,7 @@
           "location_pin_hint": "Ak chce zmeniť umiestnenie postavičky, klikni na špendlík na bloku umiestnenia a potom na miesto, kam ho chce umiestniť.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Zaisti, aby boli kostýmy každej postavičky rovnaké.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Zaisti, aby boli kostýmy každej postavičky rovnaké.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Ak chceš, aby príšera niečo povedala, spoj bloky kódu takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -9554,7 +9554,7 @@
           "hw_retro_changePropBy": "Ak chceš zmeniť veľkosť postavičky opakovane (s udalosťami), použi tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Každá postavička má **miesto**. Umiestnenie môžeš nastaviť kliknutím na špendlík na tomto bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klikni na špendlík ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) na bloku umiestnenia a potom vyber nové miesto pre svoju postavičku na obrazovke.\n-   Po dokončení kódu stlač tlačidlo \"Spustiť\".",
+          "location_hint": "Každá postavička má **miesto**. Umiestnenie môžeš nastaviť kliknutím na špendlík na tomto bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klikni na špendlík ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) na bloku umiestnenia a potom vyber nové miesto pre svoju postavičku na obrazovke.\n-   Po dokončení kódu stlač tlačidlo \"Spustiť\".",
           "remove_hint": "Postavičku môžeš odstrániť na určitom čísle riadku. Na jej miesto môžeš pridať novú postavičku:"
         },
         "poetry_hoc_backgroundEffects": {
@@ -9567,14 +9567,14 @@
           "more_events_hint": "Vo svojom programe môžeš použiť viac ako jednu udalosť. Skús použiť dve udalosti s rôznymi efektmi, ktoré sa budú zhodovať s novými riadkami v básni.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Nájdi tento blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nalebo tento blok:\n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nPripoj ho v časti „pri spustení“ vo svojom pracovnom priestore.",
-          "more_code": "Pridaj viac efektov a farieb, ktoré ladia so zvukom, ktorý si vybral/-a.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Nájdi tento blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nalebo tento blok:\n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nPripoj ho v časti „pri spustení“ vo svojom pracovnom priestore.",
+          "more_code": "Pridaj viac efektov a farieb, ktoré ladia so zvukom, ktorý si vybral/-a.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Pridaj do svojho kódu blok \"postavička začína\". Uisti sa, že si už vytvoril postavičku, ktorej priraďuješ toto správanie.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Pridaj do svojho kódu blok \"postavička začína\". Uisti sa, že si už vytvoril postavičku, ktorej priraďuješ toto správanie.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Nájdi tento blok a klikni na tlačidlo „150“.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nČo sa stane, keď je číslo „25“?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Nájdi tento blok a klikni na tlačidlo „150“.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nČo sa stane, keď je číslo „25“?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

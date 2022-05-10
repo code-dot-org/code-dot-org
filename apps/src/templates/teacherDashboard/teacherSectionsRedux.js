@@ -385,13 +385,14 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
 
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
-  // If section id is provided, load students for the current section.
-  dispatch({type: ASYNC_LOAD_BEGIN});
+
   let apis = [
     '/dashboardapi/sections',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
+
+  // If section id is provided, load students for the current section.
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
