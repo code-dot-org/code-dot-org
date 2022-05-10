@@ -933,12 +933,12 @@ class LessonTest < ActiveSupport::TestCase
       @destination_course_version = create :course_version, course_offering: course_offering, content_root: @destination_script, version_year: 2021
       @destination_lesson_group = create :lesson_group, script: @destination_script
 
-      @original_dlp_script = create :script, is_migrated: true
+      @original_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp'
       @original_dlp_script.expects(:write_script_json).never
       @original_dlp_lesson_group = create :lesson_group, script: @original_dlp_script
       @original_dlp_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_dlp_script, has_lesson_plan: true
 
-      @destination_dlp_script = create :script, is_migrated: true
+      @destination_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp-2'
       @destination_dlp_lesson_group = create :lesson_group, script: @destination_dlp_script
     end
 
