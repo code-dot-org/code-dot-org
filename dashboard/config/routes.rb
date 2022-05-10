@@ -336,7 +336,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update, :show] do
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :get_filtered_expressions
     end
