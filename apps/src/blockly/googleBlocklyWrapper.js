@@ -328,7 +328,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
     oldBlocklyResize.call(this);
     if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
-      this.flyout_.resize();
+      this.flyout_?.resize();
     }
   };
 
