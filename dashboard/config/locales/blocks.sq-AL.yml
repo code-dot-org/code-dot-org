@@ -335,6 +335,12 @@ sq:
             '90': poshtë
             '180': majtas
             '270': lart
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': mesatar
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

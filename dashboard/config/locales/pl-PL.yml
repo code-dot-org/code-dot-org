@@ -431,6 +431,7 @@ pl:
       educate_beyond: Poza Code.org
       educate_inspire: Inspiruj ucznia
       educate_community: Społeczność online
+      educate_requirements: Wymagania Techniczne
       educate_tools: Narzędzia i filmy
       about_us: O nas
       about_leadership: Przywództwo
@@ -832,6 +833,10 @@ pl:
       title: Potańcówka
     dance-2019:
       title: Potańcówka
+    hello-world:
+      title: Witaj świecie
+    poem-art:
+      title: 'Sztuka poezji '
     hoc:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
@@ -1049,19 +1054,6 @@ pl:
       mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych
       postanowień.
     review_terms: Wyświetl zaktualizowane Warunki korzystania
-  donor_interstitial:
-    title: Twoje bezpłatne kursy CS są możliwe dzięki ...
-    subtitle: 'Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło
-      sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów
-      na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!
-
-'
-    local_supporters: Lokalni zwolennicy
-    global_supporters: Globalni zwolennicy
-    support_codeorg_1: Każdy dolar przekazany Code.org daje szansę większej liczbie
-      uczniów.
-    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
-    get_started: Zacznij korzystać z Code.org
   school_info_interstitial:
     title: Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze
       postępy!

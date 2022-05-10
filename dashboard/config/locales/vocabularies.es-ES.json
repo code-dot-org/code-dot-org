@@ -881,6 +881,10 @@
           "word": "Bug o error",
           "definition": "parte de un programa que no funciona correctamente."
         },
+        "innovation/csd/2021": {
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
+        },
         "analog/csd/2021": {
           "word": "Analógico",
           "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
@@ -889,9 +893,17 @@
           "word": "Digital",
           "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
         },
+        "array/csd/2021": {
+          "word": "Array",
+          "definition": "Una estructura de datos en JavaScript utilizada para representar una lista."
+        },
         "for_loop/csd/2021": {
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+        },
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
         },
         "debugging/csd/2021": {
           "word": "Depuración",

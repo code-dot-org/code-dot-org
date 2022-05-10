@@ -2389,19 +2389,23 @@
             "parameters": {
               "points": "puncte",
               "length": "lungime"
-            }
+            },
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată"
           },
           "draw a circle": {
             "name": "desenează un cerc",
             "parameters": {
-              "radius": "raza"
-            }
+              "radius": "rază"
+            },
+            "description": "desenați un cerc cu raza dată"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "lungime",
-              "repeat": "repetă"
-            }
+              "repeat": "repetă",
+              "sides": "laturi"
+            },
+            "name": "desenați o morișcă"
           },
           "draw a triangle": {
             "name": "desenează un triunghi",
@@ -2410,9 +2414,10 @@
             }
           },
           "draw a shape": {
-            "name": "desenează o formă",
+            "name": "desenați o formă",
             "parameters": {
-              "length": "lungime"
+              "length": "lungime",
+              "sides": "laturi"
             }
           },
           "draw a house": {
@@ -2434,19 +2439,23 @@
             "parameters": {
               "points": "puncte",
               "length": "lungime"
-            }
+            },
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată"
           },
           "draw a circle": {
             "name": "desenează un cerc",
             "parameters": {
               "radius": "raza"
-            }
+            },
+            "description": "desenați un cerc cu raza dată"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "lungime",
-              "repeat": "repetă"
-            }
+              "repeat": "repetă",
+              "sides": "laturi"
+            },
+            "name": "desenați o morișcă"
           },
           "draw a triangle": {
             "name": "desenează un triunghi",
@@ -2457,7 +2466,8 @@
           "draw a shape": {
             "name": "desenează o formă",
             "parameters": {
-              "length": "lungime"
+              "length": "lungime",
+              "sides": "laturi"
             }
           },
           "draw a house": {
@@ -2633,6 +2643,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "facă ceva"
+          },
+          "draw line of polygons": {
+            "name": "desenează un rând de poligoane"
+          },
+          "draw polygon": {
+            "name": "desenează poligon"
           }
         },
         "courseF_apps_collector": {
@@ -2746,7 +2762,7 @@
         },
         "CourseF_app_computer": {
           "reset game": {
-            "name": "resetează jocul"
+            "name": "resetați jocul"
           }
         },
         "Choose Your Own Adventure": {

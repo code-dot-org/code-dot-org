@@ -1179,6 +1179,12 @@ el:
             '90': κάτω
             '180': αριστερά
             '270': επάνω
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': μεσαία
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:

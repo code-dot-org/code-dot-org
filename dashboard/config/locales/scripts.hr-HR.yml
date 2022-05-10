@@ -2881,3 +2881,7 @@ hr:
           lessons:
             Functions:
               name: Funkcije
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Uvod u AI laboratorij

@@ -689,6 +689,8 @@ vi:
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poemart_intro: Giới thiệu Tranh thơ ca
         CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
+        csp_applab_parameters: Hàm và tham số
+        CSA-PL-intro-to-arrays: Mảng một chiều (1D)
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

@@ -958,6 +958,24 @@ es:
         PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
         csd_u6_circuit_playground: Computación física
         csd_u6_input_output: Entrada y salida
+        CSA-PL-for-loops: Bucles For en Java
+        CSA-PL-variables: Creando Variables en Java
+        PL_CS_Journeys_Overview: Jornadas CS
+        CSA-PL-intro-to-java-lab: Fundamentos de Laboratorio Java
+        CSA-PL-first-program: Escribiendo un Programa en Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: CSD:Sentencias If
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Llamando y Definiendo Funciones'
+        csp_applab_parameters: Funciones con parámetros
+        starquilts_intro_artist: Introducción a las Colchas de Estrellas
+        CSA-PL-intro-to-arrays: Arrays Unidimensionales (1D)
+        CSA-PL-1d-arrays-new-values: Introducción de valores en arrays 1D
+        CSA-PL-conditionals: Sentencias Condicionales en Java
+        CSA-PL-two-way-selection: Selección bidireccional
+        CSA-PL-Printing-in-Java: Impresión en Java
+        CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

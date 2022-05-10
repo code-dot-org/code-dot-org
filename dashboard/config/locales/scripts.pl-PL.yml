@@ -7195,11 +7195,6 @@ pl:
                 efektywnego zbierania skarbów na Code.org.
             Loops in Artist:
               name: Pętle z Artystą
-              description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
-                powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
-                pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
-                pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość
-                tworzenia własnych obrazów za pomocą pętli.
             'Events: The Big Event':
               name: 'Zdarzenia: Wielkie zdarzenie'
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie
@@ -33318,6 +33313,10 @@ pl:
           lessons:
             lesson-1:
               name: Testowanie klonu CSA
+            lesson-2:
+              name: Lekcja 2
+            lesson-3:
+              name: Lekcja 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -36296,6 +36295,8 @@ pl:
               name: Dzień sprawdzianu
             EOU Student Facting Survey - [Course]:
               name: Ankieta studenckich faktów EOU - [Course]
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           lesson_groups:
             csp_lists:
               display_name: Listy
@@ -36305,6 +36306,8 @@ pl:
               display_name: Przejścia
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: Ankieta po odbyciu kursu
           name: csp5-2022
         courseb-2022:
           lessons:
@@ -36787,9 +36790,13 @@ pl:
               name: Dzień sprawdzianu
             EOU Student Facting Survey - [Course]:
               name: Ankieta studenckich faktów EOU - [Course]
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Jednistka 6: Algorytmy'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
           name: csp6-2022
         csp7-2022:
           lessons:
@@ -36843,7 +36850,7 @@ pl:
             csp_libraries:
               display_name: Biblioteki
             lessonGroup-3:
-              display_name: Ankieta
+              display_name: Ankieta po odbyciu kursu
           name: csp7-2022
         csp8-2022:
           lessons:
@@ -36857,6 +36864,13 @@ pl:
               key: Utwórz PT - Wykonaj zadanie
             EOU Student Facting Survey - [Course]:
               name: Ankieta studenckich faktów EOU - [Course]
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Twórz PT
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
           name: csp8-2022
         csp9-2022:
           lessons:
@@ -36902,9 +36916,13 @@ pl:
                 który obejmuje zagadnienia jednostki. '
             EOU Student Facting Survey - [Course]:
               name: Ankieta studenckich faktów EOU - [Course]
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
           name: csp9-2022
         csp10-2022:
           lessons:
@@ -36953,9 +36971,13 @@ pl:
               name: Dzień sprawdzianu
             EOU Student Facting Survey - [Course]:
               name: Ankieta studenckich faktów EOU - [Course]
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
           name: csp10-2022
         coursed-2022:
           lessons:
@@ -38001,6 +38023,8 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Ankieta
           name: csa1-2022
           title: Programowanie obiektowe ('22-'23)
         pre-express-2022:
@@ -39868,6 +39892,10 @@ pl:
               name: Kreatywne kodowanie z Teatrem – Dzień 2
             lesson-13:
               name: Kreatywne kodowanie z Teatrem – Dzień 3
+              description_student: |-
+                **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
+
+                Uczestniczyłeś w przeglądzie kodu na końcu poprzedniej lekcji, aby przekazać i otrzymać informację zwrotną do zidentyfikowania obszarów poprawy i rozwiązania napotkanych problemów. Rozważ te informacje zwrotne podczas kończenia prac na tej lekcji. Następnie podziel się swoim końcowym projektem ze swoimi rówieśnikami, aby uczcić swój sukces.
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
@@ -40028,7 +40056,7 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
-              display_name: Piaskownica
+              display_name: Ankieta
           name: csa8-2022
         ui-test-csa-family-script:
           name: ui-test-csa-family-script
@@ -40155,6 +40183,8 @@ pl:
               name: Aktualizacja elementów ekranu
               description_student: Na tej lekcji zaczniesz budować aplikacje, które
                 pozwolą na wiele interakcji z użytkownikiem i funkcjonalności
+            Introduction to Machine Learning:
+              name: TLO 7 - Jednostka 7 Lekcja 1
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -40390,6 +40420,12 @@ pl:
               description_teacher: Podczas tej lekcji **budującej umiejętności** uczniowie
                 nauczą się tworzyć i animować duszki oraz czynić je interaktywnymi
                 za pomocą zdarzeń.
+            lesson-4:
+              name: "[Optional] Wprowadzenie do bajek"
+            lesson-5:
+              name: Zaplanuj swoją bajkę
+            lesson-6:
+              name: Udostępnij swoj bajkę
           name: csc-pilot-2022-fables
         csd1-2022:
           lessons:
@@ -40916,6 +40952,8 @@ pl:
             Keeping Data Secret:
               name: Zachowywanie danych w tajemnicy
               key: Zachowywanie danych w tajemnicy
+            Create a Representation:
+              name: Projekt - Twórz reprezentację
             Problem Solving and Data:
               name: Rozwiązywanie problemów i dane
               key: Rozwiązywanie problemów i dane
@@ -41199,6 +41237,8 @@ pl:
           student_description: Ta jednostka zawiera ankietę na zakończenie przez Twoją
             klasę jednostek kursu Odkrycia informatyki. Twój nauczyciel poinformuje
             Cię, kiedy nadejdzie czas, aby wypełnić tę ankietę.
+        testtess2:
+          name: testtess2
         csp-post-survey-2022:
           lessons:
             Course Survey:
@@ -41208,3 +41248,271 @@ pl:
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
             Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
+        aiml-2022:
+          lessons:
+            Introduction to Machine Learning:
+              name: Wprowadzenie do uczenia maszynowego
+              description_student: Uczniowie zapoznają się z metodą sztucznej inteligencji
+                zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania
+                problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą
+                w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot
+                - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie
+                trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej
+                danych prowadzi do większej dokładności. Na drugim poziomie uczniowie
+                trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o
+                określonych kształtach i odkrywają, że A.I  Bot może opierać swoje
+                decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie
+                trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może
+                używać niepowiązanych cech do podejmowania decyzji w sposób, który
+                nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem,
+                w jaki sposób proces rozwiązywania problemów jest wykorzystywany w
+                uczeniu maszynowym.
+              description_teacher: "Uczniowie zapoznają się z metodą sztucznej inteligencji
+                zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania
+                problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą
+                w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot
+                - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie
+                trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej
+                danych prowadzi do większej dokładności. Na drugim poziomie uczniowie
+                trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o
+                określonych kształtach i odkrywają, że A.I  Bot może opierać swoje
+                decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie
+                trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może
+                używać niepowiązanych cech do podejmowania decyzji w sposób, który
+                nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem,
+                w jaki sposób proces rozwiązywania problemów jest wykorzystywany w
+                uczeniu maszynowym. \n\n**Pytanie dnia:** Jak możemy wykorzystać proces
+                rozwiązywania problemów do rozwiązania problemu związanego z uczeniem
+                maszynowym? "
+            Classification Models:
+              description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować
+                dane?"
+            Introduction to AI Lab:
+              name: Wprowadzenie do AI Lab
+            Numerical Models:
+              name: KNN bez komputera
+              description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego
+                starszego ucznia szkoły podstawowej przeżywającego bezprecedensową
+                pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie
+                formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić,
+                muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”,
+                aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie
+                wymagało przeszkolenia Toma za pomocą algorytmu regresji.
+              description_teacher: "Na tej lekcji uczniowie wcielają się w rolę współczesnego
+                starszego ucznia szkoły podstawowej przeżywającego bezprecedensową
+                pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie
+                formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić,
+                muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”,
+                aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie
+                wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\r\n\\\r\n**Pytanie
+                dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? "
+            AI Code of Ethics:
+              name: Kodeks etyczny AI
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Mini-Projekt: Utwórz aplikację z uczeniem maszynowym'
+            Survey Planning:
+              name: Projektowanie zbierania danych
+            Survey Data in AI Lab:
+              name: Model treningowy na podstawie dobrych danych
+            Troubleshooting Models:
+              name: Model treningowy na podstawie złych danych
+            Creating an App:
+              name: Utwórz aplikację
+            Innovations in AI:
+              name: Innowacje w AI
+            Issue Statements:
+              name: Zaplanuj aplikację uczenia maszynowego
+            Design an AI App:
+              name: Utwórz aplikację „AI dla dobra społecznego”
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1 - Uczenie maszynowe
+            lessonGroup-3:
+              display_name: Rozdział 2 - Projekt aplikacji uczenia maszynowego
+          name: aiml-2022
+          title: Moduł AI i uczenia maszynowego
+          description_short: Dowiedz się o sztucznej inteligencji i uczeniu maszynowym
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Moduł 1
+              key: Moduł 1
+            Module 2:
+              name: Moduł 2
+              key: Moduł 2
+            Module 3:
+              name: Moduł 3
+              key: Moduł 3
+            Module 4:
+              name: Moduł 4
+              key: Moduł 4
+            Module 5:
+              name: Moduł 5
+              key: Moduł 5
+            Module 6:
+              name: Moduł 6
+              key: Moduł 6
+            Module 7:
+              name: Moduł 7
+              key: Moduł 7
+            Module 8:
+              name: Moduł 8
+              key: Moduł 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Moduł 1
+              key: Moduł 1
+            Module 2:
+              name: Moduł 2
+              key: Moduł 2
+            Module 3:
+              name: Moduł 3
+              key: Moduł 3
+            Module 4:
+              name: Moduł 4
+              key: Moduł 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem
+                wartości'
+            'Module 6: Introduction to the Create Performance Task':
+              name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+            Module 5:
+              key: Moduł 5
+              name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem
+                wartości'
+            Module 6:
+              key: Moduł 6
+              name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+            Module 7:
+              key: Moduł 7
+            Module 8:
+              key: Moduł 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Witaj na Code.org
+            lesson-1:
+              key: lekcja 1
+              name: Witaj na Code.org
+            lesson-2:
+              key: lekcja 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Witaj
+          title: 'Moduł 1: Powitanie'
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Witaj na Code.org
+              key: Witaj na Code.org
+            lesson-4:
+              key: lekcja 4
+            lesson-3:
+              key: lekcja 3
+            lesson-8:
+              key: lekcja 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            'Overview of implementation ':
+              name: Przegląd realizacji
+            lesson-1:
+              key: lekcja 1
+            lesson-2:
+              key: lekcja 2
+            lesson-3:
+              key: lekcja 3
+              name: Przegląd realizacji
+        self-paced-pl-csd4-2022:
+          lessons:
+            Role of the teacher:
+              name: Wskazówki dotyczące nauczania Informatycznych Odkryć
+            Learning CS Discoveries:
+              name: Praktyki informatyczne
+            Teaching CS Discoveries:
+              name: Praktyki nauczania
+            lesson-1:
+              key: lekcja 1
+              name: Wskazówki dotyczące nauczania Informatycznych Odkryć
+            lesson-2:
+              key: lekcja 2
+              name: Praktyki informatyczne
+            lesson-3:
+              key: lekcja 3
+              name: Praktyki nauczania
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wskazówki dotyczące nauczania Informatycznych Odkryć
+        self-paced-pl-csp1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Witaj na Code.org
+            Welcome to “Teaching CS Principles”:
+              name: Witamy w „Nauczaniu zasad informatyki”
+            lesson-1:
+              key: lekcja 1
+              name: Witaj na Code.org
+            lesson-2:
+              key: lekcja 2
+              name: Witamy w „Nauczaniu zasad informatyki”
+        self-paced-pl-csp2-2022:
+          lessons:
+            Navigating support:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+            lesson-1:
+              key: lekcja 1
+            lesson-2:
+              key: lekcja 2
+            lesson-3:
+              key: lekcja 3
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+        self-paced-pl-csp3-2022:
+          lessons:
+            Overview of implementation:
+              name: Przegląd realizacji
+            lesson-1:
+              key: lekcja 1
+            lesson-2:
+              key: lekcja 2
+            lesson-3:
+              key: lekcja 3
+              name: Przegląd realizacji
+        self-paced-pl-csp4-2022:
+          lessons:
+            The role of the teacher:
+              name: Rola nauczyciela
+            Learning CS Principles:
+              name: Nauka Zasad Informatyki
+            Teaching CS Principles:
+              name: Nauczanie Zasad Informatyki
+            lesson-1:
+              key: lekcja 1
+              name: Rola nauczyciela
+            lesson-2:
+              key: lekcja 2
+              name: Nauka Zasad Informatyki
+            lesson-3:
+              key: lekcja 3
+              name: Nauczanie Zasad Informatyki

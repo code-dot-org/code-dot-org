@@ -4819,6 +4819,9 @@ ga:
             csp_project:
               display_name: Tionscadal
         csp5-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_lists:
               display_name: Liostaí
@@ -4828,6 +4831,8 @@ ga:
               display_name: Trasnáil
             csp_project:
               display_name: Tionscadal
+            lessonGroup-5:
+              display_name: Suirbhé Iarchúrsa
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -4868,6 +4873,13 @@ ga:
               display_name: Teagmhais
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
             scéalta, agus cluichí.
+        csp6-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp7-2022:
           lessons:
             CS Principles Post-Course Survey:
@@ -4878,20 +4890,36 @@ ga:
             csp_libraries:
               display_name: Leabharlanna
             lessonGroup-3:
-              display_name: Suirbhé
+              display_name: Suirbhé Iarchúrsa
+        csp8-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Suirbhé Iarchúrsa
         csp9-2022:
           lessons:
             Machine Learning:
               name: Meaisínfhoghlaim
             Machine Learning and Bias:
               name: Meaisínfhoghlaim
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Aonad 9: Sonraí'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp10-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -4992,6 +5020,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+            lessonGroup-5:
+              display_name: Suirbhé
         pre-express-2022:
           lesson_groups:
             csf_sequencing:
@@ -5086,6 +5116,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+            lessonGroup-5:
+              display_name: Suirbhé
         vpl-csd2-summer-pilot-2022:
           lessons:
             lesson-3:

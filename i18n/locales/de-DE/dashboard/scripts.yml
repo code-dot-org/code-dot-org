@@ -9,6 +9,10 @@ de:
         csd_2020_category_name: CS Discoveries ('20-'21)
         csd_2021_category_name: CS Discoveries ('21-'22)
         csf_category_name: Einführung in Informatik und Programmieren
+        csf_2018_category_name: Grundlagen der Informatik (18-19)
+        csf_2019_category_name: Grundlagen der Informatik (19-20)
+        csf_2020_category_name: Grundlagen der Informatik (20-21)
+        csf_2021_category_name: Grundlagen der Informatik (21-22)
         csf_international_category_name: Informatik Grundlagen international
         csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
         csp_category_name: Grundsätze der Informatik ('15-'16)
@@ -19,6 +23,7 @@ de:
         cspexams_category_name: Praxistest Grundlagen der Informatik
         csp17_category_name: CS Principles ('17-'18)
         aiml_2021_category_name: KI / ML
+        csc_2021_category_name: Grundlagen der Informatik (21-22)
         full_course_category_name: Vollständige Kurse
         hoc_category_name: Hour of Code
         math_category_name: Mathematik
@@ -172,6 +177,7 @@ de:
             Play Lab:
               name: Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
+              description_teacher: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
           student_description: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
           name: Spielelabor PlayLab
         artist:
@@ -281,6 +287,7 @@ de:
               name: 'Labyrinth: Abfolge'
           student_description: Eine kurze Einführung der Konzepte für Schüler, die Kurs 2 und 3 nicht absolviert haben.
         usability:
+          title: Nutzbarkeit Überprüfung
           lessons:
             Binary:
               name: Binärdatei
@@ -346,6 +353,7 @@ de:
             Infinity:
               name: Disney Infinity Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
+              description_teacher: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
           student_description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
           name: Infinity
         algebrademo:
@@ -512,6 +520,8 @@ de:
           lessons:
             Flappy Code:
               name: Flappy Code
+              description_student: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
+              description_teacher: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
           student_description: Schreibe dein eigenes Spiel in weniger als 10 Minuten! Probiere unsere Flappy-Code-Anleitung!
         jigsaw:
           title: Puzzle
@@ -1622,6 +1632,7 @@ de:
             Ice Age Play Lab:
               name: Ice Age Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
+              description_teacher: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
           name: Eiszeit
         CSPPD3-Unit3:
@@ -1689,6 +1700,8 @@ de:
           lessons:
             Gumball Play Lab:
               name: Gumball Spielelabor
+              description_student: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
+              description_teacher: In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
         starwars:
           title: 'Star Wars: Erschaffe eine Galaxie mit Code (JavaScript)'
@@ -5166,7 +5179,6 @@ de:
               description_teacher: Auf Grundlage des Konzepts der Wiederholung von Anweisungen aus "Happy Loops" werden die SchülerInnen in dieser Phase Schleifen verwenden, um die Schätze auf Code.org effizienter zu sammeln.
             Loops in Artist:
               name: Schleifen beim Künstler
-              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.
             'Events: The Big Event':
               name: 'Ereignisse: Das große Ereignis'
               description_teacher: Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.
@@ -6082,8 +6094,7 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -6811,6 +6822,8 @@ de:
             CSD pre-survey 21-2:
               name: CSD – Vorbefragung 21-22
             lesson-20: {}
+            CS Principles Pre-survey: {}
+            Course Survey: {}
         k1hoc2017:
           title: Hour of Code 2017 für die Vorschule bis zur 1. Klasse
           lessons:
@@ -18797,7 +18810,11 @@ de:
               display_name: Projekt
             lessonGroup-4:
               display_name: Demos und Ressourcen
-        tesstest921: {}
+        tesstest921:
+          lessons:
+            lesson-2: {}
+            lesson-3:
+              name: Lektion 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -20006,6 +20023,8 @@ de:
               key: 'Lektion 18: Bewertungstag'
               name: Prüfungstag
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
           lesson_groups:
             csp_lists:
               display_name: Listen
@@ -20015,6 +20034,8 @@ de:
               display_name: Traversierungen
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         courseb-2022:
           lessons:
             Digital Trails:
@@ -20283,9 +20304,13 @@ de:
               key: 'Lektion 6: Bewertungstag'
               name: Prüfungstag
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Lerneinheit 6: Algorithmen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -20329,7 +20354,7 @@ de:
             csp_libraries:
               display_name: Bibliotheken
             lessonGroup-3:
-              display_name: Umfrage
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -20341,6 +20366,13 @@ de:
             Create PT - Complete the Task:
               key: PT erstellen - Aufgabe abschließen
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp9-2022:
           lessons:
             Learning from Data:
@@ -20376,9 +20408,13 @@ de:
               key: 'Lektion 9: Bewertungstag'
               name: Prüfungstag
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -20425,9 +20461,13 @@ de:
               key: 'Lektion 14: Tag der Bewertung der Lerneinheit'
               name: Prüfungstag
             EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -20842,11 +20882,14 @@ de:
             lesson-21:
               name: Konsole
             lesson-22: {}
+            lesson-23: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Sandboxen
+            lessonGroup-5:
+              display_name: Umfrage
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -20931,8 +20974,6 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-            lessonGroup-4:
-              display_name: Sandboxen
         csa3-2022:
           lessons:
             lesson-3:
@@ -20965,8 +21006,6 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-            lessonGroup-4:
-              display_name: Sandboxen
         tessplayground: {}
         cs4all-invasive-species:
           lessons:
@@ -21205,6 +21244,7 @@ de:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-3: {}
         csd6-projects:
           lessons:
             'Project: Human Device Interaction': {}
@@ -21364,7 +21404,7 @@ de:
             lessonGroup-2:
               display_name: Inhalt
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Umfrage
         ui-test-csa-family-script: {}
         csa-preview:
           lessons:
@@ -21698,12 +21738,15 @@ de:
               name: Hallo Welt CSC
         csc-pilot-2022-timecapsule:
           lessons:
+            lesson-2: {}
             lesson-3: {}
+            lesson-4: {}
             Poem Art:
               name: Dichtkunst
               description_teacher: 'In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.  '
         csc-pilot-2022-starquilts:
           lessons:
+            lesson-1: {}
             lesson-2: {}
             lesson-3: {}
         csc-pilot-2022-fables:
@@ -21711,6 +21754,9 @@ de:
             lesson-3: {}
             Hello World CSC:
               name: Hallo Welt CSC
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey:
@@ -22021,6 +22067,8 @@ de:
             Keeping Data Secret:
               name: Daten geheim halten
               key: Daten geheim halten
+            Create a Representation:
+              name: Projekt - Erstellen einer Darstellung
             Problem Solving and Data:
               name: Problemlösung und Daten
               key: Problemlösung und Daten
@@ -22120,7 +22168,142 @@ de:
           title: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           description: Diese Einheit enthält die Umfrage zu „Erkenntnisse aus der Informatik“ nach dem Kurs. Diese Einheit kann den zugewiesen werden, wenn die SchülerInnen ihre letzte Einheit in Erkenntnisse aus der Informatik abgeschlossen haben.
           student_description: Diese Einheit enthält einen Fragebogen, den ihr ausfüllen könnt, wenn deine Klasse mit den Einheiten von Erkenntnisse aus der Informatik fertig ist. Euer Lehrer/euer Lehrerin wird euch sagen, wann es Zeit ist, diese Umfrage zu beantworten.
+        testtess2: {}
         csp-post-survey-2022:
           lessons:
             Course Survey: {}
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        aiml-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.
+
+                **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
+            Survey Planning:
+              name: Entwurf einer Datenerhebung
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              name: Modul 5
+              key: Modul 5
+            Module 6:
+              name: Modul 6
+              key: Modul 6
+            Module 7:
+              name: Modul 7
+              key: Modul 7
+            Module 8:
+              name: Modul 8
+              key: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return': {}
+            'Module 6: Introduction to the Create Performance Task': {}
+            'Module 7: Tools and Structure in Unit 9 - Data': {}
+            'Module 8: Building Community and Preparing Students for the AP Exam': {}
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Willkommen bei Code.org
+            lesson-1:
+              key: Lektion-1
+              name: Willkommen bei Code.org
+            lesson-2:
+              key: Lektion-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Willkommen
+          title: 'Modul 1: Willkommen'
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Willkommen bei Code.org
+            Welcome to "Teaching CS Discoveries": {}
+            lesson-4:
+              key: Lektion-4
+            lesson-3:
+              key: Lektion-3
+            lesson-8:
+              key: Lektion-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Willkommen bei Code.org
+            lesson-1:
+              key: Lektion-1
+              name: Willkommen bei Code.org
+            lesson-2:
+              key: Lektion-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3

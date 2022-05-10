@@ -2,6 +2,9 @@
   "es-MX": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Leyendo Literatura"
+        },
         "csta/AP": {
           "description": "Algoritmos y programación"
         },
@@ -44,6 +47,12 @@
         "ccmath/MD": {
           "description": "Usando Probabilidades para Tomar Decisiones"
         },
+        "ccmath/NBT": {
+          "description": "Números y Operaciones en Base Diez"
+        },
+        "ccmath/G": {
+          "description": "Geometría"
+        },
         "ccela/W": {
           "description": "Escribir"
         },
@@ -56,8 +65,17 @@
         "csta/IC": {
           "description": "Impactos de la computación"
         },
+        "csp2021/IOC-2.B": {
+          "description": "Explica cómo se pueden proteger los recursos informáticos y cómo se puede hacer un mal uso de ellos."
+        },
         "csta/NI": {
           "description": "Redes e Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Compara los algoritmos de compresión de datos para determinar cuál es el mejor en un contexto determinado."
+        },
+        "csta/DA": {
+          "description": "Datos y Análisis"
         },
         "csta/CS": {
           "description": "Sistemas de computación"
