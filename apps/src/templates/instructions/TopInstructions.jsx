@@ -507,7 +507,7 @@ class TopInstructions extends Component {
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
       return (
         <InstructionsCSF
-          ref={ref => this.setInstructionsRef(ref)}
+          setInstructionsRef={ref => this.setInstructionsRef(ref)}
           handleClickCollapser={this.handleClickCollapser}
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
