@@ -134,6 +134,7 @@ class Script < ApplicationRecord
   end
 
   attr_accessor :skip_name_format_validation
+
   include SerializedToFileValidation
 
   after_save :hide_pilot_units

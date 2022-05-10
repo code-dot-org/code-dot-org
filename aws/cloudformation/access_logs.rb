@@ -29,17 +29,17 @@ def handler(event:, context:)
 
       fields = LOG_FIELDS
       output = begin
-                 CSV.parse_line(data, col_sep: "\t", headers: fields, converters: CONVERTERS).tap do |out|
-                   if out.headers[-1].nil? || out[-1].nil?
-                     raise ArgumentError, "Record data (#{data.count("\t") + 1}) doesn't match log fields (#{fields.length}"
-                   end
-                 end
-               rescue ArgumentError
-                 # Try again using old log fields as CSV column headers.
-                 raise if fields == OLD_LOG_FIELDS
-                 fields = OLD_LOG_FIELDS
-                 retry
-               end
+        CSV.parse_line(data, col_sep: "\t", headers: fields, converters: CONVERTERS).tap do |out|
+          if out.headers[-1].nil? || out[-1].nil?
+            raise ArgumentError, "Record data (#{data.count("\t") + 1}) doesn't match log fields (#{fields.length}"
+          end
+        end
+      rescue ArgumentError
+        # Try again using old log fields as CSV column headers.
+        raise if fields == OLD_LOG_FIELDS
+        fields = OLD_LOG_FIELDS
+        retry
+      end
       {
         recordId: record['recordId'],
         result: 'Ok',
