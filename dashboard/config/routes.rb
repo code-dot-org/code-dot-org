@@ -951,6 +951,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :code_reviews, only: [:index, :create, :update]
+
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
