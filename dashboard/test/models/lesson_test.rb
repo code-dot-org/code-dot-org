@@ -977,11 +977,11 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
     end
 
-    test "can not  clone deeper learning lesson into a non deeper learning script" do
+    test "can not clone deeper learning lesson into a non deeper learning script" do
       raise = assert_raises do
-        @original_dlp_lesson.copy_to_unit(@destination_script, nil, 'NEW_PLC_COURSE')
+        @original_dlp_lesson.copy_to_unit(@destination_script, nil)
       end
-      assert_equal 'Deeper learning learning must be copied to deeper learning courses. Include destination_professional_learning_course to set the professional learning course.', raise.message
+      assert_equal 'Deeper learning lesson must be copied to deeper learning courses.', raise.message
     end
 
     test "can clone deeper learning lesson into another deeper learning script" do
@@ -1000,7 +1000,7 @@ class LessonTest < ActiveSupport::TestCase
       @original_dlp_lesson.programming_expressions = [create(:programming_expression)]
 
       @destination_dlp_script.expects(:write_script_json).once
-      copied_lesson = @original_dlp_lesson.copy_to_unit(@destination_dlp_script, nil, 'NEW_PLC_COURSE')
+      copied_lesson = @original_dlp_lesson.copy_to_unit(@destination_dlp_script, nil)
       assert_equal @destination_dlp_script, copied_lesson.script
       assert_equal 2, copied_lesson.script_levels.length
       assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)

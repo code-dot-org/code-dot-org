@@ -1197,7 +1197,7 @@ class Script < ApplicationRecord
         end
 
         lesson_groups.each do |original_lesson_group|
-          original_lesson_group.copy_to_unit(copied_unit, new_level_suffix, destination_professional_learning_course)
+          original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
 
         if destination_professional_learning_course.nil?

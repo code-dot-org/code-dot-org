@@ -80,7 +80,7 @@ class LessonGroupTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: original_script
     create :lesson, lesson_group: lesson_group, script: original_script
 
-    copied_lesson_group = lesson_group.copy_to_unit(destination_script, nil, 'MY-NEW-PLC-COURSE')
+    copied_lesson_group = lesson_group.copy_to_unit(destination_script, nil)
     destination_script.reload
     original_script.reload
 
