@@ -175,7 +175,7 @@ class Lesson < ApplicationRecord
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
-    unless MARKDOWN_FIELDS.include?(property_name)
+    unless MARKDOWN_FIELDS.include?(property_name.to_s)
       Honeybadger.notify(
         error_message: "Rendering #{property_name} which is not in MARKDOWN_FIELDS",
         error_class: "Lesson.render_property",
