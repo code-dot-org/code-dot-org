@@ -1679,7 +1679,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: args[:name] || 'someone',
         email: args[:email] || 'new@example.com',
         user_type: args[:user_type] || 'teacher',
-        dob: args[:dob] || Date.today - 20.years,
+        dob: args[:dob] || (Date.today - 20.years),
         gender: args[:gender] || 'f'
       },
       credentials: {

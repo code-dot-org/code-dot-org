@@ -29,7 +29,7 @@ total_memory_kb = node['memory']['total'].to_i
 dashboard_workers = node['cpu']['total'].to_i
 pegasus_workers = node['cpu']['total'].to_i * PEGASUS_DASHBOARD_RATIO
 
-total_usage_kb = dashboard_workers * DASHBOARD_USAGE + pegasus_workers * PEGASUS_USAGE + varnish_overhead
+total_usage_kb = (dashboard_workers * DASHBOARD_USAGE) + (pegasus_workers * PEGASUS_USAGE) + varnish_overhead
 max_memory_usage = total_memory_kb * MEMORY_RATIO
 max_unicorn_usage = max_memory_usage - varnish_overhead
 

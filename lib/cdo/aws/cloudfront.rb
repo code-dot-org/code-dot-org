@@ -263,7 +263,7 @@ module AWS
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
       normalize_accept_language = false if behavior_config[:cookies] == 'all' ||
-        behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session')
+        (behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session'))
 
       {
         AllowedMethods: ALLOWED_METHODS,

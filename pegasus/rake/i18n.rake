@@ -11,7 +11,7 @@ def format_enus_yml_with_quotes(line)
   if match_data # formats the values
     unless /^(".*"|'.*'|\|.*)$/ =~ match_data[1]
       line.gsub!(/"/, '\\"')
-      line.gsub!(/^([ a-zA-Z0-9_ ]+?): *(.*)$/, '\1: "\2"')
+      line.gsub!(/^([ a-zA-Z0-9_]+?): *(.*)$/, '\1: "\2"')
     end
   else # formats the first key
     line.gsub!(/^en-US:$/, '"en-US":')
