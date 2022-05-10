@@ -4,7 +4,7 @@
   {
     "name": "Chrome",
     "browserName": "chrome",
-    "version": "75",
+    "version": "87",
     "platform": "Windows 7",
     "screenResolution": "1280x1024",
     "extendedDebugging": true
