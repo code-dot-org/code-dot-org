@@ -1,11 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
-  registerGlobalVariables(variableList) {
-    this.globalVariables = variableList;
-    this.getVariableMap().addVariables(variableList);
-  }
-
   getContainer() {
     return this.svgGroup_.parentNode;
   }
