@@ -22,7 +22,6 @@ import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -173,7 +172,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
-  blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -331,6 +329,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
         });
       }
     );
+  };
+
+  blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function() {
+    return this.getAllBlocks().filter(block => !block.disabled);
   };
 
   // Used in levels when starting over or resetting Version History
