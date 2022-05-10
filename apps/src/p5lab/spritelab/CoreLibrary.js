@@ -469,13 +469,17 @@ export default class CoreLibrary {
 
   onPromptAnswer(variableName, userInput) {
     this.numActivePrompts--;
-    this.promptVars[variableName] = userInput;
+    // Check to see if the user entered a number.
+    const typedInput = isNaN(parseFloat(userInput))
+      ? userInput
+      : parseFloat(userInput);
+    this.promptVars[variableName] = typedInput;
     const callbacks = this.userInputEventCallbacks[variableName];
     if (callbacks) {
       // Make sure to call the setter callback to set the variable
       // before the user callback, which may rely on the variable's new value
       callbacks.setterCallbacks.forEach(callback => {
-        callback(userInput);
+        callback(typedInput);
       });
       callbacks.userCallbacks.forEach(callback => {
         callback();
