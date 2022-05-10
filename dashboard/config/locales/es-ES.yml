@@ -432,6 +432,7 @@ es:
       educate_beyond: Más allá de Code.org
       educate_inspire: Inspire a un estudiante
       educate_community: Comunidad en línea
+      educate_requirements: Requisitos Técnicos
       educate_tools: Herramientas y videos
       about_us: Acerca de nosotros
       about_leadership: Liderazgo
@@ -838,6 +839,13 @@ es:
       title: Fiesta de Baile
     dance-2019:
       title: Fiesta de Baile
+    hello-world:
+      title: Hola Mundo
+      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
+        en un mundo creado por ti.
+    poem-art:
+      title: Arte del Poema
+      body: "¡Exprésate! Utiliza el código para crear poemas animados."
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
@@ -1061,16 +1069,6 @@ es:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
-  donor_interstitial:
-    title: Tus cursos gratis de Ciencia de Computación son posible por...
-    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
-      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
-      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
-    local_supporters: Simpatizantes Locales
-    global_supporters: Simpatizantes Globales
-    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
-    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
-    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!

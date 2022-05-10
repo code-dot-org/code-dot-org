@@ -8092,12 +8092,6 @@ es:
                 recoger el tesoro de forma más eficiente en Code.org.
             Loops in Artist:
               name: Loops en Artista
-              description_teacher: Volviendo a los bucles, los alumnos aprenden a
-                dibujar imágenes mediante la creación de bucles con secuencias de
-                instrucciones sencillas. En la lección anterior, los bucles se utilizaron
-                para atravesar un laberinto y recoger un tesoro. Aquí, los bucles
-                crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad
-                de crear sus propias imágenes utilizando bucles.
             'Events: The Big Event':
               name: 'Eventos: El Gran Evento'
               description_teacher: Los eventos son una gran manera de añadir variedad
@@ -41032,6 +41026,10 @@ es:
           lessons:
             lesson-1:
               name: Probando el Clon de CSA
+            lesson-2:
+              name: Lección 2
+            lesson-3:
+              name: Lección 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -45409,6 +45407,8 @@ es:
                 que abarca los temas de la unidad.
             EOU Student Facting Survey - [Course]:
               name: EOU Encuesta sobre Datos de Alumnos - [Course]
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
           lesson_groups:
             csp_lists:
               display_name: Listas
@@ -45418,6 +45418,8 @@ es:
               display_name: Recorridos
             csp_project:
               display_name: Proyecto
+            lessonGroup-5:
+              display_name: Encuesta de final de curso
           title: Listas, Bucles y Recorridos ('21-'22)
           description: Esta unidad describe las listas, los bucles y los recorridos,
             y explora el modo en que pueden utilizarse para crear aplicaciones que
@@ -46045,9 +46047,13 @@ es:
                 que abarca los temas de la unidad.
             EOU Student Facting Survey - [Course]:
               name: EOU Encuesta sobre Datos de Alumnos - [Course]
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unidad 6: Algoritmos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
           title: Algoritmos ('21-'22)
           description: Esta unidad es una rápida exploración de cómo los informáticos
             diseñan algoritmos para resolver problemas y cómo analizan la velocidad
@@ -46210,7 +46216,7 @@ es:
             csp_libraries:
               display_name: Librerías
             lessonGroup-3:
-              display_name: Encuesta
+              display_name: Encuesta de final de curso
           title: Parámetros, Retorno y Librerías ('21-'22)
           description: Esta unidad explica los parámetros, el retorno y las bibliotecas.
             Aprende a utilizar estos conceptos para construir nuevos tipos de aplicaciones,
@@ -46361,6 +46367,8 @@ es:
                 a través de su expediente digital AP."
             EOU Student Facting Survey - [Course]:
               name: EOU Encuesta sobre Datos de Alumnos - [Course]
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
           title: Crear PT - Preparación ('21-'22)
           description: En esta unidad se prepara y se realiza la AP Create Performance
             Task. Cada lección contiene enlaces a documentos y actividades útiles
@@ -46369,6 +46377,11 @@ es:
             Performance Task. Cada lección contiene enlaces a documentos y actividades
             útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
           description_short: Practica y completa la Create Performance Task (PT).
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT de creación
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
           name: csp8-2022
         csp9-2022:
           lessons:
@@ -46588,9 +46601,13 @@ es:
                 múltiple que abarca los temas de la unidad. '
             EOU Student Facting Survey - [Course]:
               name: EOU Encuesta sobre Datos de Alumnos - [Course]
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidad 9: Datos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
           title: Datos ('21-'22)
           description: 'En esta unidad aprenderás cómo el análisis de datos ayuda
             a convertir los datos en bruto en información útil sobre el mundo. Aprendes
@@ -46952,9 +46969,13 @@ es:
                 que abarca los temas de la unidad.
             EOU Student Facting Survey - [Course]:
               name: EOU Encuesta sobre Datos de Alumnos - [Course]
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
           title: Ciberseguridad e Impactos Globales ('21-'22)
           description: En esta unidad aprenderás cómo las innovaciones informáticas
             han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
@@ -48151,6 +48172,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Sandboxes
+            lessonGroup-5:
+              display_name: Encuesta
           name: csa1-2022
           title: Programación Orientada a Objetos ('22-'23)
         pre-express-2022:
@@ -48429,7 +48452,7 @@ es:
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
-              display_name: Sandboxes
+              display_name: Encuesta Piloto
           name: csa2-2022
           title: Asignación de Estado a Objetos (22-23)
         csa3-2022:
@@ -48586,7 +48609,7 @@ es:
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
-              display_name: Sandboxes
+              display_name: Encuesta Piloto
           name: csa3-2022
           title: Ampliando los Datos del Programa ('22-'23)
         tessplayground:
@@ -48854,6 +48877,8 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
           name: csa4-2022
           title: Condiciones y Lógica ('22-'23)
         csa5-2022:
@@ -48989,6 +49014,8 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: Semana "Demuestra lo que sabes".
+            lessonGroup-4:
+              display_name: Encuesta Piloto
           name: csa5-2022
           title: Arrays Bidimensionales ('22-'23)
         tess-test-csa:
@@ -50726,7 +50753,7 @@ es:
 
             ### Controles de progreso personal del Aula AP
 
-            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa6-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa6-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
             Las siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de "Demuestra lo que sabes":
 
@@ -51023,6 +51050,10 @@ es:
               name: Codificación Creativa con El Teatro - Día 2
             lesson-13:
               name: Codificación Creativa con El Teatro - Día 3
+              description_student: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
             lesson-14:
               name: Práctica de FRQ
             lesson-15:
@@ -51041,7 +51072,7 @@ es:
 
             ### Controles de Progreso Personal del Aula AP
 
-            Para asignar preguntas del Banco de Preguntas del Aula AP que se alineen con esta unidad, cree un cuestionario personalizado en el Aula AP buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            Para asignar preguntas del Banco de Preguntas del Aula AP que se alineen con esta unidad, cree un cuestionario personalizado en el Aula AP buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa7-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
           student_description: En esta unidad, se practica el diseño y el desarrollo
             de software utilizando los conocimientos que se han adquirido a lo largo
             del plan de estudios mientras se planifica y desarrolla un proyecto de
@@ -51320,7 +51351,7 @@ es:
             lessonGroup-4:
               display_name: Encuesta Piloto
             lessonGroup-5:
-              display_name: Aislamiento
+              display_name: Encuesta
           description: |-
             En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.
 
@@ -52140,6 +52171,26 @@ es:
               name: Actualización de Elementos de Pantalla
               description_student: En esta lección, empezarás a crear aplicaciones
                 que permitan mucha interacción y funcionalidad con el usuario
+            Introduction to Machine Learning:
+              name: TLO 7 - Unidad 7 Lección 1
+              description_student: "**Podrás:**\n\n-   Participar en la lección 1
+                de la Unidad 7 interpretando el papel de estudiante.\n-   Reflexionar
+                sobre tu experiencia como estudiante participando en la lección.\n-
+                \  Compartirás ideas para ayudar a los estudiantes a manejar múltiples
+                recursos y pestañas mientras participan en una lección de Descubrimientos
+                CS. "
+              description_teacher: "**Visión general:**\nDurante esta actividad de
+                juego de rol, los asistentes participarán en la Unidad 7 Lección 1:
+                Introducción al Aprendizaje Automático. En esta lección, los participantes
+                entrenarán a un robot para que resuelva problemas. Esta lección TLO
+                también compartirá ideas para ayudar a los estudiantes a manejar múltiples
+                recursos y pestañas mientras participan en una lección de Descubrimientos
+                CS. \n\n**Los participantes podrán:**\n\n-   Participar en la Lección
+                1 de la Unidad 7 interpretando el papel del estudiante.\n-   Reflexionar
+                sobre su experiencia como estudiante que participa en la lección.\n-
+                \  Compartir ideas para ayudar a los estudiantes a manejar múltiples
+                recursos y pestañas mientras participan en una lección de Descubrimientos
+                CS. \n\n**Tiempo sugerido:** 60 minutos"
           lesson_groups:
             lessonGroup-2:
               display_name: Síncronos Parte 1
@@ -54532,7 +54583,7 @@ es:
                 Los alumnos siguen explorando cómo se representan los datos en una tarjeta perforada y empiezan a considerar si algunos datos deben protegerse de la vista del público porque son demasiado personales o sensibles. Una vez que los alumnos comprenden las razones para proteger los datos, aprenden un sistema de cifrado binario que les permite cifrar y descifrar los datos de sus tarjetas perforadas y, finalmente, son capaces de enviarse mensajes secretos entre sí utilizando este método. La clase concluye con un debate sobre la importancia de proteger nuestra información y cómo la encriptación es una de las formas de lograrlo.
               key: Mantener los datos en secreto
             Create a Representation:
-              name: Crear una Representación
+              name: Proyecto - Crear una representación
               description_student: |-
                 **Pregunta del día: ¿Cómo puedo representar información compleja utilizando sistemas binarios?**
 
@@ -55256,3 +55307,786 @@ es:
           student_description: Esta unidad contiene una encuesta sobre el Curso de
             Principios de Informática. Tu profesor te dirá cuándo es el momento de
             realizar esta encuesta.
+        aiml-2022:
+          lessons:
+            Introduction to Machine Learning:
+              name: Introducción al aprendizaje automático (Machine Learning)
+              description_student: Los alumnos conocen una forma de inteligencia artificial
+                llamada aprendizaje automático y cómo pueden utilizar el Proceso de
+                Resolución de Problemas ayudando a entrenar a un robot para que resuelva
+                problemas. Participan en tres actividades de aprendizaje automático
+                en las que un robot  "A.I. Bot" aprende a detectar patrones en los
+                peces. En el primer nivel, los alumnos entrenan al robot para que
+                detecte "peces" frente a "no peces" y descubren que un mayor número
+                de datos conduce a una mayor precisión. En el segundo nivel, los alumnos
+                entrenan al "I.A. Bot" para que detecte peces de cierto color o con
+                una forma determinada y descubren que el "I.A. Bot" podría estar basando
+                su decisión en factores no previstos. En el último nivel, los alumnos
+                entrenan al "I.A. Bot" para que detecte expresiones y descubren que
+                el "I.A. Bot" puede estar utilizando características no relacionadas
+                para tomar decisiones de una manera que no es justa. La lección termina
+                reafirmando cómo se utiliza el proceso de resolución de problemas
+                en el aprendizaje automático.
+              description_teacher: |-
+                Los alumnos conocen una forma de inteligencia artificial llamada aprendizaje automático y cómo pueden utilizar el Proceso de Resolución de Problemas ayudando a entrenar a un robot para que resuelva problemas. Participan en tres actividades de aprendizaje automático en las que un robot  "A.I. Bot" aprende a detectar patrones en los peces. En el primer nivel, los alumnos entrenan al robot para que detecte "peces" frente a "no peces" y descubren que un mayor número de datos conduce a una mayor precisión. En el segundo nivel, los alumnos entrenan al "I.A. Bot" para que detecte peces de cierto color o con una forma determinada y descubren que el "I.A. Bot" podría estar basando su decisión en factores no previstos. En el último nivel, los alumnos entrenan al "I.A. Bot" para que detecte expresiones y descubren que el "I.A. Bot" puede estar utilizando características no relacionadas para tomar decisiones de una manera que no es justa. La lección termina reafirmando cómo se utiliza el proceso de resolución de problemas en el aprendizaje automático.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar el Proceso de Resolución de Problemas para resolver un problema con el aprendizaje automático?
+            Patterns in Data:
+              name: Patrones en los Datos
+              description_student: Los alumnos examinan varias aplicaciones que toman
+                decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo
+                el aprendizaje automático puede ayudar a tomar esta decisión. La primera
+                aplicación toma decisiones de forma aleatoria, lo que constituye un
+                modelo pobre para ayudar a alguien a decidir qué zapatos ponerse.
+                La segunda aplicación toma decisiones siguiendo un patrón establecido
+                llamado árbol de decisiones, que es mejor pero no responde a sus usuarios.
+                Se guía a los alumnos para que lleguen a la conclusión de que encuestar
+                a sus usuarios puede ayudarles a tomar la mejor decisión buscando
+                patrones en los datos y basando sus decisiones en estos patrones.
+                La lección concluye motivando la necesidad de que un ordenador realice
+                este análisis y busque patrones en grandes cantidades de datos, que
+                será el tema de la siguiente lección.
+              description_teacher: "Los alumnos examinan varias aplicaciones que toman
+                decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo
+                el aprendizaje automático puede ayudar a tomar esta decisión. La primera
+                aplicación toma decisiones de forma aleatoria, lo que constituye un
+                modelo pobre para ayudar a alguien a decidir qué zapatos ponerse.
+                La segunda aplicación toma decisiones siguiendo un patrón establecido
+                llamado árbol de decisiones, que es mejor pero no responde a sus usuarios.
+                Se guía a los alumnos para que lleguen a la conclusión de que encuestar
+                a sus usuarios puede ayudarles a tomar la mejor decisión buscando
+                patrones en los datos y basando sus decisiones en estos patrones.
+                La lección concluye motivando la necesidad de que un ordenador realice
+                este análisis y busque patrones en grandes cantidades de datos, que
+                será el tema de la siguiente lección.\\\r\n\\\r\n**Pregunta del día:**
+                ¿Qué estrategias utilizan los modelos informáticos para tomar decisiones?"
+            Classification Models:
+              name: Modelos de Clasificación
+              description_student: "**Pregunta del día:** ¿Cómo aprenden los ordenadores
+                a clasificar los datos?"
+              description_teacher: "Los alumnos participan en una actividad desconectada
+                que simula uno de los algoritmos de aprendizaje automático que los
+                ordenadores utilizan para separar los datos en grupos y ayudar a tomar
+                decisiones. Los alumnos tienen que ayudar a un ordenador a clasificar
+                los alimentos como frutas o verduras. Empiezan por representar gráficamente
+                20 frutas diferentes en dos ejes, comparando la \"dulzura\" con la
+                \"facilidad de comer\". Cuando terminan, intentan separar los datos
+                en grupos: un área de frutas y un área de verduras. A continuación,
+                ponemos a prueba su división ofreciéndoles nuevas frutas y verduras
+                para que las clasifiquen, ofreciéndoles a propósito ejemplos que pongan
+                a prueba su clasificación. Al final de la clase, los alumnos reflexionan
+                sobre cómo este proceso les ha ayudado a tomar decisiones y lo difícil
+                que resulta cuando hay más datos en juego.\\\r\n\\\r\n**Pregunta del
+                día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
+            Introduction to AI Lab:
+              name: Introducción al Laboratorio de Inteligencia Artificial
+              description_student: Los alumnos se introducen por primera vez en la
+                herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde
+                seleccionan características para entrenar un modelo que predice una
+                etiqueta determinada. Los alumnos fingen que han sido contratados
+                por varios restaurantes que quieren hacer recomendaciones a nuevos
+                clientes basándose en los datos de las encuestas que han recogido.
+                Los alumnos recorren cada conjunto de datos, identificando las características
+                de los datos que les gustaría utilizar para sus recomendaciones. Los
+                alumnos también utilizan herramientas de visualización de datos para
+                identificar las características con altas relaciones en los datos,
+                ya que no todas las características pueden ser útiles o predictivas
+                para el entrenamiento de un modelo. Al final de la lección, los alumnos
+                crean un nuevo modelo para un restaurante de su elección y escriben
+                una carta al propietario explicando cómo pueden utilizar su modelo
+                para aumentar su negocio de restauración.
+              description_teacher: |-
+                Los alumnos se introducen por primera vez en la herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde seleccionan características para entrenar un modelo que predice una etiqueta determinada. Los alumnos fingen que han sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en los datos de las encuestas que han recogido. Los alumnos recorren cada conjunto de datos, identificando las características de los datos que les gustaría utilizar para sus recomendaciones. Los alumnos también utilizan herramientas de visualización de datos para identificar las características con altas relaciones en los datos, ya que no todas las características pueden ser útiles o predictivas para el entrenamiento de un modelo. Al final de la lección, los alumnos crean un nuevo modelo para un restaurante de su elección y escriben una carta al propietario explicando cómo pueden utilizar su modelo para aumentar su negocio de restauración.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?
+            Importing Models in App Lab:
+              name: Importación de Modelos en Laboratorio de Aplicaciones
+              description_student: 'Los alumnos se inician en la importación de sus
+                modelos en App Lab y en la vinculación de su modelo con sus pantallas.
+                La lección comienza pidiéndoles que prueben una aplicación de preguntas
+                al estilo de "Buzzfeed" que, a lo largo de la lección, recrean: ¿Cuál
+                es tu lugar ideal de vacaciones? Los alumnos comienzan importando
+                el modelo desde App Lab, luego añaden una pantalla que falta en el
+                modo de diseño, después añaden declaraciones "if" para cambiar las
+                pantallas y, finalmente, vinculan todas las pantallas en función del
+                resultado de la predicción. A continuación, pueden elegir otro cuestionario
+                del estilo de "Buzzfeed" para utilizarlo como modelo y diseñar una
+                aplicación, utilizando las habilidades que han aprendido en esta lección.'
+              description_teacher: "Los alumnos se inician en la importación de sus
+                modelos en App Lab y en la vinculación de su modelo con sus pantallas.
+                La lección comienza pidiéndoles que prueben una aplicación de preguntas
+                al estilo de \"Buzzfeed\" que, a lo largo de la lección, recrean:
+                ¿Cuál es tu lugar ideal de vacaciones? Los alumnos comienzan importando
+                el modelo desde App Lab, luego añaden una pantalla que falta en el
+                modo de diseño, después añaden declaraciones \"if\" para cambiar las
+                pantallas y, finalmente, vinculan todas las pantallas en función del
+                resultado de la predicción. A continuación, pueden elegir otro cuestionario
+                del estilo de \"Buzzfeed\" para utilizarlo como modelo y diseñar una
+                aplicación, utilizando las habilidades que han aprendido en esta lección.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo puedo crear una aplicación utilizando el aprendizaje
+                automático?"
+            Model Cards:
+              name: Tarjetas Modelo
+              description_student: Ayuda a decidir qué modelo debe utilizar un hospital
+                para su sistema de priorización de urgencias y a determinar qué modelos
+                incluyen sesgos involuntarios. También aprenderás cómo las Tarjetas
+                Modelo pueden ayudar a evaluar y analizar los modelos de aprendizaje
+                automático.
+              description_teacher: "En esta lección, los alumnos investigan un modelo
+                en busca de sesgos y se les presenta una Tarjeta de Modelo, que es
+                una forma de representar información importante sobre un modelo entrenado
+                que podría ayudar a descubrir los sesgos. La lección comienza con
+                la investigación por parte de los alumnos de una aplicación de Prioridad
+                Médica, que ayuda a un hospital a decidir cuándo ver a los pacientes
+                en función de sus síntomas. Los alumnos son guiados a través de una
+                actividad para ayudarles a darse cuenta de que la aplicación está
+                sesgada sobre la base de información personal como la edad, la raza
+                y el género. Los alumnos examinan cómo podría ocurrir esto basándose
+                en los datos iniciales utilizados para entrenar el modelo, y luego
+                exploran cómo una tarjeta modelo es una herramienta que puede ayudar
+                a descubrir el posible sesgo. Exploran varios ejemplos de tarjetas
+                modelo, haciendo recomendaciones sobre si el modelo podría estar sesgado
+                o no en base a los datos.\\\r\n\\\r\n**Pregunta del día:** ¿Cómo aparece
+                el sesgo humano en el aprendizaje automático?"
+            Saving Models in AI Lab:
+              name: Guardar Modelos en el Laboratorio de Inteligencia Artificial
+              description_student: Ayuda a entrenar varios modelos para facilitar
+                a un zoológico la creación de aplicaciones educativas para sus clientes.
+                Crearás Tarjetas Modelo para cada uno de tus modelos y luego importarás
+                uno de ellos al Laboratorio de Aplicaciones para crear una aplicación.
+              description_teacher: |-
+                Los alumnos completan todo el proceso de entrenamiento y guardado de un modelo y luego lo importan al Laboratorio de Aplicaciones. Por primera vez, los estudiantes son capaces de elegir la etiqueta que les gustaría predecir y dedicar tiempo a decidir las características que utilizarán para ayudar a predecir la etiqueta elegida. Los estudiantes también crean una tarjeta modelo para sus patrones con el fin de guardarlos e importarlos al Laboratorio de Aplicaciones
+
+                **Pregunta del día:** ¿Cómo puedo utilizar las Tarjetas Modelo para documentar mis decisiones al entrenar un modelo de aprendizaje automático?
+            Model Cards in App Lab:
+              name: Tarjetas Modelo en el Laboratorio de Aplicaciones
+              description_student: Aprende a utilizar las Tarjetas Modelo para mejorar
+                una aplicación de aprendizaje automático y a actualizar la pantalla
+                final en función de la predicción del modelo.
+              description_teacher: |-
+                En esta lección, los alumnos practican la importación de sus modelos en el Laboratorio de Aplicaciones, esta vez incluyendo modelos que tienen datos numéricos y utilizando tarjetas modelo para ayudar a mejorar la experiencia del usuario al rellenar su formulario. A continuación, aprenderán a ver la tarjeta modelo dentro del Laboratorio de Aplicaciones y a utilizarla para añadir más elementos descriptivos a una aplicación. A continuación, se centran en mejorar la experiencia del usuario añadiendo texto informativo para ayudar a guiar a los usuarios a la hora de rellenar el formulario y añadiendo un estilo a su aplicación para mejorar la experiencia del usuario.
+
+                **Pregunta del día:** ¿Cómo puedo utilizar una Tarjeta Modelo para mejorar mi aplicación?
+            Numerical Models:
+              name: Modelos Numéricos
+              description_student: En esta lección, los alumnos asumen el papel de
+                un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes.
+                Un día se les otorga la responsabilidad de entregar la fórmula de
+                una vacuna a un laboratorio en algún lugar de su localidad. Para ello,
+                deberán utilizar un asistente personal inteligente (API) llamado "Tom"
+                para predecir la ruta más segura hacia el laboratorio, lo que requerirá
+                entrenar a Tom con un algoritmo de regresión.
+              description_teacher: "En esta lección, los alumnos asumen el papel de
+                un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes.
+                Un día se les otorga la responsabilidad de entregar la fórmula de
+                una vacuna a un laboratorio en algún lugar de su localidad. Para ello,
+                deberán utilizar un asistente personal inteligente (API) llamado \"Tom\"
+                para predecir la ruta más segura hacia el laboratorio, lo que requerirá
+                entrenar a Tom con un algoritmo de regresión.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo aprenden los ordenadores a hacer predicciones con
+                datos numéricos?"
+            Numerical Data in AI Lab:
+              name: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+              description_student: Hasta ahora, los alumnos sólo han creado modelos
+                de aprendizaje automático a partir de datos categóricos; en esta lección,
+                se introduce a los alumnos en los datos numéricos que representan
+                un rango de valores. Se presenta a los alumnos un escenario en el
+                que cada característica y etiqueta se representa con datos numéricos,
+                y aprenden a utilizar las nuevas herramientas de visualización de
+                datos de AI Lab para ayudar a encontrar patrones.
+              description_teacher: |-
+                Hasta ahora, los alumnos sólo han creado modelos de aprendizaje automático a partir de datos categóricos; en esta lección, se introduce a los alumnos en los datos numéricos que representan un rango de valores. Se presenta a los alumnos un escenario en el que cada característica y etiqueta se representa con datos numéricos, y aprenden a utilizar las nuevas herramientas de visualización de datos de AI Lab para ayudar a encontrar patrones.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar AI Lab para predecir datos numéricos?
+            Customizing Apps:
+              name: Personalización de las Aplicaciones
+              description_student: Los alumnos exploran cómo personalizar el código
+                de su aplicación para realizar cambios adicionales en el diseño de
+                la misma. Los alumnos comienzan analizando una aplicación de una sola
+                pantalla que está abarrotada de demasiadas funciones. Practican la
+                ampliación de la aplicación a dos pantallas y la actualización del
+                código para utilizar los nuevos elementos del modo de diseño. Después
+                de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor
+                que requiere cambios en el código utilizando los nuevos elementos
+                del modo de diseño. Utilizando los conocimientos de esta lección,
+                los alumnos podrán crear aplicaciones multipantalla en las que las
+                preguntas puedan aparecer en varias pantallas en lugar de en una sola.
+              description_teacher: |-
+                Los alumnos exploran cómo personalizar el código de su aplicación para realizar cambios adicionales en el diseño de la misma. Los alumnos comienzan analizando una aplicación de una sola pantalla que está abarrotada de demasiadas funciones. Practican la ampliación de la aplicación a dos pantallas y la actualización del código para utilizar los nuevos elementos del modo de diseño. Después de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor que requiere cambios en el código utilizando los nuevos elementos del modo de diseño. Utilizando los conocimientos de esta lección, los alumnos podrán crear aplicaciones multipantalla en las que las preguntas puedan aparecer en varias pantallas en lugar de en una sola.
+
+                **Pregunta del día:** ¿Cómo puedo personalizar el código de una aplicación de aprendizaje automático?
+            AI Code of Ethics:
+              name: Código Ético de la Inteligencia Artificial
+              description_student: En pequeños grupos, los alumnos realizan una investigación
+                a partir de artículos y vídeos que exponen los problemas éticos en
+                un área de la Inteligencia Artificial (IA) de su elección. Después,
+                cada grupo desarrolla al menos un principio orientado a la solución
+                que aborda su área elegida. A continuación, estos principios se reúnen
+                en un recurso (por ejemplo, una presentación de diapositivas, un documento
+                o una página web) para los creadores de Inteligencia Artificial y
+                los legisladores de todo el mundo.
+              description_teacher: En pequeños grupos, los alumnos realizan una investigación
+                a partir de artículos y vídeos que exponen los problemas éticos en
+                un área de la Inteligencia Artificial (IA) de su elección. Después,
+                cada grupo desarrolla al menos un principio orientado a la solución
+                que aborda su área elegida. A continuación, estos principios se reúnen
+                en un recurso (por ejemplo, una presentación de diapositivas, un documento
+                o una página web) para los creadores de Inteligencia Artificial y
+                los legisladores de todo el mundo.
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Miniproyecto: Hacer una Aplicación con Aprendizaje Automático'
+            Survey Planning:
+              name: Diseño de recolección de datos
+            Survey Data in AI Lab:
+              name: Entrenar el Modelo a partir de Datos Buenos
+            Troubleshooting Models:
+              name: Entrenar el Modelo a partir de Datos Erróneos
+            Creating an App:
+              name: Crear Aplicación
+            Types of Machine Learning:
+              name: Tipos de Aprendizaje Automático
+              description_student: Los alumnos primero se plantean cómo crear modelos
+                "mentales" cuando aprenden nuevos conceptos, y cómo éstos pueden ser
+                similares a un modelo de "aprendizaje automático". Participan en una
+                actividad de patrones de colores para simular la construcción de un
+                modelo de aprendizaje automático sin ayuda, similar al de un niño
+                pequeño, como un tipo de aprendizaje no supervisado. A continuación,
+                juegan a un juego llamado "Puerta con Cristal Verde" como ejemplo
+                de aprendizaje supervisado, en el que aprenden qué palabras siguen
+                un determinado patrón para atravesar una puerta en el juego. A lo
+                largo de la lección, los alumnos también conocen los términos característica,
+                etiqueta y formación, que aparecen a lo largo de la unidad. Por último,
+                los alumnos clasifican varios escenarios en aprendizaje "supervisado"
+                o "no supervisado", y luego ven un vídeo sobre cómo las redes neuronales
+                pueden simular aún más el aprendizaje humano.
+              description_teacher: "Los alumnos primero se plantean cómo crear modelos
+                \"mentales\" cuando aprenden nuevos conceptos, y cómo éstos pueden
+                ser similares a un modelo de \"aprendizaje automático\". Participan
+                en una actividad de patrones de colores para simular la construcción
+                de un modelo de aprendizaje automático sin ayuda, similar al de un
+                niño pequeño, como un tipo de aprendizaje no supervisado. A continuación,
+                juegan a un juego llamado \"Puerta con Cristal Verde\" como ejemplo
+                de aprendizaje supervisado, en el que aprenden qué palabras siguen
+                un determinado patrón para atravesar una puerta en el juego. A lo
+                largo de la lección, los alumnos también conocen los términos característica,
+                etiqueta y formación, que aparecen a lo largo de la unidad. Por último,
+                los alumnos clasifican varios escenarios en aprendizaje \"supervisado\"
+                o \"no supervisado\", y luego ven un vídeo sobre cómo las redes neuronales
+                pueden simular aún más el aprendizaje humano.\\\r\n\\\r\n**Pregunta
+                del día:** ¿En qué se parece el aprendizaje automático al humano?"
+            Innovations in AI:
+              name: Innovaciones en Inteligencia Artificial
+              description_teacher: |-
+                En esta lección, los estudiantes exploran una aplicación de la Inteligencia Artificial llamada Seeing AI y examinan cómo está ayudando a las personas con discapacidades visuales. A continuación, los alumnos investigan otros ejemplos de cómo la Inteligencia Artificial está afectando a la sociedad, centrándose en los usuarios que se ven afectados por los ejemplos que encuentran. Por último, los alumnos comparten sus conclusiones entre ellos.
+
+                **Pregunta del día:** ¿Cómo ayuda la Inteligencia Artificial a resolver problemas en todo el mundo?
+            Issue Statements:
+              name: Planificación de un Proyecto de Aprendizaje Automático
+            Design an AI App:
+              name: Hacer una aplicación de " Inteligencia Artificial para el Bienestar
+                Social".
+              description_student: Para concluir esta unidad, los alumnos desarrollan
+                una aplicación de Inteligencia Artificial que aborda el problema social
+                que han retomado a lo largo de la unidad. Después de ver una aplicación
+                de ejemplo, los alumnos siguen una guía de proyecto para completar
+                esta actividad de varios días. En el primer paso, los alumnos preparan
+                los datos que utilizarán para entrenar su modelo en Laboratorio de
+                Inteligencia Artificial. Después de entrenar, probar y generar una
+                tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones
+                para su desarrollo. Aquí utilizan su modelo para crear una aplicación
+                fácil de usar basada en su maqueta de la lección anterior, "Planificación
+                de la aplicación". Los alumnos realizan una revisión por parte de
+                sus compañeros y hacen las actualizaciones necesarias a sus proyectos
+                antes de preparar una presentación a la clase.
+              description_teacher: "Para concluir esta unidad, los alumnos desarrollan
+                una aplicación de Inteligencia Artificial que aborda el problema social
+                que han retomado a lo largo de la unidad. Después de ver una aplicación
+                de ejemplo, los alumnos siguen una guía de proyecto para completar
+                esta actividad de varios días. En el primer paso, los alumnos preparan
+                los datos que utilizarán para entrenar su modelo en Laboratorio de
+                Inteligencia Artificial. Después de entrenar, probar y generar una
+                tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones
+                para su desarrollo. Aquí utilizan su modelo para crear una aplicación
+                fácil de usar basada en su maqueta de la lección anterior, \"Planificación
+                de la aplicación\". Los alumnos realizan una revisión por parte de
+                sus compañeros y hacen las actualizaciones necesarias a sus proyectos
+                antes de preparar una presentación a la clase.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas
+                para crear una aplicación de \"Inteligencia Artificial para el Bienestar
+                Social\"?"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Aprendizaje Automático
+            lessonGroup-3:
+              display_name: Capítulo 2 - Diseñar una aplicación de Aprendizaje Automático
+          title: Módulo de Inteligencia Artificial y Aprendizaje Automático
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Módulo 1
+              key: Módulo 1
+            Module 2:
+              name: Módulo 2
+              key: Módulo 2
+            Module 3:
+              name: Módulo 3
+              key: Módulo 3
+            Module 4:
+              name: Módulo 4
+              key: Módulo 4
+            Module 5:
+              name: Módulo 5
+              key: Módulo 5
+            Module 6:
+              name: Módulo 6
+              key: Módulo 6
+            Module 7:
+              name: Módulo 7
+              key: Módulo 7
+            Module 8:
+              name: Módulo 8
+              key: Módulo 8
+          title: Aprendizaje Profesional Virtual de CS Discoveries 2021 - 22
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Módulo 1
+              key: Módulo 1
+            Module 2:
+              name: Módulo 2
+              key: Módulo 2
+            Module 3:
+              name: Módulo 3
+              key: Módulo 3
+            Module 4:
+              name: Módulo 4
+              key: Módulo 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros
+                y retorno'
+            'Module 6: Introduction to the Create Performance Task':
+              name: 'Módulo 6: Introducción a la  Creación de la Tarea de Rendimiento
+                PT'
+            'Module 7: Tools and Structure in Unit 9 - Data':
+              name: 'Módulo 7: Herramientas y estructura de la Unidad 9 - Datos'
+            'Module 8: Building Community and Preparing Students for the AP Exam':
+              name: 'Módulo 8: Construir una comunidad y preparar a los alumnos para
+                el examen AP'
+            Module 5:
+              key: Módulo 5
+              name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros
+                y retorno'
+            Module 6:
+              key: Módulo 6
+              name: 'Módulo 6: Introducción a la  Creación de la Tarea de Rendimiento
+                PT'
+            Module 7:
+              key: Módulo 7
+              name: 'Módulo 7: Herramientas y estructura de la Unidad 9 - Datos'
+            Module 8:
+              key: Módulo 8
+              name: 'Módulo 8: Construir una comunidad y preparar a los alumnos para
+                el examen AP'
+          title: CS Principios de Aprendizaje Profesional Virtual 21 - 22
+        self-paced-pl-csd1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Bienvenido a Code.org
+            Welcome to "Teaching CS Discoveries":
+              name: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
+            lesson-1:
+              key: lección-1
+              name: Bienvenido a Code.org
+            lesson-2:
+              key: lección-2
+              name: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bienvenidos
+          title: 'Módulo 1: Bienvenida '
+          description: "Este módulo es una breve introducción tanto a Code.org como
+            a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
+            una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender
+            a participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:**
+            10 minutos"
+          student_description: "Este módulo es una breve introducción tanto a Code.org
+            como a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-
+            \  Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-
+            \  Aprender a participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            sugerido:** 10 minutos"
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Bienvenido a Code.org
+            Welcome to "Teaching CS Discoveries":
+              name: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
+              key: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
+            Navigating the Codeorg learning platform:
+              name: Navegando por la plataforma de aprendizaje Code.org
+            Navigating lesson plans and resources:
+              name: Navegando por los planes de estudio y los recursos
+            Navigating support:
+              name: Ayuda a la navegación
+            lesson-4:
+              key: lección-4
+              name: Navegando por la plataforma de aprendizaje Code.org
+            lesson-3:
+              key: lección-3
+              name: Navegando por los planes de estudio y los recursos
+            lesson-8:
+              key: lección-8
+              name: Ayuda a la navegación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navegando por Code.org
+          title: 'Módulo 2: Navegando por Code.org'
+          description: "Este módulo está diseñado para orientarte sobre las herramientas
+            que utilizarás para apoyar el aprendizaje de los estudiantes mientras
+            enseñas Descubrimientos de la Informática. \n\n**Tú podrás:**\n\n-   Navegar
+            por el sitio web de Code.org y las herramientas para profesores.\n-   Configurar
+            una sección del aula\n-   Localizar y utilizar los planes de lecciones
+            del curso y los recursos para el profesor. \n-   Aprenderás cómo acceder
+            a la ayuda mientras enseñas el curso.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo está diseñado para orientarte sobre las
+            herramientas que utilizarás para apoyar el aprendizaje de los estudiantes
+            mientras enseñas Descubrimientos de la Informática. \n\n**Tú podrás:**\n\n-
+            \  Navegar por el sitio web de Code.org y las herramientas para profesores.\n-
+            \  Configurar una sección del aula\n-   Localizar y utilizar los planes
+            de lecciones del curso y los recursos para el profesor. \n-   Aprenderás
+            cómo acceder a la ayuda mientras enseñas el curso.\n\n**Tiempo sugerido:**
+            60 minutos"
+        self-paced-pl-csd3-2022:
+          lessons:
+            Overview of course content:
+              name: Resumen del contenido del curso
+            Overview of learning tools:
+              name: Resumen de las herramientas de aprendizaje
+            'Overview of implementation ':
+              name: Resumen de las herramientas de aprendizaje
+            lesson-1:
+              key: lección-1
+              name: Resumen del contenido del curso
+            lesson-2:
+              key: lección-2
+              name: Resumen de las herramientas de aprendizaje
+            lesson-3:
+              key: lección-3
+              name: Resumen de las herramientas de aprendizaje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Resumen de los Descubrimientos de la Informática
+          title: 'Módulo 3: Resumen de Descubrimientos de la Informática'
+          description: "Este módulo le proporcionará una visión general del curso
+            Descubrimientos de Informática con énfasis en los conceptos que los estudiantes
+            aprenderán y las herramientas que utilizarán a lo largo del curso. Participar
+            en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el
+            contenido del curso que implementarás en tu aula. \n\n**Tú Podrás:**\n\n-
+            \  Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos
+            de Informática.\n-   Familiarizarse con los entornos de programación utilizados
+            en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos
+            de Informática enseñará en su clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo le proporcionará una visión general del
+            curso Descubrimientos de Informática con énfasis en los conceptos que
+            los estudiantes aprenderán y las herramientas que utilizarán a lo largo
+            del curso. Participar en este módulo te ayudará a tomar decisiones sobre
+            cómo seleccionar el contenido del curso que implementarás en tu aula.
+            \n\n**Tú Podrás:**\n\n-   Obtener una comprensión de alto nivel del plan
+            de estudios de Descubrimientos de Informática.\n-   Familiarizarse con
+            los entornos de programación utilizados en Descubrimientos de Informática.\n-
+            \  Decidir qué unidades de Descubrimientos de Informática enseñará en
+            su clase.\n\n**Tiempo sugerido:** 60 minutos"
+        self-paced-pl-csd4-2022:
+          lessons:
+            Role of the teacher:
+              name: Función del profesor
+            Learning CS Discoveries:
+              name: Aprendiendo los Descubrimientos de la Informática
+            Teaching CS Discoveries:
+              name: Enseñando los Descubrimientos de la Informática
+            lesson-1:
+              key: lección-1
+              name: Función del profesor
+            lesson-2:
+              key: lección-2
+              name: Aprendiendo los Descubrimientos de la Informática
+            lesson-3:
+              key: lección-3
+              name: Enseñando los Descubrimientos de la Informática
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñando y aprendiendo Descubrimientos de la Informática
+          title: 'Module 4: Enseñando y aprendiendo Descubrimientos de la Informática'
+          description: "En este módulo, se presentarán prácticas auténticas de Informática
+            que los estudiantes realizarán a lo largo del curso Descubrimientos de
+            la Informática. Estas prácticas incluyen la depuración, el uso de recursos
+            y la programación en parejas. También explorarás el papel del profesor
+            dentro de un aula de Descubrimientos de la Informática y harás un plan
+            para apoyar el aprendizaje de los alumnos mientras enseñas el curso.\n\n\\*\\*Tú
+            Podrás: \\*\\*\n\n-   Considerar el papel del profesor en un aula de Descubrimientos
+            de la Informática. \n-   Aprenderás sobre las prácticas auténticas de
+            Informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos
+            de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de
+            los alumnos a través de la diferenciación, la evaluación continua, y la
+            promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+          student_description: "En este módulo, se presentarán prácticas auténticas
+            de Informática que los estudiantes realizarán a lo largo del curso Descubrimientos
+            de la Informática. Estas prácticas incluyen la depuración, el uso de recursos
+            y la programación en parejas. También explorarás el papel del profesor
+            dentro de un aula de Descubrimientos de la Informática y harás un plan
+            para apoyar el aprendizaje de los alumnos mientras enseñas el curso.\n\n\\*\\*Tú
+            Podrás: \\*\\*\n\n-   Considerar el papel del profesor en un aula de Descubrimientos
+            de la Informática. \n-   Aprenderás sobre las prácticas auténticas de
+            Informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos
+            de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de
+            los alumnos a través de la diferenciación, la evaluación continua, y la
+            promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+        self-paced-pl-csp1-2022:
+          lessons:
+            Welcome to Codeorg:
+              name: Bienvenido a Code.org
+            Welcome to “Teaching CS Principles”:
+              name: Bienvenido a "Enseñanza de los Principios de la Informática”
+            lesson-1:
+              key: lección-1
+              name: Bienvenido a Code.org
+            lesson-2:
+              key: lección-2
+              name: Bienvenido a "Enseñanza de los Principios de la Informática”
+        self-paced-pl-csp2-2022:
+          lessons:
+            Navigating the Codeorg learning platform:
+              name: Navegando por la plataforma de aprendizaje Code.org
+            Navigating lesson plans and resources:
+              name: Navegando por los planes de estudio y los recursos
+            Navigating support:
+              name: Ayuda a la navegación
+              description_student: |-
+                **Tú podrás:**
+
+                -   Acceder a la ayuda mientras se enseñan los Principios de Informática.
+
+                **Tiempo sugerido:** 15 minutos
+              description_teacher: |-
+                **Tú podrás:**
+
+                -   Acceder a la ayuda mientras se enseñan los Principios de Informática.
+
+                **Tiempo sugerido:** 15 minutos
+            lesson-1:
+              key: lección-1
+              name: Navegando por la plataforma de aprendizaje Code.org
+            lesson-2:
+              key: lección-2
+              name: Navegando por los planes de estudio y los recursos
+            lesson-3:
+              key: lección-3
+              name: Ayuda a la navegación
+              description_student: |-
+                **Tú podrás:**
+
+                -   Acceder a la ayuda mientras se enseñan los Principios de Informática.
+
+                **Tiempo sugerido:** 15 minutos
+              description_teacher: |-
+                **Tú podrás:**
+
+                -   Acceder a la ayuda mientras se enseñan los Principios de Informática.
+
+                **Tiempo sugerido:** 15 minutos
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csp3-2022:
+          lessons:
+            Overview of course content:
+              name: Resumen del contenido del curso
+              description_student: |-
+                **Podrás**:
+
+                -   Obtener un alto nivel de comprensión del plan de estudios de Principios de Informática.
+                -   Aprender más sobre los enfoques pedagógicos utilizados para enseñar tanto las unidades de no programación como las de programación.
+
+                **Tiempo sugerido**: 45 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Obtener un alto nivel de comprensión del plan de estudios de Principios de Informática.
+                -   Aprender más sobre los enfoques pedagógicos utilizados para enseñar tanto las unidades de no programación como las de programación.
+
+                **Tiempo sugerido**: 45 minutos
+            Overview of learning tools:
+              name: Resumen de las herramientas de aprendizaje
+              description_student: |-
+                **Podrás**:
+
+                -   Familiarizarte con las herramientas de aprendizaje de los alumnos que se utilizan dentro de Principios de Informática.
+
+                **Tiempo sugerido**: 15 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Familiarizarte con las herramientas de aprendizaje de los alumnos que se utilizan dentro de Principios de Informática.
+
+                **Tiempo sugerido**: 15 minutos
+            Overview of implementation:
+              name: Resumen de la actividad
+              description_student: |-
+                **Podrás**:
+
+                -   Explorar los componentes del examen AP, así como tus responsabilidades como profesor si planeas ofrecer Principios de CS como un curso AP.
+                -   Construir un plan de trabajo para el año escolar.
+
+                **Tiempo sugerido**: 30 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Explorar los componentes del examen AP, así como tus responsabilidades como profesor si planeas ofrecer Principios de CS como un curso AP.
+                -   Construir un plan de trabajo para el año escolar.
+
+                **Tiempo sugerido**: 30 minutos
+            lesson-1:
+              key: lección-1
+              name: Resumen del contenido del curso
+              description_student: |-
+                **Podrás**:
+
+                -   Obtener un alto nivel de comprensión del plan de estudios de Principios de Informática.
+                -   Aprender más sobre los enfoques pedagógicos utilizados para enseñar tanto las unidades de no programación como las de programación.
+
+                **Tiempo sugerido**: 45 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Obtener un alto nivel de comprensión del plan de estudios de Principios de Informática.
+                -   Aprender más sobre los enfoques pedagógicos utilizados para enseñar tanto las unidades de no programación como las de programación.
+
+                **Tiempo sugerido**: 45 minutos
+            lesson-2:
+              key: lección-2
+              name: Resumen de las herramientas de aprendizaje
+              description_student: |-
+                **Podrás**:
+
+                -   Familiarizarte con las herramientas de aprendizaje de los alumnos que se utilizan dentro de Principios de Informática.
+
+                **Tiempo sugerido**: 15 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Familiarizarte con las herramientas de aprendizaje de los alumnos que se utilizan dentro de Principios de Informática.
+
+                **Tiempo sugerido**: 15 minutos
+            lesson-3:
+              key: lección-3
+              name: Resumen de la actividad
+              description_student: |-
+                **Podrás**:
+
+                -   Explorar los componentes del examen AP, así como tus responsabilidades como profesor si planeas ofrecer Principios de CS como un curso AP.
+                -   Construir un plan de trabajo para el año escolar.
+
+                **Tiempo sugerido**: 30 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Explorar los componentes del examen AP, así como tus responsabilidades como profesor si planeas ofrecer Principios de CS como un curso AP.
+                -   Construir un plan de trabajo para el año escolar.
+
+                **Tiempo sugerido**: 30 minutos
+        self-paced-pl-csp4-2022:
+          lessons:
+            The role of the teacher:
+              name: El papel del profesor
+              description_student: |-
+                **Podrás**:
+
+                -   Analizar tu papel como profesor de un aula de Principios de CS.
+
+                **Tiempo sugerido**: 5 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Analizar tu papel como profesor de un aula de Principios de CS.
+
+                **Tiempo sugerido**: 5 minutos
+            Learning CS Principles:
+              name: Aprendizaje de los Principios de Informática
+              description_student: |-
+                **Podrás**:
+
+                -   Conocer las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+
+                **Tiempo sugerido**: 25 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Conocer las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+
+                **Tiempo sugerido**: 25 minutos
+            Teaching CS Principles:
+              name: Enseñanza de los Principios de Informática
+              description_student: |-
+                **Podrás**:
+
+                -   Hacer un plan sobre cómo apoyarás el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción de una cultura de inclusión dentro de tu aula de Informática.
+
+                **Tiempo sugerido**: 20 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Hacer un plan sobre cómo apoyarás el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción de una cultura de inclusión dentro de tu aula de Informática.
+
+                **Tiempo sugerido**: 20 minutos
+            lesson-1:
+              key: lección-1
+              name: El papel del profesor
+              description_student: |-
+                **Podrás**:
+
+                -   Analizar tu papel como profesor de un aula de Principios de CS.
+
+                **Tiempo sugerido**: 5 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Analizar tu papel como profesor de un aula de Principios de CS.
+
+                **Tiempo sugerido**: 5 minutos
+            lesson-2:
+              key: lección-2
+              name: Aprendizaje de los Principios de Informática
+              description_student: |-
+                **Podrás**:
+
+                -   Conocer las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+
+                **Tiempo sugerido**: 25 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Conocer las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+
+                **Tiempo sugerido**: 25 minutos
+            lesson-3:
+              key: lección-3
+              name: Enseñanza de los Principios de Informática
+              description_student: |-
+                **Podrás**:
+
+                -   Hacer un plan sobre cómo apoyarás el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción de una cultura de inclusión dentro de tu aula de Informática.
+
+                **Tiempo sugerido**: 20 minutos
+              description_teacher: |-
+                **Podrás**:
+
+                -   Hacer un plan sobre cómo apoyarás el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción de una cultura de inclusión dentro de tu aula de Informática.
+
+                **Tiempo sugerido**: 20 minutos
+          student_description: |-
+            En este módulo, se presentarán prácticas auténticas de informática que los estudiantes realizarán a lo largo del curso Descubrimientos de informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Descubrimientos de Informática y harás un plan sobre cómo apoyar el aprendizaje de los estudiantes mientras enseñas el curso.
+
+            **Podrás**:
+
+            -   Considerar el papel del profesor en un aula de Descubrimientos de Informática.
+            -   Aprenderás sobre las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos de Informática.
+            -   Hacer un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua, y la promoción de una cultura de inclusión.
+
+            **Tiempo sugerido**: 50 minutos

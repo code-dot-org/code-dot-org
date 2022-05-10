@@ -587,6 +587,12 @@ ka:
             '90': ქვემოთ
             '180': მარცხნივ
             '270': ზემოთ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': საშუალო
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

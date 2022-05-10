@@ -1473,7 +1473,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -11296,12 +11296,45 @@
           "name": "Otros",
           "description": "Si sus estudiantes ya se sienten cómodos con los conceptos de codificación, motívelos a que intenten crear sus proyectos en otra plataforma, como [Scratch](https://scratch.mit.edu/) o [Alice](http://www.alice.org/index.php)."
         },
+        "1d97fa88-30c5-494c-81e0-c884102fe8e3": {
+          "description": "Esta unidad asume que los estudiantes ya están familiarizados con los elementos de diseño del Laboratorio de Aplicaciones y los comandos onEvent y setScreen, esencialmente lo que se cubre en la Unidad 4 de Descubrimientos CS o el tutorial de la Hora de Código del Laboratorio de Aplicaciones. Los estudiantes utilizarán Laboratorio de Aplicaciones por primera vez en la Lección 7. \n\nSi tienes estudiantes que no han trabajado antes en Laboratorio de Aplicaciones y en el Modo Diseño, puedes considerar dedicar un tiempo de clase adicional a presentar Laboratorio de Aplicaciones a los estudiantes lo suficiente para que tengan éxito en esta unidad. [Haz clic aquí](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) para leer nuestras recomendaciones sobre cómo hacerlo."
+        },
         "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** \\_Hoy comenzamos una unidad sobre la Inteligencia Artificial, o IA. ¿Cuál es un ejemplo de IA en tu vida personal o que hayas visto en una película o libro?",
           "tips": [
-            null
+            "**¿Qué es la Inteligencia Artificial?** En un nivel básico, la inteligencia artificial es cuando un programa informático imita la inteligencia de un ser humano. Esto puede manifestarse como la resolución de un problema, la participación en conversaciones, la manifestación de emociones y muchas otras formas. Poco después de esta pregunta, los alumnos verán un vídeo que define mejor la IA y el tema central de esta unidad, el Aprendizaje Automático."
           ]
         },
+        "853b36fb-b913-48d2-835b-620fce23c9c5": {
+          "description": "Pide a los alumnos que hagan una lluvia de ideas en silencio, que luego las compartan con sus compañeros y que finalmente las compartan con toda la clase."
+        },
+        "6e19021b-76ce-4220-9c77-2007592aae87": {
+          "description": "**Objetivo del Debate:** Intentar sacar a la luz cualquier conexión personal que los alumnos puedan tener con la Inteligencia Artificial. Los alumnos pueden pensar en ejemplos de su vida personal, como los sistemas de recomendación o el reconocimiento facial. O pueden pensar en ejemplos de los medios de comunicación, como los robots de películas como Wall-E o los asistentes personales como Siri. También es posible que los alumnos propongan ejemplos que no sean estrictamente de IA; de todas formas, añádelos a la lista. Anota las sugerencias que los alumnos hagan sin validarlas como correctas o incorrectas; deja que los alumnos hagan una lluvia de ideas libremente."
+        },
+        "986e60a9-67a7-4618-9a80-9a9cd3b78ad6": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Presentar la diapositiva con el gran diagrama de Venn que incluye Inteligencia Artificial y muchas aplicaciones."
+        },
+        "dac63e1e-9998-497e-a772-d90fa66e29c8": {
+          "description": "La Inteligencia Artificial se utiliza en muchos lugares diferentes de nuestras vidas: desde el reconocimiento facial en nuestros teléfonos hasta las recomendaciones personales cuando navegamos por la web, e incluso en los coches sin conductor. En las próximas semanas, nos centraremos en un tipo específico de inteligencia artificial llamado aprendizaje automático."
+        },
+        "382c1a61-60c6-481f-962a-ececae1298de": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Vídeo:** Vea el vídeo IA: ¿Qué es el Aprendizaje Automático? en las diapositivas\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulario:** Muestra el siguiente vocabulario\n\n-   **Aprendizaje Automático:** Cómo los ordenadores reconocen patrones y toman decisiones sin ser programados explícitamente"
+        },
+        "9e4a63b0-d249-4594-a8ad-fb0c4ad728dc": {
+          "description": "El Aprendizaje Automático nos ayuda a resolver problemas importantes de la sociedad. En las próximas semanas, veremos cómo podemos crear nuestras propias aplicaciones de aprendizaje automático para resolver problemas. Para ayudarnos a lograr nuestros objetivos, utilizaremos el Proceso de Resolución de Problemas - Definir, Preparar, Probar, Reflexionar y siempre Empatizar. Veamos cómo aparecen estos pasos para el aprendizaje automático en particular"
+        },
+        "eeeb4ccf-011a-432c-86e4-3455c858b21c": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Presenta la diapositiva con el Proceso de Resolución de Problemas. Lee las líneas adicionales que representan cómo el proceso se conecta con el Aprendizaje Automático.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Pregunta del Día:** ¿Cómo podemos utilizar el Proceso de Resolución de Problemas para resolver un problema con el aprendizaje automático?"
+        },
+        "b0263e2a-653f-4204-9d33-60188293bde1": {
+          "description": "En la actividad de hoy, vamos a utilizar el aprendizaje automático para ayudar a un robot a limpiar el océano y aprender a identificar peces. Le daremos muchos ejemplos de peces, le daremos tiempo para que aprenda de esos ejemplos y luego veremos qué tal lo hace limpiando el océano."
+        },
+        "22849dfb-7de7-468a-85ec-b9f2b563b926": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribuye:** Reparte la Guía de Actividades para esta lección"
+        },
         "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "name": "Nivel 1 - Reconociendo Peces",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Delante de la clase, navega hasta el Nivel 1 en Code Studio - Reconocimiento de Peces.",
           "progression_name": "Reconocimiento de Peces"
         },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
@@ -12492,25 +12525,45 @@
         },
         "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
           "tips": [
-            null
+            "Esta unidad requiere el Adafruit Circuit Playground.  Puedes leer más sobre esta placa de microcontrolador en <https://code.org/circuitplayground>"
           ]
         },
         "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
-          "name": "Inspírate"
+          "name": "Inspírate",
+          "description": "**Vídeo:** Ver también como clase [El Internet de las Cosas - Vídeo](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [La Informática lo está Cambiando Todo - Vídeo](https://www.youtube.com/watch?v=QvyTEx1wyOY)."
         },
         "ecaf188e-1d18-4418-9881-296b1f090f2e": {
-          "name": "Investigación en Innovación"
+          "name": "Investigación en Innovación",
+          "description": "**Agrupar:** Colocar a los alumnos en grupos de 3 a 4 personas\n\n**Distribuir:** Repartir copias de la guía de actividades"
         },
         "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "description": "**Comenta:** ¿Qué es una innovación? ¿Qué significa que algo sea innovador?",
           "tips": [
-            null
+            "Debe ser un debate rápido. El objetivo principal es que la clase llegue a un entendimiento común de lo que significa que algo sea innovador. Que no basta con que un producto sea más elegante que la última versión, sino que la innovación significa hacer algo realmente mejor de lo que se ha hecho antes, o hacer cosas que _nunca_ se han hecho antes."
           ]
+        },
+        "e3c6b405-80ba-4f55-b02d-92f4ad203ea2": {
+          "description": "#### Innovaciones Informáticas\n\nDurante esta actividad, los grupos de alumnos investigarán las innovaciones tecnológicas recientes relacionadas con un tema elegido. Una vez que hayan identificado unas cuantas innovaciones interesantes, elegirán una para analizarla en mayor profundidad e informar a la clase sobre ella.\n\n#### Investigación de Innovaciones\n\n-   **Presenta los temas**: Asegúrate de que los alumnos comprenden el alcance de cada uno de los posibles temas.\n    -   Tecnología Vestible (por ejemplo, ropa, joyas o accesorios con ordenadores incorporados)\n    -   Salud y Seguridad (p. ej., dispositivos que tratan enfermedades, hacen un seguimiento de la salud o protegen a los usuarios del peligro)\n    -   Agricultura (por ejemplo, tecnología para mejorar la eficacia, la sostenibilidad o la eficiencia de la agricultura)\n    -   Fabricación (por ejemplo, avances en la creación rápida de prototipos, robótica industrial y producción de bienes)\n    -   Arte y Diseño (por ejemplo, arte interactivo o instalaciones públicas)\n    -   Hogar Inteligente (por ejemplo, dispositivos que permiten interactuar con el termostato, las cerraduras o las luces mediante ordenadores)\n-   **Explica la tarea de investigación**: El objetivo de esta investigación es doble:\n    -   En primer lugar, desarrollar una comprensión más profunda del tema elegido. ¿Cómo está cambiando la tecnología informática este campo? ¿Cuáles son algunos de los problemas que la gente intenta resolver con la tecnología?\n    -   En segundo lugar, identificar un puñado de dispositivos innovadores dentro de este tema. Los estudiantes deben centrarse en encontrar dispositivos de _hardware_ que muestren _factores de forma_ únicos o novedosos. Es decir, ordenadores que no _parezcan_ ordenadores.\n-   **Enviar a Code Studio para los enlaces de recursos**: En Code Studio hemos recopilado descripciones más detalladas de los temas, así como un par de sitios recomendados para aprender más sobre cada tema. Utilízalo como punto de partida para la investigación de los alumnos."
         },
         "fe954bee-319a-49ec-a2d1-033dd539a59b": {
           "tips": [
-            null
+            "A continuación se presentan algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebe cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.\n\n### Tecnología Portable\n\n-   [Warable.com](https://www.wareable.com/)\n\n### Salud y Seguridad\n\n-   [Sanidad Moderna](http://www.modernhealthcare.com/section/medical-devices)\n-   [Medstartr](http://www.medstartr.com/)\n\n### Agricultura\n\n-   [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)\n-   [Noticias del Sector Agrícola](http://www.farmindustrynews.com/technology)\n\n### Fabricación\n\n-   [Semana de la Industria](https://www.industryweek.com/technology-and-iiot)\n-   [Impresión 3D](https://3dprinting.com/)\n\n### Arte y Diseño\n\n-   [ArtFab](http://artfab.art.cmu.edu/)\n-   [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Hogar Inteligente\n\n-   [CNet](https://www.cnet.com/smart-home/)\n-   [Evolución IoT](http://www.iotevolutionworld.com/smart-home/)"
           ],
           "progression_name": "Investigación en Innovación"
+        },
+        "495889a4-d34c-4248-a07c-0484473e0a55": {
+          "description": "#### Una Solución Innovadora\n\nUna vez que los grupos hayan seleccionado un dispositivo innovador específico, pueden completar la segunda página de esta guía de actividades, en la que se les pide que hagan lo siguiente:\n\n-   **¿Qué Problema Resuelve?:** Para algunos temas esto puede estar más claro (por ejemplo, los dispositivos sanitarios suelen tener un objetivo muy específico), pero para otros los alumnos pueden tener que pensar de forma más amplia sobre lo que consideran problemas. Los wearables más frívolos o las instalaciones de arte digital pueden estar más preocupados por la expresión personal que por resolver un problema específico.\n-   Anima a los alumnos a remitirse al debate anterior sobre la innovación. También puede ser útil compararlo con otros dispositivos encontrados durante la fase de investigación.\n-   ¿Cómo interactúas con él?:\\*\\* Pide a los alumnos que recuerden el modelo de _Entrada, Salida, Almacenamiento, Procesamiento_ que se introdujo en la Unidad 1. El objetivo aquí es identificar específicamente las entradas y salidas que proporciona un dispositivo determinado; cuanto más específicas sean, más fácilmente podrán los alumnos conectar los elementos del Circuit Playground con estos dispositivos.\n-   ¿Cómo se podría mejorar?:\\*\\* Puedes hacer esto tan realista o ambicioso como quieras. El objetivo es que los alumnos piensen en cómo podrían desarrollar su propia innovación utilizando un producto existente como punto de partida.\n\n\\*\\*Comparte: Da a los grupos un minuto para que compartan sus conclusiones. Consulta las actividades de ampliación para conocer otras formas de compartir."
+        },
+        "ff8003a4-e526-4a4e-a11d-c53ecc125ea9": {
+          "description": "**Diario:** ¿Qué fue lo más sorprendente, genial o impresionante que encontraste en tu investigación? Si pudieras desarrollar una innovación propia, ¿cuál sería?"
+        },
+        "b82e7960-4420-4c1a-9653-0428887167c7": {
+          "name": "Carteles de Innovación",
+          "description": "Pide a los grupos que creen un cartel que comparta el dispositivo innovador que han investigado. Los carteles deben incluir:\n\n-   Quién inventó el dispositivo\n-   Qué problema intentan resolver\n-   Por qué es único o innovador\n-   Cómo interactúan los usuarios con él (en concreto, qué entradas acepta y cómo proporciona salidas)\n\nMantén estos carteles a lo largo de la unidad para que los alumnos puedan consultarlos cuando empiecen a desarrollar sus propios dispositivos informáticos."
+        },
+        "bcb31c61-bd73-4a2d-99c4-a2ca8c1e87ef": {
+          "name": "Sitios Web de Innovación",
+          "description": "En lugar de (o además de) sus carteles, pide a los estudiantes que desarrollen sitios web en el Laboratorio Web que incluyan el mismo contenido requerido. Asegúrate de que los estudiantes incluyan enlaces a sus sitios web de origen."
         },
         "217451ea-61fa-4c54-a5f4-46e39614e303": {
           "name": "Actualización de las Propiedades de los Elementos de la Interfaz de Usuario",
@@ -12744,14 +12797,21 @@
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "description": "**Debatir:** Los estudiantes deben haber creado individualmente una lista de componentes de la placa, eventos y funciones que necesitarán para hacer el juego que han practicado. Pide a los alumnos que compartan sus listas con un compañero antes de discutirlas en clase.",
           "tips": [
-            null,
-            null
+            "**Dirige la conversación:** Puedes escribir \"Tablero\", \"Eventos\" y \"Funciones\" en la pizarra y anotar sus ideas debajo de cada una. Pide a los alumnos que justifiquen sus decisiones, pero sin sentir la necesidad de decantarse por una sola respuesta correcta.",
+            "**Mantener la Atención:** Los alumnos pueden distraerse fácilmente con la diversión del juego. Deja que jueguen un rato, pero eventualmente anímales a seguir las instrucciones en pantalla y a que hagan una lista de los componentes de la placa, los eventos y las variables que serían necesarias para crear el juego."
           ]
         },
         "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
+          "description": "**Distribuye:** Entrega a cada estudiante o pareja de estudiantes una copia de la guía del proyecto.\n\n**Pregunta:** Compara la lista de cosas que pensabas que serían necesarias con las que aparecen en esta guía del proyecto. ¿Notas alguna diferencia? \n\n**Debate:** Como clase, compara la lista que tenías en la pizarra con la lista de componentes de la placa, eventos y funciones que aparecen en la guía del proyecto. Observa las similitudes. Cuando haya diferencias, trata de entender por qué. No enfoques un conjunto como \"correcto\" frente a \"incorrecto\", sino simplemente confirma que ambos serían capaces de desarrollar el juego de los alumnos.",
           "tips": [
-            null
+            "**Compartir la Guía del Proyecto:** Los estudiantes no escriben en la guía del proyecto en esta lección. Puedes dar a cada alumno su propia copia como referencia, pero también puedes optar por imprimir una copia por pareja, compartir copias digitales o simplemente mostrar la guía en el proyector. Siempre que esté disponible como referencia, cualquier enfoque funcionará bien."
           ]
+        },
+        "796b633c-05c1-4346-ba4f-65cdeb4a7715": {
+          "description": "Normalmente hay muchas formas de estructurar un programa para que funcione como uno quiere. Lo importante cuando se escriben programas complejos o grandes es empezar con un plan. Hoy vamos a ver cómo podemos implementar este plan para construir nuestro propio juego de carreras de emojis. Al final de la lección no sólo habrás construido tu juego, sino que sabrás cómo modificarlo y hacerlo tuyo. ¡Vamos allá!"
+        },
+        "08187ef2-1a13-465b-940a-78d18fea19eb": {
+          "description": "Los alumnos reciben un código de inicio para establecer las funciones y los manejadores de eventos necesarios para este proyecto. Estos niveles guían a los estudiantes en el uso de las variables proporcionadas y en lo que debe ocurrir dentro de los manejadores de eventos. A medida que los estudiantes avanzan por los niveles, se les indica cómo se utiliza la guía del proyecto. Aunque este proyecto está muy estructurado, en la siguiente lección se pedirá a los estudiantes que desarrollen un programa basado en hardware de su propio diseño, así que asegúrate de reforzar la conexión entre la planificación que se hizo en la guía del proyecto y los niveles de programación."
         },
         "75c3755e-3860-4965-b2df-a459e020a7a8": {
           "progression_name": "Programa de muestra"
@@ -12764,7 +12824,7 @@
         },
         "01addbef-11df-4c62-a099-ae69c66c7c1c": {
           "tips": [
-            null
+            "**Introducción a Funciones con Parámetros**\n\nLos parámetros son una forma poderosa de hacer que las funciones sean más útiles al darles una entrada específica. Estamos introduciendo esto aquí principalmente como una forma de exponer a los estudiantes a este concepto, pero las funciones con parámetros no se enseñarán a fondo hasta el capítulo 2. Para los alumnos que estén interesados en experimentar más con esta técnica ahora, guíalos a la [documentación](https://studio.code.org/docs/applab/functionParams_n/)."
           ],
           "progression_name": "Retocando Funciones"
         },
@@ -12777,10 +12837,30 @@
         "d08a96a0-dc1f-436b-a4c7-99b9e8a4e70f": {
           "progression_name": "Hazlo tuyo"
         },
+        "5f92fa0f-910d-429a-bb08-d71b1f5b3408": {
+          "name": "Hazlo tú mismo",
+          "description": "Este último nivel anima a los alumnos a hacer su propio juego. Si los alumnos han llegado hasta este punto, tienen todas las habilidades que necesitan para progresar en el plan de estudios, así que no hay presión para completar ninguna de las modificaciones sugeridas en este nivel. Sin embargo, si tienes tiempo, practicar la planificación y la implementación de nuevas características será una habilidad útil. Incluso el simple hecho de modificar el aspecto de las pantallas es una forma sencilla de que los alumnos hagan su propio juego.\n\n**Compartir:** Una vez que los estudiantes hayan completado el proyecto, pueden compartir su trabajo con los compañeros de clase. Anima a los estudiantes a mostrar el código adicional que han escrito y a explicar cómo ha cambiado el funcionamiento del juego."
+        },
+        "8ec0ed9e-38fc-4dbb-b1c7-86a999fc644a": {
+          "name": "Ejemplos de Proyecto de Demostración",
+          "description": "**Presentar:** En el proyector, muestra el proyecto de ejemplo al principio de esta lección. \n\n**Sugerencia:** Analiza el ejemplo en busca de los siguientes elementos:\n\n-   ¿Dónde se reciben las entradas?\n    -   ¿Qué eventos crees que se están utilizando para cada entrada?\n-   ¿Qué información se está emitiendo a través de la placa?\n-   ¿Dónde podría estar usando este programa un bucle?\n\n**Comentar:** Pide a los estudiantes que compartan sus observaciones y análisis del ejemplo. \n\n**Distribuir:** Entrega a cada alumno una copia de la rúbrica. Repasa con ellos los diferentes componentes de la rúbrica para asegurarte de que entienden los componentes del proyecto."
+        },
+        "93bea4b2-3987-42e0-8812-4a3ea4ebfba1": {
+          "name": "Sin Conexión: Planificación de Programas",
+          "description": "**Agrupa:** Coloca a los estudiantes en grupos de 2 a 3 personas.\n\n**Distribuye:** Reparte la guía del proyecto a los alumnos. Esta es la herramienta que los estudiantes utilizarán para definir sus proyectos antes de entrar en los ordenadores. Da tiempo a los alumnos para que hagan una lluvia de ideas sobre el tipo de programa que quieren hacer.\n\n#### Guía de Proyectos para Hacer un Juego\n\n#### Lluvia de Ideas\n\nDa a los grupos algo de tiempo para que hagan una lluvia de ideas sobre su proyecto. El objetivo es crear un juego sencillo que pueda ser controlado utilizando elementos del Circuit Playground. Anima a los estudiantes a pensar en todos los programas y proyectos que han hecho hasta ahora como posibles puntos de partida (incluyendo los prototipos de la Unidad 4)."
+        },
         "8259e743-5c84-4516-8f31-300f06de6ab0": {
+          "description": "1.  Una vez que los grupos se hayan decidido por una idea, pueden anotarla en la guía de actividades en el apartado Lluvia de Ideas del Proyecto.\n2.  A continuación, los alumnos piensan en los Eventos a los que tendrán que responder.",
           "tips": [
-            null
+            "A los alumnos les puede resultar especialmente difícil predecir _todos_ los acontecimientos a los que querrán responder o las funciones que tendrán que crear. Asegúrate de que sepan que se trata de un proceso _iterativo_ y que la planificación es sólo el primer paso. Queremos empezar este proyecto con un plan lo más claro posible, pero es probable que haya cosas que no se hayan tenido en cuenta desde el principio y que el plan tenga que cambiar en consecuencia."
           ]
+        },
+        "4bdf4cde-8f63-4c4b-bc7d-fd9df2bcd184": {
+          "description": "3.  Por último, los alumnos consideran las funciones que pueden necesitar para crear."
+        },
+        "0975dac9-f5aa-45b1-8f63-0a2a3fa2df52": {
+          "name": "Prototipo del Programa",
+          "description": "**Transición:** Una vez que los equipos han completado su hoja de planificación, pueden dirigirse a Code Studio para trabajar en la creación los prototipos de sus proyectos."
         },
         "6d7c017d-88c7-4ed3-ac37-b2a3c8a741df": {
           "progression_name": "Demo - Capturar error"
@@ -12801,29 +12881,46 @@
           "progression_name": "Retoques finales"
         },
         "5efa89cb-f262-4f85-afb8-752e1495d920": {
-          "name": "Compartiendo Proyectos"
+          "name": "Compartiendo Proyectos",
+          "description": "**Compartir:** Busca una forma de que los grupos compartan sus proyectos entre sí. Probablemente será útil utilizar el enlace para compartir el proyecto para que los estudiantes puedan compartir el proyecto con otros estudiantes."
+        },
+        "e478ff63-84b6-4de8-b5c3-83e86860f443": {
+          "name": "Autoevaluación",
+          "description": "Utilizando la rúbrica, los estudiantes deben evaluar su propio proyecto antes de presentarlo.\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
         },
         "187cdb02-266e-41c6-a35e-8d31c07cfdff": {
           "progression_name": "Reflexión"
         },
+        "3c5adf69-342b-4296-bc79-e2240bf86187": {
+          "name": "Debatir: ¿Qué es una Lista?",
+          "description": "**Preparación:** Haz que los alumnos saquen sus diarios. Pídeles que respondan a la siguiente pregunta en sus diarios."
+        },
         "316f977f-5ad8-4565-b6d1-1c62507ba565": {
+          "description": "**Pregunta:** ¿Qué es una lista?  ¿Para qué se utilizan las listas?",
           "tips": [
-            null
+            "Aunque los tipos de listas que elaboran los alumnos varían de una clase a otra, las dos características principales de las listas que los alumnos deben entender es que suelen estar compuestas por elementos del mismo tipo (tareas que hay que completar, nombres de personas, títulos de canciones, artículos de la compra, etc.) y que tienen un orden.  Algunos tipos comunes de listas son una lista de tareas, una lista de clases, una lista de canciones o una lista de la compra."
           ]
+        },
+        "c569ec63-0065-4e94-bb83-9f1b3c9c63bf": {
+          "description": "**Debatir:** Una vez que los alumnos hayan tenido tiempo de escribir sus propias ideas, pídeles que las compartan con toda la clase. Trabajar como clase para tratar de entender lo que es una lista."
+        },
+        "06806587-8a93-40a6-b92f-00bdf2f710a9": {
+          "description": "Cuando programamos, a veces queremos almacenar listas de elementos.  En Javascript, lo hacemos utilizando un array.  Un array es una colección de elementos que se almacenan en un orden determinado.  Vamos a ver diferentes formas de utilizar arrays, y luego veremos cómo nos ayudarán a controlar más LEDs en el Circuit Playground."
         },
         "81d447de-9abb-4bc8-af49-9d823c30e8cb": {
           "name": "Arreglos y LED de colores",
           "description": "**Transición:** Dirígete a Code Studio"
         },
         "701df007-2fc2-4907-bdae-63ea39ea0649": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Cuándo puede ser más útil un array que una variable?\n-   ¿Por qué siempre hay que asignar un array a una variable?\n-   ¿Cómo puedes acceder a los elementos en tu array?",
           "tips": [
-            null
+            "**Objetivos:**\n\nEsta es la primera introducción a los arrays, y los alumnos tendrán la oportunidad de probarlos en la lección, así que entender por qué los arrays son útiles y las formas generales en que se pueden utilizar es más importante que la sintaxis o los comandos particulares del vídeo. Los alumnos deben entender que los arrays están pensados para contener varias piezas de información, normalmente todas del mismo tipo. Al igual que cualquier otra pieza de información, es necesario asignarla a una variable para que el programador pueda volver a encontrarla. Los programadores pueden acceder a cada elemento del array por su **índice**, o su número de posición en el array. Los estudiantes tendrán la oportunidad de practicar la sintaxis exacta en la lección."
           ],
           "progression_name": "Video: introducción a arreglos"
         },
         "528b9a48-dd5d-4f52-b455-be650f9ed180": {
           "tips": [
-            null
+            "**Nivel 6:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Introducción a los arreglos"
         },
@@ -12835,7 +12932,7 @@
         },
         "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
           "tips": [
-            null
+            "\\*\\*Nivel 14\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Espectáculo de luces"
         },
@@ -12843,13 +12940,20 @@
           "progression_name": "Niveles de Desafío"
         },
         "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
+          "name": "Debate: Objetos Vs Arrays",
+          "description": "**Pregunta:** Ahora has visto ambos objetos, como el objeto Sprite, y los arrays. ¿En qué se diferencia un array de los atributos de un objeto? ¿Cuándo usarías un array? ¿Cuándo usarías un objeto?",
           "tips": [
-            null
+            "Los arrays se utilizan con frecuencia para reunir elementos del mismo tipo (un montón de números, un montón de cadenas, un montón de nombres de botones, etc.), pero en JavaScript no es necesario que todos los elementos de la lista sean del mismo tipo. Se pueden crear listas que incluyan números, cadenas, objetos e incluso otras listas.\n\nUn objeto es una estructura de datos que combina muchos valores (como números, cadenas, e incluso funciones) que representan los atributos de ese objeto (altura, anchura, rotación, nombre) que son más fáciles de seguir si se hacen en un solo lugar. Los atributos pueden ser de muchos tipos diferentes, pero todos describen un objeto. "
           ]
         },
+        "dafa590d-cd6d-4b34-b4ba-507f43495366": {
+          "description": "Puedes usar esto como un ticket de salida o tener un debate en clase si tienes tiempo."
+        },
         "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
+          "name": "LEDs de Colores vs Zumbador",
+          "description": "**Pregunta:** Hemos estado usando el zumbador para hacer sonidos, pero esos zumbidos no siempre sonaban demasiado bien.  ¿Qué crees que necesitas para hacer música de verdad con el zumbador?",
           "tips": [
-            null
+            "Los alumnos pueden aportar muchas ideas diferentes, pero hay dos aspectos de este problema que conviene destacar antes de que los alumnos pasen a la actividad.  En primer lugar, especificar las frecuencias no es la mejor manera de indicar lo alto o bajo que debe ser un zumbido, ya que la música sólo utiliza un número limitado de frecuencias, y otras frecuencias se consideran \"desafinadas\".  La música suele escribirse en forma de notas específicas en una escala, lo que hace mucho más fácil ver qué sonidos irán bien juntos.  (Es probable que los alumnos con formación musical comprendan mucho mejor esta cuestión).  En segundo lugar, los alumnos necesitarán una forma de encadenar sonidos, o notas, para formar una canción.  Este segundo punto debería ser más universalmente comprendido."
           ]
         },
         "a5ccf2e8-f9e7-42df-a5e1-2c86349bf620": {
@@ -12860,13 +12964,13 @@
         },
         "4563c715-0a30-419a-9eca-d5b41089e165": {
           "tips": [
-            null
+            "**Nivel 7:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Matrices musicales"
         },
         "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
           "tips": [
-            null
+            "**Nivel 11:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Hacer canciones"
         },
@@ -12874,14 +12978,23 @@
           "progression_name": "Extra"
         },
         "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "description": "**Sugerencia:** Hoy, en lugar de elegir sólo un elemento de un array, hemos utilizado el bloque `playNotes` para hacer algo con cada elemento.  Piensa en otros arrays que hayas visto.  ¿Cómo podría ser útil hacer algo en cada elemento de un array?",
           "tips": [
-            null
+            "Los alumnos deben reconocer que el bloque `playNotes` reproduce cada nota del array en secuencia, y extender esa idea a otras ocasiones en las que sea útil operar sobre cada elemento de un array.  Esto les preparará para la siguiente lección, en la que se utilizan bucles `for` para operar sobre cada elemento de una lista en secuencia."
           ]
         },
+        "24a2e081-3565-42dd-a062-fa578b6021f3": {
+          "description": "**Compartir** Después de dar a los alumnos tiempo para reflexionar en sus propios diarios, pídeles que compartan con un compañero o en pequeños grupos."
+        },
         "0874692e-8e17-4b1d-9232-f11c61106af0": {
+          "name": "Ejecutar Código en Todos los Elementos de un Array",
+          "description": "**Debatir:** Si tuvieras una lista con todas tus Tareas y quisieras que el ordenador imprimiera cada una de ellas, ¿cómo lo harías? No te preocupes por el código específico, concéntrate en la información que tu programa necesitaría saber y seguir. ¿Seguiría funcionando tu método si añadieras o quitaras una Tarea de la lista?",
           "tips": [
-            null
+            "No hay que esperar que los alumnos sepan _exactamente_ cómo lo haría un ordenador, sino que empiecen a pensar en lo que se necesita para llevar la cuenta de dónde se está en un array (el índice), cómo se sabría que se ha llegado al final del array (la longitud del array), y cómo se podría aumentar incrementalmente dónde se está en la lista (el patrón de contador)."
           ]
+        },
+        "2973a58b-7229-4715-bee9-d5a0c8cb2ba8": {
+          "description": "Hacer algo en cada elemento de un array es un problema muy común en Informática, y averiguar cómo resolver este problema nos permitirá escribir programas más eficientes. Hoy vamos a centrarnos en tres cosas que nos ayudarán con este problema:\n\n1.  El uso del índice para hacer algo a los elementos de un array\n2.  Llevar la cuenta de un contador para poder movernos a través de los elementos de un array por el índice\n3.  Usar la longitud de un array para saber cuándo hemos llegado al final"
         },
         "e91b0fe3-8fe2-463c-b2fe-349fcbc510b7": {
           "name": "Arreglos y bucles 'desde'"
@@ -12890,8 +13003,9 @@
           "progression_name": "Programas que se repiten"
         },
         "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Para qué se utilizan los bucles en la programación?\n-   ¿Dónde van los bucles en tu código?",
           "tips": [
-            null
+            "**Preguntas para el Debate**\n\nLos bucles For son una construcción muy potente, pero esta introducción sólo cubre intencionadamente una pequeña parte de su funcionalidad. A medida que los alumnos se familiaricen con los bucles, se introducirán más funcionalidades. Por ahora, los estudiantes deben saber que pueden utilizar un bucle `for` para repetir un segmento de código varias veces. El segmento debe ir en cualquier parte del programa donde se ejecute el código. (Este aspecto de los bucles se destaca para evitar que los estudiantes traten los bucles como funciones y los coloquen al final del código)."
           ],
           "progression_name": "Vídeo: Bucles \"for\""
         },
@@ -12900,14 +13014,22 @@
         },
         "4eae7990-8111-4f59-a7ef-212acf9f054f": {
           "tips": [
-            null
+            "\\*\\*Nivel 12\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Bucles \"for\" y LEDs de colores"
         },
+        "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+        },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
+          "name": "¿Qué hace un sensor?",
+          "description": "**Sugerencia:** Volviendo a los sensores analógicos, ¿qué hace que un sensor sea un sensor? ¿Podría un acelerómetro ser un sensor?",
           "tips": [
-            null
+            "Los alumnos ya han conocido los sensores en lecciones anteriores, pero sólo han visto algunos aspectos de lo que puede medir un sensor. Este debate da a los alumnos la oportunidad de pensar en las características de un sensor, a la vez que piensan en las otras posibles características de un sensor que no han visto todavía."
           ]
+        },
+        "71481151-050f-4d0a-937d-5a5a964eb708": {
+          "description": "**Compartir:** Procura que los estudiantes compartan sus pensamientos e ideas en pequeños grupos."
         },
         "2433b686-980c-423e-bada-f8a501c7bc82": {
           "name": "El acelerómetro"
@@ -12917,19 +13039,30 @@
         },
         "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
           "tips": [
-            null
+            "**Nivel 7:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Eventos de Acelerómetro"
         },
         "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "description": "**Pregunta:** ¿Qué usos tiene el cabeceo y el balanceo en una aplicación cotidiana?",
           "tips": [
-            null
+            "Los alumnos deben pensar en varias aplicaciones para el acelerómetro, explicando cómo podría ser útil conocer el cabeceo y el balanceo."
           ]
         },
         "61efbeb1-5fcd-4dec-9265-4628f24745de": {
+          "description": "**Pregunta:** Cuando necesitabas acceder al cabeceo y al balanceo del acelerómetro en la última lección, utilizaste el bloque [\\`accelerometer.getOrientation\\`(#f78183)](/docs/applab/accelerometer.getOrientation/), y elegiste si querías obtener el cabeceo o el balanceo.  ¿Por qué crees que los creadores hacen que el programa funcione así, en lugar de tener dos bloques, uno para el cabeceo y otro para el balanceo?",
           "tips": [
-            null
+            "**Objetivo:** Los alumnos deben ver finalmente que los parámetros dan flexibilidad a un programa.  A veces, varios comandos son lo suficientemente similares como para que tenga sentido combinarlos en uno solo, pero con un parámetro para distinguir sus diferencias.  A veces, como en el caso de [\\`buzzer.frequency\\`(#f78183)](/docs/applab/buzzer.frequency/), hay demasiadas opciones para hacer un bloque separado para cada una.  Los parámetros permiten al programador utilizar una única solución para resolver varios problemas relacionados."
           ]
+        },
+        "79e20005-d280-4201-8aa6-c2d28c1f510f": {
+          "description": "¿Qué otros bloques que hayas visto utilizan parámetros?  ¿Por qué son tan útiles los parámetros?"
+        },
+        "5231f287-88b5-49ab-964f-aa7830429e24": {
+          "description": "Hasta ahora, las funciones que has utilizado siempre hacían exactamente lo mismo.  Hoy vamos a ver una forma de hacer que las funciones sean aún más útiles proporcionándoles parámetros, al igual que algunos de los bloques de los que acabas de hablar."
+        },
+        "37a20cd8-0b41-443d-8ac1-58c8763da273": {
+          "description": "Envía a los alumnos a Code Studio"
         },
         "de64b098-e02d-4a21-9965-1e7217f40ebd": {
           "progression_name": "Funciones con parámetros"
@@ -12939,60 +13072,111 @@
         },
         "02b60bab-d184-4bce-859c-5438c9e37cc4": {
           "tips": [
-            null
+            "**Nivel 14**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Star Chaser"
         },
+        "94106afe-253a-4daa-bf61-32e77d8ee28b": {
+          "description": "**Pregunta** Piensa en algunos de los programas que has hecho antes.  ¿En qué dos ocasiones podrías haber utilizado funciones con parámetros?  ¿Cuál sería el parámetro?  ¿Cómo deberías cambiar el comportamiento de la función cuando cambia el parámetro?"
+        },
         "3b0572f2-01eb-48b0-96a1-43739f98575a": {
+          "name": "Diseñando un Dispositivo Físico",
+          "description": "**Pregunta:** Si pudieras crear cualquier tipo de dispositivo informático, ¿cuál sería? ¿Qué haría? ¿Cómo interactuaría la gente con él?",
           "tips": [
-            null
+            "El objetivo de este breve debate es hacer que los alumnos piensen en cómo podríamos utilizar una placa similar al Circuit Playground como parte de un dispositivo informático más amplio. No es importante que seamos capaces de reproducir por completo las ideas de los alumnos con la placa, sino que podamos empezar a pensar en los ámbitos en los que se podría utilizar la placa y en los que podríamos necesitar añadir funciones adicionales."
           ]
+        },
+        "9f663677-04e9-4b39-9141-c11c2502062c": {
+          "description": "**Compartir:** Después de unos minutos de reflexión, pide a los alumnos que compartan sus ideas.\n\n**Debatir:** ¿Cómo podría un dispositivo como el Circuit Playground ayudarnos a diseñar y crear un prototipo de algunas de estas ideas? Considera la posibilidad de elegir un par de ideas para ponerlas en la pizarra y haz una lista con la clase de las cosas que las características de un determinado dispositivo podrían reproducirse con un elemento de la pizarra, y las que podrían requerir mecanismos adicionales."
+        },
+        "e33f827f-376d-4294-b637-bd64eda2858d": {
+          "name": "Presentando la Bicicleta Inteligente",
+          "description": "**Agrupar:** Coloca a los alumnos en grupos de 3 a 4 personas.\n\n**Distribuye:** Entrega a cada grupo una copia de la guía del proyecto y presenta el proyecto. Deja a los alumnos un momento para que revisen la guía. Esta guía es similar a la que utilizarán para sus propios proyectos finales, pero ya ha sido completada en su mayor parte, lo que les permite centrarse en cómo poner en práctica la idea, en lugar de en lo que debería ser la idea."
         },
         "38e26d5e-b651-4c50-b791-10455112e4ba": {
           "tips": [
-            null
+            "Los alumnos deben ser capaces de identificar que casi toda la funcionalidad (como el parpadeo de las luces, la respuesta a la pulsación de botones y el zumbido) puede realizarse con el Circuit Playground tal y como está. La principal barrera que queremos identificar es cómo los requisitos físicos del plan (como la colocación de las luces intermitentes en los extremos del manillar) requerirían la adición de nuevo hardware a la placa. Esto tiene como objetivo preparar la siguiente actividad, en la que los estudiantes conectan circuitos adicionales a sus placas."
           ]
         },
+        "c43313a0-3012-4ef1-ab8a-13600bf59638": {
+          "description": "**Debatir:** Centrándonos en la descripción y el boceto de la primera página, cómo podríamos utilizar el Circuit Playground para desarrollar este prototipo. Qué elementos son actualmente _imposibles_ de replicar con la placa?"
+        },
         "57a93004-eeaa-48a5-b81b-6f9b05aedf82": {
+          "description": "**Monitor:** Ver [r circuits-logic-video/csd/2021].",
           "progression_name": "Vídeo: Circuitos y Lógica"
+        },
+        "463c4da0-d013-4378-be2d-fa41c520ea5e": {
+          "description": "Todos los elementos de nuestro Circuit Playground están formados por circuitos tan pequeños que ni siquiera podemos ver la mayoría de ellos, pero puedes crear un sencillo [v circuit/csd/2021] por tu cuenta conectando cables a las clavijas de cobre del borde de la placa."
+        },
+        "7daa06e9-87f0-4e03-b2fe-afbf6ae551e9": {
+          "description": "**Distribuye:** Cables, LEDs y cualquier otro hardware que quieras que esté disponible para esta parte. Haz saber a la clase que antes de profundizar en la construcción de nuestros prototipos, tendremos que aprender a añadir hardware adicional a la placa.\n\n**Transición:** Dirígete a Code Studio para trabajar en las secciones de Circuitos Simples e Intermitentes."
         },
         "4d9d84e9-900f-4816-81fd-b70a1ca43b16": {
           "progression_name": "Circuitos Sencillos"
         },
         "c814528c-f376-440e-849f-19d8790e7d92": {
           "tips": [
-            null
+            "**Nivel 7:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Bicicleta Inteligente - Intermitentes"
         },
         "8521f45a-fff7-43d7-bd5a-d32077c26151": {
+          "name": "Construyendo el Prototipo",
+          "description": "**Transición:** En este punto los alumnos deberían haber montado los dos circuitos LED adicionales necesarios para sus intermitentes. Ahora vamos a dejar los ordenadores para trabajar en la construcción de ese circuito en un prototipo físico.",
           "tips": [
-            null
+            "\\*\\*¿Compartiendo Placas? \\*\\* Si vas a compartir placas entre varias clases, tendrás que tenerlo en cuenta antes de que los grupos empiecen a construir sus proyectos. Es posible que desees añadir una restricción de diseño que indique que la placa deberá ser fácilmente extraíble del diseño, o crear grupos lo suficientemente grandes como para garantizar que los grupos de cada clase tengan acceso a una placa en todo momento."
           ]
         },
+        "fc8cedd5-1d70-4849-9c1e-3bf15b2e360f": {
+          "description": "**Distribuye:** Facilita los materiales de construcción restantes que hayas reunido, como cartón y cinta adhesiva."
+        },
         "420da788-7b37-45e7-b940-ae08c8f90b25": {
+          "description": "**Construye:** Concede a los grupos algo de tiempo para construir sus prototipos, utilizando la placa y los circuitos LED. Aunque hay un montón de funcionalidades potenciales que podríamos construir en este punto basándonos en la guía, asegúrate de que los estudiantes se centran en hacer funcionar los intermitentes.",
           "tips": [
-            null
+            "Para que los estudiantes se sientan más identificados y sean más creativos, considera la posibilidad de permitirles modificar la forma (pero no la funcionalidad necesaria) del controlador de la bicicleta inteligente. Por ejemplo, pueden querer convertirlo en algo que el ciclista pueda llevar puesto, o en algo que funcione con monopatines u otros medios de transporte. El elemento importante aquí es que trabajamos con una forma que requiere añadir circuitos adicionales a la placa, en lugar de seguir trabajando únicamente dentro de los límites de la forma de la placa."
           ]
+        },
+        "0ab57116-14b5-413f-ab7f-3399b82b75b7": {
+          "description": "**Prueba:** Una vez construido el prototipo básico, haz que los estudiantes prueben el código que han escrito. No es raro que en este punto se vean nuevos errores que no estaban presentes cuando se probó el software solo. Anima a los alumnos a probar todos los elementos de sus nuevos circuitos, asegurándose de que todos los puntos de conexión son sólidos, que los circuitos están conectados a los pines correctos y que los LEDs están orientados correctamente."
+        },
+        "2923354c-95a0-4f9f-87aa-60ee4977d497": {
+          "name": "Añadiendo Entradas",
+          "description": "**Muestra:** Coloca el boceto en la primera página de [Prototipos Físicos - Guía del Proyecto](https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit) donde toda la clase pueda verlo. El primer prototipo que hemos construido se encarga de los intermitentes, pero ahora vamos a centrarnos en la función de \"bocina\". Está claro que podemos utilizar el zumbador para hacer sonar el claxon, pero ¿cómo podemos controlar el claxon?\n\n**Transición:** Envía a los estudiantes de vuelta a la progresión online para que aprendan a crear circuitos de botones, que luego añadirán a sus prototipos de bicicleta inteligente. Esta parte de la progresión les llevará hasta finalizar sus diseños y presentar el código."
         },
         "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d": {
           "progression_name": "Circuitos de Pulsadores"
         },
         "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
           "tips": [
-            null
+            "\\*\\*Nivel 12\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Terminar el prototipo"
         },
+        "73fb680f-2fa4-43be-9a9d-9f0f26eacff5": {
+          "description": "**Compartir:** Da a cada grupo la oportunidad de compartir sus diseños. Dedica algún tiempo a observar y celebrar las diferencias en el diseño: incluso en una situación en la que todos trabajamos a partir del mismo plan, cada individuo aportará sus propias experiencias y perspectivas al diseño de un producto."
+        },
         "a3f5dca7-56ea-4d7e-9f37-b1ae9f46aef5": {
+          "description": "**Debatir:** Utilizando algunas de las opciones de diseño específicas como ejemplo, debatir con la clase cómo sus opciones de diseño afectan a la facilidad de uso de sus productos. ¿Qué suposiciones hemos hecho sobre nuestros usuarios y cómo pueden nuestras elecciones de diseño haber excluido o perjudicado a diferentes grupos de usuarios?",
+          "tips": [
+            "Este debate pretende relacionar el trabajo de diseño físico que los alumnos están haciendo ahora, con el trabajo que hicieron en la unidad 4. Aunque no hemos pedido a los alumnos que dediquen la misma cantidad de energía a pensar en los usuarios y sus necesidades en este proyecto, sigue siendo un elemento esencial de un buen diseño. Anima a tus alumnos a pensar en cómo el diseño de dispositivos informáticos _físicos_ plantea nuevos retos y oportunidades a la hora de diseñar para un conjunto diverso de usuarios.  Los estudiantes pueden considerar cómo la edad, la vista o el oído pueden afectar a la facilidad de uso de este diseño."
+          ]
+        },
+        "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "description": "**Agrupa:** Coloca a los alumnos en grupos de 2 a 4 para este proyecto. A tu criterio, puedes elegir que los estudiantes formen grupos más grandes o que trabajen de forma independiente.\n\n**Distribuye:** Proporciona una copia de la guía del proyecto a cada grupo. Como clase, revisa los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto. \n\nDistribuye la rúbrica o la lista de control del estudiante a cada uno de ellos. Pídeles que revisen este recurso para que sepan desde el principio qué componentes del proyecto se van a buscar.",
           "tips": [
             null
           ]
         },
-        "0516be14-10b2-4124-af7c-3d76c5177d95": {
-          "tips": [
-            null
-          ]
+        "c6e5a606-d3cb-453d-91a9-d1b3d5ae7e5f": {
+          "name": "Definir - Alcance de la Innovación",
+          "description": "**Lluvia de ideas:** Los alumnos deben dedicar los primeros 15-20 minutos a la lluvia de ideas sobre dispositivos innovadores construidos en torno a las características del patio de recreo de circuitos. Anima a los alumnos a repasar su trabajo previo en esta unidad, así como las innovaciones del mundo real que investigaron antes para inspirarse."
+        },
+        "5332890f-3514-4acc-9697-b23c827a550d": {
+          "description": "**Distribuye:** Pon a disposición de los alumnos los materiales de construcción que puedan necesitar para construir sus prototipos. Aunque el objetivo de este paso no es construir el prototipo real, tener estos materiales disponibles puede ayudar en el proceso de lluvia de ideas.\n\n**Circula:** Una vez que los estudiantes han discutido sus ideas para el proyecto, deben completar la guía del proyecto. Aunque éste debería ser un proceso bastante familiar, anima a los alumnos a hacer cada componente tan claro y detallado como puedan en este momento. Planificar con antelación puede ayudarles a identificar problemas en su plan antes de que tengan que hacer cambios más significativos en su código o dispositivo físico. Anima a los alumnos a que utilicen más papel para dibujar las pantallas de su aplicación o vistas adicionales de su dispositivo físico."
+        },
+        "6bcfec0e-2eb3-41c7-9a29-77c10523fd99": {
+          "name": "Intentar - Desarrollo de Prototipos",
+          "description": "**Distribuye:** Pon a su disposición los materiales para la creación de prototipos físicos (como cartón, cinta adhesiva, tijeras, etc.). Informa a los alumnos de que, al igual que utilizamos los prototipos de papel para probar rápidamente las ideas de software, los desarrolladores de hardware suelen utilizar materiales baratos como el cartón y la cinta adhesiva para realizar iteraciones rápidas en el diseño de dispositivos físicos. Aunque no todas las ideas de los alumnos requieran un componente prototipo físico, debes animarles a considerar cómo la forma y el diseño (o el factor de forma) de su innovación podría afectar a su facilidad de uso.  \n\n**Transición:** Dependiendo de la naturaleza de sus innovaciones, los alumnos pueden necesitar pasar algún tiempo construyendo los componentes físicos de sus proyectos antes de pasar a la red. Cuando los estudiantes estén preparados para programar, pueden pasar a Code Studio. Estos niveles proporcionan cierta orientación sobre cómo los estudiantes pueden llevar a cabo sus proyectos, pero se dejan bastante abiertos para permitir una amplia gama de ideas. Si lo desean, los alumnos pueden trabajar en un orden diferente al sugerido en estos niveles."
         },
         "cb822f4d-fa13-460e-ba94-c491e4763a13": {
           "progression_name": "Diseña tu Prototipo"
@@ -13010,15 +13194,39 @@
           "progression_name": "Reflexión"
         },
         "44000645-7870-4e71-b27e-75cd70b6dbb9": {
+          "description": "**Grupo:** Formar grupos para revisar los proyectos de los demás.",
           "tips": [
-            null
+            "Si tienes tiempo para ello, esta puede ser una buena oportunidad para introducir el proceso de prueba de usuarios que los alumnos aprendieron en la Unidad 4."
           ]
+        },
+        "06e17616-1d59-4693-8c32-deae1dda3cda": {
+          "description": "\\*\\* Distribuye:\\*\\* Entrega a cada estudiante una copia de la guía de revisión por pares. Los alumnos deben dedicar 15 minutos a revisar el proyecto del otro grupo y a rellenar la guía de revisión por pares."
+        },
+        "4530aef3-30b6-442a-882e-3b602a78927f": {
+          "name": "Repetir - Revisión de Prototipos",
+          "description": "**Circular:** Los estudiantes deben completar el reverso de la guía de revisión por pares donde deciden cómo responder a las opiniones que recibieron. A continuación, deben utilizar esos comentarios para mejorar su juego."
         },
         "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b": {
           "name": "Compartir",
+          "description": "**Compartir:** Ofrece a los estudiantes la oportunidad de compartir sus innovaciones, ya sea dentro de la clase o ante un público más amplio. Si decides que los alumnos hagan una presentación más formal de sus proyectos, la guía del proyecto proporciona a los estudiantes un conjunto de componentes que deben incluir en sus presentaciones, incluyendo:",
           "tips": [
-            null
+            "**Celebrar:** Como este es el proyecto culminante de todo el curso, considera la posibilidad de hacerlo a lo grande. Invita a los padres y administradores, o incluso organiza un evento después de la escuela para proporcionar a los estudiantes una audiencia real para compartir sus logros."
           ]
+        },
+        "aa64627c-3f5a-4763-8b92-b9c08922805c": {
+          "description": "-   La innovación original que se propusieron construir\n-   Una descripción del proceso de programación que incluya al menos un reto al que se enfrentaron y una nueva función que decidieron añadir\n-   Una descripción del fragmento de código más interesante o complejo que hayan escrito\n-   Una demostración en vivo de la innovación real\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
+        },
+        "3461bdd5-3579-4367-8d53-c95510b243cd": {
+          "name": "Vídeo de Presentación",
+          "description": "Graba y edita un breve vídeo para presentar tu innovación."
+        },
+        "8a9ce6f1-58ca-46e4-b3f5-70c73e942af5": {
+          "name": "Sitio Web de Marketing",
+          "description": "Utilizando el Laboratorio Web, diseña un sitio web para comercializar tu innovación."
+        },
+        "c486c45e-615b-424f-abe3-7979fa240372": {
+          "name": "Campaña de Crowdfunding",
+          "description": "Pide a los alumnos que diseñen una campaña de crowdfunding (al estilo de Kickstarter o Indiegogo) para sus innovaciones. Esto podría incluir:\n\n-   Diseño de maquetas para el producto final\n-   Un análisis aproximado de los costes de producción\n-   Un breve vídeo de presentación"
         },
         "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
           "tips": [
@@ -14561,33 +14769,73 @@
         "3d5ff4dc-c2df-4b01-852e-2a3449801046": {
           "description": "Todas vuestras reflexiones en torno a estas preguntas han sido geniales. Vamos a trabajar mucho en equipo en esta clase.  Puede que estéis acostumbrados a pensar que la informática tiene que ver con los ordenadores, pero ante todo la informática consiste en resolver problemas, y normalmente eso ocurre en equipo. Muchas otras partes de esta actividad, como la mejora de los diseños y la construcción de cosas, también van a ser una parte importante de esta clase. Espero que estéis entusiasmados con el curso. Mañana empezaremos a profundizar en la resolución de problemas propiamente dicha."
         },
+        "a46854b4-0c89-445c-bb74-76b861c1f7a9": {
+          "name": "Lluvia de Ideas de Problemas",
+          "description": "**Sugerencia:** Utilizamos el término \"problema\" para referirnos a muchas situaciones diferentes. Puedo decir que tengo un problema con los deberes, un problema con mi hermano y un problema con mi coche, y los tres significan cosas muy diferentes. En una hoja de papel quiero que hagáis una lluvia de ideas con todos los tipos de problemas que podáis y que estéis preparados para compartirlos con la clase."
+        },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "description": "**Debate:** Los alumnos deben anotar sus ideas por escrito en silencio durante un par de minutos. Después, invítales a compartir lo que han escrito con un compañero y, finalmente, reúne a toda la clase para elaborar una lista de toda la clase. Anota todos los tipos de problemas que se les ocurran a los alumnos en la pizarra o en otro lugar donde sean claramente visibles.",
           "tips": [
-            null,
-            null
+            "**Hacer Categorías:** Puede agrupar los problemas en categorías más amplias durante esta conversación e invitar a los alumnos a que le ayuden a hacerlo. Por ejemplo, si dos sugerencias son \"encontrar mis llaves\" y \"encontrar mis deberes\" sugiere una categoría mayor de \"encontrar cosas perdidas\".\n\n**Problemas del Mundo Real:** Intenta guiar a los alumnos para que se alejen de los problemas de tipo tarea o asignatura (por ejemplo, problemas de matemáticas, problemas de palabras, problemas de ciencias, etc.) diciendo que te interesan más los problemas de la vida real como resolver desacuerdos, tomar grandes decisiones, arreglar o encontrar cosas, ir de un sitio a otro, etc.",
+            "**Objetivo:** Esta conversación pretende demostrar que los problemas y la resolución de problemas forman parte de la vida cotidiana. Utiliza esta lluvia de ideas para enumerar en la pizarra todos los tipos de problemas que puedas. Esto le será útil cuando más tarde pida a los alumnos que seleccionen un tipo de problema que crea que son especialmente buenos para resolver."
           ]
+        },
+        "889b6e82-6222-44d5-a7e8-d6bea339eb73": {
+          "description": "Está claro que nos encontramos con problemas en muchos ámbitos diferentes de nuestra vida. Dependiendo del contexto, esta palabra puede tener muchos significados diferentes. Hoy, vamos a ver algunos pasos que podemos utilizar para resolver todo tipo de problemas."
+        },
+        "1b5c295f-10f1-469e-8cbf-d16b7c19056f": {
+          "description": "**Pregunta del día: ¿Cuáles son algunos de los pasos comunes que podemos utilizar para resolver diferentes tipos de problemas?**"
+        },
+        "6a21930f-10d3-4f81-9c1d-8fd69681c1ef": {
+          "description": "Resolvemos problemas continuamente, pero no solemos pensar en cómo los resolvemos. Tener una estrategia o un proceso para abordar muchos tipos de problemas diferentes puede convertirte en un solucionador de problemas más reflexivo, creativo y exitoso."
+        },
+        "9842f2ee-96b6-4407-9dcb-379b048173c3": {
+          "description": "**Distribuye:** Reparte copias de las guías de actividades."
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
           "name": "El proceso de resolución de problemas",
+          "description": "**Vídeo:** Ver el Vídeo del Proceso de Resolución de Problemas en Code Studio\n\n**Preguntas a considerar con el video:**\n\n-   ¿Cómo has seguido el proceso de resolución de problemas en la última lección?\n-   ¿Cómo podrías utilizar este proceso en un problema de tu vida cotidiana?",
           "tips": [
-            null
+            "La primera pregunta de debate forma parte de la actividad central del resto de la lección. Los alumnos deben dedicar un tiempo a trabajar en sus grupos para pensar en cosas concretas que hayan hecho siguiendo cada paso del proceso. El objetivo de este debate es hacer que los pasos abstractos sean más concretos y accesibles para los alumnos relacionándolos con una actividad compartida.\nLa segunda pregunta da a los alumnos la oportunidad de ampliar su comprensión del proceso a un problema diferente, viendo cómo pueden ser los diferentes pasos en distintos ámbitos. El objetivo de este debate es asegurarse de que los alumnos tienen una comprensión lo suficientemente general del proceso como para poder aplicarlo a una mayor variedad de problemas, ya que el proceso se utilizará a lo largo del curso en diversos ámbitos."
           ],
           "progression_name": "Vídeo: El proceso de resolución de problemas"
         },
+        "9541def4-ab55-4976-8e32-5c267d62e229": {
+          "description": "Presenta y repasa en clase las descripciones de los cuatro pasos del proceso leyéndolos en voz alta. Responde o debate las preguntas que los alumnos tengan sobre el proceso, pero, si no es así, pasa a completar la primera sección de la guía de actividades."
+        },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "name": "¿Cómo lo ves?",
+          "description": "Pide a los alumnos que completen la primera sección de la guía de actividades rellenando los pasos de la actividad del día anterior pensando en cada paso del proceso de resolución de problemas."
+        },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "description": "**Debate:** Una vez que los alumnos hayan completado la primera sección de la guía de actividades, pídeles que la compartan con sus compañeros y luego con la clase en su conjunto.",
           "tips": [
-            null
+            "**Objetivo:** Para esta primera conversación en particular, asegúrate de que los alumnos entienden el significado de los cuatro pasos diferentes. Aunque algunos pasos pueden clasificarse a veces de dos maneras, aprovecha esta oportunidad para hablar de esa ambigüedad. El objetivo es utilizar el contexto compartido del problema de los botes de aluminio para entender este proceso. He aquí un posible conjunto de pasos que los alumnos pueden proponer:\n\n**Definir:** Entender el problema cuando se les asignó, examinar los recursos disponibles, encontrar problemas con su diseño original antes de decidir cómo solucionarlos, observar los problemas de los barcos de otros grupos\n\n**Preparar:** Comentar con los miembros del equipo cómo proceder, hacer una lluvia de ideas sobre los enfoques, anticiparse a los posibles fallos.\n\n**Probar:** Construir realmente los barcos, realizar la prueba\n\n**Reflexionar:** Examinar los resultados de su prueba, comparar sus resultados con sus predicciones, comentar con los miembros del grupo las razones por las que el barco se hundió finalmente."
           ]
+        },
+        "9071b1c1-0031-4e52-b8f6-a20e311f95c1": {
+          "name": "Un problema que sabes resolver bien",
+          "description": "Pide a los alumnos que seleccionen un tipo de problema que crean que se les da muy bien resolver. Utiliza la lista de problemas que ya está en la pizarra para ayudar a los alumnos a pensar en su tipo de problema. De nuevo, dales un par de minutos para que anoten en silencio los pasos de su proceso antes de compartirlo con un compañero."
         },
         "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "description": "**Debate:** Pide a los alumnos que compartan lo que han escrito con un compañero y a continuación, dirige de nuevo un debate sobre las conversaciones que han mantenido. Pide a los estudiantes que hablen de los pasos individuales que están utilizando para resolver el problema elegido, pero también señala los casos en los que los mismos tipos de estrategias aparecen varias veces.",
+          "tips": [
+            "**Objetivo:** Los tres debates pretenden reforzar el significado de los 4 pasos del proceso de resolución de problemas. En este debate, podrías apoyarte más en otros alumnos para asegurarte de que las estrategias y los pasos que ofrecen los alumnos parecen ajustarse a las definiciones de los 4 pasos que se ofrecen en la guía de actividades."
+          ]
+        },
+        "7048cb12-62e3-4d97-a12a-7d75befc7d07": {
+          "name": "Un problema que tú y un compañero queréis resolver mejor",
+          "description": "Coloca a los estudiantes en parejas y pídeles que completen la sección final de la guía de actividades. Tendrán que elegir un tipo de problema que ambos miembros del grupo quieran resolver mejor y a continuación, escribir los pasos que utilizarían dentro del proceso de resolución de problemas para resolver ese problema.\n\n**Debate:** Dirige una última puesta en común en la que los alumnos presenten cómo utilizarían el proceso de resolución de problemas para abordar un problema menos conocido."
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "name": "Crea carteles con los pasos",
+          "description": "**Distribuye:** Entrega a cada grupo un trozo de papel para carteles.",
           "tips": [
             null
           ]
         },
-        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
-          "tips": [
-            null
-          ]
+        "5c0ec90c-60b9-463c-a278-5a3c5104d0be": {
+          "description": "**Pregunta del día: ¿Cuáles son algunos de los pasos comunes que podemos utilizar para resolver diferentes tipos de problemas?**"
         },
         "03418848-4f2d-4f45-8f25-38012b191a2a": {
           "tips": [

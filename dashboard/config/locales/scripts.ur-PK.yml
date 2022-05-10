@@ -3047,9 +3047,6 @@ ur:
               name: متغیرات
             lesson-16:
               name: کنسول
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکسز
         csa3-2022:
           lessons:
             lesson-3:
@@ -3076,9 +3073,6 @@ ur:
               name: سوشل گڈ پروجیکٹ کے لیے ڈیٹا - دن 3
             lesson-16:
               name: کنسول
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکسز
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -3455,9 +3449,6 @@ ur:
             Java Lab:
               name: جاوا لیب
               key: جاوا لیب
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -3900,3 +3891,63 @@ ur:
           student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
             میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
             کا وقت کب ہے۔
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+            lesson-3:
+              key: سبق 3
+            lesson-8:
+              key: سبق 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3

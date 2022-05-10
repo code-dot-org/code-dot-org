@@ -273,6 +273,7 @@
   "participantTypeTeacherTitle": "Teachers",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
+  "petitionMessage": "Every student in every school should have the opportunity to learn computer science",
   "play": "play",
   "predictionInstructions": "Make a prediction before you run the program.",
   "projectGroupMath": "Mathematics",
@@ -369,5 +370,6 @@
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
   "yes": "Yes",
-  "yourSchoolHeading": "Expand computer science in your school or district"
+  "yourSchoolHeading": "Expand computer science in your school or district",
+  "zipOrCountry": "ZIP code or country"
 }

@@ -4904,6 +4904,9 @@
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Ampliación del aprendizaje"
         },
+        "430b1921-1d02-451a-a74f-a573525f3ac9": {
+          "name": "Antes de la Unidad"
+        },
         "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
           "name": "Calentamiento"
         },
@@ -5297,6 +5300,9 @@
         "098e6ecf-1fe4-459a-acc3-25907450f581": {
           "name": "Actividad de cierre"
         },
+        "4fada4f6-95c0-462f-af3f-7d3d655a466f": {
+          "name": "Extensiones"
+        },
         "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
           "name": "Niveles"
         },
@@ -5387,6 +5393,9 @@
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Actividad"
         },
+        "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec": {
+          "name": "Conclusión "
+        },
         "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
           "name": "Calentamiento"
         },
@@ -5402,6 +5411,9 @@
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Actividad"
         },
+        "3a46632a-43c7-47d3-85b7-e119bf9900ff": {
+          "name": "Conclusión  "
+        },
         "1e259b12-ec38-426b-944e-f5778651c422": {
           "name": "Calentamiento"
         },
@@ -5414,6 +5426,15 @@
         "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
           "name": "Calentamiento"
         },
+        "d5a88b8b-de36-473b-8206-46ac7d2801c2": {
+          "name": "Actividad 1"
+        },
+        "ca01af5b-36a3-461d-b6b0-9802dc211193": {
+          "name": "Actividad 2"
+        },
+        "09284bd4-8906-4775-8b69-db734dde7324": {
+          "name": "Actividad 3"
+        },
         "b3d78956-5557-4142-bd84-3741cc92fb87": {
           "name": "Actividad de cierre"
         },
@@ -5425,6 +5446,9 @@
         },
         "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
           "name": "Actividad de cierre"
+        },
+        "fe9db805-4d94-4c5e-a497-5fba5af44ff1": {
+          "name": "Extensiones"
         },
         "95526ba9-ab16-49b6-a013-d52be08b2753": {
           "name": "Calentamiento"
@@ -5577,7 +5601,7 @@
           "name": "Actividad de cierre"
         },
         "5faf4484-24e1-457d-8aaa-936904fec0c6": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
           "name": "Calentamiento"
@@ -5592,7 +5616,7 @@
           "name": "Niveles"
         },
         "d3975f3d-44de-46c8-a995-423cd29d2b0e": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
           "name": "Actividad inicial"
@@ -5628,7 +5652,7 @@
           "name": "Actividad de cierre"
         },
         "92c95b0a-5909-4de6-9501-c206eb277d18": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
           "name": "Calentamiento"
@@ -5640,7 +5664,7 @@
           "name": "Actividad de cierre"
         },
         "dad741db-e1fa-4efc-a1a5-9189172fd079": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "3cca2572-607f-4925-8b36-6cf02506c1b6": {
           "name": "Calentamiento"
@@ -5652,7 +5676,7 @@
           "name": "Actividad de cierre"
         },
         "e8906779-7748-4fae-9495-4140c38daffe": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "936100bf-97fb-4931-84be-dda8766c0ec4": {
           "name": "Calentamiento"
@@ -5664,7 +5688,7 @@
           "name": "Actividad de cierre"
         },
         "18b942a4-0349-4392-923f-170a70cb6c8b": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
           "name": "Calentamiento"
@@ -5676,7 +5700,7 @@
           "name": "Actividad de cierre"
         },
         "9c63c110-299c-465c-b6ac-456d561ff1c0": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
           "name": "Calentamiento"
@@ -5688,7 +5712,7 @@
           "name": "Actividad de cierre"
         },
         "9368b7ab-08ee-4900-b007-3a008552079f": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
           "name": "Calentamiento"
@@ -5700,7 +5724,7 @@
           "name": "Cierre"
         },
         "5346ecf1-b80b-44cb-ad37-ea10eb8561c2": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
           "name": "Calentamiento"
@@ -5712,7 +5736,7 @@
           "name": "Actividad de cierre"
         },
         "0fa9a305-278c-4646-8533-02397317bb18": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "434c6d86-9182-4098-bdf9-a778a50a078a": {
           "name": "Calentamiento"
@@ -5724,7 +5748,7 @@
           "name": "Actividad de cierre"
         },
         "30b9ca8a-86a0-4058-b2f5-e24d9f636c10": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "f34a570f-40d4-4d59-a68b-73775272bd4c": {
           "name": "Calentamiento"
@@ -5736,7 +5760,7 @@
           "name": "Cierre"
         },
         "42b55089-127b-435f-be68-691d07bd60f2": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
           "name": "Calentamiento"
@@ -5748,7 +5772,7 @@
           "name": "Actividad de cierre"
         },
         "87db84f0-e19c-4e75-a1ae-c66dbac3bad5": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
           "name": "Calentamiento"
@@ -5760,7 +5784,7 @@
           "name": "Actividad de cierre"
         },
         "bae868db-d958-4188-819b-7d9975721b16": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
           "name": "Calentamiento"
@@ -5772,7 +5796,7 @@
           "name": "Actividad de cierre"
         },
         "75823632-be81-4248-bd63-e69a3658941b": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
           "name": "Calentamiento"
@@ -5784,7 +5808,7 @@
           "name": "Actividad de cierre"
         },
         "6726d5e9-166b-4785-926b-549a92cf1ee5": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "177ca896-863b-456d-8703-29c35534f2d5": {
           "name": "Calentamiento"
@@ -5796,7 +5820,7 @@
           "name": "Actividad de cierre"
         },
         "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
           "name": "Calentamiento"
@@ -5808,7 +5832,7 @@
           "name": "Actividad de cierre"
         },
         "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "78332cff-112e-4d7a-b0d5-dc027283de09": {
           "name": "Calentamiento"
@@ -5820,7 +5844,7 @@
           "name": "Cierre"
         },
         "055947d6-e6ec-4356-9343-4a1b2a5fe229": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
           "name": "Calentamiento"
@@ -5832,7 +5856,7 @@
           "name": "Actividad de cierre"
         },
         "e6a3f6b5-8159-4012-acbd-273af0e5e707": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "4500c96e-1367-4b79-867f-061dfdb75d5c": {
           "name": "Calentamiento"
@@ -5844,7 +5868,7 @@
           "name": "Actividad de cierre"
         },
         "68968d00-b2cb-436f-8b21-fa47c41e6c13": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
           "name": "Calentamiento"
@@ -5856,7 +5880,7 @@
           "name": "Cierre"
         },
         "d5f8482f-a875-457a-83a0-8fe8c8697621": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
           "name": "Calentamiento"
@@ -5868,7 +5892,7 @@
           "name": "Actividad de cierre"
         },
         "a3891ced-312c-4f1f-9823-28cdaf9a131f": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
           "name": "Calentamiento"
@@ -5880,7 +5904,7 @@
           "name": "Actividad de cierre"
         },
         "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "69970ef2-e960-449e-8650-84b53151315d": {
           "name": "Calentamiento"
@@ -5892,7 +5916,7 @@
           "name": "Actividad de cierre"
         },
         "acdadc8a-d94d-4ee3-bdcb-67a234ee4130": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "d318c194-f178-4185-be90-b70771605b6d": {
           "name": "Calentamiento"
@@ -5910,7 +5934,7 @@
           "name": "Niveles"
         },
         "d57b5dae-d9df-4412-9501-893bc3fe13f2": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "d07bf4d7-6a25-4ff6-9d01-adea55e214a3": {
           "name": "Configuración técnica"
@@ -5928,7 +5952,7 @@
           "name": "Actividad de cierre"
         },
         "630fc7fe-bf16-4a13-9e9b-c553cc89881f": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
           "name": "Calentamiento"
@@ -6090,7 +6114,7 @@
           "name": "Actividad de cierre"
         },
         "7c74d83b-4571-4346-bca2-9a6e1cb926f3": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "a0381dd6-760a-46a9-9217-7e7744252d97": {
           "name": "Calentamiento"
@@ -6105,7 +6129,7 @@
           "name": "Niveles"
         },
         "19043808-e22b-4373-bb0b-9ccac3ab949b": {
-          "name": "Modificaciones de la lección"
+          "name": "Modificaciones de la Lección"
         },
         "a0692a63-008e-4013-9089-9f9c9b22d67c": {
           "name": "Actividad inicial"

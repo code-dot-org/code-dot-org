@@ -1164,6 +1164,12 @@ fi:
             '90': alas
             '180': vasemmalle
             '270': ylös
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': keskipitkä
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:

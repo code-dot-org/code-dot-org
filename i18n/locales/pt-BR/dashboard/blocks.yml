@@ -1243,6 +1243,12 @@ pt:
             '90': para baixo
             '180': para esquerda
             '270': para cima
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': pequeno
+            '50': médio
+            '100': grande
       gamelab_mirrorSprite:
         text: "{SPRITE} vira para {DIRECTION}"
         options:

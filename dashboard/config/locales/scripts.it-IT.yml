@@ -3188,12 +3188,6 @@ it:
                 cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
             Loops in Artist:
               name: Cicli con l'artista
-              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
-                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
-                lezione, i cicli sono stati utilizzati per attraversare un labirinto
-                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
-                Alla fine di questa lezione, gli studenti avranno l'opportunità di
-                creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Il grande evento
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere
@@ -12489,6 +12483,10 @@ it:
           lessons:
             lesson-1:
               name: Testing CSA Clone
+            lesson-2:
+              name: Lezione 2
+            lesson-3:
+              name: Lezione 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -13830,6 +13828,8 @@ it:
               display_name: Traversali
             csp_project:
               display_name: Progetto
+            lessonGroup-5:
+              display_name: Sondaggio Post-corso
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -14070,6 +14070,10 @@ it:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           description_audience: Da 6 a 10 anni
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -14077,11 +14081,14 @@ it:
             csp_libraries:
               display_name: Librerie
             lessonGroup-3:
-              display_name: Sondaggio
+              display_name: Sondaggio Post-corso
         csp8-2022:
           lessons:
             lesson-4:
               key: lezione-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
         csp9-2022:
           lessons:
             Machine Learning:
@@ -14093,6 +14100,8 @@ it:
           lesson_groups:
             csp_unit9_2020:
               display_name: Princìpi dell'Informatica - Unità 9
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -14103,6 +14112,9 @@ it:
               description_student: Panoramica della Lezione
             'Project: Innovation Simulation Part 7':
               description_student: Panoramica della Lezione
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -14580,6 +14592,8 @@ it:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Sondaggio
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -14676,8 +14690,6 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
-            lessonGroup-4:
-              display_name: Sandbox
         csa3-2022:
           lessons:
             lesson-3:
@@ -14709,8 +14721,6 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
-            lessonGroup-4:
-              display_name: Sandbox
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -15167,7 +15177,7 @@ it:
             lessonGroup-2:
               display_name: Contenuto
             lessonGroup-5:
-              display_name: Sandbox
+              display_name: Sondaggio
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -15708,3 +15718,69 @@ it:
           student_description: Questa unità contiene un sondaggio per quando la tua
             classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
             quando è il momento di fare questo sondaggio.
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Lezione 6
+            Survey Planning:
+              name: Progettare la Raccolta dei Dati
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: lezione-4
+            lesson-3:
+              key: lezione-3
+            lesson-8:
+              key: lezione-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3

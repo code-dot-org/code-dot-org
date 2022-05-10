@@ -5262,6 +5262,10 @@ uk:
             For Loop Fun:
               key: Ігри з циклами
               name: Ігри з циклами
+            For Loops in Bee:
+              name: Цикл For з Бджілкою
+            For Loops in Artist:
+              name: Цикл For з Художником
             Virtual Pet:
               name: 'Міні-проект: Віртуальний вихованець'
             lesson-6:
@@ -5271,6 +5275,7 @@ uk:
             lesson-5:
               name: Спалах
             lesson-2:
+              name: Сила Слів
               description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             ramp_up:
@@ -5690,6 +5695,10 @@ uk:
               display_name: Уроки
             lessonGroup-3:
               display_name: Проект
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Урок 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -5890,6 +5899,8 @@ uk:
               display_name: Переходи
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -5936,6 +5947,10 @@ uk:
             csf_data:
               display_name: Дані
           description_audience: 'Вік: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -5943,7 +5958,11 @@ uk:
             csp_libraries:
               display_name: Бібліотеки
             lessonGroup-3:
-              display_name: Опитування
+              display_name: Опитування після закінчення курсу
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
         csp9-2022:
           lessons:
             Machine Learning:
@@ -5953,6 +5972,8 @@ uk:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -5963,6 +5984,9 @@ uk:
               description_student: Огляд уроку
             'Project: Innovation Simulation Part 7':
               description_student: Огляд уроку
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -6066,6 +6090,8 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
         pre-express-2022:
           lesson_groups:
             csf_sequencing:
@@ -6164,6 +6190,8 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -6370,3 +6398,55 @@ uk:
             Post-Course Survey:
               name: Опитування після закінчення курсу
           title: Опитування після курсу Відкриття інформатики
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1.
+              key: Модуль 1.
+            Module 2:
+              name: Модуль 2.
+              key: Модуль 2.
+            Module 3:
+              name: Модуль 3.
+              key: Модуль 3.
+            Module 4:
+              name: Модуль 4.
+              key: Модуль 4.
+            Module 5:
+              name: Модуль 5.
+              key: Модуль 5.
+            Module 6:
+              name: Модуль 6.
+              key: Модуль 6.
+            Module 7:
+              name: Модуль 7.
+              key: Модуль 7.
+            Module 8:
+              name: Модуль 8.
+              key: Модуль 8.
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Модуль 1.
+              key: Модуль 1.
+            Module 2:
+              name: Модуль 2.
+              key: Модуль 2.
+            Module 3:
+              name: Модуль 3.
+              key: Модуль 3.
+            Module 4:
+              name: Модуль 4.
+              key: Модуль 4.
+            Module 5:
+              key: Модуль 5.
+            Module 6:
+              key: Модуль 6.
+            Module 7:
+              key: Модуль 7.
+            Module 8:
+              key: Модуль 8.
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ласкаво просимо

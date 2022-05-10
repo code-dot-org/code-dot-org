@@ -1047,6 +1047,12 @@ bg:
             '90': надолу
             '180': наляво
             '270': нагоре
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': средно
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

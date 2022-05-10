@@ -566,6 +566,12 @@ eu:
             '90': behera
             '180': ezkerrera
             '270': gora
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': ertaina
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

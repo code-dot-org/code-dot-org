@@ -2562,13 +2562,17 @@
           "name": "Foro de profesores"
         },
         "computing-innovations/csd/2021": {
-          "name": "Innovaciones informáticas"
+          "name": "Innovaciones informáticas",
+          "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit"
         },
         "internet-of-things-video/csd/2021": {
+          "name": "El Internet de las Cosas",
+          "url": "https://youtu.be/xQGsubJNbQw",
           "type": "Vídeo"
         },
         "innovation-video-1-1/csd/2021": {
           "name": "Las Ciencias de la Computación están cambiando todo",
+          "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
           "type": "Vídeo"
         },
         "csd_unit_6_-_physical_computing/csd/2021": {
@@ -2640,87 +2644,159 @@
           "type": "Recurso"
         },
         "date_and_change_events/csd/2021": {
+          "name": "Eventos de Fecha y Cambio",
+          "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
           "type": "Recurso"
         },
         "emoji-race-guide/csd/2021": {
+          "name": "Carrera de Emojis",
+          "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
           "type": "Guía de Proyecto"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "Operadores booleanos y de comparación",
+          "url": "https://drive.google.com/file/d/1HUDl6xDoxNWJUptqMA1B9DXE0XFTeD3a/view?usp=sharing",
           "type": "Recurso"
         },
         "functions_2/csd/2021": {
           "name": "Funciones",
+          "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
           "type": "Recurso"
         },
         "if_statements_1/csd/2021": {
           "name": "Sentencias si",
+          "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
           "type": "Recurso"
         },
+        "make-game-guide/csd/2021": {
+          "name": "Crear un Juego",
+          "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit"
+        },
+        "make_a_game_-_student_checklist/csd/2021": {
+          "name": "Crear un Juego - Lista de Control del Alumno",
+          "url": "https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view"
+        },
         "make_a_game_1/csd/2021": {
+          "name": "Crear un Juego",
+          "url": "https://docs.google.com/document/d/1FcvT4qD9obqusSkeC0OHYGjKVg5lQ26qgpV62aUB528/view",
           "type": "Rúbrica"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "name": "Crear un Juego - Ejemplo de Rúbricas Marcadas",
+          "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "Introducción a los arreglos",
+          "url": "https://youtu.be/seBDTeZmb-k",
           "type": "Vídeo"
         },
         "arrays/csd/2021": {
           "name": "Arreglos",
+          "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
           "type": "Recurso"
         },
         "circuits_and_leds/csd/2021": {
           "name": "Circuitos y LED",
+          "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
           "type": "Recurso"
         },
         "color_lights/csd/2021": {
+          "name": "Luces de Colores",
+          "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
           "type": "Recurso"
         },
         "playing_notes/csd/2021": {
           "name": "Sonando notas",
+          "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
           "type": "Recurso"
         },
         "producing_output/csd/2021": {
+          "name": "Generando la Salida",
           "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Recurso"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Bucles Para",
+          "url": "https://youtu.be/WqmyVZnMWHY",
           "type": "Vídeo"
         },
         "for_loops/csd/2021": {
           "name": "Bucles Para",
+          "url": "https://drive.google.com/file/d/1m96-bXSMQwkgpJ0MBgagEBRhJ8NYvDcN/view?usp=sharing",
           "type": "Recurso"
         },
         "modifying_arrays/csd/2021": {
           "name": "Modificar arreglos",
+          "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
           "type": "Recurso"
         },
         "accelerometer_events/csd/2021": {
           "name": "Eventos de Acelerómetro",
+          "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
           "type": "Recurso"
         },
         "the_accelerometer/csd/2021": {
           "name": "El acelerómetro",
+          "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
           "type": "Recurso"
         },
         "circuits-logic-video/csd/2021": {
           "name": "Cómo funcionan las computadoras: circuitos y lógica",
+          "url": "https://youtu.be/ZoqMiFKspAA",
           "type": "Vídeo"
         },
         "physical-prototyping-project/csd/2021": {
+          "name": "Prototipos Físicos",
+          "url": "https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit",
           "type": "Guía de Proyecto"
         },
         "circuits_and_buttons/csd/2021": {
+          "name": "Circuitos y Pulsadores",
+          "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
           "type": "Recurso"
         },
         "prototype-an-innovation-1/csd/2021": {
+          "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
           "type": "Rúbrica"
         },
         "planning-your-innovation/csd/2021": {
+          "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
           "type": "Guía de Proyecto"
+        },
+        "peer_review_1_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg"
+        },
+        "peer_review_2_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0"
+        },
+        "prototype_an_innovation_-_student_checklist/csd/2021": {
+          "name": "Prototipo de una Innovación - Lista de Comprobación del Alumno",
+          "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit"
+        },
+        "csd_guide_to_using_resources/csd/2021": {
+          "name": "Guía del CSD para el Uso de los Recursos",
+          "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
+        },
+        "all_code_4/csd/2021": {
+          "url": "/s/csd6-2021/código"
+        },
+        "all_resources_6/csd/2021": {
+          "url": "/s/csd6-2021/recursos"
+        },
+        "all_standards_6/csd/2021": {
+          "url": "/s/csd6-2021/normas"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "url": "/s/csd6-2021/vocabulario"
         },
         "circuit_playground_1/csd/2021": {
           "name": "Circuit Playground",
+          "url": "https://code.org/circuitplayground",
           "type": "Recurso"
         },
         "unit-5-data-society/csd/2021": {

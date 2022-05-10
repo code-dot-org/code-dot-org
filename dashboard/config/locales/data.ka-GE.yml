@@ -742,6 +742,7 @@ ka:
         playlab_2021_reader: თამაშების ლაბი - შესავალი
         Gettting_Started_Progress: პროგრესი, უკუკავშირი და შეფასება
         csd_u6_input_output: შესაყვანი და გამოსაყვანი ინფორმაცია
+        csp_applab_parameters: ფუნქციები პარამეტრებით
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

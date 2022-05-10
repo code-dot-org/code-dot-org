@@ -43,6 +43,12 @@
         },
         "csta/NI": {
           "description": "네트워크 및 인터넷"
+        },
+        "csta/CS": {
+          "description": "컴퓨팅 시스템"
+        },
+        "ngss/ETS1": {
+          "description": "엔지니어링 설계"
         }
       }
     }

@@ -169,6 +169,7 @@ fr:
             Play Lab:
               name: Labo de jeux
               description_student: Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base.
+              description_teacher: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
           student_description: Programme une histoire ou un jeu avec le Labo !
           name: playlab
         artist:
@@ -347,6 +348,7 @@ fr:
             Infinity:
               name: Labo de Jeux de Disney Infinity
               description_student: Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base.
+              description_teacher: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
           student_description: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
           name: infini
         algebrademo:
@@ -447,7 +449,7 @@ fr:
             Conditionals:
               name: Instructions conditionnelles
             Functions:
-              name: fonctions
+              name: Fonctions
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
             Introduction to Computer Science:
@@ -516,6 +518,8 @@ fr:
           lessons:
             Flappy Code:
               name: Flappy l'oiseau
+              description_student: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
+              description_teacher: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
           student_description: Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel de Code Flappy !
           name: flappy
         jigsaw:
@@ -1487,6 +1491,7 @@ fr:
             Unit 6 lessons:
               name: Leçons de l'Unité 6
         cspunit4draft:
+          description_short: Données
           lessons:
             Check Your Assumptions:
               name: Vérifiez vos Hypothèses
@@ -1617,6 +1622,7 @@ fr:
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
               description_student: Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base.
+              description_teacher: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
           student_description: Crée une histoire ou fais un jeu avec le Labo de jeux Âge de Glace !
           name: iceage
         CSPPD3-Unit3:
@@ -1684,6 +1690,8 @@ fr:
           lessons:
             Gumball Play Lab:
               name: Labo de jeux Gumball
+              description_student: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
+              description_teacher: Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.
           student_description: Crée une histoire ou fais un jeu avec le Labo de jeux Gumball !
           name: gumball
         starwars:
@@ -2336,7 +2344,7 @@ fr:
             Variables and Animation:
               name: Variables et Animation
             Functions:
-              name: fonctions
+              name: Fonctions
             Platform Jumper:
               name: Saut Plate-Forme
             Defender:
@@ -2674,6 +2682,8 @@ fr:
               name: Commentaire par un pair
             Describing Web Pages:
               name: Décrire des Pages Web
+        CSDU5-Draft:
+          description_short: Données
         CSF_Secret_Sample_Story:
           description_audience: De 8 à 18 ans+
           lessons:
@@ -2749,7 +2759,7 @@ fr:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle : Apprendre à faire un glisser-déposer'
             Loops:
-              name: boucles
+              name: Boucles
             Loops Intro:
               name: Initiation aux Boucles
             Loops Unplugged:
@@ -2811,7 +2821,7 @@ fr:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle : Apprendre à faire un glisser-déposer'
             Loops:
-              name: boucles
+              name: Boucles
             Loops Intro:
               name: Initiation aux Boucles
             Loops Unplugged:
@@ -3085,7 +3095,7 @@ fr:
               description_student: La classe programme ses lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont elle a utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres façons dont deux lutins pourraient interagir. Elle utilise ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
               description_teacher: Les étudiants programment leurs lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont ils ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes, à d'autres façons dont deux lutins pourraient interagir. Ils utilisent ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
             Functions:
-              name: fonctions
+              name: Fonctions
               description_student: Cette leçon couvre les fonctions comme un moyen d'organiser leur code, de le rendre plus lisible et de supprimer les blocs de code répétés. La classe apprend qu'un niveau supérieur ou des étapes plus abstraites facilitent la compréhension et le raisonnement quant aux étapes, puis commence à créer des fonctions dans le Labo des Jeux. À la fin de la leçon, la classe utilise ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
               description_teacher: Les élèves apprennent à créer des fonctions pour organiser leur code, le rendre plus lisible et supprimer des blocs de code répétés. Un échauffement débranché explore comment les directions à différents niveaux de détail peuvent être utiles en fonction du contexte. Les élèves apprennent que des étapes de niveau supérieur ou plus abstraites facilitent la compréhension et le raisonnement quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer de longs blocs de code de leur boucle Dessiner et pour remplacer des morceaux de code répétés par une seule fonction. À la fin de la leçon, les élèves utilisent ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
             The Game Design Process:
@@ -3227,11 +3237,11 @@ fr:
             For Loops:
               name: Les Boucles « Pour »
             Functions:
-              name: fonctions
+              name: Fonctions
             Functions with Parameters:
               name: Fonctions avec Paramètres
             Loops:
-              name: boucles
+              name: Boucles
             Nested Loops:
               name: Boucles Imbriquées
             Variables:
@@ -4720,7 +4730,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -4848,7 +4858,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -4981,7 +4991,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -5165,7 +5175,6 @@ fr:
               description_teacher: En s'appuyant sur le concept de répétition d'instructions des "Boucles Heureuses", cette phase amènera les élèves à utiliser des boucles pour collecter, plus efficacement, des trésors sur Code.org.
             Loops in Artist:
               name: Les Boucles dans Artiste
-              description_teacher: Revenant aux boucles, les élèves apprennent à dessiner des images en bouclant de simples séquences d'instructions. Dans la leçon branchée précédente, des boucles étaient utilisées pour traverser un labyrinthe et collecter des trésors. Ici, les boucles créent des motifs. À la fin de cette phase, les étudiants auront la possibilité de créer leurs propres images à l'aide de boucles.
             'Events: The Big Event':
               name: 'Événements : Le Grand Événement'
               description_teacher: Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.
@@ -7115,7 +7124,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -7220,7 +7229,7 @@ fr:
               description_student: La classe programme ses lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont elle a utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres façons dont deux lutins pourraient interagir. Elle utilise ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
               description_teacher: Les étudiants programment leurs lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont ils ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes, à d'autres façons dont deux lutins pourraient interagir. Ils utilisent ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
             Functions:
-              name: fonctions
+              name: Fonctions
               description_student: Cette leçon couvre les fonctions comme un moyen d'organiser leur code, de le rendre plus lisible et de supprimer les blocs de code répétés. La classe apprend qu'un niveau supérieur ou des étapes plus abstraites facilitent la compréhension et le raisonnement quant aux étapes, puis commence à créer des fonctions dans le Labo des Jeux. À la fin de la leçon, la classe utilise ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
               description_teacher: Les élèves apprennent à créer des fonctions pour organiser leur code, le rendre plus lisible et supprimer des blocs de code répétés. Un échauffement débranché explore comment les directions à différents niveaux de détail peuvent être utiles en fonction du contexte. Les élèves apprennent que des étapes de niveau supérieur ou plus abstraites facilitent la compréhension et le raisonnement quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer de longs blocs de code de leur boucle Dessiner et pour remplacer des morceaux de code répétés par une seule fonction. À la fin de la leçon, les élèves utilisent ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
             The Game Design Process:
@@ -9210,7 +9219,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -9285,6 +9294,8 @@ fr:
               display_name: Progression
             csf_variables:
               display_name: variables
+            csf_data:
+              display_name: Données
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_internet:
@@ -9453,7 +9464,7 @@ fr:
             csf_events:
               display_name: Événements
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_binary:
@@ -9559,7 +9570,7 @@ fr:
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             end_of_course_project:
               display_name: Fin du projet.
           lessons:
@@ -9714,11 +9725,11 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_variables:
               display_name: variables
             csf_for_loops:
@@ -9949,9 +9960,11 @@ fr:
             csf_binary:
               display_name: Binaire
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
+            csf_data:
+              display_name: Données
             end_of_course_project:
               display_name: Fin du projet.
           lessons:
@@ -10069,7 +10082,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           lessons:
@@ -10142,7 +10155,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             csf_events:
@@ -10217,7 +10230,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           lessons:
@@ -10443,7 +10456,7 @@ fr:
               description_student: La classe programme ses lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont elle a utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres façons dont deux lutins pourraient interagir. Elle utilise ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
               description_teacher: Les étudiants programment leurs lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont ils ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes, à d'autres façons dont deux lutins pourraient interagir. Ils utilisent ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
             Functions:
-              name: fonctions
+              name: Fonctions
               description_student: Cette leçon couvre les fonctions comme un moyen d'organiser leur code, de le rendre plus lisible et de supprimer les blocs de code répétés. La classe apprend qu'un niveau supérieur ou des étapes plus abstraites facilitent la compréhension et le raisonnement quant aux étapes, puis commence à créer des fonctions dans le Labo des Jeux. À la fin de la leçon, la classe utilise ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
               description_teacher: Les élèves apprennent à créer des fonctions pour organiser leur code, le rendre plus lisible et supprimer des blocs de code répétés. Un échauffement débranché explore comment les directions à différents niveaux de détail peuvent être utiles en fonction du contexte. Les élèves apprennent que des étapes de niveau supérieur ou plus abstraites facilitent la compréhension et le raisonnement quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer de longs blocs de code de leur boucle Dessiner et pour remplacer des morceaux de code répétés par une seule fonction. À la fin de la leçon, les élèves utilisent ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
             The Game Design Process:
@@ -10682,7 +10695,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
             required:
@@ -11285,7 +11298,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11335,7 +11348,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11456,7 +11469,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11504,7 +11517,7 @@ fr:
             csp_lists:
               display_name: Listes
             csp_loops:
-              display_name: boucles
+              display_name: Boucles
             csp_traversals:
               display_name: Parcours
             csp_project:
@@ -11604,7 +11617,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11728,7 +11741,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11778,7 +11791,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11828,7 +11841,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -11913,7 +11926,7 @@ fr:
             csp_lists:
               display_name: Listes
             csp_loops:
-              display_name: boucles
+              display_name: Boucles
             csp_traversals:
               display_name: Parcours
             csp_project:
@@ -12319,7 +12332,7 @@ fr:
               description_student: La classe programme ses lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont elle a utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres façons dont deux lutins pourraient interagir. Elle utilise ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
               description_teacher: Les étudiants programment leurs lutins pour interagir de nouvelles façons. Après une brève révision de la façon dont ils ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes, à d'autres façons dont deux lutins pourraient interagir. Ils utilisent ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre, sur l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter, déloger, bondir et rebondir).
             Functions:
-              name: fonctions
+              name: Fonctions
               description_student: Cette leçon couvre les fonctions comme un moyen d'organiser leur code, de le rendre plus lisible et de supprimer les blocs de code répétés. La classe apprend qu'un niveau supérieur ou des étapes plus abstraites facilitent la compréhension et le raisonnement quant aux étapes, puis commence à créer des fonctions dans le Labo des Jeux. À la fin de la leçon, la classe utilise ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
               description_teacher: Les élèves apprennent à créer des fonctions pour organiser leur code, le rendre plus lisible et supprimer des blocs de code répétés. Un échauffement débranché explore comment les directions à différents niveaux de détail peuvent être utiles en fonction du contexte. Les élèves apprennent que des étapes de niveau supérieur ou plus abstraites facilitent la compréhension et le raisonnement quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer de longs blocs de code de leur boucle Dessiner et pour remplacer des morceaux de code répétés par une seule fonction. À la fin de la leçon, les élèves utilisent ces compétences pour organiser et ajouter des fonctionnalités à la version finale de leur jeu à défilement latéral.
             The Game Design Process:
@@ -12414,7 +12427,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           lessons:
@@ -12866,13 +12879,13 @@ fr:
             Sequencing:
               name: Séquençage
             Loops:
-              name: boucles
+              name: Boucles
             Conditionals:
               name: Instructions conditionnelles
             Events:
               name: Événements
             Functions:
-              name: fonctions
+              name: Fonctions
             Diving Deeper:
               name: Plonger plus profondément
             Next steps:
@@ -12966,7 +12979,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
           lessons:
@@ -13043,7 +13056,7 @@ fr:
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             end_of_course_project:
               display_name: Fin du projet.
           lessons:
@@ -13144,7 +13157,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_events:
@@ -13188,7 +13201,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_events:
@@ -13307,7 +13320,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
             cspSurvey2020:
@@ -13351,7 +13364,7 @@ fr:
             csp_lists:
               display_name: Listes
             csp_loops:
-              display_name: boucles
+              display_name: Boucles
             csp_traversals:
               display_name: Parcours
             csp_project:
@@ -13809,7 +13822,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -13836,7 +13849,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           lessons:
@@ -13901,7 +13914,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             csf_events:
@@ -13969,9 +13982,11 @@ fr:
             csf_binary:
               display_name: Binaire
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
+            csf_data:
+              display_name: Données
             end_of_course_project:
               display_name: Fin du projet.
           lessons:
@@ -14063,7 +14078,7 @@ fr:
             csf_events:
               display_name: Événements
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_binary:
@@ -14164,7 +14179,7 @@ fr:
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             end_of_course_project:
@@ -14262,6 +14277,8 @@ fr:
               display_name: Citoyenneté Numérique
             csf_variables:
               display_name: variables
+            csf_data:
+              display_name: Données
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
@@ -14362,11 +14379,11 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_variables:
               display_name: variables
             csf_for_loops:
@@ -14471,7 +14488,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           lessons:
@@ -14911,7 +14928,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -14973,7 +14990,7 @@ fr:
             Sequencing:
               name: Séquençage
             Loops:
-              name: boucles
+              name: Boucles
             Events:
               name: Événements
             Conditionals:
@@ -14981,7 +14998,7 @@ fr:
             End of Course projects:
               name: Projets de Fin de Cours
             Functions:
-              name: fonctions
+              name: Fonctions
             Variables:
               name: variables
             For Loops:
@@ -15055,7 +15072,7 @@ fr:
             Collisions:
               name: Collisions
             Functions:
-              name: fonctions
+              name: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
             Using the Game Design Process:
@@ -15371,8 +15388,8 @@ fr:
               name: Collisions
               description_teacher: "\\*\\*Question du jour : Comment les programmeurs peuvent-ils s'appuyer sur des abstractions pour en créer d'autres ?\n\\\\r\nDans ce cours, les apprenants programmeront leurs sprites de sorte qu'ils interagissent différemment. Après un bref rappel de la façon dont on avait utilisé le bloc [`isTouching`(#f78183)](/docs/gamelab/isTouching/), les participants réfléchiront à de nouvelles façons de faire interagir deux sprites. Ils utiliseront ensuite le bloc [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pour faire en sorte qu'un sprite en pousse un autre à l'écran avant de s'exercer avec les quatre blocs de collision ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), et [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
-              key: fonctions
-              name: fonctions
+              key: Fonctions
+              name: Fonctions
             The Game Design Process:
               key: Le Processus de Conception d'un Jeu
               name: Le Processus de Conception d'un Jeu
@@ -15762,7 +15779,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
         csp5-2021:
@@ -15822,7 +15839,7 @@ fr:
             csp_lists:
               display_name: Listes
             csp_loops:
-              display_name: boucles
+              display_name: Boucles
             csp_traversals:
               display_name: Parcours
             csp_project:
@@ -16042,7 +16059,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
             lessonGroup-5:
@@ -16118,7 +16135,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             csf_events:
@@ -16216,9 +16233,11 @@ fr:
             csf_binary:
               display_name: Binaire
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
+            csf_data:
+              display_name: Données
             end_of_course_project:
               display_name: Fin du projet.
           student_description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
@@ -16330,7 +16349,7 @@ fr:
             csf_events:
               display_name: Événements
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_binary:
@@ -16447,7 +16466,7 @@ fr:
             csf_nested_loops:
               display_name: Instructions conditionnelles
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             end_of_course_project:
@@ -16755,11 +16774,11 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_variables:
               display_name: variables
             csf_for_loops:
@@ -16829,7 +16848,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
         csf-2021-pilot:
@@ -17228,8 +17247,8 @@ fr:
               key: Séquençage
               name: Séquençage
             Loops:
-              key: boucles
-              name: boucles
+              key: Boucles
+              name: Boucles
             Events:
               key: Événements
               name: Événements
@@ -17240,8 +17259,8 @@ fr:
               key: Projets de Fin de Cours
               name: Projets de Fin de Cours
             Functions:
-              key: fonctions
-              name: fonctions
+              key: Fonctions
+              name: Fonctions
             Variables:
               key: variables
               name: variables
@@ -17957,6 +17976,10 @@ fr:
           lessons:
             lesson-1:
               name: Test du clone CSA
+            lesson-2:
+              name: Leçon 2
+            lesson-3:
+              name: Leçon 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -18467,7 +18490,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Functions with Parameters:
-              name: fonctions
+              name: Fonctions
           lesson_groups:
             lessonGroup-2:
               display_name: Chapitre 1
@@ -18670,7 +18693,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
             lessonGroup-5:
@@ -18860,11 +18883,11 @@ fr:
             lessonGroup-9:
               display_name: Événements
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_variables:
               display_name: variables
             csf_for_loops:
@@ -19041,7 +19064,7 @@ fr:
             csp_conditionals:
               display_name: Instructions conditionnelles
             csp_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csp_project:
               display_name: Projet
         csp5-2022:
@@ -19097,15 +19120,19 @@ fr:
             'Lesson 18: Assessment Day':
               key: 'Leçon 18 : Journée D''Évaluation'
               name: Journée d'Évaluation
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
           lesson_groups:
             csp_lists:
               display_name: Listes
             csp_loops:
-              display_name: boucles
+              display_name: Boucles
             csp_traversals:
               display_name: Parcours
             csp_project:
               display_name: Projet
+            lessonGroup-5:
+              display_name: Suivi d'après cours
         courseb-2022:
           lessons:
             Digital Trails:
@@ -19214,7 +19241,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_impacts:
               display_name: Les Impacts de l'Informatique
             csf_events:
@@ -19342,9 +19369,11 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
+            csf_data:
+              display_name: Données
             end_of_course_project:
               display_name: Fin du projet.
           student_description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
@@ -19372,9 +19401,13 @@ fr:
             'Lesson 6: Assessment Day':
               key: 'Lesson 6 : Journée d''Évaluation'
               name: Journée d'Évaluation
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unité 6 : Les Algorithmes'
+            lessonGroup-2:
+              display_name: Suivi d'après cours
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -19417,7 +19450,7 @@ fr:
             csp_libraries:
               display_name: Bibliothèques
             lessonGroup-3:
-              display_name: Enquête
+              display_name: Suivi d'après cours
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -19428,6 +19461,13 @@ fr:
               key: Créer PT - Faire un Plan
             Create PT - Complete the Task:
               key: Créer PT Préparation - Accomplir la Tâche
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Créer la Tâche de Performance (PT)
+            lessonGroup-3:
+              display_name: Suivi d'après cours
         csp9-2022:
           lessons:
             Machine Learning:
@@ -19441,9 +19481,13 @@ fr:
             'Lesson 9: Assessment Day':
               key: 'Leçon 9 : Journée d''Évaluation'
               name: Journée d'Évaluation
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unité 9 : Les Données'
+            lessonGroup-2:
+              display_name: Suivi d'après cours
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -19489,9 +19533,13 @@ fr:
             'Lesson 14: Unit Assessment Day':
               key: 'Leçon 14 : Journée d''Évaluation de l''Unité'
               name: Journée d'Évaluation
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
           lesson_groups:
             csp_unit10_2020:
               display_name: " Unité 10: Cyber sécurité et impacts mondiaux"
+            lessonGroup-2:
+              display_name: Suivi d'après cours
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -19610,7 +19658,7 @@ fr:
             csf_events:
               display_name: Événements
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_conditionals:
               display_name: Instructions conditionnelles
             end_of_course_project:
@@ -19753,7 +19801,7 @@ fr:
             ramp_up:
               display_name: Boucles Imbriquées
             csf_functions:
-              display_name: fonctions
+              display_name: Fonctions
             csf_nested_loops:
               display_name: Instructions conditionnelles
             lessonGroup-7:
@@ -19931,7 +19979,7 @@ fr:
             lesson-2:
               name: Java Lab
             lesson-9:
-              name: boucles
+              name: Boucles
             lesson-21:
               name: Console
           lesson_groups:
@@ -19939,6 +19987,8 @@ fr:
               display_name: Contenu
             lessonGroup-4:
               display_name: Bacs à sable
+            lessonGroup-5:
+              display_name: Enquête
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -20004,7 +20054,7 @@ fr:
             csf_sequencing:
               display_name: Séquençage
             csf_loops:
-              display_name: boucles
+              display_name: Boucles
             csf_events:
               display_name: Événements
           description_audience: 'Âges : 4 à 8 ans'
@@ -20020,8 +20070,6 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
-            lessonGroup-4:
-              display_name: Bacs à sable
         csa3-2022:
           lessons:
             lesson-3:
@@ -20053,8 +20101,6 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
-            lessonGroup-4:
-              display_name: Bacs à sable
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -20092,7 +20138,7 @@ fr:
             lesson-2:
               name: Java Lab
             lesson-9:
-              name: boucles
+              name: Boucles
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -20406,7 +20452,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-5:
-              display_name: Le jeu Sandbox
+              display_name: Enquête
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -20509,8 +20555,8 @@ fr:
               name: Séquençage
               key: Séquençage
             Loops:
-              name: boucles
-              key: boucles
+              name: Boucles
+              key: Boucles
             Events:
               name: Événements
               key: Événements
@@ -20518,8 +20564,8 @@ fr:
               name: Instructions conditionnelles
               key: Instructions conditionnelles
             Functions:
-              name: fonctions
-              key: fonctions
+              name: Fonctions
+              key: Fonctions
             Variables:
               name: variables
               key: variables
@@ -20873,8 +20919,8 @@ fr:
               description_teacher: "\\*\\*Question du jour : Comment les programmeurs peuvent-ils s'appuyer sur des abstractions pour en créer d'autres ?\n\\\\r\nDans ce cours, les apprenants programmeront leurs sprites de sorte qu'ils interagissent différemment. Après un bref rappel de la façon dont on avait utilisé le bloc [`isTouching`(#f78183)](/docs/gamelab/isTouching/), les participants réfléchiront à de nouvelles façons de faire interagir deux sprites. Ils utiliseront ensuite le bloc [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pour faire en sorte qu'un sprite en pousse un autre à l'écran avant de s'exercer avec les quatre blocs de collision ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), et [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
               key: Collisions
             Functions:
-              name: fonctions
-              key: fonctions
+              name: Fonctions
+              key: Fonctions
             The Game Design Process:
               name: Le Processus de Conception d'un Jeu
               key: Le Processus de Conception d'un Jeu
@@ -20979,6 +21025,8 @@ fr:
             Keeping Data Secret:
               name: Garder les Données Secrètes
               key: Garder les Données Secrètes
+            Create a Representation:
+              name: Projet - Créer une Représentation
             Problem Solving and Data:
               name: La Résolution de Problèmes et les Données
               key: La Résolution de Problèmes et les Données
@@ -21054,7 +21102,7 @@ fr:
             Making Music:
               name: Créer de la Musique
             Functions:
-              name: fonctions
+              name: Fonctions
             Project - Prototype an Innovation:
               description_teacher: 'Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l''utilisateur. '
             Post-Project Test:
@@ -21076,3 +21124,123 @@ fr:
           student_description: Cette unité contient une enquête pour savoir quand votre classe aura terminé les unités de CS Discoveries. Votre professeur vous dira quand il est temps de répondre à ce sondage.
         csp-post-survey-2022:
           title: CS PrincipPrincipleses Enquête Post-Cours
+        aiml-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.
+
+                \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
+            Survey Planning:
+              name: Concevoir la Collecte de Données
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              key: Module 1
+            Module 2:
+              name: Module 2
+              key: Module 2
+            Module 3:
+              name: Module 3
+              key: Module 3
+            Module 4:
+              name: Module 4
+              key: Module 4
+            Module 5:
+              name: Module 5
+              key: Module 5
+            Module 6:
+              name: Module 6
+              key: Module 6
+            Module 7:
+              name: Module 7
+              key: Module 7
+            Module 8:
+              name: Module 8
+              key: Module 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              key: Module 1
+            Module 2:
+              name: Module 2
+              key: Module 2
+            Module 3:
+              name: Module 3
+              key: Module 3
+            Module 4:
+              name: Module 4
+              key: Module 4
+            Module 5:
+              key: Module 5
+            Module 6:
+              key: Module 6
+            Module 7:
+              key: Module 7
+            Module 8:
+              key: Module 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bienvenue
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: leçon n°4
+            lesson-3:
+              key: leçon n°3
+            lesson-8:
+              key: leçon n° 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3

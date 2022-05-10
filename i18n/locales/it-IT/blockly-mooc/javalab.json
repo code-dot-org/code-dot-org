@@ -40,7 +40,6 @@
   "emptyBackpackMessage": "I file salvati al tuo zaino compariranno qui.",
   "enablePeerReview": "Consenti la Revisione in Pari",
   "errorJavabuilderConnectionGeneral": "Abbiamo riscontrato un errore connettendoci al nostro server. Riprova.",
-  "errorJavabuilderConnectionNotAuthorized": "Non sei autorizzato ad accedere a Javalab. Devi accedere o unirti a una sezione?",
   "errorLoadingClassmates": "Si è verificato un errore caricando l'elenco dei tuoi compagni di classe. Sei pregato di riprovare.",
   "errorMediaImageLoadError": "Si è verificato un errore caricando l'immagine.",
   "errorNeighborhoodInvalidGrid": "Si è verificato un errore caricando il livello del quartiere. Sei pregato di contattarci a support@code.org e di assicurarti di includere l'URL a questa pagina nel tuo messaggio.",

@@ -2550,6 +2550,9 @@
         },
         "CSD web text size_2021": {
           "": "使用此模块在屏幕上放置文本"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
         }
       }
     }

@@ -2335,7 +2335,6 @@ ru:
               description_teacher: Основываясь на концепции повторяющихся команд из темы "Счастливые циклы", на данном этапе ученики используют циклы для более эффективного сбора сокровищ на Code.org.
             Loops in Artist:
               name: Циклы в исполнителе Художник
-              description_teacher: Возвращаясь к циклам, ученики учатся рисовать изображения, организуя в циклы простые последовательности команд. В предыдущем онлайн-уроке циклы использовались для прохождения лабиринта и сбора сокровищ. Здесь циклы используются для создания элементов изображений. В конце данного этапа ученикам дается возможность создать с помощью циклов собственные изображения.
             'Events: The Big Event':
               name: 'События: Большое событие'
               description_teacher: События предоставляют замечательную возможность внести разнообразие в написанный ранее алгоритм. Иногда хочется, чтобы твоя программа могла отвечать пользователю именно тогда, когда пользователь хочет этого. События предназначены как раз для этого.
@@ -7870,6 +7869,8 @@ ru:
           lessons:
             lesson-1:
               name: Тестирование клона CSA
+            lesson-3:
+              name: Урок 3
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -8527,6 +8528,8 @@ ru:
               display_name: Обходов
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опрос после окончания курса
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -8618,6 +8621,10 @@ ru:
             end_of_course_project:
               display_name: Конец проекта курса
           description_audience: 'Возраст: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -8625,11 +8632,14 @@ ru:
             csp_libraries:
               display_name: Библиотеки
             lessonGroup-3:
-              display_name: Опрос
+              display_name: Опрос после окончания курса
         csp8-2022:
           lessons:
             lesson-4:
               key: урок-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опрос после окончания курса
         csp9-2022:
           lessons:
             Machine Learning:
@@ -8644,6 +8654,8 @@ ru:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Урок 9: Данные'
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 6:
@@ -8654,6 +8666,9 @@ ru:
               description_student: Обзор урока
             'Project: Innovation Simulation Part 7':
               description_student: Обзор урока
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос после окончания курса
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -8885,6 +8900,8 @@ ru:
               display_name: Содержимое
             lessonGroup-4:
               display_name: Песочницы
+            lessonGroup-5:
+              display_name: Опрос
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -8928,8 +8945,6 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
-            lessonGroup-4:
-              display_name: Песочницы
         csa3-2022:
           lessons:
             lesson-3:
@@ -8961,8 +8976,6 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
-            lessonGroup-4:
-              display_name: Песочницы
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -9266,7 +9279,7 @@ ru:
             lessonGroup-2:
               display_name: Содержимое
             lessonGroup-5:
-              display_name: Песочница
+              display_name: Опрос
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -9680,3 +9693,70 @@ ru:
           title: 'Занимательная информатика: опрос по окончании курса'
           description: В этом блоке содержатся опрос после окончания курса CS Discoveries. Этот блок можно назначить после того, как учащиеся завершат свой последний блок в CS Discoveries.
           student_description: В этом разделе содержится опрос, который должен проводиться после завершения блоков в CS Discoveries. Ваш преподаватель сообщит вам, когда будет необходимо принять участие в этом опросе.
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Введение в AI лаборатории
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Добро пожаловать
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: урок-4
+            lesson-3:
+              key: урок-3
+            lesson-8:
+              key: урок-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3

@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "백팩에 저장한 파일이 여기에 나올 것입니다.",
   "enablePeerReview": "또래 검토 가능",
   "errorJavabuilderConnectionGeneral": "서버에 연결하는 중 오류가 발생했습니다. 다시 시도하세요.",
-  "errorJavabuilderConnectionNotAuthorized": "Javalab에 접근할 권한이 없습니다. 로그인하거나 또는 섹션에 가입해야 합니까?",
   "errorLoadingClassmates": "급우 목록을 로딩하는 중 오류가 있었습니다. 다시 시도해 주세요.",
   "errorMediaImageLoadError": "이미지를 로딩하는 중 오류가 있었습니다.",
   "errorNeighborhoodInvalidGrid": "이웃 레벨을 로딩하는 중 오류가 있었습니다.  support@code.org로 연락하고 이 페이지 URL을 메세지에 넣으세요.",

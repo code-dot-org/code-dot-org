@@ -263,6 +263,12 @@ lt:
             '90': žemyn
             '180': kairėn
             '270': aukštyn
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': šiek tiek
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

@@ -9885,6 +9885,12 @@ az:
               display_name: Dərslər
             lessonGroup-3:
               display_name: Layihə
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Dərs 2
+            lesson-3:
+              name: Dərs 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -10512,12 +10518,13 @@ az:
           lesson_groups:
             csp_libraries:
               display_name: Kitabxanalar
-            lessonGroup-3:
-              display_name: Sorğu
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT yarat
         csp9-2022:
           lessons:
             Learning from Data:
@@ -10733,6 +10740,8 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Sorğu
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -10965,6 +10974,8 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Sorğu
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -11260,3 +11271,100 @@ az:
               display_name: Sorğu
         csd-post-survey-2022:
           title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+        aiml-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: Süni intellekt laboratoriyasına giriş
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              name: Modul 5
+              key: Modul 5
+            Module 6:
+              name: Modul 6
+              key: Modul 6
+            Module 7:
+              name: Modul 7
+              key: Modul 7
+            Module 8:
+              name: Modul 8
+              key: Modul 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Modul 1
+              key: Modul 1
+            Module 2:
+              name: Modul 2
+              key: Modul 2
+            Module 3:
+              name: Modul 3
+              key: Modul 3
+            Module 4:
+              name: Modul 4
+              key: Modul 4
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Xoş gəlmişsiniz
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2

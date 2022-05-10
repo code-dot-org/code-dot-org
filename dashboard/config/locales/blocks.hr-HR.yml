@@ -348,6 +348,12 @@ hr:
             '90': dolje
             '180': lijevo
             '270': gore
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': srednje
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

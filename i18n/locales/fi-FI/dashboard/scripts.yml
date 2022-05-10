@@ -3382,10 +3382,6 @@ fi:
               display_name: Silmukat
             csf_events:
               display_name: Tapahtumat
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Kysely
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -3449,6 +3445,9 @@ fi:
           lessons:
             lesson-9:
               name: Silmukat
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3487,6 +3486,10 @@ fi:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-8:
               display_name: Muuttujat
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         csa2-2022-exemplars:
           lessons:
             lesson-1:

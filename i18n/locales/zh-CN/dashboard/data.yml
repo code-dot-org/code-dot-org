@@ -612,6 +612,9 @@ zh-CN:
         csd_app_lab_events: CSD应用程序实验室活动
         csd_u6_circuit_playground: 物理计算
         csd_u6_input_output: 输入和输出
+        PL_CS_Journeys_Overview: CS旅行
+        csp_applab_parameters: 有参数的函数
+        CSA-PL-intro-to-arrays: 一维（1D）数组
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

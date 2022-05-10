@@ -273,6 +273,12 @@ fa:
             '90': پایین
             '180': سمت چپ
             '270': بالا
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': متوسط
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

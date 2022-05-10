@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:28:37.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -12,16 +8,21 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String laCity = \"Livingston\";\n    String txCity = \"Holiday Lakes\";\n    String miCity = \"Ubly\";\n    String paCity = \"East York\";\n\n    System.out.println(paCity.compareTo(miCity));\n    System.out.println(laCity.compareTo(txCity));\n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String laCity = \"Livingston\";\n    String txCity = \"Holiday Lakes\";\n    String miCity = \"Ubly\";\n    String paCity = \"East York\";\n\n    System.out.println(paCity.compareTo(miCity));\n    \n  }\n}",
         "isVisible": true
       }
     },
-    "contained_level_names": [
-      "CSA U6L8-L1 Predict_2022"
-    ],
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you notice about what the `compareTo()`(#e7e8ea) method returns? Try swapping the `paCity`(#e7e8ea) and `miCity`(#e7e8ea) then run the program to observe the results.\r\n\r\n2. Add the line `System.out.println(txCity.compareTo(paCity));`(#e7e8ea) then run the program. What do you notice about what is printed?\r\n\r\n3. Try comparing different combinations of `String`(#e7e8ea)s. Run the program after each change to observe the results.",
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 68,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:37.573+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L1\\\"\"],\"cloned_from\":\"CSA U6L8-L1\"}]"
+  "created_at": "2022-02-26T00:28:37.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:37.573+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L1\\\"\"],\"cloned_from\":\"CSA U6L8-L1\"},{\"changed_at\":\"2022-05-06 15:26:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:28:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:30:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
