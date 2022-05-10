@@ -23,7 +23,7 @@ module UserHelpers
     # Throw random darts of increasing length (3 to 7 digits) to find an unused suffix.
     (2..6).each do |exponent|
       min_index = 10**exponent
-      max_index = 10**(exponent + 1) - 1
+      max_index = (10**(exponent + 1)) - 1
       2.times do |_i|
         suffix = Random.rand(min_index..max_index)
         # Truncate generated username to max allowed length.

@@ -1535,7 +1535,7 @@ FactoryGirl.define do
       country 'United States'
       postal_code '98109'
       latitude 47.620470
-      longitude (-122.349181)
+      longitude(-122.349181)
     end
 
     # Sydney Opera House
@@ -1544,7 +1544,7 @@ FactoryGirl.define do
       state 'New South Wales'
       country 'Australia'
       postal_code '2000'
-      latitude (-33.859100)
+      latitude(-33.859100)
       longitude 151.200200
     end
   end
@@ -1634,7 +1634,7 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_pardot_memory do
-    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}

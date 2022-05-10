@@ -100,7 +100,7 @@ class FirehoseClient
       @request_overhead + records.each_with_index.sum do |record, i|
         RECORD_OVERHEAD +
           # Base64-converted data is 4/3 the size of the original content.
-          4 * (record.bytesize / 3.to_f).ceil +
+          (4 * (record.bytesize / 3.to_f).ceil) +
           # Commas separating Records in the array (one less than length).
           (i.zero? ? 0 : 1)
       end
