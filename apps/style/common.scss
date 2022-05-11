@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "color";
 @import "font";
 @import "curriculum/markdown";
@@ -294,7 +296,7 @@ button.arrow:disabled {
   top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
-  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  min-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
   direction: ltr;
   z-index: 1;
 }
@@ -458,7 +460,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @mixin studio-dpad-container-width($width) {
-  $scale: $width / 400px;
+  $scale: math.div($width, 400px);
   #studio-dpad-container.responsive > * {
     -webkit-transform: scale($scale);
     -ms-transform: scale($scale);
@@ -966,7 +968,7 @@ html[dir="RTL"] .prompt-icon-cell {
 }
 
 $workspace-header-button-height: 24px;
-$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) / 2;
+$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
 .workspace-header-button {
   cursor: pointer;
   float: right;

@@ -44,7 +44,7 @@ class VerticalImageResourceCard extends Component {
       ? {...styles.jumboCard, ...cardHeight}
       : {...styles.card, ...cardHeight};
 
-    const imageHeight = hasAdjustableHeight ? {} : styles.cardHeight;
+    const imageHeight = hasAdjustableHeight ? {} : styles.imageHeight;
     const imageStyle = jumbo
       ? {...styles.jumboImage, ...imageHeight}
       : {...styles.image, ...imageHeight};
