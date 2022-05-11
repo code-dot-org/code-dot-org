@@ -82,7 +82,7 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
   gem 'codecov', require: false
   gem 'fakeredis', require: false

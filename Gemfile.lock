@@ -352,8 +352,8 @@ GEM
       activerecord (~> 6.0.0)
     concurrent-ruby (1.1.9)
     connection_pool (2.2.1)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     css_parser (1.10.0)
       addressable
@@ -484,7 +484,7 @@ GEM
       sysexits (~> 1.1)
     hammerspace (0.1.7)
       gnista (~> 1.0.1)
-    hashdiff (0.3.7)
+    hashdiff (1.0.1)
     hashery (2.1.2)
     hashie (3.6.0)
     highline (1.6.21)
@@ -782,7 +782,6 @@ GEM
     ruby_parser (3.18.1)
       sexp_processor (~> 4.16)
     rubyzip (1.2.2)
-    safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -900,10 +899,10 @@ GEM
       activesupport
       httpclient (>= 2.4)
       multi_json
-    webmock (3.3.0)
-      addressable (>= 2.3.6)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -1088,7 +1087,7 @@ DEPENDENCIES
   vcr
   web-console
   webdrivers (~> 3.0)
-  webmock
+  webmock (~> 3.8)
   xxhash
   youtube-dl.rb
 
