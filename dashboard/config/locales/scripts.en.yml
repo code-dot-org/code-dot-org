@@ -18018,6 +18018,12 @@ en:
               name: Module 7
             Self Paced Playground:
               name: Self-Paced Playground
+            "[TEMPLATE] Introduction to":
+              name: "[TEMPLATE] Introduction to..."
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Content lessons"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Unit Wrap Up"
           student_description: ''
           name: jess-test-script
         csd2-virtual:
@@ -34172,6 +34178,8 @@ en:
               name: Model Lesson 2 - Unit 2 Lesson 2
               description_student: "**You will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. "
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 2: Intro to HTML. This lesson will provide participants with an introduction to HTML and the Web Lab programming environment. This model lesson will also highlight the importance of student exploration before direct instruction in a CS Discoveries lesson.\n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes"
+            Navigating support:
+              name: Navigating support
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -34437,7 +34445,7 @@ en:
               description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work."
               description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 4 and a space to debrief the asynchronous work from Day 3. \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work.\n\n**Suggested time:** 15 minutes"
             lesson-5:
-              name: TLO 6 - Unit 6 Lesson 3 - delete
+              name: Curriculum Investigation
               description_student: "**You will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. "
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 6 Lesson 3: Updating Screen Elements. In this lesson, participants explore how to use events to update elements on the screen in App Lab. During the TLO debrief, participants will share ideas for managing classroom sets of hardware. \n\n**Participants will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. \n\n**Suggested time:** 60 minutes"
             lesson-6:
@@ -34475,7 +34483,7 @@ en:
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
               description_teacher: "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience. \n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 5 minutes"
             Updating Screen Elements:
-              name: Updating Screen Elements
+              name: TLO 6 - Unit 6 Lesson 3
               description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
               description_teacher: |-
                 Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
@@ -37637,3 +37645,16 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+        csa-pl-standalone-code-2022:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+          lesson_groups: {}
+          name: csa-pl-standalone-code-2022
+          title: CSA Professional Learning Coding Projects
+          description_audience: ''
+          description_short: ''
+          description: Workshop participants will be able to see example projects and code during PL from the neighborhood, console, and theater.
+          student_description: ''
