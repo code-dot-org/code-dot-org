@@ -144,7 +144,7 @@ describe('ProgrammingExpressionsTable', () => {
 
   it('shows table with programming expressions after load', () => {
     fetchStub
-      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} />
@@ -160,7 +160,7 @@ describe('ProgrammingExpressionsTable', () => {
 
   it('loads data but doesnt show expressions if hidden is true', () => {
     fetchStub
-      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} hidden />
@@ -175,7 +175,7 @@ describe('ProgrammingExpressionsTable', () => {
 
   it('shows confirmation dialog before destroying expression', () => {
     fetchStub
-      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setImmediate(resolve)).then(() => {
@@ -195,7 +195,7 @@ describe('ProgrammingExpressionsTable', () => {
 
   it('shows clone dialog to clone expression', () => {
     fetchStub
-      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setImmediate(resolve)).then(() => {
