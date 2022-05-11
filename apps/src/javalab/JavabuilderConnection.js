@@ -25,7 +25,8 @@ export default class JavabuilderConnection {
     executionType,
     miniAppType,
     currentUser,
-    onMarkdownLog
+    onMarkdownLog,
+    csrfToken
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -40,6 +41,7 @@ export default class JavabuilderConnection {
     this.miniAppType = miniAppType;
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
+    this.csrfToken = csrfToken;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -62,6 +64,7 @@ export default class JavabuilderConnection {
   // sources based on a channel id.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrideSources(overrideSources) {
+    // block if no csrf token?
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
 
@@ -70,7 +73,8 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_sources',
       requestData,
-      /* checkProjectEdited */ false
+      /* checkProjectEdited */ false,
+      /* usePostRequest */ true
     );
   }
 
@@ -90,7 +94,7 @@ export default class JavabuilderConnection {
     );
   }
 
-  connectJavabuilderHelper(url, data, checkProjectEdited) {
+  connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -102,12 +106,21 @@ export default class JavabuilderConnection {
       return;
     }
 
-    const ajaxPayload = {
-      url: url,
-      type: 'post',
-      contentType: 'application/json',
-      data: JSON.stringify(data)
-    };
+    const ajaxPayload = usePostRequest
+      ? {
+          url: url,
+          type: 'post',
+          data: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': this.csrfToken
+          }
+        }
+      : {
+          url: url,
+          type: 'get',
+          data: data
+        };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();

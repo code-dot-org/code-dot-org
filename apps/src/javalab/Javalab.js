@@ -375,7 +375,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     executionType,
     this.level.csaViewMode,
     getStore().getState().currentUser,
-    this.onMarkdownMessage
+    this.onMarkdownMessage,
+    this.csrf_token
   );
 
   let connectToJavabuilder;
