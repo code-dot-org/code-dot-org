@@ -77,9 +77,7 @@ export default class RecentCourses extends Component {
               isProfessionalLearningCourse={isProfessionalLearningCourse}
             />
           )}
-          {!isTeacher && hasFeedback && !isProfessionalLearningCourse && (
-            <ViewFeedback />
-          )}
+          {hasFeedback && !isProfessionalLearningCourse && <ViewFeedback />}
           {!isProfessionalLearningCourse && (
             <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
           )}
