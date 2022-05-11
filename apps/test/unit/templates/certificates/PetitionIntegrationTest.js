@@ -25,19 +25,6 @@ describe('Petition', () => {
     }
   };
 
-  const minimalDataShape = {
-    name_s: '',
-    email_s: '',
-    zip_code_or_country_s: '',
-    age_i: '',
-    role_s: 'other'
-  };
-
-  const ageSafeData = {
-    name_s: '',
-    email_s: 'anonymous@code.org'
-  };
-
   const addInputsToPetition = (wrapper, inputs) =>
     Object.keys(inputs).forEach(name => {
       wrapper
@@ -48,7 +35,11 @@ describe('Petition', () => {
     });
 
   const expectedDataFromInputs = inputs => ({
-    ...minimalDataShape,
+    name_s: '',
+    email_s: '',
+    zip_code_or_country_s: '',
+    age_i: '',
+    role_s: 'other',
     ...mapValues(inputs, input => input.target_value)
   });
 
@@ -106,7 +97,34 @@ describe('Petition', () => {
     const serverCalledWith = $.ajax.getCall(0).args[0];
     expect(serverCalledWith.data).to.deep.equal({
       ...expectedDataFromInputs(inputs),
-      ...ageSafeData
+      name_s: '',
+      email_s: 'anonymous@code.org'
+    });
+  });
+  it('sends request with all inputs filled', () => {
+    const petition = mount(
+      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
+    );
+    const inputs = {
+      ...minimumInputs,
+      role_s: {
+        tag: 'select',
+        id: 'profession',
+        target_value: 'Software Engineer'
+      },
+      zip_code_or_country_s: {
+        tag: 'input',
+        id: 'zip-or-country',
+        target_value: 'MX'
+      }
+    };
+    addInputsToPetition(petition, inputs);
+    submitForm(petition);
+
+    const serverCalledWith = $.ajax.getCall(0).args[0];
+    expect(serverCalledWith.data).to.deep.equal({
+      ...expectedDataFromInputs(inputs),
+      role_s: 'engineer' // The 'role' value has a consistent name regardless of language
     });
   });
 });
