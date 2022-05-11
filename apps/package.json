@@ -272,7 +272,7 @@
     "selectize": "^0.12.4",
     "snack-build": "0.0.1",
     "snack-sdk": "2.3.6",
-    "survey-react": "^1.9.28",
+    "survey-react": "1.7.4",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
