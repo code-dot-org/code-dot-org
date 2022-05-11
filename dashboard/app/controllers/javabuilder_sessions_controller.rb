@@ -74,9 +74,9 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    use_dashboard_sources = 'false'
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
+    can_access_dashboard_assets = !rack_env?(:development)
 
     # Set the IAT a little in the past to account for time drift between environments
     issued_at_time = (Time.now - 5.seconds).to_i
@@ -91,9 +91,9 @@ class JavabuilderSessionsController < ApplicationController
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
-      use_dashboard_sources: use_dashboard_sources,
       options: options,
-      verified_teachers: teacher_list
+      verified_teachers: teacher_list,
+      can_access_dashboard_assets: can_access_dashboard_assets
     }.merge(additional_payload)
 
     log_token_creation(payload)
