@@ -3,6 +3,10 @@ inherit_from:
   - .rubocop_new.yml
   - .rubocop_todo.yml
 
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 AllCops:
   SuggestExtensions: false
   Exclude:
