@@ -129,7 +129,7 @@ describe('Petition on submit', () => {
 
     sinon.assert.calledOnce(window.ga);
   });
-  it('does not report to google analytics if submit unsuccessful', () => {
+  it('does not report to google analytics if unsuccessful submit', () => {
     const petition = mountPetition();
     submitForm(petition);
     sinon.assert.notCalled(window.ga);
