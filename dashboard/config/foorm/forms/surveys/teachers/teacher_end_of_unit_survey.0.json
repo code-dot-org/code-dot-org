@@ -1,6 +1,5 @@
 {
   "title": "Code.org CSA Teacher End-of-Unit Survey",
-  "description": "Unit {unit_number} - {unit_name}",
   "logoPosition": "right",
   "pages": [
     {
@@ -71,18 +70,18 @@
           "startWithNewLine": false,
           "innerIndent": 3,
           "indent": 3,
-          "visible": "true"
+          "visible": "false"
+        },
+        {
+          "type": "html",
+          "name": "unit_instructions",
+          "html": " <h3>Please tell us your overall thoughts about teaching this unit.</h3>"
         },
         {
           "type": "html",
           "name": "unit_num_name_heading",
           "html": "<h2>Unit {unit_number} - {unit_name}</h2>",
           "visibleIf": "{unit_number} notempty"
-        },
-        {
-          "type": "html",
-          "name": "unit_instructions",
-          "html": " <h3>Please tell us your overall thoughts about teaching this unit.</h3>"
         },
         {
           "type": "rating",
