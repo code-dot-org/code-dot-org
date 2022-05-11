@@ -49,6 +49,9 @@ describe('Petition on submit', () => {
       .props()
       .onSubmit({preventDefault: () => {}});
 
+  const mountPetition = () =>
+    mount(<PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />);
+
   beforeEach(() => {
     sinon.spy($, 'ajax');
     window.ga = sinon.fake();
@@ -60,17 +63,13 @@ describe('Petition on submit', () => {
   });
 
   it('does not send request if there are invalid fields', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     submitForm(petition);
 
     expect($.ajax).to.not.have.been.called;
   });
   it('sends request if all required fields are valid', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
@@ -80,9 +79,7 @@ describe('Petition on submit', () => {
     );
   });
   it('sends request with name and email anonymized if under 16', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     const inputs = {
       ...minimumInputs,
       age_i: {
@@ -102,9 +99,7 @@ describe('Petition on submit', () => {
     });
   });
   it('sends request with all inputs filled', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     const inputs = {
       ...minimumInputs,
       role_s: {
@@ -128,18 +123,14 @@ describe('Petition on submit', () => {
     });
   });
   it('reports to google analytics if successful submit', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
     sinon.assert.calledOnce(window.ga);
   });
   it('does not report to google analytics if submit unsuccessful', () => {
-    const petition = mount(
-      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
-    );
+    const petition = mountPetition();
     submitForm(petition);
     sinon.assert.notCalled(window.ga);
   });
