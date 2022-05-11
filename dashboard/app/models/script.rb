@@ -1599,7 +1599,7 @@ class Script < ApplicationRecord
   #   User#get_hidden_script_ids, and satisfies the input format of
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
-    return {} unless user&.teacher?
+    return {} unless user && can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
     hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end
