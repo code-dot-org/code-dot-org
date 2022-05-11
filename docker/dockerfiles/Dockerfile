@@ -140,8 +140,8 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # We need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 # TODO: consolidate apt-get installs
-RUN sudo apt-get install -y software-properties-common && sudo add-apt-repository ppa:git-core/ppa && sudo apt-get update && sudo apt-get install -y git
-RUN sudo apt-get install -y jq
+RUN sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository ppa:git-core/ppa
+RUN sudo apt-get update && sudo apt-get install -y git jq
 
 # en_US.UTF-8 locale not available by default
 RUN sudo apt-get install -y locales
