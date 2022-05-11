@@ -87,14 +87,34 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_equal "{\"useNeighborhood\":\"true\"}", decoded_token[0]['options']
   end
 
-  test 'student of authorized teacher can get access token' do
+  test 'student of authorized teacher without csa section cannot get access token' do
     teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :forbidden
+  end
+
+  test 'student not in the authorized teachers csa section cannot get access token' do
+    csa_script = create(:csa_script)
+    teacher = create(:authorized_teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    create(:section, user: teacher, login_type: 'word', script: csa_script)
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :forbidden
+  end
+
+  test 'student of authorized teacher in csa section can get access token' do
+    teacher = create(:authorized_teacher)
+    csa_script = create(:csa_script)
+    section = create(:section, user: teacher, login_type: 'word', script: csa_script)
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
-    section.destroy
   end
 
   test 'student of non-authorized teacher cannot get access token' do
@@ -151,15 +171,18 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'student of verified teacher has correct verified_teachers parameter' do
+    csa_script = create(:csa_script)
     verified_teacher_1 = create(:authorized_teacher)
-    section_1 = create(:section, user: verified_teacher_1, login_type: 'word')
+    csa_section = create(:section, user: verified_teacher_1, login_type: 'word', script: csa_script)
     verified_teacher_2 = create(:authorized_teacher)
-    section_2 = create(:section, user: verified_teacher_2, login_type: 'word')
-    student_1 = create(:follower, section: section_1).student_user
-    create(:follower, section: section_2, student_user: student_1)
+    section_1 = create(:section, user: verified_teacher_2, login_type: 'word')
+    student_1 = create(:follower, section: csa_section).student_user
+    create(:follower, section: section_1, student_user: student_1)
+    # have verified teacher 2 also teach a csa section which student 1 is not assigned to.
+    create(:section, user: verified_teacher_2, login_type: 'word', script: csa_script)
     regular_teacher = create(:teacher)
-    section_3 = create(:section, user: regular_teacher, login_type: 'word')
-    create(:follower, section: section_3, student_user: student_1)
+    section_2 = create(:section, user: regular_teacher, login_type: 'word')
+    create(:follower, section: section_2, student_user: student_1)
 
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
@@ -171,13 +194,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
-    assert_equal 2, teachers.length
+    assert_equal 1, teachers.length
     assert teachers.include?((verified_teacher_1.id).to_s)
-    assert teachers.include?((verified_teacher_2.id).to_s)
+    # verified teacher 2 is not teaching the student csa
+    refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)
-
-    section_1.destroy
-    section_2.destroy
   end
 
   test 'levelbuilder has correct verified_teachers parameter' do
