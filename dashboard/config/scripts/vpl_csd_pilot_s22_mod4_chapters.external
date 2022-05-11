@@ -114,15 +114,16 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/1cb7783cc95f8c54e384b20ef6204b55-image-1627696963140.55.23 PM.png" alt="Image of a Circuit playground" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-**Chapter 1: Programming with Hardware** (630 minutes)
-* How does software interact with hardware?
-* How can computers sense and respond to their environment?
-* What kind of information can be communicated with hardware outputs?
+**Chapter 1: Inputs and Outputs** (630 minutes)
+* What inputs and outputs are available on a physical device?
+* What inputs and outputs are available on an app?
+* How can we create apps that use a physical device to control a digital app?
+
 
 **Chapter 2: Building Physical Prototypes** (665 minutes)
-* How do programmers work with larger amounts of similar values?
-* How can complex real-world information be represented in code?
+* How can a physical device use sensors to react to a physical environment?
 * How can simple hardware be used to develop innovative new products?
+
 
 
 </details>
