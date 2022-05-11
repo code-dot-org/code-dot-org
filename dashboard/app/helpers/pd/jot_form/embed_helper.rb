@@ -53,12 +53,12 @@ module Pd
       end
 
       def format_url_params(hash)
-        hash.map do |key, value|
+        hash.to_h do |key, value|
           [
             key.to_s,
             sanitize_value(value)
           ]
-        end.to_h.to_param
+        end.to_param
       end
 
       # JotForm doesn't accept the + sign in url params. It must be escaped with "{plusSign}".

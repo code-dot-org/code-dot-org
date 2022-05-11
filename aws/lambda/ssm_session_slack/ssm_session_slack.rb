@@ -54,7 +54,7 @@ def handler(event:, context:)
   begin
     tags = EC2.describe_tags(
       filters: [{name: 'resource-id', values: [instance_id]}]
-    ).tags.map {|x| [x.key, x.value]}.to_h
+    ).tags.to_h {|x| [x.key, x.value]}
     instance_name = tags['Name']
     unless instance_name
       stack_name = tags['aws:cloudformation:stack-name']

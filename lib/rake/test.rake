@@ -141,7 +141,7 @@ namespace :test do
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
         writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
-        database = writer.path[1..-1]
+        database = writer.path[1..]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
         mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"

@@ -98,7 +98,7 @@ def yamlize(hsh)
       v['properties'] = v['properties'].to_json
     end
   end
-  return hsh.to_yaml[4..-1]
+  return hsh.to_yaml[4..]
 end
 
 prefix = Rails.root.join('test/fixtures/')

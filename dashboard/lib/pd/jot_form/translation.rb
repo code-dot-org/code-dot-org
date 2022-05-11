@@ -148,12 +148,12 @@ module Pd
         # Answer json is in the form:
         #   question_id => {name, text, type, answer, ...}
         #   All we care about here is the answer.
-        answers = included_answers.map do |question_id, answer_data|
+        answers = included_answers.to_h do |question_id, answer_data|
           [
             question_id.to_i,
             strip_answer(answer_data['answer'])
           ]
-        end.to_h
+        end
 
         {
           form_id: @form_id,

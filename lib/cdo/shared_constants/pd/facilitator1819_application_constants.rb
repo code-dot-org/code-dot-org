@@ -151,6 +151,6 @@ module Pd
     }.freeze
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
-    ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+    ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.to_h {|k, v| [k, LABEL_OVERRIDES[k] || v]}.freeze
   end
 end

@@ -122,9 +122,9 @@ def get_i18n_strings(level)
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         description = function.at_xpath('./mutation/description')
-        parameters = function.xpath('./mutation/arg').map do |parameter|
+        parameters = function.xpath('./mutation/arg').to_h do |parameter|
           [parameter["name"], parameter["name"]]
-        end.to_h
+        end
         function_definition = Hash.new
         function_definition["name"] = name.content if name
         function_definition["description"] = description.content if description
@@ -426,9 +426,9 @@ def redact_level_file(source_path)
   source_data = JSON.load(File.open(source_path))
   return if source_data.blank?
 
-  redactable_data = source_data.map do |level_url, i18n_strings|
+  redactable_data = source_data.to_h do |level_url, i18n_strings|
     [level_url, select_redactable(i18n_strings)]
-  end.to_h
+  end
 
   backup_path = source_path.sub("source", "original")
   FileUtils.mkdir_p File.dirname(backup_path)
