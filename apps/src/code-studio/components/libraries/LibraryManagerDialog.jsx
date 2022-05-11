@@ -353,7 +353,7 @@ export class LibraryManagerDialog extends React.Component {
         >
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
+          <h2 style={styles.subHeader}>{i18n.libraryClassImport()}</h2>
           <div style={{textAlign: 'left'}}>
             <label style={{...styles.message, display: 'inline'}}>
               {i18n.showingLibrariesFromSection()}
@@ -372,7 +372,7 @@ export class LibraryManagerDialog extends React.Component {
             </select>
           </div>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
+          <h2 style={styles.subHeader}>{i18n.libraryIdImport()}</h2>
           <div style={styles.inputParent} id="ui-test-import-library">
             <input
               style={styles.linkBox}
@@ -408,7 +408,7 @@ const styles = {
   },
   linkBox: {
     cursor: 'auto',
-    height: '32px',
+    height: '22px',
     marginBottom: 0,
     flex: 1,
     maxWidth: 400
@@ -418,8 +418,13 @@ const styles = {
     fontSize: 24,
     marginTop: 20
   },
+  subHeader: {
+    textAlign: 'left',
+    fontSize: 18,
+    margin: DEFAULT_MARGIN
+  },
   libraryList: {
-    maxHeight: '140px',
+    maxHeight: '200px',
     overflowY: 'auto',
     borderBottom: `2px solid ${color.purple}`
   },
@@ -437,6 +442,8 @@ const styles = {
   },
   add: {
     margin: DEFAULT_MARGIN,
+    fontSize: 16,
+    padding: DEFAULT_MARGIN,
     color: color.dark_charcoal,
     borderColor: color.dark_charcoal,
     ':disabled': {
@@ -452,7 +459,7 @@ const styles = {
     color: color.red,
     textAlign: 'left',
     margin: DEFAULT_MARGIN,
-    minHeight: 30,
+    minHeight: 18,
     whiteSpace: 'pre-wrap',
     lineHeight: 1
   },
