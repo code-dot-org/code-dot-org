@@ -68,6 +68,14 @@ describe('Petition', () => {
     window.ga = undefined;
   });
 
+  it('does not send request if there are invalid fields', () => {
+    const petition = mount(
+      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
+    );
+    submitForm(petition);
+
+    expect($.ajax).to.not.have.been.called;
+  });
   it('sends request if all required fields are valid', () => {
     const petition = mount(
       <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
