@@ -4,6 +4,24 @@ es-MX:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        text: configurar el tamaño de todos los sprites a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': mediano
+            '2.00': grande
+            '3.00': extra grande
+      BadGuys_setSize_dropdown:
+        text: configurar el tamaño de {SPRITE} a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': mediano
+            '2.00': grande
+            '3.00': extra grande
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
@@ -1042,9 +1060,9 @@ es-MX:
             new Behavior(wandering, []): deambulando
             new Behavior(patrolling, []): patrullando
             new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
-              haciendo un bucle
+              haciendo un bucle (loop).
             new Behavior(moving_east_and_looping, []): moviéndose hacia el este y
-              haciendo un bucle
+              haciendo un bucle (loop).
             new Behavior(moving_north_and_looping, []): moviéndose hacia el norte
               y haciendo un bucle
             new Behavior(moving_south_and_looping, []): moviéndose hacia el sur y
@@ -1066,7 +1084,7 @@ es-MX:
         text: dibuja línea {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
@@ -1226,8 +1244,6 @@ es-MX:
             '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
-      gamelab_makeNewScaledSprite:
-        text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
@@ -1242,6 +1258,12 @@ es-MX:
             '90': abajo
             '180': izquierda
             '270': arriba
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': pequeño
+            '50': mediano
+            '100': grande
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 14:46:52 UTC",
+    "serialized_at": "2022-05-09 18:01:02 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -100,7 +100,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nStudents are introduced to the Creative Coding with the Console Project and evaluate requirements and examples to identify questions and key features. Students learn about project backlogs and benchmarks and set up their Project Planning Board by identifying some of the tasks they need to complete for the project.",
-        "preparation": "* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student",
+        "preparation": "* Print copies of the Unit 8 Guide (one for each student)\n* Print copies of the Creative Coding with the Console Project Planning Guide (one for each student)\n* Gather students' Project Backlog folders from the previous unit and a small stack of sticky notes (10-12) for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-1-project-planning/36319/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nYou have learned a lot about object-oriented programming and the Java programming language throughout the year. In this unit, you have the opportunity to use your new skills to create a program using the console that portrays a personal interest or solves a problem that you choose. The Creative Coding with the Console Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work."
       },
       "seeding_key": {
@@ -118,7 +118,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I determine the efficiency of an algorithm?**\n\nStudents have used searching in standard algorithms to find a target element in a list. In this lesson, students explore the linear search algorithm and how it can be applied to different data structures. Students learn how to use execution counts to determine the best, average, and worst cases and practice evaluating algorithms for their efficiency. Students then write user stories for their projects to identify required program features.",
-        "preparation": "* Print copies of the Unit 8 Guide (one for each student)\n* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)",
+        "preparation": "* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-2-searching/36318/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine the efficiency of an algorithm?**\n\nYou have used searching in standard algorithms to find a target element in a list. In this lesson, you explore the linear search algorithm and how it can be applied to different data structures. You learn how to use execution counts to determine the best, average, and worst cases and practice evaluating algorithms for their efficiency. You then write user stories for your project to identify required program features."
       },
       "seeding_key": {
@@ -136,7 +136,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How is the binary search more efficient than a linear search?**\n\nStudents discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students trace code for a binary search to evaluate its efficiency and compare it to the linear search. Students apply the binary search algorithm to solve problems in a variety of scenarios. Students then begin their initial plans for their Creative Coding with the Console Project.",
-        "preparation": "* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)",
+        "preparation": "* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-3-binary-search/36317/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is the binary search more efficient than a linear search?**\n\nYou discover a better searching algorithm that can perform more efficiently if the list is already sorted. You trace code for a binary search to evaluate its efficiency and compare it to the linear search. You apply the binary search algorithm to solve problems in a variety of scenarios. You then begin your initial plans for your Creative Coding with the Console Project."
       },
       "seeding_key": {
@@ -154,7 +154,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I implement the binary search recursively?**\n\nStudents revisit recursion and explore how the binary search algorithm can be implemented recursively. Students then practice implementing the binary search algorithm iteratively or recursively before finalizing their planning for their Creative Coding with the Console Project and participating in a peer review to receive feedback on their work.",
-        "preparation": "* Print copies of the Project Planning Feedback handout (one for each student)",
+        "preparation": "* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-4-recursive-binary-search/36316/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I implement the binary search recursively?**\n\nIn this lesson, you revisit recursion and explore how the binary search algorithm can be implemented recursively. You then practice implementing the binary search algorithm iteratively or recursively before finalize your planning for your Creative Coding with the Console Project and participating in a peer review to receive feedback on your work."
       },
       "seeding_key": {
@@ -172,7 +172,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I sort elements in a data structure?**\n\nStudents explore the selection sort algorithm and practice tracing the algorithm to evaluate its efficiency. Students identify the benefits and limitations of the selection sort algorithm, then practice implementing it in Java to sort elements.",
-        "preparation": "* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)",
+        "preparation": "* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-5-selection-sort/36315/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I sort elements in a data structure?**\n\nYou have learned that the binary search algorithm is more efficient than the linear search algorithm but requires the data to be sorted. In this lesson, you explore the selection sort algorithm and practice tracing it to evaluate its efficiency. You identify the benefits and limitations of the selection sort algorithm, then practice implementing it in Java to sort elements."
       },
       "seeding_key": {
@@ -190,7 +190,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nStudents explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. Students analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of the selection and insertion sort algorithms.",
-        "preparation": "* Print copies of the Sorting Comparison handout (one for each pair of students)",
+        "preparation": "* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-6-insertion-sort/36314/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nYou have used the selection sort algorithm to sort elements in a data structure. In this lesson, you explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. You analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of the selection and insertion sort algorithms."
       },
       "seeding_key": {
@@ -208,7 +208,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. Students identify the components of the algorithm and learn about helper functions. Students then trace the algorithm to understand its functionality and determine its efficiency using execution counts. Students then work through the tasks on their Project Planning Board to begin the development of their Creative Coding with the Console Project.",
-        "preparation": "* Print copies of the Merge Sort handout (one for each student)",
+        "preparation": "* Print copies of the Merge Sort handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-7-merge-sort/36313/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. You identify the components of the algorithm and learn about helper functions. You then trace the algorithm to understand its functionality and determine its efficiency using execution counts. You then work through the tasks on your Project Planning Board to begin the development of your Creative Coding with the Console Project."
       },
       "seeding_key": {
@@ -226,6 +226,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I implement algorithms involving multiple lists?**\n\nStudents explore traversing multiple lists at the same time by creating algorithms and tracing code involving multiple lists. Students identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games. Students then continue working through the tasks on their Project Planning Board to develop their Creative Coding with the Console Project.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-8-multiple-lists/36312/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I implement algorithms involving multiple lists?**\n\nYou explore traversing multiple lists simultaneously by creating algorithms and tracing code involving multiple lists. You identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games. You then continue working through the tasks on your Project Planning Board to develop your Creative Coding with the Console Project."
       },
       "seeding_key": {
@@ -243,7 +244,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I combine searching and sorting algorithms to solve problems?**\n\nStudents have explored searching and sorting algorithms, analyzed their efficiencies using execution counts, and implemented algorithms to work with multiple lists. Students plan and implement solutions using searching and sorting algorithms to solve problems involving one or more lists. Students then participate in a peer review to give and receive feedback on the progress they have made on their Creative Coding with the Console Project.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-9-searching-and-sorting/36311/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I combine searching and sorting algorithms to solve problems?**\n\nYou have explored searching and sorting algorithms, analyzed their efficiencies using execution counts, and implemented algorithms to work with multiple lists. You plan and implement solutions using searching and sorting algorithms to solve problems involving one or more lists. You then participate in a peer review to give and receive feedback on the progress you have made on your Creative Coding with the Console Project."
       },
       "seeding_key": {
@@ -260,6 +261,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-lesson-10-privacy-and-security/36310/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -276,7 +278,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nStudents continue to develop their Creative Coding Project to create a program that portrays a personal interest or solves a problem using the console. Students first self-assess their work to evaluate their progress in completing project requirements, then continue developing their projects. Students then conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-creative-coding-with-the-console-project/36309/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nYou continue to develop your Creative Coding Project to create a program that portrays a personal interest or solves a problem using the console. You first self-assess your work to evaluate your progress in completing project requirements, then continue developing your projects. You then conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks."
       },
       "seeding_key": {
@@ -294,7 +296,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I use the feedback I have received to prioritize the tasks I need to complete for my project?**\n\nIn the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Creative Coding with the Console Project.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-creative-coding-with-the-console-project/36309/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use the feedback I have received to prioritize the tasks I need to complete for my project?**\n\nIn the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Creative Coding with the Console Project."
       },
       "seeding_key": {
@@ -313,7 +315,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-creative-coding-with-the-console-project/36309/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -331,7 +333,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)",
+        "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-frq-practice/36308/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -350,7 +352,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-8-assessment/36307/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 8 Assessment."
       },
       "seeding_key": {
@@ -425,7 +427,7 @@
       "key": "e0ce1030-c7cd-47da-bfea-30331687d76d",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -439,7 +441,7 @@
       "key": "2a8cc407-c2ef-4da2-93b2-7750bf3181fe",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1103,10 +1105,23 @@
       "key": "ccd9b4de-551d-42e9-ae47-22ac9574b2a3",
       "position": 1,
       "properties": {
-        "name": "Creative Coding"
+        "description": "In the previous unit, you expanded your knowledge of methods. You also learned about recursion as we continued developing your software engineering skills. We will be learning more about how we can find and work with information in a data structure and continue to use software engineering characteristics and skills to make design decisions and develop more robust algorithms.",
+        "name": "Software Engineering Goals",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ccd9b4de-551d-42e9-ae47-22ac9574b2a3",
+        "lesson_activity.key": "e0ce1030-c7cd-47da-bfea-30331687d76d"
+      }
+    },
+    {
+      "key": "8f69f7bf-693e-4ee7-a82b-1567705ebf35",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 8 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 8 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals."
+      },
+      "seeding_key": {
+        "activity_section.key": "8f69f7bf-693e-4ee7-a82b-1567705ebf35",
         "lesson_activity.key": "e0ce1030-c7cd-47da-bfea-30331687d76d"
       }
     },
@@ -1210,7 +1225,7 @@
       "position": 8,
       "properties": {
         "description": "In the previous unit, we used a project management process similar to what is used by software engineers to help identify and manage tasks. For this project, we will continue to use this to plan and track our projects using a Project Planning Board. Using the list of common characteristics and key features you created and the project requirements, let's identify and plan the tasks we need to complete.",
-        "duration": "15",
+        "duration": "20",
         "name": "Project Planning and Brainstorming",
         "remarks": true
       },
@@ -1330,7 +1345,7 @@
       "key": "ca5f1747-f20b-4714-bc15-7fa8567697f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 8 Guide.\n\n**Group:** Place students in pairs.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Linear/Sequential Search"
       },
       "seeding_key": {
@@ -5654,6 +5669,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "unit_8_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "unit_8_presentation_slides"
       }
     },
@@ -5751,12 +5772,6 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "u8l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "unit_8_guide"
       }
     },
     {

@@ -4,6 +4,22 @@ uk:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': дуже маленький
+            '0.75': маленький
+            '1.00': середньо
+            '2.00': великий
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': дуже маленький
+            '0.75': маленький
+            '1.00': середньо
+            '2.00': великий
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
         options:
@@ -1043,7 +1059,7 @@ uk:
         text: будучи перетягуваним
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
@@ -1197,8 +1213,6 @@ uk:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
-      gamelab_makeNewScaledSprite:
-        text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
@@ -1210,6 +1224,12 @@ uk:
             '90': вниз
             '180': ліворуч
             '270': вгору
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': маленький
+            '50': середньо
+            '100': великий
       gamelab_mirrorSprite:
         text: повернути {SPRITE} у напрямку {DIRECTION}
         options:

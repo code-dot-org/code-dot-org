@@ -570,6 +570,7 @@ nl:
     how_it_works: 'Hoe het werkt'
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
+    cookie_notice: 'Cookiebeleid'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -633,6 +634,10 @@ nl:
       title: 'Dansfeest'
     dance-2019:
       title: 'Dansfeest'
+    hello-world:
+      title: 'Hallo Wereld'
+    poem-art:
+      title: 'Poëzie'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -778,13 +783,6 @@ nl:
     accept: "Accepteren"
     print: "Afdrukken"
     review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
-  donor_interstitial:
-    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
-    local_supporters: "Lokale ondersteuners"
-    global_supporters: "Globale ondersteuners"
-    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
-    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
-    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:

@@ -13,8 +13,12 @@ social:
   "twitter:image:src": "https://code.org/images/social-media/default-og-image.png"
 ---
 <link href="/css/marketing.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/donors.css">
 
 # Code.org 2021 Annual Report
+
+[<button>View PDF of this report</button>](/files/code.org-annual-report-2021.pdf)
+&nbsp;&nbsp;
 
 <h2 class="purple-block">Letter from Hadi</h2>
 
@@ -163,7 +167,7 @@ In early 2021, the Ministry of Education of Saudi Arabia—in collaboration with
 
 
 <h2 class="purple-block">Code.org by the Numbers</h2>
-Addressing diversity and equity issues is core to Code.org’s work, and is woven throughout our programs – from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among students from underrepresented racial and ethnic groups: Black, Hispanic/Latinx, Native American, and Pacific Islander.
+Addressing diversity and equity issues is core to Code.org’s work, and is woven throughout our programs – from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among students from underrepresented racial and ethnic groups: Black, Hispanic/Latino, Native American, and Pacific Islander.
 
 <figure class="centerspot">
   <img src="/images/AR2021/fit-580/diversitypiecharts2021.png" alt="Three pie chart graphs detailing diversity percentages of students that Code.org reaches: 48% Female or Gender-Expansive; 50% Underrepresented racial/ethnic groups; 46% Students qualifying for free or reduced-price lunch"/>
@@ -293,395 +297,259 @@ Code.org® is dedicated to the vision that every student in every school should 
 Code.org gratefully acknowledges the following supporters who have made generous commitments of $1,000 and above to support Code.org's fiscal year 2021 (January 1, 2021 - December 31, 2021). For more information or to learn how to partner with Code.org, please contact the Office of Development at <giving@code.org> or (206) 593-5521.
 
 <h2>Platinum Supporters ($3,000,000+)</h2>
-  <table class="donors featured">
-    <tbody>
-      <tr>
-        <td class="large">
-          <a href="https://www.amazon.com/" style="color: #7665a0" target="_blank">
-            <img class="large-img" src="/images/fit-200/avatars/amazon.jpg">
-          </a>
-        </td>
-        <td class="large">
-          <a href="http://www.microsoft.com" style="color: #7665a0" target="_blank">
-            <img class="large-img" src="/images/fit-200/avatars/microsoft.jpg">
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<section class="flex-container">
+  <img src="/images/fit-150/avatars/amazon.jpg" alt="Amazon logo" />
+  <img src="/images/fit-150/avatars/microsoft.jpg" alt="Microsoft logo" />
+  <p><strong>Anonymous</strong></p>
+</section>
 
-  <h2>Gold Supporters ($1,000,000+)</h2>
-  <table class="donors featured">
-    <tbody>
-      <tr>
-        <td class="large">
-          <a href="https://www.ballmergroup.org/" style="color: #7665a0" target="_blank">
-            <img class="large-img" src="/images/fit-200/avatars/ballmer_group.jpg">
-          </a>
-        </td>
-        <td class="large">
-          <a href="http://www.google.com" style="color: #7665a0" target="_blank">
-            <img class="large-img" src="/images/fit-200/avatars/google.png">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td class="large">
-          <p style="font-size: 16px;"><strong>Charlie Lee</strong></p>
-        </td>
-        <td class="large">
-          <p style="font-size: 16px;"><strong>Anonymous</strong></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<h2>Gold Supporters ($1,000,000+)</h2>
+<section class="flex-container logos">
+  <img src="/images/fit-150/avatars/ballmer_group.jpg" alt="Ballmer Group logo" />
+  <img src="/images/fit-150/avatars/google.png" alt="Google logo" />
+</section>
+<section class="flex-container text">
+  <p><strong>Charlie Lee</strong></p>
+  <p><strong>Anonymous</strong></p>
+</section>
 
-  <br />
+<section class="lists no-flex no-padding">
+  <section class="flex-container no-padding mobile-hide">
+    <h3>Institutional Supporters</h3>
+    <h3>Individual Supporters</h3>
+  </section>
 
-  <table class="donors">
-    <tbody>
-      <tr>
-        <th width="50%"><strong>Institutional Supporters</strong></th>
-        <th width="50%"><strong>Individual Supporters</strong></th>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$500,000+</th>
-      </tr>
-      <tr>
-        <td>Atlassian Foundation International</td>
-        <td>Rebecca and Alfred Lin</td>
-      </tr>
-      <tr>
-        <td>Benevity</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Cisco Systems Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Infosys Foundation USA</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Pluralsight</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$250,000+</th>
-      </tr>
-      <tr>
-        <td>Patrick J. McGovern Foundation</td>
-        <td>Hopper-Dean Foundation</td>
-      </tr>
-      <tr>
-        <td>WhaleRock Capital Management LLC</td>
-        <td>The Marie-Jos&eacute;e and Henry R. Kravis Foundation</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Vandana and Vishal Sikka</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Anonymous (2)</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$100,000+</th>
-      </tr>
-      <tr>
-        <td>Accenture</td>
-        <td>Gubrit Family Trust</td>
-      </tr>
-      <tr>
-        <td>AmazonSmile</td>
-        <td>Kaphan Foundation</td>
-      </tr>
-      <tr>
-        <td>Arizona Public Service Foundation</td>
-        <td>Kaveh Khosrowshahi</td>
-      </tr>
-      <tr>
-        <td>Koch Companies Community Fund</td>
-        <td>Bret and Karen Taylor</td>
-      </tr>
-      <tr>
-        <td>MUFG Union Bank Foundation</td>
-        <td>Harry Wagner</td>
-      </tr>
-      <tr>
-        <td>Northrop Grumman Foundation</td>
-        <td>Mr. Devin Wenig and Mrs. Cindy Wenig</td>
-      </tr>
-      <tr>
-        <td>Paypal Giving Fund</td>
-        <td>The Wilke Family Foundation</td>
-      </tr>
-      <tr>
-        <td>Pluralsight ONE Fund</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Zynga Inc.</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$50,000+</th>
-      </tr>
-      <tr>
-        <td>Craft Ventures</td>
-        <td>The Hindawi Charitable Fund</td>
-      </tr>
-      <tr>
-        <td>Fortive Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Motorola Solutions Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Tanium</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>TIBCO Software</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>UK Online Giving Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$25,000+</th>
-      </tr>
-      <tr>
-        <td>Deel, Inc.</td>
-        <td>Molly and Scott Forstall</td>
-      </tr>
-      <tr>
-        <td>Foundation for California's Technology &amp; Innovation Economy</td>
-        <td>Kelman-Lee Family</td>
-      </tr>
-      <tr>
-        <td>Radix</td>
-        <td>Louis and Mary Kay Smith Family Foundation</td>
-      </tr>
-      <tr>
-        <td>SimCorp</td>
-        <td>Mr. Jonathan David Perlow</td>
-      </tr>
-      <tr>
-        <td>UKG Inc.</td>
-        <td>Anonymous</td>
-      </tr>
-      <tr>
-        <td>WideOrbit</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$10,000+</th>
-      </tr>
-      <tr>
-        <td>Alaska Airlines</td>
-        <td>John P. Bevans</td>
-      </tr>
-      <tr>
-        <td>CompTIA</td>
-        <td>R. Martin Chavez</td>
-      </tr>
-      <tr>
-        <td>GoDaddy</td>
-        <td>John and Allison Danner</td>
-      </tr>
-      <tr>
-        <td>Network For Good</td>
-        <td>L'Aiglon Foundation</td>
-      </tr>
-      <tr>
-        <td>PricewaterhouseCoopers</td>
-        <td>Robins Nest Family Foundation</td>
-      </tr>
-      <tr>
-        <td>Quickbase Inc.</td>
-        <td>Craig Silverstein and Mary Obelnicki</td>
-      </tr>
-      <tr>
-        <td>Salesforce.org</td>
-        <td>Troper Wojcicki Foundation</td>
-      </tr>
-      <tr>
-        <td>Tango Card, Inc.</td>
-        <td>Anonymous</td>
-      </tr>
-      <tr>
-        <td>Winston &amp; Strawn LLP</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$5,000+</th>
-      </tr>
-      <tr>
-        <td>Bright Funds Foundation</td>
-        <td>Sahil Bloom</td>
-      </tr>
-      <tr>
-        <td>Consilio</td>
-        <td>Carl Schriever</td>
-      </tr>
-      <tr>
-        <td>Couponcause</td>
-        <td>Mr. Matthew McDonald Watkins and Mrs. Melanie Brown Watkins</td>
-      </tr>
-      <tr>
-        <td>Facebook Payments</td>
-        <td>Anonymous (3)</td>
-      </tr>
-      <tr>
-        <td>Greycroft Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Harvard Business Analytics Program</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>The KIND Foundation</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>King &amp; Spalding LLP</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>NBCUniversal</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>New Relic</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>SecureLink, Inc.</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Anonymous</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th colspan="2" class="sub">$1,000+</th>
-      </tr>
-      <tr>
-        <td>American Express Foundation Employee Giving</td>
-        <td>Adriaan Bouten</td>
-      </tr>
-      <tr>
-        <td>Apollo GraphQL</td>
-        <td>Gigi Brisson</td>
-      </tr>
-      <tr>
-        <td>BairesDev</td>
-        <td>Carr Lee Foundation</td>
-      </tr>
-      <tr>
-        <td>BrainGu LLC</td>
-        <td>Richard Caster&nbsp;</td>
-      </tr>
-      <tr>
-        <td>Cognia</td>
-        <td>Clatterbuck-Warner Donor Advised Fund</td>
-      </tr>
-      <tr>
-        <td>Enterprise Holdings Foundation</td>
-        <td>Jonah Cohen</td>
-      </tr>
-      <tr>
-        <td>Experts Exchange</td>
-        <td>Joel Conaway</td>
-      </tr>
-      <tr>
-        <td>Foundation for the Carolinas</td>
-        <td>Allen Conlon</td>
-      </tr>
-      <tr>
-        <td>The Giving Back Fund</td>
-        <td>Craig Dickinson</td>
-      </tr>
-      <tr>
-        <td>Greenwald Foundation</td>
-        <td>Aimee Eichelberger</td>
-      </tr>
-      <tr>
-        <td>Hack the Box</td>
-        <td>Jonathan Gayek</td>
-      </tr>
-      <tr>
-        <td>Mitchell International</td>
-        <td>Forrest Jordan</td>
-      </tr>
-      <tr>
-        <td>Munich Re Digital Partners</td>
-        <td>Edmond Lau</td>
-      </tr>
-      <tr>
-        <td>Ping Identity</td>
-        <td>David and Angela Longo</td>
-      </tr>
-      <tr>
-        <td>Quanex Foundation</td>
-        <td>Peri McDonald</td>
-      </tr>
-      <tr>
-        <td>The Red Hat Charitable Giving Fund of Triangle Community Foundation</td>
-        <td>Mr. Greg Isao Nakamoto and Mrs. Lauri Bortscheller Nakamoto</td>
-      </tr>
-      <tr>
-        <td>Stripe</td>
-        <td>Pratt Family Fund</td>
-      </tr>
-      <tr>
-        <td>Twitch Interactive Inc.</td>
-        <td>Nicholas Schneider</td>
-      </tr>
-      <tr>
-        <td>The Wonderful Company Foundation</td>
-        <td>Kirsten Schreiter</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Danny Sheridan</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Lawrence Tanimoto and Connie Guan</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Molly Tonnell</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Matthew Walker</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Jason Weill</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Kristin Yeoman</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>David Youngworth</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Anonymous (4)</td>
-      </tr>
-    </tbody>
-  </table>
+  <h4>$500,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Atlassian Foundation International</li>
+      <li>Benevity</li>
+      <li>Cisco Systems Foundation</li>
+      <li>Infosys Foundation USA</li>
+      <li>Pluralsight</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Rebecca and Alfred Lin</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$250,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Patrick J. McGovern Foundation</li>
+      <li>WhaleRock Capital Management LLC</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Hopper-Dean Foundation</li>
+      <li>The Marie-Josée and Henry R. Kravis Foundation</li>
+      <li>Vandana and Vishal Sikka</li>
+      <li>Anonymous (2)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$100,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Accenture</li>
+      <li>AmazonSmile</li>
+      <li>Arizona Public Service Foundation</li>
+      <li>Koch Companies Community Fund</li>
+      <li>MUFG Union Bank Foundation</li>
+      <li>Northrop Grumman Foundation</li>
+      <li>Paypal Giving Fund</li>
+      <li>Pluralsight ONE Fund</li>
+      <li>Zynga Inc.</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Gubrit Family Trust</li>
+      <li>Kaphan Foundation</li>
+      <li>Kaveh Khosrowshahi</li>
+      <li>Bret and Karen Taylor</li>
+      <li>Harry Wagner</li>
+      <li>Mr. Devin Wenig and Mrs. Cindy Wenig</li>
+      <li>The Wilke Family Foundation</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$50,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Craft Ventures</li>
+      <li>Fortive Foundation</li>
+      <li>Motorola Solutions Foundation</li>
+      <li>Tanium</li>
+      <li>TIBCO Software</li>
+      <li>UK Online Giving Foundation</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>The Hindawi Charitable Fund</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$25,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Deel, Inc.</li>
+      <li>Foundation for California's Technology & Innovation Economy</li>
+      <li>Radix</li>
+      <li>SimCorp</li>
+      <li>UKG Inc.</li>
+      <li>WideOrbit</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Molly and Scott Forstall</li>
+      <li>Kelman-Lee Family</li>
+      <li>Louis and Mary Kay Smith Family Foundation</li>
+      <li>Mr. Jonathan David Perlow</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$10,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Alaska Airlines</li>
+      <li>CompTIA</li>
+      <li>GoDaddy</li>
+      <li>Network For Good</li>
+      <li>PricewaterhouseCoopers</li>
+      <li>Quickbase Inc.</li>
+      <li>Salesforce.org</li>
+      <li>Tango Card, Inc.</li>
+      <li>Winston & Strawn LLP</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>John P. Bevans</li>
+      <li>R. Martin Chavez</li>
+      <li>John and Allison Danner</li>
+      <li>L'Aiglon Foundation</li>
+      <li>Robins Nest Family Foundation</li>
+      <li>Craig Silverstein and Mary Obelnicki</li>
+      <li>Troper Wojcicki Foundation</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$5,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Bright Funds Foundation</li>
+      <li>Consilio</li>
+      <li>Couponcause</li>
+      <li>Facebook Payments</li>
+      <li>Greycroft Foundation</li>
+      <li>Harvard Business Analytics Program</li>
+      <li>The KIND Foundation</li>
+      <li>King & Spalding LLP</li>
+      <li>NBCUniversal</li>
+      <li>New Relic</li>
+      <li>SecureLink, Inc.</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Sahil Bloom</li>
+      <li>Carl Schriever</li>
+      <li>Mr. Matthew McDonald Watkins and Mrs. Melanie Brown Watkins</li>
+      <li>Anonymous (3)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$1,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>American Express Foundation Employee Giving</li>
+      <li>Apollo GraphQL</li>
+      <li>BairesDev</li>
+      <li>BrainGu LLC</li>
+      <li>Cognia</li>
+      <li>Enterprise Holdings Foundation</li>
+      <li>Experts Exchange</li>
+      <li>Foundation for the Carolinas</li>
+      <li>The Giving Back Fund</li>
+      <li>Greenwald Foundation</li>
+      <li>Hack the Box</li>
+      <li>Mitchell International</li>
+      <li>Munich Re Digital Partners</li>
+      <li>Ping Identity</li>
+      <li>Quanex Foundation</li>
+      <li>The Red Hat Charitable Giving Fund of Triangle Community Foundation</li>
+      <li>Stripe</li>
+      <li>Twitch Interactive Inc.</li>
+      <li>The Wonderful Company Foundation</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Adriaan Bouten</li>
+      <li>Gigi Brisson</li>
+      <li>Carr Lee Foundation</li>
+      <li>Richard Caster</li>
+      <li>Clatterbuck-Warner Donor Advised Fund</li>
+      <li>Jonah Cohen</li>
+      <li>Joel Conaway</li>
+      <li>Allen Conlon</li>
+      <li>Craig Dickinson</li>
+      <li>Aimee Eichelberger</li>
+      <li>Jonathan Gayek</li>
+      <li>Forrest Jordan</li>
+      <li>Edmond Lau</li>
+      <li>David and Angela Longo</li>
+      <li>Peri McDonald</li>
+      <li>Mr. Greg Isao Nakamoto and Mrs. Lauri Bortscheller Nakamoto</li>
+      <li>Pratt Family Fund</li>
+      <li>Nicholas Schneider</li>
+      <li>Kirsten Schreiter</li>
+      <li>Danny Sheridan</li>
+      <li>Lawrence Tanimoto and Connie Guan</li>
+      <li>Molly Tonnell</li>
+      <li>Matthew Walker</li>
+      <li>Jason Weill</li>
+      <li>Kristin Yeoman</li>
+      <li>David Youngworth</li>
+      <li>Anonymous (4)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
+
 
 <h2>In-Kind Supporters</h2>
 Code.org gratefully acknowledges the following supporters who have made generous in-kind commitments to support Code.org's fiscal year 2021 (January 1,2021 - December 31, 2021). If you have any questions, please contact the Office of Development at <a href="mailto:giving@code.org">giving@code.org</a> or (206) 593-5521.

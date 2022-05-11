@@ -169,6 +169,7 @@ ro:
               name: Laborator de Joacă
               description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
+          name: playlab
         artist:
           title: Artist
           description: Desenează poze şi proiecte mişto cu Artistul!
@@ -179,6 +180,7 @@ ro:
               description_student: Creați imagini extraordinare programând Artistul.
               description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
           student_description: Desenează poze şi proiecte mişto cu Artistul!
+          name: artist
         hourofcode:
           title: Labirint Clasic
           description: Încercaţi bazele informaticii cu personaje din Angry Birds, Plants vs Zombies şi Scrat din Ice Age!
@@ -342,6 +344,7 @@ ro:
               name: Laborator de joacă Disney Infinity
               description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
+          name: infinitate
         algebrademo:
           title: Demo Algebră
           description: O mulțime de puzzle-uri pentru a demonstra mediul și limbajul de programare utilizat în Code.org CS în Algebră
@@ -511,6 +514,7 @@ ro:
               name: Puzzle
               description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
               description_teacher: În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.
+          name: puzzle
         step:
           title: Pas
           lessons:
@@ -994,7 +998,10 @@ ro:
             Wrap-Up:
               name: Revizuire
           student_description: 'Etapa 2 online: Studiu de vara mixt'
-        equity-pd: {}
+        equity-pd:
+          lessons:
+            Codeorg Equity PD:
+              name: Echitatea DP a Code.org
         science-PD2:
           lessons:
             Welcome!:
@@ -1130,6 +1137,7 @@ ro:
               name: Laboratorul Joaca Ice Age
               description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Creeaza o poveste sau un joc cu Laboratorul Joaca Ice Age!
+          name: era glaciară
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1196,6 +1204,7 @@ ro:
             Oceans:
               description_student: 'Rezumatul tutorialului: Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare.'
               description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în programare și informatică într-un mediu sigur și încurajator. În primul rând, elevii clasifică obiectele în „pește” sau „nu pește” pentru a încerca să scoată gunoiul din ocean. Apoi, elevii vor trebui să-și extindă setul de date de antrenament pentru a include alte creaturi marine care aparțin apei. În a doua parte a activității, elevii își vor alege propriile etichete pentru a le aplica pe imaginile cu pești generate aleatoriu. Aceste date de antrenament sunt folosite pentru un model de învățare automată care ar trebui apoi să poată eticheta noile imagini într-un mod cât mai exact.
+          name: oceane
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1409,6 +1418,8 @@ ro:
         CSDU3-Draft:
           description_short: Programare
           lessons:
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Velocity:
@@ -1709,6 +1720,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Variables:
@@ -2329,6 +2342,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd5-2017:
@@ -2346,6 +2361,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd1-old:
@@ -2376,6 +2393,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             'null':
@@ -2449,7 +2468,6 @@ ro:
               description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Bucle vesele”, în această etapă elevii vor folosi bucle pentru a strânge comori mai eficient pe Code.org.
             Loops in Artist:
               name: Cicluri cu Artistul
-              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
             'Events: The Big Event':
               name: 'Evenimente: Marele Eveniment'
               description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
@@ -3087,6 +3105,8 @@ ro:
           student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: alta
             Thanks:
               name: Mulţumim
             '': {}
@@ -3461,6 +3481,8 @@ ro:
             CSD pre-survey 21-2:
               name: Pre-cercetare CSD 21-22
             lesson-20: {}
+            CS Principles Pre-survey: {}
+            Course Survey: {}
         k1hoc2017: {}
         hero:
           title: 'Minecraft: Călătoria eroului'
@@ -3652,6 +3674,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         textbook: {}
@@ -3674,6 +3698,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             CS Discoveries End of Semester Survey: {}
@@ -5553,6 +5579,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             CS Discoveries End of Semester Survey: {}
@@ -6010,6 +6038,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -6477,6 +6507,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -7293,6 +7325,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         code-break:
@@ -7363,6 +7397,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -7449,6 +7485,8 @@ ro:
             lesson-4: {}
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Making Sprites:
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             End of Course Project:
@@ -7510,6 +7548,9 @@ ro:
             Velocity:
               key: Viteza
               name: Viteza
+            Collision Detection:
+              key: Detectarea coliziunilor
+              name: Detectarea coliziunilor
             Collisions:
               description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii abstracții pentru a crea alte abstracții?**\\\\r\n\\\\r\nÎn această lecții, elevii își programează spiritele să interacționeze în noi moduri. După o scurtă revizuire a modului în care au utilizat blocul [`isTouching`(#f78183)](/docs/gamelab/isTouching/), elevii vor căuta alte moduri în care două spirite pot interacționa. Apoi ei pot utiliza [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pentru a determina un spirit să îl împingă pe altul pe ecran înainte de a exersa cu cele patru blocuri de coliziune ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), și [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
@@ -8194,6 +8235,8 @@ ro:
               description_teacher: 'În această lecție, elevii vor învăța despre accesibilitate și despre importanța empatiei prin brainstorming și prin conceperea de soluții accesibile pentru aplicații ipotetice. '
             lesson-6:
               name: Prezentând Laboratorul de Desen
+            lesson-7:
+              name: Crearea de sprite-uri
             lesson-8:
               name: Spiriduși în acțiune
             lesson-5:
@@ -8323,6 +8366,8 @@ ro:
               name: Petrecere dansantă
               description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
               description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            lesson-2:
+              name: Crearea de sprite-uri
             lesson-3:
               name: Spiriduși în acțiune
           lesson_groups:
@@ -8414,6 +8459,8 @@ ro:
               name: Cum se Codifică o Simulare
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
+            Making Sprites:
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             introducing-spritelab:
@@ -8989,6 +9036,7 @@ ro:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: Navigând pe platforma de învățare de la Code.org
               description_teacher: |-
                 **Vei învăța cum să:**
 
@@ -9362,6 +9410,7 @@ ro:
               name: Prototipare
             lesson-19: {}
             lesson-20: {}
+            lesson-21: {}
           lesson_groups:
             lessonGroup-3:
               display_name: Șabloane
@@ -9401,7 +9450,11 @@ ro:
               display_name: Lecții
             lessonGroup-4:
               display_name: Demonstrații și Resurse
-        tesstest921: {}
+        tesstest921:
+          lessons:
+            lesson-2: {}
+            lesson-3:
+              name: Lecția 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -9905,6 +9958,8 @@ ro:
             lesson-3: {}
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
+            Making Sprites:
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -10172,6 +10227,8 @@ ro:
             Swimming Fish in Sprite Lab:
               description_student: Află cum poți crea și edita sprites.
               description_teacher: 'În această lecție, elevii vor învăța despre cele două concepte esențiale ale Laboratorului cu sprites: sprites și comportamente. Sprites sunt personaje sau obiecte de pe ecran pe care elevii le pot muta, modifica și manipula. Comportamentele sunt acțiuni pe care sprites le vor întreprinde încontinuu, până când sunt opriți.'
+            Making Sprites:
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             Virtual Pet with Sprite Lab:
@@ -10249,6 +10306,7 @@ ro:
               description_teacher: Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
             lesson-2:
               key: lecția-2
+              name: Crearea de sprite-uri
             lesson-3:
               key: lecția-3
               name: Spiriduși în acțiune
@@ -10301,6 +10359,7 @@ ro:
             Binary Numbers:
               name: Numerele binare
               key: Numerele binare
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
@@ -10314,6 +10373,7 @@ ro:
             Routers and Redundancy:
               name: Routere și redundanță
               key: Routere și redundanță
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit2_2020:
               display_name: "(vechi) Unitatea 2: Internet"
@@ -10322,7 +10382,10 @@ ro:
             Debugging:
               name: Corectare erori
               key: Corectare erori
+            EOU Student Facting Survey - [Course]: {}
         csp4-2022:
+          lessons:
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_variables:
               display_name: Variabile
@@ -10331,11 +10394,16 @@ ro:
             csp_functions:
               display_name: Funcţii
         csp5-2022:
+          lessons:
+            EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
           lesson_groups:
             csp_lists:
               display_name: Liste
             csp_loops:
               display_name: Bucle
+            lessonGroup-5:
+              display_name: Chestionar după curs
         courseb-2022:
           lessons:
             Digital Trails:
@@ -10562,12 +10630,29 @@ ro:
           student_description: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți!
           description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
           description_audience: 'Vârsta: 6-10 ani'
-        csp6-2022: {}
-        csp7-2022: {}
+        csp6-2022:
+          lessons:
+            EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp7-2022:
+          lessons:
+            CS Principles Post-Course Survey: {}
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp8-2022:
           lessons:
             lesson-4:
               key: lecția-4
+            EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp9-2022:
           lessons:
             Machine Learning:
@@ -10576,10 +10661,20 @@ ro:
               name: Învățare Automată
             lesson-10:
               key: lecția-10
+            EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
-        csp10-2022: {}
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp10-2022:
+          lessons:
+            EOU Student Facting Survey - [Course]: {}
+            CS Principles Post-Course Survey: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -10818,6 +10913,8 @@ ro:
           lessons:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
+            Making Sprites:
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -10868,6 +10965,7 @@ ro:
               key: lecția-6
             lesson-7:
               key: lecția-7
+              name: Crearea de sprite-uri
             lesson-8:
               key: lecția-8
               name: Spiriduși în acțiune
@@ -10934,44 +11032,72 @@ ro:
             lesson-21:
               name: Consolă
             lesson-22: {}
+            lesson-23: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutii cu nisip
+            lessonGroup-5:
+              display_name: Sondaj
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Să învățăm să glisăm și să fixăm
               name: Să învățăm să glisăm și să fixăm
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.
             Sequencing with Scrat:
               key: Secvențiere cu Scrat
               name: Secvențiere cu Scrat
+              description_student: Programează-l pe Scrat să ajungă la ghindă.
+              description_teacher: Cu ajutorul lui Scrat din Epoca de Gheață, elevii vor dezvolta algoritmi secvențiali cu ajutorul cărora o vor ajuta pe veverița simpatică să traverseze labirintul pentru a ajunge la ghinda care se află în partea opusă. Pentru a face acest lucru, elevii vor stivui blocuri de cod în succesiune liniară.
             Programming with Angry Birds:
               key: Programare cu Angry Birds
               name: Programare cu Angry Birds
             Programming with Rey and BB-8:
               key: Programare cu Rey și BB-8
               name: Programare cu Rey și BB-8
+              description_teacher: În această lecție, elevii își vor folosi noile abilități de programare în moduri mai complicate, pentru a-l ajuta pe BB-8 să ajungă la capătul unui traseu dificil.
             Programming with Harvester:
               key: Programare cu Culegătorul
               name: Programare cu Culegătorul
+              description_student: Ajută Culegătorul să strângă verdețurile care cresc pe cărare.
+              description_teacher: 'Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare. '
             Loops with Scrat:
               key: Bucle cu Scrat
               name: Bucle cu Scrat
+              description_student: Ajută-l pe Scrat să se deplaseze pe distanțe mai mari cu ajutorul buclelor.
             Loops with Laurel:
               key: Bucle cu Laurel
               name: Bucle cu Laurel
+              description_teacher: În această lecție, elevii aprofundează conceptul de bucle. Aici Aventuriera Laurel folosește bucle pentru a strâng comori într-o peșteră. Laurel are la dispoziție un bloc nou, denumit `ia comoara`, care o va ajuta în călătorie.
             Ocean Scene with Loops:
               key: Peisaj oceanic cu bucle
               name: Peisaj oceanic cu bucle
+              description_student: Folosește bucle și modele pentru a finaliza imaginile.
+              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
             Drawing Gardens with Loops:
               key: Cum să desenăm grădini cu ajutorul buclelor
               name: Cum să desenăm grădini cu ajutorul buclelor
+              description_student: Folosește modele și bucle pentru a finaliza imaginile.
+              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția online anterioară, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, elevii folosesc buclele pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
             On the Move with Events:
               key: Să ne mișcăm cu Evenimente
               name: Să ne mișcăm cu Evenimente
+              description_student: Creează-ți propriul joc sau propria poveste.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!
             A Royal Battle with Events:
               key: O bătălie regală cu Evenimente
               name: O bătălie regală cu Evenimente
+              description_student: Folosește evenimentele pentru a crea o poveste sau un joc interactiv.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!
+            Programming in with Angry Birds:
+              name: Programare cu Angry Birds
+            Programming in Harvester:
+              name: Programare cu Culegătorul
+              description_student: Ajută Culegătorul să strângă verdețurile care cresc pe cărare.
+              description_teacher: 'Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare. '
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -10979,6 +11105,10 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+          description_audience: 'Vârsta: 4-8 ani'
+          description_short: 'Introducere în știința calculatoarelor pentru copiii care încă nu au învățat să citească: o combinație a celor mai bune cursuri pentru grădiniță și clasa I.'
+          description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
         csa2-2022:
           lessons:
             lesson-6:
@@ -10991,8 +11121,30 @@ ro:
               display_name: Conţinut
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-4:
+              name: Elemente Matrice
             lesson-5:
               name: Bucle Pentru
+            lesson-6:
+              name: Algoritmi Matrice
+            lesson-7:
+              name: Perfecționat Pentru Bucle
+            lesson-8:
+              name: Variabile Statice și Constante
+            lesson-9:
+              name: Polimorfism
+            lesson-10:
+              name: Mai Mulți Algorimi ai Matricei
+            lesson-11:
+              name: Matrice Inversate
+            lesson-13:
+              name: Date pentru Proiectul Social Bun - Ziua 1
+            lesson-14:
+              name: Date pentru Proiectul Social Bun - Ziua 2
+            lesson-15:
+              name: Date pentru Proiectul Social Bun - Ziua 3
             lesson-16:
               name: Consolă
             lesson-17: {}
@@ -11028,10 +11180,18 @@ ro:
               name: Corectare erori
             lesson-20: {}
         csa4-2022:
+          lessons:
+            lesson-11:
+              name: Aleatoriu
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa5-2022:
+          lessons:
+            lesson-4: {}
+            lesson-7:
+              name: Perfecționat Pentru Bucle
+            lesson-8: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11063,12 +11223,51 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-        pltess: {}
+        pltess:
+          lessons:
+            lesson-2:
+              name: lecția 3
         self-paced-pl-csa1-2022: {}
         self-paced-pl-csa2-2022: {}
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
+            lesson-3:
+              name: Declarații IF (dacă) în Java
+              description_student: |-
+                **Tu vei:**
+
+                -   Evalua expresiile logice (booleane)
+                -   Scrie și citi instrucțiunile if, if-else, if-else-if-else
+                -   Descrie diferența dintre operatorul de atribuire și operatorul de comparație
+
+                **Timp estimat:** 90 minute
+              description_teacher: |-
+                **Tu vei:**
+
+                -   Evalua expresiile logice (booleane)
+                -   Scrie și citi instrucțiunile if, if-else, if-else-if-else
+                -   Descrie diferența dintre operatorul de atribuire și operatorul de comparație
+
+                **Timp estimat:** 90 minute
+            lesson-4:
+              name: Bucle în Java
+              description_student: |-
+                **You will:**
+
+                 Citi, scrie și corecta pentru bucle în Java
+
+                **Timp estimat:** 90 minute
+              description_teacher: |-
+                **You will:**
+
+                 Citi, scrie și corecta pentru bucle în Java
+
+                **Timp estimat:** 90 minute
+            lesson-5:
+              name: Matrice în Java
+              description_student: "**Tu vei:**\n\n-   Declara și inițializa o matrice 1D de tipuri de date primitive \n-   Accesa și modifica elemente într-o matrice\n-   Cerceta o matrice\n\n**Timp estimat:** 120 minute"
+              description_teacher: "**Tu vei:**\n\n-   Declara și inițializa o matrice 1D de tipuri de date primitive \n-   Accesa și modifica elemente într-o matrice\n-   Cerceta o matrice\n\n**Timp estimat:** 120 minute"
         csa7-pilot-extra:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -11165,6 +11364,7 @@ ro:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-3: {}
         csd6-projects:
           lessons:
             'Project: Human Device Interaction': {}
@@ -11179,6 +11379,9 @@ ro:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
               key: Prezentând Laboratorul de Desen
+            Making Sprites:
+              name: Crearea de sprite-uri
+              key: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
               key: Spiriduși în acțiune
@@ -11306,7 +11509,7 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
             lessonGroup-5:
-              display_name: Cutie cu nisip
+              display_name: Sondaj
         ui-test-csa-family-script: {}
         csa-preview:
           lessons:
@@ -11315,16 +11518,78 @@ ro:
             lesson-3: {}
         vpl-csd1-summer-pilot-2022:
           lessons:
-            lesson-3: {}
-            lesson-9:
-              name: Planificare lecție
+            lesson-4:
+              description_student: |-
+                **Tu vei:**
+
+                -   Câștiga un nivel ridicat de înțelegere a materiei Descoperiri CS.
+              description_teacher: "**Rezumat:**\nAceste activități asincrone vor oferi participanților o imagine de ansamblu la nivel înalt a disciplinei Descoperiri CS, inclusiv o imagine de ansamblu la nivel înalt a conținutului și instrumentelor cursului, o prezentare generală a modului în care este structurat cursul și o previzualizare a modului în care procesul de rezolvare a problemelor este utilizat pe parcursul cursului. \n\n**Participanții vor:**\n\n-   Dobândi un nivel ridicat de înțelegere a disciplinei Descoperiri CS. \n\n**Timp sugerat:** 40 minute"
+            lesson-5:
+              name: Interogare Asincronă
+            lesson-6:
+              name: Model Lecția 2 - Unitatea 2 Lecția 2
+            lesson-7:
+              name: Identitate
+            lesson-8:
+              name: Atribuirea Lecției
+            lesson-10:
+              description_student: |-
+                **Tu vrei:**
+
+                -   Vei lua în considerare rolul tău de profesor într-o clasă Descoperiri CS.
+              description_teacher: "**Rezumat:**\nAceste activități asincrone le vor oferi participanților o introducere în rolul profesorului ca elev principal. Participanții vor fi îndemnați să se gândească la modul în care experiențele și convingerile lor despre CS influențează modul în care își văd rolul de profesor într-o clasă de CS. Această reflecție îi va pregăti pe participanți pentru sesiunea de identitate care va avea loc mai târziu în cadrul atelierului. \n\n**Participanții vor:**\n\n-   Lua în considerare rolul lor de profesor într-o clasă Descoperiri CS. \n\n**Timp sugerat:** 20 minute"
+            lesson-11:
+              name: Încheiere
+            Intro to HTML:
+              name: Model Lecția 2 - Unitatea 2 Lecția 2
         vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-        vpl-csd3-summer-pilot-2022: {}
-        vpl-csd4-summer-pilot-2022: {}
-        vpl-csd5-summer-pilot-2022: {}
+            lesson-3:
+              name: Planificare lecție
+            lesson-4:
+              name: Prep Asincronă
+            lesson-6:
+              name: Interogare Asincronă
+            lesson-9:
+              name: Încheiere
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Interogare Asincronă
+            lesson-8:
+              name: Încheiere
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Concluzia Unității"
+              description_student: "**Tu vei:**\n\n-   Explora proiectele sfârșitului de capitol. \n\n**Timp sugerat:** 10 minute"
+              description_teacher: "**Tu vei:**\n\n-   Explora proiectele sfârșitului de capitol. \n\n**Timp sugerat:** 10 minute"
+            lesson-3:
+              name: "[TEMPLATE] Lecții de conținut"
+              description_student: |-
+                **Tu vei:**
+
+                -   Insera obiectivele lecției.
+
+                **Timp sugerat:** \_\_\_\_ minute
+              description_teacher: |-
+                **Tu vei:**
+
+                -   Insera obiectivele lecției.
+
+                **Timp sugerat:** \_\_\_\_ minute
+            lesson-7:
+              name: Prep Asincronă
+            lesson-11:
+              name: Interogare Asincronă
+            lesson-14:
+              name: Încheiere
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Prep Asincronă
+            lesson-6:
+              name: Interogare Asincronă
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -11385,17 +11650,396 @@ ro:
               key: Planificare lecție
             Implementation Approaches and Barriers: {}
             Next steps: {}
-        vpl-csd1-ci-pilot-2022: {}
-        vpl-csd2-ci-pilot-2022: {}
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+          title: 'Modul 1: Pregătirea Predării Rezolvarea Problemelor și Calculatoarele'
+          description: Acest modul de învățare profesională are rolul să te ajute să îți pregătești modul de predare a unității Code.org Rezolvarea Problemelor și Calculatoarele.
+          student_description: Acest modul de învățare profesională are rolul să te ajute să îți pregătești modul de predare a unității Code.org Rezolvarea Problemelor și Calculatoarele.
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introducere în Dezvoltarea unui Web
+              description_student: |-
+                **Tu vei:**
+
+                -   Obține o introducere în unitatea code.org de Dezvoltare a unui Web.
+                -   Obține o privire anticipată a primei săptămâni a conținutului unității Dezvoltarea unui Web.
+
+                **Timp sugerat:** 10 minute
+              description_teacher: |-
+                **Tu vei:**
+
+                -   Obține o introducere în unitatea code.org de Dezvoltare a unui Web.
+                -   Obține o privire anticipată a primei săptămâni a conținutului unității Dezvoltarea unui Web.
+
+                **Timp sugerat:** 10 minute
+            lesson-2:
+              name: Construiește un webswite cu HTML
+              description_student: "**Tu vei:**\n\n-   Obține o introducere în utilizarea Web Lab.\n-   Adăuga structură la o pagină web utilizând HML. \n-   Adăua imagini la o pagină web. \n\n**Timp sugerat:** 30 minute"
+              description_teacher: "**Tu vei:**\n\n-   Obține o introducere în utilizarea Web Lab.\n-   Adăuga structură la o pagină web utilizând HML. \n-   Adăua imagini la o pagină web. \n\n**Timp sugerat:** 30 minute"
+            lesson-3:
+              name: Stilizează un site cu CSS
+              description_student: |-
+                **Tu vei:**
+
+                -   Stiliza textul unei pagini web folosind CSS.
+                -   Conectarea unei foi de stil CSS la indexul paginii web.
+                -   Explora proprietăți suplimentare pentru a stiliza elementele unei pagini web.
+
+                **Timp sugerat:** 25 minute
+              description_teacher: |-
+                **Tu vei:**
+
+                -   Stiliza textul unei pagini web folosind CSS.
+                -   Conectarea unei foi de stil CSS la indexul paginii web.
+                -   Explora proprietăți suplimentare pentru a stiliza elementele unei pagini web.
+
+                **Timp sugerat:** 25 minute
+            lesson-4:
+              name: Ia în considerare rolurile și răspunderile privind mass-media digitale
+              description_student: "**Tu vei:**\n\n-   Analiza modurile în care elevii vor lucra să înțeleagă rolul și responsabilitățile lor atât de creatori, cât și de consumatori de mass-media digitală. \n\n**Timp sugerat:** 15 minute"
+              description_teacher: "**Tu vei:**\n\n-   Analiza modurile în care elevii vor lucra să înțeleagă rolul și responsabilitățile lor atât de creatori, cât și de consumatori de mass-media digitală. \n\n**Timp sugerat:** 15 minute"
+            lesson-5:
+              description_student: "**Tu vei:**\n\n-   Explora proiectele sfârșitului de capitol. \n\n**Timp sugerat:** 10 minute"
+              description_teacher: "**Tu vei:**\n\n-   Explora proiectele sfârșitului de capitol. \n\n**Timp sugerat:** 10 minute"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Predarea Dezvoltării Web
+          title: 'Modulul 2: Pregătirea Predării Dezvoltării Web'
+          description: "Acest modul de învățare profesională este conceput pentru a vă ajuta să vă pregătiți să predați unitatea de dezvoltare web de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în Dezvoltarea Web.\n-   Pune în practică conceptele cheie incluse în unitate.\n-   Te vei implica în Web Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
+          student_description: "Acest modul de învățare profesională este conceput pentru a vă ajuta să vă pregătiți să predați unitatea de dezvoltare web de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în Dezvoltarea Web.\n-   Pune în practică conceptele cheie incluse în unitate.\n-   Te vei implica în Web Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
         vpl-csd3-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Introducere în Animații și Jocuri Interactive
+            lesson-2:
+              name: Crează o scenă
+            lesson-3:
+              name: Animează o scenă cu spiriduși
+            lesson-4:
+              name: Explorează design-ul jocului
+            lesson-5: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pregătire pentru Predarea Animații și Jocuri Interactive
+          title: 'Modulul 3: Pregătire pentru Predarea Animații și Jocuri Interactive'
+          description: "Acest modul de învățare profesională este conceput să te ajute să te pregătești pentru predarea unitatea de Animații și Jocuri Interactive de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în Animații și Jocuri Interactive.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în Game Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 120 de minute"
+          student_description: "Acest modul de învățare profesională este conceput să te ajute să te pregătești pentru predarea unitatea de Animații și Jocuri Interactive de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în Animații și Jocuri Interactive.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în Game Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 120 de minute"
+        vpl-csd4-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+          title: 'Modulul 4: Pregătirea pentru Predarea Procesului de Design'
+          description: |-
+            Acest modul de învățare profesională este menit să te ajute să te pregătești să predau unitatea Code.org Procesul de Design.
+
+            **In acest modul de învățare profesională vei:**
+
+            -   Obține o introducere în Procesul de Design.
+            -   Pune în practică conceptele cheie incluse în unitate.
+            -   Participa la App Lab.
+            -   Explora proiectele de sfârșit de capitol.
+
+            **Timp sugerat:** 90 de minute
+          student_description: |-
+            Acest modul de învățare profesională este menit să te ajute să te pregătești să predau unitatea Code.org Procesul de Design.
+
+            **In acest modul de învățare profesională vei:**
+
+            -   Obține o introducere în Procesul de Design.
+            -   Pune în practică conceptele cheie incluse în unitate.
+            -   Participa la App Lab.
+            -   Explora proiectele de sfârșit de capitol.
+
+            **Timp sugerat:** 90 de minute
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
             lesson-2: {}
-        vpl-csd4-ci-pilot-2022: {}
-        vpl-csd5-ci-pilot-2022: {}
-        vpl-csd6-ci-pilot-2022: {}
-        vpl-csd7-ci-pilot-2022: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+          title: 'Modulul 5: Pregătirea pentru Predarea Date și Societate'
+          description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Date și Societate de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Date și Societate.\n-   Practica conceptele cheie incluse în unitate.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
+          student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Date și Societate de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Date și Societate.\n-   Practica conceptele cheie incluse în unitate.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+          title: 'Modul 6: Pregătirea pentru Predarea Calculelor Fizice'
+          description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Calcule Fizice de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Calculele Fizice.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în aplicația maker.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
+          student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Calcule Fizice de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Calculele Fizice.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în aplicația maker.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3:
+              name: Procesul de design
+            lesson-4: {}
+            lesson-5: {}
+            Engage with machine learning apps:
+              name: Procesul de design
+          title: 'Modulul 7: Pregătire pentru Predarea IA și Învățarea Automată'
+          description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea IA și Învățarea Automată de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în  IA și Învățarea Automată.\n-   Practicai conceptele cheie incluse în unitate.\n-   Participa la IA Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol.\n-   Face un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
+          student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea IA și Învățarea Automată de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în  IA și Învățarea Automată.\n-   Practicai conceptele cheie incluse în unitate.\n-   Participa la IA Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol.\n-   Face un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Salutare Lume CSC
           title: Bună Lume
         csd-playground:
           lessons:
+            lesson-1:
+              name: Actualizări Nivel
+          title: Teren de joacă CSD
+          description_audience: Scriitori de Curriculum
+          description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile dintre versiunile planului curicular
+          description: Pentru actualizările pe stadii ale lecțiilor sau nivelurile dintre versiunile planului curicular
+        csc-pilot-2022-ecosystems:
+          lessons:
             lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            Hello World CSC:
+              name: Salutare Lume CSC
+        csc-pilot-2022-timecapsule:
+          lessons:
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            Poem Art:
+              name: Arta Poeziei
+              description_teacher: În această lecție integrată de CS și ELA pentru codificatori noi, elevii vor anima un poem cu codul de ilustrare a unei stări de spirit a poemului. Elevii vor citi și detecta starea de spirit a unui poem. Apoi, ei găsesc efecte și imagini corespondente, pentru a-i ajuta să ilustreze starea de spirit a poemului. În final, elevii vor utiliza evenimente (coduri) pentru a ilustra o schimbare a stării de spirit sau a anima introducerea de noi imagini într-un poem.
+        csc-pilot-2022-starquilts:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+        csc-pilot-2022-fables:
+          lessons:
+            lesson-3: {}
+            Hello World CSC:
+              name: Salutare Lume CSC
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey: {}
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+              key: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
+              key: Ce Este un Computer?
+            Post-Project Test: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+        csd2-2022:
+          lessons:
+            Digital Footprint:
+              name: Amprenta digitală
+              key: Amprenta digitală
+            Post-Project Test: {}
+            CS Discoveries Post-Course Survey: {}
+            lesson-1:
+              key: lecția-1
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variabile
+              key: Variabile
+            Sprites:
+              name: Spiriduși
+              key: Spiriduși
+            Sprite Properties:
+              name: Proprietăți spiriduș
+              key: Proprietăți spiriduș
+            Text:
+              name: Text
+              key: Text
+            Conditionals:
+              name: Condiţionale
+              key: Condiţionale
+            Velocity:
+              name: Viteza
+              key: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
+              key: Detectarea coliziunilor
+            Collisions:
+              description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii abstracții pentru a crea alte abstracții?**\\\\r\n\\\\r\nÎn această lecții, elevii își programează spiritele să interacționeze în noi moduri. După o scurtă revizuire a modului în care au utilizat blocul [`isTouching`(#f78183)](/docs/gamelab/isTouching/), elevii vor căuta alte moduri în care două spirite pot interacționa. Apoi ei pot utiliza [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pentru a determina un spirit să îl împingă pe altul pe ecran înainte de a exersa cu cele patru blocuri de coliziune ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), și [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+            Functions:
+              name: Funcţii
+              key: Funcţii
+            Post-Project Test: {}
+            CS Discoveries Post-Course Survey: {}
+            lesson-1:
+              key: lecția-1
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
+        csd4-2022:
+          lessons:
+            Post-Project Test: {}
+            CS Discoveries Post-Course Survey: {}
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            cspSurvey:
+              display_name: Sondaj
+        csd5-2022:
+          lessons:
+            Post-Project Test: {}
+            CS Discoveries Post-Course Survey: {}
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
+        csd7-2022:
+          lessons:
+            CS Discoveries Post-Course Survey: {}
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sondaj
+        csd6-2022:
+          lessons:
+            Combining Inputs and Outputs:
+              name: Se Combină Intrările
+            'Project: Human Device Interaction': {}
+            Functions:
+              name: Funcţii
+            Post-Project Test: {}
+            CS Discoveries Post-Course Survey: {}
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sondaj
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Chestionar după curs
+          description: Această unitate conține sondajul distribuit după cursul Descoperiri ȘC. Această unitate poate fi atribuită după ce elevii termină ultima unitate din modulul Descoperiri ȘC.
+          student_description: Această unitate conține un sondaj care va fi distribuit când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți va spune când trebuie să răspunzi la acest sondaj.
+        testtess2: {}
+        csp-post-survey-2022:
+          lessons:
+            Course Survey: {}
+        aiml-2022: {}
+        vpl-csd-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        vpl-csp-2022:
+          lessons:
+            Module 1: {}
+            Module 2: {}
+            Module 3: {}
+            Module 4: {}
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return': {}
+            'Module 6: Introduction to the Create Performance Task': {}
+            'Module 7: Tools and Structure in Unit 9 - Data': {}
+            'Module 8: Building Community and Preparing Students for the AP Exam': {}
+            Module 5: {}
+            Module 6: {}
+            Module 7: {}
+            Module 8: {}
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            Welcome to Codeorg: {}
+            Welcome to "Teaching CS Discoveries": {}
+            lesson-4:
+              key: lecția-4
+            lesson-3:
+              key: lecția-3
+            lesson-8:
+              key: lecția-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3

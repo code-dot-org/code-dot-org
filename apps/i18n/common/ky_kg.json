@@ -485,11 +485,14 @@
   "pairingNavigatorLink": "Топ катары жараткан чечимиңерди көрүш үчүн бул жерди баскыла.",
   "parents": "Ата-энелер",
   "parentsAndStudents": "Ата-энелер жана окуучулар",
+  "participantTypeStudentTitle": "Студенттер",
+  "participantTypeTeacherTitle": "Мугалимдер",
   "password": "Сырсөз",
   "passwordConfirmation": "Сырсөздү тастыктоо",
   "percentCorrect": "% туура",
   "perfect": "кынтыксыз",
   "perfectDescription": "КЫНТЫКСЫЗ!",
+  "petitionMessage": "Бардык мектептердеги бардык окуучулардын компүтердик билим алуу мүмкүнчүлүгү болушу керек",
   "play": "ойно",
   "playzoneArtistDescription": "Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!",
   "playzoneArtistTitle": "Жаңы сүрөт",
@@ -678,5 +681,6 @@
   "yourName": "Ысымыңыз",
   "yourSchoolHeading": "Администраторлор: компүтер илимин мектебиңерге же районуңарга жайылткыла",
   "yourSchoolTeacherButton": "Үйрөтүп баштоо",
-  "yourSchoolTellUs": "Мектебиңер тууралуу маалымат"
+  "yourSchoolTellUs": "Мектебиңер тууралуу маалымат",
+  "zipOrCountry": "Почта индекси же өлкөсү"
 }

@@ -606,6 +606,210 @@
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
           "": "[șir gol]"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Încercați să schimbați when (când) cu while (în timp ce)."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Noi blocuri aici!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Utilizați noul bloc de evenimente găsit aici."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Acest bloc nu este în ordinea corectă."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "courseF_events_time": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Faceți clic aici pentru a deschide categoria Sprite-uri."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Faceți clic aici pentru a deschide categoria Locuri."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Căutați un nou bloc aici."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Căutați un nou bloc aici!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "S-a schimbat fundalul când ați răspuns la întrebare? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Ați terminat? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Căutați două noi blocuri aici!",
+          "text_answer_finish": "S-a afișat ecranul cu titlu timp de 3 secunde? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Căutați noi blocuri aici!"
+        },
+        "courseF_text_events": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_text_print": {
+          "print_block": "Găsiți blocul imprimare aici!",
+          "text_print_finish": "S-a imprimat mesajul mai sus? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Găsiți blocul cu promptul aici!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Apasă aici pentru a adăuga costume la proiectul tău."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Duceți actorul la steag pentru a trece la nivelul următor."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Folosiți acest bloc când Waddles și Chomp se ating!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Acest bloc este foarte important pentru acest proiect. Nu uitați să îl folosiți!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Adăugați-l în mijlocul programului vostru."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Puteți încetini programul aici."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Vedeți blocuri noi în cutia de instrumente? Nu vă faceți griji, vă vom arăta cum să le folosiți într-o altă lecție."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Puteți lua mai multe blocuri din cutia de instrumente dacă aveți nevoie de ele!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Aceste blocuri sunt blocate și nu pot fi șterse!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
+          "courseC_maze_programming3_3": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Acesta este primul vostru puzzle de tip provocare! Acestea sunt dificile, este posibil să fie nevoie de mai multe încercări pentru a-l rezolva.",
+          "courseC_maze_programming7_2": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Va trebui să folosiți blocul `while path ahead` pentru a rezolva acest puzzle."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
+          "stone_block_2": "Blocurile gri nu pot fi aruncate."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         }
       }
     }

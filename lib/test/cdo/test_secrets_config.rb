@@ -39,45 +39,45 @@ class SecretsConfigTest < Minitest::Test
 
   def test_secret_tag
     stub_secret 'bar!'
-    load_configuration <<YAML
-foo: foo!
-bar: !Secret
-YAML
+    load_configuration <<~YAML
+      foo: foo!
+      bar: !Secret
+    YAML
     assert_equal 'foo!', config.foo
     assert_equal 'bar!', config.bar
   end
 
   def test_clear_secrets
-    load_configuration <<YAML
-foo: !Secret
-<%=clear_secrets%>
-YAML
+    load_configuration <<~YAML
+      foo: !Secret
+      <%=clear_secrets%>
+    YAML
     assert_nil config.foo
   end
 
   def test_clear_secrets_empty
-    load_configuration <<YAML
-foo: false
-<%=clear_secrets%>
-foo: true
-YAML
+    load_configuration <<~YAML
+      foo: false
+      <%=clear_secrets%>
+      foo: true
+    YAML
     assert_equal true, config.foo
   end
 
   def test_erb_string_secret
     stub_secret 'FOO'
-    load_configuration <<YAML
-foo: !Secret
-bar: <%=foo%>bar
-YAML
+    load_configuration <<~YAML
+      foo: !Secret
+      bar: <%=foo%>bar
+    YAML
     assert_equal 'FOObar', config.bar
   end
 
   def test_json_secret
     stub_secret({bar: 'baz'}.to_json)
-    load_configuration <<YAML
-foo: !Secret
-YAML
+    load_configuration <<~YAML
+      foo: !Secret
+    YAML
     assert_equal({bar: 'baz'}, config.foo)
     assert_equal 'baz', config.foo.bar
   end

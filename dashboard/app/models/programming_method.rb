@@ -35,6 +35,7 @@ class ProgrammingMethod < ApplicationRecord
   # As this should run when the models are updated in levelbuilder,
   # just skip it for seeding.
   attr_accessor :seed_in_progress
+
   validate :validate_overload, unless: :seed_in_progress
 
   def generate_key
@@ -70,6 +71,21 @@ class ProgrammingMethod < ApplicationRecord
       externalLink: external_link,
       canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
       overloadOf: overload_of
+    }
+  end
+
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      returnValue: return_value,
+      parameters: parsed_parameters,
+      examples: parsed_examples,
+      syntax: syntax,
+      externalLink: external_link,
+      overloads: ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).map(&:summarize_for_show)
     }
   end
 
