@@ -248,20 +248,20 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       assert_response :not_acceptable
     end
 
-    test 'get_filtered_results returns paged expressions' do
+    test 'get_filtered_results returns paged results' do
       sign_in @levelbuilder
 
       get :get_filtered_results, params: {page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
-      assert_equal 20, response['expressions'].length
+      assert_equal 20, response['results'].length
 
       get :get_filtered_results, params: {page: 2}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
-      assert_equal 4, response['expressions'].length
+      assert_equal 4, response['results'].length
     end
 
     test 'get_filtered_results only returns expressions in environment if specified' do
@@ -271,7 +271,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
-      assert_equal 12, response['expressions'].length
+      assert_equal 12, response['results'].length
     end
 
     test 'get_filtered_results only returns expressions in category if specified' do
@@ -281,7 +281,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
-      assert_equal 4, response['expressions'].length
+      assert_equal 4, response['results'].length
     end
   end
 
