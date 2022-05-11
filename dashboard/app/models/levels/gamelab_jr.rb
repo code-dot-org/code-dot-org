@@ -69,90 +69,90 @@ class GamelabJr < Gamelab
   end
 
   def common_blocks(type)
-    <<-XML.chomp
-<category name="Start">
-  <block type="when_run" />
-</category>
-<category name="Variables" custom="VARIABLE" />
-<category name="Functions" custom="PROCEDURE" />
-<category name="World" />
-<category name="Sprites" custom="Sprite" />
-<category name="Groups" />
-<category name="Events" />
-<category name="Math">
-  <block type="math_number" />
-  <block type="math_change">
-    <value name="DELTA">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-  </block>
-  <block type="math_random_int">
-    <value name="FROM">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-    <value name="TO">
-      <block type="math_number">
-        <title name="NUM">100</title>
-      </block>
-    </value>
-  </block>
-  <block type="math_arithmetic" />
-</category>
-<category name="Logic">
-  <block type="controls_if" />
-  <block type="logic_compare" />
-  <block type="logic_operation" />
-  <block type="logic_negate" />
-  <block type="logic_boolean" />
-</category>
-<category name="Loops">
-  <block type="controls_repeat_ext">
-    <value name="TIMES">
-      <block type="math_number">
-        <title name="NUM">10</title>
-      </block>
-    </value>
-  </block>
-  <block type="controls_whileUntil" />
-  <block type="controls_for">
-    <value name="FROM">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-    <value name="TO">
-      <block type="math_number">
-        <title name="NUM">10</title>
-      </block>
-    </value>
-    <value name="BY">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-  </block>
-  <block type="controls_flow_statements" />
-</category>
-<category name="Text">
-  <block type="text_join_simple" inputcount="2" />
-  <block type="text" />
-</category>
-<category name="Behaviors" custom="Behavior" />
+    <<~XML.chomp
+      <category name="Start">
+        <block type="when_run" />
+      </category>
+      <category name="Variables" custom="VARIABLE" />
+      <category name="Functions" custom="PROCEDURE" />
+      <category name="World" />
+      <category name="Sprites" custom="Sprite" />
+      <category name="Groups" />
+      <category name="Events" />
+      <category name="Math">
+        <block type="math_number" />
+        <block type="math_change">
+          <value name="DELTA">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_random_int">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_arithmetic" />
+      </category>
+      <category name="Logic">
+        <block type="controls_if" />
+        <block type="logic_compare" />
+        <block type="logic_operation" />
+        <block type="logic_negate" />
+        <block type="logic_boolean" />
+      </category>
+      <category name="Loops">
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_whileUntil" />
+        <block type="controls_for">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_flow_statements" />
+      </category>
+      <category name="Text">
+        <block type="text_join_simple" inputcount="2" />
+        <block type="text" />
+      </category>
+      <category name="Behaviors" custom="Behavior" />
     XML
   end
 
   def toolbox(type)
     return common_blocks(type) unless type == 'toolbox_blocks'
-    <<-XML.chomp
-<category name="Category">
-  <block type="category"></block>
-  <block type="custom_category"></block>
-</category>
-#{common_blocks(type)}
+    <<~XML.chomp
+      <category name="Category">
+        <block type="category"></block>
+        <block type="custom_category"></block>
+      </category>
+      #{common_blocks(type)}
     XML
   end
 
