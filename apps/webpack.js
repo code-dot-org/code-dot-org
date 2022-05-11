@@ -138,7 +138,11 @@ var baseConfig = {
           {loader: 'css-loader'},
           {
             loader: 'sass-loader',
-            options: {includePaths: [scssIncludePath], implementation: sass}
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
           }
         ]
       },
