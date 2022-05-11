@@ -61,32 +61,29 @@ describe('initViewAs', function() {
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 
-  // TODO(dmcavoy): Update so it is based on instructor instead of account type
-  it('defaults to instructor if current user is a teacher', function() {
-    initViewAs(mockStore, 'teacher');
+  it('defaults to instructor if current user is instructor for course', function() {
+    initViewAs(mockStore, true, true);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
   });
 
-  // TODO(dmcavoy): Update so it is based on participant instead of account type
-  it('prevents overriding default if current user is a student', function() {
+  it('prevents overriding default if current user is not an instructor', function() {
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
-    initViewAs(mockStore, 'student');
+    initViewAs(mockStore, true, false);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 
-  // TODO(dmcavoy): Update so it is based on participant instead of account type
   it('allows overriding default if current user is not a student', function() {
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
 
-    initViewAs(mockStore, null);
+    initViewAs(mockStore, null, false);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
 
-    initViewAs(mockStore, 'teacher');
+    initViewAs(mockStore, true, true);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
 
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
 
-    initViewAs(mockStore, 'teacher');
+    initViewAs(mockStore, true, true);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 });

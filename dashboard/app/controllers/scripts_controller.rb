@@ -64,6 +64,7 @@ class ScriptsController < ApplicationController
       user_type: current_user&.user_type,
       user_id: current_user&.id,
       user_providers: current_user&.providers,
+      is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Script.locale_english_name_map[request.locale],
       locale_code: request.locale,
