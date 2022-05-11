@@ -215,7 +215,10 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher?
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    if @script.can_be_instructor?(current_user)
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
@@ -229,8 +232,6 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
-    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -514,7 +515,7 @@ class ScriptLevelsController < ApplicationController
 
     @code_review_enabled_for_level = @level.is_a?(Javalab) &&
       current_user.present? &&
-      (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+      (@script_level.script.can_be_instructor?(current_user) || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
     # Javalab exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
