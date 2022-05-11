@@ -1,8 +1,9 @@
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-const TeachersOnly = ({isTeacher, children}) => {
-  return isTeacher ? children : null;
+const TeachersOnly = ({isInstructor, children}) => {
+  console.log(isInstructor);
+  return isInstructor ? children : null;
 };
 
 export default connect(state => ({
