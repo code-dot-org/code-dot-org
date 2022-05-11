@@ -84,7 +84,11 @@ function initPage() {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(store, scriptData.user_type);
+  progress.initViewAs(
+    store,
+    scriptData.user_id !== null,
+    scriptData.is_instructor
+  );
   initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));

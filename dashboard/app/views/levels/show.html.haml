@@ -46,11 +46,6 @@
     -# anonymous users shouldn't ever see lockable lesson, but give them the locked_lesson message if they do
     = render 'levels/locked_lesson'
   - else
-    -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
-    -# TODO(dmcavoy): Change this to check instructor instead of teacher
-    - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
-      = render 'levels/locked_lesson', hidden: true
-
     - if @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};
