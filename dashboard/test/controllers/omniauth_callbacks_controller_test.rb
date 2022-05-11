@@ -962,6 +962,31 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
+  test 'login: google_oauth2 does not trigger silent take over on migrated Clever student with multiple credentials' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :migrated_imported_from_clever, uid: uid)
+    user.authentication_options << create(:google_authentication_option, user: user, email: email, authentication_id: uid)
+    user.save
+    # user.authentication_options.each {|x| puts x.id, x.credential_type, x.created_at, x.deleted_at}
+    # google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_destroy(User) do
+      get :google_oauth2
+    end
+    user.reload
+    #puts ''
+    #puts ''
+    #user.authentication_options.each {|x| puts x.id, x.credential_type, x.created_at, x.deleted_at}
+    assert_equal 'migrated', user.provider
+    auth_option_count = user.authentication_options.count
+    assert_equal 2, auth_option_count
+    assert_equal user.id, signed_in_user_id
+  end
+
   test 'login: microsoft_v2_auth does not silently add authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'

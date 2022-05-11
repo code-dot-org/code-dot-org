@@ -321,6 +321,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
