@@ -235,7 +235,7 @@ class LessonGroup < ApplicationRecord
   def copy_to_unit(destination_script, new_level_suffix = nil)
     return if script == destination_script
     raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? && !destination_script.old_professional_learning_course?
 
     copied_lesson_group = dup
     copied_lesson_group.script = destination_script

@@ -315,7 +315,7 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint2({
-            studentName: student.name
+            studentName: student.name.trim()
           })}
         />
         {section.loginType === SectionLoginType.word && (
