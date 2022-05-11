@@ -292,7 +292,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     }
 
     if (
-      (data.isTeacher || data.teacherViewingStudent) &&
+      (data.isInstructor || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
       const pageType = currentLevelId
