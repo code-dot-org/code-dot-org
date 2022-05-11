@@ -261,7 +261,7 @@
         {
           "type": "panel",
           "name": "csp_panel",
-          "visibleIf": "{workshop_course} = 'CS Principles'",
+          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A'",
           "elements": [
             {
               "type": "matrix",
@@ -308,7 +308,7 @@
                 },
                 {
                   "value": "confident_students_successful",
-                  "text": "I’m confident my students can be successful on the AP CS Principles exam."
+                  "text": "I’m confident my students can be successful on the AP {workshop_course} exam."
                 },
                 {
                   "value": "need_support_for_exam_prep",
@@ -316,7 +316,7 @@
                 },
                 {
                   "value": "workshop_increased_confidence",
-                  "text": "This workshop increased my confidence that I can teach CS Principles as an AP course."
+                  "text": "This workshop increased my confidence that I can teach {workshop_course} as an AP course."
                 }
               ]
             }
@@ -330,7 +330,7 @@
             {
               "type": "checkbox",
               "name": "csd_which_units",
-              "title": "Which units of CS Discoveries do you plan to teach in the 2021-2022 school year? ",
+              "title": "Which units of CS Discoveries do you plan to teach in the 2022-2023 school year? ",
               "description": "Check all that apply",
               "choices": [
                 {
@@ -363,7 +363,7 @@
                 },
                 {
                   "value": "none",
-                  "text": "None / I am not planning to teach any of these units in 2021-22"
+                  "text": "None / I am not planning to teach any of these units in 2022-23"
                 }
               ],
               "hasOther": true
