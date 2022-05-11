@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const TeachersOnly = ({isInstructor, children}) => {
-  console.log(isInstructor);
   return isInstructor ? children : null;
 };
 
