@@ -358,9 +358,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # OAuth providers do not necessarily provide student email addresses, so we
     # want to perform silent takeover on these accounts, but *only if* the
     # student hasn't made progress with the initial account
+    auth_options_emails = user.migrated? ?
+      user.authentication_options.select {|ao| !ao.hashed_email.blank? && ao.hashed_email} :
+      []
     user.persisted? && user.oauth_student? &&
       user.email.blank? && user.hashed_email.blank? &&
-      !user.has_activity?
+      # Also *all* AuthenticationOption's emails are blank
+      auth_options_emails.blank? && !user.has_activity?
   end
 
   # Looks for an existing user with an email address matching the oauth credentials.
