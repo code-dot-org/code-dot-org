@@ -164,6 +164,7 @@ class ProgrammingExpression < ApplicationRecord
       name: name,
       syntax: syntax,
       link: documentation_path,
+      programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
     }
   end
@@ -205,7 +206,6 @@ class ProgrammingExpression < ApplicationRecord
       tips: tips,
       parameters: palette_params,
       examples: examples,
-      programmingEnvironmentName: programming_environment.name,
       video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
