@@ -69,7 +69,7 @@ export default function ProgrammingExpressionsTable({
     );
   };
 
-  const fetchExpressions = (environmentId, categoryId, resultType, page) => {
+  const fetchResults = (environmentId, categoryId, resultType, page) => {
     const data = {};
     if (environmentId !== DEFAULT_VALUE) {
       data.programmingEnvironmentId = environmentId;
@@ -79,7 +79,7 @@ export default function ProgrammingExpressionsTable({
     }
     data.page = page;
     const url =
-      `/${resultType}/get_filtered_expressions?` + queryString.stringify(data);
+      `/${resultType}/get_filtered_results?` + queryString.stringify(data);
     let success = false;
     fetch(url)
       .then(response => {
@@ -108,7 +108,7 @@ export default function ProgrammingExpressionsTable({
     }).then(response => {
       if (response.ok) {
         setItemToDelete(null);
-        fetchExpressions(
+        fetchResults(
           selectedEnvironment,
           selectedCategory,
           selectedResultType,
@@ -121,7 +121,7 @@ export default function ProgrammingExpressionsTable({
   };
 
   useEffect(() => {
-    fetchExpressions(
+    fetchResults(
       selectedEnvironment,
       selectedCategory,
       selectedResultType,
@@ -192,6 +192,7 @@ export default function ProgrammingExpressionsTable({
             setCurrentPage(1);
           }}
           value={selectedResultType}
+          style={{marginRight: 7}}
         >
           {RESULT_TYPES.map(resultType => (
             <option key={resultType.id} value={resultType.id}>
@@ -241,7 +242,7 @@ export default function ProgrammingExpressionsTable({
                 `/${selectedResultType}/${itemToDelete.id}`,
                 () => {
                   setItemToDelete(null);
-                  fetchExpressions(
+                  fetchResults(
                     selectedEnvironment,
                     selectedCategory,
                     selectedResultType,
@@ -261,7 +262,7 @@ export default function ProgrammingExpressionsTable({
             categoriesForSelect={allCategories}
             onClose={() => {
               setItemToClone(null);
-              fetchExpressions(
+              fetchResults(
                 selectedEnvironment,
                 selectedCategory,
                 selectedResultType,

@@ -27,12 +27,12 @@ class ProgrammingClassesController < ApplicationController
     @environment_categories = @programming_class.programming_environment.categories.map {|c| {key: c.key, name: c.name}}
   end
 
-  # GET /programming_classes/get_filtered_expressions
+  # GET /programming_classes/get_filtered_results
   # Possible filters:
   # - programmingEnvironmentId
   # - categoryId
   # - page (1 indexed)
-  def get_filtered_expressions
+  def get_filtered_results
     return render(status: :not_acceptable, json: {error: 'Page is required'}) unless params[:page]
 
     @programming_classes = ProgrammingClass.all

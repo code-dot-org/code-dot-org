@@ -241,43 +241,43 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @levelbuilder = create :levelbuilder
     end
 
-    test 'get_filtered_expressions returns not_acceptable if no page providewd' do
+    test 'get_filtered_results returns not_acceptable if no page providewd' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {}
+      get :get_filtered_results, params: {}
       assert_response :not_acceptable
     end
 
-    test 'get_filtered_expressions returns paged expressions' do
+    test 'get_filtered_results returns paged expressions' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {page: 1}
+      get :get_filtered_results, params: {page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
       assert_equal 20, response['expressions'].length
 
-      get :get_filtered_expressions, params: {page: 2}
+      get :get_filtered_results, params: {page: 2}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 2, response['numPages']
       assert_equal 4, response['expressions'].length
     end
 
-    test 'get_filtered_expressions only returns expressions in environment if specified' do
+    test 'get_filtered_results only returns expressions in environment if specified' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
       assert_equal 12, response['expressions'].length
     end
 
-    test 'get_filtered_expressions only returns expressions in category if specified' do
+    test 'get_filtered_results only returns expressions in category if specified' do
       sign_in @levelbuilder
 
-      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
+      get :get_filtered_results, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
       assert_response :ok
       response = JSON.parse(@response.body)
       assert_equal 1, response['numPages']
