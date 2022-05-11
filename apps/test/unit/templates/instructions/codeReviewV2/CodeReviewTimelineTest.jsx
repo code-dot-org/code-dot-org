@@ -7,25 +7,15 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
-import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 const DEFAULT_PROPS = {
-  timelineData: [
-    {
-      id: 1,
-      createdAt: '2022-03-04T04:58:42.000Z',
-      comment: 'First commit',
-      projectVersion: 'asdfjkl',
-      isVersionExpired: false,
-      timelineElementType: timelineElementType.commit
-    },
+  reviewData: [
     {
       id: 1,
       createdAt: '2022-03-15T04:58:42.000Z',
       isClosed: true,
       projectVersion: 'asdfjkl',
       isVersionExpired: false,
-      timelineElementType: timelineElementType.review,
       comments: [
         {
           id: 123,
@@ -42,18 +32,24 @@ const DEFAULT_PROPS = {
           isResolved: false
         }
       ]
+    }
+  ],
+  commitsData: [
+    {
+      id: 1,
+      createdAt: '2022-03-04T04:58:42.000Z',
+      comment: 'First commit',
+      projectVersion: 'asdfjkl',
+      isVersionExpired: false
     },
     {
       id: 2,
       createdAt: '2022-03-20T04:58:42.000Z',
       comment: 'Second commit (after review)',
       projectVersion: 'lkjfds',
-      isVersionExpired: false,
-      timelineElementType: timelineElementType.commit
+      isVersionExpired: false
     }
-  ],
-  addCodeReviewComment: () => {},
-  closeReview: () => {}
+  ]
 };
 
 const setUp = (overrideProps = {}) => {
@@ -73,29 +69,28 @@ describe('CodeReviewTimeline', () => {
   });
 
   it('if there is no commit or review data created node will have is last set to true', () => {
-    const wrapper = setUp({timelineData: []});
+    const wrapper = setUp({reviewData: [], commitsData: []});
     const createdElement = wrapper.find(CodeReviewTimelineElement);
     expect(createdElement.props().isLast).to.be.true;
   });
 
   it('renders every commit as a CodeReviewTimelineCommit', () => {
     const wrapper = setUp();
-    // For 2 commits in the timelineData array
+    // For 2 commits in the commitsData array
     expect(wrapper.find(CodeReviewTimelineCommit)).to.have.length(2);
   });
 
   it('renders every review as a CodeReviewTimelineReview', () => {
     const wrapper = setUp();
-    // For 1 review in the timelineData array
+    // For 1 review in the reviewData array
     expect(wrapper.find(CodeReviewTimelineReview)).to.have.length(1);
   });
 
-  it('elements have expected isLast property', () => {
+  it('sorts the timeline elements by date and has expected isLast property', () => {
     const wrapper = setUp();
 
     const createdElement = wrapper.childAt(0);
     expect(createdElement.find(CodeReviewTimelineElement)).to.have.length(1);
-    expect(createdElement.props().isLast).to.be.false;
 
     const firstCommit = wrapper.childAt(1);
     expect(firstCommit.find(CodeReviewTimelineCommit)).to.have.length(1);
