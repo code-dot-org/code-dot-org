@@ -127,6 +127,7 @@ module UsersHelper
     end
 
     user_data[:current_lesson] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:isInstructor] = script.can_be_instructor?(user)
 
     user_data.compact
   end
