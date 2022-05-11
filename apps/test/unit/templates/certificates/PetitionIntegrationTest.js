@@ -6,7 +6,7 @@ import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/Peti
 import sinon from 'sinon';
 import $ from 'jquery';
 
-describe('Petition', () => {
+describe('Petition on submit', () => {
   const minimumInputs = {
     name_s: {
       tag: 'input',
@@ -126,5 +126,21 @@ describe('Petition', () => {
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer' // The 'role' value has a consistent name regardless of language
     });
+  });
+  it('reports to google analytics if successful submit', () => {
+    const petition = mount(
+      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
+    );
+    addInputsToPetition(petition, minimumInputs);
+    submitForm(petition);
+
+    sinon.assert.calledOnce(window.ga);
+  });
+  it('does not report to google analytics if submit unsuccessful', () => {
+    const petition = mount(
+      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
+    );
+    submitForm(petition);
+    sinon.assert.notCalled(window.ga);
   });
 });
