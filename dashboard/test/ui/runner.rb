@@ -559,7 +559,7 @@ def output_synopsis(output_text, log_prefix)
 
   failing_scenarios = lines.rindex("Failing Scenarios:\n")
   if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+    return lines[failing_scenarios..].map {|line| "#{log_prefix}#{line}"}.join
   else
     return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
   end

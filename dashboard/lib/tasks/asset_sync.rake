@@ -19,7 +19,7 @@ namespace :assets do
     old_files = @manifest_files.transform_values {|f| f['digest']}.to_a
 
     changed_paths = (new_files - old_files).
-      map {|key, _| [key, File.join(m.dir, key)]}.to_h
+      to_h {|key, _| [key, File.join(m.dir, key)]}
     next if changed_paths.empty?
 
     puts "Copying #{changed_paths.length} new assets to s3://#{CDO.assets_bucket}/#{CDO.assets_bucket_prefix}/assets/"

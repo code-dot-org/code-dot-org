@@ -303,7 +303,7 @@ module Cdo
           {name: 'tag:aws:cloudformation:logical-id', values: ['Frontends']},
           {name: 'instance-state-name', values: ['running']}
         ]
-      ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
+      ).reservations.map(&:instances).flatten.to_h {|i| ["fe-#{i.instance_id}", i.private_dns_name]}
       servers.merge(self[:app_servers])
     end
   end

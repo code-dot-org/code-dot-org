@@ -50,7 +50,7 @@ module Pd
 
         # Matrix answer is a Hash of sub_question => string_answer.
         # Validate each answer and convert each key to sub_question_index.
-        result = answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
+        result = answer.reject {|_, v| v.blank?}.to_h do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
 
           # TODO: Log somewhere that our sub-questions no longer have matching
@@ -63,7 +63,7 @@ module Pd
 
           # Return a 1-based value
           [sub_question_index, sub_answer]
-        end.to_h
+        end
 
         # At this point we have a result hash with keys as sub-question indexes and
         # values as their matching sub-answers, such as
@@ -84,7 +84,7 @@ module Pd
       end
 
       def summarize
-        sub_questions.each_with_index.map do |sub_question, i|
+        sub_questions.each_with_index.to_h do |sub_question, i|
           [
             generate_sub_question_key(i),
             {
@@ -95,7 +95,7 @@ module Pd
               options: options
             }
           ]
-        end.to_h
+        end
       end
 
       def process_answer(answer)

@@ -15,7 +15,7 @@ OLD_LOG_FIELDS = ENV['OLD_LOG_FIELDS']&.split(',')
 
 GLUE = Aws::Glue::Client.new
 COLUMNS = GLUE.get_table(database_name: DATABASE, name: TABLE).
-  table.storage_descriptor.columns.map {|c| [c.name, c.type]}.to_h
+  table.storage_descriptor.columns.to_h {|c| [c.name, c.type]}
 
 CONVERTERS = [
   ->(field, info) {COLUMNS[info.header] == 'int' ? field.to_i : field},

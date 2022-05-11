@@ -68,7 +68,7 @@ module Cdo::CloudFormation
         binding.local_variable_set(key, value)
       end
       Dir.chdir(File.dirname(filename)) do
-        ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(binding)
+        ERB.new(str, trim_mode: '-').tap {|erb| erb.filename = filename}.result(binding)
       end
     end
 

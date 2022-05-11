@@ -45,7 +45,7 @@ class UserScriptTest < ActiveSupport::TestCase
     end
 
     # attempt some levels
-    @script_levels[8..-1].each do |script_level|
+    @script_levels[8..].each do |script_level|
       complete_level(script_level, 10)
     end
 

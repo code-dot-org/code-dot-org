@@ -71,7 +71,7 @@ get '/api/hour/certificate/:filename' do |filename|
   begin
     image = CertificateImage.create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
     image.resize_to_fit!(width) unless width == 0
-    image.format = extname[1..-1]
+    image.format = extname[1..]
 
     dont_cache
     content_type image.format.to_sym
@@ -94,7 +94,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)
 
-  format = extname[1..-1]
+  format = extname[1..]
   begin
     image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
     image.format = format
@@ -120,7 +120,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)
 
-  format = extname[1..-1]
+  format = extname[1..]
   begin
     image = CertificateImage.create_course_certificate_image(label, course)
     image.format = format

@@ -63,9 +63,9 @@ class SharedBlocklyFunction < ApplicationRecord
 
   def self.arguments_from_xml(args_xml)
     JSON.generate(
-      args_xml.map do |arg_xml|
+      args_xml.to_h do |arg_xml|
         [arg_xml.attribute('name'), arg_xml.attribute('type')]
-      end.to_h
+      end
     )
   end
 

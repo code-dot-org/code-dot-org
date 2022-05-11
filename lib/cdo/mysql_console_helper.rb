@@ -4,7 +4,7 @@ module MysqlConsoleHelper
       --user=#{db.user}
       --host=#{db.host}
     )
-    database = db.path[1..-1]
+    database = db.path[1..]
     opts << "--database=#{database}" if database
     opts << "--port=#{db.port}" if db.port
     opts << "--password=#{db.password}" if db.password

@@ -99,7 +99,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    assignable_course_offerings(user).to_h {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
@@ -133,7 +133,7 @@ class CourseOffering < ApplicationRecord
         category: category,
         is_featured: is_featured?,
         participant_audience: course_versions.first.content_root.participant_audience,
-        course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+        course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.to_h {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
       }
     ]
   end

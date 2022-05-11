@@ -80,13 +80,13 @@ module Pd::Application
     test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].to_h {|x| [x, 'Yes']}
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher_application, course: 'csp',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].to_h {|x| [x, 'Yes']}
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
@@ -231,7 +231,7 @@ module Pd::Application
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
         # Select all but the first. Expect the first selected to be returned below
-        workshops[1..-1].map do |workshop|
+        workshops[1..].map do |workshop|
           "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
         end
         )

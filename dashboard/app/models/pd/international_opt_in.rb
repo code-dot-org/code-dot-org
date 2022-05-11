@@ -62,13 +62,13 @@ class Pd::InternationalOptIn < ApplicationRecord
     # Because we're using the special "answerText/answerValue" format in
     # self.options, we need to normalize to just answerValue here for
     # validation.
-    normalized_options = options.map do |key, values|
+    normalized_options = options.to_h do |key, values|
       normalized_values = values.map do |value|
         return value.fetch(:answerValue, nil) if value.is_a? Hash
         value
       end
       [key, normalized_values]
-    end.to_h
+    end
     super(normalized_options)
   end
 

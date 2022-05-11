@@ -1168,7 +1168,7 @@ module Services
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
         LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
-      ].map {|c| [c.name, c.count]}.to_h
+      ].to_h {|c| [c.name, c.count]}
     end
 
     def assert_script_trees_equal(s1, s2)

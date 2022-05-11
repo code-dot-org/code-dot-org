@@ -1277,13 +1277,13 @@ class Script < ApplicationRecord
 
     # Do not write the names of existing lessons. Once a lesson has been
     # created, its name is owned by the lesson edit page.
-    lessons_i18n = lessons_data.reject {|l| l['id']}.map do |lesson_data|
+    lessons_i18n = lessons_data.reject {|l| l['id']}.to_h do |lesson_data|
       [lesson_data['key'], {name: lesson_data['name']}]
-    end.to_h
+    end
 
-    lesson_groups_i18n = lesson_groups_data.select {|lg| lg['user_facing']}.map do |lg_data|
+    lesson_groups_i18n = lesson_groups_data.select {|lg| lg['user_facing']}.to_h do |lg_data|
       [lg_data['key'], {display_name: lg_data['display_name']}]
-    end.to_h
+    end
 
     {
       name => {
@@ -1601,7 +1601,7 @@ class Script < ApplicationRecord
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
-    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
+    hidden_section_ids.to_h {|section_id| [section_id, [id]]}
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
@@ -1631,9 +1631,9 @@ class Script < ApplicationRecord
   def summarize_i18n_for_copy(new_name, new_course_version)
     resource_markdown_replacement_proc = proc {|r| "[r #{Services::GloballyUniqueIdentifiers.build_resource_key(r.copy_to_course_version(new_course_version))}]"}
     vocab_markdown_replacement_proc = proc {|v| "[v #{Services::GloballyUniqueIdentifiers.build_vocab_key(v.copy_to_course_version(new_course_version))}]"}
-    data = %w(title description student_description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).to_h do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
-    end.to_h
+    end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
@@ -1655,9 +1655,9 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit
-    data = %w(title description_short description_audience).map do |key|
+    data = %w(title description_short description_audience).to_h do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
-    end.to_h
+    end
 
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
     data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))

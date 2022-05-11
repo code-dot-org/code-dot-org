@@ -261,7 +261,7 @@ module Pd
     }
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
-    ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+    ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.to_h {|k, v| [k, LABEL_OVERRIDES[k] || v]}.freeze
     ADDITIONAL_KEYS_IN_ANSWERS = MULTI_ANSWER_QUESTION_FIELDS.values.flat_map(&:values).uniq.freeze
 
     VALID_SCORES = {

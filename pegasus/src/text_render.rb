@@ -129,7 +129,7 @@ module TextRender
           value = $1
           if value[0] == '#'
             attribute = 'id'
-            value = value[1..-1]
+            value = value[1..]
           else
             attribute = 'class'
           end
