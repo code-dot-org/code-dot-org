@@ -77,6 +77,7 @@ export default class RecentCourses extends Component {
               isProfessionalLearningCourse={isProfessionalLearningCourse}
             />
           )}
+          {/* TODO(dmcavoy): Participants in PL courses should be able to get feedback*/}
           {!isTeacher && hasFeedback && !isProfessionalLearningCourse && (
             <ViewFeedback />
           )}
