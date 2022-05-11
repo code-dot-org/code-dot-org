@@ -65,6 +65,14 @@
 <%end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReaderDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_ONLY
+      VpcSecurityGroupIds: !ImportValue VPC-DBSecurityGroup
+      VpcSubnetIds: !ImportValue VPC-DBSubnetGroup
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
@@ -87,3 +95,31 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+  ReportingDBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Sub "${AWS::StackName}-reporting"
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReportingDBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+    Properties:
+      DBProxyName: !Ref ReportingDBProxy
+      DBClusterIdentifiers: [!Ref AuroraCluster]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
+        # Send reporting/analytics queries to the reader database instances, but use the database connection
+        # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
+        # and to permit long running queries.
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
+        # exceed 5% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 5
+
