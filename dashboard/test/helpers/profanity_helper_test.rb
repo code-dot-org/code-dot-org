@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProfanityHelperTest < ActionView::TestCase
-  teardown do
+  setup do
     # A list of keys used by our shared cache that should be cleared between every test.
     [
       ProfanityHelper::PROFANITY_PREFIX,

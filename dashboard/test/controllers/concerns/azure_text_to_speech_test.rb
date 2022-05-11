@@ -8,9 +8,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     @mock_token = 'a1b2c3d4'
     CDO.stubs(:azure_speech_service_key).returns(@api_key)
     CDO.stubs(:azure_speech_service_region).returns(@region)
-  end
 
-  teardown do
     # A list of keys used by our shared cache that should be cleared between every test.
     [
       ProfanityHelper::PROFANITY_PREFIX,
