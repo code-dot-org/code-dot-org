@@ -1253,6 +1253,12 @@ ar:
             '90': الأسفل
             '180': اليسار
             '270': الأعلى
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': صغير
+            '50': متوسط
+            '100': كبير
       gamelab_mirrorSprite:
         text: "{SPRITE} وجه {DIRECTION}"
         options:

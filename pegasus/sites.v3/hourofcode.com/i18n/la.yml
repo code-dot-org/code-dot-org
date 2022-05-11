@@ -169,6 +169,11 @@ la:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: "¿Qué es IA?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"

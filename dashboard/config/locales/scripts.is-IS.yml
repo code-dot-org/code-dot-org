@@ -8089,6 +8089,12 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Verkefni
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Kennslustund 2
+            lesson-3:
+              name: Kennslustund 3
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -8323,6 +8329,8 @@ is:
               display_name: Yfirferðir
             csp_project:
               display_name: Verkefni
+            lessonGroup-5:
+              display_name: Könnun eftir námskeið
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -8397,6 +8405,10 @@ is:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
             myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp7-2022:
           lesson_groups:
             csp_parameters_return_values:
@@ -8404,7 +8416,11 @@ is:
             csp_libraries:
               display_name: Söfn
             lessonGroup-3:
-              display_name: Könnun
+              display_name: Könnun eftir námskeið
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Könnun eftir námskeið
         csp9-2022:
           lessons:
             Machine Learning:
@@ -8414,10 +8430,14 @@ is:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Kafli 9: Gögn'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         csp10-2022:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            lessonGroup-2:
+              display_name: Könnun eftir námskeið
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -8553,6 +8573,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+            lessonGroup-5:
+              display_name: Könnun
         pre-express-2022:
           lessons:
             Programming with Harvester:
@@ -8679,6 +8701,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+            lessonGroup-5:
+              display_name: Könnun
         vpl-csd2-summer-pilot-2022:
           lessons:
             lesson-3:
@@ -8847,3 +8871,7 @@ is:
           lessons:
             Post-Course Survey:
               name: Könnun eftir námskeið
+        aiml-2022:
+          lessons:
+            Survey Planning:
+              name: Söfnun gagna hönnuð

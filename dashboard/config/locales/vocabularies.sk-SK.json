@@ -52,23 +52,23 @@
         },
         "code/poem-art/2021": {
           "word": "Kód",
-          "definition": "(v) zapísať pokyny pre počítač."
+          "definition": "(sloveso) zapísať pokyny pre počítač."
         },
         "event/poem-art/2021": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "line/poem-art/2021": {
-          "word": "Riadok",
+          "word": "Verš",
           "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
         },
         "mood/poem-art/2021": {
           "word": "Nálada",
-          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písaní."
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
         },
         "program/poem-art/2021": {
           "word": "Program",
-          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
+          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
         },
         "code/flappy/unversioned": {
           "word": "Kódovanie",
@@ -249,16 +249,24 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "lossless_compression/text-compression/unversioned": {
+          "definition": "algoritmus kompresie údajov, ktorý umožňuje dokonalú rekonštrukciu pôvodných údajov z komprimovaných údajov.  Najčastejšie sa používa na kompresiu textu (napr. kompresia ZIP)"
+        },
         "event/outbreak/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modely a simulácie",
+          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
         },
         "event/sports/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "code/sports/unversioned": {
-          "word": "Kód"
+          "word": "Kódovať",
+          "definition": "(sloveso) Písanie kódu/písanie inštrukcií pre počítač."
         },
         "debugging/sports/unversioned": {
           "word": "Ladenie",
@@ -326,7 +334,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Kód",
-          "definition": "(v) zapísať pokyny pre počítač."
+          "definition": "(sloveso) zapísať pokyny pre počítač."
         },
         "event/poem-art/unversioned": {
           "word": "Udalosť",
@@ -334,14 +342,14 @@
         },
         "program/poem-art/unversioned": {
           "word": "Program",
-          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
+          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
         },
         "mood/poem-art/unversioned": {
           "word": "Nálada",
-          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písaní."
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
         },
         "line/poem-art/unversioned": {
-          "word": "Riadok",
+          "word": "Verš",
           "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
         },
         "sprite/coursef/2021": {
@@ -392,6 +400,10 @@
           "word": "Cyklus „for“",
           "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modely a simulácie",
+          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
+        },
         "machine_learning/coursef/2021": {
           "word": "Strojové učenie",
           "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
@@ -440,7 +452,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/coursef/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/coursef/2021": {
@@ -748,7 +760,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/express/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/express/2021": {
@@ -860,7 +872,7 @@
           "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/coursee/2021": {
-          "word": "Reflektovať",
+          "word": "Reflexia",
           "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/coursee/2021": {

@@ -206,6 +206,9 @@ ms:
         poetry_module_conditionals: Bersyarat - Pengekodan dengan Puisi
         poemart_intro: Pengenalan Seni Puisi
         CSA-PL-debugging-temp: Pengenalan kepada Penyahpepijatan dalam Makmal Java - temp
+        PL_CS_Journeys_Overview: Perjalanan CS
+        csp_applab_parameters: Fungsi-fungsi dengan parameter
+        CSA-PL-intro-to-arrays: Tatasusunan Satu Dimensi (1D)
     callout:
       text:
         run: "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda"

@@ -1951,6 +1951,9 @@
         },
         "CSD U6 tugowar variables 3_2021": {
           "CSD_U6_checkWin": "Vérifie si un joueur a gagné"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Cliquez ici pour ajouter de nouveaux déguisements à votre projet ! "
         }
       }
     }

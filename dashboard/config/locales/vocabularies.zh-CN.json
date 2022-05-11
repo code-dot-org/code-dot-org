@@ -360,6 +360,10 @@
           "word": "变量",
           "definition": "程序中使用的一段信息的标签。"
         },
+        "prompt/coursef/2021": {
+          "word": "提示符",
+          "definition": "计算机屏幕上等待用户输入的消息。"
+        },
         "input/coursef/2021": {
           "word": "输入"
         },
@@ -703,6 +707,9 @@
         "variable/express/2021": {
           "word": "变量",
           "definition": "程序中使用的一段信息的标签。"
+        },
+        "prompt/express/2021": {
+          "definition": "计算机屏幕上等待用户输入的消息。"
         },
         "for_loop/express/2021": {
           "word": "For循环",

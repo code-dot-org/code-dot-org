@@ -174,42 +174,52 @@
         "29252927-11c0-44cc-b471-dfa8b1792c2b": {
           "description": "Povzbudzujte žiakov, aby porozprávali, akými spôsobmi sú kreatívni, napríklad ako je umenie, tanec, hudba alebo písanie. Ako doplňujúcu otázku sa žiakov opýtajte, čo inšpiruje ich kreativitu. "
         },
+        "484b5029-3d10-4c64-9b8d-547a7751713c": {
+          "description": "Vedeli ste, že počítačová veda môže byť veľmi kreatívna? V skutočnosti môžete vytvárať umenie pomocou programovania. Počítačový kód je súbor inštrukcií, ktorým počítač rozumie. Rovnako ako výber farieb na použitie, aj výber kódu, ktorý napíšete, môže byť príležitosťou na vyjadrenie vašej kreativity! \n\nNa inšpirovanie nášho dnešného kreatívneho programovania použijeme poéziu. Vie niekto, čo je to poézia? Máte obľúbenú báseň alebo básnika? "
+        },
         "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
           "description": "**Čítajte spolu poéziu:** Prečítajte si [niekoľko básní](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) spolu ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte žiakov, aby sa podelili o svoj výklad, aj keď sa líši od výkladu niekoho iného. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
           "name": "Básnické umenie",
-          "description": "#### Všeobecná podporaNa\n\n konci tejto aktivity budú mať žiaci animovanú báseň, ktorá predstavuje ich vizuálnu interpretáciu básne, ktorú si vybrali. Táto lekcia je navrhnutá tak, aby žiaci mali príležitosť pohrať sa so svojim kódom a mohli nájsť vizuálne efekty, ktoré sa im najviac páčia. \n\nV kruhových cykloch po miestnosti povzbudzujte žiakov nasledovne:\n\n-   **Neponáhľajte sa:** Väčšina úrovní vyžaduje, aby žiaci našli dokonalé efekty, ktoré zodpovedajú ich interpretácii nálady básne. Dôrazne sa odporúča zostať na úrovni a pohrať sa s ich kódom.\n\n-   **Nájdite báseň, ktorá sa vám páči:** Báseň, ktorá sa zobrazí žiakovi na novej úrovni, je len návrh. V hornej časti hracieho priestoru je rozbaľovacia ponuka básní s vopred nahranými básňami. Požiadajte žiakov, aby si prečítali niekoľko básní a našli takú, ktorá ich zaujme. Potom môžu začať animovať báseň, ktorú si vybrali, pomocou programovania (kódu). \n\n-   **Ukážte dokončenú úroveň:** Akákoľvek bublina úrovne, ktorá je úplne zelená, znamená, že žiak úspešne splnil všetky požiadavky pre danú úroveň. Požiadajte žiaka, aby kliknutím na zelenú bublinu ukázal, čo vytvoril. \n\nPre chvíle, keď sa žiak zasekne: \n\n-   **Prečítajte si pokyny:** V odrážkach sú uvedené pokyny ako dokončiť úroveň. Ak sa žiak zasekne, požiadajte ho, aby vám nahlas prečítal pokyny a vlastnými slovami zopakoval, čo pokyny hovoria. \n-   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Žiaci si môžu vypočuť pokyny prečítané nahlas aj kliknutím na túto ikonu programu prevodu textu na reč.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Snažte sa nájsť tipy**: Väčšina úrovní zahŕňa aspoň jeden tip s jasnejšími podrobnosťami o tom, ako prejsť úrovňou. \n-   **Oslavujte chyby:** Chyby v programovaní sú prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo žiak očakával, požiadajte žiaka, aby vám najprv povedal, čo chce, aby sa stalo, kliknutím na tlačidlo „Spustiť“ sledoval, čo sa skutočne deje, a potom v programe našiel miesto, ktoré spôsobilo nezrovnalosť. Keď nájde chybu, nezabudnite to osláviť a opraviť. Ak sa chyba nájde, znamená to, že žiaci odviedli skvelú prácu pri vytváraní komplexnejšieho programu. "
+          "description": "#### Všeobecná podpora\n\nNa konci tejto aktivity budú mať žiaci animovanú báseň, ktorá predstavuje ich vizuálnu interpretáciu básne, ktorú si vybrali. Táto lekcia je navrhnutá tak, aby žiaci mali príležitosť pohrať sa so svojim kódom a mohli nájsť vizuálne efekty, ktoré sa im najviac páčia. \n\nKrúžte po učebni a povzbudzujte žiakov takto:\n\n-   **Neponáhľajte sa:** Väčšina úrovní vyžaduje, aby žiaci našli dokonalé efekty, ktoré zodpovedajú ich interpretácii nálady básne. Dôrazne odporúčame zostať na úrovni dlhšie a pohrať sa s kódom.\n\n-   **Nájdite báseň, ktorá sa vám páči:** Báseň, ktorá sa zobrazí žiakovi na novej úrovni, je len návrh. V hornej časti hracieho priestoru je rozbaľovacia ponuka básní s vopred nahranými básňami. Požiadajte žiakov, aby si prečítali niekoľko básní a našli takú, ktorá ich zaujme. Potom môžu začať animovať báseň, ktorú si vybrali, pomocou programovania (kódu). \n\n-   **Ukážte dokončenú úroveň:** Akákoľvek bublina úrovne, ktorá je úplne zelená, znamená, že žiak úspešne splnil všetky požiadavky pre danú úroveň. Požiadajte žiaka, aby kliknutím na zelenú bublinu ukázal, čo vytvoril. \n\nPre chvíle, keď sa žiak zasekne: \n\n-   **Prečítajte si pokyny:** V odrážkach sú uvedené pokyny ako dokončiť úroveň. Ak sa žiak zasekne, požiadajte ho, aby vám nahlas prečítal pokyny a vlastnými slovami zopakoval, čo pokyny hovoria. \n-   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Žiaci si môžu vypočuť pokyny prečítané nahlas aj kliknutím na túto ikonu programu prevodu textu na reč.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Snažte sa nájsť tipy**: Väčšina úrovní zahŕňa aspoň jeden tip s jasnejšími podrobnosťami o tom, ako prejsť úrovňou. \n-   **Oslavujte chyby:** Chyby v programovaní sú prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo žiak očakával, požiadajte žiaka, aby vám najprv povedal, čo chce, aby sa stalo, kliknutím na tlačidlo „Spustiť“ sledoval, čo sa skutočne deje, a potom v programe našiel miesto, ktoré spôsobilo nezrovnalosť. Keď nájde chybu, nezabudnite to osláviť a opraviť. Ak sa chyba nájde, znamená to, že žiaci odviedli skvelú prácu pri vytváraní komplexnejšieho programu. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
+          "description": "#### Podpora podľa jednotlivých úrovní\n\n**Úroveň 1:** Povzbuďte žiakov, aby si báseň prečítali. Potom ich požiadajte, aby našli farbu alebo efekt pozadia, ktorý zodpovedá tónu básne, ktorý si vybrali. ",
           "progression_name": "Budovanie zručností"
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "description": "**Úroveň 2:** V tejto ukážke by si žiaci mali najprv sami prečítať báseň a potom stlačiť tlačidlo Spustiť. Žiakov sa môžete opýtať, či zvuk a efekty, ktoré programátor vybral, zodpovedajú nálade básne. Požiadajte žiakov, aby svoju odpoveď rozvinuli. ",
           "progression_name": "Príklad"
         },
         "175a6627-901e-40c3-9b54-d156c7da668f": {
+          "description": "**Úroveň 3:** Táto úroveň zapája aj zvuk. Žiaci môžu používať slúchadlá, ak ich majú. ",
           "progression_name": "Budovanie zručností"
         },
         "96abf95f-d28e-4fe0-a376-016b5dbd6883": {
+          "description": "**Úroveň 4:** Požiadajte žiakov, aby si báseň prečítali a našli riadok, v ktorom sa mení nálada básne alebo v ktorom básnik predstavuje nový obraz. Pomocou bloku udalostí doplňte k určeným riadkom básne príslušné efekty. ",
           "progression_name": "Budovanie zručností"
         },
         "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "description": "**Úroveň 5:** V tejto ukážke by si žiaci mali najprv sami prečítať báseň a potom stlačiť tlačidlo Spustiť. Opýtajte sa žiakov, či sa obrázky zhodujú so slovami básne. Požiadajte ich, aby svoju odpoveď rozvinuli. ",
           "progression_name": "Príklad"
         },
         "14006414-2422-4d85-bbed-d7bd50c95996": {
+          "description": "**Úroveň 6, 7, 8:** Pozrite si časť „Oslavujte chyby“ v časti Všeobecná podpora. Povzbudzujte žiakov, aby vytvárali programy s viac ako jedným prechodom pomocou blokov udalostí. ",
           "progression_name": "Budovanie zručností"
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "description": "**Úroveň 9:** Povzbuďte žiakov, aby si prečítali všetky básne v rozbaľovacej ponuke a našli jednu, ktorá sa im páči. Povedzte žiakom, že o to, čo vytvoria v tejto poslednej úrovni, sa môžu podeliť so svojimi priateľmi a rodinou. Teraz je čas spojiť všetky zručnosti v oblasti kódovania a jazykovedy! ",
           "progression_name": "Voľná hra"
         },
         "a93e96cb-27d2-4d92-8321-57accd5addde": {
-          "description": "Ak sa vám dnes páčilo učiť sa programovať, môžete pokračovať v učení na stránke code.org/learn. Ak sa chcete podeliť o to, čo ste vytvorili, so svojimi priateľmi a rodinou, kliknite na tlačidlo „Zdieľať“ a pošlite odkaz komu len chcete!"
+          "description": "Ak sa ti dnes páčilo učiť sa programovať, môžeš pokračovať v učení na code.org/learn. Ak sa chceš podeliť o svoje dielo so svojimi priateľmi a rodinou, klikni na tlačidlo „Zdieľať“ a pošli odkaz komu len chceš!"
         },
         "eea48561-0080-4e47-8d51-048ab2d07048": {
-          "description": "#### (Voliteľné) hodnotenie: Skontrolujte pochopenie (4 minúty)\n\nKaždému žiakovi rozdajte dva poznámkové bločky. "
+          "description": "#### (Voliteľné) Hodnotenie: Skontrolujte pochopenie (4 minúty)\n\nKaždému žiakovi rozdajte dva poznámkové bločky. "
         },
         "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
-          "description": "Máte dva poznámkové bločky. Na prvý napíšte jednu vec, ktorú ste sa dnes naučili o programovaní. \nNa druhý napíšte jednu vec, ktorú ste sa dnes naučili o poézii. \n\nPodeľme sa s celou triedou zdvihnutím ruky, a odpovedajte na túto otázku: Čo by ste sa ešte mohli naučiť o programovaní a počítačovej vede? "
+          "description": "Máte dva poznámkové bločky. Na prvý napíšte jednu vec, ktorú ste sa dnes naučili o programovaní. \nNa druhý napíšte jednu vec, ktorú ste sa dnes naučili o poézii. \n\nPodeľte sa s celou triedou zdvihnutím ruky a odpovedajte na túto otázku: Čo sa teraz chcete naučiť o programovaní a informatike? "
         },
         "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
           "name": "Príprava",
@@ -272,7 +282,8 @@
           ]
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
-          "name": "Bludisko"
+          "name": "Bludisko",
+          "description": "Dajte svojim žiakom za úlohu prejsť kurz [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1).\n\nV závislosti od veku a schopností žiakov môže byť vhodné prispôsobiť aktivitu takto: \n\n-   Ak máte mladších žiakov, odporúčame vám vytvoriť dvojice alebo veľmi malé skupiny (traja až štyria žiaci v každej), aby mohli žiaci pri robení kurzu využiť [párové programovanie](https://youtu.be/vgkahOzFH2Q).\n-   Pre žiakov v stredných ročníkoch môže byť ideálne pracovať na kurze samostatne. Občas pomôže, keď majú žiaci možnosť sami si vybrať kurz, ktorý budú robiť. Ak ich nezaujíma hra Angry Birds, podobný zážitok im vedia poskytnúť aj kurzy [Programuj s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) či [Vytvor si hru Flappy\n    ](https://studio.code.org/flappy/1).\n-   U starších žiakov a dospelých funguje kurz [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1) výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -298,7 +309,12 @@
           "description": "Rozdajte všetkým žiakom [„výstupné lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), na ktoré napíšu, čo sa dnes naučili, ako sa cítili a čo zažili. Žiaci môžu kresliť, písať alebo sa vyjadriť akýmkoľvek iným spôsobom, ktorý im vyhovuje. Výstupné lístky od žiakov zozbierajte pri odchode z triedy. Ak chcete, môžete výstupné lístky pripevniť na nástenku alebo iné dobre viditeľné miesto, kde budú žiakom pripomínať ich Hodinu kódu."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
-          "name": "Ako ďalej po Hodine kódu"
+          "name": "Ako ďalej po Hodine kódu",
+          "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne."
+        },
+        "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
+          "name": "Úpravy pre učiteľov 1. a 2. ročníka",
+          "description": "-   Keď žiaci začnú aktivitu, nechajte na obrazovkách ich počítačov už zobrazenú prvú úroveň aktivity.\n-   Ak je to možné, posaďte žiakov mimo počítačov, kým im vysvetľujete pokyny k aktivite.\n-   Vysvetlite tri príkazy, ktoré môže vták vykonať: pohyb vpred, otočenie doprava a otočenie doľava.\n-   Predveďte živý príklad prvých 3 úrovní. Skúste na podlahu nalepiť pásku, aby to vyzeralo ako vtáčie bludisko. Vymodelujte príkazy a potom vyberte 1 alebo 2 dobrovoľníkov z radov žiakov, ktorí ich budú predvádzať pre triedu.\n-   Nechajte žiakov programovať vo dvojiciach tak, že posadíte 2 žiakov k rovnakému počítaču. Nech osoba, ktorá ovláda myš a klávesnicu ako prvá, je „1“ a druhý žiak, ktorý dáva návrhy, upozorňuje na chyby a kladie otázky, je „2“. Každých 5 minút požiadajte žiakov, aby si vymenili roly.\n-   Pred pokusom o vyriešenie niektorej z hádaniek si precvičte klikanie a ťahanie blokov. Precvičte si aj ťahanie blokov do koša."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Príprava",
@@ -400,21 +416,21 @@
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "description": "_V tejto aktivite sa zabavíš vytváraním interaktívneho sveta so zábavnými postavičkami. Pomocou bubliniek budeš môcť nechať postavičky hovoriť veci tak, ako by si to videl v komikse alebo grafickom románe, a naučíš sa, aby reagovali automaticky, keď na ne ty alebo niekto iný klikne._\n\n_Dnes budeš písať „kód“, čo znamená iba súbor pokynov, ktorým počítač rozumie. Keď píšeš príbeh, musíš si dobre premyslieť slová, ktoré použiješ. Pri písaní kódu si budeš musieť dôkladne premyslieť pokyny, ktoré dávaš svojmu počítaču._",
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
           "tips": [
-            "Nebudete chcieť tráviť veľké množstvo času načítavaním alebo predstavovaním Hodiny kódu. Najmä u mladších žiakov je najlepšie skočiť do toho čo najrýchlejšie."
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Všeobecná podpora",
-          "description": "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, v ktorej pracujú\n\n-   **Spolupráca so susedom:** Povzbuďte študentov, aby sa požiadali o pomoc suseda, keď sú bezradný. V závislosti od veku a schopností vašich študentov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli absolvovať inštruktážny program pomocou [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Prečítajte si pokyny:** Pokyny zvyčajne poskytujú užitočné tipy, ako dokončiť úroveň. Skôr ako dáte študentom odpoveď, uistite sa, že si pozorne prečítali pokyny, rady, videá a akýkoľvek štartovací kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bezradný? Vyhľadajte nápovedy:** Každá úroveň obsahuje nápovedu s radami, ako prejsť úrovňou, vrátane toho, ktoré bloky kódu vyskúšať.\n\n-   **Neponáhľajte sa a experimentujte.** Pokyny hovoria študentom vo všeobecnosti, čo majú robiť, ale mali by tiež bez obáv vyskúšať svoje vlastné nápady."
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Ahoj Svet",
           "progression_name": "Ahoj Svet"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Ak skupina alebo jednotlivec skončí skôr, povzbuďte ich, aby pokračovali v tvorení projektu v poslednej úrovni. Ak si študenti nie sú istí, čo ešte majú robiť, môžete im dať otázky:\n\n-   Aké ďalšie postavičky by ste mohli pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste si vyskúšali nakresliť svoj vlastný kostým postavičky?\n-   Čo ešte by mohli vaše postavičky povedať?\n-   Čo by mali vaše postavičky robiť, keď na ne kliknete?\n-   Pozvite študentov, aby zdieľali nápady a učili sa jeden od druhého. Môžu tiež vyskúšať ďalší návod na stránke [code.org/learn](https://code.org/learn)."
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Reflexia",
@@ -589,21 +605,21 @@
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "description": "_V tejto aktivite sa zabavíš vytváraním interaktívneho sveta so zábavnými postavičkami. Pomocou bubliniek budeš môcť nechať postavičky hovoriť veci tak, ako by si to videl v komikse alebo grafickom románe, a naučíš sa, aby reagovali automaticky, keď na ne ty alebo niekto iný klikne._\n\n_Dnes budeš písať „kód“, čo znamená iba súbor pokynov, ktorým počítač rozumie. Keď píšeš príbeh, musíš si dobre premyslieť slová, ktoré použiješ. Pri písaní kódu si budeš musieť dôkladne premyslieť pokyny, ktoré dávaš svojmu počítaču._",
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
           "tips": [
-            "Nebudete chcieť tráviť veľké množstvo času načítavaním alebo predstavovaním Hodiny kódu. Najmä u mladších žiakov je najlepšie skočiť do toho čo najrýchlejšie."
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Všeobecná podpora",
-          "description": "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, v ktorej pracujú\n\n-   **Spolupráca so susedom:** Povzbuďte študentov, aby sa požiadali o pomoc suseda, keď sú bezradný. V závislosti od veku a schopností vašich študentov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli absolvovať inštruktážny program pomocou [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Prečítajte si pokyny:** Pokyny zvyčajne poskytujú užitočné tipy, ako dokončiť úroveň. Skôr ako dáte študentom odpoveď, uistite sa, že si pozorne prečítali pokyny, rady, videá a akýkoľvek štartovací kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bezradný? Vyhľadajte nápovedy:** Každá úroveň obsahuje nápovedu s radami, ako prejsť úrovňou, vrátane toho, ktoré bloky kódu vyskúšať.\n\n-   **Neponáhľajte sa a experimentujte.** Pokyny hovoria študentom vo všeobecnosti, čo majú robiť, ale mali by tiež bez obáv vyskúšať svoje vlastné nápady."
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Ahoj Svet",
           "progression_name": "Ahoj Svet"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Ak skupina alebo jednotlivec skončí skôr, povzbuďte ich, aby pokračovali v tvorení projektu v poslednej úrovni. Ak si študenti nie sú istí, čo ešte majú robiť, môžete im dať otázky:\n\n-   Aké ďalšie postavičky by ste mohli pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste si vyskúšali nakresliť svoj vlastný kostým postavičky?\n-   Čo ešte by mohli vaše postavičky povedať?\n-   Čo by mali vaše postavičky robiť, keď na ne kliknete?\n-   Pozvite študentov, aby zdieľali nápady a učili sa jeden od druhého. Môžu tiež vyskúšať ďalší návod na stránke [code.org/learn](https://code.org/learn)."
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Reflexia",
@@ -745,21 +761,21 @@
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "description": "_V tejto aktivite sa zabavíš vytváraním interaktívneho sveta so zábavnými postavičkami. Pomocou bubliniek budeš môcť nechať postavičky hovoriť veci tak, ako by si to videl v komikse alebo grafickom románe, a naučíš sa, aby reagovali automaticky, keď na ne ty alebo niekto iný klikne._\n\n_Dnes budeš písať „kód“, čo znamená iba súbor pokynov, ktorým počítač rozumie. Keď píšeš príbeh, musíš si dobre premyslieť slová, ktoré použiješ. Pri písaní kódu si budeš musieť dôkladne premyslieť pokyny, ktoré dávaš svojmu počítaču._",
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
           "tips": [
-            "Nebudete chcieť tráviť veľké množstvo času načítavaním alebo predstavovaním Hodiny kódu. Najmä u mladších žiakov je najlepšie skočiť do toho čo najrýchlejšie."
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Všeobecná podpora",
-          "description": "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, v ktorej pracujú\n\n-   **Spolupráca so susedom:** Povzbuďte študentov, aby sa požiadali o pomoc suseda, keď sú bezradný. V závislosti od veku a schopností vašich študentov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli absolvovať inštruktážny program pomocou [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Prečítajte si pokyny:** Pokyny zvyčajne poskytujú užitočné tipy, ako dokončiť úroveň. Skôr ako dáte študentom odpoveď, uistite sa, že si pozorne prečítali pokyny, rady, videá a akýkoľvek štartovací kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bezradný? Vyhľadajte nápovedy:** Každá úroveň obsahuje nápovedu s radami, ako prejsť úrovňou, vrátane toho, ktoré bloky kódu vyskúšať.\n\n-   **Neponáhľajte sa a experimentujte.** Pokyny hovoria študentom vo všeobecnosti, čo majú robiť, ale mali by tiež bez obáv vyskúšať svoje vlastné nápady."
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Ahoj Svet",
           "progression_name": "Ahoj Svet"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Ak skupina alebo jednotlivec skončí skôr, povzbuďte ich, aby pokračovali v tvorení projektu v poslednej úrovni. Ak si študenti nie sú istí, čo ešte majú robiť, môžete im dať otázky:\n\n-   Aké ďalšie postavičky by ste mohli pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste si vyskúšali nakresliť svoj vlastný kostým postavičky?\n-   Čo ešte by mohli vaše postavičky povedať?\n-   Čo by mali vaše postavičky robiť, keď na ne kliknete?\n-   Pozvite študentov, aby zdieľali nápady a učili sa jeden od druhého. Môžu tiež vyskúšať ďalší návod na stránke [code.org/learn](https://code.org/learn)."
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Reflexia",
@@ -774,13 +790,20 @@
             "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z našich [inšpiratívnych videí](https://hourofcode.com/us/resources#videos). Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre mladších žiakov odporúčame video [Hodina kódu je tu](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
+          "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“ a „ladenie“.\n\nDefinujte:\n\n-   **Kódovanie** je písanie kódu, teda pokynov pre počítač.\n-   **Programovanie** je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   **Ladenie** je kontrola kódu s cieľom nájsť chyby a opraviť ich.\n\nDajte žiakom za úlohu vymenovať nejaké pracovné pozície, ktoré súvisia s kódovaním. Žiaci možno spomenú výrazy ako „programátor“, „informatik“, „developer“ alebo „softvérový inžinier“. Zaznamenajte odpovede žiakov do myšlienkovej mapy okolo výrazu INFORMATIKA, ktorý máte napísaný na tabuli alebo nástenke. \n\n**Povedzte:** „Presne tak! Na túto otázku sa takmer ani nedá odpovedať nesprávne. V dnešnej dobe si totiž už prakticky každá práca vyžaduje nejaké znalosti kódovania. Je teda výborné, že kódovať sa môže naučiť ktokoľvek. A práve tomu sa budeme venovať dnes. A hoci dnes asi nenaprogramujeme nič prevratné, veci, čo sa dnes naučíte, vám možno raz pomôžu vytvoriť niečo rovnako populárne ako Angry Birds či Facebook.“\\_"
+        },
         "a69a3310-4b81-4e04-8313-51044489351a": {
-          "name": "Star Wars: Budovanie galaxie pomocou kódu"
+          "name": "Star Wars: Budovanie galaxie pomocou kódu",
+          "description": "Dajte svojim žiakom za úlohu prejsť kurz [Star Wars: Budovanie galaxie pomocou kódu](https://studio.code.org/s/starwars/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu takto: \n\n-   Ak máte mladších žiakov, odporúčame vám vytvoriť dvojice, aby mohli žiaci pri robení kurzu využiť [párové programovanie](https://youtu.be/vgkahOzFH2Q).\n-   Pre starších žiakov môže byť ideálne pracovať na kurze samostatne. Občas pomôže, keď majú žiaci možnosť sami si vybrať kurz, ktorý budú robiť. Ak ich nezaujíma svet Hviezdnych vojen, podobný zážitok im dokáže poskytnúť aj kurz [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1).\n-   U dospelých žiakov a dospelých funguje kurz [Star Wars: Budovanie galaxie pomocou kódu](https://studio.code.org/s/starwars/lessons/1/levels/1) výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
             "Kým dáte vybrané kurzy na vypracovanie žiakom, najprv si ich prejdite sami. Takto budete vedieť, čo môžete od kurzov očakávať, a budete sa vedieť rozhodnúť, či dáte žiakom možnosť vybrať si vlastný kurz alebo im radšej pridelíte kurzy podľa ich potrieb."
           ]
+        },
+        "eb72d828-788d-4090-9e4f-71423c081948": {
+          "description": "Na konci kurzu majú žiaci možnosť vytvoriť hru Star Wars. Ak žiaci skončia skôr, vyzvite ich, aby si navzájom vyskúšali hry a potom urobili svoje vlastné hry zaujímavejšími alebo náročnejšími.\n\nMôžete tiež nechať skupinu alebo jednotlivca, aby si vyskúšali ďalší kurz na stránke [code.org/learn](http://code.org/learn)."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Reflexia",
@@ -848,7 +871,8 @@
           "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Viac tipov na kurzy nájdete na stránke [Aj ty môžeš učiť informatiku](https://studio.code.org/courses?view=teacher)**.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si dobrovoľníka na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
-          "name": "Príprava"
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\n**Povedzte:** _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo znamená?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi."
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -859,7 +883,8 @@
           "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“ a „ladenie“.\n\nZadefinujte:\n\n-   **Kódovanie** je písanie kódu, teda pokynov pre počítač.\n-   **Programovanie** je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   **Ladenie** je kontrola kódu s cieľom nájsť chyby a opraviť ich.\n\nSpýtajte sa žiakov, čo bude podľa nich najlepším krokom po skončení strednej školy. Povedzte im, aby zdvihli ruku, ak pri tomto ďalšom kroku budú musieť používať počítač. Ruku by mal zdvihnúť každý, pretože počítače sú všade okolo nás – v telefónoch, autách či dokonca mikrovlnných rúrach a umývačkách riadu!\n\nVysvetlite žiakom, že na mnohých školách na Slovensku sa informatika nevyučuje v dostatočnej kvalite a rozsahu. Veľká časť ľudí teda nemá dobrú príležitosť učiť sa informatiku. Položte žiakom otázku: Ak mladý človek nemá takmer žiadne skúsenosti s počítačmi, ako to ovplyvní jeho schopnosť nájsť si svoju vysnívanú prácu alebo sa dostať na vysokú školu, kde chce študovať? Tento problém pritom nie je iba záležitosťou Slovenska, ale čelia mu školy po celom svete.\n\nVysvetlite žiakom, že žiaci po celom svete sa zapájajú do Hodiny kódu, ktorej hlavným cieľom je zvýšiť povedomie o tom, že nie všetci žiaci majú rovnako jednoduchý prístup k dobrému informatickému vzdelaniu. Žiaci sa teda podujatia zúčastňujú nielen preto, aby sa naučili základy informatiky a trochu sa zabavili, ale aj preto, aby vyjadrili svoj postoj a poukázali na to, aká je informatika dôležitá."
         },
         "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
-          "name": "Play Lab"
+          "name": "Play Lab",
+          "description": "Vyzvite svojich žiakov, aby dokončili kurz [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu nasledovne: \n\n-   Pri žiakoch 2. stupňa základných škôl a žiakoch stredných škôl odporúčame vybrať aktivity, ktoré ponúkajú možnosť voľnej hry a voľného vytvárania aplikácií alebo hier. Žiaci môžu pracovať samostatne, vo dvojiciach alebo v malých skupinách. Na stránke [code.org/learn](http://code.org/learn) je k dispozícii množstvo ďalších aktivít, ktoré žiakom ponúkajú možnosť slobodne niečo vytvárať, napríklad [Vytvor si hru v štýle Flappy Bird](https://studio.code.org/s/flappy) a náš nový nástroj [AppLab](https://code.org/educate/applab).\n-   Pri mladších žiakoch odporúčame, aby ste triedu rozdelili do dvojíc alebo malých skupín (po troch alebo štyroch žiakov) a dali každej skupine za úlohu spraviť aktivitu s využitím [párového programovania](https://youtu.be/vgkahOzFH2Q).\n-   Pre dospelých odporúčame aktivitu [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1), ktorá funguje výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "d430e170-dccc-4c02-bcfe-5084169a154b": {
           "tips": [
@@ -930,21 +955,21 @@
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "description": "_V tejto aktivite sa zabavíš vytváraním interaktívneho sveta so zábavnými postavičkami. Pomocou bubliniek budeš môcť nechať postavičky hovoriť veci tak, ako by si to videl v komikse alebo grafickom románe, a naučíš sa, aby reagovali automaticky, keď na ne ty alebo niekto iný klikne._\n\n_Dnes budeš písať „kód“, čo znamená iba súbor pokynov, ktorým počítač rozumie. Keď píšeš príbeh, musíš si dobre premyslieť slová, ktoré použiješ. Pri písaní kódu si budeš musieť dôkladne premyslieť pokyny, ktoré dávaš svojmu počítaču._",
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
           "tips": [
-            "Nebudete chcieť tráviť veľké množstvo času načítavaním alebo predstavovaním Hodiny kódu. Najmä u mladších žiakov je najlepšie skočiť do toho čo najrýchlejšie."
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Všeobecná podpora",
-          "description": "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, v ktorej pracujú\n\n-   **Spolupráca so susedom:** Povzbuďte študentov, aby sa požiadali o pomoc suseda, keď sú bezradný. V závislosti od veku a schopností vašich študentov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli absolvovať inštruktážny program pomocou [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Prečítajte si pokyny:** Pokyny zvyčajne poskytujú užitočné tipy, ako dokončiť úroveň. Skôr ako dáte študentom odpoveď, uistite sa, že si pozorne prečítali pokyny, rady, videá a akýkoľvek štartovací kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bezradný? Vyhľadajte nápovedy:** Každá úroveň obsahuje nápovedu s radami, ako prejsť úrovňou, vrátane toho, ktoré bloky kódu vyskúšať.\n\n-   **Neponáhľajte sa a experimentujte.** Pokyny hovoria študentom vo všeobecnosti, čo majú robiť, ale mali by tiež bez obáv vyskúšať svoje vlastné nápady."
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Ahoj Svet",
           "progression_name": "Ahoj Svet"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Ak skupina alebo jednotlivec skončí skôr, povzbuďte ich, aby pokračovali v tvorení projektu v poslednej úrovni. Ak si študenti nie sú istí, čo ešte majú robiť, môžete im dať otázky:\n\n-   Aké ďalšie postavičky by ste mohli pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste si vyskúšali nakresliť svoj vlastný kostým postavičky?\n-   Čo ešte by mohli vaše postavičky povedať?\n-   Čo by mali vaše postavičky robiť, keď na ne kliknete?\n-   Pozvite študentov, aby zdieľali nápady a učili sa jeden od druhého. Môžu tiež vyskúšať ďalší návod na stránke [code.org/learn](https://code.org/learn)."
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Reflexia",
@@ -959,10 +984,19 @@
             "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z našich [inšpiratívnych videí](https://hourofcode.com/us/resources#videos). Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre mladších žiakov odporúčame video [Hodina kódu je tu](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
+          "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“ a „ladenie“.\n\nDefinujte:\n\n-   **Kódovanie** je písanie kódu, teda pokynov pre počítač.\n-   **Programovanie** je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   **Ladenie** je kontrola kódu s cieľom nájsť chyby a opraviť ich.\n\nDajte žiakom za úlohu vymenovať nejaké pracovné pozície, ktoré súvisia s kódovaním. Žiaci možno spomenú výrazy ako „programátor“, „informatik“, „developer“ alebo „softvérový inžinier“. Zaznamenajte odpovede žiakov do myšlienkovej mapy okolo výrazu INFORMATIKA, ktorý máte napísaný na tabuli alebo nástenke. \n\n**Povedzte:** „Presne tak! Na túto otázku sa takmer ani nedá odpovedať nesprávne. V dnešnej dobe si totiž už prakticky každá práca vyžaduje nejaké znalosti kódovania. Je teda výborné, že kódovať sa môže naučiť ktokoľvek. A práve tomu sa budeme venovať dnes. A hoci dnes asi nenaprogramujeme nič prevratné, veci, čo sa dnes naučíte, vám možno raz pomôžu vytvoriť niečo rovnako populárne ako Angry Birds či Facebook.“\\_"
+        },
+        "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
+          "description": "Dajte svojim žiakom za úlohu prejsť kurz [Star Wars: Budovanie galaxie pomocou kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu takto: \n\n-   Ak máte mladších žiakov, odporúčame vám vytvoriť dvojice, aby mohli žiaci pri robení kurzu využiť [párové programovanie](https://youtu.be/vgkahOzFH2Q).\n-   Pre starších žiakov môže byť ideálne pracovať na kurze samostatne. Občas pomôže, keď majú žiaci možnosť sami si vybrať kurz, ktorý budú robiť. Ak ich nezaujíma svet Hviezdnych vojen, podobný zážitok im dokáže poskytnúť aj kurz [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1).\n-   U dospelých žiakov a dospelých funguje kurz [Star Wars: Budovanie galaxie pomocou kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
+        },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
             "Kým dáte kurz na vypracovanie žiakom, najprv si ho prejdite sami. Takto budete vedieť, čo môžete od kurzu očakávať, a budete sa vedieť rozhodnúť, či dáte žiakom možnosť vybrať si vlastný kurz alebo im radšej pridelíte kurzy podľa ich potrieb."
           ]
+        },
+        "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
+          "description": "Na konci kurzu majú žiaci možnosť vytvoriť hru Star Wars. Ak žiaci skončia skôr, vyzvite ich, aby si navzájom vyskúšali hry a potom urobili svoje vlastné hry zaujímavejšími alebo náročnejšími.\n\nMôžete tiež nechať skupinu alebo jednotlivca, aby si vyskúšali ďalší kurz na stránke [code.org/learn](http://code.org/learn)."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Reflexia",
@@ -983,59 +1017,133 @@
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Pred skončením hodiny si so žiakmi vytvorte na tabuli alebo nástenke myšlienkovú mapu informatiky zo samolepiacich papierikov. Snažte sa na ňu pridať čo najviac zaujímavých nápadov o tom, čo je informatika a prečo je dôležitá."
         },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "Úvodná aktivita",
+          "description": "#### Skrtk v tvj txt sprv\n\nAko úvod do diskusie o kompresii textu využite spojenie so spôsobmi, ktorými väčšina ľudí už vo svojom živote komprimuje text, a to prostredníctvom skratiek a akronymov, s ktorými má väčšina ľudí v textových správach určité skúsenosti.\n\nPodnieťte niektoré myšlienky o tom, prečo by niekto chcel komprimovať text.\n\n**Spýtajte sa:**"
+        },
+        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
+          "description": "-   _„Keď posielate priateľom textové správy, píšete každé slovo správne?“_ \n    -   Používate skratky pre bežné slová? Vymenujte ich čo najviac.  \n    -   Napíšte niekoľko príkladov vecí, ktoré sa môžu vyskytnúť v textovej správe a ktoré nie sú v spisovnom jazyku.\n\nDajte žiakom minútu na napísanie a na diskusiu so susedom.\n\n-   _„Prečo používate tieto skratky? Aký to má zmysel?“_\n    -   Možné odpovede:\n        -   aby sme ušetrili znaky/stlačenia klávesov\n        -   aby sme sa skryli pred rodičmi/učiteľmi\n        -   aby ste boli cool, múdri, zábavní\n        -   aby sme „hovorili v kóde“\n        -   aby sme dokázali niečo povedať stručnejšie"
+        },
+        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
+          "description": "„O čo ide? – Kompresia: Rovnaké údaje, menej bitov“\n\n-   Dnešná lekcia je o _kompresii_\n\n-   Keď skracujete alebo používate kódovaný jazyk na skrátenie pôvodného textu, „komprimujete text“.  Počítače to robia tiež, aby ušetrili čas a miesto.\n\n-   Umenie a veda kompresie spočíva vo vynájdení spôsobu, ako reprezentovať tie isté DÁTA s MENŠÍM počtom bitov.\n\n-   Prečo je to dôležité? Jedným z dôvodov je, že ukladací priestor je obmedzený a vždy je lepšie použiť menej bitov, ak je to možné. Oveľa dôležitejším dôvodom však je, že existuje horná hranica rýchlosti, akou sa dajú bity prenášať cez internet.\n\n-   Čo ak potrebujeme rýchlejšie odoslať veľké množstvo textu cez internet, ale dosiahli sme fyzický limit rýchlosti, akou môžeme posielať bity? Našou jedinou možnosťou je nejakým spôsobom zachytiť rovnaké informácie s menším počtom bitov. Hovoríme tomu _kompresia_."
+        },
+        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
+          "description": "**Premostenie:** \n\nPozrime sa na príklad textovej správy, ktorá bola komprimovaná šikovným spôsobom."
+        },
+        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
+          "description": "#### Rozlúštite tento tajomný text (10 až 15 minút)\n\n-   **Rozdajte alebo vystavte** Sprievodcu aktivitou\n-   Rozdeľte žiakov do skupín alebo ich nechajte pracovať samostatne.\n-   **Úloha:** Aký bol pôvodný text?\n-   Dajte žiakom niekoľko minút na dekódovanie textu.  Text by mala byť krátka báseň (pozrite si zhrnutie aktivity nižšie).\n\n| Sprievodca aktivitou pre žiakov                                          | Zhrnutie aktivity                                                                     |\n| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |\n| **Rozdajte alebo vystavte** Sprievodcu aktivitou                         | (Vystavte alebo nakreslite) Zhrnutie aktivity: Rozlúštite túto správu                 |\n| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png) | ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) |\n\n\\*\\*Zhrnutie: Ako veľmi bola komprimovaná?\n\nAby sme na túto otázku vedeli odpovedať, musíme porovnať počet znakov v pôvodnej básni s počtom znakov potrebných na vyjadrenie komprimovanej verzie. \n\nPoďme si to rozobrať.\n\n-   **Zobrazte** alebo **predveďte** myšlienky z: [r activity-recap-decode-this-message] \\(uvedené v tabuľke vyššie)\n\n-   **Dôležitá poznámka**: \n\n    -   Komprimovaná báseň nie je _len_ táto časť: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png) \n\n Ak by ste ju niekomu poslali cez internet, nedokázal by ju dekódovať.\n     \\* Úplný komprimovaný text obsahuje OBOJE: komprimovaný text _a_ kľúč na jeho rozlúštenie.\\\n     \\* Preto je nutné započítať celkový počet znakov v správe _plus_ celkový počet znakov v kľúči, aby ste zistili, o koľko ste ho skomprimovali oproti originálu.  \n\n**Premostenie**\n\nTeraz si budete môcť sami vyskúšať komprimáciu niektorých vecí."
+        },
+        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
+          "description": "#### Používanie widgetu na kompresiu textu\n\nPrehrajte si video - **Kompresia textu s Aloe Blacc**"
+        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            null
+            "Vo videu je vysvetlené niečo o kompresii všeobecne – rozdiel medzi [v bezstratovou kompresiou] a [v stratovou kompresiou].  Dnešná hodina je o **[v bezstratovej kompresii]**, stratovej kompresii sa budeme venovať na jednej alebo dvoch hodinách po tom, ako sa pozrieme na kódovanie obrázkov."
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            null
+            "**Učiteľ si môže vybrať**, či video pustí celej triede, alebo či ho žiaci budú sledovať v rámci aplikácie Code Studio.  Každá možnosť má svoje výhody a nevýhody.\n\n**Možnosť na zváženie**: Žiakom dajte k dispozícii nástroj na komprimáciu textu PRED premietaním videa. Žiaci by mohli lepšie pochopiť niektoré informácie vo videu, ak si najprv vyskúšajú nástroj.\n\n**Komunikácia a spolupráca:** Na rozvoj komunikácie a spolupráce medzi žiakmi zaraďte do hodiny jeden z nasledujúcich postupov:\n\n-   Nechajte žiakov, ktorým bola pridelená rovnaká báseň, porovnať výsledky alebo ich posaďte do rovnakej časti učebne.\n-   Usporiadajte malú priateľskú súťaž – ale dávajte pozor, aby do nej neprenikla „zlá“ súťaživosť – o to, ktorá dvojica dokáže báseň najviac skomprimovať.  Použite báseň, ktorú ešte nikto zo žiakov neskomprimoval.\n-   Pri každej básni nech skupiny, ktorá na básni pracovali, zistili, kto je v triede najlepší, a zapíšte to na tabuľu alebo na miesto, kde to ostatní uvidia.\n    -   Dajte si za cieľ v triede dosiahnuť čo najvyššie percento kompresie štyroch básní.\n    -   Skupiny s najlepšími percentami kompresie môžete požiadať, aby sa o svoju stratégiu podelili s triedou.\n\nŽiaci sa môžu zdráhať podeliť, ak majú pocit, že nemajú najlepšie výsledky, ale mali by vidieť prácu ostatných a ponúknuť rady a stratégie."
           ]
+        },
+        "b784f10e-0727-464d-856e-33c76e2e0077": {
+          "description": "-   Video vysvetľuje kompresiu\n-   Ukazuje použitie nástroja na kompresiu textu. \n-   POZNÁMKA: Toto video sa automaticky zobrazí, keď žiaci otvoria fázu kompresie textu v aplikácii Code Studio.\n\n<div class=\"guide\" markdown=1>\n\n-   Rozdeľte žiakov do skupín po 2\n-   Každej dvojici priraďte jednu z poskytnutých básní a vyzvite ich, aby ako dvojica čo najviac skomprimovali svoju báseň.\n-   Rozdajte alebo napíšte na tabuľu jednoduché pokyny, ktorými sa žiaci budú riadiť.\n    -   **Zadajte úlohu**: čo najviac skomprimujte pridelenú báseň.\n    -   Porovnajte sa s ostatnými skupinami a zistite, či vám to pôjde lepšie.\n    -   Pokúste sa vytvoriť všeobecnú stratégiu, ktorá povedie k dobrej kompresii."
+        },
+        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
+          "description": "-   Po určitom čase nechajte dvojice, ktoré napísali rovnakú báseň, aby si porovnali schémy.  Ich úlohou je spoločne vymyslieť pre triedu najlepšiu kompresiu pre danú báseň."
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Kompresia textu"
         },
+        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
+          "description": "#### Diskutujte o možnostiach a problémoch spojených s kompresiou\n\nPožiadajte skupiny, aby sa na chvíľu zastavili a prediskutovali otázky na konci aktivity.\n\n**Otázky pre triedu:**\n\n-   _„Čo sťažuje vykonávanie takejto kompresie?“_\n\n    -   Požiadajte žiakov o odpovede. Na povrch by mali vyplávať niektoré z týchto problémov:  Môžete začať mnohými rôznymi spôsobmi.  Skoré rozhodnutia ovplyvňujú tie neskoršie.  Keď nájdete jeden súbor vzorov, objavia sa ďalšie.\n    -   Existuje bod zvratu: Možno robíte pokroky pri kompresii, ale v určitom okamihu sa misky váh preklopia a slovník začne byť taký veľký, že prestane dávať zmysel. Potom však môžete začať slovník prehodnocovať a niektoré časti z neho vyladiť.\n\n-   \\_\"Myslíme si, že tieto miery kompresie, ktoré sme našli, sú najlepšie? Existuje spôsob, ako zistiť, aká je najlepšia kompresia?\"\n    -   Pravdepodobne nevieme, čo je najlepšie.\n    -   Existuje toľko možností, že je ťažké to zistiť.  Ukazuje sa, že jediný spôsob, ako zaručiť dokonalú kompresiu, je hrubá sila.  To znamená vyskúšať všetky možné množiny zámen. Aj v prípade malých textov to bude trvať príliš dlho. \"Najlepší\" je v skutočnosti len najlepší, aký sme doteraz našli.\n\n-   \\_\"Ale existuje postup, ktorým sa človek môže riadiť, aby našiel najlepšiu (alebo celkom dobrú) kompresiu pre časť textu?\"\n    -   Áno, ale je to nepresné - mohli by ste to nechať ako dlhodobú otázku."
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Skutočný svet: Kompresia ZIP**\n\n-   Experimentujte s kompresiou ZIP pomocou textových súborov s rôznym obsahom.  Sú výsledky pri malých súboroch rovnako dobré ako pri veľkých súboroch? (Na počítačoch Mac vyberte vo Finderi položku „Get info“ (Získať informácie) pre súbor, aby ste zistili skutočný počet bajtov v súbore, pretože na obrazovke Finderu sa pri každom súbore s menšou veľkosťou zobrazí 4 kB.\n    -   Upozornenie: Výsledky sa môžu líšiť.  ZIP funguje veľmi dobre pri texte, ale nemusí dobre komprimovať iné súbory, pretože sú už komprimované alebo nemajú rovnaké druhy vložených vzorov ako textové dokumenty.\n\n**Úloha:  Preskúmajte algoritmus LZW**.\n\n-   Kompresia ZIP je založená na [kompresnej schéme LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch).\n\n-   Hoci myšlienka nástroja na kompresiu textu je podobná algoritmu LZW (ZIP), sledovanie cesty kompresie a dekompresie je trochu náročné. Naučiť sa viac o algoritme LZW a o tom, čo sa deje v rámci vykonávania tohto algoritmu, by bolo pre niektorých jednotlivcov vynikajúcim projektom na rozšírenie vedomostí."
+        },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "**Diskusia:**\n\n-   _Čo vieme o tom, ako sa vírus šíri?_\n-   \\_Čo môže spôsobiť rýchlejšie šírenie vírusu v meste?\n-   \\_Čo môže pomôcť spomaliť šírenie vírusu?\n\nCieľom tejto diskusie je, aby žiaci mali možnosť aktivizovať svoje predchádzajúce vedomosti a vidieť svoje nápady na tabuli. Je to tiež príležitosť preskúmať niektoré nesprávne predstavy o tom, ako sa vírusy šíria."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Nákaza",
+          "description": "_V rámci dnešnej lekcie sa chystáte do Monster Townu, kde má vypuknúť epidémia vírusu. Doktor Príšera potrebuje vašu pomoc, aby spomalil šírenie vírusu._\n\n_V Sprite Labe vytvoríte simulátor epidémie a potom ho použijete, aby ste pochopili, ako sa môže vírus šíriť. Pomôžete tiež všetkým príšerkám znova vyzdravieť!_",
           "progression_name": "Nákaza"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Urobte toto:** Prečítajte si ako trieda knihu _Vitajte v Monster Towne_.",
           "progression_name": "Vitajte v mestečku Monster Town"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Urobte toto:** Zopakujte si so žiakmi slovnú zásobu, **modely a simulácie**, pričom nadviažte na predchádzajúcu lekciu. Simulácia je počítačový model procesu alebo systému."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Dnes oživíme miesto ako Monster Town písaním kódu. V tejto simulácii budete používať sprajty, ktoré budú predstavovať rôzne príšery. Sprajty budú mať rôzne kostýmy, ktoré nám povedia napríklad to, či sú choré alebo zdravé. Budete tiež používať správanie, aby sa príšery pohybovali. Nakoniec pomocou udalostí zmeníte kostým jedného sprajtu, keď sa dva sprajty na tejto obrazovke dotknú. To bude predstavovať prenos vírusu z jednej príšery na druhú. Budete predpovedať, čo sa stane so susedmi Monster Townu, a pomôžete im znova sa uzdraviť!_ "
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Urobte toto:** Posaďte žiakov k ich počítačom a nechajte ich začať postupovať podľa pokynov pre každú úroveň v časti Budovanie zručností. Ak žiaci dokončia túto časť skôr, môžu pokračovať v experimentovaní so svojím kódom na úrovni 6, kým trieda nebude pripravená pokračovať ďalej.",
           "progression_name": "Budovanie zručností"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Urobte toto:** Posaďte žiakov späť k ich počítačom a nechajte ich pracovať na zostávajúcich úrovniach. Niektoré z týchto úrovní obsahujú dobrovoľné úlohy. Povzbuďte žiakov, aby si pozorne prečítali pokyny a experimentovali so svojimi simuláciami.",
+          "progression_name": "Miniprojekt: Simulácia nákazy"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Voľná hra"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulácie sú skvelým spôsobom, ako zistiť veci, ktoré sa v reálnom svete dajú len ťažko pozorovať. Pomáhajú vedcom riešiť problémy, predvídať, ako problém vyriešiť, a bezpečne a efektívne testovať nové nápady. Tvoja simulácia je spôsob, ako znázorniť, ako by mohla vyzerať epidémia vírusu v Monster Towne._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Diskusia:**\n\n-   Ako môžu byť simulácie užitočné v reálnom svete? \n-   Ako nám môžu simulácie pomôcť pochopiť svet okolo nás? \n-   Ako môžu simulácie zlepšiť spôsob, akým testujeme nápady? \n\nCieľom diskusie je, aby žiaci pochopili, že simulácie sú spôsobom, ako interaktívne modelovať zložité systémy. Mali by tiež vidieť, ako simulácie umožňujú ľuďom rýchlo, lacno a bezpečne testovať nápady. "
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   V čom je táto simulácia podobná skutočnému svetu? V čom sa líši?\n-   Čo by ste chceli v simulácii zmeniť alebo do nej pridať?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Úvod",
+          "description": "#### Príprava\n\nPrivítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\nPovedzte: _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo znamená?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi.",
           "tips": [
             "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z našich [inšpiratívnych videí](https://hourofcode.com/us/resources#videos). Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre mladších žiakov odporúčame video [Hodina kódu je tu](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“, „udalosti“ a „ladenie“.\n\nDefinujte:\n\n-   Kódovanie je písanie kódu, teda pokynov pre počítač.\n-   Programovanie je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   Udalosť je akcia, ktorá spôsobí, že sa niečo stane\n-   Ladenie je kontrola kódu s cieľom nájsť chyby a opraviť ich.",
           "tips": [
             "S predstavovaním aktivity, ktorú ste pre žiakov v rámci Hodiny kódu pripravili, nestrávte veľa času. Najmä pre mladších žiakov je ideálne čo najskôr sa pustiť do práce. Ak na začiatku strávite príliš veľa času vysvetľovaním alebo výkladom, žiakom tým môžete pokaziť zábavu z aktivity – a práve zábava je predsa to, o čo nám ide!"
           ]
         },
+        "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
+          "description": "Požiadajte žiakov, aby si sadli k vám. Teraz im povedzte, aby sa všetci postavili!\n\nPovedzte žiakom, že to, čo ste práve urobili, bola deklarácia udalosti a akcie. Keď poviete, aby si sadli, je to udalosť. Akcia, ktorá reaguje na túto udalosť, je, že si trieda sadne. To isté sa deje, keď triede poviete, aby vstala. Udalosti a akcie sú v našom živote ľahko identifikovateľné.\n\nMedzi ďalšie udalosti a akcie patria napríklad tieto:\n\n-   Pocit hladu a jedenie jedla\n-   Zakopnutie palcom na nohe a výkrik \"Au!\".\n-   Trafenie basketbalovej lopty do koša a získanie bodu pre svoj tím!\n\nPožiadajte žiakov, aby vymysleli niekoľko ďalších udalostí. Povedzte im, že vytvoria hru, v ktorej bude program obsahovať akcie spojené s udalosťami, ktoré naprogramujú!"
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "description": "Dajte svojim žiakom za úlohu prejsť aktivitu [Naprogramuj si vlastný zápas](https://studio.code.org/s/sports/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu takto: \n\n-   Ak máte mladších žiakov, odporúčame vám vytvoriť dvojice, aby mohli žiaci pri robení kurzu využiť [párové programovanie](https://youtu.be/vgkahOzFH2Q).\n-   Pre žiakov v stredných ročníkoch môže byť ideálne pracovať na kurze samostatne. Občas pomôže, keď majú žiaci možnosť sami si vybrať kurz, na ktorom chcú pracovať. Ak ich nezaujíma Minecraft, podobný zážitok im vedia poskytnúť aj kurzy [Programuj s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) či [Star Wars](https://code.org/starwars).\n-   U starších žiakov a dospelých funguje [Naprogramuj si vlastný zápas](https://studio.code.org/s/sports/lessons/1/levels/1) výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "description": "Po dokončení ostatných úloh budú mať žiaci príležitosť prispôsobiť si hru tak, aby bola skutočne jedinečná. Povedzte žiakom, nech skúsia hru upraviť tak, aby bola náročnejšia. Môžu napríklad do hry pridať veľa lôpt naraz alebo naprogramovať, aby sa do hry pridala ďalšia lopta vždy, keď sa nejaká existujúca lopta odrazí od steny.\n\nAk skupina alebo jednotlivec skončí skôr, môžu skúsiť iný kurz z [code.org/learn](<>).",
           "tips": [
-            null
+            "Pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu [Mysli celým telom, keď si online](https://www.youtube.com/watch?v=rgbZAWnOWOo), ktoré si môžu žiaci pozrieť v triede alebo samostatne."
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
           "name": "Hodnotenie",
+          "description": "Ukážte žiakom prezentáciu **Udalosti v Bounce – Ako fungujú?**. Na druhej snímke im dajte čas na to, aby si správne poradie **udalostí** najprv poznačili do svojich zošitov. Vyvolajte niekoľkých žiakov a spýtajte sa ich na odpoveď a až potom prejdite na tretiu snímku. Prediskutujte s triedou správne poradie udalostí.",
           "tips": [
-            null
+            "Hoci sa prvýkrát objavuje až v tejto lekcií, prezentácia **Udalosti v Bounce – Ako fungujú?** sa dá použiť aj vo všeobecnejších kontextoch, keďže ukazuje vzťah medzi hardvérom a softvérom. Najmä posledná snímka v krátkosti vysvetľuje postupnosť medzi počítačovými vstupmi a výstupmi, takže výborne poslúži ako plagát do triedy."
           ]
+        },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": "**Správne poradie je: D, B, A, C**"
+        },
+        "11b82689-57e5-404f-8846-51e10f2642d0": {
+          "description": "#### Reflexia\n\nDajte žiakom za úlohu zamyslieť sa nad dnešnými aktivitami. Čo na naučili o kódovaní, programovaní a ladení? Ako sa ich názor na informatiku a programovanie zmenil po tom, čo sa im hodinu venovali?\n\n#### Čas na oslavu\n\nVysvetlite žiakom, že dnes ste strávili jednu hodinu programovaním pri príležitosti Týždňa informatiky, v rámci ktorého sa do Hodiny kódu zapájajú milióny žiakov po celom svete. Zablahoželajte žiakom za to, že sa do tohto celosvetového hnutia zapojili.\n\nKaždému žiakovi odovzdajte [certifikát](https://code.org/certificates) s jeho menom.\n\n#### Ďalšie kroky\n\nPovedzte žiakom, že ak sa im dnešná aktivita páčila, majú veľa možností, ako v programovaní pokračovať. Motivujte ich k tomu, aby navštívili stránku code.org/learn, kde nájdu zoznam dostupných aktivít, alebo ak plánujete so žiakmi robiť niektoré z našich doplňujúcich aktivít, povedzte žiakom, čo ich čaká najbližšie."
+        },
+        "e9c48a39-952e-44be-8955-9d012bfa89c1": {
+          "description": "#### Čo ďalej po Hodine kódu\n\nExistuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Viac tipov na kurzy nájdete na stránke [Aj ty môžeš učiť informatiku](https://studio.code.org/courses?view=teacher)**.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si dobrovoľníka na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Poďme sa von zahrať s loptou\n\nZoberte žiakov von, aby si zahrali nejakú loptovú hru. Sledujte udalosti a následné akcie. Napríklad, ak pri basketbale žiak nedribluje, ide o faul a loptu dostáva druhý tím. Keď vo futbale niekto vykopne loptu za postrannú čiaru, druhý tím ju vhodí späť na ihrisko. Keď sa lopta dostane do bránky, skórujúci tím získava bod! Ak to vašich žiakov baví, povymýšľajte im ďalšie udalosti. Napríklad keď zaboduje kapitán tímu, všetci žiaci musia vykríknuť „hurá“. Alebo ak niekto zaboduje dvakrát za sebou, všetci žiaci si musia ľahnúť na zem a váľať sa!"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Príprava",
@@ -1050,7 +1158,8 @@
           "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“ a „ladenie“.\n\nZadefinujte:\n\n-   **Kódovanie** je písanie kódu, teda pokynov pre počítač.\n-   **Programovanie** je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   **Ladenie** je kontrola kódu s cieľom nájsť chyby a opraviť ich.\n\nSpýtajte sa žiakov, čo bude podľa nich najlepším krokom po skončení strednej školy. Povedzte im, aby zdvihli ruku, ak pri tomto ďalšom kroku budú musieť používať počítač. Ruku by mal zdvihnúť každý, pretože počítače sú všade okolo nás – v telefónoch, autách či dokonca mikrovlnných rúrach a umývačkách riadu!\n\nVysvetlite žiakom, že na mnohých školách na Slovensku sa informatika nevyučuje v dostatočnej kvalite a rozsahu. Veľká časť ľudí teda nemá dobrú príležitosť učiť sa informatiku. Položte žiakom otázku: Ak mladý človek nemá takmer žiadne skúsenosti s počítačmi, ako to ovplyvní jeho schopnosť nájsť si svoju vysnívanú prácu alebo sa dostať na vysokú školu, kde chce študovať? Tento problém pritom nie je iba záležitosťou Slovenska, ale čelia mu školy po celom svete.\n\nVysvetlite žiakom, že žiaci po celom svete sa zapájajú do Hodiny kódu, ktorej hlavným cieľom je zvýšiť povedomie o tom, že nie všetci žiaci majú rovnako jednoduchý prístup k dobrému informatickému vzdelaniu. Žiaci sa teda podujatia zúčastňujú nielen preto, aby sa naučili základy informatiky a trochu sa zabavili, ale aj preto, aby vyjadrili svoj postoj a poukázali na to, aká je informatika dôležitá."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
-          "name": "Disney Infinity Play Lab"
+          "name": "Disney Infinity Play Lab",
+          "description": "Vyzvite svojich žiakov, aby dokončili kurz [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu nasledovne: \n\n-   Pri žiakoch 2. stupňa základných škôl a žiakoch stredných škôl odporúčame vybrať aktivity, ktoré ponúkajú možnosť voľnej hry a voľného vytvárania aplikácií alebo hier. Žiaci môžu pracovať samostatne, vo dvojiciach alebo v malých skupinách. Na stránke [code.org/learn](http://code.org/learn) je k dispozícii množstvo ďalších aktivít, ktoré žiakom ponúkajú možnosť slobodne niečo vytvárať, napríklad [Vytvor si hru v štýle Flappy Bird](https://studio.code.org/s/flappy) a náš nový nástroj [App Lab](https://code.org/educate/applab) (zatiaľ v beta verzii).\n-   Pri mladších žiakoch odporúčame, aby ste triedu rozdelili do dvojíc alebo malých skupín (po troch alebo štyroch žiakov) a dali každej skupine za úlohu spraviť aktivitu s využitím [párového programovania](https://youtu.be/vgkahOzFH2Q).\n-   Pre dospelých odporúčame aktivitu [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1), ktorá funguje výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -1082,29 +1191,42 @@
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Úvod",
+          "description": "#### Príprava\n\nPrivítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\nPovedzte: _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo znamená?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi.",
           "tips": [
             "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z našich [inšpiratívnych videí](https://hourofcode.com/us/resources#videos). Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre mladších žiakov odporúčame video [Hodina kódu je tu](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“, „udalosti“ a „ladenie“.\n\nDefinujte:\n\n-   Kódovanie je písanie kódu, teda pokynov pre počítač.\n-   Programovanie je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   Udalosť je akcia, ktorá spôsobí, že sa niečo stane\n-   Ladenie je kontrola kódu s cieľom nájsť chyby a opraviť ich.",
           "tips": [
             "S predstavovaním aktivity, ktorú ste pre žiakov v rámci Hodiny kódu pripravili, nestrávte veľa času. Najmä pre mladších žiakov je ideálne čo najskôr sa pustiť do práce. Ak na začiatku strávite príliš veľa času vysvetľovaním alebo výkladom, žiakom tým môžete pokaziť zábavu z aktivity – a práve zábava je predsa to, o čo nám ide!"
           ]
+        },
+        "94273f25-07f7-401b-85f9-13bc82c64695": {
+          "description": "Požiadajte žiakov, aby si sadli k vám. Teraz im povedzte, aby sa všetci postavili!\n\nPovedzte žiakom, že to, čo ste práve urobili, bola deklarácia udalosti a akcie. Keď poviete, aby si sadli, je to udalosť. Akcia, ktorá reaguje na túto udalosť, je, že si trieda sadne. To isté sa deje, keď triede poviete, aby vstala. Udalosti a akcie sú v našom živote ľahko identifikovateľné.\n\nMedzi ďalšie udalosti a akcie patria napríklad tieto:\n\n-   Pocit hladu a jedenie jedla\n-   Zakopnutie palcom na nohe a výkrik \"Au!\".\n-   Trafenie basketbalovej lopty do koša a získanie bodu pre svoj tím!\n\nPožiadajte žiakov, aby vymysleli niekoľko ďalších udalostí. Povedzte im, že vytvoria hru, v ktorej bude program obsahovať akcie spojené s udalosťami, ktoré naprogramujú!"
         },
         "41a58fa3-ee0d-46ca-be76-89def06d2062": {
           "name": "Vytvor si vlastný basketbalový zápas",
           "description": "Dajte svojim žiakom za úlohu prejsť aktivitu [Vytvor si vlastný basketbalový zápas](https://studio.code.org/s/basketball/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu nasledovne: \n\n-   Ak máte mladších žiakov, odporúčame vám vytvoriť dvojice, aby mohli žiaci pri robení kurzu využiť [párové programovanie](https://youtu.be/vgkahOzFH2Q).\n-   Pre žiakov v stredných ročníkoch môže byť ideálne pracovať na kurze samostatne. Občas pomôže, keď majú žiaci možnosť sami si vybrať kurz, ktorý budú robiť. Ak ich nezaujíma Minecraft, podobný zážitok im vedia poskytnúť aj kurzy [Programuj s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) či [Star Wars](https://code.org/starwars).\n-   U starších žiakov a dospelých funguje [Vytvor si vlastný basketbalový zápas](https://studio.code.org/s/basketball/lessons/1/levels/1) výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "description": "Po dokončení ostatných úloh budú mať žiaci príležitosť prispôsobiť si hru tak, aby bola skutočne jedinečná. Povedzte žiakom, nech skúsia hru upraviť tak, aby bola náročnejšia. Môžu napríklad do hry pridať veľa lôpt naraz alebo naprogramovať, aby sa do hry pridala ďalšia lopta vždy, keď sa nejaká existujúca lopta odrazí od steny.\n\nAk skupina alebo jednotlivec skončí skôr, môžu skúsiť iný kurz z [code.org/learn](<>).",
           "tips": [
             "Pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu [Mysli celým telom, keď si online](https://www.youtube.com/watch?v=rgbZAWnOWOo), ktoré si môžu žiaci pozrieť v triede alebo samostatne."
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
           "name": "Hodnotenie",
+          "description": "Ukážte žiakom prezentáciu **Udalosti v Bounce – Ako fungujú?**. Na druhej snímke im dajte čas na to, aby si správne poradie **udalostí** najprv poznačili do svojich zošitov. Vyvolajte niekoľkých žiakov a spýtajte sa ich na odpoveď a až potom prejdite na tretiu snímku. Prediskutujte s triedou správne poradie udalostí.",
           "tips": [
-            null
+            "Hoci sa prvýkrát objavuje až v tejto lekcií, prezentácia **Udalosti v Bounce – Ako fungujú?** sa dá použiť aj vo všeobecnejších kontextoch, keďže ukazuje vzťah medzi hardvérom a softvérom. Najmä posledná snímka v krátkosti vysvetľuje postupnosť medzi počítačovými vstupmi a výstupmi, takže výborne poslúži ako plagát do triedy."
           ]
+        },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": "**Správne poradie je: D, B, A, C**"
+        },
+        "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
+          "description": "#### Reflexia\n\nDajte žiakom za úlohu zamyslieť sa nad dnešnými aktivitami. Čo na naučili o kódovaní, programovaní a ladení? Ako sa ich názor na informatiku a programovanie zmenil po tom, čo sa im hodinu venovali?\n\n#### Čas na oslavu\n\nVysvetlite žiakom, že dnes ste strávili jednu hodinu programovaním pri príležitosti Týždňa informatiky, v rámci ktorého sa do Hodiny kódu zapájajú milióny žiakov po celom svete. Zablahoželajte žiakom za to, že sa do tohto celosvetového hnutia zapojili.\n\nKaždému žiakovi odovzdajte [certifikát](https://code.org/certificates) s jeho menom.\n\n#### Ďalšie kroky\n\nPovedzte žiakom, že ak sa im dnešná aktivita páčila, majú veľa možností, ako v programovaní pokračovať. Motivujte ich k tomu, aby navštívili stránku code.org/learn, kde nájdu zoznam dostupných aktivít, alebo ak plánujete so žiakmi robiť niektoré z našich doplňujúcich aktivít, povedzte žiakom, čo ich čaká najbližšie."
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### Čo ďalej po Hodine kódu\n\nExistuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Viac tipov na kurzy nájdete na stránke [Aj ty môžeš učiť informatiku](https://studio.code.org/courses?view=teacher)**.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si dobrovoľníka na našej [mape dobrovoľníkov](https://code.org/volunteer/local)\n\n#### Poďme sa von zahrať s loptou\n\nZoberte žiakov von, aby si zahrali nejakú loptovú hru. Sledujte udalosti a následné akcie. Napríklad, ak pri basketbale žiak nedribluje, ide o faul a loptu dostáva druhý tím. Keď vo futbale niekto vykopne loptu do autu, druhý tím ju vhodí späť na ihrisko. Keď sa lopta dostane do bránky, skórujúci tím získava bod! Ak to vašich žiakov baví, povymýšľajte im ďalšie udalosti. Napríklad keď zaboduje kapitán tímu, všetci žiaci musia vykríknuť „hurá“. Alebo ak niekto zaboduje dvakrát za sebou, všetci žiaci si musia ľahnúť na zem a váľať sa."
@@ -1357,20 +1479,20 @@
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_V tejto aktivite sa zabavíš vytváraním interaktívneho sveta so zábavnými postavičkami. Pomocou bubliniek budeš môcť nechať postavičky hovoriť veci tak, ako by si to videl v komikse alebo grafickom románe, a naučíš sa, aby reagovali automaticky, keď na ne ty alebo niekto iný klikne._\n\n_Dnes budeš písať „kód“, čo znamená iba súbor pokynov, ktorým počítač rozumie. Keď píšeš príbeh, musíš si dobre premyslieť slová, ktoré použiješ. Pri písaní kódu si budeš musieť dôkladne premyslieť pokyny, ktoré dávaš svojmu počítaču._",
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
           "tips": [
-            "Nebudete chcieť tráviť veľké množstvo času načítavaním alebo predstavovaním Hodiny kódu. Najmä u mladších žiakov je najlepšie skočiť do toho čo najrýchlejšie."
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "name": "Všeobecná podpora",
-          "description": "Tu je niekoľko tipov, ktoré by mali pomôcť študentom bez ohľadu na úroveň, v ktorej pracujú\n\n-   **Spolupráca so susedom:** Povzbuďte študentov, aby sa požiadali o pomoc suseda, keď sú bezradný. V závislosti od veku a schopností vašich študentov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli absolvovať inštruktážny program pomocou [pair programming][0].\n\n-   **Prečítajte si pokyny:** Pokyny zvyčajne poskytujú užitočné tipy, ako dokončiť úroveň. Skôr ako dáte študentom odpoveď, uistite sa, že si pozorne prečítali pokyny, rady, videá a akýkoľvek štartovací kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bezradný? Vyhľadajte nápovedy:** Každá úroveň obsahuje nápovedu s radami, ako prejsť úrovňou, vrátane toho, ktoré bloky kódu vyskúšať.\n\n-   **Neponáhľajte sa a experimentujte.** Pokyny hovoria študentom vo všeobecnosti, čo majú robiť, ale mali by tiež bez obáv vyskúšať svoje vlastné nápady."
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania][0].  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Ahoj Svet"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Ak skupina alebo jednotlivec skončí skôr, povzbuďte ich, aby pokračovali v tvorení projektu v poslednej úrovni. Ak si študenti nie sú istí, čo ešte majú robiť, môžete im dať otázky:\n\n-   Aké ďalšie postavičky by ste mohli pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste si vyskúšali nakresliť svoj vlastný kostým postavičky?\n-   Čo ešte by mohli vaše postavičky povedať?\n-   Čo by mali vaše postavičky robiť, keď na ne kliknete?\n-   Pozvite študentov, aby zdieľali nápady a učili sa jeden od druhého. Môžu tiež vyskúšať ďalší návod na stránke [code.org/learn][0]."
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn][0]."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflexia",
@@ -5048,40 +5170,53 @@
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Dnes využijeme svoju kreativitu, kým sa naučíme programovať. Existuje veľa spôsobov, ako byť kreatívny. Akými spôsobmi ste radi kreatívni? "
+          "description": "Dnes využijeme svoju kreativitu a zároveň sa naučíme programovať. Existuje veľa spôsobov, ako prejaviť svoju kreativitu. Akým spôsobmi ju prejavujete vy? "
         },
         "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Povzbudzujte žiakov, aby porozprávali, akými spôsobmi sú kreatívni, napríklad ako je umenie, tanec, hudba alebo písanie. Ako doplňujúcu otázku sa žiakov opýtajte, čo inšpiruje ich kreativitu. "
+          "description": "Povzbudzujte žiakov, aby porozprávali, akými spôsobmi prejavujú svoju kreativitu, napríklad cez kreslenie, tanec, hudbu alebo písanie. Ako doplňujúcu otázku sa žiakov opýtajte, čo podnecuje ich kreativitu. "
         },
         "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Vedeli ste, že počítačová veda môže byť veľmi kreatívna? V skutočnosti môžete vytvárať umenie pomocou programovania. Pripomíname, že počítačový kód je súbor inštrukcií, ktorým počítač rozumie. Rovnako ako výber farieb na použitie, aj výber kódu, ktorý napíšete, môže byť príležitosťou na vyjadrenie vašej kreativity! \n\nNa inšpirovanie nášho dnešného kreatívneho programovania použijeme poéziu. Vie niekto, čo je to poézia? Máte obľúbenú báseň alebo básnika? "
+          "description": "Vedeli ste, že informatika môže byť veľmi kreatívna? V skutočnosti môžete tvoriť umenie pomocou programovania. Nezabúdajte, že počítačový kód je súbor inštrukcií, ktorým počítač rozumie. Rovnako ako výber farieb aj výber kódu, ktorý napíšete, môže byť príležitosťou na vyjadrenie vašej kreativity! \n\nAko inšpiráciu pre naše dnešné kreatívne programovanie použijeme poéziu. Vie niekto, čo je to poézia? Máte obľúbenú báseň alebo básnika? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
           "description": "**Čítajte spolu poéziu:** Prečítajte si [niekoľko básní][0] spolu ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte žiakov, aby sa podelili o svoj výklad, aj keď sa líši od výkladu niekoho iného. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Básnické umenie",
-          "description": "#### Všeobecná podporaNa\n\n konci tejto aktivity budú mať žiaci animovanú báseň, ktorá predstavuje ich vizuálnu interpretáciu básne, ktorú si vybrali. Táto lekcia je navrhnutá tak, aby žiaci mali príležitosť pohrať sa so svojim kódom a mohli nájsť vizuálne efekty, ktoré sa im najviac páčia. \n\nV kruhových cykloch po miestnosti povzbudzujte žiakov nasledovne:\n\n-   **Neponáhľajte sa:** Väčšina úrovní vyžaduje, aby žiaci našli dokonalé efekty, ktoré zodpovedajú ich interpretácii nálady básne. Dôrazne sa odporúča zostať na úrovni a pohrať sa s ich kódom.\n\n-   **Nájdite báseň, ktorá sa vám páči:** Báseň, ktorá sa zobrazí žiakovi na novej úrovni, je len návrh. V hornej časti hracieho priestoru je rozbaľovacia ponuka básní s vopred nahranými básňami. Požiadajte žiakov, aby si prečítali niekoľko básní a našli takú, ktorá ich zaujme. Potom môžu začať animovať báseň, ktorú si vybrali, pomocou programovania (kódu). \n\n-   **Ukážte dokončenú úroveň:** Akákoľvek bublina úrovne, ktorá je úplne zelená, znamená, že žiak úspešne splnil všetky požiadavky pre danú úroveň. Požiadajte žiaka, aby kliknutím na zelenú bublinu ukázal, čo vytvoril. \n\nPre chvíle, keď sa žiak zasekne: \n\n-   **Prečítajte si pokyny:** V odrážkach sú uvedené pokyny ako dokončiť úroveň. Ak sa žiak zasekne, požiadajte ho, aby vám nahlas prečítal pokyny a vlastnými slovami zopakoval, čo pokyny hovoria. \n-   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Žiaci si môžu vypočuť pokyny prečítané nahlas aj kliknutím na túto ikonu programu prevodu textu na reč.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Snažte sa nájsť tipy**: Väčšina úrovní zahŕňa aspoň jeden tip s jasnejšími podrobnosťami o tom, ako prejsť úrovňou. \n-   **Oslavujte chyby:** Chyby v programovaní sú prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo žiak očakával, požiadajte žiaka, aby vám najprv povedal, čo chce, aby sa stalo, kliknutím na tlačidlo „Spustiť“ sledoval, čo sa skutočne deje, a potom v programe našiel miesto, ktoré spôsobilo nezrovnalosť. Keď nájde chybu, nezabudnite to osláviť a opraviť. Ak sa chyba nájde, znamená to, že žiaci odviedli skvelú prácu pri vytváraní komplexnejšieho programu. "
+          "description": "#### Všeobecná podpora\n\nNa konci tejto aktivity budú mať žiaci animovanú báseň, ktorá predstavuje ich vizuálne znázornenie básne, ktorú si vybrali. Táto lekcia je navrhnutá tak, aby žiaci mali príležitosť pohrať sa so svojim kódom a mohli nájsť vizuálne efekty, ktoré sa im najviac páčia. \n\nPohybujte sa po učebni a povzbudzujte žiakov takto:\n\n-   **Neponáhľajte sa:** Väčšina úrovní vyžaduje, aby žiaci našli tie správne efekty, ktoré zodpovedajú ich pochopeniu nálady básne. Dôrazne sa odporúča zostať dlhšie na úrovni a pohrať sa s kódom.\n\n-   **Nájdite báseň, ktorá sa vám páči:** Báseň, ktorá sa zobrazí žiakovi na novej úrovni, je len návrh. V hornej časti hracieho priestoru je rozbaľovacia ponuka básní s vopred nahranými básňami. Požiadajte žiakov, aby si prečítali niekoľko básní a vybrali jednu, ktorá ich zaujme. Potom môžu začať animovať báseň, ktorú si vybrali, pomocou programovania. \n\n-   **Ukážte dokončenú úroveň:** Akákoľvek bublina úrovne, ktorá je úplne zelená, znamená, že žiak úspešne splnil všetky požiadavky pre danú úroveň. Požiadajte žiaka, aby kliknutím na zelenú bublinu ukázal, čo vytvoril. \n\nPre chvíle, keď sa žiak zasekne: \n\n-   **Prečítajte si pokyny:** V odrážkach sú uvedené pokyny, ako dokončiť úroveň. Ak sa žiak zasekne, požiadajte ho, aby vám nahlas prečítal pokyny a vlastnými slovami zopakoval, čo pokyny hovoria. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Žiaci si môžu vypočuť pokyny prečítané nahlas aj kliknutím na túto ikonu programu prevodu textu na reč.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Snažte sa nájsť pomôcky**: Väčšina úrovní zahŕňa aspoň jednu pomôcku s jasnejšími podrobnosťami o tom, ako prejsť úroveň. \n-   **Oslavujte chyby:** Chyby v kóde sú prirodzenou súčasťou procesu programovania. Ak program nerobí to, čo žiak očakával, požiadajte žiaka, aby vám najprv povedal, čo chce, aby sa stalo, kliknutím na tlačidlo „Spustiť“ sledoval, čo sa skutočne deje, a potom v programe našiel miesto, kde je nezrovnalosť. Keď nájde chybu, nezabudnite to osláviť a opraviť. Výskyt chyby znamená, že žiaci odviedli skvelú prácu pri vytváraní komplexnejšieho programu. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Podpora jednotlivých úrovní**Úroveň 1:** Povzbudzujte žiakov, aby si prečítali báseň. Potom žiakov požiadajte, aby našli farbu pozadia alebo efekt, ktorý zodpovedá tónu básne, ktorú si vybrali. **Úroveň 2:** V tomto príklade by si žiaci mali najskôr prečítať báseň sami a potom stlačiť tlačidlo Spustiť. Môžete sa žiaka opýtať, či zvuk a efekty, ktoré si programátor vybral, zodpovedali nálade básne. Požiadajte žiakov, aby svoju odpoveď upresnili. **Úroveň 3:** Táto úroveň predstavuje zvuk, žiaci môžu používať slúchadlá, ak ich majú. **Úroveň 4:** Požiadajte žiakov, aby prečítali báseň a našli riadok, v ktorom sa mení nálada básne alebo či existuje nový obraz, ktorý básnik predstavuje. Použite blok udalosti na pridanie zodpovedajúcich efektov k identifikovaným riadkom básne. **Úroveň 5:** V tomto príklade by si žiaci mali najskôr prečítať báseň sami a potom stlačiť tlačidlo Spustiť. Opýtajte sa žiaka, či sa obrázky zhodujú so slovami básne. Požiadajte žiakov, aby svoju odpoveď upresnili. **Úroveň 6, 7, 8:** Pozrite si časť „Oslávte chyby“ v časti Všeobecná podpora. Povzbudzujte žiakov, aby vytvárali programy s viac ako jedným prechodom pomocou blokov udalostí. **Úroveň 9:** Povzbudzujte žiakov, aby si prečítali všetky básne v rozbaľovacej ponuke a našli takú, ktorá sa im páči. Povedzte žiakom, že to, čo dosiahli v tejto poslednej úrovni, môžu zdieľať so svojimi priateľmi a rodinou. Teraz je čas dať dohromady všetky zručnosti v oblasti programovania a anglického jazyka a literatúry!"
+          "description": "#### Podpora jednotlivých úrovní\n\n**Úroveň 1:** Povedzte žiakom, nech si prečítajú báseň. Potom ich požiadajte, aby vybrali farbu pozadia alebo efekt, ktorý zodpovedá tónu básne, ktorú si vybrali. \n\n**Úroveň 2:** V tomto príklade by si žiaci mali najskôr prečítať báseň sami a potom stlačiť tlačidlo Spustiť. Môžete sa žiakov opýtať, či zvuk a efekty, ktoré si programátor vybral, zodpovedali nálade básne. Požiadajte žiakov, aby svoju odpoveď zdôvodnili. \n\n**Úroveň 3:** Na tejto úrovni sa pridá aj zvuk, takže žiaci môžu používať slúchadlá, ak ich majú. \n\n**Úroveň 4:** Požiadajte žiakov, aby prečítali báseň a našli riadok, v ktorom sa mení nálada básne, alebo sa ich spýtajte, či tu básnik uvádza nejaký nový obraz. Použite blok udalosti na pridanie zodpovedajúcich efektov k identifikovaným riadkom básne. \n\n**Úroveň 5:** V tomto príklade by si žiaci mali najskôr prečítať báseň sami a potom stlačiť tlačidlo Spustiť. Spýtajte sa žiakov, či sa obrázky zhodujú so slovami básne. Požiadajte ich, aby svoju odpoveď zdôvodnili. \n\n**Úrovne 6, 7 a 8:** Pozrite si časť „Oslávujte chyby“ v časti Všeobecná podpora. Povzbudzujte žiakov, aby vytvárali programy s viac ako jedným prechodom pomocou blokov udalostí. \n\n**Úroveň 9:** Povzbudzujte žiakov, aby si prečítali všetky básne v rozbaľovacej ponuke a vybrali si jednu, ktorá sa im páči. Povedzte žiakom, že to, čo dosiahli na tejto poslednej úrovni, môžu zdieľať so svojimi priateľmi a rodinou. Teraz je čas dať dohromady všetky vedomosti v oblasti programovania a jazyka a literatúry! "
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Ak sa vám dnes páčilo učiť sa programovať, môžete pokračovať v učení na stránke code.org/learn. Ak sa chcete podeliť o to, čo ste vytvorili, so svojimi priateľmi a rodinou, kliknite na tlačidlo „Zdieľať“ a pošlite odkaz komu len chcete!"
+          "description": "Ak sa ti dnes páčilo učiť sa programovať, môžeš pokračovať v učení na code.org/learn. Ak sa chceš podeliť o svoje dielo so svojimi priateľmi a rodinou, klikni na tlačidlo „Zdieľať“ a pošli odkaz komu len chceš!"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Voliteľné) hodnotenie: Skontrolujte pochopenie (4 minúty)\n\nKaždému žiakovi rozdajte dva poznámkové bločky. "
+          "description": "#### (voliteľné) Hodnotenie: Kontrola porozumenia (4 minúty)\n\nKaždému žiakovi rozdajte dva poznámkové bločky. "
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Máte dva poznámkové bločky. Na prvý napíšte jednu vec, ktorú ste sa dnes naučili o programovaní. \nNa druhý napíšte jednu vec, ktorú ste sa dnes naučili o poézii. \n\nPodeľme sa s celou triedou zdvihnutím ruky, a odpovedajte na túto otázku: Čo by ste sa ešte mohli naučiť o programovaní a počítačovej vede? "
+          "description": "Máte dva poznámkové bločky. Na prvý napíšte jednu vec, ktorú ste sa dnes naučili o programovaní. \nNa druhý napíšte jednu vec, ktorú ste sa dnes naučili o poézii. \n\nPodeľte sa s celou triedou zdvihnutím ruky a odpovedajte na túto otázku: Čo sa teraz chcete naučiť o programovaní a informatike? "
+        },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Príprava\n\nPrivítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\nPovedzte: _Dnes strávime hodinu riešením online úloh a učením sa správania v počítačovej učebni._\nCieľom tejto diskusie je naučiť žiakov, čo majú očakávať a ako sa majú správať, keď vstúpia do počítačovej učebne."
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   V učebni sedíme pokojne.\n-   Žuvačky a iné sladkosti sú zakázané.\n-   Pri vstupe si umyjeme alebo dezinfikujeme ruky.\n-   Dvojice sedia pri jednom počítači.\n-   Dávame pozor, aby „vodič“ dvojice dosiahol na myš.\n-   Keď sa nám nedarí, neudierame do počítača ani monitoru.\n-   Dodržiavame [pravidlo 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Ako si poradiť s tým, [keď už nevieme obsedieť](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) – každých 20 až 30 minút (vyžaduje sa bezplatný účet na GoNoodle).\n-   Najprv sa pýtam spolužiaka, až potom učiteľa.\n-   Pracujem tak potichu, aby sa dvojice navzájom počuli.\n-   Pocity a riešenia si zapisujem do zápisníka."
           ]
         },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Diskusia:**\nPrediskutujte so žiakmi, aké majú očakávania od práce v počítačovej učebni, aby bolo jasné, či rozumejú pravidlám. Rozobrať môžete napríklad tieto témy:\n\n-   Je pobehovanie v počítačovej učebni v poriadku?\n-   Ako nahlas by sme mali rozprávať, keď sme v počítačovej učebni?\n-   Čo treba robiť, ak sa pri nejakej úlohe zasekneme?\n-   Ak sa nám niečo nedarí, pomôže, ak udrieme počítač?\n-   Keď ideme do počítačovej učebne, ako sa na to treba pripraviť?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Ukážka on‑line úloh\n\nUkážte na projektore úlohu z lekcie. Ukážte žiakom, ako kliknúť na obrázok a pretiahnuť ho na správne miesto. Naschvál robte chyby, napríklad klikajte na pozadie alebo pustite obrázok príliš skoro. Vyvolajte z triedy dobrovoľníkov, ktorí vám s týmito „problémami“ pomôžu."
+        },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Skladačka"
+          "name": "Skladačka",
+          "description": "_Cieľ:_ Žiaci sa naučia, ako používať Code.org na riešenie online úloh.\n\nTáto fáza bola navrhnutá tak, aby žiaci mali možnosť precvičiť si koordináciu rúk a očí, klikanie a zručnosti presúvania a púšťania.  Žiaci sa budú tiež hrať s postupnosťami.\n\nZvážte možnosť, aby si žiaci rozdelili kroky presúvania a púšťania a zaznamenali ich na tabuľu. Napríklad: \n\n1.  Presuňte šípku na kváder. \n2.  Kliknite a podržte tlačidlo myši. \n3.  Pohybujte myšou. \n4.  Pustite tlačidlo.\n\nTýmto postupom si žiaci precvičia vytváranie _algoritmu_, čo je pojem, ktorý sa bude skúmať na nasledujúcich hodinách."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Vyhraďte si čas na to, aby ste žiakom názorne ukázali, ako klikať, ťahať a púšťať objekty. Predstavte výrazy týkajúce sa zariadení, ktoré budú žiaci používať na riešenie úloh. Ak máte tablety, žiaci budú používať _dotykovú obrazovku_. Ak máte laptopy, pravdepodobne ich budú ovládať _touchpadom_. Stolové počítače v počítačovej učebni sa zase ovládajú pomocou _myši_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "description": "Učitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri riešení on‑line úloh je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line úlohy sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:",
@@ -5089,11 +5224,21 @@
             "Ukážte žiakom správny spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
         },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Vyzvite žiakov, aby dokončili kurz [Skladačka](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám."
+        },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Úrovne"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Dajte žiakom napísať alebo nakresliť, čo sa naučili alebo ako sa cítili, keď dokončili hádanky.\n\n**Úlohy pre triedu:**\n\n-   Viete nakresliť postupnosť krokov, ako sa pripravujeme na príchod do počítačovej učebne?\n-   Nakreslite zoznam vecí, ktoré sa v počítačovej učebni majú a nemajú robiť.\n-   Nakreslite a označte tú časť zariadenia, ktorú ste používali pri riešení úloh s presúvaním (tlačidlo myši, dotyková obrazovka, touchpad)."
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Rozdajte všetkým žiakom [„výstupné lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), na ktoré napíšu, čo sa dnes naučili, ako sa cítili a čo zažili. Žiaci môžu kresliť, písať alebo sa vyjadriť akýmkoľvek iným spôsobom, ktorý im vyhovuje. Výstupné lístky od žiakov zozbierajte pri odchode z triedy. Ak chcete, môžete výstupné lístky pripevniť na nástenku alebo iné dobre viditeľné miesto, kde budú žiakom pripomínať ich Hodinu kódu."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Čo ďalej po Hodine kódu\n\nExistuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5). Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n\n-   Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si dobrovoľníka na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Objavujeme informatiku: Záverečný dotazník",
@@ -5644,14 +5789,23 @@
           "progression_name": "Prispôsobiť"
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "**Diskusia:**\n\n-   _Čo vieme o tom, ako sa vírus šíri?_\n-   \\_Čo môže spôsobiť rýchlejšie šírenie vírusu v meste?\n-   \\_Čo môže pomôcť spomaliť šírenie vírusu?\n\nCieľom tejto diskusie je, aby žiaci mali možnosť aktivizovať svoje predchádzajúce vedomosti a vidieť svoje nápady na tabuli. Je to tiež príležitosť preskúmať niektoré nesprávne predstavy o tom, ako sa vírusy šíria."
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "Nákaza",
+          "description": "_V rámci dnešnej lekcie sa chystáte do Monster Townu, kde má vypuknúť epidémia vírusu. Doktor Príšera potrebuje vašu pomoc, aby spomalil šírenie vírusu._\n\n_V Sprite Labe vytvoríte simulátor epidémie a potom ho použijete, aby ste pochopili, ako sa môže vírus šíriť. Pomôžete tiež všetkým príšerkám znova vyzdravieť!_",
           "progression_name": "Nákaza"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Urobte toto:** Prečítajte si ako trieda knihu _Vitajte v Monster Towne_.",
           "progression_name": "Vitajte v mestečku Monster Town"
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**Urobte toto:** Zopakujte si so žiakmi slovnú zásobu, **modely a simulácie**, pričom nadviažte na predchádzajúcu lekciu. Simulácia je počítačový model procesu alebo systému."
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_Dnes oživíme miesto ako Monster Town písaním kódu. V tejto simulácii budete používať sprajty, ktoré budú predstavovať rôzne príšery. Sprajty budú mať rôzne kostýmy, ktoré nám povedia napríklad to, či sú choré alebo zdravé. Budete tiež používať správanie, aby sa príšery pohybovali. Nakoniec pomocou udalostí zmeníte kostým jedného sprajtu, keď sa dva sprajty na tejto obrazovke dotknú. To bude predstavovať prenos vírusu z jednej príšery na druhú. Budete predpovedať, čo sa stane so susedmi Monster Townu, a pomôžete im znova sa uzdraviť!_ "
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "description": "**Urobte toto:** Prehrajte video „Veľa sprajtov“ a diskutujte o tom, ako fungujú bloky v blokoch udalostí.",
@@ -5661,14 +5815,25 @@
           "progression_name": "Video: Veľa sprajtov"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**Urobte toto:** Posaďte žiakov k ich počítačom a nechajte ich začať postupovať podľa pokynov pre každú úroveň v časti Budovanie zručností. Ak žiaci dokončia túto časť skôr, môžu pokračovať v experimentovaní so svojím kódom na úrovni 6, kým trieda nebude pripravená pokračovať ďalej.",
           "progression_name": "Budovanie zručností"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "description": "**Urobte toto:** Spolu ako trieda si prečítajte článok _Nákaza: Myslite ako vedec._",
           "progression_name": "Učenie sa zo simulácií"
         },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**Urobte toto:** Posaďte žiakov späť k ich počítačom a nechajte ich pracovať na zostávajúcich úrovniach. Niektoré z týchto úrovní obsahujú dobrovoľné úlohy. Povzbuďte žiakov, aby si pozorne prečítali pokyny a experimentovali so svojimi simuláciami."
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Simulácie sú skvelým spôsobom, ako zistiť veci, ktoré sa v reálnom svete dajú len ťažko pozorovať. Pomáhajú vedcom riešiť problémy, predvídať, ako problém vyriešiť, a bezpečne a efektívne testovať nové nápady. Tvoja simulácia je spôsob, ako znázorniť, ako by mohla vyzerať epidémia vírusu v Monster Towne._"
+        },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**Diskusia:**\n\n-   Ako môžu byť simulácie užitočné v reálnom svete? \n-   Ako nám môžu simulácie pomôcť pochopiť svet okolo nás? \n-   Ako môžu simulácie zlepšiť spôsob, akým testujeme nápady? \n\nCieľom diskusie je, aby žiaci pochopili, že simulácie sú spôsobom, ako interaktívne modelovať zložité systémy. Mali by tiež vidieť, ako simulácie umožňujú ľuďom rýchlo, lacno a bezpečne testovať nápady. "
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   V čom je táto simulácia podobná skutočnému svetu? V čom sa líši?\n-   Čo by ste chceli v simulácii zmeniť alebo do nej pridať?"
         },
         "2c7244e0-80ea-472a-9dbe-051909768cfc": {
           "name": "Vyvolajte u žiakov záujem!",
@@ -10697,7 +10862,7 @@
           "name": "Pokus"
         },
         "b640029f-89eb-45d2-a087-e6d57d703c12": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
           "tips": [
@@ -10804,7 +10969,7 @@
           ]
         },
         "33e66783-8c6a-4b44-a3ce-7715ffb2307d": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
           "tips": [
@@ -11751,7 +11916,7 @@
           ]
         },
         "7080a972-d63e-4299-8260-f1df2f234857": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "cb6b53c4-832b-4488-b7d8-e235460c633c": {
           "tips": [
@@ -12507,7 +12672,7 @@
           ]
         },
         "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "d8f8a198-8cc9-47f1-b6c9-f03f573fe546": {
           "progression_name": "Reflexia"
@@ -12778,7 +12943,7 @@
           "name": "Zdieľať"
         },
         "2d58346e-e123-4477-8995-fefc448b3fe3": {
-          "name": "Reflektovať",
+          "name": "Reflexia",
           "progression_name": "Reflexia"
         },
         "b44faa8f-43ae-4899-b299-888d85f57d48": {
@@ -12813,14 +12978,22 @@
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "name": "Cieľ a pravidlá",
           "tips": [
             null
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "name": "Vytvorte plán",
           "tips": [
             null
           ]
+        },
+        "2b44b34b-743b-4698-bcf9-2b32d2172ac5": {
+          "name": "Otestujte loď"
+        },
+        "75e6b296-d238-4993-a9f3-2712d896e9c6": {
+          "name": "Vyhodnotenie a zlepšovanie"
         },
         "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
           "tips": [
@@ -12828,7 +13001,7 @@
           ]
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
           "tips": [
@@ -13070,14 +13243,19 @@
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "name": "Cieľ a pravidlá",
           "tips": [
             null
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "name": "Vytvorte plán",
           "tips": [
             null
           ]
+        },
+        "49050d16-5918-4c25-b43d-144649ad574c": {
+          "name": "Vyhodnotenie a zlepšovanie"
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
           "tips": [
@@ -13085,7 +13263,7 @@
           ]
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
           "tips": [
@@ -13113,14 +13291,19 @@
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "name": "Cieľ a pravidlá",
           "tips": [
             null
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "name": "Vytvorte plán",
           "tips": [
             null
           ]
+        },
+        "e4c5a863-1f7b-4d7e-994a-a4750df74d0f": {
+          "name": "Vyhodnotenie a zlepšovanie"
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
           "tips": [
@@ -13128,7 +13311,7 @@
           ]
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "01c916af-970c-4e2f-a98e-38cbc436eefc": {
           "tips": [
@@ -13156,14 +13339,19 @@
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "name": "Cieľ a pravidlá",
           "tips": [
             null
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "name": "Vytvorte plán",
           "tips": [
             null
           ]
+        },
+        "185b70c9-2353-4632-aec9-7372f25cb1a6": {
+          "name": "Vyhodnotenie a zlepšovanie"
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
           "tips": [
@@ -13171,7 +13359,7 @@
           ]
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
-          "name": "Reflektovať"
+          "name": "Reflexia"
         },
         "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
           "tips": [

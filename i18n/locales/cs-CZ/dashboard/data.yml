@@ -490,6 +490,9 @@ cs:
         poemart_imagery: Básnické umění Obrazotvornost
         poemart_celebration: Básnické umění Gratulace
         CSA-PL-debugging-temp: Příprava na ladění v prostředí Java Lab – dočasné
+        PL_CS_Journeys_Overview: Cesty informatiky
+        csp_applab_parameters: Funkce s Parametry
+        CSA-PL-intro-to-arrays: Jednorozměnrá (1D) pole
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

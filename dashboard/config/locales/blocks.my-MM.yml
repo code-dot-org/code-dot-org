@@ -167,6 +167,12 @@ my:
         options:
           EFFECT:
             '"rain"': မိုးရွာသည်
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': အလယ်အလတ်
+            '100': large
       gamelab_playSoundOptions:
         options:
           SOUND:

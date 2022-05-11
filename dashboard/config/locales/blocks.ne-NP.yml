@@ -523,6 +523,12 @@ ne:
             '90': तल
             '180': बाँया
             '270': माथि
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': medium
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

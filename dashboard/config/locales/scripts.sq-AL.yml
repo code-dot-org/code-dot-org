@@ -3053,6 +3053,10 @@ sq:
           lessons:
             lesson-3:
               name: Veglat
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lekcioni 3
         csa4-exemplars:
           lesson_groups:
             lesson group:

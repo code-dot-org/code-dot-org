@@ -676,6 +676,24 @@ in:
         PL_CSD_Unit4_AppTesting: crwdns2907916:0crwdne2907916:0
         csd_u6_circuit_playground: crwdns2907918:0crwdne2907918:0
         csd_u6_input_output: crwdns2907920:0crwdne2907920:0
+        CSA-PL-for-loops: crwdns2917488:0crwdne2917488:0
+        CSA-PL-variables: crwdns2917490:0crwdne2917490:0
+        PL_CS_Journeys_Overview: crwdns2917492:0crwdne2917492:0
+        CSA-PL-intro-to-java-lab: crwdns2917494:0crwdne2917494:0
+        CSA-PL-first-program: crwdns2917496:0crwdne2917496:0
+        CSD_u6_variables_part1: crwdns2917498:0crwdne2917498:0
+        csd_u6_if_statements: crwdns2917500:0crwdne2917500:0
+        csc-poem-art-intro: crwdns2917502:0crwdne2917502:0
+        csc-poem-art-outro: crwdns2917504:0crwdne2917504:0
+        csd_u6_call_define_functions: crwdns2917506:0crwdne2917506:0
+        csp_applab_parameters: crwdns2917508:0crwdne2917508:0
+        starquilts_intro_artist: crwdns2917510:0crwdne2917510:0
+        CSA-PL-intro-to-arrays: crwdns2917512:0crwdne2917512:0
+        CSA-PL-1d-arrays-new-values: crwdns2917514:0crwdne2917514:0
+        CSA-PL-conditionals: crwdns2917516:0crwdne2917516:0
+        CSA-PL-two-way-selection: crwdns2917518:0crwdne2917518:0
+        CSA-PL-Printing-in-Java: crwdns2917520:0crwdne2917520:0
+        CSA-PL-multi-selection-statements: crwdns2917522:0crwdne2917522:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

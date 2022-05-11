@@ -434,6 +434,12 @@ sl:
             '90': dol
             '180': levo
             '270': gor
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': srednje
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

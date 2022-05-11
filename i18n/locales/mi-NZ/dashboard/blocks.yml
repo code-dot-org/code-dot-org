@@ -1125,6 +1125,12 @@ mi:
             '90': raro
             '180': mauī
             '270': runga
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': wawaenga
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

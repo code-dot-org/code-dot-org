@@ -63,6 +63,7 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
+      CodeReview,
       CodeReviewComment,
       ReviewableProject
     ]
@@ -124,6 +125,15 @@ class Ability
       can :project_commits, ProjectVersion do |_, project_owner, project_id|
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
+
+      can :create, CodeReview do |code_review, project_owner_id|
+        code_review.user_id == user.id &&
+        project_owner_id == user.id
+      end
+      can :edit, CodeReview, user_id: user.id
+      # TODO: teachers and peers should also be able to see the code review
+      can :read, CodeReview, user_id: user.id
+
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -411,27 +421,23 @@ class Ability
       end
     end
 
-    # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if user.permission?(UserPermission::LEVELBUILDER) ||
-        user.has_pilot_experiment?(CSA_PILOT) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
-        user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
-
-        can :get_access_token, :javabuilder_session
+      # These checks control access to Javabuilder.
+      # All verified instructors and can generate a Javabuilder session token to run Java code.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
+      # Verified instructors can access and run Java Lab exemplars.
+      # Levelbuilders can access and update Java Lab validation code.
+      can :get_access_token, :javabuilder_session do
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
-    end
 
-    # Allow pilot users to have access to run override_sources java lab code, which is how we run exemplars.
-    # TODO: Change this to authorized_instructors once we have throttling in place.
-    if user.persisted? && (user.has_pilot_experiment?(CSA_PILOT) || user.has_pilot_experiment?(CSA_PILOT_FACILITATORS))
-      can :get_access_token_with_override_sources, :javabuilder_session
-    end
+      can :get_access_token_with_override_sources, :javabuilder_session do
+        user.verified_instructor?
+      end
 
-    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+      can :get_access_token_with_override_validation, :javabuilder_session do
+        user.permission?(UserPermission::LEVELBUILDER)
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

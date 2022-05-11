@@ -54,7 +54,7 @@ fr:
         loop_until: Bloc « Répète jusqu’à »
         loop_while: Bloc « tant que »
         loop_for: Bloc « Compteur »
-        function: fonctions
+        function: Fonctions
         parameters: Fonctions avec paramètres
     level:
       instructions:
@@ -626,7 +626,7 @@ fr:
         C3_functional_suncatchers: Capteurs de Soleil Fonctionnels
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
-        C4_loops_zombie: boucles
+        C4_loops_zombie: Boucles
         C4_bee_conditional: Abeilles et instructions conditionnelles
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
@@ -698,7 +698,7 @@ fr:
         csd_weblab_intro_3: Introduction au Labo du Web - Partie 3
         csp_applab_functions: Introduction aux Fonctions
         csp_applab_functions_parameters: Fonctions avec Paramètres
-        csp_applab_loops: boucles
+        csp_applab_loops: Boucles
         csp_cs_is_changing_everything: L'informatique est en Train de Tout Changer
         starwars_intro: 'Star Wars : Construire une galaxie avec du code - Introduction'
         starwars_typing: 'Star Wars : Construire une galaxie avec du code - JavaScript'
@@ -770,7 +770,7 @@ fr:
         CSF_if_allskins: Le Bloc Si
         CSF_ifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_ifelseifelse_allskins: Utiliser les Blocs « Si/Sinon »
-        CSF_loops_AB: boucles
+        CSF_loops_AB: Boucles
         csd_gamelab_booleans: Expressions Booléennes
         csd_gamelab_conditional_statements: Déclarations Conditionnelles
         csd_gamelab_if_else: Instructions « Si/Sinon »
@@ -892,6 +892,9 @@ fr:
         CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
         csd_u6_circuit_playground: L'Informatique Physique
         csd_u6_input_output: Entrée et Sortie
+        PL_CS_Journeys_Overview: Voyages CS
+        csp_applab_parameters: Fonctions avec Paramètres
+        CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
