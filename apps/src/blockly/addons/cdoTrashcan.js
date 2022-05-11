@@ -7,87 +7,15 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.id = 'cdoTrashcan';
 
     /**
-     * Width of both the trash can and lid images.
-     * @const {number}
-     * @private
-     */
-    this.WIDTH_ = 47;
-    /**
-     * Height of the trashcan image (minus lid).
-     * @const {number}
-     * @private
-     */
-    this.BODY_HEIGHT_ = 44;
-    /**
-     * Height of the lid image.
-     * @const {number}
-     * @private
-     */
-    this.LID_HEIGHT_ = 16;
-    /**
-     * Distance between trashcan and top of toolbox.
-     * @const {number}
-     * @private
-     */
-    this.MARGIN_TOP_ = 40;
-    /**
-     * Location of trashcan in sprite image.
-     * @const {number}
-     * @private
-     */
-    this.SPRITE_LEFT_ = 0;
-    /**
-     * Location of trashcan in sprite image.
-     * @const {number}
-     * @private
-     */
-    this.SPRITE_TOP_ = 32;
-    /**
-     * The length of the lid open/close animation in milliseconds.
-     * @const {number}
-     * @private
-     */
-    this.ANIMATION_LENGTH_ = 80;
-    /**
-     * The number of frames in the animation.
-     * @const {number}
-     * @private
-     */
-    this.ANIMATION_FRAMES_ = 4;
-    /**
-     * The maximum angle the trashcan lid can opens to. At the end of the open
-     * animation the lid will be open to this angle.
-     * @const {number}
-     * @private
-     */
-    this.MAX_LID_ANGLE_ = 45;
-    /**
-     * The minimum (resting) opacity of the trashcan and lid.
-     * @const {number}
-     * @private
-     */
-    this.OPACITY_MIN_ = 0.4;
-    /**
-     * The maximum (hovered) opacity of the trashcan and lid.
-     * @const {number}
-     * @private
-     */
-    this.OPACITY_MAX_ = 0.8;
-    /**
      * Current open/close state of the lid.
-     * @type {boolean}
      */
     this.isLidOpen = false;
     /**
      * Task ID of opening/closing animation.
-     * @type {number}
-     * @private
      */
     this.lidTask_ = 0;
     /**
      * Current state of lid opening (0.0 = closed, 1.0 = open).
-     * @type {number}
-     * @private
      */
     this.lidOpen_ = 0;
     this.TRASH_URL = '/blockly/media/trash.png';
@@ -128,10 +56,10 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       {class: 'blocklyTrash'},
       this.container
     );
-    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - this.WIDTH_ / 2;
+    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
     this.svgGroup_.setAttribute(
       'transform',
-      `translate(${left}, ${this.MARGIN_TOP_})`
+      `translate(${left}, ${MARGIN_TOP})`
     );
 
     // trashcan body
@@ -143,9 +71,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.RECT,
       {
-        width: this.WIDTH_,
-        height: this.BODY_HEIGHT_,
-        y: this.LID_HEIGHT_
+        width: WIDTH,
+        height: BODY_HEIGHT,
+        y: LID_HEIGHT
       },
       bodyClipPath
     );
@@ -153,9 +81,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       Blockly.utils.Svg.IMAGE,
       {
         width: Blockly.SPRITE.width,
-        x: -this.SPRITE_LEFT_,
+        x: -SPRITE_LEFT,
         height: Blockly.SPRITE.height,
-        y: -this.SPRITE_TOP_,
+        y: -SPRITE_TOP,
         'clip-path': 'url(#blocklyTrashBodyClipPath)'
       },
       this.svgGroup_
@@ -174,16 +102,16 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     );
     Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.RECT,
-      {width: this.WIDTH_, height: this.LID_HEIGHT_},
+      {width: WIDTH, height: LID_HEIGHT},
       lidClipPath
     );
     this.svgLid_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
       {
         width: Blockly.SPRITE.width,
-        x: -this.SPRITE_LEFT_,
+        x: -SPRITE_LEFT,
         height: Blockly.SPRITE.height,
-        y: -this.SPRITE_TOP_,
+        y: -SPRITE_TOP,
         'clip-path': 'url(#blocklyTrashLidClipPath)'
       },
       this.svgGroup_
@@ -326,22 +254,20 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @private
    */
   animateLid_() {
-    const delta = 1 / (this.ANIMATION_FRAMES_ + 1);
+    const delta = 1 / (ANIMATION_FRAMES + 1);
     this.lidOpen_ += this.isLidOpen ? delta : -delta;
     this.lidOpen_ = Math.min(this.lidOpen_, 1);
     this.lidOpen_ = Math.max(this.lidOpen_, 0);
 
-    this.setLidAngle_(this.lidOpen_ * this.MAX_LID_ANGLE_);
+    this.setLidAngle_(this.lidOpen_ * MAX_LID_ANGLE);
 
-    const opacity =
-      this.OPACITY_MIN_ +
-      this.lidOpen_ * (this.OPACITY_MAX_ - this.OPACITY_MIN_);
+    const opacity = OPACITY_MIN + this.lidOpen_ * (OPACITY_MAX - OPACITY_MIN);
     this.svgGroup_.style.opacity = opacity;
 
     if (this.lidOpen_ >= 0 && this.lidOpen_ < 1) {
       this.lidTask_ = setTimeout(
         this.animateLid_.bind(this),
-        this.ANIMATION_LENGTH_ / this.ANIMATION_FRAMES_
+        ANIMATION_LENGTH / ANIMATION_FRAMES
       );
     }
   }
@@ -354,8 +280,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.svgLid_.setAttribute(
       'transform',
       `rotate(${openAtRight ? -lidAngle : lidAngle}, ${
-        openAtRight ? 4 : this.WIDTH_ - 4
-      }, ${this.LID_HEIGHT_ - 2})`
+        openAtRight ? 4 : WIDTH - 4
+      }, ${LID_HEIGHT - 2})`
     );
   }
 
@@ -415,3 +341,59 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 }
 
 CdoTrashcan.TRASH_URL = '/blockly/media/trash.png';
+
+/**
+ * Width of both the trash can and lid images.
+ */
+const WIDTH = 47;
+
+/**
+ * Height of the trashcan image (minus lid).
+ */
+const BODY_HEIGHT = 44;
+
+/**
+ * Height of the lid image.
+ */
+const LID_HEIGHT = 16;
+
+/**
+ * Distance between trashcan and top of toolbox.
+ */
+const MARGIN_TOP = 40;
+
+/**
+ * Location of trashcan in sprite image.
+ */
+const SPRITE_LEFT = 0;
+
+/**
+ * Location of trashcan in sprite image.
+ */
+const SPRITE_TOP = 32;
+
+/**
+ * The length of the lid open/close animation in milliseconds.
+ */
+const ANIMATION_LENGTH = 80;
+
+/**
+ * The number of frames in the animation.
+ */
+const ANIMATION_FRAMES = 4;
+
+/**
+ * The minimum (resting) opacity of the trashcan and lid.
+ */
+const OPACITY_MIN = 0.4;
+
+/**
+ * The maximum (hovered) opacity of the trashcan and lid.
+ */
+const OPACITY_MAX = 0.8;
+
+/**
+ * The maximum angle the trashcan lid can opens to. At the end of the open
+ * animation the lid will be open to this angle.
+ */
+const MAX_LID_ANGLE = 45;
