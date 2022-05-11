@@ -32,6 +32,8 @@ class ProgrammingClass < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
 
+  after_destroy :remove_serialization
+
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
 
