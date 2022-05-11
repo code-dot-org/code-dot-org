@@ -11,9 +11,7 @@ class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
     @gender = "female"
     @locale = "es-MX"
     @default_limit = Api::V1::TextToSpeechController::REQUEST_LIMIT_PER_MIN_DEFAULT
-  end
 
-  teardown do
     # A list of keys used by our shared cache that should be cleared between every test.
     [
       ProfanityHelper::PROFANITY_PREFIX,
