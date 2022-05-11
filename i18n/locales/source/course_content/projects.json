@@ -116,6 +116,12 @@
       }
     }
   },
+  "https://studio.code.org/p/spritelab": {
+    "callouts": {
+      "costumes_tab": "Click here to add costumes to your project.",
+      "make_sprite": "Use the blocks here to make a sprite!"
+    }
+  },
   "https://studio.code.org/p/dance": {
     "display_name": "New Dance Party Project"
   },

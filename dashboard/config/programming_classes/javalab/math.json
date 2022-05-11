@@ -1,0 +1,133 @@
+{
+  "category_key": "java_lang",
+  "content": "The Java Math class provides us with methods that perform various math calculations. These methods include calculating the square root, absolute value, and hypothesis, amongst many other operations.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "Math",
+  "name": "Math",
+  "syntax": "The general syntax when using the Math class is Math.{function name}(parameter);",
+  "tips": "",
+  "methods": [
+    {
+      "name": "Math.abs(x)",
+      "position": 0,
+      "key": "abs",
+      "overload_of": null,
+      "content": "Returns the absolute (positive) value of `x`.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int, double, float, long\",\"required\":true,\"description\":\"the parameter x is a number which can be an int, double, float, or long.\"}]",
+      "examples": "[{\"name\":\"Math.abs() example\",\"description\":\"\",\"code\":\"\\n//initialize variables\\n\\nint a = -7;\\ndouble b = .9;\\n\\n//print out the absolute value of both variables\\n\\nSystem.out.println(\\\"Math.abs(a)\\\"); //prints 7\\n\\nSystem.out.println(\\\"Math.abs(b)\\\"); //prints .9\\n\\n\"}]",
+      "syntax": "Math.abs(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.sqrt(x)",
+      "position": 1,
+      "key": "math.sqrt-x",
+      "overload_of": null,
+      "content": "Returns the square root of `x`. The return value will always be a positive and correctly rounded number.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"double\",\"required\":true,\"description\":\"x is a double whose square root is to be calculated. \"}]",
+      "examples": "[{\"name\":\"Math.sqrt() example \",\"code\":\"\\n//initialize variables\\n\\ndouble a = 25.0;\\ndouble b = 0.0;\\n\\n//print out the square root of both variables\\n\\nSystem.out.println(\\\"Math.sqrt(a)\\\"); //prints 5.0\\n\\nSystem.out.println(\\\"Math.sqrt(b)\\\"); //prints 0.0\"}]",
+      "syntax": "Math.sqrt(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.min(x,y)",
+      "position": 2,
+      "key": "math.min-x",
+      "overload_of": null,
+      "content": "Returns the minimum value among the inputted parameters. ",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int, long, float, double\",\"required\":true,\"description\":\"The parameter x is a number of type int, long, float, or double. \"},{\"name\":\"y\",\"type\":\"int, long, float, double\",\"required\":true,\"description\":\"The parameter y is a number of type int, long, float, or double.\"}]",
+      "examples": "[{\"name\":\"Math.min(x,y) example\",\"code\":\"\\n//Math.min(x,y) with int parameters\\n\\nint a = 30;\\nint b = 82;\\n\\nSystem.out.println(Math.min(x,y)); // prints 30\\n\"}]",
+      "syntax": "Math.min(x, y)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.max(x,y)",
+      "position": 3,
+      "key": "math.max-x",
+      "overload_of": null,
+      "content": "Returns the maximum value among the inputted parameters. ",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int, long, float, double\",\"required\":true,\"description\":\"The parameter x is a number of type int, long, float, or double. \"},{\"name\":\"y\",\"type\":\"int, long, float, double\",\"description\":\"The parameter y is a number of type int, long, float, or double.\"}]",
+      "examples": "[{\"name\":\"Math.max(x,y) example\",\"code\":\"\\n//Math.max(x,y) with int parameters\\n\\nint a = 30;\\nint b = 82;\\n\\nSystem.out.println(Math.max(x,y)); // prints 82\\n\"}]",
+      "syntax": "Math.max(x, y)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.floor(x)",
+      "position": 4,
+      "key": "math.floor-x",
+      "overload_of": null,
+      "content": "Math.floor(x) will accept a double as a parameter, round it down, and return it. The returned value will be equivalent of a mathematical integer.  For example, if you call Math.floor(7.9), the method will round 7.9 down to 7.0. This number is equivalent to the integer 7.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"double\",\"description\":\"x is a double.\"}]",
+      "examples": "[{\"code\":\"double a = 1.5;\\n\\nSystem.out.println(Math.floor(a)); // prints 1.0\\n\\ndouble b = 1.799;\\n\\nSystem.out.println(Math.floor(b)); // prints 1.0\\n\\ndouble c = 1.23;\\n\\nSystem.out.println(Math.floor(c)); // prints 1.0\"}]",
+      "syntax": "Math.floor(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.ceil(x)",
+      "position": 5,
+      "key": "math.ceil",
+      "overload_of": null,
+      "content": "Math.ceil(x) will accept a value as a parameter, will round it upwards, and return it. The returned value will be equivalent of a mathematical integer.  For example, if you call Math.ceil(7.3), the method will round 7.3 up to 8.0. This number is equivalent to the integer 8.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"a number \",\"description\":\"x is a number to be rounded upwards. \"}]",
+      "examples": "[{\"description\":\"\",\"code\":\"double a = 1.5;\\n\\nSystem.out.println(Math.ceil(a)); // prints 2.0\\n\\ndouble b = 1.799;\\n\\nSystem.out.println(Math.ceil(b)); // prints 20\\n\\ndouble c = 1.23;\\n\\nSystem.out.println(Math.ceil(c)); // prints 2.0\\n\\ndouble d = -0.12; //negative number\\n\\nSystem.out.println(Math.ceil(d)); // prints -0.0\"}]",
+      "syntax": "Math.ceil(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.round(x)",
+      "position": 6,
+      "key": "math.round",
+      "overload_of": null,
+      "content": "Math.round(x) will return the closest long or int to the argument. If there is a tie, the method will round up.\n\n",
+      "parameters": "[{\"name\":\"x\",\"type\":\"float, double\",\"description\":\"x should either be a float or a double.\"}]",
+      "examples": "[{\"code\":\"double a = 1.5;\\n\\nSystem.out.println(Math.round(a)); // prints 2\\n\\ndouble b = 1.799;\\n\\nSystem.out.println(Math.round(b)); // prints 2\\n\\ndouble c = 1.23;\\n\\nSystem.out.println(Math.round(c)); // prints 1\"}]",
+      "syntax": "Math.round(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.log(x)",
+      "position": 7,
+      "key": "math.log",
+      "overload_of": null,
+      "content": "Math.log(x) returns the natural logarithm (base e) of the inputted value. \n\nSpecial Cases:\n- Math.log(x) will return 0 if the inputted value is zero.\n- Math.log(x) will return NaN (not a number) if the inputted value is less than zero.\n",
+      "parameters": "[{\"name\":\"x\",\"type\":\"double\",\"description\":\"The value should be a number of type double\"}]",
+      "examples": "[{\"description\":\"\",\"code\":\"//compute log() for a\\n\\ndouble a = 9.0;\\n\\nSystem.out.println(Math.log(a)); // prints 2.1972245773362196\\n\\n//compute log() for b\\n\\ndouble b = 0.0;\\n\\nSystem.out.println(Math.log(b)); // prints -Infinity\\n\\n//compute log() for c\\n\\ndouble c = -9.0;\\n\\nSystem.out.println(Math.log(c)); // prints NaN\"}]",
+      "syntax": "Math.log(x)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Math.random()",
+      "position": 8,
+      "key": "math.random",
+      "overload_of": null,
+      "content": "Math.random() will return a random value that is greater than or equal to 0.0 and less than 1.0. \n\nIn order to obtain a random number between two specified values, you can use the Math.random() function and add the upper and lower bound using the following formula:\n\nint max; (upperBound)\nint min; (lowerBound)\n**return Math.random() * (max - min) + min;",
+      "parameters": "[]",
+      "examples": "[{\"code\":\"System.out.println(Math.random()); // 0.45950063688194265\\n\\n//The following example produces a random number between the specified upper bound and lower bound\\n\\nint max = 4; int min = 1;\\n\\n//the statement below produces a random value that greater than or equal to 1, and is less than 4.\\n\\nreturn Math.random() * (4-1) + 1;\"}]",
+      "syntax": "Math.random()",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "addExact",
+      "position": 9,
+      "key": "addexact",
+      "overload_of": null,
+      "content": "Math.addExact(x,y) returns the exact sum of the two inputted numbers.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int, long\",\"required\":true,\"description\":\"x can be of type int or long. the data type of both values should be the same.\"},{\"name\":\"y\",\"type\":\"int, long\",\"required\":true,\"description\":\"y can be of type int or long. the data type of both values should be the same.\"}]",
+      "examples": "[{\"code\":\"//addExact(x,y) with int parameters \\n\\nint x = 12; int y = 14;\\n\\nSystem.out.println(Math.addExact(x,y)); // prints 26\\n\\n//addExact(x,y) with long parameters\\n\\nlong a = 12345678l; long z = 987654321;\\n\\nSystem.out.println(Math.addExact(a,z)); // prints 999999999\\n\"}]",
+      "syntax": "Math.addExact(x,y)",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

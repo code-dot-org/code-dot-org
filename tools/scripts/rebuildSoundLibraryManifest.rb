@@ -159,10 +159,10 @@ class ManifestBuilder
         verbose "Writing #{mp3_destination}"
         objects['mp3'].get(response_target: mp3_destination)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json and #{name}.mp3 from S3:
-#{service_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json and #{name}.mp3 from S3:
+          #{service_error}
+          The sound has been skipped.
         WARN
       end
 
@@ -296,16 +296,16 @@ The sound has been skipped.
         metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
         metadata['categories'] = categories
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json from S3:
-#{service_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json from S3:
+          #{service_error}
+          The sound has been skipped.
         WARN
       rescue JSON::JSONError => json_error
-        next <<-WARN
-There was an error parsing #{name}.json:
-#{json_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error parsing #{name}.json:
+          #{json_error}
+          The sound has been skipped.
         WARN
       end
 
@@ -325,9 +325,9 @@ The sound has been skipped.
       # Generate appropriate sourceUrl pointing to the sound library API
       metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
+      verbose <<~EOS
+        #{bold name} @ #{metadata['version']}
+        #{JSON.pretty_generate metadata}
       EOS
 
       metadata

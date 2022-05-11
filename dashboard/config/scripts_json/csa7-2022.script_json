@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 14:53:21 UTC",
+    "serialized_at": "2022-05-09 17:56:24 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +88,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nStudents are introduced to the Creative Coding with The Theater Project and evaluate requirements and examples to identify questions and key features. Students learn about project backlogs and benchmarks and set up their Project Planning Board by identifying some of the tasks they need to complete for the project.",
-        "preparation": "* Print copies of the Creative Coding with The Theater Project Planning Guide (one for each student)\n* Gather a manilla folder and a small stack of sticky notes (10-12) for each student\n* Print copies of the Project Planning Board (one per student)",
+        "preparation": "* Print copies of the Unit 7 Guide (one for each student)\n* Print copies of the Creative Coding with The Theater Project Planning Guide (one for each student)\n* Gather a manilla folder and a small stack of sticky notes (10-12) for each student\n* Print copies of the Project Planning Board (one per student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-1-project-planning/36332/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I keep track of the tasks I need to complete for a project?**\n\nYou have learned a lot about object-oriented programming and the Java programming language throughout the year. In this unit, you have the opportunity to use your new skills to create a program using The Theater that portrays a personal interest or solves a problem that you choose. The Creative Coding with The Theater Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work."
       },
       "seeding_key": {
@@ -106,7 +106,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nStudents revisit passing primitives and object references as parameters to identify similarities and differences between each. Students explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. Students then learn about user stories and write user stories for their projects to identify required program features.",
-        "preparation": "* Print copies of the Unit 7 Guide (one for each student)",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-2-method-parameters/36331/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nIn this lesson, you revisit passing primitives and object references as parameters to identify similarities and differences between each. You explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. You then learn about user stories and write user stories for your project to identify required program features."
       },
       "seeding_key": {
@@ -124,6 +124,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents revisit overloading and explore overloading methods to determine their impacts on the functionality of a program. Students practice writing overloaded methods to solve problems using the console, The Neighborhood, or The Theater before beginning their initial plans for their Creative Coding with The Theater Project.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-3-overloading-methods/36330/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can overloading a method be useful in my programs?**\n\nYou have learned to overload constructors to provide multiple ways to instantiate an object. In this lesson, you revisit overloading and explore how to overload methods and the impacts of overloaded methods on the functionality of a program. You practice writing overloaded methods to solve problems using the console, The Neighborhood, or The Theater before beginning your initial plans for your Creative Coding with The Theater Project."
       },
       "seeding_key": {
@@ -141,7 +142,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How does making a method `private` change its functionality?**\n\nStudents revisit access modifiers to explore the accessibility of methods and constructors in a program. Students identify scenarios for using a `private` method and constructor and practice writing and using `private` methods using the console or The Theater. Students then finalize their planning for their Creative Coding with The Theater Project and participate in a peer review to receive feedback on their work.",
-        "preparation": "* Print copies of the Project Planning Feedback handout (one for each student)",
+        "preparation": "* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-4-private-methods/36329/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does making a method `private` change its functionality?**\n\nYou have used the `private` keyword to prevent instance variables to implement data encapsulation so other classes cannot modify their values. You have also used the `public` keyword to provide access to constructors and methods from outside a class. In this lesson, you revisit these access modifiers to explore the accessibility of `private` methods and constructors in a program. You identify scenarios for using a `private` method and constructor and practice writing and using private methods using the console or The Theater. You then finalize your planning for your Creative Coding with The Theater Project and participate in a peer review to receive feedback on your work."
       },
       "seeding_key": {
@@ -159,7 +160,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I override methods from other classes?**\n\nStudents have overridden methods from the `Object` class and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods and how the `super` keyword can be used to call the superclass version of a method. Students identify scenarios for overriding methods and practice writing and calling overridden methods using the console, The Neighborhood, or The Theater.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-5-overriding-methods/36328/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I override methods from other classes?**\n\nYou have overridden methods from the `Object` class and worked with class hierarchies that implemented overridden methods. In this lesson, you explore writing and calling overridden methods and how the `super` keyword can be used to call the superclass version of a method. You identify scenarios for overriding methods and practice writing and calling overridden methods using the console, The Neighborhood, or The Theater."
       },
       "seeding_key": {
@@ -176,6 +177,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**What is the balance between intellectual property and algorithmic accountability?**\n\nStudents explore the ethical and social implications of intellectual property by analyzing and discussing real-world applications of algorithmic decision-making. Students learn why algorithms should be held accountable and regulated through audits and reflect on whether they would want their code to be audited.",
+        "preparation": "* Print copies of the Algorithms handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-6-intellectual-property/36327/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What is the balance between intellectual property and algorithmic accountability?**\n\nYou explore the ethical and social implications of intellectual property by analyzing and discussing real-world applications of algorithmic decision-making. You learn why algorithms should be held accountable and regulated through audits and reflect on whether you would want your code to be audited."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -192,7 +196,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**What is recursion?**\n\nStudents explore recursive methods through an unplugged activity and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to begin the development of their Creative Coding with The Theater Project.",
-        "preparation": "* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils",
+        "preparation": "* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-7-recursion/36326/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you explore recursive methods through an unplugged activity and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to begin the development of your Creative Coding with The Theater Project."
       },
       "seeding_key": {
@@ -210,6 +214,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**What is the difference between recursion and iteration?**\n\nStudents explore how iterative solutions can be implemented using recursion and identify the similarities and differences in both algorithms. Students practice converting iterative algorithms to recursion then continue development on their Creative Coding with The Theater Project.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-8-recursion-vs-iteration/36325/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is the difference between recursion and iteration?**\n\nSometimes it's easier to write a method iteratively, and other times a recursive method is best! In this lesson, you explore how iterative solutions can be implemented using recursion and identify the similarities and differences in both algorithms. You practice converting iterative algorithms to recursion then continue development on your Creative Coding with The Theater Project."
       },
       "seeding_key": {
@@ -227,7 +232,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can recursion be used to implement standard algorithms?**\n\nStudents explore how the standard algorithms they have worked with can be implemented using recursion. Students practice tracing recursive solutions involving `String`s, arrays, and `ArrayList`s using the console or The Theater. Students then participate in a peer review to give and receive feedback on the progress they have made on their Creative Coding with The Theater Project.",
-        "preparation": "* Print copies of the Tracing Recursion handout (one for each student)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Tracing Recursion handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-9-recursive-algorithms/36324/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can recursion be used to implement standard algorithms?**\n\nIn this lesson, you explore how the standard algorithms you have worked with can be implemented using recursion. You practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s using the console or The Theater. You then participate in a peer review to give and receive feedback on the progress you have made on your Creative Coding with The Theater Project."
       },
       "seeding_key": {
@@ -244,6 +249,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**What issues and impacts result from software bugs, and what are strategies to maximize system reliability?**\n\nStudents explore the issues and impacts resulting from open source software bugs. Students discover strategies for maximizing system reliability.",
+        "preparation": "* Print copies of the Open Source Bugs handouts (two copies of one version per pair of students)\n* Print copies of the Unit 7 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-lesson-10-maximizing-system-reliability/36323/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What issues and impacts result from software bugs, and what are strategies to maximize system reliability?**\n\nYou explore the issues and impacts resulting from open source software bugs. You discover strategies for maximizing system reliability."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -260,7 +268,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nStudents continue to develop their Creative Coding Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue developing their projects. Students then conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-creative-coding-with-the-theater-project/36322/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nYou continue to develop your Creative Coding Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then continue developing your projects. You then conduct acceptance testing to determine which of your user stories are complete and use the self-assessment and peer feedback to prioritize your remaining tasks."
       },
       "seeding_key": {
@@ -278,7 +286,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I use the feedback I have received to prioritize the tasks I need to complete for my project?**\n\nIn the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Creative Coding with The Theater Project.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-creative-coding-with-the-theater-project/36322/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use the feedback I have received to prioritize the tasks I need to complete for my project?**\n\nIn the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Creative Coding with The Theater Project."
       },
       "seeding_key": {
@@ -297,7 +305,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-creative-coding-with-the-theater-project/36322/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -315,7 +323,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper",
+        "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-frq-practice/36321/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -334,7 +342,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-7-assessment/36320/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 7 Assessment."
       },
       "seeding_key": {
@@ -394,7 +402,7 @@
       "key": "2e2be086-8bb8-4fdd-97e8-0769711b5bea",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -408,7 +416,7 @@
       "key": "c7f41032-ac86-4a43-bdfd-d3894bd78c35",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -618,7 +626,7 @@
       "key": "05ddcbe3-ed98-4399-a221-4dc6f0299def",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -632,7 +640,7 @@
       "key": "4466134e-d2cb-4189-8fb8-4b4d52fb10fc",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -786,7 +794,7 @@
       "key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -800,7 +808,7 @@
       "key": "8ade15b8-620b-48ec-b8cc-310cc9d474d3",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1060,10 +1068,29 @@
       "key": "cec6c934-29ee-4520-821c-c961ec2e1a27",
       "position": 1,
       "properties": {
-        "name": "Creative Coding"
+        "description": "In the previous unit, you expanded your knowledge of data structures and `String`s. You also learned to apply the standard algorithms we have implemented throughout the year to work with `ArrayList`s and `String`s. We will be learning more about how we can work with methods and continue to use software engineering characteristics and skills to make design decisions and develop more robust algorithms.",
+        "name": "Software Engineering Goals",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "cec6c934-29ee-4520-821c-c961ec2e1a27",
+        "lesson_activity.key": "2e2be086-8bb8-4fdd-97e8-0769711b5bea"
+      }
+    },
+    {
+      "key": "e2e6c3a7-0c71-4998-bb8d-00a0255e4681",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 7 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can choose any characteristic or skill they want to improve, regardless of whether it is an area for improvement. Students can choose a characteristic that is a strength that they want to further develop as an anchor for upcoming units, or they can choose a characteristic that is an area for improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2e6c3a7-0c71-4998-bb8d-00a0255e4681",
         "lesson_activity.key": "2e2be086-8bb8-4fdd-97e8-0769711b5bea"
       }
     },
@@ -1167,7 +1194,7 @@
       "position": 8,
       "properties": {
         "description": "Software engineers often use a backlog to keep track of the tasks they need to complete, what they are currently working on, and what has been completed. For this project, we will use a similar process to plan and track our projects using a Project Planning Board. Using the list of common characteristics and key features you created and the project requirements, let's identify and plan the tasks we need to complete.",
-        "duration": "15",
+        "duration": "20",
         "name": "Project Planning and Brainstorming",
         "remarks": true
       },
@@ -1305,7 +1332,7 @@
       "key": "9879a477-9acb-4465-ab3f-12d313753619",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Object References as Parameters"
       },
       "seeding_key": {
@@ -2034,6 +2061,9 @@
       "key": "893f8cc5-0b33-4439-aab1-a22735790951",
       "position": 1,
       "properties": {
+        "description": "In a previous unit, we learned how machine learning requires lots of data. Machine learning is often used to make predictions and decisions using algorithms to analyze data.",
+        "name": "Decision Making",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "893f8cc5-0b33-4439-aab1-a22735790951",
@@ -2041,9 +2071,24 @@
       }
     },
     {
+      "key": "f8304399-d6a6-4a40-939e-78ae17a01bd4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *When have you written code to make decisions? What type of code did you use?*\n\n**Discussion Goal:** Students share examples of decisions they implemented in their programs, such as a `Painter` object choosing whether or not to move forward or paint in The Neighborhood. Students note using conditionals and iteration to make decisions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Think about a time when an app has made a decision for you. Do you know how the code made that decision? Should you be able to know?*0\n\n**Discussion Goal:** Students suggest examples of decisions made by apps, such as recommending a song or product, choosing what appears at the top of a social media feed, or what to watch next. Students may realize that they do not know how the code made these decisions and suggest whether or not they should know."
+      },
+      "seeding_key": {
+        "activity_section.key": "f8304399-d6a6-4a40-939e-78ae17a01bd4",
+        "lesson_activity.key": "d6f5e26b-df39-4085-b4b9-875634945087"
+      }
+    },
+    {
       "key": "02bf3f80-7ee1-4fb5-8e08-533c31d5efeb",
       "position": 1,
       "properties": {
+        "description": "Companies often protect their code as intellectual property. Intellectual property is a creative work or invention that is protected by copyright laws. This includes copyrights, patents, trade secrets, and trademarks.",
+        "duration": "20",
+        "name": "Algorithms",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "02bf3f80-7ee1-4fb5-8e08-533c31d5efeb",
@@ -2051,9 +2096,99 @@
       }
     },
     {
-      "key": "f37f3aab-6e06-490d-9625-59bbbfeaa109",
+      "key": "b9b0199a-c5cf-45ba-8cb5-7370028184df",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define intellectual property.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Algorithms handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Algorithms activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of society did you list in the intellectual property column?*\n* *Which parts of society did you list in the accountability column?*\n\n**Discussion Goal:** Students share the parts of society they identified in the intellectual property and accountability columns, such as algorithms involving healthcare or the justice system should be audited, while other code may be protected as intellectual property."
+      },
+      "seeding_key": {
+        "activity_section.key": "b9b0199a-c5cf-45ba-8cb5-7370028184df",
+        "lesson_activity.key": "05ddcbe3-ed98-4399-a221-4dc6f0299def"
+      }
+    },
+    {
+      "key": "6710e42f-c150-4089-bdcc-aebfbda8a2b0",
+      "position": 3,
+      "properties": {
+        "description": "As companies protect their algorithms as intellectual property, activists want to audit programs that use artificial intelligence and machine learning to hold them accountable.",
+        "duration": "15",
+        "name": "Accountability",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6710e42f-c150-4089-bdcc-aebfbda8a2b0",
+        "lesson_activity.key": "05ddcbe3-ed98-4399-a221-4dc6f0299def"
+      }
+    },
+    {
+      "key": "5bbdf0c0-9c19-4f50-bcc1-4d04f0b95498",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the clip about NYC algorithm audits.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Should there be more regulation of tech, including algorithm audits?*\n* *What are the advantages and disadvantages of regulation?*\n* *Do you want your code to be audited? Do you think it should be intellectual property?*\n\n**Discussion Goal:** Students share their ideas about whether or not there should be regulations. Students suggest advantages and disadvantages of regulation, such as ensuring algorithms do not cause harm in their decisions and that regulations may slow the innovation process. Students share whether or not they would want their code to be audited and their thoughts on their code being intellectual property."
+      },
+      "seeding_key": {
+        "activity_section.key": "5bbdf0c0-9c19-4f50-bcc1-4d04f0b95498",
+        "lesson_activity.key": "05ddcbe3-ed98-4399-a221-4dc6f0299def"
+      }
+    },
+    {
+      "key": "c58452c6-2ee0-47b9-b07d-51d99766ac7b",
       "position": 1,
       "properties": {
+        "description": "There are a lot of researchers studying the accountability of algorithms. Let's meet one of them!",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c58452c6-2ee0-47b9-b07d-51d99766ac7b",
+        "lesson_activity.key": "4466134e-d2cb-4189-8fb8-4b4d52fb10fc"
+      }
+    },
+    {
+      "key": "e46efc35-2a0c-4a7e-9d57-76092fe4ea4b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the biography of Timnit Gebru to the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, you can also choose to listen to [**this podcast**](https://www.google.com/url?q=https://www.marketplace.org/shows/marketplace-tech/timnit-gebru-envisions-a-future-for-smart-ethical-ai/&sa=D&source=docs&ust=1652106084486259&usg=AOvVaw3FpXnLkxNf5PCy3eJ2W11X). Have students share their reactions and thoughts about the work she is doing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e46efc35-2a0c-4a7e-9d57-76092fe4ea4b",
+        "lesson_activity.key": "4466134e-d2cb-4189-8fb8-4b4d52fb10fc"
+      }
+    },
+    {
+      "key": "ecd64ec8-12a8-418a-836d-491e2a0f7956",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including intellectual property and accountability. Students suggest what they might want to do differently in their lives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecd64ec8-12a8-418a-836d-491e2a0f7956",
+        "lesson_activity.key": "4466134e-d2cb-4189-8fb8-4b4d52fb10fc"
+      }
+    },
+    {
+      "key": "e344aa68-8691-4d35-8e5a-328033e4a7f2",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e344aa68-8691-4d35-8e5a-328033e4a7f2",
+        "lesson_activity.key": "4466134e-d2cb-4189-8fb8-4b4d52fb10fc"
+      }
+    },
+    {
+      "key": "f37f3aab-6e06-490d-9625-59bbbfeaa109",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -2635,6 +2770,9 @@
       "key": "05f73258-6bf9-4a04-92ff-e00f8b9b583c",
       "position": 1,
       "properties": {
+        "description": "Throughout this year, you've used your software engineer skills to debug your code. Let's think about some examples of bugs in the real world.",
+        "name": "Bugs",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "05f73258-6bf9-4a04-92ff-e00f8b9b583c",
@@ -2642,9 +2780,24 @@
       }
     },
     {
+      "key": "3de3390c-875e-4399-b970-2c395c809d8e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *When have you experienced a bug in an application or program that you use that affected system reliability - a system's ability to function without failure?*\n\n**Discussion Goal:** Students share examples of bugs they have experienced, such as a website being down or apps that they use crashing."
+      },
+      "seeding_key": {
+        "activity_section.key": "3de3390c-875e-4399-b970-2c395c809d8e",
+        "lesson_activity.key": "829308f6-c1a9-4209-bca9-12b7f3a7c7b6"
+      }
+    },
+    {
       "key": "32274a23-97d6-42b1-bf1a-939d33fbbae9",
       "position": 1,
       "properties": {
+        "description": "It's impossible to completely prevent all bugs in a program. However, as software engineers, there are actions we can take to quickly identify and resolve bugs before they cause significant issues for users.",
+        "duration": "20",
+        "name": "Open Source Bugs",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "32274a23-97d6-42b1-bf1a-939d33fbbae9",
@@ -2652,9 +2805,116 @@
       }
     },
     {
-      "key": "f6b8ab8c-7026-475a-9289-cdf55d0d19e7",
+      "key": "32b302a6-fb6d-4e85-846f-d09c8307aeec",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "32b302a6-fb6d-4e85-846f-d09c8307aeec",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "45c50c15-907f-4c5b-9e0c-a1459d8cca24",
+      "position": 3,
+      "properties": {
+        "description": "Now that you are an expert on your Open Source Bug, let's learn about the other bugs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "45c50c15-907f-4c5b-9e0c-a1459d8cca24",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "3b92fc8a-63b8-4427-9334-a2acc8e281fd",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b92fc8a-63b8-4427-9334-a2acc8e281fd",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "a6f6f299-ac7a-4205-8bbc-4a6d5ca1097c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Rise of Open Source Software*.",
+        "duration": "15",
+        "name": "Maximizing Reliability"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6f6f299-ac7a-4205-8bbc-4a6d5ca1097c",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "db27008c-c2ff-4af0-9f52-780f74cc75b0",
+      "position": 6,
+      "properties": {
+        "description": "Software engineers often use existing open source software to develop their own programs. They also may choose to develop new programs and make them open source for other people and software engineers to use in their programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db27008c-c2ff-4af0-9f52-780f74cc75b0",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "f1955f53-86bb-442a-ad3b-7ef62309b5b8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What can you do as software engineers to maximize the reliability of open source software?*\n\n**Discussion Goal:** Students suggest ways to maximize the reliability of open source software, such as contributing code to existing projects or identifying and submitting bugs found in existing projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1955f53-86bb-442a-ad3b-7ef62309b5b8",
+        "lesson_activity.key": "7dcca2e7-fa67-486e-8fb9-cab8537e8330"
+      }
+    },
+    {
+      "key": "6097f1a3-1c74-4f79-8a42-e42e0486eaed",
       "position": 1,
       "properties": {
+        "description": "The next five lessons are an opportunity to Show What You Know! We complete our unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
+        "name": "Show What You Know Week",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6097f1a3-1c74-4f79-8a42-e42e0486eaed",
+        "lesson_activity.key": "8ade15b8-620b-48ec-b8cc-310cc9d474d3"
+      }
+    },
+    {
+      "key": "46dfaffb-25fa-4af2-8cd0-17848eb992f3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "46dfaffb-25fa-4af2-8cd0-17848eb992f3",
+        "lesson_activity.key": "8ade15b8-620b-48ec-b8cc-310cc9d474d3"
+      }
+    },
+    {
+      "key": "6e68d1ff-d0b4-4cbe-a11c-6fc13c7d8998",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e68d1ff-d0b4-4cbe-a11c-6fc13c7d8998",
+        "lesson_activity.key": "8ade15b8-620b-48ec-b8cc-310cc9d474d3"
+      }
+    },
+    {
+      "key": "f6b8ab8c-7026-475a-9289-cdf55d0d19e7",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -4976,6 +5236,18 @@
       }
     },
     {
+      "name": "[KEY] Algorithms",
+      "url": "https://docs.google.com/document/d/1fTzkxZxgjV-Kuiku-WD44LXqVhbEFLV2P4IlfJTg6Ew/edit#",
+      "key": "_key_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_algorithms"
+      }
+    },
+    {
       "name": "[KEY] MusicQueue FRQ",
       "url": "https://docs.google.com/document/d/11Wqhx5UwCgusOT9OFAGd7a7nDazonerKYiN_2PgRAsQ/edit?usp=sharing",
       "key": "_key_musicqueue_frq",
@@ -4985,6 +5257,42 @@
       },
       "seeding_key": {
         "resource.key": "_key_musicqueue_frq"
+      }
+    },
+    {
+      "name": "[KEY] Open Source Bugs (Version A)",
+      "url": "https://docs.google.com/document/d/1M0bu9trjhWE0SwHi7FUJBJeby3NCaC9hRFkZsOaiH3k/edit",
+      "key": "_key_open_source_bugs_version_a_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_open_source_bugs_version_a_"
+      }
+    },
+    {
+      "name": "[KEY] Open Source Bugs (Version B)",
+      "url": "https://docs.google.com/document/d/1An1oPU32pJW29367eu81vrhyvadtIeEInnXG5AIP9BE/edit",
+      "key": "_key_open_source_bugs_version_b_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_open_source_bugs_version_b_"
+      }
+    },
+    {
+      "name": "[KEY] Open Source Bugs (Version C)",
+      "url": "https://docs.google.com/document/d/1fLwp6GtBCfEajY6tZw9yCDJKUinGZdoYOFCTg1PiGHY/edit",
+      "key": "_key_open_source_bugs_version_c_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_open_source_bugs_version_c_"
       }
     },
     {
@@ -5009,6 +5317,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_tracing_recursion"
+      }
+    },
+    {
+      "name": "[KEY] U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1TZ2dCcBsnnIirjUxueiosxGMPxn2eYKYxiVJxddD3zg/edit?usp=sharing",
+      "key": "_key_u7l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l10_extra_practice"
       }
     },
     {
@@ -5072,6 +5392,18 @@
       }
     },
     {
+      "name": "[KEY] U7L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cNLgZuUOhyha3ISEOTg0BgryMenZ4whqnONeLso1gz0/edit?usp=sharing",
+      "key": "_key_u7l6_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l6_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U7L7 Extra Practice",
       "url": "https://docs.google.com/document/d/1jYlFyala_xpVMMs_Di8NyxYwH6XuDNx8FRLqoKe_hjM/edit?usp=sharing",
       "key": "_key_u7l7_extra_practice",
@@ -5105,6 +5437,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u7l9_extra_practice"
+      }
+    },
+    {
+      "name": "Algorithms",
+      "url": "https://docs.google.com/document/d/1QB9jmmz9ZHJQOpi8u9FUSSGz-31Um1jt7W6wWwHoJ58/edit#",
+      "key": "algorithms",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms"
       }
     },
     {
@@ -5213,6 +5557,42 @@
       }
     },
     {
+      "name": "Open Source Bugs (Version A)",
+      "url": "https://docs.google.com/document/d/1G9cZ1J7EAcCdh6KqMSmsLMUcUHGWnk6WFKrBI34Klv8/edit",
+      "key": "open_source_bugs_version_a_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "open_source_bugs_version_a_"
+      }
+    },
+    {
+      "name": "Open Source Bugs (Version B)",
+      "url": "https://docs.google.com/document/d/1R4XVa2yMznF4ZInlXr0ryTvtd5IJH8qo1zvIHZIV58c/edit",
+      "key": "open_source_bugs_version_b_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "open_source_bugs_version_b_"
+      }
+    },
+    {
+      "name": "Open Source Bugs (Version C)",
+      "url": "https://docs.google.com/document/d/1tNuhTmfaMiKiyAM0SaHCeSPe18v5DY_tbzeQJdS2Ju0/edit",
+      "key": "open_source_bugs_version_c_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "open_source_bugs_version_c_"
+      }
+    },
+    {
       "name": "Project Planning Board",
       "url": "https://docs.google.com/document/d/1Lo6y-JONN3mQebaP30sEAeCuU6xSCo1P6vKG8NJTN3s/edit?usp=sharing",
       "key": "project_planning_board",
@@ -5249,6 +5629,18 @@
       }
     },
     {
+      "name": "The Rise of Open Source Software",
+      "url": "https://www.google.com/url?q=https://youtu.be/SpeDK1TPbew?t%3D570&sa=D&source=docs&ust=1652106086596672&usg=AOvVaw3915GNx-HeoQJLeFERGO7q",
+      "key": "the_rise_of_open_source_software",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_rise_of_open_source_software"
+      }
+    },
+    {
       "name": "Tracing Recursion",
       "url": "https://docs.google.com/document/d/1CERY59fuerRvJkdIVfkQkXJ7UrppA1ZUrGOXijKlPQg/edit?usp=sharing",
       "key": "tracing_recursion",
@@ -5258,6 +5650,18 @@
       },
       "seeding_key": {
         "resource.key": "tracing_recursion"
+      }
+    },
+    {
+      "name": "U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1-hv4UW386eaS9M_YRRK6Mfe0FsUCt87loWpZDF7hyQk/edit?usp=sharing",
+      "key": "u7l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l10_extra_practice"
       }
     },
     {
@@ -5318,6 +5722,18 @@
       },
       "seeding_key": {
         "resource.key": "u7l5_extra_practice"
+      }
+    },
+    {
+      "name": "U7L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1H-sYSwSNj543_yH-A_7clqTz91puNBXMsUrPkdgQN8A/edit?usp=sharing",
+      "key": "u7l6_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l6_extra_practice"
       }
     },
     {
@@ -5445,7 +5861,79 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "unit_7_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_open_source_bugs_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_open_source_bugs_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_open_source_bugs_version_c_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "open_source_bugs_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "open_source_bugs_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "open_source_bugs_version_c_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "the_rise_of_open_source_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_7_study_guide"
       }
     },
     {
@@ -5535,12 +6023,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_7_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "resource.key": "unit_7_presentation_slides"
       }
     },
@@ -5601,6 +6083,36 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u7l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u7l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "unit_7_presentation_slides"
       }
     },
@@ -5788,6 +6300,16 @@
       }
     },
     {
+      "key": "intellectual_property",
+      "word": "intellectual property",
+      "definition": "a creative work or invention that is protected by copyright laws",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
       "key": "pass_by_value",
       "word": "Pass by Value",
       "definition": "The process of making a copy of the actual value of a variable to pass to a constructor or method",
@@ -5828,6 +6350,16 @@
       }
     },
     {
+      "key": "system_reliability",
+      "word": "System Reliability",
+      "definition": "A system's ability to function without failure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "system_reliability"
+      }
+    },
+    {
       "key": "user_story",
       "word": "User Story",
       "definition": "An informal explanation of a program feature written from the perspective of the user",
@@ -5849,6 +6381,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "project_backlog"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "system_reliability"
       }
     },
     {
@@ -5879,6 +6417,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "user_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "intellectual_property"
       }
     },
     {
@@ -5932,6 +6476,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "20295590-cd57-42bf-be91-c150eadb3e19"
+      }
+    },
+    {
+      "key": "2cb69550-fc83-49d9-a62b-98b47ea64baf",
+      "properties": {
+        "description": "Explain why algorithms should be held accountable and regulated through audits"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "2cb69550-fc83-49d9-a62b-98b47ea64baf"
       }
     },
     {
@@ -6075,6 +6629,26 @@
       }
     },
     {
+      "key": "878f2b06-d2b6-4627-9878-0c99541aeb09",
+      "properties": {
+        "description": "Describe issues and impacts resulting from software bugs"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "878f2b06-d2b6-4627-9878-0c99541aeb09"
+      }
+    },
+    {
+      "key": "88ad193a-7d0c-40b7-8117-42ef155c2644",
+      "properties": {
+        "description": "Identify ethical and social implications of intellectual property"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "88ad193a-7d0c-40b7-8117-42ef155c2644"
+      }
+    },
+    {
       "key": "9592a17c-591b-4a2f-96ea-2cc18225837a",
       "properties": {
         "description": "Identify project requirements, tasks, and priorities"
@@ -6183,9 +6757,26 @@
         "lesson.key": "lesson-8",
         "objective.key": "ef432428-604b-46af-8387-ad1fb7d717bb"
       }
+    },
+    {
+      "key": "f98ff58f-5116-4097-9628-0d7bb5311f41",
+      "properties": {
+        "description": "Identify strategies for maximizing system reliability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "f98ff58f-5116-4097-9628-0d7bb5311f41"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.1"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -6254,6 +6845,13 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.B.12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.2"
       }
     },
     {

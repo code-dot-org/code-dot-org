@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 02:14:41 UTC",
+    "serialized_at": "2022-05-09 15:54:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -928,6 +928,7 @@
       "key": "ab66741e-528f-4d29-81df-1b6a3f5ba1fa",
       "position": 5,
       "properties": {
+        "duration": 45,
         "name": "Day 5"
       },
       "seeding_key": {
@@ -1287,8 +1288,21 @@
       }
     },
     {
-      "key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9",
+      "key": "d383eef2-e74d-4993-b0f3-cbd6fc216128",
       "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9",
+      "position": 5,
       "properties": {
         "name": "Extensions"
       },
@@ -1330,7 +1344,7 @@
       "key": "c34e82c1-7915-4903-8b84-5bb8e0a93f89",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Order Materials:** This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Circuit Playgrounds:** This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1581,7 +1595,13 @@
       "key": "29b1832f-4872-46da-a270-a41592f155ae",
       "position": 3,
       "properties": {
-        "progression_name": "Setup"
+        "progression_name": "Setup",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "29b1832f-4872-46da-a270-a41592f155ae",
@@ -1647,7 +1667,13 @@
       "key": "010e456f-614d-48fe-a5bc-05ba548140ba",
       "position": 7,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "010e456f-614d-48fe-a5bc-05ba548140ba",
@@ -4589,12 +4615,36 @@
       "key": "266e20ca-98da-4140-80a3-b88831c809bc",
       "position": 2,
       "properties": {
-        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete an end of unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "266e20ca-98da-4140-80a3-b88831c809bc",
         "lesson_activity.key": "ef0f2f8a-5694-4406-9357-17f0d20037e3"
+      }
+    },
+    {
+      "key": "9d25bedc-e25e-4765-933d-124a5f27be74",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d25bedc-e25e-4765-933d-124a5f27be74",
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128"
+      }
+    },
+    {
+      "key": "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3",
+      "position": 2,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End-Of-Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3",
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128"
       }
     },
     {
@@ -10362,6 +10412,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -11574,6 +11635,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd6-2022"
       }
     },

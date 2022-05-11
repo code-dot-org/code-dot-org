@@ -60,10 +60,13 @@ class JavabuilderSessionsController < ApplicationController
   private
 
   def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
-    success ?
-      render(json: {token: encoded_payload, session_id: session_id}) :
-      render(status: :internal_server_error, json: {error: "Error uploading sources."})
+    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    if response
+      return render(json: {token: encoded_payload, session_id: session_id}) if response.code == '200'
+      return render(status: response.code, json: response.body)
+    else
+      return render(status: :internal_server_error, json: {error: "Error uploading sources."})
+    end
   end
 
   def get_encoded_payload(additional_payload)
@@ -98,18 +101,13 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   def get_teacher_list
-    if current_user.permission?(UserPermission::LEVELBUILDER) ||
-      current_user.verified_teacher? ||
-      current_user.has_pilot_experiment?(CSA_PILOT) ||
-      current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+    if current_user.verified_instructor?
       return [current_user.id]
     end
     teachers = []
-    current_user.teachers.each do |teacher|
-      next unless teacher.verified_teacher? ||
-        teacher.has_pilot_experiment?(CSA_PILOT) ||
-        teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-      teachers << teacher.id
+    current_user.sections_as_student.each do |section|
+      next unless section.assigned_csa? && section.teacher&.verified_instructor?
+      teachers << section.teacher.id
     end
     teachers.uniq
   end

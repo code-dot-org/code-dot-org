@@ -37,10 +37,9 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
           # constrained by our join to the set of users submitting for peer review, which is below
           # 500 as of August 2019, and the total number of peer_reviews rows being examined post-join
           # does not exceed 20,000 at this time.
-          # sanitize_sql_like will be public in Rails 5.2+
           reviews.
             joins(:submitter).
-            where("users.name LIKE ?", "%#{PeerReview.send(:sanitize_sql_like, user_query)}%")
+            where("users.name LIKE ?", "%#{PeerReview.sanitize_sql_like(user_query)}%")
         end
     end
 
@@ -147,14 +146,14 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
   def result_to_status(result)
     case result
-      when ActivityConstants::REVIEW_ACCEPTED_RESULT
-        'Accepted'
-      when ActivityConstants::REVIEW_REJECTED_RESULT
-        'Rejected'
-      when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
-        'Pending Review'
-      else
-        'Unsubmitted'
+    when ActivityConstants::REVIEW_ACCEPTED_RESULT
+      'Accepted'
+    when ActivityConstants::REVIEW_REJECTED_RESULT
+      'Rejected'
+    when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+      'Pending Review'
+    else
+      'Unsubmitted'
     end
   end
 end

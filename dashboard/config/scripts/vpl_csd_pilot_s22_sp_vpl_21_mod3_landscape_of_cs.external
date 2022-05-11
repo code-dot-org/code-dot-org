@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 ##### Below is a <a href="http://csedu.gallup.com/home.aspx" target="blank" rel="noopener noreferrer">series of reports</a> from Gallup and Google describes the landscape of computer science education across the United States.
 
 ## <a href="https://services.google.com/fh/files/misc/computer-science-education-in-us-k12schools-2020-report.pdf" target="blank" rel="noopener noreferrer">Current Perspectives and Continuing Challenges in Computer Science Education in U.S. K-12 Schools (2020)</a> 
-* 69% of parents/guardians say it is important or very important for their child to learn computer science. 78% of Black parents say it is important or very important (compared to 67% of Hispanic/Latino/Latina parents and 68% of white parents).
+* 69% of parents/guardians say it is important or very important for their child to learn computer science. 78% of Black parents say it is important or very important (compared to 67% of Hispanic/Latino/Latina/Latinx parents and 68% of white parents).
 * Boys in grades 7-12 are more likely than girls to think that computer science is important to learn (49% versus 31%)
 * Superintendents (75%), principals (73%), and public school teachers (66%) think offering computer science courses is just as important to a student's future success as other required courses. 
 
@@ -28,8 +28,8 @@ markdown <<MARKDOWN
 
 ## <a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-hispanic-brief.pdf" target="blank" rel="noopener noreferrer">Computer Science Learning: Closing the Gap - Hispanic Students</a> 
 
-* Hispanic/Latino/Latina (35%) middle and high school students are more likely to be very interested in learning CS than white students (21%), yet fewer Hispanic/Latino/Latina students have high confidence that they could learn computer science (51%, compared to 56% of white and 68% of Black students). 
-* 92% of Hispanic/Latino/Latina parents whose children haven’t learned computer science want their children to learn it (vs. 84% of white parents).
+* Hispanic/Latino/Latina/Latinx (35%) middle and high school students are more likely to be very interested in learning CS than white students (21%), yet fewer Hispanic/Latino/Latina/Latinx students have high confidence that they could learn computer science (51%, compared to 56% of white and 68% of Black students). 
+* 92% of Hispanic/Latino/Latina/Latinx parents whose children haven’t learned computer science want their children to learn it (vs. 84% of white parents).
 
 ## <a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-rural-small-town-brief.pdf" target="blank" rel="noopener noreferrer">Computer Science Learning: Closing the Gap - Rural and Small-Town School Districts </a> 
 
