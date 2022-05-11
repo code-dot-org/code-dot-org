@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 15:29:31 UTC",
+    "serialized_at": "2022-05-11 02:00:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -170,8 +171,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Overview:**\nThis session is all about celebration! The goal is for participants to leave the workshop proud of all they have accomplished and feeling like they are a part of a community that will support them as they take on teaching computer science in the upcoming school year. \n\n**Participants will:**\n\n* Celebrate all that you/they have accomplished throughout the workshop!\n\n**Suggested time:** 45 minutes",
-        "student_overview": "**You will:**\n\n* Celebrate all that you/they have accomplished throughout the workshop!"
+        "overview": "**Overview:**\nThis session is all about celebration! The goal is for participants to leave the workshop proud of all they have accomplished and feeling like they are a part of a community that will support them as they take on teaching computer science in the upcoming school year. \n\n**Participants will:**\n\n* Celebrate all that they have accomplished throughout the workshop!\n\n**Suggested time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Celebrate all that you have accomplished throughout the workshop!"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
