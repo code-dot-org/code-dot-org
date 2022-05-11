@@ -21,7 +21,7 @@ describe('Petition', () => {
     age_i: {
       tag: 'select',
       id: 'age',
-      target_value: '20'
+      target_value: '16'
     }
   };
 
@@ -31,6 +31,11 @@ describe('Petition', () => {
     zip_code_or_country_s: '',
     age_i: '',
     role_s: 'other'
+  };
+
+  const ageSafeData = {
+    name_s: '',
+    email_s: 'anonymous@code.org'
   };
 
   const addInputsToPetition = (wrapper, inputs) =>
@@ -63,7 +68,7 @@ describe('Petition', () => {
     window.ga = undefined;
   });
 
-  it('sends request if all required fields are valid ', () => {
+  it('sends request if all required fields are valid', () => {
     const petition = mount(
       <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
     );
@@ -74,5 +79,26 @@ describe('Petition', () => {
     expect(serverCalledWith.data).to.deep.equal(
       expectedDataFromInputs(minimumInputs)
     );
+  });
+  it('sends request with name and email anonymized if under 16', () => {
+    const petition = mount(
+      <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />
+    );
+    const inputs = {
+      ...minimumInputs,
+      age_i: {
+        tag: 'select',
+        id: 'age',
+        target_value: '15'
+      }
+    };
+    addInputsToPetition(petition, inputs);
+    submitForm(petition);
+
+    const serverCalledWith = $.ajax.getCall(0).args[0];
+    expect(serverCalledWith.data).to.deep.equal({
+      ...expectedDataFromInputs(inputs),
+      ...ageSafeData
+    });
   });
 });
