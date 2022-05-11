@@ -169,6 +169,7 @@ class FilesApi < Sinatra::Base
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
@@ -194,6 +195,7 @@ class FilesApi < Sinatra::Base
   #
   # Redirect to /<channel-id>/
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
@@ -219,6 +221,7 @@ class FilesApi < Sinatra::Base
   #
   # Serve index.html for this project.
   # Only from codeprojects.org domain
+  # Deprecated in favor of the URL below
   #
   get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
