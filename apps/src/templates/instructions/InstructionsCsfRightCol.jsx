@@ -83,8 +83,7 @@ class InstructionsCsfRightCol extends React.Component {
 
   getColumnHeight() {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    const scrollButtonsHeight = 0;
-    return collapseButtonHeight + scrollButtonsHeight;
+    return this.props.height - collapseButtonHeight;
   }
 
   render() {
@@ -97,7 +96,7 @@ class InstructionsCsfRightCol extends React.Component {
       (displayCollapserButton ? styles.scrollButtonsBelowCollapser.top : 0);
 
     return (
-      <div style={styles.column}>
+      <div>
         {displayCollapserButton && (
           <CollapserButton
             ref={c => {
@@ -138,10 +137,6 @@ class InstructionsCsfRightCol extends React.Component {
 }
 
 const styles = {
-  column: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
   collapserButton: {
     position: 'absolute',
     right: 0,
@@ -150,7 +145,8 @@ const styles = {
   },
   scrollButtons: {
     margin: '0px 5px',
-    minWidth: '40px'
+    minWidth: '40px',
+    width: '100%'
   },
   scrollButtonsBelowCollapser: {
     position: 'relative',
