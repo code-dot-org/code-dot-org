@@ -26,7 +26,7 @@ class CoursesController < ApplicationController
       @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
     end
 
-    @course_families_course_types.to_h
+    @course_families_course_types = @course_families_course_types.to_h
   end
 
   def index
