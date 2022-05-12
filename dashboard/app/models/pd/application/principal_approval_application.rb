@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: pd_applications

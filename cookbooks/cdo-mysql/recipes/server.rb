@@ -22,9 +22,9 @@ end
 # MySQL 5.7 Ubuntu package uses auth_socket plugin for local user by default.
 # Revert to mysql_native_password plugin to authenticate from non-root shell.
 execute 'mysql-user' do
-  command <<SH
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';"
-SH
+  command <<~SH
+    mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';"
+  SH
   action :nothing
 end
 

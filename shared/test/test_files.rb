@@ -154,6 +154,9 @@ class FilesTest < FilesApiTestBase
     @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
 
+    @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert_equal dog_image_body, last_response.body
+
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
@@ -249,7 +252,15 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_nil last_response['Content-Disposition']
 
+    @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
     @api.get_root_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+    assert_nil last_response['Content-Disposition']
+
+    @api.get_codeproject_object(html_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert successful?
     assert_nil last_response['Content-Disposition']
 
@@ -274,6 +285,18 @@ class FilesTest < FilesApiTestBase
 
     @api.delete_object('index.html')
     @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert not_found?
+
+    delete_all_manifest_versions
+  end
+
+  def test_codeprojects_projects_url_get_deleted_project
+    post_file_data(@api, 'index.html', '<div></div>', 'text/html')
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    @api.delete_object('index.html')
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert not_found?
 
     delete_all_manifest_versions
