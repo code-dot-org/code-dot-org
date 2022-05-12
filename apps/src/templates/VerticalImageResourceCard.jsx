@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 import Button from './Button';
 
@@ -22,7 +23,8 @@ class VerticalImageResourceCard extends Component {
     image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     MCShareLink: PropTypes.string,
-    jumbo: PropTypes.bool
+    jumbo: PropTypes.bool,
+    hasAdjustableHeight: PropTypes.bool
   };
 
   render() {
@@ -34,11 +36,23 @@ class VerticalImageResourceCard extends Component {
       isRtl,
       jumbo,
       MCShareLink,
-      image
+      image,
+      hasAdjustableHeight
     } = this.props;
-    const cardStyle = jumbo ? styles.jumboCard : styles.card;
-    const imageStyle = jumbo ? styles.jumboImage : styles.image;
+    const cardHeight = hasAdjustableHeight ? {} : styles.cardHeight;
+    const cardStyle = jumbo
+      ? {...styles.jumboCard, ...cardHeight}
+      : {...styles.card, ...cardHeight};
+
+    const imageHeight = hasAdjustableHeight ? {} : styles.imageHeight;
+    const imageStyle = jumbo
+      ? {...styles.jumboImage, ...imageHeight}
+      : {...styles.image, ...imageHeight};
+
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const descriptionStyle = hasAdjustableHeight
+      ? styles.description
+      : {...styles.description, ...styles.descriptionHeight};
 
     const filenameToImgUrl = {
       'another-hoc': require('@cdo/static/resource_cards/anotherhoc.png'),
@@ -59,7 +73,8 @@ class VerticalImageResourceCard extends Component {
       'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
       'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
-      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png')
+      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
+      course2: pegasus('/shared/images/courses/logo_tall_course2.jpg')
     };
     const imgSrc = filenameToImgUrl[image];
 
@@ -72,7 +87,7 @@ class VerticalImageResourceCard extends Component {
         </div>
         <div>
           <div style={[styles.text, styles.title, localeStyle]}>{title}</div>
-          <div style={[styles.text, styles.description, localeStyle]}>
+          <div style={[styles.text, descriptionStyle, localeStyle]}>
             {description}
             {MCShareLink && (
               <input
@@ -103,7 +118,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    height: 440,
     width: 308,
     backgroundColor: color.white
   },
@@ -112,17 +126,20 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    height: 440,
     width: 473,
     marginBottom: 20,
     backgroundColor: color.white
   },
+  cardHeight: {
+    height: 440
+  },
   image: {
-    width: 310,
-    height: 220
+    width: 310
   },
   jumboImage: {
-    width: 473,
+    width: 473
+  },
+  imageHeight: {
     height: 220
   },
   text: {
@@ -143,7 +160,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 14,
-    lineHeight: 1.5,
+    lineHeight: 1.5
+  },
+  descriptionHeight: {
     height: 89
   },
   shareLink: {

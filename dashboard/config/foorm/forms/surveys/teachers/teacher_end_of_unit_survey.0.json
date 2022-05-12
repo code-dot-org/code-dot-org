@@ -1,6 +1,5 @@
 {
   "title": "Code.org CSA Teacher End-of-Unit Survey",
-  "description": "Unit {unit_number} - {unit_name}",
   "logoPosition": "right",
   "pages": [
     {
@@ -70,12 +69,19 @@
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
           "startWithNewLine": false,
           "innerIndent": 3,
-          "indent": 3
+          "indent": 3,
+          "visible": "false"
+        },
+        {
+          "type": "html",
+          "name": "unit_instructions",
+          "html": " <h3>Please tell us your overall thoughts about teaching this unit.</h3>"
         },
         {
           "type": "html",
           "name": "unit_num_name_heading",
-          "html": "<h3>Unit {unit_number} - {unit_name}</h3><p>Please tell us your thoughts about teaching this unit."
+          "html": "<h2>Unit {unit_number} - {unit_name}</h2>",
+          "visibleIf": "{unit_number} notempty"
         },
         {
           "type": "rating",
@@ -227,6 +233,8 @@
         {
           "type": "comment",
           "name": "benefits_drawbacks_code_review",
+          "description": "(Optional)",
+          "rows": 2,
           "title": "What do you see as the benefits and/or drawbacks for students doing code reviews?"
         },
         {
@@ -254,7 +262,8 @@
         },
         {
           "type": "html",
-          "name": "question3",
+          "name": "unit_specific_header",
+          "visibleIf": "{unit_number} notempty",
           "html": "<h2>CSA Unit {unit_number} Objectives</h2><p>We're interested in how effective the lessons and materials in this unit were in helping your students learn. We will use this feedback to learn how we might improve the course.</p><h3>By the end of this unit, how many of your students can...</h3>"
         },
         {
@@ -309,7 +318,7 @@
             },
             {
               "type": "rating",
-              "name": "question2",
+              "name": "explain_inheritance",
               "title": "Explain the purpose and functionality of inheritance.",
               "rateValues": [
                 {
@@ -622,6 +631,11 @@
             }
           ],
           "visibleIf": "{unit_number} = 3"
+        },
+        {
+          "type": "html",
+          "name": "thank_you_message",
+          "html": "<h2>Thank you for your feedback!</h2>"
         }
       ]
     }

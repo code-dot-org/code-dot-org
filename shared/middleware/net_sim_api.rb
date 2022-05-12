@@ -275,14 +275,14 @@ class NetSimApi < Sinatra::Base
   def validate_one(shard_id, table_name, value)
     return VALIDATION_ERRORS[:malformed] unless value.is_a? Hash
     case table_name
-      when TABLE_NAMES[:node]
-        validate_node(shard_id, value)
-      when TABLE_NAMES[:message]
-        validate_message(shard_id, value)
-      when TABLE_NAMES[:wire]
-        validate_wire(shard_id, value)
-      else
-        nil
+    when TABLE_NAMES[:node]
+      validate_node(shard_id, value)
+    when TABLE_NAMES[:message]
+      validate_message(shard_id, value)
+    when TABLE_NAMES[:wire]
+      validate_wire(shard_id, value)
+    else
+      nil
     end
   end
 
@@ -291,9 +291,9 @@ class NetSimApi < Sinatra::Base
   # @return [String] a validation error, or nil if no problems were found
   def validate_node(shard_id, node)
     case node['type']
-      when NODE_TYPES[:router] then validate_router(shard_id, node)
-      when NODE_TYPES[:client] then nil
-      else VALIDATION_ERRORS[:malformed]
+    when NODE_TYPES[:router] then validate_router(shard_id, node)
+    when NODE_TYPES[:client] then nil
+    else VALIDATION_ERRORS[:malformed]
     end
   end
 

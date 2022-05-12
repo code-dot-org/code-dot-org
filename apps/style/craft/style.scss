@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
 @import 'color';
@@ -323,7 +325,7 @@ body {
 #phaser-game {
   $frame-width: 434;
   $native-game-width: 400;
-  $game-offset-x: (($frame-width - $native-game-width) / 2);
+  $game-offset-x: (($frame-width - $native-game-width) * 0.5);
   $game-margin-side: $game-offset-x * 1px;
 
   margin-left: $game-margin-side;
@@ -369,8 +371,8 @@ a.video_link {
  *    min-height
  */
 
-$width-to-height: 477 / 434;
-$height-to-width: 434 / 477;
+$width-to-height: math.div(477, 434);
+$height-to-width: math.div(434, 477);
 
 @media screen and (min-height: 0px) {
   @include visualization-width-height-original(
@@ -434,8 +436,8 @@ $height-to-width: 434 / 477;
 }
 
 @mixin popup-width-height($width, $height) {
-  $offsetY: -($height/2);
-  $offsetX: -($width/2);
+  $offsetY: -($height*0.5);
+  $offsetX: -($width*0.5);
 
   position: fixed;
   top: 50%;
@@ -597,8 +599,8 @@ $height-to-width: 434 / 477;
     margin-top: 13px; // matches bottom with Alex
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
+      width: $width * 0.5;
+      height: $height * 0.5;
       margin-top: 0;
     }
   }
@@ -614,8 +616,8 @@ $height-to-width: 434 / 477;
     height: $height;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
+      width: $width * 0.5;
+      height: $height * 0.5;
     }
   }
 
@@ -703,9 +705,9 @@ $height-to-width: 434 / 477;
 
     @media screen and (max-height: 630px) {
       $fudge-factor-to-match-bottoms: 7px;
-      $smaller-height: ($house-outline-height / 2) +
+      $smaller-height: ($house-outline-height * 0.5) +
         $fudge-factor-to-match-bottoms;
-      $smaller-width: $house-outline-width / 2;
+      $smaller-width: $house-outline-width * 0.5;
       width: $smaller-width;
       height: $smaller-height;
       background-size: $smaller-width $smaller-height;
@@ -727,16 +729,16 @@ $height-to-width: 434 / 477;
     background-image: url('#{$root}Sliced_Parts/House_Option_A_v3.png');
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
   #house-c-picture {
@@ -745,16 +747,16 @@ $height-to-width: 434 / 477;
     background-image: url('#{$root}Sliced_Parts/House_Option_B_v3.png');
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
   #house-b-picture {
@@ -763,16 +765,16 @@ $height-to-width: 434 / 477;
     background-image: url('#{$root}Sliced_Parts/House_Option_C_v3.png');
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 +
       $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
 

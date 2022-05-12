@@ -478,6 +478,7 @@ pl-PL:
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
   homepage_slot_text_link_shop: Koszulki, czapki i inne
+  homepage_slot_text_link_thebadguys: Koduj ze złymi facetami
   homepage_slot_text_link_administrators: Wprowadź informatykę do swojej szkoły
   homepage_gallery_header: Utworzono ponad %{project_count} mln projektów w Code.org
   homepage_header_donors: Code.org dziękuje za wsparcie
@@ -2225,6 +2226,7 @@ pl-PL:
   header_educate_beyond: Poza Code.org
   header_educate_inspire: Inspiruj ucznia
   header_educate_community: Społeczność online
+  header_educate_requirements: Wymagania Techniczne
   header_educate_tools: Narzędzia i filmy
   header_about_us: O nas
   header_about_leadership: Przywództwo
