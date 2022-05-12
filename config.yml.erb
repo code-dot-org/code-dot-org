@@ -417,6 +417,10 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
+# Use different color header for local environment than the one on production to
+# make it easier to tell the difference
+use_local_header_color:
+
 default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 

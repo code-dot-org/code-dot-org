@@ -1000,10 +1000,10 @@ def js_async(js, *args, callback_fn: 'callback', finished_var: 'window.asyncCall
     js = "var #{callback_fn} = arguments[arguments.length - 1];\n#{js}"
     @browser.execute_async_script(js, *args)
   else
-    js = <<-JS
-#{finished_var} = undefined;
-var #{callback_fn} = function(result) { #{finished_var} = result; };
-#{js}
+    js = <<~JS
+      #{finished_var} = undefined;
+      var #{callback_fn} = function(result) { #{finished_var} = result; };
+      #{js}
     JS
     @browser.execute_script(js, *args)
     wait_short_until {@browser.execute_script("return #{finished_var};")}
@@ -1017,23 +1017,23 @@ def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, trie
     body = "'#{body.to_param}'" if body
   end
 
-  js = <<-JS
-var xhr = new XMLHttpRequest();
-xhr.open('#{method}', '#{url}', true);
-#{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
-var csrf = document.head.querySelector("meta[name='csrf-token']")
-if (csrf) {
-  xhr.setRequestHeader('X-Csrf-Token', csrf.content)
-}
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4) {
-    callback(JSON.stringify({
-      status: xhr.status,
-      response: xhr.responseText
-    }));
-  }
-};
-xhr.send(#{body});
+  js = <<~JS
+    var xhr = new XMLHttpRequest();
+    xhr.open('#{method}', '#{url}', true);
+    #{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
+    var csrf = document.head.querySelector("meta[name='csrf-token']")
+    if (csrf) {
+      xhr.setRequestHeader('X-Csrf-Token', csrf.content)
+    }
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        callback(JSON.stringify({
+          status: xhr.status,
+          response: xhr.responseText
+        }));
+      }
+    };
+    xhr.send(#{body});
   JS
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: tries) do
     result = js_async(js)
