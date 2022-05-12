@@ -146,14 +146,14 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
   def result_to_status(result)
     case result
-      when ActivityConstants::REVIEW_ACCEPTED_RESULT
-        'Accepted'
-      when ActivityConstants::REVIEW_REJECTED_RESULT
-        'Rejected'
-      when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
-        'Pending Review'
-      else
-        'Unsubmitted'
+    when ActivityConstants::REVIEW_ACCEPTED_RESULT
+      'Accepted'
+    when ActivityConstants::REVIEW_REJECTED_RESULT
+      'Rejected'
+    when ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+      'Pending Review'
+    else
+      'Unsubmitted'
     end
   end
 end

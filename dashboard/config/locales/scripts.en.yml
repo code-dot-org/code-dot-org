@@ -34766,7 +34766,9 @@ en:
               name: Unit wrap up
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Problem Solving and Computing
           name: vpl-csd1-ci-pilot-2022
           title: 'Module 1: Preparing to Teach Problem Solving and Computing'
           description_audience: ''
@@ -34994,7 +34996,9 @@ en:
                 * Explore end of chapter projects.
 
                 **Suggested time:** 10 minutes
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Data and Society
           name: vpl-csd5-ci-pilot-2022
           title: 'Module 5: Preparing to Teach Data and Society'
           description_audience: ''
