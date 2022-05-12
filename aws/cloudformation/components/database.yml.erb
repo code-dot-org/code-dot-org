@@ -71,8 +71,8 @@
       DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
       DBProxyName: !Ref DBProxy
       TargetRole: READ_ONLY
-      VpcSecurityGroupIds: !Split [",", !ImportValue VPC-DBSecurityGroup]
-      VpcSubnetIds: !Split [",", !ImportValue VPC-DBSubnetGroup]
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
@@ -103,8 +103,8 @@
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
-      VpcSubnetIds: !Split [",", !ImportValue VPC-DBSubnetGroup]
-      VpcSecurityGroupIds: !Split [",", !ImportValue VPC-DBSecurityGroup]
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReportingDBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
     # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
