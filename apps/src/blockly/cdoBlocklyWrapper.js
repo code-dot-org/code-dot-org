@@ -233,6 +233,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getBlockFields: function(block) {
       return block.getTitles();
     },
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
     getBlockLimit: function(blockType) {
       return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
         blockType
