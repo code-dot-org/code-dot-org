@@ -142,7 +142,7 @@ class InstructionsCSF extends React.Component {
 
   componentDidUpdate() {
     this.setCanScrollInstructions();
-    //this.debouncedCalculateRenderedHeight();
+    this.debouncedCalculateRenderedHeight();
     this.props.adjustMaxNeededHeight();
   }
 
