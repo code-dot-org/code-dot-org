@@ -12,8 +12,8 @@ Scenario: Auto-placing malformed start blocks
 
 Scenario: Auto-placing blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle
-  Then Google Blockly block "18" is near offset "16, 16"
-  And Google Blockly block "21" is near offset "16, 114"
+  Then Google Blockly block "0" is near offset "16, 16"
+  And Google Blockly block "3" is near offset "16, 114"
 
 Scenario: Auto-placing blocks with XML positioning
   Given I am on "http://studio.code.org/s/allthethings/lessons/5/levels/4?noautoplay=true"
