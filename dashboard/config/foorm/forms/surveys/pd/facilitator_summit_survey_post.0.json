@@ -156,6 +156,11 @@
         },
         {
           "type": "html",
+          "name": "link_to_applications",
+          "html": "<p><h3>P.S. Apply to co-lead a 3-day virtual workshop to train our newest facilitators at FiT (Facilitator-in-Training)! <a href=\"https://bit.ly/fit-colead.\">Visit here for more details</a>"
+        },
+        {
+          "type": "html",
           "name": "question2",
           "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org.</p>"
         }
