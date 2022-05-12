@@ -42,6 +42,6 @@ class PrizeTools
     teacher_prize: #{user.teacher_prize.inspect}
     teacher_bonus_prize_earned: #{user.teacher_bonus_prize_earned.inspect}
     teacher_bonus_prize: #{user.teacher_bonus_prize.inspect}
-EOS
+    EOS
   end
 end

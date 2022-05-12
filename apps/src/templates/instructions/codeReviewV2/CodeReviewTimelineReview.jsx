@@ -8,9 +8,15 @@ import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
-const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
+const CodeReviewTimelineReview = ({
+  review,
+  isLastElementInTimeline,
+  addCodeReviewComment,
+  closeReview
+}) => {
   const {
     createdAt,
     isClosed,
@@ -43,7 +49,7 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
               <Button
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
-                onClick={() => {}}
+                onClick={closeReview}
                 text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
               />
@@ -60,9 +66,9 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
           />
         ))}
         {!isClosed && (
-          <div style={{border: '1px solid black'}}>
-            Comment editor placeholder
-          </div>
+          <CodeReviewCommentEditor
+            addCodeReviewComment={addCodeReviewComment}
+          />
         )}
         {!isClosed && (
           <div style={styles.codeWorkspaceDisabledMsg}>
@@ -77,7 +83,9 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
 
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
-  review: reviewShape
+  review: reviewShape,
+  addCodeReviewComment: PropTypes.func.isRequired,
+  closeReview: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimelineReview;

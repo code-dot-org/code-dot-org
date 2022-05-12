@@ -125,7 +125,6 @@ module ProxyHelper
     else
       return response.code, response['location']
     end
-
   rescue URI::InvalidURIError
     return 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
