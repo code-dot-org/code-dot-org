@@ -12,12 +12,14 @@ style_min: true
 		<h1>A new approach to AP® CSA</h1>
 		<h3>Introduce students to software engineering and object-oriented design while they learn the Java programming language in this new curriculum for <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® Computer Science A (AP® CSA)</a>.</h3>
 	</div>
-	<div class="col-33">
-		<img src="/images/csa/ap-csa-endorsed-badge.png" alt="College Board AP CSA Endorsed badge"/>
-	</div>
+	<figure class="col-33">
+		<img class="ap-csa-endorsed-badge" src="/images/csa/ap-csa-endorsed-badge.png" alt="College Board AP CSA Endorsed badge"/>
+	</figure>
 	{{ clearfix }}
 	<figure class="csa-highlights">
-		<div class="col-50"></div>
+		<figure class="col-50">
+			<img src="/images/csa/java_lab_demo.gif" alt="Gif animation showing a Java-Lab demo" />
+		</figure>
 		<div class="col-50">
 			<ul>
 				<li>Culturally responsive pedagogy</li>
@@ -86,7 +88,7 @@ style_min: true
 {{ clearfix }}
 
 
-<section class="cta">
+<section class="cta-curriculum">
 	<a href="#"><button>Check out the curriculum</button></a>
 	<p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>.</p>
 	<div class="afe">
@@ -100,21 +102,21 @@ style_min: true
 
 <section class="cta-pl">
 	<h2>View Professional Learning Opportunities</h2>
-	<p>Our highly supportive Professional Learning Program helps you bring CSA to the students in your school with this <strong>no-cost</strong> curriculum. In-person and virtual workshops starting this summer.</p>
+	<p>Our highly supportive Professional Learning Program helps you bring CSA to the students in your school with this <strong>no-cost curriculum</strong>. In-person and virtual workshops starting this summer.</p>
 	<a href="/educate/professional-learning/middle-high"><button>Learn more</button></a>
 </section>
 {{ clearfix }}
 
 
-<section>
+<section class="fun-info">
+	<div class="testimonials col-66">
+		<h2>What teachers are saying about our AP® CSA curriculum:</h2>
+		{{ csa_testimonials }}
+	</div>
 	<aside class="stat col-25">
 		<h1>34%</h1>
 		<p>increase in likelihood of students enrolling in college if they take AP® CSA</p>
 	</aside>
-	<div class="testimonials col-66">
-		<h2>What teachers are saying:</h2>
-		{{ csa_testimonials }}
-	</div>
 	{{ clearfix }}
 </section>
 {{ clearfix }}
@@ -222,7 +224,7 @@ style_min: true
 	<h2>Frequently Asked Questions</h2>
 	<details>
 		<summary>Is CSA mapped to standards?</summary>
-		<p>Yes, Code.org’s CSA curriculum is mapped to the College Board Course and Exam Description for AP® CSA.</p>
+		<p>Yes, Code.org's CSA curriculum is mapped to the College Board Course and Exam Description for AP® CSA.</p>
 	</details>
 	<details>
 		<summary>How much does it cost to teach CSA?</summary>
@@ -230,7 +232,7 @@ style_min: true
 	</details>
 	<details>
 		<summary>How/Where can I get professional development for CSA?</summary>
-		<p>Professional learning for Code.org’s CSA curriculum will be available beginning Summer 2022. <a href="/educate/professional-learning/middle-high">Click here to apply</a>.</p>
+		<p>Professional learning for Code.org's CSA curriculum will be available beginning Summer 2022. <a href="/educate/professional-learning/middle-high">Click here to apply</a>.</p>
 	</details>
 	<details>
 		<summary>What is the recommended timing for teaching CSA?</summary>
