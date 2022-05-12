@@ -31,7 +31,6 @@
   "emptyBackpackMessage": "儲存到您的背包中的檔案會出現在這裡。",
   "enablePeerReview": "啟用同儕審查",
   "errorJavabuilderConnectionGeneral": "連結到伺服器時發生錯誤，請再試一次。",
-  "errorJavabuilderConnectionNotAuthorized": "你還沒被授權能進入 Javalab。 你要登入或加入嗎？",
   "errorLoadingClassmates": "載入你的同學名單時出錯。請重試。",
   "errorMediaImageLoadError": "載入圖片時發生錯誤。",
   "errorNeighborhoodInvalidGrid": "載入鄰近關卡發生錯誤。請通過 support@code.org 與我們聯繫。請記得在你的訊息中留下此頁面的 URL。",

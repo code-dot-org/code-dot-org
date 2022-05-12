@@ -1254,6 +1254,12 @@ id:
             '90': turun
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kecil
+            '50': sedang
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} wajah {DIRECTION}"
         options:

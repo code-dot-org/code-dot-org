@@ -178,15 +178,15 @@ class Pd::Workshop < ApplicationRecord
 
   def self.in_state(state, error_on_bad_state: true)
     case state
-      when STATE_NOT_STARTED
-        where(started_at: nil)
-      when STATE_IN_PROGRESS
-        where.not(started_at: nil).where(ended_at: nil)
-      when STATE_ENDED
-        where.not(started_at: nil).where.not(ended_at: nil)
-      else
-        raise "Unrecognized state: #{state}" if error_on_bad_state
-        none
+    when STATE_NOT_STARTED
+      where(started_at: nil)
+    when STATE_IN_PROGRESS
+      where.not(started_at: nil).where(ended_at: nil)
+    when STATE_ENDED
+      where.not(started_at: nil).where.not(ended_at: nil)
+    else
+      raise "Unrecognized state: #{state}" if error_on_bad_state
+      none
     end
   end
 

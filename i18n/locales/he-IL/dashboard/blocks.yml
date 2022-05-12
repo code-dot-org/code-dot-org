@@ -1207,6 +1207,12 @@ he:
             '90': למטה
             '180': שמאלה
             '270': למעלה
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': זמן בינוני
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:

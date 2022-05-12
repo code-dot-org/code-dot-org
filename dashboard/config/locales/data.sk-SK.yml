@@ -838,6 +838,8 @@ sk:
         CSA-PL-debugging-temp: Úvod do ladenia v Java Lab - dočasný
         csd_u6_circuit_playground: Fyzické výpočty
         csd_u6_input_output: Vstup a Výstup
+        csp_applab_parameters: Funkcie s parametrami
+        CSA-PL-intro-to-arrays: Jednorozmerné (1D) polia
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

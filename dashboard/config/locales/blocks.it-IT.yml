@@ -1251,6 +1251,12 @@ it:
             '90': in basso
             '180': a sinistra
             '270': in alto
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': piccolo
+            '50': mediamente
+            '100': grande
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:

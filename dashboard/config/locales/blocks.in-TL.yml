@@ -1263,6 +1263,13 @@ in:
             '90': crwdns2693589:0crwdne2693589:0
             '180': crwdns2693591:0crwdne2693591:0
             '270': crwdns2693593:0crwdne2693593:0
+      gamelab_makeSpritesWithSize:
+        text: crwdns2917542:0[NUM]crwdnd2917542:0[0]crwdnd2917542:0[SIZE]crwdnd2917542:0[1]crwdnd2917542:0[COSTUME]crwdnd2917542:0[2]crwdne2917542:0
+        options:
+          SIZE:
+            '30': crwdns2917544:0crwdne2917544:0
+            '50': crwdns2917546:0crwdne2917546:0
+            '100': crwdns2917548:0crwdne2917548:0
       gamelab_mirrorSprite:
         text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
         options:
@@ -1474,6 +1481,46 @@ in:
         text: crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0
       gamelab_spriteSayTime:
         text: crwdns2590328:0[SPRITE]crwdnd2590328:0[0]crwdnd2590328:0[TEXT1]crwdnd2590328:0[1]crwdnd2590328:0[NUM]crwdnd2590328:0[2]crwdne2590328:0
+      gamelab_spriteThink:
+        text: crwdns2917550:0[SPRITE]crwdnd2917550:0[0]crwdnd2917550:0[SPEECH]crwdnd2917550:0[1]crwdne2917550:0
+      gamelab_spriteThinkTime:
+        text: crwdns2917552:0[SPRITE]crwdnd2917552:0[0]crwdnd2917552:0[TEXT1]crwdnd2917552:0[1]crwdnd2917552:0[NUM]crwdnd2917552:0[2]crwdne2917552:0
+      gamelab_spriteThink_fables1:
+        text: crwdns2917554:0[SPRITE]crwdnd2917554:0[0]crwdnd2917554:0[THOUGHT]crwdnd2917554:0[1]crwdne2917554:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917556:0crwdne2917556:0
+            '"I am hungry, too."': crwdns2917558:0crwdne2917558:0
+            '"I only want the biggest goat."': crwdns2917560:0crwdne2917560:0
+            '"I''m a green troll."': crwdns2917562:0crwdne2917562:0
+            '"No one will cross my bridge."': crwdns2917564:0crwdne2917564:0
+      gamelab_spriteThink_fables2:
+        text: crwdns2917566:0[SPRITE]crwdnd2917566:0[0]crwdnd2917566:0[THOUGHT]crwdnd2917566:0[1]crwdne2917566:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917568:0crwdne2917568:0
+            '"Time to make friends with the sheep."': crwdns2917570:0crwdne2917570:0
+            '"She''ll never recognize me now."': crwdns2917572:0crwdne2917572:0
+            '"This costume keeps me warm."': crwdns2917574:0crwdne2917574:0
+            '"I am actually a wolf."': crwdns2917576:0crwdne2917576:0
+      gamelab_spriteThink_fables3:
+        text: crwdns2917578:0[SPRITE]crwdnd2917578:0[0]crwdnd2917578:0[THOUGHT]crwdnd2917578:0[1]crwdne2917578:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917580:0crwdne2917580:0
+            '"I''m feeling sleepy."': crwdns2917582:0crwdne2917582:0
+            '"No one could ever beat me."': crwdns2917584:0crwdne2917584:0
+            '"I''ve done this race before."': crwdns2917586:0crwdne2917586:0
+            '"My feet are bigger than Turtle''s feet."': crwdns2917588:0crwdne2917588:0
+      gamelab_spriteThink_fables4:
+        text: crwdns2917590:0[SPRITE]crwdnd2917590:0[0]crwdnd2917590:0[THOUGHT]crwdnd2917590:0[1]crwdne2917590:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917592:0crwdne2917592:0
+            '"I''m so hungry."': crwdns2917594:0crwdne2917594:0
+            '"I''m a visitor in this town."': crwdns2917596:0crwdne2917596:0
+            '"If we share, we''ll all have something to eat. "': crwdns2917598:0crwdne2917598:0
+            '"I''ll trick everyone into giving me their food."': crwdns2917600:0crwdne2917600:0
       gamelab_startAvoiding:
         text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
       gamelab_startFollowing:

@@ -901,6 +901,9 @@ ru:
         poetry_module_conditionals: Условные операторы - Кодирование и поэзия
         poemart_intro: Введение в поэтическое искусство
         CSA-PL-debugging-temp: Введение в отладку в лаборатории Java - шаблон
+        PL_CS_Journeys_Overview: Занятия по информатике
+        csp_applab_parameters: Процедуры с параметрами
+        CSA-PL-intro-to-arrays: Одномерные (1D) массивы
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

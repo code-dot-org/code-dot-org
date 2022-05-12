@@ -1122,6 +1122,12 @@ az:
             '90': aşağı
             '180': sola
             '270': yuxarı
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kiçik
+            '50': orta
+            '100': böyük
       gamelab_mirrorSprite:
         options:
           DIRECTION:

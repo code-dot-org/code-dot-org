@@ -16,6 +16,7 @@ module AWS
 
     # @return [Cdo::CloudFormation::StackTemplate]
     attr_reader :stack
+
     delegate :stack_name, to: :stack
 
     # @return [Hash]

@@ -1224,6 +1224,12 @@ uk:
             '90': вниз
             '180': ліворуч
             '270': вгору
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': маленький
+            '50': середньо
+            '100': великий
       gamelab_mirrorSprite:
         text: повернути {SPRITE} у напрямку {DIRECTION}
         options:

@@ -1441,7 +1441,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
           "progression_name": "Jeu Collector"
@@ -1630,7 +1630,7 @@
           "progression_name": "Événements"
         },
         "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "cc69ba2c-1958-4589-90a8-13886b9c00ef": {
           "progression_name": "Terminer les touches"
@@ -3246,7 +3246,7 @@
           "progression_name": "Vidéo: Les Fonctions"
         },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
           "progression_name": "Jeu Collector"
@@ -3427,7 +3427,7 @@
           "progression_name": "Événements"
         },
         "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "396e73f3-7348-4d06-8aa3-a4eb24bc7018": {
           "progression_name": "Terminer les touches"
@@ -4310,7 +4310,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
           "progression_name": "Jeu Collector"
@@ -4504,7 +4504,7 @@
           "progression_name": "Événements"
         },
         "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "1bf5d680-889c-4c29-bc4a-478802aaf9b6": {
           "progression_name": "Terminer les touches"
@@ -8882,6 +8882,7 @@
           "description": "Sur un tableau affiché à toute la classe, dessinez (ou affichez via un projecteur) l'une des conceptions finales des puzzles Code Studio associés à cette leçon. Nous recommandons l'un des éléments suivants :\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nDemandez à la classe comment un ordinateur pourrait dessiner le dessin que vous avez affiché.\n\nAprès quelques prédictions, répondez _avec des boucles Pour bien sûr !_\n\nDites aux élèves qu'ils apprendront bientôt à créer ces beaux dessins en utilisant des boucles Pour et des variables. "
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "Les Boucles « Pour » avec l'Artiste",
           "tips": [
             "Ces puzzles sont super amusants, mais ça peut être bien pour les élèves d'avoir des rapporteurs, des crayons et du papier brouillon pour voir leurs dessins représentés physiquement. Sinon, faites-les les tracer sur l'écran de l'ordinateur avec leurs doigts."
           ],
@@ -10903,7 +10904,7 @@
           "progression_name": "Événements"
         },
         "b919f5c1-5152-4baa-bddb-112275d049ac": {
-          "progression_name": "fonctions"
+          "progression_name": "Fonctions"
         },
         "ec8d5281-885f-4d9d-af4e-2d28ecfb94c6": {
           "progression_name": "Terminer les touches"

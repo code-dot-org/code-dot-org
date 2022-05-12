@@ -1285,7 +1285,6 @@ th:
               description_teacher: เกี่ยวกับแนวคิดของคำสั่งในการทำซ้ำจาก "ลูปแห่งความสุข" โดยด่านนี้ผู้เรียนจะใช้ลูปเพื่อเก็บรวบรวมสมบัติอย่างมีประสิทธิภาพมากมากขึ้นใน Code.org.
             Loops in Artist:
               name: ลูปกับศิลปิน
-              description_teacher: กลับมาในเรื่องที่เกี่ยวกับลูป ผู้เรียนจะได้เรียนรู้ที่จะวาดภาพโดยการทำลูปกับลำดับขั้นตอนของคำสั่งอย่างง่ายๆ โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             'Events: The Big Event':
               name: 'เหตุการณ์: เหตุการณ์สำคัญ'
               description_teacher: อีเวนท์เป็นวิธีที่ยอดเยี่ยมในการเพิ่มความหลากหลายให้กับอัลกอริทึมที่เขียนไว้ล่วงหน้า บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ นั่นคือการที่อีเวนท์มีไว้ใช้เพื่อทำอะไร
@@ -7886,10 +7885,6 @@ th:
           student_description: ใช้การจัดลำดับ ลูปและเหตุการณ์สร้างโปรแกรม แปลความคิดสร้างสรรเป็นไบนารี สำรวจเทคนิคการแก้ไขปัญหาในแบบต่าง ๆ และศึกษาวิธีตอบโต้การเหยียดบนโลกไซเบอร์ และในตอนท้ายของหลักสูตร คุณจะได้สร้างเกมหรือเรื่องราวของคุณก่อนนำมาแชร์!
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ เรื่องราวและเกมของคุณเอง
           description_audience: 'อายุ: 6-10 ปี'
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: แบบสำรวจ
         csp8-2022:
           lessons:
             lesson-4:
@@ -8249,6 +8244,8 @@ th:
           lesson_groups:
             lessonGroup-4:
               display_name: แซนด์บ็อกซ์
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -8320,9 +8317,6 @@ th:
               name: ตัวแปร
             lesson-16:
               name: แผงหน้าปัด
-          lesson_groups:
-            lessonGroup-4:
-              display_name: แซนด์บ็อกซ์
         csa3-2022:
           lessons:
             lesson-3:
@@ -8351,9 +8345,6 @@ th:
               name: โปรเจกต์ Data for Social Good - วันที่ 3
             lesson-16:
               name: แผงหน้าปัด
-          lesson_groups:
-            lessonGroup-4:
-              display_name: แซนด์บ็อกซ์
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -8627,7 +8618,7 @@ th:
               key: จาวาแลป
           lesson_groups:
             lessonGroup-5:
-              display_name: แซนด์บ็อกซ์
+              display_name: แบบสำรวจ
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -8955,3 +8946,63 @@ th:
         csd-post-survey-2022:
           description: หน่วยการเรียนรู้ประกอบด้วยแบบสำรวจหลังจบคอร์ส CS Discoveries และมอบหมายหน่วยการเรียนรู้นี้ได้หลังจากนักเรียนเรียนหน่วยการเรียนรู้สุดท้ายใน CS Discoveries เรียบร้อยแล้ว
           student_description: หน่วยการเรียนนี้ประกอบด้วยแบบสำรวจเมื่อชั้นเรียนของคุณเรียน CS Discoveries เสร็จแล้ว ผู้สอนจะบอกกับคุณว่าควรทำแบบสำรวจนี้เมื่อไหร่
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: บทที่ 4
+            lesson-3:
+              key: บทที่ 3
+            lesson-8:
+              key: บทที่ 8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3

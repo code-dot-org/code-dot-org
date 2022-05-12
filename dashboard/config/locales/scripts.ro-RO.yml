@@ -2732,12 +2732,6 @@ ro:
                 pentru a strânge comori mai eficient pe Code.org.
             Loops in Artist:
               name: Cicluri cu Artistul
-              description_teacher: Revenind la bucle, elevii învață să deseneze imagini
-                repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele
-                au fost folosite pentru a traversa un labirint și pentru a strânge
-                comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul
-                acestei etape, elevii vor avea posibilitatea de a crea propriile imagini
-                folosind buclele.
             'Events: The Big Event':
               name: 'Evenimente: Marele Eveniment'
               description_teacher: Evenimentele sunt o modalitate foarte ușoară de
@@ -9781,7 +9775,7 @@ ro:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             End of Course Project:
@@ -10959,7 +10953,7 @@ ro:
             lesson-6:
               name: Prezentând Laboratorul de Desen
             lesson-7:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-8:
               name: Spiriduși în acțiune
             lesson-5:
@@ -11200,7 +11194,7 @@ ro:
                 dansantă interactivă. Pentru această activitate este nevoie de sunet,
                 deoarece instrumentul a fost creat pentru a reacționa la muzică.
             lesson-2:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-3:
               name: Spiriduși în acțiune
           lesson_groups:
@@ -11347,7 +11341,7 @@ ro:
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             introducing-spritelab:
@@ -12362,6 +12356,10 @@ ro:
               display_name: Lecții
             lessonGroup-4:
               display_name: Demonstrații și Resurse
+        tesstest921:
+          lessons:
+            lesson-3:
+              name: Lecția 3
         hello-world-animals:
           lessons:
             lesson-1:
@@ -13297,7 +13295,7 @@ ro:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -13640,7 +13638,7 @@ ro:
                 muta, modifica și manipula. Comportamentele sunt acțiuni pe care sprites
                 le vor întreprinde încontinuu, până când sunt opriți.'
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             Virtual Pet with Sprite Lab:
@@ -13798,7 +13796,7 @@ ro:
                 care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
             lesson-2:
               key: lecția-2
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-3:
               key: lecția-3
               name: Spiriduși în acțiune
@@ -13925,6 +13923,8 @@ ro:
               display_name: Liste
             csp_loops:
               display_name: Bucle
+            lessonGroup-5:
+              display_name: Chestionar după curs
         courseb-2022:
           lessons:
             Digital Trails:
@@ -14356,14 +14356,21 @@ ro:
           description_short: Învață noțiunile de bază ale științei calculatoarelor
             și creează desene, povești și jocuri.
           description_audience: 'Vârsta: 6-10 ani'
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         csp7-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: Sondaj
+              display_name: Chestionar după curs
         csp8-2022:
           lessons:
             lesson-4:
               key: lecția-4
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
         csp9-2022:
           lessons:
             Machine Learning:
@@ -14375,6 +14382,12 @@ ro:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -14809,7 +14822,7 @@ ro:
             Introducing Sprite Lab:
               name: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
             'Mini-Project: Virtual Pet':
@@ -14909,7 +14922,7 @@ ro:
               key: lecția-6
             lesson-7:
               key: lecția-7
-              name: Crearea de sprites
+              name: Crearea de sprite-uri
             lesson-8:
               key: lecția-8
               name: Spiriduși în acțiune
@@ -15014,6 +15027,8 @@ ro:
               display_name: Conţinut
             lessonGroup-4:
               display_name: Cutii cu nisip
+            lessonGroup-5:
+              display_name: Sondaj
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -15148,8 +15163,6 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-            lessonGroup-4:
-              display_name: Cutii cu nisip
         csa3-2022:
           lessons:
             lesson-3:
@@ -15181,8 +15194,6 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-            lessonGroup-4:
-              display_name: Cutii cu nisip
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -15367,8 +15378,8 @@ ro:
               name: Prezentând Laboratorul de Desen
               key: Prezentând Laboratorul de Desen
             Making Sprites:
-              name: Crearea de sprites
-              key: Crearea de sprites
+              name: Crearea de sprite-uri
+              key: Crearea de sprite-uri
             Sprites in Action:
               name: Spiriduși în acțiune
               key: Spiriduși în acțiune
@@ -15667,7 +15678,7 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
             lessonGroup-5:
-              display_name: Cutie cu nisip
+              display_name: Sondaj
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -16122,3 +16133,63 @@ ro:
           student_description: Această unitate conține un sondaj care va fi distribuit
             când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți
             va spune când trebuie să răspunzi la acest sondaj.
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: lecția-4
+            lesson-3:
+              key: lecția-3
+            lesson-8:
+              key: lecția-8
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
