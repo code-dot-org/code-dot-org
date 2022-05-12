@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 17:43:17 UTC",
+    "serialized_at": "2022-05-11 17:23:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6278,6 +6278,18 @@
       }
     },
     {
+      "name": "Adding Values to a 1D Array",
+      "url": "https://youtu.be/bL4BAs9Kfx8",
+      "key": "adding_values_to_a_1d_array",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa3-2022/resources",
       "key": "all_resources_5",
@@ -6359,6 +6371,18 @@
       }
     },
     {
+      "name": "Enhanced For Loops",
+      "url": "https://youtu.be/b3Uf7anzr-k",
+      "key": "enhanced_for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
       "name": "Exploring 1D Arrays",
       "url": "https://docs.google.com/document/d/1pBmknAxqIIgeUwAKnrA0hd_hSAmLtNpok0tw4haJr64/edit?usp=sharing",
       "key": "exploring_1d_arrays",
@@ -6395,6 +6419,18 @@
       }
     },
     {
+      "name": "For Loops",
+      "url": "https://youtu.be/EF3laugNVCI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
+      }
+    },
+    {
       "name": "Investigating Arrays",
       "url": "https://docs.google.com/document/d/1TW9_w91zbkJ_G0W89pIEQI89hK_bQwH8C8sXvFG4mn4/edit?usp=sharing",
       "key": "investigating_arrays",
@@ -6419,6 +6455,18 @@
       }
     },
     {
+      "name": "One-Dimensional (1D) Arrays",
+      "url": "https://youtu.be/MgRMA_qZxZ4",
+      "key": "one-dimensional_1d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
       "name": "Reversing an Array",
       "url": "https://docs.google.com/document/d/1lCQIZL9RViguXifp2Sxh4wNxOO6hM02sdw8jl8r_vl4/edit?usp=sharing",
       "key": "reversing_an_array",
@@ -6428,6 +6476,18 @@
       },
       "seeding_key": {
         "resource.key": "reversing_an_array"
+      }
+    },
+    {
+      "name": "Static Variables",
+      "url": "https://youtu.be/4dffzoEfufA",
+      "key": "static_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables"
       }
     },
     {
@@ -6867,6 +6927,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u3l1_extra_practice"
       }
     },
@@ -6897,6 +6963,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "investigating_arrays"
       }
     },
@@ -6922,6 +6994,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u3l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "for_loops"
       }
     },
     {
@@ -6999,6 +7077,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u3l5_extra_practice"
       }
     },
@@ -7012,6 +7096,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_variables"
       }
     },
     {

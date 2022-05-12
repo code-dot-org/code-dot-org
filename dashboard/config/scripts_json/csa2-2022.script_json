@@ -6,13 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
           "link": "",
@@ -31,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-10 00:19:57 UTC",
+    "serialized_at": "2022-05-11 16:41:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5906,6 +5899,18 @@
       }
     },
     {
+      "name": "Accessor Methods",
+      "url": "https://youtu.be/F5plZ3f5B3c",
+      "key": "accessor_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa2-2022/resources",
       "key": "all_resources_4",
@@ -5999,6 +6004,42 @@
       }
     },
     {
+      "name": "Constructors",
+      "url": "https://youtu.be/1vXP8R2i-wg",
+      "key": "constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "name": "Creating a Scanner Object",
+      "url": "https://youtu.be/2jJUc-FUuq8",
+      "key": "creating_a_scanner_object",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "name": "Creating Variables",
+      "url": "https://youtu.be/VHwlxlqrquM",
+      "key": "creating_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_variables"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1rEKCHgR74oOaHyLUmRGPWji4ISyRxdmNzXveysEG6OQ/edit?usp=sharing",
       "key": "cs_bingo_cards_1",
@@ -6024,7 +6065,7 @@
     },
     {
       "name": "CSA Manipulatives Demo",
-      "url": "https://youtu.be/AxfIm3AmrTs",
+      "url": "https://youtu.be/4QbHVC9HkkY",
       "key": "csa_manipulatives_demo",
       "properties": {
         "audience": "Verified Teacher",
@@ -6047,6 +6088,54 @@
       }
     },
     {
+      "name": "Instance Variables and Attributes",
+      "url": "https://youtu.be/49XzLCs8wgU",
+      "key": "instance_variables_and_attributes",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "name": "Mutator Methods",
+      "url": "https://youtu.be/unh7__NcIS8",
+      "key": "mutator_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "mutator_methods"
+      }
+    },
+    {
+      "name": "Overloaded Constructors",
+      "url": "https://youtu.be/rYTRK8R9ZM8",
+      "key": "overloaded_constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "name": "Scanner Class Methods",
+      "url": "https://youtu.be/v1xPNK2hzzg",
+      "key": "scanner_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "scanner_class_methods"
+      }
+    },
+    {
       "name": "Store Management Project Planning Guide",
       "url": "https://docs.google.com/document/d/1h46bWv6EKByAP0uDXQRgwKGLN32RaWA_wz6-yS6bmtQ/edit?usp=sharing",
       "key": "store_management_project_planning_guide",
@@ -6056,6 +6145,18 @@
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide"
+      }
+    },
+    {
+      "name": "The toString() Method",
+      "url": "https://youtu.be/dPH01DBWlZ8",
+      "key": "the_tostring_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6108,7 +6209,7 @@
     },
     {
       "name": "U2L3 Manipulatives Demo",
-      "url": "https://youtu.be/K4NAed8Sutw",
+      "url": "https://youtu.be/gC2yirf2H8I",
       "key": "u2l3_manipulatives_demo",
       "properties": {
         "audience": "Verified Teacher",
@@ -6279,6 +6380,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "scanner_class_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "u2l5_extra_practice"
       }
     },
@@ -6315,6 +6428,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "u2l7_extra_practice"
       }
     },
@@ -6328,6 +6447,12 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "mutator_methods"
       }
     },
     {
@@ -6358,6 +6483,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6483,6 +6614,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "creating_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u2l1_extra_practice"
       }
     },
@@ -6537,6 +6674,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "u2l3_extra_practice"
       }
     },
@@ -6556,6 +6699,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "overloaded_constructors"
       }
     },
     {
