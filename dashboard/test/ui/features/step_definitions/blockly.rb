@@ -59,7 +59,13 @@ When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do
   @browser.execute_script code
 end
 
-# To-Do: Make work for Google Blockly (and for star_labs_blocklayout)
+# To-Do: Combine these next two:
+Then /^Google Blockly block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
+  point = get_google_blockly_block_coordinates(get_block_id(block))
+  expect(point.x).to be_within(3).of(x.to_i)
+  expect(point.y).to be_within(3).of(y.to_i)
+end
+
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
   expect(point.x).to be_within(3).of(x.to_i)
