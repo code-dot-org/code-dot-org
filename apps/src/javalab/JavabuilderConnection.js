@@ -345,7 +345,7 @@ export default class JavabuilderConnection {
 
   displayUnauthorizedMessage(error) {
     const body = error.responseJSON;
-    if (body.type === WebSocketMessageType.AUTHORIZER) {
+    if (body && body.type === WebSocketMessageType.AUTHORIZER) {
       this.onAuthorizerMessage(body.value, body.detail);
       return;
     }
