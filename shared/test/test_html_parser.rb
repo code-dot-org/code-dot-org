@@ -13,19 +13,19 @@ class HtmlParsingTest < Minitest::Test
   def app
     html_parsing_app = lambda do |env|
       @request_env = env
-      head_span_html = <<HTML
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Blockly</title>
-<span>&nbsp;</span>
-</head>
-<body class="readonly embed-block">
-<img src="http://google.com" />
-</body>
-</html>
-HTML
+      head_span_html = <<~HTML
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Blockly</title>
+        <span>&nbsp;</span>
+        </head>
+        <body class="readonly embed-block">
+        <img src="http://google.com" />
+        </body>
+        </html>
+      HTML
       [200, {'Content-Type' => 'text/html'}, [head_span_html]]
     end
     Rack::Builder.app do

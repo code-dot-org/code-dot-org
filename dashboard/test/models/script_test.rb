@@ -23,8 +23,18 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_unit = create :csd_script, name: 'csd1'
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
-    @csc_unit = create :csc_script, name: 'csc1'
-    @hoc_unit = create :hoc_script, name: 'hoc1'
+
+    @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
+    CourseOffering.add_course_offering(@csc_unit)
+    @csc_unit.course_version.course_offering.category = 'csc'
+    @csc_unit.course_version.course_offering.save!
+    @csc_unit.reload
+
+    @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
+    CourseOffering.add_course_offering(@hoc_unit)
+    @hoc_unit.course_version.course_offering.category = 'hoc'
+    @hoc_unit.course_version.course_offering.save!
+    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -1196,7 +1206,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'teacher_led', unit_group.instruction_type
     assert_equal 'beta', unit_group.published_state
 
-    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'in_development')
 
     unit.reload
     unit_group = unit.plc_course_unit.plc_course.unit_group
@@ -1204,7 +1214,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'universal_instructor', unit_group.instructor_audience
     assert_equal 'teacher', unit_group.participant_audience
     assert_equal 'self_paced', unit_group.instruction_type
-    assert_equal 'stable', unit_group.published_state
+    assert_equal 'in_development', unit_group.published_state
   end
 
   test 'generate plc objects will use defaults if script has null values' do
@@ -1541,36 +1551,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal("Waiting for review", feedback2_result[:reviewStateLabel])
   end
 
-  # This test checks that all categories that may show up in the UI have
-  # translation strings.
-  test 'all visible categories have translations' do
-    I18n.locale = 'en-US'
-
-    # A course can belong to more than one category and only the first
-    # category is shown in the UI (and thus needs a translation).
-
-    # To determine the set of categories that must be translated, we first
-    # collect the list of all units that are mapped to categories in
-    # ScriptConstants::CATEGORIES.
-    all_units = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
-      scripts | scripts_in_category
-    end
-
-    # Add a unit that is not in any category so that the 'other' category
-    # will be tested.
-    all_units |= ['uncategorized-script']
-
-    untranslated_categories = Set.new
-    all_units.each do |unit|
-      category = ScriptConstants.categories(unit)[0] || ScriptConstants::OTHER_CATEGORY_NAME
-      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
-      untranslated_categories.add(category) if translation.nil?
-    end
-
-    assert untranslated_categories.empty?,
-      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
-  end
-
   test "get_assessment_script_levels returns an empty list if no level groups" do
     unit = create(:script, name: 'test-no-levels')
     level_group_script_level = unit.get_assessment_script_levels
@@ -1829,7 +1809,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
-    assert @hoc_unit.hour_of_code?
+    assert @hoc_unit.hoc?
   end
 
   test "middle_high?" do
@@ -1992,6 +1972,8 @@ class ScriptTest < ActiveSupport::TestCase
       @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
       create :course_version, content_root: @standalone_unit
 
+      @deeper_learning_unit = create :script, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
+
       @unit_group = create :unit_group
       create :course_version, content_root: @unit_group
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
@@ -2000,10 +1982,34 @@ class ScriptTest < ActiveSupport::TestCase
       @unit_in_course.reload
     end
 
+    test 'can copy a deeper learning unit as another deeper learning unit' do
+      lesson_group = create :lesson_group, script: @deeper_learning_unit
+      lesson = create :lesson, lesson_group: lesson_group, script: @deeper_learning_unit
+      lesson_activity = create :lesson_activity, lesson: lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+
+      level1 = create :level, name: 'level1-2021'
+      level2 = create :level, name: 'level2-2021'
+      create :script_level, levels: [level1], script: @deeper_learning_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+      create :script_level, levels: [level2], script: @deeper_learning_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
+
+      cloned_unit = @deeper_learning_unit.clone_migrated_unit('dlp-2022', destination_professional_learning_course: 'Deeper Learning 2022', new_level_suffix: '2022')
+      assert_equal 'dlp-2022', cloned_unit.name
+      assert_equal 'Deeper Learning 2022', cloned_unit.professional_learning_course
+      assert_equal cloned_unit.instruction_type, @deeper_learning_unit.instruction_type
+      assert_equal cloned_unit.instructor_audience, @deeper_learning_unit.instructor_audience
+      assert_equal cloned_unit.participant_audience, @deeper_learning_unit.participant_audience
+      refute_equal [level1, level2], cloned_unit.levels
+    end
+
     test 'can copy a standalone unit as another standalone unit' do
       cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 'standalone-2022', cloned_unit.name
       assert_equal '2022', cloned_unit.version_year
+      assert_equal cloned_unit.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+      assert_equal cloned_unit.instruction_type, @standalone_unit.instruction_type
+      assert_equal cloned_unit.instructor_audience, @standalone_unit.instructor_audience
+      assert_equal cloned_unit.participant_audience, @standalone_unit.participant_audience
     end
 
     test 'can update markdown on clone' do
@@ -2062,12 +2068,20 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name
       assert_equal cloned_unit.unit_group, @unit_group
+      assert_nil cloned_unit.published_state
+      assert_nil cloned_unit.instruction_type
+      assert_nil cloned_unit.instructor_audience
+      assert_nil cloned_unit.participant_audience
     end
 
     test 'can copy a unit in a unit group to a standalone unit' do
       cloned_unit = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
       assert_nil cloned_unit.unit_group
       assert_equal 'standalone-coursename-2021', cloned_unit.name
+      assert_equal cloned_unit.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+      assert_equal cloned_unit.instruction_type, @unit_group.instruction_type
+      assert_equal cloned_unit.instructor_audience, @unit_group.instructor_audience
+      assert_equal cloned_unit.participant_audience, @unit_group.participant_audience
     end
 
     test 'can copy unit with lessons without copying levels' do
@@ -2137,6 +2151,20 @@ class ScriptTest < ActiveSupport::TestCase
       refute_nil cloned_unit.get_course_version
     end
 
+    test 'clone raises exception if deeper learning course is being copied to a non-deeper learning course' do
+      raise = assert_raises do
+        @deeper_learning_unit.clone_migrated_unit('my-name')
+      end
+      assert_equal 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.', raise.message
+    end
+
+    test 'clone raises exception if provide both destination unit group and deeper learning course' do
+      raise = assert_raises do
+        @deeper_learning_unit.clone_migrated_unit('my-name', destination_professional_learning_course: 'DLP', destination_unit_group_name: 'my-ug')
+      end
+      assert_equal 'Can not have both a destination unit group and a destination professional learning course.', raise.message
+    end
+
     test 'clone raises exception if script name has already been taken' do
       create :script, name: 'my-name'
       raise = assert_raises do
@@ -2161,6 +2189,16 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if deeper learning course is being launched' do
+    unit = create(:standalone_unit, professional_learning_course: 'my-deeper-learning-course')
+    error = assert_raises do
+      unit.published_state = 'stable'
+      unit.save!
+    end
+
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
   end
 
   test 'should raise error if participant audience is nil for standalone unit' do
