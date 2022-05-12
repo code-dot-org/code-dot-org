@@ -25,24 +25,40 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :levelbuilder,
     response: :success
 
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     user: :student,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     user: :teacher,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
+    params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
+    user: :authorized_teacher,
+    response: :success
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     user: :student,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     user: :teacher,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
+    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
+    user: :authorized_teacher,
+    response: :forbidden
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
@@ -131,14 +147,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'param for override sources is required when using override sources route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
+    post :access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override validation is required when using override validation route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
+    post :access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
