@@ -32,6 +32,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
@@ -48,6 +49,7 @@ class UsersHelperTest < ActionView::TestCase
       {
         linesOfCode: 42,
         lockableAuthorized: false,
+        isInstructor: false,
         linesOfCodeText: 'Total lines of code: 42',
       },
       summarize_user_progress(script, user, exclude_level_progress)
