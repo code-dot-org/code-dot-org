@@ -218,6 +218,7 @@ class ProgressLesson extends React.Component {
               levels={levels}
               disabled={isLockedForUser}
               selectedSectionId={selectedSectionId}
+              lessonName={lesson.name}
             />
           )}
         </div>

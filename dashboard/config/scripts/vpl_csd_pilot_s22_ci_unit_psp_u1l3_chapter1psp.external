@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 1: The problem Solving Process 
 
-##### This chapter aims to anchor the formal problem solving process students will use throughout the course in some real-life experiences they already have solving problems. Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.
+##### Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.
 
 
 ## Why aren't my students on the computer? 
