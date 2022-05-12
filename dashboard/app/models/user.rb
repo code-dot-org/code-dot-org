@@ -1316,7 +1316,7 @@ class User < ApplicationRecord
 
   # Is the given script hidden for this user (based on the sections that they are in)
   def script_hidden?(script)
-    return false if script_level.script.can_be_instructor?(self)
+    return false if script.can_be_instructor?(self)
 
     return false if sections_as_student.empty?
 
