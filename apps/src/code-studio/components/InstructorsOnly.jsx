@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 
 const InstructorsOnly = ({isInstructor, children}) => {
   return isInstructor ? children : null;
 };
 
 export default connect(state => ({
-  isInstructor: state.viewAs === ViewType.Instructor
+  isInstructor: state.currentUser.userRoleInCourse === CourseRoles.Instructor
 }))(InstructorsOnly);

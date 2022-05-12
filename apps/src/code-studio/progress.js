@@ -23,6 +23,10 @@ import {
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 var progress = module.exports;
 
@@ -243,6 +247,7 @@ progress.initViewAs = function(store, isSignedInUser, isInstructor) {
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the

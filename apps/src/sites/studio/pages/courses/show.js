@@ -17,7 +17,11 @@ import {
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {registerReducers} from '@cdo/apps/redux';
-import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import {
+  setUserSignedIn,
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
@@ -52,6 +56,7 @@ function showCourseOverview() {
 
   if (isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
     if (scriptData.is_verified_instructor) {
