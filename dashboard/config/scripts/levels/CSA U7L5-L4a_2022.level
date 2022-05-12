@@ -2,20 +2,24 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "The `SocialMedia`(#e7e8ea) class manages profiles and posts on a social media platform. It has a method `createPost()`(#e7e8ea) that creates and returns a `String`(#e7e8ea) containing the user's username and the message they want to post.\r\n\r\nThe `Twitter`(#e7e8ea) class is a `SocialMedia`(#e7e8ea) that manages profiles and posts on Twitter.\r\n\r\n##In Twitter.java:\r\n\r\n1. Override the `createPost()`(#e7e8ea) method from the `SocialMedia`(#e7e8ea) class to check if `message`(#e7e8ea) is less than or equal to 140 characters.\r\n\r\n   * If `message`(#e7e8ea) is greater than 140 characters, only the first 140 characters are included in the `String`(#e7e8ea) that is returned.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Instantiate a `Twitter`(#e7e8ea) object.\r\n\r\n3. Call the `createPost()`(#e7e8ea) method.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "project_template_level_name": "CSA U7L5-L4a PBT_2022",
+    "display_name": "Social Media Posts",
+    "bubble_choice_description": "Override a method to create posts for specific social media platforms.",
+    "thumbnail_url": "https://images.code.org/1a5ac59701fa5ae7646eb613ef58a647-social-media.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-18T12:43:07.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-18T12:43:07.204+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L2d_2022\"},{\"changed_at\":\"2022-04-18 12:43:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-18T12:43:07.204+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L2d_2022\"},{\"changed_at\":\"2022-04-18 12:43:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:22:20 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:31:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:33:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

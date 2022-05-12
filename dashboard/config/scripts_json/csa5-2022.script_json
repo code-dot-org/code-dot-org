@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 17:51:54 UTC",
+    "serialized_at": "2022-05-11 17:09:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6095,6 +6095,18 @@
       }
     },
     {
+      "name": "Enhanced For Loops and 2D Arrays",
+      "url": "https://youtu.be/N-ePqqu_D9w",
+      "key": "enhanced_for_loops_and_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
       "name": "Enhanced For Loops Anticipation Guide",
       "url": "https://docs.google.com/document/d/1qrEaP944UEUiUoR3h1K4A9WEe5fiwZR8i6kPT6rw2nk/edit?usp=sharing",
       "key": "enhanced_for_loops_anticipation_guide",
@@ -6754,6 +6766,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
       }
     },
     {
