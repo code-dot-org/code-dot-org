@@ -35,6 +35,7 @@ class ProgrammingMethod < ApplicationRecord
   # As this should run when the models are updated in levelbuilder,
   # just skip it for seeding.
   attr_accessor :seed_in_progress
+
   validate :validate_overload, unless: :seed_in_progress
 
   def generate_key
