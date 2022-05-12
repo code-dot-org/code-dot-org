@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-05 19:37:52 UTC",
+    "serialized_at": "2022-05-09 19:40:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9002,6 +9002,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_1_guide"
       }
     },
     {

@@ -45,27 +45,27 @@ module Rack
 
         cookies = behavior[:cookies]
         case cookies
-          when 'all'
-            # Pass all cookies.
-            @app.call(env)
-          when 'none'
-            # Strip all cookies
-            env.delete 'HTTP_COOKIE'
-            status, headers, body = @app.call(env)
-            headers.delete 'Set-Cookie'
-            [status, headers, body]
-          else
-            # Strip all request cookies not in allowlist.
-            # Extract allowlisted cookies to X-COOKIE-* request headers.
-            request_cookies = request.cookies
-            request_cookies.slice!(*cookies)
-            cookie_str = request_cookies.map do |key, value|
-              env_key = "HTTP_X_COOKIE_#{key.upcase.tr('-', '_')}"
-              env[env_key] = value
-              Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
-            end.join('; ') + ';'
-            env['HTTP_COOKIE'] = cookie_str
-            @app.call(env)
+        when 'all'
+          # Pass all cookies.
+          @app.call(env)
+        when 'none'
+          # Strip all cookies
+          env.delete 'HTTP_COOKIE'
+          status, headers, body = @app.call(env)
+          headers.delete 'Set-Cookie'
+          [status, headers, body]
+        else
+          # Strip all request cookies not in allowlist.
+          # Extract allowlisted cookies to X-COOKIE-* request headers.
+          request_cookies = request.cookies
+          request_cookies.slice!(*cookies)
+          cookie_str = request_cookies.map do |key, value|
+            env_key = "HTTP_X_COOKIE_#{key.upcase.tr('-', '_')}"
+            env[env_key] = value
+            Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
+          end.join('; ') + ';'
+          env['HTTP_COOKIE'] = cookie_str
+          @app.call(env)
         end
       end
     end
@@ -74,6 +74,7 @@ module Rack
     # before the response reaches the cache.
     class Upstream
       attr_reader :config
+
       def initialize(app, config)
         @app = app
         @config = config

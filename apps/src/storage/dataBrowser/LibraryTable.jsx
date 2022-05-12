@@ -8,6 +8,7 @@ import {showPreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
 import moment from 'moment/moment';
+import TableDescription from './TableDescription';
 
 class LibraryTable extends React.Component {
   static propTypes = {
@@ -30,11 +31,15 @@ class LibraryTable extends React.Component {
     });
 
   render() {
+    const {
+      name,
+      libraryManifest,
+      locale,
+      onShowPreview,
+      importTable
+    } = this.props;
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
-    const datasetInfo = getDatasetInfo(
-      this.props.name,
-      this.props.libraryManifest.tables
-    );
+    const datasetInfo = getDatasetInfo(name, libraryManifest.tables);
     const shouldShowTable =
       datasetInfo &&
       (datasetInfo.published ||
@@ -43,8 +48,8 @@ class LibraryTable extends React.Component {
       return null;
     }
 
-    if (this.props.locale) {
-      moment.locale(this.props.locale);
+    if (locale) {
+      moment.locale(locale);
     }
 
     return (
@@ -55,7 +60,7 @@ class LibraryTable extends React.Component {
           className="uitest-dataset-table-link"
         >
           <FontAwesome className="fa fa-fw" icon={icon} />
-          <span>{this.props.name}</span>
+          <span>{name}</span>
         </a>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
@@ -67,20 +72,10 @@ class LibraryTable extends React.Component {
                   })}
                 </span>
               )}
-              <span style={{display: 'block'}}>{datasetInfo.description} </span>
-
-              {datasetInfo.docUrl && (
-                <span style={{display: 'block'}}>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={datasetInfo.docUrl}
-                  >
-                    {msg.moreInfo()}
-                  </a>
-                </span>
-              )}
-
+              <TableDescription
+                tableName={name}
+                libraryTables={libraryManifest.tables}
+              />
               {datasetInfo.sourceUrl && (
                 <span style={{display: 'block'}}>
                   {msg.dataSource() + ': '}
@@ -94,7 +89,7 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.preview}
                 type="button"
-                onClick={() => this.props.onShowPreview(this.props.name)}
+                onClick={() => onShowPreview(this.props.name)}
                 className="uitest-dataset-preview-btn"
               >
                 {msg.preview()}
@@ -102,7 +97,7 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={() => this.props.importTable(datasetInfo)}
+                onClick={() => importTable(datasetInfo)}
               >
                 {msg.import()}
               </button>

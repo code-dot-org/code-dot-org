@@ -1149,7 +1149,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1755,18 +1755,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do
