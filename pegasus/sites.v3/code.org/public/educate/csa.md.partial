@@ -7,26 +7,6 @@ style_min: true
 
 <link href="/css/csa.css" rel="stylesheet">
 
-<!--
-<div class="solid-block-header">
-	<p>AP® Computer Science A</p>
-</div>
-<div class="clearfix"></div>
-
-<section>
-	<div class="col-66">
-		<h2>Introduction to Java Programing</h2>
-		<h3>Introduce students to software engineering and object-oriented design while they learn the Java programming language in this new curriculum for <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP® Computer Science A (AP® CSA)</a>.</h3>
-	</div>
-	<div class="col-33">
-		<img src="/images/csa/ap-csa-endorsed-badge.png" alt="College Board AP CSA Endorsed badge"/>
-	</div>
-	<div class="clearfix"></div>
-</section>
-<div class="clearfix"></div>
--->
-
-
 <section class="top">
 	<div class="col-66">
 		<h1>A new approach to AP® CSA</h1>
@@ -35,7 +15,7 @@ style_min: true
 	<div class="col-33">
 		<img src="/images/csa/ap-csa-endorsed-badge.png" alt="College Board AP CSA Endorsed badge"/>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 	<figure class="csa-highlights">
 		<div class="col-50"></div>
 		<div class="col-50">
@@ -49,9 +29,9 @@ style_min: true
 			</ul>
 		</div>
 	</figure>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 <hr>
 
@@ -72,9 +52,9 @@ style_min: true
 			<li>Gain experience writing and making sense of documentation</li>
 		</ul>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 
 <aside class="at-a-glance">
@@ -103,7 +83,7 @@ style_min: true
 		</li>
 	</ul>
 </aside>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 
 <section class="cta">
@@ -113,9 +93,9 @@ style_min: true
 		<h3>In partnership with <a href="https://www.amazonfutureengineer.com/" target="_blank"><img src="/images/fit-250/AFE-dark-logo.png" alt="Amazon Future Engineer logo"/></a></h3>
 		<p class="tiny">Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href="https://www.amazonfutureengineer.com/" target="_blank">Learn more here</a>.</p>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 
 <section class="cta-pl">
@@ -123,7 +103,7 @@ style_min: true
 	<p>Our highly supportive Professional Learning Program helps you bring CSA to the students in your school with this <strong>no-cost</strong> curriculum. In-person and virtual workshops starting this summer.</p>
 	<a href="/educate/professional-learning/middle-high"><button>Learn more</button></a>
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 
 <section>
@@ -133,10 +113,11 @@ style_min: true
 	</aside>
 	<div class="testimonials col-66">
 		<h2>What teachers are saying:</h2>
+		{{ csa_testimonials }}
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 
 <section class="email-form">
@@ -147,10 +128,10 @@ style_min: true
 			<iframe class="col-50" src="https://go.pardot.com/l/153401/2021-02-19/p291ns" width="100%" height="400" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden"></iframe>
 			<img class="col-33" src="/images/csa/csa-why-2.png">
 		</div>
-		<div class="clearfix"></div>
+		{{ clearfix }}
 	</div>
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 <hr>
 
@@ -186,7 +167,7 @@ style_min: true
 			<li><a href="https://www.vistaequitypartners.com/">Vista Equity Partners</a></li>
 		</ul>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 	<p><strong>Education Advisory Council</strong><p>
 	<div class="col-33">
 		<ul>
@@ -214,7 +195,7 @@ style_min: true
 			<li><a href="https://westminstercollege.edu/">Westminster College</a></li>
 		</ul>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 	<p><strong>State Advisory Council</strong><p>
 	<div class="col-33">
 		<ul>
@@ -231,9 +212,9 @@ style_min: true
 			<li>Oklahoma</li>
 		</ul>
 	</div>
-	<div class="clearfix"></div>
+	{{ clearfix }}
 </section>
-<div class="clearfix"></div>
+{{ clearfix }}
 
 <hr>
 
