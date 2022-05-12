@@ -103,13 +103,11 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  # GET /docs/ide/<programming_environment_name>/expressions/<programming_environment_key>
   def show_by_keys
     return render :not_found unless @programming_expression
-    if params[:programming_environment_name] && params[:programming_expression_key]
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
-      return render :show
-    end
-    render :not_found
+    @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+    return render :show
   end
 
   def destroy
@@ -138,14 +136,15 @@ class ProgrammingExpressionsController < ApplicationController
     if DCDO.get('use-studio-code-docs', false)
       return render :not_found unless @programming_expression
       return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
+    else
+      render_proxied_url(
+        "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/#{params[:programming_expression_key]}/",
+        allowed_content_types: nil,
+        allowed_hostname_suffixes: %w(curriculum.code.org),
+        expiry_time: EXPIRY_TIME,
+        infer_content_type: true
+      )
     end
-    render_proxied_url(
-      "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/#{params[:programming_expression_key]}/",
-      allowed_content_types: nil,
-      allowed_hostname_suffixes: %w(curriculum.code.org),
-      expiry_time: EXPIRY_TIME,
-      infer_content_type: true
-    )
   end
 
   private

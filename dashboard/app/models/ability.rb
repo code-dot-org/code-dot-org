@@ -83,7 +83,7 @@ class Ability
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
-    can [:read], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 

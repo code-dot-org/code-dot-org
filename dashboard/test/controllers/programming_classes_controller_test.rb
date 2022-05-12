@@ -127,10 +127,10 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
   class ProgrammingClassesControllerAccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      programming_environment = create :programming_environment
-      @programming_class = create :programming_class, programming_environment: programming_environment
-      unpublished_programming_environment = create :programming_environment, published: false
-      @unpublished_programming_class = create :programming_class, programming_environment: unpublished_programming_environment
+      @programming_environment = create :programming_environment
+      @programming_class = create :programming_class, programming_environment: @programming_environment
+      @unpublished_programming_environment = create :programming_environment, published: false
+      @unpublished_programming_class = create :programming_class, programming_environment: @unpublished_programming_environment
 
       @update_params = {id: @programming_class.id, name: 'new name'}
     end
@@ -164,5 +164,15 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_for_unpublished_class_should_receive_forbidden'
     test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_for_unpublished_class_should_receive_forbidden'
     test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_for_unpublished_class_should_receive_success'
+
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: nil, response: :forbidden, name: 'test_signed_out_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_by_keys_for_unpublished_class_should_receive_success'
   end
 end
