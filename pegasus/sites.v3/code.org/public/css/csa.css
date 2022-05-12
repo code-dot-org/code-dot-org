@@ -3,13 +3,13 @@ figure {
 	padding: unset;
 }
 
-p.tiny {
-	font-size: 13px;
-}
-
 button {
 	height: unset;
 	border: unset;
+}
+
+p.tiny {
+	font-size: 13px;
 }
 
 section {
@@ -17,7 +17,7 @@ section {
 }
 
 /* Top section */
-section.top img {
+section.top img.ap-csa-endorsed-badge {
 		width: 125px;
 		display: block;
 		margin: 4em auto 0;
@@ -29,30 +29,31 @@ section.top img {
 		align-items: center;
 		flex-wrap: wrap;
 	}
-		figure.csa-highlights > div:first-child{
-			width: 400px;
-			height: 300px;
-			background: grey;
+		figure.csa-highlights img{
+			max-width: 490px;
+			border-radius: 12px;
+			border: 8px solid #EBE8F1;
 		}
-			figure.csa-highlights ul {
-				margin: 0 0 0 4em;
-			}
-				figure.csa-highlights ul li {
-					margin-bottom: 1.5em;
-					font-size: 16px;
-					font-family: 'Gotham 5r', sans-serif;
-				}
-					figure.csa-highlights ul li::before {
-						content: "→";
-						color: #B9BF15;
-						display: inline-block;
-						margin-right: 7px;
-					}
-						figure.csa-highlights ul li:last-child {
-							margin-bottom: 0;
-						}
 
-/* reimagine CS */
+		figure.csa-highlights ul {
+			margin: 0 0 0 4em;
+		}
+			figure.csa-highlights ul li {
+				margin-bottom: 1.5em;
+				font-size: 16px;
+				font-family: 'Gotham 5r', sans-serif;
+			}
+				figure.csa-highlights ul li::before {
+					content: "→";
+					color: #B9BF15;
+					display: inline-block;
+					margin-right: 7px;
+				}
+					figure.csa-highlights ul li:last-child {
+						margin-bottom: 0;
+					}
+
+/* Reimagine CS */
 section.reimagine-cs h3 {
 	margin-top: 3em;
 }
@@ -113,20 +114,20 @@ aside.at-a-glance {
 							border: 0;
 							padding: 0;
 						}
-							aside.at-a-glance ul li:before {
+							aside.at-a-glance ul li::before {
 								display: none;
 							}
 
-/* CTA View Curriculum */
-section.cta {
+/* CTA - View Curriculum */
+section.cta-curriculum {
 	text-align: center;
 }
-	section.cta button {
+	section.cta-curriculum button {
 		margin-bottom: 1.5em;
 		border: 4px solid white;
 		border-radius: 8px;
 	}
-		section.cta p {
+		section.cta-curriculum p {
 			font-size: 13px;
 		}
 
@@ -137,7 +138,7 @@ section.cta {
 		margin: 2em auto 0;
 	}
 
-/* CTA Professional Learning */
+/* CTA - Professional Learning */
 section.cta-pl {
 	text-align: center;
 	background: #D9F3F5;
@@ -148,12 +149,58 @@ section.cta-pl {
 		margin: 0 auto 1em;
 		font-size: 2em;
 	}
+		section.cta-pl p {
+			font-size: 1.2em;
+			line-height: 1.6;
+			max-width: 800px;
+			margin: 0 auto 1.5em;
+		}
 
-/* Stat callout*/
+/* Teacher Testimonials */
+section.fun-info {
+	margin-bottom: 7em;
+}
+	.testimonials h2{
+		color: #7665a0;
+	}
+		#csa-teacher-testimonials p {
+			font-size: 1.25em;
+			line-height: 1.6;
+		}
+			#csa-teacher-testimonials p::before,
+			#csa-teacher-testimonials p::after {
+				color:#A69BC1;
+			}
+				#csa-teacher-testimonials p::before { content: '❝'; }
+				#csa-teacher-testimonials p::after { content: '❞'; }
+
+		.carousel-wrapper {
+			margin-top: 2.25em;
+		}
+			.carousel-wrapper .pagination {
+				margin: 3em auto 0;
+				text-align: left;
+			}
+				.carousel-wrapper .pagination a {
+					background: #CFC9DE;
+					margin: 0 16px 0 0;
+				}
+				.carousel-wrapper .pagination a.selected {
+					background: #7665A0;
+				}
+
+			.carousel-wrapper .slide-prev,
+			.carousel-wrapper .slide-next {
+				display: none !important;
+			}
+
+/* Stat callout */
 aside.stat {
 	text-align: center;
-	margin-right: 6em;
+	margin-left: 6em;
 	padding: 3em 1.5em 2.5em;
+	border: 2px solid #E7E9AD;
+  border-radius: 8px;
 }
 	aside.stat h1 {
 		color: #B9BF15;
@@ -164,10 +211,6 @@ aside.stat {
 			content: url('/images/csa/up-arrow.svg');
 			margin-right: 12px;
 		}
-
-.testimonials h2{
-	color: #5b6770;
-}
 
 /* Email form */
 section.email-form {
