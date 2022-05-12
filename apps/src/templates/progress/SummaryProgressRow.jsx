@@ -115,6 +115,7 @@ function SummaryProgressRow({
             levels={levels}
             disabled={isLockedForUser}
             style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+            lessonName={lesson.name}
           />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
