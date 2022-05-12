@@ -21,6 +21,10 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 
 $(document).ready(function() {
   prepareBlockly();
@@ -92,6 +96,7 @@ function displayLessonOverview() {
 
   if (isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
 
     if (lessonData.isVerifiedInstructor) {
       store.dispatch(setVerified());
