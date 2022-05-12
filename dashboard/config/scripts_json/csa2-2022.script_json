@@ -6,13 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
           "link": "",
@@ -31,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 15:40:55 UTC",
+    "serialized_at": "2022-05-11 16:41:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +81,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I store values so I can reuse them?**\n\nStudents expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students explore how variables are declared, initialized, and used as they write and modify code segments and identify the current value stored in a variable.",
-        "preparation": "* Print copies of the Unit 2 Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-1-variables/36397/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store values so I can reuse them?**\n\nYou learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You explore how variables are declared, initialized, and used as you write and modify code segments and identify the current value stored in a variable."
       },
       "seeding_key": {
@@ -106,6 +99,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I use variables to perform calculations?**\n\nStudents discover how arithmetic and compound assignment operators function in Java with different data types. Students practice evaluating expressions and explore scenarios that result in errors or unexpected results.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-2-operators-and-expressions/36396/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use variables to perform calculations?**\n\nYou learned about primitive and reference variables and how to store values and pointers to objects in these variables. In this lesson, you discover how arithmetic and compound assignment operators function in Java when used with different data types. You practice evaluating expressions and explore scenarios that result in errors or unexpected results."
       },
       "seeding_key": {
@@ -123,7 +117,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, students created subclasses of the `Painter` class and objects of different types. Students revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. Students define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.",
-        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, you created subclasses of the `Painter` class and objects of different types. You revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. You define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access."
       },
       "seeding_key": {
@@ -141,7 +135,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I create objects with specific values?**\n\nStudents revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.",
-        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create objects with specific values?**\n\nIn the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs."
       },
       "seeding_key": {
@@ -159,6 +153,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class. Additionally, they discover the `NullPointerException`, its cause, and strategies for debugging this error.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-5-user-input/36393/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn to obtain user input using the `Scanner` class. You also discover the `NullPointerException`, its cause, and strategies for debugging this error."
       },
       "seeding_key": {
@@ -176,7 +171,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I create hierarchies of classes to simplify program code?**\n\nStudents learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, students revisit inheritance to learn about using the DRY principle to refactor redundant code. Students also learn about the `Object` class and deepen their understanding of inheritance.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-6-class-hierarchies/36392/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create hierarchies of classes to simplify program code?**\n\nYou learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, you revisit inheritance to learn about using the DRY principle to refactor redundant code. You also learn about the `Object` class and deepen your understanding of inheritance."
       },
       "seeding_key": {
@@ -194,7 +189,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.",
-        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-7-accessor-methods/36391/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions."
       },
       "seeding_key": {
@@ -212,6 +207,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I change the values of an object's instance variables after the object has been created?**\n\nStudents discover the need for mutator methods to change the values stored in the instance variables of a class. Students also revisit the `void` keyword and recall edge cases. Students practice writing and calling mutator methods for their classes.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-8-mutator-methods/36390/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I change the values of an object's instance variables after the object has been created?**\n\nYour programs currently cannot directly change the values stored in the instance variables of a class. In this lesson, you discover the need for mutator methods to change these values. You also revisit the `void` keyword and recall edge cases. You practice writing and calling mutator methods for your classes."
       },
       "seeding_key": {
@@ -229,7 +225,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to obtain information about an object using its accessor methods. In this lesson, students discover the need for an easier way to get the state of an object. Students revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. Students also learn to format output using escape sequences and concatenating instance variables and `String`s.",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up",
+        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-9-printing-objects/36389/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to obtain information about an object using its accessor methods. In this lesson, you discover the need for an easier way to get the state of an object. You revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. You also learn to format output using escape sequences and concatenating instance variables and `String`s."
       },
       "seeding_key": {
@@ -247,7 +243,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How does the scope of a variable impact its accessibility and use?**\n\nStudents explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.",
-        "preparation": "* Print copies of the Unit 2 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-10-scope-and-this/36388/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the scope of a variable impact its accessibility and use?**\n\nYou learned about local variables that are used by a constructor or a method. In this lesson, you explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. You learn to use the `this` keyword to refer to the current object in constructors and methods."
       },
       "seeding_key": {
@@ -265,7 +261,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Print copies of the Store Management Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Store Management Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
@@ -283,7 +279,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents designed classes to represent objects in a business of their choice to create a store management program. Students decide how users interact with their program and use the Scanner class to receive user input. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now designed classes to represent objects in a business of your choice to create a store management program. In this lesson, you decide how users interact with your program and use the Scanner class to receive user input. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -302,7 +298,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -320,7 +316,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)",
+        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-frq-practice/36386/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -339,7 +335,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-assessment/36385/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 2 Assessment."
       },
       "seeding_key": {
@@ -5903,6 +5899,18 @@
       }
     },
     {
+      "name": "Accessor Methods",
+      "url": "https://youtu.be/F5plZ3f5B3c",
+      "key": "accessor_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa2-2022/resources",
       "key": "all_resources_4",
@@ -5996,6 +6004,42 @@
       }
     },
     {
+      "name": "Constructors",
+      "url": "https://youtu.be/1vXP8R2i-wg",
+      "key": "constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "name": "Creating a Scanner Object",
+      "url": "https://youtu.be/2jJUc-FUuq8",
+      "key": "creating_a_scanner_object",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "name": "Creating Variables",
+      "url": "https://youtu.be/VHwlxlqrquM",
+      "key": "creating_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_variables"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1rEKCHgR74oOaHyLUmRGPWji4ISyRxdmNzXveysEG6OQ/edit?usp=sharing",
       "key": "cs_bingo_cards_1",
@@ -6020,6 +6064,18 @@
       }
     },
     {
+      "name": "CSA Manipulatives Demo",
+      "url": "https://youtu.be/4QbHVC9HkkY",
+      "key": "csa_manipulatives_demo",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "csa_manipulatives_demo"
+      }
+    },
+    {
       "name": "Diagramming Scope",
       "url": "https://docs.google.com/document/d/1INolQrMjM7CUxH70jCOiZjg-LDlOZGwQARFtICWumqY/edit?usp=sharing",
       "key": "diagramming_scope",
@@ -6032,6 +6088,54 @@
       }
     },
     {
+      "name": "Instance Variables and Attributes",
+      "url": "https://youtu.be/49XzLCs8wgU",
+      "key": "instance_variables_and_attributes",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "name": "Mutator Methods",
+      "url": "https://youtu.be/unh7__NcIS8",
+      "key": "mutator_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "mutator_methods"
+      }
+    },
+    {
+      "name": "Overloaded Constructors",
+      "url": "https://youtu.be/rYTRK8R9ZM8",
+      "key": "overloaded_constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "name": "Scanner Class Methods",
+      "url": "https://youtu.be/v1xPNK2hzzg",
+      "key": "scanner_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "scanner_class_methods"
+      }
+    },
+    {
       "name": "Store Management Project Planning Guide",
       "url": "https://docs.google.com/document/d/1h46bWv6EKByAP0uDXQRgwKGLN32RaWA_wz6-yS6bmtQ/edit?usp=sharing",
       "key": "store_management_project_planning_guide",
@@ -6041,6 +6145,18 @@
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide"
+      }
+    },
+    {
+      "name": "The toString() Method",
+      "url": "https://youtu.be/dPH01DBWlZ8",
+      "key": "the_tostring_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6089,6 +6205,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Manipulatives Demo",
+      "url": "https://youtu.be/gC2yirf2H8I",
+      "key": "u2l3_manipulatives_demo",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_manipulatives_demo"
       }
     },
     {
@@ -6252,6 +6380,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "scanner_class_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "u2l5_extra_practice"
       }
     },
@@ -6288,6 +6428,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "u2l7_extra_practice"
       }
     },
@@ -6301,6 +6447,12 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "mutator_methods"
       }
     },
     {
@@ -6331,6 +6483,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6456,6 +6614,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "creating_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u2l1_extra_practice"
       }
     },
@@ -6504,7 +6668,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "csa_manipulatives_demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u2l3_manipulatives_demo"
       }
     },
     {
@@ -6517,6 +6699,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "overloaded_constructors"
       }
     },
     {

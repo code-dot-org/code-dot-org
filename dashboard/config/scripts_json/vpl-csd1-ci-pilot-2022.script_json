@@ -6,11 +6,12 @@
     "properties": {
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-29 20:49:21 UTC",
+    "serialized_at": "2022-05-11 23:15:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -206,10 +207,21 @@
       "key": "cf395668-1eba-4bea-b32b-858154731cc3",
       "position": 4,
       "properties": {
-        "progression_name": "Wrap Up "
+        "progression_name": "Sample projects"
       },
       "seeding_key": {
         "activity_section.key": "cf395668-1eba-4bea-b32b-858154731cc3",
+        "lesson_activity.key": "cd6cd3db-6c68-44b7-9c99-9f118727a0d3"
+      }
+    },
+    {
+      "key": "00130b74-efe9-4cb4-809a-f1bd18b6c412",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "00130b74-efe9-4cb4-809a-f1bd18b6c412",
         "lesson_activity.key": "cd6cd3db-6c68-44b7-9c99-9f118727a0d3"
       }
     }
@@ -296,6 +308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons"
+        ],
         "progression": "Chapter 1 Overview"
       },
       "bonus": false,
@@ -318,6 +333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2022"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -340,6 +358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -362,6 +383,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -384,6 +408,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-practice"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -406,6 +433,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-PSP-C4U"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -453,6 +483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
         "progression": "Introduction to computing"
       },
       "bonus": false,
@@ -475,6 +508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview"
+        ],
         "progression": "Introduction to computing"
       },
       "bonus": false,
@@ -498,6 +534,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2022"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -521,6 +560,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2022"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -543,6 +585,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2022"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -565,6 +610,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2022"
+        ],
         "progression": "Explore processing and storage"
       },
       "bonus": false,
@@ -587,7 +635,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Wrap Up "
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1"
+        ],
+        "progression": "Sample projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -601,6 +652,28 @@
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "00130b74-efe9-4cb4-809a-f1bd18b6c412"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation"
       ]
     }
   ],
@@ -807,6 +880,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd1-ci-pilot-2022",
         "activity_section.key": "cf395668-1eba-4bea-b32b-858154731cc3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "00130b74-efe9-4cb4-809a-f1bd18b6c412"
       }
     }
   ],

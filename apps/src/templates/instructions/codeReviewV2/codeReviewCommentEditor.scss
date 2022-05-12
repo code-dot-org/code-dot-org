@@ -1,0 +1,13 @@
+.toastui-editor-contents .toastui-editor-ww-code-block:after {
+  // hide the code block language editor provided by ToastUI
+  display: none;
+}
+
+.toastui-editor-defaultUI {
+  border: 1px solid #19c3e1;
+  border-radius: '4px';
+}
+
+.toastui-editor-defaultUI-toolbar {
+  padding: 0 15px;
+}
