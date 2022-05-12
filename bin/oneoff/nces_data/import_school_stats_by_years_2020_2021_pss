@@ -65,3 +65,13 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/schools_private.csv") do |f
     end
   end
 end
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/locale_private.csv") do |filename|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
+    {
+      school_id:      row['NCESSCH'].to_i.to_s,
+      school_year:    SURVEY_YEAR,
+      community_type: COMMUNITY_TYPE_MAP[row['LOCALE']]
+    }
+  end
+end
