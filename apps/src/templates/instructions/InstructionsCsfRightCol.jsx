@@ -83,9 +83,7 @@ class InstructionsCsfRightCol extends React.Component {
 
   getColumnHeight() {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    const scrollButtonsHeight = this.scrollButtons
-      ? this.scrollButtons.getMinHeight()
-      : 0;
+    const scrollButtonsHeight = 0;
     return collapseButtonHeight + scrollButtonsHeight;
   }
 

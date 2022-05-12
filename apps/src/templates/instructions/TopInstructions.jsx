@@ -700,9 +700,7 @@ class TopInstructions extends Component {
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
           <div style={instructionsContainerStyle} id="scroll-container">
-            <div ref={ref => this.setInstructionsRef(ref)}>
-              {this.renderInstructions(isCSF)}
-            </div>
+            {this.renderInstructions(isCSF)}
             {tabSelected === TabType.RESOURCES && (
               <HelpTabContents
                 ref={ref => (this.helpTab = ref)}

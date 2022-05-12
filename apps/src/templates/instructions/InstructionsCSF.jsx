@@ -142,7 +142,7 @@ class InstructionsCSF extends React.Component {
 
   componentDidUpdate() {
     this.setCanScrollInstructions();
-    this.debouncedCalculateRenderedHeight();
+    //this.debouncedCalculateRenderedHeight();
     this.props.adjustMaxNeededHeight();
   }
 
@@ -307,7 +307,7 @@ class InstructionsCSF extends React.Component {
     const mainStyle = [
       styles.main,
       {
-        height: this.props.height
+        height: this.props.height - HEADER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
       this.props.overlayVisible && styles.withOverlay
@@ -383,13 +383,13 @@ const styles = {
   },
   leftCol: {
     position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    bottom: 13,
     left: 0,
     marginLeft: 0
   },
   leftColRtl: {
     position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    bottom: 13,
     right: 0,
     marginRight: 0
   }
