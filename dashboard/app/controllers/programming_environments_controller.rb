@@ -66,6 +66,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     end
   end
 
+  # GET /docs/ide/<name>
   def show
     @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     return render :not_found unless @programming_environment
