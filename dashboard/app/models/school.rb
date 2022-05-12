@@ -382,6 +382,27 @@ class School < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2020-2021 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2020-2021/pss/schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                 row['ppin'],
+            name:               row['pinst'].upcase,
+            address_line1:      row[row['pl_add'].nil? ? 'paddrs' : 'pl_add'].to_s.upcase.presence,
+            address_line2:      nil,
+            address_line3:      nil,
+            city:               row[row['pl_cit'].nil? ? 'pcity' : 'pl_cit'].to_s.upcase.presence,
+            state:              row[row['pl_stabb'].nil? ? 'pstabb' : 'pl_stabb'].to_s.upcase.presence,
+            zip:                row[row['pl_zip'].nil? ? 'pzip' : 'pl_zip'],
+            latitude:           row['latitude16'].to_f,
+            longitude:          row['longitude16'].to_f,
+            school_type:        'private',
+            school_district_id: nil,
+            state_school_id:    nil,
+          }
+        end
+      end
     end
   end
 
