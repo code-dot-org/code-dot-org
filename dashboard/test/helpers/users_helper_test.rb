@@ -15,6 +15,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {},
         current_lesson: script.lessons.first.id,
         completed: false,
@@ -105,6 +106,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {
           ul.level_id => {
             status: LEVEL_STATUS.perfect,
@@ -138,6 +140,7 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 150,
       linesOfCodeText: 'Total lines of code: 150',
       lockableAuthorized: false,
+      isInstructor: false,
       progress: {
         # BubbleChoice levels return status/result using the sublevel with the highest best_result.
         level.id => {
