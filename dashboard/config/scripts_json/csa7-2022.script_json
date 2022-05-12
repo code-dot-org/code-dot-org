@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 17:56:24 UTC",
+    "serialized_at": "2022-05-11 14:41:49 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2655,7 +2655,7 @@
       "key": "5cf0a639-6bc4-4d37-8298-9c27dfdee0e4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Recursion*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Recursion handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s using the console or The Theater and complete the Tracing Recursion handout. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Recursion*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Recursion handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s and complete the Tracing Recursion handout. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Tracing Recursive Methods"
       },
       "seeding_key": {
@@ -2978,7 +2978,7 @@
       "key": "45677883-1230-4265-bf1f-af164ce64c52",
       "position": 1,
       "properties": {
-        "description": "Using the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
         "name": "Development",
         "remarks": true
@@ -3124,7 +3124,7 @@
       "key": "4e4c44e1-bb2a-4242-985e-fdc509527c1e",
       "position": 1,
       "properties": {
-        "description": "Using the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
         "name": "Development",
         "remarks": true
@@ -3241,7 +3241,7 @@
       "key": "5e7a37de-9ae8-4ced-a8ab-900c47271bcb",
       "position": 1,
       "properties": {
-        "description": "It's time to put the finishing touches on our projects!\n\nUsing the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "description": "It's time to put the finishing touches on our projects!\n\nUsing the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
         "name": "Development",
         "remarks": true

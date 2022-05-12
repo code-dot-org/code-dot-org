@@ -342,6 +342,11 @@ class Pd::Enrollment < ApplicationRecord
     self.application_id = application_id
   end
 
+  def application
+    return nil unless application_id
+    Pd::Application::ApplicationBase.find_by(id: application_id)
+  end
+
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
     write_attribute :name, nil

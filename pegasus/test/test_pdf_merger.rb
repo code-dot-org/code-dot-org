@@ -57,12 +57,12 @@ class PDFMergerTest < Minitest::Test
       }
     ].each do |dependency|
       found = system 'which', dependency[:name], out: '/dev/null'
-      missing_dependency_message = <<-MSG
-Expected '#{dependency[:name]}' to be installed.
-    This test depends on #{dependency[:name]} (#{dependency[:url]})
-    You should install it locally:
-       OSX: #{dependency[:osx]}
-    Ubuntu: #{dependency[:ubuntu]}
+      missing_dependency_message = <<~MSG
+        Expected '#{dependency[:name]}' to be installed.
+            This test depends on #{dependency[:name]} (#{dependency[:url]})
+            You should install it locally:
+               OSX: #{dependency[:osx]}
+            Ubuntu: #{dependency[:ubuntu]}
       MSG
 
       if RUBY_PLATFORM.include? 'linux'

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 19:40:43 UTC",
+    "serialized_at": "2022-05-11 17:08:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8607,6 +8607,30 @@
       }
     },
     {
+      "name": "Commits and the Backpack",
+      "url": "https://youtu.be/uDyiBgZD0sI",
+      "key": "commits_and_the_backpack",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "commits_and_the_backpack"
+      }
+    },
+    {
+      "name": "Conditional Statements",
+      "url": "https://youtu.be/2rQmLwYVYpw",
+      "key": "conditional_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1nHrn6y5zjCc-cBdb17_WFueUBv3gZlkFp92Rw4uN7oo/edit?usp=sharing",
       "key": "cs_bingo_cards",
@@ -8655,6 +8679,18 @@
       }
     },
     {
+      "name": "Java Lab Basics",
+      "url": "https://youtu.be/Dk50QTwp6Bw",
+      "key": "java_lab_basics",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "java_lab_basics"
+      }
+    },
+    {
       "name": "PatternPainter",
       "url": "https://docs.google.com/presentation/d/1yCQwrqoQNp28pRMJ-Z-ZKT-S4AWQWRguUaLoXDNHJUU/edit?usp=sharing",
       "key": "patternpainter",
@@ -8664,6 +8700,18 @@
       },
       "seeding_key": {
         "resource.key": "patternpainter"
+      }
+    },
+    {
+      "name": "Printing in Java",
+      "url": "https://youtu.be/XjswJsUj2wQ",
+      "key": "printing_in_java",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "printing_in_java"
       }
     },
     {
@@ -8724,6 +8772,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
+      }
+    },
+    {
+      "name": "Two-Way Selection and NOT",
+      "url": "https://youtu.be/EjypsirssII",
+      "key": "two-way_selection_and_not",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-way_selection_and_not"
       }
     },
     {
@@ -8979,6 +9039,18 @@
       }
     },
     {
+      "name": "Welcome to The Neighborhood",
+      "url": "https://youtu.be/XCa735V08lQ",
+      "key": "welcome_to_the_neighborhood",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_neighborhood"
+      }
+    },
+    {
       "name": "Writing Algorithms",
       "url": "https://docs.google.com/document/d/1JmEN9yfj-kr5txjuRCRlIkTmbbAziAHfnvErMSXKH-8/edit?usp=sharing",
       "key": "writing_algorithms",
@@ -8988,6 +9060,18 @@
       },
       "seeding_key": {
         "resource.key": "writing_algorithms"
+      }
+    },
+    {
+      "name": "Writing Our First Program",
+      "url": "https://youtu.be/G2kCDIIRFU8",
+      "key": "writing_our_first_program",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "writing_our_first_program"
       }
     }
   ],
@@ -9031,6 +9115,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "two-way_selection_and_not"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "u1l10_extra_practice"
       }
     },
@@ -9050,6 +9140,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "printing_in_java"
       }
     },
     {
@@ -9271,6 +9367,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "java_lab_basics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
       }
     },
@@ -9284,6 +9386,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "writing_our_first_program"
       }
     },
     {
@@ -9318,6 +9426,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u1l4_extra_practice"
       }
@@ -9338,6 +9452,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "conditional_statements"
       }
     },
     {
@@ -9410,6 +9530,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "code_reviews_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "commits_and_the_backpack"
       }
     },
     {

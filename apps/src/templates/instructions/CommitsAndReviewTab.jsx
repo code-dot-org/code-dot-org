@@ -20,17 +20,18 @@ const CommitsAndReviewTab = props => {
     viewAsCodeReviewer,
     viewAsTeacher,
     userIsTeacher,
-    codeReviewEnabled
+    codeReviewEnabled,
+    locale
   } = props;
 
-  const [loadingReviewData, setLoadingReviewData] = useState(false);
-  const [reviewData, setReviewData] = useState([]);
-  const [commitsData, setCommitsData] = useState([]);
-  const [hasOpenCodeReview, setHasOpenCodeReview] = useState(null);
+  const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
+  const [openReviewData, setOpenReviewData] = useState(null);
+  const [timelineData, setTimelineData] = useState([]);
 
   const dataApi = useMemo(
-    () => new CodeReviewDataApi(channelId, serverLevelId, serverScriptId),
-    [channelId, serverLevelId, serverScriptId]
+    () =>
+      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId, locale),
+    [channelId, serverLevelId, serverScriptId, locale]
   );
 
   useEffect(() => {
@@ -38,28 +39,17 @@ const CommitsAndReviewTab = props => {
   }, [refresh]);
 
   const refresh = useCallback(async () => {
-    setLoadingReviewData(true);
+    setIsLoadingTimelineData(true);
     try {
-      const [codeReviews, commits] = await Promise.all([
-        dataApi.getCodeReviews(),
-        dataApi.getCommits()
-      ]);
-      setCommitsData(commits);
-      setReviewData(codeReviews);
-      setIsCodeReviewOpen(codeReviews);
+      const {timelineData, openReview} = await dataApi.getInitialTimelineData();
+      setTimelineData(timelineData);
+      setOpenReviewData(openReview);
     } catch (err) {
       // TODO: display error message TBD
       console.log(err);
     }
-    setLoadingReviewData(false);
+    setIsLoadingTimelineData(false);
   }, [dataApi]);
-
-  const setIsCodeReviewOpen = reviewData => {
-    if (reviewData.length) {
-      const mostRecentReview = reviewData[reviewData.length - 1];
-      setHasOpenCodeReview(!mostRecentReview.isClosed);
-    }
-  };
 
   const loadPeers = async (onSuccess, onFailure) => {
     try {
@@ -67,6 +57,30 @@ const CommitsAndReviewTab = props => {
       onSuccess(response);
     } catch (err) {
       onFailure(err);
+    }
+  };
+
+  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+    try {
+      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      setOpenReviewData({
+        ...openReviewData,
+        comments: [...openReviewData.comments, newComment]
+      });
+      onSuccess();
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const closeReview = async () => {
+    try {
+      const closedReview = await dataApi.closeReview(openReviewData);
+      setTimelineData([...timelineData, closedReview]);
+      setOpenReviewData(null);
+    } catch (err) {
+      // TODO: what happens when review fails to close
     }
   };
 
@@ -80,7 +94,7 @@ const CommitsAndReviewTab = props => {
     );
   }
 
-  if (loadingReviewData) {
+  if (isLoadingTimelineData) {
     return (
       <div style={styles.loadingContainer}>
         <Spinner size="large" />
@@ -115,8 +129,15 @@ const CommitsAndReviewTab = props => {
           />
         </div>
       </div>
-      <CodeReviewTimeline reviewData={reviewData} commitsData={commitsData} />
-      {!hasOpenCodeReview && (
+      <CodeReviewTimeline
+        timelineData={[
+          ...timelineData,
+          ...(openReviewData ? [openReviewData] : [])
+        ]}
+        addCodeReviewComment={addCodeReviewComment}
+        closeReview={closeReview}
+      />
+      {!openReviewData && (
         <Button
           icon="comment"
           onClick={() => {}}
@@ -137,7 +158,8 @@ export default connect(state => ({
   userIsTeacher: state.currentUser.userType === 'teacher',
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptId: state.pageConstants.serverScriptId
+  serverScriptId: state.pageConstants.serverScriptId,
+  locale: state.pageConstants.locale
 }))(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
@@ -148,7 +170,8 @@ CommitsAndReviewTab.propTypes = {
   userIsTeacher: PropTypes.bool,
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
-  serverScriptId: PropTypes.number
+  serverScriptId: PropTypes.number,
+  locale: PropTypes.string
 };
 
 const styles = {
