@@ -24,13 +24,9 @@
 #  storage_apps_storage_id_index    (storage_id)
 #
 class Project < ApplicationRecord
-  belongs_to :user_project_storage_id, foreign_key: 'storage_id'
+  belongs_to :project_storage, foreign_key: 'storage_id'
   # Note: owner is nil for projects that are owned by users without an account
-  has_one :owner, class_name: 'User', through: :user_project_storage_id, source: :user
-
-  def channel_id
-    storage_encrypt_channel_id(storage_id, id)
-  end
+  has_one :owner, class_name: 'User', through: :project_storage, source: :user
 
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
@@ -43,5 +39,16 @@ class Project < ApplicationRecord
     end
 
     Project.find(project_id)
+  end
+
+  def channel_id
+    storage_encrypt_channel_id(storage_id, id)
+  end
+
+  # Returns the user_id of the owner of this project. Returns nil if the project
+  # is owned by a user without an account. This should always return the same
+  # value as project.owner.id but is more efficient if only the user_id is needed.
+  def owner_id
+    project_storage.user_id
   end
 end
