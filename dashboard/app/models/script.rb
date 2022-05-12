@@ -1150,36 +1150,47 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
     raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
+
+    if destination_professional_learning_course.nil? && old_professional_learning_course?
+      raise 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
+    end
+
+    if !destination_professional_learning_course.nil? && !destination_unit_group_name.nil?
+      raise 'Can not have both a destination unit group and a destination professional learning course.'
+    end
 
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
-    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
+    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
       ActiveRecord::Base.transaction do
         copied_unit = dup
-        copied_unit.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
+
         copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
-        copied_unit.is_course = destination_unit_group.nil?
         copied_unit.name = new_name
 
-        if version_year
-          copied_unit.version_year = version_year
-        end
+        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
+        copied_unit.published_state = destination_unit_group.nil? ? SharedCourseConstants::PUBLISHED_STATE.in_development : nil
+        copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
+        copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
+        copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
 
         copied_unit.save!
 
-        if destination_unit_group
+        if !destination_professional_learning_course.nil?
+          copied_unit.professional_learning_course = destination_professional_learning_course
+          copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
+        elsif destination_unit_group
           raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.reload
         else
-          copied_unit.is_course = true
           raise "Must supply version year if new unit will be a standalone unit" unless version_year
           copied_unit.version_year = version_year
           raise "Must supply family name if new unit will be a standalone unit" unless family_name
@@ -1187,13 +1198,17 @@ class Script < ApplicationRecord
           CourseOffering.add_course_offering(copied_unit)
         end
 
+        copied_unit.save! if copied_unit.changed?
+
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
 
-        course_version = copied_unit.get_course_version
-        copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
-        copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        if destination_professional_learning_course.nil?
+          course_version = copied_unit.get_course_version
+          copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+          copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        end
 
         # Make sure we don't modify any files in unit tests.
         if Rails.application.config.levelbuilder_mode
