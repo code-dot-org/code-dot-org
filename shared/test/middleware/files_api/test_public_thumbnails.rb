@@ -195,7 +195,6 @@ class PublicThumbnailsTest < FilesApiTestBase
 
     # Test
     yield channel_id
-
   ensure
     delete_thumbnail(channel_id)
 
