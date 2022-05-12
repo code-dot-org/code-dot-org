@@ -25,41 +25,41 @@ HIGH_SCALE_UNIT_NAMES = %w(
 def main(argv)
   if argv.size != 1
 
-    puts <<-EOF
-Usage: #{$0}: red|yellow|green
+    puts <<~EOF
+      Usage: #{$0}: red|yellow|green
 
- - red: No HOC sharing, no HOC hints, no hoc_activity writes, no signed-in user progress saving, no HOC puzzle rating.
- - yellow: No HOC puzzle rating, no HOC hints, no hoc_activity writes.
- - green: all features turned on. SHOULD NOT BE USED UNTIL HOC IS OVER
+       - red: No HOC sharing, no HOC hints, no hoc_activity writes, no signed-in user progress saving, no HOC puzzle rating.
+       - yellow: No HOC puzzle rating, no HOC hints, no hoc_activity writes.
+       - green: all features turned on. SHOULD NOT BE USED UNTIL HOC IS OVER
 
- Public caching is enabled for all HOC scripts in all cases because this doesn't take away functionality
-EOF
+       Public caching is enabled for all HOC scripts in all cases because this doesn't take away functionality
+    EOF
     exit
   end
 
   mode = argv.shift
   # Set global Gatekeeper and DCDO flags.
   case mode
-    when 'red'
-      Gatekeeper.set('postMilestone', value: false)
-      Gatekeeper.set('tracking_pixel_enabled', value: false)
-      Gatekeeper.set('puzzle_rating', value: false)
-      DCDO.set('hoc_activity_sample_weight', 0)  # Don't write to hoc_activity.
-      DCDO.set('activity_max_rate', 100)
-    when 'yellow'
-      Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('tracking_pixel_enabled', value: false)
-      Gatekeeper.set('puzzle_rating', value: false)
-      DCDO.set('hoc_activity_sample_weight', 10)  # Sample 1/10 of sessions in hoc_activity.
-      DCDO.set('activity_max_rate', 3000)  # Max async op rate per queue processor.
-    when 'green'
-      Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('tracking_pixel_enabled', value: true)
-      Gatekeeper.set('puzzle_rating', value: true)
-      DCDO.set('hoc_activity_sample_weight', 1)  # Include all sessions in hoc_activity.
-      DCDO.set('activity_max_rate', 0)  # No limit.
-    else
-      raise "Unexpected mode #{mode}"
+  when 'red'
+    Gatekeeper.set('postMilestone', value: false)
+    Gatekeeper.set('tracking_pixel_enabled', value: false)
+    Gatekeeper.set('puzzle_rating', value: false)
+    DCDO.set('hoc_activity_sample_weight', 0)  # Don't write to hoc_activity.
+    DCDO.set('activity_max_rate', 100)
+  when 'yellow'
+    Gatekeeper.set('postMilestone', value: true)
+    Gatekeeper.set('tracking_pixel_enabled', value: false)
+    Gatekeeper.set('puzzle_rating', value: false)
+    DCDO.set('hoc_activity_sample_weight', 10)  # Sample 1/10 of sessions in hoc_activity.
+    DCDO.set('activity_max_rate', 3000)  # Max async op rate per queue processor.
+  when 'green'
+    Gatekeeper.set('postMilestone', value: true)
+    Gatekeeper.set('tracking_pixel_enabled', value: true)
+    Gatekeeper.set('puzzle_rating', value: true)
+    DCDO.set('hoc_activity_sample_weight', 1)  # Include all sessions in hoc_activity.
+    DCDO.set('activity_max_rate', 0)  # No limit.
+  else
+    raise "Unexpected mode #{mode}"
   end
 
   # Set script-specific Gatekeeper flags.
