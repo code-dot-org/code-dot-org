@@ -133,6 +133,10 @@ class JavalabEditor extends React.Component {
     this.editorModeConfigCompartment = new Compartment();
     this.editorThemeOverrideCompartment = new Compartment();
 
+    // Used to manage readOnly/editable configuration.
+    this.editorEditableCompartment = new Compartment();
+    this.editorReadOnlyCompartment = new Compartment();
+
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
     // tab order is an ordered list of file keys.
@@ -194,7 +198,16 @@ class JavalabEditor extends React.Component {
 
     if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
       Object.keys(this.editors).forEach(editorKey => {
-        console.log('update editor for readonly');
+        this.editors[editorKey].dispatch({
+          effects: [
+            this.editorEditableCompartment.reconfigure(
+              EditorView.editable.of(!this.props.isReadOnlyWorkspace)
+            ),
+            this.editorReadOnlyCompartment.reconfigure(
+              EditorState.readOnly.of(this.props.isReadOnlyWorkspace)
+            )
+          ]
+        });
       });
     }
 
@@ -231,12 +244,14 @@ class JavalabEditor extends React.Component {
           ]
     );
 
-    if (isReadOnlyWorkspace) {
-      extensions.push(
-        EditorView.editable.of(false),
-        EditorState.readOnly.of(true)
-      );
-    }
+    extensions.push(
+      this.editorEditableCompartment.of(
+        EditorView.editable.of(!isReadOnlyWorkspace)
+      ),
+      this.editorReadOnlyCompartment.of(
+        EditorState.readOnly.of(isReadOnlyWorkspace)
+      )
+    );
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
