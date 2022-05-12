@@ -272,7 +272,7 @@ Javalab.prototype.init = function(config) {
 
   // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
   // the readOnly state can change when a code review is opened or closed
-  getStore().dispatch(setIsReadOnlyWorkspace(true));
+  getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
 
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));

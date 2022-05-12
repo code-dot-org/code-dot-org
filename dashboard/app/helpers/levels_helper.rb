@@ -201,14 +201,15 @@ module LevelsHelper
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
+      channel = get_channel_for(@level, @script&.id, @user)
       view_options(
-        channel: get_channel_for(@level, @script&.id, @user),
+        channel: channel,
         reduce_channel_updates: @script ?
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel
-      readonly_view_options if @user
+      # readonly if viewing another user's channel or a code review is open for that project
+      readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
     end
 
     view_options(
