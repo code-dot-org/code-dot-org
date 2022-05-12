@@ -64,7 +64,6 @@ export default class JavabuilderConnection {
   // sources based on a channel id.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrideSources(overrideSources) {
-    // block if no csrf token?
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
 
@@ -90,7 +89,8 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_validation',
       requestData,
-      /* checkProjectEdited */ true
+      /* checkProjectEdited */ true,
+      /* usePostRequest */ true
     );
   }
 

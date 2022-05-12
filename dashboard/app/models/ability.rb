@@ -424,14 +424,13 @@ class Ability
     end
 
     # Allow pilot users to have access to run override_sources java lab code, which is how we run exemplars.
-    # TODO: Change this to authorized_instructors once we have throttling in place.
-    if user.persisted? && (user.has_pilot_experiment?(CSA_PILOT) || user.has_pilot_experiment?(CSA_PILOT_FACILITATORS))
+    if user.persisted? && user.verified_instructor?
       can :access_token_with_override_sources, :javabuilder_session
     end
 
     # This action allows levelbuilders to work on exemplars and validation in levelbuilder
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can [:access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+      can [:access_token_with_override_sources, :access_token_with_override_validation], :javabuilder_session
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
