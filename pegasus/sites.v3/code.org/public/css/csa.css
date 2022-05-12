@@ -45,10 +45,12 @@
 						margin-bottom: 1.5em;
 						font-size: 16px;
 						font-family: 'Gotham 5r', sans-serif;
-						text-indent: 0;
 					}
 						figure.csa-highlights ul li::before {
-							content: '';
+							content: "→";
+							color: #B9BF15;
+							display: inline-block;
+							margin-right: 7px;
 						}
 							figure.csa-highlights ul li:last-child {
 								margin-bottom: 0;
