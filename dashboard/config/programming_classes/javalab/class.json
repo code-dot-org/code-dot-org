@@ -1,6 +1,6 @@
 {
   "category_key": "java_lang",
-  "content": "",
+  "content": "The Object Class in Java is the root of class hierarchy. All classes inherit from the Object class; it is the superclass. When using other classes: String, Double, etc we are sometimes using methods of the Object class, such as equals() and toString()",
   "examples": "[]",
   "external_documentation": "",
   "fields": "[]",
@@ -9,6 +9,29 @@
   "syntax": "",
   "tips": "",
   "methods": [
-
+    {
+      "name": "equals",
+      "position": 0,
+      "key": "equals",
+      "overload_of": null,
+      "content": "The equals() method in the Object class compares the given object to the inputted object. The method returns true if the two objects are equal and false otherwise. Note: this method is often overridden.",
+      "parameters": "[{\"name\":\"obj\",\"type\":\"Object\",\"required\":true,\"description\":\"the object being compared to the given object.\"}]",
+      "examples": "[{\"name\":\"Using equals(Object obj)\",\"code\":\"```\\nObject obj1 = new Object();\\nObject obj2 = new Object();\\n\\nSystem.out.println(obj1.equals(obj2)); \\n```\\n\\n**Output:** false\\n//will return false because obj1 and obj2 reference different objects\"}]",
+      "syntax": "object.equals(Object obj)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "toString",
+      "position": 1,
+      "key": "tostring",
+      "overload_of": null,
+      "content": "The toString() method converts the specified object into a String and then returns it.",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"Using toString()\",\"code\":\"```\\nObject obj1 = new Object();\\nSystem.out.println(obj1.toString());\\n```\\n**Output:** java.lang.Object@7a81197d //this is a textual representation of the object: it includes the class, @, the hash code of the object\"}]",
+      "syntax": "object.toString()",
+      "external_link": null,
+      "return_value": null
+    }
   ]
 }
