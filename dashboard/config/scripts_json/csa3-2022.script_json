@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-04 15:27:44 UTC",
+    "serialized_at": "2022-05-11 17:23:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +88,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, students learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. Students practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array.",
-        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Print copies of the Exploring 1D Arrays handout (one for each pair of students)",
+        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Print copies of the Exploring 1D Arrays handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-1-one-dimensional-1d-arrays/36384/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, you learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. You practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array."
       },
       "seeding_key": {
@@ -106,7 +106,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nStudents explore how to add, modify, and obtain elements stored in a one-dimensional (1D) array. Students learn about common errors when working with 1D arrays and identify strategies for debugging these errors. Students practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop.",
-        "preparation": "* Print copies of the Investigating Arrays handout (one for each pair of students)",
+        "preparation": "* Print copies of the Investigating Arrays handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I add and change elements in a one-dimensional (1D) array?**\n\nOne-dimensional (1D) arrays can store multiple elements. In this lesson, you learn how to add, modify, and obtain elements stored in a 1D array and identify strategies for debugging common errors that can occur while working with 1D arrays. You practice adding, modifying, and printing elements in a 1D array individually and using a `while` loop."
       },
       "seeding_key": {
@@ -124,7 +124,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I search for elements in a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and use a for loop to traverse a one-dimensional (1D) array. Before using `for` loops with 1D arrays, students practice identifying the number of times a loop will execute and using trace tables to track the changing values of variables. Additionally, students differentiate between `while` loops and `for` loops and convert between both types of loops. Students practice writing `for` loops to traverse 1D arrays to access elements.",
-        "preparation": "* Print copies of the Tracing Loops handout (one for each student)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Tracing Loops handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-3-for-loops/36382/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I search for elements in a 1D array?**\n\nYou have used `while` loops to repeat a block of code and traverse a one-dimensional (1D) array. In this lesson, you learn about the structure and functionality of a `for` loop and use a `for` loop to traverse a 1D array. Before using `for` loops with 1D arrays, you practice identifying the number of times a loop will execute and using trace tables to track the changing values of variables. Additionally, you differentiate between `while` loops and `for` loops and convert between both types of loops. You practice writing `for` loops to traverse 1D arrays to access elements."
       },
       "seeding_key": {
@@ -142,7 +142,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I use arrays to find specific elements?**\n\nStudents apply their knowledge of traversing 1D arrays to develop algorithms to find elements that have specific properties. Students learn how to identify the preconditions and postconditions for an algorithm. Additionally, students differentiate between executing a `return` statement inside a loop and at the end of a method.",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Exploring Algorithms handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Exploring Algorithms handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-4-array-algorithms/36381/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use arrays to find specific elements?**\n\nTraversing an array makes it possible to find information about data. In this lesson, you apply your knowledge of traversing 1D arrays to explore algorithms to find elements that have specific properties. You learn how to identify the preconditions and postconditions for an algorithm. Additionally, you differentiate between executing a `return` statement inside a loop and at the end of a method."
       },
       "seeding_key": {
@@ -160,6 +160,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**When would I want to traverse an array with an enhanced for loop?**\n\nStudents learn about enhanced `for` loops to traverse a 1D array. As students explore the functionality of enhanced `for` loops, they identify differences, advantages, and disadvantages of using an enhanced `for` loop to traverse an array. Students use an enhanced `for` loop to calculate the sum or average of the elements in a 1D array.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-5-enhanced-for-loops/36380/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**When would I want to traverse an array with an enhanced for loop?**\n\nYou have used `while` loops and `for` loops to traverse a 1D array. In this lesson, you learn about enhanced `for` loops and explore their functionality. You identify the differences, advantages, and disadvantages of using an enhanced `for` loop to traverse an array. You then use an enhanced `for` loop to calculate the sum or average of the elements in a 1D array."
       },
       "seeding_key": {
@@ -177,6 +178,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I define data that does not change or that all objects of a class share?**\n\nStudents learn about static variables and constants and identify scenarios where these types of variables would be useful. Students differentiate between static variables and instance variables as they explore their functionality. Students practice using static variables and constants in program code, including implementing an algorithm to determine the number of elements meeting specific criteria.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-6-static-variables-and-constants/36379/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I define data that does not change or that all objects of a class share?**\n\nYou have used variables to store values and represent attributes for an object. In this lesson, you learn about static variables and constants and identify scenarios where these types of variables would be useful. You differentiate between static variables and instance variables as you explore their functionality. You practice using static variables and constants in program code, including implementing an algorithm to determine the number of elements meeting specific criteria."
       },
       "seeding_key": {
@@ -194,7 +196,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I create and use arrays of different objects?**\n\nStudents explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.",
-        "preparation": "* Print copies of the Investigating Polymorphism handout (one for each pair of students)",
+        "preparation": "* Print copies of the Investigating Polymorphism handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-7-polymorphism/36378/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create and use arrays of different objects?**\n\nYou have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods."
       },
       "seeding_key": {
@@ -212,6 +214,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How do I plan and implement algorithms to find the minimum and maximum values in a 1D array?**\n\nStudents explore the `File` class and use the `Scanner` class to read data from a file into a 1D array. In the process, students revisit the `ArrayIndexOutOfBoundsException` to identify debugging strategies to resolve off-by-one errors. Using data from a file, students develop algorithms to find the minimum and maximum values in a 1D array. Students plan their algorithms to identify the steps to solve the problem and write pseudocode to outline these steps.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-8-more-array-algorithms/36377/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I plan and implement algorithms to find the minimum and maximum values in a 1D array?**\n\nYou have used the `Scanner` class to obtain user input from the console. You can also use the `Scanner` class to read data from a file. In this lesson, you explore the `File` class and use the `Scanner` class to read data from a file into a 1D array. In the process, you revisit the `ArrayIndexOutOfBoundsException` to identify debugging strategies to resolve off-by-one errors. Using data from a file, you develop algorithms to find the minimum and maximum values in a 1D array. You plan your algorithms to identify the steps to solve the problem and write pseudocode to outline these steps."
       },
       "seeding_key": {
@@ -229,7 +232,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How would I reverse the elements in a 1D array?**\n\nStudents develop an algorithm to reverse elements in a 1D array. Students plan their algorithms using manipulatives to identify the steps to solve the problem and write pseudocode to outline these steps.",
-        "preparation": "* Print copies of the Reversing an Array handout (one for each pair of students)\n* (Optional) Cut out the Reversing an Array manipulatives\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Reversing an Array handout (one for each pair of students)\n* (Optional) Cut out the Reversing an Array manipulatives\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-9-reversing-arrays/36376/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How would I reverse the elements in a 1D array?**\n\nIn this lesson, you develop an algorithm to reverse elements in a 1D array. You plan your algorithm using manipulatives to identify the steps to solve the problem and write pseudocode to outline these steps."
       },
       "seeding_key": {
@@ -247,7 +250,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nStudents learn about nested loops and practice tracing these to explore their functionality. Using nested loops, students develop an algorithm to determine whether there are duplicate elements in a 1D array. Students plan their algorithms using manipulatives to identify the steps to solve the problem and write pseudocode before implementing them in Java.",
-        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 3 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Tracing Nested Loops handout (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* (Optional) Cut out the Finding Duplicates manipulatives\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-10-finding-duplicates/36375/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How would I check whether a 1D array contained duplicate elements?**\n\nSometimes software engineers need to repeat an action on data to solve more complex problems. In this lesson, you learn about nested loops and practice tracing these to explore their functionality. Using nested loops, you develop an algorithm to determine whether there are duplicate elements in a 1D array. You plan your algorithm using manipulatives to identify the steps to solve the problem and write pseudocode before implementing it in Java."
       },
       "seeding_key": {
@@ -265,7 +268,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from a text file for a topic that they are interested in or meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Data for Social Good Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from a text file for a topic that you are interested in or meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
@@ -283,7 +286,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents identified the data for their topic of interest and read this data into a 1D array. Students continue to develop their projects using their data to implement standard algorithms to analyze the data. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now identified the data for your topic of interest and read this data into a 1D array. You continue to develop your project using your data to implement standard algorithms to analyze the data. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -302,7 +305,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -320,7 +323,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student",
+        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-frq-practice/36373/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -339,7 +342,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-assessment/36372/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 3 Assessment."
       },
       "seeding_key": {
@@ -6275,6 +6278,18 @@
       }
     },
     {
+      "name": "Adding Values to a 1D Array",
+      "url": "https://youtu.be/bL4BAs9Kfx8",
+      "key": "adding_values_to_a_1d_array",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa3-2022/resources",
       "key": "all_resources_5",
@@ -6356,6 +6371,18 @@
       }
     },
     {
+      "name": "Enhanced For Loops",
+      "url": "https://youtu.be/b3Uf7anzr-k",
+      "key": "enhanced_for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
       "name": "Exploring 1D Arrays",
       "url": "https://docs.google.com/document/d/1pBmknAxqIIgeUwAKnrA0hd_hSAmLtNpok0tw4haJr64/edit?usp=sharing",
       "key": "exploring_1d_arrays",
@@ -6392,6 +6419,18 @@
       }
     },
     {
+      "name": "For Loops",
+      "url": "https://youtu.be/EF3laugNVCI",
+      "key": "for_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
+      }
+    },
+    {
       "name": "Investigating Arrays",
       "url": "https://docs.google.com/document/d/1TW9_w91zbkJ_G0W89pIEQI89hK_bQwH8C8sXvFG4mn4/edit?usp=sharing",
       "key": "investigating_arrays",
@@ -6416,6 +6455,18 @@
       }
     },
     {
+      "name": "One-Dimensional (1D) Arrays",
+      "url": "https://youtu.be/MgRMA_qZxZ4",
+      "key": "one-dimensional_1d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
       "name": "Reversing an Array",
       "url": "https://docs.google.com/document/d/1lCQIZL9RViguXifp2Sxh4wNxOO6hM02sdw8jl8r_vl4/edit?usp=sharing",
       "key": "reversing_an_array",
@@ -6425,6 +6476,18 @@
       },
       "seeding_key": {
         "resource.key": "reversing_an_array"
+      }
+    },
+    {
+      "name": "Static Variables",
+      "url": "https://youtu.be/4dffzoEfufA",
+      "key": "static_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables"
       }
     },
     {
@@ -6864,6 +6927,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "one-dimensional_1d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u3l1_extra_practice"
       }
     },
@@ -6894,6 +6963,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "adding_values_to_a_1d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "investigating_arrays"
       }
     },
@@ -6919,6 +6994,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u3l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "for_loops"
       }
     },
     {
@@ -6996,6 +7077,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u3l5_extra_practice"
       }
     },
@@ -7009,6 +7096,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_variables"
       }
     },
     {

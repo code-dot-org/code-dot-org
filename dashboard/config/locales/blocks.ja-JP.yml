@@ -1253,6 +1253,12 @@ ja:
             '90': 下 に
             '180': 左 に
             '270': 上 に
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': 小
+            '50': 普通
+            '100': 大
       gamelab_mirrorSprite:
         text: "{SPRITE} が {DIRECTION} に面している"
         options:

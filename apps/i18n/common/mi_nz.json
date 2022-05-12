@@ -255,6 +255,7 @@
   "participantTypeTeacherTitle": "Ngā Pouako",
   "password": "Kupuhipa",
   "passwordConfirmation": "Whakaū kupuhipa",
+  "petitionMessage": "E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao rorohiko",
   "play": "tākaro",
   "playzoneArtistDescription": "Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!",
   "playzoneArtistTitle": "Tānga Hou",
@@ -417,5 +418,6 @@
   "when": "ina",
   "whenRun": "ina whakahaerehia",
   "workspaceHeaderShort": "Papamahi: ",
-  "yes": "Āe"
+  "yes": "Āe",
+  "zipOrCountry": "ZIP rohenga, Whenua rānei"
 }

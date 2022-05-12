@@ -1069,6 +1069,12 @@
             '90': ned
             '180': venstre
             '270': opp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': middels
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:

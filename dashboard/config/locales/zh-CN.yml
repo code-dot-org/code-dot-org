@@ -680,6 +680,10 @@ zh-CN:
       title: 舞蹈派对
     dance-2019:
       title: 舞蹈派对
+    hello-world:
+      title: 你好世界
+    poem-art:
+      title: 诗歌艺术
     hoc:
       title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
@@ -844,14 +848,6 @@ zh-CN:
     reminder_desc_markdown: 我们更新了[服务条款](%{tos_url})和[隐私政策](%{privacy_url})。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，学生可能不能使用
       JavaScript 工具。
     review_terms: 查看更新后的条款
-  donor_interstitial:
-    title: 你的免费计算机科学课程是由...创造的。
-    subtitle: 我们想向能使 Code.org 成功的捐赠人表示感谢。我们下决心要使 Code.org 向所有地区的学校和学生免费开放，感谢您[donors]的（%{donors_url}）！
-    local_supporters: 地区支持者
-    global_supporters: 全球支持者
-    support_codeorg_1: 您所给予 Code.org 的每一元给予了更多学生机会。
-    support_codeorg_2: "[现在捐赠](%{donate_url})以支持 Code.org 。"
-    get_started: '开始使用 Code.org '
   school_info_interstitial:
     title: 我们想将计算机科学带给每一个学生——帮助我们记录进度！
     message: 请在下方输入您的学校信息。

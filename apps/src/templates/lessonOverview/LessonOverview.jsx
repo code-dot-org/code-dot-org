@@ -26,6 +26,7 @@ import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import FontAwesome from '../FontAwesome';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -170,7 +171,6 @@ class LessonOverview extends Component {
           })}
         </h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
-
         <div style={styles.frontPage}>
           <div style={styles.left}>
             {lesson.overview && (
@@ -314,11 +314,11 @@ class LessonOverview extends Component {
             )}
           </div>
         </div>
-
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}
+        <CopyrightInfo />
       </div>
     );
   }

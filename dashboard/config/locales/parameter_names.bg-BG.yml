@@ -17,6 +17,8 @@ bg:
       nectars: нектар
       numOctagons: бройОсмоъгълници
       points: точки
+      radius: радиус
+      sides: страни
       size: размер
       speed: скорост
       theGuess: предположението

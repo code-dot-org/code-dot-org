@@ -96,3 +96,7 @@ export default function currentUser(state = initialState, action) {
 
   return state;
 }
+
+export const isSignedIn = currentUserState => {
+  return currentUserState.signInState === SignInState.SignedIn;
+};

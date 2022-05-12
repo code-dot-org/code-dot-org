@@ -1204,6 +1204,12 @@ is:
             '90': niður
             '180': vinstri
             '270': upp
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': miðlungs
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:

@@ -627,6 +627,10 @@
           "word": "조건",
           "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
+        "pseudocode/coursed/2021": {
+          "word": "유사 부호",
+          "definition": "알고리즘 내 단계에 대한 간단한 설명"
+        },
         "condition/coursed/2021": {
           "word": "조건",
           "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
@@ -675,6 +679,9 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "code/express/2021": {
+          "definition": "코드 작성, 또는 컴퓨터에게 내릴 지시사항 작성."
+        },
         "loop/express/2021": {
           "word": "루프",
           "definition": "뭔가를 계속 다시 하는 동작."
@@ -712,6 +719,7 @@
           "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
         },
         "prompt/express/2021": {
+          "word": "프롬프트",
           "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
         },
         "for_loop/express/2021": {
@@ -789,6 +797,10 @@
         "behavior/coursee/2021": {
           "word": "행동",
           "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
+        },
+        "algorithm/coursee/2021": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록"
         },
         "sprite/coursee/2021": {
           "word": "스프라이트",

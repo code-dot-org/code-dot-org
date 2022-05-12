@@ -5,8 +5,45 @@
         "dance-extras/Dance Party - Go Further": {
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
         },
+        "flappy/Flappy Code": {
+          "name": "Flappy κώδικα"
+        },
+        "hourofcode/Maze": {
+          "name": "Λαβύρινθος"
+        },
+        "frozen/Artist": {
+          "name": "Γράψτε Κώδικα με την Άννα και την Έλσα"
+        },
+        "iceage/Ice Age Play Lab": {
+          "name": "Play Lab Εποχής των Παγετώνων"
+        },
+        "artist/Artist": {
+          "name": "Καλλιτέχνης"
+        },
+        "gumball/Gumball Play Lab": {
+          "name": "Play Lab Τσιχλόμπαλα"
+        },
         "dance/Dance Party": {
+          "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Υδάτινο Ταξίδι"
+        },
+        "hoc-encryption/Simple Encryption": {
+          "name": "Απλή Κρυπτογράφηση"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "Η Ώρα του Κώδικα με το Minecraft"
+        },
+        "playlab/Play Lab": {
+          "name": "Εργαστήριο Παιχνιδιού"
+        },
+        "text-compression/Text Compression": {
+          "name": "Συμπίεση κειμένου"
+        },
+        "infinity/Infinity": {
+          "name": "Disney Εργαστήριο Άπειρου Παιχνιδιού"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
@@ -14,11 +51,673 @@
         "dance-2019/Dance Party": {
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
         },
+        "courseb-2018/Move It, Move It": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Μη εντοπισμένα bugs"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "coursed-2018/Loops in Ice Age": {
+          "name": "Βρόχοι στην Εποχή των Παγετώνων"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Ψηφιακή υπηκοότητα"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Δυαδικές Εικόνες"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Μεταβλητές"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Μεταβλητές"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Δυαδικές Εικόνες"
+        },
+        "express-2018/Internet": {
+          "name": "Το Διαδίκτυο"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "coursee-2018/Internet": {
+          "name": "Το Διαδίκτυο"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Μη εντοπισμένα bugs"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Η μέλισσα της ορθογραφίας"
+        },
+        "csd3-2018/Variables": {
+          "name": "Μεταβλητές"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Χαρακτήρας"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Ταχύτητα"
+        },
+        "csd3-2018/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Συναρτήσεις με παραμέτρους"
+        },
+        "csd2-2018/Lists": {
+          "name": "Λίστες"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "Βρόχοι στην Εποχή των Παγετώνων"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Δυαδικές Εικόνες"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Ψηφιακή υπηκοότητα"
+        },
+        "coursed-2019/Dance Party": {
+          "name": "Πάρτι Χορού"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Μεταβλητές"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "coursef-2019/Internet": {
+          "name": "Το Διαδίκτυο"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "express-2019/Dance Party": {
+          "name": "Πάρτι Χορού"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Η μέλισσα της ορθογραφίας"
+        },
+        "csd3-2019/Variables": {
+          "name": "Μεταβλητές"
+        },
+        "csd3-2019/Sprites": {
+          "name": "Χαρακτήρας"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "csd3-2019/Velocity": {
+          "name": "Ταχύτητα"
+        },
+        "csd3-2019/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Συναρτήσεις με παραμέτρους"
+        },
+        "csd2-2019/Lists": {
+          "name": "Λίστες"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Αλγόριθμοι: Tangram"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Η μέλισσα της ορθογραφίας"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Φωλιασμένες Επαναλήψεις"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Φωλιασμένες Επαναλήψεις"
+        },
+        "express-2017/Introduction": {
+          "name": "Εισαγωγή"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Φωλιασμένες Επαναλήψεις"
+        },
+        "csd3-2017/Variables": {
+          "name": "Μεταβλητές"
+        },
+        "csd3-2017/Sprites": {
+          "name": "Χαρακτήρας"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "csd3-2017/Velocity": {
+          "name": "Ταχύτητα"
+        },
+        "csd3-2017/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Συναρτήσεις με παραμέτρους"
+        },
+        "csd2-2017/Lists": {
+          "name": "Λίστες"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Εκτός Σύνδεσης: Tangram"
+        },
+        "course4/Maze and Bee": {
+          "name": "Λαβύρινθος και Μέλισσα"
+        },
+        "course4/Artist": {
+          "name": "Καλλιτέχνης"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Εκτός Σύνδεσης: Malibs"
+        },
+        "course4/Artist: Variables": {
+          "name": "Καλλιτέχνης: Μεταβλητές"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Εργαστήριο Παιχνιδιού: Μεταβλητές"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Μέλισσα: Βρόχοι Για"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Καλλιτέχνης: Βρόχοι Για"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Εργαστήριο Παιχνιδιού: Βρόχοι Για"
+        },
+        "course4/Artist: Functions": {
+          "name": "Καλλιτέχνης: Συναρτήσεις"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Καλλιτέχνης: Συναρτήσεις με Παραμέτρους"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Εργαστήριο Παιχνιδιού: Συναρτήσεις με Παραμέτρους"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Μέλισσα: Συναρτήσεις με Παραμέτρους"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Εκτός Σύνδεσης: Δυαδικοί"
+        },
+        "course4/Artist Binary": {
+          "name": "Δυαδικοί Καλλιτέχνη"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Σούπερ πρόκληση - μεταβλητές"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Σούπερ πρόκληση - για βρόχους"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Σούπερ πρόκληση - λειτουργίες και παραμέτρους"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ακραία πρόκληση - ολοκληρωμένη"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Λαβύρινθος: Ακολουθία"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Καλλιτέχνης: Ακολουθία"
+        },
+        "course2/Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "course2/Maze: Loops": {
+          "name": "Λαβύρινθος: Επαναλήψεις"
+        },
+        "course2/Artist: Loops": {
+          "name": "Καλλιτέχνης: Επαναλήψεις"
+        },
+        "course2/Bee: Loops": {
+          "name": "Μέλισσα: Επαναλήψεις"
+        },
+        "course2/Relay programming": {
+          "name": "Προγραμματισμός με αναμετάδοση"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Μέλισσα: Επαναλήψεις"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Καλλιτέχνης: Εκσφαλμάτωση"
+        },
+        "course2/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Μέλισσα: Συνθήκες"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "course2/The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "course2/Flappy": {
+          "name": "Πουλάκι"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+        },
+        "course3/Computational Thinking": {
+          "name": "Αλγοριθμική Σκέψη"
+        },
+        "course3/Maze": {
+          "name": "Λαβύρινθος"
+        },
+        "course3/Artist": {
+          "name": "Καλλιτέχνης"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Λειτουργικές Ηλιοκυνηγοί"
+        },
+        "course3/Artist: Functions": {
+          "name": "Καλλιτέχνης: Συναρτήσεις"
+        },
+        "course3/Bee: Functions": {
+          "name": "Λειτουργίες μέλισσας"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Μέλισσα: Συνθήκες"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Λαβύρινθος: Συνθήκες"
+        },
+        "course3/Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "course3/Dice Race": {
+          "name": "Αγώνας ζαριών"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Καλλιτέχνης: Εμφωλευμένες επαναλήψεις"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Αγρότης: Βρόχοι όσο"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Μέλισσα: Εμφωλευμένοι βρόχοι"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Μέλισσα: Επαναλήψεις"
+        },
+        "course3/Bounce": {
+          "name": "Αναπήδηση"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι"
+        },
+        "course3/Internet": {
+          "name": "Διαδίκτυο"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Ψηφιακή υπηκοότητα"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Καλλιτέχνης: Σχέδια"
+        },
+        "course1/Happy Maps": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "course1/Move it, Move it": {
+          "name": "Κούνισέ το, Κούνισέ το"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Παζλ: Μάθε την μεταφορά και απόθεση"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Λαβύρινθος: Ακολουθία"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Λαβύρινθο: εντοπισμός σφαλμάτων"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Μέλισσα: Ακολουθία"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Καλλιτέχνης: Ακολουθία"
+        },
+        "course1/Building a Foundation": {
+          "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Καλλιτέχνης: Σχήματα"
+        },
+        "course1/Spelling Bee": {
+          "name": "Η μέλισσα της ορθογραφίας"
+        },
+        "course1/Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "course1/Maze: Loops": {
+          "name": "Λαβύρινθος: Επαναλήψεις"
+        },
+        "course1/Bee: Loops": {
+          "name": "Μέλισσα: Επαναλήψεις"
+        },
+        "course1/The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου"
+        },
+        "course1/Going Places Safely": {
+          "name": "Πηγαίνοντας σε Μέρη με Ασφάλεια"
+        },
+        "course1/Artist: Loops": {
+          "name": "Καλλιτέχνης: Επαναλήψεις"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Παζλ"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "Χαρακτήρες σε Δράση"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "coursef-2021/lesson-5": {
+          "name": "Έξαρση"
+        },
+        "coursef-2021/Internet": {
+          "name": "Το Διαδίκτυο"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
         "coursed-2021/Dance Party": {
+          "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
         },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "Βρόχοι στην Εποχή των Παγετώνων"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "express-2021/lesson-3": {
+          "name": "Χαρακτήρες σε Δράση"
+        },
         "express-2021/lesson-1": {
+          "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "Συναρτήσεις με παραμέτρους"
+        },
+        "csd3-2021/Variables": {
+          "name": "Μεταβλητές"
+        },
+        "csd3-2021/Random Numbers": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Χαρακτήρας"
+        },
+        "csd3-2021/Sprite Properties": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "csd3-2021/Text": {
+          "name": "κείμενο"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Συνθήκες"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Ταχύτητα"
+        },
+        "csd3-2021/Functions": {
+          "name": "Συναρτήσεις"
+        },
+        "express-2020/Dance Party": {
+          "name": "Πάρτι Χορού"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Πάρτι Χορού"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Βρόχοι στην Εποχή των Παγετώνων"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Δυαδικές Εικόνες"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Σύνθεση τραγουδιού"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Μεταβλητές"
+        },
+        "coursef-2020/Internet": {
+          "name": "Το Διαδίκτυο"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Διασκέδαση με το Βρόχο Για"
         }
       }
     }

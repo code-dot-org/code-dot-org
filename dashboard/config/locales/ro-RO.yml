@@ -814,6 +814,10 @@ ro:
       title: Petrecere dansantă
     dance-2019:
       title: Petrecere dansantă
+    hello-world:
+      title: Bună Lume
+    poem-art:
+      title: Arta Poeziei
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -1033,17 +1037,6 @@ ro:
       noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
-  donor_interstitial:
-    title: Cursurile tale gratuite de Informatică au fost posibile de către...
-    subtitle: Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil
-      succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți,
-      în general, datorită generozității continue a [donors](%{donors_url}) noștri!
-    local_supporters: Suporteri Locali
-    global_supporters: Suporteri Globali
-    support_codeorg_1: Fiecare dolar donat la Code.org aduce oportunități mai multor
-      studenți.
-    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
-    get_started: Începe pe Code.org.
   school_info_interstitial:
     title: Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne
       putea urmări progresul!

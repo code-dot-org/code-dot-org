@@ -5482,7 +5482,6 @@ zh-TW:
               description_teacher: 從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
-              description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             'Events: The Big Event':
               name: 事件：大事件
               description_teacher: 事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。
@@ -19677,6 +19676,8 @@ zh-TW:
           lessons:
             lesson-1:
               name: 測試CSA克隆
+            lesson-3:
+              name: 第 3 課
           name: tesstest921
         hello-world-animals:
           lessons:
@@ -20876,6 +20877,8 @@ zh-TW:
             'Lesson 18: Assessment Day':
               key: 課堂 18：評估日
               name: 評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
           lesson_groups:
             csp_lists:
               display_name: 清單
@@ -20885,6 +20888,8 @@ zh-TW:
               display_name: 尋訪
             csp_project:
               display_name: 專案
+            lessonGroup-5:
+              display_name: 課後調查
         courseb-2022:
           lessons:
             Digital Trails:
@@ -21161,9 +21166,13 @@ zh-TW:
             'Lesson 6: Assessment Day':
               key: 課堂 6：評估日
               name: 評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
           lesson_groups:
             csp_unit6_2020:
               display_name: 單元 6：演算法
+            lessonGroup-2:
+              display_name: 課後調查
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -21206,7 +21215,7 @@ zh-TW:
             csp_libraries:
               display_name: 程式庫
             lessonGroup-3:
-              display_name: 問卷
+              display_name: 課後調查
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -21217,6 +21226,13 @@ zh-TW:
               key: 建立 PT - 制定計畫
             Create PT - Complete the Task:
               key: 建立 PT - 完成任務
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 建立 PT
+            lessonGroup-3:
+              display_name: 課後調查
         csp9-2022:
           lessons:
             Exploring One Column:
@@ -21248,9 +21264,13 @@ zh-TW:
             'Lesson 9: Assessment Day':
               key: 課堂 9：評估日
               name: 評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
           lesson_groups:
             csp_unit9_2020:
               display_name: 單元 9：資料
+            lessonGroup-2:
+              display_name: 課後調查
         csp10-2022:
           lessons:
             Data Policies and Privacy:
@@ -21296,9 +21316,13 @@ zh-TW:
             'Lesson 14: Unit Assessment Day':
               key: 課堂 14：單元評估日
               name: 評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
           lesson_groups:
             csp_unit10_2020:
               display_name: 單元 10：網路安全與全球影響
+            lessonGroup-2:
+              display_name: 課後調查
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -21728,6 +21752,8 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 沙盒
+            lessonGroup-5:
+              display_name: 問卷
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -21812,8 +21838,6 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
-            lessonGroup-4:
-              display_name: 沙盒
         csa3-2022:
           lessons:
             lesson-3:
@@ -21845,8 +21869,6 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
-            lessonGroup-4:
-              display_name: 沙盒
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -22180,7 +22202,7 @@ zh-TW:
             lessonGroup-2:
               display_name: 內容
             lessonGroup-5:
-              display_name: 沙盒
+              display_name: 問卷
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-1:
@@ -22882,6 +22904,8 @@ zh-TW:
             Keeping Data Secret:
               name: 讓資料保密
               key: 讓資料保密
+            Create a Representation:
+              name: 專案 - 創建標記法
             Problem Solving and Data:
               name: 問題解決與數據
               key: 問題解決與數據
@@ -22981,3 +23005,123 @@ zh-TW:
           student_description: 本單元包含一個調查問卷，待完成《電腦科學探索》所有單元後進行填寫。教師將告訴你何時填寫該調查問卷。
         csp-post-survey-2022:
           title: 電腦科學原理課後問卷調查
+        aiml-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
+            Survey Planning:
+              name: 設計數據收集
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: 模組 1
+              key: 模組 1
+            Module 2:
+              name: 模組 2
+              key: 模組 2
+            Module 3:
+              name: 模組 3
+              key: 模組 3
+            Module 4:
+              name: 模組 4
+              key: 模組 4
+            Module 5:
+              name: 模組 5
+              key: 模組 5
+            Module 6:
+              name: 模組 6
+              key: 模組 6
+            Module 7:
+              name: 模組 7
+              key: 模組 7
+            Module 8:
+              name: 模組 8
+              key: 模組 8
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: 模組 1
+              key: 模組 1
+            Module 2:
+              name: 模組 2
+              key: 模組 2
+            Module 3:
+              name: 模組 3
+              key: 模組 3
+            Module 4:
+              name: 模組 4
+              key: 模組 4
+            Module 5:
+              key: 模組 5
+            Module 6:
+              key: 模組 6
+            Module 7:
+              key: 模組 7
+            Module 8:
+              key: 模組 8
+        self-paced-pl-csd1-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 歡迎
+        self-paced-pl-csd2-2022:
+          lessons:
+            lesson-4:
+              key: 第4課
+            lesson-3:
+              key: 第3課
+            lesson-8:
+              key: 第8課
+        self-paced-pl-csd3-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+        self-paced-pl-csd4-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+        self-paced-pl-csp1-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+        self-paced-pl-csp2-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+        self-paced-pl-csp3-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+        self-paced-pl-csp4-2022:
+          lessons:
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課

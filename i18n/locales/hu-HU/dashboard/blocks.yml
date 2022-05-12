@@ -1227,6 +1227,12 @@ hu:
             '90': le
             '180': balra
             '270': fel
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kicsi
+            '50': közepes
+            '100': nagy
       gamelab_mirrorSprite:
         text: "{SPRITE} fordul {DIRECTION}"
         options:

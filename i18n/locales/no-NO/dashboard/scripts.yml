@@ -3887,10 +3887,6 @@
               display_name: Løkker
             csf_events:
               display_name: Hendelser
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Undersøkelse
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -3960,6 +3956,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+            lessonGroup-5:
+              display_name: Undersøkelse
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -4036,6 +4034,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+            lessonGroup-5:
+              display_name: Undersøkelse
         csa2-2022-exemplars:
           lessons:
             lesson-1:

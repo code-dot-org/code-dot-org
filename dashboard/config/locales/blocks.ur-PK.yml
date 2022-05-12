@@ -1232,6 +1232,12 @@ ur:
             '90': نیچے
             '180': بائیں
             '270': اوپر
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': چھوٹا
+            '50': متوسط
+            '100': بڑا
       gamelab_mirrorSprite:
         text: "{SPRITE} چہرہ {DIRECTION}"
         options:

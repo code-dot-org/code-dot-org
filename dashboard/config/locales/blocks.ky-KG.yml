@@ -318,6 +318,12 @@ ky:
             '90': ылдый
             '180': солго
             '270': өйдө
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': орто
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

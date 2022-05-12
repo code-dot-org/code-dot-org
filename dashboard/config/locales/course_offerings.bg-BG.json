@@ -2,6 +2,12 @@
   "bg-BG": {
     "data": {
       "course_offerings": {
+        "coursea": "Курс A",
+        "courseb": "Курс B",
+        "coursec": "Курс C",
+        "coursed": "Курс D",
+        "coursee": "Курс E",
+        "coursef": "Курс F",
         "csp": "AP ® Принципи на компютърните науки",
         "csa": "Компютърни Науки",
         "20-hour": "20-часов въвеждащ курс",
