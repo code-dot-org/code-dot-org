@@ -1,0 +1,205 @@
+	.clearfix {
+		clear: both;
+	}
+
+	figure {
+		margin: unset;
+		padding: unset;
+	}
+
+	p.tiny {
+		font-size: 13px;
+	}
+
+	button {
+		height: unset;
+		border: unset;
+	}
+
+	section {
+		margin: 2em 0 6em;
+	}
+
+	/* Top section */
+	section.top img {
+		  width: 125px;
+			display: block;
+			margin: 4em auto 0;
+	}
+		figure.csa-highlights {
+			margin-top: 4em;
+			display: flex;
+			justify-content: flex-start;
+  		align-items: center;
+			flex-wrap: wrap;
+		}
+			figure.csa-highlights > div:first-child{
+				width: 400px;
+				height: 300px;
+				background: grey;
+			}
+				figure.csa-highlights ul {
+					margin: 0 0 0 4em;
+				}
+					figure.csa-highlights ul li {
+						margin-bottom: 1.5em;
+						font-size: 16px;
+						font-family: 'Gotham 5r', sans-serif;
+						text-indent: 0;
+					}
+						figure.csa-highlights ul li::before {
+							content: '';
+						}
+							figure.csa-highlights ul li:last-child {
+								margin-bottom: 0;
+							}
+
+	/* reimagine CS */
+	section.reimagine-cs h3 {
+		margin-top: 3em;
+	}
+		section.reimagine-cs ul:nth-of-type(1) {
+			max-width: 380px;
+		}
+			section.reimagine-cs ul li {
+				margin-bottom: 1.5em;
+				font-size: 16px;
+			}
+				section.reimagine-cs ul li::before {
+					content: "✔";
+					color: #B9BF15;
+					display: inline-block;
+					margin-right: 8px;
+				}
+
+	/* At a Glance */
+	aside.at-a-glance {
+		border: 2px solid #7665A0;
+		padding: 0 0 2em;
+		border-radius: 8px;
+		margin: -2em auto -4.1em;
+	}
+		aside.at-a-glance h2 {
+			margin: -.01em 0 1.25em;
+			padding: .75em;
+			color: white;
+			text-align: center;
+			font-size: 1.35em;
+			background: #7665A0;
+			border-radius: 6px 6px 0 0;
+		}
+			aside.at-a-glance h3 {
+				font-size: 1em;
+				margin: 1em 0 0.5em;
+				border-bottom: 1px solid #EBE8F1;
+				padding-bottom: 4px;
+			}
+				aside.at-a-glance p {
+					font-size: 18px;
+					font-family: 'Gotham 7r', sans-serif;
+					margin: 0;
+				}
+					aside.at-a-glance ul {
+						display: flex;
+						justify-content: space-between;
+						align-content: flex-start;
+						flex-direction: row;
+						padding: 0 2em;
+					}
+						aside.at-a-glance ul li {
+							padding: 0;
+							text-indent: 0;
+							max-width: 170px;
+						}
+							aside.at-a-glance ul li:last-child {
+								border: 0;
+								padding: 0;
+							}
+								aside.at-a-glance ul li:before {
+									display: none;
+								}
+
+	/* CTA View Curriculum */
+	section.cta {
+		text-align: center;
+	}
+		section.cta button {
+			margin-bottom: 1.5em;
+			border: 4px solid white;
+			border-radius: 8px;
+		}
+			section.cta p {
+				font-size: 13px;
+			}
+
+		/* Amazon Future Engineer */
+		.afe {
+			text-align: center;
+			max-width: 600px;
+			margin: 2em auto 0;
+		}
+
+	/* CTA Professional Learning */
+	section.cta-pl {
+		text-align: center;
+		background: #D9F3F5;
+		padding: 4.5em 4em;
+		border-radius: 8px;
+	}
+		section.cta-pl h2 {
+			margin: 0 auto 1em;
+			font-size: 2em;
+		}
+
+	/* Stat callout*/
+	aside.stat {
+		text-align: center;
+		margin-right: 6em;
+		padding: 3em 1.5em 2.5em;
+	}
+		aside.stat h1 {
+			color: #B9BF15;
+			margin: 0 0 16px;
+			font-size: 3.5em;
+		}
+			aside.stat h1::before {
+				content: url('/images/csa/up-arrow.svg');
+				margin-right: 12px;
+			}
+
+	.testimonials h2{
+		color: #5b6770;
+	}
+
+	/* Email form */
+	section.email-form {
+		background: #F2F2F2;
+		text-align: center;
+		border-radius: 8px;
+		padding: 4em 2em 2em;
+	}
+		section.email-form h2 {
+			color: #7665A0;
+			font-size: 2em;
+			margin: 0 auto .5em;
+		}
+			section.email-form iframe {
+				margin-top: 2em;
+			}
+				section.email-form img {
+					max-width: 450px;
+					margin: 12vh 4vw;
+				}
+
+	/* FAQ dropdowns */
+	details {
+		margin-bottom: 1em;
+	}
+		details p {
+			padding-left: 1em;
+			margin-top: .25em;
+		}
+			summary {
+				font-size: 16px;
+				font-family: 'Gotham 5r', sans-serif;
+			}
