@@ -623,7 +623,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
+      <div style={this.props.style}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
