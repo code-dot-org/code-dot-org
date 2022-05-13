@@ -128,7 +128,6 @@ section.cta-curriculum {
 }
   .cta-button-wrapper {
     margin-top: -4.15em;
-    display: none;/* ---> hide until we get the link */
   }
     .cta-button-wrapper button {
       margin-bottom: 1.5em;
