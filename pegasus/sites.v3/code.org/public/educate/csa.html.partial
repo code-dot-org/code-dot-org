@@ -89,7 +89,6 @@ style_min: true
 
 
 <section class="cta-curriculum">
-  <!-- Hide this until we get the link -->
   <div class="cta-button-wrapper">
     <a href="https://studio.code.org/courses/csa-2022"><button>Check out the curriculum</button></a>
     <p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>.</p>
