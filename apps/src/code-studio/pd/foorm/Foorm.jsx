@@ -43,7 +43,7 @@ export default class Foorm extends React.Component {
       root: 'sv_q_rating foorm-adjust-rating'
     },
     navigation: {
-      prev: 'sv_prev_button foorm-button',
+      prev: 'sv_prev_button foorm-button foorm-button-left',
       next: 'sv_next_button foorm-button foorm-button-right',
       complete: 'sv_complete_btn foorm-button'
     },
