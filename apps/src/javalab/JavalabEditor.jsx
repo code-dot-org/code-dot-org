@@ -811,12 +811,14 @@ class JavalabEditor extends React.Component {
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
         />
-        <VersionHistoryWithCommitsDialog
-          handleClearPuzzle={handleClearPuzzle}
-          isProjectTemplateLevel={isProjectTemplateLevel}
-          onClose={() => this.setState({openDialog: null})}
-          isOpen={openDialog === Dialog.VERSION_HISTORY}
-        />
+        {openDialog === Dialog.VERSION_HISTORY && (
+          <VersionHistoryWithCommitsDialog
+            handleClearPuzzle={handleClearPuzzle}
+            isProjectTemplateLevel={isProjectTemplateLevel}
+            onClose={() => this.setState({openDialog: null})}
+            isOpen={openDialog === Dialog.VERSION_HISTORY}
+          />
+        )}
       </div>
     );
   }
