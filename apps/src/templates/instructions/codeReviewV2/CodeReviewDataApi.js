@@ -62,10 +62,10 @@ export default class CodeReviewDataApi {
     let openReview = null;
     codeReviews.forEach(review => {
       review.timelineElementType = timelineElementType.review;
-      if (review.isClosed) {
-        labeledClosedReviewData.push(review);
-      } else {
+      if (review.isOpen) {
         openReview = review;
+      } else {
+        labeledClosedReviewData.push(review);
       }
     });
 
@@ -87,68 +87,19 @@ export default class CodeReviewDataApi {
   };
 
   getCodeReviews() {
-    // Enable when the API is ready
-    // return $.ajax({
-    //   url: `/code_reviews`,
-    //   type: 'GET',
-    //   data: {
-    //     channel_id: this.channelId,
-    //     level_id: this.levelId,
-    //     script_id: this.scriptId
-    //   }
-    // });
-
+    // TODO: csrf token get rid of this:
     this.getCodeReviewCommentsForProject();
 
-    // For now returning stub data
-    return [
-      {
-        id: 1,
-        createdAt: '2022-03-15T04:58:42.000Z',
-        isClosed: true,
-        projectVersion: 'asdfjkl',
-        isVersionExpired: false,
-        comments: [
-          {
-            id: 123,
-            commentText: 'Great work on this!',
-            name: 'Steve',
-            timestampString: '2022-03-31T04:58:42.000Z',
-            isResolved: false
-          },
-          {
-            id: 124,
-            commentText: 'Could you add more comments?',
-            name: 'Karen',
-            timestampString: '2022-03-31T04:58:42.000Z',
-            isResolved: false
-          }
-        ]
-      },
-      {
-        id: 2,
-        createdAt: '2022-03-31T04:58:42.000Z',
-        isClosed: false,
-        projectVersion: 'asdfjkl',
-        isVersionExpired: false,
-        comments: [
-          {
-            id: 123,
-            commentText: 'Great work on this!',
-            name: 'Steve',
-            timestampString: '2022-03-31T04:58:42.000Z',
-            isResolved: false
-          },
-          {
-            id: 124,
-            commentText: 'Could you add more comments?',
-            name: 'Karen',
-            timestampString: '2022-03-31T04:58:42.000Z',
-            isResolved: false
-          }
-        ]
+    // Enable when the API is ready
+    return $.ajax({
+      url: `/code_reviews`,
+      type: 'GET',
+      data: {
+        channelId: this.channelId,
+        levelId: this.levelId,
+        scriptId: this.scriptId
       }
-    ];
+    });
   }
 
   getCommits() {
@@ -233,8 +184,47 @@ export default class CodeReviewDataApi {
     });
   }
 
-  closeReview(review) {
+  closeReview(reviewId) {
     // TODO: call API for close review
-    return {...review, isClosed: true};
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_reviews/${reviewId}`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': this.token},
+        data: {
+          isClosed: true
+        }
+      })
+        .done(updatedCodeReview =>
+          resolve({
+            ...updatedCodeReview,
+            timelineElementType: timelineElementType.review
+          })
+        )
+        .fail(result => reject(result));
+    });
+  }
+
+  openNewCodeReview(version) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_reviews`,
+        type: 'POST',
+        headers: {'X-CSRF-Token': this.token},
+        data: {
+          channelId: this.channelId,
+          scriptId: this.scriptId,
+          levelId: this.levelId,
+          version: version
+        }
+      })
+        .done(newCodeReview =>
+          resolve({
+            ...newCodeReview,
+            timelineElementType: timelineElementType.review
+          })
+        )
+        .fail(result => reject(result));
+    });
   }
 }
