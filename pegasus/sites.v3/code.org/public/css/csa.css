@@ -17,42 +17,45 @@ section {
 }
 
 /* Top section */
-section.top img.ap-csa-endorsed-badge {
-		width: 125px;
-		display: block;
-		margin: 4em auto 0;
+section.top h3 {
+	line-height: 1.4;
+	margin-bottom: 2em;
 }
-	figure.csa-highlights {
-		margin-top: 4em;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		flex-wrap: wrap;
+	section.top img.ap-csa-endorsed-badge {
+			width: 135px;
+			display: block;
+			margin: 4em auto 2em;
 	}
-		figure.csa-highlights img{
-			max-width: 490px;
-			width: 100%;
-			border-radius: 12px;
-			border: 8px solid #EBE8F1;
+		figure.csa-highlights {
+			margin-top: 2em;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
 		}
-
-		figure.csa-highlights ul {
-			margin: 0 0 0 4em;
-		}
-			figure.csa-highlights ul li {
-				margin-bottom: 1.5em;
-				font-size: 16px;
-				font-family: 'Gotham 5r', sans-serif;
+			figure.csa-highlights img{
+				width: 100%;
+				border-radius: 12px;
+				border: 8px solid #EBE8F1;
 			}
-				figure.csa-highlights ul li::before {
-					content: "→";
-					color: #B9BF15;
-					display: inline-block;
-					margin-right: 7px;
+
+			figure.csa-highlights ul {
+				margin: 0 0 0 4em;
+			}
+				figure.csa-highlights ul li {
+					margin-bottom: 1.5em;
+					font-size: 16px;
+					font-family: 'Gotham 5r', sans-serif;
 				}
-					figure.csa-highlights ul li:last-child {
-						margin-bottom: 0;
+					figure.csa-highlights ul li::before {
+						content: "→";
+						color: #B9BF15;
+						display: inline-block;
+						margin-right: 7px;
 					}
+						figure.csa-highlights ul li:last-child {
+							margin-bottom: 0;
+						}
 
 /* Reimagine CS */
 section.reimagine-cs h3 {
@@ -125,7 +128,7 @@ section.cta-curriculum {
 }
 	.cta-button-wrapper {
 		margin-top: -4.15em;
-		/* display: none;/* ---> hide until we get the link */
+		display: none;/* ---> hide until we get the link */
 	}
 		.cta-button-wrapper button {
 			margin-bottom: 1.5em;
@@ -191,6 +194,9 @@ section.fun-info {
 					background: #CFC9DE;
 					margin: 0 16px 0 0;
 				}
+				.carousel-wrapper .pagination a:last-child {
+					margin-right: 0;
+				}
 				.carousel-wrapper .pagination a.selected {
 					background: #7665A0;
 				}
@@ -203,8 +209,9 @@ section.fun-info {
 	/* Stat callout */
 	aside.stat {
 		text-align: center;
-		padding: 3em 1.5em 2.5em;
-		border: 2px solid #E7E9AD;
+		padding: 3em 1.25em 2.5em;
+		margin-left: 6em;
+		border: 3px solid #E7E9AD;
 		border-radius: 8px;
 	}
 		aside.stat h1 {
@@ -258,16 +265,16 @@ details {
 		}
 
 /* Tablet styles */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 970px) {
 
 	/* Top section */
-	section.top h3 {
-		margin-bottom: 2em;
+	figure.csa-highlights > div:first-child {
+		float: none;
+		margin: 0 auto 3em;
+		text-align: center;
 	}
-		figure.csa-highlights > div:first-child {
-			float: none;
-			margin: 0 auto 3em;
-			text-align: center;
+		figure.csa-highlights ul {
+			margin: 0;
 		}
 
 	/* At a glace */
@@ -287,6 +294,11 @@ details {
   	margin: 3em auto;
 	}
 
+	/* Fun info */
+	.carousel-wrapper .pagination {
+		text-align: center;
+	}
+
 	/* Stat callout */
 	aside.stat {
 		margin: 6em auto 0;
@@ -297,10 +309,6 @@ details {
 /* Mobile styles */
 @media screen and (max-width: 640px) {
 
-	h1 {
-		font-size: 32px !important;
-	}
-
 	h2 {
 		font-size: 22px !important;
 	}
@@ -309,15 +317,14 @@ details {
 		padding-top: 0;
 	}
 
+	section.top h1 {
+		font-size: 32px !important;
+	}
+
 	/* CTA - Professional Learning */
 	section.cta-pl {
 		padding-left: 3em;
 		padding-right: 3em;
-	}
-
-	/* Fun info */
-	.carousel-wrapper .pagination {
-		text-align: center;
 	}
 
 	/* Email form */
