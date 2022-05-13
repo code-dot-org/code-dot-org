@@ -17,9 +17,9 @@ style_min: true
 	</figure>
 	{{ clearfix }}
 	<figure class="csa-highlights">
-		<figure class="col-50">
+		<div class="col-50">
 			<img src="/images/csa/java_lab_demo.gif" alt="Gif animation showing a Java-Lab demo" />
-		</figure>
+		</div>
 		<div class="col-50">
 			<ul>
 				<li>Culturally responsive pedagogy</li>

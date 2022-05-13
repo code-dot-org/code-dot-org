@@ -31,6 +31,7 @@ section.top img.ap-csa-endorsed-badge {
 	}
 		figure.csa-highlights img{
 			max-width: 490px;
+			width: 100%;
 			border-radius: 12px;
 			border: 8px solid #EBE8F1;
 		}
@@ -71,7 +72,7 @@ section.reimagine-cs h3 {
 				margin-right: 8px;
 			}
 
-/* At a Glance */
+/* At a glance */
 aside.at-a-glance {
 	border: 2px solid #7665A0;
 	padding: 0 0 2em;
@@ -83,7 +84,7 @@ aside.at-a-glance {
 		padding: .75em;
 		color: white;
 		text-align: center;
-		font-size: 1.35em;
+		font-size: 1.35em !important; /* override mobile h2 font-size */
 		background: #7665A0;
 		border-radius: 6px 6px 0 0;
 	}
@@ -118,7 +119,7 @@ aside.at-a-glance {
 								display: none;
 							}
 
-/* CTA - View Curriculum */
+/* CTA - View curriculum */
 section.cta-curriculum {
 	text-align: center;
 }
@@ -156,9 +157,13 @@ section.cta-pl {
 			margin: 0 auto 1.5em;
 		}
 
-/* Teacher Testimonials */
+/* Teacher testimonials */
 section.fun-info {
 	margin-bottom: 7em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 	.testimonials h2{
 		color: #7665a0;
@@ -194,23 +199,22 @@ section.fun-info {
 				display: none !important;
 			}
 
-/* Stat callout */
-aside.stat {
-	text-align: center;
-	margin-left: 6em;
-	padding: 3em 1.5em 2.5em;
-	border: 2px solid #E7E9AD;
-  border-radius: 8px;
-}
-	aside.stat h1 {
-		color: #B9BF15;
-		margin: 0 0 16px;
-		font-size: 3.5em;
+	/* Stat callout */
+	aside.stat {
+		text-align: center;
+		padding: 3em 1.5em 2.5em;
+		border: 2px solid #E7E9AD;
+		border-radius: 8px;
 	}
-		aside.stat h1::before {
-			content: url('/images/csa/up-arrow.svg');
-			margin-right: 12px;
+		aside.stat h1 {
+			color: #B9BF15;
+			margin: 0 0 16px;
+			font-size: 3.5em;
 		}
+			aside.stat h1::before {
+				content: url('/images/csa/up-arrow.svg');
+				margin-right: 12px;
+			}
 
 /* Email form */
 section.email-form {
@@ -224,13 +228,20 @@ section.email-form {
 		font-size: 2em;
 		margin: 0 auto .5em;
 	}
+
+	section.email-form .flex-container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 		section.email-form iframe {
 			margin-top: 2em;
 		}
 			section.email-form img {
-				max-width: 450px;
-				margin: 12vh 4vw;
+				max-width: 300px;
 			}
+
 
 /* FAQ dropdowns */
 details {
@@ -244,3 +255,76 @@ details {
 			font-size: 16px;
 			font-family: 'Gotham 5r', sans-serif;
 		}
+
+/* Tablet styles */
+@media screen and (max-width: 992px) {
+
+	/* Top section */
+	section.top h3 {
+		margin-bottom: 2em;
+	}
+		figure.csa-highlights > div:first-child {
+			float: none;
+			margin: 0 auto 3em;
+			text-align: center;
+		}
+
+	/* At a glace */
+	aside.at-a-glance ul {
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: center;
+	}
+		aside.at-a-glance ul li {
+			max-width: 220px;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+
+	/* Email form */
+	section.email-form img {
+  	margin: 3em auto;
+	}
+
+	/* Stat callout */
+	aside.stat {
+		margin: 6em auto 0;
+	}
+
+}
+
+/* Mobile styles */
+@media screen and (max-width: 640px) {
+
+	h1 {
+		font-size: 32px !important;
+	}
+
+	h2 {
+		font-size: 22px !important;
+	}
+
+	section {
+		padding-top: 0;
+	}
+
+	/* CTA - Professional Learning */
+	section.cta-pl {
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+	/* Fun info */
+	.carousel-wrapper .pagination {
+		text-align: center;
+	}
+
+	/* Email form */
+	section.email-form {
+		padding-bottom: 4em;
+	}
+		section.email-form iframe {
+			height: 570px;
+		}
+
+}
