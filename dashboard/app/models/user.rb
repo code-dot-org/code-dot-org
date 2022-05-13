@@ -1331,8 +1331,8 @@ class User < ApplicationRecord
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   lesson ids for that section.
   #   For students this will just be a list of lesson ids that are hidden for them.
-  def get_hidden_lesson_ids(script_name)
-    unit = Script.get_from_cache(script_name)
+  def get_hidden_lesson_ids(unit_name)
+    unit = Script.get_from_cache(unit_name)
     return [] if unit.nil?
 
     unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(script.id, true)
@@ -2158,12 +2158,12 @@ class User < ApplicationRecord
       sections.find {|section| section.script_id == script.id}
   end
 
-  def lesson_extras_enabled?(script)
-    return false unless script.lesson_extras_available?
-    return true if script.can_be_instructor?(self)
+  def lesson_extras_enabled?(unit)
+    return false unless unit.lesson_extras_available?
+    return true if unit.can_be_instructor?(self)
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.lesson_extras
+      section.script_id == unit.id && section.lesson_extras
     end
   end
 
@@ -2511,32 +2511,32 @@ class User < ApplicationRecord
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  def hidden_script_ids(sections)
+  def hidden_unit_ids(sections)
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # on the input. If hidden_lessons is true, id is expected to be a unit id and
   # we look for lessons that are hidden. If hidden_lessons is false, id is expected
-  # to be a course_id, and we look for hidden scripts.
+  # to be a course_id, and we look for hidden units.
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
+  #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
   def get_instructor_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden lessons/scripts in that section
+    # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which lessons/scripts should be hidden
+  # and determine which lessons/units should be hidden
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
-  # @return {number[]} Set of lesson/script ids that should be hidden
+  #   if we're looking for hidden units.
+  # @return {number[]} Set of lesson/unit ids that should be hidden
   def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
@@ -2547,14 +2547,14 @@ class User < ApplicationRecord
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a lesson/script
+      # if we have no sections matching this assignment, we consider a lesson/unit
       # hidden if any of our sections hides it
-      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_unit_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a lesson/script
+      # if we do have sections matching this assignment, we consider a lesson/unit
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_unit_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

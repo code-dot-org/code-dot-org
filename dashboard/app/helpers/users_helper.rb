@@ -105,7 +105,7 @@ module UsersHelper
     )
   end
 
-  # Summarize a user and their progress within a certain script.
+  # Summarize a user and their progress within a certain unit.
   # Example return value:
   # {
   #   "linesOfCode": 34,
@@ -116,10 +116,10 @@ module UsersHelper
   #     "135": {"status": "perfect", "result": 100}
   #   }
   # }
-  def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
+  def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
     user_data = {}
     if user
-      is_instructor = script.can_be_instructor?(user)
+      is_instructor = unit.can_be_instructor?(user)
 
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:lockableAuthorized] = is_instructor ? user.verified_instructor? : user.student_of_verified_instructor?
@@ -129,15 +129,15 @@ module UsersHelper
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
-    merge_script_progress(user_data, user, script, exclude_level_progress)
+    merge_script_progress(user_data, user, unit, exclude_level_progress)
 
-    if script.has_peer_reviews?
-      user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
-        summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(script))
+    if unit.has_peer_reviews?
+      user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, unit).try(:map) do |summary|
+        summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(unit))
       end
     end
 
-    user_data[:current_lesson] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:current_lesson] = user.next_unpassed_progression_level(unit)&.lesson&.id unless exclude_level_progress || unit.script_levels.empty?
 
     user_data.compact
   end
