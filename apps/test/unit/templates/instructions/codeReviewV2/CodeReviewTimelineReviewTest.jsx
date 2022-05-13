@@ -7,6 +7,8 @@ import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import sinon from 'sinon';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 const DEFAULT_REVIEW = {
   id: 1,
@@ -77,6 +79,36 @@ describe('CodeReviewTimelineReview', () => {
     const closeButton = wrapper.find('Button');
     expect(closeButton).to.have.length(1);
     expect(closeButton.props().text).to.equal(javalabMsg.closeReview());
+  });
+
+  it('calls prop closeReview when close is clicked does not display codeReviewError if successful', () => {
+    const closeReviewStub = sinon
+      .stub()
+      .callsFake((successCallback, failureCallback) => {
+        successCallback();
+      });
+    const wrapper = setUp({closeReview: closeReviewStub});
+    const closeButton = wrapper.find('Button');
+    closeButton.simulate('click');
+
+    expect(closeReviewStub).to.have.been.called;
+    wrapper.update();
+    expect(wrapper.find(CodeReviewError)).to.have.length(0);
+  });
+
+  it('calls prop closeReview when close is clicked displays codeReviewError if fails', () => {
+    const closeReviewStub = sinon
+      .stub()
+      .callsFake((successCallback, failureCallback) => {
+        failureCallback();
+      });
+    const wrapper = setUp({closeReview: closeReviewStub});
+    const closeButton = wrapper.find('Button');
+    closeButton.simulate('click');
+
+    expect(closeReviewStub).to.have.been.called;
+    wrapper.update();
+    expect(wrapper.find(CodeReviewError)).to.have.length(1);
   });
 
   it('hides the close button if the code review is closed', () => {

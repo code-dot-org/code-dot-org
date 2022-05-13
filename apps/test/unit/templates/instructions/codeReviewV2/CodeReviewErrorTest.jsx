@@ -17,7 +17,6 @@ const setUp = (overrideProps = {}) => {
 
 describe('CodeReviewError', () => {
   it('renders exclamation circle icon', () => {
-    console.log(javalabMsg);
     const wrapper = setUp();
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.length(1);
