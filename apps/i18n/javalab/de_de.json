@@ -87,6 +87,7 @@
   "runtimeError": "Bei Ihrem Code ist während der Ausführung eine Ausnahme aufgetreten. {cause}",
   "saveToBackpack": "Im Profil speichern",
   "startingPainter": "Maler starten.",
+  "submit": "Absenden",
   "timeoutWarning": "Warnung: die Ausführung deines Programms wird in 15 Sekunden gestoppt.",
   "timeout": "Dein Projekt wurde gestoppt.",
   "twoMainMethods": "Fehler: Ihr Code darf nur eine Hauptmethode haben. Wir haben mindestens zwei Klassen mit Hauptmethoden gefunden.",
