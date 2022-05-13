@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 ruby '~> 2.7'
 
+# Ruby 2.7 no longer includes some libraries by default; install
+# the ones we need here
+# see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
+gem 'e2mmap'
+gem 'thwait'
+
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
 # @see https://github.com/bundler/bundler/issues/4978
