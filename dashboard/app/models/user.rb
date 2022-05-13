@@ -1335,7 +1335,7 @@ class User < ApplicationRecord
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
-    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
+    script.can_be_instructor?(self) ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1343,9 +1343,9 @@ class User < ApplicationRecord
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
   def get_hidden_script_ids(unit_group = nil)
-    return [] if !teacher? && unit_group.nil?
+    return [] if unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
+    unit_group.can_be_instructor?(self) ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?

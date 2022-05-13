@@ -89,7 +89,9 @@ function initPage() {
     scriptData.user_id !== null,
     scriptData.is_instructor
   );
-  initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  if (scriptData.is_instructor) {
+    initializeStoreWithSections(store, scriptData.sections, scriptData.section);
+  }
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
