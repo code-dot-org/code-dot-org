@@ -4,5 +4,7 @@ import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/Peti
 export default storybook => {
   return storybook
     .storiesOf('Congrats/PetitionCallToAction', module)
-    .add('Default', () => <PetitionCallToAction />);
+    .add('Default', () => (
+      <PetitionCallToAction gaPagePath={'congrats/coursetest-2050'} />
+    ));
 };
