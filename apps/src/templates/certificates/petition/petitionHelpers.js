@@ -54,12 +54,12 @@ export const getAgeSafeData = data => {
   return data.age_i < 16 ? merge(data, safeData) : data;
 };
 
-export const professionOptions = {
-  placeholder: {text: '-', dataString: 'other'},
-  student: {text: i18n.student(), dataString: 'student'},
-  parent: {text: i18n.parent(), dataString: 'parent'},
-  educator: {text: i18n.educator(), dataString: 'educator'},
-  administrator: {text: i18n.administrator(), dataString: 'administrator'},
-  engineer: {text: i18n.softwareEngineer(), dataString: 'engineer'},
-  none: {text: i18n.noneOfTheAbove(), dataString: 'other'}
-};
+export const professionOptions = [
+  {text: '-', dataString: 'other'},
+  {text: i18n.student(), dataString: 'student'},
+  {text: i18n.parent(), dataString: 'parent'},
+  {text: i18n.educator(), dataString: 'educator'},
+  {text: i18n.administrator(), dataString: 'administrator'},
+  {text: i18n.softwareEngineer(), dataString: 'engineer'},
+  {text: i18n.noneOfTheAbove(), dataString: 'other'}
+];

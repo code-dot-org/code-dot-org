@@ -143,22 +143,11 @@ const PetitionForm = ({gaPagePath}) => {
           onChange={handleChange}
           value={data.role_s || ''}
         >
-          {[
-            'placeholder',
-            'student',
-            'parent',
-            'educator',
-            'administrator',
-            'engineer',
-            'none'
-          ].map(option => {
-            const {text} = professionOptions[option];
-            return (
-              <option key={option} value={text}>
-                {text}
-              </option>
-            );
-          })}
+          {professionOptions.map(({text}) => (
+            <option key={text} value={text}>
+              {text}
+            </option>
+          ))}
         </ControlledFieldGroup>
         <Button
           className="petition-button"
