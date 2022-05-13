@@ -3,6 +3,7 @@ import React from 'react';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
 
 export default function Congrats(props) {
@@ -57,6 +58,7 @@ export default function Congrats(props) {
         hideDancePartyFollowUp={hideDancePartyFollowUp}
       />
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+      <PetitionCallToAction />
     </div>
   );
 }
