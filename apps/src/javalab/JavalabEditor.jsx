@@ -7,9 +7,7 @@ import {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
-  removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight
+  removeFile
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -92,8 +90,6 @@ class JavalabEditor extends React.Component {
     handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
-    setRenderedHeight: PropTypes.func.isRequired,
-    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -892,8 +888,6 @@ export default connect(
       dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
-    removeFile: filename => dispatch(removeFile(filename)),
-    setRenderedHeight: height => dispatch(setRenderedHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    removeFile: filename => dispatch(removeFile(filename))
   })
 )(Radium(JavalabEditor));
