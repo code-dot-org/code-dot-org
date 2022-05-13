@@ -89,8 +89,11 @@ style_min: true
 
 
 <section class="cta-curriculum">
-	<a href="#"><button>Check out the curriculum</button></a>
-	<p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>.</p>
+	<!-- Hide this until we get the link -->
+	<div class="cta-button-wrapper">
+		<a href="#"><button>Check out the curriculum</button></a>
+		<p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>.</p>
+	</div>
 	<div class="afe">
 		<h3>In partnership with <a href="https://www.amazonfutureengineer.com/" target="_blank"><img src="/images/fit-250/AFE-dark-logo.png" alt="Amazon Future Engineer logo"/></a></h3>
 		<p class="tiny">Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href="https://www.amazonfutureengineer.com/" target="_blank">Learn more here</a>.</p>
