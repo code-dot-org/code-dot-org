@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import styleConstants from '../../styleConstants';
-import {getOuterHeight} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -82,8 +81,7 @@ class InstructionsCsfRightCol extends React.Component {
   }
 
   getColumnHeight() {
-    const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    return this.props.height - collapseButtonHeight;
+    return 0;
   }
 
   render() {
