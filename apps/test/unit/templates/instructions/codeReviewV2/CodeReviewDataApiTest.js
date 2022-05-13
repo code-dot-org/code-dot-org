@@ -32,7 +32,7 @@ const fakeReviewData = [
   {
     id: 11,
     createdAt: '2022-03-15T04:58:42.000Z',
-    isClosed: true,
+    isOpen: false,
     projectVersion: 'asdfjkl',
     isVersionExpired: false,
     comments: [
@@ -55,7 +55,7 @@ const fakeReviewData = [
   {
     id: 22,
     createdAt: '2022-03-31T04:58:42.000Z',
-    isClosed: false,
+    isOpen: true,
     projectVersion: 'qweruiop',
     isVersionExpired: false,
     comments: [

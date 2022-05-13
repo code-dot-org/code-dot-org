@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
@@ -10,6 +10,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -17,20 +18,27 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview
 }) => {
-  const {
-    createdAt,
-    isClosed,
-    projectVersion,
-    isVersionExpired,
-    comments
-  } = review;
+  const {createdAt, isOpen, version, isVersionExpired, comments} = review;
+  const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
+
+  const handleCloseCodeReview = () => {
+    closeReview(onCloseReviewSuccess, onCloseReviewFailure);
+  };
+
+  const onCloseReviewSuccess = () => {
+    setDisplayCloseError(false);
+  };
+
+  const onCloseReviewFailure = () => {
+    setDisplayCloseError(true);
+  };
 
   return (
     <CodeReviewTimelineElement
       type={codeReviewTimelineElementType.CODE_REVIEW}
       isLast={isLastElementInTimeline}
-      projectVersionId={projectVersion}
+      projectVersionId={version}
       isProjectVersionExpired={isVersionExpired}
     >
       <div style={styles.wrapper}>
@@ -44,33 +52,35 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {!isClosed && (
+          {isOpen && (
             <div>
               <Button
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
-                onClick={closeReview}
+                onClick={handleCloseCodeReview}
                 text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
               />
+              {displayCloseError && <CodeReviewError />}
             </div>
           )}
         </div>
-        {comments.map(comment => (
-          <Comment
-            comment={comment}
-            key={`code-review-comment-${comment.id}`}
-            onResolveStateToggle={() => {}}
-            onDelete={() => {}}
-            viewAsCodeReviewer={true}
-          />
-        ))}
-        {!isClosed && (
+        {comments &&
+          comments.map(comment => (
+            <Comment
+              comment={comment}
+              key={`code-review-comment-${comment.id}`}
+              onResolveStateToggle={() => {}}
+              onDelete={() => {}}
+              viewAsCodeReviewer={true}
+            />
+          ))}
+        {isOpen && (
           <CodeReviewCommentEditor
             addCodeReviewComment={addCodeReviewComment}
           />
         )}
-        {!isClosed && (
+        {isOpen && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
             {javalabMsg.codeEditingDisabled()}

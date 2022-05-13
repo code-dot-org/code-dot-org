@@ -11,8 +11,8 @@ import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2
 const DEFAULT_REVIEW = {
   id: 1,
   createdAt: '2022-03-31T04:58:42.000Z',
-  isClosed: false,
-  projectVersion: 'asdfjkl',
+  isOpen: true,
+  version: 'asdfjkl',
   isVersionExpired: false,
   timelineElementType: timelineElementType.review,
   comments: [
@@ -80,7 +80,7 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('hides the close button if the code review is closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: true};
+    const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
     expect(wrapper.find('Button')).to.have.length(0);
   });
@@ -96,19 +96,19 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('hides code review disabled note if the review is closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: true};
+    const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
     expect(wrapper.contains(javalabMsg.codeEditingDisabled())).to.be.false;
   });
 
-  it('displays CodeReviewCommentEditor if the review is not closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: false};
+  it('displays CodeReviewCommentEditor if the review is open', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: true};
     const wrapper = setUp({review: review});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(1);
   });
 
   it('hides the CodeReviewCommentEditor if the reveiw is closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: true};
+    const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
   });
