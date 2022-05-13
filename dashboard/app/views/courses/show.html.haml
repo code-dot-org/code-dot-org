@@ -9,7 +9,7 @@
 - data[:sections] = @sections_with_assigned_info || []
 - data[:is_instructor] = unit_group.can_be_instructor?(@current_user)
 - data[:is_verified_instructor] = @current_user.try(:verified_instructor?) || false
-- data[:hidden_scripts] = @current_user.try(:get_hidden_script_ids, unit_group)
+- data[:hidden_scripts] = @current_user.try(:get_hidden_unit_ids, unit_group)
 - data[:show_version_warning] = unit_group.has_older_version_progress?(@current_user) && !unit_group.has_dismissed_version_warning?(@current_user)
 - data[:show_redirect_warning] = redirect_warning
 - data[:redirect_to_course_url] = unit_group.redirect_to_course_url(@current_user)

@@ -3891,17 +3891,17 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id], student.get_hidden_unit_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id, @script2.id], student.get_hidden_unit_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@unit_group)
+      assert_equal [], student.get_hidden_unit_ids(@unit_group)
     end
 
     test "user in two sections, both attached to course but no script" do
@@ -3913,17 +3913,17 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id], student.get_hidden_unit_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id, @script2.id], student.get_hidden_unit_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@unit_group)
+      assert_equal [], student.get_hidden_unit_ids(@unit_group)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3954,7 +3954,7 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(section1, section2)
 
       # when not attached to course, we should hide when hidden in any section
-      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_unit_ids(@unit_group)
     end
 
     test "user in two sections, one attached to script one not" do
@@ -3983,7 +3983,7 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(attached_section, unattached_section)
 
       # only the scripts hidden in the attached section are considered hidden
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
+      assert_equal [@script.id, @script2.id], student.get_hidden_unit_ids(@unit_group)
     end
 
     test "user in no sections" do
@@ -4043,20 +4043,20 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@script.id],
         teacher_owner_section2.id => [@script.id, @script2.id]
       }
-      assert_equal expected, teacher.get_hidden_script_ids(@unit_group)
+      assert_equal expected, teacher.get_hidden_unit_ids(@unit_group)
     end
 
-    test "script_hidden?" do
+    test "unit_hidden?" do
       teacher = create :teacher
       student = create :student
       section = put_student_in_section(student, teacher, @script, @unit_group)
       SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
 
       # returns true for student
-      assert_equal true, student.script_hidden?(@script)
+      assert_equal true, student.unit_hidden?(@script)
 
       # returns false for teacher
-      assert_equal false, teacher.script_hidden?(@script)
+      assert_equal false, teacher.unit_hidden?(@script)
     end
   end
 
