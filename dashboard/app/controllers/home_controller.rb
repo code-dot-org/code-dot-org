@@ -184,7 +184,6 @@ class HomeController < ApplicationController
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
-      @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
