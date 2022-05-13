@@ -1335,7 +1335,7 @@ class User < ApplicationRecord
     unit = Script.get_from_cache(unit_name)
     return [] if unit.nil?
 
-    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(script.id, true)
+    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
