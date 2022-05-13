@@ -7271,10 +7271,16 @@ nl:
             lesson-19:
               name: Foutopsporing
         csa4-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
         csa5-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -7432,6 +7438,8 @@ nl:
               description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s om programmagegevens op te slaan en maakten ze onderscheid tussen het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten de voordelen en functionaliteit van een `ArrayList`, en gebruikten deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen gebruikten methoden in de `String` klasse om tekst, verkregen uit gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende de hele unit schreven de leerlingen programmadocumentatie met behulp van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar om API documentatie te maken. In het proces, identificeerden en documenteerden de leerlingen precondities en postcondities van objecten en methodes. Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden van de unit op een meerkeuzebeoordeling.
             lesson-1:
               key: Les 1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -7441,12 +7449,17 @@ nl:
           lessons:
             lesson-6:
               name: Intellectuele Eigendom
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-5:
               display_name: Sandbox
         csa8-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -7716,3 +7729,7 @@ nl:
               key: Les 2
             lesson-3:
               key: Les 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console
