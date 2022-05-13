@@ -143,8 +143,7 @@ const styles = {
   },
   scrollButtons: {
     margin: '0px 5px',
-    minWidth: '40px',
-    width: '100%'
+    minWidth: '40px'
   },
   scrollButtonsBelowCollapser: {
     position: 'relative',
