@@ -117,6 +117,10 @@ class ScrollButtons extends React.Component {
       transform: 'translateX(50%)'
     };
 
+    const minecraftButton = {
+      width: 40
+    };
+
     const containerStyle = {
       height: this.props.height
     };
@@ -134,7 +138,7 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollUp"
         onMouseDown={this.scrollStartUp}
-        style={[styles.all, upStyle]}
+        style={[styles.all, upStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
       </button>
@@ -160,7 +164,7 @@ class ScrollButtons extends React.Component {
         }}
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
-        style={[styles.all, downStyle]}
+        style={[styles.all, downStyle, minecraftButton]}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
       </button>
