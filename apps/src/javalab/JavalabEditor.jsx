@@ -106,7 +106,12 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    backpackEnabled: PropTypes.bool
+    backpackEnabled: PropTypes.bool,
+    fileMetadata: PropTypes.object.isRequired,
+    orderedTabKeys: PropTypes.array.isRequired,
+    activeTabKey: PropTypes.string,
+    lastTabKeyIndex: PropTypes.number.isRequired,
+    editTabKey: PropTypes.string
   };
 
   constructor(props) {
@@ -133,32 +138,13 @@ class JavalabEditor extends React.Component {
     this.editorModeConfigCompartment = new Compartment();
     this.editorThemeOverrideCompartment = new Compartment();
 
-    // fileMetadata is a dictionary of file key -> filename.
-    let fileMetadata = {};
-    // tab order is an ordered list of file keys.
-    let orderedTabKeys = [];
-    Object.keys(props.sources).forEach((file, index) => {
-      if (props.sources[file].isVisible || props.isEditingStartSources) {
-        let tabKey = this.getTabKey(index);
-        fileMetadata[tabKey] = file;
-        orderedTabKeys.push(tabKey);
-      }
-    });
-
-    const firstTabKey = orderedTabKeys.length > 0 ? orderedTabKeys[0] : null;
-
     this.state = {
-      orderedTabKeys,
-      fileMetadata,
       showMenu: false,
       contextTarget: null,
       openDialog: null,
       menuPosition: {},
-      editTabKey: null,
       newFileError: null,
       renameFileError: null,
-      activeTabKey: firstTabKey,
-      lastTabKeyIndex: orderedTabKeys.length - 1,
       fileToDelete: null,
       compileStatus: CompileStatus.NONE
     };
@@ -166,14 +152,13 @@ class JavalabEditor extends React.Component {
 
   componentDidMount() {
     this.editors = {};
-    const {sources} = this.props;
-    const {orderedTabKeys, fileMetadata} = this.state;
+    const {sources, orderedTabKeys, fileMetadata} = this.props;
     orderedTabKeys.forEach(tabKey => {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.displayTheme !== this.props.displayTheme) {
       const styleOverride =
         this.props.displayTheme === DisplayTheme.DARK
@@ -192,9 +177,9 @@ class JavalabEditor extends React.Component {
       });
     }
 
-    const {fileMetadata} = this.state;
+    const {fileMetadata} = this.props;
     if (
-      !_.isEqual(Object.keys(prevState.fileMetadata), Object.keys(fileMetadata))
+      !_.isEqual(Object.keys(prevProps.fileMetadata), Object.keys(fileMetadata))
     ) {
       for (const tabKey in fileMetadata) {
         if (!this.editors[tabKey]) {
@@ -253,7 +238,7 @@ class JavalabEditor extends React.Component {
       this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        sourceTextUpdated(this.state.fileMetadata[key], tr.newDoc.toString());
+        sourceTextUpdated(this.props.fileMetadata[key], tr.newDoc.toString());
         projectChanged();
       }
     };
@@ -264,7 +249,7 @@ class JavalabEditor extends React.Component {
   }
 
   updateVisibility(key, isVisible) {
-    this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
+    this.props.sourceVisibilityUpdated(this.props.fileMetadata[key], isVisible);
     this.setState({
       showMenu: false,
       contextTarget: null
@@ -273,7 +258,7 @@ class JavalabEditor extends React.Component {
 
   updateValidation(key, isValidation) {
     this.props.sourceValidationUpdated(
-      this.state.fileMetadata[key],
+      this.props.fileMetadata[key],
       isValidation
     );
     this.setState({
@@ -406,7 +391,7 @@ class JavalabEditor extends React.Component {
     if (!this.validateFileName(newFilename, 'renameFileError')) {
       return;
     }
-    const {fileMetadata, editTabKey} = this.state;
+    const {fileMetadata, editTabKey} = this.props;
     // check for duplicate filename
     const duplicateFileError = this.checkDuplicateFileName(newFilename);
     if (duplicateFileError) {
@@ -449,11 +434,11 @@ class JavalabEditor extends React.Component {
     const newTabKey = this.getTabKey(newTabIndex);
 
     // update file key to filename map with new file name
-    const newFileMetadata = {...this.state.fileMetadata};
+    const newFileMetadata = {...this.props.fileMetadata};
     newFileMetadata[newTabKey] = filename;
 
     // add new key to tabs
-    let newTabs = [...this.state.orderedTabKeys];
+    let newTabs = [...this.props.orderedTabKeys];
     newTabs.push(newTabKey);
 
     // add new file to sources
@@ -472,12 +457,8 @@ class JavalabEditor extends React.Component {
   }
 
   onDeleteFile() {
-    const {
-      orderedTabKeys,
-      fileMetadata,
-      activeTabKey,
-      fileToDelete
-    } = this.state;
+    const {activeTabKey, fileToDelete} = this.state;
+    const {fileMetadata, orderedTabKeys} = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
 
@@ -518,7 +499,7 @@ class JavalabEditor extends React.Component {
   }
 
   onImportFile(filename, fileContents) {
-    const {fileMetadata} = this.state;
+    const {fileMetadata} = this.props;
     // If filename already exists in sources, replace file contents.
     // Otherwise, create a new file.
     if (Object.keys(this.props.sources).includes(filename)) {
@@ -565,7 +546,7 @@ class JavalabEditor extends React.Component {
 
   // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
-    let newTabs = [...this.state.orderedTabKeys];
+    let newTabs = [...this.props.orderedTabKeys];
     let selectedFileIndex = newTabs.indexOf(key);
     newTabs.splice(selectedFileIndex, 1);
     newTabs.unshift(key);
@@ -597,10 +578,6 @@ class JavalabEditor extends React.Component {
 
   render() {
     const {
-      orderedTabKeys,
-      fileMetadata,
-      activeTabKey,
-      editTabKey,
       openDialog,
       fileToDelete,
       contextTarget,
@@ -619,7 +596,11 @@ class JavalabEditor extends React.Component {
       height,
       isProjectTemplateLevel,
       handleClearPuzzle,
-      backpackEnabled
+      backpackEnabled,
+      orderedTabKeys,
+      fileMetadata,
+      activeTabKey,
+      editTabKey
     } = this.props;
 
     let menuStyle = {
@@ -880,7 +861,12 @@ export default connect(
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    backpackEnabled: state.javalab.backpackEnabled
+    backpackEnabled: state.javalab.backpackEnabled,
+    fileMetadata: state.javalab.fileMetadata,
+    orderedTabKeys: state.javalab.orderedTabKeys,
+    activeTabKey: state.javalab.activeTabKey,
+    lastTabKeyIndex: state.javalab.lastTabKeyIndex,
+    editTabKey: state.javalab.editTabKey
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),

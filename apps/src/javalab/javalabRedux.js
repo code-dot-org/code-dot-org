@@ -30,10 +30,35 @@ const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 
+const getFileMetadataFromSources = (sources, isEditingStartSources) => {
+  let fileMetadata = {};
+  let orderedTabKeys = [];
+
+  Object.keys(sources).forEach((file, index) => {
+    if (sources[file].isVisible || isEditingStartSources) {
+      let tabKey = getTabKey(index);
+      fileMetadata[tabKey] = file;
+      orderedTabKeys.push(tabKey);
+    }
+  });
+
+  return [fileMetadata, orderedTabKeys];
+};
+
+const getTabKey = index => `file-${index}`;
+
+const initialSources = {
+  'MyClass.java': {text: '', isVisible: true, isValidation: false}
+};
+let initialFileMetadata, initialOrderedTabKeys;
+[initialFileMetadata, initialOrderedTabKeys] = getFileMetadataFromSources(
+  initialSources
+);
+
 // Exported for test
 export const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
+  sources: initialSources,
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
@@ -52,7 +77,13 @@ export const initialState = {
   disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
+  fileMetadata: initialFileMetadata,
+  orderedTabKeys: initialOrderedTabKeys,
+  activeTabKey:
+    initialOrderedTabKeys.length > 0 ? initialOrderedTabKeys[0] : null,
+  lastTabKeyIndex: initialOrderedTabKeys.length - 1,
+  editTabKey: null // initialize?
 };
 
 // Action Creators
