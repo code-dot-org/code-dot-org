@@ -27845,7 +27845,7 @@ en:
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
               description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
           title: Poem Art
-          description: "This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](studio.code.org/s/poetry-2021). \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. "
+          description: "This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](https://studio.code.org/s/poetry). \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. "
           student_description: ''
           description_short: 'This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called Coding with Poetry. '
           description_audience: ''
@@ -33114,7 +33114,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-3:
-              name: ImagePlus
+              name: ImagePlus and ScenePlus
               description_student: 
               description_teacher: 
           lesson_groups: {}
