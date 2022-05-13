@@ -8,6 +8,7 @@
         {
           "type": "panel",
           "name": "variable_panel",
+          "visible": "false",
           "elements": [
             {
               "type": "radiogroup",
@@ -21,7 +22,8 @@
                 5,
                 6,
                 7,
-                8
+                8,
+                9
               ]
             },
             {
@@ -69,19 +71,18 @@
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
           "startWithNewLine": false,
           "innerIndent": 3,
-          "indent": 3,
-          "visible": "false"
+          "indent": 3
         },
         {
           "type": "html",
           "name": "unit_instructions",
-          "html": " <h3>Please tell us your overall thoughts about teaching this unit.</h3>"
+          "html": " <p style='font-size: larger'>Please tell us your overall thoughts about teaching this unit. Your feedback is crucial for us to better understand how to improve this course for teachers.</p>"
         },
         {
           "type": "html",
           "name": "unit_num_name_heading",
-          "html": "<h2>Unit {unit_number} - {unit_name}</h2>",
-          "visibleIf": "{unit_number} notempty"
+          "visibleIf": "{unit_number} notempty and {unit_number} >= 1 and {unit_number} <=8",
+          "html": "<h2>Unit {unit_number} - {unit_name}</h2>"
         },
         {
           "type": "rating",
@@ -233,9 +234,9 @@
         {
           "type": "comment",
           "name": "benefits_drawbacks_code_review",
+          "title": "What do you see as the benefits and/or drawbacks for students doing code reviews?",
           "description": "(Optional)",
-          "rows": 2,
-          "title": "What do you see as the benefits and/or drawbacks for students doing code reviews?"
+          "rows": 2
         },
         {
           "type": "radiogroup",
@@ -263,8 +264,8 @@
         {
           "type": "html",
           "name": "unit_specific_header",
-          "visibleIf": "{unit_number} notempty",
-          "html": "<h2>CSA Unit {unit_number} Objectives</h2><p>We're interested in how effective the lessons and materials in this unit were in helping your students learn. We will use this feedback to learn how we might improve the course.</p><h3>By the end of this unit, how many of your students can...</h3>"
+          "visibleIf": "{unit_number} <= 8 and {unit_number} > 1 and {unit_number} notempty",
+          "html": "<h2>Objectives: CSA Unit {unit_number} - {unit_name}</h2>\n<p>How effective were the lessons and materials in this unit in helping your students learn?</p><p><br/></p><p><strong>By the end of this unit how many of your students can...</strong></p>"
         },
         {
           "type": "panel",
@@ -633,9 +634,69 @@
           "visibleIf": "{unit_number} = 3"
         },
         {
+          "type": "panel",
+          "name": "unit4_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+            }
+          ],
+          "visibleIf": "{unit_number} = 4"
+        },
+        {
+          "type": "panel",
+          "name": "unit5_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+            }
+          ],
+          "visibleIf": "{unit_number} = 5"
+        },
+        {
+          "type": "panel",
+          "name": "unit6_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+            }
+          ],
+          "visibleIf": "{unit_number} = 6"
+        },
+        {
+          "type": "panel",
+          "name": "unit7_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+            }
+          ],
+          "visibleIf": "{unit_number} = 7"
+        },
+        {
+          "type": "panel",
+          "name": "unit8_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+            }
+          ],
+          "visibleIf": "{unit_number} = 8"
+        },
+        {
           "type": "html",
           "name": "thank_you_message",
-          "html": "<h2>Thank you for your feedback!</h2>"
+          "html": "<h2>Thank you for your feedback!</h2><p>We will use this feedback to learn how we might improve the course.</p>\n<h3></h3>\n"
         }
       ]
     }
