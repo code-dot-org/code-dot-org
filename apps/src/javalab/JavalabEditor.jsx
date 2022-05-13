@@ -35,7 +35,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -44,7 +44,8 @@ const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
   'CREATE_FILE',
-  'COMMIT_FILES'
+  'COMMIT_FILES',
+  'VERSION_HISTORY'
 );
 const DEFAULT_FILE_NAME = '.java';
 const EDITOR_LOAD_PAUSE_MS = 100;
@@ -254,10 +255,6 @@ class JavalabEditor extends React.Component {
       }
     };
   };
-
-  handleVersionHistory() {
-    this.setState({versionHistoryOpen: true});
-  }
 
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
@@ -602,8 +599,7 @@ class JavalabEditor extends React.Component {
       contextTarget,
       renameFileError,
       newFileError,
-      compileStatus,
-      versionHistoryOpen
+      compileStatus
     } = this.state;
     const {
       onCommitCode,
@@ -628,14 +624,6 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
-        {versionHistoryOpen && (
-          <VersionHistoryWithCommits
-            handleClearPuzzle={handleClearPuzzle}
-            isProjectTemplateLevel={isProjectTemplateLevel}
-            onClose={() => this.setState({versionHistoryOpen: false})}
-            isOpen={versionHistoryOpen}
-          />
-        )}
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -663,7 +651,7 @@ class JavalabEditor extends React.Component {
             label={msg.showVersionsHeader()}
             headerHasFocus
             isRtl={false}
-            onClick={() => this.handleVersionHistory()}
+            onClick={() => this.setState({openDialog: Dialog.VERSION_HISTORY})}
             isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
@@ -822,6 +810,12 @@ class JavalabEditor extends React.Component {
           }
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
+        />
+        <VersionHistoryWithCommitsDialog
+          handleClearPuzzle={handleClearPuzzle}
+          isProjectTemplateLevel={isProjectTemplateLevel}
+          onClose={() => this.setState({openDialog: null})}
+          isOpen={openDialog === Dialog.VERSION_HISTORY}
         />
       </div>
     );
