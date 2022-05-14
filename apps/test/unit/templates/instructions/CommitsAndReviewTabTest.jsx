@@ -13,7 +13,10 @@ const DEFAULT_PROPS = {
   serverScriptId: 2,
   viewAsCodeReviewer: true,
   viewAsTeacher: false,
-  codeReviewEnabled: true
+  userIsTeacher: false,
+  codeReviewEnabled: true,
+  locale: 'en_us',
+  setIsReadOnlyWorkspace: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
