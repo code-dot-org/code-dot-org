@@ -34,7 +34,6 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
-import {first} from 'lodash';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -102,11 +101,7 @@ describe('Java Lab Editor Test', () => {
 
   describe('Editing Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: false
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(false));
     });
 
     describe('toggleTabMenu', () => {
@@ -404,11 +399,14 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setIsReadOnlyWorkspace(true));
         expect(dispatchSpy).to.have.been.called;
-        expect(firstEditor.state.readOnly).to.be.true;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.true;
 
         store.dispatch(setIsReadOnlyWorkspace(false));
         expect(dispatchSpy).to.have.been.called;
-        expect(firstEditor.state.readOnly).to.be.false;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.false;
+
         dispatchSpy.restore();
       });
     });
@@ -788,11 +786,7 @@ describe('Java Lab Editor Test', () => {
 
   describe('View Only Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: true
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(true));
     });
 
     it('is not editable', () => {
