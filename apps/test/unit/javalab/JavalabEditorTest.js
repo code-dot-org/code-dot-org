@@ -21,7 +21,8 @@ import javalab, {
   setDisplayTheme,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setBackpackApi
+  setBackpackApi,
+  setIsReadOnlyWorkspace
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
@@ -33,6 +34,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import {first} from 'lodash';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps
@@ -390,6 +392,24 @@ describe('Java Lab Editor Test', () => {
             javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
           ]
         });
+        dispatchSpy.restore();
+      });
+
+      it('toggles between read-only and editable', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        const javalabCodeMirrors = javalabEditor.editors;
+        const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+        const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
+        store.dispatch(setIsReadOnlyWorkspace(true));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.readOnly).to.be.true;
+
+        store.dispatch(setIsReadOnlyWorkspace(false));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.readOnly).to.be.false;
+        dispatchSpy.restore();
       });
     });
 
