@@ -85,6 +85,24 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
 end
 
+And(/^I create a (universal instructor|plc reviewer|facilitator) associated (facilitator|teacher) named "([^"]*)"$/) do |instructor_type, participant_type, name|
+  steps "Given I create a teacher named \"Instructor_#{name}\""
+  steps "And I sign in as \"Instructor_#{name}\" and go home"
+  steps "And I get \"#{instructor_type}\" access"
+  steps "And I create a new \"#{participant_type}\" section and go home"
+
+  steps "Then I create a teacher named \"Participant\""
+  steps "And I sign in as \"Participant\" and go home"
+  steps "And I get \"#{participant_type}\" access"
+  steps "And I reload the page"
+
+  steps "And I wait until element \"div.ui-test-join-section\" is visible"
+  steps "And I scroll the \"div.ui-test-join-section\" element into view"
+  steps "And I enter the section code into \"input.ui-test-join-section\""
+  steps "And I click selector \"div.ui-test-join-section\""
+  steps "Then the professional learning joined sections table should have 1 row"
+end
+
 And(/^I save the student section url$/) do
   wait_short_until {steps 'Then I should see the student section table'}
   section_code = @browser.execute_script <<-SCRIPT
