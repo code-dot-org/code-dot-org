@@ -23,6 +23,28 @@ Scenario: Toggle on Multi Level
   And I close my eyes
 
 @eyes
+Scenario: Toggle on Multi Level - Facilitator to Teacher
+  When I open my eyes to test "toggle on multi level - facilitator to teacher"
+  Given I create facilitator associated teacher named "Maeve"
+  Then I sign in as "Instructor_Maeve"
+  Then I am on "http://studio.code.org/s/ui-test-teacher-pl-course/lessons/1/levels/2"
+  And I see no difference for "page load"
+  And I wait to see ".submitButton"
+  Then I click selector ".uitest-viewAsStudent"
+  And I see no difference for "view as participant"
+  Then I click selector ".uitest-viewAsTeacher"
+  And I see no difference for "view as instructor"
+  Then I open the progress drop down of the current page
+  And I see no difference for "progress dropdown for instructor"
+
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I wait to see ".header_popup_link"
+  Then I open the progress drop down of the current page
+  And I wait until element ".user-stats-block:contains(Jigsaw)" is visible
+  And I see no difference for "progress dropdown for instructor viewing as participant"
+  And I close my eyes
+
+@eyes
 Scenario: Toggle on Hidden Maze Level
   When I open my eyes to test "toggle on hidden maze level"
   Given I create an authorized teacher-associated student named "Arya"
@@ -38,6 +60,24 @@ Scenario: Toggle on Hidden Maze Level
   And I see no difference for "view as student"
   Then I click selector ".uitest-viewAsTeacher"
   And I see no difference for "view as teacher"
+  And I close my eyes
+
+@eyes
+Scenario: Toggle on Hidden Maze Level - Facilitator to Teacher
+  When I open my eyes to test "toggle on hidden maze level - facilitator to teacher"
+  Given I create facilitator associated teacher named "Maeve"
+  Then I sign in as "Instructor_Maeve"
+  Then I am on "http://studio.code.org/s/ui-test-teacher-pl-course"
+  And I wait to see ".uitest-togglehidden"
+  Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
+  Then I am on "http://studio.code.org/s/ui-test-teacher-pl-course/lessons/1/levels/3?noautoplay=true"
+  And I wait for the page to fully load
+  And I see no difference for "page load"
+  Then I click selector ".show-handle .fa-chevron-left"
+  Then I click selector ".uitest-viewAsStudent"
+  And I see no difference for "view as participant"
+  Then I click selector ".uitest-viewAsTeacher"
+  And I see no difference for "view as instructor"
   And I close my eyes
 
 @eyes
