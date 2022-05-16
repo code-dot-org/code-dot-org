@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 16:41:32 UTC",
+    "serialized_at": "2022-05-13 22:04:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1648,10 +1648,21 @@
       }
     },
     {
-      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "key": "731da697-8bc7-4ac0-97a3-ead1316b39cc",
       "position": 13,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice."
+      },
+      "seeding_key": {
+        "activity_section.key": "731da697-8bc7-4ac0-97a3-ead1316b39cc",
+        "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
+      }
+    },
+    {
+      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "position": 14,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to create objects from their classes.",
         "tips": [
           {
             "type": "teachingTip",
