@@ -90,7 +90,6 @@ export default class CodeReviewDataApi {
     // TODO: csrf token get rid of this:
     this.getCodeReviewCommentsForProject();
 
-    // Enable when the API is ready
     return $.ajax({
       url: `/code_reviews`,
       type: 'GET',
