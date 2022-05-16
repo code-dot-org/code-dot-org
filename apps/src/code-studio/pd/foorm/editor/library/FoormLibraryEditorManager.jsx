@@ -138,12 +138,12 @@ class FoormLibraryEditorManager extends React.Component {
 
   // Callback for FoormEntityEditor
   updateLibraryQuestionPreview() {
-    this.setState({
+    this.setState(prevState => ({
       previewQuestions: {
         elements: [this.props.questions]
       },
-      forceRerenderKey: this.state.forceRerenderKey + 1
-    });
+      forceRerenderKey: prevState.forceRerenderKey + 1
+    }));
   }
 
   // Callback for FoormEntityLoadButtons (for initializing new library)

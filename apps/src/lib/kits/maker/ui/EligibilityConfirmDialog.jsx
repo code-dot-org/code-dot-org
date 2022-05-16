@@ -22,13 +22,13 @@ export default class EligibilityConfirmDialog extends Component {
   };
 
   verifyResponse = () => {
-    this.setState({
+    this.setState(prevState => ({
       validInput:
         this.check1.checked &&
         this.check2.checked &&
         this.check3.checked &&
-        /\S/.test(this.state.signature)
-    });
+        /\S/.test(prevState.signature)
+    }));
   };
 
   handleSubmit = () => {

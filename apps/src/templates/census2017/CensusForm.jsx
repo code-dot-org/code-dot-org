@@ -94,15 +94,15 @@ class CensusForm extends Component {
   };
 
   handleChange = (field, event) => {
-    this.setState(
+    this.setState(prevState => (
       {
         submission: {
-          ...this.state.submission,
+          ...prevState.submission,
           [field]: event.target.value
         }
       },
       this.checkShowFollowUp
-    );
+    ));
   };
 
   handleSchoolDropdownChange = (field, event) => {

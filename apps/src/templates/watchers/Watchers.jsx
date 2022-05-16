@@ -122,9 +122,9 @@ class Watchers extends React.Component {
       return;
     }
     this.props.add(inputText);
-    this.setState(
+    this.setState(prevState => (
       {
-        history: [inputText].concat(this.state.history),
+        history: [inputText].concat(prevState.history),
         editing: false,
         historyIndex: -1,
         text: ''
@@ -133,7 +133,7 @@ class Watchers extends React.Component {
         this.scrollToBottom();
         this.filterOptions();
       }
-    );
+    ));
   }
 
   closeAutocomplete = () => {
@@ -158,10 +158,10 @@ class Watchers extends React.Component {
   };
 
   selectHistoryIndex(historyIndex) {
-    this.setState(
+    this.setState(prevState => (
       {
         editing: false,
-        text: this.state.history[historyIndex],
+        text: prevState.history[historyIndex],
         historyIndex: historyIndex,
         autocompleteSelecting: false,
         autocompleteOpen: false
@@ -170,7 +170,7 @@ class Watchers extends React.Component {
         this.filterOptions();
         this.setState({editing: true});
       }
-    );
+    ));
   }
 
   selectAutocompleteIndex(autocompleteIndex) {
@@ -285,18 +285,18 @@ class Watchers extends React.Component {
     const navigatingHistory = this.navigatingHistory();
     const historyTextModified =
       navigatingHistory && this.state.history[this.state.historyIndex] !== text;
-    this.setState({
+    this.setState(prevState => ({
       autocompleteIndex:
-        this.state.autocompleteIndex > filteredOptions.length
+        prevState.autocompleteIndex > filteredOptions.length
           ? 0
-          : this.state.autocompleteIndex,
+          : prevState.autocompleteIndex,
       autocompleteOptions: filteredOptions,
       autocompleteOpen:
         text.length &&
         filteredOptions.length &&
         !completeMatch &&
         (!navigatingHistory || historyTextModified)
-    });
+    }));
   };
 
   onAutocompleteOptionClicked = text => {

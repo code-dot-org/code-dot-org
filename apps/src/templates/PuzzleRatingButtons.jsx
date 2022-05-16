@@ -76,11 +76,11 @@ class PuzzleRatingButtons extends Component {
   };
 
   like() {
-    this.setState({liked: !this.state.liked, disliked: false});
+    this.setState(prevState => ({liked: !prevState.liked, disliked: false}));
   }
 
   dislike() {
-    this.setState({liked: false, disliked: !this.state.disliked});
+    this.setState(prevState => ({liked: false, disliked: !prevState.disliked}));
   }
 
   render() {

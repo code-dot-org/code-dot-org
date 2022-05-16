@@ -128,13 +128,13 @@ export class Workshop extends React.Component {
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
       dataType: 'json'
     }).done(data => {
-      this.setState({
+      this.setState(prevState => ({
         loadingEnrollments: false,
         enrollments: data,
-        workshop: _.merge(_.cloneDeep(this.state.workshop), {
+        workshop: _.merge(_.cloneDeep(prevState.workshop), {
           enrolled_teacher_count: data.length
         })
-      });
+      }));
       this.loadEnrollmentsRequest = null;
     });
   };

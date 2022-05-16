@@ -65,7 +65,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   updateFormData = change => {
-    this.setState({formData: {...this.state.formData, ...change}});
+    this.setState(prevState => ({formData: {...prevState.formData, ...change}}));
   };
 
   // Wrapper to allow saving data to session
@@ -154,9 +154,9 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   handleEligibility(isEligible) {
-    this.setState({
-      formData: {...this.state.formData, schoolEligible: isEligible}
-    });
+    this.setState(prevState => ({
+      formData: {...prevState.formData, schoolEligible: isEligible}
+    }));
     this.saveToSessionStorage();
 
     if (!isEligible) {

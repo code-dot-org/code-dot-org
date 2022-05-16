@@ -66,14 +66,14 @@ export default class QuickActionsCell extends Component {
     const windowWidth = window.innerWidth;
     if (windowWidth > styleConstants['content-width']) {
       // Accounts for resizing when page is not scrollable
-      this.setState({
+      this.setState(prevState => ({
         menuTop: rect.bottom + window.pageYOffset,
         menuLeft:
           rect.left -
           rect.width -
-          (windowWidth - this.state.currWindowWidth) / 2,
+          (windowWidth - prevState.currWindowWidth) / 2,
         currWindowWidth: window.innerWidth
-      });
+      }));
     } else {
       // Accounts for scrolling or resizing when scrollable
       this.setState({
