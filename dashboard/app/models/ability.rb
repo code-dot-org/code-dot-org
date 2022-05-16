@@ -431,11 +431,11 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :get_access_token_with_override_sources, :javabuilder_session do
+      can :access_token_with_override_sources, :javabuilder_session do
         user.verified_instructor?
       end
 
-      can :get_access_token_with_override_validation, :javabuilder_session do
+      can :access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
       end
     end

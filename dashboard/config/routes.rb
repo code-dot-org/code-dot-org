@@ -917,8 +917,8 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
-  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
+  post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
+  post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
