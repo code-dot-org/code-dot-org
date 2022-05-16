@@ -1,14 +1,73 @@
 {
   "category_key": "java_util",
-  "content": "",
+  "content": "The ArrayList object is part of the java.util package. The difference between a built-in array and the ArrayList object is as follows:\n- a built-in array canon the modified: if you intend on adding/removing elements, you have to create a new array\n- new elements can be added/removed from an ArrayList whenever you want.",
   "examples": "[]",
   "external_documentation": "",
   "fields": "[]",
   "key": "ArrayList",
   "name": "ArrayList",
-  "syntax": "",
+  "syntax": "ArrayList< Data Type > name = new ArrayList< Data Type >();",
   "tips": "",
   "methods": [
-
+    {
+      "name": "ArrayList",
+      "position": 0,
+      "key": "arraylist",
+      "overload_of": null,
+      "content": "The ArrayList constructor allows you to create a new ArrayList object.",
+      "parameters": "[{\"name\":\"C\",\"type\":\"Collection\",\"description\":\"Not required. You can send over a Collection and the ArrayList will populate with the elements from Collection C.\"},{\"name\":\"capacity\",\"type\":\"int\",\"description\":\"Not required. int capacity is the specified size of the ArrayList.\"}]",
+      "examples": "[{\"name\":\"\"}]",
+      "syntax": "ArrayList arr = new ArrayList(); ",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "add",
+      "position": 1,
+      "key": "add",
+      "overload_of": null,
+      "content": "The add method is used to add a specific element to the list. There are two commonly used variations of the add() method:\n- add(Object element). This method appends the element to the end of the list.\n- add(int index, Object element). This method inserts the element at a specific index within the list.",
+      "parameters": "[{\"name\":\"element\",\"type\":\"Object\",\"required\":true,\"description\":\"The object that you want to add to the ArrayList\"},{\"name\":\"index\",\"type\":\"int\",\"description\":\"Not required. The index specifies the position at which you want to insert the specified element.\"}]",
+      "examples": "[{\"name\":\"Using add()\",\"code\":\"```\\nArrayList\\u003cString\\u003e test = new ArrayList\\u003c\\u003e();\\n // Adding elements to ArrayList\\n\\ntest.add(\\\"It\\\");\\ntest.add(\\\"Cold\\\");\\nal.add(1, \\\"Is\\\");\\n  \\n        // Printing all the elements in an ArrayList\\n        System.out.println(al);\\n```\\n**output:** \\n[It, Is, Cold]\"}]",
+      "syntax": "public void add(Object element);\n\npublic void add(int index, Object element);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "get",
+      "position": 2,
+      "key": "get",
+      "overload_of": null,
+      "content": "This method allows you to get the object at the specified index from the ArrayList.",
+      "parameters": "[{\"name\":\"index\",\"type\":\"int\",\"required\":true,\"description\":\"index of element to be returned\"}]",
+      "examples": "[{\"name\":\"Using get(index)\",\"code\":\"```\\n  ArrayList\\u003cInteger\\u003e test = new ArrayList\\u003cInteger\\u003e(4);\\n  \\n\\n        arr.add(1);\\n        arr.add(2);\\n        arr.add(3);\\n        arr.add(4);\\n\\nint element = test.get(2);\\n  \\nSystem.out.println(\\\"the element at index 2 is \\\" + element);\\n\\n```\\n**output:** the element at index 2 is 3\"}]",
+      "syntax": "ArrayListName.get(index);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "remove",
+      "position": 3,
+      "key": "remove",
+      "overload_of": null,
+      "content": "This method allows you to remove a specific element from an ArrayList object.",
+      "parameters": "[{\"name\":\"index\",\"type\":\"int\",\"description\":\"index of the element to be removed\"}]",
+      "examples": "[{\"name\":\"Using remove()\",\"code\":\"```\\nArrayList\\u003cInteger\\u003e test = new ArrayList\\u003cInteger\\u003e(5);\\n\\ntest.add(1);\\ntest.add(2);\\ntest.add(3);\\ntest.add(4);\\n\\nSystem.out.println(\\\"Size of list: \\\" + test.size());\\ntest.remove(2);\\nSystem.out.println(\\\"Size of list: \\\" + test.size());\\n```\\n**output:**\\n4\\n3\"}]",
+      "syntax": "public E remove(int index)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "size",
+      "position": 4,
+      "key": "size",
+      "overload_of": null,
+      "content": "Returns the size of the ArrayList object",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"\",\"code\":\"\"}]",
+      "syntax": "public int size()",
+      "external_link": null,
+      "return_value": null
+    }
   ]
 }
