@@ -6,6 +6,12 @@ module BlocklyHelpers
     @browser.execute_script("$(\"[#{id_selector}='#{block_id}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
   end
 
+  def generate_google_blockly_block_drag_code(from, to, target_dx, target_dy)
+    "var drag_dx = $(\"[class='blocklyDraggable']\").eq(#{to.to_i}).offset().left - $(\"[class='blocklyDraggable']\").eq(#{from.to_i}).offset().left;" \
+        "var drag_dy = $(\"[class='blocklyDraggable']\").eq(#{to.to_i}).offset().top  - $(\"[class='blocklyDraggable']\").eq(#{from.to_i}).offset().top;" \
+        "$(\"[class='blocklyDraggable']\").eq(#{from.to_i}).simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+  end
+
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
     generate_selector_drag_code "[#{id_selector}='#{from}']", "[#{id_selector}='#{to}']", target_dx, target_dy
