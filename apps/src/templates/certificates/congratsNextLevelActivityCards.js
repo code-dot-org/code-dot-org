@@ -29,35 +29,35 @@ const Applab = {
 };
 
 const CourseB = {
-  scriptName: 'courseB',
+  scriptName: 'courseb',
   link: '/s/courseB',
   image: 'courseB',
   buttonText: i18n.viewCourse()
 };
 
 const CourseC = {
-  scriptName: 'courseC',
+  scriptName: 'coursec',
   link: '/s/courseC',
   image: 'courseC',
   buttonText: i18n.viewCourse()
 };
 
 const CourseD = {
-  scriptName: 'courseD',
+  scriptName: 'coursed',
   link: '/s/courseD',
   image: 'courseD',
   buttonText: i18n.viewCourse()
 };
 
 const CourseE = {
-  scriptName: 'courseE',
+  scriptName: 'coursee',
   link: '/s/courseE',
   image: 'courseE',
   buttonText: i18n.viewCourse()
 };
 
 const CourseF = {
-  scriptName: 'courseF',
+  scriptName: 'coursef',
   link: '/s/courseF',
   image: 'courseF',
   buttonText: i18n.viewCourse()
