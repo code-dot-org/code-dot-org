@@ -36,9 +36,9 @@ fi
 
 if [ -n "$DRONE" ]; then
   CODECOV=/tmp/codecov.sh
-  curl -s https://codecov.io/bash > ${CODECOV}
+  curl -s https://uploader.codecov.io/latest/linux/codecov > ${CODECOV}
   chmod +x ${CODECOV}
-  CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+  CODECOV="$CODECOV -t ${CODECOV_TOKEN} -C $DRONE_COMMIT_SHA"
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub

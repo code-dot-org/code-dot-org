@@ -14,8 +14,8 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment var
   SimpleCov.start :rails
   SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
   if ENV['CIRCLECI'] || ENV['DRONE']
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+    require 'simplecov-cobertura'
+    SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
   end
 end
 
