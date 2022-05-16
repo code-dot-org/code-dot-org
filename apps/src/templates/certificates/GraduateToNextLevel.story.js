@@ -1,6 +1,5 @@
 import React from 'react';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import i18n from '@cdo/locale';
 
 export default storybook => {
   return storybook
@@ -12,8 +11,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="course2"
-            courseTitle={i18n.course2_name()}
-            courseDesc={i18n.course2_shortdescription_congrats()}
+            courseTitle="Course 2"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -22,8 +21,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="course3"
-            courseTitle={i18n.course3_name()}
-            courseDesc={i18n.course3_shortdescription_congrats()}
+            courseTitle="Course 3"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -32,8 +31,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="course4"
-            courseTitle={i18n.course4_name()}
-            courseDesc={i18n.course4_shortdescription_congrats()}
+            courseTitle="Course 4"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -42,8 +41,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="courseb"
-            courseTitle={i18n.courseb_name()}
-            courseDesc={i18n.courseb_shortdescription_congrats()}
+            courseTitle="Course B"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -52,8 +51,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="coursec"
-            courseTitle={i18n.coursec_name()}
-            courseDesc={i18n.coursec_shortdescription_congrats()}
+            courseTitle="Course C"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -62,8 +61,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="coursed"
-            courseTitle={i18n.coursed_name()}
-            courseDesc={i18n.coursed_shortdescription_congrats()}
+            courseTitle="Course D"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -72,8 +71,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="coursee"
-            courseTitle={i18n.coursee_name()}
-            courseDesc={i18n.coursee_shortdescription_congrats()}
+            courseTitle="Course E"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -82,8 +81,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="coursef"
-            courseTitle={i18n.coursef_name()}
-            courseDesc={i18n.coursef_shortdescription_congrats()}
+            courseTitle="Course F"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       },
@@ -92,8 +91,8 @@ export default storybook => {
         story: () => (
           <GraduateToNextLevel
             scriptName="applab-intro"
-            courseTitle={i18n.applab_tile_title()}
-            courseDesc={i18n.applab_tile_subtitle()}
+            courseTitle="App Lab Intro"
+            courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
         )
       }
