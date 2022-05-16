@@ -76,10 +76,10 @@ class EditTableRow extends React.Component {
   };
 
   handleEdit = () => {
-    this.setState({
+    this.setState((prevState, prevProps) => ({
       isEditing: true,
-      newInput: _.mapValues(this.props.record, editableValue)
-    });
+      newInput: _.mapValues(prevProps.record, editableValue)
+    }));
   };
 
   handleDelete = () => {

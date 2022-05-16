@@ -66,7 +66,7 @@ export default onClickOutside(
     };
 
     handleCancelClick = () => {
-      this.setState({description: this.props.description});
+      this.setState((prevState, prevProps) => ({description: prevProps.description}));
       this.props.onEditCancel();
     };
 

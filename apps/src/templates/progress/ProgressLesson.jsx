@@ -54,10 +54,10 @@ class ProgressLesson extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     // If we're assigned a lesson id, and it is for this lesson, uncollapse
     if (nextProps.currentLessonId !== this.props.currentLessonId) {
-      this.setState(prevState => ({
+      this.setState((prevState, prevProps) => ({
         collapsed:
           prevState.collapsed &&
-          nextProps.currentLessonId !== this.props.lesson.id
+          nextProps.currentLessonId !== prevProps.lesson.id
       }));
     }
   }

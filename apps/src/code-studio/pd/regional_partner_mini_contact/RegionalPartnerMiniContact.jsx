@@ -233,19 +233,19 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
       url: '/dashboardapi/v1/users/me/contact_details'
     })
       .done(results => {
-        this.setState({
+        this.setState((prevState, prevProps) => ({
           options: {
             user_name: results.user_name,
             email: results.email,
-            zip: `${this.props.zip || results.zip}`,
-            notes: this.props.notes || results.notes
+            zip: `${prevProps.zip || results.zip}`,
+            notes: prevProps.notes || results.notes
           }
-        });
+        }));
       })
       .fail(() => {
-        this.setState({
-          options: {zip: this.props.zip, notes: this.props.notes}
-        });
+        this.setState((prevState, prevProps) => ({
+          options: {zip: prevProps.zip, notes: prevProps.notes}
+        }));
       });
   }
 

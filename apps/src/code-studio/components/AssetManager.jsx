@@ -124,9 +124,9 @@ export default class AssetManager extends React.Component {
    */
   onAssetListReceived = result => {
     assetListStore.reset(result.files);
-    this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions)
-    });
+    this.setState((prevState, prevProps) => ({
+      assets: assetListStore.list(prevProps.allowedExtensions)
+    }));
   };
 
   /**
@@ -206,10 +206,10 @@ export default class AssetManager extends React.Component {
       })
     });
 
-    this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions),
+    this.setState((prevState, prevProps) => ({
+      assets: assetListStore.list(prevProps.allowedExtensions),
       statusMessage: `File "${name}" successfully deleted!`
-    });
+    }));
   };
 
   deleteStarterAssetRow = name => {

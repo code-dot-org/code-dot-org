@@ -26,10 +26,10 @@ export default class EditEnrollmentNameDialog extends React.Component {
   // set initial value for each input field when modal is shown
   componentDidUpdate(prevProps) {
     if (!prevProps.show && this.props.show) {
-      this.setState({
-        firstName: this.props.selectedEnrollment.first_name,
-        lastName: this.props.selectedEnrollment.last_name
-      });
+      this.setState((prevState, prevProps) => ({
+        firstName: prevProps.selectedEnrollment.first_name,
+        lastName: prevProps.selectedEnrollment.last_name
+      }));
     }
   }
 
