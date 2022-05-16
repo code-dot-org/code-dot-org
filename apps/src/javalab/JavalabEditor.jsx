@@ -345,12 +345,12 @@ class JavalabEditor extends React.Component {
   // This is called from the dropdown menu on the active tab
   // when the rename option is clicked
   renameFromTabMenu() {
-    this.setState({
+    this.setState(prevState => ({
       showMenu: false,
       contextTarget: null,
-      editTabKey: this.state.contextTarget,
+      editTabKey: prevState.contextTarget,
       openDialog: Dialog.RENAME_FILE
-    });
+    }));
   }
 
   // This closes the dropdown menu on the active tab
@@ -364,12 +364,12 @@ class JavalabEditor extends React.Component {
   // This is called from the dropdown menu on the active tab
   // when the delete option is clicked
   deleteFromTabMenu() {
-    this.setState({
+    this.setState(prevState => ({
       showMenu: false,
       contextTarget: null,
       openDialog: Dialog.DELETE_FILE,
-      fileToDelete: this.state.contextTarget
-    });
+      fileToDelete: prevState.contextTarget
+    }));
   }
 
   // Checks if the given file name is valid and if not,

@@ -58,7 +58,7 @@ export default class ColorPickerPropertyRow extends React.Component {
   }
 
   toggleColorPicker = () => {
-    this.setState({displayColorPicker: !this.state.displayColorPicker});
+    this.setState(prevState => ({displayColorPicker: prevState.displayColorPicker}));
   };
 
   render() {
