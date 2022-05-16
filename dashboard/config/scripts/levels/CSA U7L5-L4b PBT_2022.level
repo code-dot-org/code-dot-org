@@ -8,11 +8,11 @@
     "csa_view_mode": "neighborhood",
     "start_sources": {
       "MyNeighborhood.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n\n\n    \n  }\n}",
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // TO DO #2: Instantiate a SpeedyPainter object.\n\n\n    // TO DO #3: Call the overridden moveFast() method.\n\n    \n  }\n}",
         "isVisible": true
       },
       "SpeedyPainter.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class SpeedyPainter extends PainterPlus {\n\n  public SpeedyPainter(int x, int y, String direction, int paint) {\n    super(x, y, direction, paint);\n  }\n\n  // TO DO: Override the moveFast() method\n  // from the PainterPlus class.\n\n\n\n  \n}",
+        "text": "import org.code.neighborhood.Painter;\n\n/*\n * Represents a Painter that can move faster than a PainterPlus\n */\npublic class SpeedyPainter extends PainterPlus {\n\n  /*\n   * Constructor to create a SpeedyPainter with the specified\n   * x and y location, direction to face, and amount of paint\n   */\n  public SpeedyPainter(int x, int y, String direction, int paint) {\n    super(x, y, direction, paint);\n  }\n\n  // TO DO #1: Override the moveFast() method to move three spaces.\n\n\n\n  \n}",
         "isVisible": true
       }
     },
@@ -768,6 +768,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-18T12:42:26.005+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L4a PBT_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L4a PBT_2022\"},{\"changed_at\":\"2022-04-18 12:42:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:33:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:34:19 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:34:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-18T12:42:26.005+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L4a PBT_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L4a PBT_2022\"},{\"changed_at\":\"2022-04-18 12:42:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:33:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:34:19 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:34:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 12:15:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 12:16:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
