@@ -82,7 +82,7 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
   gem 'codecov', require: false
   gem 'fakeredis', require: false
@@ -252,7 +252,9 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 0.52', require: false
+  gem 'rubocop', '1.28', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
   gem 'scss_lint', require: false
 end
 
@@ -336,8 +338,8 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'active_record_union'
 gem 'activerecord-import'
+gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 

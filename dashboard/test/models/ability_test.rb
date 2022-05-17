@@ -797,6 +797,37 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
   end
 
+  test 'only the project owner can create a code review on that project' do
+    project_owner = create :student
+    other_student = create :student
+    code_review = create :code_review, user_id: project_owner.id
+
+    assert Ability.new(project_owner).can? :create, code_review, project_owner.id
+    refute Ability.new(project_owner).can? :create, code_review, other_student.id
+    refute Ability.new(other_student).can? :create, code_review, project_owner.id
+    refute Ability.new(other_student).can? :create, code_review, other_student.id
+  end
+
+  test 'only the code review owner can edit the code review' do
+    code_review_owner = create :student
+    other_student = create :student
+    code_review = create :code_review, user_id: code_review_owner.id
+
+    assert Ability.new(code_review_owner).can? :edit, code_review
+    refute Ability.new(other_student).can? :edit, code_review
+  end
+
+  # TODO: Update this test after allowing peers in the same code review group
+  # to also see the review.
+  test 'only the code review owner can see the review' do
+    code_review_owner = create :student
+    other_student = create :student
+    code_review = create :code_review, user_id: code_review_owner.id
+
+    assert Ability.new(code_review_owner).can? :read, code_review
+    refute Ability.new(other_student).can? :read, code_review
+  end
+
   test 'workshop admins can update scholarship info' do
     workshop_admin = create :workshop_admin
     pd_enrollment = create :pd_enrollment

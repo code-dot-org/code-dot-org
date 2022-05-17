@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-29 16:29:34 UTC",
+    "serialized_at": "2022-05-09 15:54:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -928,6 +928,7 @@
       "key": "ab66741e-528f-4d29-81df-1b6a3f5ba1fa",
       "position": 5,
       "properties": {
+        "duration": 45,
         "name": "Day 5"
       },
       "seeding_key": {
