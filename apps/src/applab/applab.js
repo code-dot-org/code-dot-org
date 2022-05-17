@@ -281,7 +281,7 @@ function getCurrentTickLength() {
   var debugStepDelay = stepDelayFromStepSpeed(
     getStore().getState().runState.stepSpeed
   );
-  return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
+  return typeof debugStepDelay !== "undefined" ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
 function queueOnTick() {
