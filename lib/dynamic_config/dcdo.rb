@@ -44,7 +44,8 @@ class DCDOBase < DynamicConfigBase
       'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false),
       'thebadguys-promotion': DCDO.get('thebadguys-promotion', false),
       'thebadguys-projects-page': DCDO.get('thebadguys-projects-page', false),
-      'code_review_v2': DCDO.get('code_review_v2', false)
+      'code_review_v2': DCDO.get('code_review_v2', false),
+      'csa-launch-2022': DCDO.get('csa-launch-2022', false),
     }
   end
 end
