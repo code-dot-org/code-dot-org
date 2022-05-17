@@ -10,6 +10,5 @@ Scenario: Autorun Eyes Test
   Then I see no difference for "square already drawn"
   When I drag block "2" to block "12"
   And I drag block "6" to block "17"
-  And I wait for 0.5 seconds
   Then I see no difference for "two squares drawn"
   And I close my eyes
