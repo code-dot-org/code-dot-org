@@ -79,7 +79,7 @@
   }
 
   function setupPoemWithText(text) {
-    text = text.replace(/[ \n]/g, "_");
+    text = text.replace(/[ \n]/g, "_").replace(/[^A-Z_]/g, "");
     document.getElementById("compressedPoem").innerHTML = text;
     poemText = text;
     // Note: compress will call calculateData to update view once it's finished
