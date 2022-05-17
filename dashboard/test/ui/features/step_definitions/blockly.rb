@@ -24,18 +24,8 @@ When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, 
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
 end
 
-When /^I drag Google Blockly block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |n, dx, dy|
-  @browser.execute_script("$(\"[class='blocklyDraggable']\").eq(#{n.to_i}).simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
-end
-
-# To-Do: Combine with Google Blockly version
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
-  @browser.execute_script code
-end
-
-When /^I drag Google Blockly block "([^"]*)" to block "([^"]*)"$/ do |from, to|
-  code = generate_google_blockly_block_drag_code(from, to, 0, 30)
   @browser.execute_script code
 end
 
@@ -64,15 +54,8 @@ When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do
   @browser.execute_script code
 end
 
-# To-Do: Combine with Google Blockly version
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  expect(point.x).to be_within(3).of(x.to_i)
-  expect(point.y).to be_within(3).of(y.to_i)
-end
-
-Then /^Google Blockly block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
-  point = get_google_blockly_block_coordinates(get_block_id(block))
   expect(point.x).to be_within(3).of(x.to_i)
   expect(point.y).to be_within(3).of(y.to_i)
 end
@@ -130,7 +113,6 @@ Then /^block "([^"]*)" is visible in the workspace$/ do |block|
   expect(block_right).to be > block_space_left + block_margin + toolbox_width
 end
 
-# To-Do: Make Work for Google Blockly (and star_labs_sharepage)
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   id_selector = get_id_selector
   @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
@@ -138,17 +120,6 @@ Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute(id_selector)
   expect(actual_parent_id).to eq(get_block_id(parent))
-end
-
-Then /^Google Blockly block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
-  id_selector = get_id_selector
-  @child_item = @browser.find_elements(class: 'blocklyDraggable')[child.to_i]
-  child_id = @child_item.attribute(id_selector)
-  @parent_item = @browser.find_elements(class: 'blocklyDraggable')[parent.to_i]
-  parent_id = @parent_item.attribute(id_selector)
-  @actual_parent_item = @child_item.find_element(:xpath, "..")
-  actual_parent_id = @actual_parent_item.attribute(id_selector)
-  expect(actual_parent_id).to eq(parent_id)
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
