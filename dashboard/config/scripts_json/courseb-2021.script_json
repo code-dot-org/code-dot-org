@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-04-11 18:49:27 UTC",
+    "serialized_at": "2022-05-16 14:59:10 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6472,11 +6472,10 @@
     },
     {
       "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
       "key": "class-section-video",
       "properties": {
-        "audience": "Teacher",
-        "type": "Teacher Video"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "class-section-video"
