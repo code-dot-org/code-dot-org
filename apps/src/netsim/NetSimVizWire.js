@@ -380,7 +380,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function() {
       (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
       this.localVizNode.posX,
     y:
-      (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
+      (this.remoteVizNode.posY - this.localVizNode.posY) / 2 +
       this.localVizNode.posY +
       TEXT_FINAL_VERTICAL_OFFSET
   };
