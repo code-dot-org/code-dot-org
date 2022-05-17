@@ -5686,6 +5686,8 @@ sk:
               name: Projekt - Navrhnite aplikáciu
               description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+            Post-Project Test:
+              name: Záverečný test po projekte
         andrea-test:
           title: andrea-test
           description_short: toto je na otestovanie mojich schopností vytvoriť kurz
@@ -6024,6 +6026,8 @@ sk:
               name: Zoznamy
             Project - Multi-Page Websites:
               name: Projekt - Viacstránkové webstránky
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd3-2019:
@@ -6120,6 +6124,8 @@ sk:
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: V tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou.
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd4-2019:
@@ -6139,6 +6145,8 @@ sk:
               name: Digitálny dizajn
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            Post-Project Test:
+              name: Záverečný test po projekte
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -6148,6 +6156,8 @@ sk:
             cspSurvey:
               display_name: Dotazník
           lessons:
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd6-2019:
@@ -6161,6 +6171,8 @@ sk:
           lessons:
             Functions with Parameters:
               name: Funkcie s parametrami
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csp4-pilot:
@@ -6559,6 +6571,8 @@ sk:
               name: Projekt - Navrhnite aplikáciu
               description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+            Post-Project Test:
+              name: Záverečný test po projekte
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -6578,6 +6592,8 @@ sk:
               name: Zoznamy
             Project - Multi-Page Websites:
               name: Projekt - Viacstránkové webstránky
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
             Images:
@@ -6676,6 +6692,8 @@ sk:
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: V tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou.
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
             Sprite Properties:
@@ -6797,6 +6815,8 @@ sk:
               name: Aplikácie a Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+            Post-Project Test:
+              name: Záverečný test po projekte
         csp2-pilot:
           lesson_groups:
             content:
@@ -7087,6 +7107,8 @@ sk:
               name: Digitálna stopa
             Images:
               name: Obrázky
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd1-2020:
@@ -7191,6 +7213,8 @@ sk:
                 **Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r
                 \\r
                 Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+            Post-Project Test:
+              name: Záverečný test po projekte
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
               name: 'Alternatívne Verzie Lekcie 3: Objavovanie riešenia problémov'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -7240,6 +7264,8 @@ sk:
               name: Analýza dizajnu
             Digital Design:
               name: Digitálny dizajn
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd5-2020:
@@ -7251,6 +7277,8 @@ sk:
             cspSurvey:
               display_name: Dotazník
           lessons:
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd6-2020:
@@ -7264,6 +7292,8 @@ sk:
           lessons:
             Functions with Parameters:
               name: Funkcie s parametrami
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd3-2020:
@@ -7416,6 +7446,8 @@ sk:
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: "**Otázka dňa: Ako môže týchto 5 informatických zručností: štruktúrované riešenie problémov, vytrvalosť, komunikácia, spolupráca a kreativita) pomôcť programátorom úspešne dokončiť veľké projekty?**\\\\r\n\\\\r\nV tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou. "
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
             Text:
@@ -8062,6 +8094,10 @@ sk:
               name: Nástroje
             Debugging:
               name: Ladenie
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Obsah hodín"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Zhrnutie učebného celku"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -8077,6 +8113,8 @@ sk:
               name: Obrázky
             'Websites for Expression ':
               description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csp5-virtual:
@@ -8305,6 +8343,8 @@ sk:
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: "**Otázka dňa: Ako môže týchto 5 informatických zručností: štruktúrované riešenie problémov, vytrvalosť, komunikácia, spolupráca a kreativita) pomôcť programátorom úspešne dokončiť veľké projekty?**\\\\r\n\\\\r\nV tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou. "
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
@@ -8461,6 +8501,9 @@ sk:
                 **Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r
                 \\r
                 Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
               name: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
@@ -8482,6 +8525,9 @@ sk:
             Digital Footprint:
               key: Digitálna stopa
               name: Digitálna stopa
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -8561,6 +8607,9 @@ sk:
             Project - Design a Game:
               key: Projekt - Vytvor vlastnú hru
               name: Projekt - Vytvor vlastnú hru
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -8579,6 +8628,9 @@ sk:
               key: Analýza dizajnu
             Digital Design:
               key: Digitálny dizajn
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -8595,6 +8647,9 @@ sk:
               display_name: Dotazník
         csd5-2021:
           lessons:
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -8612,6 +8667,9 @@ sk:
             Functions with Parameters:
               key: Funkcie s parametrami
               name: Funkcie s parametrami
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -9524,6 +9582,9 @@ sk:
             Digital Design:
               key: Digitálny dizajn
               name: Digitálny dizajn
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -9540,6 +9601,9 @@ sk:
               display_name: Dotazník
         csd5-preview-2021:
           lessons:
+            Post-Project Test:
+              key: Záverečný test po projekte
+              name: Záverečný test po projekte
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
@@ -11962,6 +12026,9 @@ sk:
             lesson-19:
               name: Ladenie
         csa4-2022:
+          lessons:
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -11969,6 +12036,8 @@ sk:
           lessons:
             lesson-7:
               name: Rozšírené slučky "for"
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12244,6 +12313,8 @@ sk:
               key: Java Lab
             lesson-1:
               key: lekcia-1
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12254,6 +12325,8 @@ sk:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12264,6 +12337,8 @@ sk:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12772,6 +12847,9 @@ sk:
                 \\r
                 Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
               key: Projekt - Navrhnite aplikáciu
+            Post-Project Test:
+              name: Záverečný test po projekte
+              key: Záverečný test po projekte
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               name: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
               key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
@@ -12793,6 +12871,9 @@ sk:
             Digital Footprint:
               name: Digitálna stopa
               key: Digitálna stopa
+            Post-Project Test:
+              name: Záverečný test po projekte
+              key: Záverečný test po projekte
             CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
             lesson-1:
@@ -12872,6 +12953,9 @@ sk:
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               key: Projekt - Vytvor vlastnú hru
+            Post-Project Test:
+              name: Záverečný test po projekte
+              key: Záverečný test po projekte
             CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
             lesson-1:
@@ -12886,6 +12970,9 @@ sk:
               display_name: Dotazník
         csd4-2022:
           lessons:
+            Post-Project Test:
+              name: Záverečný test po projekte
+              key: Záverečný test po projekte
             CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
               key: 'Objavujeme informatiku: Záverečný dotazník'
@@ -12902,6 +12989,9 @@ sk:
               display_name: Dotazník
         csd5-2022:
           lessons:
+            Post-Project Test:
+              name: Záverečný test po projekte
+              key: Záverečný test po projekte
             CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
               key: 'Objavujeme informatiku: Záverečný dotazník'
@@ -12931,6 +13021,8 @@ sk:
               name: Zlúčenie vstupov
             Functions:
               name: Funkcie
+            Post-Project Test:
+              name: Záverečný test po projekte
             CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
@@ -13009,3 +13101,7 @@ sk:
               key: lekcia-2
             lesson-3:
               key: lekcia-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konzola

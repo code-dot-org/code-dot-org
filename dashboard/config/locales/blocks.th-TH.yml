@@ -1089,6 +1089,7 @@ th:
         options:
           CHOICE:
             '"this"': นี้
+            '"other"': อย่างอื่น
       gamelab_getTime:
         text: เวลาเป็น {UNIT}
         options:

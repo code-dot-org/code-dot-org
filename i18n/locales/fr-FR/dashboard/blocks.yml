@@ -1004,7 +1004,7 @@ fr:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
-        text: le sprite {SPRITE} set me à {BEHAVIOR}
+        text: le sprite {SPRITE} se met à {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE} permet à la cible {TARGET} d'atteindre {OPT} "
         options:
@@ -1566,7 +1566,7 @@ fr:
       gamelab_yLocationOf:
         text: coordonnées y de {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: le sprite {SPRITE} set me à {BEHAVIOR}
+        text: le sprite {SPRITE} se met à {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'ajouter des données d''entraînement : {NAME},{LOCATION}'
         options:

@@ -868,6 +868,10 @@ ur:
           lessons:
             Tools:
               name: اوزار
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] مواد کے اسباق"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] یونٹ لپیٹنا"
         csp5-virtual:
           lessons:
             Variables:
@@ -2267,10 +2271,16 @@ ur:
               name: شرائط
             lesson-17:
               name: پروجیکٹ انسپائریشن
+        csa4-2022:
+          lessons:
+            Console:
+              name: کنسول
         csa5-2022:
           lessons:
             lesson-7:
               name: لوپس کے لیے بہتر کردہ
+            Console:
+              name: کنسول
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -2477,6 +2487,8 @@ ur:
               key: جاوا لیب
             lesson-1:
               key: سبق 1
+            Console:
+              name: کنسول
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -2485,6 +2497,8 @@ ur:
             Java Lab:
               name: جاوا لیب
               key: جاوا لیب
+            Console:
+              name: کنسول
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -2493,6 +2507,8 @@ ur:
             Java Lab:
               name: جاوا لیب
               key: جاوا لیب
+            Console:
+              name: کنسول
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -2976,3 +2992,7 @@ ur:
               key: سبق 2
             lesson-3:
               key: سبق 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: کنسول
