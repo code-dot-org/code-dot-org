@@ -5,7 +5,8 @@ export const commitShape = PropTypes.shape({
   createdAt: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   projectVersion: PropTypes.string.isRequired,
-  isVersionExpired: PropTypes.bool
+  isVersionExpired: PropTypes.bool,
+  timelineElementType: PropTypes.string.isRequired
 });
 
 const reviewCommentShape = PropTypes.shape({
@@ -22,5 +23,6 @@ export const reviewShape = PropTypes.shape({
   isClosed: PropTypes.bool,
   projectVersion: PropTypes.string,
   isVersionExpired: PropTypes.bool,
+  timelineElementType: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(reviewCommentShape)
 });

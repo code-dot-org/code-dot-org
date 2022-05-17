@@ -2,7 +2,7 @@ import React from 'react';
 import PetitionForm from './PetitionForm';
 import i18n from '@cdo/locale';
 
-export default function PetitionCallToAction() {
+export default function PetitionCallToAction(props) {
   return (
     <>
       <div id="petition-block" className="petition-block">
@@ -12,7 +12,7 @@ export default function PetitionCallToAction() {
         <h2 id="sign-message" className="petition-sign-message">
           {i18n.petitionSignMessage()}
         </h2>
-        <PetitionForm />
+        <PetitionForm {...props} />
       </div>
     </>
   );

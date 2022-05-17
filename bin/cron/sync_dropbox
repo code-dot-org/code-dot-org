@@ -56,12 +56,12 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
       end
     else
       error_message = <<~ERROR_MSG
-                        <!here> Error syncing Dropbox and staging
-                        Dropbox directory: #{key}
-                        pegasus directory: #{value}
-                        stdout: #{stdout}
-                        stderr: #{stderr}
-                      ERROR_MSG
+        <!here> Error syncing Dropbox and staging
+        Dropbox directory: #{key}
+        pegasus directory: #{value}
+        stdout: #{stdout}
+        stderr: #{stderr}
+      ERROR_MSG
       logger.record error_message
     end
   end

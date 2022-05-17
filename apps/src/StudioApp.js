@@ -1519,7 +1519,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };

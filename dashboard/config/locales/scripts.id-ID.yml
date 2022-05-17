@@ -23668,6 +23668,10 @@ id:
               name: Modul 8
             Module 7:
               name: Modul 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Isi pelajaran"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Penutup Unit"
         csd2-virtual:
           title: Pengenalan Web Lab sesuai Kecepatan Belajar Sendiri
           description: Anda akan mempelajari cara membuat dan membagikan konten di
@@ -32468,6 +32472,8 @@ id:
               name: Unit 4 Penillaian
             lesson-11:
               name: Acak
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32477,6 +32483,8 @@ id:
               name: Unit 5 Penilaian
             lesson-7:
               name: Ditingkatkan Untuk Loop
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32903,6 +32911,8 @@ id:
               key: Hari Penilaian
             lesson-1:
               key: pelajaran ke-1
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32915,6 +32925,8 @@ id:
               key: Hari Penilaian
             lesson-6:
               name: Hak milik intelektual
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32925,6 +32937,8 @@ id:
             Assessment Day:
               name: Hari Penilaian
               key: Hari Penilaian
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -34059,3 +34073,7 @@ id:
               key: pelajaran ke-2
             lesson-3:
               key: pelajaran ke- 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsol

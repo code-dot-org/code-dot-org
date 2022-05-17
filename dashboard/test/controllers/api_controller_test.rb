@@ -1755,18 +1755,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do
