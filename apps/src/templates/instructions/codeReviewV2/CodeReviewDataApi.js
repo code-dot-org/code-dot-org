@@ -102,46 +102,10 @@ export default class CodeReviewDataApi {
   }
 
   getCommits() {
-    // Enable when the API is ready
-    // return $.ajax({
-    //   url: `/project_versions`,
-    //   type: 'GET',
-    //   data: {
-    //     project_id: this.channelId,
-    //   }
-    // });
-    //
-    // For now returning stub data
-    return [
-      {
-        id: 1,
-        createdAt: '2022-03-04T04:58:42.000Z',
-        comment: 'First commit',
-        projectVersion: 'asdfjkl',
-        isVersionExpired: false
-      },
-      {
-        id: 2,
-        createdAt: '2022-03-13T04:58:42.000Z',
-        comment: 'Second commit',
-        projectVersion: 'lkjfds',
-        isVersionExpired: false
-      },
-      {
-        id: 3,
-        createdAt: '2022-03-16T04:58:42.000Z',
-        comment: 'Third commit',
-        projectVersion: '234kjjdfk',
-        isVersionExpired: false
-      },
-      {
-        id: 4,
-        createdAt: '2022-03-20T04:58:42.000Z',
-        comment: 'Fourth commit',
-        projectVersion: 'wlkjdujx',
-        isVersionExpired: false
-      }
-    ];
+    return $.ajax({
+      url: `/project_commits/${this.channelId}`,
+      type: 'GET'
+    });
   }
 
   submitNewCodeReviewComment(commentText) {
