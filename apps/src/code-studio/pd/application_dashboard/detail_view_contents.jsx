@@ -295,7 +295,7 @@ export class DetailViewContents extends React.Component {
     const key = keyCategory[0];
     const category = keyCategory[1];
 
-    const responseScores = this.state.response_scores;
+    const responseScores = [...this.state.response_scores];
     responseScores[category][key] = event.target.value;
     this.setState({
       response_scores: responseScores
