@@ -15150,6 +15150,10 @@ pt:
               name: Módulo 8
             Module 7:
               name: Módulo 7
+            "[TEMPLATE] Content lessons":
+              name: "[MODELO] Lições sobre conteúdo"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[MODELO] Encerramento da unidade"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -20276,6 +20280,8 @@ pt:
               name: Unidade 4 Avaliação
             lesson-11:
               name: Aleatório
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -20285,6 +20291,8 @@ pt:
               name: Avaliação Unidade 5
             lesson-7:
               name: Otimizado para circuitos
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -20499,6 +20507,8 @@ pt:
               key: Dia de Avaliação
             lesson-1:
               key: lição 1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -20511,6 +20521,8 @@ pt:
               key: Dia de Avaliação
             lesson-6:
               name: Propriedade intelectual
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -20521,6 +20533,8 @@ pt:
             Assessment Day:
               name: Dia de Avaliação
               key: Dia de Avaliação
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -21238,3 +21252,7 @@ pt:
               key: lição 2
             lesson-3:
               key: lição 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console

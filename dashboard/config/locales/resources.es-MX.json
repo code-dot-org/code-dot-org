@@ -2522,66 +2522,109 @@
           "name": "Todo el Vocabulario"
         },
         "unit-4-the-design-process/csd/2021": {
+          "name": "CSD Unidad 4 - El Proceso de Diseño",
           "type": "Diapositivas"
         },
+        "pspe-image/csd/2021": {
+          "name": "Proceso de Resolución de Problemas con Empatía",
+          "url": "https://drive.google.com/file/d/1-wblyXhTh-rknRJaavgP3Nqt_gHKt9DU/view?usp=sharing",
+          "type": "Imagen"
+        },
         "designing_with_empathy/csd/2021": {
+          "name": "Diseñando con Empatía",
           "type": "Guía de Actividades"
         },
         "designing_with_empathy_1/csd/2021": {
+          "name": "Diseñando con Empatía",
           "type": "Ejemplo"
         },
         "reacting-as-your-user-exemplar-19/csd/2021": {
+          "name": "Reaccionando como Tu Perfil de Usuario 1",
           "type": "Ejemplo"
         },
         "reacting-as-your-user/csd/2021": {
+          "name": "Reaccionando como tu Usuario",
           "type": "Guía de Actividades"
         },
+        "profile-1/csd/2021": {
+          "name": "Perfil 1",
+          "type": "Perfil de Usuario"
+        },
+        "profile-2/csd/2021": {
+          "name": "Perfil 2",
+          "type": "Perfil de Usuario"
+        },
+        "profile-3/csd/2021": {
+          "name": "Perfil 3",
+          "type": "Perfil de Usuario"
+        },
+        "profile-4/csd/2021": {
+          "name": "Perfil 4",
+          "type": "Perfil de Usuario"
+        },
         "reacting_as_your_user_profile_2/csd/2021": {
+          "name": "Reaccionando como Tu Perfil de Usuario 2",
           "type": "Ejemplo"
         },
         "reacting_as_your_user_profile_3/csd/2021": {
+          "name": "Reaccionando como Tu Perfil de Usuario 3",
           "type": "Ejemplo"
         },
         "reacting_as_your_user_profile_4/csd/2021": {
+          "name": "Reaccionando como Tu Perfil de Usuario 4",
           "type": "Ejemplo"
         },
         "user-centered-design-2021/csd/2021": {
+          "name": "Diseño Centrado en el Usuario (Definir y Preparar) 2021",
           "type": "Guía de Actividades"
         },
         "the-design-thinking-process/csd/2021": {
+          "name": "El Proceso de Pensamiento de Diseño",
+          "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
           "type": "Vídeo"
         },
         "user_centered_design_define_prepare_/csd/2021": {
+          "name": "Diseño Centrado en el Usuario (Definir y Preparar)",
           "type": "Ejemplo"
         },
         "user-centered-design-reflect-2021/csd/2021": {
+          "name": "Diseño Centrado en el Usuario (Probar y Reflexionar) 2021",
           "type": "Guía de Actividades"
         },
         "user_centered_design_try_reflect_/csd/2021": {
+          "name": "Diseño Centrado en el Usuario (Probar y Reflexionar)",
           "type": "Ejemplo"
         },
         "user-interface-screens/csd/2021": {
+          "name": "Pantalla de Interfaz de Usuario",
           "type": "Recurso"
         },
         "user-experience-computer/csd/2021": {
+          "name": "Prueba con Usuarios (Computadora)",
           "type": "Guía de Actividades"
         },
         "user-experience-user/csd/2021": {
+          "name": "Prueba con Usuarios (Usuario) ",
           "type": "Guía de Actividades"
         },
         "improve-a-screen-exemplar-19/csd/2021": {
+          "name": "Mejorar una Pantalla",
           "type": "Ejemplo"
         },
         "paper-prototype-sample-feedback/csd/2021": {
+          "name": "Retroalimentación del Prototipo",
           "type": "Recurso"
         },
         "improve-a-screen/csd/2021": {
+          "name": "Mejorar una Pantalla",
           "type": "Guía de Actividades"
         },
         "user-interviews-1/csd/2021": {
+          "name": "Entrevistas al Usuario",
           "type": "Guía de Actividades"
         },
         "user-interviews/csd/2021": {
+          "name": "Ejemplo de Entrevistas al Usuario",
           "type": "Recurso"
         },
         "computer-science-practices/csd/2021": {
@@ -2637,6 +2680,7 @@
           "type": "Guía de Actividades"
         },
         "whats-for-lunch-testing/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=ny5UbRpG6PE",
           "type": "Vídeo"
         },
         "paper_prototype_user_testing/csd/2021": {
@@ -2981,6 +3025,7 @@
         },
         "unit-5-data-society/csd/2021": {
           "name": "CSD Unit 5 - Datos y Sociedad",
+          "url": "https://docs.google.com/presentation/d/1X0N-PS7E0ccXuj2eHVneY4lBdV42s5cn/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Diapositivas"
         },
         "representation-matters-exemplar-2019/csd/2021": {
@@ -3068,7 +3113,7 @@
           "type": "Ejemplo"
         },
         "activity-guide-pet-records/csd/2021": {
-          "name": " Guía de Actividad - Registros de Mascotas",
+          "name": " Guía de Actividades - Registros de Mascotas",
           "url": "https://docs.google.com/document/d/1bnmZ8z92LcpCCGaaDXLOFqIo2riujaXFUmPqfBZcuO8/edit?usp=sharing",
           "type": "Guía de Actividades"
         },
@@ -3077,11 +3122,6 @@
           "url": "https://docs.google.com/document/d/1V8is0VXeSVc8obhXs8mAdNoHiUSGyJdDMPAnQ9pWYqQ/edit?usp=sharing",
           "type": "Referencia"
         },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Mantener los datos en secreto",
-          "url": "https://docs.google.com/document/d/1Y-eKyn7FiQ2UDTiiixnvxkRek-YbetbX/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
-          "type": "Ejemplo"
-        },
         "keeping-data-secret/csd/2021": {
           "name": "Registros Médicos",
           "url": "https://docs.google.com/document/d/1bvQLYvq2au1cqEi80iANt_bwHVWzSDUy/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
@@ -3089,6 +3129,7 @@
         },
         "unit_5_data_society/csd/2021": {
           "name": "Unidad 5 - Datos y Sociedad",
+          "url": "https://docs.google.com/presentation/d/1X0N-PS7E0ccXuj2eHVneY4lBdV42s5cn/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Diapositivas"
         },
         "secret_messages_2021/csd/2021": {
@@ -3112,6 +3153,7 @@
         },
         "unit_5_data_society_1/csd/2021": {
           "name": "Unidad 5 - Datos y Sociedad",
+          "url": "https://docs.google.com/presentation/d/1X0N-PS7E0ccXuj2eHVneY4lBdV42s5cn/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Diapositivas"
         },
         "create_a_representation/csd/2021": {
@@ -3125,6 +3167,7 @@
         },
         "create_a_representation_marked_rubrics/csd/2021": {
           "name": "Crear una Representación - Rúbrica Marcada",
+          "url": "https://docs.google.com/document/d/1bKiKQP_U97lSPDOVE98INXY3rJfwbcak/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "problem-solving-with-data-exemplar-2019/csd/2021": {
@@ -3174,6 +3217,7 @@
         },
         "problem-solving-process-with-data/csd/2021": {
           "name": "Proceso de Resolución de Problemas con Datos",
+          "url": "https://docs.google.com/document/d/1U9w8G1O5vCwK4xG1VDVqz44y2VS3SgrQ/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Recurso"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
@@ -3192,23 +3236,28 @@
           "type": "Guía de Actividades"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "name": "Amazon y Datos",
           "url": "https://youtu.be/S4RL6prqtGQ",
           "type": "Vídeo"
         },
         "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "name": "Waze y Datos",
           "url": "https://www.youtube.com/watch?v=Uu-uTo_ma9c",
           "type": "Vídeo"
         },
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "name": "Netflix y Datos",
           "url": "https://www.youtube.com/watch?v=hqFHAnkSP2U",
           "type": "Vídeo"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
           "name": "Los datos en el mundo real",
+          "url": "https://docs.google.com/document/d/1ESfv3uvwlkHEfV4xnhLyNTYgbIO9FI7Y/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "data-in-the-real-world/csd/2021": {
           "name": "Los datos en el mundo real",
+          "url": "https://docs.google.com/document/d/1M_zxtfTiOHe78XKqUjHJc_-MSqQH3VBC/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de Actividades"
         },
         "video_impact_on_society/csd/2021": {
@@ -3227,27 +3276,46 @@
           "type": "Vídeo"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
+          "name": "Hacer una Recomendación",
+          "url": "https://docs.google.com/document/d/1OqGE-iT3uhEidYqVmdA9iWgYYqpCv-vg/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Revisión Por Pares"
         },
         "make-a-recommendation-1/csd/2021": {
+          "name": "Hacer una Recomendación",
+          "url": "https://docs.google.com/document/d/1s3iu8lv1FqL9jbhfRv-wZuN8SGu_AvaQ/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Rúbrica"
         },
         "solve-a-data-problem/csd/2021": {
+          "name": "Hacer una Recomendación",
+          "url": "https://docs.google.com/document/d/1kbSEuSB2Hh5U_mUnSXinMxu9vB6ZxTrn/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de Proyecto"
         },
         "project_guide_exemplar/csd/2021": {
+          "name": "Ejemplo de Guía de Proyecto",
+          "url": "https://docs.google.com/document/d/1wx_PsB9JuCY1-ms6ZK-JWN_4K8y0K0gF/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "peer_review_exemplar_1/csd/2021": {
+          "name": "Ejemplo de Revisión por Pares 1 ",
+          "url": "https://docs.google.com/document/d/1zs-WX9-Hb5MaOv7k-6UaQg5SAopjWVTR/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "peer_review_exemplar_2/csd/2021": {
+          "name": "Ejemplo de Revisión por Pares 2",
+          "url": "https://docs.google.com/document/d/192OxFab7XAfXLdAOzFBiQcr_hQKrYQnb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "unit_5_data_society_2/csd/2021": {
+          "name": "Unidad 5 Datos y Sociedad ",
+          "url": "https://docs.google.com/presentation/d/1X0N-PS7E0ccXuj2eHVneY4lBdV42s5cn/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Diapositivas"
         },
+        "make_a_recommendation_-_student_checklist/csd/2021": {
+          "name": "Hacer una Recomendación - Lista de Comprobación del Estudiante",
+          "url": "https://docs.google.com/document/d/1RyXTxcllYmrCdPdG1MKKp1AJ4LY_gr8j/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+        },
         "sample_marked_rubrics_3/csd/2021": {
+          "url": "https://docs.google.com/document/d/1BKB5-lUEVBDk-4oGrjSgaizfyXVKqYqN/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },
         "all_resources_5/csd/2021": {
@@ -3734,6 +3802,7 @@
           "type": "Guía de actividades"
         },
         "project-propose-an-app-2020/csd/2021": {
+          "name": "Ejemplo de Guía de Proyecto",
           "url": "https://docs.google.com/document/d/1p_8J7SZCY4U3urWDSYw17BZialOnsC-W/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplo"
         },

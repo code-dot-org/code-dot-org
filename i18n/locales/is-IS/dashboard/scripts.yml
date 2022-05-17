@@ -7804,6 +7804,9 @@ is:
             lesson-19:
               name: Villuleit
         csa4-2022:
+          lessons:
+            Console:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -7811,6 +7814,8 @@ is:
           lessons:
             lesson-2:
               name: 5.  eining - Mat
+            Console:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -7861,14 +7866,23 @@ is:
           description_audience: 'Aldur: 9-13'
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
         csa6-2022:
+          lessons:
+            Console:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
         csa7-2022:
+          lessons:
+            Console:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
         csa8-2022:
+          lessons:
+            Console:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -8045,3 +8059,7 @@ is:
           lessons:
             Survey Planning:
               name: Söfnun gagna hönnuð
+        csa9-2022:
+          lessons:
+            Console:
+              name: Skjár
