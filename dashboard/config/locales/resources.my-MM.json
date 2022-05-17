@@ -503,6 +503,12 @@
         "teacher_forum/csd/2021": {
           "name": "ဆရာဖိုရမ်"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "ဗီဒီယို"
         },
@@ -583,6 +589,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "ဆရာဖိုရမ်"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "ဗီဒီယို"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ဗီဒီယို"

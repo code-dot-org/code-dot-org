@@ -178,8 +178,29 @@
           "word": "迴圈",
           "definition": "不斷重複做某件事情的動作。"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "凱撒密碼（Caesar Cipher）",
+          "definition": "一種加密技術，使用若干數目的字元來轉換字母"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "密碼（Cipher）",
+          "definition": "執行加密技術（或演算法）的通用詞彙"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "破解加密內容（Cracking encryption）",
+          "definition": "若你嘗試把秘密訊息解碼，而不知道密碼的詳情，這就表示你正在嘗試「破解」加密內容。"
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "解密（Decryption）",
+          "definition": "這種流程用於反轉加密程序，把秘密訊息重現成原始的純文字"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "加密"
+          "word": "加密",
+          "definition": "把訊息編碼的流程，讓訊息內容保密，只有得到「授權」的人士才可讀取。"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "隨機替換式密碼（Random Substitution Cipher）",
+          "definition": "一種加密技術，把字母表的每個字母，配對至字母表中隨機選擇的其他字母。"
         },
         "code/starwars/unversioned": {
           "word": "代碼",
@@ -230,7 +251,8 @@
           "definition": "編碼為可以由電腦運行的演算法。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "無損壓縮"
+          "word": "無損壓縮",
+          "definition": "一種資料壓縮演算法，可讓壓縮資料完美重建成原始資料。最常用於文字壓縮（例如 .zip 壓縮）"
         },
         "event/outbreak/unversioned": {
           "word": "事件（Event）",

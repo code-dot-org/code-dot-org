@@ -11,6 +11,7 @@
         "express": "Express-cursus",
         "csd": "Ontdekkingen in de informatica",
         "csp": "Basisprincipes uit de informatica",
+        "csa": "Computer Wetenschap A",
         "20-hour": "20-uur Intro cursus",
         "flappy": "Flappy Code",
         "jigsaw": "Legpuzzel",
@@ -23,6 +24,7 @@
         "course4": "Les 4",
         "frozen": "Code met Anna en Elsa",
         "gumball": "Kauwgom Speel Lab",
+        "hero": "Minecraft: Heldenreis",
         "hourofcode": "Klassiek doolhof",
         "iceage": "Ijs tijd Speel Lab",
         "infinity": "Disney Infinity Play Lab",
@@ -39,7 +41,13 @@
         "explore-data-1": "Boxplots en histogrammen verkennen",
         "outbreak-csc": "Uitbraak",
         "poem-art": "Poëzie",
-        "edit-code": "Code Bewerken"
+        "edit-code": "Code Bewerken",
+        "poetry-hoc3": "poetry-hoc3",
+        "csa-u8-dev": "csa-u8-dev",
+        "netsim": "netsim",
+        "allthethingscourse": "alledingencursus",
+        "step": "stap",
+        "csa5-exemplars": "csa5-exemplars"
       }
     }
   }

@@ -130,7 +130,7 @@ id-ID:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
         - {}
       2-3 artist functions multi 1:
@@ -256,10 +256,10 @@ id-ID:
         title: Pilihan Berganda
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Masing-masing kendaraan ini telah dibagi menjadi bagian-bagian yang
           lebih kecil. Cocokkan setiap kendaraan dengan daftar bagiannya.
         questions:
@@ -279,6 +279,9 @@ id-ID:
         - text: Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/>
             Hillview adalah sebuah kota kecil.
         title: Pilihan Berganda
+        content1: Berikut adalah tiga kalimat. Manakah dari template di bawah ini
+          secara benar mengabstraksi sehingga ketiga cocok dengan pola yang sama seperti
+          template?
       4-5 Crowdsourcing Multi 1:
         answers:
         - {}
@@ -317,6 +320,7 @@ id-ID:
         - text: Ketika Anda mencoba untuk log on ke code.org, alamat IP mana yang
             merupakan DNS yang paling mungkin untuk membawa Anda?
         title: Pilihan Berganda
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Internet Multi 2:
         answers:
         - {}
@@ -327,6 +331,7 @@ id-ID:
         - text: Jika DNS telah mengirim Anda ke halaman di alamat IP 100.42.50.110,
             situs mana yang sedang Anda masuki?
         title: Pilihan Berganda
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, lewati untuk ke Lou saya,
@@ -337,8 +342,11 @@ id-ID:
         - {}
         - {}
         questions:
-        - {}
+        - text: Apa potongan terbesar dari lagu ini yang dapat Anda definisikan sebagai
+            bagian chorus sehingga bagian chorus mengulangi persis setiap kali hal
+            itu dipanggil?
         title: Pilihan Berganda
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
       4-5 Suncatchers Match 1:
         answers:
         - text: "<h4>STACK</h4>"
@@ -348,11 +356,12 @@ id-ID:
         content1: Cocokkan setiap program dengan kata yang dibuat, gunakan kelompok
           keterampilan yang telah disediakan.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Mencocokan
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
         - {}
@@ -398,6 +407,9 @@ id-ID:
         questions:
         - text: Pilih blok terbaik.
         title: Kondisional Lebah Pilihan Berganda
+        content2: Sebuah bunga ungu dapat memiliki 3, 2 atau 1 sari bunga, tetapi
+          Anda tidak mengetahui seberapa banyak. Blok manakah yang dapat memeriksa
+          dan mengumpulkan semua sari bunga dari sebuah bunga ungu dengan benar?
       4-5 bee debug multi 1:
         answers:
         - {}
@@ -1930,12 +1942,24 @@ id-ID:
             ini gagal?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat akan sampai di akorn. Tidak ada bug dalam code.
+          feedback: Salah. Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
+        - text: Scrat tidak akan mencapai akorn karena dia salah belok.
+          correct: true
+          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
+        - text: Scrat tidak akan mencapai akorn karena tidak cukup ada blok `move
+            forward`.
+          correct: true
+          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
         - text: Saya tidak tahu.
+          feedback: Ada dua bug di dalam code ini. Pertama, Scrat salah belok, lalu
+            Scrat tidak bergerak maju secukupnya agar mencapai akorn.
         questions:
-        - {}
+        - text: Cari bug dalam code ini. Akankah Scrat mencapai akorn atau apakah
+            ada masalah?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Burung akhirnya akan kurang satu langkah dari babi.
@@ -2126,6 +2150,8 @@ id-ID:
             "Jalankan"?
       courseD_EOC_2020:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di pelajaran terakhir Kursus D! Pilih proyek
+          untuk dibuat.
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -3028,6 +3054,7 @@ id-ID:
         content1: Tes Halaman Buku Teks Markdown
       courseE_EOC_2020:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Program yang sama juga akan bekerja untuk memecahkan puzzle ini.
@@ -3215,6 +3242,7 @@ id-ID:
         content1: Tes Halaman Buku Teks Markdown
       courseF_EOC_2020:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus F! Pilih proyek untuk dibuat.
       courseF_bee_variables_8a_2018:
         answers:
         - text: Lebah tidak akan mengumpulkan nektar apa pun karena variabel tidak
@@ -3989,10 +4017,22 @@ id-ID:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
       csf_be_a_super_digital_citizen:
         content1: deskripsi di sini
+        markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
+          ketika menyaksikan cyberbullying?"
       csf_password_power-up:
         content1: deskripsi di sini
+        markdown: "#  Perkuat Kata Sandi Anda## Tips Kata Sandi yang Harus Diingat*
+          Awali dengan **frasa** yang mudah diingat.* Hanya **orang tua** Anda yang
+          boleh tahu kata sandi Anda.* Jangan sekali-kali menggunakan informasi identitas
+          **privat** dalam kata sandi Anda.* Buat kata sandi dengan minimal **delapan**
+          karakter.* Gunakan huruf, angka, dan **simbol** dalam kata sandi Anda.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_putting_a_stop_to_online_meanness:
         content1: deskripsi di sini
+        markdown: "# STOP Tindakan Kasar## Apa yang sebaiknya dilakukan jika ada orang
+          bersikap kasar kepada Anda secara online?* **S**tep away (Menjauh).* **T**ell
+          a trusted adult (Beri tahu orang dewasa tepercaya).* **O**K sites first
+          (Cari situs yang aman).* **P**ause and think online (Jeda sejenak dan berpikir
+          matang secara online).![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
@@ -5312,3 +5352,17 @@ id-ID:
         display_name: Praktik
       CSD web text practice choice_2021:
         display_name: Praktik
+      CSD Games Properties practice_2021:
+        display_name: Properti Sprite
+      PowerOfWords-Unplugged_2020:
+        markdown: "# Kekuatan Kata-Kata## Apa yang harus Anda lakukan ketika seseorang
+          menggunakan kata-kata kasar atau menyakitkan di internet?"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: "# Informasi Privat dan Pribadi## Apa saja informasi tentang diri
+          Anda yang AMAN untuk dibagikan secara online?"
+      csf_digital_trails:
+        markdown: "# Mengikuti Jejak Digital## Apa informasi yang AMAN untuk disimpan
+          sebagai jejak digital Anda?"
+      csf_safety_in_my_online_neighborhood:
+        markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
+          tempat-tempat online secara aman?"

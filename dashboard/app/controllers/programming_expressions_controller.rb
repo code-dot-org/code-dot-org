@@ -16,12 +16,12 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
-  # GET /programming_expressions/get_filtered_expressions
+  # GET /programming_expressions/get_filtered_results
   # Possible filters:
   # - programmingEnvironmentId
   # - categoryId
   # - page (1 indexed)
-  def get_filtered_expressions
+  def get_filtered_results
     return render(status: :not_acceptable, json: {error: 'Page is required'}) unless params[:page]
 
     @programming_expressions = ProgrammingExpression.all
@@ -33,7 +33,7 @@ class ProgrammingExpressionsController < ApplicationController
     num_pages = (total_expressions / results_per_page.to_f).ceil
 
     @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page)
-    render json: {numPages: num_pages, expressions: @programming_expressions.map(&:summarize_for_all_code_docs)}
+    render json: {numPages: num_pages, results: @programming_expressions.map(&:summarize_for_all_code_docs)}
   end
 
   # GET /programming_expressions/search
@@ -172,6 +172,6 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def set_expression_by_keys
-    @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
+    @programming_expression = ProgrammingExpression.get_from_cache(params[:programming_environment_name], params[:programming_expression_key])
   end
 end

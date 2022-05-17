@@ -2,6 +2,9 @@
   "hu-HU": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
@@ -19,11 +22,20 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Videó"
         },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Videó"
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Videó"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
         },
         "ai-ml/oceans/unversioned": {
           "type": "Videó"
@@ -720,6 +732,9 @@
         "pause_and_think_online/coursed/2021": {
           "type": "Videó"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
         "pause_and_think_online_1/coursed/2021": {
           "type": "Videó"
         },
@@ -766,6 +781,9 @@
         },
         "pause_and_think_online/express/2021": {
           "type": "Videó"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
         },
         "pair_programming_video/express/2021": {
           "type": "Videó"
@@ -870,6 +888,12 @@
         },
         "teacher_forum/csd/2021": {
           "name": "Tanári fórum"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Videó"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Videó"
         },
         "random_numbers_1/csd/2021": {
           "name": "Véletlen számok"
@@ -1000,6 +1024,12 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Tanári fórum"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Videó"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "A probléma-megoldási folyamat"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Mi az a számítógép?"

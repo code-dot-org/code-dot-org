@@ -14,6 +14,17 @@
         "poem_art_introduction/poem-art/2021": {
           "type": "ვიდეო"
         },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "ვიდეო"
         },
@@ -808,6 +819,17 @@
           "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "მობრუნება და კუთხეები"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "დიდი მოვლენა",
           "url": "https://youtu.be/u0WV9shCoak"
@@ -1009,10 +1031,17 @@
           "type": "ვიდეო"
         },
         "artist_introduction/express/2021": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "ვიდეო"
         },
         "turns_angles/express/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "ვიდეო"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "მობრუნება და კუთხეები"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Sprite ლაბორატორია დოკუმენტაცია",
@@ -1109,6 +1138,13 @@
         },
         "digital-sharing-video/coursee/2021": {
           "type": "ვიდეო"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "სიმღერის წერა ფუნქციებით",
@@ -1245,6 +1281,12 @@
         },
         "teacher_forum/csd/2021": {
           "name": "მასწავლებლის ფორუმი"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "ვიდეო"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "როგორ მუშაობს კომპიუტერი: აპარატული და პროგრამული უზრუნველყოფა",
@@ -1406,6 +1448,12 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "მასწავლებლის ფორუმი"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "პროებლემების გადაჭრის პროცესი"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "რა არის კომპიუტერი?"

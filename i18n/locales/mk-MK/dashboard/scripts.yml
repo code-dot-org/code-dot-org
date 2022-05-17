@@ -403,3 +403,11 @@ mk:
             Variables:
               name: Променливи
               key: Променливи
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Променливи
+              key: Променливи
+            Text:
+              name: Текст
+              key: Текст

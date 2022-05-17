@@ -27,6 +27,7 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -192,11 +193,13 @@ class EditSectionForm extends Component {
             onChange={name => editSectionProperties({name})}
             disabled={isSaveInProgress}
           />
-          <GradeField
-            value={section.grade || ''}
-            onChange={grade => editSectionProperties({grade})}
-            disabled={isSaveInProgress}
-          />
+          {section.participantType === ParticipantAudience.student && (
+            <GradeField
+              value={section.grade || ''}
+              onChange={grade => editSectionProperties({grade})}
+              disabled={isSaveInProgress}
+            />
+          )}
           {showLoginTypeField && (
             <LoginTypeField
               value={section.loginType}
@@ -373,7 +376,16 @@ const AssignmentField = ({
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
-    <FieldDescription>{i18n.whichCourse()}</FieldDescription>
+    <FieldDescription>
+      {i18n.whichCourse()}
+      <a
+        href="https://support.code.org/hc/en-us/articles/204874337-What-happens-when-I-assign-a-course-to-a-section-Can-I-assign-2-at-once-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {i18n.explainCourseAssignmentsLearnMore()}
+      </a>
+    </FieldDescription>
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}

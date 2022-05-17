@@ -1,11 +1,11 @@
 name 'CSA U4 Assessment 2022 q13'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`a && b || c`'
+wrong '`a && b && c`'
+right '`!a && !b && !c`'
+wrong '`!a && (!b || !c)`'
+wrong '`!(a && b) || !c`'
 
 markdown <<MARKDOWN
-question
+Assume that `a`, `b`, and `c` are `boolean` variables. Which of the following expressions is equivalent to `!a && !(b || c)`?
 MARKDOWN

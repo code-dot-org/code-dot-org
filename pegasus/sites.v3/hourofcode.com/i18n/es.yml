@@ -171,6 +171,11 @@ es:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
+  hoc_danceparty_alt_text: Personajes animados bailando al ritmo de la música bajo
+    el texto "Codifica tu propia fiesta de baile".
+  hoc_ai_alt_text: Un personaje flotante de inteligencia artificial, de color blanco,
+    con una antena, un escáner en la parte inferior y una cara LED
+  hoc_banner_alt_text: Cartel de la Hora del Código
   ai_video_title_what_is_ai: "¿Qué es la Inteligencia Artificial?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
@@ -11195,86 +11200,167 @@ es:
   all: Todos
   dont_know: No sé
   language_label: Idioma
-  ar: Árabe
-  az: Azerí
-  bg: Búlgaro
-  bn: Bengalí
-  br: Bretón
-  bs: Bosnio
-  ca: Catalán
-  cs: Checo
-  cs-cz: Checo (Chequia)
-  da: Danés
-  da-dk: Danés (Dinamarca)
-  de: Alemán
-  de-de: Alemán (Alemania)
-  el: Griego
-  el-gr: Griego (Grecia)
-  en: Español (España)
-  en-gb: Inglés (Reino Unido)
-  es: Español
-  es-es: Español (España)
-  es-mx: Español (México)
-  et: Estonio
-  eu: Vasco
-  fa: Persa
-  fa-ir: Persa (Irán)
-  fi: Finlandés
-  fi-fi: Finlandés (Finlandia)
-  fil-ph: Filipino (Filipinas)
-  fr: Francés
-  gl: Gallego
-  he: Hebreo
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croata
-  hu: Húngaro
-  ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
-  id: Bahasa Indonesio
-  is: Islandés
-  it: Italiano
-  it-it: Italiano (Italia)
-  ja: Japonés
-  ja-jp: Japonés (Japón)
-  ka: Georgiano
-  kk: Kazajo
-  ko: Coreano
-  lt: Lituano
-  lv: Letón
-  mk: Macedonio
-  mr: Maratí
-  ms: Malayo
-  my: Birmano
-  nl: Holandés
-  nl-nl: Holandés (Holanda)
-  nn: Noruego (Nynorsk)
-  false: Noruego
-  pl: Polaco
-  pl-pl: Polaco (Polonia)
-  pt: Portugués
-  pt-br: Portugués (Brasil)
-  pt-pt: Portugués (Portugal)
-  ro: Rumano
-  ru: Ruso
-  sk: Eslovaco
-  sl: Esloveno
-  sq: Albanés
-  sr: Serbio
-  sv: Sueco
-  sv-se: Sueco (Suecia)
-  sw: Swahili
-  ta: Tamil
-  te: Télugu
-  th: Tailandés
-  tl: Tagalo
-  tr: Turco
-  uk: Ucraniano
-  ur: Urdú
-  ur-in: Urdú (India)
-  ur-pk: Urdú (República Islámica de Pakistán)
-  vi: Vietnamita
-  zh: Chino (Simplificado)
-  zh-cn: Chino (Simplificado, República Popular de China)
-  zh-hans: Chino (Simplificado) (zh-Hans)
-  zh-hant: Chino (Tradicional) (zh-Hant)
-  zh-tw: Chino (Tradicional, Taiwán)
+  language_code:
+    ar: Árabe
+    az: Azerí
+    bg: Búlgaro
+    bn: Bengalí
+    br: Bretón
+    bs: Bosnio
+    ca: Catalán
+    co: Corso
+    cs: Checo
+    da: Danés
+    de: Alemán
+    dv: Dhivehi
+    el: Griego
+    en: Español (España)
+    es: Español
+    et: Estonio
+    eu: Vasco
+    fa: Persa
+    fi: Finlandés
+    fil: Tagalo
+    fr: Francés
+    ga: Irlandés
+    gl: Gallego
+    haw: Hawaiano
+    he: Hebreo
+    hi: Hindi
+    hr: Croata
+    hu: Húngaro
+    hy: Armenio
+    ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
+    id: indonesio
+    is: Islandés
+    it: Italiano
+    ja: Japonés
+    ka: Georgiano
+    kk: Kazajo
+    km: Jemer
+    kn: Canarés
+    ko: Coreano
+    ku: Kurdo
+    ky: Kirguís
+    lt: Lituano
+    lv: Letón
+    mi: Maori
+    mk: Macedonio
+    mn: Mongol
+    mr: Maratí
+    ms: Malayo
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Árabe
+    az-az: Azerí
+    bg-bg: Búlgaro
+    bn-bd: Bengalí
+    bs-ba: Bosnio
+    ca-es: Catalán
+    co-co: Corso
+    cs-cz: Checo
+    da-dk: Danés
+    de-de: Alemán
+    dv-mv: Dhivehi
+    el-gr: Griego
+    en-gb: English (United Kingdom)
+    en-us: Español (España)
+    es-es: Spanish (Spain)
+    es-mx: Español (México)
+    et-ee: Estonio
+    eu-es: Vasco
+    fa-af: Dari
+    fa-ir: Persa
+    fi-fi: Finlandés
+    fil-ph: Tagalo
+    fr-fr: Francés
+    ga-ie: Irlandés
+    gl-es: Gallego
+    haw-hi: Hawaiano
+    he-il: Hebreo
+    hi-in: Hindi
+    hr-hr: Croata
+    hu-hu: Húngaro
+    hy-am: Armenio
+    id-id: indonesio
+    is-is: Islandés
+    it-it: Italiano
+    ja-jp: Japonés
+    ka-ge: Georgiano
+    kk-kz: Kazajo
+    km-kh: Jemer
+    kn-in: Canarés
+    ko-kr: Coreano
+    ku-iq: Kurdo
+    ky-kg: Kirguís
+    lt-lt: Lituano
+    lv-lv: Letón
+    mi-nz: Maori
+    mk-mk: Macedonio
+    mn-mn: Mongol
+    mr-in: Maratí
+    ms-my: Malayo
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

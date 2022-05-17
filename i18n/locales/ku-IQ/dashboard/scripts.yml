@@ -936,3 +936,21 @@ ku:
             Variables:
               name: گۆڕاوەکان
               key: گۆڕاوەکان
+        csd3-2022:
+          lessons:
+            Variables:
+              name: گۆڕاوەکان
+              key: گۆڕاوەکان
+            Text:
+              name: دەق
+              key: دەق
+            Conditionals:
+              name: مەرجیەکان
+              key: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+              key: فرمانەکان
+        csd6-2022:
+          lessons:
+            Functions:
+              name: فرمانەکان

@@ -697,6 +697,12 @@
         "teacher_forum/csd/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "វីដេអូ"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
         },
@@ -824,6 +830,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "វីដេអូ"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "វីដេអូ"

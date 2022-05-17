@@ -660,6 +660,10 @@ cs:
       title: 'Taneční večírek'
     dance-2019:
       title: 'Taneční večírek'
+    hello-world:
+      title: 'Ahoj, světe'
+    poem-art:
+      title: 'Básnické umění'
     hoc:
       title: 'Klasické bludiště'
       body: 'Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.'
@@ -818,14 +822,6 @@ cs:
     reminder_desc: 'Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní podmínky</a>a<a href="%{privacy_url}" target="_blank">Ochranu osobních údajů </a>. Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.'
     reminder_desc_markdown: Aktualizovali jsme naše [Smluvní podmínky](%{tos_url})a[Ochranu osobních údajů](%{privacy_url}). Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.
     review_terms: "Zkontrolujte aktualizované podmínky"
-  donor_interstitial:
-    title: "Vaše bezplatné kurzy počítačových věd umožňuje..."
-    subtitle: "Rádi bychom poděkovali štědrým dárcům, jejichž podpora umožnila úspěch Code.org. Díky neutuchající štědrosti našich [dárců](%{donors_url}) jsme odhodláni nadále poskytovat Code.org studentům a školám po celém světě zdarma!"
-    local_supporters: "Místní podporovatelé"
-    global_supporters: "Globální podporovatelé"
-    support_codeorg_1: "Každý dolar daný společnosti Code.org přináší příležitost dalším studentům."
-    support_codeorg_2: "[Darujte teď](%{donate_url}) a podpořte Code.org."
-    get_started: "Začněte na Code.org"
   school_info_interstitial:
     title: "Chceme přinášet počítačovou vědu všem studentům - pomozte nám sledovat náš pokrok!"
     message: "Zadejte prosím níže údaje vaší školy."

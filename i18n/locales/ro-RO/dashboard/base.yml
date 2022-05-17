@@ -168,7 +168,15 @@ ro:
     user_type_button: "Actualizaţi tipul de contul"
     user_type_label: "Tipul contului"
     user_type_student: "Elev"
+    user_type_student_desc: "Studiază toate cursurile și activitățile noastre, plus:"
+    user_type_student_ability_1: "Salvează-ți progresul și proiectele"
+    user_type_student_ability_2: "Alătură-te secțiunii clasei profesorului tău"
     user_type_teacher: "Profesor"
+    user_type_teacher_desc: "Totul la care elevii au acces, plus:"
+    user_type_teacher_ability_1: "Crează secțiuni de clasă"
+    user_type_teacher_ability_2: "Atribuie și urmărește munca elevilor"
+    user_type_teacher_ability_3: "Înscrie-te la studiul profesional"
+    user_type_teacher_ability_4: "Interacționează pe forumul profesorului nostru"
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
@@ -647,6 +655,10 @@ ro:
       title: 'Petrecere dansantă'
     dance-2019:
       title: 'Petrecere dansantă'
+    hello-world:
+      title: 'Bună Lume'
+    poem-art:
+      title: 'Arta Poeziei'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
@@ -805,14 +817,6 @@ ro:
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'
     reminder_desc_markdown: Am actualizat [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url}). Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: "Revedeţi termenii actualizati"
-  donor_interstitial:
-    title: "Cursurile tale gratuite de Informatică au fost posibile de către..."
-    subtitle: "Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți, în general, datorită generozității continue a [donors](%{donors_url}) noștri!"
-    local_supporters: "Suporteri Locali"
-    global_supporters: "Suporteri Globali"
-    support_codeorg_1: "Fiecare dolar donat la Code.org aduce oportunități mai multor studenți."
-    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
-    get_started: "Începe pe Code.org."
   school_info_interstitial:
     title: "Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne putea urmări progresul!"
     message: "Vă rugăm introduceți informațiile despre școala dumneavoastră mai jos."

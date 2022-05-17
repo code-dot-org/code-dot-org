@@ -635,6 +635,10 @@ hu:
       title: 'Táncos buli'
     dance-2019:
       title: 'Táncos buli'
+    hello-world:
+      title: 'Helló világ'
+    poem-art:
+      title: 'Versművészet'
     hoc:
       title: 'Hagyományos labirintus'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'

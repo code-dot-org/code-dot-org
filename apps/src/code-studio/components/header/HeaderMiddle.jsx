@@ -270,6 +270,7 @@ class HeaderMiddle extends React.Component {
                 setDesiredWidth={width => {
                   this.setDesiredWidth('lessonProgress', width);
                 }}
+                lessonName={lessonData.name}
               />
             </div>
           )}

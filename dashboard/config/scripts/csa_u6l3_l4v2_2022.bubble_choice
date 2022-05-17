@@ -1,6 +1,6 @@
 name 'CSA U6L3-L4v2_2022'
 display_name 'Using ArrayLists'
-description 'level description here'
+description 'Create an `ArrayList` to store values of different types.'
 
 sublevels
 level 'CSA U6L3-L4a_2022'

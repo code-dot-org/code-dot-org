@@ -1526,7 +1526,7 @@
         "helloworld_animals_freeplay": "Itt az ideje, hogy azt hozz létre, amit csak akarsz!",
         "helloworld_animals_location": "Adj minden sprite-nak más-más helyet.",
         "helloworld_animals_multi": "Beszéltesd a két sprite-ot.",
-        "helloworld_animals_say": "Használd a `say` blokkot, hogy azt mondjak, amit csak akarsz!",
+        "helloworld_animals_say": "Használd a „Mondd” blokkot, hogy azt mondjak, amit csak szeretnél!",
         "helloworld_animals_sizes": "Tanuljuk meg, hogyan lehet a sprite-ok méretét megváltoztatni.",
         "helloworld_animals_sounds": "Tanuld meg, hogany kell hangokat lejátszani.",
         "helloworld_emoji_backgrounds": "Tanuljuk meg, hogy hogyan lehet a hátteret megváltoztatni.",
@@ -1626,7 +1626,17 @@
         "NEW Course 4 Bee For Loops 10a": "Készen állsz egy kihívásra? Használd fel a ciklusokról tanultakat a feladvány megoldásához. Ne felejtsd: Szükség lehet többször végigfutni a megoldásokon, amíg rájössz az összes lépésre.",
         "NEW Course 4 Bee For Loops 5": "Használhatod a \"számold\" ciklust lefelé is. Próbáld begyűjteni a nektárt úgy, hogy 5-től 1-ig számolsz 1-es lépésközzel.",
         "NEW Course 4 Bee For Loops 6": "A számláló ciklusnál az utolsó számot úgy hívjuk, hogy \"lépésköz\". Mindig, amikor végigfut a ciklus, a counter változó értéke a lépésközzel módosul. Próbáld meg a virágokból a nektárt összegyűjteni a 2-es lépésköz használatával!",
-        "NEW Course 4 Bee For Loops 9": "Ha a számláló ciklus lefelé számol, a lépésköz minden ciklusban levonódik a counter  változóból. Mi a megfelelő lépésköz, ha 15, 12, és 9 nektárt kell összegyűjteni?"
+        "NEW Course 4 Bee For Loops 9": "Ha a számláló ciklus lefelé számol, a lépésköz minden ciklusban levonódik a counter  változóból. Mi a megfelelő lépésköz, ha 15, 12, és 9 nektárt kell összegyűjteni?",
+        "courseB_maze_seq11_2021": "Most csak te vagy! Juttasd el Scrat-ot a makkhoz.",
+        "courseB_maze_seq12_2021": "Most szerezd meg azt a makkot, bármilyen módon ahogy tudod.",
+        "courseB_maze_seq1_2021": "Játszogass a blokkokkal, és nézd meg hogy mit csinál tőlük Scrat!\n\nVezesd el Scrat-ot a makkhoz a szint teljesítéséhez.",
+        "courseB_maze_seq4_2021": "Használj **2**  mozgás blokkot, hogy eljuttasd Scrat-ot a makkhoz.",
+        "courseB_maze_seq5_2021": "Ez a feladat egy kicsit trükkös!",
+        "courseB_maze_seq6_2021": "Mozgasd egyik, majd másik irányba hogy eljuttasd Scrat-ot a makkhoz.",
+        "courseB_maze_seq7_2021": "Találd ki, mi hiányzik, egészítsd ki a kódot hogy eljuttasd Scrat-et a makkhoz!",
+        "courseB_maze_seq8_2021": "Te jössz! Mit kell ahhoz csinálnod, hogy eljuttasd Scrat-ot a makkhoz?",
+        "courseB_maze_seq9_2021": "Kihívás: Menj körbe a törött jegen, hogy eljuttasd Scrat-et a makkhoz.",
+        "courseB_maze_seq_challenge1_2021": "Tudsz találni egy utat, mielőtt kifogysz a blokkokból?"
       }
     }
   }

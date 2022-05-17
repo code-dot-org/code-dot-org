@@ -4,6 +4,22 @@ hu:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': nagyon kicsi
+            '0.75': kicsi
+            '1.00': közepes
+            '2.00': nagy
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': nagyon kicsi
+            '0.75': kicsi
+            '1.00': közepes
+            '2.00': nagy
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
@@ -1040,7 +1056,7 @@ hu:
         text: vonal húzása {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ismételd meg minden {N} {UNIT} után '
         options:
           UNIT:
@@ -1199,8 +1215,6 @@ hu:
             '"pop"': pukkanás
             '"rain"': esős
             '"spiral"': spirál
-      gamelab_makeNewScaledSprite:
-        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:
@@ -1213,6 +1227,12 @@ hu:
             '90': le
             '180': balra
             '270': fel
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kicsi
+            '50': közepes
+            '100': nagy
       gamelab_mirrorSprite:
         text: "{SPRITE} fordul {DIRECTION}"
         options:

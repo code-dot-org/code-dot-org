@@ -2,6 +2,22 @@
 az:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': daha kiçik
+            '0.75': kiçik
+            '1.00': orta
+            '2.00': böyük
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': daha kiçik
+            '0.75': kiçik
+            '1.00': orta
+            '2.00': böyük
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} dəyişdir hər bir {N} ölçüləri \narasında {MOVE1} and {MOVE2}"
         options:
@@ -969,7 +985,7 @@ az:
         text: rəy bildir
       gamelab_draggable:
         text: sürüklənən olması
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'təkrarla hər '
         options:
           UNIT:
@@ -1107,6 +1123,12 @@ az:
             '90': aşağı
             '180': sola
             '270': yuxarı
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kiçik
+            '50': orta
+            '100': böyük
       gamelab_mirrorSprite:
         options:
           DIRECTION:

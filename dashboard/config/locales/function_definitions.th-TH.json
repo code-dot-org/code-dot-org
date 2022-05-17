@@ -1794,16 +1794,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "parameters": {
+              "radius": "รัศมี"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปกังหันลม"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1813,8 +1820,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปทรง"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1825,8 +1834,21 @@
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส",
             "parameters": {
-              "length": "ความยาว"
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
             }
+          },
+          "small flower": {
+            "name": "ดอกไม้ดอกเล็ก"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ตรรกะดอกไม้2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ตรรกะดอกไม้"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ตรรกะดอกไม้"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -1835,16 +1857,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "parameters": {
+              "radius": "รัศมี"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปกังหันลม"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1854,8 +1883,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปทรง"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1876,16 +1907,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "parameters": {
+              "radius": "รัศมี"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปกังหันลม"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1895,8 +1933,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปทรง"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1917,16 +1957,23 @@
             "parameters": {
               "points": "คะแนน",
               "length": "ความยาว"
-            }
+            },
+            "description": "วาดรูปดาวด้วยจุดที่ให้และด้านที่มีความยาวที่กำหนดไว้"
           },
           "draw a circle": {
-            "name": "วาดวงกลม"
+            "name": "วาดวงกลม",
+            "description": "วาดรูปวงกลมโดยมีรัศมีตามที่กำหนดไว้",
+            "parameters": {
+              "radius": "รัศมี"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "ความยาว",
-              "repeat": "ทำซ้ำ"
-            }
+              "repeat": "ทำซ้ำ",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปกังหันลม"
           },
           "draw a triangle": {
             "name": "วาดสามเหลี่ยม",
@@ -1936,8 +1983,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "ความยาว"
-            }
+              "length": "ความยาว",
+              "sides": "ด้านข้าง"
+            },
+            "name": "วาดรูปทรง"
           },
           "draw a house": {
             "name": "วาดรูปบ้าน",
@@ -1990,7 +2039,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "วาดเปลวไฟ"
+          },
+          "draw fire": {
+            "name": "วาดไฟ"
           }
         },
         "courseC_data wizard_2021": {
@@ -2004,11 +2057,17 @@
           },
           "draw hexagon": {
             "name": "วาดรูปหกเหลี่ยม"
+          },
+          "draw line of hexagons": {
+            "name": "วาดเส้นของหกเหลี่ยม"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw ear stems": {
+            "name": "วาดก้าน"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -2045,6 +2104,9 @@
           },
           "draw square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2075,11 +2137,20 @@
           },
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "draw triangle": {
+            "name": "วาดสามเหลี่ยม"
+          },
+          "draw line of triangles": {
+            "name": "วาดเส้นของสามเหลี่ยม"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2091,16 +2162,28 @@
           },
           "draw square": {
             "name": "วาดสี่เหลี่ยมจตุรัส"
+          },
+          "draw line of hexagons": {
+            "name": "วาดเส้นของหกเหลี่ยม"
+          },
+          "staggered squares": {
+            "name": "สี่เหลี่ยมจัตุรัสที่สลับไปมา"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "งานออกแบบของฉัน"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "my design": {
+            "name": "งานออกแบบของฉัน"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -2116,6 +2199,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "ทำบางสิ่ง"
+          },
+          "draw line of polygons": {
+            "name": "วาดเส้นของหลายเหลี่ยม"
+          },
+          "draw polygon": {
+            "name": "วาดหลายเหลี่ยม"
           }
         },
         "courseF_apps_collector": {
@@ -2136,6 +2225,123 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "ฟังก์ชันของฉัน"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "แนวทางแก้ไขที่เป็นไปได้"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "บูสเตอร์"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "วาดหน้าต่าง"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          },
+          "pumpkin square": {
+            "name": "ฟักทองสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "pumpkin square": {
+            "name": "ฟักทองสี่เหลี่ยมจัตุรัส"
+          },
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get produce": {
+            "name": "เก็บพืชผล"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "check for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "corn rectangle": {
+            "name": "ข้าวโพดสี่เหลี่ยม"
+          },
+          "lettuce stairs": {
+            "name": "บันไดผักกาดหอม"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "เลือกตามเส้นทาง"
+          },
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "มองหาข้าวโพด"
+          },
+          "get all pumpkins": {
+            "name": "เก็บฟักทองทั้งหมด"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "สวนรูปสี่เหลี่ยมจัตุรัส"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "รีเซ็ตเกม"
           }
         }
       }

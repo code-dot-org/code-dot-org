@@ -18,7 +18,7 @@
         },
         "debugging/minecraft/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/minecraft/unversioned": {
           "word": "Programa",
@@ -29,7 +29,7 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "loop/minecraft/unversioned": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "code/hero/unversioned": {
@@ -37,7 +37,7 @@
         },
         "debugging/hero/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/hero/unversioned": {
           "word": "Programa",
@@ -68,11 +68,12 @@
           "definition": "Uma série de passos que foram codificados em algo que pode ser executado por uma máquina."
         },
         "code/flappy/unversioned": {
+          "word": "codificar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/flappy/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/flappy/unversioned": {
           "word": "Programa",
@@ -83,7 +84,7 @@
         },
         "debugging/hourofcode/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/hourofcode/unversioned": {
           "word": "Programa",
@@ -94,7 +95,7 @@
         },
         "debugging/frozen/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/frozen/unversioned": {
           "word": "Programa",
@@ -105,7 +106,7 @@
         },
         "debugging/iceage/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/iceage/unversioned": {
           "word": "Programa",
@@ -117,7 +118,7 @@
         },
         "debugging/artist/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/artist/unversioned": {
           "word": "Programa",
@@ -128,7 +129,7 @@
         },
         "debugging/gumball/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/gumball/unversioned": {
           "word": "Programa",
@@ -150,7 +151,7 @@
         },
         "debugging/aquatic/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/aquatic/unversioned": {
           "word": "Programa",
@@ -168,15 +169,36 @@
           "word": "laços",
           "definition": "Ação de fazer algo repetidas vezes."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cifra de César",
+          "definition": "Técnica de criptografia que desloca o alfabeto em certo número de caracteres."
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cifra",
+          "definition": "Termo genérico para uma técnica (ou algoritmo) que realiza criptografia."
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Violar a criptografia",
+          "definition": "Quando tentamos decodificar uma mensagem secreta sem conhecer todos os detalhes da cifra, estamos tentando “craquear” (violar) a criptografia."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Descriptografia",
+          "definition": "Processo que reverte a criptografia, partindo de uma mensagem secreta e reproduzindo o texto original sem formatação."
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Criptografia"
+          "word": "Criptografia",
+          "definition": "Processo de codificação de mensagens para mantê-las secretas, de modo que somente partes “autorizadas” possam lê-las."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Cifra de Substituição Aleatória",
+          "definition": "Técnica de criptografia que mapeia cada letra do alfabeto a outras letras selecionadas aleatoriamente."
         },
         "code/starwars/unversioned": {
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/starwars/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/starwars/unversioned": {
           "word": "Programa",
@@ -187,7 +209,7 @@
         },
         "debugging/mc/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/mc/unversioned": {
           "word": "Programa",
@@ -198,7 +220,7 @@
         },
         "debugging/playlab/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/playlab/unversioned": {
           "word": "Programa",
@@ -209,14 +231,15 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/starwarsblocks/unversioned": {
           "word": "Programa",
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compressão sem perdas"
+          "word": "Compressão sem perdas",
+          "definition": "Algoritmo de compactação de dados que permite que os dados originais sejam reconstruídos com perfeição a partir dos dados compactados. Mais usado para compactação de textos (ex.: compactação em zip)."
         },
         "event/outbreak/unversioned": {
           "word": "Evento",
@@ -231,7 +254,7 @@
         },
         "debugging/sports/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/sports/unversioned": {
           "word": "Programa",
@@ -242,7 +265,7 @@
         },
         "debugging/infinity/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/infinity/unversioned": {
           "word": "Programa",
@@ -257,7 +280,7 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/basketball/unversioned": {
           "word": "Programa",
@@ -287,7 +310,7 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Máquina de aprendizado",
-          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
+          "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
         },
         "code/poem-art/unversioned": {
           "word": "Código",
@@ -346,7 +369,7 @@
           "definition": "As informações que os computadores obtêm dos usuários."
         },
         "loop/coursef/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/coursef/2021": {
@@ -359,7 +382,7 @@
         },
         "machine_learning/coursef/2021": {
           "word": "Máquina de aprendizado",
-          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
+          "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -423,7 +446,7 @@
         },
         "debugging/courseb/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "click/courseb/2021": {
           "word": "Clique em",
@@ -454,7 +477,7 @@
           "definition": "Tentar de novo várias vezes, mesmo quando algo é muito difícil."
         },
         "loop/courseb/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/courseb/2021": {
@@ -471,7 +494,7 @@
         },
         "debugging/coursea/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/coursea/2021": {
           "word": "Programa",
@@ -502,7 +525,7 @@
           "definition": "Arte de criar um programa."
         },
         "loop/coursea/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/coursea/2021": {
@@ -523,7 +546,7 @@
         },
         "debugging/coursec/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/coursec/2021": {
           "word": "Programa",
@@ -538,7 +561,7 @@
           "definition": "Arte de criar um programa."
         },
         "loop/coursec/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/coursec/2021": {
@@ -567,10 +590,10 @@
         },
         "debugging/coursed/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "loop/coursed/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "programming/coursed/2021": {
@@ -630,7 +653,7 @@
         },
         "debugging/express/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "sequencing/express/2021": {
           "word": "Sequenciamento",
@@ -660,7 +683,7 @@
           "definition": "para escrever código ou escrever instruções para um computador."
         },
         "loop/express/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/express/2021": {
@@ -745,7 +768,7 @@
         },
         "debugging/pre-express/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/pre-express/2021": {
           "word": "Programa",
@@ -760,7 +783,7 @@
           "definition": "Tentar de novo várias vezes, mesmo quando algo é muito difícil."
         },
         "loop/pre-express/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/pre-express/2021": {
@@ -790,7 +813,7 @@
           "word": "Direitos Autorais"
         },
         "loop/coursee/2021": {
-          "word": "Laço",
+          "word": "Laço de repetição",
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "repeat/coursee/2021": {
@@ -831,7 +854,11 @@
         },
         "machine_learning/csd/2021": {
           "word": "Máquina de aprendizado",
-          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
+          "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
+        },
+        "user/csd/2021": {
+          "word": "Usuário",
+          "definition": "Alguém que usa um objeto, incluindo software e hardware."
         },
         "user_interface/csd/2021": {
           "word": "Interface do Usuário"
@@ -846,7 +873,7 @@
         },
         "debugging/csd/2021": {
           "word": "Analisando",
-          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
         },
         "program/csd/2021": {
           "word": "Programa",

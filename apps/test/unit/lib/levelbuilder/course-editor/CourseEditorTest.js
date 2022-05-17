@@ -143,7 +143,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('CourseUnitsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
-    assert.equal(wrapper.find('CollapsibleEditorSection').length, 5);
+    assert.equal(wrapper.find('CollapsibleEditorSection').length, 6);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     assert.equal(wrapper.find('CourseTypeEditor').length, 1);

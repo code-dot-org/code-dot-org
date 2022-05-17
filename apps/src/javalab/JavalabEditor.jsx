@@ -7,9 +7,7 @@ import {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
-  removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight
+  removeFile
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -37,7 +35,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -46,9 +44,11 @@ const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
   'CREATE_FILE',
-  'COMMIT_FILES'
+  'COMMIT_FILES',
+  'VERSION_HISTORY'
 );
 const DEFAULT_FILE_NAME = '.java';
+const EDITOR_LOAD_PAUSE_MS = 100;
 
 // Custom theme overrides (exported for tests)
 export const editorDarkModeThemeOverride = EditorView.theme(
@@ -91,8 +91,6 @@ class JavalabEditor extends React.Component {
     handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
-    setRenderedHeight: PropTypes.func.isRequired,
-    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -258,10 +256,6 @@ class JavalabEditor extends React.Component {
     };
   };
 
-  handleVersionHistory() {
-    this.setState({versionHistoryOpen: true});
-  }
-
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
     this.setState({
@@ -305,6 +299,21 @@ class JavalabEditor extends React.Component {
         contextTarget: null,
         activeTabKey: key
       });
+      // scroll the new editor to whatever its current selection is.
+      // If this editor has no selection it will stay at the top of the file.
+      this.editors[key].dispatch({
+        scrollIntoView: true
+      });
+      // It takes a second for the editor to show up. We can't
+      // focus on it until it is visible, so we set a delay to focus
+      // on the new editor.
+      const timer = setInterval(() => {
+        this.editors[key].focus();
+        if (this.editors[key].hasFocus) {
+          // stop trying to focus once we have focused.
+          clearInterval(timer);
+        }
+      }, EDITOR_LOAD_PAUSE_MS);
     }
   }
 
@@ -590,8 +599,7 @@ class JavalabEditor extends React.Component {
       contextTarget,
       renameFileError,
       newFileError,
-      compileStatus,
-      versionHistoryOpen
+      compileStatus
     } = this.state;
     const {
       onCommitCode,
@@ -611,18 +619,11 @@ class JavalabEditor extends React.Component {
       position: 'fixed',
       top: this.state.menuPosition.top,
       left: this.state.menuPosition.left,
-      backgroundColor: '#F0F0F0'
+      backgroundColor: '#F0F0F0',
+      zIndex: 1000
     };
     return (
-      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
-        {versionHistoryOpen && (
-          <VersionHistoryWithCommits
-            handleClearPuzzle={handleClearPuzzle}
-            isProjectTemplateLevel={isProjectTemplateLevel}
-            onClose={() => this.setState({versionHistoryOpen: false})}
-            isOpen={versionHistoryOpen}
-          />
-        )}
+      <div style={this.props.style}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -650,7 +651,7 @@ class JavalabEditor extends React.Component {
             label={msg.showVersionsHeader()}
             headerHasFocus
             isRtl={false}
-            onClick={() => this.handleVersionHistory()}
+            onClick={() => this.setState({openDialog: Dialog.VERSION_HISTORY})}
             isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
@@ -728,6 +729,25 @@ class JavalabEditor extends React.Component {
                 );
               })}
             </Nav>
+            <div style={menuStyle}>
+              <JavalabEditorTabMenu
+                cancelTabMenu={this.cancelTabMenu}
+                renameFromTabMenu={this.renameFromTabMenu}
+                deleteFromTabMenu={this.deleteFromTabMenu}
+                changeFileTypeFromTabMenu={(isVisible, isValidation) =>
+                  this.updateFileType(activeTabKey, isVisible, isValidation)
+                }
+                showVisibilityOption={isEditingStartSources}
+                fileIsVisible={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isVisible
+                }
+                fileIsValidation={
+                  sources[fileMetadata[activeTabKey]] &&
+                  sources[fileMetadata[activeTabKey]].isValidation
+                }
+              />
+            </div>
             <Tab.Content id="tab-content" animation={false}>
               {orderedTabKeys.map(tabKey => {
                 return (
@@ -747,25 +767,6 @@ class JavalabEditor extends React.Component {
             </Tab.Content>
           </div>
         </Tab.Container>
-        <div style={menuStyle}>
-          <JavalabEditorTabMenu
-            cancelTabMenu={this.cancelTabMenu}
-            renameFromTabMenu={this.renameFromTabMenu}
-            deleteFromTabMenu={this.deleteFromTabMenu}
-            changeFileTypeFromTabMenu={(isVisible, isValidation) =>
-              this.updateFileType(activeTabKey, isVisible, isValidation)
-            }
-            showVisibilityOption={isEditingStartSources}
-            fileIsVisible={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isVisible
-            }
-            fileIsValidation={
-              sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isValidation
-            }
-          />
-        </div>
         <JavalabDialog
           isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}
@@ -810,6 +811,14 @@ class JavalabEditor extends React.Component {
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
         />
+        {openDialog === Dialog.VERSION_HISTORY && (
+          <VersionHistoryWithCommitsDialog
+            handleClearPuzzle={handleClearPuzzle}
+            isProjectTemplateLevel={isProjectTemplateLevel}
+            onClose={() => this.setState({openDialog: null})}
+            isOpen={openDialog === Dialog.VERSION_HISTORY}
+          />
+        )}
       </div>
     );
   }
@@ -875,8 +884,6 @@ export default connect(
       dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
-    removeFile: filename => dispatch(removeFile(filename)),
-    setRenderedHeight: height => dispatch(setRenderedHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    removeFile: filename => dispatch(removeFile(filename))
   })
 )(Radium(JavalabEditor));

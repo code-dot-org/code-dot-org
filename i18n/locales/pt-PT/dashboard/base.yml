@@ -167,8 +167,15 @@ pt:
     user_type_button: "Atualizar o tipo de conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Aluno"
+    user_type_student_desc: "Explore todos os nossos cursos e atividades, e ainda:"
     user_type_student_ability_1: "Salvar seu progresso e projetos"
+    user_type_student_ability_2: "Junte-se à secção de sala de aula do seu professor"
     user_type_teacher: "Professor"
+    user_type_teacher_desc: "Tudo a que os alunos têm acesso, e ainda:"
+    user_type_teacher_ability_1: "Criar secções de sala de aula"
+    user_type_teacher_ability_2: "Atribuir tarefas e acompanhar o trabalho dos alunos"
+    user_type_teacher_ability_3: "Matricular-se em aprendizagem profissional"
+    user_type_teacher_ability_4: "Interagir no nosso fórum de professores"
     field_is_required: "é obrigatório"
     accept_terms: "Deves concordar em criar uma conta."
     error: "Ocorreu um erro."
@@ -642,6 +649,10 @@ pt:
       title: 'Festa dançante'
     dance-2019:
       title: 'Festa dançante'
+    hello-world:
+      title: 'Olá Mundo'
+    poem-art:
+      title: 'Arte poética'
     hoc:
       title: 'Labirinto clássico'
       body: 'Explora as noções básicas da Ciência da Computação. Milhões de pessoas já experimentaram.'
@@ -800,9 +811,6 @@ pt:
     reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
     reminder_desc_markdown: Atualizamos nossos [Termos de Serviço](%{tos_url}) e [Política de Privacidade](%{privacy_url}). Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: "Ver os termos atualizados"
-  donor_interstitial:
-    support_codeorg_1: "Cada dólar doado ao Code.org gera oportunidades para mais estudantes."
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: "Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos a acompanhar o nosso progresso!"
     message: "Por favor, digite abaixo as informações da sua escola."

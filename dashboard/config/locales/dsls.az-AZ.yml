@@ -2584,7 +2584,7 @@ az-AZ:
           feedback: Yanlış. Rəssam kvadrat çəkir.
         - text: Rəssam tək xətt çəkəcək.
           feedback: Yanlış. Rəssam kvadrat çəkir.
-        - text: Rəssam dördbucaqlı çəkəcək.
+        - text: Rəssam kvadrat çəkəcək.
           correct: true
           feedback: Düzgün!
         - text: Rəssam beşbucaqlı cəkəcək

@@ -349,7 +349,7 @@
         "CourseE_Project_SpriteLab_2019": "Kurz E Lab projekt s postavičkou",
         "CourseE_hoops": "Zajac ",
         "CourseF_Oceans_Video_Machine_Learning": "Video: Strojové učenie",
-        "CourseF_Oceans_Video_Societal_Implications": "Video: Spoločenské následky",
+        "CourseF_Oceans_Video_Societal_Implications": "Video: Spoločenské hľadiská",
         "CourseF_Oceans_Video_Training_Data": "Video: Trénovacie dáta",
         "CourseF_Project_Revise_SpriteLab": "Reviduj Sprite Lab projekt",
         "CourseF_Project_SpriteLab": "Sprite Lab projekt Kurz F",
@@ -411,7 +411,7 @@
         "OPD-K5 WhatIsCS_copy": "Čo je informatika?",
         "OPD-K5-spritelab-5-video": "Ako vytvoriť postavu",
         "Oceans_Video_Machine_Learning": "Video: Strojové učenie",
-        "Oceans_Video_Societal_Implications": "Video: Spoločenské následky",
+        "Oceans_Video_Societal_Implications": "Video: Spoločenské hľadiská",
         "Oceans_Video_Training_Data": "Video: Trénovacie dáta",
         "Robot Doodle_2018": "Robotova čmáranica",
         "courseA_video_Stevie": "Stevie a jej veľký projekt",
@@ -517,7 +517,7 @@
         "CourseEF_video_MakeSprite_2021-2": "Ako vytvoriť postavu",
         "CourseE_Project_SpriteLab_2021": "Vytvor Sprite Lab projekt",
         "CourseF_Oceans_Video_Machine_Learning_2021": "Video: Strojové učenie",
-        "CourseF_Oceans_Video_Societal_Implications_2021": "Video: Spoločenské následky",
+        "CourseF_Oceans_Video_Societal_Implications_2021": "Video: Spoločenské hľadiská",
         "CourseF_Oceans_Video_Training_Data_2021": "Video: Trénovacie dáta",
         "CourseF_Project_SpriteLab_2021": "Vytvor Sprite Lab projekt",
         "CourseF_outbreak1": "Simulácia vírusu",
@@ -720,7 +720,8 @@
         "Oceans_Video_Training_Data_2021": "Video: Trénovacie dáta",
         "Video: Intro to CSS Part 2_2021": "Video: Úvod do CSS – 2. časť",
         "Video: Intro to CSS_2021": "Video: Úvod do CSS",
-        "csd U3 conditional statements video_2021": "Video: Podmienené príkazy"
+        "csd U3 conditional statements video_2021": "Video: Podmienené príkazy",
+        "helloworld_food_backgrounds": "Udalosti kliknutia"
       }
     }
   }

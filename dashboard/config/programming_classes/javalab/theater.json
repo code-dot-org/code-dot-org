@@ -39,7 +39,7 @@
       "name": "playScenes(Scene... scenes)",
       "content": "Plays all scenes provided as parameters to this call. This method uses a special feature of Java that allows for any number of scenes to be passed to the method without requiring an array to be created. There can be only one call to `play()`  or `playScenes()` per execution of a program.",
       "parameters": "[{\"name\":\"scenes\",\"type\":\"Scene\",\"required\":true,\"description\":\"one or more scenes to be played for the animation\"}]",
-      "examples": "[{}]",
+      "examples": "[]",
       "syntax": "To play multiple scenes in the Theater, you can either call `playScenes` with an array, or simply pass in all the scenes in the order you want them to play, like this:\n\n```\nTheater.playScenes(myFirstScene, mySecondScene, myThirdScene);\n```",
       "external_link": null,
       "overload_of": "playscenes",

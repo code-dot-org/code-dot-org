@@ -2,11 +2,40 @@
   "fil-PH": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/minecraft/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/hero/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "function/hero/unversioned": {
           "word": "Function"
@@ -14,29 +43,95 @@
         "code/poem-art/2021": {
           "word": "Code"
         },
+        "event/poem-art/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/poem-art/2021": {
+          "word": "Program"
+        },
+        "code/flappy/unversioned": {
+          "word": "code",
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/flappy/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/frozen/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/iceage/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
         "code/artist/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/artist/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/gumball/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/dance/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/aquatic/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Mga conditional"
@@ -47,17 +142,53 @@
         "encryption/hoc-encryption/unversioned": {
           "word": "Pag-Encrypt"
         },
+        "code/starwars/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/starwars/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/mc/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/playlab/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/outbreak/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "event/sports/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "code/sports/unversioned": {
           "word": "Code"
@@ -65,17 +196,76 @@
         "debugging/sports/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "debugging/infinity/unversioned": {
           "word": "Pagdedebug"
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/basketball/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "debugging/basketball/unversioned": {
           "word": "Pagdedebug"
         },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
         "code/poem-art/unversioned": {
           "word": "Code"
         },
+        "event/poem-art/unversioned": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Program"
+        },
         "behavior/coursef/2021": {
           "word": "Paggawi"
+        },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/coursef/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -95,20 +285,55 @@
         "drop/courseb/2021": {
           "word": "Drop"
         },
+        "program/courseb/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/courseb/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
         "debugging/coursea/2021": {
           "word": "Pagdedebug"
+        },
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "drop/coursea/2021": {
           "word": "Drop"
         },
+        "event/coursea/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
         "debugging/coursec/2021": {
           "word": "Pagdedebug"
+        },
+        "program/coursec/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/coursec/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "binary/coursec/2021": {
           "word": "Binary"
         },
+        "program/coursed/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
         "debugging/coursed/2021": {
           "word": "Pagdedebug"
+        },
+        "event/coursed/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
+        "code/coursed/2021": {
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2021": {
           "word": "Mga conditional"
@@ -116,8 +341,16 @@
         "debugging/express/2021": {
           "word": "Pagdedebug"
         },
+        "program/express/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
         "behavior/express/2021": {
           "word": "Paggawi"
+        },
+        "event/express/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "conditionals/express/2021": {
           "word": "Mga conditional"
@@ -137,8 +370,20 @@
         "debugging/pre-express/2021": {
           "word": "Pagdedebug"
         },
+        "program/pre-express/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "event/pre-express/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
+        },
         "behavior/coursee/2021": {
           "word": "Paggawi"
+        },
+        "event/coursee/2021": {
+          "word": "Event",
+          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "copyright/coursee/2021": {
           "word": "Karapatang-ari"
@@ -154,6 +399,10 @@
         },
         "debugging/csd/2021": {
           "word": "Pagdedebug"
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "variable/csd/2021": {
           "word": "Variable"

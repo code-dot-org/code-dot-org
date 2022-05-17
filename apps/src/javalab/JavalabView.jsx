@@ -81,7 +81,7 @@ class JavalabView extends React.Component {
         : javalabMsg.displayThemeDarkMode();
 
     return [
-      <a
+      <button
         onClick={() =>
           setDisplayTheme(
             displayTheme === DisplayTheme.DARK
@@ -90,9 +90,10 @@ class JavalabView extends React.Component {
           )
         }
         key="theme-setting"
+        type="button"
       >
         {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
-      </a>
+      </button>
     ];
   };
 

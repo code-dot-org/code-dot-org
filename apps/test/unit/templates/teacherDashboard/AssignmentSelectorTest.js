@@ -17,6 +17,7 @@ const defaultProps = {
     lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
+    participantType: 'student',
     studentCount: 0,
     code: 'asdf',
     courseOfferingId: null,
@@ -35,6 +36,7 @@ const hiddenSectionProps = {
     lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
+    participantType: 'student',
     studentCount: 0,
     code: 'asdf',
     courseOfferingId: 2,
@@ -43,10 +45,57 @@ const hiddenSectionProps = {
   }
 };
 
+const newSectionProps = {
+  courseOfferings: courseOfferings,
+  section: {
+    id: -1,
+    name: '',
+    lessonExtras: true,
+    pairingAllowed: true,
+    ttsAutoplayEnabled: false,
+    loginType: 'word',
+    code: 'ikfs',
+    studentCount: 0,
+    providerManaged: false,
+    participantType: 'student',
+    unitId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    courseId: null
+  }
+};
+
 describe('AssignmentSelector', () => {
-  it('getCourseOfferingsByCategory gets the right course offerings', () => {
+  it('getCourseOfferingsByCategory gets the right course offerings for student', () => {
     let courseOfferingsByCategory = getCourseOfferingsByCategory(
-      defaultProps.courseOfferings
+      defaultProps.courseOfferings,
+      'student'
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+  });
+
+  it('getCourseOfferingsByCategory gets the right course offerings for teacher', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings,
+      'teacher'
     );
 
     assert.deepEqual(Object.keys(courseOfferingsByCategory), [
@@ -69,6 +118,14 @@ describe('AssignmentSelector', () => {
       courseOfferingsByCategory['csf'].map(s => s.display_name),
       ['Course A']
     );
+    assert.deepEqual(
+      courseOfferingsByCategory['self_paced_pl'].map(s => s.display_name),
+      ['Self Paced PL CSP']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['virtual_pl'].map(s => s.display_name),
+      ['Virtual PL CSP']
+    );
   });
 
   it('filters out unused course offering categories', () => {
@@ -82,9 +139,7 @@ describe('AssignmentSelector', () => {
   });
 
   it('defaults to just course offering dropdown with no selection when no section is provided', () => {
-    const wrapper = shallow(
-      <AssignmentSelector {...defaultProps} section={null} />
-    );
+    const wrapper = shallow(<AssignmentSelector {...newSectionProps} />);
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('select').value, undefined);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
@@ -95,9 +150,7 @@ describe('AssignmentSelector', () => {
   });
 
   it('unit dropdown defaults to first unit when picking new course offering and course version', () => {
-    const wrapper = shallow(
-      <AssignmentSelector {...defaultProps} section={null} />
-    );
+    const wrapper = shallow(<AssignmentSelector {...newSectionProps} />);
     wrapper
       .find('select')
       .at(0)

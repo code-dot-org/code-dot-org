@@ -4,6 +4,22 @@ fil:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': sobrang liit
+            '0.75': maliit
+            '1.00': katamtaman
+            '2.00': malaki
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': sobrang liit
+            '0.75': maliit
+            '1.00': katamtaman
+            '2.00': malaki
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1}
           at {MOVE2}"
@@ -1044,7 +1060,7 @@ fil:
         text: gumuhit ng linya {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: gilid block {SPRITE} mula sa paglipat
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ulitin bawat {N} {UNIT} '
         options:
           UNIT:
@@ -1203,8 +1219,6 @@ fil:
             '"pop"': pop
             '"rain"': ulan
             '"spiral"': paikid
-      gamelab_makeNewScaledSprite:
-        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_makeNumSprites:
@@ -1219,6 +1233,12 @@ fil:
             '90': baba
             '180': kaliwa
             '270': paitaas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': maliit
+            '50': katamtaman
+            '100': malaki
       gamelab_mirrorSprite:
         text: "{SPRITE} mukha {DIRECTION}"
         options:

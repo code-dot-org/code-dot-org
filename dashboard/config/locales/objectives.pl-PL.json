@@ -128,6 +128,18 @@
         "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Określ miejsca, w które można się udać, aby kontynuować naukę informatyki i kodowania."
         },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Wyjaśniać, dlaczego szyfrowanie stanowi ważną potrzebę dla życia codziennego w Internecie."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Złamać wiadomość zaszyfrowaną przy pomocy szyfru Cezara używając \"Widgetu szyfru Cezara\""
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Złamać wiadomość zaszyfrowaną przy pomocy losowego zastępowania używając \"Analizy częstotliwości\""
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Wyjaśniać słabe punkty i niedociągnięcia zabezpieczeń szyfrów substytucyjnych\""
+        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
         },
@@ -167,6 +179,12 @@
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Określ miejsca, w które można się udać, aby kontynuować naukę informatyki i kodowania."
         },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Budować i udostępniać swoje własne aplikacje w \"App Lab\" używając elementów takich jak: przyciski, tekst, dźwięk i ekrany."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Kontynuować tworzenie projektów w pełnym \"App Lab\" z użyciem zasobów podanych na stronie: code.org/applab page."
+        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
         },
@@ -184,6 +202,18 @@
         },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Określ miejsca, w które można się udać, aby kontynuować naukę informatyki i kodowania."
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Współpracować z rówieśnikami, aby znaleźć rozwiązanie zadania polegającego na kompresji tekstu używając \"Widgetu kompresji tekstu (planu kompresji bezstratnej)."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Wyjaśniać powody, dla których kompresja w ilości optymalnej nie jest możliwa lub jest \"trudna\" do określenia."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Wyjaśniać czynniki, które sprawiają, że kompresja stanowi wyzwanie."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Opisać cel i uzasadnienie dla kompresji bezstratnej."
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."

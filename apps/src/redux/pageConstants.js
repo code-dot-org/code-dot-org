@@ -20,6 +20,7 @@ var ALLOWED_KEYS = new Set([
   'isIframeEmbed',
   'isReadOnlyWorkspace',
   'isCodeReviewing',
+  'hasBackgroundMusic',
   'displayNotStartedBanner',
   'displayOldVersionBanner',
   'isShareView',

@@ -371,6 +371,20 @@ describe('animationList', function() {
       store.dispatch(deleteAnimation(key0));
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
+
+    it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function() {
+      const key0 = 'animation_1';
+      const key1 = 'animation_2';
+      let animationList = createAnimationList(2);
+      animationList.propsByKey[key1].categories = ['backgrounds'];
+      let store = createStore(
+        combineReducers({animationList: reducer, animationTab}),
+        {}
+      );
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key0, true));
+      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+    });
   });
 
   describe('action: clone animation', function() {

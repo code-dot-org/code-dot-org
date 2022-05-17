@@ -79,7 +79,8 @@
           "90a2bd046bc816f7d42c33d2a3b347d3": "Excelente! Em que direção poderia ser? 1. Direita, 2. esquerda",
           "7222972741bf95c7d2bf97d1a104fbf0": "Pareço ter perdido minha varinha. Você a viu em algum lugar? 1. Sim, 2. não",
           "c499da20fd7c64b89860a41b61d2dd88": "Não? Hmm, você gostaria de me ajudar a encontrá-lo? 1. Sim, 2. não",
-          "5282c58be05cdecc1308241480b66276": "Fim de jogo"
+          "5282c58be05cdecc1308241480b66276": "Fim de jogo",
+          "710ba29e2eed73bc74a520631d0ab520": "Fim de jogo!"
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digita o texto aqui",
@@ -496,6 +497,12 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Nível: "
+        },
+        "Course 4 Playlab For Loops 6b": {
+          "710ba29e2eed73bc74a520631d0ab520": "Fim de jogo!"
         }
       }
     }

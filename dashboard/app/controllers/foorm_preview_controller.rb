@@ -5,7 +5,7 @@ class FoormPreviewController < ApplicationController
 
     forms = Foorm::Form.all.map do |form|
       {
-        name: form.name,
+        name: "#{form.name}, version #{form.version}",
         url: '/foorm/preview/' + form.name
       }
     end
