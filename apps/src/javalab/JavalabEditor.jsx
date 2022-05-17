@@ -7,9 +7,7 @@ import {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   renameFile,
-  removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight
+  removeFile
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -37,8 +35,8 @@ import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
 import {getDefaultFileContents} from './JavalabFileHelper';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -47,7 +45,8 @@ const Dialog = makeEnum(
   'RENAME_FILE',
   'DELETE_FILE',
   'CREATE_FILE',
-  'COMMIT_FILES'
+  'COMMIT_FILES',
+  'VERSION_HISTORY'
 );
 const DEFAULT_FILE_NAME = '.java';
 const EDITOR_LOAD_PAUSE_MS = 100;
@@ -94,8 +93,6 @@ class JavalabEditor extends React.Component {
     viewMode: PropTypes.string,
 
     // populated by redux
-    setRenderedHeight: PropTypes.func.isRequired,
-    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -260,10 +257,6 @@ class JavalabEditor extends React.Component {
       }
     };
   };
-
-  handleVersionHistory() {
-    this.setState({versionHistoryOpen: true});
-  }
 
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
@@ -610,8 +603,7 @@ class JavalabEditor extends React.Component {
       contextTarget,
       renameFileError,
       newFileError,
-      compileStatus,
-      versionHistoryOpen
+      compileStatus
     } = this.state;
     const {
       onCommitCode,
@@ -635,15 +627,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
-        {versionHistoryOpen && (
-          <VersionHistoryWithCommits
-            handleClearPuzzle={handleClearPuzzle}
-            isProjectTemplateLevel={isProjectTemplateLevel}
-            onClose={() => this.setState({versionHistoryOpen: false})}
-            isOpen={versionHistoryOpen}
-          />
-        )}
+      <div style={this.props.style}>
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -671,7 +655,7 @@ class JavalabEditor extends React.Component {
             label={msg.showVersionsHeader()}
             headerHasFocus
             isRtl={false}
-            onClick={() => this.handleVersionHistory()}
+            onClick={() => this.setState({openDialog: Dialog.VERSION_HISTORY})}
             isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
@@ -831,6 +815,14 @@ class JavalabEditor extends React.Component {
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
         />
+        {openDialog === Dialog.VERSION_HISTORY && (
+          <VersionHistoryWithCommitsDialog
+            handleClearPuzzle={handleClearPuzzle}
+            isProjectTemplateLevel={isProjectTemplateLevel}
+            onClose={() => this.setState({openDialog: null})}
+            isOpen={openDialog === Dialog.VERSION_HISTORY}
+          />
+        )}
       </div>
     );
   }
@@ -896,8 +888,6 @@ export default connect(
       dispatch(sourceTextUpdated(filename, text)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
-    removeFile: filename => dispatch(removeFile(filename)),
-    setRenderedHeight: height => dispatch(setRenderedHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    removeFile: filename => dispatch(removeFile(filename))
   })
 )(Radium(JavalabEditor));
