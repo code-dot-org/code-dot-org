@@ -62,6 +62,12 @@ class ReferenceGuide < ApplicationRecord
     File.delete(file_path)
   end
 
+  def self.find_by_course_name_and_key(course_name, key)
+    course_version_id = CurriculumHelper.find_matching_course_version(course_name)&.id
+    return nil unless course_version_id
+    ReferenceGuide.find_by_course_version_id_and_key(course_version_id, key)
+  end
+
   # runs through all seed files, creating and deleting records to match the seed files
   def self.seed_all
     # collect all existing ids

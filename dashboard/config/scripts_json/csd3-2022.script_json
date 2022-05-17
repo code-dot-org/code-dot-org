@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 23:11:37 UTC",
+    "serialized_at": "2022-05-03 19:33:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -679,8 +679,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "c15e2c80-6ea3-44d7-9e30-839f3ec2c1e2",
+      "key": "0754806a-e34d-4891-a471-399122e56ac9",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0754806a-e34d-4891-a471-399122e56ac9",
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2022"
+      }
+    },
+    {
+      "key": "c15e2c80-6ea3-44d7-9e30-839f3ec2c1e2",
+      "position": 2,
       "properties": {
         "name": "Lesson Modifications"
       },
@@ -693,7 +706,7 @@
     },
     {
       "key": "29c29273-e188-41d0-8559-b9048c892737",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -707,7 +720,7 @@
     },
     {
       "key": "97df4d19-713a-44eb-bb9b-6f4d2cb96d74",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -721,7 +734,7 @@
     },
     {
       "key": "341ad1d7-516f-4eb1-9a76-c48b4d8b4b3e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2167,7 +2180,7 @@
       "key": "367760dc-695e-4391-acd6-d0f12787bc0e",
       "position": 5,
       "properties": {
-        "name": "Post-Project Test"
+        "name": "After the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "367760dc-695e-4391-acd6-d0f12787bc0e",
@@ -2203,6 +2216,18 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "f2627910-3a24-4b6e-9ce6-6d3bd485b695",
+      "position": 1,
+      "properties": {
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2627910-3a24-4b6e-9ce6-6d3bd485b695",
+        "lesson_activity.key": "0754806a-e34d-4891-a471-399122e56ac9"
+      }
+    },
     {
       "key": "53c5bc90-7114-4dc9-b668-25e473067baa",
       "position": 1,
@@ -2268,10 +2293,27 @@
       }
     },
     {
-      "key": "a6630e9d-312a-4f4d-8674-ff84ae43cd2c",
+      "key": "56d3bbbd-9eec-4102-8e92-91724e9cdf52",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three. Consider allowing students to group based on common interest as each group will be exploring a field of entertainment together.\r\n\r\n**Distribute:** Give each group a copy of the activity guide.\r\n\r\n\r\n\r\n#### Entertainment Exploration\r\n\r\nDuring this activity student groups will do some light research into the role that CS and programming play in various fields of entertainment. The primary goal of this activity is to broaden students' perspectives about how programming can be used to make fun or entertaining things. Some of the fields that students could research (such as art, animation, and games) can be directly connected to programs they will write later in this unit, while others may serve more as an inspiration for how the skills that they learn here may be applied in different domains.\r\n\r\n#### Topics\r\n\r\nIn the activity guide there are a number of potential fields for research. These specific fields were chosen to go along with resources that are provided on Code Studio, but you can have students look into other fields if they wish."
+        "description": "**Group:** Place students in groups of three. Consider allowing students to group based on common interest as each group will be exploring a field of entertainment together.\n\n**Distribute:** Give each group a copy of the activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "56d3bbbd-9eec-4102-8e92-91724e9cdf52",
+        "lesson_activity.key": "97df4d19-713a-44eb-bb9b-6f4d2cb96d74"
+      }
+    },
+    {
+      "key": "a6630e9d-312a-4f4d-8674-ff84ae43cd2c",
+      "position": 3,
+      "properties": {
+        "description": "#### Entertainment Exploration\n\nDuring this activity student groups will do some light research into the role that CS and programming play in various fields of entertainment. The primary goal of this activity is to broaden students' perspectives about how programming can be used to make fun or entertaining things. Some of the fields that students could research (such as art, animation, and games) can be directly connected to programs they will write later in this unit, while others may serve more as an inspiration for how the skills that they learn here may be applied in different domains.\n\n#### Topics\n\nIn the activity guide there are a number of potential fields for research. These specific fields were chosen to go along with resources that are provided on Code Studio, but you can have students look into other fields if they wish."
       },
       "seeding_key": {
         "activity_section.key": "a6630e9d-312a-4f4d-8674-ff84ae43cd2c",
@@ -2280,7 +2322,7 @@
     },
     {
       "key": "ed04f320-0cda-418a-a633-200cc4862c9f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.\n\n- **Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)**: This site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.\n\n- **Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)**: Videos featuring a range of people working in diverse areas of the game industry, talking about what they do.\n\n- **Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)**: Music Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for \"computer science\" or \"programming\" will reveal some interesting articles.\n\n- **Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)**: While this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.",
         "name": "Researching your Topic\r",
@@ -2298,7 +2340,7 @@
     },
     {
       "key": "844265f4-91e5-4a68-895d-7cc5b15b4ed9",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Circulate** As students search the web, they may need support in staying focused on the research task. The goal of this exploration is twofold:\r\n\r\n  * First, develop a deeper understanding of how programming is used in the chosen field. How is computer technology changing this field, and what are some of the problems that people are trying to solve with technology?\r\n  * Second, identify some interesting applications of CS or facts to share. What are some cool things that people are doing in this field that make use of CS?\r\n\r\n\r\n#### Interesting Information\r\n\r\nOnce groups have learned a bit about how CS is used in their chosen field, they can complete the second page of the activity guide, which asks them to do the following:\r\n\r\n* **What Problem Does It Solve?:** \"Problem\" in this context can be fairly broad. It might be simplifying an otherwise laborious or complex task, doing things that wouldn't otherwise be possible, or any number of things that make this form of entertainment more accessible to end users.\r\n* **How is it an Improvement?:** This could be tightly coupled with the answer to the previous question. Push students to consider how their form of entertainment was created before programming was prevalent.\r\n* **An Interesting Fact or Use:** Share something fun or interesting about how CS is used in this field.\r\n* **An Open Question:** It's likely that students come away with more questions than answers after just some quick research. Encourage them to reflect on what they don't yet know, and what questions they'd still like answered.\r\n\r\n\r\n\r\n\r\n**Share:** Give groups a minute each to share their findings.",
         "name": "Research Notes\r"
@@ -2310,7 +2352,7 @@
     },
     {
       "key": "e2751c56-4dfd-482a-b3a1-4b36f4f20d23",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "In this unit, we're going to have a chance to create our own entertainment through animations and games using a tool called Game Lab. Here are some samples of programs made using the Game Lab tool.",
         "name": "Exploring Games with Game Lab\r",
@@ -2323,7 +2365,7 @@
     },
     {
       "key": "1847a908-f5a4-40a2-9248-958ecb67bc4a",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Display:** Show either as a whole class, or let students explore independently, the example programs at the end of this lesson's Code Studio progression. These programs are designed to show a variety of different kinds of programs that it's possible to make in Game Lab.",
         "tips": [
@@ -2340,7 +2382,7 @@
     },
     {
       "key": "db70080e-e443-42ef-af8d-df3a0d609324",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Sample Programs"
       },
@@ -2649,7 +2691,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goal** From Unit 2, students may remember that a computer can only understand what to do if you use a particular language in order to communicate with it.  For Web Development, that language was HTML. Computers can't \"figure out\" what you mean in the same way that a human can, and they are usually much more specific in how they follow instructions.\r\n\r\n"
+            "markdown": "**Goal** Guide students to realize that the way we communicate with each other may can be more informal than how we communicate with a computer. For example, communicating with a digital assistant requires precise language and commands, usually starting with \"Hey\" and then the name of the device. Similarly, as we start coding in this unit, students will need to use a precise set of commands to communicate with a computer."
           }
         ]
       },
@@ -2662,7 +2704,7 @@
       "key": "08c1a6f2-0d76-4eae-95c1-c8e09765d720",
       "position": 3,
       "properties": {
-        "description": "In order to give instructions to a computer, we need to use a language that a computer understands.  In the last unit, we used HTML, which is great for making web pages.  To make our animations and games, we will use a version of Javascript that uses blocks.  The environment that we'll be programming in is called Game Lab.",
+        "description": "In order to give instructions to a computer, we need to use a language that a computer understands. To make our animations and games, we will use a version of Javascript that uses blocks.  The environment that we'll be programming in is called Game Lab.",
         "remarks": true
       },
       "seeding_key": {
@@ -2690,7 +2732,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about how to use Code Studio's pair programming feature [here](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-).\n\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the [CSD Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit)\n\n"
           }
         ]
       },
@@ -2718,7 +2760,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Tour of Game Lab**\n\nDepending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button."
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
           }
         ]
       },
@@ -2749,7 +2791,13 @@
       "key": "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd",
       "position": 5,
       "properties": {
-        "progression_name": "Using the Grid"
+        "progression_name": "Using the Grid",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd",
@@ -2778,7 +2826,13 @@
       "key": "7ac34d77-29c1-48f2-83f9-2958ace257d6",
       "position": 7,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7ac34d77-29c1-48f2-83f9-2958ace257d6",
@@ -2793,7 +2847,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 8a:** This debugging task tests the student's ability to sequence code correctly.\n\n**Level 8b:** This debugging task helps students understand how to place elements on a screen using a coordinate plane.\n\n**Level 8c:** This debugging task tests the student's ability to sequence code in regards to the [`fill`(#4dd0e1)](/docs/gamelab/fill/) command."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2809,8 +2863,8 @@
         "progression_name": "Assessment",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "This is a good puzzle to use as an assessment of whether or not students understand the basics of sequencing and positioning shapes in Game Lab."
+            "type": "teachingTip",
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           }
         ]
       },
@@ -2827,7 +2881,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 10a:** This task introduces students to the point block.\n\n**Level 10b:** This task gives students practice with the [`strokeWeight`(#4dd0e1)](/docs/gamelab/strokeWeight/) block.\n\n**Level 10c:** This task gives students practice with the [`noFill`(#4dd0e1)](/docs/gamelab/noFill/) block."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2837,25 +2891,8 @@
       }
     },
     {
-      "key": "6f525cc1-5dee-4477-b7cc-fa95d94d2e56",
-      "position": 11,
-      "properties": {
-        "description": "**Support:** As students work on the levels, you can help them, but encourage them to try to spend some time figuring things out themselves first. If you need help supporting students, see the exemplars in the teacher answer viewer. When students hit the **challenge levels**, they can choose to pursue one or more of the challenges, return to improve upon previous levels, or help a classmate.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students that are new to programming often have some common misconceptions they run into. In order to prevent those, keep reminding students about the following things:\r\n\r\n* One command per line\r\n* Commands run in order from top to bottom\r\n* Order of inputs into shape commands matter\r\n* Each input into shape commands are separated by commas\r\n* (0,0) is in the upper left corner of the display\r\n* All x and y values on the display are positive\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6f525cc1-5dee-4477-b7cc-fa95d94d2e56",
-        "lesson_activity.key": "4bb4979a-ae04-425d-8bf7-9d26ca5eed48"
-      }
-    },
-    {
       "key": "8fdd09d2-1840-4a54-aa83-eed630d5b65a",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "**Share:** Once students have completed their drawings, have them share them with the class. One way to do this is with a gallery walk.",
         "name": "Share Drawings\r"
@@ -2888,19 +2925,8 @@
       }
     },
     {
-      "key": "a2f418e4-b88b-45e3-b8f9-48344f3e94c4",
-      "position": 1,
-      "properties": {
-        "description": "1. [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/)\r\n3. [`rect()`(#4dd0e1)](/docs/gamelab/rect/)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a2f418e4-b88b-45e3-b8f9-48344f3e94c4",
-        "lesson_activity.key": "e0da2bc7-8e5c-4cf8-bde4-1a438d67ca59"
-      }
-    },
-    {
       "key": "c3b5a0f9-6e09-4f19-9195-4cb22f27cced",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Prompt:** The [`rect`(#4dd0e1)](/docs/gamelab/rect/) block has two inputs that control where it's drawn - the x and y position. If you wanted these commands to draw different sizes of rectangles, what additional inputs would you need to give these blocks?",
         "name": "Shapes of Different Sizes\r"
@@ -2912,7 +2938,7 @@
     },
     {
       "key": "85fd91f5-29ae-413c-bbf4-4f8f71bcf462",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "**Discuss:** Students should brainstorm ideas silently, then share with a neighbor, then share out with the whole class. Record ideas as students share them on the board.",
         "tips": [
@@ -2929,7 +2955,7 @@
     },
     {
       "key": "2086365c-b36a-4fe1-b770-ac8e7b699194",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter/csd/2022]s, and today we're going to be learning more about how to use them.",
         "remarks": true
@@ -2941,7 +2967,7 @@
     },
     {
       "key": "0aabc1b3-327f-42c3-a1fb-8abd3f0dd000",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Key Vocabulary:** Parameter - Additional information provided as input to a block to customize it's functionality\n\n**Question of the Day:  How can we use parameters to give the computer more specific instructions?**"
       },
@@ -2955,7 +2981,13 @@
       "position": 1,
       "properties": {
         "description": "**Group:**  Put students into pairs for the programming activity. \r\n\r\n**Transition:** Move students onto Code Studio.",
-        "name": "Programming with Parameters\r"
+        "name": "Programming with Parameters\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "18df6cd3-adee-415d-abd4-71263ef3de6c",
@@ -2966,7 +2998,13 @@
       "key": "8edada5b-86d6-4a42-ac50-b07edf4532b9",
       "position": 2,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8edada5b-86d6-4a42-ac50-b07edf4532b9",
@@ -2992,7 +3030,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3005,13 +3043,7 @@
       "key": "d412b429-353c-467e-bee1-ad7bf774a5a4",
       "position": 5,
       "properties": {
-        "progression_name": "Challenges",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Level 8e:** This creative task allows students to use their new knowledge to achieve a goal that they set for themselves, or to tinker with the code without a specific set goal."
-          }
-        ]
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "d412b429-353c-467e-bee1-ad7bf774a5a4",
@@ -3115,7 +3147,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
-        "name": "Programming with Variables\r"
+        "name": "Programming with Variables\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e7468f3b-3e70-492a-9749-a45d6df1c3f7",
@@ -3126,7 +3164,13 @@
       "key": "d26059f8-ed8e-47d8-a1e4-00864675f48b",
       "position": 2,
       "properties": {
-        "progression_name": "Prediction"
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d26059f8-ed8e-47d8-a1e4-00864675f48b",
@@ -3187,7 +3231,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3314,7 +3358,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Move students onto Code Studio",
-        "name": "Programming Images\r"
+        "name": "Programming Images\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a8fb986b-7cf6-4689-a9ef-5d8804fa6d98",
@@ -3362,7 +3412,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3500,7 +3550,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:**  Send students to Code Studio",
-        "name": "Introduction to Sprites\r"
+        "name": "Introduction to Sprites\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a84eba1a-65fd-4b4f-8d51-ef8d0f9f3041",
@@ -3598,7 +3654,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3714,7 +3770,13 @@
       "key": "a748f14d-ac72-4518-affc-f8afdbd5f545",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students in pairs.\r\n\r\n\r\n**Transition:** Send students to Code Studio."
+        "description": "**Transition:** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a748f14d-ac72-4518-affc-f8afdbd5f545",
@@ -3762,7 +3824,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3825,7 +3887,7 @@
       "key": "a1b6c071-7374-44ea-86f5-4edfcf34e891",
       "position": 1,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png)\r\n\r\n**Display:** Display the cartoon for students to see.\r\n\r\n**Prompt:** Look at the cartoon that was made in Game Lab. What do you think the alien should be saying?\r\n\r\n**Share:** Allow volunteers to share out their ideas.",
+        "description": "![A two-dimensional scene with a peach robot and purple alien on the ground and a pink alien crouching on a floating rock above them. The pink alien has an empty speech bubble next to it's head as if it will start talking, but the bubble is empty](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png)\n\n**Display:** Display the cartoon for students to see.\n\n**Prompt:** Look at the cartoon that was made in Game Lab. What do you think the alien should be saying?\n\n**Share:** Allow volunteers to share out their ideas.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3860,7 +3922,13 @@
       "key": "143eb56e-c445-4fde-a1f6-845371db821c",
       "position": 1,
       "properties": {
-        "description": "**Transition** Send students to Code Studio."
+        "description": "**Transition** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "143eb56e-c445-4fde-a1f6-845371db821c",
@@ -3908,7 +3976,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -4013,7 +4081,13 @@
       "key": "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day: How can we use Game Lab to express our creativity?**"
+        "description": "**Question of the Day: How can we use Game Lab to express our creativity?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f",
@@ -4024,7 +4098,13 @@
       "key": "576907fe-bf93-4136-b9cb-e36310bca046",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the scene they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio."
+        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the scene they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "576907fe-bf93-4136-b9cb-e36310bca046",
@@ -4046,7 +4126,13 @@
       "key": "449a73b9-9e17-4a54-bbc6-8eacad2cfd30",
       "position": 3,
       "properties": {
-        "progression_name": "Create a Background"
+        "progression_name": "Create a Background",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "449a73b9-9e17-4a54-bbc6-8eacad2cfd30",
@@ -4199,13 +4285,7 @@
       "key": "5ef834e5-20ca-4560-ba3f-a9e5da8ef00b",
       "position": 1,
       "properties": {
-        "description": "**Video:** Watch the video introducing the draw loop.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Pair Programming:** This lesson introduces a challenging new paradigm. Consider having students pair program. Remember to give students clear instructions on when to switch driver and navigator.\r\n"
-          }
-        ]
+        "description": "**Video:** Watch the video introducing the draw loop."
       },
       "seeding_key": {
         "activity_section.key": "5ef834e5-20ca-4560-ba3f-a9e5da8ef00b",
@@ -4213,19 +4293,8 @@
       }
     },
     {
-      "key": "cd45a9e8-dd79-4644-9838-daa94e1649bd",
-      "position": 2,
-      "properties": {
-        "description": "**Demo:** If you choose, use the provided manipulatives to provide a hands-on demo for exploring how the draw loop and animations are connected."
-      },
-      "seeding_key": {
-        "activity_section.key": "cd45a9e8-dd79-4644-9838-daa94e1649bd",
-        "lesson_activity.key": "7884dd96-0810-4aa3-abee-f67a7a34c157"
-      }
-    },
-    {
       "key": "dfdf1139-c8f8-4be7-a21c-a43ce12665bb",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "**Question to Consider with Video:**\n- What does the draw function do?",
         "progression_name": "Video: Introduction to the Draw Loop",
@@ -4242,10 +4311,27 @@
       }
     },
     {
+      "key": "cd45a9e8-dd79-4644-9838-daa94e1649bd",
+      "position": 3,
+      "properties": {
+        "description": "**Demo:** If you choose, use the provided manipulatives to provide a hands-on demo for exploring how the draw loop and animations are connected."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd45a9e8-dd79-4644-9838-daa94e1649bd",
+        "lesson_activity.key": "7884dd96-0810-4aa3-abee-f67a7a34c157"
+      }
+    },
+    {
       "key": "aea2bc61-b817-404c-90e4-7fcadd60412a",
       "position": 4,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aea2bc61-b817-404c-90e4-7fcadd60412a",
@@ -4270,7 +4356,7 @@
         "progression_name": "Prediction",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "discussionGoal",
             "markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds."
           }
         ]
@@ -4310,7 +4396,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -4323,13 +4409,7 @@
       "key": "69bd94e3-84b7-42e9-b97c-85fc528c1e77",
       "position": 10,
       "properties": {
-        "progression_name": "Challenges",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
-          }
-        ]
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "69bd94e3-84b7-42e9-b97c-85fc528c1e77",
@@ -4431,7 +4511,12 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
-        "name": " Levels: Sprites and Images\r"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "286a1590-1a6c-4029-91c1-9166ef1ff766",
@@ -4493,7 +4578,13 @@
       "key": "22bee33a-d845-4e5a-8a7a-568e3d59d2ed",
       "position": 6,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "22bee33a-d845-4e5a-8a7a-568e3d59d2ed",
@@ -4596,7 +4687,13 @@
       "key": "d4023790-1810-4ddd-a510-133df9586856",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**"
+        "description": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d4023790-1810-4ddd-a510-133df9586856",
@@ -4607,7 +4704,13 @@
       "key": "539b36c9-fdb1-4f96-af81-fe2ceda35ba6",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the animation they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio."
+        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the animation they create at the end of this lesson, but the planning can also be completed on scratch paper.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "539b36c9-fdb1-4f96-af81-fe2ceda35ba6",
@@ -4618,6 +4721,7 @@
       "key": "a85e603b-4d97-46a4-9c91-de765391646f",
       "position": 2,
       "properties": {
+        "description": "**Transition** Send students to Code Studio.",
         "progression_name": "Example Animated Scene"
       },
       "seeding_key": {
@@ -4629,7 +4733,13 @@
       "key": "37116129-33c9-43a6-be07-a81b0bf2f8b5",
       "position": 3,
       "properties": {
-        "progression_name": "Plan Your Scene"
+        "progression_name": "Plan Your Scene",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "37116129-33c9-43a6-be07-a81b0bf2f8b5",
@@ -4651,7 +4761,13 @@
       "key": "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84",
       "position": 5,
       "properties": {
-        "progression_name": "Add Sprites"
+        "progression_name": "Add Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84",
@@ -4834,7 +4950,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
-        "name": "Conditionals\r"
+        "name": "Conditionals\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f0528d6a-0b12-4ff1-aa3a-51f47643023b",
@@ -4914,13 +5036,7 @@
       "key": "45b91d61-4ce0-4926-958e-854ae5d14009",
       "position": 7,
       "properties": {
-        "progression_name": "Skill Building",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
-          }
-        ]
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "45b91d61-4ce0-4926-958e-854ae5d14009",
@@ -4946,7 +5062,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5040,7 +5156,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio",
-        "name": "Keyboard Input\r"
+        "name": "Keyboard Input\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e7c40cc1-5969-4bdb-bd17-0c0f786b9d76",
@@ -5088,7 +5210,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5187,8 +5309,14 @@
       "key": "ac698d02-ec2a-44b9-bee2-9889a2b5317d",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Move the class to Code Studio, and have students complete the prediction level as a class or in small groups, then talk about what they found.\r\n\r\n**Video:**  Watch the video as a class and review the discussion questions together.",
-        "name": "If/Else and More Input\r"
+        "description": "**Transition:** Move the class to Code Studio, and have students complete the prediction level as a class or in small groups, then talk about what they found.",
+        "name": "If/Else and More Input\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ac698d02-ec2a-44b9-bee2-9889a2b5317d",
@@ -5210,7 +5338,7 @@
       "key": "71dc54d3-ec2d-4193-84cd-9e994129aa36",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?",
+        "description": "**Video:**  Watch the video as a class and review the discussion questions together.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?",
         "progression_name": "Video: If/Else Statements",
         "tips": [
           {
@@ -5228,13 +5356,7 @@
       "key": "3b5b4962-1d02-4591-a4c6-fd1f81665d68",
       "position": 4,
       "properties": {
-        "progression_name": "Skill Building",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Level 3:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n\n**Level 4:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
-          }
-        ]
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "3b5b4962-1d02-4591-a4c6-fd1f81665d68",
@@ -5260,7 +5382,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5389,7 +5511,13 @@
       "key": "6fc9f0d1-23f2-45bf-879f-69b222793806",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n\n**Question of the Day:  What skills and practices are important when creating an interactive program?**"
+        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6fc9f0d1-23f2-45bf-879f-69b222793806",
@@ -5400,7 +5528,7 @@
       "key": "0320f16b-06ce-44af-b1bd-20794feb5a52",
       "position": 3,
       "properties": {
-        "description": "**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.\n\n**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
+        "description": "**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
         "name": "Unplugged: Interactive Card Planning\r"
       },
       "seeding_key": {
@@ -5428,7 +5556,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2022] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -5441,7 +5569,13 @@
       "key": "4e0723c7-38ba-4d47-82fa-957aed03bab9",
       "position": 6,
       "properties": {
-        "progression_name": "Project Work"
+        "progression_name": "Project Work",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4e0723c7-38ba-4d47-82fa-957aed03bab9",
@@ -5591,7 +5725,13 @@
       "key": "e16bcb96-aa05-4fb1-8ac9-d3908e077e9a",
       "position": 2,
       "properties": {
-        "description": "**Transition:**  Move students to Code Studio\n\n**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10."
+        "description": "**Transition:**  Move students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e16bcb96-aa05-4fb1-8ac9-d3908e077e9a",
@@ -5602,6 +5742,7 @@
       "key": "66c70a69-b26c-448c-bda8-2276640f676f",
       "position": 3,
       "properties": {
+        "description": "**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5663,7 +5804,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5910,7 +6051,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -6019,7 +6160,13 @@
       "key": "4d0e1b05-6764-45b5-85f0-d956e11f0704",
       "position": 3,
       "properties": {
-        "description": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**"
+        "description": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d0e1b05-6764-45b5-85f0-d956e11f0704",
@@ -6030,7 +6177,13 @@
       "key": "847ce2b1-b2de-4932-af9c-ad5b8ca0499b",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the Side Scroller they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio."
+        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the Side Scroller they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "847ce2b1-b2de-4932-af9c-ad5b8ca0499b",
@@ -6151,7 +6304,7 @@
       "key": "fd996d24-c10f-42f8-81ea-d73816e91478",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show the two images of a frog jumping to the class.\r\n\r\n![](https://curriculum.code.org/media/uploads/triangleJump.gif)  ![](https://curriculum.code.org/media/uploads/curveJump.gif)"
+        "description": "**Display:** Show the two images of a frog jumping to the class.\n\n![An animation of a frog jumping up and down with a very linear movement](https://curriculum.code.org/media/uploads/triangleJump.gif)  ![An animation of a frog jumping up and down with a more nuanced movement that looks more realistic and affected by gravity](https://curriculum.code.org/media/uploads/curveJump.gif)"
       },
       "seeding_key": {
         "activity_section.key": "fd996d24-c10f-42f8-81ea-d73816e91478",
@@ -6213,7 +6366,13 @@
       "key": "3f6d101f-bccb-4a4d-9b16-5db525802046",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Move students to Code Studio."
+        "description": "**Transition:** Move students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3f6d101f-bccb-4a4d-9b16-5db525802046",
@@ -6267,7 +6426,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -6381,7 +6540,7 @@
       "key": "fc153167-32a3-4078-aa3c-c34b69b29131",
       "position": 1,
       "properties": {
-        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\r\n\r\n![](https://curriculum.code.org/media/uploads/collision.gif)\r\n\r\n\r\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?",
+        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\n\n![A giraffe emoji moves across the screen towards a stationary monkey emoji. As it touches the monkey emoji, both the monkey and giraffe continue moving across the screen](https://curriculum.code.org/media/uploads/collision.gif)\n\n\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?",
         "progression_name": "Code Prediction"
       },
       "seeding_key": {
@@ -6504,7 +6663,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -6590,7 +6749,13 @@
       "key": "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4",
       "position": 3,
       "properties": {
-        "description": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**"
+        "description": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4",
@@ -6601,7 +6766,13 @@
       "key": "1acd883d-261b-4c22-8a50-167d3ab9832f",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students can use this sheet to plan out the Flyer Game they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio."
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students can use this sheet to plan out the Flyer Game they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1acd883d-261b-4c22-8a50-167d3ab9832f",
@@ -6842,7 +7013,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 7: Functions in Context**\n\nIn this and the next two levels, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
+            "markdown": "**Level 7: Functions in Context**\n\nIn these levels, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
           }
         ]
       },
@@ -7424,10 +7595,27 @@
       }
     },
     {
-      "key": "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2",
+      "key": "4cedbe11-f01d-4877-8772-99baae5c7d46",
       "position": 1,
       "properties": {
-        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\n\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
+        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4cedbe11-f01d-4877-8772-99baae5c7d46",
+        "lesson_activity.key": "37150fb2-5983-44a9-bf23-91a8690bc5cf"
+      }
+    },
+    {
+      "key": "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -7437,11 +7625,17 @@
     },
     {
       "key": "2f874f2f-5f9e-4d5a-a84f-61151378280c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Circulate:** Students should spend the first 15-20 minutes playing the sample games, reviewing past work, and discussing as a group the type of game they'd like to build. If they want they can sketch ideas on scratch paper or in their journals.",
         "name": "Define - Scope Game\r",
-        "progression_name": "Sample Games"
+        "progression_name": "Sample Games",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f874f2f-5f9e-4d5a-a84f-61151378280c",
@@ -7450,10 +7644,16 @@
     },
     {
       "key": "b8798164-0848-4f12-b1c2-4e41799cda93",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Circulate:** Once students have discussed their ideas for the project, they should complete the project guide. While this should be a fairly familiar process, encourage students to make each component as clear and detailed as they can. Planning ahead can help them identify issues in their plan before they'll need to make more significant changes to their code.",
-        "name": "Prepare - Complete Project Guide\r"
+        "name": "Prepare - Complete Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b8798164-0848-4f12-b1c2-4e41799cda93",
@@ -7462,14 +7662,14 @@
     },
     {
       "key": "244c4366-1d73-41c1-bdd4-f151ee576403",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
         "name": "Try - Write Code\r",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2022] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -7480,9 +7680,15 @@
     },
     {
       "key": "0296c25a-c7e0-4f70-9254-e3742c469a84",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "progression_name": "Project - Background and Variables"
+        "progression_name": "Project - Background and Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0296c25a-c7e0-4f70-9254-e3742c469a84",
@@ -7491,7 +7697,7 @@
     },
     {
       "key": "e2bfdd8b-2cbb-41be-b227-37e15a8fef70",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Project - Sprites and Interactions"
       },
@@ -7502,7 +7708,7 @@
     },
     {
       "key": "9a016486-d583-4013-8f09-c0db34b00dd9",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the peer review guide.  \r\n\r\nStudents should spend 15 minutes reviewing the other group's game and filling out the peer review guide.",
         "name": "Reflect - Peer Review\r"
@@ -7514,7 +7720,7 @@
     },
     {
       "key": "3d65a24a-c99b-400e-a632-249258bbe645",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Review Your Game"
       },
@@ -7525,7 +7731,7 @@
     },
     {
       "key": "6a47a229-617f-41c5-a439-47dacbf2aeb4",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
         "name": "Iterate - Update Code\r",
@@ -7543,7 +7749,7 @@
     },
     {
       "key": "f5d590b3-559c-47e9-9222-72691313c104",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Share:** Give students a chance to share their games. If you choose to let students do a more formal presentation of their projects, the project guide provides students a set of components to include in their presentations including:\r\n\r\n* The original game they set out to build\r\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\r\n* A description of the most interesting or complex piece of code they wrote\r\n* A live demonstration of the actual game",
         "name": "Share\r"
@@ -7569,7 +7775,7 @@
       "key": "574e77dd-d6f7-4d59-80db-f24e54851aa1",
       "position": 2,
       "properties": {
-        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Send students to Code Studio to complete a quick end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r",
         "progression_name": "End-Of-Unit Survey"
       },
@@ -7579,25 +7785,26 @@
       }
     },
     {
-      "key": "7c1abffe-f336-4395-af24-cf4ca2c79007",
-      "position": 3,
+      "key": "324ed892-67b4-45b3-96d1-5e0ea6563e2e",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "324ed892-67b4-45b3-96d1-5e0ea6563e2e",
+        "lesson_activity.key": "367760dc-695e-4391-acd6-d0f12787bc0e"
+      }
+    },
+    {
+      "key": "fc3f8fce-d1cd-4f76-a0ba-ff6014b6b78e",
+      "position": 2,
       "properties": {
         "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
-        "activity_section.key": "7c1abffe-f336-4395-af24-cf4ca2c79007",
-        "lesson_activity.key": "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5"
-      }
-    },
-    {
-      "key": "324ed892-67b4-45b3-96d1-5e0ea6563e2e",
-      "position": 1,
-      "properties": {
-        "description": "The post-project test is found at the bottom of the Interactive Animations and Games unit overview page on Code Studio.\n\nThis test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear."
-      },
-      "seeding_key": {
-        "activity_section.key": "324ed892-67b4-45b3-96d1-5e0ea6563e2e",
+        "activity_section.key": "fc3f8fce-d1cd-4f76-a0ba-ff6014b6b78e",
         "lesson_activity.key": "367760dc-695e-4391-acd6-d0f12787bc0e"
       }
     },
@@ -10059,7 +10266,7 @@
       "chapter": 98,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Conditionals Apple 2_2022"
@@ -12109,7 +12316,7 @@
       "chapter": 180,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSD games functions assessment FR_2022"
@@ -16432,6 +16639,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -18076,6 +18294,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd3-2022"
       }
     },

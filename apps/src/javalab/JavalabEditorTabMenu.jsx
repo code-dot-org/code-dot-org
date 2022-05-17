@@ -4,7 +4,7 @@ import JavalabDropdown from './components/JavalabDropdown';
 import javalabMsg from '@cdo/javalab/locale';
 
 /**
- * A menu with a set of clickable links that calls the cancel handler if you
+ * A menu with a set of clickable file options that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
 export default class JavalabEditorTabMenu extends Component {
@@ -33,19 +33,20 @@ export default class JavalabEditorTabMenu extends Component {
       fileIsValidation
     } = this.props;
     let elements = [
-      <a onClick={renameFromTabMenu} key="rename">
+      <button onClick={renameFromTabMenu} key="rename" type="button">
         {javalabMsg.rename()}
-      </a>,
-      <a onClick={deleteFromTabMenu} key="delete">
+      </button>,
+      <button onClick={deleteFromTabMenu} key="delete" type="button">
         {javalabMsg.delete()}
-      </a>
+      </button>
     ];
     // options for start sources mode
     if (showVisibilityOption) {
       // file is not visible, add option to make it a starter file
       if (!fileIsVisible) {
         elements.push(
-          <a
+          <button
+            type="button"
             key="starter"
             onClick={() => {
               changeFileTypeFromTabMenu(
@@ -55,13 +56,14 @@ export default class JavalabEditorTabMenu extends Component {
             }}
           >
             {javalabMsg.makeStarter()}
-          </a>
+          </button>
         );
       }
       // file is not a validation file, add option to make it a validation file
       if (!fileIsValidation) {
         elements.push(
-          <a
+          <button
+            type="button"
             key="validation"
             onClick={() => {
               changeFileTypeFromTabMenu(
@@ -71,13 +73,14 @@ export default class JavalabEditorTabMenu extends Component {
             }}
           >
             {javalabMsg.makeValidation()}
-          </a>
+          </button>
         );
       }
       // if file is a starter file or a validation file, add the option to make it a support file.
       if (fileIsVisible || fileIsValidation) {
         elements.push(
-          <a
+          <button
+            type="button"
             key="support"
             onClick={() => {
               changeFileTypeFromTabMenu(
@@ -87,14 +90,14 @@ export default class JavalabEditorTabMenu extends Component {
             }}
           >
             {javalabMsg.makeSupport()}
-          </a>
+          </button>
         );
       }
     }
     elements.push(
-      <a key="cancel" onClick={cancelTabMenu}>
+      <button key="cancel" onClick={cancelTabMenu} type="button">
         {javalabMsg.cancel()}
-      </a>
+      </button>
     );
     return elements;
   };

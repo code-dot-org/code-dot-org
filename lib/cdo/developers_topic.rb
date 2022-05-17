@@ -113,11 +113,11 @@ module DevelopersTopic
 
   private_class_method def self.get_room_for_branch(branch)
     case branch
-      when STAGING, STAGING_NEXT
-        DEVELOPERS_ROOM
-      when TEST, PRODUCTION, LEVELBUILDER
-        DEPLOY_STATUS_ROOM
-      else raise "Unknown branch: #{branch}"
+    when STAGING, STAGING_NEXT
+      DEVELOPERS_ROOM
+    when TEST, PRODUCTION, LEVELBUILDER
+      DEPLOY_STATUS_ROOM
+    else raise "Unknown branch: #{branch}"
     end
   end
 

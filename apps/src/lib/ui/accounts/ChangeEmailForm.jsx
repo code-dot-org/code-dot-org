@@ -128,22 +128,34 @@ export default class ChangeEmailForm extends React.Component {
             labelDetails={this.emailOptInLabelDetails()}
             error={validationErrors.emailOptIn}
           >
-            <select
-              value={values.emailOptIn}
-              disabled={disabled}
-              tabIndex="1"
-              onKeyDown={this.onKeyDown}
-              onChange={this.onEmailOptInChange}
-              style={{
-                ...styles.input,
-                width: 100
-              }}
-              ref={el => (this.emailOptInSelect = el)}
-            >
-              <option value="" />
-              <option value="yes">{i18n.yes()}</option>
-              <option value="no">{i18n.no()}</option>
-            </select>
+            <>
+              <label>
+                <input
+                  style={styles.radio}
+                  type="radio"
+                  value="yes"
+                  name="email-opt-in-buttons"
+                  onClick={this.onEmailOptInChange}
+                  disabled={disabled}
+                  onKeyDown={this.onKeyDown}
+                  tabIndex="1"
+                />
+                {i18n.yes()}
+              </label>
+              <label>
+                <input
+                  style={styles.radio}
+                  type="radio"
+                  value="no"
+                  name="email-opt-in-buttons"
+                  onClick={this.onEmailOptInChange}
+                  disabled={disabled}
+                  onKeyDown={this.onKeyDown}
+                  tabIndex="1"
+                />
+                {i18n.no()}
+              </label>
+            </>
           </Field>
         )}
       </div>
@@ -154,5 +166,8 @@ export default class ChangeEmailForm extends React.Component {
 const styles = {
   input: {
     marginBottom: 4
+  },
+  radio: {
+    margin: '0px 5px 0px 0px'
   }
 };

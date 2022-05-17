@@ -105,6 +105,7 @@ def main
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
       COURSE_OFFERING_CATEGORIES
+      PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),

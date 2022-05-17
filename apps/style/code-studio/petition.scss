@@ -21,7 +21,7 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 2px 0;
   font-family: $gotham-regular;
   color: #5B6770;
 }
@@ -37,11 +37,37 @@
   justify-content: space-around;
 }
 
+.petition-space {
+  flex: 1 100%;
+  height: 18px;
+  margin: 0 0 2px 0;
+  color: #FF8000;
+  font-family: $gotham-extra-bold;
+  font-size: 14px;
+  text-align: center;
+}
+
 input.field, select.field {
   background-color: #e2e4e3;
   color: #595959;
   padding: 5px;
   border-width: 1px;
+  margin: 0;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: 0 0 8px #66afe9;
+  }
+}
+
+input.has-error, select.has-error {
+  border-color: #a94442;
+
+  &:focus {
+    box-shadow: 0 0 6px #ce8483;
+    border-color: #843534;
+  }
 }
 
 input.grey_input {
