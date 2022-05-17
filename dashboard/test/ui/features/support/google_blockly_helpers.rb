@@ -1,4 +1,6 @@
 module GoogleBlocklyHelpers
+  Point = Struct.new(:x, :y)
+
   def google_blockly?
     @browser.execute_script("return Blockly.version === 'Google'")
   end
