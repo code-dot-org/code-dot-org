@@ -6,12 +6,6 @@ module BlocklyHelpers
     @browser.execute_script("$(\"[#{id_selector}='#{block_id}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
   end
 
-  def generate_google_blockly_block_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"[class='blocklyDraggable']\").eq(#{to.to_i}).offset().left - $(\"[class='blocklyDraggable']\").eq(#{from.to_i}).offset().left;" \
-        "var drag_dy = $(\"[class='blocklyDraggable']\").eq(#{to.to_i}).offset().top  - $(\"[class='blocklyDraggable']\").eq(#{from.to_i}).offset().top;" \
-        "$(\"[class='blocklyDraggable']\").eq(#{from.to_i}).simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
-  end
-
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
     generate_selector_drag_code "[#{id_selector}='#{from}']", "[#{id_selector}='#{to}']", target_dx, target_dy
@@ -36,14 +30,6 @@ module BlocklyHelpers
     # For IE compatability, uses the SVG DOM binding technique from:
     #   http://stackoverflow.com/questions/10349811/how-to-manipulate-translate-transforms-on-a-svg-element-with-javascript-in-chrom
     js = "var xforms = $(\"[#{id_selector}='#{block_id}']\")[0].transform.baseVal; var firstXForm = xforms.getItem(0); if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){ var firstX = firstXForm.matrix.e; var firstY = firstXForm.matrix.f; }; return [firstX, firstY];"
-    coordinate_pair = @browser.execute_script(js)
-    Point.new(coordinate_pair[0], coordinate_pair[1])
-  end
-
-  def get_google_blockly_block_coordinates(block)
-    # For IE compatability, uses the SVG DOM binding technique from:
-    #   http://stackoverflow.com/questions/10349811/how-to-manipulate-translate-transforms-on-a-svg-element-with-javascript-in-chrom
-    js = "var xforms = $(\"[class='blocklyDraggable']\").eq(#{block.to_i})[0].transform.baseVal; var firstXForm = xforms.getItem(0); if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){ var firstX = firstXForm.matrix.e; var firstY = firstXForm.matrix.f; }; return [firstX, firstY];"
     coordinate_pair = @browser.execute_script(js)
     Point.new(coordinate_pair[0], coordinate_pair[1])
   end
@@ -89,15 +75,6 @@ module BlocklyHelpers
 
   def modal_dialog_visible
     @browser.execute_script("return $('#modalContainer').is(':visible');")
-  end
-
-  def google_blockly?
-    @browser.execute_script("return Blockly.version === 'Google'")
-  end
-
-  # Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
-  def get_id_selector
-    google_blockly? ? 'data-id' : 'block-id'
   end
 end
 
