@@ -37662,3 +37662,13 @@ en:
           description_short: ''
           description: Workshop participants will be able to see example projects and code during PL from the neighborhood, console, and theater.
           student_description: ''
+        csc-ecosystems-1:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+          lesson_groups: {}
+        csc-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: Hello World CSC
+          lesson_groups: {}
