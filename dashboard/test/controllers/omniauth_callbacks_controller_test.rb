@@ -977,6 +977,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     assert_equal 'migrated', user.provider
+    # No more authentication_options should be created or deleted. The
+    # two created before login should be the only existing ones.
     auth_option_count = user.authentication_options.count
     assert_equal 2, auth_option_count
     assert_equal user.id, signed_in_user_id
