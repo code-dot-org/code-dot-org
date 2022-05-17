@@ -22,7 +22,7 @@ class ViewAsToggle extends React.Component {
     this.toggleHideAsStudent(this.props.viewAs);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.viewAs !== this.props.viewAs) {
       this.toggleHideAsStudent(nextProps.viewAs);
     }
