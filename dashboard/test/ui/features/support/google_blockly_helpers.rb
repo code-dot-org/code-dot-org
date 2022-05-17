@@ -9,9 +9,9 @@ module GoogleBlocklyHelpers
   end
 
   def generate_google_blockly_block_drag_code(target_index, destination_index, target_dx, target_dy)
-    "var drag_dx = $(\"[class='blocklyDraggable']\").eq(#{target_index.to_i}).offset().left - $(\"[class='blocklyDraggable']\").eq(#{destination_index.to_i}).offset().left;" \
-        "var drag_dy = $(\"[class='blocklyDraggable']\").eq(#{target_index.to_i}).offset().top  - $(\"[class='blocklyDraggable']\").eq(#{destination_index.to_i}).offset().top;" \
-        "$(\"[class='blocklyDraggable']\").eq(#{destination_index.to_i}).simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+    "var drag_dx = $(\"[class='blocklyDraggable']\").eq(#{destination_index.to_i}).offset().left - $(\"[class='blocklyDraggable']\").eq(#{target_index.to_i}).offset().left;" \
+        "var drag_dy = $(\"[class='blocklyDraggable']\").eq(#{destination_index.to_i}).offset().top  - $(\"[class='blocklyDraggable']\").eq(#{target_index.to_i}).offset().top;" \
+        "$(\"[class='blocklyDraggable']\").eq(#{target_index.to_i}).simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def get_google_blockly_block_coordinates(block_index)
