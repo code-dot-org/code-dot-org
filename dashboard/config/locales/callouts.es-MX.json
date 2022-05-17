@@ -2591,7 +2591,8 @@
           "CSD_AI_L11_weather": "Esta es la función del tiempo"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto.",
+          "make_sprite": "¡Utiliza los bloques aquí para hacer un sprite!"
         }
       }
     }

@@ -365,7 +365,8 @@
           "definition": "计算机屏幕上等待用户输入的消息。"
         },
         "input/coursef/2021": {
-          "word": "输入"
+          "word": "输入",
+          "definition": "计算机从用户那里得到的信息。"
         },
         "loop/coursef/2021": {
           "word": "循环",

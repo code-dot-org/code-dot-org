@@ -4572,6 +4572,10 @@ ms:
               name: Alatan
             Debugging:
               name: Penyahpepijatan
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Isi pelajaran"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Unit Penyelesai"
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -4834,7 +4838,7 @@ ms:
               display_name: Acara-acara
             lessonGroup-5:
               display_name: Akhir Projek Kursus
-          name: kursusa-2021
+          name: coursea-2021
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         courseb-2021:
           title: Kursus B (2021)
@@ -7792,10 +7796,16 @@ ms:
               name: Inspirasi Projek
             lesson-19:
               name: Penyahpepijatan
+        csa4-2022:
+          lessons:
+            Console:
+              name: Konsol
         csa5-2022:
           lessons:
             lesson-7:
               name: Dipertingkatkan Untuk Gelung
+            Console:
+              name: Konsol
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -8059,6 +8069,8 @@ ms:
               key: Java Lab
             lesson-1:
               key: pelajaran-1
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
@@ -8067,6 +8079,8 @@ ms:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
@@ -8075,6 +8089,8 @@ ms:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konsol
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -8504,3 +8520,7 @@ ms:
               key: pelajaran-2
             lesson-3:
               key: pelajaran-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsol
