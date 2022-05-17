@@ -74,7 +74,7 @@ module LtiHelper
         full_name  = "Lti #{uid.first}" if full_name.blank?
         email      = SecureRandom.uuid + "@code.org"
 
-        user_type  = lti_role_to_user_type(params[:roles])
+        user_type = lti_role_to_user_type(params[:roles])
         age = 21 if user_type == User::TYPE_TEACHER
 
         if uid.blank?
