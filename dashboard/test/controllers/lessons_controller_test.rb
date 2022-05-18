@@ -37,12 +37,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                @lesson.name => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -288,12 +283,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                solo_lesson_in_script.key => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
