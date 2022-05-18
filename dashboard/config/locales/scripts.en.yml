@@ -25688,3 +25688,145 @@ en:
             Hello World CSC:
               name: Hello World CSC
           lesson_groups: {}
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview
+          title: CS Discoveries Deeper Learning Overview
+          description: Welcome to the 2021 Deeper Learning program for onboarding CS Discoveries facilitators.
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csd-mod1-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Discoveries Deeper Learning Module 1 for Workshop 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csd-mod2-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csd-mod3-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csd-mod4-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csp-mod1-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Principles Deeper Learning Module 1 for Workshop 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csp-mod2-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csp-mod3-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csp-mod4-2022:
+          lessons:
+            'Stage 1: Increase Understanding':
+              name: 'Stage 1: Increase Understanding'
+            'Stage 2: Demonstrate Understanding':
+              name: 'Stage 2: Demonstrate Understanding'
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview
+          title: 2021 CS Principles Deeper Learning Overview
+          description: "###Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
+          student_description: ''
+          description_short: ''
+          description_audience: ''

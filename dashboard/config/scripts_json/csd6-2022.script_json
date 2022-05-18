@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-18 15:13:47 UTC",
+    "serialized_at": "2022-05-18 15:23:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11007,6 +11007,18 @@
       }
     },
     {
+      "name": "Student Checklist - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/edit#",
+      "key": "student_checklist_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "student_checklist_-_human_device_interaction"
+      }
+    },
+    {
       "name": "Student Rubric - Interactive Art",
       "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
       "key": "student_rubric_-_interactive_art",
@@ -11496,6 +11508,12 @@
       "seeding_key": {
         "lesson.key": "Project: Human Device Interaction",
         "resource.key": "rubric_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "resource.key": "student_checklist_-_human_device_interaction"
       }
     },
     {
