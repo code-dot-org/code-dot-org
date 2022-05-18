@@ -20,7 +20,6 @@ import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
-import CdoVariableMap from './addons/cdoVariableMap';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
@@ -171,7 +170,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
-  blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -373,6 +371,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // TODO - called by StudioApp, not sure whether they're still needed.
   blocklyWrapper.WorkspaceSvg.prototype.setEnableToolbox = function(enabled) {};
   blocklyWrapper.WorkspaceSvg.prototype.traceOn = function(armed) {};
+
+  blocklyWrapper.VariableMap.prototype.addVariables = function(variableList) {
+    variableList.forEach(varName => this.createVariable(varName));
+  };
 
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
