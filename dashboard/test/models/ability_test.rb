@@ -798,17 +798,14 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'only the project owner can create a code review on that project' do
-    skip 'tests that create a project'
     project_owner = create :student
     other_student = create :student
-    project = create :project, owner: project_owner
-    other_project = create :project, owner: other_student
-    code_review = create :code_review, user_id: project_owner.id, project_id: project.id
+    code_review = create :code_review, user_id: project_owner.id
 
-    assert Ability.new(project_owner).can? :create, code_review, project
-    refute Ability.new(project_owner).can? :create, code_review, other_project
-    refute Ability.new(other_student).can? :create, code_review, project
-    refute Ability.new(other_student).can? :create, code_review, other_project
+    assert Ability.new(project_owner).can? :create, code_review, project_owner.id
+    refute Ability.new(project_owner).can? :create, code_review, other_student.id
+    refute Ability.new(other_student).can? :create, code_review, project_owner.id
+    refute Ability.new(other_student).can? :create, code_review, other_student.id
   end
 
   test 'only the code review owner can edit the code review' do
@@ -820,35 +817,15 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(other_student).can? :edit, code_review
   end
 
-  test 'who can view code reviews on a given project' do
-    skip 'tests that create a project'
+  # TODO: Update this test after allowing peers in the same code review group
+  # to also see the review.
+  test 'only the code review owner can see the review' do
+    code_review_owner = create :student
+    other_student = create :student
+    code_review = create :code_review, user_id: code_review_owner.id
 
-    # Create the teacher and 3 students involved in this test.
-    teacher = create :teacher
-    project_owner = create :student
-    student_in_group = create :student
-    student_not_in_group = create :student
-
-    # Create a section that's led by the teacher and has all 3 students.
-    section = create :section, teacher: teacher
-    followers = []
-    followers[0] = create :follower, section: section, student_user: project_owner
-    followers[1] = create :follower, section: section, student_user: student_in_group
-    followers[2] = create :follower, section: section, student_user: student_not_in_group
-
-    # Create a code review group includes 2 students (project_owner and student_in_group)
-    code_review_group = create :code_review_group, section: section
-    create :code_review_group_member, code_review_group: code_review_group, follower: followers[0]
-    create :code_review_group_member, code_review_group: code_review_group, follower: followers[1]
-
-    # Create the project owned by code_review_owner
-    project = create :project, owner: project_owner
-
-    # Now we're finally ready to verify who can index code reviews associated the project
-    assert Ability.new(teacher).can? :index_code_reviews, project
-    assert Ability.new(project_owner).can? :index_code_reviews, project
-    assert Ability.new(student_in_group).can? :index_code_reviews, project
-    refute Ability.new(student_not_in_group).can? :index_code_reviews, project
+    assert Ability.new(code_review_owner).can? :read, code_review
+    refute Ability.new(other_student).can? :read, code_review
   end
 
   test 'workshop admins can update scholarship info' do
