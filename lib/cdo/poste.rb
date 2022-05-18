@@ -182,7 +182,7 @@ module Poste
       @@renderer ||= begin
         require 'cdo/markdown/handler'
         Cdo::Markdown::Handler.register
-        ActionView::Base.new
+        ActionView::Base.with_empty_template_cache.empty
       end
     end
   end

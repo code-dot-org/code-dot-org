@@ -5,6 +5,7 @@ Scenario: Autorun Eyes Test
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/9"
   And I wait to see "#runButton"
   And I close the instructions overlay if it exists
+  And I wait for 0.5 seconds
   And I open my eyes to test "artist autorun"
   Then I see no difference for "square already drawn"
   When I drag block "2" to block "12"
