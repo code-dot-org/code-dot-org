@@ -798,6 +798,7 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'only the project owner can create a code review on that project' do
+    skip 'tests that create a project'
     project_owner = create :student
     other_student = create :student
     project = create :project, owner: project_owner
@@ -820,6 +821,8 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'who can view code reviews on a given project' do
+    skip 'tests that create a project'
+
     # Create the teacher and 3 students involved in this test.
     teacher = create :teacher
     project_owner = create :student
