@@ -67,9 +67,17 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+  const addCodeReviewComment = async (
+    commentText,
+    reviewId,
+    onSuccess,
+    onFailure
+  ) => {
     try {
-      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      const newComment = await dataApi.submitNewCodeReviewComment(
+        commentText,
+        reviewId
+      );
       setOpenReviewData({
         ...openReviewData,
         comments: [...openReviewData.comments, newComment]
