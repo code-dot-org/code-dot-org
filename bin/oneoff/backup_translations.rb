@@ -4,6 +4,8 @@ require 'fileutils'
 
 # This script's function is to move translation JSON files from our
 # i18n directory into a backup directory in the root of our repo.
+# The files are not meant to be kept there long term. They should
+# eventually be deleted.
 
 # The reason why this was originally used is in the case that a `Script`
 # no longer existed and caused the i18n sync-out step to fail with a
