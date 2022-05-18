@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-29 15:39:58 UTC",
+    "serialized_at": "2022-05-03 19:33:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1260,7 +1260,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd/2022] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },

@@ -53,86 +53,86 @@ class Maze < Grid
   end
 
   def common_blocks(type)
-    <<-XML.chomp
-#{k1_blocks}
-<category name="Actions">
-  <block type='maze_moveForward'></block>
-  <block type='maze_move'></block>
-  <block type='maze_move'>
-    <title name='DIR'>???</title>
-  </block>
-  <block type='maze_turn'>
-    <title name='DIR'>turnRight</title>
-  </block>
-  <block type='maze_turn'>
-    <title name='DIR'>???</title>
-  </block>
-</category>
-<category name="Loops">
-  <block type='controls_repeat'>
-    <title name='TIMES'>5</title>
-  </block>
-  <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="2-10">???</title>
-  </block>
-  <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="2-10">3</title>
-  </block>
-  <block type='controls_repeat_ext'></block>
-  <block type="maze_forever"></block>
-  <block type="controls_for" inline="true">
-    <title name="VAR">i</title>
-    <value name="FROM">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-    <value name="TO">
-      <block type="math_number">
-        <title name="NUM">10</title>
-      </block>
-    </value>
-    <value name="BY">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-  </block>
-</category>
-<category name="Variables" custom="VARIABLE"></category>
-<category name="Logic">
-  <block type="maze_if"></block>
-  <block type="maze_ifElse"></block>
-</category>
-<category name="Comment">
-  <block type="comment" />
-</category>
+    <<~XML.chomp
+      #{k1_blocks}
+      <category name="Actions">
+        <block type='maze_moveForward'></block>
+        <block type='maze_move'></block>
+        <block type='maze_move'>
+          <title name='DIR'>???</title>
+        </block>
+        <block type='maze_turn'>
+          <title name='DIR'>turnRight</title>
+        </block>
+        <block type='maze_turn'>
+          <title name='DIR'>???</title>
+        </block>
+      </category>
+      <category name="Loops">
+        <block type='controls_repeat'>
+          <title name='TIMES'>5</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type='controls_repeat_ext'></block>
+        <block type="maze_forever"></block>
+        <block type="controls_for" inline="true">
+          <title name="VAR">i</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+      </category>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Logic">
+        <block type="maze_if"></block>
+        <block type="maze_ifElse"></block>
+      </category>
+      <category name="Comment">
+        <block type="comment" />
+      </category>
     XML
   end
 
   def k1_blocks
-    <<-XML.chomp
-<category name="K1 Blocks">
-  <block type="controls_repeat_simplified">
-    <title name="TIMES">5</title>
-  </block>
-  <block type="controls_repeat_simplified_dropdown">
-    <title name="TIMES" config="2-10">3</title>
-  </block>
-  <block type="maze_moveNorth"></block>
-  <block type="maze_moveSouth"></block>
-  <block type="maze_moveEast"></block>
-  <block type="maze_moveWest"></block>
-</category>
+    <<~XML.chomp
+      <category name="K1 Blocks">
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type="maze_moveNorth"></block>
+        <block type="maze_moveSouth"></block>
+        <block type="maze_moveEast"></block>
+        <block type="maze_moveWest"></block>
+      </category>
     XML
   end
 
   def toolbox(type)
-    <<-XML.chomp
-<category name="Category">
-  <block type="category"></block>
-</category>
-#{common_blocks(type)}
+    <<~XML.chomp
+      <category name="Category">
+        <block type="category"></block>
+      </category>
+      #{common_blocks(type)}
     XML
   end
 end

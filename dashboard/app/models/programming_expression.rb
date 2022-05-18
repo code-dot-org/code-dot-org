@@ -76,7 +76,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']}.join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -207,7 +207,7 @@ class ProgrammingExpression < ApplicationRecord
       parameters: palette_params,
       examples: examples,
       programmingEnvironmentName: programming_environment.name,
-      video: Video.current_locale.find_by_key(video_key)&.summarize(false),
+      video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
   end
@@ -314,5 +314,12 @@ class ProgrammingExpression < ApplicationRecord
     new_exp.write_serialization
 
     new_exp
+  end
+
+  def self.get_from_cache(programming_environment_name, key)
+    Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Script.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+    end
   end
 end

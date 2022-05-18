@@ -4,7 +4,7 @@ nav: educate_nav
 theme: responsive
 ---
 
-# IT requirements for Code.org tutorials
+# Technical Requirements for Code.org Tutorials
 
 ## Hardware
 

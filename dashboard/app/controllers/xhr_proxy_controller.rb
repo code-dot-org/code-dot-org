@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
     ch.tetr.io

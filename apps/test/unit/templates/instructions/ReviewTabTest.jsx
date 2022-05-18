@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
 import './codeReview/CodeReviewTestHelper';
 import {UnconnectedReviewTab as ReviewTab} from '@cdo/apps/templates/instructions/ReviewTab';
@@ -38,7 +37,7 @@ describe('Code Review Tab', () => {
     };
   };
 
-  let wrapper, onLoadComplete, mockApi, existingComment;
+  let wrapper, mockApi, existingComment;
 
   beforeEach(() => {
     existingComment = Factory.build('CodeReviewComment');
@@ -56,15 +55,12 @@ describe('Code Review Tab', () => {
       canMarkReviewable: false,
       reviewEnabled: true
     });
-
-    onLoadComplete = sinon.spy();
   });
 
   describe('viewing as code owner with review enabled', () => {
     function createWrapper() {
       return shallow(
         <ReviewTab
-          onLoadComplete={onLoadComplete}
           codeReviewEnabled
           viewAsCodeReviewer={false}
           channelId={channelId}
@@ -81,14 +77,6 @@ describe('Code Review Tab', () => {
 
     it('renders loading spinner before load is completed', () => {
       expect(wrapper.find(Spinner).length).to.equal(1);
-    });
-
-    it('calls onLoadComplete callback after load is completed', () => {
-      onLoadComplete.resetHistory();
-      sinon.assert.notCalled(onLoadComplete);
-
-      wrapper.setState({loadingReviewData: false});
-      sinon.assert.calledOnce(onLoadComplete);
     });
 
     describe('after load', () => {
@@ -324,7 +312,6 @@ describe('Code Review Tab', () => {
     beforeEach(() => {
       wrapper = shallow(
         <ReviewTab
-          onLoadComplete={onLoadComplete}
           codeReviewEnabled={false}
           viewAsCodeReviewer={false}
           viewAsTeacher={true}
@@ -352,11 +339,7 @@ describe('Code Review Tab', () => {
 
   it('does not render enable code review checkbox when codeReviewEnabled is false', () => {
     wrapper = shallow(
-      <ReviewTab
-        onLoadComplete={onLoadComplete}
-        codeReviewEnabled={false}
-        viewAsCodeReviewer={false}
-      />
+      <ReviewTab codeReviewEnabled={false} viewAsCodeReviewer={false} />
     );
     expect(wrapper.find("input[type='checkbox']").length).to.equal(0);
   });

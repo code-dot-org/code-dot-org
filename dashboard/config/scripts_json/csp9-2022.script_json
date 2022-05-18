@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:34:58 UTC",
+    "serialized_at": "2022-05-06 21:28:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1592,7 +1592,13 @@
       "properties": {
         "description": "Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** *Have students share our their responses and talk through their conclusions*.",
         "name": "Making Scatter Charts",
-        "progression_name": "Crosstab and Scatter Charts"
+        "progression_name": "Crosstab and Scatter Charts",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The dataset titled \"Favorite Classes\" that students use to complete this activity guide is a fabricated dataset for the purposes of this lesson. The rest of the datasets are ones that can be found in the permanent library of datasets available in any AppLab project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1bd8046f-a264-44be-85d1-1a392c018028",

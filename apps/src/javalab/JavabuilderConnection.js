@@ -25,7 +25,8 @@ export default class JavabuilderConnection {
     executionType,
     miniAppType,
     currentUser,
-    onMarkdownLog
+    onMarkdownLog,
+    csrfToken
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -40,6 +41,7 @@ export default class JavabuilderConnection {
     this.miniAppType = miniAppType;
     this.currentUser = currentUser;
     this.onMarkdownLog = onMarkdownLog;
+    this.csrfToken = csrfToken;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -70,7 +72,8 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_sources',
       requestData,
-      /* checkProjectEdited */ false
+      /* checkProjectEdited */ false,
+      /* usePostRequest */ true
     );
   }
 
@@ -86,11 +89,12 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_validation',
       requestData,
-      /* checkProjectEdited */ true
+      /* checkProjectEdited */ true,
+      /* usePostRequest */ true
     );
   }
 
-  connectJavabuilderHelper(url, data, checkProjectEdited) {
+  connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -102,11 +106,21 @@ export default class JavabuilderConnection {
       return;
     }
 
-    const ajaxPayload = {
-      url: url,
-      type: 'get',
-      data: data
-    };
+    const ajaxPayload = usePostRequest
+      ? {
+          url: url,
+          type: 'post',
+          data: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': this.csrfToken
+          }
+        }
+      : {
+          url: url,
+          type: 'get',
+          data: data
+        };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
@@ -345,7 +359,7 @@ export default class JavabuilderConnection {
 
   displayUnauthorizedMessage(error) {
     const body = error.responseJSON;
-    if (body.type === WebSocketMessageType.AUTHORIZER) {
+    if (body && body.type === WebSocketMessageType.AUTHORIZER) {
       this.onAuthorizerMessage(body.value, body.detail);
       return;
     }

@@ -36,6 +36,8 @@ scripts_map = {
   'pre-express-2017' => 'pre-express-2017'
 }
 
+@course_offerings = {}
+@course_versions = {}
 @unit_groups = {}
 @plc_courses = {}
 @scripts = {}
@@ -52,6 +54,13 @@ scripts_map.each do |_script_id, name|
 
   script.unit_groups&.each do |unit_group|
     @unit_groups[unit_group.name] = unit_group.attributes
+  end
+
+  course_version = script.get_course_version
+  if course_version
+    course_version_identifier = course_version.course_offering.key + '-' + course_version.key
+    @course_versions[course_version_identifier] = course_version.attributes
+    @course_offerings[course_version.course_offering.key] = course_version.course_offering.attributes
   end
 
   plc_course_unit = script.plc_course_unit
@@ -94,6 +103,8 @@ end
 
 prefix = Rails.root.join('test/fixtures/')
 
+File.new("#{prefix}course_offerings.yml", 'w').write(yamlize(@course_offerings))
+File.new("#{prefix}course_versions.yml", 'w').write(yamlize(@course_versions))
 File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))

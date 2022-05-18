@@ -7,18 +7,21 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ],
     "display_name": "Chatbot",
     "bubble_choice_description": "An example project that creates a chatbot to interact with a user.",
-    "thumbnail_url": "https://images.code.org/24bc0bdb5638c0a67d49ef0f77be95c3-image-1651495036604.png"
+    "thumbnail_url": "https://images.code.org/24bc0bdb5638c0a67d49ef0f77be95c3-image-1651495036604.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-14T19:13:32.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:13:32.884+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L1_2022\"},{\"changed_at\":\"2022-04-14 19:13:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 12:37:41 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:13:32.884+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L1_2022\"},{\"changed_at\":\"2022-04-14 19:13:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 12:37:41 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 12:46:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

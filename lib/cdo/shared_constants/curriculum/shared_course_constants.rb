@@ -59,19 +59,19 @@ module SharedCourseConstants
   ).freeze
 
   # All the categories options used to group course offerings in the assignment dropdown
-  COURSE_OFFERING_CATEGORIES = OpenStruct.new(
-    pl_self_paced: 'Self-Paced Professional Learning',
-    pl_virtual: 'Virtual Professional Learning',
-    pl_other: 'Other Professional Learning',
-    full_course: 'Full Courses',
-    csf: 'CS Fundamentals',
-    csc: 'CS Connections',
-    aiml: 'AI/ML',
-    hoc: 'Hour of Code',
-    csf_international: 'CS Fundamentals International',
-    math: 'Math',
-    twenty_hour: '20-hour',
-    other: 'Other'
+  COURSE_OFFERING_CATEGORIES = %w(
+    pl_self_paced
+    pl_virtual
+    pl_other
+    full_course
+    csf
+    csc
+    aiml
+    hoc
+    csf_international
+    math
+    twenty_hour
+    other
   ).freeze
 
   # Sections have a participant_type and courses have a participant_audience. A section

@@ -9,16 +9,19 @@ noindex: true
 
 ## Quick Links
 
-- **[K-12 Supplies Plan](#plan)**<br/>
+- **[K-12 Workshop Supplies](#supplies)**<br/>
 - **[Mimeo Marketplaces](#mimeo)**<br/>
 - **[Adafruit Circuit Playground](#adafruit)**<br/>
 - **[Printing Certificates](#certs)**<br/>
 
 
 <a id="plan"></a>
-## K-12 Supplies Plan
+## K-12 Workshop Supplies
 
-Code.org will be covering the cost of all initial supplies needed for all K-12 programs. We will do this by shipping materials directly, providing a lump sum for partners to purchase supplies, or by covering the cost of items ordered through the Mimeo Marketplace. The [K-12 Supplies Plan](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit) outlines the details, including key differences in how supplies will be handled in the K-5 program and the 6-12 program.
+Code.org will be covering the cost of all initial supplies needed for all K-12 programs. We will do this by covering the cost of items ordered through the Mimeo Marketplace. 
+
+- [Guidance for K-5 Workshop Supplies](https://docs.google.com/document/d/1hmaqhTvLjl7b_TKjaGF8O3RgirGYMJLA-AZ9yDGBLEw/edit#bookmark=id.f56kk46c9c1p)
+- [Guidance for 6-12 Workshop Supplies](https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit#heading=h.je26w0f9mw6h)
 
 <a id="mimeo"></a>
 ## Accessing Mimeo

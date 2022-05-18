@@ -32,6 +32,7 @@ import {
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -172,14 +173,38 @@ export default class Craft {
         return config.skin.assetUrl(`music/${filename}`);
       },
       levelTracks,
-      levelTracks.length > 1 ? 7500 : null
+      levelTracks.length > 1 ? 7500 : null,
+      muteCookieWithLevel(Craft.level)
     );
+
+    config.muteBackgroundMusic = function() {
+      Craft.musicController.setMuteMusic(true);
+    };
+
+    config.unmuteBackgroundMusic = function() {
+      var songToPlayFirst = Craft.getFirstSong();
+      Craft.musicController.setMuteMusic(false, songToPlayFirst);
+    };
+
+    // Play music when the instructions are shown
+    Craft.beginBackgroundMusic = function() {
+      var songToPlayFirst = Craft.getFirstSong();
+      Craft.musicController.play(songToPlayFirst);
+    };
+
+    Craft.getFirstSong = function() {
+      Sounds.getSingleton().whenAudioUnlocked(function() {
+        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+        return hasSongInLevel ? Craft.level.songs[0] : null;
+      });
+    };
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.smallStaticAvatar =
       MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.failureAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Fail.png';
     config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
+    config.level.levelTracks = levelTracks;
 
     const onMount = function() {
       studioApp().init(
@@ -393,17 +418,6 @@ export default class Craft {
 
   static getAppReducers() {
     return reducers;
-  }
-
-  /**
-   * Play music when the instructions are shown
-   */
-  static beginBackgroundMusic() {
-    Sounds.getSingleton().whenAudioUnlocked(function() {
-      const hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      const songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-      Craft.musicController.play(songToPlayFirst);
-    });
   }
 
   static onArrowButtonDown(e, btn) {
