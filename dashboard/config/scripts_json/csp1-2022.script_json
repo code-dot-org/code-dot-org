@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:21:14 UTC",
+    "serialized_at": "2022-05-03 19:32:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -122,7 +122,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates.",
-        "preparation": "* Have scissors ready for groups to create [r ab-cutouts/csp/2021] or have these pre-cut and prepared before class\r\n",
+        "preparation": "* Have scissors ready for groups to create [r shape_cutouts/csp/2022] or have these pre-cut and prepared before class\r\n",
         "purpose": "Eventually, students will need to understand the binary number system which uses 1's and 0's rather than circles and squares. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced. In wrestling with the challenge of describing the rules of ordering patterns of circles and squares clearly, students will be primed to see how the binary number system solves many of these problems. Students may discover a system that is equivalent to the binary number system, which is a feat worth celebrating, but it is not expected that every student uncovers the rules for binary in this lesson.",
         "student_overview": "Develop a system for creating and ordering patterns of shapes.",
         "unplugged": true
@@ -143,7 +143,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r flippy_do/csp/2022]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -206,7 +206,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2021/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2022] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2021/stage/7/puzzle/1)",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
         "student_overview": "Learn how computers represent black and white images using bits."
       },
@@ -226,7 +226,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
-        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information/csp/2021]\t\r\n",
+        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information_1/csp/2022]\t\r\n",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
         "student_overview": "Learn how computers represent color images using bits."
       },
@@ -266,7 +266,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
-        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information/csp/2021] ready for the discussion towards the end of the lesson\r\n",
+        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information_1/csp/2022] ready for the discussion towards the end of the lesson\r\n",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost."
       },
@@ -286,7 +286,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article.",
-        "preparation": "\r\n* Print out [r fortnite-article/csp/2021] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
+        "preparation": "\r\n* Print out [r article_-_fortnite_stealing_dance_moves/csp/2022] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
         "purpose": "Students have been examining how digital information is created and stored, but they have not closely examined the question of who owns their digital data and what rules govern how that information can be shared. This lesson introduces the concept of copyright by presenting students with an article that challenges their current understanding of digital ownership and makes them wrestle with some of the complexities of owning and sharing digital information. It’s important for students to talk through their ideas and hear the perspectives of their peers as they try to unpack how copyright law can impact society. Ultimately, students begin to form their own opinions about copyright focusing on how these policies impact the world around us and observing who benefits and who is harmed in particular copyright situations.\r\n\r\nThis lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence. Students may need support with these processes during this lesson so they are able to complete the following lesson independently. It is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \r\n",
         "student_overview": "Learn about how people can own digital information and the ways they can share access to their creative digital works.",
         "unplugged": true
@@ -1163,7 +1163,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos_1/csp/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos/csp/2022] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },

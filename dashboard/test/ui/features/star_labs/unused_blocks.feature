@@ -5,7 +5,7 @@ Scenario: Solve a level with unused blocks
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-
+  And I wait for 1 second
   When I open my eyes to test "Unused Blocks"
 
   # Drag a block into the middle of the workspace

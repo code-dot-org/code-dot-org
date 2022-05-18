@@ -836,6 +836,10 @@ de:
       title: Tanzparty
     dance-2019:
       title: Tanzparty
+    hello-world:
+      title: Hallo Welt
+    poem-art:
+      title: Dichtkunst
     hoc:
       title: Klassisches Labyrinth
       body: Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es
@@ -1067,14 +1071,6 @@ de:
       zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit
       akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
-  donor_interstitial:
-    title: Deine kostenlosen CS Kurse wurden ermöglicht durch...
-    local_supporters: Lokale Unterstützer
-    global_supporters: Globale Unterstützer
-    support_codeorg_1: Jeder an Code.org gespendete Euro bringt mehr Möglichkeiten
-      für mehr Studierende.
-    support_codeorg_2: "[Spende jetzt](%{donate_url}) um Code.org zu unterstützen."
-    get_started: Starte mit Code.org
   school_info_interstitial:
     title: Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns,
       unsere Fortschritte zu verfolgen!

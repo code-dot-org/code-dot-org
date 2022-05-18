@@ -8988,3 +8988,102 @@ fr-FR:
         display_name: S'entraîner
       CSD web text practice choice_2021:
         display_name: S'entraîner
+      CSD U4L01 SFLP:
+        markdown: |-
+          # Aperçu
+
+          Dans cette leçon, vous apprendrez comment l'empathie pour les besoins d'un utilisateur est une composante essentielle du processus de conception. Ensuite, vous allez mener une enquête sur une série de produits afin d'examiner et de critiquer la manière dont ils répondent à une variété de besoins.
+
+          ## Vocabulaire
+
+          ***Critique** - Faire une évaluation critique de façon détaillée et constructive.
+          **Empathie** - En matière de design, tenir compte des sentiments et des besoins d'un utilisateur lors de la conception d'un produit.
+          **Utilisateur** - Personne qui utilise un objet, notamment un logiciel ou un matériel.
+
+          ## Ressources
+
+          * [Déterminer l'utilisateur] (https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/export?format=pdf) - Guide d'activité
+      CSD U4L02 SFLP:
+        markdown: |
+          # Aperçu
+
+          Les concepteurs doivent comprendre les besoins de leurs utilisateurs. Ce cours vous amènera à réfléchir à la manière de concevoir pour une autre personne en jouant le rôle d'un profil d'utilisateur et en réagissant face à une série de produits.
+
+          ## Vocabulaire
+
+          **Facilité d'utilisation** - Facilité, efficacité et satisfaction lors de l'utilisation d'un objet ou d'un système fabriqué par l'homme (notamment un logiciel).
+
+          ## Ressources
+
+          * [Réagir en tant qu’utilisateur](https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - Guide d'activité
+
+
+          *[Profil 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - Profil d'utilisateur
+          * [Profil 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - Profil d'utilisateur
+          * [Profil 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - Profil d'utilisateur
+          * [Profil 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - Profil d'utilisateur
+      CSD U4L03 SFLP:
+        markdown: |-
+          # Aperçu
+
+          Dans ce cours, vous allez apprendre à créer un produit à partir de zéro afin de répondre aux besoins d'un utilisateur. Vous découvrirez comment le brainstorming et le fait de catégoriser les idées sont des compétences utiles lorsqu'il existe de nombreuses options potentielles parmi lesquelles vous pourriez choisir.
+
+          ## Ressources
+
+          * Conception centrée sur l'utilisateur] (https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Guide d'activité
+      CSD U4L04 SFLP:
+        markdown: "# Aperçu\n\nDans cette leçon, vous apprendrez ce que signifie une
+          application et comment elle est conçue pour répondre aux besoins d'un utilisateur.
+          Vous apprendrez également comment on utilise les prototypes pour obtenir
+          une conception préliminaire d'un logiciel.\n\n## Vocabulaire\n\n* **Prototype**
+          - Un premier modèle ou un modèle ancien d'un produit qui vous permet de
+          tester des hypothèses avant de développer une version finale.\n**Interface
+          utilisateur** - Les éléments visuels d'un programme qui permettent à l'utilisateur
+          de contrôler ou de communiquer sur l'application. Souvent abrégé en UI.\n\n\n##
+          Ressources\n\n* [Écrans d'interface utilisateur] (https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf)
+          - Guide d'activité\n* [Test d'utilisateur (ordinateur)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf)
+          - Guide d'activité\n* [Test d'utilisateur (utilisateur)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf)
+          - Guide d'activité\n \nhttps://studio.code.org/s/csd4-2017/lessons/4/levels/1
+          -> dsls -> markdown"
+      CSD U4L05 SFLP:
+        markdown: |-
+          # Aperçu
+
+          Dans cette leçon, vous apprendrez à lire attentivement les commentaires relatifs à un produit afin de connaître les besoins qui sont exprimés. Ensuite, vous mettrez à jour un prototype papier afin de mieux répondre à ces besoins.
+
+          ## Ressources
+
+          * [Écrans d'interface utilisateur](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Guide d'activité
+          * [Commentaires sur le prototype](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Guide d'activité
+          * [Améliorer l'affichage d'un écran](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Guide d'activité
+      CSD U4L06 SFLP:
+        markdown: |-
+          # Aperçu
+
+          Jusqu'à présent, nous nous sommes concentrés sur la conception pour des utilisateurs qui sont, plus ou moins éloignés de nous. Le contact avec l'utilisateur final n'a jamais été direct, que ce soit par le biais d'un brainstorming, de profils ou de commentaires textuels. Ce cours vous propose d'interroger directement l'un de vos camarades de classe afin de concevoir une application qui réponde à ses besoins.
+
+          ## Ressources
+
+          * [Entrevue auprès de l'utilisateur] (https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Guide d'activité
+          * [Projet - Prototype papier](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Guide d'activité
+      CSD U4L07 SFLP:
+        markdown: |-
+          # Aperçu
+
+          En vous inspirant de l'entretien que vous avez mené dans la dernière leçon, concevez une application qui pourrait aider votre camarade de classe à surmonter un obstacle auquel il est confronté pendant qu'il apprend quelque chose de nouveau.
+
+
+          ## Ressources
+
+          * [Rubrique relative au prototype papier] (https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Grille d'évaluation
+          * [Projet - Prototype papier] (https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Guide d'activité
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Aperçu\n\nDans le cadre de cette activité, les élèves travaillent
+          en groupes pour concevoir des bateaux en papier d'aluminium qui pourront
+          contenir le plus grand nombre possible de centimes.  À la fin de la leçon,
+          ils réfléchissent à l'expérience qu'ils ont eue en participant à cette activité
+          et établissent des liens avec le type de résolution de problèmes qu'ils
+          auront à effectuer pendant le reste du cours. \n\n\n## Ressources\n\n* Bateaux
+          en aluminium] (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Guide d'activité (copier en [MS Word] (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc] (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"

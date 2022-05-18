@@ -1,0 +1,14 @@
+{
+  "eu-ES": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Pentsamendu konputazionala"
+        },
+        "ccela/L": {
+          "description": "Hizkuntza"
+        }
+      }
+    }
+  }
+}

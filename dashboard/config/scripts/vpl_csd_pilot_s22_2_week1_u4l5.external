@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lessons 1 - 8 
+# Lessons 1 - 5
 
-##### Review the lesson overviews from the first eight lessons. Summarize the key learning from the first eight lessons and connect this to the learning throughout the unit. Highlight how the start of the unit sets students up for success later in the unit. 
+##### At the start of the unit, students will be introduced to the design process used in this course along with the concept of designing for others.  
 
 ## Key terms used throughout The Design Process unit
 
@@ -13,14 +13,14 @@ markdown <<MARKDOWN
 * ##### **User Interface** - The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.
 
 
-## Overview of Lessons 1 - 8
+## Overview of Lessons 1 - 5
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details>
 <summary><strong>Lesson 1: Designing With Empathy</strong></summary>
 
-<img src="https://images.code.org/51240a4ad2d5d64dfffaac35332c4056-image-1648858997069.JPG" alt="Image of the activity guide for the project design feedback section about shoes" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 20px;">
+<img src="https://images.code.org/51240a4ad2d5d64dfffaac35332c4056-image-1648858997069.JPG" alt="Image of the activity guide for the project design feedback section about shoes" width="225px" style="float:left; margin: 0 0 40px 40px;  padding-right: 20px;">
 
 **Question of the Day:** Why do people create web pages?
 
@@ -113,63 +113,7 @@ Following the mini design project, students look towards the next phase of desig
 
 <div style="clear:both"/>
 
-<details>
-<summary><strong>Lesson 6: Feedback and Testing</strong></summary>
 
-<img src="https://images.code.org/6e098c0914809afcbb4696ff10ef38f9-image-1648859256588.JPG" alt="Image of potential improvements for an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
-
-**Question of the Day:** How can we use feedback to improve an app?
-
-**Lesson Overview:**
-
-In this lesson, students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
-
-**Students will be able to:** 
-* Categorize and prioritize user feedback for an app
-* Improve a screen design based on user feedback.
-* Use feedback to create a plan for further development of an app
-
-</details>
-
-<div style="clear:both"/>
-
-<details>
-<summary><strong>Lesson 7: Identifying User Needs</strong></summary>
-
-<img src="https://images.code.org/80f02a76e63c9ae881e9ace40b3f8025-image-1648859319621.JPG" alt="Image of a brainstorming poster for an app that could address a barrier or opportunity" width="225px" style="float:left; margin: 0 0 30px 30px;  padding-right: 30px;">
-
-**Question of the Day:** How can user interviews help us create apps to meet the needs of a user?
-
-**Lesson Overview:**
-
-In this lesson, students interpret user interviews to determine the needs & interests of a user. They then speculate on the barriers these users are facing or the opportunities that are available for each user. In a group, they share these barriers & opportunities and brainstorm different apps that could be used to address these issues. By the end of the lesson, students will have decided on an app idea that addresses a barrier or opportunity for a user.
-
-**Students will be able to:** 
-* Analyze interview notes to identify specific user needs
-
-</details>
-
-<div style="clear:both"/>
-
-<details>
-<summary><strong>Lesson 8: Paper Prototype</strong></summary>
-
-<img src="https://images.code.org/d7afb0b619c0522337a990282da53208-image-1648861151353.JPG" alt="Image of a poster that has an app to help a user address a need or interest" width="225px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
-
-**Question of the Day:** How can I develop an app prototype for a user?
-
-**Lesson Overview:**
-
-Based on user interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing "screens" on individual notecards. A project guide directs students through the process including building the paper prototype and testing it with their user to see if their assumptions about the user interfaces they created are accurate.
-
-This is a two-day lesson, with specific timings outlined in the lesson plan below.
-
-**Students will be able to:** 
-* Design a paper prototype of an app to address the specific needs of a user
-* Design the user interface of an app
-* Identify improvements to an app based on user testing
-
-</details>
 
 <div style="clear:both"/>
 

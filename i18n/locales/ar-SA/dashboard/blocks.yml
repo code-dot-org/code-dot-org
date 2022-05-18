@@ -4,6 +4,22 @@ ar:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': صغير جدًا
+            '0.75': صغير
+            '1.00': متوسط
+            '2.00': كبير
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': صغير جدًا
+            '0.75': صغير
+            '1.00': متوسط
+            '2.00': كبير
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} بدل كل {N} مقياس
@@ -1066,7 +1082,7 @@ ar:
         text: رسم خط {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: حواف كتلة {SPRITE} من التحرك
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'كل {N} {UNIT} '
         options:
           UNIT:
@@ -1225,8 +1241,6 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
-      gamelab_makeNewScaledSprite:
-        text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_makeNumSprites:
@@ -1239,6 +1253,12 @@ ar:
             '90': الأسفل
             '180': اليسار
             '270': الأعلى
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': صغير
+            '50': متوسط
+            '100': كبير
       gamelab_mirrorSprite:
         text: "{SPRITE} وجه {DIRECTION}"
         options:

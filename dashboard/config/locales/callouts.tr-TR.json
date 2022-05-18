@@ -2130,11 +2130,13 @@
         },
         "New Artist Project": {
           "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
-          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!",
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin"
         },
         "New Play Lab Project": {
           "New Play Lab Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
-          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!",
+          "New Play Lab Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin"
         },
         "CSD U3 Variables Predict Where XY_2021": {
           "grid": "Izgarayı göstermek için buraya tıklayın."
@@ -2279,6 +2281,9 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Buradaki sayıyı değiştir"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
         }
       }
     }

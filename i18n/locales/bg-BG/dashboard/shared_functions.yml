@@ -4,6 +4,7 @@ bg:
       driving with arrow keys: движение с стрелките
       fluttering: пърхане
       growing: растене
+      jittering: треперене
       moving east: движение на изток
       moving east and looping: движение на изток и циклене
       moving north: движение на север
@@ -18,3 +19,4 @@ bg:
       spinning left: въртене наляво
       spinning right: въртене надясно
       wandering: блуждаейки
+      wobbling: люлеене

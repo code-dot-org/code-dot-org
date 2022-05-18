@@ -1384,10 +1384,14 @@ cs-CZ:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '12'
           correct: true
           feedback: Správně!
         - text: '15'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
@@ -1395,10 +1399,14 @@ cs-CZ:
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '12'
           correct: true
           feedback: Správně!
         - text: '15'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
@@ -1406,10 +1414,14 @@ cs-CZ:
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '12'
           correct: true
           feedback: Správně!
         - text: '15'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
@@ -1417,10 +1429,14 @@ cs-CZ:
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '12'
           correct: true
           feedback: Správně!
         - text: '15'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
@@ -1460,12 +1476,23 @@ cs-CZ:
             způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat se dostane k žaludu. V kódu nejsou žádné chyby.
+          feedback: Špatně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
+            dopředu tolikrát, aby dosáhl na žalud.
+        - text: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
+          correct: true
+          feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
+            dopředu tolikrát, aby došel až k žaludu.
+        - text: Scrat nedosáhne na žalud, protože není dostatek bloků `posuv dopředu`.
+          correct: true
+          feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
+            dopředu tolikrát, aby došel až k žaludu.
         - text: Nevím.
+          feedback: V tomhle kódu jsou dvě chyby. Nejdřív se Scrat otočí nesprávným
+            směrem a pak se neposune dopředu tolikrát, aby došel až k žaludu.
         questions:
-        - {}
+        - text: Najdi v tomhle kódu chyby. Dojde Scrat až k žaludu, nebo je v kódu
+            nějaký problém?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.
@@ -1521,7 +1548,9 @@ cs-CZ:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 se nepohne.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se pohne o jedno políčko.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
@@ -1531,7 +1560,9 @@ cs-CZ:
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 se nepohne.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se pohne o jedno políčko.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
@@ -1541,7 +1572,9 @@ cs-CZ:
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 se nepohne.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se pohne o jedno políčko.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
@@ -1551,7 +1584,9 @@ cs-CZ:
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 se nepohne.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se pohne o jedno políčko.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
@@ -1728,7 +1763,11 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: B
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: C
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: Nevím.
         markdown: |+
           <table>
@@ -1746,7 +1785,11 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: B
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: C
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: Nevím.
         markdown: |+
           <table>
@@ -1764,7 +1807,11 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: B
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: C
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: Nevím.
         markdown: |+
           <table>
@@ -1782,7 +1829,11 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: B
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: C
+          feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
         - text: Nevím.
         markdown: |+
           <table>
@@ -1797,11 +1848,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -1811,11 +1866,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -1825,11 +1884,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -1839,11 +1902,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -1853,11 +1920,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -1927,7 +1998,11 @@ cs-CZ:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Včela se posune vpřed a získá nektar pouze jednou.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar jen ze dvou květů.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar ze všech květů.
           correct: true
           feedback: Správně!
@@ -1937,7 +2012,11 @@ cs-CZ:
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Včela se posune vpřed a získá nektar pouze jednou.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar jen ze dvou květů.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar ze všech květů.
           correct: true
           feedback: Správně!
@@ -1947,7 +2026,11 @@ cs-CZ:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Včela se posune vpřed a získá nektar pouze jednou.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar jen ze dvou květů.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar ze všech květů.
           correct: true
           feedback: Správně!
@@ -1957,7 +2040,11 @@ cs-CZ:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: Včela se posune vpřed a získá nektar pouze jednou.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar jen ze dvou květů.
+          feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
         - text: Včela získá nektar ze všech květů.
           correct: true
           feedback: Správně!
@@ -2186,6 +2273,8 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict1_2018:
@@ -2201,6 +2290,8 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -2216,6 +2307,8 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
@@ -2231,6 +2324,8 @@ cs-CZ:
           correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict2:
@@ -2238,7 +2333,8 @@ cs-CZ:
         - correct: true
           feedback: Správně!
         - text: Zombie se dostane ke slunečnici.
-        - {}
+        - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
+            v kruhu.
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
@@ -2250,7 +2346,9 @@ cs-CZ:
         - text: Zombie se dostane ke slunečnici.
           feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
-        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+        - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
+            v kruhu.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
         - text: Nevím.
           feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
@@ -2265,7 +2363,9 @@ cs-CZ:
         - text: Zombie se dostane ke slunečnici.
           feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
-        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+        - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
+            v kruhu.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
         - text: Nevím.
           feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
@@ -2280,7 +2380,9 @@ cs-CZ:
         - text: Zombie se dostane ke slunečnici.
           feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
-        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+        - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
+            v kruhu.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
             a zpět. '
         - text: Nevím.
           feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
@@ -2299,6 +2401,9 @@ cs-CZ:
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
             pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
+          feedback: Kód zajistí, že se pták bude posouvat dopředu, dokud je před ním
+            cesta, a pak se otočí doleva. To bude opakovat tak dlouho, až se dostane
+            k praseti.
         questions:
         - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
             "Spustit"?
@@ -2314,6 +2419,9 @@ cs-CZ:
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
             pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
+          feedback: Kód zajistí, že se pták bude posouvat dopředu, dokud je před ním
+            cesta, a pak se otočí doleva. To bude opakovat tak dlouho, až se dostane
+            k praseti.
         questions:
         - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
             "Spustit"?
@@ -2329,6 +2437,9 @@ cs-CZ:
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
             pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
+          feedback: Kód zajistí, že se pták bude posouvat dopředu, dokud je před ním
+            cesta, a pak se otočí doleva. To bude opakovat tak dlouho, až se dostane
+            k praseti.
         questions:
         - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
             "Spustit"?
@@ -2344,6 +2455,9 @@ cs-CZ:
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
             pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
+          feedback: Kód zajistí, že se pták bude posouvat dopředu, dokud je před ním
+            cesta, a pak se otočí doleva. To bude opakovat tak dlouho, až se dostane
+            k praseti.
         questions:
         - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
             "Spustit"?
@@ -2377,73 +2491,126 @@ cs-CZ:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Zahradnice posbírá dvě dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sesbírá všechny dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sklidí salát.
           correct: true
           feedback: Správně!
         - text: Farmářka sklidí kukuřici.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         questions:
         - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Zahradnice posbírá dvě dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sesbírá všechny dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sklidí salát.
           correct: true
           feedback: Správně!
         - text: Farmářka sklidí kukuřici.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         questions:
         - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Zahradnice posbírá dvě dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sesbírá všechny dýně.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         - text: Farmářka sklidí salát.
           correct: true
           feedback: Správně!
         - text: Farmářka sklidí kukuřici.
+          feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
         questions:
         - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -2518,48 +2685,84 @@ cs-CZ:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se stranami dlouhými 50 pixelů.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí mnohoúhelník s 50 stranami dlouhými 3 pixely.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být v cyklu
+            „repeat“.
+        - text: Umělec nakreslí tři otevřené strany, které svírají úhel 50 stupňů.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být použitá
+            v bloku „turn“.
         - text: Nevím.
+          feedback: Proměnná „length“ je nastavená na 50 a používá se v bloku „move
+            forward by“, takže umělec nakreslí trojúhelník se stranami o délce 50 pixelů.
         questions:
-        - {}
+        - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
+            na Spustit?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se stranami dlouhými 50 pixelů.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí mnohoúhelník s 50 stranami dlouhými 3 pixely.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být v cyklu
+            „repeat“.
+        - text: Umělec nakreslí tři otevřené strany, které svírají úhel 50 stupňů.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být použitá
+            v bloku „turn“.
         - text: Nevím.
+          feedback: Proměnná „length“ je nastavená na 50 a používá se v bloku „move
+            forward by“, takže umělec nakreslí trojúhelník se stranami o délce 50 pixelů.
         questions:
-        - {}
+        - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
+            na Spustit?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se stranami dlouhými 50 pixelů.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí mnohoúhelník s 50 stranami dlouhými 3 pixely.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být v cyklu
+            „repeat“.
+        - text: Umělec nakreslí tři otevřené strany, které svírají úhel 50 stupňů.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být použitá
+            v bloku „turn“.
         - text: Nevím.
+          feedback: Proměnná „length“ je nastavená na 50 a používá se v bloku „move
+            forward by“, takže umělec nakreslí trojúhelník se stranami o délce 50 pixelů.
         questions:
-        - {}
+        - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
+            na Spustit?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se stranami dlouhými 50 pixelů.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí mnohoúhelník s 50 stranami dlouhými 3 pixely.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být v cyklu
+            „repeat“.
+        - text: Umělec nakreslí tři otevřené strany, které svírají úhel 50 stupňů.
+          feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být použitá
+            v bloku „turn“.
         - text: Nevím.
+          feedback: Proměnná „length“ je nastavená na 50 a používá se v bloku „move
+            forward by“, takže umělec nakreslí trojúhelník se stranami o délce 50 pixelů.
         questions:
-        - {}
+        - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
+            na Spustit?
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         markdown: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
           je tam květina, pak by včela musí sebrat nektar **jednou**.
@@ -2577,40 +2780,81 @@ cs-CZ:
             "Spustit"?
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         questions:
-        - {}
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2630,40 +2874,64 @@ cs-CZ:
         - {}
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: Umělec úlohu vyřeší správně.
+          feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
+            ale funkci „nakresli mnohoúhelník“.
+        - text: Umělec nakreslí čtyři čtverce uspořádané do tvaru okna.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí jen jednu řadu čtverců.
+          feedback: Špatně. Program nevolá funkci „nakresli řadu mnohoúhelníků“.
+        - text: Umělec nakreslí čtyři čtverce nad sebou.
+          feedback: Špatně. Cyklus zahrnuje otočení o 90 stupňů mezi jednotlivými
+            voláními funkce „nakresli mnohoúhelník“.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš tlačítko „Spustit“?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Umělec úlohu vyřeší správně.
+          feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
+            ale funkci „nakresli mnohoúhelník“.
+        - text: Umělec nakreslí čtyři čtverce uspořádané do tvaru okna.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí jen jednu řadu čtverců.
+          feedback: Špatně. Program nevolá funkci „nakresli řadu mnohoúhelníků“.
+        - text: Umělec nakreslí čtyři čtverce nad sebou.
+          feedback: Špatně. Cyklus zahrnuje otočení o 90 stupňů mezi jednotlivými
+            voláními funkce „nakresli mnohoúhelník“.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš tlačítko „Spustit“?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Umělec úlohu vyřeší správně.
+          feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
+            ale funkci „nakresli mnohoúhelník“.
+        - text: Umělec nakreslí čtyři čtverce uspořádané do tvaru okna.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí jen jednu řadu čtverců.
+          feedback: Špatně. Program nevolá funkci „nakresli řadu mnohoúhelníků“.
+        - text: Umělec nakreslí čtyři čtverce nad sebou.
+          feedback: Špatně. Cyklus zahrnuje otočení o 90 stupňů mezi jednotlivými
+            voláními funkce „nakresli mnohoúhelník“.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš tlačítko „Spustit“?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Umělec úlohu vyřeší správně.
+          feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
+            ale funkci „nakresli mnohoúhelník“.
+        - text: Umělec nakreslí čtyři čtverce uspořádané do tvaru okna.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Umělec nakreslí jen jednu řadu čtverců.
+          feedback: Špatně. Program nevolá funkci „nakresli řadu mnohoúhelníků“.
+        - text: Umělec nakreslí čtyři čtverce nad sebou.
+          feedback: Špatně. Cyklus zahrnuje otočení o 90 stupňů mezi jednotlivými
+            voláními funkce „nakresli mnohoúhelník“.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš tlačítko „Spustit“?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: Dotazník pro studenty ke konci kurzu Objevujeme informatiku
       csd-post-survey-levelgroup-2018:
@@ -3072,11 +3340,15 @@ cs-CZ:
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
             květina.
           correct: true
           feedback: Správně!
         - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+          feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
         - text: Nevím.
         questions:
         - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
@@ -3085,12 +3357,19 @@ cs-CZ:
             že se stane, když klikneš na tlačítko "Spustit"?
       courseE_prediction_artistFunction1_dani:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nic. Funkce se v programu nevolá.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí jeden čtverec.
+          feedback: Špatně. Program funkci volá hned dvakrát.
+        - text: Umělec nakreslí dva čtverce, které se překrývají.
+          feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+        - text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+          correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
         questions:
-        - {}
+        - text: Co se stane, až stiskneš „Spustit“?
       courseF_events_predict_multi:
         answers:
         - text: Sprajt se bude prostě otáčet doprava.
@@ -3422,6 +3701,8 @@ cs-CZ:
         display_name: Projekt na zakončení kurzu
       courseD_EOC_2020:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
+          chceš vytvořit.
       courseD_EOC_2021:
         display_name: Projekt na zakončení kurzu
         description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
@@ -3634,6 +3915,8 @@ cs-CZ:
 
       courseE_EOC_2020:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
+          vytvořit.
       courseE_EOC_2021:
         display_name: Projekt na zakončení kurzu
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
@@ -3705,6 +3988,8 @@ cs-CZ:
         display_name: Projekt na zakončení kurzu
       courseF_EOC_2020:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi na konec kurzu F. Vyber si projekt, který chceš
+          vytvořit.
       courseF_EOC_2021:
         display_name: Projekt na zakončení kurzu
         description: Dospěl(a) jsi na konec kurzu F. Vyber si projekt, který chceš
@@ -4356,10 +4641,37 @@ cs-CZ:
           výzvu**...\n\n \n"
       csf_be_a_super_digital_citizen:
         content1: sem uveďte popis
+        markdown: |
+          # Digitální superobčan
+
+          ## Jak můžeme zakročit, když se setkáme s kyberšikanou?
       csf_password_power-up:
         content1: sem uveďte popis
+        markdown: |
+          #  Posil své heslo
+
+          ## Důležité tipy k heslům
+
+          * Začni zapamatovatelnou **frází**.
+          * Tvoje heslo by měli znát jenom tví **rodiče**.
+          * Nikdy do hesla nedávej žádné **soukromé** informace o své identitě.
+          * Každé heslo by mělo mít aspoň **osm** znaků.
+          * Heslo by mělo zahrnovat písmena, čísla a **symboly**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: sem uveďte popis
+        markdown: |
+          # STOP zlovolnosti
+
+          ## Co byste měli dělat, když je na Vás někdo zlý online?
+
+          * Udělat krok pryč.
+          * Říci to důvěryhodnému dospělému.
+          * Nejprve si každý web prověřit.
+          * Pozastavit se a zamyslet se online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -4463,3 +4775,133 @@ cs-CZ:
         - correct: true
         questions:
         - {}
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Binární náramky
+
+          Vytvořte náramek, který představuje Vaše jméno v systému, kterému počítače rozumí!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # Binární náramky
+
+          Vytvořte náramek, který představuje Vaše jméno v systému, kterému počítače rozumí!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      CSD Games Properties practice_2021:
+        display_name: Vlastnosti sprajtu
+      CSD U1 Test:
+        title: Počítač a řešení problémů - test po projektu
+      CSD U1 Test_2021:
+        title: Počítač a řešení problémů - test po projektu
+      CSD U5 test:
+        title: Data a společnost - test po projektu
+      CSD U5 test_2021:
+        title: Data a společnost - test po projektu
+      CSD User Centered Design Post-Project Test:
+        title: 'Design zaměřený na uživatele: Test po projektu'
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Design zaměřený na uživatele: Test po projektu'
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Navrhování pro zpřístupnění
+
+          * Ve světě počítačových věd se jako **zpřístupnění** označuje vytváření technologií pro lidi s postižením.
+          * Postižení může být fyzické, sluchové, zrakové nebo jiné.
+          * Existují různá postižení, která ovlivňují životy lidí v nejrůznějších oblastech – včetně používání technologií, jako jsou **smartphonové aplikace**.
+          * Aplikace navržené tak, aby byly přístupné pro lidi s postiženími, jsou lepší i pro všechny ostatní.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          # Navrhování pro zpřístupnění
+
+          * Ve světě počítačových věd se jako **zpřístupnění** označuje vytváření technologií pro lidi s postižením.
+          * Postižení může být fyzické, sluchové, zrakové nebo jiné.
+          * Existují různá postižení, která ovlivňují životy lidí v nejrůznějších oblastech – včetně používání technologií, jako jsou **smartphonové aplikace**.
+          * Aplikace navržené tak, aby byly přístupné pro lidi s postiženími, jsou lepší i pro všechny ostatní.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Sdílení digitálního obsahu
+
+          V téhle lekci se zaměříme na výzvy a přínosy respektování vlastnictví a autorských práv, zejména v digitálním prostředí.
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          # Sdílení digitálního obsahu
+
+          V téhle lekci se zaměříme na výzvy a přínosy respektování vlastnictví a autorských práv, zejména v digitálním prostředí.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # Zábava s cykly „for“
+
+          Víme, že cykly nám umožňují dělat věci znovu a znovu, teď se ale naučíme používat cykly s přidanou strukturou, kterou zabudujeme přímo do nich.
+      ForLoopFun-Unplugged_2020:
+        markdown: |
+          # Zábava s cykly „for“
+
+          Víme, že cykly nám umožňují dělat věci znovu a znovu, teď se ale naučíme používat cykly s přidanou strukturou, kterou zabudujeme přímo do nich.
+      GettingLoopy-Unplugged:
+        markdown: |
+          # Zacyklení
+
+          Tato lekce je úvodem do programátorské koncepce cyklů formou taneční aktivity.
+      GettingLoopy-Unplugged_2020:
+        markdown: |
+          # Zacyklení
+
+          Tato lekce je úvodem do programátorské koncepce cyklů formou taneční aktivity.
+      Internet-Unplugged:
+        markdown: |
+          # Internet
+
+          Postav si ve třídě vlastní internet jen pomocí ústřižků papíru.
+      Internet-Unplugged_2020:
+        markdown: |
+          # Internet
+
+          Postav si ve třídě vlastní internet jen pomocí ústřižků papíru.
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # Pohybujte tím, pohybujte tím
+
+          Používejte mapu a vydávejte příkazy k dosažení cíle.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # Pohybujte tím, pohybujte tím
+
+          Používejte mapu a vydávejte příkazy k dosažení cíle.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # Moc slova
+
+          ## Co máte dělat, když někdo použije zlý nebo urážlivý jazyk na internetu?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Soukromé a osobní údaje
+
+          ## Jaké informace je v pořádku o sobě na internetu šířit?
+      Songwriting-Unplugged:
+        markdown: |-
+          # Skládání písniček
+
+          Na příkladu refrénu písničky se nauč definovat a volat funkci.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Skládání písniček
+
+          Na příkladu refrénu písničky se nauč definovat a volat funkci.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Správná aplikace\n\n* Dnes každý používá počítače, zejména chytré
+          telefony. \n* Aplikace pro chytré telefony lidem umožňují například hovořit
+          s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
+          aby programátoři chápali potřeby jiných a navrhovali aplikace tak, aby na
+          ně pamatovali!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Správná aplikace\n\n* Dnes každý používá počítače, zejména chytré
+          telefony. \n* Aplikace pro chytré telefony lidem umožňují například hovořit
+          s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
+          aby programátoři chápali potřeby jiných a navrhovali aplikace tak, aby na
+          ně pamatovali!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"

@@ -184,6 +184,26 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Meni ovo glačalo!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_emoji_location": {
+          "pin": "zakači"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Novi blok!"
         }
       }
     }

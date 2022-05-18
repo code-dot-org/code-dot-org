@@ -22,26 +22,14 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  ADAFRUIT_VID,
-  CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID,
-  MICROBIT_PID,
-  MICROBIT_VID
-} from '../portScanning';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
 const CHROMEBOOK = 'chromebook';
-
-// Filter available ports to the boards we support
-const WEB_SERIAL_FILTERS = [
-  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
-  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
-  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
-];
 
 const style = {
   icon: {
@@ -89,7 +77,10 @@ export default class SetupGuide extends React.Component {
       );
     }
 
-    this.setupChecker = new SetupChecker(webSerialPort);
+    let wrappedPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedPort);
 
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist setupChecker={this.setupChecker} />;

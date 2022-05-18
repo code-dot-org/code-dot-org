@@ -684,6 +684,10 @@ zh-TW:
       title: 舞蹈派對
     dance-2019:
       title: 舞蹈派對
+    hello-world:
+      title: 你好世界
+    poem-art:
+      title: 詩歌藝術
     hoc:
       title: 經典迷宮
       body: 試試數百萬人已經體驗過的計算機科學基礎課程。
@@ -848,15 +852,6 @@ zh-TW:
     reminder_desc_markdown: 我們更新了[服務條款](%{tos_url})和[隱私政策](%{privacy_url})。同意前請仔細閱讀。注意，在你的學生接受新條款之前，可能無法使用我們教授
       JavaScript 的工具。
     review_terms: 查看更新後的條款
-  donor_interstitial:
-    title: 您學習的免費電腦科學課程可能是由...組成的
-    subtitle: 我們想要感激這些慷慨又大方的捐贈，這些捐獻讓Code.org離成功的目標又邁進了一大步。我們承諾會讓全球學校的學生免費地使用Code.org網站。再一次地感謝這些持續不斷地
-      [大方捐獻](%{donors_url})!
-    local_supporters: 在地支援
-    global_supporters: 全球支援
-    support_codeorg_1: 捐贈給本網站的每一筆資金，都可以為更多的學生帶來更多的機會。
-    support_codeorg_2: "[現在就捐贈](%{donate_url}) 來贊助、支援本網站（Code.org）"
-    get_started: 開始使用 Code.org
   school_info_interstitial:
     title: 我們想要讓每個學生都能學習計算機科學 - 幫助我們紀錄學生進度！
     message: 請在下方輸入你的學校資訊。

@@ -338,6 +338,13 @@
         "intro_to_design_mode/csd/2021": {
           "type": "Видео"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Видео"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Компүтер илими баарын өзгөртүүдө",
+          "type": "Видео"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Видео"
         },
@@ -422,6 +429,9 @@
         },
         "functions_1/csd/2021": {
           "name": "Функциялар"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Видео"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Видео"

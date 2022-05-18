@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 03:52:16 UTC",
+    "serialized_at": "2022-05-03 19:32:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -94,7 +94,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
-        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
+        "preparation": "* Read over the [r app_development_planning_guide/csp/2022]",
         "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true

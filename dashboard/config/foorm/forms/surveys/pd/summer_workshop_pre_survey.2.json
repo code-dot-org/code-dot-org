@@ -227,7 +227,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'CS A'",
+          "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'Computer Science A'",
           "natalia_comment": "NOTE: re-used the CSP panel for CSA because they will use the same questions. Didn't change any of the technical names that include 'csp' inthe question name to preserve the ability to compare historical data - NATALIA"
         },
         {
@@ -310,7 +310,7 @@
               "type": "html",
               "name": "question7_csa",
               "visible": false,
-              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS A&lt;&lt;</span></p>"
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF Computer Science A&lt;&lt;</span></p>"
             },
             {
               "type": "checkbox",
@@ -426,7 +426,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS A'"
+          "visibleIf": "{workshop_course} = 'Computer Science A'"
         },
         {
           "type": "radiogroup",
@@ -546,7 +546,7 @@
               "type": "html",
               "name": "question_wrapup_csa",
               "visible": false,
-              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS A&lt;&lt;</span></p>"
+              "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF Computer Science A&lt;&lt;</span></p>"
             },
             {
               "type": "rating",
@@ -612,7 +612,7 @@
               ]
             }
           ],
-          "visibleIf": "{workshop_course} = 'CS A'"
+          "visibleIf": "{workshop_course} = 'Computer Science A'"
         },
         {
           "type": "radiogroup",

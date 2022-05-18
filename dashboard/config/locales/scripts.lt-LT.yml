@@ -3030,6 +3030,12 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: 2 pamoka
+            lesson-3:
+              name: 3 pamoka
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3320,3 +3326,24 @@ lt:
             For Loops:
               name: Kartojimas
               key: Kartojimas
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Kintamieji
+              key: Kintamieji
+            Text:
+              name: Tekstas
+              key: Tekstas
+            Conditionals:
+              name: Sąlyginiai sakiniai
+              key: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+              key: Greitis
+            Functions:
+              name: Komandų kūrimas
+              key: Komandų kūrimas
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Komandų kūrimas

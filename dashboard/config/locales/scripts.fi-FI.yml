@@ -3532,6 +3532,9 @@ fi:
           lessons:
             lesson-9:
               name: Silmukat
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3570,6 +3573,10 @@ fi:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-8:
               display_name: Muuttujat
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -3594,3 +3601,68 @@ fi:
             For Loops:
               name: Silmukat
               key: Silmukat
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+            csd1_1:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            csd1_2:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Muuttujat
+              key: Muuttujat
+            Text:
+              name: teksti
+              key: teksti
+            Conditionals:
+              name: Ehtolausekkeet
+              key: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+              key: Nopeus
+            Functions:
+              name: Funktiot
+              key: Funktiot
+          lesson_groups:
+            csd3_1:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            csd3_2:
+              display_name: 'Luku 2: Pelien rakentaminen'
+            cspSurvey:
+              display_name: Kysely
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            csd4_2:
+              display_name: 'Luku 2: Apsin prototypointi'
+            cspSurvey:
+              display_name: Kysely
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funktiot
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
+            lessonGroup-4:
+              display_name: Kysely

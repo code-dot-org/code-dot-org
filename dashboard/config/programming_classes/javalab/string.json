@@ -1,14 +1,133 @@
 {
   "category_key": "java_lang",
-  "content": "",
+  "content": "The String class represents character strings. There exist a variety of methods within the String class for identifying specific characters within the string, for comparing strings, and searching for substrings. ",
   "examples": "[]",
   "external_documentation": "",
   "fields": "[]",
   "key": "String",
   "name": "String",
-  "syntax": "",
+  "syntax": "new String(String value);",
   "tips": "",
   "methods": [
-
+    {
+      "name": "String",
+      "position": 0,
+      "key": "string",
+      "overload_of": null,
+      "content": "the String constructor can take in a variety of parameters. The most useful constructor is the one that accepts a String as a parameter.",
+      "parameters": "[{\"name\":\"original\",\"type\":\"String\",\"required\":false,\"description\":\"A String object will be formed with the original String specified in the parameter.\"}]",
+      "examples": "[{\"name\":\"Using the Constructor\",\"description\":\"```\\nString tempString = new String(\\\"hello\\\");\\n\\n``` \"}]",
+      "syntax": "new String(String original);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "charAt",
+      "position": 1,
+      "key": "charat",
+      "overload_of": null,
+      "content": "The charAt value returns the char within the String at the specified index.",
+      "parameters": "[{\"name\":\"index\",\"type\":\"int\",\"required\":true,\"description\":\"the parameter is the index in the string for which you would like to know the char.\"}]",
+      "examples": "[{\"name\":\"Using charAt()\",\"code\":\"```\\nString name = \\\"flower\\\";\\nchar ch = name.charAt(3);\\nSystem.out.println(ch);\\n```\\n**Output:** w\"}]",
+      "syntax": "public char charAt(int index)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "compareTo",
+      "position": 2,
+      "key": "compareto",
+      "overload_of": null,
+      "content": "The compareTo() method compares the String values and returns an int. The returned int is the number difference between two strings. Both strings are compared by the Unicode value of each character in the String.\n\n- if stringOne > stringTwo, the method will return a positive number. \"Greater Than\" means lexicographically greater than, so when stringOne has more characters than stringTwo.\n- if stringOne < stringTwo, the method will return a negative number. \"Less Than\" means lexicographically less than, so when stringOne has less characters than stringTwo.\n- if stringOne == stringTwo, the method will return 0.\n\n*The compareTo() method is case sensitive, meaning that capitalization does affect the calculation. The compareToIgnoreCase() method can be used if you want to compare two strings without regard for cases.*",
+      "parameters": "[{\"name\":\"stringTwo\",\"type\":\"String\",\"required\":true,\"description\":\"The String to be compared to the first String\\n\"}]",
+      "examples": "[{\"name\":\"Using compareTo()\",\"code\":\"```\\nString name1 = \\\"James\\\";\\nString name2 = \\\"Bill\\\";\\nString name3 = \\\"James\\\";\\n\\nSystem.out.println(name1.compareTo(name2)); //Prints 8 because James \\u003e Bill lexicographically \\nSystem.out.println(name1.compareTo(name3));//Prints 0 because both are the same\\n```\"}]",
+      "syntax": "stringOne.compareTo(stringTwo);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "equals",
+      "position": 3,
+      "key": "equals",
+      "overload_of": null,
+      "content": "The equals() method will compare the string that it is called on as well as the string passed as a parameter. The expression returns a boolean: true if the two Strings are equal to each other, false otherwise.",
+      "parameters": "[{\"name\":\"stringTwo\",\"type\":\"String\",\"required\":true,\"description\":\"the second string being compared to the first.\\n\"}]",
+      "examples": "[{\"name\":\"Using equals()\",\"code\":\"```\\nStringOne = \\\"Apple\\\";\\nStringTwo = \\\"Pear\\\";\\nStringThree = \\\"Apple\\\";\\n\\n//check if stringOne is equal to stringTwo\\nSystem.out.println(stringOne.equals(stringTwo)); \\n// prints false\\n\\n//check if stringOne is equal to stringThree\\nSystem.out.println(stringOne.equals(stringThree)); \\n// prints true\\n```\"}]",
+      "syntax": "stringOne.equals(stringTwo);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "indexOf",
+      "position": 4,
+      "key": "indexof",
+      "overload_of": null,
+      "content": "The indexOf() method returns the first position of the specified index of a char/char(s) in a String.",
+      "parameters": "[{\"name\":\"str\",\"type\":\"String\",\"description\":\"the String to search for within the initial string.\"},{\"name\":\"fromIndex\",\"type\":\"int\",\"description\":\"(Optional). The int from which you would like to start the search for String str. If you are to include this parameter the syntax would be ```public int indexOf(String str, int fromIndex);```\"}]",
+      "examples": "[{\"name\":\"Using indexOf()\",\"code\":\"```\\nString text = \\\"Hello world, welcome to the universe.\\\";\\nint result = text.indexOf(\\\"welcome\\\");\\n\\nSystem.out.println(result);\\n```\\n**Output:** 13\"}]",
+      "syntax": "//there are four methods of indexOf\n\n//we will focus on using the first two, with parameter String str\n\npublic int indexOf(String str)\npublic int indexOf(String str, int fromIndex)\npublic int indexOf(int char)\npublic int indexOf(int char, int fromIndex)",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "length",
+      "position": 5,
+      "key": "length",
+      "overload_of": null,
+      "content": "The method returns the length of the specified String.",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"Using length()\",\"description\":\"```\\nString test = new String(\\\"Welcome\\\");\\nSystem.out.println(test.length());\\n```\\n**Output:** 7\"}]",
+      "syntax": "public int length()",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "substring",
+      "position": 6,
+      "key": "substring",
+      "overload_of": null,
+      "content": "The substring method returns a part of the string, as specific by the input parameters.",
+      "parameters": "[{\"name\":\"start\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the first character of the substring you would like returned.\"},{\"name\":\"end\",\"type\":\"int\",\"required\":false,\"description\":\"the end index of the substring\"}]",
+      "examples": "[{\"name\":\"Using substring()\",\"description\":\"\",\"code\":\"```\\nString test = \\\"welcome\\\";\\nSystem.out.println(test.substring(2,4));\\nSystem.out.println(test.substring(2));\\n```\\n**Output:** \\nlc\\nlcome\"}]",
+      "syntax": "public String substring(int start);\n\n OR \n\npublic String substring(int start, int end);\n\n//Note: if you don't specify the end index (don't send that parameter), the method will return the substring following the start index",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "toString",
+      "position": 7,
+      "key": "tostring",
+      "overload_of": null,
+      "content": "The toString() method returns the string itself.",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"Using toString()\",\"description\":\"\",\"code\":\"```\\nString test = new String(\\\"Welcome to our Home!\\\");\\nSystem.out.println(test.toString());\\n```\\n**Output:** \\nWelcome to our Home!\"}]",
+      "syntax": "public String toString()",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "toLowerCase",
+      "position": 8,
+      "key": "tolowercase",
+      "overload_of": null,
+      "content": "This method returns the String converted to lowercase letters.",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"Using toLowerCase()\",\"code\":\"```\\nString test = \\\"Welcome, Anna!\\\";\\nSystem.out.println(test.toLowerCase());\\n```\\n**Output:**\\nwelcome, anna!\"}]",
+      "syntax": "*string*.toLowerCase()",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "toUpperCase",
+      "position": 9,
+      "key": "touppercase",
+      "overload_of": null,
+      "content": "This method returns the String converted to uppercase letters.",
+      "parameters": "[]",
+      "examples": "[{\"name\":\"Using toUpperCase()\",\"code\":\"```\\nString test = new String(\\\"Welcome, Anna!\\\");\\nSystem.out.println(test.toUpperCase());\\n```\\n**Output:**\\nWELCOME, ANNA!\"}]",
+      "syntax": "*string*.toUpperCase()",
+      "external_link": null,
+      "return_value": null
+    }
   ]
 }

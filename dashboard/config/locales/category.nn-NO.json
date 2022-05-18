@@ -1,0 +1,14 @@
+{
+  "nn-NO": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Programmeringstenking"
+        },
+        "ccela/L": {
+          "description": "Språk"
+        }
+      }
+    }
+  }
+}

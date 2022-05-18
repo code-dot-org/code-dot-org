@@ -1,15 +1,22 @@
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap';
-import {range, mapValues, without} from 'lodash';
+import {range, mapValues, without, find} from 'lodash';
+import i18n from '@cdo/locale';
+import $ from 'jquery';
 import {
   keyValidation,
   getInvalidFields,
-  getErrorMessage
+  getErrorMessage,
+  getAgeSafeData,
+  professionOptions
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
+import PropTypes from 'prop-types';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+/* global ga */
 
-const PetitionForm = () => {
-  // data starts with all required fields having an empty value to ensure proper validation
+const PetitionForm = ({gaPagePath}) => {
+  // data starts with all fields having an empty value to ensure consistent data shape
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
@@ -26,17 +33,52 @@ const PetitionForm = () => {
   const handleSubmit = useCallback(
     e => {
       e.preventDefault();
-      Object.entries(data).forEach(field => {
-        let value = data[field];
-        if (typeof value === 'string') {
-          setData({...data, [field]: value.trim()});
+
+      let sanitizedData = {};
+      Object.keys(data).forEach(field => {
+        if (typeof data[field] === 'string') {
+          sanitizedData = {...sanitizedData, [field]: data[field].trim()};
+        } else {
+          sanitizedData = {...sanitizedData, [field]: data[field]};
         }
       });
-      setInvalidFields(getInvalidFields(data));
-      setErrorMessage(getErrorMessage(data));
+      // ensure profession data is sent in english
+      sanitizedData.role_s =
+        find(professionOptions, {text: data.role_s})?.dataString || 'other';
+
+      const currentInvalidFields = getInvalidFields(sanitizedData);
+      if (currentInvalidFields.length !== 0) {
+        setInvalidFields(currentInvalidFields);
+        setErrorMessage(getErrorMessage(sanitizedData));
+      } else {
+        setErrorMessage('');
+        // Do not send email or name server-side for under sixteen users to protect privacy.
+        sendDataToEndpoint(getAgeSafeData(sanitizedData));
+        ga('send', 'event', 'petition', 'click', {
+          page: gaPagePath
+        });
+      }
     },
     [data]
   );
+
+  const sendDataToEndpoint = data => {
+    const handleSuccessfulSubmit = () => {
+      window.location.href = pegasus('/promote/thanks');
+    };
+    const handleFailedSubmit = () => {
+      setErrorMessage(i18n.formServerError());
+    };
+
+    $.ajax({
+      url: pegasus('/forms/Petition'),
+      type: 'post',
+      dataType: 'json',
+      data: data
+    })
+      .done(handleSuccessfulSubmit)
+      .fail(handleFailedSubmit);
+  };
 
   return (
     <>
@@ -48,37 +90,43 @@ const PetitionForm = () => {
         <div className={'petition-space'}>{errorMessage}</div>
         <ControlledFieldGroup
           id="name"
-          placeholderOrLabel="Name"
-          isErrored={invalidFields.includes('name')}
+          name="name_s"
+          placeholderOrLabel={i18n.name()}
+          isErrored={invalidFields.includes('name_s')}
           onChange={handleChange}
-          value={data['name'] || ''}
+          value={data.name_s || ''}
         />
         <ControlledFieldGroup
           id="email"
-          placeholderOrLabel="Email"
-          isErrored={invalidFields.includes('email')}
-          helpText="Only used for infrequent updates"
+          name="email_s"
+          placeholderOrLabel={i18n.email()}
+          isErrored={invalidFields.includes('email_s')}
+          helpText={i18n.usedForInfrequentUpdates()}
           onChange={handleChange}
-          value={data.email || ''}
+          value={data.email_s || ''}
         />
         <ControlledFieldGroup
           id="zip-or-country"
-          placeholderOrLabel="ZIP code or country"
-          isErrored={invalidFields.includes('zip-or-country')}
-          helpText="Enter country if outside the United States"
+          name="zip_code_or_country_s"
+          placeholderOrLabel={i18n.zipOrCountry()}
+          isErrored={invalidFields.includes('zip_code_or_country_s')}
+          helpText={i18n.enterCountry()}
           onChange={handleChange}
-          value={data['zip-or-country'] || ''}
+          value={data.zip_code_or_country_s || ''}
         />
         <ControlledFieldGroup
           id="age"
-          placeholderOrLabel="Age"
-          isErrored={invalidFields.includes('age')}
+          name="age_i"
+          placeholderOrLabel={i18n.age()}
+          isErrored={invalidFields.includes('age_i')}
           helpText={
-            <a href="/privacy">See our privacy practices for children</a>
+            <a href={pegasus('/privacy')}>
+              {i18n.privacyPracticesForChildren()}
+            </a>
           }
           componentClass="select"
           onChange={handleChange}
-          value={data['age'] || ''}
+          value={data.age_i || ''}
         >
           {['-', ...range(1, 101)].map((age, index) => (
             <option key={index} value={age}>
@@ -88,23 +136,16 @@ const PetitionForm = () => {
         </ControlledFieldGroup>
         <ControlledFieldGroup
           id="profession"
-          placeholderOrLabel="I am a"
-          isErrored={invalidFields.includes('profession')}
+          name="role_s"
+          placeholderOrLabel={i18n.iAmA()}
+          isErrored={invalidFields.includes('role_s')}
           componentClass="select"
           onChange={handleChange}
-          value={data['profession'] || ''}
+          value={data.role_s || ''}
         >
-          {[
-            '-',
-            'Student',
-            'Parent',
-            'Educator',
-            'School Administrator',
-            'Software Engineer',
-            'None of the Above'
-          ].map((profession, index) => (
-            <option key={index} value={profession}>
-              {profession}
+          {professionOptions.map(({text}) => (
+            <option key={text} value={text}>
+              {text}
             </option>
           ))}
         </ControlledFieldGroup>
@@ -115,11 +156,15 @@ const PetitionForm = () => {
           id="submit"
           type="submit"
         >
-          I agree
+          {i18n.iAgree()}
         </Button>
       </form>
     </>
   );
+};
+
+PetitionForm.propTypes = {
+  gaPagePath: PropTypes.string.isRequired // in the form '/congrats/coursea-2020' to be sent to ga
 };
 
 export default PetitionForm;

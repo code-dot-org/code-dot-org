@@ -55,7 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import cookies from 'js-cookie';
+import {muteCookieWithLevel} from '../util/muteCookieHelpers';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -63,8 +63,6 @@ import {
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
-
-const muteMusic = 'mute_music';
 
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;
@@ -2205,8 +2203,16 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    config.level.muteMusic || cookies.get(muteMusic) === 'true'
+    muteCookieWithLevel(config.level)
   );
+
+  config.muteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(true);
+  };
+
+  config.unmuteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(false);
+  };
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2251,6 +2257,8 @@ Studio.init = function(config) {
     );
     showInstructions();
   };
+
+  config.level.levelTracks = levelTracks;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers

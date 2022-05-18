@@ -170,7 +170,10 @@
         "K-1 Maze 8": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
         "K-1 Maze 9": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
         "K-1 Maze Sequence Assessment 1": "Da vidimo što ste naučili!\nPomiči se korak po korak da me odvedeš do svinje.",
-        "k-1 maze 1": "Možeš li me premjestiti na zapad da dođem do svinje?"
+        "k-1 maze 1": "Možeš li me premjestiti na zapad da dođem do svinje?",
+        "helloworld_emoji_location": "Dajte svakom sprite-u drugačije mjesto.",
+        "helloworld_emoji_multi": "Neka svaki od tvoja dva sprite-a nešto kaže.",
+        "helloworld_emoji_say": "Upotrijebite blok `say` da kažem što god želiš!"
       }
     }
   }

@@ -1,0 +1,23 @@
+{
+  "ms-MY": {
+    "data": {
+      "category": {
+        "csta2011/CPP": {
+          "description": "Amalan & Pengaturcaraan Pengkomputeran"
+        },
+        "csta2011/CT": {
+          "description": "Pengiraan pemikiran"
+        },
+        "ccela/L": {
+          "description": "Bahasa"
+        },
+        "csta2011/CL": {
+          "description": "Kerjasama"
+        },
+        "csta/IC": {
+          "description": "Kesan Pengkomputeran"
+        }
+      }
+    }
+  }
+}

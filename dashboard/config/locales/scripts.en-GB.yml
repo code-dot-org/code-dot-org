@@ -466,3 +466,11 @@ en-GB:
             Variables:
               name: Variables
               key: Variables
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+              key: Variables
+            Text:
+              name: Text
+              key: Text
