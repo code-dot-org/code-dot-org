@@ -17,12 +17,6 @@
 #
 #  index_code_review_requests_unique  (user_id,script_id,level_id,closed_at,deleted_at) UNIQUE
 class CodeReview < ApplicationRecord
-  # TODO: Reorder columns so that the first three columns are id, user_id, project_id
-  # TODO: Change unique index to include just user_id, project_id, closed_at, and deleted_at
-  # TODO: Add index to look up by project_id
-  # TODO: Add column to store channel id
-  # TODO: Add column to store project version expiration
-
   # This model was renamed partway through the development process. This line
   # will be removed when the table is renamed before this work is completed.
   self.table_name = 'code_review_requests'
@@ -35,9 +29,16 @@ class CodeReview < ApplicationRecord
 
   # Enforce that each student can only have one open code review per script and
   # level. (This is also enforced at the database level with a unique index.)
-  validates_uniqueness_of :user_id, scope: [:project_id],
+  validates_uniqueness_of :user_id, scope: [:script_id, :level_id],
     conditions: -> {where(closed_at: nil)},
-    message: 'already has an open code review for this project'
+    message: 'already has an open code review for this script and level'
+
+  # Returns an array of all code reviews (open and closed) that match the given
+  # identifying attributes. Returns an empty array if there are no matches.
+  def self.get_all(project_id:, script_id:, level_id:)
+    # TODO: Add an index to the db that covers this query
+    CodeReview.where(project_id: project_id, script_id: script_id, level_id: level_id).to_a
+  end
 
   def self.open_for_project?(channel:)
     _, project_id = storage_decrypt_channel_id(channel)
@@ -59,6 +60,8 @@ class CodeReview < ApplicationRecord
   def summarize
     {
       id: id,
+      scriptId: script_id,
+      levelId: level_id,
       channelId: nil,             # TODO: implement this!
       version: project_version,
       isVersionExpired: false,    # TODO: implement this!
