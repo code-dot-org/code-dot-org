@@ -229,6 +229,7 @@ class JavalabView extends React.Component {
                 height={height}
                 isProjectTemplateLevel={isProjectTemplateLevel}
                 handleClearPuzzle={handleClearPuzzle}
+                viewMode={viewMode}
               />
             )}
             bottomRightPanel={() => (
