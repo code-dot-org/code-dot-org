@@ -12953,66 +12953,118 @@
           "progression_name": "Inštrukcie pre vypĺňanie dotazníka po kurze"
         },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“.",
           "tips": [
-            null
+            "**Videonávody:** Nasledujúci postup je pokrytý aj v sérií [r how-to-videos/csd/2021], ktoré sú k dispozícii ná našej stránke s podpornými materiálmi pre učiteľov. Môže byť vhodné pozrieť si tieto videá ešte pred prečítaním nasledujúcich pokynov."
           ]
         },
+        "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
+          "description": "## Pred hodinou\n\n#### Uistite sa, že máte v Code studiu zaregistrovaný „overený“ učiteľský účet\n\nUčiteľský účet si v Code studiu môže vytvoriť ktokoľvek. Preto musíme mať zavedený postup na dodatočné overenie identity, aby žiaci nemali ľahký prístup k materiálom z kurzu Objavujeme informatiku, napríklad k hodnoteným úlohám, kľúčom s odpoveďami a podobne. Ak ste sa počas leta zúčastnili našej konferencie TeacherCon, tento typ prístupu by ste už mali mať schválený.\n\nAko skontrolovať, či už prístup máte:\n\n1.  Prejdite na stránku [Tematický celok č. 1 – prehľad kurzu](https://studio.code.org/s/csd1-2021)\n2.  Zobrazuje sa vám ako prvá vec v kurze úvodný dotazník?\n3.  Ak nie, vyplňte [tento formulár](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Upozorňujeme, že overenie učiteľského účtu môže trvať aj vyše dňa, tak formulár vyplňte dostatočne včas!\n\nAk _nemáte_ overený učiteľský účet, stále môžete vytvoriť triedu, no pred overením účtu zatiaľ nebudete môcť žiakom zadať úvodný dotazník.\n\n#### Vytvorenie triedy v Code studiu.\n\nNa vytvorenie triedy:\n\n1.  Prejdite na [domovskú stránku učiteľa](https://studio.code.org/home)\n2.  V sekcii 'Triedy' vyberte možnosť 'Vytvoriť triedu'\n3.  Vyberte možnosť 'Prihlasovanie e-mailom' \n4.  Do poskytnutého políčka zadajte názov triedy (napr. Objavujeme informatiku – 1. skupina), ročník, Kurz: 'Objavujeme informatiku', Aktuálny tematický celok: 'Tematický celok č. 1: Riešenie problémov' a kliknite 'Uložiť'\n5.  Po vytvorení triedy kliknite na jej názov\n6.  Na novej stránke uvidíte unikátnu URL adresu na pripojenie do triedy, ktorú budete môcť v škole rozdať žiakom. \n\nAk si chcete tento postup pozrieť na videu a dozvedieť sa viac o tom, ako sa zorientovať vo svojom účte na Code.org, prejdite do sekcie\n[r how-to-videos/csd/2021]"
+        },
+        "32772c7d-26fd-4352-b09c-6a7331500a70": {
+          "description": "## Na začiatku hodiny\n\n1.  Ak žiaci ešte nemajú povytvárané účty v Code studiu na adrese <https://studio.code.org>, povedzte im, aby si ich vytvorili.\n2.  Dajte žiakom URL adresu na pripojenie sa k triede a povedzte im, aby ju otvorili .\n    -   To, či sa žiaci k triede úspešne pripájajú, si môžete overiť na domovskej stránke učiteľa v sekcii „pokrok“ – stačí, keď budete priebežne obnovovať stránku. Žiaci by mali navrchu stránky vidieť malý zelený oznam s textom 'Pripojil(a) si sa do triedy ...' \n3.  Povedzte žiakom, aby na stránke [studio.code.org](https://studio.code.org) našli kurz Objavujeme informatiku, klikli na možnosť 'Zobraziť kurz' a potom prešli na tematický celok č. 1.\n\nKeď sa žiakom podarí dostať na stránku s prehľadom tematického celku č. 1, budú pripravení vyplniť úvodný dotazník pred kurzom Objavujeme informatiku."
+        },
         "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "description": "#### Dôležité! Dajte svojim žiakom za úlohu vyplniť úvodný dotazník pred kurzom Objavujeme informatiku!\n\nOdkaz na dotazník v Code studiu je prvá vec, ktorá sa žiakom zobrazí na stránke s prehľadom tematického celku č. 1. Ak chcete zabezpečiť, aby žiaci vypĺňali dotazník iba vtedy, keď je na to vhodný čas, kým ho neodomknete, bude uvedený ako „zamknutý“ a žiaci nebudú mať možnosť otvoriť ho. Článok [Ako žiakom zadať zamknutú hodnotenú úlohu](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) vám poskytne viac podrobností o tom, ako dotazník odomknúť, keď už naň budú žiaci pripravení. Upozorňujeme, že pokyny na odomknutie hodnotenej úlohy a dotazníka sú rovnaké.    \n\n**Koľko času to zaberie?** Vyplnenie dotazníka žiakom zaberie istý čas – obsahuje približne 30 otázok. Môžete zvážiť, či nebude vhodné dať ho žiakom vyplniť na domácu úlohu.\n\n**Kedy mám dať žiakom dotazník na vyplnenie?** Keďže ide o úvodný dotazník pred kurzom, je dôležité, aby ho žiaci vyplnili čo najskôr ešte pred tým, ako sa počas hodín stihli venovať informatike, aby sme dokázali čo najpresnejšie odmerať, aké zmeny v postojoch a presvedčení žiakov náš kurz podporuje.",
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "4ae4ed17-55d9-4ad4-837d-06cbcaa121d1": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "9eb792f3-b6ec-4e1b-a96e-f9bc4bda5247": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "621b00e1-d6b6-4060-b0db-8dee8c8ebb6a": {
+          "name": "Staviame hliníkovú loď",
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
+        "8f694c11-9713-491a-a965-360ddbc1033a": {
+          "description": "Dnes budeme stavať hliníkové loďky. Budete mať príležitosť postaviť aspoň dve loďky a pri každej ďalšej využiť predchádzajúce skúsenosti na to, aby ste ju postavili lepšie. Kým začneme, v skupine sa dohodnite a navrhnite svoju prvú loďku. Svoje nápady a možné nedostatky tohto prvého návrhu zapíšte do sprievodcu aktivitou."
+        },
         "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
-            null
+            "**Ako vytvárať kópie materiálov z Dokumentov Google:** Sprievodcovia aktivitami z týchto učebných osnov sú k dispozícii online v službe Dokumenty Google, ako dokumenty vytvorené vo Worde a vo formáte PDF. Ak chcete nejaký materiál zo služby Dokumenty Google upraviť alebo si vytvoriť vlastnú kópiu, môžete tak urobiť aj bez toho, aby ste museli žiadať o dodatočné povolenia. Stačí sa prihlásiť pomocou svojho účtu Google, kliknúť na „Súbor“ a vybrať z ponuky možnosť „Vytvoriť kópiu“. Svoju kópiu potom môžete zdieľať so žiakmi.\n\n![](https://images.code.org/ef58681bcfba8239ddf2a0b00b62efb6-Screenshot-2017-08-17-at-11.51.32-AM.png)"
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
-            null
+            "Pri tejto aktivite sa môže stať, že v triede bude mokro! V ideálnom prípade by mala mať každá skupina vlastné vedro alebo inú nádobu z vodou, v ktorej budú môcť žiaci testovať svoju loďku. V prípade potreby sa môže viacero skupín deliť o jednu nádobu, no je dôležité nastaviť si pravidlá na používanie takejto spoločnej nádoby. Pod každú nádobu umiestnite handru alebo uterák. Ak máte v triede obmedzené možnosti, zvážte, či by ste nevedeli so žiakmi túto aktivitu robiť na chodbe alebo v nejakom inom priestore, prípadne či nebude potrebné dohodnúť sa aj na dodatočných pravidlách."
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
           "name": "Vytvorte plán",
+          "description": "Dajte žiakom niekoľko minút na to, aby v skupine prediskutovali, ako budú pristupovať k navrhovaniu prvej loďky. Keď všetky skupiny zaznamenajú svoje nápady a možné nedostatky daného návrhhu, môžu si k vám prísť po hliníkovú fóliu a pustiť sa do stavby lode.",
           "tips": [
-            null
+            "Fóliu žiakom poskytnite až vtedy, keď vám odovzdajú svoj plán lode. Cieľom tohto postupu nie je spomaliť žiakov, ale dať im chvíľu na to, aby sa v krátkosti zamysleli nad možnými prístupmi k stavbe loďky. Ide o jeden zo spôsobov, ktorými táto aktivita odkazuje na krok plánovania, s ktorým sa žiaci budú stretávať pri nasledujúcich lekciách o riešení problémov."
           ]
         },
         "2b44b34b-743b-4698-bcf9-2b32d2172ac5": {
-          "name": "Otestujte loď"
+          "name": "Otestujte loď",
+          "description": "Keď sú skupiny pripravené, dajte žiakom za úlohu otestovať svoje loďky tým, že do nich budú postupne klásť jednocentové mince. Pripomeňte im pravidlá aktivity, najmä to, že po umiestnení loďky na vodu sa jej už nesmú dotýkať ani ju upravovať. Žiaci si do sprievodcu aktivitou zaznamenajú celkový počet jednocentoviek, ktoré je ich loďka schopná udržať."
         },
         "75e6b296-d238-4993-a9f3-2712d896e9c6": {
-          "name": "Vyhodnotenie a zlepšovanie"
+          "name": "Vyhodnotenie a zlepšovanie",
+          "description": "Tento prvý pokus o postavenie loďky slúžil len na to, aby ste sa s úlohou oboznámili. Každá skupina teraz bude mať za úlohu postaviť ďalšiu loďku a pozrieme sa na to, či sa vám podarí v porovnaní s predchádzajúcou loďkou zväčšiť počet mincí, ktoré udrží. Kým sa však pustíme do práce, pozrime sa na to, čo sme sa pri tejto skúšobnej stave lode dozvedeli."
         },
         "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "description": "**Zdieľajte:** Dajte žiakom za úlohu podeliť sa o výsledky svojej prvej loďky so susednými skupinami. Povedzte skupinám, aby sa zamerali najmä na to, na čom ich loďka nakoniec zlyhala (napr. „nebola dostatočne hlboká“, „bola nestabilná“), a spravily krátky brainstorming nápadov, ako by dokázali tieto problémy vyriešiť.",
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
+        },
+        "fd85159d-c1a1-484b-a5c6-fed3d2d0cc77": {
+          "description": "### Vytvorte plán\n\n**Povedzte:** Teraz, keď ste už mali príležitosť poučiť sa zo svojej prvej stavby lode, urobme tú istú aktivitu znova. Každá skupina najprv vytvorí nový plán. Rovnako ako minule, aj teraz si ho zaznamenajte do sprievodcu aktivitou, a keď bude hotový, prídem za vami a dám vám novú fóliu na stavbu lode.\n\n**Poskytujte podporu**: Keď sa budete prechádzať medzi skupinami, pýtajte sa žiakov, na čo sa zameriavali pri prerábaní svojho návrhu. Napríklad: „Akú vlastnosť vašej lode bolo treba zlepšiť najviac?“ „Aké nápady od iných skupín ste chceli zakomponovať do svojho návrhu?“ „Mali ste pocit, že svoju loď musíte úplne prerobiť, alebo ste sa rozhodli len pre menšie úpravy?“ \n\nKeď budú mať skupiny pripravené nové plány, dajte im novú hliníkovú fóliu na postavenie loďky.\n\n### Testovanie lode\n\nRovnako ako prvýkrát, aj teraz môžu skupiny testovať svoju loďku a zaznamenať výsledky do sprievodcu aktivitou."
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "62597c94-0e74-4478-b491-9427a83a7a2a": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "4a8474b0-c86b-4bc6-8813-1a47b5be09e8": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "3d5ff4dc-c2df-4b01-852e-2a3449801046": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "a46854b4-0c89-445c-bb74-76b861c1f7a9": {
+          "name": "Brainstorming problémov",
+          "description": "**Povedzte:** Výraz „problém“ používame v množstve rôznych situácií. Napríklad môžem povedať, že mám za úlohu vyriešiť nejaký problém, že mám problém so svojím bratom alebo že mám problém s autom, pričom v každom z týchto slovných spojení výraz „problém“ znamená niečo iné. Chcem, aby ste si na papier spísali čo najviac rôznych typov problémov a pripravili sa na to, aby ste sa o ne mohli podeliť so zvyškom triedy."
         },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
           "tips": [
             null,
             null
           ]
+        },
+        "1b5c295f-10f1-469e-8cbf-d16b7c19056f": {
+          "description": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**"
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
           "name": "Proces riešenia problémov",
@@ -13035,6 +13087,9 @@
           "tips": [
             null
           ]
+        },
+        "5c0ec90c-60b9-463c-a278-5a3c5104d0be": {
+          "description": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**"
         },
         "03418848-4f2d-4f45-8f25-38012b191a2a": {
           "tips": [
@@ -13222,28 +13277,45 @@
           "name": "Reflexia",
           "progression_name": "Reflexia"
         },
+        "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "b7043c24-837d-4375-8abc-db97b39d5a86": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "1b6e47b3-1fff-4497-abb7-08eaea7bbd52": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13259,39 +13331,68 @@
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "8da74910-a0c5-4983-a7be-0b370c20d612": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "e2eaa19c-4ad1-42ea-a0ee-1186b3a986b7": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "84c36a0f-89da-46bf-a8c8-8ccaafb3146a": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "805b87e8-c377-489d-84e2-8be6316309b1": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
         },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "418d731c-d516-4e49-8547-9313763526ca": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
-            null
+            "**Vedenie denníka:** Vedenie denníka je v kurze Objavujeme informatiku dôležitou zručnosťou. Žiaci si môžu písať denník na samostatné papiere, do zápisníka alebo aj digitálne.\n\n**Prezentácie:** Prezentácie k tomuto tematickému celku sú k dispozícii v učebnom pláne v sekcii „Materiály pre učiteľov“. Systém vás vyzve, aby ste si uložili kópiu, čo stačí urobiť raz. Následne už budete môcť používať prezentácie ku všetkým lekciám v učebných osnovách."
           ]
         },
         "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "d4e42301-7a41-4d37-8f34-07e7d9562339": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "ae6365e1-e28d-4d30-846a-2ebef57b4afd": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13307,39 +13408,68 @@
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "a90c61ba-7aa3-4b9b-ba1c-081bb47c3230": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "6977e8b1-edf5-4a77-b65d-561695544e26": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "f5e08562-db11-4323-80ed-4c719b6a6905": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
+        },
+        "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
+          "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
-            null
+            "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
           ]
         },
         "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "name": "Príprava",
+          "description": "**Spýtajte sa:** Aké vlastnosti má mať človek, ktorý je dobrý v riešení problémov? Každý si pripraví tri odpovede, o ktoré sa podelí so svojou skupinou.",
           "tips": [
             null
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "description": "**Diskutujte:** Dajte žiakom možnosť podeliť sa o svoje odpovede so zvyšnými členmi skupiny pri stole. Potom tých, ktorí s tým nemajú problém, požiadajte, aby sa o odpovede podelili s celou triedou. ",
           "tips": [
-            null
+            "Cieľom tejto úvodnej aktivity je dosiahnuť, aby sa žiaci ešte pred dnešnou aktivitou začali zamýšľať nad riešením problémov.  Vyzdvihujte odpovede, ktoré odkazujú na dôležité vlastnosti a schopnosti využívané pri práci v triede, napríklad spoluprácu, vytrvalosť či tvorivosť. Teraz tiež máte príležitosť podporiť v triede pozitívnu kultúru, ktorá motivuje žiakov zdieľať veci s ostatnými a navzájom sa podporovať pri rýchlom vymýšľaní nápadov prostredníctvom brainstormingu."
           ]
         },
+        "c1a4e53a-2218-4c00-80d7-3505a462d81d": {
+          "description": "Výborné myšlienky! V informatike riešime problémy neustále, takže ku všetkým zručnostiam, ktoré ste vymenovali, sa budeme vracať nielen dnes, ale aj po zvyšok kurzu. V informatike platí, že problémy väčšinou riešime v tímoch. Dnes teda budete pracovať v tímoch na riešení zábavnej úlohy, pri ktorej nebudeme používať počítače. Kým budete na úlohe pracovať, zamyslite sa nad nasledujúcou otázkou."
+        },
+        "05812355-06bd-4750-9713-691134fd7a89": {
+          "description": "**Ukážte:** Ukážte žiakom otázku dňa\n\n**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "241975ce-013e-4f72-a787-8800069fd731": {
+          "description": "**Vytvorte skupiny**: Rozdeľte žiakov do skupín po dvoch alebo troch."
+        },
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "description": "**Rozdajte**: Jednu kópiu sprievodcu aktivitou každej skupine.",
           "tips": [
             null
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
           "name": "Cieľ a pravidlá",
+          "description": "S celou triedou v sprievodcovi aktivitou prečítajte sekciu „Cieľ a pravidlá“ a zodpovedajte otázky.",
           "tips": [
             null
           ]
@@ -13355,16 +13485,28 @@
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
           "tips": [
-            null
+            "Hoci niektorí žiaci budú túto časť lekcie vnímať ako súťaž, pripomeňte skupinám, že ich cieľom je zlepšiť svoj vlastný návrh lode, nie súťažiť s ostatnými. Všetkých žiakov takto vyzývate k tomu, aby súťažili predovšetkým sami so sebou, nie s ostatnými."
           ]
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Premostenie**: Povedzte žiakom, aby sa vrátili na svoje miesta na reflexiu."
+        },
+        "eb580d4d-4253-490a-9fe8-256885fb0ed8": {
+          "name": "Diskusia o výzve",
+          "description": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**"
+        },
+        "10f5ec1c-3957-422e-a1ee-3787a5df1dc7": {
+          "description": "**Spýtajte sa**: Pri tejto aktivite ste pracovali v tímoch. Čím práca v tíme túto aktivitu zjednodušila a čím ju, naopak, skomplikovala? Čo vašej skupine pomohlo prekonať tieto výzvy?"
         },
         "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "description": "**Diskutujte**: Dajte žiakom čas na to, aby sa o svoje myšlienky podelili so zvyškom triedy.",
           "tips": [
-            null
+            "Žiaci si možno uvedomia, spolupráca im umožnila premyslieť si svoje nápady dôkladnejšie alebo rozdeliť prácu medzi viacerých ľudí. Keď budú žiaci spomínať komplikácie, ktoré im spolupráca spôsobila, dozrite na to, aby zároveň prichádzali aj s možnými riešeniami týchto problémov. Ak ste si v dynamike niektorej skupiny počas aktivity všimli nejaké problémy, môžete tento čas využiť na to, aby ste tieto potenciálne problémy nekonfliktným tónom spomenuli a pomohli žiakom vymyslieť stratégie, ako v budúcnosti spolupracovať efektívnejšie. Tieto nápady si dokonca môžete spísať ako pravidlá tímovej práce v danej triede."
           ]
+        },
+        "32af4c30-b182-4d2e-9c46-e61ad93d6eb9": {
+          "description": "Všetky vaše myšlienky k týmto otázkam boli výborné. V tejto triede budeme spoločnú prácu využívať často. Možno ste zvyknutí vnímať informatiku tak, že je iba o počítačoch, no informatika je v prvom rade o riešení problémov a to je aktivita, ktorej sa zvyčajne venujeme v tímoch. Mnohé ďalšie časti tejto aktivity, napríklad zlepšovanie návrhov či budovanie vecí, budú tiež dôležitou súčasťou tohto kurzu. Dúfam, že sa na tohtoročné aktivity tešíte. Zajtra sa viac zahĺbime do samotného riešenia problémov."
         },
         "48dcb032-0dad-4177-89a7-066d60d785f5": {
           "tips": [

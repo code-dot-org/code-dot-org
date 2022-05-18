@@ -10373,6 +10373,10 @@ es-MX:
               name: CSD encuesta previa 21-22
             lesson-20:
               name: CSP encuesta final 2021
+            CS Principles Pre-survey:
+              name: CSA Borrador de la Encuesta Previa
+            Course Survey:
+              name: CSA Borrador de la Encuesta Fin de Curso
           name: todas las encuestas
         k1hoc2017:
           title: Hora del Código para escuela primaria 2017
@@ -25837,6 +25841,12 @@ es-MX:
               name: Módulo 7
             Self Paced Playground:
               name: Parque Infantil Autodidacta
+            "[TEMPLATE] Introduction to":
+              name: "[TEMPLATE] Introducción a..."
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Contenido de lecciones"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Finalizar la unidad"
           name: guión-prueba-jess
         csd2-virtual:
           title: Introducción autodidacta al Laboratorio Web
@@ -31767,7 +31777,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          name: Curso A - 2021
+          name: coursea-2021
           student_description: Aprende los fundamentos de las ciencias de la computación
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
@@ -48201,6 +48211,8 @@ es-MX:
               name: Consola
             lesson-22:
               name: Clases y Objetos
+            lesson-23:
+              name: CSA Encuesta Previa
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -48908,6 +48920,12 @@ es-MX:
                 **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
 
                 Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
+            Console:
+              name: Consola
+            The Neighborhood:
+              name: Clases y Objetos
+            lesson-16:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -49045,6 +49063,12 @@ es-MX:
                 **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
 
                 Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
+            Console:
+              name: Consola
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -50181,6 +50205,10 @@ es-MX:
               name: Creando Tipos de Painters
             lesson-2:
               name: Proyecto Camión de Comida de Pastelerías Mercurio
+            lesson-4:
+              name: ProcesadorTexto
+            lesson-3:
+              name: ImagenPlus
           name: csa-mochila-2022
           title: Versiones de la Mochila CSA ['22-'23]
           description: Versiones de las clases que los alumnos tienen en su **Mochila**
@@ -50776,6 +50804,8 @@ es-MX:
                 de la Unidad 6.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple
                 que abarca los temas de la unidad.
+            Console:
+              name: Consola
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -51066,24 +51096,56 @@ es-MX:
               name: Documentación del Código del Programa
             lesson-2:
               name: Parámetros del Método
+              description_student: |-
+                **¿Cuáles son las similitudes y diferencias entre pasar primitivos y referencias a objetos como parámetros?**
+
+                En esta lección, se revisa el paso de primitivos y referencias a objetos como parámetros para identificar las similitudes y diferencias entre cada uno. Explorarás el impacto de usar una referencia de objeto como parámetro en el objeto original e identificarás los escenarios en los que no es ideal usar una referencia de objeto como parámetro. A continuación, aprenderás sobre las historias de usuario y escribirás historias de usuario para tu proyecto con el fin de identificar las características necesarias del programa.
+              description_teacher: |-
+                **¿Cuáles son las similitudes y diferencias entre pasar primitivos y referencias a objetos como parámetros?**
+
+                Los alumnos revisan el paso de primitivos y referencias a objetos como parámetros para identificar las similitudes y diferencias entre cada uno de ellos. Los estudiantes exploran el impacto de usar una referencia de objeto como parámetro en el objeto original e identifican los escenarios en los que no es ideal usar una referencia de objeto como parámetro. A continuación, los alumnos aprenden sobre las historias de usuario y escriben historias de usuario para sus proyectos con el fin de identificar las características necesarias del programa.
             lesson-3:
               name: Sobrecarga de Métodos
             lesson-4:
               name: Métodos Privados
             lesson-5:
               name: Anulación de Métodos
+              description_student: |-
+                \*\*¿Cómo puedo anular métodos de otras clases?
+
+                Has anulado métodos de la clase `Object` y has trabajado con jerarquías de clases que implementan métodos anulados. En esta lección, explorarás la escritura y la llamada a métodos anulados y cómo la palabra clave `super` puede ser utilizada para llamar a la versión de la superclase de un método. Identificarás escenarios para anular métodos y practicarás la escritura y la llamada a métodos anulados utilizando la consola, El Barrio o El Teatro.
+              description_teacher: |-
+                \*\*¿Cómo puedo anular métodos de otras clases?
+
+                Los alumnos han anulado métodos de la clase `Object` y han trabajado con jerarquías de clases que aplican métodos anulados. Los estudiantes exploran la escritura y la llamada a métodos anulados y cómo la palabra clave `super` puede ser utilizada para llamar a la versión de la superclase de un método. Los estudiantes identifican escenarios para anular métodos y practican la escritura y la llamada a métodos anulados utilizando la consola, El Barrio o El Teatro.
             lesson-6:
               name: Propiedad intelectual
             lesson-7:
               name: Recursión
             lesson-8:
               name: Recursión frente a Iteración
+              description_student: |-
+                **¿Cuál es la diferencia entre recursión e iteración?**
+
+                A veces es más fácil escribir un método de forma iterativa, y otras veces es mejor un método recursivo. En esta lección, explorarás cómo las soluciones iterativas pueden ser implementadas usando la recursividad e identificarás las similitudes y diferencias en ambos algoritmos. Practicarás la conversión de algoritmos iterativos a recursivos y luego continuarás el desarrollo de tu Codificación Creativa con el Proyecto Teatro.
+              description_teacher: |-
+                \*\*¿Cuál es la diferencia entre recursión e iteración?
+
+                Los alumnos exploran cómo se pueden implementar soluciones iterativas utilizando la recursividad e identifican las similitudes y diferencias de ambos algoritmos. Los estudiantes practican la conversión de algoritmos iterativos a recursivos y luego continúan el desarrollo de su Codificación Creativa con el Proyecto Teatro.
             lesson-9:
               name: Algoritmos Recursivos
             lesson-10:
               name: Maximizando la Fiabilidad del Sistema
             lesson-11:
               name: Codificación Creativa con El Teatro - Día 1
+              description_student: |-
+                **¿Cómo identifico y priorizo las tareas que me quedan por completar para mi proyecto?**
+
+                Continúas desarrollando tu Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando El Teatro. Primero autoevaluarás tu trabajo para valorar tu progreso en la finalización de los requisitos del proyecto, y luego seguirás desarrollando tus proyectos. A continuación, realiza pruebas de aceptación para determinar cuáles de tus historias de usuario están completas y utiliza la autoevaluación y los comentarios de los compañeros para priorizar tus tareas restantes.
+              description_teacher: |-
+                **¿Cómo identifico y priorizo las tareas que me faltan por completar para mi proyecto?**
+
+                Los alumnos continúan desarrollando su Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando El Teatro. Los estudiantes primero autoevalúan su trabajo para comprobar su progreso en el cumplimiento de los requisitos del proyecto, y luego continúan desarrollando sus proyectos. A continuación, los estudiantes realizan pruebas de aceptación para determinar cuáles de sus historias de usuario están completas y utilizan la autoevaluación y los comentarios de los compañeros para priorizar sus tareas restantes.
             lesson-12:
               name: Codificación Creativa con El Teatro - Día 2
             lesson-13:
@@ -51094,8 +51156,20 @@ es-MX:
                 Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
             lesson-14:
               name: Práctica de FRQ
+              description_student: |-
+                **¿Cómo utilizaré lo que sé sobre `ArrayList`s y algoritmos estándar para responder a una Pregunta de Respuesta Libre?**
+
+                Practicarás el desarrollo de soluciones a las Preguntas de Respuesta Libre de AP CSA en un simulacro de Pregunta de Respuesta Libre de Arrays. Aplicarás estrategias de descomposición y anotación para identificar los componentes clave del problema y validarás tus soluciones utilizando las Guías de Puntuación.
+              description_teacher: |-
+                **¿Cómo utilizaré lo que sé sobre `ArrayList`s y algoritmos estándar para responder a una Pregunta de Respuesta Libre?**
+
+                Los estudiantes practican el desarrollo de soluciones a los FRQs de AP CSA en un FRQ de Arrays simulado. Los estudiantes aplican estrategias de descomposición y anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-15:
               name: Evaluación de la Unidad 7
+              description_teacher: Los alumnos realizan una evaluación de opción múltiple
+                que abarca los temas de la unidad.
+            Console:
+              name: Consola
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -51105,6 +51179,7 @@ es-MX:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Aislamiento
+          title: Descomposición y Recursión de Métodos
           description: |-
             Esta unidad permite a los alumnos practicar el diseño y el desarrollo de software utilizando los conocimientos que han adquirido a lo largo del plan de estudios mientras planifican y desarrollan un proyecto de codificación creativo para transmitir un interés personal o una historia utilizando El Teatro. Los alumnos utilizan estrategias de descomposición y principios orientados a objetos para planificar e implementar sus ideas mientras se aseguran de que sus proyectos cumplen con los requisitos especificados. En el proceso, los estudiantes aprenden a escribir métodos `privados`, sobrecargados y anulados y a utilizar la palabra clave `super` en un método de la subclase para llamar a un método de la superclase mientras exploran la funcionalidad de los métodos y sus parámetros. A lo largo de la unidad, los alumnos practican el rastreo y la escritura de métodos recursivos y la comparación de estos métodos con las soluciones iterativas. Con los conocimientos y habilidades adquiridos a lo largo del año, los estudiantes consideran la necesidad de maximizar la fiabilidad del sistema mientras exploran los errores y problemas en los programas existentes.
 
@@ -51373,14 +51448,38 @@ es-MX:
               name: Privacidad y Seguridad
             lesson-11:
               name: Codificación Creativa con la Consola - Día 1
+              description_student: |-
+                **¿Cómo identifico y priorizo las tareas que me faltan por completar para mi proyecto?**
+
+                Continúas desarrollando tu Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando la consola. Primero autoevalúas tu trabajo para comprobar tu progreso en el cumplimiento de los requisitos del proyecto, y luego continúas desarrollando tus proyectos. A continuación, realizas pruebas de aceptación para determinar cuáles de tus historias de usuario están completas y utilizas la autoevaluación y los comentarios de tus compañeros para priorizar tus tareas restantes.
+              description_teacher: |-
+                **¿Cómo identifico y priorizo las tareas que me quedan por completar para mi proyecto?**
+
+                Los alumnos continúan desarrollando su Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando la consola. Los estudiantes primero autoevalúan su trabajo para comprobar su progreso en el cumplimiento de los requisitos del proyecto, y luego continúan desarrollando sus proyectos. A continuación, los estudiantes realizan pruebas de aceptación para determinar cuáles de sus historias de usuario están completas y utilizan la autoevaluación y los comentarios de los compañeros para priorizar sus tareas restantes.
             lesson-12:
               name: Codificación Creativa con la Consola - Día 2
             lesson-13:
               name: Codificación Creativa con la Consola - Día 3
+              description_student: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
             lesson-14:
               name: Práctica de FRQ
+              description_student: |-
+                **¿Cómo usaré lo que sé sobre arrays 2D y algoritmos estándar para responder a una Pregunta de Respuesta Libre?**
+
+                Practicarás el desarrollo de soluciones a preguntas de respuesta libre de AP CSA en un simulacro de Pregunta de Respuesta Libre sobre Arrays 2D. Aplicarás estrategias de descomposición y anotación para identificar los componentes clave del problema y validarás tus soluciones utilizando las Guías de Puntuación.
+              description_teacher: |-
+                **¿Cómo utilizaré lo que sé sobre arrays 2D y algoritmos estándar para responder a una Pregunta de Respuesta Libre?**
+
+                Los estudiantes practican el desarrollo de soluciones a las preguntas de respuesta libre de AP CSA en un simulacro de Pregunta de Respuesta Libre sobre Arrays 2D. Los estudiantes aplican estrategias de descomposición y anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-15:
               name: Evaluación de la Unidad 8
+              description_teacher: Los alumnos realizan una evaluación de opción múltiple
+                que abarca los temas de la unidad.
+            Console:
+              name: Consola
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -51390,6 +51489,7 @@ es-MX:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Encuesta
+          title: Buscando y Ordenando
           description: |-
             En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.
 
@@ -51596,6 +51696,8 @@ es-MX:
                 sobre su experiencia como estudiante que participa en la lección.\n-
                 \  Discutir el papel de la exploración del estudiante en el plan de
                 estudios de Descubrimientos CS. \n\n**Tiempo sugerido:** 60 minutos"
+            Navigating support:
+              name: Ayuda a la navegación
           lesson_groups:
             lessonGroup-2:
               display_name: Síncronos Parte 1
@@ -52815,10 +52917,21 @@ es-MX:
               name: Efectos Visuales
             lesson-2:
               name: Mi Historia de la Cápsula del Tiempo
+              description_teacher: 'En esta lección, los alumnos planificarán su aplicación
+                de la cápsula del tiempo antes de codificarla. Los estudiantes reflexionarán
+                sobre sus cosas favoritas y sus propias experiencias personales para
+                escribir una breve historia sobre el período de tiempo actual. '
             lesson-3:
               name: Codificando mi Cápsula del Tiempo
             lesson-4:
               name: Exposición
+              description_teacher: En esta última lección, los alumnos compartirán
+                sus aplicaciones entre ellos.  Primero copiarán y pegarán los enlaces
+                de sus aplicaciones en una nueva pestaña. A continuación, los alumnos
+                recorrerán y comprobarán las aplicaciones de la cápsula del tiempo
+                de los demás. Por último, toda la clase debatirá sobre la importancia
+                de la conservación y sobre cómo decidir qué elementos se conservan
+                al contar la historia.
             Poem Art:
               name: El Arte del Poema
               description_student: La poesía trata de usar palabras para crear arte.
@@ -52836,6 +52949,12 @@ es-MX:
           lessons:
             lesson-1:
               name: Colchas de Estrellas Nativas Americanas
+              description_teacher: 'En esta lección sin conexión, los alumnos conocerán
+                las colchas de estrellas de los nativos americanos y su significado.
+                A continuación, los alumnos harán una forma de estrella de 6 puntas
+                en un papel. Uno de los objetivos principales es analizar los patrones
+                dentro de la forma. Estas ideas serán clave para las partes de codificación
+                en línea de la actividad más adelante. '
             lesson-2:
               name: Cómo empezar con El Artista
             lesson-3:
@@ -52856,6 +52975,27 @@ es-MX:
               description_teacher: 'En esta lección de **desarrollo de habilidades**,
                 los alumnos aprenderán a crear y animar sprites y hacerlos interactivos
                 usando eventos. '
+            lesson-4:
+              name: "[Optional] Introducción a las Fábulas"
+              description_teacher: 'Los alumnos repasarán y enumerarán las moralejas
+                y los rasgos de carácter comunes de las fábulas. En esta lección,
+                los estudiantes desarrollarán una lista de temas, tópicos y patrones
+                de eventos similares en la literatura tradicional de diferentes culturas
+                para comenzar a escribir y codificar su propia fábula. '
+            lesson-5:
+              name: Planifica tu Fábula
+              description_teacher: 'En esta lección, los alumnos elegirán sus fábulas
+                favoritas para adaptarlas, escogiendo una moraleja y dos personajes
+                de dos fábulas diferentes. Los alumnos comenzarán a redactar los personajes
+                y a redactar la escena que piensan animar. '
+            lesson-6:
+              name: Comparte tu Fábula
+              description_teacher: 'En esta lección, los alumnos tendrán tiempo para
+                reflexionar sobre sus proyectos y compartirlos con sus compañeros.
+                Los estudiantes deben trabajar con sus compañeros para depurar cualquier
+                error en su código. Se les anima a que establezcan conexiones con
+                los compañeros que tienen problemas similares en su código, cómo resolvieron
+                esos problemas o ver diferentes formas de programar. '
           name: csc-piloto-2022-fábulas
         csd1-2022:
           lessons:
@@ -55141,6 +55281,10 @@ es-MX:
               key: Código Ético de la Inteligencia Artificial
             'Mini-Project: Make a Machine Learning App':
               name: 'Miniproyecto: Hacer una Aplicación con Aprendizaje Automático'
+              description_teacher: |-
+                En este proyecto de uno o dos días, los alumnos aplican sus conocimientos de la unidad hasta ahora y crean una aplicación de aprendizaje automático utilizando datos del mundo real. Los estudiantes reciben varios conjuntos de datos del mundo real procedentes de diversos contextos, y eligen el conjunto de datos que les gustaría investigar. Entrenan y guardan su modelo, y luego crean una sencilla aplicación del Laboratorio de Aplicaciones que utiliza el modelo. Este miniproyecto es una oportunidad para evaluar la capacidad de los alumnos para utilizar las características y crear modelos de aprendizaje automático precisos, así como su capacidad para crear aplicaciones que utilicen el aprendizaje automático.
+
+                **Pregunta del día:** ¿Puedo utilizar datos del mundo real para crear una aplicación que utilice el aprendizaje automático?
               key: 'Miniproyecto: Hacer una Aplicación con Aprendizaje Automático'
             Issue Statements:
               name: Planificación de un Proyecto de Aprendizaje Automático
@@ -55275,6 +55419,13 @@ es-MX:
               name: Variables y Sentencias If
             'Mini-Project: On-The-Go App':
               name: 'Mini-Proyecto: Aplicaciones On The Go'
+              description_student: Crear una aplicación que utilice el Circuit Playground
+                para recoger datos con un propósito específico, y que luego tenga
+                una aplicación para analizar los datos recogidos
+              description_teacher: |-
+                En este mini-proyecto, los alumnos crearán una aplicación que utiliza el Circuit Playground para recoger datos, y luego tiene una aplicación para analizar los datos recogidos. Esto es similar al trabajo de campo de la ciencia ciudadana o a las aplicaciones de encuestas con las que los estudiantes pueden estar familiarizados. Los estudiantes utilizarán variables y eventos para recopilar datos del Circuit Playground y luego utilizarán sentencias "if" para tomar decisiones o hacer recomendaciones basadas en los datos recopilados.
+
+                \*\*Pregunta del día: ¿Cómo puedo utilizar eventos y variables para crear una aplicación que recoja y analice datos?
             Color LEDs:
               name: LEDs de colores
               description_student: En esta lección, aprenderás a acceder y controlar
@@ -55381,6 +55532,8 @@ es-MX:
           student_description: Esta unidad contiene una encuesta para cuando tu clase
             haya terminado con las unidades de Descubrimientos CS. Tu profesor te
             dirá cuándo es el momento de realizar esta encuesta.
+        testtess2:
+          name: testtess2
         csp-post-survey-2022:
           lessons:
             Course Survey:
@@ -55733,7 +55886,10 @@ es-MX:
               display_name: Capítulo 1 - Aprendizaje Automático
             lessonGroup-3:
               display_name: Capítulo 2 - Diseñar una aplicación de Aprendizaje Automático
+          name: iaml-2022
           title: Módulo de Inteligencia Artificial y Aprendizaje Automático
+          description_short: Descubre la Inteligencia Artificial y el Aprendizaje
+            Automático
         vpl-csd-2022:
           lessons:
             Module 1:
@@ -55832,6 +55988,7 @@ es-MX:
           lessons:
             Welcome to Codeorg:
               name: Bienvenido a Code.org
+              key: Bienvenido a Codeorg
             Welcome to "Teaching CS Discoveries":
               name: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
               key: Bienvenido a "Enseñanza de los Descubrimientos de la Informática"
@@ -56204,3 +56361,131 @@ es-MX:
             -   Hacer un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua, y la promoción de una cultura de inclusión.
 
             **Tiempo sugerido**: 50 minutos
+        csa9-2022:
+          lessons:
+            The AP CSA Exam:
+              name: El Examen AP CSA
+              description_student: "¡Lo has conseguido! Has completado el contenido
+                del curso, y ahora es el momento de preparar el examen AP CSA. En
+                el proceso, identificas y respondes a las preguntas que puedas tener
+                sobre el examen. Explora las estrategias de prueba y los recursos
+                de estudio que puedes utilizar para preparar el examen."
+              description_teacher: Los estudiantes aprenden sobre la estructura y
+                las expectativas del examen AP CSA. En el proceso, los estudiantes
+                identifican y responden preguntas sobre el examen. Los estudiantes
+                exploran las estrategias para realizar el examen y los recursos de
+                estudio que pueden utilizar para prepararse para el examen.
+            MCQ Pre-Assessment:
+              name: Pre-Evaluación MCQ
+              description_student: Para identificar tus puntos fuertes y débiles en
+                la parte de opción múltiple del examen AP CSA, realiza una evaluación
+                previa de opción múltiple en el Aula AP. ¡Mucha suerte!
+              description_teacher: Los alumnos realizan una evaluación previa de opción
+                múltiple en el Aula AP.
+            MCQ Study Plan:
+              name: Plan de Estudio MCQ
+              description_student: Revisa tus resultados de la pre-evaluación de opción
+                múltiple para crear un plan de estudio.
+              description_teacher: Los estudiantes revisan sus resultados de la pre-evaluación
+                de opción múltiple para crear un plan de estudio.
+            MCQ Practice – Day 1:
+              name: Práctica de MCQ - Día 1
+              description_student: "¡Ahora es el momento de practicar! Identifica
+                los diferentes tipos de preguntas de opción múltiple del examen AP
+                CSA y las estrategias para abordar cada tipo."
+              description_teacher: Los estudiantes identifican los diferentes tipos
+                de preguntas de opción múltiple en el examen AP CSA y las estrategias
+                para abordar cada tipo.
+            MCQ Practice – Day 2:
+              name: Práctica de MCQ - Día 2
+              description_student: Reflexionas sobre tu plan de estudios e identificas
+                tus áreas de mejora más prioritarias. Utilizas una tabla de elección
+                de estrategias de estudio con el fin de practicar para el examen AP
+                CSA.
+              description_teacher: Los estudiantes reflexionan sobre su plan de estudio
+                e identifican sus áreas de mayor prioridad para mejorar. Los estudiantes
+                utilizan un conjunto de estrategias de estudio con el fin de practicar
+                para el examen AP CSA.
+            FRQ Pre-Assessment:
+              name: Pre-Evaluación FRQ
+              description_student: Para identificar tus puntos fuertes y débiles en
+                la parte de FRQ del examen AP CSA, realiza una pre-evaluación de FRQ.
+                ¡Mucha suerte!
+              description_teacher: 'Los estudiantes completan una pre-evaluación FRQ. '
+            FRQ Study Plan:
+              name: Plan de Estudio FRQ
+              description_student: Revisa los resultados de la pre-evaluación del
+                FRQ para crear un plan de estudio.
+              description_teacher: Los estudiantes revisan sus resultados de la pre-evaluación
+                FRQ para crear un plan de estudio.
+            FRQ Practice – Day 1:
+              name: Práctica de FRQ - Día 1
+              description_student: Reflexionas sobre tu plan de estudios e identificas
+                tus áreas de mejora más prioritarias. Utilizas una tabla de elección
+                de estrategias de estudio con el fin de practicar para el examen AP
+                CSA.
+              description_teacher: Los estudiantes reflexionan sobre su plan de estudio
+                e identifican sus áreas de mayor prioridad para mejorar. Los estudiantes
+                utilizan un conjunto de estrategias de estudio con el fin de practicar
+                para el examen AP CSA.
+            FRQ Practice – Day 2:
+              name: Práctica de FRQ - Día 2
+              description_student: Identificas estrategias para abordar los FRQs del
+                examen AP CSA.
+              description_teacher: Los estudiantes identifican estrategias para abordar
+                los FRQs en el examen AP CSA.
+            Mock MCQ Exam – Day 1:
+              name: Simulacro de Examen MCQ - Día 1
+              description_student: Completa la primera mitad de un simulacro de examen
+                de opción múltiple de AP CSA. ¡Buena suerte!
+              description_teacher: Los estudiantes completan la primera mitad de un
+                simulacro de examen AP CSA de opción múltiple.
+            Mock MCQ Exam – Day 2:
+              name: Simulacro de Examen MCQ - Día 2
+              description_student: Completa la segunda parte de un simulacro de examen
+                AP CSA de opción múltiple. ¡Mucha suerte!
+              description_teacher: Los estudiantes completan la segunda mitad de un
+                simulacro de examen AP CSA de opción múltiple.
+            Mock FRQ Exam – Day 2:
+              name: Simulacro de Examen FRQ - Día 2
+              description_student: Completa la segunda parte de un simulacro de examen
+                AP CSA de respuesta libre. ¡Buena suerte!
+              description_teacher: Los estudiantes completan la segunda mitad de un
+                simulacro de examen AP CSA de respuesta libre.
+            Mock FRQ Exam – Day 1:
+              name: Simulacro de Examen FRQ - Día 1
+              description_student: Completa la primera mitad de un simulacro de examen
+                AP CSA de respuesta libre. ¡Buena suerte!
+              description_teacher: Los estudiantes completan la primera mitad de un
+                simulacro de examen AP CSA de respuesta libre.
+            Mock FRQ Exam – Day 3:
+              name: Simulacro de Examen FRQ - Día 3
+              description_student: Revisa tus resultados en el simulacro de examen
+                FRQ y actualiza tus planes de estudio.
+              description_teacher: Los estudiantes revisan sus resultados en el simulacro
+                de examen FRQ y actualizan sus planes de estudio.
+            Console:
+              name: Consola
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            Mock MCQ Exam – Day 3:
+              name: Simulacro de Examen MCQ - Día 3
+              description_student: Revisa tus resultados en el simulacro de examen
+                MCQ y actualiza tus planes de estudio.
+              description_teacher: Los estudiantes revisan sus resultados en el simulacro
+                de examen MCQ y actualizan sus planes de estudio.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisión y Práctica
+            lessonGroup-3:
+              display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+        csa-pl-standalone-code-2022:
+          lessons:
+            lesson-1:
+              name: Unidad 1 Proyectos
+            lesson-2:
+              name: Unidad 2 Proyectos

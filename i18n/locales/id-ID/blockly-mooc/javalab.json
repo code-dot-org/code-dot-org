@@ -87,6 +87,7 @@
   "runtimeError": "Kode Anda mengalami exception saat sedang berjalan.\n{cause}",
   "saveToBackpack": "Simpan ke Backpack",
   "startingPainter": "Memulai painter.",
+  "submit": "Kirim",
   "timeoutWarning": "Peringatan: pekerjaan Anda akan berhenti berjalan dalam 15 detik.",
   "timeout": "Pekerjaan Anda telah berhenti.",
   "twoMainMethods": "Kesalahan: Kode Anda hanya boleh memiliki satu metode utama. Kami menemukan setidaknya dua kelas dengan metode utama.",

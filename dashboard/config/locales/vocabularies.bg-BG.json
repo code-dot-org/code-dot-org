@@ -94,8 +94,15 @@
         "code/poem-art/unversioned": {
           "word": "Код"
         },
+        "user/coursef/2021": {
+          "word": "Потребител",
+          "definition": "Някой, който използва обект, включително софтуер и хардуер."
+        },
         "behavior/coursef/2021": {
           "word": "Поведение"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Алгоритъм"
         },
         "variable/coursef/2021": {
           "word": "Променлива"
@@ -116,6 +123,9 @@
         "define/coursef/2021": {
           "word": "Дефиниране"
         },
+        "algorithm/courseb/2021": {
+          "word": "Алгоритъм"
+        },
         "debugging/courseb/2021": {
           "word": "Отстраняване на грешки"
         },
@@ -127,6 +137,9 @@
         },
         "loop/courseb/2021": {
           "word": "Цикъл"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Алгоритъм"
         },
         "debugging/coursea/2021": {
           "word": "Отстраняване на грешки"
@@ -140,6 +153,9 @@
         "loop/coursea/2021": {
           "word": "Цикъл"
         },
+        "algorithm/coursec/2021": {
+          "word": "Алгоритъм"
+        },
         "debugging/coursec/2021": {
           "word": "Отстраняване на грешки"
         },
@@ -151,6 +167,9 @@
         },
         "binary/coursec/2021": {
           "word": "Двоичен код"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Алгоритъм"
         },
         "debugging/coursed/2021": {
           "word": "Отстраняване на грешки"
@@ -167,6 +186,9 @@
         "condition/coursed/2021": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "algorithm/express/2021": {
+          "word": "Алгоритъм"
         },
         "debugging/express/2021": {
           "word": "Отстраняване на грешки"
@@ -198,6 +220,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Капка"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Алгоритъм"
         },
         "debugging/pre-express/2021": {
           "word": "Отстраняване на грешки"
@@ -237,6 +262,10 @@
         "empathy/csd/2021": {
           "word": "Емпатия",
           "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
+        },
+        "user/csd/2021": {
+          "word": "Потребител",
+          "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
         "usability/csd/2021": {
           "word": "Ползваемост",
