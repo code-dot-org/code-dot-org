@@ -9,7 +9,8 @@ import {
   appendOutputLog,
   setDisplayTheme,
   setIsRunning,
-  setIsTesting
+  setIsTesting,
+  setDisableFinishButton
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
@@ -40,6 +41,8 @@ class JavalabView extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     onPhotoPrompterFileSelected: PropTypes.func.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool,
+    isCodeReviewing: PropTypes.bool,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -55,16 +58,25 @@ class JavalabView extends React.Component {
     setIsTesting: PropTypes.func,
     canRun: PropTypes.bool,
     canTest: PropTypes.bool,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
     hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
-    isSubmitted: PropTypes.bool
+    isSubmitted: PropTypes.bool,
+    setDisableFinishButton: PropTypes.func
   };
 
   componentDidMount() {
     this.props.onMount();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      const disableFinishButton =
+        (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
+        !!this.props.isCodeReviewing;
+      this.props.setDisableFinishButton(disableFinishButton);
+    }
   }
 
   compile = () => {
@@ -173,7 +185,6 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       isTesting,
-      showProjectTemplateWorkspaceIcon,
       disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
@@ -223,9 +234,6 @@ class JavalabView extends React.Component {
             topRightPanel={height => (
               <JavalabEditor
                 onCommitCode={onCommitCode}
-                showProjectTemplateWorkspaceIcon={
-                  showProjectTemplateWorkspaceIcon
-                }
                 height={height}
                 isProjectTemplateLevel={isProjectTemplateLevel}
                 handleClearPuzzle={handleClearPuzzle}
@@ -326,20 +334,22 @@ export default connect(
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
-    isSubmitted: state.pageConstants.isSubmitted
+    isSubmitted: state.pageConstants.isSubmitted,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    isCodeReviewing: state.pageConstants.isCodeReviewing
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
+    setDisableFinishButton: disabled =>
+      dispatch(setDisableFinishButton(disabled))
   })
 )(UnconnectedJavalabView);
