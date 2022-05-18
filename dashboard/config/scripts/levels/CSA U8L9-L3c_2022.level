@@ -1,18 +1,15 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:34:11.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "The Guess Who game contains a list of characters that the player can choose from. The computer randomly chooses questions when the **Ask a Question** button is clicked to eliminate characters from the board based on their traits (gender, hair color, eye color, and shirt color). Each `Character` object has a 1D array containing their traits.\r\n\r\nIn `GuessWho.java`, complete the `createCharacters()` method. This method returns a 2D array of `Character` objects that each contain their list of traits from the 2D array `imageFiles`. Each row in `imageFiles` contains the traits for one `Character`.",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "playground",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHY3jPzh5K4ZAIFMmCxg\nkN429Ki9Ovq4r36kfPT1AWENNLr3qehrC9WBlrjvEeGuTyPMP6VFEEvxpt3L\nMt+dLSoH\n",
-    "display_name": "Guess Who",
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ],
     "starter_assets": {
       "character01.png": "83506304-b06e-4d45-a64b-14749077cc26.png",
       "character02.png": "9bd90dd5-ff4a-4a24-8807-98049b53f371.png",
@@ -47,11 +44,13 @@
         "isVisible": true
       }
     },
-    "bubble_choice_description": "Use multiple lists in this Guess Who game to manage the list of traits for each character.",
-    "thumbnail_url": "https://images.code.org/19ed0639a37b830520674380c439eaae-image-1641777159749.png",
     "name_suffix": "_2022"
   },
+  "game_id": 68,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:34:11.190+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L3c\\\"\"],\"cloned_from\":\"CSA U8L9-L3c\"}]"
+  "created_at": "2022-02-26T00:34:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:34:11.190+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L3c\\\"\"],\"cloned_from\":\"CSA U8L9-L3c\"},{\"changed_at\":\"2022-05-18 20:22:09 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 20:22:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
