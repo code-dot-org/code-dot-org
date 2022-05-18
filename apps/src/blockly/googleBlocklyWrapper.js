@@ -5,7 +5,6 @@ import {
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
-import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
@@ -40,14 +39,6 @@ import {ToolboxType} from './constants';
 const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
-
-  /**
-   * Google Blockly sets Block ids to randomly generated 20-character strings.
-   * CDO Blockly set Block ids using a global counter. There are several places in our code and
-   * tests that assume Block ids will be numbers, so we want to re-implement the global counter
-   * and pass the id in the Block constructor, rather than leaving it to Google Blockly.
-   */
-  this.uidCounter_ = 0;
 
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -163,7 +154,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
