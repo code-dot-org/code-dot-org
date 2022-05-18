@@ -503,25 +503,6 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 30, levels_data[:duration]
   end
 
-  test 'i18n_hash has correct value' do
-    script = create :script, name: 'dummy-script'
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
-    lesson.student_overview = 'student overview'
-    lesson.overview = 'teacher overview'
-
-    expected_i18n = {
-      'dummy-script' => {
-        'lessons' => {
-          'dummy-key' => {
-            'name' => 'Dummy Name',
-          }
-        }
-      }
-    }
-    assert_equal expected_i18n, lesson.i18n_hash
-  end
-
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script
@@ -1127,7 +1108,6 @@ class LessonTest < ActiveSupport::TestCase
       create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       destination_resource = create :resource, name: 'resource1', course_version: @destination_course_version
       destination_vocab = create :vocabulary, word: 'word one', course_version: @destination_course_version
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -1138,7 +1118,6 @@ class LessonTest < ActiveSupport::TestCase
 
     test "dots are stripped from cloned lesson key" do
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       @original_lesson.update!(name: 'Problem.Lesson.')
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 'ProblemLesson', copied_lesson.key
@@ -1168,7 +1147,6 @@ class LessonTest < ActiveSupport::TestCase
       destination_script.expects(:write_script_json).once
       course_version_resource_count = course_version.resources.count
       course_version_vocab_count = course_version.vocabularies.count
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = original_lesson.copy_to_unit(destination_script)
       course_version.reload
 
@@ -1192,7 +1170,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson_group, script: destination_script
 
       destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = original_lesson.copy_to_unit(destination_script)
 
       assert_equal destination_script, copied_lesson.script
@@ -1213,7 +1190,6 @@ class LessonTest < ActiveSupport::TestCase
         activity_section: existing_activity_section, activity_section_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
 
@@ -1258,7 +1234,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
@@ -1276,7 +1251,6 @@ class LessonTest < ActiveSupport::TestCase
       create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       @destination_script.reload
       assert_equal @destination_script, copied_lesson.script
@@ -1307,7 +1281,7 @@ class LessonTest < ActiveSupport::TestCase
       @destination_script.lesson_groups = []
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).twice
+      Script.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count

@@ -691,11 +691,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     # Just make sure the new lesson name appears somewhere in the new file contents.
     File.stubs(:write).with do |filename, data|
-      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
-    end.once
-
-    # Just make sure the new lesson name appears somewhere in the new file contents.
-    File.stubs(:write).with do |filename, data|
       filename.end_with?('.script_json') && data.include?(@update_params[:name])
     end.once
 
