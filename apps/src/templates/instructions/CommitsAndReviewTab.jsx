@@ -25,6 +25,7 @@ const CommitsAndReviewTab = props => {
     userIsTeacher,
     codeReviewEnabled,
     locale,
+    isReadOnlyWorkspace,
     setIsReadOnlyWorkspace
   } = props;
 
@@ -173,7 +174,7 @@ const CommitsAndReviewTab = props => {
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
           />
-          {!openReviewData && (
+          {!openReviewData && !isReadOnlyWorkspace && (
             <div style={styles.openCodeReview}>
               <Button
                 icon="comment"
@@ -200,7 +201,8 @@ export default connect(
     channelId: state.pageConstants.channelId,
     serverLevelId: state.pageConstants.serverLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
-    locale: state.pageConstants.locale
+    locale: state.pageConstants.locale,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
@@ -218,6 +220,7 @@ CommitsAndReviewTab.propTypes = {
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
+  isReadOnlyWorkspace: PropTypes.bool,
   setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
@@ -244,7 +247,7 @@ const styles = {
   },
   messageText: {
     fontSize: 13,
-    marginBottom: '25px',
+    margin: '15px 5px 25px 16px',
     color: color.light_gray
   },
   refreshButtonStyle: {
