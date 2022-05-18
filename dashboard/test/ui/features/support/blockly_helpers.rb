@@ -24,7 +24,6 @@ module BlocklyHelpers
         "$(\"[#{id_selector}='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
-  # To-Do: Combine these next two:
   def get_block_coordinates(block_id)
     id_selector = get_id_selector
     # For IE compatability, uses the SVG DOM binding technique from:
