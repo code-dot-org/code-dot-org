@@ -3,7 +3,7 @@
 <circle cx="151.308" cy="371.534" r="70.4662" fill="#7665A0"/>
 <circle cx="527.128" cy="316.909" r="30.0438" fill="#7665A0" fill-opacity="0.6"/>
 <circle cx="50" cy="50" r="50" fill="#7665A0" fill-opacity="0.5"/>
-<rect x="44" y="45" width="315" height="176.523" fill="url(#pattern0)" stroke="#544872" stroke-width="4"/>
+<rect x="44" y="45" width="315" height="176.523" rx="6" fill="url(#pattern0)" stroke="#544872" stroke-width="4"/>
 <rect x="164" y="198" width="315" height="176.523" rx="6" fill="url(#pattern1)" stroke="#74639E" stroke-width="4"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

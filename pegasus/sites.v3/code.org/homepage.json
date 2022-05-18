@@ -22,13 +22,13 @@
           "text": "homepage_csa_body"
         },
         {
+          "type": "image",
+          "url": "/images/marketing/homepage-csa-right.svg"
+        },
+        {
           "type": "cta_button_solid_yellow",
           "text": "homepage_banner_text_link",
           "url": "/educate/csa"
-        },
-        {
-          "type": "image",
-          "url": "/images/marketing/homepage-csa-right.svg"
         }
       ]
     }
