@@ -1292,6 +1292,45 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
+        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
+          "description": " Evaluar de manera crítica un objeto, en base a su diseño y considerar si este cumple con ciertos requerimientos."
+        },
+        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
+          "description": "Identificar la empatía con el usuario como un componente importante del proceso de diseño."
+        },
+        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
+          "description": " Evaluar de manera crítica un diseño a través de la perspectiva de un perfil de usuario."
+        },
+        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
+          "description": " Diseñar mejoras en un producto a partir de un perfil de usuario."
+        },
+        "8885beeb-2915-4569-b3b2-2ceca9293597": {
+          "description": "Generar varias estrategias para suplir las necesidades del usuario"
+        },
+        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
+          "description": "Organizar ideas y estrategias en categorías significativas"
+        },
+        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
+          "description": "Analizar y seleccionar las estrategias más adecuadas para satisfacer las necesidades de los usuarios."
+        },
+        "81d19c33-2675-415e-9b35-12643f8c33be": {
+          "description": "Usar un prototipo de papel para probar el diseño de una aplicación."
+        },
+        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
+          "description": "Recolectar y analizar las opiniones de los usuarios que probaron un prototipo de papel."
+        },
+        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
+          "description": "Utilizar los comentarios para crear un plan de desarrollo para una aplicación."
+        },
+        "3b9c322a-6a98-4473-8079-d20160c3e352": {
+          "description": "Clasificar y ordenar por prioridades los comentarios de los usuarios para una aplicación."
+        },
+        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
+          "description": "Mejorar el diseño de una pantalla a partir de los comentarios de los usuarios."
+        },
+        "b09ef219-e569-45de-94f7-3e7beec34d72": {
+          "description": "Analizar los apuntes tomados en la entrevista para identificar las necesidades del usuario"
+        },
         "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
           "description": "Identifica las innovaciones informáticas en un campo determinado"
         },
@@ -1449,7 +1488,7 @@
           "description": "Describir las razones por las cuales el encriptado es necesario para proteger datos personales"
         },
         "42021a55-c97c-432b-9420-a62927cc2bba": {
-          "description": "Aplicar métodos de encriptación para garantizar el traspaso de datos seguro"
+          "description": "Aplicar métodos de encriptación para garantizar el traspaso seguro de datos."
         },
         "e537dea9-f777-4037-8c48-d20298ba53b2": {
           "description": "Escoger y justificar el uso de distintos sistemas de representación binaria dependiendo de la información que esté siendo representada"
@@ -1458,7 +1497,7 @@
           "description": "Codificar y decodificar información representada en números binarios y texto ASCII"
         },
         "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
-          "description": "Crear un sistema de representación generalizado para una variedad instancias de tipos complejos de información"
+          "description": "Crear un sistema de representación generalizado para una variedad de instancias de un tipo de información compleja"
         },
         "d7b16ab2-6683-4efa-93d9-d425024858bf": {
           "description": "Usar el proceso de resolución de problemas para responder una pregunta utilizando datos."
@@ -1499,11 +1538,26 @@
         "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
           "description": "Interpretar datos recolectados para identificar patrones"
         },
+        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
+          "description": "Dar ejemplos de cómo se recolectan los datos por sensores y seguimiento de comportamientos de usuario."
+        },
+        "fd3bf488-7c63-4869-9c48-a97556d39150": {
+          "description": "Determinar datos que pueden ser útiles para resolver un problema y cómo esos datos pueden ser recolectados."
+        },
+        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
+          "description": "Distinguir entre datos que los usuarios aportaron ya sea voluntaria o involuntariamente."
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
+        },
+        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
+          "description": "Aplicar el proceso de Resolución de Problemas de datos a un tema de relevancia personal"
+        },
+        "b0342e84-056b-46d6-ac84-1d976155c38d": {
+          "description": "Determinar las fuentes de datos apropiadas que necesitarán para resolver un problema"
         },
         "b2682f90-e600-48aa-aef4-def3798b261d": {
           "description": "Identificar cómo se utilizan las ciencias de la computación en el ámbito del entretenimiento"

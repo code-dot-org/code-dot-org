@@ -233,12 +233,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.FieldTextInput;
   };
 
-  const oldMixin = blocklyWrapper.BlockSvg.prototype.mixin;
+  const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
   blocklyWrapper.BlockSvg.prototype.mixin = function(
     mixinObj,
     opt_disableCheck
   ) {
-    oldMixin.call(this, mixinObj, true);
+    googleBlocklyMixin.call(this, mixinObj, true);
   };
 
   blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function(
@@ -250,15 +250,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.unusedSvg_.render(this.svgGroup_);
   };
 
-  const oldRender = blocklyWrapper.BlockSvg.prototype.render;
+  const googleBlocklyRender = blocklyWrapper.BlockSvg.prototype.render;
   blocklyWrapper.BlockSvg.prototype.render = function(opt_bubble) {
-    oldRender.call(this, opt_bubble);
+    googleBlocklyRender.call(this, opt_bubble);
     this.removeUnusedBlockFrame();
   };
 
-  const oldDispose = blocklyWrapper.BlockSvg.prototype.dispose;
+  const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
   blocklyWrapper.BlockSvg.prototype.dispose = function() {
-    oldDispose.call(this);
+    googleBlocklyDispose.call(this);
     this.removeUnusedBlockFrame();
   };
 
@@ -284,7 +284,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.BlockSvg.prototype.isVisible = function() {
-    // TODO (eventually) - All Flappy/Poetry/Bounce blocks are visible.
+    // TODO (eventually) - All Google Blockly blocks are currently visible.
     // This shouldn't be a problem until we convert other labs.
     return true;
   };
@@ -324,9 +324,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   // Used in levels when starting over or resetting Version History
-  const oldBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
+  const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
   blocklyWrapper.WorkspaceSvg.prototype.clear = function() {
-    oldBlocklyClear.call(this);
+    googleBlocklyBlocklyClear.call(this);
     // After clearing the workspace, we need to reinitialize global variables
     // if there are any.
     if (this.globalVariables) {
@@ -346,9 +346,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.svgGroup_.parentNode;
   };
 
-  const oldBlocklyResize = blocklyWrapper.WorkspaceSvg.prototype.resize;
+  const googleBlocklyBlocklyResize =
+    blocklyWrapper.WorkspaceSvg.prototype.resize;
   blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
-    oldBlocklyResize.call(this);
+    googleBlocklyBlocklyResize.call(this);
     if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
       this.flyout_?.resize();
     }

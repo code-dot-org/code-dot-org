@@ -40,6 +40,7 @@ Feature: Checking the footer appearance
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I wait for the page to fully load
 
+    And I wait for 0.5 seconds
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
     Then I see no difference for "small footer"
 

@@ -2,6 +2,9 @@
   "pl-PL": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "Czytanie literatury"
+        },
         "ccela/SL": {
           "description": "Mówienie i słuchanie"
         },
@@ -29,8 +32,17 @@
         "ccela/RI": {
           "description": "Czytanie w celach zdobywania informacji"
         },
+        "ccmath/OA": {
+          "description": "Operacje i myślenie algebraiczne"
+        },
+        "csta2011/CD": {
+          "description": "Komputery i urządzenia komunikacyjne"
+        },
         "ccmath/MD": {
           "description": "Stosowanie prawdopodobieństwa do podejmowania decyzji"
+        },
+        "ccmath/NBT": {
+          "description": "Liczby i operacje w systemie dziesiętnym"
         },
         "ccmath/G": {
           "description": "Geometria"

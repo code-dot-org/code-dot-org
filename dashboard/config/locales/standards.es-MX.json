@@ -332,6 +332,12 @@
         "csta/2-AP-17": {
           "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
         },
+        "csta/2-IC-21": {
+          "description": "Analizar problemas de sesgo y accesibilidad en el diseño de tecnologías existentes."
+        },
+        "csta/2-IC-20": {
+          "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
+        },
         "csta/2-AP-13": {
           "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
         },
@@ -349,6 +355,15 @@
         },
         "csta/2-AP-15": {
           "description": "Buscar e incorporar los comentarios de sus compañeros de equipo y usuarios para refinar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "csta/2-IC-22": {
+          "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
+        },
+        "csta/2-CS-01": {
+          "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
+        },
+        "csta/2-CS-02": {
+          "description": "Diseñar Proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
         },
         "csta/2-AP-10": {
           "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."
@@ -373,6 +388,9 @@
         },
         "csta/2-NI-06": {
           "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
+        },
+        "csta/2-IC-23": {
+          "description": "Describa las compensaciones entre permitir que la información sea pública y mantener la información privada y segura."
         },
         "csta/3A-AP-20": {
           "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."

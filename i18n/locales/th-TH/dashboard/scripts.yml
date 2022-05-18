@@ -1893,6 +1893,8 @@ th:
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: อย่างอื่น
             Thanks:
               name: ขอบคุณ
         csp3-research-mxghyt:
@@ -5294,6 +5296,10 @@ th:
               name: เครื่องมือ
             Debugging:
               name: การแก้ไขจุดบกพร่อง
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] เนื้อหาบทเรียน"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] สรุปบทเรียน"
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -5398,6 +5404,8 @@ th:
           lessons:
             Virus Simulation for Code Bytes:
               name: การเข้ารหัสการจำลอง
+            Making Sprites:
+              name: การสร้างสไปร์ท
             End of Course Project:
               name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
@@ -5591,7 +5599,7 @@ th:
               display_name: เหตุการณ์
             lessonGroup-5:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
-          name: หลักสูตร A-2021
+          name: coursea-2021
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         courseb-2021:
           title: หลักสูตร B (2021)
@@ -6060,6 +6068,8 @@ th:
               description_student: 'ในบทเรียนนี้ นักเรียนจะได้ศึกษาเรื่องการช่วยการเข้าถึงและคุณค่าของการมีความรู้สึกร่วมผ่านการระดมความคิดและการออกแบบโซลูชั่นที่เข้าถึงได้สำหรับแอปสมมุติ '
             lesson-6:
               description_student: คุณจะได้พูดถึงบทบาทของคอมพิวเตอร์และเทคโนโลยีที่มีต่อชีวิตของคุณ โดยเน้นว่าแอปและเครื่องมือจะช่วยให้ผู้ใช้เลือกใช้แอปและเครื่องมือได้ด้วยวิธีใดบ้าง
+            lesson-7:
+              name: การสร้างสไปร์ท
             lesson-5:
               name: การระบาด
             lesson-2:
@@ -6188,6 +6198,8 @@ th:
             lesson-1:
               name: Dance Party
               description_student: ได้เวลาฉลองกันแล้ว! ในบทเรียนนี้ คุณจะได้เขียนโปรแกรมปาร์ตี้เต้นรำแบบโต้ตอบของคุณเอง
+            lesson-2:
+              name: การสร้างสไปร์ท
           lesson_groups:
             csf_warmup:
               display_name: อุ่นเครื่อง
@@ -6270,6 +6282,8 @@ th:
               name: ปลาว่ายน้ำไปกับแพลตฟอร์ม "เทพเจ้า"
             Virus Simulation for Code Bytes:
               name: การเข้ารหัสการจำลอง
+            Making Sprites:
+              name: การสร้างสไปร์ท
           lesson_groups:
             ramp_up:
               display_name: บทเกริ่นนำ
@@ -7304,6 +7318,8 @@ th:
           lessons:
             Introducing Sprite Lab:
               description_student: คุณจะได้พูดถึงบทบาทของคอมพิวเตอร์และเทคโนโลยีที่มีต่อชีวิตของคุณ โดยเน้นว่าแอปและเครื่องมือจะช่วยให้ผู้ใช้เลือกใช้แอปและเครื่องมือได้ด้วยวิธีใดบ้าง
+            Making Sprites:
+              name: การสร้างสไปร์ท
             Simulating Experiments:
               name: การจำลองการทดลอง
               description_student: ใช้การจำลองบนคอมพิวเตอร์และทดลองด้วยการเปลี่ยนตัวแปร
@@ -7530,6 +7546,8 @@ th:
               key: การสร้างศิลปะด้วยโค้ด
             Swimming Fish in Sprite Lab:
               description_student: ศึกษาวิธีสร้างและแก้ไขเทพเจ้า
+            Making Sprites:
+              name: การสร้างสไปร์ท
             Virtual Pet with Sprite Lab:
               name: สัตว์เลี้ยงเสมือนจริงด้วยแพลตฟอร์ม "สไปร์ทแลป"
               key: สัตว์เลี้ยงเสมือนจริงด้วยแพลตฟอร์ม "สไปร์ทแลป"
@@ -7600,6 +7618,7 @@ th:
               description_student: ค้นหาปัญหาภายในปริศนาต่างๆ ก่อนฝึกใช้ทักษะการดีบัก
             lesson-2:
               key: บทที่ 2
+              name: การสร้างสไปร์ท
             lesson-3:
               key: บทที่ 3
             lesson-1:
@@ -8130,6 +8149,8 @@ th:
           lessons:
             Introducing Sprite Lab:
               description_student: คุณจะได้พูดถึงบทบาทของคอมพิวเตอร์และเทคโนโลยีที่มีต่อชีวิตของคุณ โดยเน้นว่าแอปและเครื่องมือจะช่วยให้ผู้ใช้เลือกใช้แอปและเครื่องมือได้ด้วยวิธีใดบ้าง
+            Making Sprites:
+              name: การสร้างสไปร์ท
             The Power of Words:
               name: พลังของถ้อยคำ
               description_student: ไม่มีใครยอมรับเรื่องบูลลี่ได้หรอก บทเรียนนี้จะสอนให้คุณรู้ว่าอะไรที่เหมาะหรือไม่เหมาะพูดออนไลน์
@@ -8177,6 +8198,7 @@ th:
               key: บทที่ 6
             lesson-7:
               key: บทที่ 7
+              name: การสร้างสไปร์ท
             lesson-8:
               key: บทที่ 8
             Virtual Pet:
@@ -8359,10 +8381,16 @@ th:
               name: แรงบันดาลใจของโปรเจกต์
             lesson-19:
               name: การแก้ไขจุดบกพร่อง
+        csa4-2022:
+          lessons:
+            Console:
+              name: แผงหน้าปัด
         csa5-2022:
           lessons:
             lesson-7:
               name: ปรับเพิ่มลูป
+            Console:
+              name: แผงหน้าปัด
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -8519,6 +8547,9 @@ th:
               key: พลังของถ้อยคำ
             Introducing Sprite Lab:
               description_student: คุณจะได้พูดถึงบทบาทของคอมพิวเตอร์และเทคโนโลยีที่มีต่อชีวิตของคุณ โดยเน้นว่าแอปและเครื่องมือจะช่วยให้ผู้ใช้เลือกใช้แอปและเครื่องมือได้ด้วยวิธีใดบ้าง
+            Making Sprites:
+              name: การสร้างสไปร์ท
+              key: การสร้างสไปร์ท
             Simulating Experiments:
               name: การจำลองการทดลอง
               description_student: ใช้การจำลองบนคอมพิวเตอร์และทดลองด้วยการเปลี่ยนตัวแปร
@@ -8600,6 +8631,8 @@ th:
               key: จาวาแลป
             lesson-1:
               key: บทที่ 1
+            Console:
+              name: แผงหน้าปัด
           lesson_groups:
             lessonGroup-5:
               display_name: แซนด์บ็อกซ์
@@ -8608,6 +8641,8 @@ th:
             Java Lab:
               name: จาวาแลป
               key: จาวาแลป
+            Console:
+              name: แผงหน้าปัด
           lesson_groups:
             lessonGroup-5:
               display_name: แซนด์บ็อกซ์
@@ -8616,6 +8651,8 @@ th:
             Java Lab:
               name: จาวาแลป
               key: จาวาแลป
+            Console:
+              name: แผงหน้าปัด
           lesson_groups:
             lessonGroup-5:
               display_name: แบบสำรวจ
@@ -9006,3 +9043,7 @@ th:
               key: บทที่ 2
             lesson-3:
               key: บทที่ 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: แผงหน้าปัด

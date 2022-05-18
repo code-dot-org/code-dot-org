@@ -13694,10 +13694,16 @@ fil:
               name: Inspirasyon ng Proyekto
             lesson-19:
               name: Pagdedebug
+        csa4-2022:
+          lessons:
+            Console:
+              name: Console
         csa5-2022:
           lessons:
             lesson-2:
               name: Yunit 5 Pagtatasa
+            Console:
+              name: Console
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -13814,6 +13820,8 @@ fil:
               key: Java Lab
             lesson-1:
               key: aralin-1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -13824,6 +13832,8 @@ fil:
               key: Java Lab
             lesson-6:
               name: Intelektwal na Pag-aari
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
@@ -13832,6 +13842,8 @@ fil:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-5:
               display_name: Pagsisiyasat
@@ -14246,3 +14258,7 @@ fil:
               key: aralin-2
             lesson-3:
               key: aralin-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console

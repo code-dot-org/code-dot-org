@@ -87,6 +87,7 @@
   "runtimeError": "Pri vykonávaní tvojho kódu sa vyskytla výnimka.\n{cause}",
   "saveToBackpack": "Uložiť do batoha",
   "startingPainter": "Spúšťa sa maliar.",
+  "submit": "Odoslať",
   "timeoutWarning": "Upozornenie: Váš projekt sa zastaví o 15 sekúnd.",
   "timeout": "Váš projekt sa zastavil.",
   "twoMainMethods": "Chyba: Tvoj kód môže obsahovať iba jednu metódu main(). Našli sme minimálne dve triedy s metódou main().",

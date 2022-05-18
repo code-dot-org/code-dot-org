@@ -18902,6 +18902,10 @@ ko:
               name: 모듈 8
             Module 7:
               name: 모듈 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] 내용 레슨"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] 단원 마무리"
         csd2-virtual:
           title: 자기 진도에 맞춘 웹 랩 소개
           description: 여러분은 자신의 웹페이지에 콘텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 콘텐츠를 세상과 공유할지
@@ -19812,6 +19816,8 @@ ko:
               name: '스프라이트 랩: 스프라이트 인 액션 (CSF 2021 파일럿)'
             text_and_prompts_2021:
               name: '스프라이트 랩: 텍스트 및 프롬프트'
+            minitoolbox_2021:
+              name: '영혼 연구실: 많은 영혼들'
           title: 커리큘럼 샌드박스 레벨
           description_short: '레슨 계획과 직접 링크되어 있지만 다른 스크립트에는 나오지 않는 레벨. '
         virustest:
@@ -19899,6 +19905,8 @@ ko:
               name: 최종 프로젝트
             appendix:
               name: 부록
+            intro-categorical:
+              name: AI 연구실 소개
             lesson1:
               name: 머신 러닝 소개
             CSP Tester:
@@ -21151,7 +21159,7 @@ ko:
               display_name: 이벤트
             lessonGroup-5:
               display_name: 과정말 프로젝트
-          name: 과정 a-2021
+          name: coursea-2021
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
             게임 또는 스토리를 만드세요.
         courseb-2021:
@@ -22992,6 +23000,8 @@ ko:
           lessons:
             lesson1:
               name: 머신 러닝 소개
+            lesson5:
+              name: AI 연구실 소개
             lesson14:
               description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
                 기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
@@ -23010,6 +23020,8 @@ ko:
           lessons:
             Introduction to Machine Learning:
               name: 머신 러닝 소개
+            Introduction to AI Lab:
+              name: AI 연구실 소개
             AI Code of Ethics:
               description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
                 기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
@@ -26504,6 +26516,8 @@ ko:
           lessons:
             lesson-2:
               name: 단원 4 평가
+            Console:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -26513,6 +26527,8 @@ ko:
               name: 단원 5 평가
             lesson-7:
               name: 루프를 위해 향상된
+            Console:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -26872,6 +26888,8 @@ ko:
               key: Java 연구소
             lesson-1:
               key: 레슨-1
+            Console:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -26887,6 +26905,8 @@ ko:
               key: Java 연구소
             lesson-6:
               name: 지적 재산
+            Console:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -26900,6 +26920,8 @@ ko:
             Java Lab:
               name: Java 연구소
               key: Java 연구소
+            Console:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -27751,6 +27773,9 @@ ko:
             Introduction to Machine Learning:
               name: 머신 러닝 소개
               key: 머신 러닝 소개
+            Introduction to AI Lab:
+              name: AI 연구실 소개
+              key: AI 연구실 소개
             AI Code of Ethics:
               description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
                 기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
@@ -27820,6 +27845,8 @@ ko:
           lessons:
             Introduction to Machine Learning:
               name: 머신 러닝 소개
+            Introduction to AI Lab:
+              name: AI 연구실 소개
             AI Code of Ethics:
               description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
                 기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
@@ -27954,3 +27981,7 @@ ko:
               key: 레슨--2
             lesson-3:
               key: 레슨--3
+        csa9-2022:
+          lessons:
+            Console:
+              name: 콘솔

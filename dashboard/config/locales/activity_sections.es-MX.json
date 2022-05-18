@@ -6265,7 +6265,7 @@
           "description": "Cuando se crean aplicaciones y juegos, se diseñan pensando en el usuario. El usuario eres tú, o cualquier persona que use y juegue con la aplicación. Los creadores tienen ideas sobre cómo deben usarse sus aplicaciones, ¡pero las elecciones dependen del usuario!\nHoy vamos a explorar cómo (y por qué) los creadores de aplicaciones y juegos nos permiten tomar decisiones."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
-          "description": "**Haz esto:** muestra la diapositiva de Elecciones del usuario, que se encuentra en la sección Recursos.\n\n**Análisis:** para cada aplicación o juego que ven, ¿qué opciones creen que el creador de la aplicación le está dando al usuario?\n\n**Objetivo:** los estudiantes deben debatir no solo de qué se tratan las aplicaciones, sino también sobre las elecciones específicas que el usuario puede tomar. Por ejemplo, Talk Box permite a los usuarios elegir un avatar o una representación digital de ellos mismos. Esta elección es algo bueno porque ayuda al usuario a sentir que la aplicación es realmente para él.",
+          "description": "**Haz esto:** muestra la diapositiva con las opciones de usuario, que se encuentra en la sección Recursos.\n\n**Discutir:** para cada aplicación o juego que revisen, ¿qué opciones creen que el creador de la aplicación le está dando al usuario?\n\n**Objetivo:** los estudiantes deben debatir no solo de qué se tratan las aplicaciones, sino también sobre las opciones específicas que el usuario puede escoger. Por ejemplo, Talk Box permite a los usuarios elegir un avatar o una representación digital de sí mismos. Esta elección  ayuda al usuario a sentir que la aplicación está hecha para él.",
           "tips": [
             "Esta lección incluye una presentación de diapositivas con algunas aplicaciones simuladas para usar con fines de conversación. Puedes complementar o reemplazar estos ejemplos con otros según los intereses de tus estudiantes."
           ]
@@ -6539,7 +6539,7 @@
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
           "name": "Revisión",
-          "description": "**Haz esto:** usa las diapositivas de la lección para revisar los conceptos que los estudiantes han explorado hasta ahora en el curso: sprites, comportamientos, eventos y texto. Por último, revisa cómo funcionan los mensajes y las variables. \n\n#### Predicción\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
+          "description": "**Haz esto:** usa las diapositivas de la lección para revisar los conceptos que los estudiantes han explorado a los largo del curso: sprites, comportamientos, eventos y texto. Por último, revisa cómo funcionan los apuntes y las variables. \n\n#### Predicción\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, proporciona tiempo para que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "tips": [
             "Una de las partes más complicadas de aprender sobre variables es asegurarse de que la etiqueta de una variable siempre coincida. En este nivel, asegúrate de que los estudiantes conozcan la diferencia entre la variable **comida** y la variable **alimento**. Los estudiantes deben entender que la mejor manera de resolver esto sería usar una sola variable, asegurándose de que la etiqueta siempre coincida.\n\nTambién puedes enseñar a tu clase a corregir los errores de este programa proyectando este nivel [Teacher Sandbox](https://studio.code.org/levels/27300)."
           ],
@@ -6699,7 +6699,7 @@
           "description": "Usa estas actividades para ampliar el aprendizaje de los estudiantes. Pueden ser usadas como actividades extraprogramáticas.\n\n\\*\\* Ejecútalo al revés\\*\\*\n\n-   Intenta realizar esta actividad otra vez. Sin embargo, esta vez designen el valor inicial con tres dados y el valor de término con uno. ¡Asegúrate de que el valor de intervalo de pasos sea negativo!\n\n\\*\\* La rayuela\\*\\*\n\n-   Con tiza, dibuja una rayuela en algún lugar al aire libre. \n    -   Enumere los cuadrados desde abajo hacia arriba\n    -   Pide a los estudiantes que, entre ellos, se designen cuadrados de inicio, de término y cuántos cuadrados deben saltar a la vez.\n    -   Cuando el estudiante que salte por la rayuela haya terminado, pídele que anote el bucle que acaba de representar. \n    -   Añade actividades adicionales a realizar en cada cuadrado, como decir una palabra, levantar los brazos o hacer un sonido. Esto le sumará complejidad a la parte escrita."
         },
         "36568ca1-c41d-45f4-ae3a-462166e038e7": {
-          "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Ciencias de la computación + Matemáticas**\n\n_Estándares abordados:_\n\n-   **MD**: medición y datos\n\n-   \\*\\*2.MD.10: \\*\\*: dibujar un gráfico de imágenes y un gráfico de barras (con escala de una sola unidad) para representar un conjunto de datos con un máximo de cuatro categorías. Resolver problemas sencillos de armar, desmontar y comparar problemas4 utilizando la información presentada en un gráfico de barras."
+          "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Ciencias de la computación + Matemáticas**\n\n_Estándares abordados:_\n\n-   **MD**: medición y datos\n\n-   \\*\\*2.MD.10: \\*\\*: dibujar un gráfico de imágenes y un gráfico de barras (con escala de una sola unidad) para representar un conjunto de datos con un máximo de cuatro categorías. Resolver problemas sencillos para armar, desmontar y comparar problemas utilizando la información presentada en un gráfico de barras."
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introducción",
@@ -11849,6 +11849,9 @@
             null
           ]
         },
+        "d3bd1ebf-06e8-44b4-a4ae-e60b2bf4907a": {
+          "name": "Ideas para la Aplicación"
+        },
         "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
           "tips": [
             null
@@ -12032,227 +12035,465 @@
           ],
           "progression_name": "Instrucciones para la encuesta fin de curso"
         },
+        "02c742eb-e175-4fbb-869a-4f1a5a9d8085": {
+          "description": "**Mostrar:** Presente a sus estudiantes la gráfica “Proceso de resolución de problemas” que ahora incluye una sección enfocada en  _Empatizar_ en el proceso.\n\n#### Escribir en la bitácora\n\n**Decir:** Durante el transcurso de este curso, hemos puesto en práctica el proceso de resolución de problemas. Sin embargo, en esta unidad integraremos un nuevo elemento: **Empatizar**. ¿Qué significa empatizar? ¿En qué otro contexto han escuchado este término?"
+        },
         "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "description": "**Análisis:** En esta parte, los estudiantes deben escribir sus respuestas en la bitácora, luego comparten estas ideas con un compañero y finalmente con toda la clase. Para finalizar, dirija la conversación al punto en que los estudiantes comprendan que la empatía consiste en tomar en cuenta los deseos, las necesidades y las preocupaciones de los otros.",
           "tips": [
-            null
+            "**Objetivo:** Este análisis se puede realizar de manera libre y no es necesario que tenga un cierre o conclusión. Los estudiantes tendrán tiempo suficiente para comprender este concepto ya que trabajarán con él a lo largo de toda la unidad. No es necesario definir concretamente lo que es empatizar, bastará con plantearlo como una introducción al tema de esta unidad."
           ]
+        },
+        "07dbc06d-25e3-4a72-a67e-cddd7c698a2b": {
+          "description": "**Vocabulario:** Muestre el siguiente vocabulario como una transición a la actividad principal:\n\n-   Empatía: en el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto\n-   Usuario: es la persona que usa el producto puede ser un software o hardware"
+        },
+        "e27ed593-a4f0-417e-a786-0f7aa8d8787c": {
+          "description": "En esta unidad, nos enfocaremos mucho más en el diseño pensado para otros. En general, ya es parte del proceso de resolución de problemas, pero ahora debemos tener aún más en cuenta las necesidades de nuestros usuarios. En resumen, el término empatía será central a medida que aprendamos más acerca del diseño."
+        },
+        "d523037f-e439-4bf8-8a69-a94a4723cecd": {
+          "description": "**Pregunta del día:** ¿Cómo podemos elegir productos en base a las necesidades del usuario?"
         },
         "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "description": "**Distribuir:** Reparta copias de la guía de actividades Definiendo al Usuario.",
           "tips": [
-            null
+            "**Reducir el material impreso**\n\nLa unidad 4 contiene mucho material que se debe imprimir. En el caso que no exista esa posibilidad, elija alguna de las siguientes opciones propuestas.\n\n**Opción 1: Guía de actividades en línea**\n\nTodas nuestras guías de actividades están disponibles para editar en formato Google Doc y Microsoft Doc. Quienes utilizan Google o Microsoft pueden compartir los archivos con sus estudiantes con el fin de que estos realicen las actividades en línea.\n\n**Opción 2: Bitácoras del estudiante**\n\nMuchas de las guías de actividades pueden ser reemplazadas por actividades en la bitácora. Los docentes pueden presentar las instrucciones y luego pedir a sus estudiantes que hagan la actividad por sí mismos usando una bitácora.\n\nBusque las “Sugerencias para el docente” en las lecciones pertinentes para saber cuándo puede evitar la impresión y reemplazarla por las opciones recomendadas anteriormente."
           ]
+        },
+        "d525de1b-c25a-48e6-b371-e382b8186757": {
+          "description": "### **_Diseñando con Empatía_**\n\n#### Definiendo al usuario\n\n**Reseña:** Indique a los estudiantes que lean la sección “Definir al usuario” que se encuentra en la guía de actividades. En la primera parte de esta actividad, pida a sus estudiantes que emparejen diferentes tipos de zapatos con un posible usuario. Pida a los estudiantes que realicen esta actividad en pares y que conversen acerca del por qué de cada una de sus decisiones. Con esta actividad se puede lograr un buen análisis acerca del diseño de zapatos y las necesidades del usuario.\n\n**Recorrer el salón de clases:** Supervise a los estudiantes mientras responden la guía de actividades y pídales que justifiquen las decisiones que tomaron. No importa si los estudiantes no comparten las mismas opiniones acerca de la relación zapato-usuario, ya que en esta actividad no hay respuestas incorrectas. Lo importante es que los estudiantes analicen y tengan la capacidad de razonar y justificar sus decisiones."
         },
         "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "description": "**Compartir:** Divida la clase en grupos pequeños y pídales que respondan las preguntas que se presentan a continuación. Luego, comenten las respuestas en conjunto:\n\n-   ¿A cuál usuario le costó más asignarle un tipo de zapato?\n-   ¿A cuál usuario le fue más fácil asignarle un tipo de zapato?\n\nDe acuerdo con lo observado durante su recorrido por el salón de clases, ya debería tener identificados a algunos usuarios para analizar con la clase, especialmente aquellos usuarios a quienes los estudiantes les asignaron distintos zapatos. Inste a los estudiantes a que escuchen las distintas razones que tienen sus compañeros al momento de decidir y recalque la importancia de razonar por sobre la decisión final.",
           "tips": [
-            null
+            "Mientras los estudiantes comparten sus razones tras sus elecciones, asegúrese que identifiquen las necesidades y características propias del usuario y no las razones generales que se tienen al momento de elegir un zapato. Puede desafiar a los estudiantes a distinguir sus propias necesidades y preferencias de las de los usuarios descritos."
           ]
+        },
+        "ee03bf4e-0d6c-494f-90aa-24d1b2ae3df7": {
+          "name": "Retroalimentación del Diseño",
+          "description": "Ahora aprenderemos a dar retroalimentación sobre un diseño. Comentaremos lo bueno y lo malo de los zapatos. Es importante que al dar retroalimentación tengamos en cuenta que esta acción tiene el fin de mejorar un producto y no de resaltar lo negativo o juzgar, ya que esto no aporta al producto."
+        },
+        "77d36a73-ea24-4f41-970a-2b2485d1be8e": {
+          "description": "**Retroalimentación del diseño:** Indique a los estudiantes que lean la sección “Retroalimentación del diseño” que se encuentra en la página dos de la guía. Esta segunda actividad permite que los estudiantes tengan la oportunidad de dar su opinión sobre cuatro de los zapatos. La composición de esta página refleja la idea general que se estará usando al momento de dar retroalimentación al usar las siguientes tres estructuras:\n\n-   Me gusta…  (indica una sugerencia)\n-   Me hubiera gustado que…  (indica un aspecto a mejorar)\n-   Me pregunto…   (indica una sugerencia)"
         },
         "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "description": "**Recorrer el salón de clases:** Supervise a los estudiantes mientras responden la guía de actividades, asegurándose de que estén dando retroalimentación factible y que logre mejoras en el producto en lugar de opiniones vacías o sin fundamentos que son más que nada prejuicios y no sugerencias.",
           "tips": [
-            null
+            "El primer paso para desarrollar un diseño dirigido a un gran grupo de personas es centrarse en comprender que no todas las personas piensan igual, perciben un objeto o diseño de la misma manera. Este es el primer ejercicio, donde los estudiantes se alejan de lo que ellos piensan y toman en consideración el cómo otros perciben el mundo."
           ]
+        },
+        "7a54430f-eea6-4be2-bbad-ecf7bf32f999": {
+          "description": "**Compartir:** Divida la clase en grupos pequeños y pídales que respondan las preguntas que se presentan más abajo. Luego, comenten en conjunto las respuestas:\n\n-   ¿Cuál fue su zapato favorito? ¿Por qué?\n-   ¿Cuál de estos zapatos podría ser el favorito de algún integrante de su familia? ¿Por qué?\n\nIncentive a los estudiantes a pensar en sí mismos, pero también en otras personas que forman parte de su vida, por ejemplo, un familiar, etc.  Pensar de esta manera ayuda a enfatizar lo que significa diseñar: pensar más allá de nuestras necesidades y deseos, y considerar cómo otras personas reaccionarían ante un producto."
+        },
+        "37c5161d-636f-481e-9a9d-3d3cfad75432": {
+          "description": "Una parte importante de esta actividad es pensar en cómo los diferentes productos están hechos para diferentes personas y cómo siempre hay espacio para mejorar un producto con el fin de que sea útil para más usuarios. A lo largo de esta unidad, seguiremos pensando en cómo las diferentes personas utilizan los objetos por diferentes razones con el objetivo de diseñar aplicaciones para el mayor número de usuarios posible."
         },
         "3fe573d7-2c09-4e1c-ae7e-d4029f905d35": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Elijan uno o dos de los objetos analizados en la actividad de hoy ¿Qué cambios le harían a este objeto para que ustedes puedan usarlo? Para responder pueden usar palabras, imágenes o ambas opciones."
         },
         "bffb7609-21c3-4e03-b16a-e4753c421cbc": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Pensemos en los productos que tienen buena apariencia en comparación a aquellos productos que son fáciles de usar. \n\n-   ¿Puedes pensar en algun ejemplo de un producto que tiene una buena apariencia pero es difícil de usar? \n-   ¿Puedes pensar en uno que es fácil de usar, pero no les gusta su apariencia?"
         },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "description": "**Análisis:** Inste a los estudiantes que escriban sus ideas en una bitácora. Mientras comparten lo que escribieron con sus compañeros, pídales que también comenten si prefieren que el producto sea práctico o que tenga una buena apariencia. Después de un par de minutos, permita que una pareja de estudiantes exponga lo que han analizado.",
           "tips": [
-            null
+            "**Objetivo:** Señale que, como diseñadores, se debe empatizar con diversos tipos de necesidades de los usuarios. Destaque que es importante considerar la usabilidad de un producto, independiente de si es agradable desde el punto de vista estético."
           ]
+        },
+        "d52af850-0d61-4276-800e-243f7df01518": {
+          "description": "Está claro que tenemos muchas necesidades a la hora de utilizar productos. La usabilidad de nuestros diseños influirá a que un usuario pueda utilizar el producto en primera instancia. Sin embargo, si un producto no es atractivo, es posible que nunca se utilice. A medida que más pensemos en diseñar para otras personas, queremos tener en cuenta muchos tipos de necesidades distintas."
+        },
+        "66cabdfb-9de1-4019-8c82-60f8bcc9d565": {
+          "description": "**Pregunta del día:** ¿Cómo podemos asegurarnos de que un producto satisfaga las necesidades de un usuario?"
         },
         "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "description": "**Distribuir:** Reparta un folleto con un perfil de usuario para cada estudiante. Intente variar los perfiles de usuario dentro de los grupos de estudiantes para que no sean todos iguales.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**\n\nLos perfiles de usuario se utilizan sólo como referencia. Los estudiantes pueden ver las versiones digitales durante esta actividad. En lugar de repartir los perfiles reales, asigne a cada estudiante un enlace.\n\nSi opta por imprimir los perfiles de usuario, estos se podrán reutilizar, siempre que les diga a los estudiantes que no deben escribir sobre ellos."
           ]
+        },
+        "d778eaad-e4e5-42dc-8cdc-fd1426102f7c": {
+          "description": "Dediquen unos minutos a leer el perfil de usuario que se les asignó: tendrán que \"meterse en la cabeza\" de su usuario para nuestra actividad de hoy. De hecho, durante el resto del día ustedes aprenderán a empatizar con sus usuarios y a reaccionar a las situaciones como ellos."
+        },
+        "c0e00399-f06d-4568-9594-85b46759e863": {
+          "description": "**Recorrer el salón de clases:** Permita que los estudiantes lean sus perfiles durante unos minutos. Aliéntelos a pensar como el usuario que se les asignó, casi como si estuvieran interpretando un papel en una película u obra de teatro. Durante el resto del día, los estudiantes intentarán ponerse en el lugar de sus usuarios y deberán reaccionar a las situaciones como ellos."
+        },
+        "273655dd-a5a5-4702-8c3a-e362a3781b3c": {
+          "name": "Pensar Como un Usuario",
+          "description": "**Mostrar:** Las tres diapositivas siguientes contienen diferentes opciones para el mismo producto: una mascota, una mochila y un automóvil. Para cada diapositiva, pida a los estudiantes que elijan una esquina en función de la imagen que atraería a su usuario. Luego, haga que los estudiantes se dirijan a la esquina (A, B, C o D) que han elegido para debatir con sus compañeros.\n\n**Compartir:** Indique a los grupos de cada esquina que comenten brevemente (1-2 minutos) por qué creen que su usuario se siente atraído por esta versión del producto. Pida a un par de estudiantes que compartan lo que analizaron con el resto de la clase. Repita esta tarea para cada una de las diapositivas.\n\n**Agrupar:** Después de repetir esta tarea para todos los objetos de las diapositivas, ubique a los estudiantes en grupos de 3 a 5 según el perfil de usuario que se les haya asignado; los estudiantes con el mismo perfil trabajarán juntos en la siguiente actividad."
         },
         "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "description": "**Distribuir:** Distribuya copia de la guía de actividades para cada alumno.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**\n\n**Opción en línea:** Los estudiantes pueden completar la guía de actividades en línea. Pueden encerrar en círculo la reacción que más los represente o escribir su evaluación en la casilla. Para el diseño de la silla, los estudiantes pueden dibujar su diseño en línea o presentar una versión en papel de su diseño por separado.\n\n**Opción de bitácora:** Esta actividad puede completarse en la bitácora. Los estudiantes pueden utilizar una versión digital de la guía de actividades como ayuda y copiar los gráficos y las preguntas en sus bitácoras.\n\n**Consejo:** Tener varias ventanas o pestañas abiertas en la misma computadora puede ser confuso. Haga que los grupos trabajen en conjunto con una computadora que muestre un perfil de usuario mientras otro muestra la guía de actividades."
           ]
         },
+        "808ef3ce-a3c8-4d25-9f27-019fbbaf2e05": {
+          "description": "#### Reaccionando como Tu Usuario"
+        },
         "8accf144-8730-45d6-a806-475e5164395c": {
+          "description": "**Mostrar**: Las tres diapositivas siguientes contienen diferentes productos para que cada grupo de usuarios reaccione: botas de agua, una bicicleta y cupcakes de chocolate. Los estudiantes reaccionarán a cada producto como su usuario al rellenar una tabla en la guía de actividades. En la guía los estudiantes deberán distinguir entre la usabilidad de un objeto para su usuario y el hecho de que les parezca atractivo o no. Es aconsejable pasar por la primera diapositiva en grupo para demostrar que un producto puede ser estéticamente atractivo, pero no muy usable, o usable pero no estéticamente atractivo.",
           "tips": [
-            null
+            "**Adaptar la actividad:** Las diapositivas incluidas ya tienen varios productos, pero usted podría añadir otras opciones (productos e imágenes) que considere que puedan ser de interés para sus estudiantes."
           ]
         },
         "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "description": "**Recorrer el salón de clases:** Supervise a los estudiantes mientras completan la guía de actividades y asegúrese de que asuman el papel de su usuario en lugar de reaccionar ante el producto como ellos mismos. Recuérdeles que ésta es una parte intencional de la actividad: ver el mundo a través de los ojos de otra persona y no sólo de ellos mismos.",
           "tips": [
-            null
+            "En la primera página, compruebe que los estudiantes incorporen las indicaciones del perfil del usuario y que relacionen la descripción de éste con su elección.\n\nEn la parte inferior de la segunda página, compruebe que los estudiantes hayan relacionado el perfil de usuario con las características que han añadido a su silla."
           ]
+        },
+        "82b86ad9-04a5-4f6c-aae0-1a6b85532fd9": {
+          "description": "**Compartir:** Pida a algunos grupos que compartan sus respuestas ante cada producto.\n\n**Mostrar:** En la última diapositiva se muestra una mesa con varias sillas que se utilizará para la segunda página de la guía de actividades. Los estudiantes pueden trabajar de forma individual en la segunda página, donde se les pedirá que analicen cuál de las sillas se adapta mejor a su usuario. Tras reflexionar sobre las características que los llevaron a elegir una silla, los estudiantes dispondrán de un espacio para diseñar una silla aún más acorde con su usuario. Esta es una actividad creativa y los estudiantes pueden optar por dibujar su diseño.\n\n**Compartir:** Recorra el salón de clases para compartir algunos de los diseños de las sillas y pida a los estudiantes que definan qué es lo que hace que su diseño sea la mejor opción para el usuario."
         },
         "ac33d632-f30f-4def-b290-37aa318342ca": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** \n\n-   ¿Cuáles fueron 3 cosas que te diferenciaron a la elección de tu usuario?\n-   ¿Cuáles fueron 2 ocasiones que les resultó difícil empatizar con su usuario?\n-   ¿Cuál es 1 cosa que creen que le gustaría a su usuario de la silla que han diseñado?"
         },
         "5becca11-20b8-4141-9617-ef7c518a3d99": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** En las dos últimas lecciones, aprendimos que los productos están diseñados con un propósito y que los distintos diseños están dirigidos a distintas personas. Si cada persona tiene distintas necesidades e intereses, ¿A qué tipos de desafíos nos enfrentaríamos si diseñáramos un producto pensando en alguien más?"
         },
         "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "description": "**Análisis:** Pida a los estudiantes que trabajen individualmente, luego que compartan con un compañero de escritorio y luego con la clase en general.",
           "tips": [
-            null
+            "**Objetivo:** El propósito de esta actividad es realizar una breve introducción al tema de esta lección. Debe lograr que los estudiantes comprendan que diseñar para otras personas requiere anteponer las necesidades del usuario a las del diseñador, lo cual casi siempre es un desafío. Este análisis inicial dará pie a la presentación del video “Proceso de pensamiento de diseño”."
           ]
+        },
+        "d8cd0a38-ce50-4111-a340-284cadf1d176": {
+          "description": "Hay muchas razones por las cuales diseñar para otras personas puede ser un gran desafío, pero una de las más importantes es la dificultad que existe al considerar los deseos, gustos y problemas de otras personas. En palabras más simples, nuestro desafío es poner en práctica la empatía. Hoy haremos una breve actividad de diseño que nos ayudará a experimentar este proceso por nosotros mismos."
+        },
+        "abdaf61c-0cf9-48e6-86f3-b2883c09332d": {
+          "description": "**Pregunta del día: ¿Cómo podemos diseñar para otras personas y no solo para nosotros mismos?**"
         },
         "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "name": "Introducción al Pensamiento de Diseño",
+          "description": "**Video:** Junto con los estudiantes mire el video “Proceso de pensamiento de diseño”. Pause el video cuando finalice el paso 5 (minuto 3:10).",
           "tips": [
-            null
+            "**Pensamiento de diseño:** La actividad de hoy, al igual que las otras en esta unidad, está muy influenciada por el pensamiento de diseño. Esto quiere decir que la actividad es libre y tiene una atmósfera creativa que puede ser un poco difícil de imaginar si nunca ha participado de una actividad de este tipo. El material que aparece más abajo lo ayudará a visualizar cómo se verá el salón de clases durante esta actividad de pensamiento de diseño. \n\n-   [¿Qué es el pensamiento de diseño? Guía práctica para docentes](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n-   [Pensamiento de diseño: Lecciones para implementar en el salón de clases](https://www.edutopia.org/blog/design-thinking-betty-ray)\n-   [Pensamiento de diseño curso para el docente (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nAlgunos de estos recursos se centran en las clases de ciencias o en los prototipos en físico, lo que difiere de esta unidad que, en última instancia, se centra en la creación de aplicaciones. En cualquier caso, deberían ofrecer algo de claridad acerca del proceso completo de principio a fin, y cómo puede lucir y sonar su salón de clases durante estas actividades."
           ]
+        },
+        "44cf2df5-54a8-46bb-97d0-e2f2d1c56afe": {
+          "description": "**Mostrar:** Presente los pasos que componen el “Proceso de pensamiento de diseño”. Mientras explica este proceso, haga clic en la animación que aparece en la diapositiva, esto permitirá que los pasos de este proceso vayan desapareciendo y aparezca el proceso de resolución de problemas."
+        },
+        "51bb0221-f877-4a56-9ba5-6e88419d08b6": {
+          "description": "El proceso de pensamiento de diseño es muy similar a nuestro proceso de resolución de problemas, ya que ambos se enfocan en la empatía y se componen de los siguientes pasos: definir, preparar, intentar y reflexionar. En las próximas semanas, pondremos en práctica este proceso con el fin de diseñar productos y aplicaciones destinadas a las personas dentro de nuestra comunidad y el mundo. Hoy y la próxima clase, comenzaremos a practicar con una versión más abreviada del proceso. Propondremos distintos grupos de personas, cada uno con sus propias necesidades y luego, diseñaremos productos de ropa inteligente que cubran las necesidades de estas personas."
+        },
+        "1e779b96-330b-4c2d-8823-0a99e975a847": {
+          "name": "Introducción a la Actividad",
+          "description": "**Agrupar:** Los estudiantes deben trabajar en equipos de 3 a 5 integrantes."
         },
         "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "description": "**Distribuir:** Reparta la guía de actividades a cada integrante del grupo al igual que marcadores, notas adhesivas y cartulinas.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**\n\n**Opción en línea:** Los estudiantes pueden completar la guía de actividades en línea. Para el diseño de la silla, los estudiantes pueden dibujar su diseño en línea o presentar una versión en papel de su diseño por separado.\n\n**Opción de bitácora:** Esta actividad puede completarse en la bitácora. Los estudiantes pueden utilizar una versión digital de la guía de actividades como ayuda y copiando los títulos e instrucciones en sus bitácoras."
           ]
         },
+        "d87d2b1b-c32f-4e92-94b2-5dd42d5f3da0": {
+          "description": "#### Diseño Centrado en el Usuario"
+        },
         "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "description": "**Reseña:** En conjunto con la clase lean con atención la sección “Reseña” para asegurarse de que los grupos entiendan cuál es el objetivo de la actividad.",
           "tips": [
-            null
+            "**¿Por qué se escogió la ropa inteligente?:** Se escogió este tipo de producto porque existe una amplia variedad de aplicaciones que permiten combinar tecnologías de la computación con diseño de ropa y, por lo tanto, beneficia a distintos tipos de usuarios. Otra ventaja es que el campo aún no está bien definido, por lo que proporciona más libertad de acción a los estudiantes al momento de desarrollar ideas sobre cómo resolver los problemas de la gente dejando de lado las soluciones ya existentes. "
           ]
         },
         "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
           "name": "Definir",
+          "description": "**Proponer grupos de usuarios:** Pida a los estudiantes que en la guía de actividades hagan una lista con todos los posibles usuarios que puedan haber de ropa inteligente. El video daba un ejemplo de un grupo de personas de la tercera edad, pero los estudiantes pueden proponer otro tipo de usuarios. Dé a los estudiantes un par de minutos para pensar de manera individual. Cuando se termine este tiempo, solicite a cada estudiante que en una nota adhesiva escriba al menos 2 ó 3 grupos de usuarios posibles.",
           "tips": [
-            null
+            "**Proponer grupos de usuarios:** En esta actividad de propuestas intente mostrar este proceso en detalle. Aconseje a sus estudiantes a tomar en cuenta los distintos aspectos que identifican a los usuarios, por ejemplo, edad, ocupación o situación económica. La identificación de los usuarios debe ser amplia, en una o dos palabras que identifiquen a grandes grupos de personas en la población. Estos son algunos ejemplos: jóvenes adultos, militares, médicos, dueños de mascotas, habitantes de una granja, etc. \n\nInste a que los estudiantes se inspiren en personas que conocen, ya que esto ayuda a generalizar a un determinado tipo de usuario. Haga hincapié en que en esta actividad no hay respuestas incorrectas, además los estudiantes podrán luego elegir cuáles son las opciones más adecuadas. "
           ]
         },
         "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "description": "**Clasificar usuarios:** Pida a los estudiantes que en su cartulina peguen las notas adhesivas de sus usuarios según las categorías, por ejemplo, por edad u ocupación. Si algún usuario no pertenece a una categoría, no hay problema.",
           "tips": [
-            null
+            "**Clasificar usuarios:** El objetivo más importante es que los estudiantes noten los patrones o similitudes entre los grupos que cada uno propuso de manera individual. Las categorías se pueden seguir generalizando los grupos de usuarios, por ejemplo, se puede agrupar en una misma categoría las notas adhesivas que tienen como usuario a policías, bomberos y paramédicos porque todos son los primeros en responder ante alguna eventualidad.\n\nCuando creen categorías, recalque nuevamente que no hay categorías incorrectas y que lo más importante es definir el problema que intentarán resolver. Este proceso es útil para fijar la atención en un problema específico."
           ]
+        },
+        "398782e5-226b-4a53-8a89-2325552fa7dc": {
+          "description": "**Seleccionar un usuario específico:** Pida a los grupos que elijan una de las categorías de usuarios que crearon. Intente que las categorías que queden sean variadas, si no es posible, no hay problema.\n\n**Proponer y clasificar necesidades:** Los estudiantes repetirán el proceso, creando una lista con posibles preocupaciones, intereses y necesidades de los usuarios que escogieron anteriormente. Pídales que anoten sus ideas en la guía de actividades y que luego escriban dos o tres ideas en las notas adhesivas que pegarán en la cartulina. Motive a los estudiantes a identificar bien cuáles serían las necesidades de los usuarios."
         },
         "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "description": "**Recorrer el salón de clases:** Los estudiantes volverán a escribir en notas adhesivas cada una de las necesidades, intereses y preocupaciones de los usuarios seleccionados, y luego las agruparán. Los estudiantes pueden usar los marcadores y cartulinas que ya les entregó para llevar a cabo esta actividad.",
           "tips": [
-            null
+            "Mientras recorre el salón de clases, revise si los estudiantes están agrupando las ideas en categorías significativas. Las categorías deben abarcar varias ideas, pero no tantas para que cada grupo tenga más de dos o tres categorías."
           ]
+        },
+        "43cd587e-fe86-499c-ad1f-9ee8665da856": {
+          "description": "**Seleccionar un usuario específico:** Pida a los grupos que seleccionen una necesidad específica de los usuarios para trabajar en ella. Tienen que decidir por una necesidad que se podría suplir usando ropa inteligente. Es posible que en algunos casos tengan que usar su creatividad para encontrar estas necesidades.\n\n**Compartir:** Llegado este momento, cada grupo ya debería haber decidido cuál será su grupo de usuarios y cuáles serán sus necesidades o intereses. Pida a cada grupo que comparta el grupo de usuarios y las necesidades escogidas con el resto de la clase."
         },
         "8e25228f-7396-4a9d-9dab-ff41c9ceeb53": {
-          "name": "Preparar"
+          "name": "Preparar",
+          "description": "**Buscar soluciones:** Pida a los estudiantes que piensen en maneras en que la ropa inteligente podría ayudar a suplir la necesidad que escogieron. Pida a los estudiantes que vayan a la segunda página de la guía de actividades."
         },
         "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "description": "**Analizar los pros y contras:** Una vez que los estudiantes hayan ideado soluciones de manera individual, pídales que las compartan con su grupo de trabajo para comentar las ventajas y desventajas de cada una de las propuestas. Anime a los estudiantes a aprovechar este análisis para encontrar mejores soluciones tomando en cuenta las ideas de cada uno.",
           "tips": [
-            null
+            "**Analizar los pros y contras:** En esta actividad los estudiantes hablan desde la perspectiva de sus usuarios e imaginan los posibles beneficios o daños que podrían causar las soluciones a las que llegaron. En esta parte, los estudiantes no clasificarán las ideas como “buenas” o “malas”, sino que analizarán si la solución es factible o no y si satisface las necesidades e intereses del usuario. Algunas frases que sirven para realizar esta actividad son: “Sí y…” cuando respaldan una ventaja o “No, pero…” cuando se refieran a las desventajas."
           ]
+        },
+        "d3efa834-c54a-4cc1-ac97-95ef774a3089": {
+          "description": "**Seleccionar una solución específica:** En esta parte, indique a los estudiantes que se decidan por una solución específica. Esta solución puede ser una combinación de todas las ideas comentadas en grupo o una nueva solución que surgió durante el análisis. Esta decisión será la base para la actividad que viene después: la creación del producto."
+        },
+        "d791987f-64f5-4b3b-b15e-888be2ac882e": {
+          "description": "En la actividad de hoy, completamos los pasos de “Definir y Preparar” del proceso de diseño, es decir, seleccionamos los usuarios e identificamos sus necesidades. Ahora estamos preparados para plantear una solución que incluya la ropa inteligente. En la próxima actividad, completaremos los pasos de “Probar y Reflexionar”, en la que diseñaremos nuestra propia ropa inteligente y compartiremos nuestras ideas con el resto del salón."
+        },
+        "c89c9fd3-9638-4b06-9b4a-03ae2ffe446a": {
+          "description": "**Recoja:** Guarde las guías de actividades de cada estudiante o pida a sus estudiantes que se las lleven y la traigan de vuelta para la actividad de la próxima lección."
         },
         "32060f67-52fc-496b-9178-29bbcd0a854e": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** En la actividad de hoy tuvimos que trabajar y compartir ideas con nuestros grupos. ¿Hubo alguna idea que se le haya ocurrido a algún compañero y que ustedes no hayan considerado? ¿De qué forma, afecta en las decisiones que tomaron?"
         },
         "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "description": "**Análisis:** Permita que los estudiantes trabajen individualmente, luego que compartan con un compañero de escritorio y luego con la clase en general.",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes deben reflexionar acerca de cómo el trabajo en grupo y escuchar otras ideas contribuye a mejorarlas y al diseño del producto que comenzarán en la próxima lección. Será importante recalcar la importancia del trabajo en equipo y la valoración de las ideas de los demás a lo largo de la unidad, ya que los estudiantes trabajarán juntos para desarrollar aplicaciones para otros."
           ]
+        },
+        "0aafe4f1-ca8b-4dbc-bf46-97a5a91574ae": {
+          "description": "**Distribuir:** Entregue nuevamente las guías de actividades de la clase anterior o pida a los estudiantes que la saquen a medida que ingresan al salón de clases. Si un estudiante estuvo ausente, pídale que se una a un grupo existente y que utilice el mismo usuario, las mismas necesidades y soluciones que ese grupo."
         },
         "77645736-2519-4d27-b58f-460674b37ac3": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Revisen su guía de actividades y elaboren una lista que contenga la siguiente información:\n\n-   El usuario para el que están diseñando\n-   Su necesidad o interés en particular\n-   La solución elegida para su necesidad\n\nLuego, escriban una idea para un tipo específico de ropa inteligente que podrían diseñar en base a su solución."
         },
         "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "description": "**Análisis:** Dé un minuto a los estudiantes para que recuerden el trabajo que hicieron en la lección anterior. Una vez que hayan escrito en la bitácora, pídales que se turnen para compartir esta información con los mismos grupos de ayer.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este análisis es repasar que los estudiantes puedan repasar el trabajo que realizaron la clase anterior. Tendrán la oportunidad de compartir las distintas ideas de productos antes de tomar una decisión grupal, en la primera parte de la actividad."
           ]
+        },
+        "233d29c4-7eb9-4004-a440-8b397262d9d8": {
+          "description": "Existen muchos usuarios y necesidades distintas para los que estamos diseñando. Hoy completaremos las etapas de “Probar” y “Reflexionar” de esta actividad. Sus grupos tendrán la oportunidad de diseñar ropa inteligente para su usuario y compartir sus ideas con la clase."
+        },
+        "2ab94314-31c6-4d42-9fb3-e4c4d1885c00": {
+          "description": "**Pregunta del día: ¿Cómo podemos diseñar un producto que satisfaga las necesidades de un usuario?**"
         },
         "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
           "tips": [
-            null
+            "**Investigar sobre ropa inteligente:** En caso de que los estudiantes no estén familiarizados con el tema, incentívelos a utilizar Internet para investigar sobre cómo funciona la ropa inteligente o cómo se ha utilizado para resolver problemas. Deben evitar encontrar ropa inteligente existente que satisfaga las necesidades de sus usuarios, pero pueden investigar el uso de este tipo de ropa si no están familiarizados con ella."
           ]
         },
+        "e47eea09-c3ea-4ba3-8b4d-6976340b86ef": {
+          "description": "**Distribuir:** Reparta la guía de actividades del diseño centrado en el usuario (Probar y Reflexionar) y, de ser posible, entregue cartulinas a cada grupo .\n\n#### Diseño Centrado en el Usuario (Probar y Reflexionar)"
+        },
         "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
-          "name": "Intentar"
+          "name": "Intentar",
+          "description": "**Reseña:** Lea la reseña junto con la clase para asegurarse de que los estudiantes entiendan la actividad. Aproveche el juego de roles de este proyecto y anime a los estudiantes a imaginar que tienen todos los recursos que necesitan para completar esta tarea.\n\n**Asignando roles:** Pida a los estudiantes que se asignen roles, como un secretario, un dibujante, un cronometrador y un expositor. Asegúrese de que los estudiantes tengan claros sus roles y asignaciones durante esta tarea.\n\n**Haz esto:** Los estudiantes deben trabajar juntos para diseñar ropa inteligente que satisfaga las necesidades de sus usuarios. Pueden utilizar su análisis durante la actividad inicial como una guía para este proceso. También deberán crear un bosquejo de cómo podría ser el diseño, con flechas y etiquetas que ayuden a comunicar cómo funciona el producto. El dibujante podrá diseñar su producto en la guía de actividades o en la cartulina que se le entregó. Puede ver un modelo de lo que los estudiantes pueden llegar a crear en el documento de ejemplo incluido en esta lección. Dé un límite de tiempo a los estudiantes y asegúrese de que el cronometrador de cada grupo esté consciente de él.\n\n**Recorrer el salón de clases:** Supervise a los estudiantes mientras trabajan en la etapa de “Probar” y asegúrese de que se basen en el usuario para tomar decisiones correspondientes al producto. Si es necesario, recuerde a los estudiantes que deben \"meterse en la mente\" de su usuario, de forma similar a la lección “Entender al usuario”."
+        },
+        "22e5e073-764b-4970-a333-f3aa33d901ed": {
+          "description": "Vi algunos productos muy creativos, así que me gustaría que compartan sus ideas con los demás. Este es el último paso del proceso de diseño: compartir las ideas, recibir retroalimentación y reflexionar sobre los próximos pasos."
         },
         "b640029f-89eb-45d2-a087-e6d57d703c12": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "**Haz esto:** Pida a los estudiantes que respondan las preguntas de la segunda página de la guía de actividades y que se preparen para compartir los resultados con sus compañeros.\n\n**Recorrer el salón de clases:** Compruebe que los estudiantes resuman sus ideas en esta guía de reflexión. Mientras responden a estas preguntas, los estudiantes pueden hacer cambios de última hora en su producto.\n\n**Compartir:** Pida a los grupos que se turnen para compartir los productos que han diseñado. Los estudiantes deberán presentar el usuario al que van dirigidos y sus necesidades. También deberán exponer cómo el producto responde a esas necesidades. Cuando terminen, invite a los demás grupos a dar su opinión en forma de \"me gusta…\" y \"desearía que…\"."
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
           "name": "Escribir en la bitácora",
+          "description": "**Decir:** ¿Cuál ha sido el reto de diseñar un producto para alguien que no sea ustedes? ¿Qué actividad de hoy o de la clase anterior hizo más fácil este ejercicio?",
           "tips": [
-            null
+            "**Objetivo:** Las respuestas variarán, especialmente si los estudiantes todavía están aprendiendo a ponerse en el lugar del otro. Motívelos para que vean cómo el intercambio de ideas y la colaboración con sus compañeros puede ser útil para crear y pensar fuera de sus propias experiencias."
           ]
         },
         "9cdb66ed-0a11-469c-86c7-516372ae3eca": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** ¿Qué es una aplicación? ¿Qué aplicaciones usan ustedes o sus conocidos?"
         },
         "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
+          "description": "**Análisis:** Pida a los estudiantes que anoten sus respuestas en la bitácora y luego las compartan con el resto del salón. Vaya escribiendo las respuestas en el pizarrón Una vez que todos hayan dicho sus respuestas, escriba la siguiente propuesta de definición para el término aplicación: “un tipo de software diseñado con un propósito”.",
           "tips": [
-            null
+            "**Objetivo:** El propósito de este análisis es definir el término aplicación. Las definiciones que ofrezcan los estudiantes deben estar relacionadas con la definición propuesta en esta lección. Las aplicaciones nos proveen servicios, organizan o entregan información, también, pueden ser videojuegos o alguna clase de entretención. La finalidad de este análisis es concluir que una aplicación es un tipo de software diseñado con un propósito."
           ]
+        },
+        "9af85d3c-6e77-492b-b1e0-9d63f16ca9b4": {
+          "description": "**Vocabulario:**\n\n-   **Aplicación:** Una pieza de software diseñada con un propósito"
+        },
+        "8ea6f5e9-ca3e-43f6-a035-501b5d476d7f": {
+          "description": "Cuando piensan en una aplicación, probablemente solo imaginan el producto final. En la última lección tuvieron la oportunidad de conocer los primeros pasos de desarrollo de productos al idear y proponer potenciales usuarios y necesidades. En las próximas lecciones, sabremos cómo aplicar el mismo proceso de diseño en el desarrollo de una aplicación dirigida a un usuario específico en función de sus necesidades e intereses."
+        },
+        "b9b435a8-7790-4386-b2a9-f6f76af1f9a1": {
+          "description": "**Pregunta del día:** ¿Cómo podemos asegurar que una aplicación satisface las necesidades de un usuario?"
         },
         "aa617b29-6e2d-44e6-972d-45bb987419e8": {
-          "name": "Prototipos en papel"
+          "name": "Prototipos en papel",
+          "description": "**Agrupar:** Pida a sus estudiantes que trabajen en pareja."
         },
         "889b61a1-6e88-49a4-9250-5e48853f289c": {
+          "description": "**Distribuir:** Entregue una copia de la guía “Pantalla de interfaz de usuario” a cada pareja Si aún no ha recortado las imágenes de la guía, dé tiempo a los estudiantes para que lo hagan ellos mismos.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**\n\nLos materiales que no usen los estudiantes se pueden reutilizar. De hecho, en la próxima actividad de la lección también los podrá volver a usar."
           ]
+        },
+        "3063baca-d796-4feb-8030-600b71988449": {
+          "description": "**Muestre** las siguientes definiciones durante la clase \n\n-   **Prototipo** - Un primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final.\n-   **Interfaz de usuario** - Los elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
+        },
+        "722cc5f3-47e1-412e-85d4-13a3771d464f": {
+          "description": "Los recortes de pantallas que les acabo de entregar se les denomina prototipo de papel. Un prototipo es el primer modelo de un producto, el cual nos permite probar suposiciones antes de desarrollar la versión final. Tener un prototipo es uno de los primeros pasos para diseñar una aplicación, ya que ayuda al desarrollador a probar sus ideas antes de invertir mucho tiempo en programar. \n\nEl prototipo de papel es una manera fácil y rápida de presentar la interfaz de usuario a posibles consumidores. A los elementos visuales de un programa se les conoce como interfaz de usuario y con esta el usuario puede controlar e interactuar con la aplicación. En español, para referirnos a la interfaz de usuario se usa comúnmente la abreviación en inglés UI."
+        },
+        "d989fccc-126d-4cd9-afb5-fbf5171d4a52": {
+          "description": "**Decir:** De acuerdo únicamente con las pantallas de interfaces del prototipo, ¿A qué usuario estaría dirigida esta aplicación? ¿Cuál crees que es el propósito de esta aplicación?"
         },
         "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
+          "description": "**Análisis:** Los estudiantes deben trabajar con sus compañeros y luego compartir las ideas con el resto de la clase.",
           "tips": [
-            null
+            "**Objetivo:** Anime a los estudiantes tanto a identificar elementos específicos del prototipo que sirvan para respaldar sus ideas como a tomar en cuenta las necesidades del usuario que este prototipo tendría como propósito satisfacer."
           ]
+        },
+        "042642d9-c1f5-48b6-9382-8a10dbc2eccd": {
+          "description": "En la actividad de hoy, usaremos el prototipo de papel para probar la aplicación. Realizaremos un juego de roles, un estudiante tomará el papel de usuario que intenta usar el prototipo de papel; Otro estudiante será la computadora y se encargará de cambiar las pantallas y reaccionar a los comandos del usuario. Nuestro objetivo será recibir retroalimentación para poder mejorar y dar recomendaciones respecto a nuestra aplicación."
+        },
+        "f6ae2b78-f4b1-4f5b-87b5-3bbb4b9f2f41": {
+          "description": "**Juego de roles:** Asigne un rol que desempeñar a cada pareja de estudiantes, el de _Computadora_ y _Usuario_. Luego, pídales que se sienten uno al frente del otro."
         },
         "b7a9b018-0728-4b91-935e-b3ec7c723623": {
+          "description": "**Distribuir:** Dé a las _Computadoras_ una copia de la Guía de actividades Experiencia de Usuario (computadora) y a los _Usuarios_ una copia de la Guía de actividades Experiencia de usuario (usuario). La guía de actividades solo puede ser vista por la computadora, no por el usuario.",
           "tips": [
-            null
+            "**Reducir el material impreso**\n\n**Guía para la computadora** La guía entregada al rol de la computadora es solo una referencia, Los estudiantes pueden ver las versiones digitales durante esta actividad. Si decide imprimir la guía, estas pueden ser reutilizadas, pero debe comentar a los estudiantes que no deben escribir en ellas.\n\n**Guía de actividades para el usuario:** La guía del usuario se puede completar en línea o en la bitácora. Los estudiantes pueden utilizar una versión digital de la guía de actividades como ayuda y copiar los gráficos y las preguntas en sus bitácoras."
           ]
         },
+        "6cca8c81-d83c-4316-b8b4-5b2e48069e1c": {
+          "description": "#### Prueba con Usuarios\n\n**Mostrar**: Lea el primer párrafo de “Casos de prueba” a los estudiantes Luego, recalque que los usuarios tienen una lista de tareas que completar y una de ellas es dar su opinión acerca de cómo mejorar la experiencia del usuario. Ya que algunas de estas tareas son imposibles de completar, tenemos la oportunidad de recomendar cómo mejorar la aplicación y terminar la tarea.\n\n**Modelo:** En esta actividad, los estudiantes probarán en pareja el prototipo de papel. Cada uno cumple un rol, el de _computadora_ y _usuario_. Antes de comenzar con la actividad, se debe modelar el proceso básico y, luego, dejar que los estudiantes trabajen solos. El proceso es el siguiente:\n\n1.  El rol de la _computadora_ le muestra al usuario la pantalla de inicio titulada \"Txt Ur Grndkds”.\n2.  El _usuario_ selecciona una tarea que aparezca en la tabla de la guía.\n3.  El _usuario_ intenta completar una de las tareas al “hacer clic” en la pantalla del prototipo de papel que le muestra la computadora.\n4.  Cada vez que el _usuario_ hace clic en la pantalla, la _computadora_ consulta el diagrama de navegación que aparece en su guía.\n    -   Si el diagrama de navegación muestra una línea conectada a uno de los elementos clicados, encuentre la otra imagen de pantalla unida a la anterior y colóquela en frente del usuario.\n    -   Si el diagrama de navegación no muestra ninguna línea conectada a un elemento clicado, no haga nada.\n5.  Cuando el _usuario_ completa la tarea (o cree que es imposible llevarla a cabo en este prototipo), deberá completar las columnas “Probé esto” y “Mi reacción” y la computadora volverá a la página de inicio de la aplicación.\n\n**Recorrer el salón de clases**: Supervise a los estudiantes mientras completan la actividad. Asegúrese de que los estudiantes que tienen el rol de computadora sigan las flechas de navegación para desplazarse por las imágenes de la pantalla y de que los usuarios completen la lista de tareas que aparece en la tabla. A mitad de la actividad, pida a las parejas que intercambien roles."
+        },
+        "9ed017b1-a7ee-4c38-87f0-8dea971bd9e6": {
+          "name": "Reporte",
+          "description": "**Decir:** Cuando estaban en el rol de usuario, ¿Con qué problemas se encontraron cuando al utilizar la aplicación? ¿Cuáles serían los cambios que le harían al prototipo según su experiencia como usuarios?"
+        },
         "45553c85-cb2b-4763-8875-484919a56ced": {
+          "description": "**Análisis:** Los estudiantes deben comentar sus respuestas con su pareja y luego compartirlas con el resto del salón. Anote en el pizarrón una lista con las posibles mejoras.",
           "tips": [
-            null
+            "Los estudiantes deben relacionar las experiencias específicas de usuario con los problemas que tiene la aplicación y pensar en cómo podrían resolverlos. Si es necesario pida a los estudiantes que piensen en los problemas específicos de diseño que aparecieron cuando probaron la aplicación."
           ]
+        },
+        "a0281e07-488a-4ed3-a0f4-fa5454f6a71a": {
+          "description": "Crear y probar un prototipo es una parte fundamental del proceso de diseño. Por ejemplo, pensemos en todas las sugerencias que recibimos y los cambios que debemos hacer. Cuando empecemos a diseñar nuestra aplicación, uno de los primeros pasos será crear un prototipo de papel con el que podamos probar y recibir opiniones antes de asegurarnos de que estamos satisfaciendo las necesidades del usuario."
         },
         "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
           "name": "Escribir en la bitácora",
+          "description": "**Decir:** Al comienzo de esta lección intentamos saber cuáles serían las necesidades que abordaría este prototipo. Ahora que ya experimentamos con la aplicación respondan las siguientes preguntas:",
           "tips": [
-            null
+            "Los estudiantes deben sintetizar lo analizado anteriormente en puntos claves y procesables para una revisión del diseño. Estos deben estar claramente relacionados con el análisis anterior, por esta razón, compruebe que los estudiantes estén relacionando entre sí las necesidades del usuario, la experiencia del usuario adquirida en la prueba y las características específicas de la aplicación."
           ]
+        },
+        "9d9b2509-c188-4bcc-a50e-2a9bc92ec04c": {
+          "description": "-   ¿Cuál es la necesidad del usuario que mejor satisface esta aplicación?\n-   ¿Cuál necesidad del usuario debería abordar de mejor manera esta aplicación?\n-   ¿Cuál necesidad, que no es abordada por la aplicación, se podría añadir para mejorar la aplicación?\n\n**Compartir:** Si aún sobra tiempo, haga que los estudiantes compartan sus respuestas y escríbalas en el pizarrón o en alguna cartulina para que en la próxima clase pueden tenerlas como base."
         },
         "d4051ea3-89a9-4721-812c-0eaff899cb06": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Pensemos en un software, como una aplicación, que sea difícil de usar. Tal vez no encontraron lo que necesitaban, estaba mal organizado o simplemente era difícil de usar. ¿Qué es lo que no les gustó de la aplicación en específico? ¿Cómo se podría mejorar?"
         },
         "c5dbb48d-d120-4560-b671-bd507f1685b0": {
+          "description": "**Análisis:** Los estudiantes deberán escribir sus ideas en silencio. Luego, inicie un debate en clase sobre los tipos de problemas que los estudiantes han tenido con las aplicaciones en el pasado. Dirija la conversación hacia lo que falla en la interfaz de usuario o en la experiencia de usuario de la aplicación y pregunte cómo se podrían mejorar esos aspectos.",
           "tips": [
-            null
+            "**Objetivo:** Explorar cómo muchos de los problemas que tenemos al utilizar una aplicación pueden resolverse con cambios en la interfaz de usuario. Se trata de un intercambio de ideas y una forma de que los estudiantes establezcan conexiones personales entre las aplicaciones que utilizan a diario y la actividad que realizaremos en clase para ayudar a mejorar el diseño y la interfaz de usuario de una aplicación."
           ]
+        },
+        "7bbeb2e8-9312-4daa-b5c4-6b6d6bb1a491": {
+          "description": "Escuché varios buenos ejemplos de cómo se pueden mejorar las aplicaciones para que sean más accesibles y satisfagan nuestras necesidades. Este tipo de retroalimentación resultaría muy valiosa para que los desarrolladores de estas aplicaciones pudieran mejorarlas. En la actividad de hoy, vamos a revisar algunos comentarios de la aplicación que exploramos en la clase anterior y veremos cómo podemos mejorar la interfaz de usuario basándonos en estos."
+        },
+        "590542a6-7c3e-4ab3-9038-079cf2171680": {
+          "description": "**Pregunta del día:** ¿Cómo podemos utilizar los comentarios de la retroalimentación para mejorar una aplicación?"
+        },
+        "bb7169a3-70a1-4264-9141-1abadc51c844": {
+          "name": "Retroalimentación del Prototipo",
+          "description": "**Grupo:** Forme grupos de 2 ó 3 estudiantes"
         },
         "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
+          "description": "**Distribuir:** Entregue a cada pareja o grupo una copia de los trozos de papel de “Retroalimentación del prototipo”. Si es posible, recorte el material con anticipación; de lo contrario, dé a los estudiantes tiempo para que lo recorten en clase. También debe distribuir copias del material “Pantalla de interfaz usuario” o mostrarlas en la pantalla.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**\n\nEl material de “Retroalimentación del prototipo” y “Pantalla de interfaz de usuario” se puede reutilizar, siempre que los estudiantes no escriban en él. El material de “Pantalla de interfaz de usuario” debería estar impreso desde la lección anterior.\n\nEsta guía de actividades se puede completar en línea o como una actividad en la bitácora. Los estudiantes que completen la actividad en línea pueden optar por utilizar una herramienta de dibujo para bosquejar la interfaz de usuario ya mejorada o presentar el bosquejo por separado en papel."
           ]
+        },
+        "25e2bf05-fed1-4d00-a2c9-b63c80d2b656": {
+          "description": "**Haz esto:** Los estudiantes deben trabajar en grupos para juntar en montones los trozos de papel, de manera que cada montón conforme una categoría de comentarios. Las categorías deben corresponder a necesidades o problemas similares a los que se refiere la retroalimentación. Por ejemplo, varios comentarios pueden referirse al hecho de que el tipo de letra es demasiado pequeño para leerlo. A medida que clasifiquen los comentarios, también deberían discutir en qué categorías les gustaría centrarse y por qué.\n\n**Recorrer el salón de clases:** Supervise el progreso de los estudiantes. Deberá pedir a los grupos que expliquen cómo están formando sus categorías. No existe una clasificación correcta o incorrecta de los comentarios, sin embargo, los estudiantes deberían estar preparados para justificar sus categorías. Pídales que expliquen qué categorías han elegido como las más importantes para abordar y porqué.\n\n**Compartir:** Una vez que todos los grupos hayan clasificado sus comentarios, pídales algunas sugerencias sobre los tipos de categorías que han creado."
+        },
+        "10d99ae6-1017-4eee-bd4b-f29db65a8188": {
+          "name": "Responder a los Comentarios",
+          "description": "**Distribuir:** Entregue una copia de la guía de actividades “Mejorar una pantalla” a cada grupo. Los grupos, necesitarán sólo una copia para compartir entre sus integrantes.\n\n#### Mejorar una Pantalla"
+        },
+        "c4c179f9-0c8f-4b1e-9968-951378f3fa2d": {
+          "description": "#### Posibles Mejoras"
         },
         "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
+          "description": "**Haz esto:** En grupo, los estudiantes tomarán los comentarios que categorizaron y propondrán posibles mejoras para la aplicación. Cada propuesta de mejora debe estar claramente relacionada con una de las categorías de retroalimentación creadas en la última actividad.",
           "tips": [
-            null
+            "**Elegir mejoras:** Es posible que los estudiantes necesiten ayuda para idear buenas mejoras para sus aplicaciones. Por ejemplo, si varios usuarios se quejan de que el texto es pequeño, podrían intentar aumentar el tamaño de la fuente en la pantalla que están mejorando. También pueden optar por añadir un ajuste de \"tamaño de texto\" en su página de \"Configuración\". Siempre hay algo que se puede mejorar. En esta lección es más importante que el cambio responda de forma razonable a la necesidad que eligieron. Habrá más oportunidades para investigar lo que es realista cambiar en la interfaz de usuario de una aplicación más adelante en la unidad. "
           ]
         },
+        "47850443-e8d5-4a7f-940f-7ef92470e1c5": {
+          "description": "**Recorrer el salón de clases:** Supervise a los estudiantes mientras trabajan en sus grupos. Asegúrese de que las opiniones de todos los integrantes de los grupos se tomen en cuenta y aclare cualquier duda que surja.\n\n#### Rediseño de las Pantallas\n\n**Haz esto:** Cada estudiante dibujará una versión mejorada de una de las pantallas en la aplicación prototipo de papel. La guía de actividades contiene una hoja para cada pantalla de la aplicación para que el grupo se reparta. De ser posible, imprima la guía de actividades por un solo lado para que sea más fácil para los estudiantes dividir las pantallas.\n\n**Compartir:** Pida a un estudiante de cada grupo que presente brevemente la pantalla que ha actualizado. Pídales que describan de forma específica lo siguiente:\n\n-   La categoría de las necesidades que eligieron para abordar.\n-   Las diferentes soluciones que consideraron para satisfacer esas necesidades.\n-   Los cambios en la interfaz de usuario que diseñaron para satisfacer esas necesidades."
+        },
         "6c56c6d8-505f-450b-af78-6589752885e9": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Muestre el proceso de resolución de problemas. ¿Dónde creen que encaja la retroalimentación de los usuarios en este proceso? ¿Cuál creen que es el siguiente paso después de recolectar las opiniones de los usuarios?"
         },
         "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
+          "description": "**Análisis:** Pida a los estudiantes que escriban las respuestas en su bitácora y que luego las comenten con sus compañeros. De ser posible, organice un debate con toda la clase en el que se relacionan los comentarios de los usuarios con el proceso de resolución de problemas.",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes deberán esforzarse por situar los comentarios de los usuarios en las etapas “Reflexionar” o “Probar” del proceso de resolución de problemas. Intente guiar la conversación hacia lo que podrían ser los siguientes pasos, enfatizando que el diagrama tiene flechas que van en ambas direcciones. Es importante ser flexible a la hora de desarrollar una aplicación para satisfacer las necesidades del usuario.\n\nPor ejemplo, si los comentarios de retroalimentación del usuario se encuentran en la etapa de “Reflexionar”, entonces los estudiantes pueden retroceder a la etapa de “Probar” para hacer cambios rápidos e intentar de nuevo, o bien, la retroalimentación puede hacer que avancen a la etapa de “Definir”, donde descubrieron una necesidad completamente nueva del usuario que han decidido abordar."
           ]
         },
         "6c9f71c2-38be-428f-88e2-c7b16c1f4b47": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** ¿Cuáles crees que deberían ser los primeros pasos que hay que seguir cuando diseñan una aplicación dirigida a usuarios específicos, especialmente si quieren asegurarse de que de verdad la usarán?"
         },
         "3fef28ad-87b4-4154-b80f-12b358f2e031": {
+          "description": "**Análisis:** Pida a los estudiantes que escriban sus ideas en la bitácora para luego comentarlas con su compañero de escritorio. Luego, invítelos a compartir sus ideas con el resto de la clase.",
           "tips": [
-            null
+            "**Objetivo:** En esta actividad hay muchas respuestas posibles, pero es importante que dirija la conversación al tema central: la entrevista al usuario. Si queremos diseñar una aplicación dirigida a un grupo en específico, necesitamos conversar con ellos y asegurarse de que comprendemos sus necesidades e intereses al diseñar una aplicación. Si los estudiantes no llegaron a esta idea explícitamente, no hay problema. Aun así, debería mencionarlo durante los comentarios que introducen a la próxima actividad."
           ]
+        },
+        "050c2db7-ce44-4acb-9d8a-79f5e5193dbc": {
+          "description": "La entrevista al usuario es un paso importante en el proceso de diseño, ya que a través de ella podemos identificar las necesidades e intereses de los usuarios que en el futuro ocuparán nuestra aplicación. En la actividad de hoy, leerán varias de estas entrevistas y tendrán que escoger a un solo usuario. Deben pensar bien a quién elegir, ya que pasaremos los próximos días desarrollando un prototipo de papel de una aplicación que tiene como finalidad satisfacer las necesidades de este usuario."
+        },
+        "dfd2f487-13e7-429a-8291-c57da6fc2a31": {
+          "description": "**Pregunta del día:** ¿De qué forma entrevistar a los usuarios nos ayuda a crear aplicaciones para satisfacer sus necesidades?"
+        },
+        "66f4c842-8e0c-4ad8-88f3-5890841efc3d": {
+          "name": "Escuchar a los Usuarios",
+          "description": "**Agrupar:** Forme grupos de 3 a 4 estudiantes."
         },
         "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
+          "description": "**Distribuir:** Distribuya una copia de la **Guía de Actividades Entrevista al Usuario** a cada estudiante. Dé una copia del recurso **Ejemplo de Entrevistas al Usuario**, que contiene cuatro entrevistas a cada grupo.",
           "tips": [
-            null
+            "**Reducir el Material Impreso**: Esta actividad se puede llevar a cabo en línea o en la bitácora.\n\n**Entrevistas a la Comunidad:** En lugar de usar los ejemplos de entrevistas, recomendamos recolectar entrevistas reales de usuarios que formen parte de la comunidad de los estudiantes. Puede entrevistar a personas de la escuela, de almacenes, apoderados o familiares de los estudiantes y pedirles que respondan preguntas similares. Como resultado de esto, los estudiantes podrán crear el prototipo de la aplicación que supla las necesidades de personas reales y que impacten directamente en la comunidad."
           ]
+        },
+        "9653faa3-65b9-4ad4-850c-3d7902c334b2": {
+          "description": "#### Entrevista al Usuario"
+        },
+        "cfca8397-bf47-4775-a4a8-947fc8be08e8": {
+          "description": "**Haz esto:** Pida a los estudiantes que lean las entrevistas al usuario en grupo. Individualmente, deben seleccionar a un usuario al que les gustaría dirigir su aplicación. No es un problema que los estudiantes elijan el mismo usuario ni tampoco que escojan uno distinto. Una vez seleccionado el usuario, los estudiantes deben completar la guía de actividades “Entrevista al usuario” y anotar e identificar tanto las necesidades e intereses como los obstáculos y oportunidades."
         },
         "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
+          "description": "**Recorrer el salón de clases:** Supervise a los grupos mientras completan esta actividad. No debería haber ruido en el salón dado que los estudiantes están leyendo las entrevistas al usuario. Una vez finalizada la lectura y actividad, pida a los estudiantes que comenten sus elecciones con su grupo y piensen en conjunto, sin importar que sus elecciones no sean las mismas. Durante la actividad de lluvia de ideas, pida a los grupos que consideren a cada integrante como un “facilitador de ideas” con el que podrán contar.",
           "tips": [
-            null
+            "**Necesidades e intereses:** El diseño de los ejemplos de entrevistas tiene como propósito que los estudiantes observen las diferentes facetas de cada usuario y cómo estos pueden expresar de manera explícita o no sus necesidades e intereses. Cuando esto último sucede, los estudiantes pueden leer entre líneas y obtener más información del usuario al relacionar lo que no dicen con la edad o el lugar de dónde vienen. Si estas entrevistas se hicieran para un proyecto real, los estudiantes podrían querer seguir entrevistando al usuario para estudiarlo mejor.\n\n**Obstáculos y oportunidades:** En esta sección se pide a los estudiantes que especulen más acerca de los obstáculos que encontrarían al querer satisfacer las necesidades de su usuario y de las oportunidades que tienen estos para explorar sus intereses. Si las especulaciones no están estrechamente relacionadas con las entrevistas al usuario, no hay problema alguno, lo importante es que estén conectadas a las necesidades e intereses que ya han identificado."
           ]
         },
+        "9c65d424-21fb-43d5-a61f-94a4eae30351": {
+          "name": "Ideas para la Aplicación",
+          "description": "Ahora que ya identificamos nuestro usuario y sus necesidades e intereses, es momento de pensar en posibles ideas para una aplicación que cubra estas necesidades. Por lo tanto, nos enfocaremos en un obstáculo y una oportunidad específica. A continuación, formaremos nuevos grupos e idearemos posibles aplicaciones que satisfagan las necesidades anteriores."
+        },
+        "03a882f3-b062-4c38-bacd-5d08a350756d": {
+          "description": "**Haz esto:** Pida a los estudiantes que elijan y encierren en un círculo uno de los obstáculos y una de las oportunidades que hayan identificado.\n\n**Agrupar:** Organice el salón de clases de tal manera que cada grupo se ubique en distintas áreas del salón dependiendo del usuario que escogieron, por ejemplo, cada esquina del salón representa un usuario distinto. Si un grupo tiene más de 4 estudiantes, pídales que dividan el grupo a la mitad y que no superen los 4 integrantes. Dé a cada grupo un pliego de cartulina, marcadores y notas adhesivas.\n\n**Haz esto:** Pida a cada estudiante que escriba el obstáculo y la oportunidad que seleccionaron en la cartulina. Luego, pídales que en grupo evalúen cada selección e intercambien ideas de aplicaciones que aborden estos obstáculos y oportunidades. En una nota adhesiva, los estudiantes deben anotar cada posible aplicación y luego pegarla en la cartulina alrededor de la palabra idea. Recalque que no hay respuestas incorrectas cuando se hacen lluvia de ideas, por lo que cada obstáculo u oportunidad mencionada debe estar escrita en una nota adhesiva.\n\n**Recorrer el salón de clases:** Supervise a los grupos mientras realizan la actividad y asegúrese de que las opciones de aplicaciones estén escritas y pegadas en la cartulina. En el salón de clases se escucharán las conversaciones de los estudiantes entusiasmados con sus propias ideas y con la actividad. Aun así, asegúrese de que los estudiantes se apoyen mutuamente con las ideas, sean positivos y no menosprecien los aportes de los compañeros."
+        },
+        "2b330cdf-c219-4ac1-abed-97e99a7b4d33": {
+          "description": "Veo muy buenas ideas en sus carteles Ahora, tomen estas ideas como inspiración y escriban cómo será su aplicación al final de la página de la guía de actividades. La selección de una aplicación es una decisión importante, ya que la usarán en las próximas lecciones."
+        },
+        "93135d45-c43f-4dce-9b1d-83da5ce4da77": {
+          "description": "**Haz esto:** Pida a los estudiantes que escriban la idea de aplicación al final de la guía de actividades."
+        },
         "b1a23a75-eac2-45e6-aeb9-dc86a259ee94": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Ahora que ya eligieron su aplicación, ¿cuál creen que será el próximo paso para diseñar su aplicación dirigida a sus usuarios?"
         },
         "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
+          "description": "**Análisis:** Pida a los estudiantes que escriban su respuesta en la bitácora y que después la compartan con su compañero de escritorio. Una vez terminada esta actividad, pídales que también la compartan con el resto de la clase.",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes ya tienen una idea de lo que se viene en los próximos días, Es probable que sus respuestas ya reflejen lo que veremos en las próximas lecciones: desarrollo de un prototipo de papel, prueba con usuarios y respuesta a la retroalimentación."
           ]
         },
         "950c4c2b-2dea-43a3-bf2f-b3ce9ba2b710": {
@@ -13613,7 +13854,7 @@
           "description": "**Pregunta del día: ¿Qué sistemas utilizan las computadoras para representar letras y palabras?**"
         },
         "47d2a823-af64-4c77-9eb8-66bb3c656c90": {
-          "description": "**Agrupar:** Forme parejas de estudiantes\n\n**Distribuir:** una copia del recurso de texto ASCII a cada pareja, y copias de la guía de actividades desafíos ASCII a cada estudiante.\n\n#### Recurso de Texto ASCII\n\n**Texto ASCII:** Lea esta sección del recurso junto con la clase. Ayude a los estudiantes con la pronunciación de ASCII (ask-ee). Cuando termine de leer ambos párrafos, muestre el vocabulario en donde toda la clase pueda verlo.\n\n**Vocabulario:** \n\n-   **Sistema binario:** una forma de representar información utilizando solamente dos opciones.\n-   **ASCII:** un sistema popular para representar texto en binario\n\n**Mostrar:** Revise la tabla ASCII con los estudiantes, enfatice que esta tabla es una forma de resolver el problema presentado en la pregunta de la actividad inicial. Comunique a los estudiantes que ASCII es el sistema utilizado por todas las computadoras para representar letras. Una vez que los estudiantes ya hayan analizado la tabla, pídales que la usen para resolver los desafíos de la guía de actividades.\n\n#### Desafíos ASCII  Guía de actividades"
+          "description": "**Agrupar:** Forme parejas de estudiantes\n\n**Distribuir:** una copia del recurso de texto ASCII a cada pareja, y copias de la guía de actividades desafíos ASCII a cada estudiante.\n\n#### Recurso de Texto ASCII\n\n**Texto ASCII:** Lea esta sección del recurso junto con la clase. Ayude a los estudiantes con la pronunciación de ASCII (ask-ee). Cuando termine de leer ambos párrafos, muestre el vocabulario en donde toda la clase pueda verlo.\n\n**Vocabulario:** \n\n-   **Sistema binario:** una forma de representar información utilizando solamente dos opciones.\n-   **ASCII:** un sistema popular para representar texto en binario\n\n**Mostrar:** Revise la tabla ASCII con los estudiantes, enfatice que esta tabla es una forma de resolver el problema presentado en la pregunta de la actividad inicial. Comunique a los estudiantes que ASCII es el sistema utilizado por todas las computadoras para representar letras. Una vez que los estudiantes ya hayan analizado la tabla, pídales que la usen para resolver los desafíos de la guía de actividades.\n\n#### Desafíos ASCII Guía de actividades"
         },
         "b19adc05-c5d0-473e-9091-5f3f6523a749": {
           "description": "**Mostrar:** Pida a los estudiantes que decodifiquen estos tres mensajes en parejas, comprobando las respuestas mientras trabajan."
@@ -13873,7 +14114,7 @@
           "description": "**Pregunta del día:** ¿Cómo podemos mantener los datos en secreto y protegerlos de su uso indebido?"
         },
         "07f6553a-9c00-4213-9728-c878c1cccea0": {
-          "description": "**Distribuir:** Guía de actividades Registros Médicos. Lea la introducción a la guía de actividades junto con la clase y presenteles la nueva tarjeta perforada de registro médico.\n\n### **_Guía de Actividades Registros Médicos_**"
+          "description": "**Distribuir:** Guía de actividades Registros Médicos. Lea la introducción de la guía de actividades junto con la clase y presenteles la nueva tarjeta perforada de registro médico.\n\n### **_Guía de Actividades Registros Médicos_**"
         },
         "2c09cb98-721d-4c28-add5-bc717980da1e": {
           "description": "**Mostrar:** Muestre el ejemplo de la tarjeta perforada médica, haga hincapié en cómo deben decodificar la última fila de historial médico. Recalque el hecho de que cada cuadrado corresponde a una pregunta especifica, y que el blanco representa una respuesta “si” y el negro una respuesta “no”.",
@@ -13894,7 +14135,7 @@
           "description": "Llevar el registro de datos confidenciales o personales es importante para usos específicos, pero también deben ser protegidos para asegurarnos que solo ciertas personas puedan acceder a ellos. Una forma de protegerlos es mediante el encriptado."
         },
         "ff9399a1-cb17-477d-9a07-8b32c1e45c41": {
-          "description": "**Vocabulario:** Muestre las siguientes definiciones:\n\n-   **Encriptar** - cambiar la información con el objetivo de ocultar su significado\n-   **Desencriptar** - cambiar la información con el objetivo de revelar su significad"
+          "description": "**Vocabulario:** Muestre las siguientes definiciones:\n\n-   **Encriptar** - cambiar la información con el objetivo de ocultar su significado\n-   **Desencriptar** - cambiar la información con el objetivo de revelar su significado"
         },
         "bc476ecb-65ea-4f30-a970-81feb995c71c": {
           "description": "**Mostrar:** Pida a los estudiantes que vayan a la segunda página de la guía de actividades. Lea la introducción junto con la clase para definir el algoritmo y la clave",
@@ -13926,18 +14167,18 @@
           ]
         },
         "b76749fc-2d2a-446d-89e7-e44cfde226fa": {
-          "description": "Esta lista es excelente, y muestra que hay muchas cosas en nuestras vidas que podemos representar utilizando los sistemas binarios que aprendimos en esta unidad. Hoy, nos enfrentaremos a un desafío e intentaremos representar algo más complejo  solamente utilizando binario: trataremos de representar una historia acerca de nuestro día perfecto, utilizando un sistema binario."
+          "description": "Esta lista es excelente, y muestra que hay muchas cosas en nuestras vidas que podemos representar utilizando los sistemas binarios que aprendimos en esta unidad. Hoy, nos enfrentaremos a un desafío e intentaremos representar algo más complejo solamente utilizando binario: trataremos de representar una historia acerca de nuestro día perfecto, utilizando un sistema binario."
         },
         "551aa650-99b6-471b-9612-058a5279ef1b": {
           "description": "**Pregunta del día:** ¿Cómo puedo representar información compleja utilizando sistemas binarios?"
         },
         "12af85e2-3f2d-421e-b2b6-16f8810d8835": {
-          "description": "**Agrupar:** Los estudiantes pueden sentarse en pares y trabajar en este proyecto de forma colaborativa.\n\n**Decir:** Cierra tus ojos y piensa en un día perfecto. ¿Cómo está el clima? ¿Qué cosas vas a hacer? ¿Quién está contigo? Piensa en todos los detalles que puedas. No deben escribir nada aún.\n\n**Distribuir:** Distribuya copias de la Guía de Proyecto\n\n#### **_Guía de Proyecto - Crea una Representación_**\n\n**Paso 1 - Describe tu día perfecto:** Los estudiantes deben escribir los detalles de su día perfecto en la guía de actividades. Pueden utilizar oraciones complejas o una lista de ideas.\n\n**Paso 2 - Comparte con un compañero:** Los estudiantes deben escoger a un compañero para compartir lo que escribieron acerca de su día perfecto.  Deben continuar actualizando la información del paso 1, a medida que tengas más ideas acerca de su día perfecto."
+          "description": "**Agrupar:** Los estudiantes pueden sentarse en pares y trabajar en este proyecto de forma colaborativa.\n\n**Decir:** Cierra tus ojos y piensa en un día perfecto. ¿Cómo está el clima? ¿Qué cosas vas a hacer? ¿Quién está contigo? Piensa en todos los detalles que puedas. No deben escribir nada aún.\n\n**Distribuir:** Distribuya copias de la Guía de Proyecto\n\n#### **_Guía de Proyecto - Crea una Representación_**\n\n**Paso 1 - Describe tu día perfecto:** Los estudiantes deben escribir los detalles de su día perfecto en la guía de actividades. Pueden utilizar oraciones complejas o una lista de ideas.\n\n**Paso 2 - Comparte con un compañero:** Los estudiantes deben escoger a un compañero para compartir lo que escribieron acerca de su día perfecto. Deben continuar actualizando la información del paso 1 a medida que tengas más ideas acerca de su día perfecto."
         },
         "317d7606-342d-4068-939d-b4abefb7867f": {
-          "description": "**Paso 3 - Identificar información:** Los estudiantes deben separar la información acerca de su día perfecto en tres categorías: Números, caracteres o imágenes.",
+          "description": "**Paso 3 - Identificar información:** Los estudiantes deben separar la información acerca de su día perfecto en tres categorías: Números, caracteres, o imágenes.",
           "tips": [
-            "**Escogiendo las representaciones:** El objetivo es separar el “día perfecto” en objetos individuales, que puedan ser representados con un sistema binario. Puede mostrar a los estudiantes cómo asignar distintos tipos de información a las distintas categorías o como clase, asignar información de los “días perfectos” de estudiantes voluntarios."
+            "**Escogiendo las representaciones:** El objetivo es separar el “día perfecto” en objetos individuales, que puedan ser representados con un sistema binario. Puede mostrar a los estudiantes cómo asignar distintos tipos de información a las distintas categorías o como clase asignar información de los “días perfectos” de estudiantes voluntarios."
           ]
         },
         "699ec39e-ff86-4306-86ea-6419c957158f": {
@@ -13975,10 +14216,10 @@
           ]
         },
         "ac044e78-b527-4de2-ab65-6e883fea4b4f": {
-          "description": "**Analiza**r: Deje que los estudiantes analicen esta pregunta individualmente, luego que compartan sus opiniones con un compañero y finalmente pídales que comenten con la clase."
+          "description": "**Analizar**: Deje que los estudiantes analicen esta pregunta individualmente, luego que compartan sus opiniones con un compañero, y finalmente pídales que comenten con la clase."
         },
         "07bdcf42-d87f-4ba0-9750-1e5b3bcfd6d9": {
-          "description": "Todas estas cosas son datos, y todos nos ayudaron a resolver problemas en nuestras vidas. Hoy, analizaremos nuestro proceso de resolución de problemas y cómo podemos utilizarlo con datos."
+          "description": "Todas estas cosas son datos, y todas nos ayudaron a resolver problemas en nuestras vidas. Hoy, analizaremos nuestro proceso de resolución de problemas y cómo podemos utilizarlo con datos."
         },
         "8f7e2aed-a1e3-4e0d-bc5a-f300a3fc09da": {
           "description": "**Pregunta del día: ¿Cómo podemos utilizar datos para resolver los problemas en nuestra comunidad?**"
@@ -13987,10 +14228,10 @@
           "description": "Presente el escenario que los estudiantes encontrarán en la guía de actividades. Elija un lugar en su ciudad o pueblo que los estudiantes conozcan o que les resulte familiar. Si no es posible, puede utilizar otro lugar, como, por ejemplo, el centro comercial ubicado en su ciudad."
         },
         "36cca9a9-a33c-4497-8852-4ef8371d2e36": {
-          "description": "Para esta actividad, seremos expertos contratados para dar consejos acerca de lo que deberían construir en una nueva ubicación a un costado del centro comercial La ciudad cuenta con el dinero para construir algo en las cercanías, pero el consejo municipal tiene problemas para decidir lo que la ciudad necesita. Algunos miembros quieren una estación de bomberos, otros un refugio de animales, y otros una biblioteca. Nuestro trabajo es investigar los datos y utilizar el proceso de resolución de problemas para realizar una recomendación que pueda convencer al concejo municipal. Para resolver esto, utilizaremos el proceso de resolución de problemas."
+          "description": "Para esta actividad, seremos expertos contratados para dar consejos acerca de lo que deberían construir en una nueva ubicación a un costado del centro comercial. La ciudad cuenta con el dinero para construir algo en las cercanías, pero el consejo municipal tiene problemas para decidir lo que la ciudad necesita. Algunos miembros quieren una estación de bomberos, otros un refugio de animales, y otros una biblioteca. Nuestro trabajo es investigar los datos y utilizar el proceso de resolución de problemas para realizar una recomendación que pueda convencer al concejo municipal. Para resolver esto, utilizaremos el proceso de resolución de problemas."
         },
         "6fc7958a-8055-43c0-b691-c935982236fd": {
-          "description": "**El Proceso de Resolución de Problemas:** Recuerde el proceso de resolución de problemas a los estudiantes: Definir, preparar, intentar, reflexionar. Utilizaremos este proceso para resolver el problema de hoy.\n\n**Agrupar:** Forme grupos de 3 ó 4 estudiantes\n\n**Distribuir:** Distribuya una copia de [r problem-solving-with-data/csd/2021], a cada estudiante.\n\n#### Resolviendo un Problema de Datos"
+          "description": "**El Proceso de Resolución de Problemas:** Recuerde el proceso de resolución de problemas a los estudiantes: definir, preparar, intentar, reflexionar. Utilizaremos este proceso para resolver el problema de hoy.\n\n**Agrupar:** Forme grupos de 3 ó 4 estudiantes\n\n**Distribuir:** Distribuya una copia de [r problem-solving-with-data/csd/2021], a cada estudiante.\n\n#### Resolviendo un Problema de Datos"
         },
         "928ac428-64ef-4359-ad63-12d175fa700e": {
           "name": "Definir",
@@ -14009,7 +14250,7 @@
         "2cd98702-4332-403a-8ce9-01db36e361ab": {
           "description": "**Recorrer el salón de clases:** Dé a los estudiantes algunos minutos para completar la tarea individualmente, luego pídales que compartan sus ideas en grupos pequeños de 2 ó 3 estudiantes. Anime a los grupos a que continúen añadiendo tipos de información a sus listas a medida que escuchan las ideas de sus compañeros.",
           "tips": [
-            "Si los estudiantes tienen dificultades para pensar en datos relevantes, guielos de la siguiente forma: \n\n-   ¿Qué bibliotecas, estaciones de bomberos o refugios de animales existen en esta área? (Sitios web de mapas como Google Maps)\n-   ¿Las personas están conformes con este tipo de servicios? (Sitios web con comentarios o reseñas como Yelp)\n-   ¿Cuántas personas viven en la ciudad? ¿Cuál es el tamaño de la ciudad? (Sitio web de la ciudad o Wikipedia)"
+            "Si los estudiantes tienen dificultades para pensar en datos relevantes, guíelos de la siguiente forma: \n\n-   ¿Qué bibliotecas, estaciones de bomberos o refugios de animales existen en esta área? (Sitios web de mapas como Google Maps)\n-   ¿Las personas están conformes con este tipo de servicios? (Sitios web con comentarios o reseñas como Yelp)\n-   ¿Cuántas personas viven en la ciudad? ¿Cuál es el tamaño de la ciudad? (Sitio web de la ciudad o Wikipedia)"
           ]
         },
         "e5d02dfb-51a0-4815-ab13-440a9c1afdf2": {
@@ -14020,10 +14261,10 @@
         },
         "799529e8-aa6b-44e9-a270-1db8052d7df3": {
           "name": "Intentar",
-          "description": "**Analizar:** Permita que cada grupo analice en donde debería ubicarse el edificio nuevo y que completen el gráfico con las razones y datos. Asegúrese que los estudiantes comprendan que pueden utilizar los datos de toda la clase y no solo los de su grupo. Deben usar al menos dos tipos de datos para respaldar su decisión.\n\n**Recorrer el salón de clases:** Apoye a los grupos mientras toman la decisión. Si los grupos tienen dificultades para llegar a un acuerdo, coménteles que no existe una respuesta “correcta” para este problema, pero que deben tratar de respaldar su decisión con dos tipos de datos."
+          "description": "**Analizar:** Permita que cada grupo analice en dónde debería ubicarse el edificio nuevo y que completen el gráfico con las razones y datos. Asegúrese que los estudiantes comprendan que pueden utilizar los datos de toda la clase y no solo los de su grupo. Deben usar al menos dos tipos de datos para respaldar su decisión.\n\n**Recorrer el salón de clases:** Apoye a los grupos mientras toman la decisión. Si los grupos tienen dificultades para llegar a un acuerdo, coménteles que no existe una respuesta “correcta” para este problema, pero que deben tratar de respaldar su decisión con dos tipos de datos."
         },
         "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
-          "description": "**Compartir:** Los grupos deben compartir sus decisiones y aquellas razones y los datos que las respaldan. Asegure a los estudiantes que está bien tener varias respuestas, siempre y cuando utilicen los datos para respaldar sus ideas.",
+          "description": "**Compartir:** Los grupos deben compartir sus decisiones, como también aquellas razones y los datos que las respaldan. Asegure a los estudiantes que está bien tener varias respuestas, siempre y cuando utilicen los datos para respaldar sus ideas.",
           "tips": [
             "Los estudiantes deben comprender y sentirse cómodos con el hecho de que las decisiones que tomamos en base a los datos implican interpretación y priorización. Deben ser capaces de apoyar sus decisiones utilizando los datos obtenidos por la clase."
           ]
@@ -14033,7 +14274,7 @@
         },
         "7080a972-d63e-4299-8260-f1df2f234857": {
           "name": "Reflexionar",
-          "description": "Solicite a los estudiantes que completen la última parte de la guía de trabajo, recuérdeles que el contar con más datos, los ayudará a tomar una mejor decisión."
+          "description": "Solicite a los estudiantes que completen la última parte de la guía de trabajo, recordándoles que el contar con más datos, les ayudará a tomar una mejor decisión."
         },
         "4c16bc31-dc7e-4dc0-a639-6491916e81af": {
           "description": "**Escribir en la bitácora:** Pida a los estudiantes que piensen en un problema en sus vidas o en sus comunidades que posiblemente puedan resolver con datos. Deben responder las siguientes preguntas:\n\n-   ¿Cuál es el problema ?\n-   ¿Qué datos te ayudarían a resolverlo?\n-   ¿En dónde puedes encontrar esos datos?"
@@ -14043,10 +14284,10 @@
         },
         "08bb2602-af7f-4afc-91ee-cc1b81b67264": {
           "name": "Escribir en la bitácora",
-          "description": "**Decir:** ¿Cuál de estas opciones hace que sea más fácil para un humano decidir cuál es la mascota ideal?, ¿Cual de estas opciones facilita la decisión de una computadora?"
+          "description": "**Decir:** ¿Cuál de estas opciones hace que sea más fácil para un humano decidir cuál es la mascota ideal?, ¿Cuál de estas opciones facilita la decisión de una computadora?"
         },
         "cb6b53c4-832b-4488-b7d8-e235460c633c": {
-          "description": "**Analizar:** Deje que los estudiantes analicen esta pregunta individualmente, luego que compartan sus opiniones con un compañero, finalmente pídales que comenten con la clase. Puede registrar sus ideas en la pizarra para volver a ellas más tarde en la clase.",
+          "description": "**Analizar:** Deje que los estudiantes analicen esta pregunta individualmente, luego que compartan sus opiniones con un compañero, y finalmente pídales que comenten con la clase. Puede registrar sus ideas en la pizarra para volver a ellas más tarde en la clase.",
           "tips": [
             "Los estudiantes deben comprender que las distintas formas de los datos hacen que tomar decisiones sea más fácil para las personas. También deben entender que las personas responden mejor a lo visual, como, por ejemplo. el gráfico de barras, mientras que las computadoras responden mejor a los números, como la tabla."
           ]
@@ -14058,7 +14299,7 @@
           "description": "**Pregunta del día: ¿Cómo podemos hacer que una computadora pueda procesar datos más fácilmente?**"
         },
         "c4c17534-67ea-42a2-814f-757f62782804": {
-          "description": "**Agrupar:** Forme parejas de de estudiantes y entregue un copia de [r structuring-data-2021/csd/2021] a cada pareja.\n\n#### **_Estructurando datos Guía de actividades_**\n\nLea las instrucciones en conjunto con la clase, asegurando que los estudiantes comprenden el problema que tratarán de solucionar (escoger un ingrediente de la pizza para una fiesta de pizza)."
+          "description": "**Agrupar:** Forme parejas de estudiantes y entregue un copia de [r structuring-data-2021/csd/2021] a cada pareja.\n\n#### **_Estructurando Datos Guía de Actividades_**\n\nLea las instrucciones en conjunto con la clase, asegurando que los estudiantes comprenden el problema que tratarán de solucionar (escoger un ingrediente de la pizza para una fiesta de pizza)."
         },
         "81e66693-3476-4c0d-ae92-0428e702cedb": {
           "description": "**Hacer esto:** Los estudiantes deben crear el gráfico de barras del conjunto de datos sin procesar. Es posible que algunas respuestas no estén relacionadas con las alternativas disponibles.\n\n**Recorrer el salón de clases:** Motive a los estudiantes a usar su mejor criterio en las respuestas que son difíciles de incluir en el gráfico, y recuérdeles que estos desafíos son una parte normal del proceso de resolución de problemas de datos. Escuche los análisis de los estudiantes y preste atención a la forma en la que interactúan con sus compañeros para tomar una decisión.\n\n**Reflexionar:** Los estudiantes deben responder las preguntas de reflexión al final de la guía de actividades."
@@ -14070,10 +14311,10 @@
           ]
         },
         "08edaf30-5d95-4c71-8587-baf6b7a8394f": {
-          "description": "Hemos construido este gráfico a mano, pero también es posible que una computadora lo construya para nosotros.  Esto es particularmente útil cuando contamos con una gran cantidad de datos. ¿Qué pasaría si la computadora tratará de hacer un gráfico con los mismos datos que utilizaste en un principio? ¿Crees que se vería igual al tuyo?"
+          "description": "Hemos construido este gráfico a mano, pero también es posible que una computadora lo construya para nosotros. Esto es particularmente útil cuando contamos con una gran cantidad de datos. ¿Qué pasaría si la computadora tratará de hacer un gráfico con los mismos datos que utilizaste en un principio? ¿Crees que se vería igual al tuyo?"
         },
         "4668155e-befd-4113-bcad-1c7a7fa245be": {
-          "description": "**Analizar**: Pida a los estudiantes que analicen esta pregunta con un compañero de escritorio. Mientras realizan la actividad, prepare la Aplicación Datos de la Fiesta de Pizza para que los estudiantes puedan verla.\n\n**Aplicación Datos de la Fiesta de Pizza**: Haga una demostración de la aplicación, explique a la clase, que esta aplicación tiene los mismos datos que ellos tenían y unos cuantos más. Puede desplazarse a través de la primera pantalla para ver todos los datos disponibles, señalando que algunas de las nuevas respuestas, también pueden ser difíciles de categorizar. \n\nMencione el botón de “mostrar gráfico”, ubicado en la parte superior de la aplicación, y pida a los estudiantes que compartan sus predicciones acerca de cómo se verá el gráfico en la siguiente pantalla. Puede pedir a los estudiantes que compartan sus ideas, pero que no las interpreten como “correctas” o “incorrectas”, deje que los estudiantes piensen en sus predicciones antes de hacer clic en el botón para revelar la próxima pantalla.",
+          "description": "**Analizar**: Pida a los estudiantes que analicen esta pregunta con un compañero de escritorio. Mientras realizan la actividad, prepare la Aplicación Datos de la Fiesta de Pizza para que los estudiantes puedan verla.\n\n**Aplicación Datos de la Fiesta de Pizza**: Haga una demostración de la aplicación, explique a la clase que esta aplicación tiene los mismos datos que ellos tenían y unos cuantos más. Puede desplazarse a través de la primera pantalla para ver todos los datos disponibles, señalando que algunas de las nuevas respuestas también pueden ser difíciles de categorizar. \n\nMencione el botón de “mostrar gráfico”, ubicado en la parte superior de la aplicación, y pida a los estudiantes que compartan sus predicciones acerca de cómo se verá el gráfico en la siguiente pantalla. Puede pedir a los estudiantes que compartan sus ideas, pero que no las interpreten como “correctas” o “incorrectas”, deje que los estudiantes piensen en sus predicciones antes de hacer clic en el botón para revelar la próxima pantalla.",
           "progression_name": "Datos de la Fiesta de la Pizza"
         },
         "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
@@ -14095,7 +14336,7 @@
           ]
         },
         "b22284df-c9d1-4046-93d8-4cd7339b1ec0": {
-          "description": "**Decir:** Tuvimos que trabajar bastante, y solo eran aproximadamente 20 votos. ¿Cuanto tiempo crees que nos tomaría limpiar los datos de una encuesta nacional? ¿Puedes pensar en alguna forma en la que podamos asegurarnos que los datos estarán limpios desde el principio, y que nos ahorre todo este trabajo?",
+          "description": "**Decir:** Tuvimos que trabajar bastante, y solo eran aproximadamente 20 votos. ¿Cuánto tiempo crees que nos tomaría limpiar los datos de una encuesta nacional? ¿Puedes pensar en alguna forma en la que podamos asegurarnos que los datos estarán limpios desde el principio, y que nos ahorre todo este trabajo?",
           "tips": [
             "Al finalizar, los estudiantes deben comprender que limitar las opciones puede ayudarnos con esto, por ejemplo, utilizar selección múltiple en lugar de escribir las respuestas. Es posible que los estudiantes mencionen ignorar el uso de mayúsculas para que las palabras “queso” y “Queso” signifiquen lo mismo.\n  "
           ]
@@ -14111,7 +14352,7 @@
           "description": "**Decir:** ¿Puedes pensar en alguna situación en la que tuviste que recopilar tus propios datos, como, por ejemplo, completando un formulario? ¿Qué estrategias utilizó este formulario para asegurarse de que los datos recolectados estuvieran limpios?"
         },
         "62ea0c97-f14e-43e1-8a84-1463b2d5aad7": {
-          "description": "**Mostrar:** Proyecte la diapositiva de la actividad inicial en la pizarra mientras los estudiantes ingresan a la sala de clases."
+          "description": "**Mostrar:** Proyecte la diapositiva de la actividad inicial en la pizarra mientras los estudiantes ingresan a la sala de clases"
         },
         "880e6e3b-0a3b-4c47-bfe5-d2d4a6819da2": {
           "description": "Acá podemos observar más resultados de encuestas, pero esta vez, en lugar de los ingredientes de una pizza, podemos ver los sabores del pastel y sus glaseados."
@@ -14175,17 +14416,18 @@
           "name": "Escribir en la bitácora ",
           "description": "**Decir:**",
           "tips": [
-            "Esta actividad en la bitácora, es un adelanto del proyecto del final del capítulo, en donde los estudiantes utilizarán este proceso para resolver un problema de datos que ellos elijan."
+            "Esta actividad en la bitácora es un adelanto del proyecto final del capítulo, en donde los estudiantes utilizarán este proceso para resolver un problema de datos que ellos elijan."
           ]
         },
         "e07811c2-0b0a-4b3a-9ce4-69c4ff707abd": {
           "description": "1.  ¿Qué otro problema de datos podrías solucionar utilizando este método?  \n2.  ¿Qué podrías preguntar?\n3.  ¿Qué relaciones buscarías?"
         },
         "ff83c374-628a-4388-8d39-29a2a7030ab9": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** ¿Qué tipo de datos que te ayuden a tomar decisiones en tu vida ya te encuentras recolectando? ¿Hay decisiones que los datos te puedan ayudar a resolver de mejor manera?"
         },
         "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
-          "description": "**Análisis:** Invite a un par de estudiantes a compartir sus respuestas con la clase. No es necesario explicar los detalles de esta pregunta, podrá regresar a ella al final de la lección.",
+          "description": "**Análisis:** Invite a un par de estudiantes a compartir sus respuestas con la clase. No es necesario explicar los detalles de esta pregunta puesto que podrá regresar a ella al final de la lección.",
           "tips": [
             "**Objetivo:** Esta debería ser una conversación rápida solo para introducir el tema y es completamente normal que los estudiantes actualmente no estén pensando en tomar decisiones personales utilizando datos. Puede dar algunos ejemplos como: ver el clima para decidir qué ponerse o revisar los datos de un producto en línea. Puede quedarse solamente con estos ejemplos para hacer una introducción a la clase y regresar a esta pregunta más adelante."
           ]
@@ -14197,13 +14439,13 @@
           "description": "**Pregunta del día - ¿Cómo pueden los patrones en los datos ayudarnos a tomar decisiones?**"
         },
         "e27e7955-327c-420a-9219-ca2414154a18": {
-          "description": "**Agrupar:** Forme grupos de 3 ó 4 estudiantes\n\n**Distribuir** Entregue una copia del Proceso de resolución de problemas con datos a cada grupo.\n\n**Decir:** ¿Qué pasos hemos seguido en las últimas lecciones para resolver problemas? Pida a un integrante de cada grupo que encierre las preguntas que han analizado.\n\n**Recorrer el salón de clases:** Revise el trabajo de cada grupo mientras encierran las distintas preguntas. A medida que termine de revisar el trabajo de cada grupo, entregue una copia de la guía de actividades Tomando decisiones con datos."
+          "description": "**Agrupar:** Forme grupos de 3 ó 4 estudiantes\n\n**Distribuir** Entregue una copia del Proceso de resolución de problemas con datos a cada grupo.\n\n**Decir:** ¿Qué pasos hemos seguido en las últimas lecciones para resolver problemas? Pida a un integrante de cada grupo que encierre las preguntas que han analizado.\n\n**Recorrer el salón de clases:** Revise el trabajo de cada grupo mientras encierran las distintas preguntas. A medida que termine de revisar el trabajo de cada grupo, entregue una copia de la guía de actividades Tomando Decisiones con Datos."
         },
         "3ce44f5d-714b-4a92-9d2d-c22a8fb195ee": {
           "description": "#### **_Guía de Actividades - Tomando Decisiones con Datos_**"
         },
         "3cf5b5f5-208d-4801-b616-a877e120f6ca": {
-          "description": "**Problema 1 - Cuando publicar:** Lea las secciones de definición y preparación del problema junto con la clase. Permita que los grupos analicen los datos presentados y que reflexionen acerca de las preguntas al final de la guía de actividades.",
+          "description": "**Problema 1 - Cuándo publicar:** Lea las secciones de definición y preparación del problema junto con la clase. Permita que los grupos analicen los datos presentados y que reflexionen acerca de las preguntas al final de la guía de actividades.",
           "tips": [
             "**Asignando roles:** Antes de revisar las decisiones de cada grupo, solicite a los grupos que asignen a una persona para compartir los resultados de su análisis. Cambiando los roles entre problemas.\n\n**Compañeros de análisis:** Aunque los estudiantes trabajen en grupos, no es necesario que la decisión de los grupos sea compartida."
           ]
@@ -14256,13 +14498,13 @@
           ]
         },
         "d81c6701-1dfc-4758-b5a5-b1bd59755d84": {
-          "description": "**Análisis:** Los estudiantes deben responder a las preguntas silenciosamente en sus bitácoras, luego deben compartir en grupos pequeños y finalmente analizar la pregunta con el resto de la clase."
+          "description": "**Análisis:** Los estudiantes deben responder a las preguntas silenciosamente en sus bitácoras, luego deben compartir en grupos pequeños, y finalmente analizar la pregunta con el resto de la clase."
         },
         "60233e2f-bec5-42f5-87e1-82101d44c47f": {
-          "description": "Para que una computadora pueda tomar una decisión, necesita datos de entrada y un algoritmo para procesarlos. Esto solo se refiere al modelo de entrada, salida, almacenamiento y procesamiento que ya aprendimos. En la última clase aprendimos a interpretar los datos para entender más acerca del mundo. Hoy, veremos cómo diseñar algoritmos para que una computadora pueda usar lo que nosotros entendemos para tomar decisiones automáticamente."
+          "description": "Para que una computadora pueda tomar una decisión, necesita datos de entrada y un algoritmo para procesarlos. Esto solo se refiere al modelo de entrada, salida, almacenamiento y procesamiento que ya aprendimos. En la última clase aprendimos a interpretar los datos para entender más acerca del mundo. Hoy veremos cómo diseñar algoritmos para que una computadora pueda usar lo que nosotros entendemos para tomar decisiones automáticamente."
         },
         "4ca4c346-7448-41c7-adbb-f66b210d521e": {
-          "description": "**Pregunta del día:** ¿Cómo pueden ayudarnos las computadoras a tomar decisiones sobre los datos?"
+          "description": "**Pregunta del día**: ¿Cómo pueden ayudarnos las computadoras a tomar decisiones sobre los datos?"
         },
         "69f631cc-0e74-4730-b0fe-f21aceef7f89": {
           "description": "**Distribuir:** Copias de [r data-decisions-resource/csd/2021] y [r automating-data-decisions-1/csd/2021] a cada estudiante.\n\n#### **_Automatizando Decisiones con Datos Guía de Actividades:_**"
@@ -14277,7 +14519,7 @@
         "1d708064-9b0b-4a56-bccf-715c91c2cf6d": {
           "description": "**Decir:** Basándote en las tablas de tabulación, ¿Por qué crees que alguien creó la primera regla del algoritmo? ¿Puedes pensar en una regla distinta?",
           "tips": [
-            "Asegúrese que los estudiantes comprenden que la regla está basada en la primera fila de la tabla de “Vacaciones y comida” No hay una regla “correcta” basada en los datos, pero es probable que alguien que prefiera el helado, preferiría la playa y tal vez el parque de diversiones."
+            "Asegúrese que los estudiantes comprenden que la regla está basada en la primera fila de la tabla de “Vacaciones y Comida”. No hay una regla “correcta” basada en los datos, pero es probable que alguien que prefiera el helado, también prefiera la playa y tal vez el parque de diversiones."
           ]
         },
         "cc284ad1-97ef-49a7-bec1-afcc0eaae2fb": {
@@ -14297,135 +14539,248 @@
           "description": "-   ¿Qué desventajas tiene el usar un algoritmo para tomar decisiones?\n-   ¿Qué tipos de decisiones te gustaría que una computadora pudiera tomar automáticamente?"
         },
         "1d97d183-068b-4f5a-b823-e6b47f686a81": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** En la lección pasada, analizamos cómo los datos podían ser recolectados mediante preguntas y luego utilizados para hacer una recomendación. Existen otras formas de recolectar nuestros datos y es un proceso que está presente en nuestras vidas todos los días. ¿De qué forma las aplicaciones, compañías, o gobiernos pueden recolectar tus datos?"
         },
         "e4a6519f-4954-49e6-8914-83043cd945d7": {
+          "description": "**Análisis:** Deje que los estudiantes analicen esta pregunta individualmente, luego que compartan sus opiniones con un compañero, y finalmente pídales que comenten con la clase. Puede registrar sus ideas en la pizarra para volver a ellas más tarde en la clase.",
           "tips": [
-            null
+            "**Objetivo:** Este análisis es principalmente una lluvia de ideas. Es posible que algunos estudiantes tengan más conocimiento propio del tema que otros y en este punto del curso, además de las encuestas, no han aprendido nada más acerca de la recolección de datos. Apunte principalmente a obtener ideas y preparar el contexto de la lección. Recuerde que está tratando de cambiar el enfoque de las encuestas que respondieron 10 ó 20 personas a grandes cantidades de datos que los estudiantes quizás sepan que son recolectadas por herramientas tecnológicas modernas."
           ]
         },
+        "b8f9d3d2-e7bf-4209-9a20-6c5c8c803649": {
+          "description": "Buen trabajo. Hoy analizaremos ejemplos de cómo se recolectan los datos para resolver problemas. Preste atención y analice si los estudiantes proponen nuevas ideas."
+        },
+        "5966e707-3c45-439e-bb6f-7ecc280d4387": {
+          "description": "**Pregunta del día: ¿Cómo se recolectan nuestros datos y por qué son útiles?**"
+        },
+        "1662b367-c675-4cd5-a1d3-6a1fc89f62c5": {
+          "description": "**Agrupar:** Los estudiantes pueden completar esta actividad individualmente o en parejas.\n\n**Distribuir:** Distribuya copias de la guía de actividades\n\n#### Datos en el Mundo Real"
+        },
+        "52798cdc-24aa-4256-9aa9-4e3450877690": {
+          "name": "Web Pix",
+          "description": "**Web Pix**: Lea la introducción a Web Pix que se encuentra en la primera página. Dé unos minutos a los estudiantes para que escriban sus ideas o para que las compartan con un compañero. Comunique a los estudiantes que aún no pueden responder la pregunta acerca de Netflix. Si los estudiantes terminan antes, pídales que piensen en otros tipos de datos y cómo estos pueden ser recolectados.\n\n**Compartir:** Permita a los estudiantes compartir algunas de sus ideas y luego presente el video de Netflix."
+        },
+        "118d0bfe-9d5f-465c-9607-d8c146db9e9b": {
+          "description": "Muchas compañías como YouTube, Facebook y Netflix, recomiendan videos y publicaciones basados en los datos que han recolectado de sus usuarios. Veremos un breve video acerca de como Netflix puede hacer esto. Presten atención a la forma en que Netflix recolecta datos para poder recomendar buenos videos."
+        },
         "e84d2260-141b-4899-971d-0e0e33eb12d2": {
+          "description": "**Mostrar:** Vea el video de Netflix",
           "tips": [
-            null
+            "**Accediendo a videos:** En esta lección, los videos se encuentran dentro de las diapositivas, también pueden descargarse en el plan de esta lección. También se encuentran en los respectivos niveles en Code Studio para que los estudiantes puedan acceder a ellos si lo desean o si están ausentes el día de esta lección."
           ],
           "progression_name": "Vídeo: Netflix y Datos"
         },
         "caccc30a-07e9-465a-a077-65788e7b4f1b": {
+          "description": "**Análisis:** Pida a los estudiantes que respondan la tercera pregunta acerca de Netflix. Deje que los estudiantes compartan con un compañero, luego que analicen con un grupo los tipos de datos que Netflix recolecta para poder hacer recomendaciones.",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes deben comprender que Netflix basa sus sugerencias no solo en las encuestas de datos de sus usuarios, pero también en su comportamiento al usar el sitio, como, por ejemplo, el contenido que ellos ven y las calificaciones que dan a los distintos videos."
           ]
         },
         "2837e4be-02be-4d45-91a4-2a155bfbb322": {
+          "name": "Routz",
+          "description": "**Routz:** Pida a los estudiantes que continúen con el problema de Routz. Nuevamente, deben tomarse unos minutos para trabajar individualmente o en pares en los primeros dos problemas.  \n\n**Compartir:** Permita que los estudiantes compartan algunas de sus ideas y luego presente el video de Waze.\n\n**Mostrar:** Vea el video de Waze.",
           "progression_name": "Vídeo: Waze y Datos"
         },
         "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
+          "description": "**Análisis:** Deje que los estudiantes compartan con un compañero, luego lidere un análisis breve acerca de los tipos de datos que recolecta Waze para encontrar la mejor ruta.",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes deberían señalar que mientras algunos datos se han añadido intencionalmente por los usuarios, Waze también recolecta datos acerca del GPS y ubicación de cada usuario sin la entrada activa de estos. El sensor de datos como el tiempo, la temperatura, y la ubicación son recolectados por las computadoras automáticamente sin que el usuario los añada de forma activa."
           ]
         },
         "35b3c205-5ca5-43fa-b2ef-ee0f6d245722": {
+          "name": "Nyle",
+          "description": "**Nyle:** Pida a los estudiantes que continúen con el problema de Nyle. Nuevamente, deben tomarse unos minutos para trabajar individualmente o en parejas en los primeros dos problemas.  \n\n**Compartir:** Permita que los estudiantes compartan algunas de sus ideas y luego presente el video de Amazon.\n\n**Mostrar:** Vea el video de Amazon.",
           "progression_name": "Vídeo: Amazon y Datos"
         },
         "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
+          "description": "**Análisis:** Deje que los estudiantes compartan con un compañero y luego lidere un análisis breve acerca de los tipos de datos que recolecta Amazon para encontrar los mejores productos que sugerirá al usuario.",
           "tips": [
-            null
+            "**Objetivo:** Es posible que en el video de Amazon hayan ciertos aspectos que podrían causar interés.  \n\n-   El solo hecho de mirar algo en línea produce datos que pueden ser utilizados para publicidad y otros.\n-   Amazon decide lo que quizás te gustaría comprar analizando a usuarios similares y utilizando sus comportamientos para predecir el tuyo.\n-   Es posible que los distintos tipos de datos como, por ejemplo, “clics”, “me gusta” y “ compras” tengan otro tipo de relevancia.\n-   Las necesidades del usuario no son una prioridad. Pero si las de los anunciantes. \n\nCualquiera de estos temas son importantes para la lección, pero lo más importante es que los estudiantes comprendan que no siempre estarán conscientes de que están generando datos."
           ]
         },
         "1f315b3a-9470-42be-95de-4b2327b9a338": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Hemos descubierto las distintas maneras en las que una computadora puede recolectar datos. En general, los datos pueden ser recolectados automáticamente mediante sensores, como en la aplicación Waze, la cual recolecta datos del GPS; también puede recolectar información de usuarios que generan datos intencionalmente, como cuando calificas videos en Netflix; y también puede recolectar información de usuarios de forma no intencional para producir datos, como cuando Amazon registra los productos que miraste."
+        },
+        "7a916afc-ac3b-49d1-ab1d-a073525cf437": {
+          "description": "**Reflexión:** Pida a los estudiantes que completen el cuadro que categoriza los distintos tipos de datos al final de la pagina. Permita que los estudiantes compartan sus respuestas con un compañero."
         },
         "cab8946a-af60-4101-9f3b-a6ea464f6601": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Hoy analizamos tres compañías que recolectan datos para solucionar problemas. Piensa en otros sitios web, aplicaciones o compañías que uses o conozcas. ¿Qué datos recolectan? ¿De qué forma los utilizan para resolver un problema?"
         },
         "85bda82c-51d9-4b18-a377-4ecd142855c0": {
+          "description": "**Análisis:** Pida a los estudiantes que compartan sus ideas con sus compañeros.",
           "tips": [
-            null
+            "**Objetivo:** Esta actividad está pensada en ayudar a los estudiantes a conectar sus experiencias personales con los servicios que recolectan datos y con lo que han aprendido en esta lección. El objetivo es conectar los ejemplos que los estudiantes vieron en la lección de hoy con otras aplicaciones, sitios web o servicios que conozcan. Si necesita apoyar a los estudiantes, puede sugerirles que piensen en sitios de redes sociales, medios o aplicaciones que ellos o sus familiares utilizan."
           ]
+        },
+        "92df200b-ac53-40bc-aaf3-38bd956015e7": {
+          "description": "Hoy vimos algunos ejemplos de las distintas fuentes de datos que las aplicaciones del mundo real y sitios web utilizan para resolver problemas. Esto también quiere decir que estos sitios web están recolectando mucha información, algo que para un humano sería muy difícil de analizar. En la próxima lección, veremos cómo podemos ayudar a las computadoras a tomar decisiones y que aprendan de todos estos datos."
         },
         "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
           "name": "Escribir en la bitácora",
+          "description": "**Decir:** ¿Alguna vez una computadora te ha recomendado algo? ¿Cómo crees que aprendió a hacer esto?",
           "tips": [
-            null
+            "**Objetivo:** Las respuestas podrían variar y es posible que estén sujetas a las experiencias de los estudiantes con los sistemas de recomendación u otros tipos de inteligencia artificial. Intente llevar este análisis a una conversación, en donde se analice el rol que juegan los humanos en el aprendizaje automático. Este análisis puede ser breve, pero su propósito es sentar las bases para la próxima actividad. "
           ]
         },
+        "ffbd3a00-2fe9-42a4-8752-1af0196e7667": {
+          "description": "**Análisis:** Los estudiantes deben trabajar por su cuenta, luego compartir las respuestas con sus compañeros y finalmente con el resto de la clase."
+        },
+        "b0c8343f-91ef-4d9e-ab29-0f2e9d884709": {
+          "description": "Hoy aprenderemos más acerca del aprendizaje automático y sus impactos."
+        },
+        "6994374b-5b68-4099-b63f-6695700d8898": {
+          "description": "**Pregunta del día: ¿Cómo pueden “aprender” las máquinas?**"
+        },
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
+          "description": "**Video:** Reproduzca el video “Qué es el aprendizaje automático”.",
           "tips": [
-            null
+            "**Alternativas para la herramienta Inteligencia Artificial para Océanos:** Inteligencia Artificial para Océanos fue desarrollada inicialmente como una actividad de La hora del Código que los estudiantes pueden completar en cualquier dispositivo que tengan a su alcance. La hemos modificado para que pueda utilizarse en esta lección. Dependiendo de su sala de clases, puede reemplazar esta actividad por:\n\n-   [Teachable Machines](https://teachablemachine.withgoogle.com/) - _Teachable Machines es una herramienta web de fácil acceso en la que se pueden crear modelos de aprendizaje automático de forma fácil y rápida. La aplicación es flexible, utiliza archivos o captura ejemplos en vivo. También respeta su manera de trabajar. Incluso, puede utilizarla en un dispositivo, sin compartir datos de su cámara o micrófono._ \n    -   Si los dispositivos de su sala de clases tienen cámaras, Teachables Machines ofrece formas llamativas en las que se pueden crear conjuntos de datos de entrenamiento. Anime a sus estudiantes a que le enseñen a esta máquina a representar el juego de piedra, papel o tijeras con gestos de manos. ¿Cuáles son las posibles formas en las que podría introducirse el sesgo?\n\n-   [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - _Esta herramienta gratuita introduce el aprendizaje automatizado a través de experiencias prácticas para el entrenamiento de sistemas de aprendizaje automatizado y la construcción de elementos con ellos. Proporciona un ambiente guiado y fácil de utilizar, en el que se pueden entrenar los modelos de aprendizaje automático para el reconocimiento de texto, números, imágenes y sonidos._\n    -   Machine Learning for Kids es una buena opción si sus estudiantes desean trabajar con muestras de texto. Puede enseñarle a una máquina a reconocer palabras o textos que demuestran sentimientos felices o tristes. Con esta herramienta tendrán mucho que explorar. "
           ],
           "progression_name": "Vídeo: ¿Qué es el Aprendizaje Automático?"
         },
+        "d266f2ed-9f75-4e5f-8ce3-f3b0b67f89d2": {
+          "description": "El aprendizaje automático se refiere a una computadora que es capaz de reconocer patrones y tomar decisiones sin estar específicamente programada para esto. En esta actividad proporcionaremos los datos para entrenar a nuestro propio modelo de aprendizaje automático. Imagina un océano que contiene criaturas como peces, pero que también contiene basura desechada por humanos. ¿Qué pasaría si pudiéramos entrenar a una computadora para que pueda identificar estas diferencias y luego utilice esta tecnología para ayudar a limpiar el océano?"
+        },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
+          "description": "**Hacer esto:** Dirija a los estudiantes hacia los niveles 2 al 5 en Code Studio. Los estudiantes deben trabajar en estos niveles por aproximadamente 5 minutos en total. Ayúdelos con la pregunta que aparece en la sección “considerar” en la diapositiva. Para programar la Inteligencia Artificial, utilice los botones para clasificar una imagen como “pez” o “no pez”. Cada imagen y etiqueta forma parte de los datos utilizados para entrenar a la Inteligencia Artificial a hacer esto por sí sola. Una vez entrenada, la inteligencia artificial intentará clasificar 100 nuevas imágenes por su cuenta, luego presentará una selección de aquellas imágenes que, en base a su entrenamiento, ha determinado tienen las más altas probabilidades de ser un “pez”. Los estudiantes, quienes etiquetaron los elementos correctamente, deberían ver un océano con distintas criaturas, y con muy pocos (o idealmente sin) otros objetos.",
           "tips": [
-            null
+            "En esta parte del tutorial, cada imagen ha sido suministrada a un canal neutral previamente entrenado con un enorme conjunto de datos llamados [ImageNet](http://www.image-net.org/). La base de datos contiene más de 14 millones de imágenes seleccionadas a mano. ImageNet alberga más de 20.000 categorías, con una categoría normal, como, por ejemplo, “globo” o “fresa”, compuesta por cientos de imágenes. Cuando la inteligencia artificial escanea nuevas imágenes y realiza sus predicciones en el tutorial, en realidad está comparando las posibles categorías para la nueva imagen con los patrones que ha encontrado en el conjunto de datos de entrenamiento. "
           ],
           "progression_name": "Inteligencia Artificial para Océanos: Peces y No Peces"
         },
         "037d1080-4d96-41bc-93af-bef5eef2007a": {
+          "description": "**Análisis:** ¿Qué tan bien funcionó la inteligencia artificial? ¿Cómo crees que decidió los elementos que debía incluir en el océano?\n\n**Video:** Reproduzca el video “Datos de Entrenamiento y Sesgo”.",
           "progression_name": "Vídeo: Datos de Entrenamiento y Sesgo"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "description": "**Pregunta:** ¿Cómo crees que tus datos de entrenamiento influyeron en los resultados que produjo la Inteligencia Artificial?",
           "tips": [
-            null
+            "**Objetivo:** Los estudiantes deben reflexionar acerca de su experiencia hasta el momento. Es importante que, en este punto, los estudiantes se den cuenta que al etiquetar las imágenes en realidad están programando a la computadora. Los ejemplos que ellos muestran a la inteligencia artificial son los “datos de entrenamiento”."
           ]
         },
         "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
+          "description": "En la segunda mitad de la actividad, debes enseñar la palabra que tu quieras a la Inteligencia artificial, mostrándole ejemplos de ese tipo de pez. Al igual que en la actividad anterior, la inteligencia artificial no posee ningún dato de entrenamiento acerca de estas etiquetas. Aunque las palabras en este nivel son bastante objetivas, es posible que obtengas resultados diferentes en base a los datos de entrenamiento. Incluso puedes entrenar a la inteligencia artificial incorrectamente solo para ver que pasa.",
           "tips": [
             "Los peces de este aprendizaje se generan aleatoriamente basándose en algunos componentes predefinidos, como bocas, colas, ojos, escamas y aletas, con un color, una forma y un tamaño del cuerpo elegidos al azar. En lugar de mirar los datos de la imagen real, la Inteligencia Artificial está buscando patrones en estos componentes basados en cómo el estudiante clasifica cada pez. Es más probable que etiquete un pez de la misma manera que el estudiante si tiene rasgos que coinciden."
           ]
         },
         "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "description": "Hacer esto:\\*\\* Dirija a los estudiantes a los niveles 6 al 7 en Code Studio. Los estudiantes deben trabajar en estos niveles por aproximadamente 5 minutos. Ayúdelos con la pregunta de la sección “Considerar” en la diapositiva. En esta actividad, al igual que en la anterior, los estudiantes utilizarán datos de entrenamiento para enseñar a la inteligencia artificial a reconocer los distintos tipos de pez. Las palabras en esta lista son intencionalmente más subjetivas que las que los estudiantes han visto hasta ahora. Anime a los estudiantes a que ellos mismos decidan qué características hacen que un pez se vea “enojado” o “divertido”. Es posible que dos estudiantes que elijan la misma etiqueta, obtengan un conjunto de resultados muy diferentes en base a los rasgos de peces en los que se enfocaron. Motívelos a que analicen sus resultados con sus compañeros o a que escojan nuevas palabras. Cada estudiante dependerá de sus propias opiniones para entrenar a la inteligencia artificial, esto quiere decir que la inteligencia artificial aprenderá con el mismo sesgo de los estudiantes. A medida que los estudiantes comienzan a identificar el rol que juegan sus opiniones, pídales que reflexionen si esto es bueno o malo, y cómo podría solucionarse.",
           "progression_name": "Inteligencia Artificial para Océanos: Tipos de Peces"
         },
         "92b13324-8ae5-4796-9071-694683704daa": {
+          "description": "**Decir:** ¿De qué forma los resultados sesgados podrían ser problemáticos para la inteligencia artificial? ¿De qué formas se puede solucionar esto?",
           "tips": [
-            null
+            "**Objetivo:** En esta etapa, los estudiantes deberían tener una noción preliminar de cómo los datos sesgados pueden ocasionar problemas para la inteligencia artificial. Es posible que comenten que si los conjuntos de datos han sido entrenados de forma incorrecta, se realizarán conclusiones incorrectas o malinterpretadas. Puede solucionarse mediante distintos conjuntos de entrenamiento. El siguiente video explica este tema en profundidad. "
           ]
         },
+        "bdb799bb-b8cb-4efe-b420-9142896c8aa4": {
+          "description": "**Video:** Reproduzca el video “Cómo estoy combatiendo el sesgo en algoritmos” con Joy Buolamwini. \n\n**Decir:** \n\n-   ¿Qué otras formas de sesgos humanos podrían aparecer en el aprendizaje automático?\n-   ¿Cómo podemos tratar de evitar ese sesgo?\n\nDeje que los estudiantes analicen estas preguntas con un compañero de escritorio, y luego que compartan sus ideas con la clase completa. Esta podría ser la primera vez que los estudiantes consideren los asuntos de sesgo en la tecnología, por lo que es aceptable el no llegar a ninguna conclusión y que terminen esta lección con más dudas.\n\n**Mostrar** Muestre la gráfica del proceso de resolución de problemas que contiene la Empatía en el centro."
+        },
+        "2e20b5ce-46a7-4b70-9202-f2120d69425a": {
+          "description": "El aprendizaje automático ha aportado innovaciones en medicina, negocios y ciencias, pero la información descubierta de esta manera ha sido utilizada para dañar o excluir grupos de personas.\n\nComo hemos visto, los problemas de sesgo por lo general son ocasionados por el tipo o fuente de datos recolectados. Recolectar más datos no significa que el sesgo haya desaparecido.     \n\nLos programadores (incluído tú) deben tomar medidas para reducir el sesgo en las aplicaciones y sitios web que las personas utilizamos. Podemos encontrar una estrategia importante para esto en nuestro proceso de resolución de problemas: Empatizar con otros para asegurarnos de que no estamos excluyendo a ningún grupo de nuestro trabajo. Debes estar atento al sesgo, y ser mas empatico e inclusivo para poder evitarlo."
+        },
         "e67f18c9-668b-44fb-95aa-1908687d9f52": {
+          "description": "**Repaso:** Reproduzca el video “Impacto en la sociedad” el cual resume los conceptos que analizamos hoy.",
           "progression_name": "Vídeo: Impacto en la Sociedad"
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
           "name": "Escribir en la bitácora",
+          "description": "**Decir:** Ya sea acerca del aprendizaje automático o de las formas en las que el sesgo se manifiesta en la tecnología, ¿Cuál es la gran enseñanza de la lección de hoy?",
           "tips": [
             "Puedes compartir estas historias con tu clase para ayudarles a ver el impacto de la Inteligencia Artificial en el futuro.\n\n-   [El despilfarro de alimentos es un problema grave, pero la IA intenta resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/).\n-   [La tecnología de IA puede identificar trastornos genéticos a partir de la cara de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cómo una empresa de IA diseñó un candidato a fármaco en sólo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [El Ejército acelera el ritmo de los coches autónomos](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dice que utilizará la IA para reducir los prejuicios a la hora de acusar a las personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [La IA está ayudando a los estudiosos a restaurar antiguos textos griegos en tablillas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
           ]
         },
+        "710a7a49-d593-4c67-841c-bd6ea39106fd": {
+          "description": "**Análisis:** Es posible que ya no quede mucho tiempo de clase. Anime a los estudiantes a que compartan sus opiniones con un compañero de escritorio o con la clase completa.\n\t\n\n* * *"
+        },
         "7833e351-1d81-480d-bf06-6c70c8374072": {
-          "name": "Escribir en la bitácora"
+          "name": "Escribir en la bitácora",
+          "description": "**Decir:** Piensa en las últimas lecciones y elabora una lista de todas aquellas oportunidades en las que hemos visto que se utilizan datos para hacer una recomendación. Por ejemplo: utilizamos los datos de una encuesta para hacer una recomendación acerca de qué pizza pedir."
         },
         "375e017e-8620-4d95-a1f5-89fda22729ac": {
+          "description": "**Análisis:** Los estudiantes deben escribir sus respuestas de forma individual, luego compartir con un compañero y añadir nuevos ejemplos a sus listas. Luego, solicite que compartan sus respuestas con la clase.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este breve resumen es que los estudiantes recuerden los tipos de problemas que pueden solucionar con datos antes de avanzar a la etapa de definición de su propio problema de datos. Es posible que los estudiantes mencionen los siguientes ejemplos:\n\n-   ¿Qué pizza deberíamos pedir?\n-   ¿Qué helado deberíamos elegir?\n-   ¿Qué video debería recomendar WebPix?\n-   ¿Qué ruta debería tomar un conductor?\n-   ¿Qué productos debería recomendar Nyle?"
           ]
         },
+        "2fd97848-8352-45c5-b174-0404f39f43c2": {
+          "description": "Hemos analizado distintos tipos de problemas de datos, pero todos se relacionan con hacer recomendaciones (como la selección de videos) o predicciones (como el trayecto más corto). Hoy, comenzaremos un proyecto en donde utilizarás datos para hacer tus propias recomendaciones, basadas en un tema de tu interés."
+        },
+        "61aaac24-77d4-4333-80fd-75b90af1df58": {
+          "description": "**Pregunta del día:** ¿Cómo puedo utilizar datos para hacer mis propias recomendaciones?"
+        },
         "24a8f1ab-d8eb-4738-b114-0534be713085": {
+          "name": "Día 1 Actividad principal (40 minutos)",
+          "description": "**Agrupar:** Agrupe a los estudiantes en parejas. Si el número de estudiantes es impar, este proyecto se puede realizar en un grupo de 3 estudiantes o individualmente.\n\n**Distribuir:** Distribuya copias de la Guía de Proyecto. También entregue una copia de la rúbrica o de la lista de comprobación a cada estudiante.",
           "tips": [
             "**Rúbrica y Lista de Comprobación:** Los estudiantes cuentan con dos recursos que pueden utilizar para la auto-reflexión y para asegurar que su proyecto va por buen camino: la rúbrica y la lista de comprobación del estudiante. Recomendamos que los estudiantes utilicen la lista de comprobación para autoevaluación y reflexión, ya que es más fácil para ellos entender y resumir su propio proyecto. Sin embargo, recomendamos que el docente utilice la rúbrica completa para la evaluación de proyectos, puesto que de esta forma podrá brindar una retroalimentación más asertiva y completa a los estudiantes. Puede ver ejemplos de esta evaluación en el recurso de Ejemplo de Rúbrica Marcada en la parte superior del plan de lección (solo visible para docentes verificados)."
           ]
         },
         "84929552-ebfc-43ef-a97d-f1857609d4ae": {
+          "description": "#### **_Guía de Proyecto - Haz una recomendación_**\n\n**Reseña:** Lea la reseña del proyecto junto con los estudiantes y responda las dudas que puedan tener.\n\n**Aplicación de ejemplo:** Muestre la aplicación de ejemplo. La clase debe participar en el cuestionario varias veces.",
           "progression_name": "Aplicación de muestra"
         },
         "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
+          "description": "**Comenzando:** Los estudiantes deben responder la siguiente pregunta en sus guías de proyecto:\n\n-   ¿Qué decisiones puede tomar el usuario con la ayuda de la aplicación?\n-   ¿Qué datos utiliza la aplicación para brindar esa recomendación?\n-   ¿Cómo crees que los creadores de la aplicación decidieron el algoritmo qué debían utilizar para tomar la decisión?",
           "tips": [
-            null
+            "Las primeras dos preguntas son bastante directas. La aplicación ayuda al usuario a escoger un lugar de vacaciones y utiliza los datos acerca de sus preferencias en comidas, superpoderes y animales.\n\nEn la siguiente pregunta, los estudiantes deben pensar acerca de cómo se eligen los algoritmos. En la lección anterior, los estudiantes diseñaron un algoritmo para esta aplicación analizando tablas de tabulación cruzada de las personas que manifestaron preferencias distintas. Recuérdeles que, en lugar de crear sus propias reglas basadas en suposiciones acerca del mundo, los creadores pueden usar los datos que ellos mismos han recolectado para crear sus propios algoritmos."
           ]
+        },
+        "aea82025-7a34-4033-81e5-8468fd89be01": {
+          "description": "En este proyecto, utilizaremos el proceso de resolución de problemas de datos para poder crear nuestro algoritmo. Encuestaremos a personas para encontrar las relaciones entre sus preferencias, luego utilizaremos lo que hemos aprendido para crear un algoritmo que pueda recomendar algo al usuario. Trabajarás con un compañero, y tu primer paso será: pensar en el tipo de recomendación que quieres hacer, y tres preguntas que harás a tus encuestados, las cuales te ayudarán a obtener la información que necesitas para hacer una recomendación."
+        },
+        "eaf9b941-778e-468d-ae6e-e353b3d0942b": {
+          "description": "**Paso 1 - Define tu problema:** Dé un momento a los estudiantes para que, junto con su compañero, decidan el tema de su recomendación."
         },
         "4bc50ef6-5978-4a80-943a-49fc0cffb23e": {
+          "description": "#### Preparar\n\n**Paso 2 - Determina qué datos que necesitarás:** Dé un momento a los estudiantes para que piensen en los datos que necesitarán para hacer una recomendación al usuario.",
           "tips": [
-            null
+            "El plan de lección asume una estructura sumamente rígida del algoritmo, con cuatro posibles recomendaciones basadas en tres preguntas de selección múltiple, cada una con cuatro opciones de respuesta. Por esta razón, es conveniente dar más libertad a los estudiantes al momento de crear sus encuestas y algoritmos."
           ]
+        },
+        "187a7588-ecb2-4b52-8d9c-d87ca320216b": {
+          "description": "**Paso 3 - Crea tu encuesta**\n\nCuando los estudiantes hayan determinado los datos que necesitarán, deben agregarlos al formulario de encuesta. En la encuesta inicial, deberán incluir una pregunta que les ayude a obtener lo que quieren recomendar (Por ejemplo: Un lugar de vacaciones). Utilizarán estos datos para hacer conexiones entre las preferencias declaradas por el usuario y lo que ellos recomendarán.\n\n#### Día 1 Actividad de cierre\n\n**Recoger:** Recoja las guías de proyecto y revise si existen errores que puedan causar problemas a los estudiantes en la siguiente parte de la lección. Los estudiantes también pueden usar esta instancia para recolectar datos y aplicar la encuesta a otras personas fuera de la clase, adelantándose de la próxima lección."
+        },
+        "43097b7a-83d4-475a-b618-96db7d3d4522": {
+          "name": "Día 2 Actividad principal (45 minutos)",
+          "description": "#### Día 2 Actividad inicial\n\n**Distribuir:** Entregue a los estudiantes las guías de proyecto de la clase anterior. Si tiene comentarios acerca del trabajo de los estudiantes, hable con ellos de forma individual. De lo contrario, los estudiantes pueden continuar con los siguientes pasos del proyecto.\n\n#### **_Guía de Proyecto - Haz una recomendación_**\n\n**Paso 4 - Recolecta lo datos para tu encuesta:** Los estudiantes deben aplicar la encuesta a sus compañeros. Idealmente, los estudiantes deben encuestar al menos a 20 personas para cerciorarse de tener suficientes datos para la interpretación de estos en el siguiente paso. La mayor parte de esta hora de clase se utilizará en llevar a cabo esta actividad. "
+        },
+        "db13f5b5-f1c0-4052-9a57-e23f3b55608f": {
+          "description": "**Paso 5 - Interpreta tus datos:** Apoye a los estudiantes cuando deban utilizar la tabulación cruzada para encontrar relaciones entre las distintas preferencias del usuario. Si los estudiantes tienen dificultades en esta parte del proyecto, puede mostrarles la guía de ejemplo o completar algunas de las tablas como clase."
         },
         "2d923b7c-56a0-462a-b7c4-5350cfe28ac0": {
+          "description": "**Paso 6 - Define tu Algoritmo:** Los estudiantes usan las relaciones para crear las reglas para su algoritmo de recomendación.",
           "tips": [
-            null
+            "Este paso es algo distinto a la actividad de algoritmo que los estudiantes realizaron al comienzo de este capítulo. Asegúrese que los estudiantes comprendan que las reglas de su algoritmo deben estar basadas en los datos recolectados e interpretados de sus encuestas y no en sus propias opiniones."
           ]
         },
+        "7dc83ff4-843e-4ef0-8b8f-fc42ec99c587": {
+          "description": "#### Día 2 Actividad de cierre\n\n**Recoger:** Recoja las guías de proyecto de los estudiantes y revise brevemente para comprobar que los estudiantes avanzan de forma correcta."
+        },
+        "ccc60270-6d7f-4def-96ba-d02c520dc917": {
+          "name": "Día 3 Actividad principal (45 minutos)",
+          "description": "#### Día 3 Actividad inicial\n\n**Distribuir:** Entregue a los estudiantes las guías de proyecto de la clase anterior. Si tiene comentarios acerca del trabajo de los estudiantes, hable con ellos de forma individual. De lo contrario, los estudiantes pueden continuar con los siguientes pasos del proyecto.\n\n#### **_Guía de Proyecto - Haz una recomendación_**"
+        },
+        "831f4bc1-6ea7-4419-b83d-0382e78db075": {
+          "description": "**Paso 7 - Prueba tu Algoritmo:** Dé tiempo a los estudiantes para que puedan utilizar su algoritmo haciendo una recomendación a tres de sus compañeros, y luego reflexionen si su algoritmo es o no efectivo.\n\n**Paso 8 - Revisión por pares:** Lea las instrucciones del Paso 8 en la Guía de Proyecto. Aclare que la intención de que otro equipo revise nuestro trabajo es generar nuevas ideas para mejorar el algoritmo de recomendación.\n\n**Distribuir:** Distribuya la Guía Revisión por Pares - Hacer una Recomendación a cada estudiante.\n\n#### Revisión por pares - Hacer una recomendación\n\n**Revisión por pares:** Pida a los equipos que intercambien proyectos y completen la guía de revisión por pares de otro equipo. Deben completar la tabla y ofrecer retroalimentación para el algoritmo de recomendación del otro equipo.\n\n**Reflexión del Creador:** Los equipos deben revisar la retroalimentación y completar la sección de Reflexión del Creador en la guía de actividades. Los equipos deben corregir sus guías de proyecto en base a la retroalimentación del otro equipo.\n\n#### Día 3 Actividad de cierre\n\n**Recoger:** Recoja las guías de proyecto de los estudiantes y revise brevemente para comprobar que los estudiantes avanzan de forma correcta."
+        },
+        "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4": {
+          "name": "Días 4 y 5 Actividad (85 minutos)",
+          "description": "#### Día 4 Actividad inicial\n\n**Distribuir:** Entregue a los estudiantes las guías de proyecto de la clase anterior. Si tiene comentarios acerca del trabajo de los estudiantes, hable con ellos de forma individual. De lo contrario, los estudiantes pueden continuar con los siguientes pasos del proyecto."
+        },
         "92566744-182e-416d-b7c7-2f5b2a92026b": {
+          "description": "**Paso 9 - Finalizar y presentar:** Los estudiantes deben diseñar una presentación para compartir su trabajo con sus compañeros de clase. Si bien usted puede escoger entre distintos formatos, a continuación brindamos una lista de los contenidos que debería incluir la presentación. La presentación debería incluir:\n\n-   Las decisiones que puede tomar el usuario con la ayuda de la aplicación\n-   Los tipos de datos que recolectaron y que ayudaron a que el usuario pudiera tomar esa decisión\n-   Las relaciones encontradas al interpretar los datos de la encuesta\n-   La forma en la que utilizaste esta información para crear tu algoritmo de recomendación\n-   Los resultados al probar el algoritmo en los usuarios",
           "tips": [
-            null
+            "**¿Qué tipo de presentación?** Puede optar por la forma de presentación que mejor se adapte a su clase: diapositivas, carteles, papel, etc. Puede modificar la rúbrica de presentación para que se adapte a sus propias necesidades."
           ]
+        },
+        "2b7b1dfd-eb64-46b1-a225-5a4df7b10149": {
+          "description": "**Presentaciones:** Dé un tiempo a los equipos para que presenten su trabajo. Puede evaluar los proyectos utilizando la rúbrica, y basándose en las presentaciones y guías de proyecto."
         },
         "22ca7a0f-899a-4cd3-8fbd-14afbf396317": {
           "progression_name": "Reflexión"
