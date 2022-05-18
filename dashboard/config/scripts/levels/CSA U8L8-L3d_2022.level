@@ -7,18 +7,25 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ],
     "display_name": "Dog and Cat Breeds",
     "bubble_choice_description": "Create a scene about dog and cat breeds using a list of dog breeds and a list of cat breeds.",
-    "thumbnail_url": "https://images.code.org/3fd66866dd4fb3b002f0721143ff6f81-pets.png"
+    "thumbnail_url": "https://images.code.org/3fd66866dd4fb3b002f0721143ff6f81-pets.png",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n    \n  }\n}",
+        "isVisible": true
+      },
+      "PetScene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.util.ArrayList;\n\n/*\n * Represents a pet scene displaying images of cats and dogs\n */\npublic class PetScene extends Scene {\n\n  private ArrayList<Cat> catBreeds;    // The list of cat breeds\n  private ArrayList<Dog> dogBreeds;    // The list of dog breeds\n\n  /*\n   * Constructor to create a PetScene with\n   * the specified lists of cat and dog breeds\n   */\n  public PetScene(ArrayList<Cat> catBreeds, ArrayList<Dog> dogBreeds) {\n    this.catBreeds = catBreeds;\n    this.dogBreeds = dogBreeds;\n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-18T19:46:29.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-18T19:46:29.452+00:00\",\"changed\":[\"cloned from \\\"CSA U8L8-L3c_2022\\\"\"],\"cloned_from\":\"CSA U8L8-L3c_2022\"},{\"changed_at\":\"2022-04-18 19:46:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-15 21:08:29 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-16 14:41:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-18T19:46:29.452+00:00\",\"changed\":[\"cloned from \\\"CSA U8L8-L3c_2022\\\"\"],\"cloned_from\":\"CSA U8L8-L3c_2022\"},{\"changed_at\":\"2022-04-18 19:46:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-15 21:08:29 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-16 14:41:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-17 22:57:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
