@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Upcoming panel for high school students:  Mentorships, scholarships, mental health, gap year, finding community and more!",
+          "details": "Join us Wed, May 25 at 8pm EDT as college women attending the California Institute of Technology, University of Maryland, College Park, Cal Berkeley, Universities of Toronto and Washington discuss mentorships, scholarships, mental health, gap year and finding community in college!  ",
+          "link": "https://bit.ly/RTC5lb2022",
+          "type": "bullhorn",
+          "visibility": "Teacher and student"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 17:18:56 UTC",
+    "serialized_at": "2022-05-16 17:45:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

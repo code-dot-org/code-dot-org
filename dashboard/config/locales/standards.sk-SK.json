@@ -224,8 +224,17 @@
         "csta/1B-IC-18": {
           "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
         },
+        "csta/1B-AP-11": {
+          "description": "Rozkladanie problémov na menšie, zvládnuteľné podproblémy s cieľom podporiť proces vývoja programov."
+        },
+        "csta/1B-AP-08": {
+          "description": "Porovnávanie a zdokonaľovanie viacerých algoritmov slúžiacich na tú istú úlohu a určenie toho, ktorý je najvhodnejší."
+        },
         "csta/1B-DA-07": {
           "description": "Používanie údajov na zdôraznenie alebo načrtnutie príčinných súvislostí, predpovedanie výsledkov alebo vyjadrenie myšlienky."
+        },
+        "csta/1B-AP-16": {
+          "description": "Schopnosť zaujať s pomocou učiteľa rôzne roly pri spolupráci s rovesníkmi počas dizajnovej, implementačnej a kontrolnej fázy vývoja programu."
         }
       }
     }

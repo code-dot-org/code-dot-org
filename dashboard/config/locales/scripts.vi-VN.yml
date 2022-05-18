@@ -12110,6 +12110,10 @@ vi:
               name: giai đoạn mới
             Debugging:
               name: Sửa lỗi
+            "[TEMPLATE] Content lessons":
+              name: "[MẪU] Nội dung bài học"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[MẪU] Tổng kết học phần"
         csd2-virtual:
           description_short: Tìm hiểu để xây dựng trang web riêng của bạn trong Kho
             Dữ liệu Web.
@@ -17545,6 +17549,9 @@ vi:
             lesson-19:
               name: Sửa lỗi
         csa4-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -17554,6 +17561,8 @@ vi:
               name: Phần 5 Đánh giá
             lesson-7:
               name: Vòng lặp for nâng cao
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -18033,6 +18042,8 @@ vi:
                 học tập thông qua một bài đánh giá trắc nghiệm.
             lesson-1:
               key: lesson-1
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -18042,12 +18053,17 @@ vi:
           lessons:
             lesson-6:
               name: Sở hữu trí tuệ
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Hộp cát
         csa8-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -18661,3 +18677,7 @@ vi:
               key: lesson-2
             lesson-3:
               key: lesson-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển

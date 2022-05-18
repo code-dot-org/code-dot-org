@@ -103,6 +103,7 @@
   "saveToBackpack": "บันทึกในแบ็กแพ็ก",
   "sendingVideo": "กำลังส่งวิดีโอ ความยาวทั้งหมด: {totalTime} วินาที",
   "startingPainter": "เริ่มใช้งานตัววาดภาพ",
+  "submit": "ส่ง",
   "switchToDisplayTheme": "เปลี่ยนเป็น {displayTheme}",
   "timeoutWarning": "คำเตือน: โปรเจกต์ของคุณจะหยุดทำงานในอีก 15 วินาที",
   "timeout": "โปรเจกต์หยุดทำงานแล้ว",
