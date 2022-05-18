@@ -9,6 +9,9 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
+import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
+import project from '@cdo/apps/code-studio/initApp/project';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -21,12 +24,14 @@ const CommitsAndReviewTab = props => {
     viewAsTeacher,
     userIsTeacher,
     codeReviewEnabled,
-    locale
+    locale,
+    setIsReadOnlyWorkspace
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
+  const [openReviewError, setOpenReviewError] = useState(null);
 
   const dataApi = useMemo(
     () =>
@@ -74,13 +79,30 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const closeReview = async () => {
+  const handleCloseReview = async (onSuccess, onFailure) => {
     try {
-      const closedReview = await dataApi.closeReview(openReviewData);
+      const closedReview = await dataApi.closeReview(openReviewData.id);
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
+      setIsReadOnlyWorkspace(false);
+      onSuccess();
     } catch (err) {
-      // TODO: what happens when review fails to close
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const handleOpenReview = async () => {
+    try {
+      await project.save(true);
+      const currentVersion = project.getCurrentSourceVersionId();
+      const newReview = await dataApi.openNewCodeReview(currentVersion);
+      setOpenReviewData(newReview);
+      setIsReadOnlyWorkspace(true);
+      setOpenReviewError(false);
+    } catch (err) {
+      console.log(err);
+      setOpenReviewError(true);
     }
   };
 
@@ -135,32 +157,40 @@ const CommitsAndReviewTab = props => {
           ...(openReviewData ? [openReviewData] : [])
         ]}
         addCodeReviewComment={addCodeReviewComment}
-        closeReview={closeReview}
+        closeReview={handleCloseReview}
       />
       {!openReviewData && (
-        <Button
-          icon="comment"
-          onClick={() => {}}
-          text={javalabMsg.startReview()}
-          color={Button.ButtonColor.blue}
-          style={styles.openCodeReview}
-        />
+        <div style={styles.openCodeReview}>
+          <Button
+            icon="comment"
+            onClick={handleOpenReview}
+            text={javalabMsg.startReview()}
+            color={Button.ButtonColor.blue}
+          />
+          {openReviewError && <CodeReviewError />}
+        </div>
       )}
     </div>
   );
 };
 
 export const UnconnectedCommitsAndReviewTab = CommitsAndReviewTab;
-export default connect(state => ({
-  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Instructor,
-  userIsTeacher: state.currentUser.userType === 'teacher',
-  channelId: state.pageConstants.channelId,
-  serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptId: state.pageConstants.serverScriptId,
-  locale: state.pageConstants.locale
-}))(CommitsAndReviewTab);
+export default connect(
+  state => ({
+    codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
+    viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+    viewAsTeacher: state.viewAs === ViewType.Instructor,
+    userIsTeacher: state.currentUser.userType === 'teacher',
+    channelId: state.pageConstants.channelId,
+    serverLevelId: state.pageConstants.serverLevelId,
+    serverScriptId: state.pageConstants.serverScriptId,
+    locale: state.pageConstants.locale
+  }),
+  dispatch => ({
+    setIsReadOnlyWorkspace: isReadOnly =>
+      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+  })
+)(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
   // Populated by redux
@@ -171,7 +201,8 @@ CommitsAndReviewTab.propTypes = {
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
 const styles = {
