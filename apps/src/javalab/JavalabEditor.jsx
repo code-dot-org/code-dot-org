@@ -87,7 +87,6 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
 
@@ -106,7 +105,8 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    backpackEnabled: PropTypes.bool
+    backpackEnabled: PropTypes.bool,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -901,7 +901,10 @@ export default connect(
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
-    backpackEnabled: state.javalab.backpackEnabled
+    backpackEnabled: state.javalab.backpackEnabled,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.isProjectTemplateLevel &&
+      state.javalab.isReadOnlyWorkspace
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
