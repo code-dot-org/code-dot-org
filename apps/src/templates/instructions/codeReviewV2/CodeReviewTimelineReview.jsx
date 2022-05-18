@@ -69,6 +69,7 @@ const CodeReviewTimelineReview = ({
           comments.map(comment => {
             // When we create the V2 comment, no longer convert, use the new comment shape
             const convertDataForComponent = {
+              id: comment.id,
               name: comment.commenterName,
               commentText: comment.comment,
               timestampString: comment.createdAt
