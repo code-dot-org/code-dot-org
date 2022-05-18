@@ -144,9 +144,9 @@ export default class CodeReviewDataApi {
     ];
   }
 
-  submitNewCodeReviewComment(commentText) {
+  submitNewCodeReviewComment(comment, codeReviewId) {
     return new Promise((resolve, reject) => {
-      findProfanity(commentText, this.locale, this.token)
+      findProfanity(comment, this.locale, this.token)
         .done(profaneWords => {
           if (profaneWords?.length > 0) {
             reject({
@@ -156,28 +156,18 @@ export default class CodeReviewDataApi {
               })
             });
           } else {
-            // $.ajax({
-            //   url: `/code_review_notes`,
-            //   type: 'POST',
-            //   headers: {'X-CSRF-Token': this.token},
-            //   data: {
-            //     channel_id: this.channelId,
-            //     script_id: this.scriptId,
-            //     level_id: this.levelId,
-            //     comment: commentText
-            //   }
-            // })
-            //   .done(newComment => resolve(newComment))
-            //   .fail(result => reject(result));
+            $.ajax({
+              url: `/code_review_notes`,
+              type: 'POST',
+              headers: {'X-CSRF-Token': this.token},
+              data: {
+                codeReviewId,
+                comment
+              }
+            })
+              .done(newComment => resolve(newComment))
+              .fail(result => reject(result));
           }
-          const fakeNewComment = {
-            id: 789,
-            commentText: commentText,
-            name: 'Steve',
-            timestampString: '2022-03-31T04:58:42.000Z',
-            isResolved: false
-          };
-          resolve(fakeNewComment);
         })
         .fail(error => reject(error));
     });

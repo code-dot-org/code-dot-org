@@ -18,7 +18,7 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview
 }) => {
-  const {createdAt, isOpen, version, isVersionExpired, comments} = review;
+  const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
@@ -66,18 +66,28 @@ const CodeReviewTimelineReview = ({
           )}
         </div>
         {comments &&
-          comments.map(comment => (
-            <Comment
-              comment={comment}
-              key={`code-review-comment-${comment.id}`}
-              onResolveStateToggle={() => {}}
-              onDelete={() => {}}
-              viewAsCodeReviewer={true}
-            />
-          ))}
+          comments.map(comment => {
+            // When we create the V2 comment, no longer convert, use the new comment shape
+            const convertDataForComponent = {
+              name: comment.commenterName,
+              commentText: comment.comment,
+              timestampString: comment.createdAt
+            };
+            return (
+              <Comment
+                comment={convertDataForComponent}
+                key={`code-review-comment-${comment.id}`}
+                onResolveStateToggle={() => {}}
+                onDelete={() => {}}
+                viewAsCodeReviewer={true}
+              />
+            );
+          })}
         {isOpen && (
           <CodeReviewCommentEditor
-            addCodeReviewComment={addCodeReviewComment}
+            addCodeReviewComment={(commentText, onSuccess, onFailure) =>
+              addCodeReviewComment(commentText, id, onSuccess, onFailure)
+            }
           />
         )}
         {isOpen && (
