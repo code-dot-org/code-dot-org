@@ -41,6 +41,7 @@ body.modal-open .supreme-container{
 #homepage #hero {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 #homepage #hero .widehero {
