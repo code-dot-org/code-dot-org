@@ -5,7 +5,7 @@
 
   "banners": {
     "csa-launch-2022": {
-      "dcdo": "csa-launch-2022",
+      "dcdo": "csa-homepage-banner-2022",
       "class": "csa",
       "desktopImage": "/images/marketing/homepage-csa-background.svg",
       "actions": [
