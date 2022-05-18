@@ -2,6 +2,15 @@
   "de-DE": {
     "data": {
       "standards": {
+        "csta/1B-AP-10": {
+          "description": "Programme erstellen, die Sequenzen, Ereignisse, Schleifen und Konditionalitäten enthalten."
+        },
+        "csta/1B-AP-12": {
+          "description": "Teile eines bestehenden Programms ändern, neu mischen oder in die eigene Arbeit integrieren, um etwas Neues zu entwickeln oder erweiterte Funktionen hinzuzufügen."
+        },
+        "csta/1B-AP-15": {
+          "description": "Ein Programm oder einen Algorithmus testen und debuggen (Fehler erkennen und beheben), um sicherzustellen, dass er wie vorgesehen läuft."
+        },
         "ccela/6.SL.1": {
           "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in der Klasse 6, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
         },
@@ -173,8 +182,47 @@
         "iste/4.d": {
           "description": "Benutze mehrere Prozesse und verschiedene Perspektiven, um alternative Lösungen zu erkunden."
         },
+        "csta/1A-AP-11": {
+          "description": "Zerlegen Sie die zur Lösung eines Problems erforderlichen Schritte in eine präzise Abfolge von Anweisungen."
+        },
+        "csta/1A-AP-09": {
+          "description": "Modellieren Sie die Art und Weise, wie Programme Daten speichern und verarbeiten, indem Sie Zahlen oder andere Symbole zur Darstellung von Informationen verwenden."
+        },
+        "csta/1A-AP-14": {
+          "description": "Fehler in einem Algorithmus oder Programm, das Sequenzen und einfache Schleifen enthält, zu identifizieren und zu beheben."
+        },
+        "csta/1B-CS-01": {
+          "description": "Beschreiben Sie, wie interne und externe Teile von Computergeräten funktionieren und ein System bilden."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modellieren, wie Computerhardware und -software als System zusammenarbeiten, um Aufgaben zu bewältigen."
+        },
+        "csta/1A-CS-03": {
+          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
+        },
+        "csta/1A-AP-10": {
+          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
+        },
         "csta/1B-IC-18": {
           "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
+        },
+        "csta/1B-AP-11": {
+          "description": "Dekomposition (Zerlegung) von Problemen in kleinere, überschaubare Teilprobleme, um den Programmentwicklungsprozess zu erleichtern."
+        },
+        "csta/1B-NI-05": {
+          "description": "Erörtern Sie reale Probleme der Cybersicherheit und wie persönliche Daten geschützt werden können."
+        },
+        "csta/1B-AP-09": {
+          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
+        },
+        "csta/1B-IC-21": {
+          "description": "Verwenden Sie gemeinfreie oder Creative-Commons-Medien und unterlassen Sie das Kopieren oder Verwenden von Material, das von anderen ohne Genehmigung erstellt wurde."
+        },
+        "csta/1B-AP-14": {
+          "description": "Beachten Sie die Rechte an geistigem Eigentum und geben Sie bei der Erstellung oder beim Remixen von Programmen die entsprechenden Urheberrechte an."
+        },
+        "csta/1B-AP-17": {
+          "description": "Beschreiben Sie die während der Programmentwicklung getroffenen Entscheidungen anhand von Codekommentaren, Präsentationen und Demonstrationen."
         }
       }
     }

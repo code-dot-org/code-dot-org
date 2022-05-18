@@ -806,7 +806,7 @@
           "type": "리소스"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "느낌 얼굴",
+          "name": "감정 얼굴",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "감정 이미지"
         },
@@ -1093,7 +1093,7 @@
           "type": "리소스"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "느낌 얼굴",
+          "name": "감정 얼굴",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "감정 이미지"
         },
@@ -1182,7 +1182,7 @@
           "type": "리소스"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "커몬 코어 (Common Core) 및 NGSS 가이던스",
+          "name": "공통교과과정 및 NGSS 가이던스",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "리소스"
         },
@@ -1232,11 +1232,11 @@
           "type": "리소스"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "온라인 상에서 비열한 행동을 멈추게 함(STOP): 레슨 슬라이드 ",
+          "name": "온라인 상에서 나쁜 행동을 멈추게 함(STOP): 레슨 슬라이드 ",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "온라인 상에서 비열한 행동을 멈추게 함(STOP): 온라인 비열한 행동 멈춤 (STOP)",
+          "name": "온라인 상에서 나쁜 행동을 멈추게 함(STOP): 온라인에서 나쁜 행동 멈춤 (STOP)",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "학생 유인물"
         },
@@ -1588,7 +1588,7 @@
           "type": "정답"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "느낌 얼굴",
+          "name": "감정 얼굴",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "감정 이미지"
         },
@@ -1828,7 +1828,7 @@
           "type": "교사용 동영상"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "느낌 얼굴",
+          "name": "감정 얼굴",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "감정 이미지"
         },
@@ -1977,6 +1977,7 @@
           "type": "슬라이드"
         },
         "types_of_disabilities/coursee/2021": {
+          "name": "장애 유형",
           "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
           "type": "리소스"
         },
@@ -2005,7 +2006,7 @@
           "type": "리소스"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "커몬 코어 (Common Core) 및 NGSS 가이던스",
+          "name": "공통교과과정 및 NGSS 가이던스",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
           "type": "리소스"
         },
@@ -2100,9 +2101,11 @@
           "type": "리소스"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "AI 연구실 소개",
           "type": "슬라이드"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI 연구실 소개",
           "type": "비디오"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
@@ -2454,9 +2457,6 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "숫자 표현"
-        },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "데이터 기밀 유지"
         },
         "unit_5_data_society/csd/2021": {
           "type": "슬라이드"

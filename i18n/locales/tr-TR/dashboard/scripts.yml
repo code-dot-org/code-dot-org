@@ -15179,6 +15179,10 @@ tr:
               name: Modül 8
             Module 7:
               name: Modül 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] İçerik ile ilgili dersler"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Ünite Sonu Özeti"
         csd2-virtual:
           title: Web Laboratuvarına Kişiye Özel Giriş
           description: Kendi web sayfanızda nasıl içerik oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşmak istediğinize karar verdikten sonra, sayfalarınızı HTML ve CSS kullanarak nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Aynı zamanda hata ayıklama ve yorumlama gibi önemli programlama becerilerini uygulayacaksınız. Ünitenin sonunda, İnternette yayınlanabilecek kişisel bir web siteniz olacak.
@@ -20809,6 +20813,8 @@ tr:
           lessons:
             lesson-2:
               name: Ünite 4 Değerlendirme
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -20818,6 +20824,8 @@ tr:
               name: Ünite 5 Değerlendirme
             lesson-7:
               name: Gelişmiş For Döngüler
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -21080,6 +21088,8 @@ tr:
               key: Değerlendirme Günü
             lesson-1:
               key: ders-1
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -21092,6 +21102,8 @@ tr:
               key: Değerlendirme Günü
             lesson-6:
               name: Fikri Mülkiyet
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -21102,6 +21114,8 @@ tr:
             Assessment Day:
               name: Değerlendirme Günü
               key: Değerlendirme Günü
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -22103,3 +22117,7 @@ tr:
               key: ders-2
             lesson-3:
               key: ders-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsol

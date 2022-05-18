@@ -905,6 +905,7 @@
   coursed-2020_name: Курс D (2020)
   coursee-2020_name: Курс E (2020)
   coursef-2020_name: Курс F (2020)
+  coursef-2021_name: Курс F (2021)
   accelerated_name: "Ускорен курс"
   20-hour_name: Ускорен курс
   algebra_name: "CS в алгебрата"
@@ -1482,3 +1483,4 @@
   ai_for_oceans_lesson_plan: "план на урок"
   ai_activity: "Упражнение"
   ai_description: "Описание"
+  outbreak_tile_title: "Епидемия"
