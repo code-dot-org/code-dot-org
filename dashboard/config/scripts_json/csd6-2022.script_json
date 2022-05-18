@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-18 15:23:54 UTC",
+    "serialized_at": "2022-05-18 15:33:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1392,7 +1392,7 @@
       "key": "debe9954-34ec-44d2-96c4-69f46dc1bca8",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.\n\n**Question of the Day:** What is a computing innovation?",
         "name": "Get Inspired\r"
       },
       "seeding_key": {
@@ -11796,13 +11796,6 @@
         "lesson.key": "Board Events",
         "programming_environment.name": "applab",
         "programming_expression.key": "toggleSwitch"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "toggleSwitch.isOpen"
       }
     },
     {
