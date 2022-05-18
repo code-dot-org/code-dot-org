@@ -6,36 +6,44 @@ class CodeReviewsController < ApplicationController
 
   # GET /code_reviews
   # Returns the list of code reviews and associated comments for the given
-  # project (identified by channel id).
+  # project (identified by channel id), script, and level.
   def index
-    params.require([:channelId])
+    params.require([:channelId, :scriptId, :levelId])
 
-    project = Project.find_by_channel_id(params[:channelId])
+    storage_id, project_id = storage_decrypt_channel_id(params[:channelId])
+    project_owner_id = user_id_for_storage_id(storage_id)
+    project_owner = User.find(project_owner_id)
 
-    # Check that current_user can see code reviews associated with this project.
-    # (Note that this ability is defined on Project.)
-    authorize! :index_code_reviews, project
+    # Check that current_user can see code reviews associated with this project
+    authorize! :read, CodeReview, project_owner
 
-    code_reviews = CodeReview.where(project_id: project.id)
+    code_reviews = CodeReview.get_all(
+      project_id: project_id,
+      script_id: params[:scriptId],
+      level_id: params[:levelId]
+    )
+
     render json: code_reviews.map(&:summarize_with_comments)
   end
 
   # POST /code_reviews
   def create
-    params.require([:channelId, :version, :scriptId, :levelId])
+    params.require([:scriptId, :levelId, :channelId, :version])
 
-    project = Project.find_by_channel_id(params[:channelId])
+    storage_id, project_id = storage_decrypt_channel_id(params[:channelId])
+    project_owner_id = user_id_for_storage_id(storage_id)
     # TODO: Should we check that this is a valid version for this project?
     # TODO: Can we determine and store an accurate expiration date? Can the expiration date change?
 
+    # TODO: Consider storing the channel_id instead of the project_id in CodeReview
     code_review = CodeReview.new(
       user_id: current_user.id,
-      project_id: project.id,
-      project_version: params[:version],
       script_id: params[:scriptId],
-      level_id: params[:levelId]
+      level_id: params[:levelId],
+      project_id: project_id,
+      project_version: params[:version]
     )
-    authorize! :create, code_review, project
+    authorize! :create, code_review, project_owner_id
     code_review.save!
 
     render json: code_review.summarize

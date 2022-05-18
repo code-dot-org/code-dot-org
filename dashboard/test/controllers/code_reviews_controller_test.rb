@@ -1,15 +1,13 @@
 require 'test_helper'
 
 class CodeReviewsControllerTest < ActionController::TestCase
-  # Setting this to true causes some weird db locking issue, possibly due to
-  # some writes to the projects table coming from a different connection via
-  # sequel.
-  self.use_transactional_test_case = false
+  self.use_transactional_test_case = true
 
   setup_all do
     @project_owner = create :student
-    @project = create :project, owner: @project_owner
-    @channel_id = @project.channel_id
+    @storage_id = create_storage_id_for_user(@project_owner.id)
+    @channel_id = create :project, storage_id: @storage_id
+    _,  @project_id = storage_decrypt_channel_id(@channel_id)
   end
 
   setup do
@@ -21,11 +19,11 @@ class CodeReviewsControllerTest < ActionController::TestCase
     level_id = 5
 
     closed_at = DateTime.now
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
       script_id: script_id, level_id: level_id, closed_at: closed_at
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
       script_id: script_id, level_id: level_id, closed_at: closed_at + 1.second
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
+    create :code_review, user_id: @project_owner.id, project_id: @project_id,
       script_id: script_id, level_id: level_id, closed_at: nil
 
     get :index, params: {
@@ -45,38 +43,42 @@ class CodeReviewsControllerTest < ActionController::TestCase
     project_version = 'abc'
 
     post :create, params: {
-      channelId: @channel_id,
-      version: project_version,
       scriptId: script_id,
-      levelId: level_id
+      levelId: level_id,
+      channelId: @channel_id,
+      version: project_version
     }
     assert_response :success
 
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
+    assert_equal script_id, response_json['scriptId']
+    assert_equal level_id, response_json['levelId']
     assert_equal project_version, response_json['version']
     assert_equal false, response_json['isVersionExpired']
     assert_equal true, response_json['isOpen']
     assert_not_nil response_json['createdAt']
   end
 
-  test 'cannot create multiple open code reviews for the same project' do
+  test 'cannot create multiple open code reviews for the same script and level' do
+    script_id = 23
+    level_id = 11
     project_version = 'abc'
 
     post :create, params: {
+      scriptId: script_id,
+      levelId: level_id,
       channelId: @channel_id,
-      version: project_version,
-      scriptId: 15,
-      levelId: 31
+      version: project_version
     }
     assert_response :success
 
     assert_raises ActiveRecord::RecordInvalid do
       post :create, params: {
+        scriptId: script_id,
+        levelId: level_id,
         channelId: @channel_id,
-        version: project_version,
-        scriptId: 7,
-        levelId: 19
+        version: project_version
       }
     end
   end
