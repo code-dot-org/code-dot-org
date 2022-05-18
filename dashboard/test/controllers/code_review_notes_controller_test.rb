@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CodeReviewNotesTest < ActionController::TestCase
+class CodeReviewNotesControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
@@ -23,7 +23,7 @@ class CodeReviewNotesTest < ActionController::TestCase
   test 'create code review note' do
     comment_text = "A note for code review"
     post :create, params: {
-      comment: script_id,
+      comment: comment_text,
       codeReviewId: @code_review_request.id,
     }
     assert_response :success
