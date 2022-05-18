@@ -58,7 +58,6 @@ class JavalabView extends React.Component {
     setIsTesting: PropTypes.func,
     canRun: PropTypes.bool,
     canTest: PropTypes.bool,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
     hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
@@ -186,7 +185,6 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       isTesting,
-      showProjectTemplateWorkspaceIcon,
       disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
@@ -236,9 +234,6 @@ class JavalabView extends React.Component {
             topRightPanel={height => (
               <JavalabEditor
                 onCommitCode={onCommitCode}
-                showProjectTemplateWorkspaceIcon={
-                  showProjectTemplateWorkspaceIcon
-                }
                 height={height}
                 isProjectTemplateLevel={isProjectTemplateLevel}
                 handleClearPuzzle={handleClearPuzzle}
@@ -338,8 +333,6 @@ export default connect(
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
