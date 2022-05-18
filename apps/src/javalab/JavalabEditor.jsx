@@ -35,6 +35,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import {getDefaultFileContents} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 
 const MIN_HEIGHT = 100;
@@ -89,6 +90,7 @@ class JavalabEditor extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
+    viewMode: PropTypes.string,
 
     // populated by redux
     setSource: PropTypes.func,
@@ -429,7 +431,6 @@ class JavalabEditor extends React.Component {
     if (!this.validateFileName(filename, 'newFileError')) {
       return;
     }
-    fileContents = fileContents || '';
     const duplicateFileError = this.checkDuplicateFileName(filename);
     if (duplicateFileError) {
       this.setState({
@@ -437,6 +438,9 @@ class JavalabEditor extends React.Component {
       });
       return;
     }
+
+    fileContents =
+      fileContents || getDefaultFileContents(filename, this.props.viewMode);
 
     const newTabIndex = this.state.lastTabKeyIndex + 1;
     const newTabKey = this.getTabKey(newTabIndex);
