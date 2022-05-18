@@ -230,14 +230,14 @@ class Lesson < ApplicationRecord
     # using legacy lesson plans, remove this condition and consolidate with
     # localized_name_for_lesson_show.
     if script.lessons.many? || (script.is_migrated && !script.use_legacy_lesson_plans)
-      get_localized_property(:name) || ''
+      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
   end
 
   def localized_name_for_lesson_show
-    get_localized_property(:name) || ''
+    I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
   end
 
   def localized_lesson_plan

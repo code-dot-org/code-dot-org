@@ -87,7 +87,6 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
     viewMode: PropTypes.string,
@@ -105,7 +104,8 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    backpackEnabled: PropTypes.bool
+    backpackEnabled: PropTypes.bool,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -131,6 +131,10 @@ class JavalabEditor extends React.Component {
     // Used to manage dark and light mode configuration.
     this.editorModeConfigCompartment = new Compartment();
     this.editorThemeOverrideCompartment = new Compartment();
+
+    // Used to manage readOnly/editable configuration.
+    this.editorEditableCompartment = new Compartment();
+    this.editorReadOnlyCompartment = new Compartment();
 
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
@@ -191,6 +195,21 @@ class JavalabEditor extends React.Component {
       });
     }
 
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      Object.keys(this.editors).forEach(editorKey => {
+        this.editors[editorKey].dispatch({
+          effects: [
+            this.editorEditableCompartment.reconfigure(
+              EditorView.editable.of(!this.props.isReadOnlyWorkspace)
+            ),
+            this.editorReadOnlyCompartment.reconfigure(
+              EditorState.readOnly.of(this.props.isReadOnlyWorkspace)
+            )
+          ]
+        });
+      });
+    }
+
     const {fileMetadata} = this.state;
     if (
       !_.isEqual(Object.keys(prevState.fileMetadata), Object.keys(fileMetadata))
@@ -224,12 +243,14 @@ class JavalabEditor extends React.Component {
           ]
     );
 
-    if (isReadOnlyWorkspace) {
-      extensions.push(
-        EditorView.editable.of(false),
-        EditorState.readOnly.of(true)
-      );
-    }
+    extensions.push(
+      this.editorEditableCompartment.of(
+        EditorView.editable.of(!isReadOnlyWorkspace)
+      ),
+      this.editorReadOnlyCompartment.of(
+        EditorState.readOnly.of(isReadOnlyWorkspace)
+      )
+    );
 
     this.editors[key] = new EditorView({
       state: EditorState.create({
@@ -875,8 +896,11 @@ export default connect(
     validation: state.javalab.validation,
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    backpackEnabled: state.javalab.backpackEnabled
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    backpackEnabled: state.javalab.backpackEnabled,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.isProjectTemplateLevel &&
+      state.javalab.isReadOnlyWorkspace
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),

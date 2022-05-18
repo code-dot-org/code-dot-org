@@ -40,6 +40,11 @@ class CodeReview < ApplicationRecord
     CodeReview.where(project_id: project_id, script_id: script_id, level_id: level_id).to_a
   end
 
+  def self.open_for_project?(channel:)
+    _, project_id = storage_decrypt_channel_id(channel)
+    CodeReview.exists?(project_id: project_id, closed_at: nil)
+  end
+
   # Returns whether the code review is open for adding more comments.
   def open?
     closed_at.nil?
