@@ -134,6 +134,12 @@ class Ability
       # TODO: teachers and peers should also be able to see the code review
       can :read, CodeReview, user_id: user.id
 
+      can :create, CodeReviewNote, &:can_be_created?
+
+      can :toggle_resolved, CodeReviewNote do |code_review_note|
+        code_review_note.code_review.user_id == user.id
+      end
+
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id

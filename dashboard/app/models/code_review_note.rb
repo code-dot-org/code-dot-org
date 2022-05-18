@@ -19,8 +19,13 @@ class CodeReviewNote < ApplicationRecord
   # removed.
 
   belongs_to :commenter, class_name: 'User'
+  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id
 
   acts_as_paranoid
+
+  def can_be_created?
+    code_review.open? && commenter.can_do_code_review_for?(code_review.owner)
+  end
 
   def summarize
     {
