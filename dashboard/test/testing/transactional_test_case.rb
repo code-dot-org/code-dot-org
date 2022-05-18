@@ -41,6 +41,7 @@ module ActiveSupport
               connection.pool.lock_thread = false
             end
           end
+          teardown_fixtures
         end
 
         private
