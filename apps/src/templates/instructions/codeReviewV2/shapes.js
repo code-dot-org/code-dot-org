@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export const commitShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
   createdAt: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   projectVersion: PropTypes.string.isRequired,
@@ -20,8 +19,8 @@ const reviewCommentShape = PropTypes.shape({
 export const reviewShape = PropTypes.shape({
   id: PropTypes.number,
   createdAt: PropTypes.string,
-  isClosed: PropTypes.bool,
-  projectVersion: PropTypes.string,
+  isOpen: PropTypes.bool,
+  version: PropTypes.string,
   isVersionExpired: PropTypes.bool,
   timelineElementType: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(reviewCommentShape)
