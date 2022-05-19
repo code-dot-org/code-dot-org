@@ -8851,7 +8851,7 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
@@ -8868,7 +8868,7 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
@@ -8885,7 +8885,7 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
@@ -8902,7 +8902,7 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
@@ -10580,9 +10580,9 @@ es-MX:
           En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
-          # Historias de Espacios en Blanco
+          # Historias del espacio en blanco
 
-          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+          En esta lección, aprenderás a usar y escribir historias de espacio en blanco. Mira este video para aprender cómo esto se conecta con las ciencias de la computación.
       ForLoopFun-Unplugged_2021:
         markdown: |
           # Por el Divertido de Loop
@@ -12071,8 +12071,8 @@ es-MX:
         display_name: Proyecto de fin de curso
       courseF_artist_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
-        display_name: Práctica con Artista
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y el Artista!"
+        display_name: Práctica con el Artista
       courseF_beeFor_practice:
         description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
@@ -12097,9 +12097,9 @@ es-MX:
           # Resumen del Nivel de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones siguientes para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecer|Inflar un pez|Un pingüino en movimiento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecerse|Inflar un pez|Un pingüino en movimiento|
           |-|-|-|-|-|-|-|
           | ***Tipo*** |**Revisar**|**Debug**|**Corregir**|**Debug**|**Contenido Opcional**|**Contenido Opcional**
           | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos when/while*|
@@ -12134,18 +12134,17 @@ es-MX:
           Estas opciones llevan a los alumnos a aplicaciones que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
       courseF_labels_predict_multi:
         answers:
-        - text: '"¡Una pizza marchando!"'
+        - text: '"¡Una pizza viene enseguida!"'
           feedback: No es correcto. Las etiquetas de las variables no coinciden.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una que viene enseguida!"'
           correct: true
           feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
         - text: No se imprimirá nada.
-          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
-            de impresión seguirán funcionando.
+          feedback: No es correcto. El evento y el bloque de impresión seguirán funcionando.
         questions:
         - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
             se imprimirá si el usuario escribe "pizza"?
@@ -12156,11 +12155,11 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: El ordenador pedirá al usuario un número.
+        - text: La computadora pedirá un número al usuario.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
@@ -12223,42 +12222,42 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. Sigue practicando con el texto y las indicaciones."
-        display_name: Práctica de Texto y Avisos
+          todas las que puedas. ¡Sigue practicando con el texto y los apuntes!"
+        display_name: Práctica de Texto y Apuntes
         teacher_markdown: |+
           # Visión General de los Niveles de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
           Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Avisos|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Apuntes|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
           |-|-|-|-|-|-|-|-|
-          | ***Tipo*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
-          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+          | ***Teclear*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
+          | ***Concepto***|*print block, events*|*apuntes, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
 
 
       courseF_variables_predict_multi:
         answers:
         - text: El programa imprimirá "¡Hola nombre!"
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
-            usted escriba.
-        - text: El programa le dará la bienvenida con el nombre que introduzca.
+            escribas.
+        - text: El programa te dará la bienvenida con el nombre que escribas.
           correct: true
           feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
           feedback: Es incorrecto. El texto se imprime en la pantalla.
-        - text: El ordenador hará otra pregunta.
+        - text: La computadora hará otra pregunta.
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
-        - text: 'Este programa le permite responder a una pregunta escribiendo con
-            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
-            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
+        - text: 'Este programa te permite escribir con el teclado para responder una
+            pregunta. El bloque `imprimir` muestra el texto en la pantalla. Haz una
+            predicción: ¿qué ocurrirá después de responder la pregunta?'
       courseF_variables_projects:
-        description: Crearás una tarjeta de felicitación, un chatbot o una historia
-          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
-          a la "Parte 2".
+        description: Crearás una tarjeta de felicitaciones, un chatbot o una historia
+          de espacio en blanco. Si ya has terminado la \"Parte 1"\ de tu proyecto,
+          pasa a la \"Parte 2\".
         display_name: Elige un Proyecto
         teacher_markdown: |
           # Visión General del Nivel de Elección
@@ -12268,8 +12267,8 @@ es-MX:
       courseF_variables_samples:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
           en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
-          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
-          listo para empezar a planificar tu propio programa.
+          a continuación para ver qué te interesa crear. Pulsa \"Terminar"\ cuando
+          estés listo/a para empezar a planificar tu propio programa.
         display_name: Exploración - Ejemplos de Programas
         teacher_markdown: |
           # Visión General de los Niveles de Elección
@@ -12278,12 +12277,12 @@ es-MX:
           Los alumnos deben mirar estos proyectos cuidadosamente antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o hacer que los alumnos los exploren por su cuenta.
       courseF_variables_stop:
         content1: descripción aquí
-        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
-          \n\n\nEn el siguiente nivel, comenzarás a escribir el código de tu proyecto.
-          Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
-          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo/a para seguir
+          adelante? \n\n\nEn el siguiente nivel, comenzarás a escribir el código de
+          tu proyecto. Esto funciona mejor si ya tienes un plan.\n\nTu plan completo
+          debe incluir:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
           style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
-          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
+          que estás construyendo. Por ejemplo, una tarjeta de felicitaciones, un chatbot
           o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
           El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
           de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
