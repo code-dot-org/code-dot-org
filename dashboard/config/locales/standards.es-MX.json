@@ -338,6 +338,9 @@
         "csta/2-IC-20": {
           "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
         },
+        "csta/2-DA-09": {
+          "description": "Perfeccionar modelos computacionales a partir de la información que generaron."
+        },
         "csta/2-AP-13": {
           "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
         },
@@ -359,11 +362,14 @@
         "csta/2-IC-22": {
           "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
         },
+        "csta/2-DA-08": {
+          "description": "Recopilar datos utilizando herramientas computacionales y transformarlos para hacerlos más útiles y confiables."
+        },
         "csta/2-CS-01": {
           "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
         },
         "csta/2-CS-02": {
-          "description": "Diseñar Proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
+          "description": "Diseñar proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
         },
         "csta/2-AP-10": {
           "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."

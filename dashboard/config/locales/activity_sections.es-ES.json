@@ -14930,113 +14930,226 @@
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "description": "**Debatir:** Una vez que los alumnos hayan reflexionado en sus diarios, pueden compartir sus ideas al estilo \"palomitas\" y cada alumno que comparta una idea llamará a un nuevo compañero para que la comparta a continuación. Dirige esta conversación como una lluvia de ideas, registrando las ideas en la pizarra. Anota y señala las similitudes en las características.  Los alumnos pueden proponer contraejemplos para algunas de las características comunes.  Recuérdales que estás haciendo una lluvia de ideas y que es importante tener en cuenta todas las ideas posibles y que tendrán más tiempo para pensar en esta cuestión en la lección.",
           "tips": [
-            null
+            "**Objetivo:** Este calentamiento hace que los alumnos piensen en las características que definen a un ordenador.  No es necesario que los alumnos tengan una definición de ordenador, pero sí que empiecen a pensar en los diferentes tipos de ordenadores que hay en su vida y en lo que tienen en común.\n\n**Nota:** Los programadores que aparecen en la imagen son Elizabeth Jean Jennings Bartik y Frances Bilas Spence.  El ordenador fotografiado es el ENIAC."
           ]
+        },
+        "455d8859-98cd-49da-8d9d-47880a8f24e8": {
+          "description": "Los ordenadores tienen muchas formas diferentes y han cambiado mucho a lo largo de los años. Hoy vamos a reflexionar sobre lo que hace que algo sea un ordenador."
+        },
+        "4f6f922f-4af2-4143-a308-d43b8bf52191": {
+          "description": "\\*\\*Pregunta del Día: ¿Qué es un ordenador? \\*\\*"
+        },
+        "c23840b1-46e6-4538-b892-bb22f6ed543b": {
+          "name": "¿Ordenador o No?",
+          "description": "**Agrupa:** Coloca a los alumnos en grupos de 3 o 4"
         },
         "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "description": "**Distribuye:** La guía de actividades, así como tijeras, rotuladores / lápices de colores, papel para carteles y pegamento / cinta adhesiva para hacer los carteles. (Ten en cuenta que hay dos versiones posibles de la guía de actividades.  Escoge la mejor para tu clase, o dale a diferentes grupos diferentes versiones).",
           "tips": [
-            null
+            "**Modificaciones del Foro:** Muchos docentes han compartido ideas para ampliar las lecciones modificadas en el foro [(enlace)](http://forum.code.org/c/csd). Dirígete a él para ver cómo los docentes han reducido los impresos, han integrado la tecnología o han adaptado esta actividad a las necesidades de su clase. Si haces algo nuevo, ¡comparte también tus ideas! "
           ]
+        },
+        "24fe9cac-40fb-48cc-ab1a-e06e4e474af9": {
+          "description": "Facilita a los alumnos las siguientes instrucciones:\n\n-   Dibuja una línea en el centro de tu cartel, rotula un lado \"Ordenador\" y en el otro \"No es un ordenador\"\n-   Comenta en grupo cuáles de los objetos de su conjunto (de la guía de actividades) pertenecen a cada categoría\n-   Una vez que el grupo se haya puesto de acuerdo, pega los objetos en el lado correspondiente.\n-   Elabora una lista de las características que tus grupos han utilizado para determinar si un objeto es un ordenador"
         },
         "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "description": "**Circular:** Circula por la sala mientras los alumnos trabajan para clasificar las diferentes imágenes de la guía de actividades. Anima a los grupos a hablar abiertamente sobre sus ideas y a explicar por qué creen que un objeto debe ser considerado un ordenador o no. En el caso de los grupos que no puedan decidirse por una clasificación, pide a los miembros que defiendan sus puntos de vista e intenta llegar a un consenso. Asegura a los grupos que no pasa nada si una o dos personas no están de acuerdo y que hay que respetar el punto de vista de todos.",
           "tips": [
-            null
+            "**Primero la Cinta Adhesiva:** Los estudiantes tendrán la oportunidad de actualizar sus clasificaciones más adelante en la lección. Por el momento, deben pegar sus objetos en su cartel o simplemente colocarlos en el lado correcto."
           ]
+        },
+        "9b8fefda-e95f-4760-9e74-11bc72f33a4b": {
+          "description": "Al final de la sesión, reúne a la clase y pídeles que coloquen sus carteles en la parte delantera de la sala."
         },
         "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "name": "Presenta tus Clasificaciones",
+          "description": "**Compartir:** Que cada grupo presente brevemente sus carteles, centrando su reflexión en los siguientes puntos",
           "tips": [
-            null
+            "**Comparación de Clasificaciones:** Hay dos conjuntos diferentes de objetos en la guía de actividades. La primera página de cada conjunto es idéntica mientras que las segundas páginas son diferentes. Esto significa que todos los alumnos verán algunos objetos que ya han clasificado y otros que son nuevos. Utiliza esto para ayudar a impulsar la conversación."
           ]
         },
+        "aab18b5a-b8a1-4015-b1d3-a4590f057057": {
+          "description": "1.  ¿Qué reglas o definiciones has utilizado para clasificar tus objetos?\n2.  ¿Qué objeto te resultó más difícil de clasificar? ¿Cómo tomasteis finalmente la decisión de dónde colocarlo?\n\nInvita al público a cuestionar respetuosamente cualquier clasificación si no están de acuerdo con las decisiones del grupo presentador."
+        },
+        "3f21f8e1-bcdc-4e08-9be8-53211f4c71b0": {
+          "description": "Como puedes ver, no siempre está claro si algo es un ordenador, e incluso los expertos tienen a veces diferentes puntos de vista. No obstante, veamos una definición que utilizaremos a lo largo de este curso."
+        },
+        "397250f1-0ead-4ee1-b22f-bc7c0036a794": {
+          "description": "**Muestra:** Ver [r what-is-a-computer-1-2-3/csd/2021]. Este vídeo también está disponible para los alumnos en el sitio web Code.org, incluyendo un enlace alternativo para los centros educativos en los que YouTube está bloqueado. El vídeo presenta un ordenador como una máquina que ayuda a realizar ciertos tipos de trabajo intelectual mediante la manipulación de la información.  Puedes presentar la definición como \"una máquina que trabaja con información\"."
+        },
         "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "description": "**Preguntas para reflexionar con el vídeo**:\n\n-   ¿En qué se diferencian los ordenadores de las máquinas anteriores?",
           "tips": [
-            null
+            "Después de ver el vídeo, los alumnos deben comprender que los ordenadores son máquinas diseñadas para ayudar a las personas en el trabajo intelectual, en contraposición al trabajo físico. En el contexto de la resolución de problemas, los ordenadores están diseñados para resolver problemas de información. Pueden surgir sutilezas en la discusión en torno a los ordenadores que tienen mecanismos de salida que les permiten realizar trabajo físico (por ejemplo, los robots). No pasa nada si los alumnos no llegan a una conclusión concreta sobre cada dispositivo que se les ocurra."
           ],
           "progression_name": "Video: ¿por qué las computadoras son así?"
         },
         "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "description": "**Vocabulario Clave:**\n\n-   **ordenador:** una máquina que trabaja con información\n\nPermite a los alumnos revisar sus carteles utilizando la definición que acaban de aprender.  Pueden utilizar las siguientes preguntas para guiarse.\n\n-   ¿Para qué tipo de problemas se utiliza este dispositivo?\n-   ¿El aparato utiliza información para resolver los problemas?\n-   ¿De dónde obtiene la información?\n-   ¿Cómo utiliza la información para resolver los problemas?\n\n**Debatir:** ¿Algún grupo ha cambiado de opinión sobre si algo es un ordenador?  ¿Qué les convenció de la definición?",
           "tips": [
-            null
+            "En lugar de fijarse en cómo se clasifican los elementos concretos, comprueba el razonamiento de los alumnos sobre si un dispositivo es un ordenador. Asegúrate de que mencionan que manipula información o que resuelve problemas de información (o intelectuales), e indúceles con las preguntas de apoyo si no son capaces de dar una definición suficiente.\n\nPuede que sea imposible saber, sólo por la imagen, si un objeto es o no un ordenador.  Tranquiliza a la clase diciéndoles que incluso los expertos a menudo no se ponen de acuerdo sobre lo que es o no es exactamente un ordenador."
           ]
+        },
+        "9a0930f2-a1e3-409f-b215-4bc00d2110a4": {
+          "description": "\\*\\*Pregunta del Día: ¿Qué es un ordenador? \n\n**Vocabulario Clave:**\n\n-   **ordenador:** Una máquina que trabaja con información"
         },
         "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "description": "**Sugerencia:** Hoy has tenido la oportunidad de ver una definición de ordenador que se centra en cómo el ordenador resuelve problemas.  También hemos visto diferentes tipos de ordenadores.  En tu diario, piensa en un problema que un ordenador pueda ayudarte a resolver.\n\n-   ¿Cuál es el problema de información?\n-   ¿Qué información necesita el ordenador para resolver ese problema?\n-   ¿Qué tipo de trabajo intelectual necesita el ordenador para resolver el problema?",
           "tips": [
-            null,
-            null
+            "**Identificando Problemas de Información:** Los alumnos todavía están desarrollando una comprensión de lo que es la información o de cómo es un problema de información que un ordenador podría ayudar a resolver. Haz que los alumnos compartan sus ideas si quieres, pero enmarca la conversación como una primera investigación de esta cuestión, ya que volverán a ella repetidamente durante el resto de la unidad.",
+            "Comprueba que los alumnos han elegido problemas de información y han descrito cómo se puede utilizar la información para resolver el problema.  Las respuestas no tienen que ser lo suficientemente específicas como para programarlas en un ordenador, pero deben dar una descripción general suficiente para justificar que se trata de un problema de información (o de cálculo)."
           ]
+        },
+        "4136f0ec-4960-439b-b710-c102d09432d7": {
+          "name": "Recomendando una Mascota",
+          "description": "#### Diario\n\n**Sugerencia:** Imagina que vas a recomendar una mascota a alguien.  ¿Cuáles son las tres preguntas que les harías para ayudarles a hacer esa recomendación?\n\nDa tiempo a los alumnos para que escriban sus tres preguntas."
+        },
+        "897da97a-8dfc-435e-9dba-2a478519e407": {
+          "description": "En la última lección aprendimos que un ordenador es una máquina que \"trabaja con información\". Ahora vamos a trabajar con información para hacer una recomendación de mascotas a un compañero de clase."
+        },
+        "9f814ba0-3a5b-4261-884b-2a41dcbd1e38": {
+          "description": "**Agrupar:** Colocar a los estudiantes en parejas.\n\n**Sugerencia:** Por turnos, plantear vuestras preguntas y hacer una recomendación a vuestro compañero."
         },
         "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "description": "**Debatir:** Después de que los alumnos hayan tenido tiempo de hacer una recomendación cada uno, permite que algunos alumnos compartan las respuestas que les dio su compañero y la recomendación que hicieron.  Haz una lista en la pizarra con las \"respuestas\" junto a las \"recomendaciones\".",
           "tips": [
-            null
+            "**Objetivo:** En la lección de hoy los alumnos hablarán de los conceptos de \"entrada\" y \"salida\" en informática.  Para este debate, no son tan importantes las respuestas y recomendaciones exactas, sino que los estudiantes puedan ver que esta información se divide en dos categorías diferentes."
           ]
         },
+        "187046cd-aaf6-466a-be86-5060acdda8e4": {
+          "description": "Para resolver este problema, tenías que **obtener** información de tu compañero en forma de respuestas a tus preguntas.  También tenías que **dar** información a tu compañero en forma de recomendación.  Los ordenadores hacen lo mismo.  La información que obtienen de los usuarios se llama **entrada**, y la información que dan a los usuarios se llama **salida**.  Veamos una aplicación que también hace recomendaciones sobre mascotas."
+        },
+        "324a171f-99ef-42b7-b94b-df073186ff8a": {
+          "description": "**Vocabulario Clave:**\n\n-   **Entrada** Es la información que los ordenadores obtienen de los usuarios, dispositivos u otros ordenadores\n-   **Salida** Es la información que los ordenadores dan a los usuarios, dispositivos u otros ordenadores\n\n**Pregunta del Día: ¿Cómo utilizan los ordenadores la entrada y la salida para obtener y dar la información que necesitan para resolver problemas?**"
+        },
         "502a9053-c029-441d-aac1-5dcfc540fe9d": {
-          "name": "Entradas y salidas"
+          "name": "Entradas y salidas",
+          "description": "**Distribuye:** Copias de la guía de actividades a cada pareja (o pídeles que respondan a las preguntas en sus diarios).\n\n**Vocabulario:** Las dos palabras de vocabulario del día se encuentran en la parte superior de la guía de actividades."
+        },
+        "a7d0f6de-e600-44ae-98e2-434e94375160": {
+          "description": "## Ejemplo de Aplicaciones\n\n**Transición:** Envia parejas a Code Studio."
         },
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "name": "Buscador de Mascotas",
+          "description": "Mirar juntos la aplicación de búsqueda de mascotas.  Observar que hace algo muy parecido a lo que acaban de hacer los alumnos por parejas.  Responder en grupo a las dos primeras preguntas sobre la entrada de la aplicación.  Asegúrate de que los alumnos entienden que la aplicación obtiene la información del comportamiento del usuario, en este caso, pulsando un botón.  Dependiendo del grupo, puedes plantear la pregunta en torno a la salida o hacer que los alumnos la trabajen en parejas.",
           "tips": [
-            null
+            "Los alumnos no necesitan la información exacta para cada una de las posibles preguntas formuladas.  Basta con decir que la entrada es información sobre si el usuario tiene alergias, quiere jugar con la mascota, etc., y que la aplicación obtiene esta información cuando el usuario pulsa un botón."
           ],
           "progression_name": "App: Selector de Mascotas"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "name": "Creador de Historias",
+          "description": "A continuación, permite que las parejas examinen la aplicación de creación de historias por su cuenta, respondiendo a preguntas similares sobre su entrada y salida.  Esta aplicación permite a los alumnos introducir información específica en un formulario y, a continuación, generar una historia personalizada basada en la información proporcionada.",
           "tips": [
-            null
+            "Asegúrate de que los estudiantes identifican las entradas y salidas adecuadas.  Las respuestas de los estudiantes pueden variar ligeramente, pero deben ser similares a las del ejemplo proporcionado en la casilla \"Sólo para Docentes\" del primer nivel en Code Studio."
           ],
           "progression_name": "App: Creador de Historias"
         },
+        "f0ca9021-3f50-4255-99a0-41558253f592": {
+          "description": "## Aplicaciones de los Alumnos\n\nEn parejas o en grupos más grandes, los alumnos proponen sus propias ideas de aplicaciones y deciden los tipos de entrada y salida que se necesitarían para esas aplicaciones.\n\n**Compartir:** Permite a los estudiantes presentar sus ideas de aplicaciones y las entradas y salidas que necesitarían."
+        },
+        "ce9e1b16-609b-43ed-bcc4-99f024c05fee": {
+          "description": "## Otras Fuentes de Entrada\n\n**Sugerencia:** Hasta ahora, toda la información que hemos visto proviene directamente del usuario.  ¿Hay alguna otra forma de que las aplicaciones puedan obtener la información que necesitan?"
+        },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "description": "**Debatir:** Permite a los alumnos hacer una lluvia de ideas en silencio, y luego hablar en parejas o en pequeños grupos antes de solicitar las respuestas de todo el grupo.",
           "tips": [
-            null
+            "A medida que los alumnos vayan proponiendo sus ideas, asegúrate de que aparezcan Internet y los datos de los sensores (como el GPS, el micrófono y la cámara).  Es posible que tengas que estimular a los alumnos preguntándoles si hay algo que un teléfono inteligente sabe sin que el usuario tenga que decírselo.  Aunque los alumnos no estén familiarizados con todos los sensores posibles de un teléfono, al final del debate deberían entender que el teléfono tiene sensores que puede utilizar para obtener datos sin que el usuario se los diga directamente."
           ]
         },
         "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "name": "Aplicación de Mascotas Mejorada",
+          "description": "Los alumnos deben ver la nueva aplicación para mascotas que es similar a la que vieron antes, pero con la característica adicional de que da al usuario indicaciones para llegar a una tienda de mascotas cercana donde puede conseguir la mascota.\n\nLos alumnos deben identificar las diferentes entradas de la aplicación mejorada, incluyendo qué entradas provienen del usuario, cuáles de Internet y cuáles de los sensores del teléfono.",
           "progression_name": "App: Aplicación Mejorada para Mascotas"
         },
+        "065a0d2e-1f70-4ff0-8e46-42d5c8116cc2": {
+          "description": "**Pregunta del Día: ¿Cómo utilizan los ordenadores la entrada y la salida para obtener y dar la información que necesitan para resolver problemas?** "
+        },
+        "e92cb9d2-6fd3-43f3-abd5-7eec596b537f": {
+          "name": "¿Qué entradas y salidas puedo utilizar?",
+          "description": "**Vocabulario Clave:**\n\n-   **Entrada** La información que los ordenadores obtienen de los usuarios, dispositivos u otros ordenadores\n-   **Salida** La información que los ordenadores dan a los usuarios, dispositivos u otros ordenadores\n\n**Sugerencia:** Piensa en una actividad cotidiana que tú o las personas que conoces realicen con una aplicación o un ordenador.\n\n1.  ¿Cuál es la entrada utilizada para esa actividad?\n2.  ¿Cuál es el resultado?\n\n**Circular:** Pide a los estudiantes que hagan una lluvia de ideas individualmente y que anoten sus ideas en sus guías de actividades o en sus diarios."
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "description": "**Debatir:** En clase, comentar los ejemplos que los alumnos han aportado en una lluvia de ideas.",
           "tips": [
-            null
+            "Utiliza esta actividad de recapitulación para evaluar si los alumnos han comprendido el papel de la entrada y la salida en algunas actividades comunes en un ordenador. Por ejemplo:\n\n-   Escribir en un teclado (entrada) hace que las letras aparezcan en la pantalla (salida)\n-   Mover el ratón o la pantalla táctil (Input) hace que aparezca lo que se ve en la pantalla (Output)\n-   Pulsar el play en una pantalla táctil (Input) hace que se reproduzca una canción por los altavoces (Output)\n\nSi lo necesitas, puedes ponerles a los alumnos este u otros ejemplos para que te den más ejemplos"
           ]
         },
         "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "name": "Analizando una Aplicación (Aplicación de Cumpleaños)",
+          "description": "**Pregunta del Diario**: Ve a Code Studio para probar la aplicación de cumpleaños. Tiene tres posibles salidas.  Intenta encontrar cada una de ellas.\n\n1.  ¿Cuál es la entrada de la aplicación?  \n2.  ¿Cuál es la salida?  \n3.  ¿Cómo crees que la aplicación decide qué salida debe proporcionar al usuario?",
           "progression_name": "App: ¿Es tu cumpleaños?"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "description": "**Circular:** La primera parte de esta reflexión sirve como repaso de la entrada y la salida.   A medida que los alumnos reflexionan sobre la pregunta, comprueba sus respuestas para asegurarte de que entienden cómo se utilizan la entrada y la salida en la aplicación.",
           "tips": [
-            null
+            "Los alumnos pueden identificar la fecha de nacimiento del usuario como una entrada y posiblemente la fecha actual como otra entrada. El mensaje de si es o no el cumpleaños es la salida. La decisión de qué mensaje se emite se basa en si la fecha actual coincide con la fecha introducida por el usuario. "
           ]
         },
         "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "description": "Pide a los alumnos que compartan cómo creen que la aplicación tomó la decisión.",
           "tips": [
-            null
+            "Los estudiantes pueden tener problemas para articular exactamente cómo la aplicación toma su decisión.  Fomente el debate y destaque las facetas de \"coincidencia\" y \"si/entonces\" del proceso de toma de decisiones.  (por ejemplo, \"La aplicación **compara** la fecha de nacimiento con la fecha de hoy\". / **Si** la fecha de nacimiento coincide con la fecha de hoy, **entonces** muestra \"¡Feliz cumpleaños!\")"
           ]
         },
+        "db018d57-7aa0-4395-b16a-8649a1e291c1": {
+          "description": "En las últimas lecciones, hemos aprendido que los ordenadores son máquinas que nos ayudan a pensar convirtiendo la información de entrada en información de salida.  Por ejemplo, el trabajo intelectual que hizo esta aplicación fue comparar la fecha de nacimiento con la fecha de hoy y utilizar esa información para decidir qué mostrar en la pantalla.  Este tipo de trabajo intelectual que hacen los ordenadores se llama \"procesamiento\".  Hoy vamos a ver algunos tipos diferentes de procesamiento."
+        },
+        "4c64e5b5-a49e-4fbf-874c-e8de24a9277f": {
+          "description": "**Vocabulario Clave:**\n\n-   **Procesamiento** El trabajo intelectual que hacen los ordenadores para convertir la entrada en salida\n\n\\*\\*Pregunta del Día: ¿Cuáles son las diferentes formas en que los ordenadores pueden procesar la información?"
+        },
+        "dd302238-9da9-4598-a9ad-346d80a7ca0f": {
+          "name": "Tipos de Procesamiento",
+          "description": "Ya hemos visto dos tipos diferentes de procesamiento en la aplicación Cumpleaños: comparando y si/entonces.  Vamos a ver un par de otras aplicaciones y ver qué tipos de procesamiento pueden utilizar."
+        },
         "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "description": "**Mostrar:** Hacer una demostración de la aplicación \"Parque Nacional\" en la parte delantera del aula, o permitir que los estudiantes exploren la aplicación por su cuenta.",
           "progression_name": "App: Parques Nacionales"
         },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "description": "**Pregunta:** ¿Cómo utiliza esta aplicación el if/then y la comparación para convertir la entrada en salida?",
           "tips": [
-            null
+            "Permite a los alumnos que compartan sus respuestas y remarca que comparar puede significar decidir si dos cosas son iguales, no sólo los números."
           ]
         },
         "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "description": "**Presentar:** Hacer una demostración de la aplicación \"Cuántos países...\" en la parte delantera del aula, o permitir a los alumnos que exploren la aplicación por su cuenta.",
           "progression_name": "App: ¿Cuántos Países?"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "description": "**Pregunta:** Esta aplicación utiliza algunos tipos diferentes de procesamiento para tomar decisiones.  ¿Qué tipos de procesamiento podría utilizar?",
           "tips": [
-            null
+            "Permite que los alumnos compartan sus respuestas, pero asegúrate de que el \"conteo\" y el \"encontrar una coincidencia\" se destaquen en las conversaciones."
           ]
         },
+        "58559ae7-ea27-45aa-ba26-1fdc3758d9a0": {
+          "description": "Hay muchos tipos diferentes de procesamiento que los ordenadores pueden utilizar.  Hoy vamos a centrarnos en cuatro tipos básicos:  If/then, comparar, encontrar una coincidencia y contar."
+        },
+        "ffa29e42-7efc-41b6-ba23-b18391cd1041": {
+          "description": "**Presentar:** Visualizar los cuatro tipos de procesamiento y sus definiciones en la parte delantera de la sala, y repasar la información con los alumnos.\n\n**Agrupar:** Coloca a los alumnos en grupos de 2 a 3 personas.  Cada grupo necesitará acceso a un ordenador para esta actividad.\n\n**Distribuir:** Entrega a cada grupo una copia de la guía de actividades."
+        },
+        "0cba3d63-aa17-4e9e-b3e0-91330dc94748": {
+          "name": "Aplicaciones y Procesamiento",
+          "description": "Como clase, completa las tres primeras filas de la guía de actividades, que hacen referencia a las tres aplicaciones que los alumnos ya han visto."
+        },
         "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "description": "**Circular:** Permite a los alumnos completar el resto de la gráfica en sus grupos. Mientras rellenan los gráficos, pídeles que expliquen cómo funciona la aplicación y qué es lo que hace que ese tipo de procesamiento sea útil.",
           "tips": [
-            null
+            "Como casi todas las aplicaciones utilizan más de una forma de procesamiento, los alumnos pueden identificar aspectos inesperados de las mismas. La parte más importante es su explicación. Deben razonar sobre cómo se utiliza la entrada para generar la salida de la aplicación."
           ]
         },
         "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "description": "**Mi Cumpleaños Famoso**\n\nEsta aplicación pide a los usuarios que introduzcan su fecha de nacimiento, luego les dice el día de la semana en que nacieron y un autor famoso nacido ese mismo día.  El tipo de tratamiento se incluye en las notas \"sólo para docentes\" del nivel.",
           "progression_name": "App: Mi Cumpleaños Famoso"
         },
         "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "description": "**Sello de Cuaderno**\n\nEsta aplicación permite a los usuarios hacer clic en un icono y \"estampar\" ese icono en la pantalla.  Si se pulsa un icono más de una vez, cambia el color del sello.",
           "progression_name": "App: Sello de Cuadernos"
+        },
+        "30a5ba05-3776-4be9-b6d5-66df2e579294": {
+          "name": "Más Procesamiento",
+          "description": "La siguiente gráfica pide a los estudiantes que encuentren dos tipos de procesamiento para cada aplicación.  Las explicaciones sobre el procesamiento se incluyen en la sección \"Sólo para Docentes\" de Code Studio.  En esta sección se pide a los estudiantes que evalúen aplicaciones más complejas, lo que puede resultar difícil para los estudiantes más jóvenes.  Puedes saltarte esta sección más complicada y pasar directamente a la sección de \"aplicaciones para estudiantes\".\n\n**El Dedo Más Rápido**\n\nEsta aplicación muestra qué tecla se pulsa más rápido, la tecla \"s\" o la tecla \"k\". \n\n**Adivina el Número**\n\nEsta aplicación pide a los usuarios que adivinen un número entre el uno y el cien, y muestra si la respuesta es demasiado alta, demasiado baja o correcta.\n\n**¿Dónde Debería Vivir?**\n\nEsta aplicación aconseja al usuario dónde vivir basándose en las respuestas a algunas preguntas.",
+          "progression_name": "Más Aplicaciones de Procesamiento"
         },
         "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
           "progression_name": "App: El Dedo más Rápido"
@@ -15047,71 +15160,141 @@
         "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
           "progression_name": "App: ¿Dónde Debería Vivir?"
         },
+        "b8be58da-51d2-44de-8fd8-f136b1604f84": {
+          "name": "Aplicaciones de Alumnos",
+          "description": "Los alumnos proponen sus propias ideas de aplicaciones, utilizando su aplicación anterior de la lección de Entradas y Salidas, o ideando una nueva.  A continuación, piensan en los tipos de procesamiento que serían necesarios para esas aplicaciones.\n\n**Compartir:** Permite a los alumnos presentar sus ideas de aplicaciones y el procesamiento que necesitarían."
+        },
+        "dd0a4480-2ff7-407b-be56-5a7ff2df932e": {
+          "name": "¿Qué entradas y salidas puedo utilizar?",
+          "description": "**Sugerencia:** Hoy hemos visto cuatro tipos diferentes de procesamiento, pero hay muchos más.  \n\n1.  ¿Cuál es otro tipo de procesamiento que crees que sería útil?  \n2.  ¿Qué tipo de aplicación podría utilizarlo?\n\n**Circular:** Pide a los estudiantes que hagan una lluvia de ideas individualmente y las anoten en sus guías de actividades o en sus diarios."
+        },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "description": "**Debatir:** En clase, comentar los ejemplos que los alumnos han aportado en una lluvia de ideas.",
           "tips": [
-            null
+            "Las respuestas de los alumnos pueden variar, pero asegúrate de que utilizan razonablemente el procesamiento para convertir una entrada en una salida."
           ]
         },
+        "49fca890-c067-42b3-9982-6a30352b21d3": {
+          "name": "Analizando una Aplicación (Selector de Ropa)",
+          "description": "**Pregunta del Diario**: Accede a Code Studio para ver la aplicación de selección de ropa. ¿Cuál es una entrada, una salida y un tipo de procesamiento que podría utilizar?  Supongamos que utilizas esta aplicación todos los días. ¿Qué información querrías que recordara esta aplicación?"
+        },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "description": "**Circular:** La primera parte de esta reflexión sirve como repaso de la entrada, la salida y el procesamiento.   A medida que los alumnos reflexionen sobre la pregunta, comprueba sus respuestas para asegurarte de que entienden cómo se utilizan la entrada, la salida y el procesamiento en la aplicación.",
           "tips": [
-            null
+            "Los alumnos pueden identificar el tiempo, el color favorito o la estación del año como la entrada, y las imágenes de los conjuntos como la salida. Aunque el proceso exacto de la aplicación no esté claro, los alumnos pueden señalar que hay varios escenarios probables de si/entonces (\"Si el tiempo es lluvioso, entonces incluye un paraguas\") o que hay una correspondencia entre la entrada del usuario y las características de los conjuntos."
           ]
         },
         "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "description": "Pide a los alumnos que compartan la información que creen que debería almacenarse y por qué.",
           "tips": [
-            null
+            "Aunque no es importante que los alumnos se pongan de acuerdo en las respuestas, este debate les introduce en la idea de almacenar información para más tarde y les hace pensar en qué información debe y no debe almacenarse en una aplicación. "
           ]
         },
+        "2f41e74b-1693-4621-a008-ee942996e062": {
+          "description": "Esta aplicación de ejemplo pide algunos datos que no cambian muy a menudo, como tu color favorito. En lugar de tener que introducir estos datos cada vez, sería útil que la app pudiera recordar nuestras respuestas almacenándolas. Todos los ordenadores pueden guardar información para más tarde y leer la información guardada a través del **almacenamiento**."
+        },
+        "dee06cd4-dac7-4000-bce5-c10bedcc7874": {
+          "description": "**Vocabulario Clave:** \n\n-   **Almacenamiento** Guardar información para usarla en el futuro\n\n**Pregunta del Día: ¿Por qué el almacenamiento es una parte importante del proceso informático?** "
+        },
+        "b289fd48-6c31-480d-a98b-7d3d92fdca67": {
+          "name": "Aplicaciones con Almacenamiento",
+          "description": "Vamos a ver algunas aplicaciones que utilizan algunos tipos de información. Queremos identificar qué información podría almacenarse para no tener que introducirla cada vez."
+        },
+        "24dd5f31-50de-4a28-91c2-5d4591b8d1d8": {
+          "description": "**Agrupar:** Coloca a los alumnos en grupos de 2 a 3 personas.  Cada grupo necesitará acceso a un ordenador para esta actividad.\n\n**Distribuir:** Entregar a cada grupo una copia de la guía de actividades.\n\nComo clase, completa la primera sección de la guía de actividades, que hace referencia a la aplicación de selección de ropa utilizada en el calentamiento.\n\nEnvía a los alumnos a Code Studio para que vean las aplicaciones de ejemplo."
+        },
         "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "description": "**Circular:** Permite a los alumnos completar el resto de la guía de actividades en sus grupos. Mientras rellenan las gráficas, pídeles que expliquen con detalle por qué creen que se debe almacenar o no cada entrada.",
           "tips": [
-            null
+            "Hay cierta flexibilidad en cuanto a lo que debe y no debe almacenarse, ya que es una elección que el diseñador de la aplicación puede hacer. Lo más importante es su explicación. Deberían razonar sobre si esa información cambiará con frecuencia."
           ]
         },
         "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
           "name": "Selector de Ropa",
+          "description": "La primera aplicación pide a los usuarios que introduzcan su color favorito, la estación del año en la que se encuentran y el tiempo que hace, y a continuación muestra una imagen de un conjunto basado en los datos introducidos por el usuario.",
           "progression_name": "App: Selector de Ropa"
         },
         "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
           "name": "Buscador de Amigos",
+          "description": "La segunda aplicación pide a los usuarios que introduzcan qué amigos deben estar en su lista de amigos y luego muestra un mapa con la ubicación de los amigos de la lista.",
           "progression_name": "App: Buscador de Amigos"
         },
         "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "name": "Elige una Película para Niños",
+          "description": "La tercera aplicación pide a los usuarios que introduzcan varias preferencias en torno a las películas y después ofrece una recomendación de películas basada en las preferencias del usuario.",
           "progression_name": "App: Elige una Película para Niños"
         },
+        "2956f576-807d-495f-ae89-140842e245b0": {
+          "name": "Directrices",
+          "description": "Cuando los grupos pasen a la actividad final, es posible que tengas que explicar brevemente qué es una directriz y qué pide la pregunta.  Asegúrate de que todos los grupos tengan tiempo para elaborar las directrices, incluso si tienen que saltarse partes del cuadro anterior."
+        },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "description": "**Circular:** Si los grupos se atascan en la redacción de sus pautas, pregúntales sobre qué entradas dijeron que debían almacenarse en las otras aplicaciones. Pídeles que vean si pueden encontrar alguna similitud entre las entradas que se almacenaron y las que no se almacenaron. Recuérdales que también pueden escribir las directrices sobre las entradas que no se almacenaron.",
           "tips": [
-            null
+            "Las respuestas de los alumnos pueden variar, pero en general deben darse cuenta de que el hecho de que la información deba o no almacenarse está relacionado con la frecuencia con la que cambia, si es que cambia."
           ]
         },
+        "93237735-0211-4bda-be3e-0a22ee8e868a": {
+          "description": "Una vez que la mayoría de los grupos haya terminado de redactar sus directrices, vuelve a reunir a la clase y pregunta si algún grupo quiere compartir una de sus directrices."
+        },
+        "9f28ebbd-3614-4789-b84e-9f9037fc8c83": {
+          "description": "Ahora, podemos entender un ordenador como una máquina que hace cuatro cosas: entrada, salida, almacenamiento y procesamiento"
+        },
         "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "description": "Muéstrales el vídeo de presentación del modelo IOSP.",
           "progression_name": "Vídeo: Modelo IOSP"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "description": "Promueve el debate con dos preguntas de reflexión.",
           "tips": [
-            null
+            "Si se utiliza un diario, pide a los alumnos que escriban las respuestas en sus diarios"
           ]
+        },
+        "bf776613-5d76-4349-8f6d-3df95766a838": {
+          "description": "1.  Piensa en algo que hagas en el ordenador. ¿Qué tipo de entrada, salida, almacenamiento y procesamiento se produce?\n\n2.  ¿Qué tipos de entrada, salida, almacenamiento y procesamiento se utilizan en un smartphone moderno?\n\nPor último, mira el póster de la lección \"¿Qué es un ordenador?\" y comprueba si alguna de las máquinas debe ser reclasificada como ordenador o no según este nuevo modelo de la IOSP."
+        },
+        "2d4d1c53-92af-4087-b1e7-964f95e3c3da": {
+          "description": "**Sugerencia:** Piensa en una aplicación que te gustaría crear. ¿Qué información almacenaría?"
         },
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "description": "**Compartir:** Si el tiempo te lo permite, deja que los alumnos compartan sus ideas.",
           "tips": [
-            null
+            "Cuando los alumnos compartan sus ideas, asegúrate de que utilizan el vocabulario clave de la lección:\n\n**almacenamiento** - guardar información para utilizarla en el futuro"
           ]
         },
+        "8a962e67-680c-4b35-8f29-bee873ebf2fe": {
+          "name": "Presentar el Proyecto",
+          "description": "**Pregunta:** De las aplicaciones que hemos visto en esta unidad, ¿cuál ha sido tu favorita?  ¿Qué problema ha resuelto?\n\n**Compartir:** Permite a los estudiantes compartir sus aplicaciones favoritas."
+        },
+        "76ebb601-8ed2-4aa1-ac1e-4a8d04173f64": {
+          "description": "Durante toda la unidad hemos estado aprendiendo sobre el proceso de resolución de problemas y sobre cómo los ordenadores procesan la información para ayudar a resolver problemas tomando entradas y procesándolas para crear salidas útiles. Hoy vamos a empezar un proyecto en el que tú y un compañero diseñaréis una aplicación para resolver un problema de vuestra elección."
+        },
+        "400c20cd-fe74-435b-a883-db94d9c4ee41": {
+          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**"
+        },
         "a5bc259a-2779-4488-b754-f6485a212933": {
-          "name": "Guía de Proyecto"
+          "name": "Guía de Proyecto",
+          "description": "**Distribuir**: Entrega una guía del proyecto y una rúbrica o lista de control del alumno a cada uno de ellos. Como clase, revisa la información proporcionada en la primera hoja de la guía del proyecto, que explica el proyecto, enumera los pasos y muestra lo que los alumnos tendrán que crear. A continuación, haz un breve resumen de cada uno de los pasos más detallados."
         },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "description": "**Paso 1: Elegir un Compañero**: Coloca a los alumnos en parejas o grupos de tres.",
           "tips": [
-            null
+            "**Creando Grupos:** Lo ideal es que este proyecto se haga en parejas. Si es necesario, los grupos de 3 funcionarán. Deberás decidir de antemano si vas a asignar o permitir a los alumnos elegir a sus compañeros."
           ]
         },
         "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "description": "**Paso 2: Lluvia de Ideas de Problemas**: Pide a los grupos que pasen varios minutos en silencio haciendo una lluvia de ideas sobre los problemas y anotándolos en sus guías de proyecto. Circula por la sala y recuérdales que en este momento no deben pensar en una aplicación que quieran construir o incluso si es posible resolver este problema con una aplicación. Asegúrate de que empiezan con el problema y no con la solución.",
           "tips": [
-            null
+            "**Ayudando en la Lluvia de Ideas:** Escucha atentamente las conversaciones de los alumnos. Identifica a los alumnos que están atascados y la razón por la que lo están. ¿Están pensando demasiado en grande? Ayuda a esos estudiantes a pensar en los problemas como molestias o inconvenientes, o como una oportunidad para mejorar su calidad de vida en pequeña o gran medida. "
           ]
         },
+        "4118dd91-3977-4ade-825a-32aa7f2996c1": {
+          "description": "**Paso 3: Elige tu Problema**: La guía del proyecto proporciona varios criterios que los alumnos pueden utilizar para evaluar cuál de sus problemas les gustaría abordar. Pide a los alumnos que consulten el paso 4 si necesitan más orientación sobre cómo definir o delimitar sus problemas. Concede a los estudiantes unos minutos para que comenten con su grupo y elijan el problema que les gustaría abordar con su aplicación."
+        },
         "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "description": "**Paso 4: Definir el Problema**: En este paso, los alumnos tendrán que delimitar adecuadamente su problema definiendo quién es su público, cuál es específicamente el problema y cómo sabrán que lo han solucionado.",
           "tips": [
-            null
+            "**Cómo Ayudar:** En este punto los estudiantes han tenido mucha práctica en la definición de los problemas. También tienen un proceso de revisión por pares poco después de este paso. Anímales a ser lo más detallados posible, pero evita darles consejos específicos sobre cómo definir su problema. "
           ]
         },
         "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
