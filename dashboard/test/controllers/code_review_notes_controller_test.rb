@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CodeReviewNotesControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
+  self.use_transactional_test_case = false
 
   setup_all do
     @project_owner = create :student
