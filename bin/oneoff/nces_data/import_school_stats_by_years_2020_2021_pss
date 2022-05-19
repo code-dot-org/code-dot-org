@@ -41,27 +41,27 @@ COMMUNITY_TYPE_MAP = {
   '43' => 'rural_remote'
 }.freeze
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/schools_private.csv") do |filename|
+AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: true) do |row|
     {
       school_id:          row['School ID - NCES Assigned [Private School] Latest available year'],
       school_year:        SURVEY_YEAR,
       grades_offered_lo:  row['Lowest Grade Taught [Private School] 2019-20'].presence.try {|v| GRADES_MAP[v]},
       grades_offered_hi:  row['Highest Grade Taught [Private School] 2019-20'].presence.try {|v| GRADES_MAP[v]},
-      grade_pk_offered:   row['Prekindergarten Students [Private School] 2019-20'][0] == '1',
-      grade_kg_offered:   row['Kindergarten Students [Private School] 2019-20'][0] == '1',
-      grade_01_offered:   row['Grade 1 Students [Private School] 2019-20'][0] == '1',
-      grade_02_offered:   row['Grade 2 Students [Private School] 2019-20'][0] == '1',
-      grade_03_offered:   row['Grade 3 Students [Private School] 2019-20'][0] == '1',
-      grade_04_offered:   row['Grade 4 Students [Private School] 2019-20'][0] == '1',
-      grade_05_offered:   row['Grade 5 Students [Private School] 2019-20'][0] == '1',
-      grade_06_offered:   row['Grade 6 Students [Private School] 2019-20'][0] == '1',
-      grade_07_offered:   row['Grade 7 Students [Private School] 2019-20'][0] == '1',
-      grade_08_offered:   row['Grade 8 Students [Private School] 2019-20'][0] == '1',
-      grade_09_offered:   row['Grade 9 Students [Private School] 2019-20'][0] == '1',
-      grade_10_offered:   row['Grade 10 Students [Private School] 2019-20'][0] == '1',
-      grade_11_offered:   row['Grade 11 Students [Private School] 2019-20'][0] == '1',
-      grade_12_offered:   row['Grade 12 Students [Private School] 2019-20'][0] == '1',
+      grade_pk_offered:   row['Prekindergarten Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_kg_offered:   row['Kindergarten Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_01_offered:   row['Grade 1 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_02_offered:   row['Grade 2 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_03_offered:   row['Grade 3 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_04_offered:   row['Grade 4 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_05_offered:   row['Grade 5 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_06_offered:   row['Grade 6 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_07_offered:   row['Grade 7 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_08_offered:   row['Grade 8 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_09_offered:   row['Grade 9 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_10_offered:   row['Grade 10 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_11_offered:   row['Grade 11 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
+      grade_12_offered:   row['Grade 12 Students [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? '0' : '1'},
       grade_13_offered:   false,
       virtual_status:     'MISSING',
       students_total:     row['Total Students (Ungraded & K-12) [Private School] 2019-20'].presence.try {|v| v.to_i <= 0 ? nil : v.to_i},
