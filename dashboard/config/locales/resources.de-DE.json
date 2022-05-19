@@ -552,12 +552,12 @@
           "type": "Folien"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "Die Macht der Worte: Lektionsfolien",
+          "name": "Die Macht der Worte: Unterrichtsfolien",
           "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
           "type": "Folien"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "Die Macht der Worte: Die Macht der Worte",
+          "name": "Die Macht der Worte: Die Macht der Worte\t",
           "url": "https://www.commonsense.org/education/videos/the-power-of-words",
           "type": "Video"
         },
@@ -567,17 +567,17 @@
           "type": "Handout"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "Die Macht der Worte: Lektions-Quiz",
+          "name": "Die Macht der Worte: Unterrichtsquiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
           "type": "Ressource"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "Die Macht der Worte: Lektions-Quiz",
+          "name": "Die Macht der Worte: Unterrichtsquiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
           "type": "Antwortschlüssel"
         },
         "variables_blank_space_stories/coursef/2021": {
-          "name": "Variablen: Leere Geschichten",
+          "name": "Variablen: Lückengeschichte",
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
           "type": "Folien"
         },
@@ -602,7 +602,7 @@
           "type": "Folien"
         },
         "teacher_sandbox_level/coursef/2021": {
-          "name": "Lehrer Sandbox Level",
+          "name": "Sandbox-Level für Lehrer",
           "url": "https://studio.code.org/levels/27300",
           "type": "Ressource"
         },
@@ -622,9 +622,9 @@
           "type": "Unplugged-Video"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "For Loop Fun - Bewertungsschlüssel",
+          "name": "Spaß mit 'for'-Schleifen - Bewertungschlüssel",
           "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
-          "type": "Lehrer Schlüssel"
+          "type": "Lehrerschlüssel"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "„Zähle mit“-Schleifenspaß",
@@ -677,7 +677,7 @@
           "type": "Unplugged-Video"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "IP-Adresskarten und Liefertypkarten",
+          "name": "IP-Adresskarten und Zustellungstypkarten",
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
           "type": "Manipulatoren"
         },
@@ -707,7 +707,7 @@
           "type": "Arbeitsblatt"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "CS-Grundlagen Abschlussprojekt",
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Bewertungsleitfaden"
         },
@@ -717,7 +717,7 @@
           "type": "Ressource"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "Gemeinsamer Kern und NGSS-Leitfaden",
+          "name": "Standards- und NGSS-Leitfaden",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
           "type": "Ressource"
         },
@@ -727,7 +727,7 @@
           "type": "Ressource"
         },
         "course_vocabulary/coursef/2021": {
-          "name": "Kurs Vokabular",
+          "name": "Kurs-Vokablar\t",
           "url": "https://studio.code.org/s/coursef-2021/vocab",
           "type": "Ressource"
         },
@@ -737,17 +737,17 @@
           "type": "Ressource"
         },
         "lesson_type_guide/coursef/2021": {
-          "name": "Leitfaden für Lektionstypen",
+          "name": "Stundentypen-Leitfaden",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "Ressource"
         },
         "debugging_guide/coursef/2021": {
-          "name": "Anleitung zum Debuggen",
+          "name": "Fehlerbehungsleitfaden",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "Ressource"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Leitfaden für den Lehrplan",
+          "name": "Lehrplanleitfaden",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ressource"
         },
@@ -757,7 +757,7 @@
           "type": "Ressource"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Forum für Lehrkräfte",
+          "name": "Lehrer-Forum",
           "url": "https://forum.code.org/c/csf/",
           "type": "Ressource"
         },
@@ -767,16 +767,16 @@
           "type": "Ressource"
         },
         "virtual_lesson_modifications/coursef/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
           "type": "Ressource"
         },
         "digital-trails-lesson-slides/courseb/2021": {
-          "name": "Digitale Pfade: Lektion Folien",
+          "name": "Digitale Trails: Unterrichtsfolien",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "Digitale Pfade: Folgen Sie der digitalen Spur",
+          "name": "Digitale Trails: Folgen Sie der digitalen Spur",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Video zur Lektion"
         },
@@ -826,8 +826,7 @@
         },
         "class-section-video/courseb/2021": {
           "name": "Wie man einen Klassenabschnitt auf Code.org erstellt",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Video für Lehrkräfte"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Unplugged Blockly Blocks (Klassenstufe K-1)",
@@ -905,7 +904,7 @@
           "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
-          "name": "Die richtigen Anwendungsszenarien",
+          "name": "Die richtigen App-Szenarien",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {
@@ -944,7 +943,7 @@
           "type": "Ressource"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "Gemeinsamer Kern und NGSS-Leitfaden",
+          "name": "Common Core und NGSS Anleitung",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
           "type": "Ressource"
         },
@@ -954,7 +953,7 @@
           "type": "Ressource"
         },
         "course_vocabulary/courseb/2021": {
-          "name": "Kurs Vokabular",
+          "name": "Kurs-Vokablar",
           "url": "https://studio.code.org/s/courseb-2021/vocab",
           "type": "Ressource"
         },
@@ -964,17 +963,17 @@
           "type": "Ressource"
         },
         "lesson_type_guide/courseb/2021": {
-          "name": "Leitfaden für Lektionstypen",
+          "name": "Stundentypen-Leitfaden",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "Ressource"
         },
         "debugging_guide/courseb/2021": {
-          "name": "Anleitung zum Debuggen",
+          "name": "Fehlerbehungsleitfaden",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "Ressource"
         },
         "curriculum_guide_1/courseb/2021": {
-          "name": "Leitfaden für den Lehrplan",
+          "name": "Lehrplanleitfaden",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ressource"
         },
@@ -984,12 +983,12 @@
           "type": "Ressource"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "Forum für Lehrkräfte",
+          "name": "Lehrer-Forum",
           "url": "https://forum.code.org/c/csf/",
           "type": "Ressource"
         },
         "virtual_lesson_modifications/courseb/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
           "type": "Ressource"
         },
@@ -1237,7 +1236,7 @@
           "type": "Ressource"
         },
         "virtual_lesson_modifications/coursea/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
           "type": "Ressource"
         },
@@ -1258,7 +1257,7 @@
         "csf-mrf-symbol-key/coursec/2021": {
           "name": "Meine Roboterfreunde",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
-          "type": "Symbol Schlüssel"
+          "type": "Symbol-Schlüssel"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Meine Roboterfreunde",
@@ -1295,7 +1294,7 @@
           "type": "Empfehlungen für den Unterricht"
         },
         "debugging_guide/coursec/2021": {
-          "name": "Anleitung zum Debuggen",
+          "name": "Fehlerbehungsleitfaden",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
           "type": "Ressource"
         },
@@ -1453,7 +1452,7 @@
           "type": "Ressource"
         },
         "virtual_lesson_modifications/coursec/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
           "type": "Ressource"
         },
@@ -1693,7 +1692,7 @@
           "type": "Ressource"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit",
           "type": "Ressource"
         },
@@ -1806,7 +1805,7 @@
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "CS-Grundlagen Abschlussprojekt",
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Bewertungsleitfaden"
         },
@@ -1999,7 +1998,7 @@
           "type": "Arbeitsblatt"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "CS-Grundlagen Abschlussprojekt",
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "Bewertungsleitfaden"
         },
@@ -2068,7 +2067,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "Änderungen der virtuellen Lektion",
+          "name": "Änderungen der virtuellen Stunde",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
           "type": "Ressource"
         },

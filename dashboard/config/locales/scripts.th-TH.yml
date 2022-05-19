@@ -5117,6 +5117,8 @@ th:
               name: เงื่อนไข
             Functions:
               name: ฟังก์ชัน
+            Sprite Properties:
+              name: คุณสมบัติของสไปร์ท
         maddie-test:
           lessons:
             stage 1:
@@ -5421,6 +5423,8 @@ th:
           lessons:
             Variables:
               name: ตัวแปร
+            Sprite Properties:
+              name: คุณสมบัติของสไปร์ท
             Conditionals:
               name: เงื่อนไข
             Functions:
@@ -6479,6 +6483,8 @@ th:
           lessons:
             Variables:
               name: ตัวแปร
+            Sprite Properties:
+              name: คุณสมบัติของสไปร์ท
             Text:
               name: ข้อความ
             Conditionals:
@@ -6566,6 +6572,9 @@ th:
             Variables:
               key: ตัวแปร
               name: ตัวแปร
+            Sprite Properties:
+              key: คุณสมบัติของสไปร์ท
+              name: คุณสมบัติของสไปร์ท
             Text:
               key: ข้อความ
               name: ข้อความ
@@ -10893,6 +10902,9 @@ th:
             Variables:
               name: ตัวแปร
               key: ตัวแปร
+            Sprite Properties:
+              name: คุณสมบัติของสไปร์ท
+              key: คุณสมบัติของสไปร์ท
             Text:
               name: ข้อความ
               key: ข้อความ

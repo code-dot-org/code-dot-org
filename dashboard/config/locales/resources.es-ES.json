@@ -992,8 +992,7 @@
         },
         "class-section-video/courseb/2021": {
           "name": "Cómo Hacer una Sección de Clase en Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Vídeo del Profesor"
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Bloques Blockly Sin Conexión (Cursos K-1)",
@@ -3138,19 +3137,50 @@
           "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit"
         },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "¿Qué es una computadora?"
+          "name": "¿Qué es una computadora?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "¿Qué es un Ordenador?",
+          "url": "https://youtu.be/rRSD128KWIM",
           "type": "Vídeo"
+        },
+        "what-is-a-computer-version-b/csd/2021": {
+          "name": "¿Qué es un Ordenador? (Versión B)",
+          "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/"
+        },
+        "what-is-a-computer-version-a/csd/2021": {
+          "name": "¿Qué es un Ordenador? (Versión A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w"
         },
         "input-and-output-2020/csd/2021": {
-          "name": "Entrada y salida"
+          "name": "Entrada y salida",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing"
         },
         "input-and-output-1/csd/2021": {
-          "name": "Entrada y salida"
+          "name": "Entrada y salida",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY"
+        },
+        "processing-2020/csd/2021": {
+          "name": "Aplicaciones con Procesamiento",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing"
+        },
+        "apps-with-processing/csd/2021": {
+          "name": "Aplicaciones con Procesamiento",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view"
         },
         "what-do-computers-do/csd/2021": {
+          "name": "¿Qué Hacen los Ordenadores?",
+          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
           "type": "Vídeo"
+        },
+        "storage-1/csd/2021": {
+          "name": "Aplicaciones con Almacenamiento",
+          "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing"
+        },
+        "storage/csd/2021": {
+          "name": "Aplicaciones con Almacenamiento",
+          "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit"
         },
         "app-proposal-project/csd/2021": {
           "name": "Aplicaciones y resolución de problemas"
