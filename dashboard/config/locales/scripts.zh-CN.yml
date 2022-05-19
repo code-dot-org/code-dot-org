@@ -15690,6 +15690,10 @@ zh-CN:
               name: 模块 8
             Module 7:
               name: 模块 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] 内容课程"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] 单元总结"
         csd2-virtual:
           description: 您将学习如何在自己的网页上创建和分享内容。在决定要与世界分享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和美化页面。您还将练习有意义的编程技能,
             比如调试和注释。 在该单元的末尾, 您将拥有一个可以发布到互联网上的个人网站。
@@ -21258,6 +21262,8 @@ zh-CN:
               name: 第4单元评估
             lesson-11:
               name: 随机
+            Console:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21267,6 +21273,8 @@ zh-CN:
               name: 第 5 单元评估
             lesson-7:
               name: 增强For循环
+            Console:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21539,6 +21547,8 @@ zh-CN:
               key: Java实验室
             lesson-1:
               key: 第1课
+            Console:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21554,6 +21564,8 @@ zh-CN:
               key: Java实验室
             lesson-6:
               name: 知识产权
+            Console:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21567,6 +21579,8 @@ zh-CN:
             Java Lab:
               name: Java实验室
               key: Java实验室
+            Console:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -22439,3 +22453,7 @@ zh-CN:
               key: 第2课
             lesson-3:
               key: 第3课
+        csa9-2022:
+          lessons:
+            Console:
+              name: 控制台

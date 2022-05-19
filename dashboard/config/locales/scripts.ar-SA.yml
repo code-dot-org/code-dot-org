@@ -21906,6 +21906,10 @@ ar:
               name: الوحدة 8
             Module 7:
               name: الوحدة 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] دروس المحتوى"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] ملخص الوحدة"
         csd2-virtual:
           title: مقدمة ذاتية عن مختبر الويب
           description: ستتعلم كيفية إنشاء المحتوى ومشاركته على صفحات الويب الخاصة
@@ -30269,6 +30273,8 @@ ar:
           lessons:
             lesson-2:
               name: الوحدة 4 التقييم
+            Console:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -30278,6 +30284,8 @@ ar:
               name: الوحدة 5 التقييم
             lesson-7:
               name: مُحسَّن من أجل الحلقات
+            Console:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -30689,6 +30697,8 @@ ar:
               key: مختبر Java
             lesson-1:
               key: الدرس 1
+            Console:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -30704,6 +30714,8 @@ ar:
               key: مختبر Java
             lesson-6:
               name: الملكية الفكرية
+            Console:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -30717,6 +30729,8 @@ ar:
             Java Lab:
               name: مختبر Java
               key: مختبر Java
+            Console:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -31908,3 +31922,7 @@ ar:
               key: الدرس 2
             lesson-3:
               key: الدرس 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: وحدة التحكم

@@ -1415,6 +1415,51 @@
         "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
           "description": "Identificar las diferentes estrategias utilizadas para resolver un problema"
         },
+        "3c206514-27ee-4c05-a9b7-f84176d23ebe": {
+          "description": "Dado un problema, identifica las acciones individuales que entrarían dentro de cada paso del proceso de resolución de problemas"
+        },
+        "1383b94a-1a14-4579-8da9-47114eec604d": {
+          "description": "Identifica estrategias útiles dentro de cada paso del proceso de resolución de problemas"
+        },
+        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
+          "description": "Aplicar el proceso de resolución de problemas para abordar una variedad de problemas"
+        },
+        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
+          "description": "Evaluar el grado de definición de un problema y utilizar estrategias para definirlo con mayor precisión"
+        },
+        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
+          "description": "Identificar un ordenador como una máquina que trabaja con información"
+        },
+        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
+          "description": "Razonar sobre si determinados objetos son o no son ordenadores."
+        },
+        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
+          "description": "Elige problemas que puedan resolverse con la informática y justifica esas elecciones."
+        },
+        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
+          "description": "Selecciona las entradas y salidas utilizadas para realizar tareas informáticas comunes"
+        },
+        "372ca368-9509-4398-b84c-21ac4c890a1d": {
+          "description": "Explica el papel que desempeñan la entrada y la salida cuando se utilizan los ordenadores para resolver problemas de información."
+        },
+        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
+          "description": "Definir el procesamiento como el trabajo realizado (posiblemente por un ordenador) para convertir una entrada en una salida"
+        },
+        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
+          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática."
+        },
+        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
+          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático concreto."
+        },
+        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
+          "description": "Determinar qué información de un problema informático debe almacenarse para su uso posterior."
+        },
+        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
+          "description": "Identificar las directrices relativas a la información que debe y no debe almacenarse como parte del proceso informático."
+        },
+        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
+          "description": "Utiliza el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso informático."
+        },
         "74336c50-eaa5-4dce-a478-27925ce67729": {
           "description": "Mejorar de forma iterativa la solución de un problema"
         },
@@ -1432,6 +1477,18 @@
         },
         "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
           "description": "Identificar las diferentes estrategias utilizadas para resolver un problema"
+        },
+        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
+          "description": "Aplicar el proceso de resolución de problemas para abordar una variedad de problemas"
+        },
+        "4616a321-c362-4a0e-928a-b1bc642d4010": {
+          "description": "Evaluar el grado de definición de un problema y utilizar estrategias para definirlo con mayor precisión"
+        },
+        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
+          "description": "Aplicar el proceso de resolución de problemas para abordar una variedad de problemas"
+        },
+        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
+          "description": "Evaluar el grado de definición de un problema y utilizar estrategias para definirlo con mayor precisión"
         }
       }
     }
