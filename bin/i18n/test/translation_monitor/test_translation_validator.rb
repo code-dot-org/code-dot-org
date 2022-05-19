@@ -17,6 +17,7 @@ class TranslationValidatorTest < Minitest::Test
   def test_validate_redacted_blocks
     # valid cases
     assert_nil validate_redacted_blocks('[A][0]')
+    assert_nil validate_redacted_blocks('[A][0][B][1]')
     assert_nil validate_redacted_blocks('[A][0] [B][1]')
 
     # invalid cases
