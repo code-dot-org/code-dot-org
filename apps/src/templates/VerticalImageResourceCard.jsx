@@ -74,7 +74,14 @@ class VerticalImageResourceCard extends Component {
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
       'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
       'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
-      course2: pegasus('/shared/images/courses/logo_tall_course2.jpg')
+      course2: pegasus('/shared/images/courses/logo_tall_course2.jpg'),
+      course3: pegasus('/shared/images/courses/logo_tall_course3.jpg'),
+      course4: pegasus('/shared/images/courses/logo_tall_course4.jpg'),
+      courseB: pegasus('/shared/images/courses/logo_tall_courseb.png'),
+      courseC: pegasus('/shared/images/courses/logo_tall_coursec.png'),
+      courseD: pegasus('/shared/images/courses/logo_tall_coursed.png'),
+      courseE: pegasus('/shared/images/courses/logo_tall_coursee.png'),
+      courseF: pegasus('/shared/images/courses/logo_tall_coursef.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
