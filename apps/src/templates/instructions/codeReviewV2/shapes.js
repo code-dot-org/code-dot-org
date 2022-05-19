@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export const commitShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
   createdAt: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   projectVersion: PropTypes.string.isRequired,
