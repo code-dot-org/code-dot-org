@@ -1,4 +1,5 @@
 # coding: utf-8
+
 require_relative 'test_helper'
 
 require 'cdo/rake_utils'
