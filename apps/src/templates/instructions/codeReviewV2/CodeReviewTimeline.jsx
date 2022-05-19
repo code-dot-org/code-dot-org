@@ -39,7 +39,7 @@ const CodeReviewTimeline = props => {
         if (data.timelineElementType === timelineElementType.commit) {
           return (
             <CodeReviewTimelineCommit
-              key={`commit-${data.id}`}
+              key={`commit-${data.projectVersion}`}
               commit={data}
               isLastElementInTimeline={lastElementInTimeline}
             />

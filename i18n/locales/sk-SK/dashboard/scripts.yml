@@ -1854,8 +1854,8 @@ sk:
               description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_student: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_teacher: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
             'Project: Design a Game':
               name: 'Projekt: vytvor vlastnú hru'
             Programming for Entertainment:
@@ -1974,7 +1974,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
@@ -1983,26 +1983,26 @@ sk:
               description_student: 'Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu. '
               description_teacher: 'V tejto lekcii študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch kôl, ktorých cieľom je zvýšiť počet mincí, ktoré čln udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť po zvyšok kurzu. '
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý bude trieda počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
-              description_student: 'V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
+              name: Objavujeme riešenie problémov
+              description_student: 'V tejto lekcii žiaci aplikujú postup riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je postup riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
               description_teacher: |-
                 V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.
 
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
               description_student: V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač, trieda v skupinách roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
               description_teacher: V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
               description_student: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
               description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
               description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania, ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú na usporiadaní balíkov kariet, čo je forma spracovania informácií. Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
             Storage:
@@ -2012,7 +2012,7 @@ sk:
               description_teacher: 'Táto lekcia sa venuje vstupným a výstupným aspektom počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie. Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať, a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade aplikácií na spoločnosť. '
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
-              description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
+              description_student: Na záver štúdia postupu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania žiaci navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
         csp-online-test:
           lesson_groups:
@@ -2653,11 +2653,11 @@ sk:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
+              name: Objavujeme riešenie problémov
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
         csd2-draft:
           lessons:
             Digital Footprint:
@@ -2673,19 +2673,21 @@ sk:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
+              name: Objavujeme riešenie problémov
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
+            Inputs and Outputs:
+              name: Vstupy a výstupy
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
             Storage:
               name: Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
         csd3-chapters:
           lessons:
             Programming for Entertainment:
@@ -3766,7 +3768,7 @@ sk:
             Personal Innovations:
               name: Osobné inovácie (vylepšenia)
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
             Simple Encryption:
               name: Jednoduché šifrovanie
             App Development - Intro to App Lab:
@@ -4101,8 +4103,8 @@ sk:
               description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_student: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_teacher: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: V tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou.
@@ -4729,7 +4731,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
@@ -4738,26 +4740,26 @@ sk:
               description_student: 'Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť po zvyšok kurzu.
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý bude trieda počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
-              description_student: 'V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
+              name: Objavujeme riešenie problémov
+              description_student: 'V tejto lekcii žiaci aplikujú postup riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je postup riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
               description_teacher: |-
                 V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r
                 \\r
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
               description_student: V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač, trieda v skupinách roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
               description_teacher: V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
               description_student: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
               description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
               description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania, ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú na usporiadaní balíkov kariet, čo je forma spracovania informácií. Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
             Storage:
@@ -4767,7 +4769,7 @@ sk:
               description_teacher: 'Táto lekcia sa venuje vstupným a výstupným aspektom počítačov v kontexte, ktorý je pre študentov relevantný a známy: aplikácie. Trieda hodnotí rôzne webové aplikácie s cieľom analyzovať konkrétne problémy, ktoré majú dané aplikácie riešiť, vstupy, ktoré musia spracovať, a výstupy, ktoré poskytujú používateľom. Záver hodiny je venovaný pozorovaniu týchto aplikácií, ako aj diskusii vedenej učiteľom o dopade aplikácií na spoločnosť. '
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
-              description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
+              description_student: Na záver štúdia postupu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania žiaci navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
             Apps and Storage:
               name: Aplikácie a Pamäť
@@ -5647,7 +5649,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
@@ -5656,26 +5658,26 @@ sk:
               description_student: 'Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť po zvyšok kurzu.
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý bude trieda počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
-              description_student: 'V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
+              name: Objavujeme riešenie problémov
+              description_student: 'V tejto lekcii žiaci aplikujú postup riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je postup riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
               description_teacher: |-
                 V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r
                 \\r
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
               description_student: V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač, trieda v skupinách roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
               description_teacher: V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
               description_student: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
               description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
               description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania, ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú na usporiadaní balíkov kariet, čo je forma spracovania informácií. Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
             Apps and Storage:
@@ -5684,7 +5686,7 @@ sk:
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
-              description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
+              description_student: Na záver štúdia postupu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania žiaci navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
             Post-Project Test:
               name: Záverečný test po projekte
@@ -6119,8 +6121,8 @@ sk:
               description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_student: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_teacher: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: V tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou.
@@ -6515,9 +6517,9 @@ sk:
         csd-test-saving-state:
           lessons:
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
             Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -6532,7 +6534,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
@@ -6541,26 +6543,26 @@ sk:
               description_student: 'Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu. '
               description_teacher: V tejto lekcii študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. Skupiny pracujú na svojich člnoch počas dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť po zvyšok kurzu.
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_student: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý bude trieda počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda tieto kroky prepája s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
               description_teacher: Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
-              description_student: 'V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
+              name: Objavujeme riešenie problémov
+              description_student: 'V tejto lekcii žiaci aplikujú postup riešenia problémov na tri rôzne úlohy: osemsmerovku, rozdelenie sedenia na narodeninovú oslavu a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je postup riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.'
               description_teacher: |-
                 V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r
                 \\r
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
               description_student: V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač, trieda v skupinách roztriedi obrázky na plagát do kategórií „je počítač“ alebo „nie je počítač“ a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
               description_teacher: V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
               description_student: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
               description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
               description_student: Táto lekcia sa hlbšie zaoberá konceptom spracovania, ktorý bol predstavený ako súčasť definície počítača. Páry spolupracujú na usporiadaní balíkov kariet, čo je forma spracovania informácií. Na konci sa v triede diskutuje, čo znamená spracovanie v kontexte riešenia informačných problémov.
               description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
             Apps and Storage:
@@ -6569,7 +6571,7 @@ sk:
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
-              description_student: Na záver štúdia procesu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania študenti navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
+              description_student: Na záver štúdia postupu riešenia problémov a počítačového modelu vstupu / výstupu / ukladania / spracovania žiaci navrhnú aplikácie určené na riešenie problémov v skutočnom svete. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktoré zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť aj individuálne.
               description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
             Post-Project Test:
               name: Záverečný test po projekte
@@ -6687,8 +6689,8 @@ sk:
               description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_student: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+              description_teacher: V tejto viacdennej lekcii využijeme postup riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
             Project - Design a Game:
               name: Projekt - Vytvor vlastnú hru
               description_student: V tejto lekcii si pomocou Sprievodcu projektom a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme a nakoniec hotovú hru odprezentujeme pred triedou.
@@ -6806,11 +6808,11 @@ sk:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
             Apps and Storage:
               name: Aplikácie a Pamäť
             Project - Propose an App:
@@ -7117,7 +7119,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
           lessons:
@@ -7139,7 +7141,7 @@ sk:
                 -   [Most z cestovín](../5/)\\r
                 -   [Papierová veža](../6/)
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_student: |-
                 **Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r
                 \\r
@@ -7149,11 +7151,11 @@ sk:
                 \\r
                 Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
+              name: Objavujeme riešenie problémov
               description_student: |-
-                **Otázka dňa: Ako môžeme aplikovať proces riešenia problémov na rôzne druhy problémov?**\\r
+                **Otázka dňa: Ako môžeme aplikovať postup riešenia problémov na rôzne druhy problémov?**\\r
                 \\r
-                V tejto lekcii trieda aplikuje proces riešenia problémov na tri rôzne úlohy: osemsmerovku, zasadací poriadok na narodeninovej oslave, a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.
+                V tejto lekcii trieda aplikuje postup riešenia problémov na tri rôzne úlohy: osemsmerovku, zasadací poriadok na narodeninovej oslave, a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je postup riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov.
               description_teacher: |-
                 **Otázka dňa: Ako môžeme aplikovať proces riešenia problémov na rôzne druhy problémov?**\\r
                 \\r
@@ -7161,7 +7163,7 @@ sk:
                 \\r
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
               description_student: |-
                 **Otázka dňa: Čo je počítač?**\\r
                 \\r
@@ -7171,7 +7173,7 @@ sk:
                 \\r
                 V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
             Input and Output:
-              name: Vstup a Výstup
+              name: Vstup a výstup
               description_student: |-
                 **Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**\\r
                 \\r
@@ -7182,7 +7184,7 @@ sk:
                 \\r
                 V tejto lekcii sa študenti zaoberajú tým, ako počítače získavajú a poskytujú informácie používateľovi prostredníctvom vstupov a výstupov. Študenti najprv zváženia, aké informácie by boli potrebné na vyriešenie „problému myslenia“, a potom na základe týchto informácií formulujú odporučenie. Trieda identifikuje vstupy a výstupy tohto procesu. Potom preskúmajú sériu aplikácií a pre každú z nich určia vstupy a výstupy. Nakoniec zvážia iné typy vstupov a výstupov, ktorými počítače môžu pomôcť pri riešení problémov.
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
               description_student: |-
                 \*\*Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?
                 \*\*\\r
@@ -7434,10 +7436,10 @@ sk:
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: |-
-                **Otázka dňa:  Ako môže štruktúrovaný proces riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
+                **Otázka dňa:  Ako môže štruktúrovaný postup riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
                 \\r
                 \\r
-                V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+                V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
               description_teacher: |-
                 **Otázka dňa:  Ako môže štruktúrovaný proces riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
                 \\r
@@ -8331,10 +8333,10 @@ sk:
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: |-
-                **Otázka dňa:  Ako môže štruktúrovaný proces riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
+                **Otázka dňa:  Ako môže štruktúrovaný postup riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
                 \\r
                 \\r
-                V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
+                V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný postup. Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
               description_teacher: |-
                 **Otázka dňa:  Ako môže štruktúrovaný proces riešenia problémov pomôcť programátorom pri manažovaní veľkých projektov?**\\r
                 \\r
@@ -8464,28 +8466,40 @@ sk:
               name: Úvod do riešenia problémov
               description_student: "**Otázka dňa: Čo nám môže pomôcť spolupracovať a tímovo riešiť problémy?**\n\nBudete pracovať v skupine na navrhovaní a testovaní člnu z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. "
             The Problem Solving Process:
-              key: Proces riešenia problémov
-              name: Proces riešenia problémov
+              key: Postup riešenia problémov
+              name: Postup riešenia problémov
               description_teacher: |-
                 **Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r
                 \\r
                 Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémami z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
             Exploring Problem Solving:
-              key: Objavovanie riešenia problémov
-              name: Objavovanie riešenia problémov
+              key: Objavujeme riešenie problémov
+              name: Objavujeme riešenie problémov
+              description_student: |-
+                **Otázka dňa: Ako môžeme postup riešenia problémov využiť na riešenie rôznych typov problémov?**
+
+                Dnes využijete postup riešenia problémov na to, aby ste vyriešili tri rôzne problémy, pri ktorých bude každý ďalší problém náročnejší!
             What is a Computer?:
-              key: Čo je počítač?
-              name: Čo je počítač?
+              key: Čo je to počítač?
+              name: Čo je to počítač?
+              description_student: |-
+                **Otázka dňa: Čo je to počítač?**
+
+                V tejto lekcii sa budete v skupinách snažiť zistiť, čo robí počítač počítačom.
               description_teacher: |-
                 **Otázka dňa: Čo je počítač?**\\r
                 \\r
                 V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
             Input and Output:
-              key: Vstup a Výstup
-              name: Vstup a Výstup
+              key: Vstup a výstup
+              name: Vstup a výstup
             Processing:
-              key: Spracovanie
-              name: Spracovanie
+              key: Spracúvanie
+              name: Spracúvanie
+              description_student: |-
+                **Otázka dňa: Akými rôznymi spôsobmi počítače spracúvajú informácie?**
+
+                V tejto lekcii sa oboznámite so štyrmi hlavnými typmi spracúvania, ktorými počítače premieňajú vstupy na výstupy.
               description_teacher: |-
                 \*\*Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?
                 \*\*\\r
@@ -8494,6 +8508,14 @@ sk:
             Storage:
               key: Pamäť
               name: Pamäť
+              description_student: |-
+                **Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**
+
+                V tejto lekcii sa dozviete o poslednej vlastnosti, ktorá robí počítač počítačom – je ňou pamäť!
+              description_teacher: |-
+                **Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**
+
+                V tejto lekcii sa žiaci oboznámia s poslednou súčasťou výpočtového modelu, ktorý prezentujeme v tomto tematickom celku: pamäť. Po vyskúšaní aplikácie „Výber oblečenia“ žiaci diskutujú o tom, aké informácie by mali byť v aplikácii uložené a aké informácie by sa mali zadávať ako vstupy pri každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, spíšu všeobecné zásady pre rozhodovanie, aké informácie by sa mali ukladať. Potom preskúmajú štyri súčasti výpočtového modelu, ktorý prezentujeme v tejto kapitole: vstup, výstup, pamäť a spracúvanie. Následne budú mať ešte jednu príležitosť upraviť svoje rozhodnutia o tom, ktoré položky zo skoršej časti tejto kapitoly by mali byť zatriedené do kategórie „počítače“. Hodina sa pre žiakov končí reflexiou zameranou na ich vlastné nápady na aplikácie a to, ako by sa v nich využívala pamäť.
             Project - Propose an App:
               key: Projekt - Navrhnite aplikáciu
               name: Projekt - Navrhnite aplikáciu
@@ -8514,7 +8536,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
         csd2-2021:
@@ -12353,7 +12375,7 @@ sk:
                 -   znalosti na vysokej úrovni o učebných osnovách CS Discoveries.
               description_teacher: |-
                 **Prehľad:**
-                Tieto asynchrónne aktivity poskytnú účastníkom prehľad na vysokej úrovni o učebných osnovách CS Discoveries vrátane prehľadu obsahu kurzu a nástrojov na vysokej úrovni, prehľad o štruktúre kurzu a ukážku toho, ako sa používa proces riešenia problémov počas celého kurzu.
+                Tieto asynchrónne aktivity poskytnú účastníkom prehľad o učebných osnovách Objavujeme informatiku vrátane prehľadu obsahu kurzu a nástrojov na vysokej úrovni, prehľad o štruktúre kurzu a ukážku toho, ako sa používa postup riešenia problémov počas celého kurzu.
 
                 **Účastníci budú:**
 
@@ -12810,35 +12832,55 @@ sk:
               description_student: "**Otázka dňa: Čo nám môže pomôcť spolupracovať a tímovo riešiť problémy?**\n\nBudete pracovať v skupine na navrhovaní a testovaní člnu z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac mincí. "
               key: Úvod do riešenia problémov
             The Problem Solving Process:
-              name: Proces riešenia problémov
+              name: Postup riešenia problémov
               description_teacher: |-
                 **Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r
                 \\r
                 Táto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémami z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka.
-              key: Proces riešenia problémov
+              key: Postup riešenia problémov
             Exploring Problem Solving:
-              name: Objavovanie riešenia problémov
-              key: Objavovanie riešenia problémov
+              name: Objavujeme riešenie problémov
+              description_student: |-
+                **Otázka dňa: Ako môžeme postup riešenia problémov využiť na riešenie rôznych typov problémov?**
+
+                Dnes využijete postup riešenia problémov na to, aby ste vyriešili tri rôzne problémy, pri ktorých bude každý ďalší problém náročnejší!
+              key: Objavujeme riešenie problémov
             What is a Computer?:
-              name: Čo je počítač?
+              name: Čo je to počítač?
+              description_student: |-
+                **Otázka dňa: Čo je to počítač?**
+
+                V tejto lekcii sa budete v skupinách snažiť zistiť, čo robí počítač počítačom.
               description_teacher: |-
                 **Otázka dňa: Čo je počítač?**\\r
                 \\r
                 V tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.
-              key: Čo je počítač?
+              key: Čo je to počítač?
             Input and Output:
-              name: Vstup a Výstup
-              key: Vstup a Výstup
+              name: Vstup a výstup
+              key: Vstup a výstup
             Processing:
-              name: Spracovanie
+              name: Spracúvanie
+              description_student: |-
+                **Otázka dňa: Akými rôznymi spôsobmi počítače spracúvajú informácie?**
+
+                V tejto lekcii sa oboznámite so štyrmi hlavnými typmi spracúvania, ktorými počítače premieňajú vstupy na výstupy.
               description_teacher: |-
                 \*\*Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?
                 \*\*\\r
                 \\r
                 Táto lekcia zoznamuje študentov so štyrmi bežnými typmi spracovania: ak / tak (podmienky), hľadanie zhody (vyhľadávanie), počítanie a porovnávanie. Prostredníctvom vzorových aplikácií sú študenti najskôr oboznámení s rôznymi typmi spracovania. Následne preskúmajú ďalšie aplikácie, aby určili, aké typy spracovania sa v nich používajú. Potom vymyslia svoju vlastnú aplikáciu a rozhodnú, aké typy spracovania by potrebovala používať. Na záver brainstormingom prediskutujú ďalšie potenciálne užitočné typy spracovania, ktoré neboli zahrnuté v hlavnej lekcii.
-              key: Spracovanie
+              key: Spracúvanie
             Storage:
               name: Pamäť
+              description_student: |-
+                **Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**
+
+                V tejto lekcii sa dozviete o poslednej vlastnosti, ktorá robí počítač počítačom – je ňou pamäť!
+              description_teacher: |-
+                **Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**
+
+                V tejto lekcii sa žiaci oboznámia s poslednou súčasťou výpočtového modelu, ktorý prezentujeme v tomto tematickom celku: pamäť. Po vyskúšaní aplikácie „Výber oblečenia“ žiaci diskutujú o tom, aké informácie by mali byť v aplikácii uložené a aké informácie by sa mali zadávať ako vstupy pri každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, spíšu všeobecné zásady pre rozhodovanie, aké informácie by sa mali ukladať. Potom preskúmajú štyri súčasti výpočtového modelu, ktorý prezentujeme v tejto kapitole: vstup, výstup, pamäť a spracúvanie. Následne budú mať ešte jednu príležitosť upraviť svoje rozhodnutia o tom, ktoré položky zo skoršej časti tejto kapitoly by mali byť zatriedené do kategórie „počítače“. Hodina sa pre žiakov končí reflexiou zameranou na ich vlastné nápady na aplikácie a to, ako by sa v nich využívala pamäť.
               key: Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
@@ -12860,7 +12902,7 @@ sk:
             cspSurvey:
               display_name: Dotazník
             csd1_1:
-              display_name: 'Kapitola 1: Proces riešenia problémov'
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
         csd2-2022:

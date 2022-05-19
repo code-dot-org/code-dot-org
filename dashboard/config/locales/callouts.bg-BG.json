@@ -250,15 +250,15 @@
         },
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
-          "craft_drag_block_callout": "Плъзни блокче \"премести напред\" и го слепете под другия блок"
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
-          "craft_drag_block_callout": "Плъзни блокче \"премести напред\" и го слепете под другия блок"
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
-          "craft_drag_block_callout": "Плъзни блокче \"премести напред\" и го слепете под другия блок"
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
@@ -426,7 +426,7 @@
         },
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
-          "craft_drag_block_callout": "Плъзни блокче \"премести напред\" и го слепете под другия блок"
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
