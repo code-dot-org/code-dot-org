@@ -5563,10 +5563,16 @@ hu:
             lesson-19:
               name: Hibakeresés
         csa4-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
         csa5-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -5725,18 +5731,26 @@ hu:
               description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A tanulók a „String” osztály metódusait használták a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során a tanulók programdokumentációt írtak egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították és dokumentálták az objektumok és módszerek elő- és utófeltételeit. Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen mértékben érték el az egység tanulási célkitűzéseit és a kitűzött készségeket.
             lesson-1:
               key: 1.  lecke
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
         csa7-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
         csa8-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -5922,3 +5936,7 @@ hu:
               key: 2.  lecke
             lesson-3:
               key: 3.  lecke
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konzol

@@ -22,8 +22,8 @@ const DEFAULT_PROPS = {
     {
       id: 1,
       createdAt: '2022-03-15T04:58:42.000Z',
-      isClosed: true,
-      projectVersion: 'asdfjkl',
+      isOpen: false,
+      version: 'asdfjkl',
       isVersionExpired: false,
       timelineElementType: timelineElementType.review,
       comments: [

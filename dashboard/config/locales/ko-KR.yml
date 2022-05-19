@@ -448,6 +448,7 @@ ko:
       starwars: 스타워즈
       starwarsblocks: 스타워즈 (블록)
       starwarsblocks_hour: 스타워즈 (블록)
+      thebadguys: 나쁜 사람들
       loading: Loading...
       weblab: 웹 랩
       view_all: 모든 프로젝트 보기...
@@ -1101,6 +1102,8 @@ ko:
     편지를 써서 이 상황을 해결할 수 있게 해주세요. '
   no_script_access_student: 이 단원에 들어 올 수 없습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요.
   no_script_access_teacher: '이 단원에 들어 올 수 없습니다. 이 단원에 들어 올 수 있다고 믿으면, support@code.org에
+    편지를 써서 이 상황을 해결할 수 있게 해주세요. '
+  no_level_access_teacher: '이 단계에 들어 올 수 없습니다. 이 단계에 들어 올 수 있다고 믿으면, support@code.org에
     편지를 써서 이 상황을 해결할 수 있게 해주세요. '
   return_unit_overview: 단원 개요로 이동
   return_course_overview: 과정 개요로 이동

@@ -3308,6 +3308,18 @@
         "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
           "name": "Fächerübergreifende Gelegenheit"
         },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Warm Up: Gleiches Wort. Verschiedene Bedeutungen."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Beobachten: Die Macht der Worte"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Untersuchen: Was ist das Problem?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Nachbereitung: Das Überschreiten der Grenze"
+        },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Vertiefendes Lernen"
         },
@@ -3399,7 +3411,7 @@
           "name": "Aufwärmübung"
         },
         "5b774bd6-b243-4d1d-9145-20747f320129": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Hauptaktivität"
@@ -3462,25 +3474,34 @@
           "name": "Prüfung"
         },
         "80cbea1a-7c3f-4121-bab6-abd831772020": {
-          "name": "1.  Tag - Ideen für Projekte untersuchen"
+          "name": "Tag 1 - Projektideen erkunden"
         },
         "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
           "name": "Tag 2 - Der Entwurfsprozess"
         },
         "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
-          "name": "Tag 3 - Projekt aufbauen"
+          "name": "Tag 3 - Erstellen Sie Ihr Projekt"
         },
         "459d00f2-e296-4205-bca6-eab8d4599354": {
-          "name": "Tag 4 - Überarbeiten des Projekts"
+          "name": "Tag 4 - Überarbeiten Sie Ihr Projekt"
         },
         "25d5e16a-9db1-441d-a4c4-916612df574b": {
-          "name": "Tag 5 und Tag 6 - Projekt präsentieren"
+          "name": "Tag 5 & 6 - Präsentieren Sie Ihr Projekt"
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Vertiefendes Lernen"
         },
         "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
-          "name": "Folge der digitalen Spur"
+          "name": "Beobachten: Folgen Sie der digitalen Spur"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Spielen: Tierspuren"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Rückblick: Darf man teilen?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Nachbereitung: Pause & Denk-Moment"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Vertiefendes Lernen"
@@ -3501,7 +3522,7 @@
           "name": "Aufwärmübung"
         },
         "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Hauptaktivität"
@@ -3519,10 +3540,10 @@
           "name": "Aufwärmübung"
         },
         "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
-          "name": "### Vorschau von Online-Aufgaben als Klasse ansehen"
+          "name": "Online-Rätsel in der Klasse ansehen"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Hauptaktivität"
@@ -3561,7 +3582,7 @@
           "name": "Aufwärmübung"
         },
         "06b2458e-a834-46c5-842e-385c1fc97bc8": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Hauptaktivität"
@@ -3582,7 +3603,7 @@
           "name": "Hauptaktivität"
         },
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
-          "name": " Zusammenfassung"
+          "name": "Einpacken"
         },
         "352bcbca-fe70-41d4-8d38-7cfed390e991": {
           "name": "Fächerübergreifende Gelegenheit"
@@ -3630,7 +3651,7 @@
           "name": "Aufwärmübung"
         },
         "8e77b151-07f6-4404-98ec-473f310fc8b1": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Hauptaktivität"
@@ -3654,10 +3675,10 @@
           "name": "Ansehen: Meine Online-Nachbarschaft"
         },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
-          "name": "Lesen Sie: Sicherheit geht vor!"
+          "name": "Lesen Sie: Sicherheit, sie regiert!"
         },
         "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
-          "name": "Erkunden: Ausflug ins Internet"
+          "name": "Erforschen: Internet-Exkursion"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
           "name": "Ein Moment zum Innehalten und Überlegen"
@@ -3696,7 +3717,7 @@
           "name": "Aufwärmübung"
         },
         "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Hauptaktivität"
@@ -3747,13 +3768,13 @@
           "name": "Aufwärmübung"
         },
         "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
-          "name": "Weiterleitende Aktivität - Wählen Sie eine aus"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Hauptaktivität"
         },
         "647827d3-b6a3-4697-9cb8-fec35c819d12": {
-          "name": " Zusammenfassung"
+          "name": "Einpacken"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Vertiefendes Lernen"
@@ -3798,7 +3819,7 @@
           "name": "Aufwärmübung"
         },
         "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
-          "name": "Weiterführende Aktivität - Wählen Sie eine aus"
+          "name": "Überbrückungsaktivität - Ereignisse - Wählen Sie eines aus"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Hauptaktivität"
@@ -3817,6 +3838,18 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Zusammenfassung"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Lernen: Was ist Gemeinheit?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Durchführen: Online vs. Face-to-Face"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Erforschen: STOP Geiz ist geil"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Nachbereitung: Pause & Denk-Moment"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Vertiefendes Lernen"
@@ -3837,10 +3870,10 @@
           "name": "Aufwärmübung"
         },
         "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
-          "name": "Überbrückende Aktivität - Programmierung"
+          "name": "Überbrückungsaktivität - Programmierung"
         },
         "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
-          "name": "### Vorschau von Online-Aufgaben als Klasse ansehen"
+          "name": "Online-Rätsel in der Klasse ansehen"
         },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Hauptaktivität"
@@ -3868,6 +3901,9 @@
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Aufwärmübung"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Überbrückungsaktivität"
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Hauptaktivität"
@@ -3906,7 +3942,7 @@
           "name": "Aufwärmübung"
         },
         "8df58520-6127-4563-b145-8d7d81635bde": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Hauptaktivität"
@@ -3960,7 +3996,7 @@
           "name": "Aufwärmübung"
         },
         "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Hauptaktivität"
@@ -3999,7 +4035,7 @@
           "name": "Aufwärmübung"
         },
         "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
-          "name": "Hauptaktivität "
+          "name": "Haupttätigkeit"
         },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Zusammenfassung"
@@ -4019,6 +4055,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Zusammenfassung"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Aufwärmen: Pssst ... Was ist ein Passwort?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Auswerten: Oh-Oh! Wenn ... Dann ..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Erstellen: Power Up Your Password"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Nachbereitung: Passwort-Tipps Hinweise"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Vertiefendes Lernen"
         },
@@ -4034,6 +4082,9 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Zusammenfassung"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Fakultative Bewertung"
+        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Vertiefendes Lernen"
         },
@@ -4041,7 +4092,7 @@
           "name": "Aufwärmübung"
         },
         "6b7f225b-884f-47b3-8390-7226087e8fd1": {
-          "name": "Überbrückende Aktivität - Programmierung"
+          "name": "Überbrückungsaktivitäten - Programmierung"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Hauptaktivität"
@@ -4063,6 +4114,9 @@
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Aufwärmübung"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Überbrückungsaktivitäten - Wählen Sie eine aus"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Hauptaktivität"
@@ -4110,7 +4164,7 @@
           "name": "Hauptaktivität"
         },
         "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
-          "name": " Zusammenfassung"
+          "name": "Einpacken"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
           "name": "Vertiefendes Lernen"
@@ -4132,6 +4186,9 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Zusammenfassung"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Aufwärmen"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Hauptaktivität"
@@ -4230,7 +4287,7 @@
           "name": "Aufwärmübung"
         },
         "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
-          "name": "Überbrückende Aktivität"
+          "name": "Überbrückungsaktivität"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Hauptaktivität"
@@ -4506,7 +4563,7 @@
           "name": "Aufwärmübung"
         },
         "472354f3-e631-40c3-8001-dc5d7f1206db": {
-          "name": "### Vorschau von Online-Aufgaben als Klasse ansehen"
+          "name": "Online-Rätsel in der Klasse ansehen"
         },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Hauptaktivität"
@@ -4516,6 +4573,9 @@
         },
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Vertiefendes Lernen"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Aufwärmen: Vorschau Programmierung im Labyrinth"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Hauptaktivität"
@@ -4551,7 +4611,7 @@
           "name": "Hauptaktivität"
         },
         "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
-          "name": " Zusammenfassung"
+          "name": "Einpacken"
         },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
           "name": "Vertiefendes Lernen"
@@ -4560,13 +4620,13 @@
           "name": "Aufwärmübung"
         },
         "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
-          "name": "Online Foundation: Vorschau von Schleifen beim Sammler"
+          "name": "Online-Stiftung: Vorschau-Schleifen im Collector"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Hauptaktivität"
         },
         "e6a1f5df-d8d4-41a1-8649-d518965997af": {
-          "name": " Zusammenfassung"
+          "name": "Einpacken"
         },
         "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
           "name": "Aufwärmübung"
@@ -4623,7 +4683,7 @@
           "name": "Aufwärmübung"
         },
         "23175482-f558-4d04-aec7-69a02820317e": {
-          "name": "Überbrückende Aktivität"
+          "name": "Überbrückungsaktivität"
         },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Hauptaktivität"
@@ -4640,8 +4700,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Zusammenfassung"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Aufwärmen: Geheime Superhelden"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Lernen: Aufmüpfig sein"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Erstellen: Ihr digitaler Bürger-Superheld"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Nachbereitung: Rette den Tag! Comicstrip"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Vertiefendes Lernen"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Aufwärmen: Aufstehen, Hinsetzen"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analysieren: Warum wird geteilt?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analysieren: Privat oder persönlich?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Nachbereitung: Exit Ticket"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Vertiefendes Lernen"
@@ -4660,6 +4744,9 @@
         },
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Fächerübergreifende Gelegenheit"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Aufwärmen (optional)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Hauptaktivität"
@@ -4728,7 +4815,7 @@
           "name": "Aufwärmübung"
         },
         "a80b5d47-5fb8-4557-9fb2-233074caad47": {
-          "name": "Überbrückende Aktivität - eine auswählen"
+          "name": "Überbrückungsaktivität - Wählen Sie eine aus"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Hauptaktivität"
@@ -4797,10 +4884,10 @@
           "name": "Tag 2 - Der Entwurfsprozess"
         },
         "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
-          "name": "Tag 3 - Projekt aufbauen"
+          "name": "Tag 3 - Erstellen Sie Ihr Projekt"
         },
         "e8be4727-c687-43bb-a1be-e1b3da780020": {
-          "name": "Tag 4 und Tag 5 - Projekt präsentieren"
+          "name": "Tag 4 & 5 - Präsentieren Sie Ihr Projekt"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Vertiefendes Lernen"
@@ -5296,6 +5383,9 @@
         },
         "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
           "name": "Zusammenfassung"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Aufwärmen"
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Aufgabe"

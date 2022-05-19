@@ -32,7 +32,7 @@ const fakeReviewData = [
   {
     id: 11,
     createdAt: '2022-03-15T04:58:42.000Z',
-    isClosed: true,
+    isOpen: false,
     projectVersion: 'asdfjkl',
     isVersionExpired: false,
     comments: [
@@ -55,7 +55,7 @@ const fakeReviewData = [
   {
     id: 22,
     createdAt: '2022-03-31T04:58:42.000Z',
-    isClosed: false,
+    isOpen: true,
     projectVersion: 'qweruiop',
     isVersionExpired: false,
     comments: [
@@ -121,6 +121,84 @@ describe('CodeReviewDataApi', () => {
       expect(openReview.timelineElementType).to.equal(
         timelineElementType.review
       );
+    });
+  });
+
+  describe('closeReview', () => {
+    let dataApi, ajaxStub;
+    before(() => {
+      dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+    });
+
+    beforeEach(() => {
+      ajaxStub = sinon.stub($, 'ajax').returns({
+        done: successCallback => {
+          successCallback(fakeReviewData[0]);
+          return {fail: () => {}};
+        }
+      });
+    });
+
+    afterEach(() => {
+      ajaxStub.restore();
+    });
+
+    it('calls patch code review endpoint with isClosed true', async () => {
+      await dataApi.closeReview(11);
+      expect(ajaxStub).to.have.been.calledWith({
+        url: `/code_reviews/11`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': undefined},
+        data: {
+          isClosed: true
+        }
+      });
+    });
+
+    it('appends timelineElementType of review onto response', async () => {
+      const result = await dataApi.closeReview(11);
+      expect(result.timelineElementType).to.equal(timelineElementType.review);
+    });
+  });
+
+  describe('openNewCodeReview', () => {
+    let dataApi, ajaxStub;
+    const fakeVersion = 'asdfjkl';
+    before(() => {
+      dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+    });
+
+    beforeEach(() => {
+      ajaxStub = sinon.stub($, 'ajax').returns({
+        done: successCallback => {
+          successCallback(fakeReviewData[0]);
+          return {fail: () => {}};
+        }
+      });
+    });
+
+    afterEach(() => {
+      ajaxStub.restore();
+    });
+
+    it('calls code reveiw POST endpoint with the expected data', async () => {
+      await dataApi.openNewCodeReview(fakeVersion);
+      expect(ajaxStub).to.have.been.calledWith({
+        url: `/code_reviews`,
+        type: 'POST',
+        headers: {'X-CSRF-Token': undefined},
+        data: {
+          channelId: fakeChannelId,
+          scriptId: fakeScriptId,
+          levelId: fakeLevelId,
+          version: fakeVersion
+        }
+      });
+    });
+
+    it('appends timelineElementType of review onto response', async () => {
+      const result = await dataApi.openNewCodeReview(fakeVersion);
+      expect(result.timelineElementType).to.equal(timelineElementType.review);
     });
   });
 });

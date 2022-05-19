@@ -15195,6 +15195,10 @@ de:
               name: Modul 8
             Module 7:
               name: Modul 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Inhaltliche Lektionen"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Zusammenfassung"
         csd2-virtual:
           title: Einführung in Web Lab - im eigenen Tempo
           description: Sie lernen, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und weitergeben können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Allgemeinheit teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse wie Fehlerbeseitigung/Debugging und Kommentieren. Am Ende der Lerneinheit haben Sie eine private Website erstellt, die Sie im Internet veröffentlichen können.
@@ -21038,6 +21042,10 @@ de:
           lessons:
             lesson-2:
               name: Lerneinheit 4 Bewertung
+            Console:
+              name: Konsole
+            The Neighborhood: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21048,7 +21056,10 @@ de:
             lesson-4: {}
             lesson-7:
               name: Verbesserte For-Schleifen
-            lesson-8: {}
+            Console:
+              name: Konsole
+            The Neighborhood: {}
+            The Theater: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21244,6 +21255,7 @@ de:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-4: {}
             lesson-3: {}
         csd6-projects:
           lessons:
@@ -21364,6 +21376,8 @@ de:
             The Playground: {}
             lesson-1:
               key: Lektion-1
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21383,6 +21397,8 @@ de:
             The Playground: {}
             lesson-6:
               name: Geistiges Eigentum
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21400,6 +21416,10 @@ de:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-10: {}
+            Console:
+              name: Konsole
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21658,8 +21678,6 @@ de:
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
         vpl-csd4-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-3: {}
             lesson-4: {}
             lesson-5:
               name: Physische Datenverarbeitung
@@ -21668,9 +21686,6 @@ de:
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
         vpl-csd5-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
             lesson-4:
               name: Daten und Gesellschaft
             lesson-5:
@@ -22307,3 +22322,10 @@ de:
               key: Lektion-2
             lesson-3:
               key: Lektion-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsole
+            The Neighborhood: {}
+            The Theater: {}
+        csa-pl-standalone-code-2022: {}

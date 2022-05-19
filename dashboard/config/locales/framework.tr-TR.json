@@ -13,6 +13,9 @@
         },
         "iste": {
           "name": "Öğrenciler için ISTE Standartları"
+        },
+        "ngss": {
+          "name": "Yeni Nesil Bilim Standartları"
         }
       }
     }

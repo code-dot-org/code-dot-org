@@ -6243,6 +6243,10 @@ cs:
               name: Nástroje
             Debugging:
               name: Ladění
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Obsahové lekce"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Shrnutí jednotky"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -9684,6 +9688,9 @@ cs:
             lesson-19:
               name: Ladění
         csa4-2022:
+          lessons:
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -9691,6 +9698,8 @@ cs:
           lessons:
             lesson-7:
               name: Vylepšené cykly „for“
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -9949,6 +9958,8 @@ cs:
               key: Java Lab
             lesson-1:
               key: lekce-1
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -9959,6 +9970,8 @@ cs:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -9969,6 +9982,8 @@ cs:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -10366,3 +10381,7 @@ cs:
               key: lekce-2
             lesson-3:
               key: lekce-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konzola
