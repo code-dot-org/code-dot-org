@@ -50,7 +50,7 @@ class VocabulariesController < ApplicationController
 
   # GET /courses/:course_name/vocab/edit
   def edit
-    @course_version = find_matching_course_version(params[:course_name])
+    @course_version = CurriculumHelper.find_matching_course_version(params[:course_name])
     @vocabularies = @course_version.vocabularies.order(:word).map(&:summarize_for_edit)
   end
 

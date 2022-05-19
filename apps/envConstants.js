@@ -37,7 +37,7 @@ module.exports = {
   // Used by karma to force singleRun mode
   WATCH: !!getMoocEnv('WATCH'),
   // If set, will collect code coverage info
-  COVERAGE: getBoolEnv('COVERAGE') || getBoolEnv('DRONE'),
+  COVERAGE: getBoolEnv('COVERAGE'),
   NODE_ENV: process.env.NODE_ENV,
   CIRCLECI: process.env.CIRCLECI,
   DRONE: process.env.DRONE,

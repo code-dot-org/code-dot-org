@@ -1,7 +1,8 @@
 # Helper steps for creating and managing sections
 
 And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type}))
+  grade = participant_type == 'student' ? 'Other' : 'pl'
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type, grade: grade}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home

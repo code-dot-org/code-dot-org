@@ -9,11 +9,11 @@ class ConfigTest < Minitest::Test
     config.load_configuration({key: 'value', nil_key: nil})
     assert_equal 'value', config.key
     file = Tempfile.new(%w(config .yml))
-    file.write <<YAML
-key: new
-a: b
-nil_key: new
-YAML
+    file.write <<~YAML
+      key: new
+      a: b
+      nil_key: new
+    YAML
     file.close
     config.load_configuration(file)
     assert_equal 'value', config.key
@@ -23,12 +23,12 @@ YAML
 
   def test_erb
     file = Tempfile.new(%w(config .yml.erb))
-    file.write <<YAML
-x: y
-a: foo
-b: <%=a%>bar
-c: <%=b%>baz
-YAML
+    file.write <<~YAML
+      x: y
+      a: foo
+      b: <%=a%>bar
+      c: <%=b%>baz
+    YAML
     file.close
 
     config = Cdo::Config.new
@@ -44,10 +44,10 @@ YAML
 
   def test_circular_dependency
     file = Tempfile.new(%w(config .yml.erb))
-    file.write <<YAML
-a: foo<%=b%>
-b: <%=a%>bar
-YAML
+    file.write <<~YAML
+      a: foo<%=b%>
+      b: <%=a%>bar
+    YAML
     file.close
     assert_raises(RuntimeError) do
       Cdo::Config.new.load_configuration(file.path)

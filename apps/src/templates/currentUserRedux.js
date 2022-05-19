@@ -6,6 +6,7 @@ const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
+const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -31,6 +32,10 @@ export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
   serverUser
 });
+export const setMuteMusic = isBackgroundMusicMuted => ({
+  type: SET_MUTE_MUSIC,
+  isBackgroundMusicMuted
+});
 
 const initialState = {
   userId: null,
@@ -38,6 +43,7 @@ const initialState = {
   userType: 'unknown',
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
+  isBackgroundMusicMuted: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true
 };
@@ -70,17 +76,27 @@ export default function currentUser(state = initialState, action) {
       under13: action.under13
     };
   }
-
+  if (action.type === SET_MUTE_MUSIC) {
+    return {
+      ...state,
+      isBackgroundMusicMuted: action.isBackgroundMusicMuted
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, under_13} = action.serverUser;
+    const {id, username, user_type, mute_music, under_13} = action.serverUser;
     return {
       ...state,
       userId: id,
       userName: username,
       userType: user_type,
+      isBackgroundMusicMuted: mute_music,
       under13: under_13
     };
   }
 
   return state;
 }
+
+export const isSignedIn = currentUserState => {
+  return currentUserState.signInState === SignInState.SignedIn;
+};

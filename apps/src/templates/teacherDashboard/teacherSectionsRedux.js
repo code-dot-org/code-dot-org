@@ -4,6 +4,8 @@ import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -14,6 +16,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
+  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',
@@ -380,27 +383,16 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
   });
 };
 
-/**
- * Change the login type of the given section.
- * @param {number} sectionId
- * @param {SectionLoginType} loginType
- * @return {function():Promise}
- */
-export const editSectionLoginType = (sectionId, loginType) => dispatch => {
-  dispatch(beginEditingSection(sectionId));
-  dispatch(editSectionProperties({loginType}));
-  return dispatch(finishEditingSection());
-};
-
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
-  // If section id is provided, load students for the current section.
-  dispatch({type: ASYNC_LOAD_BEGIN});
+
   let apis = [
     '/dashboardapi/sections',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
+
+  // If section id is provided, load students for the current section.
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
@@ -583,16 +575,15 @@ const initialState = {
 };
 /**
  * Generate shape for new section
- * @param id
- * @param loginType
+ * @param participantType
  * @returns {sectionShape}
  */
 
-function newSectionData(id, loginType) {
+function newSectionData(participantType) {
   return {
-    id: id,
+    id: PENDING_NEW_SECTION_ID,
     name: '',
-    loginType: loginType,
+    loginType: undefined,
     grade: '',
     providerManaged: false,
     lessonExtras: true,
@@ -600,7 +591,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
-    participantType: 'student',
+    participantType: participantType,
     code: '',
     courseId: null,
     courseOfferingId: null,
@@ -699,10 +690,14 @@ export default function teacherSections(state = initialState, action) {
     );
 
     const studentSectionIds = sections
-      .filter(section => section.participantType === 'student')
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
       .map(section => section.id);
     const plSectionIds = sections
-      .filter(section => section.participantType !== 'student')
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
       .map(section => section.id);
 
     return {
@@ -796,9 +791,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_BEGIN) {
+    const initialParticipantType =
+      state.availableParticipantTypes.length === 1
+        ? state.availableParticipantTypes[0]
+        : undefined;
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
+      : newSectionData(initialParticipantType);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
@@ -825,6 +824,17 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    // PL Sections must use email logins and its grade value should be "pl"
+    const loginTypeSettings = {};
+    const gradeSettings = {};
+    if (
+      action.props.participantType &&
+      action.props.participantType !== ParticipantAudience.student
+    ) {
+      loginTypeSettings.loginType = SectionLoginType.email;
+      gradeSettings.grade = PlGradeValue;
+    }
+
     const lessonExtraSettings = {};
     if (action.props.unitId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
@@ -841,6 +851,8 @@ export default function teacherSections(state = initialState, action) {
         ...state.sectionBeingEdited,
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
+        ...loginTypeSettings,
+        ...gradeSettings,
         ...action.props
       }
     };
@@ -883,10 +895,14 @@ export default function teacherSections(state = initialState, action) {
     };
 
     const newStudentSectionIds = Object.values(newSections)
-      .filter(section => section.participantType === 'student')
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
       .map(section => section.id);
     const newPlSectionIds = Object.values(newSections)
-      .filter(section => section.participantType !== 'student')
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {
@@ -1367,7 +1383,7 @@ export function hiddenStudentSectionIds(state) {
   return state.sectionIds.filter(
     id =>
       state.sections[id].hidden &&
-      state.sections[id].participantType === 'student'
+      state.sections[id].participantType === ParticipantAudience.student
   );
 }
 
@@ -1379,7 +1395,7 @@ export function hiddenPlSectionIds(state) {
   return state.sectionIds.filter(
     id =>
       state.sections[id].hidden &&
-      state.sections[id].participantType !== 'student'
+      state.sections[id].participantType !== ParticipantAudience.student
   );
 }
 
