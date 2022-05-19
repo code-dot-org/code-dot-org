@@ -464,9 +464,9 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'only actual sublevels are considered sublevels' do
     sublevel = create :level
-    contained_level = create :level
+    contained_level = create :free_response
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
-    ParentLevelsChildLevel.create(
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED,
@@ -489,8 +489,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'setup_sublevels will not remove non-sublevel child levels' do
     bubble_choice = create :bubble_choice_level
-    contained_level = create :level
-    ParentLevelsChildLevel.create(
+    contained_level = create :free_response
+    ParentLevelsChildLevel.create!(
       parent_level: bubble_choice,
       child_level: contained_level,
       kind: ParentLevelsChildLevel::CONTAINED
