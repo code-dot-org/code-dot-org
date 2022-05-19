@@ -442,8 +442,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not_nil @channel_id
 
     _,  @project_id = storage_decrypt_channel_id(@channel_id)
-    create :code_review, user_id: @user.id, project_id: @project_id,
-      script_id: script.id, level_id: @level.id, closed_at: nil
+    create :code_review, user_id: @user.id, project_id: @project_id
 
     # calling app_options should set readonly_workspace, since a code review is open
     app_options
