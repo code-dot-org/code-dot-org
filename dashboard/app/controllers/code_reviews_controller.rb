@@ -46,7 +46,7 @@ class CodeReviewsController < ApplicationController
     authorize! :create, code_review, project_owner_id
     code_review.save!
 
-    render json: code_review.summarize
+    render json: code_review.summarize_with_comments
   end
 
   # PATCH /code_reviews/:id
@@ -65,6 +65,6 @@ class CodeReviewsController < ApplicationController
       end
     end
 
-    render json: code_review.summarize
+    render json: code_review.summarize_with_comments
   end
 end
