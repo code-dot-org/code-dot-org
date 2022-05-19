@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
-import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -26,7 +26,7 @@ const FAKE_VERSION_LIST_RESPONSE = {
   ])
 };
 
-describe('VersionHistoryWithCommits', () => {
+describe('VersionHistoryWithCommitsDialog', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -53,7 +53,7 @@ describe('VersionHistoryWithCommits', () => {
       sourcesApi.ajax.restore();
     });
 
-    testVersionHistoryWithCommits({
+    testVersionHistoryWithCommitsDialog({
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
@@ -76,7 +76,7 @@ describe('VersionHistoryWithCommits', () => {
     });
   });
 
-  function testVersionHistoryWithCommits({
+  function testVersionHistoryWithCommitsDialog({
     props,
     finishVersionHistoryLoad,
     failVersionHistoryLoad,
@@ -85,7 +85,7 @@ describe('VersionHistoryWithCommits', () => {
     failRestoreVersion
   }) {
     it('renders loading spinner at first', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       assert(
         wrapper.containsMatchingElement(
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
@@ -94,13 +94,13 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('renders an error on failed version history load', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       failVersionHistoryLoad();
       expect(wrapper.text()).to.include('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       // Call third argument, the success handler
       finishVersionHistoryLoad();
 
@@ -117,7 +117,7 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
@@ -129,7 +129,7 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('renders an error on failed restore', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
       wrapper
         .find('Button')
@@ -141,7 +141,7 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('reloads the page on successful restore', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
       wrapper
         .find('Button')
@@ -154,7 +154,7 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('shows a confirmation after clicking Start Over', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
 
       // Click "Start Over"
@@ -175,7 +175,7 @@ describe('VersionHistoryWithCommits', () => {
     });
 
     it('goes back to version list after cancelling Start Over', () => {
-      wrapper = mount(<VersionHistoryWithCommits {...props} />);
+      wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
 
       // Click "Start Over"
@@ -206,7 +206,7 @@ describe('VersionHistoryWithCommits', () => {
 
     it('shows a confirmation with template project warning', () => {
       wrapper = mount(
-        <VersionHistoryWithCommits {...props} isProjectTemplateLevel />
+        <VersionHistoryWithCommitsDialog {...props} isProjectTemplateLevel />
       );
       finishVersionHistoryLoad();
 
@@ -234,7 +234,7 @@ describe('VersionHistoryWithCommits', () => {
 
         handleClearPuzzle = sinon.stub().returns(Promise.resolve());
         wrapper = mount(
-          <VersionHistoryWithCommits
+          <VersionHistoryWithCommitsDialog
             {...props}
             handleClearPuzzle={handleClearPuzzle}
           />

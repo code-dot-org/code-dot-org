@@ -14,7 +14,7 @@ const DEFAULT_FILE_NAME = 'main.json';
 /**
  * A component for viewing project version history.
  */
-export default class VersionHistoryWithCommits extends React.Component {
+export default class VersionHistoryWithCommitsDialog extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
