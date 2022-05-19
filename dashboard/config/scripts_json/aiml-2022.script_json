@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-04-29 17:33:55 UTC",
+    "serialized_at": "2022-05-09 17:23:38 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -11223,6 +11223,19 @@
       }
     },
     {
+      "name": "Printable Model Cards",
+      "url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/view",
+      "key": "printable_model_cards",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/export?format=pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "printable_model_cards"
+      }
+    },
+    {
       "name": "Saving Models in AI Lab",
       "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview",
       "key": "saving_models_in_ai_lab",
@@ -11770,6 +11783,12 @@
       "seeding_key": {
         "lesson.key": "Model Cards in App Lab",
         "resource.key": "model_cards_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "resource.key": "printable_model_cards"
       }
     },
     {

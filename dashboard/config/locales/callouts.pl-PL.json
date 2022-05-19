@@ -2155,7 +2155,8 @@
           "CSD_U3_L16_S3_C3": "Zmień tą funkcję."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Kliknij tutaj, aby dodać kostiumy do swojego projektu."
+          "costumes_tab": "Kliknij tutaj, aby dodać kostiumy do swojego projektu.",
+          "make_sprite": "Użyj bloków tutaj, aby utworzyć duszka!"
         }
       }
     }

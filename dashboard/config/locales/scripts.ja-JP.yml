@@ -15406,6 +15406,10 @@ ja:
               name: モジュール8
             Module 7:
               name: モジュール7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] コンテンツレッスン"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] まとめユニット"
         csd2-virtual:
           title: 自習型のウェブラボ入門
           description: ここではコンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
@@ -17064,7 +17068,7 @@ ja:
               display_name: イベント
             lessonGroup-5:
               display_name: コース最後のプロジェクト
-          name: コースa -2021
+          name: coursea-2021
           student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
         courseb-2021:
           description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
@@ -21327,6 +21331,8 @@ ja:
               name: ユニット4 評価
             lesson-11:
               name: ランダム
+            Console:
+              name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21336,6 +21342,8 @@ ja:
               name: ユニット5 評価
             lesson-7:
               name: 強化されたForループ
+            Console:
+              name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21633,6 +21641,8 @@ ja:
               key: Javaラボ
             lesson-1:
               key: レッスン1
+            Console:
+              name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21648,6 +21658,8 @@ ja:
               key: Javaラボ
             lesson-6:
               name: 知的財産
+            Console:
+              name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21661,6 +21673,8 @@ ja:
             Java Lab:
               name: Javaラボ
               key: Javaラボ
+            Console:
+              name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -22544,3 +22558,7 @@ ja:
               key: レッスン2
             lesson-3:
               key: レッスン3
+        csa9-2022:
+          lessons:
+            Console:
+              name: コンソール

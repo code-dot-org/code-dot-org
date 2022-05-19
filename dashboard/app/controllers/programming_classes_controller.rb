@@ -1,4 +1,5 @@
 class ProgrammingClassesController < ApplicationController
+  include Rails.application.routes.url_helpers
   before_action :require_levelbuilder_mode_or_test_env
   load_and_authorize_resource
 
@@ -21,8 +22,29 @@ class ProgrammingClassesController < ApplicationController
   end
 
   def edit
+    @programming_class = ProgrammingClass.find_by_id(params[:id])
     return render :not_found unless @programming_class
     @environment_categories = @programming_class.programming_environment.categories.map {|c| {key: c.key, name: c.name}}
+  end
+
+  # GET /programming_classes/get_filtered_results
+  # Possible filters:
+  # - programmingEnvironmentId
+  # - categoryId
+  # - page (1 indexed)
+  def get_filtered_results
+    return render(status: :not_acceptable, json: {error: 'Page is required'}) unless params[:page]
+
+    @programming_classes = ProgrammingClass.all
+    @programming_classes = @programming_classes.where(programming_environment_id: params[:programmingEnvironmentId]) if params[:programmingEnvironmentId]
+    @programming_classes = @programming_classes.where(programming_environment_category_id: params[:categoryId]) if params[:categoryId]
+
+    results_per_page = 20
+    total_classes = @programming_classes.length
+    num_pages = (total_classes / results_per_page.to_f).ceil
+
+    @programming_classes = @programming_classes.page(params[:page]).per(results_per_page)
+    render json: {numPages: num_pages, results: @programming_classes.map(&:summarize_for_all_code_docs)}
   end
 
   def update
@@ -56,6 +78,16 @@ class ProgrammingClassesController < ApplicationController
   def show
     return render :not_found unless @programming_class
     @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
+  end
+
+  def destroy
+    return render :not_found unless @programming_class
+    begin
+      @programming_class.destroy
+      render(status: 200, plain: "Destroyed #{@programming_class.name}")
+    rescue
+      render(status: :not_acceptable, plain: @programming_class.errors.full_messages.join('. '))
+    end
   end
 
   private

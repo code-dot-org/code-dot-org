@@ -6738,10 +6738,16 @@ hu:
             lesson-19:
               name: Hibakeresés
         csa4-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
         csa5-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -7051,18 +7057,26 @@ hu:
                 készségeket.
             lesson-1:
               key: 1.  lecke
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
         csa7-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
         csa8-2022:
+          lessons:
+            Console:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -7269,3 +7283,7 @@ hu:
               key: 2.  lecke
             lesson-3:
               key: 3.  lecke
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konzol

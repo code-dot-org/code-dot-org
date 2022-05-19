@@ -5563,11 +5563,17 @@ he:
             lesson-19:
               name: מציאת טעויות
             lesson-20: {}
-        csa4-2022: {}
+        csa4-2022:
+          lessons:
+            Console: {}
+            The Neighborhood: {}
+            lesson-16: {}
         csa5-2022:
           lessons:
             lesson-4: {}
-            lesson-8: {}
+            Console: {}
+            The Neighborhood: {}
+            The Theater: {}
         tess-test-csa: {}
         csa1-2022-exemplars:
           lessons:
@@ -5618,6 +5624,7 @@ he:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-4: {}
             lesson-3: {}
         csd6-projects:
           lessons:
@@ -5651,6 +5658,7 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            Console: {}
         csa7-2022:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -5658,6 +5666,7 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            Console: {}
         csa8-2022:
           lessons:
             Unit 8 Pilot Survey: {}
@@ -5665,6 +5674,9 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-10: {}
+            Console: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-5:
               display_name: סקר
@@ -5747,17 +5759,10 @@ he:
             lesson-5: {}
         vpl-csd4-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-3: {}
             lesson-4: {}
-            lesson-5: {}
         vpl-csd5-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
             lesson-4: {}
-            lesson-5: {}
         vpl-csd6-ci-pilot-2022:
           lessons:
             lesson-1: {}
@@ -5941,3 +5946,9 @@ he:
         self-paced-pl-csp2-2022: {}
         self-paced-pl-csp3-2022: {}
         self-paced-pl-csp4-2022: {}
+        csa9-2022:
+          lessons:
+            Console: {}
+            The Neighborhood: {}
+            The Theater: {}
+        csa-pl-standalone-code-2022: {}

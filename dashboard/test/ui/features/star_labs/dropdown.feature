@@ -14,3 +14,4 @@ Scenario: Drag a dropdown and select a different option.
   And I wait for 1 seconds
   Then the dropdown is hidden
   And the dropdown field has text "remove ▼"
+  
