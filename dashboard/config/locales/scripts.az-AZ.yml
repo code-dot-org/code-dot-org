@@ -10809,10 +10809,15 @@ az:
           lessons:
             lesson-11:
               name: Təsadüf
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa5-2022:
+          lessons:
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10949,6 +10954,8 @@ az:
               key: Java Lab
             lesson-1:
               key: dərs-1
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10960,6 +10967,8 @@ az:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10971,6 +10980,8 @@ az:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -11368,3 +11379,11 @@ az:
               key: dərs-1
             lesson-2:
               key: dərs-2
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsol
+        csa-pl-standalone-code-2022:
+          lessons:
+            lesson-1:
+              name: Bölmə 1 Layihələri

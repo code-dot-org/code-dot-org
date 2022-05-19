@@ -10002,6 +10002,10 @@ it:
               name: Strumenti
             Debugging:
               name: Correzione errori (debugging)
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Lezioni con contenuti"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Conclusione dell'unità"
         csd2-virtual:
           description_short: Imparare a costruire il tuo sito web con Sviluppo Web.
           lesson_groups:
@@ -14739,6 +14743,8 @@ it:
           lessons:
             lesson-11:
               name: Casuale
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -14746,6 +14752,8 @@ it:
           lessons:
             lesson-7:
               name: Cicli con contatore migliorati
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -15153,6 +15161,8 @@ it:
               key: Laboratorio di Java
             lesson-1:
               key: lezione-1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -15163,6 +15173,8 @@ it:
             Java Lab:
               name: Laboratorio di Java
               key: Laboratorio di Java
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -15173,6 +15185,8 @@ it:
             Java Lab:
               name: Laboratorio di Java
               key: Laboratorio di Java
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -15784,3 +15798,7 @@ it:
               key: lezione-2
             lesson-3:
               key: lezione-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console

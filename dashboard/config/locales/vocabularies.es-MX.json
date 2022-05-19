@@ -870,16 +870,33 @@
         "ethics/csd/2021": {
           "word": "Ética"
         },
+        "empathy/csd/2021": {
+          "word": "Empatía",
+          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        },
         "user/csd/2021": {
           "word": "Usuario",
           "definition": "Alguien que utiliza un objeto, incluido software y hardware."
         },
+        "usability/csd/2021": {
+          "word": "Usabilidad",
+          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
+        },
+        "prototype/csd/2021": {
+          "word": "Prototipo",
+          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
+        },
         "user_interface/csd/2021": {
-          "word": "Pantalla de Usuario"
+          "word": "Pantalla de Usuario",
+          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
         },
         "bug/csd/2021": {
           "word": "Bug",
           "definition": "Una parte de un programa que no funciona correctamente."
+        },
+        "feature/csd/2021": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
         },
         "innovation/csd/2021": {
           "word": "Innovación",

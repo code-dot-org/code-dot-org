@@ -24909,6 +24909,10 @@ de:
               name: Modul 8
             Module 7:
               name: Modul 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Inhaltliche Lektionen"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Zusammenfassung"
         csd2-virtual:
           title: Einführung in Web Lab - im eigenen Tempo
           description: Sie lernen, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen
@@ -34102,6 +34106,8 @@ de:
           lessons:
             lesson-2:
               name: Lerneinheit 4 Bewertung
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -34111,6 +34117,8 @@ de:
               name: Lerneinheit 5 Bewertung
             lesson-7:
               name: Verbesserte For-Schleifen
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -34571,6 +34579,8 @@ de:
               key: Java-Labor
             lesson-1:
               key: Lektion-1
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -34586,6 +34596,8 @@ de:
               key: Java-Labor
             lesson-6:
               name: Geistiges Eigentum
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -34599,6 +34611,8 @@ de:
             Java Lab:
               name: Java-Labor
               key: Java-Labor
+            Console:
+              name: Konsole
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -35692,3 +35706,7 @@ de:
               key: Lektion-2
             lesson-3:
               key: Lektion-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Konsole

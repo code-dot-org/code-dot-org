@@ -87,6 +87,7 @@
   "runtimeError": "Mã lệnh của bạn có ngoại lệ trong quá trình chạy.\n{cause}",
   "saveToBackpack": "Lưu vào ba lô",
   "startingPainter": "Đang khởi động họa sĩ.",
+  "submit": "Gửi",
   "timeoutWarning": "Cảnh báo: dự án của bạn sẽ ngừng chạy sau 15 giây.",
   "timeout": "Dự án của bạn đã dừng lại.",
   "twoMainMethods": "Lỗi: Mã lệnh của bạn chỉ có một phương thức chính. Chúng tôi tìm ra ít nhất hai nhóm có phương thức chính.",
