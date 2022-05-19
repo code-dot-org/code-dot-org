@@ -83,7 +83,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/pss/locale_private.csv") do |fi
     {
       school_id:      row['PPIN'].to_i.to_s,
       school_year:    SURVEY_YEAR,
-      community_type: COMMUNITY_TYPE_MAP[row['LOCALE']]
+      community_type: row['LOCALE'].presence.try {|v| COMMUNITY_TYPE_MAP[v]},
     }
   end
 end
