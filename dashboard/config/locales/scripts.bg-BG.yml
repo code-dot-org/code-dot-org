@@ -1336,13 +1336,13 @@ bg:
         SpecialSeries:
           description_audience: Възраст 10 + (след курс 3)
         iceage:
-          title: 'Ледена епоха: игрална лаборатория'
+          title: Ледена епоха Play Lab
           description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
           description_short: Създай история или си направи игра с Ледена епоха игрална
             лаборатория!
           lessons:
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
               description_student: В този урок, учащите получават въведение на компютърните
                 науки и създават игра използвайки базов блоков код.
           student_description: Създай история или си направи игра с Ледена епоха игрална
@@ -2067,7 +2067,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
         classic-hoc-impact-study:
@@ -2292,7 +2292,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -2308,7 +2308,7 @@ bg:
             Loops with BB-8:
               name: Цикли с BB-8
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Bounce:
               name: Bounce
         coursea-2017:
@@ -2355,7 +2355,7 @@ bg:
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Envelope Variables:
               name: Плик с променливи
             For Loop Fun:
@@ -2624,7 +2624,7 @@ bg:
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
             Envelope Variables:
@@ -2730,7 +2730,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
             Envelope Variables:
@@ -2945,7 +2945,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
               description_student: Избегни лавата! Тук ще научиш за условията в света

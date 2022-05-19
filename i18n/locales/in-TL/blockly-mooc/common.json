@@ -1506,6 +1506,8 @@
   "professionalLearningParticipantQuestion": "crwdns2915338:0crwdne2915338:0",
   "programmingEnvironmentDocumentation": "crwdns2885664:0{programmingEnvironmentTitle}crwdne2885664:0",
   "progress": "crwdns81158:0crwdne81158:0",
+  "progressBubbleDescription": "crwdns2927538:0{levelID}crwdne2927538:0",
+  "progressBubbleDescriptionWithLesson": "crwdns2927540:0{levelID}crwdnd2927540:0{lessonName}crwdne2927540:0",
   "progressLegendAssessment": "crwdns405080:0crwdne405080:0",
   "progressOnCSTAStandards": "crwdns2290799:0crwdne2290799:0",
   "progressOnCSTAStandardsDescription": "crwdns2290801:0{cstaLink}crwdne2290801:0",

@@ -221,6 +221,12 @@
         "csta/3A-DA-10": {
           "description": "Posúďte kompromisy v tom, ako sú usporiadané prvky údajov a kde sú údaje uložené."
         },
+        "csta/1B-CS-01": {
+          "description": "Opísanie toho, ako vnútorné a vonkajšie súčasti počítača vytvárajú systém."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modelovanie toho, ako spolu počítačový hardvér a softvér fungujú ako systém, aby splnili úlohy."
+        },
         "csta/1B-IC-18": {
           "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
         },

@@ -1297,7 +1297,7 @@
           "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
         "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "Continuați acest program adăugând mai multe coduri în partea de jos.",
+          "courseE_artist_functions_challenge1_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
           "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
         "courseE_artist_functions_challenge2": {
@@ -1445,6 +1445,42 @@
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Faceți clic aici!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Faceți clic aici!"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
+        },
+        "courseE_aboutme_2": {
+          "": "Faceți clic aici!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Faceți clic aici!"
         }
       }
     }
