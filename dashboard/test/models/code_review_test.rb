@@ -8,21 +8,13 @@ class CodeReviewTest < ActiveSupport::TestCase
   end
 
   test 'open_for_project? returns true if a code review is open for the project' do
-    script_id = 12
-    level_id = 5
-
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
-      script_id: script_id, level_id: level_id, closed_at: nil
+    create :code_review, user_id: @project_owner.id, project_id: @project.id
 
     assert CodeReview.open_for_project?(channel: @channel_id)
   end
 
   test 'open_for_project? returns false if a code review is not open for the project' do
-    script_id = 12
-    level_id = 5
-
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
-      script_id: script_id, level_id: level_id, closed_at: DateTime.now
+    create :code_review, user_id: @project_owner.id, project_id: @project.id, closed_at: DateTime.now
 
     refute CodeReview.open_for_project?(channel: @channel_id)
   end
