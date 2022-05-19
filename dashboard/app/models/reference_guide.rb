@@ -62,6 +62,21 @@ class ReferenceGuide < ApplicationRecord
     File.delete(file_path)
   end
 
+  def copy_to_course_version(course_version)
+    copied_ref_guide = ReferenceGuide.find_or_create_by(
+      course_version_id: course_version.id,
+      key: key
+    ) do |created_ref_guide|
+      created_ref_guide.update!(
+        parent_reference_guide_key: parent_reference_guide_key,
+        display_name: display_name,
+        content: content,
+        position: position
+      )
+    end
+    copied_ref_guide.write_serialization
+  end
+
   def self.find_by_course_name_and_key(course_name, key)
     course_version_id = CurriculumHelper.find_matching_course_version(course_name)&.id
     return nil unless course_version_id
