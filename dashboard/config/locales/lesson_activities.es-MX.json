@@ -5033,6 +5033,9 @@
         "53a369c4-4de1-4607-99cf-3d538af13c51": {
           "name": "Actividad de cierre"
         },
+        "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e": {
+          "name": "Actividades de Extensión"
+        },
         "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
           "name": "Calentamiento"
         },
@@ -5177,6 +5180,9 @@
         "0de0afb2-3b1f-420a-aaf6-557b0726539b": {
           "name": "Actividad de cierre"
         },
+        "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b": {
+          "name": "Preparación del Proyecto"
+        },
         "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
           "name": "Calentamiento"
         },
@@ -5288,8 +5294,17 @@
         "9964a143-7893-42ba-b74f-c36b7707cde0": {
           "name": "Calentamiento"
         },
+        "023a1a6b-0219-4fa2-bac4-3e8894455cc6": {
+          "name": "Días 1 y 2"
+        },
+        "84d660d9-6dc5-40da-8955-1aacbbe9a7b9": {
+          "name": "Días 3 y 4"
+        },
         "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
           "name": "Actividad de cierre"
+        },
+        "e0cc8a92-52b9-421d-a2fd-d5d63296212e": {
+          "name": "Actividades de Extensión"
         },
         "83194b44-89d2-4b23-8601-b26ce5caa6af": {
           "name": "Calentamiento"

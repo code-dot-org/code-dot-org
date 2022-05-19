@@ -2113,12 +2113,23 @@ ro-RO:
           feedback: Corect!
         - text: B
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: C
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: Nu știu.
           correct: true
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -2126,12 +2137,23 @@ ro-RO:
           feedback: Corect!
         - text: B
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: C
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: Nu știu.
           correct: true
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -2139,12 +2161,23 @@ ro-RO:
           feedback: Corect!
         - text: B
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: C
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: Nu știu.
           correct: true
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -2152,12 +2185,23 @@ ro-RO:
           feedback: Corect!
         - text: B
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: C
           correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
         - text: Nu știu.
           correct: true
         questions:
-        - {}
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: Albina se va deplasa spre nor și va încerca să strângă nectar, indiferent
@@ -3498,6 +3542,8 @@ ro-RO:
           * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       csf_be_a_super_digital_citizen:
         content1: descrierea aici
+        markdown: "# Supercetățeanul digital## Cum putem fi un exemplu pentru cei
+          din jur atunci când asistăm la cyberbullying?"
       csf_password_power-up:
         content1: descrierea aici
         markdown: "#  Îmbunătățiți-vă parolele## Sfaturi de reținut cu privire la
@@ -3814,6 +3860,8 @@ ro-RO:
           pe care doriți să-l creați.
       courseE_EOC_2020:
         display_name: Proiect de final de curs
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
       courseExpress_EOC_2020:
         display_name: Proiect de final de curs
       courseF_EOC_2020:
@@ -5074,3 +5122,38 @@ ro-RO:
         markdown: "# Urma digitală## Ce informații puteți include în amprenta digitală?"
       csf_safety_in_my_online_neighborhood:
         markdown: "# Cartierul meu online## Cum vizitați în siguranță locuri online?"
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: "# Design pentru accesibilitate* În universul științei calculatoarelor,
+          **accesibilitatea** se referă la crearea de tehnologie pentru persoanele
+          cu dizabilități.* Dizabilitățile pot fi fizice, auditive, vizuale și de
+          multe alte feluri.* Dizabilitățile sunt diverse și îi afectează pe oameni
+          în moduri diferite, inclusiv în ceea ce privește utilizarea tehnologiei,
+          cum ar fi **aplicațiile pentru smartphone**.* Proiectarea de aplicații care
+          sunt accesibile pentru persoanele cu dizabilități face ca aceste aplicații
+          să fie mai bune și pentru toți ceilalți!![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: "# Design pentru accesibilitate* În universul științei calculatoarelor,
+          **accesibilitatea** se referă la crearea de tehnologie pentru persoanele
+          cu dizabilități.* Dizabilitățile pot fi fizice, auditive, vizuale și de
+          multe alte feluri.* Dizabilitățile sunt diverse și îi afectează pe oameni
+          în moduri diferite, inclusiv în ceea ce privește utilizarea tehnologiei,
+          cum ar fi **aplicațiile pentru smartphone**.* Proiectarea de aplicații care
+          sunt accesibile pentru persoanele cu dizabilități face ca aceste aplicații
+          să fie mai bune și pentru toți ceilalți!![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DigitalSharing-Unplugged:
+        markdown: "# Partajare digitalăÎn această lecție veți înțelege provocările
+          și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor
+          de autor, în special în mediile digitale."
+      DigitalSharing-Unplugged_2020:
+        markdown: "# Partajare digitalăÎn această lecție veți înțelege provocările
+          și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor
+          de autor, în special în mediile digitale."
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: "# Informații private și informații personale## Ce informații despre
+          voi puteți partaja online?"
+      Songwriting-Unplugged:
+        markdown: "# Compoziți muzicaleFolosiți conceptul de refren dintr-un cântec
+          pentru a învăța despre definirea și apelarea funcțiilor."
+      Songwriting-Unplugged_2020:
+        markdown: "# Compoziți muzicaleFolosiți conceptul de refren dintr-un cântec
+          pentru a învăța despre definirea și apelarea funcțiilor."
