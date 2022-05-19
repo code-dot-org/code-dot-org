@@ -3399,6 +3399,12 @@ bs:
           lessons:
             lesson-1:
               name: Pregled
+        tesstest921:
+          lessons:
+            lesson-2:
+              name: Lekcija 2
+            lesson-3:
+              name: Lekcija 3
         spelling-bee:
           lessons:
             lesson-1:
@@ -3606,6 +3612,17 @@ bs:
             lesson-9:
               name: Petlje
         pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
             csf_loops:
               display_name: Petlje
@@ -3665,3 +3682,32 @@ bs:
             For Loops:
               name: Od-Do-Za Petlje
               key: Od-Do-Za Petlje
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Varijable
+              key: Varijable
+            Text:
+              name: Tekst
+              key: Tekst
+            Conditionals:
+              name: Uvjeti
+              key: Uvjeti
+            Velocity:
+              name: Brzina
+              key: Brzina
+            Functions:
+              name: Funkcije
+              key: Funkcije
+        csd5-2022:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        csd6-2022:
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions:
+              name: Funkcije

@@ -1,0 +1,37 @@
+{
+  "category_key": "general",
+  "content": "There are three primary methods to compare numbers (doubles and ints): using the equals() method, using the compare() method and using operators. \n\n###Operators \nThe operators below can be used to compare ints and doubles. When using these operators in a control structure (if statement, for loop, while loop, etc), the value of the expression will equate to a boolean. \n\n![](https://images.code.org/b0a61faf03811c0dd006c9ac6daa1f32-Screen Shot 2022-05-07 at 1.04.51 PM.png)",
+  "examples": "[{\"name\":\"Using Comparison Operators\",\"code\":\"``` \\nint a = 4;\\nint b = 7;\\n\\nif(a == b){ //this expression will equate to false and therefore, the print statement in this if statement will not be executed.\\n     System.out.println(\\\"they are equal.\\\")\\n}\\n\\nif(a \\u003c b){ //the expression will equate to true, because 4 \\u003c 7 and therefore, the print statement below will be executed.\\n     System.out.println(\\\"a is less than b\\\");\\n}\\n```\\n\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "ComparingNumbers",
+  "name": "Comparing Numbers",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "name": "compare",
+      "position": 0,
+      "key": "compare",
+      "overload_of": null,
+      "content": "This method is part of the Integer class java.lang package. A similar method is in the Double class as well. \n\n*The method returns an integer. The integer is:*\n- 0, if the two numbers are equal to each other. \n- a negative number, if the first number is less than the second number\n- a positive number, if the first number is greater than the second number",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int, double\",\"required\":true,\"description\":\"the first number to compare\"},{\"name\":\"y\",\"type\":\"int, double\",\"required\":true,\"description\":\"the second number to compare\"}]",
+      "examples": "[{\"name\":\"Using compare()\",\"code\":\"```\\nint x = 10;\\nint y = 20;\\n\\nSystem.out.println(Integer.compare(x,y)) ; // output is a value less than zero \\n\\ndouble x = 1023.0;\\ndouble y = 1023.0;\\n\\nSystem.out.println(Double.compare(x,y)) ; // output is 0\\n\\n\\n```\"}]",
+      "syntax": "public static int compare(int x, int y);\n\nOR \n\npublic static int compare(double x, double y);",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "equals",
+      "position": 1,
+      "key": "equals",
+      "overload_of": null,
+      "content": "The equals method compares two numbers. It will return true if both objects are equal; otherwise, it will return false;",
+      "parameters": "[{\"name\":\"numTwo\",\"type\":\"int, double\",\"required\":true,\"description\":\"the number numOne is being compared to.\"}]",
+      "examples": "[{\"name\":\"Using equals()\",\"description\":\"\",\"code\":\"```\\nint numOne = 4;\\nint numTwo = 8;\\nint numThree 4;\\n\\nSystem.out.println(numOne.equals(numTwo)); //prints false\\nSystem.out.println(numOne.equals(numThree)); //prints true\\n\"}]",
+      "syntax": "numOne.equals(numTwo);",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

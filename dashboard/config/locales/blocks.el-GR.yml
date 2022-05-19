@@ -4,6 +4,22 @@ el:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': μεσαία
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': μεσαία
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
@@ -1016,7 +1032,7 @@ el:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
         text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'κάθε {N} {UNIT} '
         options:
           UNIT:
@@ -1154,8 +1170,6 @@ el:
         options:
           EFFECT:
             '"rain"': βροχή
-      gamelab_makeNewScaledSprite:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeProjectile:
@@ -1165,6 +1179,12 @@ el:
             '90': κάτω
             '180': αριστερά
             '270': επάνω
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': μεσαία
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:

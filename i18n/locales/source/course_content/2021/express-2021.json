@@ -579,6 +579,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/express-2021/lessons/5/levels/4": {
@@ -600,6 +603,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/express-2021/lessons/5/levels/5": {
@@ -618,6 +624,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/express-2021/lessons/5/levels/6": {
@@ -639,6 +648,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/express-2021/lessons/5/levels/8": {
@@ -657,6 +669,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/express-2021/lessons/5/levels/9": {
@@ -682,6 +697,19 @@
       "moving north": "moving north",
       "jittering": "jittering",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     },
     "contained levels": [
       {
@@ -742,6 +770,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/4": {
@@ -766,6 +808,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/5": {
@@ -787,6 +843,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/6": {
@@ -811,6 +881,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/7": {
@@ -830,6 +914,15 @@
       "moving south": "moving south",
       "moving north": "moving north",
       "moving west": "moving west"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/8": {
@@ -851,6 +944,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/9": {
@@ -872,6 +979,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/10": {
@@ -893,6 +1014,20 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/11": {
@@ -918,6 +1053,21 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/6/levels/12": {
@@ -940,6 +1090,21 @@
       "jittering": "jittering",
       "fluttering": "fluttering",
       "wobbling": "wobbling"
+    },
+    "behavior_descriptions": {
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/1": {
@@ -963,6 +1128,19 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "moving east": "moving east"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     },
     "contained levels": [
       {
@@ -1021,6 +1199,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/4": {
@@ -1048,6 +1242,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/5": {
@@ -1078,6 +1288,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/6": {
@@ -1101,6 +1327,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/7": {
@@ -1127,6 +1369,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/8": {
@@ -1151,6 +1409,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/9": {
@@ -1180,6 +1454,23 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/10": {
@@ -1203,6 +1494,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/11": {
@@ -1225,6 +1532,21 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/12": {
@@ -1252,6 +1574,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/13": {
@@ -1279,6 +1617,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/7/levels/14": {
@@ -1300,6 +1654,21 @@
       "jittering": "jittering",
       "fluttering": "fluttering",
       "wobbling": "wobbling"
+    },
+    "behavior_descriptions": {
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/8/levels/1": {
@@ -1324,6 +1693,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/8/levels/2": {
@@ -1346,6 +1733,19 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/8/levels/3": {
@@ -1377,6 +1777,19 @@
       "jittering2": "jittering2",
       "moving west2": "moving west2",
       "patrolling2": "patrolling2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/8/levels/4": {
@@ -3475,6 +3888,19 @@
       "jittering": "jittering",
       "patrolling": "patrolling"
     },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+    },
     "contained levels": [
       {
         "dsls": {
@@ -3533,6 +3959,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/4": {
@@ -3560,6 +4002,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/5": {
@@ -3584,6 +4042,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/6": {
@@ -3612,6 +4086,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/7": {
@@ -3639,6 +4129,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/8": {
@@ -3670,6 +4176,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/9": {
@@ -3702,6 +4224,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/10": {
@@ -3733,6 +4273,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/11": {
@@ -3763,6 +4321,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/12": {
@@ -3796,6 +4372,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/13": {
@@ -3826,6 +4420,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/14": {
@@ -3855,6 +4465,22 @@
       "fluttering": "fluttering",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move the sprite forward in the direction it is facing": "move the sprite forward in the direction it is facing",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/23/levels/15": {
@@ -3884,6 +4510,24 @@
       "wobbling": "wobbling",
       "moving west and looping": "moving west and looping",
       "moving east and looping": "moving east and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/24/levels/1": {
@@ -4299,6 +4943,24 @@
           "wobbling": "wobbling",
           "moving west and looping": "moving west and looping",
           "moving east and looping": "moving east and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen."
         }
       },
       "CourseD_EOC_dance_examples_2021": {
@@ -4452,6 +5114,19 @@
           "jittering": "jittering",
           "moving west": "moving west",
           "patrolling": "patrolling"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
         }
       },
       "CourseD_EOC_dance_2021": {

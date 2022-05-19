@@ -1,0 +1,23 @@
+{
+  "pl-PL": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Standardy Common Core English Language Arts"
+        },
+        "ccmath": {
+          "name": "Standardy matematyczne Common Core"
+        },
+        "csta2011": {
+          "name": "Standardy Informatyki CSTA dla K-12 (2011)"
+        },
+        "iste": {
+          "name": "Standardy ISTE dla uczniów"
+        },
+        "ngss": {
+          "name": "Standardy przyrody nowej generacji"
+        }
+      }
+    }
+  }
+}

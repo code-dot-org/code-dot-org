@@ -3,138 +3,138 @@ require 'json'
 
 class BlocklyTest < ActiveSupport::TestCase
   setup do
-    @toolbox_xml = <<XML
-<xml>
-  <block type="category">
-    <title name="CATEGORY">Category1</title>
-  </block>
-  <block type="controls_repeat_simplified">
-    <title name="TIMES">5</title>
-  </block>
-  <block type="simple_move_up"></block>
-  <block type="simple_move_down"></block>
-  <block type="simple_move_right"></block>
-  <block type="simple_move_left"></block>
+    @toolbox_xml = <<~XML
+      <xml>
+        <block type="category">
+          <title name="CATEGORY">Category1</title>
+        </block>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_move_up"></block>
+        <block type="simple_move_down"></block>
+        <block type="simple_move_right"></block>
+        <block type="simple_move_left"></block>
 
-  <block type="category">
-    <title name="CATEGORY">Category2</title>
-  </block>
-  <block type="controls_repeat_simplified">
-    <title name="TIMES">5</title>
-  </block>
-  <block type="simple_move_up"></block>
-  <block type="simple_move_down"></block>
-  <block type="simple_move_right"></block>
-  <block type="simple_move_left"></block>
+        <block type="category">
+          <title name="CATEGORY">Category2</title>
+        </block>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_move_up"></block>
+        <block type="simple_move_down"></block>
+        <block type="simple_move_right"></block>
+        <block type="simple_move_left"></block>
 
-  <block type="custom_category">
-    <title name="CUSTOM">PROCEDURE</title>
-  </block>
+        <block type="custom_category">
+          <title name="CUSTOM">PROCEDURE</title>
+        </block>
 
-  <block type="custom_category">
-    <title name="CUSTOM">VARIABLE</title>
-  </block>
-</xml>
-XML
-    @category_xml = <<XML
-<xml>
-  <category name="Category1">
-  <block type="controls_repeat_simplified">
-    <title name="TIMES">5</title>
-  </block>
-  <block type="simple_move_up"/>
-  <block type="simple_move_down"/>
-  <block type="simple_move_right"/>
-  <block type="simple_move_left"/>
-  </category>
+        <block type="custom_category">
+          <title name="CUSTOM">VARIABLE</title>
+        </block>
+      </xml>
+    XML
+    @category_xml = <<~XML
+      <xml>
+        <category name="Category1">
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        </category>
 
-  <category name="Category2">
-  <block type="controls_repeat_simplified">
-    <title name="TIMES">5</title>
-  </block>
-  <block type="simple_move_up"/>
-  <block type="simple_move_down"/>
-  <block type="simple_move_right"/>
-  <block type="simple_move_left"/>
-  </category>
+        <category name="Category2">
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        </category>
 
-  <category name="Functions" custom="PROCEDURE"/>
-  <category name="Variables" custom="VARIABLE"/>
-</xml>
-XML
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="VARIABLE"/>
+      </xml>
+    XML
 
-    @category_xml_fields = <<XML
-<xml>
-  <category name="Category1">
-  <block type="controls_repeat_simplified">
-    <field name="TIMES">5</field>
-  </block>
-  </category>
+    @category_xml_fields = <<~XML
+      <xml>
+        <category name="Category1">
+        <block type="controls_repeat_simplified">
+          <field name="TIMES">5</field>
+        </block>
+        </category>
 
-  <category name="Category2">
-  <block type="controls_repeat_simplified">
-    <field name="TIMES">5</field>
-  </block>
-  </category>
+        <category name="Category2">
+        <block type="controls_repeat_simplified">
+          <field name="TIMES">5</field>
+        </block>
+        </category>
 
-  <category name="Functions" custom="PROCEDURE"/>
-  <category name="Variables" custom="VARIABLE"/>
-</xml>
-XML
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="VARIABLE"/>
+      </xml>
+    XML
 
-    @toolbox_xml_fields = <<XML
-<xml>
-  <block type="category">
-    <field name="CATEGORY">Category1</field>
-  </block>
-  <block type="controls_repeat_simplified">
-    <field name="TIMES">5</field>
-  </block>
+    @toolbox_xml_fields = <<~XML
+      <xml>
+        <block type="category">
+          <field name="CATEGORY">Category1</field>
+        </block>
+        <block type="controls_repeat_simplified">
+          <field name="TIMES">5</field>
+        </block>
 
-  <block type="category">
-    <field name="CATEGORY">Category2</field>
-  </block>
-  <block type="controls_repeat_simplified">
-    <field name="TIMES">5</field>
-  </block>
+        <block type="category">
+          <field name="CATEGORY">Category2</field>
+        </block>
+        <block type="controls_repeat_simplified">
+          <field name="TIMES">5</field>
+        </block>
 
-  <block type="custom_category">
-    <field name="CUSTOM">PROCEDURE</field>
-  </block>
+        <block type="custom_category">
+          <field name="CUSTOM">PROCEDURE</field>
+        </block>
 
-  <block type="custom_category">
-    <field name="CUSTOM">VARIABLE</field>
-  </block>
-</xml>
-XML
+        <block type="custom_category">
+          <field name="CUSTOM">VARIABLE</field>
+        </block>
+      </xml>
+    XML
 
-    @xml = <<XML
-<xml>
-  <block type="simple_move_up"/>
-  <block type="simple_move_down"/>
-  <block type="simple_move_right"/>
-  <block type="simple_move_left"/>
-</xml>
-XML
-    @blocks_outside_category_xml = <<XML
-<xml>
-  <category name="Default">
-    <block type="simple_move_up"/>
-  </category>
-  <category name="Example">
-    <block type="simple_move_down"/>
-  </category>
-</xml>
-XML
-    @blocks_in_default_category_xml = <<XML
-<xml>
-  <block type="simple_move_up"/>
-  <block type="category">
-    <title name="CATEGORY">Example</title>
-  </block>
-  <block type="simple_move_down"/>
-</xml>
-XML
+    @xml = <<~XML
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+      </xml>
+    XML
+    @blocks_outside_category_xml = <<~XML
+      <xml>
+        <category name="Default">
+          <block type="simple_move_up"/>
+        </category>
+        <category name="Example">
+          <block type="simple_move_down"/>
+        </category>
+      </xml>
+    XML
+    @blocks_in_default_category_xml = <<~XML
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="category">
+          <title name="CATEGORY">Example</title>
+        </block>
+        <block type="simple_move_down"/>
+      </xml>
+    XML
   end
 
   test 'field_or_title' do
@@ -832,6 +832,66 @@ XML
     assert_equal level.authored_hints, level.localized_authored_hints
   end
 
+  test 'localizes default behavior blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize default behavior blocks'
+    original_this_sprite_str = 'this sprite'
+    original_description_str = 'move a sprite, changing its direction randomly'
+    localized_this_sprite_str = 'test sprite'
+    localized_name_str = 'test wandering'
+    localized_description_str = 'test wandering description'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'behaviors' => {
+        'this_sprite' => localized_this_sprite_str
+      },
+      'data' => {
+        'behavior_names' => {
+          level.name => {
+            'wandering' => localized_name_str
+          }
+        },
+        'behavior_descriptions' => {
+          level.name => {
+            'wandering' => localized_description_str
+          }
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    block_xml = <<~XML
+      <block type="behavior_definition" deletable="false" movable="false" editable="false">
+        <mutation>
+          <arg name="this sprite" type="Sprite"/>
+          <description>move a sprite, changing its direction randomly</description>
+        </mutation>
+        <title name="NAME" id="wandering">wandering</title>
+      </block>
+    XML
+    localized_block_xml = level.localized_function_blocks(block_xml)
+    parsed_xml = Nokogiri::XML(block_xml, &:noblanks)
+
+    # Replacing using xpath because we only want to replace the content. `id` should be untouched
+    parsed_xml.xpath("//title[@id='wandering']").first.content = localized_name_str
+    expected_localized_block_xml = parsed_xml.serialize(save_with: Blockly::XML_OPTIONS)
+
+    expected_localized_block_xml.gsub!(original_this_sprite_str, localized_this_sprite_str)
+    expected_localized_block_xml.gsub!(original_description_str, localized_description_str)
+    expected_localized_block_xml.strip!.gsub!(/\s*\n\s*/, '')
+
+    assert_equal expected_localized_block_xml, localized_block_xml
+  end
+
   test 'uses_droplet for StudioEC levels' do
     level = Level.new(
       name: 'test studioEC level',
@@ -880,47 +940,47 @@ XML
   end
 
   test 'remove_counter_mutations' do
-    counter_mutation_xml = <<XML
-<xml>
-  <block type="category">
-    <title name="CATEGORY">Category1</title>
-  </block>
-  <block type="controls_for_counter" inline="true">
-    <mutation counter="counter"/>
-    <value name="FROM">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-    <value name="TO">
-      <block type="math_number">
-        <title name="NUM">100</title>
-      </block>
-    </value>
-    <value name="BY">
-      <block type="math_number">
-        <title name="NUM">10</title>
-      </block>
-    </value>
-  </block>
-</xml>
-XML
+    counter_mutation_xml = <<~XML
+      <xml>
+        <block type="category">
+          <title name="CATEGORY">Category1</title>
+        </block>
+        <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    XML
     updated_xml_string = Blockly.remove_counter_mutations(counter_mutation_xml)
     updated_xml = Nokogiri::XML(updated_xml_string, &:noblanks)
     assert_equal updated_xml.xpath('//mutation').count, 0
   end
 
   test 'other mutation blocks are not removed' do
-    counter_mutation_xml = <<XML
-<xml>
-  <block type="category">
-    <title name="CATEGORY">Category1</title>
-  </block>
-  <block type="procedures_callnoreturn">
-    <mutation name="draw pinwheel"/>
-  </block>
-</xml>
-XML
+    counter_mutation_xml = <<~XML
+      <xml>
+        <block type="category">
+          <title name="CATEGORY">Category1</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw pinwheel"/>
+        </block>
+      </xml>
+    XML
     updated_xml_string = Blockly.remove_counter_mutations(counter_mutation_xml)
     updated_xml = Nokogiri::XML(updated_xml_string, &:noblanks)
     assert_equal updated_xml.xpath('//mutation').count, 1

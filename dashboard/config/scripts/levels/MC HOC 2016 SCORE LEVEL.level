@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2016-10-24T22:12:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
@@ -53,11 +49,18 @@
     "include_shared_functions": "false",
     "agent_start_direction": "0",
     "is_agent_level": "false",
-    "contained_level_names": null
+    "encrypted": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 49,
+  "created_at": "2016-10-24T22:12:00.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "This level will introduce a scoring system.",
-  "audit_log": "[{\"changed_at\":\"2018-07-03 21:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:57:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:58:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-03 21:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:57:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:58:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2022-04-28 22:38:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"},{\"changed_at\":\"2022-04-28 22:39:22 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -131,5 +134,44 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="craft_ironGolem">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_wait">
+                  <field name="TYPE">2.0</field>
+                  <next>
+                    <block type="craft_moveAway">
+                      <field name="TYPE">Player</field>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_addScore">
+              <field name="SCORE">1</field>
+              <next>
+                <block type="craft_wait">
+                  <field name="TYPE">0.4</field>
+                  <next>
+                    <block type="craft_destroyEntity"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+          <statement name="WHEN_ATTACKED">
+            <block type="craft_destroyEntity"/>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Craft>

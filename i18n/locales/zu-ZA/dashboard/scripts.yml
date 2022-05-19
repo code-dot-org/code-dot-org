@@ -70,3 +70,8 @@ zu:
           lesson_groups:
             csp_lists:
               display_name: Umbhalo olandelanayo
+        csd3-2022:
+          lessons:
+            Text:
+              name: Umbhalo
+              key: Umbhalo

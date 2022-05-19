@@ -3370,7 +3370,25 @@
         "CSD U6 params modify planes_2021": "# Multi-pesawat Controller\\\r \\\r program ini bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang, hanya pesawat merah bekerja. \\\r \\\r # This\\\r melakukan \\* membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \\\r \\* memanggil fungsi 'movePlane(name)' dalam blok event, sehingga hanya bergerak ketika dengan kotak centang dicentang. \\\r \\\r \\_Challenge: Sekarang pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah kode sehingga mereka bergerak lebih lambat? \\_zxsxXXsx",
         "CSDU6 arrays select rainbow_2021": "Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)",
         "CSDU6 arrays select random_2021": "Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)",
-        "CSDU6 arrays select variable_2021": "Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)"
+        "CSDU6 arrays select variable_2021": "Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)",
+        "2-3 Artist Nested Loops 2": "Sekarang ulangi segitiga 6 kali. \n\nSetiap selesai satu segitiga, putar posisi 60 derajat untuk menggambar segitiga berikutnya.",
+        "2-3 Bee Debugging 5": "Bunga itu terlihat cantik! Perbaiki kesalahan untuk mengambil semua nektar. Kini Anda dapat menggunakan berlari dan melangkah.",
+        "CourseD_EOC_artist": "Buat gambar Anda sendiri!",
+        "CourseD_EOC_bounce1": "Buat game bola basket Anda sendiri!",
+        "CourseD_EOC_dance": "Buat dansa Anda sendiri!",
+        "CourseD_EOC_starwars": "Buat game Star Wars Anda sendiri!",
+        "K-1 Bee 11": "Dapatkan tiga nektar dan kemudian buat satu madu",
+        "K-1 Maze Sequence Assessment 2": "Gerakkan aku satu arah, lalu ke arah lainnya untuk membawaku ke babi.",
+        "New Bounce Project": "Buatlah game Bounce anda sendiri. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.",
+        "course1_collector_loops_challenge1": "\"Bisakah saya dibantu mencari beberapa bug? Saya tahu jalan yang harus dilalui, tetapi saya tidak yakin berapa langkah yang harus ditempuh.\"",
+        "course1_maze_seq_challenge1": "\"Bawa saya menelusuri jalan menuju babi nakal itu. Hindarilah TNT kalau tidak bulu-bulu akan beterbangan!\"",
+        "course2_artist_prog_challenge2": "_Bantu saya mengecat jalan ini dengan garis-garis kuning!_",
+        "express_maze_debugging9_2019": "Gunakan blok di dalam toolbox untuk membuat program. Gerakkan Scrat sampai ke akorn.",
+        "express_maze_debugging9_2020": "Gunakan blok di dalam toolbox untuk membuat program. Gerakkan Scrat sampai ke akorn.",
+        "scrat 16": "Biji ek! Gunakan blok \"jika\" (if) untuk mengantar saya ke sana dengan jumlah blok paling sedikit.",
+        "scrat 17": "OK, mari kita coba lagi latihan itu - ini tidak terlalu berbeda, tapi waspada temboknya!",
+        "scrat 18": "Blok \"jika tidak\" (if-else) memeriksa persyaratan, lalu melakukan satu hal ATAU yang lain, Untuk menjalankan saya ke biji ek tersebut cobalah gunakan blok baru ini.",
+        "scrat 20": "Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!"
       }
     }
   }

@@ -815,6 +815,9 @@ fil:
         hello_world_events: Hello World - Pag-program gamit ang Mga Kaganapan
         hello_world_congrats: Hello World - Gawin ang Gusto Mo
         poemart_intro: Introduksiyon sa Sining ng Tula
+        csd_u6_input_output: Input at Output
+        PL_CS_Journeys_Overview: Mga Paglalakbay sa CS
+        csp_applab_parameters: Mga function na meron mga parameter
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

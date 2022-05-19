@@ -40,7 +40,7 @@ Continue making connections between computer science and traditional subjects wi
 {{ csc_module, title: "Story Morals", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
-## Bridging Lessons
+## 브리징 레슨
 
 Our bridging lessons provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
 

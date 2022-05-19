@@ -1,0 +1,14 @@
+{
+  "category_key": "general",
+  "content": "The main method in java is arguably the most important method; it is the entry-point into any java program. The syntax is the same for any java program. The JVM (Java Virtual Machine ) executes Java byte code, and the main method must have specific syntax in order for the JVM to be able to identify it and execute its contents.\n\n###public static void main(String[] args)\n\n***public***: The method needs to be public in order for the JVM to identify it.\n\n***static***: Static in this context means that there will be only one type of this method and that it will be shared. When we call the main method, it does not need require a new instantiated object; it can be called without the creation of a new object. \n\n***void***: there is nothing returned from the main method.\n\n***main***: the general signature of the main method that is identified by the JVM to execute any program from start to finish. \n\n***String [] args***:  the main method's argument (or input parameter) is an array of type string. this allows the method to accept command line arguments, which are stored as strings in this variable. The name \"args\" can be changed.   ",
+  "examples": "[{\"code\":\"*//this method will be identified by the JVM, and will execute accordingly assuming there are no other errors*\\n```\\npublic static void main(String [] args)\\n{\\n\\nSystem.out.println(\\\"Main Method\\\");\\n\\n}\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "MainMethod",
+  "name": "The Main Method",
+  "syntax": "public static void main(String[] args)",
+  "tips": "",
+  "methods": [
+
+  ]
+}

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-ecosystems",
-    "serialized_at": "2022-04-25 21:46:08 UTC",
+    "serialized_at": "2022-04-27 21:55:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -516,19 +516,8 @@
       }
     },
     {
-      "key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
-      "position": 8,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
-        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
-      }
-    },
-    {
       "key": "b4025688-fd40-4651-b8e0-d4ad04f3b717",
-      "position": 9,
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -544,7 +533,7 @@
     },
     {
       "key": "e6d0ff9b-725f-45d4-a556-f134142da793",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
       },
@@ -555,7 +544,7 @@
     },
     {
       "key": "904c3551-9864-4258-8017-e96b1d905729",
-      "position": 11,
+      "position": 10,
       "properties": {
         "tips": [
           {
@@ -571,7 +560,7 @@
     },
     {
       "key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 6\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.",
         "progression_name": "Skill Building"
@@ -583,7 +572,7 @@
     },
     {
       "key": "18951d48-856d-4d66-99a4-b5056bcf4611",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7” slide\n",
         "progression_name": "Prediction"
@@ -595,7 +584,7 @@
     },
     {
       "key": "884b98ab-a6c1-42ba-820a-d088bc64ef8a",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
         "progression_name": "Skill Building"
@@ -607,7 +596,7 @@
     },
     {
       "key": "c64edda8-c21c-409f-b725-9e961bf8865a",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide\n",
         "progression_name": "Multiple Choice"
@@ -619,7 +608,7 @@
     },
     {
       "key": "37c6c5f7-0093-4bb1-bb08-551734e3603d",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10” slide\n",
         "progression_name": "Free Play"
@@ -631,7 +620,7 @@
     },
     {
       "key": "d23e9d4d-4731-4f63-9a38-c7cb41945893",
-      "position": 17,
+      "position": 16,
       "properties": {
         "duration": "10",
         "name": "Modify the Simulation",
@@ -649,7 +638,7 @@
     },
     {
       "key": "8b8211fa-dd9f-472c-98b6-3e412019a71c",
-      "position": 18,
+      "position": 17,
       "properties": {
         "description": "Try changing one number at a time and predict what you expect to happen before clicking the run button. Explain what changed in the program after changing the numbers. After you experiment a bit try answering the following questions: \n\n- What happens if your ecosystem starts with a large number of fish? \n- What happens if it takes more/less time for the algae to regrow? \n- How else can you control how many new algae are growing? \n- Bonus Challenge! Can you add a second type of fish to your model? \n",
         "remarks": true
@@ -1429,13 +1418,10 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_algae_growth"
-        ],
-        "progression": "Prediction"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1445,7 +1431,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76"
+        "activity_section.key": "91a36036-9ce6-4a2b-bea6-dd233c8de60a"
       },
       "level_keys": [
         "csc_ecosystems_algae_growth"
@@ -1532,6 +1518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2075,7 +2064,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76"
+        "activity_section.key": "91a36036-9ce6-4a2b-bea6-dd233c8de60a"
       }
     },
     {

@@ -68,6 +68,7 @@
           "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
         },
         "code/flappy/unversioned": {
+          "word": "コード",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/flappy/unversioned": {
@@ -168,8 +169,29 @@
           "word": "くりかえし",
           "definition": "何度も何度も何かをするという行為。"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "シーザー暗号 ",
+          "definition": "アルファベットを数文字ずらす暗号化技術"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "サイファー",
+          "definition": "暗号化を行う技術（またはアルゴリズム）の総称。"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "暗号化のクラッキング",
+          "definition": "暗号の詳細をすべて知らずに秘密のメッセージを解読しようとすると、暗号化を「クラック」しようとすることになります。"
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "解読",
+          "definition": "暗号化をさかのぼり、秘密のメッセージをとり、元のプレーンテキストを再現するプロセス"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "暗号化"
+          "word": "暗号化",
+          "definition": "メッセージを暗号化して秘密にしておくプロセス。"
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "換字式暗号",
+          "definition": "アルファベットの各文字をランダムに選ばれた他の文字にマッピングする暗号化技術。"
         },
         "code/starwars/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
@@ -216,7 +238,8 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "可逆圧縮"
+          "word": "可逆圧縮",
+          "definition": "圧縮されたデータから元のデータを完全に再構築できるようにするデータ圧縮アルゴリズム。 テキスト圧縮にもっとも一般的に使用されます（zip圧縮など）。"
         },
         "event/outbreak/unversioned": {
           "word": "イベント",
@@ -842,6 +865,10 @@
         "machine_learning/csd/2021": {
           "word": "機械学習",
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "user/csd/2021": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
         },
         "user_interface/csd/2021": {
           "word": "ユーザーインタフェース"

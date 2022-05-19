@@ -3026,3 +3026,24 @@ da:
             For Loops:
               name: For Loops
               key: For Loops
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variabler
+              key: Variabler
+            Sprites:
+              name: figure
+              key: figure
+            Text:
+              name: Tekst
+              key: Tekst
+            Conditionals:
+              name: Betingelser
+              key: Betingelser
+            Functions:
+              name: Funktioner
+              key: Funktioner
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funktioner

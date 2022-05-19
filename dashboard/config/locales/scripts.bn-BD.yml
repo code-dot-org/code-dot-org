@@ -1985,3 +1985,21 @@ bn:
             For Loops:
               name: ফর লুপ
               key: ফর লুপ
+        csd3-2022:
+          lessons:
+            Variables:
+              name: চলকগুলো
+              key: চলকগুলো
+            Text:
+              name: পাঠ
+              key: পাঠ
+            Conditionals:
+              name: শর্তযুক্ত
+              key: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+              key: ফাংশনগুলি
+        csd6-2022:
+          lessons:
+            Functions:
+              name: ফাংশনগুলি

@@ -29,8 +29,8 @@
     "serialized_at": "2022-04-26 18:53:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csd-2022"
     }

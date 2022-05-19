@@ -39,7 +39,7 @@
         "iceage": "Laboratório da Era do Gelo",
         "infinity": "Laboratório Infinito Disney",
         "mc": "Hora do Código Minecraft",
-        "minecraft": "Designer Minecraft Hora do Código",
+        "minecraft": "Designer do Minecraft da Hora do Código",
         "oceans": "IA para oceanos",
         "outbreak": "Simulador de Epidemia",
         "pixelation": "Pixelização",
@@ -52,7 +52,17 @@
         "outbreak-csc": "Epidemia",
         "poem-art": "Arte poética",
         "edit-code": "Edite o código",
-        "tesstest921": "tesstest921"
+        "tesstest921": "tesstest921",
+        "poetry-hoc3": "poetry-hoc3",
+        "andrea-test": "andrea-teste",
+        "csa-u8-dev": "csa-u8-dev",
+        "valentine": "namorado",
+        "netsim": "netsim",
+        "allthethingscourse": "cursodetodasascoisas",
+        "halloween": "Dia das bruxas",
+        "step": "passo",
+        "coursee-ramp": "percurso",
+        "csa5-exemplars": "csa5-exemplars"
       }
     }
   }

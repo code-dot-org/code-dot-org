@@ -16,7 +16,9 @@ const style = {
     fontSize: 16,
     fontWeight: 'bold',
     height: rowHeight,
-    color: 'white'
+    color: color.white,
+    display: 'flex',
+    alignItems: 'center'
   },
   selectedColumn: {
     ...cellStyle,

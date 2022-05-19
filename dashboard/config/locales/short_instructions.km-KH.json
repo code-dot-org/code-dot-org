@@ -1342,7 +1342,19 @@
         "CSD U3 Variables change circle size_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
         "CSD U3 Variables naming rules v2_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
         "CSD U3 Variables random with assignment_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
-        "CSD U6 params modify planes_2021": "# Multi-plane Controller\\\r\n\n\\\r\nThis\nprogram moves the three planes using the board accelerometer and the on-screen\ncheck boxes.  Right now, only the red plane works.\\\r\n\\\r\n\n# Do This\\\r\n\n-   Create\n    a new `movePlane(name)` function that can move any plane.\\\r\n-   Call the `movePlane(name)`\n    function inside the event block, such that it only moves when its checkbox\n    is checked.\\\r\n    \\\r\n    _Challenge: Right now the planes move way too fast.  Can\n    you figure out how to change the code so they move more slowly?_"
+        "CSD U6 params modify planes_2021": "# Multi-plane Controller\\\r\n\n\\\r\nThis\nprogram moves the three planes using the board accelerometer and the on-screen\ncheck boxes.  Right now, only the red plane works.\\\r\n\\\r\n\n# Do This\\\r\n\n-   Create\n    a new `movePlane(name)` function that can move any plane.\\\r\n-   Call the `movePlane(name)`\n    function inside the event block, such that it only moves when its checkbox\n    is checked.\\\r\n    \\\r\n    _Challenge: Right now the planes move way too fast.  Can\n    you figure out how to change the code so they move more slowly?_",
+        "courseA_harvester_seq6_2021": "សាកល្បងដោយខ្លួនឯង!",
+        "courseA_harvester_seq7_2021": "សាកល្បងដោយខ្លួនឯង!",
+        "courseD_maze_ramp5d": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2018": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2019": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2020": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_ramp5d_2021": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2018": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2019": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2020": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក.",
+        "courseD_maze_until3_2021": "នាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក."
       }
     }
   }

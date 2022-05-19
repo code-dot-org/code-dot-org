@@ -548,6 +548,12 @@
         "intro_to_design_mode/csd/2021": {
           "type": "Vídeo"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Vídeo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Vídeo"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Vídeo"
         },
@@ -636,6 +642,9 @@
         },
         "functions_1/csd/2021": {
           "name": "Funcións"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Vídeo"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Vídeo"

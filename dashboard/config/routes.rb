@@ -336,12 +336,19 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show, :destroy] do
+    collection do
+      get :get_filtered_results
+    end
+    member do
+      post :clone
+    end
+  end
 
   resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
-      get :get_filtered_expressions
+      get :get_filtered_results
     end
     member do
       post :clone
@@ -910,8 +917,8 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
-  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
+  post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
+  post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
@@ -951,6 +958,10 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :code_reviews, only: [:index, :create, :update]
+
+  resources :code_review_notes, only: [:create]
+
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
@@ -960,6 +971,7 @@ Dashboard::Application.routes.draw do
 
   resources :project_versions, only: [:create]
   get 'project_versions/get_token', to: 'project_versions#get_token'
+  get 'project_commits/:channel_id', to: 'project_versions#project_commits'
 
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'

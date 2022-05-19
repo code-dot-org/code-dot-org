@@ -240,8 +240,11 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
         unit.course_version.destroy if unit.course_version
+
+        unit.reload
+        unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -319,7 +322,7 @@ class UnitGroup < ApplicationRecord
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: units_for_user(user).map do |unit|
         include_lessons = false
-        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
+        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
       end,
       teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),

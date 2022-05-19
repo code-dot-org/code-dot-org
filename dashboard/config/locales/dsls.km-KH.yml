@@ -205,7 +205,7 @@ km-KH:
         - {}
         questions:
         - {}
-        - {}
+        - text: "**2)**"
         - {}
         - {}
       4-5 Algorithms Multi 1:
@@ -842,7 +842,7 @@ km-KH:
         - {}
       K-1 Word Search Multi 3:
         answers:
-        - {}
+        - text: កំណត់
         - {}
         - {}
         questions:

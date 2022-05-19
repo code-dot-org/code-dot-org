@@ -129,9 +129,18 @@ th:
     mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
     student_consent: "ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ Code.org ได้"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
+    user_type_button: "อัปเดตประเภทบัญชี"
     user_type_label: "ประเภทบัญชี"
     user_type_student: "นักเรียน"
+    user_type_student_desc: "สำรวจบทเรียนและกิจกรรมของเราทั้งหมด:"
+    user_type_student_ability_1: "บันทึกความคืบหน้าและโปรเจกต์"
+    user_type_student_ability_2: "เข้าร่วมชั้นเรียนของครูของคุณ"
     user_type_teacher: "ครู"
+    user_type_teacher_desc: "รายการทุกรายการที่นักเรียนได้รับสิทธิ์เข้าถึง:"
+    user_type_teacher_ability_1: "สร้างหมวดชั้นเรียนใหม่"
+    user_type_teacher_ability_2: "ให้การบ้านนักเรียนและติดตามผล"
+    user_type_teacher_ability_3: "ลงทะเบียนเรียนในระดับอาชีพ"
+    user_type_teacher_ability_4: "โต้ตอบในกระดานพูดคุยของครู"
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
@@ -239,6 +248,10 @@ th:
     created: '%{model} สร้างเสร็จแล้ว'
     updated: '%{model} ได้รับอัพเดทแล้ว'
     destroyed: '%{model} ถูกลบออกแล้ว'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "ที่อยู่อีเมลที่คุณป้อนไม่ตรงกับที่อยู่อีเมลของบัญชีนี้"
   nav:
     header:
       finished_hoc: "ฉันผ่านชั่วโมงแห่งการเขียนโค้ดของฉันแล้ว"
@@ -463,6 +476,10 @@ th:
       title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
+    hello-world:
+      title: 'Hello World'
+    poem-art:
+      title: 'ภาพปกบทกวี'
     hoc:
       title: 'เขาวงกตสุดคลาสสิค'
       body: 'ลองศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง'

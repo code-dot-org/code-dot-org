@@ -1,0 +1,14 @@
+{
+  "category_key": "data_structures",
+  "content": "A one-dimensional array is useful data structure to store numerous elements in one variable. You can access each element in the array using an index. You will typically use a 1D array when you know the number of elements you want to store in that data structure. There are few ways to go about modifying elements in a 1D array: \n1. Use a new array that is larger than the original array \n2. Use an ArrayList data structure, because it is resizable \n3. Shift the elements in the original array to accommodate a new element\n\n**Note:**\nYou are able to initialize an array in Java in primarily two different ways:\n- use the `new` keyword and size to create an array. ex: ` int arr[] = new int[4];`\n- initialize the array with a list of values. ex: `int arr[] = {1, 2, 3, 4};`\n\n",
+  "examples": "[{\"name\":\"Adding and Modifying Elements in Array \",\"code\":\"*our objective is to add an additional number at the end of an array*\\n```\\nint numbers [] = {1, 2, 3, 4, 5, 6}; //initial array\\nint numbersTwo [] = new int[7]; //create an array with one additional position\\nfor(int x = 0; x \\u003c numbers.length(); x++)\\n{\\n     numbersTwo[x] = numbers[x];\\n}\\nnumbersTwo[6] = 7;\\n\\n```\\n*modifying an element in a position*\\n```\\nnumbers[4] = 9;\\n```\"},{\"name\":\"Traversing a 1D Array with a For Loop\",\"code\":\"```\\nint numbers[] = {1, 2, 3, 4, 5, 6};\\nfor(int x = 0; x \\u003c numbers.length(); x++)\\n{\\n     System.out.println(numbers[x]);\\n}\\n```\\n**output:**\\n\\n1\\n\\n2\\n\\n3\\n\\n4\\n\\n5\\n\\n6\"},{\"name\":\"Traversing a 1D Array with a While Loop \",\"code\":\"```\\nint numbers[] = {1, 2, 3, 4, 5, 6};\\nint x = 0; //declare the variable that will increment through the loop\\nint size = numbers.length(); //declare the size of the array \\n\\nwhile(x \\u003c size)\\n{\\n     System.out.println(numbers[x]);\\n     x++;\\n}\\n```\\n**output:**\\n\\n1\\n\\n2\\n\\n3\\n\\n4\\n\\n5\\n\\n6\"},{\"name\":\"Traversing through a 1D Array with an enhanced for loop\",\"code\":\"```\\nint numbers[] = {1, 2, 3, 4, 5, 6};\\nfor(int x : numbers)\\n{\\n     System.out.println(x);\\n}\\n```\\n**output:**\\n\\n1\\n\\n2\\n\\n3\\n\\n4\\n\\n5\\n\\n6\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "1DArrays",
+  "name": "1D Arrays",
+  "syntax": "//here we have initialized an array of type in, which can hold 4 integer values\n\nint[] sampleArray = new int[4];\n\n//set the value at a specific index\n\n//note: the first element in the array will be at position 0.\n\nsampleArray[2] = 4;",
+  "tips": "",
+  "methods": [
+
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "in-TL": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "crwdns2908924:0crwdne2908924:0"
+        },
+        "csta/AP": {
+          "description": "crwdns2910840:0crwdne2910840:0"
+        },
+        "ccela/SL": {
+          "description": "crwdns2914914:0crwdne2914914:0"
+        },
+        "ccmath/MP": {
+          "description": "crwdns2912158:0crwdne2912158:0"
+        },
+        "csta2011/CPP": {
+          "description": "crwdns2912178:0crwdne2912178:0"
+        },
+        "csta2011/CT": {
+          "description": "crwdns2912186:0crwdne2912186:0"
+        },
+        "iste/1": {
+          "description": "crwdns2912198:0crwdne2912198:0"
+        },
+        "iste/4": {
+          "description": "crwdns2912214:0crwdne2912214:0"
+        },
+        "iste/6": {
+          "description": "crwdns2912226:0crwdne2912226:0"
+        },
+        "ccela/L": {
+          "description": "crwdns2913194:0crwdne2913194:0"
+        },
+        "ccela/RI": {
+          "description": "crwdns2913186:0crwdne2913186:0"
+        },
+        "ccmath/OA": {
+          "description": "crwdns2914926:0crwdne2914926:0"
+        },
+        "csta2011/CD": {
+          "description": "crwdns2914954:0crwdne2914954:0"
+        },
+        "csta2011/CI": {
+          "description": "crwdns2914958:0crwdne2914958:0"
+        },
+        "ccmath/MD": {
+          "description": "crwdns2911138:0crwdne2911138:0"
+        },
+        "ccmath/NBT": {
+          "description": "crwdns2913206:0crwdne2913206:0"
+        },
+        "ccmath/G": {
+          "description": "crwdns2913210:0crwdne2913210:0"
+        },
+        "ccela/W": {
+          "description": "crwdns2912130:0crwdne2912130:0"
+        },
+        "csta2011/CL": {
+          "description": "crwdns2912162:0crwdne2912162:0"
+        },
+        "iste/2": {
+          "description": "crwdns2912206:0crwdne2912206:0"
+        },
+        "csta/IC": {
+          "description": "crwdns2910740:0crwdne2910740:0"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "crwdns2913166:0crwdne2913166:0"
+        },
+        "csta/NI": {
+          "description": "crwdns2910744:0crwdne2910744:0"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "crwdns2911066:0crwdne2911066:0"
+        },
+        "csta/DA": {
+          "description": "crwdns2910736:0crwdne2910736:0"
+        },
+        "csta/CS": {
+          "description": "crwdns2911982:0crwdne2911982:0"
+        },
+        "ngss/ETS1": {
+          "description": "crwdns2908690:0crwdne2908690:0"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": "crwdns2912770:0crwdne2912770:0"
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": "crwdns2912782:0crwdne2912782:0"
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": "crwdns2912308:0crwdne2912308:0"
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": "crwdns2912788:0crwdne2912788:0"
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": "crwdns2912776:0crwdne2912776:0"
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": "crwdns2912794:0crwdne2912794:0"
+        }
+      }
+    }
+  }
+}

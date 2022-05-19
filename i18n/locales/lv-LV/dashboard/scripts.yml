@@ -2583,3 +2583,24 @@ lv:
             For Loops:
               name: '"par" cikli'
               key: '"par" cikli'
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Mainīgie
+              key: Mainīgie
+            Text:
+              name: Teksts
+              key: Teksts
+            Conditionals:
+              name: Sazarojumi
+              key: Sazarojumi
+            Velocity:
+              name: Ātrums
+              key: Ātrums
+            Functions:
+              name: Funkcijas
+              key: Funkcijas
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funkcijas

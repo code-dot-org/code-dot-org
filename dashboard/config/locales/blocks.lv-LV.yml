@@ -219,7 +219,7 @@ lv:
           CONDITION:
             '"when"': kad
             '"while"': kamēr
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': sekundes

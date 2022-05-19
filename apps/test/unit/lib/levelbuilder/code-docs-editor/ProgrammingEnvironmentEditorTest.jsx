@@ -66,12 +66,9 @@ describe('ProgrammingEnvironmentEditor', () => {
     ).to.equal(1);
   });
 
-  it('shows upload image dialog when choose image button is pressed', () => {
+  it('shows ImageInput', () => {
     const wrapper = shallow(<ProgrammingEnvironmentEditor {...defaultProps} />);
-    const uploadButton = wrapper.find('Button').first();
-    expect(uploadButton).to.not.be.null;
-    uploadButton.simulate('click');
-    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
+    expect(wrapper.find('ImageInput').length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {
