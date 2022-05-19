@@ -10712,7 +10712,7 @@ fr:
                 des "Boucles Heureuses", cette phase amènera les élèves à utiliser
                 des boucles pour collecter, plus efficacement, des trésors sur Code.org.
             Loops in Artist:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
                 des images en bouclant de simples séquences d'instructions. Dans la
                 leçon branchée précédente, des boucles étaient utilisées pour traverser
@@ -10735,7 +10735,7 @@ fr:
             Programming in Bee:
               name: La Programmation dans l'Abeille
             Programming in Harvester:
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
             Loops in Harvester:
               name: Les Boucles avec l'Agricultrice
             Sequencing in Maze:
@@ -14375,7 +14375,7 @@ fr:
           description_audience: 'Àges : 7 à 11 ans'
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_events:
               display_name: Événements
             csf_loops:
@@ -14950,6 +14950,11 @@ fr:
             que tu peux partager avec tes amis et ta famille.
         express-2019:
           title: Cour rapide (2019)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique : elle combine le
             meilleur de notre programme pour l''école primaire à destination des élèves
             plus âgés.'
@@ -14958,7 +14963,7 @@ fr:
             csf_warmup:
               display_name: Échauffement
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
@@ -15078,6 +15083,11 @@ fr:
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
             Concept Practice with Minecraft:
               name: Mise en Pratique du Concept avec Minecraft
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         csd1-2019:
           title: CSD Unité 1 - La Résolution de Problèmes et l'Informatique (2019
             - 2020)
@@ -15343,7 +15353,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_binary:
               display_name: Binaire
             csf_loops:
@@ -15587,7 +15597,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -15669,7 +15679,7 @@ fr:
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -15727,7 +15737,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_impacts:
@@ -15838,7 +15848,7 @@ fr:
               description_student: Crée des programmes pour aider l'Angry Bird à se
                 déplacer à travers le labyrinthe.
             Programming in Harvester:
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
@@ -15856,12 +15866,17 @@ fr:
             que tu peux partager.
         pre-express-2019:
           title: Pré-lecteur Express (2019)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
             conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
           description_audience: 'Âges : 4 à 8 ans'
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -15904,13 +15919,18 @@ fr:
             Programming in Maze:
               name: Programmation avec Angry Birds
             Programming in Harvester:
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
             Tell a Story in Play Lab:
               name: En Déplacement avec les Événements
             Make a Game in Play Lab:
               name: Une Bataille Royale avec des Événements
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         removed19:
           title: Retiré du CSF pour 2019
           lessons:
@@ -19797,7 +19817,7 @@ fr:
           title: Maîtrise de L'informatique au Vietnam
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -19812,7 +19832,7 @@ fr:
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
             Tell a Story in Play Lab:
               name: Raconter une Histoire dans le Labo du Jeu
         dlp19-csd-mod-fit:
@@ -20265,7 +20285,7 @@ fr:
             Best practices for teaching computer science:
               name: Les meilleures pratiques pour l'enseignement de l'informatique
             Sequencing:
-              name: Séquençage
+              name: Séquencement
             Loops:
               name: Boucles
             Conditionals:
@@ -20550,7 +20570,7 @@ fr:
           title: Time4CS Unité De Contrôle 1
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
@@ -20594,7 +20614,7 @@ fr:
           title: Time4CS Expérience Unité 1
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
@@ -21875,7 +21895,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -21953,7 +21973,7 @@ fr:
                 du maïs. Ici, les boucles sont utilisées pour collecter des trésors
                 dans les espaces ouverts des grottes.
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -21995,7 +22015,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_impacts:
@@ -22031,7 +22051,7 @@ fr:
               description_student: Crée des programmes pour aider l'Angry Bird à se
                 déplacer à travers le labyrinthe.
             Programming in Harvester:
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
@@ -22123,7 +22143,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_binary:
               display_name: Binaire
             csf_loops:
@@ -22336,7 +22356,7 @@ fr:
           description_audience: 'Àges : 7 à 11 ans'
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_events:
               display_name: Événements
             csf_loops:
@@ -23040,6 +23060,11 @@ fr:
             que tu peux partager avec tes amis et ta famille.
         express-2020:
           title: Cours Express (2020)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique : elle combine le
             meilleur de notre programme pour l''école primaire à destination des élèves
             plus âgés.'
@@ -23048,7 +23073,7 @@ fr:
             csf_warmup:
               display_name: Échauffement
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
@@ -23152,13 +23177,23 @@ fr:
               name: Soirée Dansante des Extraterrestres
             Behaviors in Sprite Lab:
               name: Les Comportements dans le Labo des Lutins
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         pre-express-2020:
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
             conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
           description_audience: 'Âges : 4 à 8 ans'
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -23200,7 +23235,7 @@ fr:
                 nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
                 son voyage.
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
                 des images en bouclant de simples séquences d'instructions. Dans la
                 leçon branchée précédente, des boucles étaient utilisées pour traverser
@@ -23239,6 +23274,11 @@ fr:
               name: En Déplacement avec les Événements
             A Royal Battle with Events:
               name: Une Bataille Royale avec des Événements
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         csp1-2020:
           title: CSP Unité 1 - L'Information Numérique (2120 - 2020)
           lesson_groups:
@@ -23495,6 +23535,10 @@ fr:
               name: Module 8
             Module 7:
               name: Module 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Contenu des leçons"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Récapitulatif des activités du module"
         csd2-virtual:
           description_short: Apprends à construire ton propre site web avec le labo
             du web.
@@ -23781,7 +23825,7 @@ fr:
             Understanding the Computer Science Fundamentals Courses:
               name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
             Sequencing:
-              name: Séquençage
+              name: Séquencement
             Loops:
               name: Boucles
             Events:
@@ -25008,8 +25052,8 @@ fr:
                 du maïs. Ici, les boucles sont utilisées pour collecter des trésors
                 dans les espaces ouverts des grottes.
             Ocean Scene with Loops:
-              key: Scène de l'Océan avec des Boucles
-              name: Scène de l'Océan avec des Boucles
+              key: Scène de l'Océan avec Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -25044,7 +25088,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -25095,7 +25139,7 @@ fr:
                 tourner à droite.
             Programming in Harvester:
               key: La Programmation avec l'Agricultrice
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: Les élèves appliqueront les concepts de programmation
@@ -25184,7 +25228,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_impacts:
@@ -25366,7 +25410,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_binary:
               display_name: Binaire
             csf_loops:
@@ -25588,7 +25632,7 @@ fr:
                 vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_events:
               display_name: Événements
             csf_loops:
@@ -26122,6 +26166,11 @@ fr:
             lessonGroup-7:
               display_name: Citoyenneté Numérique
         express-2021:
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique : elle combine le
             meilleur de notre programme pour l''école primaire à destination des élèves
             plus âgés.'
@@ -26428,7 +26477,7 @@ fr:
             csf_warmup:
               display_name: Warm-up (Séance d’échauffement)
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
@@ -26440,20 +26489,30 @@ fr:
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
-              display_name: Les Lutins
+              display_name: Les sprites
             end_of_course_project:
               display_name: Fin du projet.
             lessonGroup-9:
               display_name: Événements
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         pre-express-2021:
-          title: Cours rapide pour les primo-lecteurs (2021)
+          title: Cours express pour les pré-lecteurs (2021)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
             conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
           description_audience: 'Âges : 4 à 8 ans'
           lessons:
             Learn to Drag and Drop:
               key: Apprends à Faire Glisser et Déposer
-              name: Apprends à Faire Glisser et Déposer
+              name: Apprendre à glisser-déposer
               description_student: Clique et fais glisser pour terminer les énigmes.
               description_teacher: Cette leçon donnera aux élèves une idée de ce à
                 quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
@@ -26470,7 +26529,7 @@ fr:
                 dans le laboratoire informatique, puis ils progresseront dans l'utilisation
                 d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in with Angry Birds:
-              name: Programmation avec Angry Birds
+              name: Programmer avec Angry Birds
               description_teacher: En utilisant des personnages de L'Âge de Glace,
                 les élèves développeront des algorithmes séquentiels pour déplacer
                 Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce
@@ -26485,7 +26544,7 @@ fr:
                 pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
               key: La Programmation avec l'Agricultrice
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
@@ -26508,8 +26567,8 @@ fr:
                 nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
                 son voyage.
             Ocean Scene with Loops:
-              key: Scène de l'Océan avec des Boucles
-              name: Scène de l'Océan avec des Boucles
+              key: Scène de l'Océan avec Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -26551,11 +26610,16 @@ fr:
                 et de créer une histoire dans le Labo du Jeu !
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
               display_name: Événements
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         csf-2021-pilot:
           lessons:
             Learning Sprites with Sprite Lab:
@@ -27656,8 +27720,8 @@ fr:
             Understanding the Computer Science Fundamentals Courses:
               key: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
             Sequencing:
-              key: Séquençage
-              name: Séquençage
+              key: Séquencement
+              name: Séquencement
             Loops:
               key: Boucles
               name: Boucles
@@ -29739,7 +29803,7 @@ fr:
                 du maïs. Ici, les boucles sont utilisées pour collecter des trésors
                 dans les espaces ouverts des grottes.
             Ocean Scene with Loops:
-              name: Scène de l'Océan avec des Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -29748,7 +29812,7 @@ fr:
                 un labyrinthe et collecter des trésors. Ici, les boucles créent des
                 motifs. À la fin de cette phase, les étudiants auront la possibilité
                 de créer leurs propres images à l'aide de boucles.
-              key: Scène de l'Océan avec des Boucles
+              key: Scène de l'Océan avec Boucles
             The Big Event Jr:
               name: Le Grand Événement Jr.
               description_student: Déplace-toi et crie lorsque ton professeur appuie
@@ -29845,7 +29909,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -30218,7 +30282,7 @@ fr:
                 de changer pendant que le code est en cours d'exécution.
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_sprites:
               display_name: Les Lutins
             lessonGroup-9:
@@ -30235,6 +30299,16 @@ fr:
               display_name: Les Boucles « Pour »
             end_of_course_project:
               display_name: Fin du projet.
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
           description_short: 'Une introduction à l''informatique : elle combine le
             meilleur de notre programme pour l''école primaire à destination des élèves
             plus âgés.'
@@ -30512,7 +30586,7 @@ fr:
                 linéaire, les faisant se déplacer tout droit, tourner à gauche ou
                 tourner à droite.
             Programming with Harvester:
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: Les élèves appliqueront les concepts de programmation
@@ -30614,7 +30688,7 @@ fr:
                 tourner à droite.
             Programming in Harvester:
               key: La Programmation avec l'Agricultrice
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: Les élèves appliqueront les concepts de programmation
@@ -30693,7 +30767,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_impacts:
@@ -30954,7 +31028,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -31372,7 +31446,7 @@ fr:
             lessonGroup-6:
               display_name: Citoyenneté Numérique
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_events:
               display_name: Événements
             csf_loops:
@@ -32081,8 +32155,8 @@ fr:
                 nouvelles compétences en programmation de manière plus compliquée
                 pour naviguer dans un cours délicat avec BB-8.
             Programming with Harvester:
-              key: La Programmation avec l'Agricultrice
-              name: La Programmation avec l'Agricultrice
+              key: Programmer avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
@@ -32105,8 +32179,8 @@ fr:
                 nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
                 son voyage.
             Ocean Scene with Loops:
-              key: Scène de l'Océan avec des Boucles
-              name: Scène de l'Océan avec des Boucles
+              key: Scène de l'Océan avec Boucles
+              name: Scène de l'Océan avec Boucles
               description_student: Utilisez des boucles et des modèles pour terminer
                 les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
@@ -32156,7 +32230,7 @@ fr:
                 tourner à droite.
             Programming in Harvester:
               key: La Programmation avec l'Agricultrice
-              name: La Programmation avec l'Agricultrice
+              name: Programmer avec l'Agricultrice
               description_student: Aide l'Agricultrice à ramasser les légumes le long
                 d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
@@ -32167,7 +32241,7 @@ fr:
                 et commenceront à utiliser le processus de débogage. '
           lesson_groups:
             csf_sequencing:
-              display_name: Séquençage
+              display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_events:
@@ -32175,6 +32249,16 @@ fr:
           description_audience: 'Âges : 4 à 8 ans'
           description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
             conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
         csa2-2022:
           lessons:
             lesson-5:
@@ -32237,6 +32321,8 @@ fr:
               name: Unité 4 Évaluation
             lesson-11:
               name: Random
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32246,6 +32332,8 @@ fr:
               name: Unité 5 Évaluation
             lesson-7:
               name: Amélioré pour les boucles
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32772,6 +32860,8 @@ fr:
               key: Java Lab
             lesson-1:
               key: leçon n° 1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32787,6 +32877,8 @@ fr:
               key: Java Lab
             lesson-6:
               name: Propriété intellectuelle
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32800,6 +32892,8 @@ fr:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32922,8 +33016,8 @@ fr:
               name: La Mise en Route
               key: La Mise en Route
             Sequencing:
-              name: Séquençage
-              key: Séquençage
+              name: Séquencement
+              key: Séquencement
             Loops:
               name: Boucles
               key: Boucles
@@ -33796,3 +33890,7 @@ fr:
               key: leçon n°2
             lesson-3:
               key: leçon n°3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console

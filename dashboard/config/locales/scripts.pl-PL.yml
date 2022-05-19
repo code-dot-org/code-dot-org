@@ -9454,6 +9454,10 @@ pl:
               name: CSD wstępna ankieta 21-22
             lesson-20:
               name: Ankieta po CSP w 2021
+            CS Principles Pre-survey:
+              name: CSA Projekt wstępnej ankiety
+            Course Survey:
+              name: CSA Projekt ankiety po kursie
           name: wszystkie ankiety
         k1hoc2017:
           title: K - 1 Godzina Kodowania 2017
@@ -24525,6 +24529,8 @@ pl:
               name: Moduł 7
             Self Paced Playground:
               name: Plac własnych zabaw
+            "[TEMPLATE] Introduction to":
+              name: "[TEMPLATE] Wprowadzenie do..."
           name: skrypt testu jess
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
@@ -37893,22 +37899,14 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: Kurs F (2022)
-          description: "Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna
             się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach,
             z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje
             w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych
             lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie
             tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie
             utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi
-            i rodziną.\n\n## Wiosna 2022 Otwarty przegląd\n\nTa nowa wersja Kursu
-            F zawiera trzy nowe lekcje i potrzebujemy Twojej opinii! Nowe lekcje to:\n\n-
-            \  Lekcja 9 - Dużo duszków - [przekaż opinię][0]\n-   Lekcja 10 – Liczenie
-            ze zmiennymi – [przekaż opinię][1]\n-   Lekcja 11 - Mini-projekt: Gra
-            kolekcjonera - [przekaż opinię][2]\n\nZauważ, że te nowe lekcje mogą ulec
-            zmianie od teraz do lipca 2022. Dziękujemy za wszelkie uwagi. Kursy A-E
-            z Podstaw informatyki (2022) rozpoczną się w lipcu 2022.\n\nDodaliśmy
-            również pełny zestaw slajdów obejmujący wszystkie lekcje w Kursie F. Czekamy
-            również na Twoją [opinię][3] na temat tych slajdów! "
+            i rodziną.
           student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów
             wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj
             i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
@@ -38018,6 +38016,8 @@ pl:
                 Oceń swoje postępy w ramach Sprawdzianu Jednostki 1.
             lesson-21:
               name: Konsola
+            lesson-23:
+              name: Ankieta wstępna CSA
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -38156,11 +38156,11 @@ pl:
         csa2-2022:
           lessons:
             lesson-1:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+              name: Projekt zarządzania sklepem - Dzień 1
             lesson-2:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+              name: Projekt zarządzania sklepem - Dzień 2
             lesson-3:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+              name: Projekt zarządzania sklepem - Dzień
               description_student: |-
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
 
@@ -38357,6 +38357,10 @@ pl:
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
 
                 Uczestniczyłeś w przeglądzie kodu na końcu poprzedniej lekcji, aby przekazać i otrzymać informację zwrotną do zidentyfikowania obszarów poprawy i rozwiązania napotkanych problemów. Rozważ te informacje zwrotne podczas kończenia prac na tej lekcji. Następnie podziel się swoim końcowym projektem ze swoimi rówieśnikami, aby uczcić swój sukces.
+            Console:
+              name: Konsola
+            lesson-16:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -38387,6 +38391,10 @@ pl:
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
 
                 Uczestniczyłeś w przeglądzie kodu na końcu poprzedniej lekcji, aby przekazać i otrzymać informację zwrotną do zidentyfikowania obszarów poprawy i rozwiązania napotkanych problemów. Rozważ te informacje zwrotne podczas kończenia prac na tej lekcji. Następnie podziel się swoim końcowym projektem ze swoimi rówieśnikami, aby uczcić swój sukces.
+            Console:
+              name: Konsola
+            The Theater:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -39170,6 +39178,10 @@ pl:
               name: Malarz Plus
             lesson-2:
               name: Projekt Mercury Ciastka Food Truck
+            lesson-4:
+              name: Procresor tekstu
+            lesson-3:
+              name: ImagePlus
           name: csa-backpack-2022
           title: Wersje CSA w plecakach [22-23]
           description: Wersje zajęć, które uczniowie mają w swoich **Plecakach** przez
@@ -39635,6 +39647,8 @@ pl:
             lesson-15:
               name: Jednostka 6 Sprawdzian
               description_student: Oceń swoje postępy w sprawdzianie z Jednostki 6.
+            Console:
+              name: Konsola
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -39900,6 +39914,8 @@ pl:
               name: Praktyka FRQ
             lesson-15:
               name: Jednostka 7 Sprawdzian
+            Console:
+              name: Konsola
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -40046,10 +40062,19 @@ pl:
               name: Kreatywne kodowanie z Konsolą – Dzień 2
             lesson-13:
               name: Kreatywne kodowanie z Konsolą – Dzień 3
+              description_student: |-
+                **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
+
+                Uczestniczyłeś w przeglądzie kodu na końcu poprzedniej lekcji, aby przekazać i otrzymać informację zwrotną do zidentyfikowania obszarów poprawy i rozwiązania napotkanych problemów. Rozważ te informacje zwrotne podczas kończenia prac na tej lekcji. Następnie podziel się swoim końcowym projektem ze swoimi rówieśnikami, aby uczcić swój sukces.
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
               name: Jednostka 8 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 8.
+            Console:
+              name: Konsola
+            lesson-16:
+              name: CSA ankieta końcowa
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -40238,11 +40263,11 @@ pl:
             lesson-10:
               name: Zakres i to
             lesson-11:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+              name: Projekt zarządzania sklepem - Dzień 1
             lesson-12:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+              name: Projekt zarządzania sklepem - Dzień 2
             lesson-13:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+              name: Projekt zarządzania sklepem - Dzień
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
@@ -40304,6 +40329,9 @@ pl:
               name: Poznaj, jak działa komputer
             lesson-4:
               name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie rozwiązywania problemów i informatyki
         vpl-csd2-ci-pilot-2022:
           lessons:
             lesson-5:
@@ -40332,6 +40360,9 @@ pl:
               name: Dane i społeczeństwo
             lesson-5:
               name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie o danych i społeczeństwie
         vpl-csd6-ci-pilot-2022:
           lessons:
             lesson-3:
@@ -41516,3 +41547,126 @@ pl:
             lesson-3:
               key: lekcja 3
               name: Nauczanie Zasad Informatyki
+        csa9-2022:
+          lessons:
+            The AP CSA Exam:
+              name: Egzamin AP CSA
+              description_student: Zrobiłeś to! Ukończyłeś zakres kursu, teraz czas
+                przygotować się do egzaminu AP CSA. W tym celu identyfikujesz i odpowiadasz
+                na pytania, które możesz mieć na temat egzaminu. Poznajesz strategie
+                testowania testów i materiały do nauki, których możesz użyć do przygotowania
+                się do egzaminu.
+              description_teacher: Uczniowie poznają strukturę i oczekiwania egzaminu
+                AP CSA. W tym celu identyfikują i odpowiadają na pytania dotyczące
+                egzaminu. Poznają również strategie zdawania testów i materiały do
+                nauki, które mogą wykorzystać do przygotowania się do egzaminu.
+            MCQ Pre-Assessment:
+              name: Wstępny sprawdzian MCQ
+              description_student: Aby zidentyfikować swoje obecne mocne i słabe strony
+                w części wielokrotnego wyboru egzaminu AP CSA, należy wykonać Wstępny
+                sprawdzian wielokrotnego wyboru dotyczący zajęć AP. Powodzenia!
+              description_teacher: Uczniowie wypełniają Wstępny sprawdzian wielokrotnego
+                wyboru dotyczący zajęć AP.
+            MCQ Study Plan:
+              name: Plan nauki MCQ
+              description_student: Przeglądasz swoje wyniki z wstępnego sprawdzianu
+                wielokrotnego wyboru, aby utworzyć plan nauki.
+              description_teacher: Uczniowie przeglądają swoje wyniki z wstępnego
+                sprawdzianu wielokrotnego wyboru, aby utworzyć plan nauki.
+            MCQ Practice – Day 1:
+              name: Praktyka MCQ – Dzień 1
+              description_student: Teraz czas na ćwiczenia! Zidentyfikuj różne rodzaje
+                pytań wielokrotnego wyboru na egzaminie AP CSA i strategie w podejściu
+                do każdego typu.
+              description_teacher: Uczniowie identyfikują różne rodzaje pytań wielokrotnego
+                wyboru na egzaminie AP CSA i strategie w podejściu do każdego typu.
+            MCQ Practice – Day 2:
+              name: Praktyka MCQ – Dzień 2
+              description_student: Zastanawiasz się nad planamI swoich uczniów i określaśz
+                obszary o najwyższym priorytecie do poprawy. Korzystasz z tablicy
+                wyboru strategii nauki, aby ćwiczyć do egzaminu AP CSA.
+              description_teacher: Uczniowie zastanawiają się nad swoimi planamI nauki
+                i określają obszary o najwyższym priorytecie do poprawy. Korzystają
+                z tablicy wyboru strategii nauki, aby ćwiczyć do egzaminu AP CSA.
+            FRQ Pre-Assessment:
+              name: Wstępny sprawdzian FRQ
+              description_student: Aby określić swoje obecne mocne i słabe strony
+                w części FRQ egzaminu AP CSA, wykonaj wstępny sprawdzian FRQ. Powodzenia!
+              description_teacher: Uczniowie zdają wstępny sprawdzian FRQ
+            FRQ Study Plan:
+              name: Plan nauki FRQ
+              description_student: Przeglądasz swoje wyniki ze wstępnej oceny FRQ,
+                aby utworzyć plan studiów.
+              description_teacher: Uczniowie przeglądają swoje wyniki ze wstępnej
+                oceny FRQ, aby utworzyć plan studiów.
+            FRQ Practice – Day 1:
+              name: Praktyka FRQ – Dzień 1
+              description_student: Zastanawiasz się nad planamI swoich uczniów i określaśz
+                obszary o najwyższym priorytecie do poprawy. Korzystasz z tablicy
+                wyboru strategii nauki, aby ćwiczyć do egzaminu AP CSA.
+              description_teacher: Uczniowie zastanawiają się nad swoimi planamI nauki
+                i określają obszary o najwyższym priorytecie do poprawy. Korzystają
+                z tablicy wyboru strategii nauki, aby ćwiczyć do egzaminu AP CSA.
+            FRQ Practice – Day 2:
+              name: Praktyka FRQ – Dzień 2
+              description_student: Określasz strategie podejścia do FRQ na egzaminie
+                AP CSA.
+              description_teacher: Uczniowie określają strategie podejścia do FRQ
+                na egzaminie AP CSA.
+            Mock MCQ Exam – Day 1:
+              name: Próbny egzamin MCQ – Dzień 1
+              description_student: Ukończ pierwszą połowę próbnego egzaminu wielokrotnego
+                wyboru AP CSA. Powodzenia!
+              description_teacher: Uczniowie zdają pierwszą połowę próbnego egzaminu
+                wielokrotnego wyboru AP CSA.
+            Mock MCQ Exam – Day 2:
+              name: Próbny egzamin MCQ – Dzień 2
+              description_student: Kończysz drugą połowę próbnego egzaminu wielokrotnego
+                wyboru AP CSA. Powodzenia!
+              description_teacher: Uczniowie kończą drugą połowę próbnego egzaminu
+                wielokrotnego wyboru AP CSA.
+            Mock FRQ Exam – Day 2:
+              name: Próbny egzamin FRQ – Dzień 2
+              description_student: Kończysz drugą połowę próbnego egzaminu AP CSA.
+                Powodzenia!
+              description_teacher: Uczniowie zdają drugą połowę próbnego egzaminu
+                AP CSA wolnych odpowiedzi.
+            Mock FRQ Exam – Day 1:
+              name: Próbny egzamin FRQ – Dzień 1
+              description_student: Kończysz pierwszą połowę próbnego egzaminu AP CSA.
+                Powodzenia!
+              description_teacher: Uczniowie kończą pierwszą połowę próbnego egzaminu
+                AP CSA.
+            Mock FRQ Exam – Day 3:
+              name: Próbny egzamin FRQ – Dzień 3
+              description_student: Przeglądnij swoje wyniki na egzaminie próbnym FRQ
+                i zaktualizuj swoje plany studiowania.
+              description_teacher: Uczniowie przeglądają swoje wyniki na egzaminie
+                próbnym FRQ i aktualizują swoje plany studiowania.
+            Console:
+              name: Konsola
+            The Theater:
+              name: Korzystanie z poleceń
+            Mock MCQ Exam – Day 3:
+              name: Próbny egzamin MCQ – Dzień 3
+              description_student: Przeglądasz swoje wyniki na egzaminie próbnym MCQ
+                i aktualizujesz swoje plany studiowania.
+              description_teacher: Uczniowie przeglądają swoje wyniki na egzaminie
+                próbnym MCQ i aktualizują swoje plany studiowania.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przegląd i praktyka
+            lessonGroup-3:
+              display_name: Egzaminy próbne
+          name: csa9-2022
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
+            odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
+        csa-pl-standalone-code-2022:
+          lessons:
+            lesson-1:
+              name: Jednostka 1 Projekty
+            lesson-2:
+              name: Jednostka 2 Projekty
+          name: csa-pl-standalone-code-2022
+          description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty
+            i kod podczas PL z sąsiedztwa, konsoli i teatru.

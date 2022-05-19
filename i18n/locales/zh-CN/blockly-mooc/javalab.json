@@ -112,6 +112,7 @@
   "saveToBackpack": "保存到背包",
   "sendingVideo": "正在发送视频。总长度为：{totalTime}秒。",
   "startingPainter": "开始绘图工具。",
+  "submit": "提交",
   "successfulTestResult": "{className} > {methodName} 成功",
   "switchToDisplayTheme": "切换到{displayTheme}",
   "timeoutWarning": "警告：你的项目将在15秒后停止运行。",

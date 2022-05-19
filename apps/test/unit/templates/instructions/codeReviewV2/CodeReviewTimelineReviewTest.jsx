@@ -5,13 +5,18 @@ import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeRevie
 import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import sinon from 'sinon';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 const DEFAULT_REVIEW = {
   id: 1,
   createdAt: '2022-03-31T04:58:42.000Z',
-  isClosed: false,
-  projectVersion: 'asdfjkl',
+  isOpen: true,
+  version: 'asdfjkl',
   isVersionExpired: false,
+  timelineElementType: timelineElementType.review,
   comments: [
     {
       id: 123,
@@ -32,7 +37,9 @@ const DEFAULT_REVIEW = {
 
 const DEFAULT_PROPS = {
   review: DEFAULT_REVIEW,
-  isLastElementInTimeline: false
+  isLastElementInTimeline: false,
+  addCodeReviewComment: () => {},
+  closeReview: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
@@ -74,8 +81,38 @@ describe('CodeReviewTimelineReview', () => {
     expect(closeButton.props().text).to.equal(javalabMsg.closeReview());
   });
 
+  it('calls prop closeReview when close is clicked does not display codeReviewError if successful', () => {
+    const closeReviewStub = sinon
+      .stub()
+      .callsFake((successCallback, failureCallback) => {
+        successCallback();
+      });
+    const wrapper = setUp({closeReview: closeReviewStub});
+    const closeButton = wrapper.find('Button');
+    closeButton.simulate('click');
+
+    expect(closeReviewStub).to.have.been.called;
+    wrapper.update();
+    expect(wrapper.find(CodeReviewError)).to.have.length(0);
+  });
+
+  it('calls prop closeReview when close is clicked displays codeReviewError if fails', () => {
+    const closeReviewStub = sinon
+      .stub()
+      .callsFake((successCallback, failureCallback) => {
+        failureCallback();
+      });
+    const wrapper = setUp({closeReview: closeReviewStub});
+    const closeButton = wrapper.find('Button');
+    closeButton.simulate('click');
+
+    expect(closeReviewStub).to.have.been.called;
+    wrapper.update();
+    expect(wrapper.find(CodeReviewError)).to.have.length(1);
+  });
+
   it('hides the close button if the code review is closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: true};
+    const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
     expect(wrapper.find('Button')).to.have.length(0);
   });
@@ -91,8 +128,20 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('hides code review disabled note if the review is closed', () => {
-    const review = {...DEFAULT_REVIEW, isClosed: true};
+    const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
     expect(wrapper.contains(javalabMsg.codeEditingDisabled())).to.be.false;
+  });
+
+  it('displays CodeReviewCommentEditor if the review is open', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: true};
+    const wrapper = setUp({review: review});
+    expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(1);
+  });
+
+  it('hides the CodeReviewCommentEditor if the reveiw is closed', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: false};
+    const wrapper = setUp({review: review});
+    expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
   });
 });

@@ -87,6 +87,7 @@
   "runtimeError": "你的程式碼在執行時碰到了例外。\n{cause}",
   "saveToBackpack": "儲存到背包",
   "startingPainter": "開始繪畫",
+  "submit": "提交",
   "timeoutWarning": "你的項目已經停止。警告：你的項目將在15秒後停止運行。",
   "timeout": "你的項目已經停止。",
   "twoMainMethods": "錯誤：你的程式碼只可以有一個主要函式。我們發現至少有兩個類別有主要函式。",

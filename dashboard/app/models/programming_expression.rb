@@ -76,7 +76,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']}.join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end

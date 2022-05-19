@@ -3515,8 +3515,12 @@ h2.danger {
   background-color: $orange !important;
 }
 
+.foorm-button-left {
+  float: left !important;
+}
+
 .foorm-button-right {
-  float: right;
+  float: right !important;
 }
 
 .foorm-survey-rating-question-sample {

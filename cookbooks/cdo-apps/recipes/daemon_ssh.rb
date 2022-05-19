@@ -13,14 +13,14 @@
   end
 end
 
-ssh_config = <<SSH_CONFIG
-Host github.com
-  StrictHostKeyChecking no
-Host *.ec2.internal *.cdn-code.org
-  User ubuntu
-  StrictHostKeyChecking no
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/server_access_key
+ssh_config = <<~SSH_CONFIG
+  Host github.com
+    StrictHostKeyChecking no
+  Host *.ec2.internal *.cdn-code.org
+    User ubuntu
+    StrictHostKeyChecking no
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/server_access_key
 SSH_CONFIG
 
 file "#{node[:home]}/.ssh/config" do
