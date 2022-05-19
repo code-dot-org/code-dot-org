@@ -438,9 +438,9 @@ class LevelsHelperTest < ActionView::TestCase
     create(:script_level, script: script, levels: [@level])
 
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
-    @channel_id = get_channel_for(@level, script.id, @user)
-    assert_not_nil @channel_id
+    assert_not_nil get_channel_for(@level, script.id, @user)
 
+    @channel_id = create :project, storage_id: fake_storage_id_for_user_id(@user.id)
     _,  @project_id = storage_decrypt_channel_id(@channel_id)
     create :code_review, user_id: @user.id, project_id: @project_id,
       script_id: script.id, level_id: @level.id, closed_at: nil
