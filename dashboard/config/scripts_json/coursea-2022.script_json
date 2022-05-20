@@ -15,11 +15,12 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2022-04-21 16:36:35 UTC",
+    "serialized_at": "2022-05-19 21:17:56 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
