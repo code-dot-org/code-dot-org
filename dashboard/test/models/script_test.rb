@@ -2140,6 +2140,16 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
 
+    test 'can copy reference guides' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      @unit_in_course.unit_group.course_version.reference_guides = [create(:reference_guide)]
+      cloned_unit = @unit_in_course.clone_migrated_unit('coursename3-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal 1, @unit_group.course_version.reference_guides.count
+    end
+
     test 'can copy a script without a course version' do
       source_unit = create :script, is_course: true, is_migrated: true
       lesson = create :lesson, script: source_unit
