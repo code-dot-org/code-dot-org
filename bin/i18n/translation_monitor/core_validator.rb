@@ -3,7 +3,7 @@ require 'cld'
 #
 # A collection of functions to find errors in translations.
 #
-module TranslationValidator
+module CoreValidator
   # Markdown link should not have space(s) between the [] and () block.
   # E.g. "[text] (url)" is an invalid Markdown link.
   #
