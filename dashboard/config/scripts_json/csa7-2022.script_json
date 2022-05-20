@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-13 23:16:29 UTC",
+    "serialized_at": "2022-05-19 20:53:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5509,6 +5510,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1h_O-N9Ghs2Yna5M4Te6SHd-j_5oF_stsPFHsoDVOOw8/edit?usp=sharing",
+      "key": "cs_bingo_cards_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_5"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1E84CmDdKyfJYa1Dt-QLSEqGlExUD5ruslmINazvtw0w/edit?usp=sharing",
+      "key": "cs_bingo_definitions_7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_7"
+      }
+    },
+    {
       "name": "Java Quick Reference",
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
@@ -6048,6 +6073,18 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u7l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_cards_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_definitions_7"
       }
     },
     {
