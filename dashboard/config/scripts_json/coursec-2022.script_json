@@ -15,11 +15,12 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2022-04-21 16:36:59 UTC",
+    "serialized_at": "2022-05-19 21:18:32 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
