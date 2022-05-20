@@ -339,6 +339,8 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
     chunky_png (1.3.6)
+    cld (0.11.0)
+      ffi
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -944,6 +946,7 @@ DEPENDENCIES
   brakeman
   cancancan (~> 3.0.0)
   chronic (~> 0.10.2)
+  cld
   codecov
   colorize
   composite_primary_keys (~> 12.0)
