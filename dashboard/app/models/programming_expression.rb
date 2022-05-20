@@ -143,15 +143,19 @@ class ProgrammingExpression < ApplicationRecord
     record.id
   end
 
-  def documentation_path
+  def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
 
   def studio_documentation_path
+    programming_environment_programming_expression_path(programming_environment.name, key)
+  end
+
+  def documentation_path
     if DCDO.get('use-studio-code-docs', false)
-      documentation_path
+      studio_documentation_path
     else
-      programming_environment_programming_expression_path(programming_environment.name, key)
+      cb_documentation_path
     end
   end
 
