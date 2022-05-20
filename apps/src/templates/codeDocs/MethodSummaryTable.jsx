@@ -15,7 +15,7 @@ export default function MethodSummaryTable({
     <table style={{...tableLayoutStyles.table, width: '100%'}}>
       <tbody>
         {methods.map(method => (
-          <tr>
+          <tr key={method.key}>
             <td style={styles.method}>
               <h3>
                 {method.name}
