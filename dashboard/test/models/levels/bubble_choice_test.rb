@@ -503,7 +503,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'bubble choice cannot contain another bubble choice level' do
     bubble_choice = create :bubble_choice_level
-    e = assert_raises do
+    e = assert_raises(ActiveRecord::RecordInvalid) do
       create :bubble_choice_level, sublevels: [bubble_choice]
     end
     assert_includes e.message, 'cannot contain BubbleChoice level'
@@ -511,7 +511,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
   test 'bubble choice level cannot contain level group' do
     level_group = create :level_group
-    e = assert_raises do
+    e = assert_raises(ActiveRecord::RecordInvalid) do
       create :bubble_choice_level, sublevels: [level_group]
     end
     assert_includes e.message, 'cannot contain LevelGroup level'
