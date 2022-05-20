@@ -1395,16 +1395,20 @@
           "courseD_artist_nestedLoops3_a": "Încercați să utilizați blocul \"sări înainte\" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.\n\nDacă pătratele dvs. au 20 de pixeli înălțime și au 20 de pixeli distanță între ele, cât de departe trebuie să săriți?"
         },
         "courseD_artist_nestedLoops9": {
-          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade"
+          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade",
+          "courseD_artist_nestedLoops9_b": "Adăugați un al doilea set de bucle imbricate la sfârșitul primului set, dar de data aceasta folosiți triunghiuri."
         },
         "courseD_artist_nestedLoops9_2018": {
-          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade"
+          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade",
+          "courseD_artist_nestedLoops9_b": "Adăugați un al doilea set de bucle imbricate la sfârșitul primului set, dar de data aceasta folosiți triunghiuri."
         },
         "courseD_artist_nestedLoops9_2019": {
-          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade"
+          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade",
+          "courseD_artist_nestedLoops9_b": "Adăugați un al doilea set de bucle imbricate la sfârșitul primului set, dar de data aceasta folosiți triunghiuri."
         },
         "courseD_artist_nestedLoops9_2020": {
-          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade"
+          "courseD_artist_nestedLoops9_c": "Utilizați două bucle imbricate:\n\n-   Repetă de 8 ori\n-   desenează un pătrat\n-   sari înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade\n-   Repetă de 8 ori\n-   desenează un triunghi\n-   sări înainte 50 de pixeli\n-   întoarce la dreapta cu 45 de grade",
+          "courseD_artist_nestedLoops9_b": "Adăugați un al doilea set de bucle imbricate la sfârșitul primului set, dar de data aceasta folosiți triunghiuri."
         },
         "courseD_artist_project3": {
           "courseD_artist_project3_b": "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-   Încercați 60 de grade dacă repetați bucla exterioară de 6 ori",
@@ -3496,7 +3500,7 @@
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "Cu ajutorul blocurilor <xml>  <block type=\"simple_move_up_left\"/></xml> Artistul se va deplasa pe diagonală!",
-          "courseA_artist_loops_challenge2_b": "Când terminați unul dintre corturi, săriți cu `jump` de două ori pentru a ajunge la următorul!",
+          "courseA_artist_loops_challenge2_b": "Cu ajutorul blocurilor [blockly block][0] Artistul se va deplasa pe diagonală!",
           "courseA_artist_loops_challenge2_c": "Toate blocurile trebuie să se afle în interiorul unei bucle pentru a rezolva  acest puzzle."
         },
         "courseA_collector_loops3_2019": {
@@ -4472,7 +4476,7 @@
           "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de gradeRepetați acest model de 2 ori!"
         },
         "courseC_artist_prog7_2021": {
-          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de grade Repetați acest model de 2 ori!"
+          "courseC_artist_prog7_d": "Trebuie să faceți următoarele:- deplasare înainte- întoarcere la dreapta cu 45 de grade- deplasare înainte- întoarcere la dreapta cu 90 de grade- deplasare înainte- întoarcere la dreapta cu 45 de gradeRepetați acest model de 2 ori!"
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Puteți face acest desen sub forma unui dreptunghi cu o linie în mijloc sau folosind două pătrate diferite!"
@@ -4916,16 +4920,20 @@
           "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
         },
         "courseD_artist_project2": {
-          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
+          "courseD_artist_project2_b": "După ce desenați și mutați prima dată, puteți repeta codul adăugând o buclă în jurul exteriorului."
         },
         "courseD_artist_project2_2018": {
-          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
+          "courseD_artist_project2_b": "După ce desenați și mutați prima dată, puteți repeta codul adăugând o buclă în jurul exteriorului."
         },
         "courseD_artist_project2_2019": {
-          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
+          "courseD_artist_project2_b": "După ce desenați și mutați prima dată, puteți repeta codul adăugând o buclă în jurul exteriorului."
         },
         "courseD_artist_project2_2020": {
-          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează."
+          "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
+          "courseD_artist_project2_b": "După ce desenați și mutați prima dată, puteți repeta codul adăugând o buclă în jurul exteriorului."
         },
         "courseD_artist_project2_2021": {
           "courseD_artist_project2_a": "Nu uitați că `move forward` desenează o linie, iar `jump forward` nu o desenează.",
@@ -6562,6 +6570,271 @@
         },
         "courseF_playlab_variables_challenge2": {
           "courseF_playlab_variables_challenge2_c": "**Soluție:**\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_harvester_seq8": {
+          "courseA_harvester_seq8_a": "Codul final trebuie să conțină **4** blocuri de mișcare și **2** blocuri de culegere."
+        },
+        "courseA_harvester_seq8_2019": {
+          "courseA_harvester_seq8_a": "Codul final trebuie să conțină **4** blocuri de mișcare și **2** blocuri de culegere."
+        },
+        "courseA_harvester_seq8_2020": {
+          "courseA_harvester_seq8_a": "Codul final trebuie să conțină **4** blocuri de mișcare și **2** blocuri de culegere."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_c": "Dacă vreți să folosiți culori, folosiți blocul `set color` (setează culoare) în cod. Nu trebuie să coordonați culorile din imaginea din model."
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_c": "Dacă vreți să folosiți culori, folosiți blocul `set color` (setează culoare) în cod. Nu trebuie să coordonați culorile din imaginea din model."
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_c": "Dacă vreți să folosiți culori, folosiți blocul `set color` (setează culoare) în cod. Nu trebuie să coordonați culorile din imaginea din model."
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_c": "Dacă vreți să folosiți culori, folosiți blocul `set color` (setează culoare) în cod. Nu trebuie să coordonați culorile din imaginea din model."
+        },
+        "courseD_artist_nestedLoops7": {
+          "courseD_artist_nestedLoops7_a": "Aici va trebui să folosiți bucle imbricate. Mai întâi, utilizați o buclă pentru a desena un pătrat. Ce va face bucla exterioară dacă bucla interioară desenează un pătrat?"
+        },
+        "courseD_artist_nestedLoops7_2018": {
+          "courseD_artist_nestedLoops7_a": "Aici va trebui să folosiți bucle imbricate. Mai întâi, utilizați o buclă pentru a desena un pătrat. Ce va face bucla exterioară dacă bucla interioară desenează un pătrat?"
+        },
+        "courseD_artist_nestedLoops7_2019": {
+          "courseD_artist_nestedLoops7_a": "Aici va trebui să folosiți bucle imbricate. Mai întâi, utilizați o buclă pentru a desena un pătrat. Ce va face bucla exterioară dacă bucla interioară desenează un pătrat?"
+        },
+        "courseD_artist_nestedLoops7_2020": {
+          "courseD_artist_nestedLoops7_a": "Aici va trebui să folosiți bucle imbricate. Mai întâi, utilizați o buclă pentru a desena un pătrat. Ce va face bucla exterioară dacă bucla interioară desenează un pătrat?"
+        },
+        "courseD_artist_nestedLoops8": {
+          "courseD_artist_nestedLoops8_a": "Pentru a obține 8 hexagoane în desen, va trebui să faceți întoarceri de **45 de grade** între fiecare dintre ele. De ce? Pentru că 360 de grade (o întoarcere completă) împărțit la 8 (numărul de hexagoane) este egal cu 45 de grade.",
+          "courseD_artist_nestedLoops8_c": "Utilizați o buclă imbricată:-   Repetați de 8 ori    -   desenați un hexagon    -   faceți un salt înainte de 50 de pixeli    -   faceți o întoarcere la dreapta cu 45 de grade"
+        },
+        "courseD_artist_nestedLoops8_2018": {
+          "courseD_artist_nestedLoops8_a": "Pentru a obține 8 hexagoane în desen, va trebui să faceți întoarceri de **45 de grade** între fiecare dintre ele. De ce? Pentru că 360 de grade (o întoarcere completă) împărțit la 8 (numărul de hexagoane) este egal cu 45 de grade.",
+          "courseD_artist_nestedLoops8_c": "Utilizați o buclă imbricată:-   Repetați de 8 ori    -   desenați un hexagon    -   faceți un salt înainte de 50 de pixeli    -   faceți o întoarcere la dreapta cu 45 de grade"
+        },
+        "courseD_artist_nestedLoops8_2019": {
+          "courseD_artist_nestedLoops8_a": "Pentru a obține 8 hexagoane în desen, va trebui să faceți întoarceri de **45 de grade** între fiecare dintre ele. De ce? Pentru că 360 de grade (o întoarcere completă) împărțit la 8 (numărul de hexagoane) este egal cu 45 de grade.",
+          "courseD_artist_nestedLoops8_c": "Utilizați o buclă imbricată:-   Repetați de 8 ori    -   desenați un hexagon    -   faceți un salt înainte de 50 de pixeli    -   faceți o întoarcere la dreapta cu 45 de grade"
+        },
+        "courseD_artist_nestedLoops8_2020": {
+          "courseD_artist_nestedLoops8_a": "Pentru a obține 8 hexagoane în desen, va trebui să faceți întoarceri de **45 de grade** între fiecare dintre ele. De ce? Pentru că 360 de grade (o întoarcere completă) împărțit la 8 (numărul de hexagoane) este egal cu 45 de grade.",
+          "courseD_artist_nestedLoops8_c": "Utilizați o buclă imbricată:-   Repetați de 8 ori    -   desenați un hexagon    -   faceți un salt înainte de 50 de pixeli    -   faceți o întoarcere la dreapta cu 45 de grade"
+        },
+        "courseD_artist_nestedLoopsFP": {
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>Această imagine a fost realizată folosind un cod similar cu cel din nicelurile pe care le-ați parcurs înainte, dar cu cercuri (repetare de 360 de ori: deplasare înainte 1, întoarcere 1 grad)."
+        },
+        "courseD_artist_nestedLoopsFP_2018": {
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>Această imagine a fost realizată folosind un cod similar cu cel din nicelurile pe care le-ați parcurs înainte, dar cu cercuri (repetare de 360 de ori: deplasare înainte 1, întoarcere 1 grad)."
+        },
+        "courseD_artist_nestedLoopsFP_2019": {
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>Această imagine a fost realizată folosind un cod similar cu cel din nicelurile pe care le-ați parcurs înainte, dar cu cercuri (repetare de 360 de ori: deplasare înainte 1, întoarcere 1 grad)."
+        },
+        "courseD_artist_nestedLoopsFP_2020": {
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>Această imagine a fost realizată folosind un cod similar cu cel din nicelurile pe care le-ați parcurs înainte, dar cu cercuri (repetare de 360 de ori: deplasare înainte 1, întoarcere 1 grad)."
+        },
+        "courseD_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Începeți prin a schimba culoarea în albastru, apoi creați un octogon cu laturi de 50 de pixeli și întoarceri de 45 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adăugați cod pentru a schimba culoarea în verde, apoi creați un triunghi cu laturi de 50 de pixeli și întoarceri de 120 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_c": "După ce ați desenat ambele forme, va trebui să faceți un salt înainte de 50 de pixeli înainte de a face o întoarcere de 90 de grade la dreapta.",
+          "courseD_artist_nestedLoops_challenge1_d": "Puneți tot codul în interiorul unei bucle `repeat 4 times` (repetă de 4 ori) pentru a termina."
+        },
+        "courseD_artist_nestedLoops_challenge1_2018": {
+          "courseD_artist_nestedLoops_challenge1_a": "Începeți prin a schimba culoarea în albastru, apoi creați un octogon cu laturi de 50 de pixeli și întoarceri de 45 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adăugați cod pentru a schimba culoarea în verde, apoi creați un triunghi cu laturi de 50 de pixeli și întoarceri de 120 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_c": "După ce ați desenat ambele forme, va trebui să faceți un salt înainte de 50 de pixeli înainte de a face o întoarcere de 90 de grade la dreapta.",
+          "courseD_artist_nestedLoops_challenge1_d": "Puneți tot codul în interiorul unei bucle `repeat 4 times` (repetă de 4 ori) pentru a termina."
+        },
+        "courseD_artist_nestedLoops_challenge1_2019": {
+          "courseD_artist_nestedLoops_challenge1_a": "Începeți prin a schimba culoarea în albastru, apoi creați un octogon cu laturi de 50 de pixeli și întoarceri de 45 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adăugați cod pentru a schimba culoarea în verde, apoi creați un triunghi cu laturi de 50 de pixeli și întoarceri de 120 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_c": "După ce ați desenat ambele forme, va trebui să faceți un salt înainte de 50 de pixeli înainte de a face o întoarcere de 90 de grade la dreapta.",
+          "courseD_artist_nestedLoops_challenge1_d": "Puneți tot codul în interiorul unei bucle `repeat 4 times` (repetă de 4 ori) pentru a termina."
+        },
+        "courseD_artist_nestedLoops_challenge1_2020": {
+          "courseD_artist_nestedLoops_challenge1_a": "Începeți prin a schimba culoarea în albastru, apoi creați un octogon cu laturi de 50 de pixeli și întoarceri de 45 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_b": "Adăugați cod pentru a schimba culoarea în verde, apoi creați un triunghi cu laturi de 50 de pixeli și întoarceri de 120 de grade la stânga.",
+          "courseD_artist_nestedLoops_challenge1_c": "După ce ați desenat ambele forme, va trebui să faceți un salt înainte de 50 de pixeli înainte de a face o întoarcere de 90 de grade la dreapta.",
+          "courseD_artist_nestedLoops_challenge1_d": "Puneți tot codul în interiorul unei bucle `repeat 4 times` (repetă de 4 ori) pentru a termina."
+        },
+        "courseD_artist_project1a": {
+          "courseD_artist_project1a_a": "Pentru această treaptă se folosește o întoarcere de 76 de grade și se repetă de 4 ori.<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
+        },
+        "courseD_artist_project1a_2018": {
+          "courseD_artist_project1a_a": "Pentru această treaptă se folosește o întoarcere de 76 de grade și se repetă de 4 ori.<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
+        },
+        "courseD_artist_project1a_2019": {
+          "courseD_artist_project1a_a": "Pentru această treaptă se folosește o întoarcere de 76 de grade și se repetă de 4 ori.<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
+        },
+        "courseD_artist_project1a_2020": {
+          "courseD_artist_project1a_a": "Pentru această treaptă se folosește o întoarcere de 76 de grade și se repetă de 4 ori.<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Aceste modele se aseamănă mult cu treptele din alte puzzle-uri, dar folosesc un unghi diferit."
+        },
+        "courseD_artist_project2a": {
+          "courseD_artist_project2a_a": "Acest desen a fost realizat prin introducerea unei bucle de 4 scări și a unui bloc `turn right 180 degrees` (întoarcere la dreapta cu 180 de grade) în interiorul unui bloc `repeat 2 times` (repetă de 2 ori).<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project2a_2018": {
+          "courseD_artist_project2a_a": "Acest desen a fost realizat prin introducerea unei bucle de 4 scări și a unui bloc `turn right 180 degrees` (întoarcere la dreapta cu 180 de grade) în interiorul unui bloc `repeat 2 times` (repetă de 2 ori).<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project2a_2019": {
+          "courseD_artist_project2a_a": "Acest desen a fost realizat prin introducerea unei bucle de 4 scări și a unui bloc `turn right 180 degrees` (întoarcere la dreapta cu 180 de grade) în interiorul unui bloc `repeat 2 times` (repetă de 2 ori).<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project2a_2020": {
+          "courseD_artist_project2a_a": "Acest desen a fost realizat prin introducerea unei bucle de 4 scări și a unui bloc `turn right 180 degrees` (întoarcere la dreapta cu 180 de grade) în interiorul unui bloc `repeat 2 times` (repetă de 2 ori).<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3a": {
+          "courseD_artist_project3a_a": "Puteți alege diferite numere pentru rotirea formei! Ce spuneți de 18 ori cu o întoarcere de 20 de grade între rotiri?"
+        },
+        "courseD_artist_project3a_2018": {
+          "courseD_artist_project3a_a": "Puteți alege diferite numere pentru rotirea formei! Ce spuneți de 18 ori cu o întoarcere de 20 de grade între rotiri?"
+        },
+        "courseD_artist_project3a_2019": {
+          "courseD_artist_project3a_a": "Puteți alege diferite numere pentru rotirea formei! Ce spuneți de 18 ori cu o întoarcere de 20 de grade între rotiri?"
+        },
+        "courseD_artist_project3a_2020": {
+          "courseD_artist_project3a_a": "Puteți alege diferite numere pentru rotirea formei! Ce spuneți de 18 ori cu o întoarcere de 20 de grade între rotiri?"
+        },
+        "courseD_artist_project4": {
+          "courseD_artist_project4_a": "Acesta este fulgul de zăpadă care are forma unui pentagon, cu o întoarcere de 36 de grade, înainte de un fulg de zăpadă triunghiular:<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />Iată un set de hexagoane cu pătrate:<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pentru a încerca acest lucru, desenați primul fulg de zăpadă, faceți o întoarcere, apoi desenați un al doilea fulg de zăpadă."
+        },
+        "courseD_artist_project4_2018": {
+          "courseD_artist_project4_a": "Acesta este fulgul de zăpadă care are forma unui pentagon, cu o întoarcere de 36 de grade, înainte de un fulg de zăpadă triunghiular:<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />Iată un set de hexagoane cu pătrate:<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pentru a încerca acest lucru, desenați primul fulg de zăpadă, faceți o întoarcere, apoi desenați un al doilea fulg de zăpadă."
+        },
+        "courseD_artist_project4_2019": {
+          "courseD_artist_project4_a": "Acesta este fulgul de zăpadă care are forma unui pentagon, cu o întoarcere de 36 de grade, înainte de un fulg de zăpadă triunghiular:<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />Iată un set de hexagoane cu pătrate:<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pentru a încerca acest lucru, desenați primul fulg de zăpadă, faceți o întoarcere, apoi desenați un al doilea fulg de zăpadă."
+        },
+        "courseD_artist_project4_2020": {
+          "courseD_artist_project4_a": "Acesta este fulgul de zăpadă care are forma unui pentagon, cu o întoarcere de 36 de grade, înainte de un fulg de zăpadă triunghiular:<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />Iată un set de hexagoane cu pătrate:<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Pentru a încerca acest lucru, desenați primul fulg de zăpadă, faceți o întoarcere, apoi desenați un al doilea fulg de zăpadă."
+        },
+        "courseD_artist_project4a": {
+          "courseD_artist_project4a_a": "Iată doi fulg de zăpadă cu lungimi diferite, desenați unul după altul (cu o întoarcere de 30 de grade între ei.)<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project4a_2018": {
+          "courseD_artist_project4a_a": "Iată doi fulg de zăpadă cu lungimi diferite, desenați unul după altul (cu o întoarcere de 30 de grade între ei.)<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project4a_2019": {
+          "courseD_artist_project4a_a": "Iată doi fulg de zăpadă cu lungimi diferite, desenați unul după altul (cu o întoarcere de 30 de grade între ei.)<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project4a_2020": {
+          "courseD_artist_project4a_a": "Iată doi fulg de zăpadă cu lungimi diferite, desenați unul după altul (cu o întoarcere de 30 de grade între ei.)<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5": {
+          "courseD_artist_project4_a": "Rânduri cu 2 hexagoane și 4 triunghiuri:<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2018": {
+          "courseD_artist_project4_a": "Rânduri cu 2 hexagoane și 4 triunghiuri:<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2019": {
+          "courseD_artist_project4_a": "Rânduri cu 2 hexagoane și 4 triunghiuri:<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2020": {
+          "courseD_artist_project4_a": "Rânduri cu 2 hexagoane și 4 triunghiuri:<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Va trebui să introduceți buclele `until` și `while` în interiorul buclei `repeat` pentru a rezolva acest puzzle!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Soluția acestui puzzle seamănă foarte mult cu soluția ultimului puzzle, dar întoarcerea se efectuează în cealaltă direcție."
+        },
+        "courseE_farmer_ramp11a": {
+          "courseE_farmer_ramp12_a": "În loc să folosiți o buclă `repeat` pentru a-i spune fermierului de câte ori să dea cu lopata, acum puteți folosi un bloc `while there is a pile` (cât există o grămadă).",
+          "courseE_farmer_ramp12_b": "Va trebui să vă deplasați o singură dată pentru a lua pământul."
+        },
+        "courseE_farmer_ramp11a_2018": {
+          "courseE_farmer_ramp12_a": "În loc să folosiți o buclă `repeat` pentru a-i spune fermierului de câte ori să dea cu lopata, acum puteți folosi un bloc `while there is a pile` (cât există o grămadă).",
+          "courseE_farmer_ramp12_b": "Va trebui să vă deplasați o singură dată pentru a lua pământul."
+        },
+        "courseE_farmer_ramp11a_2019": {
+          "courseE_farmer_ramp12_a": "În loc să folosiți o buclă `repeat` pentru a-i spune fermierului de câte ori să dea cu lopata, acum puteți folosi un bloc `while there is a pile` (cât există o grămadă).",
+          "courseE_farmer_ramp12_b": "Va trebui să vă deplasați o singură dată pentru a lua pământul."
+        },
+        "courseE_farmer_ramp11a_2020": {
+          "courseE_farmer_ramp12_a": "În loc să folosiți o buclă `repeat` pentru a-i spune fermierului de câte ori să dea cu lopata, acum puteți folosi un bloc `while there is a pile` (cât există o grămadă).",
+          "courseE_farmer_ramp12_b": "Va trebui să vă deplasați o singură dată pentru a lua pământul."
+        },
+        "courseE_farmer_ramp11b": {
+          "courseE_farmer_ramp11b_a": "Puteți introduce bucla `while` în interiorul unei bucle `repeat` pentru a scurta codul."
+        },
+        "courseE_farmer_ramp11b_2018": {
+          "courseE_farmer_ramp11b_a": "Puteți introduce bucla `while` în interiorul unei bucle `repeat` pentru a scurta codul."
+        },
+        "courseE_farmer_ramp11b_2019": {
+          "courseE_farmer_ramp11b_a": "Puteți introduce bucla `while` în interiorul unei bucle `repeat` pentru a scurta codul."
+        },
+        "courseE_farmer_ramp11b_2020": {
+          "courseE_farmer_ramp11b_a": "Puteți introduce bucla `while` în interiorul unei bucle `repeat` pentru a scurta codul."
+        },
+        "courseE_farmer_ramp12_forswap": {
+          "courseE_farmer_ramp12_b": "Va trebui să folosiți în continuare o buclă `repeat` în exteriorul acesteia pentru a-i spune fermierului de câte ori să se deplaseze înainte și să strângă salata."
+        },
+        "courseE_farmer_ramp12_forswap_2018": {
+          "courseE_farmer_ramp12_b": "Va trebui să folosiți în continuare o buclă `repeat` în exteriorul acesteia pentru a-i spune fermierului de câte ori să se deplaseze înainte și să strângă salata."
+        },
+        "courseE_farmer_ramp12_forswap_2019": {
+          "courseE_farmer_ramp12_b": "Va trebui să folosiți în continuare o buclă `repeat` în exteriorul acesteia pentru a-i spune fermierului de câte ori să se deplaseze înainte și să strângă salata."
+        },
+        "courseE_farmer_ramp12_forswap_2020": {
+          "courseE_farmer_ramp12_b": "Va trebui să folosiți în continuare o buclă `repeat` în exteriorul acesteia pentru a-i spune fermierului de câte ori să se deplaseze înainte și să strângă salata."
+        },
+        "courseE_farmer_ramp12c": {
+          "courseE_farmer_ramp12b_b": "Va trebui să folosiți mai întâi o buclă `until`, apoi să folosiți o buclă `while` după ce ajungeți la salată."
+        },
+        "courseE_farmer_ramp12c_2018": {
+          "courseE_farmer_ramp12b_b": "Va trebui să folosiți mai întâi o buclă `until`, apoi să folosiți o buclă `while` după ce ajungeți la salată."
+        },
+        "courseE_farmer_ramp12c_2019": {
+          "courseE_farmer_ramp12b_b": "Va trebui să folosiți mai întâi o buclă `until`, apoi să folosiți o buclă `while` după ce ajungeți la salată."
+        },
+        "courseE_farmer_ramp12c_2020": {
+          "courseE_farmer_ramp12b_b": "Va trebui să folosiți mai întâi o buclă `until`, apoi să folosiți o buclă `while` după ce ajungeți la salată."
+        },
+        "courseE_farmer_ramp12d_2018": {
+          "courseE_farmer_ramp12d_b": "Va trebui să introduceți buclele `until` și `while` în interiorul buclei `repeat` pentru a rezolva acest puzzle!"
+        },
+        "courseE_farmer_ramp12d_2019": {
+          "courseE_farmer_ramp12d_b": "Va trebui să introduceți buclele `until` și `while` în interiorul buclei `repeat` pentru a rezolva acest puzzle!"
+        },
+        "courseE_farmer_ramp12d_2020": {
+          "courseE_farmer_ramp12d_b": "Va trebui să introduceți buclele `until` și `while` în interiorul buclei `repeat` pentru a rezolva acest puzzle!"
+        },
+        "courseE_farmer_ramp12e_2018": {
+          "courseE_farmer_ramp12e_b": "Soluția acestui puzzle seamănă foarte mult cu soluția ultimului puzzle, dar întoarcerea se efectuează în cealaltă direcție."
+        },
+        "courseE_farmer_ramp12e_2019": {
+          "courseE_farmer_ramp12e_b": "Soluția acestui puzzle seamănă foarte mult cu soluția ultimului puzzle, dar întoarcerea se efectuează în cealaltă direcție."
+        },
+        "courseE_farmer_ramp12e_2020": {
+          "courseE_farmer_ramp12e_b": "Soluția acestui puzzle seamănă foarte mult cu soluția ultimului puzzle, dar întoarcerea se efectuează în cealaltă direcție."
+        },
+        "courseE_farmer_ramp12f": {
+          "courseE_farmer_ramp12f_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12f_2018": {
+          "courseE_farmer_ramp12f_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12f_2019": {
+          "courseE_farmer_ramp12f_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12f_2020": {
+          "courseE_farmer_ramp12f_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12g": {
+          "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12g_2018": {
+          "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12g_2019": {
+          "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
+        },
+        "courseE_farmer_ramp12g_2020": {
+          "courseE_farmer_ramp12G_b": "Folosiți un bloc `if/else` pentru a-l ajuta pe fermier să decidă dacă trebuie să se întoarcă la dreapta sau la stânga."
         }
       }
     }

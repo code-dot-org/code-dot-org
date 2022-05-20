@@ -1,6 +1,6 @@
 name 'CSA U8L9-L3_2022'
-display_name 'Multiple Lists in Games'
-description 'Use multiple lists in games to manage different types of data or multiple players.'
+display_name 'Using Sorting Algorithms'
+description 'Implement the selection, insertion, or merge sort algorithms.'
 
 sublevels
 level 'CSA U8L9-L3a_2022'

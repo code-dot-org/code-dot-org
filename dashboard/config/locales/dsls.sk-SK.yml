@@ -4780,16 +4780,16 @@ sk-SK:
 
           [/key]
       Unit 1 Lesson 2 Overview:
-        markdown: |
+        markdown: |-
           # Prehľad
 
-          V tejto lekcii sa naučíš všeobecný proces riešenia problémov, ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších problémov.
+          V tejto lekcii sa naučíš všeobecný postup riešenia problémov, ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších problémov.
 
           ## Materiál
 
-          * [Proces riešenia problémov - Sprievodca aktivitami ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+          * [Postup riešenia problémov - Sprievodca aktivitami ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
         teacher_markdown: |-
-          * [Proces riešenia problémov]
+          * [Postup riešenia problémov]
           (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
       Unit 1 Lesson 3 Overview:
         teacher_markdown: "[Riešenie problémov KĽÚČ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
@@ -4797,7 +4797,7 @@ sk-SK:
           | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
         markdown: |-
           # Prehľad
-          V tejto lekcii sa naučíš uplatniť proces riešenia problémov na najrôznejšie problémy a objavíš, ako ti jednotlivé kroky pomôžu k vybudovaniu a vylepšeniu procesu riešenia problémov.
+          V tejto lekcii sa naučíš uplatniť postup riešenia problémov na najrôznejšie problémy a objavíš, ako ti jednotlivé kroky pomôžu k vybudovaniu a vylepšeniu postupu riešenia problémov.
 
           ## Materiály
 

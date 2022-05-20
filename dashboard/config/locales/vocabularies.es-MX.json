@@ -894,6 +894,10 @@
           "word": "Bug",
           "definition": "Una parte de un programa que no funciona correctamente."
         },
+        "feature/csd/2021": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
+        },
         "innovation/csd/2021": {
           "word": "Innovación",
           "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"

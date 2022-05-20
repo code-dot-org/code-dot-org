@@ -321,6 +321,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -861,16 +871,20 @@ FactoryGirl.define do
     end
   end
 
-  # For now, this factory returns the channel id of the created project.
-  # This will be improved when we migrate the projects code to ActiveRecord.
-  factory :project, class: 'Projects' do
-    skip_create # disable ActiveRecord persistence
+  factory :project_storage do
+  end
 
-    storage_id 1
-    value Hash.new
-    updated_ip "127.0.0.1"
+  factory :project do
+    transient do
+      owner create :user
+    end
 
-    initialize_with {Projects.new(storage_id).create(value, ip: updated_ip)}
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
+    end
   end
 
   factory :featured_project do

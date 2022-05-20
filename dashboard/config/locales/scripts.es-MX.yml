@@ -51094,6 +51094,14 @@ es-MX:
               key: Tratando los Datos como Tipos Diferentes
             lesson-1:
               name: Documentación del Código del Programa
+              description_student: |-
+                **¿Cómo puedo hacer un seguimiento de las tareas que necesito completar en un proyecto?**
+
+                A lo largo del año has aprendido mucho sobre la programación orientada a objetos y el lenguaje de programación Java. En esta unidad, tienes la oportunidad de usar tus nuevos conocimientos para crear un programa usando El Teatro que represente un interés personal o resuelva un problema que tú elijas. El proyecto de codificación creativa con El Teatro es un gran proyecto en el que se trabaja a lo largo de la unidad, y las estrategias de gestión de proyectos ayudan a organizar y estructurar el trabajo.
+              description_teacher: |-
+                **¿Cómo puedo hacer un seguimiento de las tareas que necesito completar en un proyecto?**
+
+                Los alumnos se introducen en la codificación creativa con el proyecto de teatro y evalúan los requisitos y los ejemplos para identificar las preguntas y las características clave. Los estudiantes aprenden acerca de los retrasos y los puntos de referencia del proyecto y establecen su Tablero de Planificación del Proyecto identificando algunas de las tareas que necesitan completar para el proyecto.
             lesson-2:
               name: Parámetros del Método
               description_student: |-
@@ -51106,8 +51114,24 @@ es-MX:
                 Los alumnos revisan el paso de primitivos y referencias a objetos como parámetros para identificar las similitudes y diferencias entre cada uno de ellos. Los estudiantes exploran el impacto de usar una referencia de objeto como parámetro en el objeto original e identifican los escenarios en los que no es ideal usar una referencia de objeto como parámetro. A continuación, los alumnos aprenden sobre las historias de usuario y escriben historias de usuario para sus proyectos con el fin de identificar las características necesarias del programa.
             lesson-3:
               name: Sobrecarga de Métodos
+              description_student: |-
+                **¿Cómo puede ser útil sobrecargar un método en mis programas?**
+
+                Has aprendido a sobrecargar los constructores para proporcionar múltiples formas de crear instancias de un objeto. En esta lección, volverás a ver la sobrecarga y explorarás cómo sobrecargar métodos y el impacto de los métodos sobrecargados en la funcionalidad de un programa. Practicarás la escritura de métodos sobrecargados para resolver problemas utilizando la consola, El Barrio o El Teatro antes de comenzar tus planes iniciales para tu Proyecto de Codificación Creativa con El Teatro.
+              description_teacher: |-
+                **¿Cómo puede ser útil sobrecargar un método en mis programas?**
+
+                Los alumnos revisan la sobrecarga y exploran los métodos de sobrecarga para determinar su impacto en la funcionalidad de un programa. Los estudiantes practican la escritura de métodos sobrecargados para resolver problemas utilizando la consola, El Barrio o El Teatro antes de comenzar sus planes iniciales para su Proyecto de Codificación Creativa con El Teatro.
             lesson-4:
               name: Métodos Privados
+              description_student: |-
+                **¿Cómo cambia la funcionalidad de un método "privado"?**
+
+                Has utilizado la palabra clave `private` para evitar que las variables de instancia implementen el encapsulamiento de datos para que otras clases no puedan modificar sus valores. También has utilizado la palabra clave `public` para proporcionar acceso a los constructores y métodos desde fuera de una clase. En esta lección, volverás a ver estos modificadores de acceso para explorar la accesibilidad de los métodos y constructores `private` en un programa. Identificarás los escenarios para usar un método y constructor `privado` y practicarás la escritura y el uso de métodos privados usando la consola o El Teatro. A continuación, finalizarás la planificación de tu proyecto de codificación creativa con El Teatro y participarás en una revisión por pares para recibir comentarios sobre tu trabajo.
+              description_teacher: |-
+                **¿Cómo cambiar la funcionalidad de un método "privado"?**
+
+                Los alumnos revisan los modificadores de acceso para explorar la accesibilidad de los métodos y constructores en un programa. Los estudiantes identifican escenarios para usar un método y constructor `privado` y practican la escritura y el uso de métodos `privados` usando la consola o El Teatro. A continuación, los estudiantes finalizan la planificación de su proyecto de codificación creativa con El Teatro y participan en una revisión por pares para recibir comentarios sobre su trabajo.
             lesson-5:
               name: Anulación de Métodos
               description_student: |-
@@ -51120,8 +51144,24 @@ es-MX:
                 Los alumnos han anulado métodos de la clase `Object` y han trabajado con jerarquías de clases que aplican métodos anulados. Los estudiantes exploran la escritura y la llamada a métodos anulados y cómo la palabra clave `super` puede ser utilizada para llamar a la versión de la superclase de un método. Los estudiantes identifican escenarios para anular métodos y practican la escritura y la llamada a métodos anulados utilizando la consola, El Barrio o El Teatro.
             lesson-6:
               name: Propiedad intelectual
+              description_student: |-
+                **¿Cuál es el equilibrio entre la propiedad intelectual y la responsabilidad algorítmica?**
+
+                Explora las implicaciones éticas y sociales de la propiedad intelectual analizando y debatiendo las aplicaciones del mundo real de la toma de decisiones algorítmicas. Aprenderás por qué los algoritmos deben rendir cuentas y ser regulados mediante auditorías y reflexionarás sobre si desearías que tu código fuera auditado.
+              description_teacher: |-
+                **¿Cuál es el equilibrio entre la propiedad intelectual y la responsabilidad algorítmica?**
+
+                Los alumnos exploran las implicaciones éticas y sociales de la propiedad intelectual analizando y debatiendo las aplicaciones del mundo real de la toma de decisiones algorítmicas. Los estudiantes aprenden por qué los algoritmos deben rendir cuentas y ser regulados mediante auditorías y reflexionan sobre si desearían que su código fuera auditado.
             lesson-7:
               name: Recursión
+              description_student: |-
+                **¿Qué es la recursión?**
+
+                En esta lección, explorarás los métodos recursivos a través de una actividad no conectada y practicarás el rastreo de código con métodos recursivos. A continuación, trabajarás con las tareas de tu Panel de Planificación de Proyectos para empezar a desarrollar tu Proyecto de Codificación Creativa con el Teatro.
+              description_teacher: |-
+                **¿Qué es la recursión?**
+
+                Los alumnos exploran los métodos recursivos a través de una actividad no conectada y practican el rastreo de código con métodos recursivos. A continuación, los estudiantes trabajan en las tareas de su Panel de Planificación de Proyectos para comenzar el desarrollo de su Codificación Creativa con el Proyecto de El Teatro.
             lesson-8:
               name: Recursión frente a Iteración
               description_student: |-
@@ -51134,8 +51174,24 @@ es-MX:
                 Los alumnos exploran cómo se pueden implementar soluciones iterativas utilizando la recursividad e identifican las similitudes y diferencias de ambos algoritmos. Los estudiantes practican la conversión de algoritmos iterativos a recursivos y luego continúan el desarrollo de su Codificación Creativa con el Proyecto Teatro.
             lesson-9:
               name: Algoritmos Recursivos
+              description_student: |-
+                **¿Cómo se puede utilizar la recursividad para implementar algoritmos estándar?**
+
+                En esta lección, explorarás cómo los algoritmos estándar con los que has trabajado pueden ser aplicados utilizando la recursividad. Practicarás el rastreo de soluciones recursivas con `String`s, arrays y `ArrayList`s utilizando la consola o El Teatro. A continuación, participarás en una revisión por parte de tus compañeros para dar y recibir comentarios sobre el progreso que has hecho en tu proyecto de codificación creativa con El Teatro.
+              description_teacher: |-
+                **¿Cómo se puede utilizar la recursión para implementar algoritmos estándar?**
+
+                Los alumnos exploran cómo los algoritmos estándar con los que han trabajado pueden ser aplicados utilizando la recursividad. Los estudiantes practican el rastreo de soluciones recursivas que implican `String`s, arrays, y `ArrayList`s utilizando la consola o El Teatro. A continuación, los estudiantes participan en una revisión por pares para dar y recibir comentarios sobre el progreso que han hecho en su proyecto de codificación creativa con El Teatro.
             lesson-10:
               name: Maximizando la Fiabilidad del Sistema
+              description_student: |-
+                **¿Qué problemas e impactos se derivan de los errores de software y qué estrategias se pueden aplicar para mejorar la fiabilidad del sistema?**.
+
+                Explorarás los problemas e impactos derivados de los fallos del software de código abierto. Descubrirás estrategias para mejorar la fiabilidad del sistema.
+              description_teacher: |-
+                **¿Qué problemas e impactos se derivan de los errores de software y cuáles son las estrategias para mejorar la fiabilidad del sistema?**
+
+                Los estudiantes exploran los problemas e impactos resultantes de los errores del software de código abierto. Los estudiantes descubren estrategias para mejorar la fiabilidad del sistema.
             lesson-11:
               name: Codificación Creativa con El Teatro - Día 1
               description_student: |-
@@ -51148,6 +51204,14 @@ es-MX:
                 Los alumnos continúan desarrollando su Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando El Teatro. Los estudiantes primero autoevalúan su trabajo para comprobar su progreso en el cumplimiento de los requisitos del proyecto, y luego continúan desarrollando sus proyectos. A continuación, los estudiantes realizan pruebas de aceptación para determinar cuáles de sus historias de usuario están completas y utilizan la autoevaluación y los comentarios de los compañeros para priorizar sus tareas restantes.
             lesson-12:
               name: Codificación Creativa con El Teatro - Día 2
+              description_student: |-
+                **¿Cómo utilizaré la información que he recibido para priorizar las tareas que debo realizar en mi proyecto?**
+
+                En la lección anterior, realizaste una autoevaluación y escribiste los criterios de aceptación de tu proyecto. En esta lección, obtienes los comentarios de tus compañeros para identificar las tareas restantes que debes completar y continuar desarrollando tu Codificación Creativa con el Proyecto de El Teatro.
+              description_teacher: |-
+                **¿Cómo voy a utilizar los comentarios que he recibido para priorizar las tareas que debo realizar en mi proyecto?**
+
+                En la lección anterior, los alumnos realizaron autoevaluaciones y redactaron criterios de aceptación para sus proyectos. En esta lección, los estudiantes obtienen los comentarios de sus compañeros para identificar las tareas restantes que deben completar y continuar desarrollando su Codificación Creativa con el Proyecto de El Teatro.
             lesson-13:
               name: Codificación Creativa con El Teatro - Día 3
               description_student: |-
@@ -51166,6 +51230,8 @@ es-MX:
                 Los estudiantes practican el desarrollo de soluciones a los FRQs de AP CSA en un FRQ de Arrays simulado. Los estudiantes aplican estrategias de descomposición y anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-15:
               name: Evaluación de la Unidad 7
+              description_student: Comprueba tu progreso a través de la Evaluación
+                de la Unidad 7.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple
                 que abarca los temas de la unidad.
             Console:
@@ -51428,22 +51494,94 @@ es-MX:
               key: Tratando los Datos como Tipos Diferentes
             lesson-1:
               name: Documentación del Código del Programa
+              description_student: |-
+                **¿Cómo puedo hacer un seguimiento de las tareas que me faltan por completar en un proyecto?**
+
+                A lo largo del año has aprendido mucho sobre la programación orientada a objetos y el lenguaje de programación Java. En esta unidad, tienes la oportunidad de usar tus nuevos conocimientos para crear un programa usando la consola que represente un interés personal o resuelva un problema que tú elijas. El Proyecto de Codificación Creativa con la Consola es un gran proyecto en el que se trabaja a lo largo de la unidad, y las estrategias de gestión de proyectos ayudan a organizar y estructurar el trabajo.
+              description_teacher: |-
+                **¿Cómo puedo hacer un seguimiento de las tareas que necesito completar en un proyecto?**
+
+                Los alumnos se introducen en el Proyecto de Codificación Creativa con la Consola y evalúan los requisitos y los ejemplos para identificar las preguntas y las características clave. Los estudiantes aprenden acerca de los retrasos y los puntos de referencia del proyecto y establecen su Panel de Planificación del Proyecto identificando algunas de las tareas que necesitan completar en el proyecto.
             lesson-2:
               name: Buscando
+              description_student: |-
+                **¿Cómo puedo determinar la eficiencia de un algoritmo?**
+
+                Has utilizado la búsqueda en algoritmos estándar para encontrar un elemento objetivo en una lista. En esta lección, explorarás el algoritmo de búsqueda lineal y cómo se puede aplicar a diferentes estructuras de datos. Aprenderás a utilizar los recuentos de ejecución para determinar el mejor, el promedio y el peor de los casos y practicarás la evaluación de los algoritmos en función de su eficiencia. A continuación, escribirás historias de usuario para tu proyecto con el fin de identificar las características necesarias del programa.
+              description_teacher: |-
+                **¿Cómo puedo determinar la eficiencia de un algoritmo?**
+
+                Los alumnos han utilizado la búsqueda en algoritmos estándar para encontrar un elemento objetivo en una lista. En esta lección, los estudiantes exploran el algoritmo de búsqueda lineal y cómo se puede aplicar a diferentes estructuras de datos. Los estudiantes aprenden a utilizar los recuentos de ejecución para determinar el mejor, el promedio y el peor de los casos y practican la evaluación de los algoritmos por su eficiencia. A continuación, los estudiantes escriben historias de usuario para sus proyectos con el fin de identificar las características necesarias del programa.
             lesson-3:
               name: Búsqueda Binaria
+              description_student: |-
+                **¿Cómo es la búsqueda binaria más eficiente que la búsqueda lineal?**
+
+                Descubrirás un algoritmo de búsqueda mejor que puede funcionar de forma más eficiente si la lista ya está ordenada. Rastreas el código de una búsqueda binaria para evaluar su eficiencia y compararla con la búsqueda lineal. Aplicas el algoritmo de búsqueda binaria para resolver problemas en una variedad de escenarios. A continuación, comenzarás tus planes iniciales para tu Proyecto de Codificación Creativa con la Consola.
+              description_teacher: |-
+                **¿Cómo es la búsqueda binaria más eficiente que la búsqueda lineal?**
+
+                Los alumnos descubren un algoritmo de búsqueda mejor que puede funcionar de forma más eficiente si la lista ya está ordenada. Los alumnos rastrean el código de una búsqueda binaria para evaluar su eficiencia y compararla con la búsqueda lineal. Los estudiantes aplican el algoritmo de búsqueda binaria para resolver problemas en una variedad de escenarios. A continuación, los alumnos comienzan a planificar su Proyecto de Codificación Creativa con la Consola.
             lesson-4:
               name: Búsqueda Binaria Recursiva
+              description_student: |-
+                **¿Cómo puedo implementar la búsqueda binaria de forma recursiva?**
+
+                En esta lección, volverás a ver la recursividad y explorarás cómo se puede implementar el algoritmo de búsqueda binaria de forma recursiva. A continuación, practicarás la implementación del algoritmo de búsqueda binaria de forma iterativa o recursiva antes de finalizar la planificación de tu proyecto de codificación creativa con la consola y participar en una revisión por pares para recibir comentarios sobre tu trabajo.
+              description_teacher: |-
+                **¿Cómo puedo implementar la búsqueda binaria de forma recursiva?**
+
+                Los alumnos revisan la recursividad y exploran cómo se puede implementar el algoritmo de búsqueda binaria de forma recursiva. A continuación, los estudiantes practican la implementación del algoritmo de búsqueda binaria de forma iterativa o recursiva antes de finalizar su planificación para su proyecto de codificación creativa con la consola y participar en una revisión por pares para recibir comentarios sobre su trabajo.
             lesson-5:
               name: Ordenamiento por Selección
+              description_student: |-
+                **¿Cómo puedo ordenar los elementos de una estructura de datos?**
+
+                Has aprendido que el algoritmo de búsqueda binaria es más eficiente que el algoritmo de búsqueda lineal pero requiere que los datos estén ordenados. En esta lección, explorarás el algoritmo de ordenación por selección y practicarás su rastreo para evaluar su eficiencia. Identificarás las ventajas y limitaciones del algoritmo de ordenación por selección, y luego practicarás su aplicación en Java para ordenar elementos.
+              description_teacher: |-
+                **¿Cómo puedo ordenar los elementos de una estructura de datos?**
+
+                Los alumnos exploran el algoritmo de ordenación por selección y practican el rastreo del algoritmo para evaluar su eficiencia. Los alumnos identifican las ventajas y las limitaciones del algoritmo de ordenación por selección, y luego practican su aplicación en Java para ordenar elementos.
             lesson-6:
               name: Ordenamiento por Inserción
+              description_student: |-
+                **¿Cómo se compara la eficiencia del algoritmo de ordenación por inserción con el algoritmo de ordenación por selección?**
+
+                Has utilizado el algoritmo de ordenación por selección para ordenar elementos en una estructura de datos. En esta lección, explorarás el algoritmo de ordenación por inserción y compararás su funcionalidad y eficiencia con el algoritmo de ordenación por selección. Analizarás la eficiencia de cada algoritmo utilizando los recuentos de ejecución e identificarás los beneficios y las limitaciones de los algoritmos de ordenación de selección e inserción.
+              description_teacher: |-
+                **¿Cómo se compara la eficiencia del algoritmo de ordenación por inserción con el algoritmo de ordenación por selección?**
+
+                Los alumnos exploran el algoritmo de ordenación por inserción y comparan su funcionalidad y eficiencia con el algoritmo de ordenación por selección. Los estudiantes analizan la eficiencia de cada algoritmo utilizando los recuentos de ejecución e identifican los beneficios y las limitaciones de los algoritmos de ordenación de selección e inserción.
             lesson-7:
               name: Ordenamiento por Mezcla
+              description_student: |-
+                **¿Cómo se compara la eficiencia del algoritmo de ordenación por fusión con los algoritmos de ordenación por selección e inserción?**
+
+                Explora el algoritmo de ordenación por fusión para organizar los elementos de una lista utilizando un enfoque de dividir y conquistar. Identificarás los componentes del algoritmo y conocerás las funciones de ayuda. A continuación, se rastrea el algoritmo para comprender su funcionalidad y determinar su eficiencia mediante el recuento de ejecuciones. A continuación, trabajarás en las tareas de tu Panel de Planificación de Proyectos para comenzar el desarrollo de tu Proyecto de Codificación Creativa con la Consola.
+              description_teacher: |-
+                **¿Cómo se compara la eficiencia del algoritmo de ordenación por fusión con los algoritmos de ordenación por selección e inserción?**
+
+                Los alumnos exploran el algoritmo de ordenación por fusión para organizar los elementos de una lista utilizando un enfoque de "divide y vencerás". Los estudiantes identifican los componentes del algoritmo y aprenden sobre las funciones de ayuda. A continuación, los alumnos rastrean el algoritmo para comprender su funcionalidad y determinar su eficiencia mediante el recuento de ejecuciones. A continuación, los estudiantes trabajan en las tareas de su Panel de Planificación de Proyectos para comenzar el desarrollo de su Proyecto de Codificación Creativa con la Consola.
             lesson-8:
               name: Listas Múltiples
+              description_student: |-
+                **¿Cómo puedo implementar algoritmos que involucren múltiples listas?**
+
+                Explorarás el recorrido de múltiples listas simultáneamente creando algoritmos y rastreando código que involucre múltiples listas. Identificarás los escenarios en los que podrían necesitarse múltiples listas y considerarás cómo podrían utilizarse y recorrerse múltiples listas en los juegos. A continuación, seguirás trabajando en las tareas de tu Panel de Planificación de Proyectos para desarrollar tu Proyecto de Codificación Creativa con la Consola.
+              description_teacher: |-
+                **¿Cómo puedo aplicar algoritmos que incluyan múltiples listas?**
+
+                Los alumnos exploran la posibilidad de recorrer varias listas al mismo tiempo mediante la creación de algoritmos y el rastreo de código con listas múltiples. Los alumnos identifican situaciones en las que pueden ser necesarias varias listas y consideran cómo se pueden utilizar y recorrer varias listas en los juegos. A continuación, los alumnos siguen trabajando en las tareas de su Panel de Planificación de Proyectos para desarrollar su Proyecto de Codificación Creativa con la Consola.
             lesson-9:
               name: Buscando y Ordenando
+              description_student: |-
+                **¿Cómo puedo combinar algoritmos de búsqueda y ordenación para resolver problemas?**
+
+                Has explorado los algoritmos de búsqueda y ordenación, has analizado sus eficiencias utilizando recuentos de ejecución y has aplicado algoritmos para trabajar con múltiples listas. Has planificado y aplicado soluciones utilizando algoritmos de búsqueda y ordenación para resolver problemas que implican una o más listas. A continuación, participarás en una revisión por pares para dar y recibir comentarios sobre el progreso que has hecho en tu Proyecto de Codificación Creativa con la Consola.
+              description_teacher: |-
+                **¿Cómo puedo combinar algoritmos de búsqueda y ordenación para resolver problemas?**
+
+                Los alumnos han explorado los algoritmos de búsqueda y ordenación, han analizado su eficiencia mediante recuentos de ejecución y han aplicado algoritmos para trabajar con múltiples listas. Los alumnos planifican y aplican soluciones utilizando algoritmos de búsqueda y ordenación para resolver problemas que implican una o más listas. A continuación, los estudiantes participan en una revisión por pares para dar y recibir retroalimentación sobre el progreso que han hecho en su Proyecto de Codificación Creativa con la Consola.
             lesson-10:
               name: Privacidad y Seguridad
             lesson-11:
@@ -51458,6 +51596,14 @@ es-MX:
                 Los alumnos continúan desarrollando su Proyecto de Codificación Creativa para crear un programa que represente un interés personal o resuelva un problema utilizando la consola. Los estudiantes primero autoevalúan su trabajo para comprobar su progreso en el cumplimiento de los requisitos del proyecto, y luego continúan desarrollando sus proyectos. A continuación, los estudiantes realizan pruebas de aceptación para determinar cuáles de sus historias de usuario están completas y utilizan la autoevaluación y los comentarios de los compañeros para priorizar sus tareas restantes.
             lesson-12:
               name: Codificación Creativa con la Consola - Día 2
+              description_student: |-
+                **¿Cómo utilizaré la información que he recibido para priorizar las tareas que debo realizar en mi proyecto?**
+
+                En la lección anterior, realizaste una autoevaluación y escribiste los criterios de aceptación para tu proyecto. En esta lección, obtienes la opinión de tus compañeros para identificar las tareas restantes que debes completar y continuar desarrollando tu Proyecto de Codificación Creativa con la Consola.
+              description_teacher: |-
+                **¿Cómo voy a utilizar los comentarios que he recibido para priorizar las tareas que debo realizar en mi proyecto?**
+
+                En la lección anterior, los alumnos realizaron autoevaluaciones y redactaron criterios de aceptación para sus proyectos. En esta lección, los alumnos obtienen los comentarios de sus compañeros para identificar las tareas pendientes y continuar desarrollando su Proyecto de Codificación Creativa con la Consola.
             lesson-13:
               name: Codificación Creativa con la Consola - Día 3
               description_student: |-
@@ -51476,10 +51622,14 @@ es-MX:
                 Los estudiantes practican el desarrollo de soluciones a las preguntas de respuesta libre de AP CSA en un simulacro de Pregunta de Respuesta Libre sobre Arrays 2D. Los estudiantes aplican estrategias de descomposición y anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-15:
               name: Evaluación de la Unidad 8
+              description_student: Comprueba tu progreso a través de la Evaluación
+                de la Unidad 8.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple
                 que abarca los temas de la unidad.
             Console:
               name: Consola
+            lesson-16:
+              name: CSA Encuesta Final
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -52578,6 +52728,9 @@ es-MX:
               name: Aprender cómo funciona un ordenador
             lesson-4:
               name: Computación física
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñanza de la Resolución de Problemas y la Informática
           name: vpl-csd1-ci-pilot-2022
           title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas
             y la Computación'
@@ -52772,6 +52925,9 @@ es-MX:
               name: Los datos y la sociedad
             lesson-5:
               name: Computación física
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enseñanza de Datos y Sociedad
           name: vpl-csd5-ci-pilot-2022
           title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'
           description: "Este módulo de aprendizaje profesional está diseñado para
@@ -56483,9 +56639,29 @@ es-MX:
               display_name: Simulacros de Exámenes
             lessonGroup-4:
               display_name: Encuesta Piloto
+          name: csa9-2022
+          title: AP Revisión y Práctica del Examen ('22-'23)
+          description_short: Los estudiantes se preparan para el examen AP CSA practicando
+            estrategias para las preguntas de opción múltiple y de respuesta libre.
+          description: Esta unidad prepara a los estudiantes para el examen AP CSA
+            repasando los conceptos clave, practicando las preguntas de opción múltiple
+            y de respuesta libre, y reforzando las estrategias para realizar el examen.
+            Los estudiantes identifican los puntos fuertes y las áreas de mejora para
+            crear planes de estudio individualizados para enfocar su práctica y autoevaluar
+            su progreso.
+          student_description: Esta unidad te prepara para el examen AP CSA repasando
+            los conceptos clave, practicando las preguntas de opción múltiple y de
+            respuesta libre, y reforzando las estrategias para realizar el examen.
+            Identificarás los puntos fuertes y las áreas de mejora para crear planes
+            de estudio individualizados que te permitan enfocar tu práctica y autoevaluar
+            el progreso.
         csa-pl-standalone-code-2022:
           lessons:
             lesson-1:
               name: Unidad 1 Proyectos
             lesson-2:
               name: Unidad 2 Proyectos
+          name: csa-pl-código-independiente-2022
+          title: CSA Proyectos de Codificación de Aprendizaje Profesional
+          description: Los participantes en el taller podrán ver proyectos de ejemplo
+            y código durante el PL de la consola, el barrio,  y el teatro.
