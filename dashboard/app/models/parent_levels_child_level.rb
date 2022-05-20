@@ -63,5 +63,12 @@ class ParentLevelsChildLevel < ApplicationRecord
         parent_level&.errors&.add(:child_level, error_message)
       end
     end
+    if kind == SUBLEVEL && parent_level.is_a?(BubbleChoice)
+      if %w(BubbleChoice LevelGroup).include?(child_level.type)
+        error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
+        errors.add(:child_level_id, error_message)
+        parent_level&.errors&.add(:child_level, error_message)
+      end
+    end
   end
 end
