@@ -4,6 +4,10 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import Heading1 from '../../lib/ui/Headings';
+import color from '@cdo/apps/util/color';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -39,7 +43,8 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   state = {
-    buttonState: READY
+    buttonState: READY,
+    isDialogOpen: true
   };
 
   onClick = () => {
@@ -74,6 +79,9 @@ class SyncOmniAuthSectionControl extends React.Component {
     if (buttonState === FAILURE) {
       // On click after failure, reset the button so the user can try again.
       this.setState({buttonState: READY});
+      this.openDialog();
+      // CREATE OR TOGGLE VISIBILITY OF DIALOG HERE
+
       return;
     }
 
@@ -87,9 +95,23 @@ class SyncOmniAuthSectionControl extends React.Component {
         // While we are embedded in an angular page, reloading is the easiest
         // way to pick up roster changes.  Once everything is React maybe we
         // won't need to do this.
+
         utils.reload();
       })
-      .catch(() => this.setState({buttonState: FAILURE}));
+      .catch(error_message => {
+        this.setState({buttonState: FAILURE});
+        console.log(error_message);
+      });
+  };
+
+  openDialog = () => {
+    console.log('Open dialog');
+    this.setState({isDialogOpen: true});
+  };
+
+  closeDialog = () => {
+    console.log('Close dialog');
+    this.setState({isDialogOpen: false});
   };
 
   render() {
@@ -102,11 +124,31 @@ class SyncOmniAuthSectionControl extends React.Component {
     }
 
     return (
-      <SyncOmniAuthSectionButton
-        provider={sectionProvider}
-        buttonState={buttonState}
-        onClick={this.onClick}
-      />
+      <div>
+        <SyncOmniAuthSectionButton
+          provider={sectionProvider}
+          buttonState={buttonState}
+          onClick={this.onClick}
+        />
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={this.state.isDialogOpen}
+          style={styles.dialog}
+          handleClose={this.closeDialog}
+        >
+          <Heading1>Sync error</Heading1>
+          <p>Test error message</p>
+          <a href="sampleLink">Need additional help?</a>
+          <DialogFooter>
+            <Button
+              __useDeprecatedTag
+              text={i18n.closeDialog()}
+              onClick={this.closeDialog}
+              color={Button.ButtonColor.gray}
+            />
+          </DialogFooter>
+        </BaseDialog>
+      </div>
     );
   }
 }
@@ -172,3 +214,44 @@ function iconProps(buttonState) {
   }
   return {};
 }
+
+const styles = {
+  headerName: {
+    width: '60%',
+    float: 'left',
+    marginRight: 5
+  },
+  headerIcon: {
+    width: '20%',
+    float: 'left'
+  },
+  button: {
+    float: 'left'
+  },
+  buttonWithMargin: {
+    marginRight: 5,
+    float: 'left'
+  },
+  verticalAlign: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
+  },
+  noSectionCode: {
+    color: color.teal,
+    textDecoration: 'none',
+    cursor: 'pointer'
+  },
+  sectionCodeNotApplicable: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  }
+};
