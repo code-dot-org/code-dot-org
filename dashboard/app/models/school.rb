@@ -385,9 +385,9 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2019-2020 private school data."
       AWS::S3.seed_from_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
           {
-            id:                           row['School ID - NCES Assigned [Private School] Latest available year'].to_i.to_s,
+            id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
             name:                         row['Private School Name'].upcase,
             address_line1:                row['Physical Address [Private School] 2019-20'].to_s.upcase.truncate(50).presence,
             address_line2:                nil,
@@ -405,10 +405,10 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2019-2020 private school geographic data."
-      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true, insert_new: false) do |row|
+      AWS::S3.seed_from_file('cdo-nces', "2020-2021/pss/final_locale_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
           {
-            id:                 row['PPIN'].to_i.to_s,
+            id:                 row['PPIN'],
             latitude:           row['LAT'].to_f,
             longitude:          row['LON'].to_f
           }
