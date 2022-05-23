@@ -840,10 +840,10 @@ def run_feature(browser, feature, options)
 
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
-    skip_warning += <<EOS
-Check the excluded @tags in the cucumber command line above and in the #{feature} file:
-  - Do the feature or scenario tags exclude #{browser_name}?
-EOS
+    skip_warning += <<~EOS
+      Check the excluded @tags in the cucumber command line above and in the #{feature} file:
+        - Do the feature or scenario tags exclude #{browser_name}?
+    EOS
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end

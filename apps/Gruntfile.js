@@ -332,7 +332,8 @@ describe('entry tests', () => {
         // dart-sass: Only the "expanded" and "compressed" values of outputStyle are supported.
         outputStyle: 'expanded',
         includePaths: ['node_modules', '../shared/css/'],
-        implementation: sass
+        implementation: sass,
+        quietDeps: true
       },
       files: _.fromPairs(
         [
