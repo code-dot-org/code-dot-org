@@ -5131,11 +5131,16 @@ sv:
           lessons:
             lesson-3:
               name: Teatern
+            lesson-16:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
           name: csa4-2022
         csa5-2022:
+          lessons:
+            The Theater:
+              name: Teatern
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -5567,3 +5572,7 @@ sv:
               key: lektion-2
             lesson-3:
               key: lektion-3
+        csa9-2022:
+          lessons:
+            The Theater:
+              name: Teatern

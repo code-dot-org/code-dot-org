@@ -26,6 +26,7 @@ import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import FontAwesome from '../FontAwesome';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -317,14 +318,7 @@ class LessonOverview extends Component {
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}
-        <div>
-          <a href="https://creativecommons.org/">
-            <img src="https://curriculum.code.org/static/img/creativeCommons-by-nc-sa.png" />
-          </a>
-          <SafeMarkdown
-            markdown={i18n.licenseMaterials({link: 'https://code.org/contact'})}
-          />
-        </div>
+        <CopyrightInfo />
       </div>
     );
   }

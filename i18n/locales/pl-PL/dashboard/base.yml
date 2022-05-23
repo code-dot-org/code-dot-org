@@ -668,8 +668,10 @@ pl:
       title: 'Potańcówka'
     hello-world:
       title: 'Witaj świecie'
+      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
     poem-art:
       title: 'Sztuka poezji '
+      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
     hoc:
       title: 'Klasyczny labirynt'
       body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'

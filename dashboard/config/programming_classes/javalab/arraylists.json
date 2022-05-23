@@ -1,11 +1,11 @@
 {
   "category_key": "data_structures",
-  "content": "",
-  "examples": "[]",
+  "content": "An ArrayList is a powerful data structure that allows you to resize a collection of elements. Details of this class are included in the ArrayList class documentation. Beyond that, it's important to know how to:\n- adding and changing elements \n- removing elements\n- traversals",
+  "examples": "[{\"name\":\"Adding and Changing Elements in an ArrayList\",\"code\":\"*you can leverage the add() method to insert a specified element at a specific option.*\\n\\n**the method:** `public void add(int index, E element)`\\n```\\nArrayList\\u003cInteger\\u003e tempList = new ArrayList\\u003cInteger\\u003e(4);\\ntempList.add(1);\\ntempList.add(2);\\ntempList.add(3);\\ntempList.add(4);\\n\\n//OR you can use this syntax to add at a specific position\\ntempList.add(2, 3);\\n```\\n\\n*modifying an element within the ArrayList* \\n\\n**the method:** `public Object set(int index, Object element)`\\n```\\ntempList.set(2, 7);\\n```\\n\"},{\"name\":\"Removing Elements in ArrayLists\",\"code\":\"```\\nArrayList\\u003cInteger\\u003e tempList = new ArrayList\\u003c\\u003e();\\n\\ntempList.add(1);\\ntempList.add(2);\\ntempList.add(3);\\ntempList.add(4);\\ntempList.add(5);\\n \\n// This makes a call to remove(int), it removes the int at position 1, therefore it removes 2\\n\\ntempList.remove(1);\\n\\n```\\n  \"},{\"name\":\"Traversing Through an ArrayList\",\"code\":\"**Note:** the example below traverses the ArrayList with a for loop, but an ArrayList can be traversed with a while loop as well\\n```\\nArrayList\\u003cInteger\\u003e numbers = new ArrayList\\u003cInteger\\u003e();\\n numbers.add(1);\\n numbers.add(2);\\n numbers.add(3);\\n numbers.add(4);\\n\\nfor (int x = 0; x \\u003c numbers.size(); x++) {\\n\\n            // Printing and access each element in the ArrayList\\n            System.out.print(numbers.get(i));       \\n}\\n```\"}]",
   "external_documentation": "",
   "fields": "[]",
   "key": "ArrayLists",
-  "name": "ArrayLists",
+  "name": "Array Lists",
   "syntax": "",
   "tips": "",
   "methods": [

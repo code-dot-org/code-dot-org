@@ -67,6 +67,9 @@
         },
         "csta/DA": {
           "description": "Dáta a analýza"
+        },
+        "csta/CS": {
+          "description": "Výpočtové systémy"
         }
       }
     }

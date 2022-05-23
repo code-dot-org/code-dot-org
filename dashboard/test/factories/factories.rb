@@ -321,6 +321,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -858,6 +868,22 @@ FactoryGirl.define do
         standalone_unit.is_course = true
         standalone_unit.save!
       end
+    end
+  end
+
+  factory :project_storage do
+  end
+
+  factory :project do
+    transient do
+      owner create :user
+    end
+
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
     end
   end
 
@@ -1548,6 +1574,14 @@ FactoryGirl.define do
         create :script_level, script: tf.script, levels: [tf.level]
       end
     end
+  end
+
+  factory :code_review do
+    user_id 1
+    script_id 1
+    level_id 1
+    project_id 1
+    project_version "1"
   end
 
   factory :code_review_comment do

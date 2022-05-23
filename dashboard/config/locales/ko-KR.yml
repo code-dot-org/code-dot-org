@@ -448,6 +448,7 @@ ko:
       starwars: 스타워즈
       starwarsblocks: 스타워즈 (블록)
       starwarsblocks_hour: 스타워즈 (블록)
+      thebadguys: 나쁜 사람들
       loading: Loading...
       weblab: 웹 랩
       view_all: 모든 프로젝트 보기...
@@ -737,8 +738,10 @@ ko:
       title: 댄스 파티
     hello-world:
       title: 헬로우 월드
+      body: 4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호적인 캐릭터를 코딩하세요.
     poem-art:
       title: 시학
+      body: 자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.
     hoc:
       title: 고전 미로게임
       body: 컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.
@@ -1102,6 +1105,10 @@ ko:
   no_script_access_student: 이 단원에 들어 올 수 없습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요.
   no_script_access_teacher: '이 단원에 들어 올 수 없습니다. 이 단원에 들어 올 수 있다고 믿으면, support@code.org에
     편지를 써서 이 상황을 해결할 수 있게 해주세요. '
+  no_level_access_student: 이 레벨에 들어 올 수 없습니다. 선생님에게 어느 레벨을 들어야 하는지 물어 보세요.
+  no_level_access_teacher: '이 단계에 들어 올 수 없습니다. 이 단계에 들어 올 수 있다고 믿으면, support@code.org에
+    편지를 써서 이 상황을 해결할 수 있게 해주세요. '
+  no_exemplar: 이 레벨에 모범 예시가 존재하지 않습니다.
   return_unit_overview: 단원 개요로 이동
   return_course_overview: 과정 개요로 이동
   view_all_units: 모든 단원 보기
