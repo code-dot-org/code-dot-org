@@ -110,7 +110,8 @@ class ProgrammingClass < ApplicationRecord
       tips: tips || '',
       syntax: syntax || '',
       externalDocumentation: external_documentation || '',
-      categoryKey: programming_environment_category&.key || ''
+      categoryKey: programming_environment_category&.key || '',
+      showUrl: programming_environment_programming_class_path(programming_environment.name, key)
     }
   end
 
@@ -149,7 +150,7 @@ class ProgrammingClass < ApplicationRecord
       key: key,
       name: name,
       syntax: syntax,
-      link: "/programming_classes/#{id}"
+      link: programming_environment_programming_class_path(programming_environment.name, key)
     }
   end
 

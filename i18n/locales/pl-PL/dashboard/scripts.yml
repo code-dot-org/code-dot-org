@@ -23747,7 +23747,7 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: Kurs F (2022)
-          description: "Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.\n\n## Wiosna 2022 Otwarty przegląd\n\nTa nowa wersja Kursu F zawiera trzy nowe lekcje i potrzebujemy Twojej opinii! Nowe lekcje to:\n\n-   Lekcja 9 - Dużo duszków - [przekaż opinię][0]\n-   Lekcja 10 – Liczenie ze zmiennymi – [przekaż opinię][1]\n-   Lekcja 11 - Mini-projekt: Gra kolekcjonera - [przekaż opinię][2]\n\nZauważ, że te nowe lekcje mogą ulec zmianie od teraz do lipca 2022. Dziękujemy za wszelkie uwagi. Kursy A-E z Podstaw informatyki (2022) rozpoczną się w lipcu 2022.\n\nDodaliśmy również pełny zestaw slajdów obejmujący wszystkie lekcje w Kursie F. Czekamy również na Twoją [opinię][3] na temat tych slajdów! "
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
           student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: W wieku 9-13
@@ -23937,11 +23937,11 @@ pl:
         csa2-2022:
           lessons:
             lesson-1:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+              name: Projekt zarządzania sklepem - Dzień 1
             lesson-2:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+              name: Projekt zarządzania sklepem - Dzień 2
             lesson-3:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+              name: Projekt zarządzania sklepem - Dzień
               description_student: |-
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
 
@@ -25005,8 +25005,11 @@ pl:
               name: Praktyka FRQ
             lesson-15:
               name: Jednostka 8 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 8.
             Console:
               name: Konsola
+            lesson-16:
+              name: CSA ankieta końcowa
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -25194,11 +25197,11 @@ pl:
             lesson-10:
               name: Zakres i to
             lesson-11:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+              name: Projekt zarządzania sklepem - Dzień 1
             lesson-12:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+              name: Projekt zarządzania sklepem - Dzień 2
             lesson-13:
-              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+              name: Projekt zarządzania sklepem - Dzień
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
@@ -25260,6 +25263,9 @@ pl:
               name: Poznaj, jak działa komputer
             lesson-4:
               name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie rozwiązywania problemów i informatyki
         vpl-csd2-ci-pilot-2022:
           lessons:
             lesson-5:
@@ -25288,6 +25294,9 @@ pl:
               name: Dane i społeczeństwo
             lesson-5:
               name: Oiczenia fizyczne
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nauczanie o danych i społeczeństwie
         vpl-csd6-ci-pilot-2022:
           lessons:
             lesson-3:
@@ -26232,9 +26241,13 @@ pl:
               display_name: Przegląd i praktyka
             lessonGroup-3:
               display_name: Egzaminy próbne
+          name: csa9-2022
+          description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
         csa-pl-standalone-code-2022:
           lessons:
             lesson-1:
               name: Jednostka 1 Projekty
             lesson-2:
               name: Jednostka 2 Projekty
+          name: csa-pl-standalone-code-2022
+          description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.

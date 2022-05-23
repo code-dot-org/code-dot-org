@@ -24533,7 +24533,7 @@ en:
             lessonGroup-2:
               display_name: Teaching Problem Solving and Computing
           name: vpl-csd1-ci-pilot-2022
-          title: 'Module 1: Preparing to Teach Problem Solving and Computing'
+          title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
@@ -24554,7 +24554,7 @@ en:
             lessonGroup-2:
               display_name: Teaching Web Development
           name: vpl-csd2-ci-pilot-2022
-          title: 'Module 2: Preparing to Teach Web Development'
+          title: Preparing to Teach Web Development
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Web Development.\n* Practice key concepts included in the unit.\n* Engage with Web Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
@@ -24577,7 +24577,7 @@ en:
             lessonGroup-2:
               display_name: Preparing to Teach Interactive Animations and Games
           name: vpl-csd3-ci-pilot-2022
-          title: 'Module 3: Preparing to Teach Interactive Animations and Games '
+          title: 'Preparing to Teach Interactive Animations and Games '
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
@@ -24598,7 +24598,7 @@ en:
             lessonGroup-2:
               display_name: Preparing to Teach the Design Process
           name: vpl-csd4-ci-pilot-2022
-          title: " Module 4: Preparing to Teach The Design Process"
+          title: Preparing to Teach The Design Process
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Design Process unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to The Design Process.\n* Practice key concepts included in the unit.\n* Engage with App Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
@@ -24619,7 +24619,7 @@ en:
             lessonGroup-2:
               display_name: Teaching Data and Society
           name: vpl-csd5-ci-pilot-2022
-          title: 'Module 5: Preparing to Teach Data and Society'
+          title: Preparing to Teach Data and Society
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 60 minutes"

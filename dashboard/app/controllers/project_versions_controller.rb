@@ -19,6 +19,7 @@ class ProjectVersionsController < ApplicationController
     return head :ok
   end
 
+  # GET /project_commits/:channel_id
   def project_commits
     user_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id])
     project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))

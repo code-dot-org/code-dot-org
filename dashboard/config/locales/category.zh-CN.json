@@ -2,6 +2,9 @@
   "zh-CN": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "算法与编程"
+        },
         "ccela/SL": {
           "description": "口语和听力"
         },
@@ -26,6 +29,9 @@
         "ccela/RI": {
           "description": "阅读信息类文本"
         },
+        "ccmath/MD": {
+          "description": "利用概率做决定"
+        },
         "ccela/W": {
           "description": "写作"
         },
@@ -37,6 +43,15 @@
         },
         "csta/IC": {
           "description": "计算的影响"
+        },
+        "csta/NI": {
+          "description": "网络与互联网"
+        },
+        "csta/CS": {
+          "description": "计算系统"
+        },
+        "ngss/ETS1": {
+          "description": "工程设计"
         }
       }
     }
