@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 22:37:34 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-05-23 20:04:45 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -251,6 +251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-CourseOverview-CSP_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -273,6 +276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CV-Equity-CSP_2022"
+        ],
         "progression": "Course overview"
       },
       "bonus": false,
@@ -295,6 +301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSP-vid_2022"
+        ],
         "progression": "Course overview"
       },
       "bonus": false,
@@ -317,6 +326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-Units_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -339,6 +351,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-IntroToCSP_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -361,6 +376,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LessonTypes-CSP_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -383,6 +401,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Task-LessonTypes-CSP_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -405,6 +426,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LevelTypes-CSP_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -427,6 +451,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-LevelType-practice-lc_2022"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -449,6 +476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSP-EIPM-vid_2022"
+        ],
         "progression": "EIPM sequences"
       },
       "bonus": false,
@@ -471,6 +501,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSP-EIPM1_2022"
+        ],
         "progression": "EIPM sequences"
       },
       "bonus": false,
@@ -493,6 +526,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Task-EIPMlessons-CSP_2022"
+        ],
         "progression": "EIPM sequences"
       },
       "bonus": false,
@@ -515,6 +551,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-EIPM_2022"
+        ],
         "progression": "EIPM sequences"
       },
       "bonus": false,
@@ -537,6 +576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Tools-CSP_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -559,6 +601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-AppLab-CSP_2022"
+        ],
         "progression": "Tools"
       },
       "bonus": false,
@@ -581,6 +626,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-AppLab-practice-lc-CSP_2022"
+        ],
         "progression": "Tools"
       },
       "bonus": false,
@@ -603,6 +651,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Widgets-CSP_2022"
+        ],
         "progression": "Tools"
       },
       "bonus": false,
@@ -625,6 +676,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-NetSim-CSP_2022"
+        ],
         "progression": "Tools"
       },
       "bonus": false,
@@ -647,6 +701,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Tools-c4u-CSP_2022"
+        ],
         "progression": "Tools"
       },
       "bonus": false,
@@ -669,6 +726,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Implementation-CSP_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -691,6 +751,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-TechAndMaterials-CSP_2022"
+        ],
         "progression": "Technical and material requirements"
       },
       "bonus": false,
@@ -713,6 +776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-APExamOverview-CSP_2022"
+        ],
         "progression": "The AP exam"
       },
       "bonus": false,
@@ -735,6 +801,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod3-APExam_2022"
+        ],
         "progression": "The AP exam"
       },
       "bonus": false,
@@ -757,6 +826,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-APExam-c4u-CSP_2022"
+        ],
         "progression": "The AP exam"
       },
       "bonus": false,
@@ -779,6 +851,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-APCourseAudit-CSP_2022"
+        ],
         "progression": "The AP exam"
       },
       "bonus": false,
@@ -801,6 +876,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-APResources-CSP_2022"
+        ],
         "progression": "The AP exam"
       },
       "bonus": false,
@@ -823,6 +901,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan-CSP_2022"
+        ],
         "progression": "Make an implementation plan"
       },
       "bonus": false,
@@ -845,6 +926,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-21-Navigation-Mod3_2022"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
