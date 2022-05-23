@@ -94,6 +94,7 @@ const EyeballLink = ({versionHref}) => {
       icon={
         <FontAwesome icon={'eye'} title={'preview'} style={styles.eyeIcon} />
       }
+      openInNewTab
     />
   );
 };

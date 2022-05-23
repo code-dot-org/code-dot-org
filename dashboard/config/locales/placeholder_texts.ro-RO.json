@@ -22,10 +22,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
+          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hei!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
+          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hei!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "albastru",
@@ -234,7 +236,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
+          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hei!"
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "peşte",
@@ -434,6 +437,85 @@
           "71fc859f3abd22273bad5d0d8eda2173": "Numărați toate animalele!",
           "f62038e77820419cd978f7b722da560a": "Câte vor apărea?",
           "81a2909a24e4ca3b582ab9ee539c080c": "Numărați animalele de companie"
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un câine!",
+          "336ad881e37e713ba0325500a8fa1f00": "câini!",
+          "27944770529dd15319a983bee8951560": "O pisică!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " pisici!",
+          "1c64ef29c853587fbe94f69f05272b79": "O pasăre!",
+          "5b402e6ea05e847a076e03ad74420c45": " păsări!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un dragon!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dragoni!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Numărați toate animalele!",
+          "f62038e77820419cd978f7b722da560a": "Câte vor apărea?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Numărați animalele de companie"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un câine!",
+          "336ad881e37e713ba0325500a8fa1f00": "câini!",
+          "27944770529dd15319a983bee8951560": "O pisică!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " pisici!",
+          "1c64ef29c853587fbe94f69f05272b79": "O pasăre!",
+          "5b402e6ea05e847a076e03ad74420c45": " păsări!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un dragon!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dragoni!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Numărați toate animalele!",
+          "f62038e77820419cd978f7b722da560a": "Câte vor apărea?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Numărați animalele de companie"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "Asta sunt eu! Rikki! Îmi place să scriu cod, să-mi petrec timpul cu Thuy și să mănânc înghețată!",
+          "810896b14fc6615f0c76628b9b6a727e": "Ea este prietena mea cea mai bună, Thuy! E foarte bună la sport!",
+          "8e985f60f328934accd78e7649584840": "Înghețata este desertul meu preferat!",
+          "31ba97bb501bb1f5b448221be09bad32": "Ea este cățelușa mea corgi, Lollipop! Ar trebui să o învăț să programeze!",
+          "6f97975a0bda0c9219915161149cbb26": "Acesta este calculatorul meu! Scriu cod cu ajutorul lui tot timpul!"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Asta sunt eu! Rikki! Îmi place să scriu cod, să-mi petrec timpul cu Thuy și să mănânc înghețată!",
+          "810896b14fc6615f0c76628b9b6a727e": "Ea este prietena mea cea mai bună, Thuy! E foarte bună la sport!",
+          "6f97975a0bda0c9219915161149cbb26": "Acesta este calculatorul meu! Scriu cod cu ajutorul lui tot timpul!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Asta sunt eu! Rikki! Îmi place să scriu cod, să-mi petrec timpul cu Thuy și să mănânc înghețată!",
+          "810896b14fc6615f0c76628b9b6a727e": "Ea este prietena mea cea mai bună, Thuy! E foarte bună la sport!",
+          "6f97975a0bda0c9219915161149cbb26": "Acesta este calculatorul meu! Scriu cod cu ajutorul lui tot timpul!"
         }
       }
     }

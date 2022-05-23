@@ -21,7 +21,8 @@ import javalab, {
   setDisplayTheme,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setBackpackApi
+  setBackpackApi,
+  setIsReadOnlyWorkspace
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
@@ -100,11 +101,7 @@ describe('Java Lab Editor Test', () => {
 
   describe('Editing Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: false
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(false));
     });
 
     describe('toggleTabMenu', () => {
@@ -390,6 +387,27 @@ describe('Java Lab Editor Test', () => {
             javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
           ]
         });
+        dispatchSpy.restore();
+      });
+
+      it('toggles between read-only and editable', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        const javalabCodeMirrors = javalabEditor.editors;
+        const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+        const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
+        store.dispatch(setIsReadOnlyWorkspace(true));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.true;
+
+        store.dispatch(setIsReadOnlyWorkspace(false));
+        expect(dispatchSpy).to.have.been.called;
+        expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
+        expect(firstEditor.state.facet(EditorState.readOnly)).to.be.false;
+
+        dispatchSpy.restore();
       });
     });
 
@@ -768,11 +786,7 @@ describe('Java Lab Editor Test', () => {
 
   describe('View Only Mode', () => {
     beforeEach(() => {
-      store.dispatch(
-        setPageConstants({
-          isReadOnlyWorkspace: true
-        })
-      );
+      store.dispatch(setIsReadOnlyWorkspace(true));
     });
 
     it('is not editable', () => {

@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 17:08:37 UTC",
+    "serialized_at": "2022-05-22 15:28:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8559,6 +8560,18 @@
       }
     },
     {
+      "name": "Calling Methods",
+      "url": "https://youtu.be/CPE_lYGCw3A",
+      "key": "calling_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calling_methods"
+      }
+    },
+    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -8631,6 +8644,18 @@
       }
     },
     {
+      "name": "Creating Objects",
+      "url": "https://youtu.be/C5Ks_u87Ltg",
+      "key": "creating_objects",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_objects"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1nHrn6y5zjCc-cBdb17_WFueUBv3gZlkFp92Rw4uN7oo/edit?usp=sharing",
       "key": "cs_bingo_cards",
@@ -8688,6 +8713,18 @@
       },
       "seeding_key": {
         "resource.key": "java_lab_basics"
+      }
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "url": "https://youtu.be/Wok4Xw_5cyY",
+      "key": "object-oriented_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "object-oriented_programming"
       }
     },
     {
@@ -9415,6 +9452,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "creating_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "object-oriented_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u1l3_extra_practice"
       }
     },
@@ -9434,6 +9483,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "calling_methods"
       }
     },
     {

@@ -110,11 +110,6 @@ group :development, :test do
   gem 'pdf-reader', require: false
 end
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Needed for unit testing, and also for /rails/mailers email previews.
 gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 
@@ -357,3 +352,6 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'

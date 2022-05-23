@@ -939,7 +939,9 @@ pl:
         starquilts_intro_artist: Wprowadzenie do kołder w gwiazdki
         CSA-PL-1d-arrays-new-values: Wprowadzanie wartości w tablicach 1D
         CSA-PL-conditionals: Instrukcje warunkowe w Javie
+        CSA-PL-two-way-selection: Dwustronny wybór
         CSA-PL-Printing-in-Java: Drukowanie w Javie
+        CSA-PL-multi-selection-statements: Instrukcje wielokrotnego wyboru
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
