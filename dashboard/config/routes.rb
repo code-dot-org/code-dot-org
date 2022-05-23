@@ -72,6 +72,20 @@ Dashboard::Application.routes.draw do
   get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
   get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
   get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+
+  resources :programming_environments, only: [:index, :show], param: 'name', path: '/docs/ide/' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/expressions' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+    resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
+      member do
+        get :show, to: 'programming_classes#show_by_keys'
+      end
+    end
+  end
+
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -336,12 +350,19 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show, :destroy] do
+    collection do
+      get :get_filtered_results
+    end
+    member do
+      post :clone
+    end
+  end
 
   resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
-      get :get_filtered_expressions
+      get :get_filtered_results
     end
     member do
       post :clone
@@ -910,8 +931,8 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
-  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
+  post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
+  post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
@@ -952,6 +973,8 @@ Dashboard::Application.routes.draw do
   end
 
   resources :code_reviews, only: [:index, :create, :update]
+
+  resources :code_review_notes, only: [:create]
 
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member

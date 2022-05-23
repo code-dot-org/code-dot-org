@@ -798,6 +798,10 @@
           "word": "Davranış",
           "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
         },
+        "algorithm/coursee/2021": {
+          "word": "algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi"
+        },
         "sprite/coursee/2021": {
           "word": "Hareketli nesne",
           "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
@@ -807,7 +811,8 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "copyright/coursee/2021": {
-          "word": "Telif Hakkı"
+          "word": "Telif Hakkı",
+          "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
         },
         "loop/coursee/2021": {
           "word": "Döngü",
@@ -905,7 +910,8 @@
           "word": "Dijital Ayak İzi"
         },
         "copyright/csd/2021": {
-          "word": "Telif Hakkı"
+          "word": "Telif Hakkı",
+          "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
         }
       }
     }

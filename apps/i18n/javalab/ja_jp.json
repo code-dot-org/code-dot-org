@@ -87,6 +87,7 @@
   "runtimeError": "コードの実行中に例外が発生しました。\n{cause}",
   "saveToBackpack": "バックパックに保存する",
   "startingPainter": "ペインターを始動中。",
+  "submit": "送信",
   "timeoutWarning": "警告: プロジェクトは15秒で実行を停止します。",
   "timeout": "プロジェクトは停止しました。",
   "twoMainMethods": "エラー：mainメソッドは1つしかコードに含めることはできません。mainメソッドのあるクラスが少なくとも2つ見つかりました。",
