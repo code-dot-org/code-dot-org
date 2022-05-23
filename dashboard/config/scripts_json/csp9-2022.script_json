@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-19 20:44:21 UTC",
+    "serialized_at": "2022-05-20 22:15:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -63,15 +64,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "notice": "Lesson Updated March 4",
-            "details": "Due to a change in Google's privacy policies, the Google Trends tool is no longer accessible to most students. We've updated this lesson to remove the use of the Google Trends tool. If you'd like to reference the old version of this lesson with Google Trends included, please click the \"Learn More\" button.",
-            "link": "https://curriculum.code.org/csp-20/unit9/1/",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.",
         "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -214,7 +206,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Preview the Project Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
         "student_overview": "You will create an effective visualization that you will use to tell a data story."
       },
@@ -235,7 +227,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Review the rubric in the Project Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the rubric in the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
         "student_overview": "Finish the task you started in the previous lesson by using the Data Analysis Process to tell a data story with the visualization you created."
       },
@@ -3847,6 +3839,30 @@
       "seeding_key": {
         "lesson.key": "Project   Tell a Data Story Part 2",
         "resource.key": "csp_unit_9_-_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_4"
       }
     }
   ],

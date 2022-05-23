@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-19 20:53:59 UTC",
+    "serialized_at": "2022-05-20 16:39:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5513,6 +5513,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1aCg49-ilRrAK9I8500DV5xrGOPkjKYk1zLgK0XxJlXE/edit?usp=sharing",
+      "key": "cs_bingo_cards_6",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_6"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1EzxMVHnoUudvlVwYOILDyyVPwE4xEBKM8Qor5vuXEeI/edit?usp=sharing",
+      "key": "cs_bingo_definitions_8",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_8"
+      }
+    },
+    {
       "name": "Data, Privacy, and Security",
       "url": "https://docs.google.com/document/d/1ZOM-Jtd1IVQwx2qgg3O2gNUsNYey6ivB0dDVzekfGsA/edit",
       "key": "data_privacy_and_security",
@@ -6004,6 +6028,18 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u8l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_cards_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_definitions_8"
       }
     },
     {
