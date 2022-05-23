@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 17:15:17 UTC",
+    "serialized_at": "2022-05-20 19:47:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -195,7 +196,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent. Students practice using methods in the `Math` class to solve problems.",
+        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent inheritance. Students practice using methods in the `Math` class to solve problems.",
         "preparation": "* Print copies of The Math Class handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-7-the-math-class/36365/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the Math class?**\n\nIn this lesson, you explore the `Math` class to learn about its structure and available methods. As you review the documentation for the `Math` class, you revisit the `final` keyword and learn how it can be used to prevent inheritance. You practice using methods in the `Math` class to solve problems."
       },
@@ -7384,6 +7385,13 @@
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.H.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.3"
       }
     },
     {
