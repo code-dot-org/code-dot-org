@@ -13,6 +13,7 @@ require 'open3'
 # Execute a system command. Raise an error if the command does not complete successfully. Log the output
 # and also return the output to the caller.
 def execute_system_command(command)
+  CDO.log.info "Executing command: #{command}"
   stdout, stderr, status = Open3.capture3(command)
   raise stderr unless status == 0
   CDO.log.info stdout
