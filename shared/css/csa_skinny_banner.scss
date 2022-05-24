@@ -1,0 +1,26 @@
+.csa-skinny-banner{
+  height: 98px;
+  margin-bottom: 2em;
+  background: rgb(81,69,110);
+  background: linear-gradient(124deg, rgba(81,69,110,1) 0%, rgba(118,101,160,1) 100%);
+
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .text-wrapper {
+    color: white;
+
+    .header {
+      font-family: 'Gotham 7r', sans-serif;
+      font-size: 1.65em;
+      margin-bottom: 6px;
+    }
+
+    .text {
+      font-size: 1.15em;
+    }
+  }
+}
