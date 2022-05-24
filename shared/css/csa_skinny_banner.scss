@@ -1,17 +1,30 @@
-.csa-skinny-banner{
-  height: 98px;
+$width-md: 970px;
+$width-sm: 640px;
+
+.csa-skinny-banner {
+  height: 120px;
   margin-bottom: 2em;
-  background: rgb(81,69,110);
-  background: linear-gradient(124deg, rgba(81,69,110,1) 0%, rgba(118,101,160,1) 100%);
+  background-image: url('/images/csa/csa-skinny-banner-bg.svg');
+  overflow: hidden;
+
+  a:hover {
+    text-decoration: none;
+  }
 
   .wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 2.5em;
+
+    @media screen and (max-width: $width-md) {
+      padding: 1em;
+    }
   }
 
   .text-wrapper {
     color: white;
+    width: 370px;
 
     .header {
       font-family: 'Gotham 7r', sans-serif;
@@ -20,7 +33,40 @@
     }
 
     .text {
+      font-family: 'Gotham 4r', sans-serif;
       font-size: 1.15em;
     }
+  }
+
+  .img-wrapper {
+    width: 315px;
+    margin-bottom: -8px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .button-wrapper {
+
+    button {
+      height: unset;
+      font-family: 'Gotham 7r', sans-serif;
+      color: white;
+      background: #FFA400;
+      margin: 0;
+      padding: 0.65em 2em;
+      border-radius: 4px;
+
+      @media screen and (max-width: $width-md) {
+        padding: 0.5em 1em;
+      }
+    }
+  }
+
+  // Hide phantom <p> tag
+  // it's messing up flexbox
+  p:last-child {
+    display: none;
   }
 }
