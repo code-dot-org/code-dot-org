@@ -3,7 +3,7 @@
   "name": "colorLeds[i].intensity()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Changes the brightness of the color LED\r\n\r\nWith `colorLeds[i].intensity()`, you can control how bright or dim you want a colorLED to be with a number. The bigger the number used, the brighter the color LED.\r\n\r\n`.intensity()` works a lot like  [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) and is just rapidly turning the light on and off, giving the illusion of dimness. \r\n",
+  "content": "Changes the brightness of the color LED\n\nWith [`colorLeds[index].intensity(brightness)`(#f78183)](/docs/applab/intensity/), you can control how bright or dim you want a colorLED to be with a number. The bigger the number used, the brighter the color LED.\n\n`.intensity()` works a lot like  [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) and is just rapidly turning the light on and off, giving the illusion of dimness. \n",
   "examples": [
     {
       "name": "Example: Light Dimmer",
@@ -25,5 +25,5 @@
   ],
   "short_description": "Changes the brightness of the color LED",
   "syntax": "colorLeds[index].intensity(brightness)",
-  "tips": "* A common usage of `colorLeds[i].intensity()` is with a slider or some sort of variable that you can easily change or update. "
+  "tips": "* A common usage of [`colorLeds[index].intensity(brightness)`(#f78183)](/docs/applab/intensity/) is with a slider or some sort of variable that you can easily change or update. "
 }

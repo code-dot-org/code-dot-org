@@ -2309,6 +2309,10 @@ ne:
           lessons:
             Debugging:
               name: Debugging
+            "[TEMPLATE] Content lessons":
+              name: "[MODÈLE] Leçons de contenu"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[MODÈLE] Résumé de l'unité"
         csp5-virtual:
           lessons:
             While Loops:

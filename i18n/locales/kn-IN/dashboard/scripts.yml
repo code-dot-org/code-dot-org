@@ -2180,6 +2180,10 @@ kn:
               name: ಸಲಕರಣೆಗಳು
             Debugging:
               name: ಡಿಬಗ್ ಮಾಡುವುದು
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] ಕಂಟೆಂಟ್ ಅಧ್ಯಾಯಗಳು"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] ಯುನಿಟ್‌ ಉಪಸಂಹಾರ"
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -3890,10 +3894,16 @@ kn:
               name: ಪ್ರಾಜೆಕ್ಟ್ ಸ್ಫೂರ್ತಿ
             lesson-19:
               name: ಡಿಬಗ್ ಮಾಡುವುದು
+        csa4-2022:
+          lessons:
+            Console:
+              name: ಕನ್ಸೋಲ್
         csa5-2022:
           lessons:
             lesson-7:
               name: ಲೂಪ್‌ಗಳಿಗೆ ವರ್ಧಿಸಿರುವುದು
+            Console:
+              name: ಕನ್ಸೋಲ್
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -4113,6 +4123,8 @@ kn:
               key: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+            Console:
+              name: ಕನ್ಸೋಲ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -4121,6 +4133,8 @@ kn:
             Java Lab:
               name: ಜಾವಾ ಲ್ಯಾಬ್
               key: ಜಾವಾ ಲ್ಯಾಬ್
+            Console:
+              name: ಕನ್ಸೋಲ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -4129,6 +4143,8 @@ kn:
             Java Lab:
               name: ಜಾವಾ ಲ್ಯಾಬ್
               key: ಜಾವಾ ಲ್ಯಾಬ್
+            Console:
+              name: ಕನ್ಸೋಲ್
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -4452,3 +4468,7 @@ kn:
               key: ಅಧ್ಯಾಯ -2
             lesson-3:
               key: ಅಧ್ಯಾಯ -3
+        csa9-2022:
+          lessons:
+            Console:
+              name: ಕನ್ಸೋಲ್

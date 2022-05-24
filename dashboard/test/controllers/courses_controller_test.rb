@@ -60,7 +60,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
   end
 
   class CachedQueryCounts < ActionController::TestCase
@@ -94,14 +94,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(5) do
+      assert_cached_queries(6) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(8) do
+      assert_cached_queries(9) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -626,6 +626,10 @@ class CoursesControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
+
+    File.stubs(:write).with do |filename, data|
+      filename.to_s.end_with?("#{unit_group.name}.course") && data.include?(resource1.name) && data.include?(resource2.name)
+    end.once
 
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload

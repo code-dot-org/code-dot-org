@@ -7259,6 +7259,10 @@ ro:
               name: Instrumente
             Debugging:
               name: Corectare erori
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Lecții de conținut"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Concluzia Unității"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -11183,6 +11187,10 @@ ro:
           lessons:
             lesson-11:
               name: Aleatoriu
+            Console:
+              name: Consolă
+            The Neighborhood: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11191,7 +11199,10 @@ ro:
             lesson-4: {}
             lesson-7:
               name: Perfecționat Pentru Bucle
-            lesson-8: {}
+            Console:
+              name: Consolă
+            The Neighborhood: {}
+            The Theater: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11364,6 +11375,7 @@ ro:
           lessons:
             lesson-1: {}
             lesson-2: {}
+            lesson-4: {}
             lesson-3: {}
         csd6-projects:
           lessons:
@@ -11477,6 +11489,8 @@ ro:
             The Playground: {}
             lesson-1:
               key: lecția-1
+            Console:
+              name: Consolă
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11491,6 +11505,8 @@ ro:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            Console:
+              name: Consolă
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11505,6 +11521,10 @@ ro:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-10: {}
+            Console:
+              name: Consolă
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11731,10 +11751,7 @@ ro:
           student_description: "Acest modul de învățare profesională este conceput să te ajute să te pregătești pentru predarea unitatea de Animații și Jocuri Interactive de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în Animații și Jocuri Interactive.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în Game Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 120 de minute"
         vpl-csd4-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-3: {}
             lesson-4: {}
-            lesson-5: {}
           title: 'Modulul 4: Pregătirea pentru Predarea Procesului de Design'
           description: |-
             Acest modul de învățare profesională este menit să te ajute să te pregătești să predau unitatea Code.org Procesul de Design.
@@ -11760,11 +11777,7 @@ ro:
             **Timp sugerat:** 90 de minute
         vpl-csd5-ci-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
             lesson-4: {}
-            lesson-5: {}
           title: 'Modulul 5: Pregătirea pentru Predarea Date și Societate'
           description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Date și Societate de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Date și Societate.\n-   Practica conceptele cheie incluse în unitate.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
           student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Date și Societate de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Date și Societate.\n-   Practica conceptele cheie incluse în unitate.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
@@ -12043,3 +12056,10 @@ ro:
               key: lecția-2
             lesson-3:
               key: lecția-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Consolă
+            The Neighborhood: {}
+            The Theater: {}
+        csa-pl-standalone-code-2022: {}
