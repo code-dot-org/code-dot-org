@@ -23,7 +23,7 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    config.load_defaults 5.2
+    config.load_defaults "6.0"
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
