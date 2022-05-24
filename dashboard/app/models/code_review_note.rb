@@ -23,10 +23,6 @@ class CodeReviewNote < ApplicationRecord
 
   acts_as_paranoid
 
-  def can_be_created?
-    code_review.open? && commenter.can_do_code_review_for?(code_review.owner)
-  end
-
   def summarize
     {
       id: id,

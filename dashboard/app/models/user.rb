@@ -2107,15 +2107,8 @@ class User < ApplicationRecord
     sections_as_student.empty?
   end
 
-  def can_do_code_review_for?(other_user)
-    # teacher can always review student projects
-    return true if other_user.student_of?(self)
-
-    shared_sections = sections_as_student & other_user.sections_as_student
-    shared_code_review_groups = code_review_groups & other_user.code_review_groups
-
-    # students need to be in the same code review groups and be in a shared section with code review enabled
-    shared_sections.any?(&:code_review_enabled?) && shared_code_review_groups.any?
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
   end
 
   # Users who might otherwise have orphaned accounts should have the option
