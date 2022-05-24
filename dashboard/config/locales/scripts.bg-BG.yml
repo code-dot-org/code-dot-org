@@ -1336,13 +1336,13 @@ bg:
         SpecialSeries:
           description_audience: Възраст 10 + (след курс 3)
         iceage:
-          title: 'Ледена епоха: игрална лаборатория'
+          title: Ледена епоха Play Lab
           description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
           description_short: Създай история или си направи игра с Ледена епоха игрална
             лаборатория!
           lessons:
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
               description_student: В този урок, учащите получават въведение на компютърните
                 науки и създават игра използвайки базов блоков код.
           student_description: Създай история или си направи игра с Ледена епоха игрална
@@ -1994,10 +1994,14 @@ bg:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
+            Loops in Artist:
+              name: Цикли в Художник
             Going Places Safely:
               name: Достигаме безопасно до места
         courseb-draft:
           lessons:
+            Loops in Artist:
+              name: Цикли в Художник
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Your Digital Footprint:
@@ -2012,6 +2016,8 @@ bg:
               name: Вашите дигитални отпечатъци
             Building a Foundation:
               name: Изграждане на база
+            Loops in Harvester:
+              name: Цикли в Harvester
         coursed-draft:
           lessons:
             Conditionals with Cards:
@@ -2061,7 +2067,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
         classic-hoc-impact-study:
@@ -2286,7 +2292,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -2302,7 +2308,7 @@ bg:
             Loops with BB-8:
               name: Цикли с BB-8
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Bounce:
               name: Bounce
         coursea-2017:
@@ -2311,18 +2317,28 @@ bg:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
+            Loops in Artist:
+              name: Цикли в Художник
         courseb-2017:
           title: Курс B
           assignment_family_title: Курс B
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
+            Loops in Artist:
+              name: Цикли в Художник
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
         coursec-2017:
           title: Курс C
           assignment_family_title: Курс C
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
+            Loops in Harvester:
+              name: Цикли в Harvester
+            Loops in Artist:
+              name: Цикли в Художник
         coursed-2017:
           title: Курс D
           assignment_family_title: Курс D
@@ -2339,7 +2355,7 @@ bg:
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Envelope Variables:
               name: Плик с променливи
             For Loop Fun:
@@ -2348,6 +2364,8 @@ bg:
               name: Композиране на песен с параметри
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Nested Loops:
               name: Вмъкнати цикли
         coursef-2017:
@@ -2366,6 +2384,8 @@ bg:
                 като използват свои програми.
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -2449,6 +2469,8 @@ bg:
           lessons:
             Introduction:
               name: Въведение
+            Loops in Artist:
+              name: Цикли в Художник
             Internet:
               name: Интернет
             Digital Citizenship:
@@ -2471,6 +2493,8 @@ bg:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
+            Loops in Artist:
+              name: Цикли в Художник
             Spelling Bee:
               name: Правопис
         subgoal-labels-opt-in:
@@ -2519,6 +2543,8 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Nested Loops:
               name: Вмъкнати цикли
             Conditionals:
@@ -2545,6 +2571,8 @@ bg:
               name: 'Художник: Бинарен код'
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Loops in Ice Age:
               name: Цикли в Ледена Епоха
         csp3-a:
@@ -2558,12 +2586,18 @@ bg:
           lessons:
             Introduction:
               name: Въведение
+            Loops in Artist:
+              name: Цикли в Художник
             Conditionals in Minecraft:
               name: Условия в Minecraft
             Building a Foundation:
               name: Изграждане на база
             Nested Loops:
               name: Вмъкнати цикли
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Цикли в Художник
         new-e:
           lesson_groups:
             extra_course_content:
@@ -2571,6 +2605,8 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Conditionals:
               name: Условия
             Private and Personal Information:
@@ -2583,10 +2619,12 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
             Envelope Variables:
@@ -2667,6 +2705,8 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Nested Loops:
               name: Вмъкнати цикли
             Introduction:
@@ -2683,12 +2723,14 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
             Envelope Variables:
@@ -2812,6 +2854,8 @@ bg:
               name: 'Реални алгоритми: Засадете семената'
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             Move It, Move It:
               name: Преместете го, преместете го
         coursed-2018:
@@ -2901,7 +2945,7 @@ bg:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
-              name: 'Ледена епоха: игрална лаборатория'
+              name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
               description_student: Избегни лавата! Тук ще научиш за условията в света
@@ -3150,6 +3194,8 @@ bg:
               name: Преместете го, преместете го
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стив и Големият проект
         fit-test:
@@ -3200,6 +3246,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         coursef-2019:
           title: Курс F (2019)
           lesson_groups:
@@ -3218,6 +3266,8 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Conditionals with Cards:
               name: Условия с карти
             Envelope Variables:
@@ -3276,6 +3326,8 @@ bg:
           lessons:
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
             Nested Loops:
               name: Вмъкнати цикли
             Conditionals with Cards:
@@ -3351,8 +3403,17 @@ bg:
               name: нов етап
             'null':
               name: нула
+            Part 1:
+              name: Част 1
+            Part 2:
+              name: Част 2
+            part 3:
+              name: част 3
         dance-extras-gallery:
           title: Продължавай Да Танцуваш
+          lessons:
+            Dance Party - Go Further:
+              name: Танцово Парти - Продължи Нататък
         coursec-2019:
           title: Курс C (2019)
           lesson_groups:
@@ -3369,6 +3430,10 @@ bg:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
+            Loops with Rey and BB-8:
+              description_student: 'Помогнете на BB-8 през лабиринти използвайки цикли! '
+            Loops in Artist:
+              name: Цикли в Художник
             'Events: The Big Event':
               name: Голямото събитие
             Binary Bracelets:
@@ -3393,6 +3458,10 @@ bg:
               name: Щастливи карти
             Going Places Safely:
               name: Достигаме безопасно до места
+            Loops in Artist:
+              name: Цикли в Художник
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
         courseb-2019:
           title: Курс B (2019)
           lesson_groups:
@@ -3407,6 +3476,8 @@ bg:
               name: Преместете го, преместете го
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             Loops in Ice Age:
               name: Цикли в Ледена Епоха
             'Loops: Getting Loopy':
@@ -3422,6 +3493,8 @@ bg:
               name: Преместете го, преместете го
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             Spelling Bee:
               name: Правопис
         removed19:
@@ -3492,6 +3565,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
             required:
               display_name: Общ преглед
           lessons:
@@ -3621,6 +3696,8 @@ bg:
               name: Условия с карти
             Building a Foundation:
               name: Изграждане на база
+            Loops in Artist:
+              name: Цикли в Художник
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3629,6 +3706,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp2-pilot-staging:
           title: 'Раздел 2: Интернет'
           lesson_groups:
@@ -3638,6 +3717,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3646,12 +3727,16 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+            csp_project:
+              display_name: Проект
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3660,6 +3745,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp7-pilot-staging:
           lessons:
             new stage:
@@ -3672,6 +3759,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp9-pilot-staging:
           title: 'Раздел 9: данни'
           lesson_groups:
@@ -3681,6 +3770,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3689,6 +3780,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -3707,6 +3800,8 @@ bg:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+            csp_project:
+              display_name: Проект
             required:
               display_name: Общ преглед
           lessons:
@@ -3789,6 +3884,8 @@ bg:
             csf_events:
               display_name: Събития
           lessons:
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             Loops in Ice Age:
               name: Цикли в Ледена Епоха
         dlp19-csd-mod-fit:
@@ -3881,6 +3978,8 @@ bg:
               name: нов етап
             Introduction:
               name: Въведение
+            Loops in Artist:
+              name: Цикли в Художник
             Nested Loops:
               name: Вмъкнати цикли
         csp6-pilot:
@@ -3924,6 +4023,8 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
           lessons:
             new stage:
               name: нов етап
@@ -3998,12 +4099,16 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+            csp_project:
+              display_name: Проект
         csp9-pilot:
           lessons:
             new stage:
@@ -4085,6 +4190,8 @@ bg:
               name: Достигаме безопасно до места
             'Programming: Happy Maps':
               name: Щастливи карти
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
         courseb-2020:
           title: Курс B (2020)
           lesson_groups:
@@ -4117,6 +4224,8 @@ bg:
           lessons:
             Binary Bracelets:
               name: Двоични гривни
+            Loops with Rey and BB-8:
+              description_student: 'Помогнете на BB-8 през лабиринти използвайки цикли! '
             'Events: The Big Event':
               name: Голямото събитие
         coursed-2020:
@@ -4206,6 +4315,8 @@ bg:
           lessons:
             Dance Party:
               name: Танцово Парти
+            Loops in Artist:
+              name: Цикли в Художник
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -4213,10 +4324,14 @@ bg:
             csf_events:
               display_name: Събития
           lessons:
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
             Spelling Bee:
               name: Правопис
             Loops in Ice Age:
               name: Цикли в Ледена Епоха
+            Loops in Artist:
+              name: Цикли в Художник
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -4264,6 +4379,10 @@ bg:
           lessons:
             new stage:
               name: нов етап
+            Part 1:
+              name: Част 1
+            Part 2:
+              name: Част 2
         csp3-virtual:
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
             което отключва възможността да се правят богати, интерактивни приложения.
@@ -4455,6 +4574,8 @@ bg:
           lessons:
             Course F Introduction:
               name: Въведение в Sprite Lab
+            lesson-3:
+              name: 'Мини-Проект: Програми за Вход от Потребител'
             Sprites in Action:
               name: Спрайтове в Действие
           lesson_groups:
@@ -4575,12 +4696,16 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+            csp_project:
+              display_name: Проект
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -4610,6 +4735,9 @@ bg:
           lessons:
             'Programming: Happy Maps':
               name: Щастливи карти
+            Programming with Rey and BB-8:
+              key: Програмиране с Рей и BB-8
+              name: Програмиране с Рей и BB-8
             Loops in Ice Age:
               key: Цикли в Ледена Епоха
           lesson_groups:
@@ -4626,6 +4754,10 @@ bg:
               name: Преместете го, преместете го
             'Loops: Getting Loopy':
               name: Да повтаряме
+            Loops in Harvester:
+              key: Цикли в Harvester
+            Loops in Artist:
+              key: Цикли в Художник
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -4638,6 +4770,8 @@ bg:
             Binary Bracelets:
               key: Двоични гривни
               name: Двоични гривни
+            Loops in Harvester:
+              key: Цикли в Harvester
             'Events: The Big Event':
               name: Голямото събитие
           lesson_groups:
@@ -4664,6 +4798,8 @@ bg:
             Loops in Ice Age:
               key: Цикли в Ледена Епоха
               name: Цикли в Ледена Епоха
+            Loops in Artist:
+              key: Цикли в Художник
             Conditionals with Cards:
               key: Условия с карти
               name: Условия с карти
@@ -4713,12 +4849,15 @@ bg:
             csf_functions:
               display_name: Функции
         coursef-2021:
+          title: Курс F (2021)
           lessons:
             Loops with the Artist:
               key: Цикли с Артиста
             Envelope Variables:
               key: Плик с променливи
               name: Плик с променливи
+            AI for Oceans:
+              name: ИТ За Океани
             Internet:
               key: Интернет
               name: Интернет
@@ -4726,6 +4865,7 @@ bg:
               key: Повторения за забавление
               name: Повторения за забавление
             Virtual Pet:
+              key: Виртуален Домашен Любимец
               name: 'Мини-Проект: Виртуален Домашен Любимец'
             lesson-1:
               name: Проектиране за Достъпност
@@ -4733,6 +4873,12 @@ bg:
               name: Въведение в Sprite Lab
             lesson-8:
               name: Спрайтове в Действие
+            lesson-5:
+              name: Епидемия
+            lesson-2:
+              name: Силата на Думите
+            lesson-11:
+              name: 'Мини-Проект: Програми за Вход от Потребител'
           lesson_groups:
             ramp_up:
               display_name: Спрайт
@@ -4740,6 +4886,8 @@ bg:
               display_name: Цифрови граждани
             csf_variables:
               display_name: За циклите
+            csf_data:
+              display_name: Данни и Симулации
             csf_for_loops:
               display_name: За циклите
             lessonGroup-8:
@@ -4773,6 +4921,10 @@ bg:
             lessonGroup-9:
               display_name: Събития
         pre-express-2021:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Програмиране с Рей и BB-8
+              name: Програмиране с Рей и BB-8
           lesson_groups:
             csf_loops:
               display_name: Повторения
@@ -4786,6 +4938,8 @@ bg:
               name: Спрайтове в Действие
             introducing-spritelab:
               name: Въведение в Sprite Lab
+            user-input-programs:
+              name: 'Мини-Проект: Програми за Вход от Потребител'
           lesson_groups:
             ramp_up:
               display_name: Въведение
@@ -4930,6 +5084,7 @@ bg:
           lesson_groups:
             lessonGroup-4:
               display_name: Проучване
+          title: AI и Машинно Обучение
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -4945,10 +5100,16 @@ bg:
           lessons:
             lesson-9:
               name: Учителска общност
+        self-paced-pl-csd5-2021:
+          lessons:
+            lesson-7:
+              name: AI и Машинно Обучение
         self-paced-pl-csd6-2021:
           lessons:
             lesson-7:
               name: Част 6
+        outbreak-module:
+          title: Епидемия
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5010,6 +5171,8 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Уроци
+            lessonGroup-3:
+              display_name: Проект
         csa1-pilot-facilitator:
           lessons:
             lesson-1:
@@ -5049,6 +5212,8 @@ bg:
           lessons:
             lesson-9:
               name: Цветни LEDs
+            lesson-19:
+              name: Проект
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -5060,6 +5225,8 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Уроци
+            lessonGroup-3:
+              display_name: Проект
         tesstest921:
           lessons:
             lesson-2:
@@ -5089,6 +5256,8 @@ bg:
             lesson-1:
               name: Правопис
           title: Правопис
+        outbreak-csc:
+          title: Епидемия
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5141,6 +5310,8 @@ bg:
               name: Спрайтове в Действие
             'Mini-Project: Virtual Pet':
               name: 'Мини-Проект: Виртуален Домашен Любимец'
+            'Mini-Project: User Input Programs':
+              name: 'Мини-Проект: Програми за Вход от Потребител'
           lesson_groups:
             lessonGroup-2:
               display_name: Спрайт
@@ -5176,6 +5347,9 @@ bg:
           lessons:
             Happy Maps:
               name: Щастливи карти
+            Programming with Rey and BB-8:
+              name: Програмиране с Рей и BB-8
+              key: Програмиране с Рей и BB-8
             'Programming: Happy Maps':
               name: Щастливи карти
             Loops in Ice Age:
@@ -5239,12 +5413,16 @@ bg:
               display_name: Условия
             csp_functions:
               display_name: Функции
+            csp_project:
+              display_name: Проект
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+            csp_project:
+              display_name: Проект
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -5254,6 +5432,10 @@ bg:
               name: Да повтаряме
             'Loops: Getting Loopy':
               name: Да повтаряме
+            Loops in Harvester:
+              key: Цикли в Harvester
+            Loops in Artist:
+              key: Цикли в Художник
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -5268,6 +5450,8 @@ bg:
             Binary Bracelets:
               name: Двоични гривни
               key: Двоични гривни
+            Loops in Harvester:
+              key: Цикли в Harvester
             'Events: The Big Event':
               name: Голямото събитие
           lesson_groups:
@@ -5306,6 +5490,8 @@ bg:
               key: Условия с карти
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
+            Loops in Artist:
+              key: Цикли в Художник
           lesson_groups:
             lessonGroup-6:
               display_name: Цифрови граждани
@@ -5353,17 +5539,28 @@ bg:
               name: Спрайтове в Действие
             'Mini-Project: Virtual Pet':
               name: 'Мини-Проект: Виртуален Домашен Любимец'
+            'Mini-Project: User Input Programs':
+              name: 'Мини-Проект: Програми за Вход от Потребител'
             For Loop Fun:
               name: Повторения за забавление
               key: Повторения за забавление
+            Outbreak:
+              name: Епидемия
+            AI For Oceans:
+              name: ИТ За Океани
             The Internet:
               name: Интернет
             lesson-8:
               name: Спрайтове в Действие
             Virtual Pet:
+              key: Виртуален Домашен Любимец
               name: 'Мини-Проект: Виртуален Домашен Любимец'
+            lesson-11:
+              name: 'Мини-Проект: Програми за Вход от Потребител'
             Loops with the Artist:
               key: Цикли с Артиста
+            AI for Oceans:
+              name: ИТ За Океани
             Internet:
               key: Интернет
               name: Интернет
@@ -5374,6 +5571,8 @@ bg:
               display_name: Цифрови граждани
             lessonGroup-8:
               display_name: Променливи
+            csf_data:
+              display_name: Данни и Симулации
         csa1-2022:
           lessons:
             lesson-2:
@@ -5388,6 +5587,10 @@ bg:
             lessonGroup-5:
               display_name: Проучване
         pre-express-2022:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Програмиране с Рей и BB-8
+              name: Програмиране с Рей и BB-8
           lesson_groups:
             csf_loops:
               display_name: Повторения
@@ -5425,10 +5628,15 @@ bg:
           lessons:
             lesson-11:
               name: Случаен
+            Console:
+              name: Конзола
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa5-2022:
+          lessons:
+            Console:
+              name: Конзола
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5468,6 +5676,15 @@ bg:
             'Mini-Project: Virtual Pet':
               name: 'Мини-Проект: Виртуален Домашен Любимец'
               key: 'Мини-Проект: Виртуален Домашен Любимец'
+            'Mini-Project: User Input Programs':
+              name: 'Мини-Проект: Програми за Вход от Потребител'
+              key: 'Мини-Проект: Програми за Вход от Потребител'
+            Outbreak:
+              name: Епидемия
+              key: Епидемия
+            AI For Oceans:
+              name: ИТ За Океани
+              key: ИТ За Океани
             The Internet:
               name: Интернет
               key: Интернет
@@ -5478,11 +5695,15 @@ bg:
               display_name: Спрайт
             lessonGroup-8:
               display_name: Променливи
+            csf_data:
+              display_name: Данни и Симулации
         csa6-2022:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
               key: Java (Джава) Практически Урок
+            Console:
+              name: Конзола
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5491,6 +5712,8 @@ bg:
             Java Lab:
               name: Java (Джава) Практически Урок
               key: Java (Джава) Практически Урок
+            Console:
+              name: Конзола
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5499,6 +5722,8 @@ bg:
             Java Lab:
               name: Java (Джава) Практически Урок
               key: Java (Джава) Практически Урок
+            Console:
+              name: Конзола
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5627,3 +5852,7 @@ bg:
           lessons:
             Introduction to AI Lab:
               name: Въведение в AI Lab
+        csa9-2022:
+          lessons:
+            Console:
+              name: Конзола

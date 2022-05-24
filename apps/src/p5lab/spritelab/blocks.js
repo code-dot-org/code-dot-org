@@ -93,7 +93,7 @@ const customInputTypes = {
             }
           });
         },
-        block.getHexColour(),
+        block.getHexColour(), // Google Blockly includes block.getColour
         value => {
           if (value) {
             try {

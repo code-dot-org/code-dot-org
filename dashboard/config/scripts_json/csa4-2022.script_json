@@ -27,11 +27,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-09 17:47:29 UTC",
+    "serialized_at": "2022-05-20 19:47:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -195,7 +196,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent. Students practice using methods in the `Math` class to solve problems.",
+        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent inheritance. Students practice using methods in the `Math` class to solve problems.",
         "preparation": "* Print copies of The Math Class handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-7-the-math-class/36365/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the Math class?**\n\nIn this lesson, you explore the `Math` class to learn about its structure and available methods. As you review the documentation for the `Math` class, you revisit the `final` keyword and learn how it can be used to prevent inheritance. You practice using methods in the `Math` class to solve problems."
       },
@@ -2510,7 +2511,7 @@
       "key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Casting*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
@@ -6045,6 +6046,18 @@
       }
     },
     {
+      "name": "Casting",
+      "url": "https://youtu.be/l4BCk46Y9AA",
+      "key": "casting",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "casting"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1JWNIeSVRbgsusc1bQNbmAyoPecSO3nXUvSHpmc03dBY/edit?usp=sharing",
       "key": "cs_bingo_cards_3",
@@ -6126,6 +6139,30 @@
       },
       "seeding_key": {
         "resource.key": "investigating_the_theater"
+      }
+    },
+    {
+      "name": "Multi-Selection Statements",
+      "url": "https://youtu.be/sGYm7fojjXA",
+      "key": "multi-selection_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "multi-selection_statements"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://youtu.be/sbH9lixzL34",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
       }
     },
     {
@@ -6373,6 +6410,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "casting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "investigating_casting"
       }
     },
@@ -6392,6 +6435,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "random_numbers"
       }
     },
     {
@@ -6422,6 +6471,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "finding_patterns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "multi-selection_statements"
       }
     },
     {
@@ -7330,6 +7385,13 @@
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.H.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.3"
       }
     },
     {

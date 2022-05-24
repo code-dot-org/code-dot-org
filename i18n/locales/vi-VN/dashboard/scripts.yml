@@ -9464,6 +9464,10 @@ vi:
               name: giai đoạn mới
             Debugging:
               name: Sửa lỗi
+            "[TEMPLATE] Content lessons":
+              name: "[MẪU] Nội dung bài học"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[MẪU] Tổng kết học phần"
         csd2-virtual:
           description_short: Tìm hiểu để xây dựng trang web riêng của bạn trong Kho Dữ liệu Web.
           lessons:
@@ -13292,6 +13296,9 @@ vi:
             lesson-19:
               name: Sửa lỗi
         csa4-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -13301,6 +13308,8 @@ vi:
               name: Phần 5 Đánh giá
             lesson-7:
               name: Vòng lặp for nâng cao
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -13570,6 +13579,8 @@ vi:
               description_teacher: Trong học phần này, học viên đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Học viên đã khám phá các lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Học viên đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, học viên đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, học viên đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, học viên thực hiện đánh giá việc đạt được các mục tiêu và kỹ năng của đơn vị học tập thông qua một bài đánh giá trắc nghiệm.
             lesson-1:
               key: lesson-1
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -13579,12 +13590,17 @@ vi:
           lessons:
             lesson-6:
               name: Sở hữu trí tuệ
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Hộp cát
         csa8-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -14068,3 +14084,7 @@ vi:
               key: lesson-2
             lesson-3:
               key: lesson-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Bảng điều khiển

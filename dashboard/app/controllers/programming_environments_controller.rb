@@ -66,6 +66,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     end
   end
 
+  # GET /docs/ide/<name>
   def show
     @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     return render :not_found unless @programming_environment
@@ -77,8 +78,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     if DCDO.get('use-studio-code-docs', false)
       @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
       return render :not_found unless @programming_environment
-      @programming_environment_categories = @programming_environment.categories_for_navigation
-      render :show
+      redirect_to(programming_environments_path(@programming_environment.name))
     else
       render_proxied_url(
         "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/",
