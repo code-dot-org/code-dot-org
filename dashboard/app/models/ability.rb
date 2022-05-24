@@ -136,26 +136,20 @@ class Ability
         # 1) the user is the project owner
         # 2) the user is the teacher of the project owner
         # 3) the user and the project owner are in the same code reivew group
-        project.owner.id == user.id ||
-          project.owner.student_of?(user) ||
-          project.owner.in_code_review_group_with?(user)
+        project.owner.id == user.id || can?(:code_review, project.owner)
       end
 
-      # The user can leave a code review note for another user if all of the following is true:
-      # 1) The code review is open
-      # 2) The current user is either the teacher OR
-      #    in the same code review group as the owner of the code review and code review is turned on for the section
+      # A user can review the code or another user if they are the user's teacher or if
+      # they're in a shared section with code review turned on and they're in the same code review group
+      can :code_review, User do |other_user|
+        return true if other_user.student_of?(user)
+
+        in_shared_section_with_code_review = user.shared_sections_with?(other_user).any?(&:code_review_enabled?)
+        in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
+      end
+
       can :create, CodeReviewNote do |code_review_note|
-        return false unless code_review_note.code_review.open?
-
-        user_being_reviewed = code_review_note.code_review.owner
-        # teacher can always review student projects
-        return true if user_being_reviewed.student_of?(user)
-
-        in_shared_section_with_code_review = user.shared_sections_with?(user_being_reviewed).any?(&:code_review_enabled?)
-
-        # students need to be in the same code review groups and be in a shared section with code review enabled
-        in_shared_section_with_code_review && user.in_code_review_group_with?(user_being_reviewed)
+        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
       end
 
       can :toggle_resolved, CodeReviewNote do |code_review_note|
