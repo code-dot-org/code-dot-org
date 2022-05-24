@@ -1,11 +1,21 @@
+// Variables
 $width-md: 970px;
-$width-sm: 640px;
+$width-sm: 600px;
 
+// Start styles
 .csa-skinny-banner {
+  box-sizing: content-box;
   height: 120px;
   margin-bottom: 2em;
+  padding: 0 2.5em;
   background-image: url('/images/csa/csa-skinny-banner-bg.svg');
   overflow: hidden;
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1.5em 1.15em;
+    margin-top: 2em;
+    background: linear-gradient(180deg, #51466E 0%, #75659F 100%);
+  }
 
   a:hover {
     text-decoration: none;
@@ -15,10 +25,11 @@ $width-sm: 640px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2.5em;
+    flex-wrap: wrap;
 
-    @media screen and (max-width: $width-md) {
-      padding: 1em;
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      text-align: center;
     }
   }
 
@@ -30,11 +41,19 @@ $width-sm: 640px;
       font-family: 'Gotham 7r', sans-serif;
       font-size: 1.65em;
       margin-bottom: 6px;
+
+      @media screen and (max-width: $width-sm) {
+        font-size: 1.45em;
+      }
     }
 
     .text {
       font-family: 'Gotham 4r', sans-serif;
       font-size: 1.15em;
+
+      @media screen and (max-width: $width-sm) {
+        font-size: 1em;
+      }
     }
   }
 
@@ -42,12 +61,20 @@ $width-sm: 640px;
     width: 315px;
     margin-bottom: -8px;
 
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
     img {
       width: 100%;
     }
   }
 
   .button-wrapper {
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 1em;
+    }
 
     button {
       height: unset;
@@ -64,8 +91,7 @@ $width-sm: 640px;
     }
   }
 
-  // Hide phantom <p> tag
-  // it's messing up flexbox
+  // Hide phantom <p> tag (it's messing up flexbox)
   p:last-child {
     display: none;
   }
