@@ -104,6 +104,8 @@ const CodeReviewTimelineReview = ({
   );
 };
 
+export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
+
 export default connect(state => ({
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing
 }))(CodeReviewTimelineReview);
