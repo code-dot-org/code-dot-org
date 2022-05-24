@@ -152,9 +152,10 @@ class Ability
         # teacher can always review student projects
         return true if user_being_reviewed.student_of?(user)
 
-        shared_sections = user.sections_as_student & user_being_reviewed.sections_as_student
+        in_shared_section_with_code_review = user.shared_sections_with?(user_being_reviewed).any?(&:code_review_enabled?)
+
         # students need to be in the same code review groups and be in a shared section with code review enabled
-        shared_sections.any?(&:code_review_enabled?) && user.in_code_review_group_with?(user_being_reviewed)
+        in_shared_section_with_code_review && user.in_code_review_group_with?(user_being_reviewed)
       end
 
       can :toggle_resolved, CodeReviewNote do |code_review_note|
