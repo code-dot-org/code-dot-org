@@ -141,11 +141,11 @@ class Ability
           project.owner.in_code_review_group_with?(user)
       end
 
+      # The user can leave a code review note for another user if all of the following is true:
+      # 1) The code review is open
+      # 2) The current user is either the teacher OR
+      #    in the same code review group as the owner of the code review and code review is turned on for the section
       can :create, CodeReviewNote do |code_review_note|
-        # The user can leave a code review note for another user if all of the following is true:
-        # 1) The code review is open
-        # 2) The current user is either the teacher OR
-        #    in the same code review group as the owner of the code review and code review is turned on for the section
         return false unless code_review_note.code_review.open?
 
         user_being_reviewed = code_review_note.code_review.owner
