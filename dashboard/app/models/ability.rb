@@ -138,10 +138,24 @@ class Ability
         # 3) the user and the project owner are in the same code reivew group
         project.owner.id == user.id ||
           project.owner.student_of?(user) ||
-          (project.owner.code_review_groups & user.code_review_groups).any?
+          project.owner.in_code_review_group_with?(user)
       end
 
-      can :create, CodeReviewNote, &:can_be_created?
+      can :create, CodeReviewNote do |code_review_note|
+        # The user can leave a code review note for another user if all of the following is true:
+        # 1) The code review is open
+        # 2) The current user is either the teacher OR
+        #    in the same code review group as the owner of the code review and code review is turned on for the section
+        return false unless code_review_note.code_review.open?
+
+        user_being_reviewed = code_review_note.code_review.owner
+        # teacher can always review student projects
+        return true if user_being_reviewed.student_of?(user)
+
+        shared_sections = user.sections_as_student & user_being_reviewed.sections_as_student
+        # students need to be in the same code review groups and be in a shared section with code review enabled
+        shared_sections.any?(&:code_review_enabled?) && user.in_code_review_group_with?(user_being_reviewed)
+      end
 
       can :toggle_resolved, CodeReviewNote do |code_review_note|
         code_review_note.code_review.user_id == user.id
