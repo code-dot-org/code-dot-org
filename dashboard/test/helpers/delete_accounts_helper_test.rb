@@ -915,6 +915,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.code_review_requests
+  # Table: dashboard.code_review_notes
+  #
+  test "soft deletes comments for purged user" do
+    student = create :student
+    comment = create :code_review_note, commenter: student
+    refute_nil comment.commenter
+
+    purge_user student
+    comment.reload
+    assert_nil comment.commenter
+  end
+
+  test "anonymizes code review comments written by user" do
+  end
+
+  #
   # Table: dashboard.pd_applications
   #
 
