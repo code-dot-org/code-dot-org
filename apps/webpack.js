@@ -35,7 +35,8 @@ var toTranspileWithinNodeModules = [
     __dirname,
     'node_modules',
     'microsoft-cognitiveservices-speech-sdk'
-  )
+  ),
+  path.resolve(__dirname, 'node_modules', '@toast-ui')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -138,7 +139,11 @@ var baseConfig = {
           {loader: 'css-loader'},
           {
             loader: 'sass-loader',
-            options: {includePaths: [scssIncludePath], implementation: sass}
+            options: {
+              includePaths: [scssIncludePath],
+              implementation: sass,
+              quietDeps: true
+            }
           }
         ]
       },

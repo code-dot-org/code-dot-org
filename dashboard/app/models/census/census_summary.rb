@@ -440,7 +440,6 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(:school_stats_by_year).
         eager_load(:census_overrides).
         find_each do |school|
-
         summarize_school_data(
           {
             school: school,

@@ -7,13 +7,14 @@
     "vpl-csd4-summer-pilot-2022",
     "vpl-csd5-summer-pilot-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "vpl-csd-summer-pilot",
     "has_verified_resources": true,
+    "pilot_experiment": "vpl-csd-summer-pilot-2022",
     "version_year": "2022"
   },
   "resources": [
