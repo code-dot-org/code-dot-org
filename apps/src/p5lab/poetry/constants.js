@@ -61,6 +61,23 @@ export const POEMS = {
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
+  cb: {
+    locale: 'en_us',
+    author: 'C. B.',
+    title: 'My City',
+    linesSplit: [
+      'My city.',
+      'I love the smell of the donuts',
+      'on Avenue 6.',
+      'The sound of the cats screeching',
+      'at five in the morning.',
+      'The feeling of my favorite song playing',
+      'over and over again.',
+      'When I go to a new city',
+      'with different smells, sounds, and feelings,',
+      'I’ll still remember everything my city had.'
+    ]
+  },
   rusinek1: {
     locale: 'pl_pl',
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
