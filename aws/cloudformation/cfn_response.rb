@@ -13,7 +13,7 @@ module CfnResponse
   )
     response_body = {
       Status: response_status,
-      Reason: message || "See the details in CloudWatch Log Stream: " + context.log_stream_name,
+      Reason: message || ("See the details in CloudWatch Log Stream: " + context.log_stream_name),
       PhysicalResourceId: physical_resource_id,
       StackId: event['StackId'],
       RequestId: event['RequestId'],
