@@ -285,6 +285,22 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{comments_count} CodeReviewComment" if comments_count > 0
   end
 
+  def clean_and_destroy_code_reviews(user_id)
+    # anonymize notes the user wrote
+    comments_written = CodeReviewNote.where(commenter_id: user_id)
+    comments_written_count = comments_written.count
+    comments_written.each do |comment|
+      comment.commenter_id = nil
+      comment.save!
+    end
+    @log.puts "Anonymized #{comments_written_count} CodeReviewNote" if comments_written_count > 0
+    # soft delete the code reviews of the user. This also soft deletes any comments on those reviews.
+    code_reviews = CodeReview.where(user_id: user_id)
+    code_reviews_count = code_reviews.count
+    code_reviews.destroy_all
+    @log.puts "Deleted #{code_reviews_count} CodeReview" if code_reviews_count > 0
+  end
+
   def check_safety_constraints(user)
     assert_constraint !user.facilitator?,
       'Automated purging of accounts with FACILITATOR permission is not supported at this time.'
@@ -366,6 +382,7 @@ class DeleteAccountsHelper
 
     purge_teacher_feedbacks(user.id)
     purge_code_review_comments(user.id)
+    clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
     anonymize_circuit_playground_discount_application(user)
