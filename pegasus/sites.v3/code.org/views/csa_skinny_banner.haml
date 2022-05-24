@@ -2,6 +2,7 @@
   = inline_css 'csa_skinny_banner.css'
   - header_text = 'A new approach to AP® CSA!'
   - text = "Creative projects and real world connections in our equity-driven curriculum"
+  - image = "/images/csa/csa-skinny-banner-image.png"
 
   .csa-skinny-banner
     %a{href: link_address}
@@ -9,8 +10,10 @@
         .text-wrapper
           .header= header_text
           .text= text
-        .right-button
-          %a
+        .img-wrapper
+          %img{src: image}
+        .button-wrapper
+          %button
             #{button_label}
 
   .clear
