@@ -345,9 +345,6 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    codecov (0.2.8)
-      json
-      simplecov
     coderay (1.1.1)
     colorize (0.8.1)
     composite_primary_keys (12.0.10)
@@ -396,7 +393,6 @@ GEM
       actionmailer (>= 3.2.6)
       devise (>= 3.2.0)
     diff-lcs (1.3)
-    docile (1.1.5)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotiw (4.0.1)
@@ -811,11 +807,6 @@ GEM
       faraday (~> 0.9)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
-    simplecov (0.15.1)
-      docile (~> 1.1.0)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.2)
     sinatra (2.0.2)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -947,7 +938,6 @@ DEPENDENCIES
   cancancan (~> 3.0.0)
   chronic (~> 0.10.2)
   cld
-  codecov
   colorize
   composite_primary_keys (~> 12.0)
   cucumber
@@ -1063,7 +1053,6 @@ DEPENDENCIES
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun
-  simplecov (~> 0.9)
   sinatra (= 2.0.2)
   sort_alphabetical!
   spring
