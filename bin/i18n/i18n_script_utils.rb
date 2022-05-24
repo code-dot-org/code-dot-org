@@ -168,7 +168,11 @@ class I18nScriptUtils
 
   # Used by get_level_from_url, for the script_level-specific case.
   def self.get_script_level(route_params, url)
-    script = Script.get_from_cache(route_params[:script_id])
+    script = if Script.family_names.include?(route_params[:script_id])
+               Script.get_unit_family_redirect_for_user(route_params[:script_id])
+             else
+               Script.get_from_cache(route_params[:script_id])
+             end
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
