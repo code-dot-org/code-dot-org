@@ -143,15 +143,11 @@ module Api::V1::Pd::Application
     end
 
     test 'updates course hours, autoscores, and queues email once application is submitted' do
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
-
       application_hash = build :pd_teacher_application_hash_common, :csp,
                                cs_how_many_minutes: 45,
                                cs_how_many_days_per_week: 5,
                                cs_how_many_weeks_per_year: 30
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
-      refute TEACHER_APPLICATION_CLASS.last.response_scores # do not score until submit
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
