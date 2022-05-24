@@ -17,7 +17,7 @@ class ProjectSourceJson
     @parsed_json['animations']['propsByKey'][key]['version'] = version
   end
 
-  def to_json
+  def to_json(*_args)
     raise "Can't convert unparseable body to JSON" if @unparseable
     JSON.generate(@parsed_json)
   end
