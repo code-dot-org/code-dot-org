@@ -2,7 +2,7 @@ class CodeReviewsController < ApplicationController
   before_action :authenticate_user!
 
   # Make sure we don't forget to authorize each action
-  check_authorization except: [:from_peers]
+  check_authorization except: [:peers_with_open_reviews]
 
   # GET /code_reviews
   # Returns the list of code reviews and associated comments for the given
@@ -60,10 +60,10 @@ class CodeReviewsController < ApplicationController
     render json: code_review.summarize_with_comments
   end
 
-  # GET /code_reviews/from_peers
+  # GET /code_reviews/peers_with_open_reviews
   # Returns the list of open code reviews for the given script and level
   # from peers in the user's code review groups.
-  def from_peers
+  def peers_with_open_reviews
     params.require([:scriptId, :levelId])
 
     code_reviews = CodeReview.open_reviews.where(
@@ -72,11 +72,12 @@ class CodeReviewsController < ApplicationController
       script_id: params[:scriptId]
     ).includes(:owner)
 
-    return render json: code_reviews.map(&:summarize_for_peer)
+    return render json: code_reviews.map(&:summarize_owner_info)
   end
 
   # Returns the user ids of the students that are in the same code review group
-  # as the given user.
+  # as the given user. A user id may appear multiple times if a student is in
+  # multiple code review groups with the given user.
   def peer_user_ids(student)
     # Get the Follower objects for the current user that are in sections where
     # code review is enabled. There is at most one per section that the student
