@@ -10,7 +10,7 @@ module CoreExtensions
   end
 end
 
-Hash.send(:include, CoreExtensions::Hash::Camelizing)
+Hash.include CoreExtensions::Hash::Camelizing
 
 module CoreExtensions
   module I18n
@@ -22,4 +22,4 @@ module CoreExtensions
   end
 end
 
-I18n.send(:extend, CoreExtensions::I18n::En)
+I18n.extend CoreExtensions::I18n::En
