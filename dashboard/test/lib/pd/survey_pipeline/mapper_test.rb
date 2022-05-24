@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/mapper.rb'
+require 'pd/survey_pipeline/generic_mapper.rb'
 require 'pd/survey_pipeline/reducer.rb'
 
 module Pd::SurveyPipeline

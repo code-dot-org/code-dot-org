@@ -1,7 +1,7 @@
 require 'pd/survey_pipeline/daily_survey_retriever.rb'
 require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
-require 'pd/survey_pipeline/mapper.rb'
+require 'pd/survey_pipeline/generic_mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
 
 module Pd::SurveyPipeline::Helper
