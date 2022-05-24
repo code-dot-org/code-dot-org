@@ -83,7 +83,7 @@ class Ability
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
-    can [:read], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -126,13 +126,20 @@ class Ability
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
 
-      can :create, CodeReview do |code_review, project_owner_id|
+      can :create, CodeReview do |code_review, project|
         code_review.user_id == user.id &&
-        project_owner_id == user.id
+        project.owner_id == user.id
       end
       can :edit, CodeReview, user_id: user.id
-      # TODO: teachers and peers should also be able to see the code review
-      can :read, CodeReview, user_id: user.id
+      can :index_code_reviews, Project do |project|
+        # The user can see the code review if one of the following is true:
+        # 1) the user is the project owner
+        # 2) the user is the teacher of the project owner
+        # 3) the user and the project owner are in the same code reivew group
+        project.owner.id == user.id ||
+          project.owner.student_of?(user) ||
+          (project.owner.code_review_groups & user.code_review_groups).any?
+      end
 
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
@@ -423,19 +430,19 @@ class Ability
 
     if user.persisted?
       # These checks control access to Javabuilder.
-      # All verified instructors and students of verified instructors can generate
-      # a Javabuilder session token to run Java code.
+      # All verified instructors and can generate a Javabuilder session token to run Java code.
+      # Students who are also assigned to a CSA section with a verified instructor can run Java code.
       # Verified instructors can access and run Java Lab exemplars.
       # Levelbuilders can access and update Java Lab validation code.
       can :get_access_token, :javabuilder_session do
-        user.verified_instructor? || user.student_of_verified_instructor?
+        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :get_access_token_with_override_sources, :javabuilder_session do
+      can :access_token_with_override_sources, :javabuilder_session do
         user.verified_instructor?
       end
 
-      can :get_access_token_with_override_validation, :javabuilder_session do
+      can :access_token_with_override_validation, :javabuilder_session do
         user.permission?(UserPermission::LEVELBUILDER)
       end
     end

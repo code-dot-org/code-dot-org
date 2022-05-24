@@ -82,7 +82,7 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
   gem 'codecov', require: false
   gem 'fakeredis', require: false
@@ -108,11 +108,6 @@ group :development, :test do
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
   gem 'pdf-reader', require: false
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
@@ -357,3 +352,6 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
