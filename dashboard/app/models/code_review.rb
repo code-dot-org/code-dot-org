@@ -29,6 +29,7 @@ class CodeReview < ApplicationRecord
 
   acts_as_paranoid
 
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id
   # TODO: Once all the renaming has settled, the following association should be:
   # has_many :comments, class_name: 'CodeReviewComment', dependent:  :destroy
   has_many :comments, class_name: 'CodeReviewNote', foreign_key: 'code_review_request_id', dependent:  :destroy
@@ -38,6 +39,9 @@ class CodeReview < ApplicationRecord
   validates_uniqueness_of :user_id, scope: [:project_id],
     conditions: -> {where(closed_at: nil)},
     message: 'already has an open code review for this project'
+
+  # Scope that includes only open code reviews
+  scope :open_reviews, -> { where(closed_at: nil) }
 
   def self.open_for_project?(channel:)
     _, project_id = storage_decrypt_channel_id(channel)
@@ -71,5 +75,13 @@ class CodeReview < ApplicationRecord
     summarize.merge!(
       {comments: comments.map(&:summarize)}
     )
+  end
+
+  # Information returned to a peer who can comment on this review
+  def summarize_for_peer
+    {
+      ownerId: owner.id,
+      ownerName: owner.name,
+    }
   end
 end
