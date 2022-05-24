@@ -28,10 +28,10 @@ export const PALETTES = {
 
 // Notes:
 // - author is not translated.
-// - Poems are shown in all languages, unless there is a locale attribute, in which case
-//   the poem is shown in the dropdown only for users with that current locale.
-// - If the locale attribute is set, then title is used and is not translated.
-// - If the locale attribute is set, then linesSplit is used and is not translated.
+// - Poems are shown in all languages, unless there is a locales attribute, in which case
+//   the poem is shown in the dropdown only for users with a current locale that matches.
+// - If the locales attribute is set, then title is used and is not translated.
+// - If the locales attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
   hafez: {author: 'Hafez'},
   field: {author: 'Eugene Field'},
@@ -62,7 +62,7 @@ export const POEMS = {
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
   cb: {
-    locale: 'en_us',
+    locales: ['en_us', 'en_gb'],
     author: 'C. B.',
     title: 'My City',
     linesSplit: [
@@ -79,7 +79,7 @@ export const POEMS = {
     ]
   },
   rusinek1: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'WIESZAKI',
     linesSplit: [
@@ -99,7 +99,7 @@ export const POEMS = {
     ]
   },
   rusinek2: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'PRYSZNIC',
     linesSplit: [
@@ -115,7 +115,7 @@ export const POEMS = {
     ]
   },
   rusinek3: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'TOSTER',
     linesSplit: [
@@ -141,7 +141,7 @@ export const POEMS = {
     ]
   },
   rusinek4: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'WAZON',
     linesSplit: [
@@ -152,7 +152,7 @@ export const POEMS = {
     ]
   },
   rusinek5: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'SŁOIKI',
     linesSplit: [
