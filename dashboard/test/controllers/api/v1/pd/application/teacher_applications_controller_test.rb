@@ -138,7 +138,7 @@ module Api::V1::Pd::Application
 
       sign_in @applicant
       put :create, params: {form_data_hash: @test_params, status: 'incomplete'}
-      refute TEACHER_APPLICATION_CLASS.last.response_scores # do not score until submit
+      refute TEACHER_APPLICATION_CLASS.last.response_scores
       assert_response :created
     end
 
@@ -160,6 +160,7 @@ module Api::V1::Pd::Application
       put :update, params: {id: application.id, form_data: application_hash, status: 'unreviewed'}
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+      assert_response :ok
     end
 
     test 'can submit an empty form if application is incomplete' do
