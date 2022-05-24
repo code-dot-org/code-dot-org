@@ -896,7 +896,7 @@ class LevelTest < ActiveSupport::TestCase
     # level names if we don't truncate it before adding the suffix
     old_name = 'x' * 67
     suffix = '_long_suffix'
-    new_name = 'x' * 58 + suffix
+    new_name = ('x' * 58) + suffix
     assert_equal(70, new_name.length)
 
     old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
