@@ -962,6 +962,28 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
+  test 'login: google_oauth2 does not trigger silent take over on migrated Clever student with multiple credentials' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :migrated_imported_from_clever, uid: uid)
+    user.authentication_options << create(:google_authentication_option, user: user, email: email, authentication_id: uid)
+    user.save
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_destroy(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    # No more authentication_options should be created or deleted. The
+    # two created before login should be the only existing ones.
+    auth_option_count = user.authentication_options.count
+    assert_equal 2, auth_option_count
+    assert_equal user.id, signed_in_user_id
+  end
+
   test 'login: microsoft_v2_auth does not silently add authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -1679,7 +1701,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: args[:name] || 'someone',
         email: args[:email] || 'new@example.com',
         user_type: args[:user_type] || 'teacher',
-        dob: args[:dob] || Date.today - 20.years,
+        dob: args[:dob] || (Date.today - 20.years),
         gender: args[:gender] || 'f'
       },
       credentials: {

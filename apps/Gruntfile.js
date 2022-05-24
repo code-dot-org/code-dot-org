@@ -11,7 +11,7 @@ var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-var sass = require('node-sass');
+var sass = require('sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -329,9 +329,11 @@ describe('entry tests', () => {
     all: {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
-        outputStyle: 'nested',
+        // dart-sass: Only the "expanded" and "compressed" values of outputStyle are supported.
+        outputStyle: 'expanded',
         includePaths: ['node_modules', '../shared/css/'],
-        implementation: sass
+        implementation: sass,
+        quietDeps: true
       },
       files: _.fromPairs(
         [

@@ -25,6 +25,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   alias_attribute :categories, :programming_environment_categories
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   after_destroy :remove_serialization
