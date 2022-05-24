@@ -87,6 +87,7 @@
   "runtimeError": "Kodunuz çalışırken kural dışı bir durum ile karşılaştı.\n{cause}",
   "saveToBackpack": "Sırt Çantasına Kaydet",
   "startingPainter": "Ressam başlatılıyor.",
+  "submit": "Gönder",
   "timeoutWarning": "Uyarı: projenizin çalışması 15 saniye sonra duracak.",
   "timeout": "Projeniz durdu.",
   "twoMainMethods": "Hata: Kodunuzun yalnızca bir ana yöntemi olabilir. Ana yöntemi olan en az iki sınıf bulduk.",

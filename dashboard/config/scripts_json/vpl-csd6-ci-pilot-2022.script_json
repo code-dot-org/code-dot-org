@@ -5,13 +5,15 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
+      "is_maker_unit": true,
       "is_migrated": true,
+      "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 06:34:07 UTC",
-    "published_state": null,
+    "serialized_at": "2022-05-23 20:48:37 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -265,6 +267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -337,6 +342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-U6"
+        ],
         "progression": "Learning tools"
       },
       "bonus": false,
@@ -359,6 +367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U6L5-good"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -381,6 +392,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -403,6 +417,118 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-MakerApp"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U6L5"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -420,11 +546,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C2"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -442,11 +571,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C1"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -535,6 +667,66 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
         "activity_section.key": "65872066-60ae-4ecd-9848-15cc298fa7a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-MakerApp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
       }
     },
     {

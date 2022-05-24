@@ -1,6 +1,6 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
-@import 'color';
+@import 'color.scss';
 @import 'font';
 
 $alabaster: #fafafa;

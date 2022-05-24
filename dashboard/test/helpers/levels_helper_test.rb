@@ -428,6 +428,27 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, view_options[:readonly_workspace]
   end
 
+  test 'readonly workspace should be set if the level is channel-backed and a code review is open for the project' do
+    @user = create :user
+    sign_in @user
+    stub_storage_id_for_user_id(@user.id)
+
+    script = create(:script)
+    @level = create :javalab
+    create(:script_level, script: script, levels: [@level])
+
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
+    @channel_id = get_channel_for(@level, script.id, @user)
+    assert_not_nil @channel_id
+
+    _,  @project_id = storage_decrypt_channel_id(@channel_id)
+    create :code_review, user_id: @user.id, project_id: @project_id
+
+    # calling app_options should set readonly_workspace, since a code review is open
+    app_options
+    assert_equal true, view_options[:readonly_workspace]
+  end
+
   test 'level_started? should return true if a channel exists for a channel backed level' do
     user = create :user
     stub_storage_id_for_user_id(user.id)
