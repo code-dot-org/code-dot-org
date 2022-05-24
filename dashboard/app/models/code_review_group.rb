@@ -11,7 +11,6 @@
 # Indexes
 #
 #  index_code_review_groups_on_section_id  (section_id)
-#  TODO: Add index on follower_id
 #
 class CodeReviewGroup < ApplicationRecord
   # use dependent: :delete_all here because code_review_group_members is a join table and has no id column.

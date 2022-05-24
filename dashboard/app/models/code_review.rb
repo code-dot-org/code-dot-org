@@ -77,8 +77,7 @@ class CodeReview < ApplicationRecord
     )
   end
 
-  # Information returned to a peer who can comment on this review
-  def summarize_for_peer
+  def summarize_owner_info
     {
       ownerId: owner.id,
       ownerName: owner.name,

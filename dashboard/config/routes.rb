@@ -973,7 +973,7 @@ Dashboard::Application.routes.draw do
   end
 
   resources :code_reviews, only: [:index, :create, :update] do
-    get :from_peers, on: :collection
+    get :peers_with_open_reviews, on: :collection
   end
 
   resources :code_review_notes, only: [:create]

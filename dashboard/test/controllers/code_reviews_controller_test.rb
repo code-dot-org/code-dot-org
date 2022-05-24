@@ -109,7 +109,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'from_peers returns correct data' do
+  test 'peers_with_open_reviews returns correct data' do
     script_id = 91
     level_id = 161
 
@@ -127,7 +127,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
     create :code_review, user_id: peer.id, script_id: script_id, level_id: level_id
 
     sign_in student
-    get :from_peers, params: {
+    get :peers_with_open_reviews, params: {
       scriptId: script_id,
       levelId: level_id
     }
