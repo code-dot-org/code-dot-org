@@ -6,11 +6,11 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Upcoming panel for high school students:  Mentorships, scholarships, mental health, gap year, finding community and more!",
-          "details": "Join us Wed, May 25 at 8pm EDT as college women attending the California Institute of Technology, University of Maryland, College Park, Cal Berkeley, Universities of Toronto and Washington discuss mentorships, scholarships, mental health, gap year and finding community in college! ",
-          "link": "https://bit.ly/RTC5lb2022",
+          "notice": " Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
           "type": "bullhorn",
-          "visibility": "Teacher and student"
+          "visibility": "Teacher-only"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-16 17:39:46 UTC",
+    "serialized_at": "2022-05-20 16:14:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
