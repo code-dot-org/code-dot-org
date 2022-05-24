@@ -22218,6 +22218,10 @@ hi:
               name: मॉड्यूल 8
             Module 7:
               name: मॉड्यूल 7
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] सामग्री पाठ"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] यूनिट का संक्षेप"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -30244,12 +30248,16 @@ hi:
               name: इकाई 4 मूल्यांकन
             lesson-11:
               name: बेतरतीब
+            Console:
+              name: कंसोल
         csa5-2022:
           lessons:
             lesson-2:
               name: इकाई 5 मूल्यांकन
             lesson-7:
               name: लूप्स के लिए एन्हांस्ड
+            Console:
+              name: कंसोल
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -30733,6 +30741,8 @@ hi:
               key: Java Lab
             lesson-1:
               key: पाठ - 1
+            Console:
+              name: कंसोल
           lesson_groups:
             lessonGroup-5:
               display_name: सैंडबॉक्स
@@ -30743,6 +30753,8 @@ hi:
               key: Java Lab
             lesson-6:
               name: बौद्धिक विशेषता
+            Console:
+              name: कंसोल
           lesson_groups:
             lessonGroup-5:
               display_name: सैंडबॉक्स
@@ -30751,6 +30763,8 @@ hi:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: कंसोल
           lesson_groups:
             lessonGroup-5:
               display_name: सर्वेक्षण
@@ -31749,3 +31763,7 @@ hi:
               key: पाठ - 2
             lesson-3:
               key: पाठ - 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: कंसोल

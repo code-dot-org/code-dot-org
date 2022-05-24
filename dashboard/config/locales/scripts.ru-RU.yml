@@ -7468,6 +7468,10 @@ ru:
               name: Инструменты
             Debugging:
               name: Отладка
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] Содержание уроков"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] Завершение модуля"
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -11080,6 +11084,9 @@ ru:
             lesson-19:
               name: Отладка
         csa4-2022:
+          lessons:
+            Console:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -11087,6 +11094,8 @@ ru:
           lessons:
             lesson-7:
               name: Улучшения для циклов
+            Console:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -11511,6 +11520,8 @@ ru:
               key: Java Lab
             lesson-1:
               key: урок-1
+            Console:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -11521,6 +11532,8 @@ ru:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -11531,6 +11544,8 @@ ru:
             Java Lab:
               name: Java Lab
               key: Java Lab
+            Console:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -12148,3 +12163,7 @@ ru:
               key: урок-2
             lesson-3:
               key: урок-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Консоль

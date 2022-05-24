@@ -2435,3 +2435,11 @@ bg-BG:
           # Моите Приятели Роботи
 
           Научи се да програмираш като пишеш код с приятели!
+      courseF_intro_apps:
+        description: Добре дошли в основите на CS! Всички тези проекти са създадени
+          в Sprite Lab. Пробвайте ги и вижте какво е възможно. На края на този курс,
+          ти ще можеш да създаваш проекти като тези... и други!
+        display_name: Sprite Lab Приложения
+      gradek1_activity_beNice:
+        markdown: "# Поведение в Компютърната Стая\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nОтиди на план на урока\n</button> \n</a>\n\n<br/><br/>"

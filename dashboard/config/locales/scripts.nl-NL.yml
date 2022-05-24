@@ -8455,10 +8455,16 @@ nl:
             lesson-19:
               name: Foutopsporing
         csa4-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
         csa5-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -8766,6 +8772,8 @@ nl:
                 van de unit op een meerkeuzebeoordeling.
             lesson-1:
               key: Les 1
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -8775,12 +8783,17 @@ nl:
           lessons:
             lesson-6:
               name: Intellectuele Eigendom
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-5:
               display_name: Sandbox
         csa8-2022:
+          lessons:
+            Console:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9070,3 +9083,7 @@ nl:
               key: Les 2
             lesson-3:
               key: Les 3
+        csa9-2022:
+          lessons:
+            Console:
+              name: Console

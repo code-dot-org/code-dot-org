@@ -3132,6 +3132,10 @@ mr:
               name: साधने
             Debugging:
               name: डीबगिंग
+            "[TEMPLATE] Content lessons":
+              name: "[TEMPLATE] आशयाचे धडे"
+            "[TEMPLATE] Unit Wrap Up":
+              name: "[TEMPLATE] युनिट रॅप अप"
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -5372,10 +5376,16 @@ mr:
               name: प्रोजेक्टसाठी प्रेरणा
             lesson-19:
               name: डीबगिंग
+        csa4-2022:
+          lessons:
+            Console:
+              name: कन्सोल
         csa5-2022:
           lessons:
             lesson-7:
               name: वाढवलेले फॉर लूप्स
+            Console:
+              name: कन्सोल
         csa1-2022-exemplars:
           lessons:
             lesson-2:
@@ -5555,6 +5565,8 @@ mr:
               key: जावा लॅब
             lesson-1:
               key: धडा -1
+            Console:
+              name: कन्सोल
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -5563,6 +5575,8 @@ mr:
             Java Lab:
               name: जावा लॅब
               key: जावा लॅब
+            Console:
+              name: कन्सोल
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -5571,6 +5585,8 @@ mr:
             Java Lab:
               name: जावा लॅब
               key: जावा लॅब
+            Console:
+              name: कन्सोल
         vpl-csd1-summer-pilot-2022:
           lessons:
             lesson-4:
@@ -6082,3 +6098,7 @@ mr:
               key: धडा -2
             lesson-3:
               key: धडा-3
+        csa9-2022:
+          lessons:
+            Console:
+              name: कन्सोल
