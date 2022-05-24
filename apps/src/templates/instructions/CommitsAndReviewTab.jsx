@@ -31,6 +31,7 @@ const CommitsAndReviewTab = props => {
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
+  const [timelineLoadingError, setTimelineLoadingError] = useState(null);
   const [openReviewError, setOpenReviewError] = useState(null);
 
   const dataApi = useMemo(
@@ -49,9 +50,10 @@ const CommitsAndReviewTab = props => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setTimelineLoadingError(false);
     } catch (err) {
-      // TODO: display error message TBD
       console.log(err);
+      setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
   }, [dataApi]);
@@ -65,9 +67,17 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+  const addCodeReviewComment = async (
+    commentText,
+    reviewId,
+    onSuccess,
+    onFailure
+  ) => {
     try {
-      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      const newComment = await dataApi.submitNewCodeReviewComment(
+        commentText,
+        reviewId
+      );
       setOpenReviewData({
         ...openReviewData,
         comments: [...openReviewData.comments, newComment]
@@ -151,24 +161,30 @@ const CommitsAndReviewTab = props => {
           />
         </div>
       </div>
-      <CodeReviewTimeline
-        timelineData={[
-          ...timelineData,
-          ...(openReviewData ? [openReviewData] : [])
-        ]}
-        addCodeReviewComment={addCodeReviewComment}
-        closeReview={handleCloseReview}
-      />
-      {!openReviewData && (
-        <div style={styles.openCodeReview}>
-          <Button
-            icon="comment"
-            onClick={handleOpenReview}
-            text={javalabMsg.startReview()}
-            color={Button.ButtonColor.blue}
+      {timelineLoadingError ? (
+        <CodeReviewError />
+      ) : (
+        <>
+          <CodeReviewTimeline
+            timelineData={[
+              ...timelineData,
+              ...(openReviewData ? [openReviewData] : [])
+            ]}
+            addCodeReviewComment={addCodeReviewComment}
+            closeReview={handleCloseReview}
           />
-          {openReviewError && <CodeReviewError />}
-        </div>
+          {!openReviewData && (
+            <div style={styles.openCodeReview}>
+              <Button
+                icon="comment"
+                onClick={handleOpenReview}
+                text={javalabMsg.startReview()}
+                color={Button.ButtonColor.blue}
+              />
+              {openReviewError && <CodeReviewError />}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

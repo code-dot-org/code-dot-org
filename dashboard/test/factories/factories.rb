@@ -871,16 +871,20 @@ FactoryGirl.define do
     end
   end
 
-  # For now, this factory returns the channel id of the created project.
-  # This will be improved when we migrate the projects code to ActiveRecord.
-  factory :project, class: 'Projects' do
-    skip_create # disable ActiveRecord persistence
+  factory :project_storage do
+  end
 
-    storage_id 1
-    value Hash.new
-    updated_ip "127.0.0.1"
+  factory :project do
+    transient do
+      owner create :user
+    end
 
-    initialize_with {Projects.new(storage_id).create(value, ip: updated_ip)}
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
+    end
   end
 
   factory :featured_project do
@@ -1545,7 +1549,7 @@ FactoryGirl.define do
       country 'United States'
       postal_code '98109'
       latitude 47.620470
-      longitude (-122.349181)
+      longitude(-122.349181)
     end
 
     # Sydney Opera House
@@ -1554,7 +1558,7 @@ FactoryGirl.define do
       state 'New South Wales'
       country 'Australia'
       postal_code '2000'
-      latitude (-33.859100)
+      latitude(-33.859100)
       longitude 151.200200
     end
   end
@@ -1644,7 +1648,7 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_pardot_memory do
-    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}

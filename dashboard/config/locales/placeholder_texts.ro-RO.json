@@ -22,10 +22,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
+          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hei!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
+          "ed076287532e86365e841e92bfc50d8c": "Salutare lume!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hei!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "albastru",
@@ -504,6 +506,16 @@
         "courseE_playLab_scaffold5": {
           "5cec903c4d41c49412a70a94d54999ee": "Puteți scrie ceva.",
           "3e11a2dc6edb909c47778bed75a81769": "Text aici"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Asta sunt eu! Rikki! Îmi place să scriu cod, să-mi petrec timpul cu Thuy și să mănânc înghețată!",
+          "810896b14fc6615f0c76628b9b6a727e": "Ea este prietena mea cea mai bună, Thuy! E foarte bună la sport!",
+          "6f97975a0bda0c9219915161149cbb26": "Acesta este calculatorul meu! Scriu cod cu ajutorul lui tot timpul!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Asta sunt eu! Rikki! Îmi place să scriu cod, să-mi petrec timpul cu Thuy și să mănânc înghețată!",
+          "810896b14fc6615f0c76628b9b6a727e": "Ea este prietena mea cea mai bună, Thuy! E foarte bună la sport!",
+          "6f97975a0bda0c9219915161149cbb26": "Acesta este calculatorul meu! Scriu cod cu ajutorul lui tot timpul!"
         }
       }
     }
