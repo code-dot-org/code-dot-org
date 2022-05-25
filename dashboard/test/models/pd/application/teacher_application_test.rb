@@ -797,6 +797,7 @@ module Pd::Application
         # Updates the application with principal's responses and run auto_score! again
         application.on_successful_principal_approval_create(principal_approval)
 
+        # Written as a conditional to address Minitest 6 deprecation: `DEPRECATED: Use assert_nil if expecting nil`
         if test_case[:meet_requirement]
           assert application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
                  "Test case index #{index} failed"
