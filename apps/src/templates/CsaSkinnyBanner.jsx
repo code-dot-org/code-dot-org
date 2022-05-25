@@ -6,19 +6,15 @@ import DCDO from '@cdo/apps/dcdo';
 //   Copied styles from 'shared/css/csa_skinny_banner.scss' that's used
 //   in the Pegasus version of this banner:
 //  'pegasus/sites.v3/code.org/views/csa_skinny_banner.haml'.
-import './marketingSkinnyBanner.scss';
+import './csaSkinnyBanner.scss';
 
 const IMAGE_BASE_URL = '/blockly/media/';
 
-// Skinny banner component
-// Current: CSA Launch May 2022
 export default function MarketingSkinnyBanner() {
-  const header_text = 'A new approach to AP® CSA!';
+  const headerText = 'A new approach to AP® CSA!';
   const text =
     'Creative projects and real world connections in our equity-driven curriculum';
 
-  // Only show if DCDO flag is set to true,
-  //   otherwise return null.
   if (!!DCDO.get('csa-skinny-banner', false)) {
     return (
       <a
@@ -27,7 +23,7 @@ export default function MarketingSkinnyBanner() {
       >
         <aside>
           <div className="text-wrapper">
-            <h1>{header_text}</h1>
+            <h1>{headerText}</h1>
             <p>{text}</p>
           </div>
           <img

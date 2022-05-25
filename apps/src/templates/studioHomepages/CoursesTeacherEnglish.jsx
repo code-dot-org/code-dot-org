@@ -11,7 +11,7 @@ import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import MarketingSkinnyBanner from '../MarketingSkinnyBanner';
+import CsaSkinnyBanner from '../CsaSkinnyBanner';
 import i18n from '@cdo/locale';
 
 /**
@@ -34,8 +34,7 @@ class CoursesTeacherEnglish extends Component {
     return (
       <div>
         <div>
-          {/* Currently showing CSA launch banner - May 2022 */}
-          <MarketingSkinnyBanner />
+          <CsaSkinnyBanner />
 
           <ContentContainer
             heading={i18n.courseExplorerHeading()}
