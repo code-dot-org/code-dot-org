@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_24_212716) do
+ActiveRecord::Schema.define(version: 2022_05_25_230111) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -313,7 +313,7 @@ ActiveRecord::Schema.define(version: 2022_05_24_212716) do
     t.integer "code_review_request_id", null: false
     t.integer "commenter_id"
     t.boolean "is_resolved", null: false
-    t.text "comment", size: :medium, null: false
+    t.text "comment", size: :medium
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
