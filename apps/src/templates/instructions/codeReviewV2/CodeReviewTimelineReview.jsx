@@ -7,7 +7,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
