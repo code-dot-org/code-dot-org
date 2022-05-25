@@ -313,14 +313,14 @@ ActiveRecord::Schema.define(version: 2022_05_25_175523) do
     t.integer "code_review_request_id", null: false
     t.integer "commenter_id"
     t.boolean "is_resolved", null: false
-    t.text "comment", null: false
+    t.text "comment", size: :medium, null: false
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
-  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "script_id", null: false
     t.integer "level_id", null: false
@@ -2196,6 +2196,17 @@ ActiveRecord::Schema.define(version: 2022_05_25_175523) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
+  add_foreign_key "ap_school_codes", "schools"
+  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
+  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
+  add_foreign_key "census_inaccuracy_investigations", "users"
+  add_foreign_key "census_overrides", "schools"
+  add_foreign_key "census_submission_form_maps", "census_submissions"
+  add_foreign_key "census_summaries", "schools"
+  add_foreign_key "circuit_playground_discount_applications", "schools"
+  add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "ib_school_codes", "schools"
+  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
