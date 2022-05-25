@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-04 21:57:19 UTC",
+    "serialized_at": "2022-05-24 18:52:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -259,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod1-NewTeacherAdvice"
+        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,
@@ -277,6 +280,28 @@
     },
     {
       "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to CS Principles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2021",
+        "activity_section.key": "9aec8cd0-2b02-4e1a-a102-3173f62566dd"
+      },
+      "level_keys": [
+        "SP-VPL-22-CSP-mod1-NewTeacherAdvice"
+      ]
+    },
+    {
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -301,7 +326,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -326,7 +351,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -405,6 +430,18 @@
         "level.key": "SP-VPL-21-CSP-mod1-NewTeacherAdvice",
         "script_level.level_keys": [
           "SP-VPL-21-CSP-mod1-NewTeacherAdvice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2021",
+        "activity_section.key": "9aec8cd0-2b02-4e1a-a102-3173f62566dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-CSP-mod1-NewTeacherAdvice",
+        "script_level.level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
