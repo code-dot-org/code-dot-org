@@ -165,6 +165,15 @@ class ProgrammingClass < ApplicationRecord
     methods
   end
 
+  def self.get_from_cache(programming_environment_name, key)
+    cache_key = "programming_class/#{programming_environment_name}/#{key}"
+    Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+      puts 'cache miss'
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
+    end
+  end
+
   private
 
   def parsed_examples
