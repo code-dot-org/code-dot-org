@@ -53,6 +53,18 @@
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
 <% secret; end -%>
 
+  ReportingDBDomainNameRecord:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
+          Type: CNAME
+          AliasTarget:
+            DNSName: !GetAtt [<%=app%>CDN, DomainName ]
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
+          TTL: <%= DNS_TTL %>
+          ResourceRecords: [!GetAtt ReportingDBProxyEndpoint.ReportingDBProxyEndpoint]
   DBProxy:
     Type: AWS::RDS::DBProxy
     Properties:
@@ -105,6 +117,23 @@
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReportingDBDomainName:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
+          Type: CNAME
+          TTL: <%= DNS_TTL %>
+          ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.ReportingDBProxyEndpoint ]
+  ReportingDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reporting"
+      DBProxyName: !Ref ReportingDBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
   ReportingDBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
     # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
