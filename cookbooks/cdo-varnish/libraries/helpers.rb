@@ -157,7 +157,7 @@ def process_request(behavior, _)
     end
   )
   if behavior[:query] == false
-    out << "\n" + 'set req.url = regsub(req.url, "\?.*$", "");'
+    out << ("\n" + 'set req.url = regsub(req.url, "\?.*$", "");')
   end
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
