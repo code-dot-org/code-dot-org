@@ -1,7 +1,7 @@
 class CodeReviewNotesController < ApplicationController
   before_action :authenticate_user!
 
-  load_and_authorize_resource :code_review_note, only: [:toggle_resolved]
+  load_and_authorize_resource :code_review_note, only: [:update]
 
   # POST /code_review_notes
   def create
@@ -19,20 +19,19 @@ class CodeReviewNotesController < ApplicationController
     # We wait to authorize until this point because we need to know
     # who owns the project that the comment is associated with.
     authorize! :create, @code_review_note
-
-    if @code_review_note.save
-      return render json: @code_review_note.summarize
-    else
-      return head :bad_request
-    end
+    @code_review_note.save!
+    render json: @code_review_note.summarize
   end
 
-  # PATCH /code_review_notes/:id/toggle_resolved
-  def toggle_resolved
-    if @code_review_note.update(is_resolved: params[:is_resolved])
-      return head :ok
-    else
-      return head :bad_request
+  # PATCH /code_review_notes/:id
+  # Currently, updating is_resolved the note is the only allowed update.
+  def update
+    params.require(:id)
+
+    if params[:isResolved]
+      @code_review_note.update!(is_resolved: params[:isResolved])
     end
+
+    render json: @code_review_note.summarize
   end
 end

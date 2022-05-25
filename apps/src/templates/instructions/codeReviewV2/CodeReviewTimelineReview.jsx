@@ -8,7 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
@@ -18,6 +18,7 @@ const CodeReviewTimelineReview = ({
   isLastElementInTimeline,
   addCodeReviewComment,
   closeReview,
+  resolveComment,
   viewAsCodeReviewer
 }) => {
   const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
@@ -25,15 +26,10 @@ const CodeReviewTimelineReview = ({
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   const handleCloseCodeReview = () => {
-    closeReview(onCloseReviewSuccess, onCloseReviewFailure);
-  };
-
-  const onCloseReviewSuccess = () => {
-    setDisplayCloseError(false);
-  };
-
-  const onCloseReviewFailure = () => {
-    setDisplayCloseError(true);
+    closeReview(
+      () => setDisplayCloseError(false), // on success
+      () => setDisplayCloseError(true) // on failure
+    );
   };
 
   return (
@@ -69,7 +65,8 @@ const CodeReviewTimelineReview = ({
         </div>
         {isOpen && !viewAsCodeReviewer && (
           <div style={styles.codeWorkspaceDisabledMsg}>
-            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
+            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
+            &nbsp;
             {javalabMsg.codeEditingDisabled()}
           </div>
         )}
@@ -80,15 +77,16 @@ const CodeReviewTimelineReview = ({
               id: comment.id,
               name: comment.commenterName,
               commentText: comment.comment,
-              timestampString: comment.createdAt
+              timestampString: comment.createdAt,
+              isResolved: comment.isResolved
             };
             return (
               <Comment
                 comment={convertDataForComponent}
                 key={`code-review-comment-${comment.id}`}
-                onResolveStateToggle={() => {}}
+                onResolveStateToggle={resolveComment}
                 onDelete={() => {}}
-                viewAsCodeReviewer={true}
+                viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
           })}
@@ -115,6 +113,7 @@ CodeReviewTimelineReview.propTypes = {
   review: reviewShape,
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
+  resolveComment: PropTypes.func.isRequired,
   viewAsCodeReviewer: PropTypes.bool
 };
 
