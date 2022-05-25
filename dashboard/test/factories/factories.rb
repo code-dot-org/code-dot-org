@@ -882,10 +882,8 @@ FactoryGirl.define do
     updated_ip '127.0.0.1'
 
     after(:build) do |project, evaluator|
-      unless project.storage_id
-        project_storage = create :project_storage, user_id: evaluator.owner.id
-        project.storage_id = project_storage.id
-      end
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
     end
   end
 
