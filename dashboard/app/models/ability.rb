@@ -152,7 +152,7 @@ class Ability
         code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
       end
 
-      can :toggle_resolved, CodeReviewNote do |code_review_note|
+      can :update, CodeReviewNote do |code_review_note|
         code_review_note.code_review.user_id == user.id
       end
 

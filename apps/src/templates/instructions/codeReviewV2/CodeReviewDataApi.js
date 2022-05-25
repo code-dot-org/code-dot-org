@@ -137,8 +137,20 @@ export default class CodeReviewDataApi {
     });
   }
 
+  resolveComment(commentId, isResolved) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_review_notes/${commentId}`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': this.token},
+        data: {isResolved}
+      })
+        .done(codeReviewComment => resolve(codeReviewComment))
+        .fail(result => reject(result));
+    });
+  }
+
   closeReview(reviewId) {
-    // TODO: call API for close review
     return new Promise((resolve, reject) => {
       $.ajax({
         url: `/code_reviews/${reviewId}`,
