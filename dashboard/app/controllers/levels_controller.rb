@@ -292,6 +292,8 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  rescue ArgumentError, ActiveRecord::RecordInvalid => e
+    render status: :not_acceptable, plain: e.message
   end
 
   # POST /levels/:id/update_start_code

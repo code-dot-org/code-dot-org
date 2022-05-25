@@ -127,7 +127,8 @@ section.cta-curriculum {
   text-align: center;
 }
   .cta-button-wrapper {
-    margin-top: -4.15em;
+    max-width: 610px;
+    margin: -4.15em auto 0;
   }
     .cta-button-wrapper button {
       margin-bottom: 1.5em;
@@ -273,10 +274,15 @@ details {
     text-align: center;
   }
     figure.csa-highlights ul {
-      margin: 0;
+      margin: 0 0 0 1em;
     }
 
-  /* At a glace */
+  /* Reimagine CS */
+  section.reimagine-cs ul:first-of-type {
+    margin-bottom: -1.5em;
+  }
+
+  /* At a glance */
   aside.at-a-glance ul {
     flex-wrap: wrap;
     flex-direction: column;
@@ -319,6 +325,8 @@ details {
   section.top h1 {
     font-size: 32px !important;
   }
+
+
 
   /* CTA - Professional Learning */
   section.cta-pl {

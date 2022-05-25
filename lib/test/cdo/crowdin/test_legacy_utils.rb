@@ -1,5 +1,5 @@
 require_relative '../../test_helper'
-require 'cdo/crowdin/utils'
+require_relative '../../../cdo/crowdin/legacy_utils'
 require 'tempfile'
 
 class MockCrowdinProject < Minitest::Mock
@@ -30,7 +30,7 @@ class MockCrowdinProject < Minitest::Mock
   end
 end
 
-class CrowdinUtilsTest < Minitest::Test
+class CrowdinLegacyUtilsTest < Minitest::Test
   def setup
     @mock_project = MockCrowdinProject.new
 
@@ -41,7 +41,7 @@ class CrowdinUtilsTest < Minitest::Test
       locales_dir: Dir.mktmpdir("locales"),
       logger: Logger.new('/dev/null')
     }
-    @utils = Crowdin::Utils.new(@mock_project, @options)
+    @utils = Crowdin::LegacyUtils.new(@mock_project, @options)
     @latest_crowdin_etags = {
       "i1-8n" => {
         "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
