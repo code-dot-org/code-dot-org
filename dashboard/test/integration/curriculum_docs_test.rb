@@ -139,6 +139,13 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       end
       assert_response :success
     end
+
+    test "environment get_summary_by_name should cache all queries" do
+      assert_cached_queries(0) do
+        get get_summary_by_name_programming_environment_path(@programming_environment.name)
+      end
+      assert_response :success
+    end
   end
 
   class CodeDocsQueryCountTest < CurriculumDocsTest
@@ -174,6 +181,13 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
     test "signed out class show query count" do
       assert_queries(10) do
         get programming_environment_programming_class_path(@programming_environment.name, @programming_class.key)
+      end
+      assert_response :success
+    end
+
+    test "environment get_summary_by_name query count" do
+      assert_queries(6) do
+        get get_summary_by_name_programming_environment_path(@programming_environment.name)
       end
       assert_response :success
     end
