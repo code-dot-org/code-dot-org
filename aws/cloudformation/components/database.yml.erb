@@ -119,7 +119,8 @@
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
+        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
+        - Name: <%="#{subdomain.delete_suffix(domain)}-db-reporting.#{domain}"%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
           ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
