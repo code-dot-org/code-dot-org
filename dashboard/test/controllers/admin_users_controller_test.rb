@@ -375,6 +375,22 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_equal 1, PairedUserLevel.pairs(driver_user_level).count
   end
 
+  test "delete_progress deletes code reviews" do
+    sign_in @admin
+
+    project_storage = create :project_storage, user_id: @user.id
+
+    create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level1.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+    create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level2.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+    create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level3.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+
+    create :code_review, user_id: @user.id, script_id: create(:script).id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+
+    post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: 'Testing'}
+    assert_equal 0, CodeReview.where(user_id: @user.id, script_id: @script.id).count
+    assert_equal 1, CodeReview.where(user_id: @user.id).count
+  end
+
   generate_admin_only_tests_for :user_projects_form
 
   test 'user_projects finds user by id' do
