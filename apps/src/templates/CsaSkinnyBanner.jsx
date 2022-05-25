@@ -10,7 +10,7 @@ import './csaSkinnyBanner.scss';
 
 const IMAGE_BASE_URL = '/blockly/media/';
 
-export default function MarketingSkinnyBanner() {
+export default function CsaSkinnyBanner() {
   const headerText = 'A new approach to AP® CSA!';
   const text =
     'Creative projects and real world connections in our equity-driven curriculum';
