@@ -92,8 +92,8 @@ class InstructionsCSF extends React.Component {
       displayScrollButtons: true
     };
 
-    this.debouncedCalculateRenderedHeight = debounce(
-      this.calculateRenderedHeight,
+    this.debouncedAdjustRenderedHeight = debounce(
+      this.adjustRenderedHeight,
       300
     );
   }
@@ -108,6 +108,13 @@ class InstructionsCSF extends React.Component {
     }
   }
 
+  adjustRenderedHeight(props = this.props) {
+    const minHeight = this.getMinHeight(props.collapsed);
+    const maxHeight = this.getMaxHeight();
+    const newHeight = Math.max(Math.min(props.height, maxHeight), minHeight);
+    this.props.setInstructionsRenderedHeight(newHeight);
+  }
+
   /**
    * When collapsed, height can change when we get additional feedback
    * or the hint prompt. In that case, we want to always resize.
@@ -116,16 +123,7 @@ class InstructionsCSF extends React.Component {
    * again, we want to increase height.
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight(nextProps.collapsed);
-    const newHeight = Math.min(nextProps.maxHeight, minHeight);
-
-    const shouldUpdateHeight = nextProps.collapsed
-      ? newHeight !== this.props.height
-      : nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
-
-    if (shouldUpdateHeight) {
-      this.props.setInstructionsRenderedHeight(newHeight);
-    }
+    this.adjustRenderedHeight(nextProps);
   }
 
   UNSAFE_componentWillUpdate(nextProps) {
@@ -142,7 +140,7 @@ class InstructionsCSF extends React.Component {
 
   componentDidUpdate() {
     this.setCanScrollInstructions();
-    this.debouncedCalculateRenderedHeight();
+    this.debouncedAdjustRenderedHeight();
     this.props.adjustMaxNeededHeight();
   }
 
@@ -156,21 +154,6 @@ class InstructionsCSF extends React.Component {
       this.setState({
         displayScrollButtons: canScroll
       });
-    }
-  }
-
-  calculateRenderedHeight() {
-    const minHeight = this.getMinHeight();
-    const maxHeight = this.getMaxHeight();
-    const heightOutOfBounds =
-      this.props.height < minHeight || this.props.height > maxHeight;
-
-    if (heightOutOfBounds) {
-      const newHeight = Math.max(
-        Math.min(this.props.height, maxHeight),
-        minHeight
-      );
-      this.props.setInstructionsRenderedHeight(newHeight);
     }
   }
 
