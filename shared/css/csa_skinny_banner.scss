@@ -8,7 +8,7 @@ $width-sm: 600px;
   height: 120px;
   margin-bottom: 2em;
   padding: 0 2.5em;
-  background-image: url('/images/csa/csa-skinny-banner-bg.svg');
+  background: url('/images/csa/csa-skinny-banner-bg.svg') top left no-repeat;
   overflow: hidden;
 
   @media screen and (max-width: $width-sm) {
