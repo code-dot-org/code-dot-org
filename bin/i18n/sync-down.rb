@@ -6,7 +6,7 @@
 
 require_relative 'i18n_script_utils'
 
-require 'cdo/crowdin/utils'
+require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 def with_elapsed
