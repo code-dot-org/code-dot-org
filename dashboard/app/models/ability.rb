@@ -122,8 +122,8 @@ class Ability
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
       end
       can :destroy, ReviewableProject, user_id: user.id
-      can :project_commits, ProjectVersion do |_, project_owner, project_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
+      can :project_commits, ProjectVersion do |_, project_owner|
+        project_owner.id === user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|
