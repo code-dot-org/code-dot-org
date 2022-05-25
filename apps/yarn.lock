@@ -1585,8 +1585,7 @@
   integrity sha512-Aex5zpSmWDvTBRGNJWwI12qYWhXG+u0bnb74LD917EdE94tsz4P2p7B/tby3NZdsE4DvNHjUG0dxCwxTbcitHg==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.0.0"
-  uid ""
+  version "0.1.0"
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
@@ -5511,6 +5510,11 @@ csstype@^3.0.2:
 csv-parse@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.1.7.tgz#6e4678f7967013ac823929a4303a3ce177115abc"
+
+csv-parse@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-5.1.0.tgz#e587e969bf0385ecf4f36f584ed5ddebba0237ab"
+  integrity sha512-JL+Q6YEikT2uoe57InjFFa6VejhSv0tDwOxeQ1bVQKeUC/NCnLAAZ8n3PzowPQQLuZ37fysDYZipB2UJkH9C6A==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
