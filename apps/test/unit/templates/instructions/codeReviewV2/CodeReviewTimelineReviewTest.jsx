@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
@@ -40,6 +40,7 @@ const DEFAULT_PROPS = {
   isLastElementInTimeline: false,
   addCodeReviewComment: () => {},
   closeReview: () => {},
+  resolveComment: () => {},
   viewAsCodeReviewer: false
 };
 
