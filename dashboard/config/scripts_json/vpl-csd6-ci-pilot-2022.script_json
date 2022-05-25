@@ -7,13 +7,12 @@
       "has_verified_resources": true,
       "is_maker_unit": true,
       "is_migrated": true,
-      "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-23 20:48:37 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-05-24 08:33:39 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -417,6 +416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -438,7 +440,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,7 +465,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,7 +490,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -504,7 +515,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
