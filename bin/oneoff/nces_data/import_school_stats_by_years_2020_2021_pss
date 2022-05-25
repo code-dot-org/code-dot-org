@@ -42,7 +42,7 @@ COMMUNITY_TYPE_MAP = {
 }.freeze
 
 AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |filename|
-  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: true) do |row|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: false) do |row|
     {
       school_id:          row['School ID - NCES Assigned [Private School] Latest available year'],
       school_year:        SURVEY_YEAR,
@@ -79,9 +79,9 @@ AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_schools_private.csv") do |
 end
 
 AWS::S3.process_file('cdo-nces', "2020-2021/pss/final_locale_private.csv") do |filename|
-  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: true) do |row|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}, dry_run: false) do |row|
     {
-      school_id:      row['PPIN'].to_i.to_s,
+      school_id:      row['PPIN'],
       school_year:    SURVEY_YEAR,
       community_type: row['LOCALE'].presence.try {|v| COMMUNITY_TYPE_MAP[v]},
     }
