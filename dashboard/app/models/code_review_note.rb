@@ -19,6 +19,7 @@ class CodeReviewNote < ApplicationRecord
   # removed.
 
   belongs_to :commenter, class_name: 'User'
+  belongs_to :code_review, foreign_key: 'code_review_request_id'
 
   acts_as_paranoid
 

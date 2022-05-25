@@ -380,7 +380,8 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     project_storage = create :project_storage, user_id: @user.id
 
-    create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level1.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+    review1 = create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level1.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
+    create :code_review_note, code_review_request_id: review1.id
     create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level2.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
     create :code_review, user_id: @user.id, script_id: @script.id, level_id: @level3.id, project_id: create(:project, owner: @user, project_storage: project_storage).id
 
@@ -388,6 +389,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: 'Testing'}
     assert_equal 0, CodeReview.where(user_id: @user.id, script_id: @script.id).count
+    assert_equal 0, CodeReviewComment.where(project_owner_id: @user.id).count
     assert_equal 1, CodeReview.where(user_id: @user.id).count
   end
 
