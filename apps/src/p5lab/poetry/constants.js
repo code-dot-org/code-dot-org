@@ -29,7 +29,8 @@ export const PALETTES = {
 // Notes:
 // - author is not translated.
 // - Poems are shown in all languages, unless there is a locales attribute, in which case
-//   the poem is shown in the dropdown only for users with a current locale that matches.
+//   the poem is shown in the dropdown only for users with a current locale that is included
+//   in the array.
 // - If the locales attribute is set, then title is used and is not translated.
 // - If the locales attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
