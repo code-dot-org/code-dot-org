@@ -7,7 +7,7 @@ module Crowdin
   # @see https://support.crowdin.com/api/api-integration-setup/#rate-limits
   MAX_THREADS = 10
 
-  class Utils
+  class LegacyUtils
     attr_reader :project
     attr_reader :files_to_download_json
     attr_reader :files_to_sync_out_json
