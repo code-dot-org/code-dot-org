@@ -100,7 +100,10 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-    const centerItems = this.props.height > 56;
+    const showItems = this.props.isMinecraft ? this.props.height > 46 : true;
+    const centerItems = this.props.isMinecraft
+      ? this.props.height > 100
+      : this.props.height > 56;
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
@@ -183,10 +186,12 @@ class ScrollButtons extends React.Component {
     );
 
     return (
-      <div style={[containerStyle, this.props.style]}>
-        {upButton}
-        {downButton}
-      </div>
+      showItems && (
+        <div style={[containerStyle, this.props.style]}>
+          {upButton}
+          {downButton}
+        </div>
+      )
     );
   }
 }

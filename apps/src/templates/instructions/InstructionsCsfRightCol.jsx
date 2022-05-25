@@ -156,10 +156,10 @@ const styles = {
       marginBottom: 0
     },
     scrollButtons: {
-      left: 38
+      left: 0
     },
     scrollButtonsRtl: {
-      right: 38
+      right: 0
     }
   }
 };
