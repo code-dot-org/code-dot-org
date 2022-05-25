@@ -1,5 +1,4 @@
 import cookies from 'js-cookie';
-import _ from 'lodash';
 
 /**
  * Determines if the current user has already submitted an Abuse report for this project.
@@ -8,7 +7,7 @@ import _ from 'lodash';
 export const userAlreadyReportedAbuse = function(channelId) {
   return (
     cookies.get('reported_abuse') &&
-    _.includes(JSON.parse(cookies.get('reported_abuse')), channelId)
+    JSON.parse(cookies.get('reported_abuse')).includes(channelId)
   );
 };
 

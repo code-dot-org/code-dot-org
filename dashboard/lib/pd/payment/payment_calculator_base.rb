@@ -221,12 +221,12 @@ module Pd::Payment
       rate = district_payment_term.rate
 
       case district_payment_term.rate_type
-        when Pd::DistrictPaymentTerm::RATE_HOURLY
-          return hours * rate
-        when Pd::DistrictPaymentTerm::RATE_DAILY
-          return days * rate
-        else
-          raise "Unexpected district payment term rate type #{district_payment_term.rate_type} for id #{district_payment_term.id}"
+      when Pd::DistrictPaymentTerm::RATE_HOURLY
+        return hours * rate
+      when Pd::DistrictPaymentTerm::RATE_DAILY
+        return days * rate
+      else
+        raise "Unexpected district payment term rate type #{district_payment_term.rate_type} for id #{district_payment_term.id}"
       end
     end
   end

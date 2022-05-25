@@ -800,6 +800,7 @@ uk:
         csd_what_computers_are: Що таке комп’ютер?
         playlab_2021: Вступ до Ігрової лабораторії
         playlab_2021_reader: Вступ до Ігрової лабораторії
+        csp_applab_parameters: Функції з параметрами
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

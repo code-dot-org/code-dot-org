@@ -1121,6 +1121,9 @@
         "Course 4 Playlab For Loops 4b": {
           "Course_4_Playlab_For_Loops_4b_1": "Mindkét karakternek saját `counter` változója van. Így mindkét `számold` ciklus egymástól függetlenül tud működni.",
           "Course_4_Playlab_For_Loops_4b_2": "Ebben a feladatban csak a \"lépésköz\" értékét változtathatod meg, ráadásul csak az egyik `számold` ciklusban."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Kattints ide, hogy jelmezeket adhass a projektedhez."
         }
       }
     }

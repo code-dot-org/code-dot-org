@@ -4094,7 +4094,7 @@
           },
           "draw a circle": {
             "name": "画一个圆圈",
-            "description": "用给予的半径画一个圆圈",
+            "description": "用给定的半径画一个圆圈",
             "parameters": {
               "radius": "半径"
             }

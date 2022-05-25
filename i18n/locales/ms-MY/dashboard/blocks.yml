@@ -4,6 +4,22 @@ ms:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': lebih kecil
+            '0.75': kecil
+            '1.00': sederhana
+            '2.00': besar
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': lebih kecil
+            '0.75': kecil
+            '1.00': sederhana
+            '2.00': besar
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} berselang-seli setiap {N} corak berirama \nantara {MOVE1} dan {MOVE2}"
         options:
@@ -1023,6 +1039,15 @@ ms:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): bergetar
+            new Behavior(jittering, []): terketar
+            new Behavior(wobbling, []): bergoyang
+            new Behavior(wandering, []): merayau
+            new Behavior(patrolling, []): meronda
+            new Behavior(moving_west_and_looping, []): bergerak ke barat dan bergelung
+            new Behavior(moving_east_and_looping, []): bergerak ke timur dan bergelung
             new Behavior(moving_north_and_looping, []): bergerak ke utara dan gelung
             new Behavior(moving_south_and_looping, []): bergerak ke selatan dan gelung
       gamelab_comment:
@@ -1041,7 +1066,7 @@ ms:
         text: lukis garisan {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
@@ -1067,6 +1092,7 @@ ms:
         options:
           CHOICE:
             '"this"': ini
+            '"other"': lain
       gamelab_getTime:
         text: masa dalam {UNIT}
         options:
@@ -1200,8 +1226,6 @@ ms:
             '"pop"': pop
             '"rain"': hujan
             '"spiral"': lingkaran
-      gamelab_makeNewScaledSprite:
-        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       gamelab_makeNumSprites:
@@ -1214,6 +1238,12 @@ ms:
             '90': bawah
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kecil
+            '50': sederhana
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:
@@ -1291,6 +1321,7 @@ ms:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): bergerak dengan kunci arah
+            new Behavior(driving_with_arrow_keys, []): memandu dengan kekunci anak panah
             draggable(): diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
@@ -2006,12 +2037,28 @@ ms:
         text: 'sprite {ANIMATION_NAME} bermula {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': bergetar
+            '"growing"': membesar
+            '"jittering"': terketar
+            '"shrinking"': mengecil
+            '"spinning_left"': berputar ke kiri
+            '"spinning_right"': berputar ke kanan
             '"swimming_left_and_right"': Berenang
+            '"wandering"': merayau
+            '"wobbling"': bergoyang
       Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} berhenti {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': bergetar
+            '"growing"': membesar
+            '"jittering"': terketar
+            '"shrinking"': mengecil
+            '"spinning_left"': berputar ke kiri
+            '"spinning_right"': berputar ke kanan
             '"swimming_left_and_right"': Berenang
+            '"wandering"': merayau
+            '"wobbling"': bergoyang
             '"all"': "--semua tingkah laku--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

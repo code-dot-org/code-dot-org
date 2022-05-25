@@ -2078,6 +2078,9 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
         }
       }
     }

@@ -4656,6 +4656,9 @@ ga:
             csp_project:
               display_name: Tionscadal
         csp5-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_lists:
               display_name: Liostaí
@@ -4665,6 +4668,8 @@ ga:
               display_name: Trasnáil
             csp_project:
               display_name: Tionscadal
+            lessonGroup-5:
+              display_name: Suirbhé Iarchúrsa
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -4703,25 +4708,53 @@ ga:
             csf_events:
               display_name: Teagmhais
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
+        csp6-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp7-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_parameters_return_values:
               display_name: Paraiméadair agus Luachanna Athfhillte
             csp_libraries:
               display_name: Leabharlanna
+            lessonGroup-3:
+              display_name: Suirbhé Iarchúrsa
+        csp8-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Suirbhé Iarchúrsa
         csp9-2022:
           lessons:
             Machine Learning:
               name: Meaisínfhoghlaim
             Machine Learning and Bias:
               name: Meaisínfhoghlaim
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Aonad 9: Sonraí'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         csp10-2022:
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+            lessonGroup-2:
+              display_name: Suirbhé Iarchúrsa
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -4821,6 +4854,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+            lessonGroup-5:
+              display_name: Suirbhé
         pre-express-2022:
           lesson_groups:
             csf_sequencing:
@@ -4829,6 +4864,7 @@ ga:
               display_name: Lúba
             csf_events:
               display_name: Teagmhais
+          description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí: scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad bhliain.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -4852,6 +4888,9 @@ ga:
             lesson-19:
               name: Dífhabhtú
         csa4-2022:
+          lessons:
+            lesson-11:
+              name: Randamach
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -4908,9 +4947,11 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
-        vpl-csd1-summer-pilot-2022:
+            lessonGroup-5:
+              display_name: Suirbhé
+        vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-9:
+            lesson-3:
               name: Ceachtanna a Phleanáil
         csa2-2022-exemplars:
           lessons:
@@ -4944,3 +4985,86 @@ ga:
               key: Lúba "Do Gach"
             Lesson Planning:
               key: Ceachtanna a Phleanáil
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csd1_1:
+              display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            csd1_2:
+              display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+            csd1_3:
+              display_name: Ceachtanna Malartacha
+        csd2-2022:
+          lessons:
+            Peer Review and Final Touches:
+              name: Piarmheasúnú agus Bailchríoch
+              key: Piarmheasúnú agus Bailchríoch
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Athróga
+              key: Athróga
+            Sprites:
+              name: Sprideanna
+              key: Sprideanna
+            Sprite Properties:
+              name: Airíonna na Spride
+              key: Airíonna na Spride
+            Text:
+              name: Téacs
+              key: Téacs
+            Conditionals:
+              name: Coinníollacha
+              key: Coinníollacha
+            Velocity:
+              name: Treoluas
+              key: Treoluas
+            Functions:
+              name: Feidhmeanna
+              key: Feidhmeanna
+          lesson_groups:
+            csd3_1:
+              display_name: 'Caibidil 1: Íomhánna agus Beochan'
+            csd3_2:
+              display_name: 'Caibidil 2: Tógáil Cluichí'
+            cspSurvey:
+              display_name: Suirbhé
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
+            csd4_2:
+              display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
+            cspSurvey:
+              display_name: Suirbhé
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Caibidil 1: Léiriú Sonraí'
+            csd5_2:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            cspSurvey:
+              display_name: Suirbhé
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Suirbhé
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Feidhmeanna
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+            lessonGroup-4:
+              display_name: Suirbhé
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
+        csp-post-survey-2022:
+          title: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'

@@ -2491,3 +2491,24 @@ sr:
             For Loops:
               name: Бројачке петље
               key: Бројачке петље
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Променљиве
+              key: Променљиве
+            Text:
+              name: текст
+              key: текст
+            Conditionals:
+              name: Кондиционали
+              key: Кондиционали
+            Velocity:
+              name: Брзина
+              key: Брзина
+            Functions:
+              name: Функције
+              key: Функције
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Функције

@@ -2,23 +2,43 @@
   "sv-SE": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
         "program/dance-extras/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/minecraft/unversioned": {
           "word": "Felsökning"
         },
         "program/minecraft/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "loop/minecraft/unversioned": {
           "word": "Loop"
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/hero/unversioned": {
           "word": "Felsökning"
         },
         "program/hero/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "function/hero/unversioned": {
           "word": "Funktion"
@@ -26,6 +46,10 @@
         "code/poem-art/2021": {
           "word": "Kod",
           "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "event/poem-art/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "line/poem-art/2021": {
           "word": "Rad",
@@ -39,53 +63,88 @@
           "word": "Program",
           "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
         },
+        "code/flappy/unversioned": {
+          "word": "kod",
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
         "debugging/flappy/unversioned": {
           "word": "Felsökning"
         },
         "program/flappy/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Felsökning"
         },
         "program/hourofcode/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/frozen/unversioned": {
           "word": "Felsökning"
         },
         "program/frozen/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/iceage/unversioned": {
           "word": "Felsökning"
         },
         "program/iceage/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/artist/unversioned": {
           "word": "Felsökning"
         },
         "program/artist/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/gumball/unversioned": {
           "word": "Felsökning"
         },
         "program/gumball/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "event/dance/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/dance/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/aquatic/unversioned": {
           "word": "Felsökning"
         },
         "program/aquatic/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Villkor"
@@ -96,29 +155,53 @@
         "encryption/hoc-encryption/unversioned": {
           "word": "Kryptering"
         },
+        "code/starwars/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
         "debugging/starwars/unversioned": {
           "word": "Felsökning"
         },
         "program/starwars/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/mc/unversioned": {
           "word": "Felsökning"
         },
         "program/mc/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/playlab/unversioned": {
           "word": "Felsökning"
         },
         "program/playlab/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Felsökning"
         },
         "program/starwarsblocks/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "event/outbreak/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "event/sports/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "code/sports/unversioned": {
           "word": "Kod"
@@ -127,29 +210,62 @@
           "word": "Felsökning"
         },
         "program/sports/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/infinity/unversioned": {
           "word": "Felsökning"
         },
         "program/infinity/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "event/basketball/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/basketball/unversioned": {
           "word": "Felsökning"
         },
         "program/basketball/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/dance-2019/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/poem-art/unversioned": {
           "word": "Program",
@@ -170,10 +286,15 @@
           "word": "Beteende"
         },
         "program/coursef/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "algorithm/coursef/2021": {
           "word": "Algoritm"
+        },
+        "event/coursef/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "variable/coursef/2021": {
           "word": "Variabel"
@@ -224,10 +345,15 @@
           "word": "Dubbelklicka"
         },
         "program/courseb/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "loop/courseb/2021": {
           "word": "Loop"
+        },
+        "event/courseb/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "algorithm/coursea/2021": {
           "word": "Algoritm"
@@ -236,7 +362,8 @@
           "word": "Felsökning"
         },
         "program/coursea/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "click/coursea/2021": {
           "word": "Klick"
@@ -253,6 +380,10 @@
         "loop/coursea/2021": {
           "word": "Loop"
         },
+        "event/coursea/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
         "algorithm/coursec/2021": {
           "word": "Algoritm"
         },
@@ -263,10 +394,15 @@
           "word": "Felsökning"
         },
         "program/coursec/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "loop/coursec/2021": {
           "word": "Loop"
+        },
+        "event/coursec/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "binary/coursec/2021": {
           "word": "Binära"
@@ -275,7 +411,8 @@
           "word": "Algoritm"
         },
         "program/coursed/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "bug/coursed/2021": {
           "word": "Bugg"
@@ -288,6 +425,13 @@
         },
         "frustrated/coursed/2021": {
           "word": "Frustrerad"
+        },
+        "event/coursed/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "code/coursed/2021": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "conditionals/coursed/2021": {
           "word": "Villkor"
@@ -305,10 +449,15 @@
           "word": "Felsökning"
         },
         "program/express/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "behavior/express/2021": {
           "word": "Beteende"
+        },
+        "event/express/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "loop/express/2021": {
           "word": "Loop"
@@ -347,16 +496,25 @@
           "word": "Felsökning"
         },
         "program/pre-express/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "loop/pre-express/2021": {
           "word": "Loop"
+        },
+        "event/pre-express/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "behavior/coursee/2021": {
           "word": "Beteende"
         },
         "algorithm/coursee/2021": {
           "word": "algoritm"
+        },
+        "event/coursee/2021": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "copyright/coursee/2021": {
           "word": "Copyright"
@@ -391,6 +549,9 @@
         "ethics/csd/2021": {
           "word": "Etik"
         },
+        "user/csd/2021": {
+          "word": "Användare"
+        },
         "prototype/csd/2021": {
           "word": "Prototyp"
         },
@@ -422,7 +583,8 @@
           "word": "Felsökning"
         },
         "program/csd/2021": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "variable/csd/2021": {
           "word": "Variabel"

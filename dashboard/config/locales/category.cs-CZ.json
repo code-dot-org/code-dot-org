@@ -1,0 +1,35 @@
+{
+  "cs-CZ": {
+    "data": {
+      "category": {
+        "ccela/SL": {
+          "description": "Mluvení a poslech"
+        },
+        "ccmath/MP": {
+          "description": "Cvičení z matematiky"
+        },
+        "csta2011/CPP": {
+          "description": "Počítačová praxe a programování"
+        },
+        "csta2011/CT": {
+          "description": "Aritmetické Myšlení"
+        },
+        "ccela/L": {
+          "description": "Jazyk"
+        },
+        "ccela/RI": {
+          "description": "Čtení informačně"
+        },
+        "ccela/W": {
+          "description": "Psaní"
+        },
+        "csta2011/CL": {
+          "description": "Spolupráce"
+        },
+        "csta/IC": {
+          "description": "Dopady počítačů"
+        }
+      }
+    }
+  }
+}

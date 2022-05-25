@@ -25,6 +25,9 @@
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Percepatkannya, Perlahankannya"
         },
+        "2c451b2f-6820-47bb-94e0-966633757f93": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
+        },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
           "name": "Di sebalik Hour of Code"
         },
@@ -98,6 +101,9 @@
         "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
           "description": "Anda mempunyai dua nota pelekat. Pada satu nota, tuliskan satu perkara yang anda pelajari tentang pengekodan hari ini.Pada nota kedua, tuliskan satu perkara yang anda pelajari tentang puisi hari ini. Mari berkongsi bersama seluruh kelas dengan mengangkat tangan anda untuk menjawab soalan ini: Apakah yang anda harapkan untuk belajar tentang pengekodan dan sains komputer lagi dalam pelajaran seterusnya?"
         },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "Mengatur pentas"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -135,6 +141,10 @@
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Di sebalik Hour of Code"
         },
+        "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
             null
@@ -153,8 +163,14 @@
             null
           ]
         },
+        "144b447f-1c5d-413b-a08c-65dda905a706": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
+        },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Di sebalik Hour of Code"
+        },
+        "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "Mengatur pentas"
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
@@ -169,6 +185,10 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Di sebalik Hour of Code"
         },
+        "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
           "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
@@ -176,6 +196,7 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Sokongan Umum",
           "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
@@ -201,6 +222,9 @@
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artis"
         },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "Mengatur pentas"
+        },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
             null
@@ -214,6 +238,9 @@
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Di sebalik Hour of Code"
         },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
             null
@@ -224,10 +251,20 @@
             null
           ]
         },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Sokongan Umum"
+        },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
           "tips": [
             null
           ]
+        },
+        "0600e9df-03bd-4d61-9876-7516a87c2d30": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
+        },
+        "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
@@ -236,6 +273,7 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Sokongan Umum",
           "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
@@ -301,6 +339,10 @@
             null
           ]
         },
+        "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
@@ -308,6 +350,7 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Sokongan Umum",
           "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
@@ -319,6 +362,9 @@
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
+        },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "Mengatur pentas"
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -335,6 +381,9 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Di sebalik Hour of Code"
+        },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
@@ -353,6 +402,9 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Di sebalik Hour of Code"
+        },
+        "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "Mengatur pentas"
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -378,6 +430,10 @@
             null
           ]
         },
+        "9d3ef78a-4043-489e-898b-f407c914f698": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
           "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
@@ -385,6 +441,7 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Sokongan Umum",
           "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
@@ -396,6 +453,9 @@
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
+        },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "Mengatur pentas"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -409,6 +469,9 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Di sebalik Hour of Code"
+        },
+        "b0fff664-80cc-4318-b031-edf88ad1aebc": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
         },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
@@ -484,6 +547,9 @@
             null
           ]
         },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "Mengatur pentas"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -518,6 +584,12 @@
             null
           ]
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "Mengatur pentas"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Sokongan Umum"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
             null
@@ -547,6 +619,13 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Percepatkannya, Perlahankannya"
         },
+        "7905508e-c354-4909-93eb-38e2e9ef5661": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
+        },
+        "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
@@ -557,10 +636,16 @@
             null
           ]
         },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Sokongan Umum"
+        },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
             null
           ]
+        },
+        "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Membangkitkan Keseronokan!",
@@ -574,6 +659,9 @@
           "tips": [
             null
           ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Latih AI untuk Membersihkan Lautan"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: Data Latihan & Bias - Video"
@@ -589,9 +677,6 @@
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "progression_name": "Ajar AI Perkataan Baharu"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Mula Memanas"
-        },
         "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
           "name": "Aktiviti Utama (Lama)"
         },
@@ -601,6 +686,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Penggulungan"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
@@ -608,6 +697,7 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Sokongan Umum",
           "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan][0].\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
@@ -625,8 +715,14 @@
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "Pembolehubah"
         },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "Sifat Peperi"
+        },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Fungsi"
+        },
+        "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
+          "progression_name": "Permainan Pengumpul"
         },
         "90bc9191-8e68-41bd-b8e9-8291930dca38": {
           "progression_name": "Acara-acara"
@@ -646,14 +742,93 @@
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Penyahpepijatan"
         },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Cabaran",
+          "progression_name": "Cabaran"
+        },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Cabaran"
+        },
         "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"
+        },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Cabaran"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Cabaran"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Cabaran"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Cabaran"
+        },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Cabaran"
+        },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Cabaran"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Cabaran"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Cabaran"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Cabaran"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Cabaran"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Cabaran"
+        },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Cabaran"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Cabaran"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Cabaran"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Cabaran"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Cabaran"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Cabaran"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Cabaran"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Cara Membuat Peperi"
         },
         "71c84958-5cc4-467d-8c97-f2f63123c47d": {
           "progression_name": "Video"
         },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Cabaran"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Cabaran"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Cabaran"
+        },
         "b6a63f32-8007-4b17-ae9b-718652243e78": {
           "progression_name": "Artis: Pemboleh Ubah"
+        },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Cabaran"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Cabaran"
         },
         "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
           "progression_name": "Projek Lab Sprite"
@@ -662,11 +837,38 @@
           "name": "Projek Artis",
           "progression_name": "Projek Artis"
         },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Cabaran"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Cabaran"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Cabaran"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Cabaran"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Cara Membuat Peperi"
+        },
         "345e2136-8d60-4513-a0d9-f7db80faff4a": {
           "progression_name": "Video"
         },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Cabaran"
+        },
         "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
           "progression_name": "Video"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Cabaran"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Cabaran"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Cabaran"
         },
         "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
           "progression_name": "Projek Lab Sprite"
@@ -682,12 +884,33 @@
           "name": "Projek Artis",
           "progression_name": "Projek Artis"
         },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Cabaran"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Cabaran"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Cabaran"
+        },
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
           "name": "Tambahan Pelajaran",
           "progression_name": "Tambahan Pelajaran"
         },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Cabaran"
+        },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"
+        },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Cabaran"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Cabaran"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Cabaran"
         },
         "92340731-e0b6-4342-8045-17e19688a200": {
           "progression_name": "Kod Permainan Flappy Anda Sendiri"
@@ -698,8 +921,14 @@
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "Pembolehubah"
         },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "Sifat Peperi"
+        },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "Fungsi"
+        },
+        "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
+          "progression_name": "Permainan Pengumpul"
         },
         "de9506b3-18cc-45c8-a490-9f9b49505977": {
           "progression_name": "Acara-acara"
@@ -716,14 +945,24 @@
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Penyahpepijatan"
         },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Cabaran",
+          "progression_name": "Cabaran"
+        },
         "2af454bc-9b55-4205-b0fd-247af66b3d13": {
           "progression_name": "Lukisan"
         },
         "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
           "progression_name": "Pembolehubah"
         },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "Sifat Peperi"
+        },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
           "progression_name": "Fungsi"
+        },
+        "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
+          "progression_name": "Permainan Pengumpul"
         },
         "14876891-4b0e-4960-878d-f5c7b5771261": {
           "progression_name": "Acara-acara"
@@ -739,6 +978,10 @@
         },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Penyahpepijatan"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Cabaran",
+          "progression_name": "Cabaran"
         },
         "11c25022-a283-488e-9952-4d58bd243a7e": {
           "progression_name": "Gambaran Keseluruhan"
@@ -894,6 +1137,7 @@
           "description": "**Lakukan ini:** Dengan menggunakan slaid mula memanas pelajaran, atau [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ini, tunjukkan kepada murid animasi semut dan pepatung.\n\n**Bincangkan:** _Bagaimanakah anda menghuraikan adegan peperi ini?\nJika anda mahu seseorang mencipta adegan ini untuk anda pada komputer, apakah arahan yang diperlukan oleh mereka?_\n\n**Matlamat perbincangan:** Pelajar perlu mengenal pasti kedua-dua peperi dalam projek ini, huraikan tingkah laku (pergerakan) peperi tersebut dan perhatikan juga latar belakangnya.\nSila berikan masa kepada pelajar melakukan sumbang saran ke atas idea. Jika mereka tidak pasti mengenai perkara yang perlu dikatakan, terangkan bahawa anda hanya meminta mereka menyatakan pemerhatian tentang perkara yang mereka lihat.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Membuat Peperi",
           "description": "#### Ramalan (3 minit)\n\n**Lakukan Ini:** Minta pelajar baca kod yang disediakan dan buat ramalan tentang perkara yang akan berlaku. Selepas menekan “Jalankan”, berikan masa untuk pelajar merenungkan apa-apa perkara yang mereka dapati menarik atau mengejutkan mereka.",
           "tips": [
             " Dalam teka-teki ramalan pelajar diminta membaca atur cara yang disediakan dan menjawab soalan tentangnya. Soalan mesti dijawab sebelum pelajar boleh menekan butang “Jalankan”. Sungguhpun ia mungkin boleh menggunakan soalan ini sebagai bentuk penilaian, perlu diingatkan bahawa soalan tersebut sering diletakkan pada permulaan pelajaran sebagai cara meminta pelajar membuat pertanyaan ke atas sesuatu sebelum ia ditunjukkan secara formal sejauh mana sesuatu yang baharu berfungsi. "
@@ -1006,6 +1250,7 @@
           "description": "**Lakukan Ini:** Memudahkan pengedaran dan pengumpulan sampul surat yang bertanda “objek”, “cecair” dan “nombor”. Sebaik sahaja dikumpulkan, pastikan sampul surat ditutup dan mula membaca cerita. Hanya apabila anda sampai di tempat kosong, sila buka sampul surat dan baca nilai yang disimpan."
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Permainan Majlis",
           "description": "**Lakukan Ini:**\n\n-   Sediakan sampul surat yang bertanda “kata sifat”, “objek”, “bahagian badan” dan “nombor”. \n-   Ulangi permainan di atas dengan cerita kedua. Kali ini anda boleh memulakan dengan label sebelum menunjukkan cerita bertujuan membangkitkan keadaan yang lebih tegang. Animasi dalam slaid pelajaran sudah disediakan bagi membantu memudahkan aktiviti ini.\n\n#### (Pilihan) Lanjutan Main Peranan\n\nHubungan boleh dibuat antara sukarelawan dan idea aplikasi mempunyai “pengguna”. Dalam analogi ini, peranan anda sebagai guru ialah seperti komputer. Anda akan meminta dan menyimpan maklumat daripada “pengguna” dan kemudian berusaha mencari jalan menggabungkan cerita. Bagi melibatkan lebih ramai pelajar dan meminta mereka melakonkan model ini, berikan peranan:\n\n_Komputer:_ Edar dan kumpulkan sampul surat. Buka setiap sampul surat semasa cerita sedang dibacakan bertujuan menyemak nilai yang disimpan.\n\n_Pengguna:_ Hantar perkataan yang diperlukan untuk melengkapkan cerita.\n\n_Pembaca:_ Baca kisah yang diselesaikan dengan kuat.\n\n#### Soal Jawab\n\n**Bincangkan:** Bagaimanakah menulis cerita ruang kosong berbeza jika dibandingkan dengan menulis cerita biasa?"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
@@ -1572,6 +1817,9 @@
           "name": "Pengaturcaraan dengan Angry Birds",
           "description": "#### Demonstrasi Tambahan\n\nKita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Programming in Maze #1](https://studio.code.org/levels/8730)\n-   [Programming in Maze #2](https://studio.code.org/levels/8729)"
         },
+        "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
+          "progression_name": "Cabaran"
+        },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -1606,6 +1854,9 @@
         },
         "c99faf85-9a98-4efe-8843-65d04bed20f6": {
           "description": "**Sebarkan:** Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Di samping idea yang disenaraikan dalam pelajaran yang lalu, beberapa idea mengenai cara melakukannya ialah: \n\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan kesilapan mereka sendiri.\n\n**Peralihan:** Minta pelajar mengambil Jurnal Renungan mereka dan luangkan sedikit masa menyemak pelajaran untuk diri mereka sendiri."
+        },
+        "fcc74691-719d-415b-87ae-8bc40b436318": {
+          "progression_name": "Cabaran"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan masa anda menemui pepijat dalam kod anda."
@@ -1662,6 +1913,9 @@
           "name": "Gelung dengan Penuai",
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
+        "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
+          "progression_name": "Cabaran"
+        },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Bagaimanakah gelung menjadikan atur cara anda lebih mudah untuk ditulis?\n-   Lukiskan sesuatu yang menggunakan gelung."
         },
@@ -1680,6 +1934,9 @@
         "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
           "name": "Demonstrasi Guru",
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\nTahap Ramalan:\n\n-   [Course B, Loops in Collector](https://studio.code.org/levels/8746)"
+        },
+        "9b293bbc-d3e3-494d-892e-f90e56347451": {
+          "progression_name": "Cabaran"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Tambahan Pelajaran"
@@ -1704,6 +1961,9 @@
         },
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\n**Tahap Ramalan:** - [Course B, Loops in Artist](https://studio.code.org/levels/8745)"
+        },
+        "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
+          "progression_name": "Cabaran"
         },
         "6c661991-bf9d-4271-a318-5878b3ef438c": {
           "progression_name": "Tambahan Pelajaran"
@@ -1954,6 +2214,9 @@
           "name": "Pengaturcaraan Dengan Scrat",
           "description": "Jika anda sedang mencari beberapa teka-teki tambahan untuk dibincangkan dengan kelas anda, berikut ialah beberapa teka-teki \"ramalan\" yang akan membolehkan anda mengikuti kod sedia ada dengan pelajar anda untuk meramalkan perkara yang _Scrat_ akan lakukan. Ini ialah idea yang baik untuk melakukannya bersama-sama sebelum melepaskan pelajar daripada menggunakan komputer mereka sendiri.\n\n#### Tahap Ramalan:\n\n-   [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n-   [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
         },
+        "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
+          "progression_name": "Cabaran"
+        },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -1979,6 +2242,9 @@
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Pengaturcaraan dengan Rey dan BB-8"
+        },
+        "3c2f387d-dde7-4c31-befe-3bf45387d813": {
+          "progression_name": "Cabaran"
         },
         "4aebed84-fb26-4d7b-97e8-6bcee3dbb701": {
           "description": "Seperti yang kami sebutkan dalam pelajaran lalu, kami amat menyarankan menonton dan menggunakan video **\\*Pengaturcaraan Berpasangan** - pelajar sebagai satu kelas. Pengaturcaraan berpasangan merangsang perbincangan yang boleh menjawab soalan, menilai konsep asas dan membina keyakinan dengan subjek."
@@ -2038,6 +2304,9 @@
         "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
+        "277f1b5f-abbe-4158-9507-d91cce301994": {
+          "progression_name": "Cabaran"
+        },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
             "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
@@ -2070,6 +2339,9 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Tahap Ramalan:\n\n-   [Course A, Loops in Collector #1](https://studio.code.org/levels/8728)\n-   [Course A, Loops in Collector #2](https://studio.code.org/levels/8727)"
         },
+        "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
+          "progression_name": "Cabaran"
+        },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -2088,6 +2360,9 @@
         },
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\nTahap Ramalan:\n\n-   [Course A, Loops in Artist](https://studio.code.org/levels/8726)"
+        },
+        "879f345b-620d-4541-8467-84f00e515229": {
+          "progression_name": "Cabaran"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -2270,6 +2545,9 @@
             "Tunjukkan kepada pelajar cara yang betul untuk membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
         },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": "Cabaran"
+        },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -2295,6 +2573,9 @@
           "name": "Penyahpepijatan di dalam Pagar Sesat",
           "description": "Sebelum membenarkan pelajar menghidupkan komputer, ingatkan mereka tentang kelebihan video pengaturcaraan berpasangan dan meminta bantuan rakan sebaya mereka. Tetapkan tempat duduk pelajar secara berpasangan dan sarankan mereka meminta sekurang-kurangnya dua rakan sebaya untuk mendapatkan bantuan sebelum berjumpa guru."
         },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": "Cabaran"
+        },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -2318,6 +2599,9 @@
           "name": "Mengumpul Harta Karun bersama Laurel",
           "description": "_Pengembara Laurel_ sedang berusaha mengumpulkan harta karun sebanyak yang mungkin. Arahkan pelajar merentasi teka-teki untuk mengumpulkan apa-apa sahaja yang mereka boleh. Terdapat beberapa peringkat permainan akan meminta anda mengambil hanya satu harta karun, tetapi bagi yang lain pula, anda diminta mengambil setiap harta karun yang ada. Tumpukan kepada arahan untuk mengetahui perkara yang perlu dilakukan!"
         },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": "Cabaran"
+        },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -2334,7 +2618,8 @@
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
             "Teka-teki kelapan meminta pelajar melukis poligon 6 sisi. Ini mungkin mencabar bagi sesetengah pelajar. Kami sarankan agar pelajar mencuba beberapa kali, tanya rakan sebaya, kemudian minta bantuan guru. Di bawah ialah imej yang mungkin berguna untuk pelajar.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Cabaran"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
           "progression_name": "Tambahan Pelajaran"
@@ -2390,6 +2675,9 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "Gelung dengan Rey dan BB-8"
         },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": "Cabaran"
+        },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -2410,6 +2698,9 @@
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Apabila pelajar menggunakan gelung untuk mengulangi tindakan (seperti menuai labu), galakkan mereka untuk berfikir tentang pergerakan sebelum dan selepas tindakan itu. Bolehkah tindakan tersebut dibawa ke dalam gelung juga?"
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": "Cabaran"
         },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
           "progression_name": "Tambahan Pelajaran"
@@ -2710,6 +3001,9 @@
         "528f5675-b238-4157-849e-e3c9882d39f5": {
           "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan Pengaturcaraan Berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
         },
+        "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
+          "progression_name": "Cabaran"
+        },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Senaraikan beberapa pepijat yang anda temui dalam atur cara anda hari ini.\n-   Apakah teka-teki kegemaran anda untuk diselesaikan? Lukiskan watak kegemaran anda untuk melengkapkan teka-teki."
         },
@@ -2767,6 +3061,9 @@
           "name": "Penyahpijatan dengan Laurel",
           "description": "Mungkin berguna untuk pelajar duduk bersama pasukan mereka daripada aktiviti gabungan. Setiap pelajar perlu melakukan teka-teki ini secara individu atau berpasangan, tetapi mempunyai kumpulan yang rapat untuk bertanya dan menjawab soalan boleh membantu mengembangkan keyakinan dan pemahaman dengan bidang itu."
         },
+        "1921c52c-25f6-457a-8dba-57926c95bfae": {
+          "progression_name": "Cabaran"
+        },
         "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah pepijat? Bagaimanakah anda tahu terdapat pepijat dalam atur cara anda?\n-   Apakah yang dimaksudkan dengan menyahpepijatkan kod? Bagaimanakah anda menyahpepijatkan atur cara?"
         },
@@ -2818,6 +3115,10 @@
         },
         "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Berikan contoh peristiwa yang anda gunakan dalam atur cara anda hari ini?\n-   Mengapakah penting untuk tidak berkongsi maklumat peribadi dalam talian? Bagaimanakah anda tahu jika maklumat adalah peribadi?"
+        },
+        "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
@@ -2874,7 +3175,8 @@
           "progression_name": "Tambahan Pelajaran"
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
-          "name": "Penilaian"
+          "name": "Penilaian",
+          "description": "Minta pelajar menambah nota pelekat atau kad nota \"Analisis Kefahaman\" mereka kepada peta minda \"Sains Komputer\" anda semasa mereka keluar dari kelas. Cuba penuhkan papan dengan banyak idea hebat tentang CS dan kepentingannya."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
           "name": "Peluang Kurikulum Bersilang",
@@ -2889,6 +3191,9 @@
         },
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
+        },
+        "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
+          "progression_name": "Cabaran"
         },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
@@ -2910,6 +3215,9 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Melukis Bentuk dengan Gelung"
         },
+        "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
+          "progression_name": "Cabaran"
+        },
         "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
           "description": "#### Teka-Teki Dalam Talian\n\nSesetengah pelajar mungkin menemui tempat untuk menambahkan gelung `berulang` dengan menulis atur cara tanpa gelung kemudian mengelilingi bahagian ulangan. Jika pelajar dalam kelas anda kelihatan seperti mereka boleh memanfaatkan daripada ini, minta mereka letakkan kertas dan pensel di sebelah mereka pada komputer mereka. Pelajar juga mungkin suka melukis beberapa bentuk dan rupa pada kertas semasa mereka mengatur caranya dalam talian."
         },
@@ -2922,6 +3230,9 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Gelung Bersarang di dalam Pagar Sesat",
           "description": "Kita amat menyarankan pengaturcaraan berpasangan untuk pelajaran ini. Ini mungkin bukan topik yang mudah untuk majoriti pelajar anda. Bekerjasama dengan pasangan dan membincangkan penyelesaian berpotensi kepada teka-teki mungkin dapat menenangkan fikiran pelajar.\n\nDi samping itu, minta disediakan kertas dan pensel berdekatan untuk pelajar menulis rancangan mereka sebelum mengekod. Sesetengah teka-teki mempunyai had ke atas bilangan blok tertentu yang boleh anda gunakan, oleh itu jika pelajar suka menulis jawapan yang panjang untuk mencari ulangan, kertas boleh menjadi sangat berguna."
+        },
+        "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
+          "progression_name": "Cabaran"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
           "progression_name": "Tambahan Pelajaran"
@@ -2964,6 +3275,9 @@
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan."
         },
+        "16432484-49b1-47dc-bbd9-60f67bacc790": {
+          "progression_name": "Cabaran"
+        },
         "3cb11179-29ea-4362-b237-a509e3e0943f": {
           "description": "**Prom:**\n\n-   Lukiskan wajah beremosi untuk menunjukkan perasaan anda tentang pelajaran hari ini.\n-   Lukiskan sesuatu yang mungkin anda telah bina dalam dunia _Minecraft_ ini.\n-   Bolehkah anda melukis adegan yang seseorang menggunakan syarat?"
         },
@@ -2979,6 +3293,9 @@
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
+        },
+        "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
+          "progression_name": "Cabaran"
         },
         "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
           "progression_name": "Tambahan Pelajaran"
@@ -3000,6 +3317,12 @@
           "name": "Gelung Semasa di dalam Peladang",
           "description": "Gelung semasa tidak selalunya merupakan konsep yang sukar untuk difahami oleh pelajar, tetapi jika anda berpendapat kelas anda mungkin bersusah payah menyelesaikan teka-teki ini, kami sarankan pengaturcaraan berpasangan. Ini akan membolehkan pelajar melantunkan idea antara satu sama lain sebelum melaksanakan kod. Pengaturcaraan berpasangan berfungsi meningkatkan keyakinan dan pemahaman dengan topik seperti gelung semasa."
         },
+        "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
+          "progression_name": "Cabaran"
+        },
+        "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
+          "progression_name": "Cabaran"
+        },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah perbezaan antara gelung semasa dan gelung ulangan biasa?\n-   Berikan contoh teka-teki yang anda akan menggunakan gelung semasa, tetapi tidak bukan gelung ulangan. Bolehkah anda berikan contoh teka-teki yang anda akan menggunakan gelung ulangan, tetapi bukan gelung semasa?"
         },
@@ -3011,6 +3334,9 @@
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "description": "#### Teka-teki Dalam Talian\n\nMenggabungkan konsep bukan sesuatu yang mudah, tetapi set pelajaran ini bertujuan membantu pelajar melihat kemungkinan pengekodan yang tidak berkesudahan apabila menggunakan syarat. Jika pelajar mengalami kesusahan memahami persamaan atau perbezaan antara gelung \"semasa\" dan gelung \"sehingga\", minta mereka cuba fikirkan cara mereka akan menggunakan pernyataan yang serupa dalam kehidupan mereka yang sebenar."
+        },
+        "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
+          "progression_name": "Cabaran"
         },
         "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah perbezaan antara gelung \"sehingga\" dan gelung \"semasa\"?"
@@ -3050,6 +3376,12 @@
             "Tunjukkan kepada pelajar cara yang betul membantu rakan sekelas dengan:\nJangan duduk di atas kerusi rakan sekelas\nJangan gunakan papan kekunci rakan sekelas\nJangan sentuh tetikus rakan sekelas\nPastikan rakan sekelas dapat menghuraikan penyelesaian sebelum anda pergi"
           ]
         },
+        "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
+          "progression_name": "Cabaran"
+        },
+        "19367182-a8f0-442e-9a7d-e7852546f961": {
+          "progression_name": "Cabaran"
+        },
         "d09eb753-cf01-4cfa-b252-0e6d4faa4f97": {
           "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian bertujuan untuk berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan Pengaturcaraan Berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih menghadapi masalah selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri.\n\n**Bincangkan:** Selepas memberikan amaran kepada pelajar pada akhir waktu kelas, tarik perhatian semua pelajar dan minta mereka renungkan pengalaman yang baharu mereka lalui.\n\n-   Adakah sesiapa yang merasa kecewa semasa melakukan mana-mana teka-teki?\n-   Adakah sesiapa menyedari keperluan menjadi seorang yang tabah?\n\n**Peralihan:** Minta pelajar mengambil **\\*Jurnal Thinkspot** mereka dan ambil sedikit masa untuk meninggalkan pelajaran itu kepada diri mereka sendiri."
         },
@@ -3073,6 +3405,9 @@
           "name": "Penyahpepijatan dengan Scrat",
           "description": "Sebelum membenarkan pelajar menghidupkan komputer, ingatkan mereka tentang kelebihan video **\\*Pengaturcaraan Berpasangan** dan meminta bantuan rakan sebaya mereka. Tetapkan tempat duduk pelajar secara berpasangan dan sarankan mereka meminta sekurang-kurangnya dua rakan sebaya untuk mendapatkan bantuan sebelum berjumpa guru.\n\nSeperti yang dinyatakan dalam tujuan pelajaran ini, pastikan pelajar sedar bahawa mereka akan menghadapi teka-teki yang mengecewakan. Beritahu mereka tidak menjadi masalah untuk berasa kecewa, tetapi ia penting untuk berusaha menyelesaikan masalah dan meminta bantuan. Semasa pelajar berusaha menyelesaikan teka-teki, sila berjalan di sekeliling untuk memastikan tiada pelajar sedang menghadapi masalah sehingga mereka tidak sanggup meneruskan lagi."
         },
+        "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
+          "progression_name": "Cabaran"
+        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3093,6 +3428,9 @@
           "name": "Mengumpul Harta Karun bersama Laurel",
           "description": "_Pengembara Laurel_ sedang berusaha mengumpulkan harta karun sebanyak yang mungkin. Arahkan pelajar merentasi teka-teki untuk mengumpulkan apa-apa sahaja yang mereka boleh. Terdapat beberapa peringkat permainan akan meminta anda mengambil hanya satu harta karun, tetapi bagi yang lain pula, anda diminta mengambil setiap harta karun yang ada. Tumpukan kepada arahan untuk mengetahui perkara yang perlu dilakukan!"
         },
+        "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
+          "progression_name": "Cabaran"
+        },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3109,7 +3447,8 @@
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
             "Teka-teki kelapan meminta pelajar melukis poligon 6 sisi. Ini mungkin mencabar bagi sesetengah pelajar. Kami sarankan agar pelajar mencuba beberapa kali, tanya rakan sebaya, kemudian minta bantuan guru. Di bawah ialah imej yang mungkin berguna untuk pelajar.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
-          ]
+          ],
+          "progression_name": "Cabaran"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
           "progression_name": "Tambahan Pelajaran"
@@ -3152,6 +3491,7 @@
           "description": "**Lakukan ini:** Dengan menggunakan slaid mula memanas pelajaran, atau [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ini, tunjukkan kepada murid animasi semut dan pepatung.\n\n**Bincangkan:** _Bagaimanakah anda menghuraikan adegan peperi ini?\nJika anda mahu seseorang mencipta adegan ini untuk anda pada komputer, apakah arahan yang diperlukan oleh mereka?_\n\n**Matlamat perbincangan:** Pelajar perlu mengenal pasti kedua-dua peperi dalam projek ini, huraikan tingkah laku (pergerakan) peperi tersebut dan perhatikan juga latar belakangnya.\nSila berikan masa kepada pelajar melakukan sumbang saran ke atas idea. Jika mereka tidak pasti mengenai perkara yang perlu dikatakan, terangkan bahawa anda hanya meminta mereka menyatakan pemerhatian tentang perkara yang mereka lihat.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Membuat Peperi",
           "description": "#### Ramalan (3 minit)\n\n**Lakukan Ini:** Minta pelajar baca kod yang disediakan dan buat ramalan tentang perkara yang akan berlaku. Selepas menekan “Jalankan”, berikan masa untuk pelajar merenungkan apa-apa perkara yang mereka dapati menarik atau mengejutkan mereka.",
           "tips": [
             " Dalam teka-teki ramalan pelajar diminta membaca atur cara yang disediakan dan menjawab soalan tentangnya. Soalan mesti dijawab sebelum pelajar boleh menekan butang “Jalankan”. Sungguhpun ia mungkin boleh menggunakan soalan ini sebagai bentuk penilaian, perlu diingatkan bahawa soalan tersebut sering diletakkan pada permulaan pelajaran sebagai cara meminta pelajar membuat pertanyaan ke atas sesuatu sebelum ia ditunjukkan secara formal sejauh mana sesuatu yang baharu berfungsi. "
@@ -3225,6 +3565,9 @@
         "cea77f0d-7de9-4eb3-8637-2d3f42663d9f": {
           "description": "### Memberikan Tenaga kepada Haiwan Peliharaan Maya anda (60-90 minit)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)**Sains Komputer + Seni Bahasa Inggeris + Sains**\n\n[Providing Energy for your Virtual Pet](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) ialah aktiviti pilihan yang dijajarkan mengikut Standard Kesenian Bahasa Inggeris Teras Umum dan Standard Sains Generasi Akan Datang, ditulis oleh komuniti guru kita. Pelajar akan mencipta model saintifik yang menunjukkan cara haiwan peliharaan maya mereka akan menerima tenaga yang diperlukannya untuk terus hidup. \n\n_Standards yang Dikemukakan:_\n\n-   **CCSS.ELA.RI.5.7:** Mendapatkan maklumat daripada berbilang sumber cetakan atau digital, mempamerkan kebolehan mencari jawapan kepada soalan dengan pantas atau menyelesaikan masalah dengan cekap. \n\n-   **CCSS.ELA.RI.5.9:** Mengintegrasikan maklumat daripada beberapa teks mengenai topik yang sama untuk menulis atau bercakap tentang subjek dengan berpengetahuan. \n\n-   **5- PS3-1:** Menggunakan model untuk menghuraikan bahawa tenaga dalam makanan haiwan (digunakan untuk penyembuhan, pertumbuhan, pergerakan anggota badan dan menjaga haba badan) yang datang daripada tenaga matahari. \n\n-   **5-LS2-1:** Membangunkan model untuk menghuraikan pergerakan jirim dalam kalangan tumbuhan, haiwan, pengurai dan alam sekitar \n\n-   **SL.5.5:** Memasukkan komponen multimedia (misalnya, grafik, bunyi) dan paparan visual dalam pembentangan apabila perlu bagi meningkatkan pembangunan idea atau tema utama. "
         },
+        "9886bd75-e2c9-419e-8818-f4373a296270": {
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
         "2a089231-5563-4b8e-a861-8faf4bda0cf5": {
           "description": "Galakkan pelajar berkongsi kaedah mereka menyatakan kreativiti, seperti dengan seni, tarian, muzik, penulisan.\n\nJelaskan bahawa hari ini kita akan menjadi kreatif dengan kod. Sama seperti memilih jenis warna cat untuk digunakan, atau jenis perkataan yang anda tulis yang boleh menyatakan kreativiti, memilih kod yang anda tulis dan cara individu berinteraksi dengannya boleh menjadi peluang untuk mengetengahkan kreativiti anda juga!\n\n**Bangun dan menari:** Umumkan kepada kelas bahawa hari ini kita akan lihat cara kita boleh menggabungkan pengekodan dengan menari dengan cara yang kreatif. Minta anak-anak anda melakukan gerakan flos, dab, atau gerakan tarian kreatif sendiri selama 10 saat untuk mereka mendapatkan moodnya. Anda boleh memainkan lagu daripada **\\*Senarai Main Spotify** ini untuk membantu memulakan sesuatu. Rakamkan gerakan kelas anda pada video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
@@ -3285,6 +3628,9 @@
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Gelung dengan Rey dan BB-8"
         },
+        "736ef92b-b635-4477-abbb-7d98d171b960": {
+          "progression_name": "Cabaran"
+        },
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3326,6 +3672,9 @@
           "name": "Gelung Bersarang di dalam Pagar Sesat",
           "description": "Kita amat menyarankan pengaturcaraan berpasangan untuk pelajaran ini. Ini mungkin bukan topik yang mudah untuk majoriti pelajar anda. Bekerjasama dengan pasangan dan membincangkan penyelesaian berpotensi kepada teka-teki mungkin dapat menenangkan fikiran pelajar.\n\nDi samping itu, minta disediakan kertas dan pensel berdekatan untuk pelajar menulis rancangan mereka sebelum mengekod. Sesetengah teka-teki mempunyai had ke atas bilangan blok tertentu yang boleh anda gunakan, oleh itu jika pelajar suka menulis jawapan yang panjang untuk mencari ulangan, kertas boleh menjadi sangat berguna."
         },
+        "59a2568e-bd18-4790-9dd4-e6df4db826ca": {
+          "progression_name": "Cabaran"
+        },
         "20282149-72fa-4e24-aa15-5182f21bcf95": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3348,6 +3697,9 @@
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar benar-benar menggemari pelajaran ini. Kemungkinan besar kebanyakan pelajar anda pernah mendengar tentang _Minecraft_, tetapi berikan pengenalan ringkas untuk mereka yang mungkin tidak tahu.\n\n_Minecraft_ ialah permainan kiub. Anda boleh bermain sebagai Alex atau Steve semasa anda berusaha mengharungi jalan dalam pagar sesat. Anda perlu mengelak lahar gunung berapi, mengambil item dan meneroka dalam dunia yang diperbuat daripada kiub.\n\nTunjukkan satu daripada teka-teki kepada kelas (kami sarankan teka-teki 11). Sebaik sahaja semua soalan telah dijawab, alihkan pelajar kepada komputer dan biarkan mereka memulakan pengaturcaraan pasangan."
         },
+        "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
+          "progression_name": "Cabaran"
+        },
         "a8610908-835c-4ecf-87b2-0f10e7381e88": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Lukiskan wajah beremosi untuk menunjukkan perasaan anda tentang pelajaran hari ini.\n-   Lukiskan sesuatu yang lain yang mungkin anda bina dalam dunia _minecraft_ ini.\n-   Bolehkah anda melukis adegan yang seseorang menggunakan syarat?"
         },
@@ -3359,6 +3711,9 @@
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
+        },
+        "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
+          "progression_name": "Cabaran"
         },
         "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
           "progression_name": "Tambahan Pelajaran"
@@ -3375,6 +3730,9 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Gelung Semasa di dalam Peladang",
           "description": "Gelung semasa tidak selalunya merupakan konsep yang sukar untuk difahami oleh pelajar, tetapi jika anda berpendapat kelas anda mungkin bersusah payah menyelesaikan teka-teki ini, kami sarankan pengaturcaraan berpasangan. Ini akan membolehkan pelajar melantunkan idea antara satu sama lain sebelum melaksanakan kod. Pengaturcaraan berpasangan berfungsi meningkatkan keyakinan dan pemahaman dengan topik seperti gelung semasa."
+        },
+        "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
+          "progression_name": "Cabaran"
         },
         "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
           "progression_name": "Tambahan Pelajaran"
@@ -3404,6 +3762,9 @@
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
           "description": "Menggabungkan konsep bukan sesuatu yang mudah, tetapi set tahap ini bertujuan membantu pelajar melihat kemungkinan pengekodan yang tidak berkesudahan apabila menggunakan syarat. Jika pelajar mengalami kesusahan memahami persamaan atau perbezaan antara gelung semasa dan gelung sehingga, minta mereka cuba fikirkan cara mereka akan menggunakan pernyataan yang serupa dalam kehidupan mereka yang sebenar."
         },
+        "db38efa3-e075-41c0-ba59-0e9426393b52": {
+          "progression_name": "Cabaran"
+        },
         "8995dda6-6311-4747-a13d-9e793d658e20": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah perbezaan antara gelung sehingga dan gelung semasa?"
         },
@@ -3412,6 +3773,9 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "description": "Pelajar akan terus berusaha dengan pernyataan jika / lain, gelung semasa dan gelung sehingga. Teka-teki ini agak mencabar, namun, ia menggalakkan pelajar untuk mengikutinya sehingga mereka dapat menghuraikan perkara yang perlu berlaku untuk setiap atur cara."
+        },
+        "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
+          "progression_name": "Cabaran"
         },
         "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
           "progression_name": "Tambahan Pelajaran"
@@ -3440,6 +3804,9 @@
         "dd960de9-43c8-4013-9b55-41e931d458c1": {
           "name": "Fungsi dengan Artis"
         },
+        "074980cb-1e9f-4fa3-b97d-1467b036062d": {
+          "progression_name": "Cabaran"
+        },
         "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3455,6 +3822,9 @@
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
           "name": "Fungsi dengan Penuai",
           "description": "#### Teka-teki Dalam Talian\n\nSesetengah teka-teki akan mempunyai fungsi yang diisytiharkan terlebih dahulu untuk diisi oleh pelajar. Mungkin ini berguna untuk pelajar menulis keseluruhan atur cara tanpa fungsi terlebih dahulu, kemudian tentukan kedudukan fungsi yang berguna dalam atur cara.\n\nAdalah penting untuk memastikan bahawa setiap pelajar menyelesaikan setiap teka-teki dengan titik hijau gelap. Jika sesetengah pelajar anda terpaksa berusaha sedaya upaya cuba memudahkan kod dan menggunakan fungsi, sediakan pasukan pelajar pakar di dalam kelas anda untuk pergi ke sekeliling dan menjawab soalan.\n\nJangan lupa menyediakan pensel dan kertas untuk membantu pelajar melakarkan penyelesaian yang munasabah."
+        },
+        "0ee69e3c-cf57-4652-8b39-55a7ff57430f": {
+          "progression_name": "Cabaran"
         },
         "3c8c44ae-c181-41c0-9574-54a236e706f9": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah yang membuatkan anda menyedari yang fungsi boleh membantu atur cara anda?\n-   Bagaimanakah pernyataan gelung `semasa` dan `jika / lain` membantu atur cara anda?"
@@ -3646,6 +4016,9 @@
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Pengaturcaraan dengan Angry Birds"
         },
+        "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
+          "progression_name": "Cabaran"
+        },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3669,6 +4042,9 @@
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
           "name": "Pengaturcaraan dengan Rey dan BB-8"
         },
+        "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
+          "progression_name": "Cabaran"
+        },
         "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
           "description": "Kami amat menyarankan menonton dan menggunakan video **\\*Pengaturcaraan Berpasangan** bersama seluruh kelas. Pengaturcaraan berpasangan merangsang perbincangan yang boleh menjawab soalan, menilai konsep asas dan membina keyakinan dengan subjek."
         },
@@ -3686,6 +4062,9 @@
           "tips": [
             "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
+          "progression_name": "Cabaran"
         },
         "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
           "description": "**Sebarkan:** Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Di samping idea yang disenaraikan dalam pelajaran yang lalu, beberapa idea mengenai cara melakukannya ialah: \n\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan kesilapan mereka sendiri.\n\n**Peralihan:** Minta pelajar mengambil Jurnal Thinkspot mereka dan ambil sedikit masa untuk meninggalkan pelajaran itu kepada diri mereka sendiri."
@@ -3713,6 +4092,9 @@
             "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
         },
+        "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
+          "progression_name": "Cabaran"
+        },
         "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
           "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
         },
@@ -3736,6 +4118,9 @@
           "name": "Teka-teki Dalam Talian",
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
+        "46172f79-e306-4a8f-9ecd-640b05733fb6": {
+          "progression_name": "Cabaran"
+        },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3757,6 +4142,9 @@
         "bbc61306-32dd-4de2-9a6b-35b47408093f": {
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Loops in Artist](https://studio.code.org/levels/8726)"
         },
+        "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
+          "progression_name": "Cabaran"
+        },
         "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -3774,6 +4162,9 @@
           "tips": [
             "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas video **\\*Jeda dan Fikir Dalam Talian**."
           ]
+        },
+        "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
+          "progression_name": "Cabaran"
         },
         "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
           "progression_name": "Tambahan Pelajaran"
@@ -3998,6 +4389,12 @@
           "name": "Melukis dengan Gelung",
           "description": "Sesetengah pelajar mungkin menemui tempat untuk menambahkan gelung \"berulang\" dengan menulis atur cara tanpa gelung kemudian mengelilingi bahagian ulangan. Jika pelajar dalam kelas anda kelihatan seperti mereka boleh memanfaatkan daripada ini, minta mereka letakkan kertas dan pensel di sebelah mereka pada mesin mereka. Pelajar juga mungkin suka melukis beberapa bentuk dan rupa pada kertas sebelum mereka mengatur caranya dalam talian."
         },
+        "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
+          "progression_name": "Cabaran"
+        },
+        "9a64a3f8-16de-4001-82e3-01d9184a0650": {
+          "progression_name": "Cabaran"
+        },
         "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -4016,6 +4413,9 @@
           "tips": [
             "Pelajar akan mempunyai peluang berkongsi hasil usaha mereka sendiri pada akhir peringkat ini. Karya seni ini boleh dikongsi secara maya atau dicetak. Kami sarankan mencetak hasil kerja kelas dan memaparkannya untuk tatapan individu tersayang pelajar."
           ]
+        },
+        "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
+          "progression_name": "Cabaran"
         },
         "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
           "progression_name": "Tambahan Pelajaran"
@@ -4131,6 +4531,9 @@
           "name": "Fungsi dengan Artis",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar boleh memanfaatkan daripada menulis kod tanpa fungsi dan kemudian mencipta fungsi daripada kod berulang. Jika pelajar tidak suka melakukan ini dalam ruang kerja Code.org, kami sarankan supaya menyediakan kertas dan pensel untuk pelajar menulis (atau melukis) idea mereka."
         },
+        "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
+          "progression_name": "Cabaran"
+        },
         "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
           "progression_name": "Tambahan Pelajaran"
         },
@@ -4162,6 +4565,9 @@
             "Corak dalam teka-teki ini mungkin tidak jelas kepada setiap pelajar. Kami sarankan agar anda bermain melalui tahap ini terlebih dahulu untuk memahami dengan baik mana-mana kawasan masalah untuk kelas anda. Di samping itu juga, menonton dan menggunakan teknik daripada Video **\\*Jeda dan Fikirkan Dalam Talian** mungkin berguna untuk kelas anda."
           ]
         },
+        "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
+          "progression_name": "Cabaran"
+        },
         "63757527-5067-4217-9d3b-134aac5a39ab": {
           "description": "**Prom:**\n\n-   Apakah itu bersyarat? Mengapakah anda mahu mengatur cara bersyarat?\n-   Berikan contoh penggunaan bersyarat semasa sepanjang hari anda? (contohnya, _Jika_ saya lapar, saya makan sedikit makanan; _Semasa_ saya berjalan melintasi ke seberang sana, saya sentiasa memerhatikan kereta)"
         },
@@ -4174,6 +4580,9 @@
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
           "name": "Teka-Teki Dalam Talian",
           "description": "Sesetengah teka-teki akan mempunyai fungsi yang diisytiharkan terlebih dahulu untuk diisi oleh pelajar. Mungkin ini berguna untuk pelajar menulis keseluruhan atur cara tanpa fungsi terlebih dahulu, kemudian tentukan kedudukan fungsi yang berguna dalam atur cara.\n\nAdalah penting untuk memastikan bahawa setiap pelajar menyelesaikan setiap teka-teki dengan titik hijau gelap. Jika sesetengah pelajar anda terpaksa berusaha sedaya upaya cuba memudahkan kod dan menggunakan fungsi, sediakan pasukan pelajar pakar di dalam kelas anda untuk pergi ke sekeliling dan menjawab soalan.\n\nJangan lupa menyediakan pensel dan kertas untuk membantu pelajar melakarkan penyelesaian yang munasabah."
+        },
+        "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
+          "progression_name": "Cabaran"
         },
         "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1": {
           "description": "**Prom:**\n\n-   Apakah yang membuatkan anda menyedari yang fungsi boleh membantu atur cara anda?\n-   Bagaimanakah pernyataan gelung \"semasa\" dan \"jika / lain\" membantu atur cara anda?"
@@ -4500,6 +4909,9 @@
             null
           ]
         },
+        "61bfa751-8587-4118-84e1-b3870975fad4": {
+          "progression_name": "Cabaran"
+        },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
           "tips": [
             null
@@ -4677,6 +5089,26 @@
           "name": "Penggulungan"
         },
         "9819f2db-593b-4631-96e8-ad45aba59e08": {
+          "tips": [
+            null
+          ]
+        },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
           "tips": [
             null
           ]
@@ -5182,6 +5614,24 @@
             null
           ]
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Terinspirasi"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -5439,6 +5889,36 @@
           ]
         },
         "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
           "tips": [
             null
           ]
@@ -5841,6 +6321,21 @@
           ]
         },
         "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ]
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
           "tips": [
             null
           ]
@@ -6347,7 +6842,8 @@
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Permainan Pengumpul"
         },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
           "tips": [
@@ -6463,6 +6959,37 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "tips": [
+            null
+          ]
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -6492,6 +7019,9 @@
           "tips": [
             null
           ]
+        },
+        "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
+          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [
@@ -6828,6 +7358,21 @@
             null
           ]
         },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
+          "tips": [
+            null
+          ]
+        },
         "248256b0-de8c-4fcf-8f60-58492ef07802": {
           "tips": [
             null
@@ -6877,7 +7422,8 @@
         "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Cabaran"
         },
         "7d15a1cb-357e-419d-b469-608585606064": {
           "tips": [
@@ -7299,6 +7845,27 @@
             null
           ]
         },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Cabaran"
+        },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Cabaran"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Cabaran"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Cabaran"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Cabaran"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Cabaran"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Cabaran"
+        },
         "83b5ca79-12e5-4d68-a965-4bed0681e331": {
           "progression_name": "Acara-acara"
         },
@@ -7311,30 +7878,132 @@
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Wrap-up"
         },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Cabaran"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Cabaran"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Cabaran"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Cabaran"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Cabaran"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Cabaran"
+        },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Cabaran"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Cabaran"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Cabaran"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Cabaran"
+        },
         "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
           "name": "Tambahan Pelajaran",
           "progression_name": "Tambahan Pelajaran"
         },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Cabaran"
+        },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"
+        },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Cabaran"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Cabaran"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Cabaran"
         },
         "25e197c5-7687-48f6-ba36-a1a571283b2c": {
           "progression_name": "Kod Permainan Flappy Anda Sendiri"
         },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Cabaran"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Cabaran"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Cabaran"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Cabaran"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Cara Membuat Peperi"
+        },
         "3d63e945-be66-4203-91e4-d4780e318ace": {
           "progression_name": "Video"
+        },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Cabaran"
         },
         "b8c86684-ebd8-441f-ba6e-669457575120": {
           "progression_name": "Video"
         },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Cabaran"
+        },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Cabaran"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Cabaran"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Cabaran"
+        },
         "598993a6-e64b-48e3-8002-c617aae9cdab": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"
+        },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Cabaran"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Cabaran"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Cabaran"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Cabaran"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Cara Membuat Peperi"
         },
         "54fa7040-6612-4012-b595-1f4745f1479d": {
           "progression_name": "Video"
         },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Cabaran"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Cabaran"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Cabaran"
+        },
         "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
           "progression_name": "Artis: Pemboleh Ubah"
+        },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Cabaran"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Cabaran"
         }
       }
     }

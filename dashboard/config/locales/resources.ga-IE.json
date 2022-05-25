@@ -868,6 +868,13 @@
         "teacher_forum/csd/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Físeán"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Tá an Ríomheolaíocht ag athrú an domhain",
+          "type": "Físeán"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "An chaoi a n-oibríonn ríomhairí: Crua-earraí agus Bogearraí",
           "type": "Físeán"
@@ -985,6 +992,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Fóram do Mhúinteoirí"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Físeán"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Físeán"

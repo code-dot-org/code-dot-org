@@ -8755,9 +8755,9 @@ es-ES:
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Encuesta de estudiante CS Discoveries de final del curso
+        title: 'Encuesta Fin de Curso del Alumno de Descubrimientos de Informática '
       csd-post-survey-levelgroup-2018:
-        title: Encuesta de estudiante CS Discoveries de final del curso
+        title: 'Encuesta Fin de Curso del Alumno de Descubrimientos de Informática '
       csd-pre-survey-2017-levelgroup:
         markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
           papel aluminio que puedan cargar tantas monedas como sea posible. Al final
@@ -12561,6 +12561,26 @@ es-ES:
           Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descripción aquí
+        markdown: |
+          # Construir un Salto de Plataforma
+
+          A medida que construyas tu salto de plataforma, utilizarás el proceso de resolución de problemas.
+
+          ## Definir
+
+          El problema está claramente definido para este juego, porque ya has visto una versión de ejemplo.  Sin embargo, es posible que quieras hacer algunos cambios.   Asegúrate de que las nuevas características de tu juego están claramente definidas.
+
+          ## Preparar
+
+          Antes de empezar a codificar, tienes que rellenar una guía de proyecto.  Te preparará y hará que la codificación sea mucho más fácil.
+
+          ## Probar
+
+          Probarás tu plan cuando empieces a codificar.  No te olvides de todos tus recursos, como la documentación y la pestaña de ayuda y consejos, cuando empieces a codificar.
+
+          ## Reflexionar
+
+          Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U5 test_2021:
         title: Datos y Sociedad Prueba Fin de Proyecto
       CSD U6 LED create intro_2021:
@@ -12658,7 +12678,7 @@ es-ES:
         description: |2-
 
           Haz el Tuyo Propio
-          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué funciones o desafíos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
         description: Practica el uso de las funciones y aprende más sobre lo que las
@@ -12954,6 +12974,7 @@ es-ES:
       ml-models in applab-choice parent:
         description: Prueba lo que has aprendido en una o varias de las siguientes
           actividades.
+        display_name: 'Práctica de Tarjeta Modelo '
       CSD CSS project RGB_2021:
         description: Comprueba cómo puedes conseguir aún más colores utilizando los
           códigos RGB.
@@ -13122,3 +13143,72 @@ es-ES:
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: "¡Encuesta Rápida de Informática!"
+      ml-customize apps-practice choice-2021:
+        display_name: Practica Personalizando tus Aplicaciones
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para crear una copia de los datos de Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para crear una copia de los datos de Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder a la encuesta de Kim
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Recomendador Sala de Urgencias V1
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Prioridad en la Sala de Urgencias de Auroras Boreales
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Recomendador Médico con Inteligencia Artificial
+
+          Pulsa en la ficha del modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-plan survey-copy form:
+        markdown: |
+          # Copia un Formulario de Google
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para crear la copia de una plantilla de encuesta que utilizaremos hoy
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Tarjeta Modelo del Recomendador de Mascotas
+
+          **Con un compañero:** ¿Cómo puedes diferenciar las características categóricas de las numéricas en la tarjeta modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Practica con Modelos en el Laboratorio de Aplicaciones

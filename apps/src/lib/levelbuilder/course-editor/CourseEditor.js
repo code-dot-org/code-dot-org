@@ -340,11 +340,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <AnnouncementsEditor
-            announcements={announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
         </CollapsibleEditorSection>
 
         <CourseTypeEditor
@@ -386,6 +381,14 @@ class CourseEditor extends Component {
             }
             isCourse
             courseOfferingEditorLink={this.props.courseOfferingEditorLink}
+          />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 

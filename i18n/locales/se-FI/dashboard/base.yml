@@ -703,14 +703,6 @@ se:
     reminder_desc: 'Mii leat ođastan min <a href="%{tos_url}" target="_blank">Geavahaneavttuid</a> ja <a href="%{privacy_url}" target="_blank">Persovdnasuodjaleami</a>. Loga dáid dárkilit ovdalgo dohkkehat daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid. '
     reminder_desc_markdown: Mii leat ođastan min [Geavahaneavttuid](%{tos_url}) ja Persovdnasuodjaleami](%{privacy_url}). Loga dáid dárkilit ovdalgo dohkkehat daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid.
     review_terms: "Loga ođastuvvon eavttuid"
-  donor_interstitial:
-    title: "Du nuvttá CS kurssaid lea dahkan vejolažžan..."
-    subtitle: "Mii háliidit giitit daid árvvas skeŋkejeddjiid geaid doarjagat leat dahkan Code.org lihkostuvvama vejolažžan. Mii leat geatnegahtton doalahit Code.org nuvttá skuvllaide ja ohppiide, globálalaččat, giitu joatkás árvvasvuhtii min [skeŋkejeaddjit](%{donors_url})!"
-    local_supporters: "Báikkálaš Doarjjaolbmot"
-    global_supporters: "Globála Doarjjaolbmot"
-    support_codeorg_1: "Juohke ruhta mii skeŋkejuvvo Code.org:i addá vejolašvuođaid eanet ohppiide."
-    support_codeorg_2: "[Skeŋke dál](%{donate_url}) doarjun dihte Code.org."
-    get_started: "Boađe johtui Code.org:s"
   school_info_interstitial:
     title: "Mii hálidit buktit DihtorDiehtaga juohke oahppái  - veahket min oaidnit min ovdáneami!"
     message: "Čális iežat skuvlla birra dieđuid vuolábeallái."

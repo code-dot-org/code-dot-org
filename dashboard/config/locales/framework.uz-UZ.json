@@ -1,0 +1,20 @@
+{
+  "uz-UZ": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Ingliz tili fani standartlari"
+        },
+        "ccmath": {
+          "name": "Umumiy Matematika bo‘yicha standartlar"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Kompyuter fanlari Standartlari (2011)"
+        },
+        "iste": {
+          "name": "Talabalar uchun ISTE Standartlari"
+        }
+      }
+    }
+  }
+}

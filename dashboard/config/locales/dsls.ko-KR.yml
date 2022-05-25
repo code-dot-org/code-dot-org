@@ -1313,11 +1313,11 @@ ko-KR:
         title: 객관식
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
         title: 객관식
@@ -1378,26 +1378,29 @@ ko-KR:
         title: 미로
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
         title: 객관식
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: 이 알고리즘의 처음에 시작해야하는 단계는?
         title: 객관식
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - text: 이 알고리즘의 빈 칸에 채워야 하는 것은?
         title: 객관식
@@ -2121,12 +2124,22 @@ ko-KR:
         - text: 아래 코드를 자세히 보세요. 이 프로그램을 실패하게 만들 첫 번째 버그는 무엇입니까?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: 스크랫은 도토리에 도달할 것입니다. 코드에는 버그가 없습니다.
+          feedback: 틀렸습니다. 먼저, 스크랫은 잘못된 방향으로 회전하고 그 다음, 도토리에 도달하기에 충분하지 않은 횟수로 앞으로
+            이동합니다.
+        - text: 스크랫은 잘못된 방향으로 회전하기 때문에 도토리에 도달하지 않을 것입니다.
+          correct: true
+          feedback: 맞았습니다. 먼저, 스크랫은 잘못된 방향으로 회전하고 그 다음, 도토리에 도달하기에 충분하지 않은 횟수로 앞으로
+            이동합니다.
+        - text: 스크랫은 `앞으로 이동` 블록이 충분하지 않기 때문에 도토리에 도달하지 않을 것입니다.
+          correct: true
+          feedback: 맞았습니다. 먼저, 스크랫은 잘못된 방향으로 회전하고 그 다음, 도토리에 도달하기에 충분하지 않은 횟수로 앞으로
+            이동합니다.
         - text: 잘 모르겠음.
+          feedback: 코드에는 두 개의 버그가 있습니다. 먼저, 스크랫은 잘못된 방향으로 회전하고 그 다음, 도토리에 도달하기에 충분하지
+            않은 횟수로 앞으로 이동합니다.
         questions:
-        - {}
+        - text: 이 코드에서 버그를 찾으세요. 스크랫이 도토리에 도달할까요 또는 문제가 있습니까?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
@@ -3567,10 +3580,37 @@ ko-KR:
         title: CS 발견 학생 과정 전 설문 조사
       csf_be_a_super_digital_citizen:
         content1: 설명 입력
+        markdown: |
+          # 슈퍼 디지털 시민
+
+          ## 사이버 폭력을 목격했을 때 어떻게 하면 외면하지 않고 나서서 행동하는 사람이 될 수 있을까요?
       csf_password_power-up:
         content1: 설명 입력
+        markdown: |
+          #  비밀번호 강화
+
+          ## 기억할 비밀번호 팁
+
+          * 기억에 남는 **구절**로 시작합니다.
+          * **부모**만 여러분의 비밀번호를 알아야 합니다.
+          * 비밀번호에 **개인** 신원 정보는 사용하지 마십시오.
+          * 적어도 **여덞**개 문자로 비밀번호를 만듭니다.
+          * 비밀번호에 문자와 숫자, **기호**를 사용하세요.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: 설명 입력
+        markdown: |
+          # 비열한 행동 멈춤
+
+          ## 누군가 온라인 상에서 여러분에게 비열하게 굴면 어떻게 해야 할까요?
+
+          * **벗어**납니다.
+          * **믿을 수  있는 성인**에게 말합니다.
+          * **괜찮은**사이트가 먼저입니다.
+          * **잠시 멈추고**온라인에 대해 생각합니다.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # 나의 온라인 마을
@@ -3649,12 +3689,15 @@ ko-KR:
           다음 부분에서는 프로그램 안에서 변*하는* 변수로 코드를 작성할 것입니다.</h3>\n\n"
       courseD_EOC_2020:
         display_name: 과정말 프로젝트
+        description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
       courseE_EOC_2020:
         display_name: 과정말 프로젝트
+        description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
       courseExpress_EOC_2020:
         display_name: 과정말 프로젝트
       courseF_EOC_2020:
         display_name: 과정말 프로젝트
+        description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
       outbreak_story:
         content1: 설명 입력
       outbreak_story2:
@@ -5946,3 +5989,28 @@ ko-KR:
         display_name: 연습
       csd-pre-survey-levelgroup_21_22:
         title: CS 발견 학생 과정 전 설문 조사
+      Internet-Unplugged:
+        markdown: |
+          # 인터넷
+
+          단지 종이 조각을 사용하여 교실에 인터넷을 구축하세요.
+      Internet-Unplugged_2020:
+        markdown: |
+          # 인터넷
+
+          단지 종이 조각을 사용하여 교실에 인터넷을 구축하세요.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # 말의 힘
+
+          ## 누군가 인터넷 상에서 무례하거나 또는 감정을 상하게 하는 언어를 사용할 때 어떻게 해야 합니까?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # 사적 정보와 개인 정보
+
+          ## 어떤 정보가 온라인 상으로 공유해도 되는 정보입니까?
+      csf_digital_trails:
+        markdown: |
+          # 디지털 트레일 팔로우
+
+          ## 어떤 정보가 디지털 흔적으로 남아도 되는 정보입니까?

@@ -23,6 +23,7 @@
 #
 class ProgrammingClass < ApplicationRecord
   include CurriculumHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
@@ -30,6 +31,8 @@ class ProgrammingClass < ApplicationRecord
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
+
+  after_destroy :remove_serialization
 
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
@@ -107,7 +110,20 @@ class ProgrammingClass < ApplicationRecord
       tips: tips || '',
       syntax: syntax || '',
       externalDocumentation: external_documentation || '',
-      categoryKey: programming_environment_category&.key || ''
+      categoryKey: programming_environment_category&.key || '',
+      showUrl: programming_environment_programming_class_path(programming_environment.name, key)
+    }
+  end
+
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_class_url(self)
     }
   end
 
@@ -124,7 +140,8 @@ class ProgrammingClass < ApplicationRecord
       externalDocumentation: external_documentation,
       categoryKey: programming_environment_category&.key || '',
       color: programming_environment_category&.color || '',
-      category: programming_environment_category&.name || ''
+      category: programming_environment_category&.name || '',
+      methods: summarize_programming_methods
     }
   end
 
@@ -133,8 +150,19 @@ class ProgrammingClass < ApplicationRecord
       key: key,
       name: name,
       syntax: syntax,
-      link: "/programming_classes/#{id}"
+      link: programming_environment_programming_class_path(programming_environment.name, key)
     }
+  end
+
+  def summarize_programming_methods
+    # Create a list of the top level programming methods, i.e. the
+    # ones without overload_of set
+    methods = []
+    programming_methods.each do |m|
+      next unless m.overload_of.blank?
+      methods += [m.summarize_for_show]
+    end
+    methods
   end
 
   private

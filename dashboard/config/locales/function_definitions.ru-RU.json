@@ -319,6 +319,9 @@
         "Course 4 Artist Functions challenge": {
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "Course 4 Bee Params 5": {
@@ -744,16 +747,25 @@
         "NEW Course 4 Artist Functions 11": {
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "NEW Course 4 Artist Functions 14": {
@@ -762,6 +774,12 @@
           },
           "draw a square 20": {
             "name": "нарисовать квадрат 20"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
+          },
+          "draw a square 40": {
+            "name": "нарисовать квадрат 40"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1147,11 +1165,17 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "course3_bee_functions_challenge1": {
@@ -1224,6 +1248,9 @@
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -1782,11 +1809,17 @@
         "courseE_artist_concept4": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_concept4_2018": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1815,6 +1848,9 @@
           },
           "draw hexagon": {
             "name": "нарисовать шестиугольник"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
           }
         },
         "courseE_artist_functions10_2018": {
@@ -1823,6 +1859,9 @@
           },
           "draw hexagon": {
             "name": "нарисовать шестиугольник"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
           }
         },
         "courseE_artist_functions10_2019": {
@@ -1831,6 +1870,9 @@
           },
           "draw hexagon": {
             "name": "нарисовать шестиугольник"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
           }
         },
         "courseE_artist_functions10_2020": {
@@ -1839,6 +1881,9 @@
           },
           "draw hexagon": {
             "name": "нарисовать шестиугольник"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
           }
         },
         "courseE_artist_functions2": {
@@ -1966,6 +2011,9 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -1977,6 +2025,9 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1988,6 +2039,9 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1999,6 +2053,9 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -2031,6 +2088,9 @@
           },
           "do something": {
             "name": "выполнить что-то"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8b_2019": {
@@ -2039,6 +2099,9 @@
           },
           "do something": {
             "name": "выполнить что-то"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8b_2020": {
@@ -2047,6 +2110,9 @@
           },
           "do something": {
             "name": "выполнить что-то"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -2058,6 +2124,9 @@
           },
           "staggered squares": {
             "name": "квадраты в шахматном порядке\n"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -2069,6 +2138,9 @@
           },
           "staggered squares": {
             "name": "квадраты в шахматном порядке\n"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -2080,6 +2152,9 @@
           },
           "staggered squares": {
             "name": "квадраты в шахматном порядке\n"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions9": {
@@ -2088,6 +2163,9 @@
           },
           "draw triangle": {
             "name": "нарисовать треугольник"
+          },
+          "draw line of triangles": {
+            "name": "нарисовать линию из треугольников"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -2096,6 +2174,9 @@
           },
           "draw triangle": {
             "name": "нарисовать треугольник"
+          },
+          "draw line of triangles": {
+            "name": "нарисовать линию из треугольников"
           }
         },
         "courseE_artist_functions9_2019": {
@@ -2104,6 +2185,9 @@
           },
           "draw triangle": {
             "name": "нарисовать треугольник"
+          },
+          "draw line of triangles": {
+            "name": "нарисовать линию из треугольников"
           }
         },
         "courseE_artist_functions9_2020": {
@@ -2112,6 +2196,9 @@
           },
           "draw triangle": {
             "name": "нарисовать треугольник"
+          },
+          "draw line of triangles": {
+            "name": "нарисовать линию из треугольников"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -2123,6 +2210,12 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -2134,6 +2227,12 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -2145,46 +2244,76 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_predict1": {

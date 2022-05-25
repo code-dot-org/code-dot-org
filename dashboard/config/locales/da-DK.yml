@@ -894,10 +894,6 @@ da:
       for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer
       dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg
       for dine elevar før dei oppdaterte vilkåre er akseptert.
-  donor_interstitial:
-    title: Dine gratis datalogikurser er blevet muliggjort af...
-    support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
-    get_started: Kom i gang med Code.org
   school_info_interstitial:
     save: Gem
   race_interstitial:

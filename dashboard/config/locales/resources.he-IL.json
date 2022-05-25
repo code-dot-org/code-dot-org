@@ -842,6 +842,12 @@
         "teacher_forum/csd/2021": {
           "name": "פורום מורים"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "סרטון"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "סרטון"
         },
@@ -940,6 +946,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "פורום מורים"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "סרטון"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "סרטון"

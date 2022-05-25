@@ -421,6 +421,7 @@ eu:
         csd_debugging: Arazketa
         playlab_2021: 'Sarrera: Jolas Laborategia'
         playlab_2021_reader: 'Sarrera: Jolas Laborategia'
+        csp_applab_parameters: Parametrodun funtzioak
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

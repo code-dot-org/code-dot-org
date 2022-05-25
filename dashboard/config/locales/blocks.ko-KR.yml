@@ -4,6 +4,22 @@ ko:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': 매우 작음
+            '0.75': 작음
+            '1.00': 보통
+            '2.00': 큰
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': 매우 작음
+            '0.75': 작음
+            '1.00': 보통
+            '2.00': 큰
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -1048,7 +1064,7 @@ ko:
         text: 라인 {COLOR}  {LOC1}  {LOC2} 그리기
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: '매 {N} {UNIT} '
         options:
           UNIT:
@@ -1207,8 +1223,6 @@ ko:
             '"pop"': 펑!
             '"rain"': 비
             '"spiral"': 나선
-      gamelab_makeNewScaledSprite:
-        text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:
@@ -1223,6 +1237,12 @@ ko:
             '90': 아래로
             '180': 왼쪽으로
             '270': 위로
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': 작음
+            '50': 보통
+            '100': 큰
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:

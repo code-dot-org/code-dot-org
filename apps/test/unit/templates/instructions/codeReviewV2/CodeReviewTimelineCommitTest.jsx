@@ -6,6 +6,7 @@ import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
 const DEFAULT_PROPS = {
   commit: {
@@ -13,7 +14,8 @@ const DEFAULT_PROPS = {
     createdAt: '2022-03-31T04:58:42.000Z',
     comment: 'This is a comment from your teacher',
     projectVersion: 'asdfjkl',
-    isVersionExpired: false
+    isVersionExpired: false,
+    timelineElementType: timelineElementType.commit
   },
   isLastElementInTimeline: false
 };

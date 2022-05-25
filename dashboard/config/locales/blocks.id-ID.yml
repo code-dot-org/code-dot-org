@@ -4,6 +4,22 @@ id:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -1066,7 +1082,7 @@ id:
         text: gambar garis {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
@@ -1225,8 +1241,6 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
-      gamelab_makeNewScaledSprite:
-        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNumSprites:
@@ -1241,6 +1255,12 @@ id:
             '90': turun
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': kecil
+            '50': sedang
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} wajah {DIRECTION}"
         options:

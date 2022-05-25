@@ -28,12 +28,10 @@ import {
 } from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
-
-/** @const {number} serial port transfer rate */
-const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
 const pinMapping = {
@@ -97,7 +95,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       if (isWebSerialPort(this.port_)) {
-        const name = this.port_.getInfo().usbProductId;
+        const name = this.port_.productId;
         CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
           port => {
             this.initializePlaygroundAndBoard(port, name, resolve, reject);
@@ -428,14 +426,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   /**
    * Create a serial port controller and open the Web Serial port immediately.
-   * @param {string} portName
+   * @param {Object} port
    * @return {Promise<SerialPort>}
    */
-  static async openSerialPortWebSerial(port) {
-    await port.open({baudRate: SERIAL_BAUD});
-
-    this.createPendingQueue(port);
-    return port;
+  static openSerialPortWebSerial(port) {
+    return port.open().then(() => {
+      this.createPendingQueue(port);
+      return port;
+    });
   }
 
   // Creates a queue on the port to store pending buffers

@@ -833,6 +833,10 @@
           "word": "Máquina de aprendizado",
           "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
         },
+        "user/csd/2021": {
+          "word": "Usuário",
+          "definition": "Alguém que usa um objeto, incluindo software e hardware."
+        },
         "user_interface/csd/2021": {
           "word": "Interface do Usuário"
         },

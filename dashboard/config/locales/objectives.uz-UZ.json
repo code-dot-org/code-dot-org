@@ -2,14 +2,89 @@
   "uz-UZ": {
     "data": {
       "objectives": {
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "6394fdc5-50c3-423e-8135-a64594824db3": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "Tasvirni ketma-ket qadamlar yordamida bajarish uchun dastur yarating."
         },
         "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
           "description": "Murakkab shakllarni oddiy qismlarga ajrating."
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish"
@@ -20,6 +95,90 @@
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Kod bilan raqs animatsiyalari yarating"
         },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Nima uchun shifrlash Internetdagi kundalik hayot uchun muhim ehtiyoj ekanligini tushuntiring."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Qaysar shifrli vidjet yordamida Qaysar shifr bilan shifrlangan xabarni buzish"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Frequency Analysis yordamida tasodifiy almashtirish bilan shifrlangan xabarni buzish"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "O‘zgartirish shifrlarining zaif va xavfsizlik nuqsonlarini tushuntiring"
+        },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "App Lab-da tugmachalar, matnlar, rasmlar, tovushlar va ekranlar kabi xususiyatlardan foydalangan holda o‘z dasturlaringizni yarating va o‘rtoqlashing."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "code.org/applab sahifasida keltirilgan manbalardan foydalangan holda to‘liq App laboratoriyasida loyihalarni qurishda davom eting."
+        },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Matnni siqish vidjeti (yo‘qotishsiz siqish sxemasi) yordamida matnni siqish muammosiga echim topish uchun tengdoshlar bilan hamkorlik qiling."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Nima uchun siqishni optimal miqdorini aniqlash mumkin emasligini yoki \"qiyin ligini\" tushuntiring."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Siqishni qiyinlashtiradigan ba'zi omillarni tushuntirib bering."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Kayıpsız siqishni maqsadi va asoslarini aytib bering."
+        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."
         },
@@ -28,6 +187,18 @@
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
+        },
+        "63be9575-1232-47a5-991c-8bd03ac7c949": {
+          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
+        },
+        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
+          "description": "Informatika so‘z birikmalarini aniqlang"
+        },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
+        },
+        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
+          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."

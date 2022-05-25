@@ -2,6 +2,22 @@
 my:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': အလယ်အလတ်
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': အလယ်အလတ်
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -151,6 +167,12 @@ my:
         options:
           EFFECT:
             '"rain"': မိုးရွာသည်
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': အလယ်အလတ်
+            '100': large
       gamelab_playSoundOptions:
         options:
           SOUND:

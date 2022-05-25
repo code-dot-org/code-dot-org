@@ -1211,6 +1211,18 @@
         },
         "CSD web text size_2021": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
         }
       }
     }

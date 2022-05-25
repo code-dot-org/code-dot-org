@@ -2636,6 +2636,8 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+          description_audience: De 4 a 8 anys
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
         csa2-2022:
           lessons:
             lesson-6:
@@ -2692,3 +2694,21 @@ ca:
             For Loops:
               name: Per bucles
               key: Per bucles
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+              key: Variables
+            Text:
+              name: text
+              key: text
+            Conditionals:
+              name: Condicionals
+              key: Condicionals
+            Functions:
+              name: Funcions
+              key: Funcions
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funcions

@@ -3013,3 +3013,21 @@ kk:
             For Loops:
               name: For ілмектері
               key: For ілмектері
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Айнымалылар
+              key: Айнымалылар
+            Text:
+              name: Мәтін
+              key: Мәтін
+            Conditionals:
+              name: Шарттар
+              key: Шарттар
+            Functions:
+              name: Функциялар
+              key: Функциялар
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Функциялар

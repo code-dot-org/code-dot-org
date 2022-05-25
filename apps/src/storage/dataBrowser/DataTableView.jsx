@@ -13,6 +13,7 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
+import TableDescription from './TableDescription';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -28,6 +29,7 @@ class DataTableView extends React.Component {
     tableListMap: PropTypes.object.isRequired,
     tableRecords: PropTypes.array.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
+    libraryManifest: PropTypes.object.isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
@@ -91,7 +93,14 @@ class DataTableView extends React.Component {
   }
 
   render() {
-    const visible = DataView.TABLE === this.props.view;
+    const {
+      view,
+      tableListMap,
+      tableName,
+      onViewChange,
+      libraryManifest
+    } = this.props;
+    const visible = DataView.TABLE === view;
     const containerStyle = [
       styles.container,
       {
@@ -104,8 +113,7 @@ class DataTableView extends React.Component {
         display: this.state.showDebugView ? '' : 'none'
       }
     ];
-    const readOnly =
-      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
+    const readOnly = tableListMap[tableName] === tableType.SHARED;
 
     return (
       <div id="dataTable" style={containerStyle} className="inline-flex">
@@ -114,7 +122,7 @@ class DataTableView extends React.Component {
             <a
               id="tableBackToOverview"
               style={dataStyles.link}
-              onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
+              onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
               &nbsp;Back to data
@@ -134,9 +142,15 @@ class DataTableView extends React.Component {
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
-          tableName={this.props.tableName}
+          tableName={tableName}
           readOnly={readOnly}
         />
+        {libraryManifest.tables && (
+          <TableDescription
+            tableName={tableName}
+            libraryTables={libraryManifest.tables}
+          />
+        )}
         <div style={debugDataStyle}>{this.getTableJson()}</div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
@@ -186,7 +200,8 @@ export default connect(
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
+    libraryManifest: state.data.libraryManifest || {}
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {

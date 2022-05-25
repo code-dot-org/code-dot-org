@@ -1007,6 +1007,8 @@ mi:
           lessons:
             Introduction:
               name: Kupu Whakataki
+            Input:
+              name: Tāuru
         coursed-ramp:
           lessons:
             Introduction:
@@ -2782,3 +2784,21 @@ mi:
             For Loops:
               name: Mō Ngā Koromeke
               key: Mō Ngā Koromeke
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Ngā Taurangi
+              key: Ngā Taurangi
+            Text:
+              name: Kuputuhi
+              key: Kuputuhi
+            Conditionals:
+              name: Ngā Here
+              key: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+              key: Ngā Taumahi
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Ngā Taumahi

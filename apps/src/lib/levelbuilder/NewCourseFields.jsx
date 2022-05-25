@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import PropTypes from 'prop-types';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 export default function NewCourseFields(props) {
   const [selectedFamilyName, setSelectedFamilyName] = useState('');
@@ -17,7 +18,7 @@ export default function NewCourseFields(props) {
           className="familyNameSelector"
           onChange={e => {
             setSelectedFamilyName(e.target.value);
-            props.setFamilyName(e.target.value);
+            props.setFamilyAndCourseType(e.target.value);
           }}
           disabled={newFamilyName !== ''}
         >
@@ -114,6 +115,15 @@ export default function NewCourseFields(props) {
               </select>
             </label>
           )}
+          {/* Set allowMajorCurriculumChanges to false to disable editing of these fields since they have to match other courses in family*/}
+          {selectedFamilyName !== '' && (
+            <CourseTypeEditor
+              instructorAudience={props.instructorAudience}
+              participantAudience={props.participantAudience}
+              instructionType={props.instructionType}
+              allowMajorCurriculumChanges={false}
+            />
+          )}
         </div>
       )}
     </div>
@@ -125,8 +135,12 @@ NewCourseFields.propTypes = {
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
   familyName: PropTypes.string.isRequired,
   setFamilyName: PropTypes.func.isRequired,
+  setFamilyAndCourseType: PropTypes.func.isRequired,
   versionYear: PropTypes.string.isRequired,
-  setVersionYear: PropTypes.func.isRequired
+  setVersionYear: PropTypes.func.isRequired,
+  instructionType: PropTypes.string.isRequired,
+  instructorAudience: PropTypes.string.isRequired,
+  participantAudience: PropTypes.string.isRequired
 };
 
 const styles = {

@@ -1,0 +1,14 @@
+{
+  "category_key": "general",
+  "content": "We can compare `int` and `double` values using relational operators.\n\n###Relational Operators \n\nThe operators below can be used to compare `int` and `double` values. The value of the expression will equate to a `boolean`. \n\n![](https://images.code.org/b0a61faf03811c0dd006c9ac6daa1f32-Screen Shot 2022-05-07 at 1.04.51 PM.png)",
+  "examples": "[{\"name\":\"Using Relational Operators\",\"code\":\"``` \\nint a = 4;\\nint b = 7;\\n\\nif (a == b) {\\n     System.out.println(\\\"they are equal.\\\");\\n}\\n// This expression will evaluate to false, so the print statement will not be executed.\\n\\nif (a \\u003c b) {\\n     System.out.println(\\\"a is less than b\\\");\\n}\\n// This expression will evaluate to true because 4 \\u003c 7, so the print statement will be executed.\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "ComparingNumbers",
+  "name": "Comparing Numbers",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

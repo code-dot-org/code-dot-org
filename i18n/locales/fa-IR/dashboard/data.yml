@@ -382,6 +382,7 @@ fa:
         csd_debugging: اشکال‌زدایی
         playlab_2021: معرفی آزمایشگاه بازی
         playlab_2021_reader: معرفی آزمایشگاه بازی
+        csp_applab_parameters: معادله با پارامترها
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

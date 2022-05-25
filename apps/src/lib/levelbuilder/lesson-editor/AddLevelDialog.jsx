@@ -17,7 +17,8 @@ export default class AddLevelDialog extends Component {
     handleConfirm: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    activitySection: activitySectionShape.isRequired
+    activitySection: activitySectionShape.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   state = {
@@ -55,6 +56,9 @@ export default class AddLevelDialog extends Component {
                   removeLevel={this.handleRemoveLevel}
                   activitySectionPosition={this.props.activitySection.position}
                   activityPosition={this.props.activityPosition}
+                  allowMajorCurriculumChanges={
+                    this.props.allowMajorCurriculumChanges
+                  }
                 />
               ))}
             </div>
