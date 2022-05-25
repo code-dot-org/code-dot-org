@@ -12,8 +12,8 @@ export default function MarketingSkinnyBanner() {
   const text =
     'Creative projects and real world connections in our equity-driven curriculum';
 
-  // Only show if DCDO flag is set to true.
-  // Otherwise return null.
+  // Only show if DCDO flag is set to true
+  // Otherwise return null
   if (!!DCDO.get('csa-skinny-banner', false)) {
     return (
       <a
@@ -42,22 +42,22 @@ export default function MarketingSkinnyBanner() {
 
 // Styles
 const styles = {
+  a: {
+    textDecoration: 'none'
+  },
   wrapper: {
     boxSizing: 'border-box',
     width: '100%',
     height: 120,
-    marginBottom: '2em',
+    margin: '3em auto 5em',
     padding: '0 2.5em',
     background:
-      'url("/blockly/media/csa-skinny-banner-bg.svg") center center no-repeat',
+      'url("/blockly/media/csa-skinny-banner-bg.svg") center no-repeat',
     overflow: 'hidden',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap'
-  },
-  a: {
-    textDecoration: 'none'
   },
   textWrapper: {
     color: color.white,
