@@ -62,7 +62,7 @@
                 },
                 {
                   "value": "P",
-                  "text": "Planning to offer"
+                  "text": "Not currently offered, but planning to offer in the future"
                 },
                 {
                   "value": "N",
@@ -73,6 +73,12 @@
                   "text": "Not sure"
                 }
               ]
+            },
+            {
+              "type": "html",
+              "name": "planning_to_instructions",
+              "html": "<blockquote>If you are <strong>not sure</strong> or your school is <strong>planning to offer</strong> computer science courses in the future, we're interested in you answering the following questions about those plans to the best of your ability.</blockquote>",
+              "visibleIf": "{cs_offering}='p' or {cs_offering}='not_sure'"
             },
             {
               "type": "checkbox",
@@ -170,7 +176,11 @@
               "title": "Can students at your school get credit by taking computer science courses that teach programming through any of these other options? (Check all that apply.)",
               "choices": [
                 {
-                  "value": "credit_atschool",
+                  "value": "not_sure",
+                  "text": "Not sure"
+                },
+                {
+                  "value": "credit_at_school",
                   "text": "From a teacher in this school"
                 },
                 {
@@ -241,6 +251,10 @@
                 {
                   "value": "0",
                   "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "Not sure"
                 }
               ],
               "rows": [
