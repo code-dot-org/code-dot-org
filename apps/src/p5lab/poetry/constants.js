@@ -63,7 +63,7 @@ export const POEMS = {
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
   cb: {
-    locales: ['en_us', 'en_gb'],
+    locales: ['en_us'],
     author: 'C. B.',
     title: 'My City',
     linesSplit: [
