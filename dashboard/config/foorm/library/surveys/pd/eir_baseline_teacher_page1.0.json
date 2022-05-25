@@ -61,7 +61,7 @@
                   "text": "Yes, currently offered"
                 },
                 {
-                  "value": "P",
+                  "value": "p",
                   "text": "Not currently offered, but planning to offer in the future"
                 },
                 {
@@ -176,10 +176,6 @@
               "title": "Can students at your school get credit by taking computer science courses that teach programming through any of these other options? (Check all that apply.)",
               "choices": [
                 {
-                  "value": "not_sure",
-                  "text": "Not sure"
-                },
-                {
                   "value": "credit_at_school",
                   "text": "From a teacher in this school"
                 },
@@ -201,7 +197,7 @@
                 }
               ],
               "hasNone": true,
-              "noneText": "Grades 9-12 students in this school cannot take a computer science course that teaches programming or requires programming as a prerequisite",
+              "noneText": "None of these options are available to students at my school (or not sure)",
               "maxSelectedChoices": 5
             },
             {
@@ -253,7 +249,7 @@
                   "text": "No"
                 },
                 {
-                  "value": "not_sure",
+                  "value": "99",
                   "text": "Not sure"
                 }
               ],
@@ -364,12 +360,9 @@
                 {
                   "value": "7",
                   "text": "301 or more"
-                },
-                {
-                  "value": "99",
-                  "text": "Not sure"
                 }
               ],
+              "hasNone": true,
               "noneText": "Not sure"
             },
             {
@@ -401,12 +394,9 @@
                 {
                   "value": "6",
                   "text": "30 or more (full year)"
-                },
-                {
-                  "value": "99",
-                  "text": "Not sure"
                 }
               ],
+              "hasNone": true,
               "noneText": "Not sure"
             }
           ]
