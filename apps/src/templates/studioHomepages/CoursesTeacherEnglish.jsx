@@ -11,7 +11,7 @@ import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import MarketingSkinnyBanner from './MarketingSkinnyBanner';
+import MarketingSkinnyBanner from '../MarketingSkinnyBanner';
 import i18n from '@cdo/locale';
 
 /**
