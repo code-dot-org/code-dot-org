@@ -19,21 +19,19 @@ export default function MarketingSkinnyBanner() {
       <a
         href={pegasus('/educate/csa')}
         title="Learn more about Code.org's AP® CSA curriculum"
+        style={styles.a}
       >
-        <aside style={styles.csaSkinnyBanner}>
-          <div style={styles.wrapper}>
-            <div style={styles.textWrapper}>
-              <h1 style={styles.h1}>{header_text}</h1>
-              <p style={styles.p}>{text}</p>
-            </div>
-            <div style={styles.imgWrapper}>
-              <img
-                src={IMAGE_BASE_URL + 'csa-skinny-banner-image.png'}
-                alt="Two screenshots of the CSA curriculum w/ the College Board AP® CSA Endorsed badge"
-              />
-            </div>
-            <span style={styles.span}>Learn more</span>
+        <aside style={styles.wrapper}>
+          <div style={styles.textWrapper}>
+            <h1 style={styles.h1}>{header_text}</h1>
+            <p style={styles.p}>{text}</p>
           </div>
+          <img
+            style={styles.img}
+            src={IMAGE_BASE_URL + 'csa-skinny-banner-image.png'}
+            alt="Two screenshots of the CSA curriculum w/ the College Board AP® CSA Endorsed badge"
+          />
+          <span style={styles.span}>Learn more</span>
         </aside>
       </a>
     );
@@ -44,24 +42,22 @@ export default function MarketingSkinnyBanner() {
 
 // Styles
 const styles = {
-  csaSkinnyBanner: {
-    width: '100%',
-    display: 'inline-block',
+  wrapper: {
     boxSizing: 'border-box',
+    width: '100%',
     height: 120,
     marginBottom: '2em',
     padding: '0 2.5em',
-    backgroundColor: color.purple,
     background:
       'url("/blockly/media/csa-skinny-banner-bg.svg") center center no-repeat',
-    overflow: 'hidden'
-  },
-  wrapper: {
+    overflow: 'hidden',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    flexWrap: 'wrap',
-    height: '100%'
+    flexWrap: 'wrap'
+  },
+  a: {
+    textDecoration: 'none'
   },
   textWrapper: {
     color: color.white,
@@ -78,7 +74,7 @@ const styles = {
     fontSize: 16,
     lineHeight: '1.4'
   },
-  imgWrapper: {
+  img: {
     width: 315,
     marginBottom: -8
   },
