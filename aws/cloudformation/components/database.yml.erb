@@ -60,9 +60,6 @@
       RecordSets:
         - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
           Type: CNAME
-          AliasTarget:
-            DNSName: !GetAtt [<%=app%>CDN, DomainName ]
-            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt ReportingDBProxyEndpoint.ReportingDBProxyEndpoint]
   DBProxy:
