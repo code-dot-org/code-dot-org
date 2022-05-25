@@ -288,7 +288,8 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    ALLTHETHINGS = 'allthethings'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -340,11 +341,6 @@ module ScriptConstants
 
   def self.unit_in_category?(category, script)
     return CATEGORIES[category].include? script
-  end
-
-  def self.categories(script)
-    CATEGORIES.select {|_, scripts| scripts.include? script}.
-      map {|category, _| category.to_s}
   end
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]

@@ -67,13 +67,13 @@ export function setupApp(appOptions) {
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
-      }
-      // Only show version history if user is project owner, or teacher viewing student work
-      const isTeacher =
-        getStore().getState().currentUser?.userType === 'teacher';
-      const isViewingStudent = !!queryParams('user_id');
-      if (project.isOwner() || (isTeacher && isViewingStudent)) {
-        $('#versions-header').show();
+        // Only show version history if user is project owner, or teacher viewing student work
+        const isTeacher =
+          getStore().getState().currentUser?.userType === 'teacher';
+        const isViewingStudent = !!queryParams('user_id');
+        if (project.isOwner() || (isTeacher && isViewingStudent)) {
+          $('#versions-header').show();
+        }
       }
       $(document).trigger('appInitialized');
     },

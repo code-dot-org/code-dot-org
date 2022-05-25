@@ -134,6 +134,7 @@ class Script < ApplicationRecord
   end
 
   attr_accessor :skip_name_format_validation
+
   include SerializedToFileValidation
 
   after_save :hide_pilot_units
@@ -158,6 +159,13 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validate :deeper_learning_courses_cannot_be_launched
+
+  def deeper_learning_courses_cannot_be_launched
+    if old_professional_learning_course? && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
+    end
+  end
 
   after_save :check_course_type_settings
 
@@ -212,7 +220,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil?
+    !professional_learning_course.blank?
   end
 
   def generate_plc_objects
@@ -313,20 +321,12 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def self.frozen_unit
-    Script.get_from_cache(Script::FROZEN_NAME)
-  end
-
   def self.course1_unit
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
   def self.flappy_unit
     Script.get_from_cache(Script::FLAPPY_NAME)
-  end
-
-  def self.artist_unit
-    Script.get_from_cache(Script::ARTIST_NAME)
   end
 
   def self.maker_units(user)
@@ -350,6 +350,26 @@ class Script < ApplicationRecord
 
     def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
+    end
+
+    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+      record = {
+        study: 'scripts_en_yml',
+        event: log_event_type,
+        data_string: unit_name,
+        data_json: {
+          old_size: old_size,
+          new_size: new_size,
+          delta: (new_size - old_size),
+          lessons_i18n: lessons_i18n,
+          metadata_i18n: metadata_i18n,
+        }.to_json
+      }
+      FirehoseClient.instance.put_record(:analysis, record)
+
+      # Firehose events do not log reliably on levelbuilder. For now, also
+      # write them to the syslog so we can reliably find them there.
+      CDO.log.info "Logging firehose event: #{record}"
     end
   end
 
@@ -779,6 +799,10 @@ class Script < ApplicationRecord
     name
   end
 
+  def self.unit_in_category?(category, script)
+    return Script.get_from_cache(script)&.course_version&.course_offering&.category == category
+  end
+
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
@@ -792,19 +816,19 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    ScriptConstants.unit_in_category?(:twenty_hour, name)
+    name == '20-hour'
   end
 
   def hoc?
-    ScriptConstants.unit_in_category?(:hoc, name)
+    Script.unit_in_category?('hoc', name)
   end
 
   def flappy?
-    ScriptConstants.unit_in_category?(:flappy, name)
+    name == 'flappy'
   end
 
   def csf_international?
-    ScriptConstants.unit_in_category?(:csf_international, name)
+    Script.unit_in_category?('csf_international', name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -833,6 +857,8 @@ class Script < ApplicationRecord
 
   def k5_course?
     return false if twenty_hour?
+
+    # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
     k5_csc_course = [
       Script::POETRY_2021_NAME,
       Script::AI_ETHICS_2021_NAME,
@@ -847,6 +873,7 @@ class Script < ApplicationRecord
       Script::HELLO_WORLD_EMOJI_2021_NAME,
       Script::HELLO_WORLD_RETRO_2021_NAME
     ].include?(name)
+
     csf? || k5_csc_course || hoc_course
   end
 
@@ -867,17 +894,13 @@ class Script < ApplicationRecord
   end
 
   def csc?
-    under_curriculum_umbrella?('CSC')
+    Script.unit_in_category?('csc', name)
   end
 
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
     csd? || csp? || csa?
-  end
-
-  def hour_of_code?
-    under_curriculum_umbrella?('HOC')
   end
 
   def get_script_level_by_id(script_level_id)
@@ -1128,36 +1151,47 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
     raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
+
+    if destination_professional_learning_course.nil? && old_professional_learning_course?
+      raise 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
+    end
+
+    if !destination_professional_learning_course.nil? && !destination_unit_group_name.nil?
+      raise 'Can not have both a destination unit group and a destination professional learning course.'
+    end
 
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
-    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
+    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
       ActiveRecord::Base.transaction do
         copied_unit = dup
-        copied_unit.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
+
         copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
-        copied_unit.is_course = destination_unit_group.nil?
         copied_unit.name = new_name
 
-        if version_year
-          copied_unit.version_year = version_year
-        end
+        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
+        copied_unit.published_state = destination_unit_group.nil? ? SharedCourseConstants::PUBLISHED_STATE.in_development : nil
+        copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
+        copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
+        copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
 
         copied_unit.save!
 
-        if destination_unit_group
+        if !destination_professional_learning_course.nil?
+          copied_unit.professional_learning_course = destination_professional_learning_course
+          copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
+        elsif destination_unit_group
           raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.reload
         else
-          copied_unit.is_course = true
           raise "Must supply version year if new unit will be a standalone unit" unless version_year
           copied_unit.version_year = version_year
           raise "Must supply family name if new unit will be a standalone unit" unless family_name
@@ -1165,13 +1199,17 @@ class Script < ApplicationRecord
           CourseOffering.add_course_offering(copied_unit)
         end
 
+        copied_unit.save! if copied_unit.changed?
+
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
 
-        course_version = copied_unit.get_course_version
-        copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
-        copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        if destination_professional_learning_course.nil?
+          course_version = copied_unit.get_course_version
+          copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+          copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        end
 
         # Make sure we don't modify any files in unit tests.
         if Rails.application.config.levelbuilder_mode
@@ -1328,9 +1366,9 @@ class Script < ApplicationRecord
 
   # This method updates scripts.en.yml with i18n data from the units.
   # There are three types of i18n data
-  # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
+  # 1. Lesson names are passed in as lessons_i18n here. The script edit page
+  #   will add to these when creating a new lesson.
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {}, log_event_type: 'write_other')
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     old_size = `wc -l #{units_yml.dump}`.to_i
@@ -1338,57 +1376,31 @@ class Script < ApplicationRecord
 
     updated_i18n = update_i18n(i18n, lessons_i18n, unit_name, metadata_i18n)
     if i18n == updated_i18n
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'scripts_en_yml',
-          event: "skipped_#{log_event_type}",
-          data_string: unit_name,
-          user_id: current_user&.id,
-          data_json: {
-            old_size: old_size,
-            lessons_i18n: lessons_i18n,
-            metadata_i18n: metadata_i18n,
-          }.to_json
-        }
+      log_script_yml_write(
+        log_event_type: "skipped_#{log_event_type}",
+        unit_name: unit_name,
+        old_size: old_size,
+        new_size: old_size,
+        lessons_i18n: lessons_i18n,
+        metadata_i18n: metadata_i18n
       )
     else
       File.write(units_yml, "# Autogenerated scripts locale file.\n" + updated_i18n.to_yaml(line_width: -1))
 
       new_size = `wc -l #{units_yml.dump}`.to_i
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'scripts_en_yml',
-          event: log_event_type,
-          data_string: unit_name,
-          user_id: current_user&.id,
-          data_json: {
-            old_size: old_size,
-            new_size: new_size,
-            delta: (new_size - old_size),
-            lessons_i18n: lessons_i18n,
-            metadata_i18n: metadata_i18n,
-          }.to_json
-        }
+      log_script_yml_write(
+        log_event_type: log_event_type,
+        unit_name: unit_name,
+        old_size: old_size,
+        new_size: new_size,
+        lessons_i18n: lessons_i18n,
+        metadata_i18n: metadata_i18n
       )
     end
   end
 
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
-      metadata_i18n['lessons'] = {}
-      unless lesson_descriptions.nil?
-        JSON.parse(lesson_descriptions).each do |lesson|
-          lesson_name = lesson['name']
-          lesson_data = {
-            'description_student' => lesson['descriptionStudent'],
-            'description_teacher' => lesson['descriptionTeacher']
-          }
-          metadata_i18n['lessons'][lesson_name] = lesson_data
-        end
-      end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
     end
 
@@ -1635,10 +1647,7 @@ class Script < ApplicationRecord
     data['lessons'] = {}
     lessons.each do |lesson|
       lesson_data = {
-        'key' => lesson.key,
         'name' => lesson.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
       }
       data['lessons'][lesson.key] = lesson_data
     end
@@ -1646,7 +1655,7 @@ class Script < ApplicationRecord
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n_for_edit(include_lessons=true)
+  def summarize_i18n_for_edit
     data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
@@ -1654,21 +1663,11 @@ class Script < ApplicationRecord
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
     data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
-    if include_lessons
-      data[:lessonDescriptions] = lessons.map do |lesson|
-        {
-          key: lesson.key,
-          name: lesson.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
-        }
-      end
-    end
     data
   end
 
-  def summarize_i18n_for_display(include_lessons=true)
-    data = summarize_i18n_for_edit(include_lessons)
+  def summarize_i18n_for_display
+    data = summarize_i18n_for_edit
     data[:title] = title_for_display
     data
   end
@@ -1947,7 +1946,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!get_pilot_experiment
+    !get_pilot_experiment.blank?
   end
 
   def has_pilot_access?(user = nil)

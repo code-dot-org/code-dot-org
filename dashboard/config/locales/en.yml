@@ -679,6 +679,12 @@ en:
       title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
+    hello-world:
+      title: 'Hello World'
+      body: 'Choose from four fun themes to code interactive characters in a world you create.'
+    poem-art:
+      title: 'Poem Art'
+      body: 'Express yourself! Use code to create animated poems.'
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'

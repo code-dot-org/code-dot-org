@@ -8,6 +8,7 @@ import {
   CourseOfferingCategories,
   ParticipantAudiencesByType
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -234,12 +235,11 @@ export default class AssignmentSelector extends Component {
      * teachers will not be able to see PL course offerings because they
      * can not assign them so they should not see the PL course offerings either
      */
-    const filteredCategories = _.filter(
-      Object.keys(CourseOfferingCategories),
-      function(category) {
-        return courseOfferingsByCategories[category];
-      }
-    );
+    const filteredCategories = _.filter(CourseOfferingCategories, function(
+      category
+    ) {
+      return courseOfferingsByCategories[category];
+    });
 
     return (
       <div>
@@ -261,7 +261,7 @@ export default class AssignmentSelector extends Component {
             {filteredCategories.map(category => (
               <optgroup
                 key={category}
-                label={CourseOfferingCategories[category]}
+                label={translatedCourseOfferingCategories[category]}
               >
                 {courseOfferingsByCategories[category]?.map(courseOffering => (
                   <option key={courseOffering.id} value={courseOffering.id}>

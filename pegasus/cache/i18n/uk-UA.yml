@@ -1984,6 +1984,7 @@ uk-UA:
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
   header_sections: Секції
+  header_professional_learning: Підвищення кваліфікації
   header_educate_overview: Огляд для педагога
   header_educate_elementary: Початкова школа
   header_educate_middle: Середня школа
@@ -2008,7 +2009,7 @@ uk-UA:
   header_teach: Вчити
   header_stats: Статистика
   header_help_us: Допомога нам
-  header_about: Про
+  header_about: Про нас
   header_teacher_community: Спільнота вчителів
   header_help_support: 'Допомога та підтримка '
   header_report_bug: Сповістити про проблему
@@ -2227,7 +2228,7 @@ uk-UA:
   codebytes_skinny_banner_english_only: Лише англійська
   codebytes_skinny_banner_learn: 'Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). '
   footer_privacy_policy: Політика конфіденційності
-  footer_about: Про
+  footer_about: Про нас
   footer_partners: Партнери
   footer_donate: Підтримати
   footer_support: Довідка та спільнота

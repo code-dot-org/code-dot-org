@@ -15,12 +15,14 @@
         "artist"
       ],
       "project_widget_visible": true,
-      "version_year": "2022"
+      "tts": true,
+      "version_year": "2022",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-04-21 16:37:34 UTC",
-    "published_state": "beta",
+    "serialized_at": "2022-05-20 16:09:28 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
