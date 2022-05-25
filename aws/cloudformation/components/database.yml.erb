@@ -61,7 +61,7 @@
         - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
-          ResourceRecords: [!GetAtt ReportingDBProxyEndpoint.ReportingDBProxyEndpoint]
+          ResourceRecords: [!GetAtt ReportingDBProxyEndpoint.Endpoint]
   DBProxy:
     Type: AWS::RDS::DBProxy
     Properties:
