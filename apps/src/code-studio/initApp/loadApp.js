@@ -9,7 +9,6 @@ import {
 } from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
-import renderNotFound from './renderNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -240,34 +239,26 @@ function tryToUploadShareImageToS3({image, level}) {
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
-    project
-      .load()
-      .then(() => {
-        if (project.hideBecauseAbusive()) {
-          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
-          return;
-        }
-        if (project.hideBecausePrivacyViolationOrProfane()) {
-          renderAbusive(project, msg.policyViolation());
-          return;
-        }
-        if (project.getSharingDisabled()) {
-          renderAbusive(
-            project,
-            msg.sharingDisabled({
-              sign_in_url: 'https://studio.code.org/users/sign_in'
-            })
-          );
-          return;
-        }
-        resolve(appOptions);
-      })
-      .catch(() => {
-        if (project.notFound()) {
-          renderNotFound(project);
-          return;
-        }
-      });
+    project.load().then(() => {
+      if (project.hideBecauseAbusive()) {
+        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+        return;
+      }
+      if (project.hideBecausePrivacyViolationOrProfane()) {
+        renderAbusive(project, msg.policyViolation());
+        return;
+      }
+      if (project.getSharingDisabled()) {
+        renderAbusive(
+          project,
+          msg.sharingDisabled({
+            sign_in_url: 'https://studio.code.org/users/sign_in'
+          })
+        );
+        return;
+      }
+      resolve(appOptions);
+    });
   });
 }
 
