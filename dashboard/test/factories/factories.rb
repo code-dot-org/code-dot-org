@@ -1161,6 +1161,7 @@ FactoryGirl.define do
 
   factory :level_group, class: LevelGroup do
     game {create(:game, app: "level_group")}
+    sequence(:name) {|n| "Level_Group_Level_#{n}"}
     transient do
       title 'title'
       submittable false
@@ -1582,6 +1583,14 @@ FactoryGirl.define do
     level_id 1
     project_id 1
     project_version "1"
+  end
+
+  factory :code_review_note do
+    association :commenter, factory: :student
+    association :code_review
+
+    is_resolved false
+    comment 'a note about the project'
   end
 
   factory :code_review_comment do
