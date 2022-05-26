@@ -70,8 +70,22 @@ Dashboard::Application.routes.draw do
   # with the rest falling back to the old proxying logic.
   get 'docs/', to: 'programming_environments#docs_index'
   get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
-  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
-  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
+
+  resources :programming_environments, only: [:index, :show], param: 'name', path: '/docs/ide/' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/expressions' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+    resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
+      member do
+        get :show, to: 'programming_classes#show_by_keys'
+      end
+    end
+  end
+
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -359,7 +373,7 @@ Dashboard::Application.routes.draw do
     member do
       get :get_summary_by_name
     end
-    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end
@@ -958,7 +972,11 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :code_reviews, only: [:index, :create, :update]
+  resources :code_reviews, only: [:index, :create, :update] do
+    get :peers_with_open_reviews, on: :collection
+  end
+
+  resources :code_review_notes, only: [:create, :update]
 
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
