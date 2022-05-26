@@ -72,3 +72,5 @@ npm-debug.log
 /i18n/locales/*/codeorg-markdown/
 /i18n/locales/*/curriculum_content/
 /i18n/locales/*/piskel/
+*.scssc
+*.map
