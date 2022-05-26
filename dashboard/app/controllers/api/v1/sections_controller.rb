@@ -1,4 +1,4 @@
-class Api::V1::SectionsController < Api::V1::JsonApiController
+class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
