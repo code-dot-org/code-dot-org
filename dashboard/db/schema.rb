@@ -457,7 +457,7 @@ ActiveRecord::Schema.define(version: 2022_05_25_181706) do
     t.index ["name"], name: "index_courses_on_name"
   end
 
-  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "name"
     t.text "content"
