@@ -134,14 +134,16 @@ class SyncOmniAuthSectionControl extends React.Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <Heading1>{'Sync error'}</Heading1>
+          <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
           <div style={styles.scroll}>
             <pre>
               <code>Sample error.</code>
             </pre>
           </div>
           <div style={styles.needHelpMessage}>
-            <a href="sampleLink">Need additional help?</a>
+            <a href="https://support.code.org/hc/en-us/articles/6496495212557">
+              {i18n.loginTypeSyncButtonDialogNeedHelp()}
+            </a>
           </div>
           <div style={styles.closeButton}>
             <Button
@@ -199,7 +201,7 @@ function buttonText(buttonState, providerName) {
   } else if (buttonState === SUCCESS) {
     return i18n.loginTypeSyncButton_success({providerName});
   } else if (buttonState === FAILURE) {
-    return i18n.loginTypeSyncButton_failure({providerName});
+    return i18n.loginTypeSyncButton_failure_more_info({providerName});
   }
   return i18n.loginTypeSyncButton({providerName});
 }
