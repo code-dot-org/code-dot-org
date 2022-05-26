@@ -333,8 +333,7 @@ class Script < ApplicationRecord
   # Used to determine the most recent Maker Unit to show on the Maker Homepage
   def self.maker_units(user)
     # only units in CSD should be included in the maker units
-    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.key == 'csd'}
-    return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
+    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.csd?}
   end
 
   class << self
@@ -1583,7 +1582,7 @@ class Script < ApplicationRecord
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
-    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.key == 'csd'
+    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
     summary
   end
 
