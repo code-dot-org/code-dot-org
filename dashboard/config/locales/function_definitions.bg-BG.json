@@ -2532,6 +2532,28 @@
           "build long bridge": {
             "name": "построй дълъг мост"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "нарисувай форма",
+            "parameters": {
+              "sides": "страни",
+              "length": "дължина"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
         }
       }
     }
