@@ -480,6 +480,7 @@ fil-PH:
   homepage_slot_text_link_buy: Sumali
   homepage_slot_text_link_donate: Magbigay ng donasyon
   homepage_slot_text_link_shop: Mga t-shirt, mga sombrero, & iba pa
+  homepage_slot_text_link_thebadguys: Code kasama ang The Bad Guys
   homepage_slot_text_link_administrators: Dalhin sa iyong paaralan o distrito
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: Tingnan lahat
@@ -1396,6 +1397,12 @@ fil-PH:
   coursed-2021_gradelevel: Baitang 8+
   coursee-2021_gradelevel: Baitang 9+
   coursef-2021_gradelevel: Baitang 10+
+  coursea-2022_gradelevel: Baitang 5+
+  courseb-2022_gradelevel: Baitang 6+
+  coursec-2022_gradelevel: Baitang 7+
+  coursed-2022_gradelevel: Baitang 8+
+  coursee-2022_gradelevel: Baitang 9+
+  coursef-2022_gradelevel: Baitang 10+
   accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
@@ -1637,6 +1644,26 @@ fil-PH:
     function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
     na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
   coursef-2021_shortdescription_congrats: Matutong gumami sa iba't ibang uri ng mga
+    loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
+    pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing
+    at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha
+    ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
+  coursea-2022_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
+    computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+    iyong sariling laro o istorya na maaari mong ibahagi.
+  courseb-2022_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa
+    computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+    iyong sariling laro o istorya na maaari mong ibahagi.
+  coursec-2022_shortdescription_congrats: Lumikha ng mga programa gamit ang pagsunod-sunod,
+    mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin
+    ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon
+    sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari
+    mong ibahagi!
+  coursee-2022_shortdescription_congrats: Magsimulang mag-code gamit ang mga algoritmo,
+    mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga
+    function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
+    na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+  coursef-2022_shortdescription_congrats: Matutong gumami sa iba't ibang uri ng mga
     loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
     pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing
     at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha
@@ -2224,6 +2251,7 @@ fil-PH:
   header_educate_beyond: Pagkatapos ng Code.org
   header_educate_inspire: Magbigay Inspirasyon sa Estudyante
   header_educate_community: Online na Komunidad
+  header_educate_requirements: Mga Kinakailangang Teknikal
   header_educate_tools: Mga Tools at Videos
   header_about_us: Tungkol sa Amin
   header_about_leadership: Pamumuno
@@ -2408,3 +2436,8 @@ fil-PH:
   ai_activity: Aktibidad
   ai_description: Deskripsyon
   outbreak_tile_title: Pagsiklab
+  top_hoc_tutorial_applab_alt_text: Isang kayumangging kamay na nakadikit ang hintuturo
+    sa isang touch screen na tablet na naglalabas ng mga bituin at sinag ng liwanag
+    laban sa isang asul na background
+  minecraft_tile_alt: Dalawang karakter sa Minecraft, sina Steve at Alex, sa background
+    na nagpapakita ng eksena sa aquatic Minecraft na may coral, dolphin, at kelp

@@ -51,6 +51,7 @@ mr-IN:
   homepage_action_text_girlvideo: एका मुलीला प्रोत्साहन द्या
   homepage_slot_text_title_hoc: अवर ऑफ कोड
   homepage_slot_text_link_hoc: अवर ऑफ कोड करून पहा
+  homepage_slot_text_link_thebadguys: द बॅड गाईज सोबत कोड करा.
   videos_more: आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही <a href='%{inspiring_videos_playlist}'>प्रेरणादायक
     व्हिडीओज</a>
   videos_more_markdown: आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही [प्रेरणादायक
@@ -165,6 +166,7 @@ mr-IN:
   coursee-2020_name: अभ्यासक्रम  E (2020)
   coursef-2020_name: अभ्यासक्रम F (2020)
   coursed-2021_name: अभ्यासक्रम D (2021)
+  coursed-2022_name: अभ्यासक्रम D (2021)
   pre-express-2018_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2018)
   pre-express-2019_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2019)
   pre-express-2020_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2020)
@@ -238,6 +240,12 @@ mr-IN:
   coursed-2021_gradelevel: वय वर्षे 7-11
   coursee-2021_gradelevel: वय वर्षे 8-12
   coursef-2021_gradelevel: वय वर्षे 9-13
+  coursea-2022_gradelevel: वय वर्षे 4-7
+  courseb-2022_gradelevel: वय वर्षे 5-8
+  coursec-2022_gradelevel: वय वर्षे 6-10
+  coursed-2022_gradelevel: वय वर्षे 7-11
+  coursee-2022_gradelevel: वय वर्षे 8-12
+  coursef-2022_gradelevel: वय वर्षे 9-13
   accelerated_gradelevel: वय वर्षे 10-18
   thinkersmithspanish_platformtext: अनप्लग केले
   thinkersmith_platformtext: अनप्लग केले
@@ -318,6 +326,7 @@ mr-IN:
   header_project_gallery: प्रकल्प
   header_professional_learning: व्यावसायिक अध्ययन
   header_educate_hoc: अवर ऑफ कोड
+  header_educate_requirements: तांत्रिक आवश्यकता
   header_about: या बद्दल
   header_help_support: 'सहाय्य आणि मदत '
   header_report_bug: समस्या रिपोर्ट करा
@@ -560,3 +569,7 @@ mr-IN:
     प्लॅटफॉर्म
   ai_try_activity: कृती करून पहा
   outbreak_tile_title: उद्रेक
+  top_hoc_tutorial_applab_alt_text: तर्जनी असलेला तपकिरी हात एका टच स्क्रीन टॅब्लेटला
+    स्पर्श करत आहे जो निळ्या पार्श्वभूमीवर तारे आणि प्रकाश किरण उत्सर्जित करतो
+  minecraft_tile_alt: दोन माइन क्राफ्ट पात्र, स्टीव्ह आणि अॅलेक्स, पार्श्वभूमीवर कोरल,
+    डॉल्फिन आणि केल्पसह जलीय माइन क्राफ्ट दृश्य दर्शवित आहेत
