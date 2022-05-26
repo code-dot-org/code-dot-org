@@ -245,6 +245,10 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
+        },
         "event/sports/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -379,6 +383,10 @@
         "for_loop/coursef/2021": {
           "word": "\"for“-Schleife",
           "definition": "Schleifen, die einen festgelegten Anfang, ein festgelegtes Ende und eine festgelegte Schrittgröße (Schrittintervall) haben."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelle und Simulationen",
+          "definition": "ein Programm, das die wichtigsten Merkmale eines realen Ereignisses nachbildet oder nachahmt, um das Verhalten des Ereignisses ohne die Kosten, den Zeitaufwand oder die Gefahren eines Experiments in der realen Welt zu untersuchen."
         },
         "machine_learning/coursef/2021": {
           "word": "Maschinelles Lernen",
