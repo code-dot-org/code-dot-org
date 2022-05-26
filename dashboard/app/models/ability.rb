@@ -183,6 +183,7 @@ class Ability
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
         if level_to_view&.is_a?(Javalab)
+          # Code review V1
           reviewable_project = ReviewableProject.find_by(
             user_id: user_to_assume.id,
             script_id: script_level.script_id,
@@ -199,6 +200,11 @@ class Ability
               reviewable_project.level_id,
               reviewable_project.script_id
             )
+            can_view_as_user_for_code_review = true
+          end
+
+          # Code review V2
+          if user != user_to_assume && !user_to_assume.student_of?(user) && can?(:code_review, user_to_assume)
             can_view_as_user_for_code_review = true
           end
         end
