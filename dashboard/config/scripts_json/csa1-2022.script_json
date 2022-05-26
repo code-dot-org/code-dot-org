@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-22 15:28:18 UTC",
+    "serialized_at": "2022-05-24 13:40:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9088,6 +9088,30 @@
       }
     },
     {
+      "name": "While Loops",
+      "url": "https://youtu.be/qnz0LVpUr88",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "name": "Writing a Method",
+      "url": "https://youtu.be/pdNf1O9BTYM",
+      "key": "writing_a_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "writing_a_method"
+      }
+    },
+    {
       "name": "Writing Algorithms",
       "url": "https://docs.google.com/document/d/1JmEN9yfj-kr5txjuRCRlIkTmbbAziAHfnvErMSXKH-8/edit?usp=sharing",
       "key": "writing_algorithms",
@@ -9571,6 +9595,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "writing_a_method"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u1l8_extra_practice"
       }
@@ -9639,6 +9669,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "while_loops"
       }
     },
     {

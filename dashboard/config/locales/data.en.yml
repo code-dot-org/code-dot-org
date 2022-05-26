@@ -701,6 +701,7 @@ en:
         PL_CSP_TeacherTips_LeadLearner: 'Teacher Tips: How to be a Lead Learner'
         PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
         PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
