@@ -604,8 +604,9 @@ class UnitEditor extends React.Component {
               />
               <HelpTip>
                 <p>
-                  If checked, this unit uses the maker toolkit and teachers who
-                  teach it may be eligible for maker toolkit discounts.
+                  If checked, this unit is in CSD and uses the maker toolkit.
+                  Checking this will add this unit to the list of units that can
+                  show up on the maker homepage.
                 </p>
               </HelpTip>
             </label>
