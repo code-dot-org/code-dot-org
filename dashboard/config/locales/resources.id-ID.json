@@ -665,7 +665,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -1589,7 +1590,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -1755,7 +1757,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Tugas Akhir CS Fundamentals",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "design-process/coursee/2021": {
           "name": "Proses Desain",
@@ -1853,6 +1856,9 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrik"
+        },
         "survey_planning/csd/2021": {
           "name": "Merancang Pengumpulan Data"
         },
@@ -1862,6 +1868,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "Video"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrik"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
@@ -1869,7 +1878,8 @@
           "type": "Bayangan"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Prototipe Kertas"
+          "name": "Prototipe Kertas",
+          "type": "Rubrik"
         },
         "market-research/csd/2021": {
           "name": "Meneliti pasar"
@@ -1893,7 +1903,8 @@
           "name": "Aplikasi Multilayar"
         },
         "app-presentation/csd/2021": {
-          "name": "Penyajian aplikasi"
+          "name": "Penyajian aplikasi",
+          "type": "Rubrik"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Penyajian aplikasi"
@@ -1933,6 +1944,9 @@
         "functions_2/csd/2021": {
           "name": "fungsi"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrik"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "Pengenalan Array",
           "type": "Video"
@@ -1960,6 +1974,9 @@
         "physical-prototyping-project/csd/2021": {
           "type": "Panduan Proyek"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrik"
+        },
         "planning-your-innovation/csd/2021": {
           "type": "Panduan Proyek"
         },
@@ -1978,6 +1995,9 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Merepresentasikan Angka"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubrik"
         },
         "structuring_data/csd/2021": {
           "name": "Penataan Data"
@@ -2031,6 +2051,9 @@
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrik"
+        },
         "solve-a-data-problem/csd/2021": {
           "type": "Panduan Proyek"
         },
@@ -2059,6 +2082,9 @@
         "sprite_properties/csd/2021": {
           "name": "Properti Sprite"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrik"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },
@@ -2071,6 +2097,9 @@
         "animating-sprites/csd/2021": {
           "name": "Gerakan Sprite",
           "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrik"
         },
         "boolean_expressions/csd/2021": {
           "name": "Ekspresi Boolean",
@@ -2090,6 +2119,9 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
+        "interactive_card/csd/2021": {
+          "type": "Rubrik"
+        },
         "velocity_1/csd/2021": {
           "name": "Percepatan",
           "type": "Video"
@@ -2104,7 +2136,8 @@
           "name": "Deteksi tumbukan"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Side Scroller"
+          "name": "Side Scroller",
+          "type": "Rubrik"
         },
         "side-scroller/csd/2021": {
           "name": "Side Scroller",
@@ -2114,7 +2147,8 @@
           "name": "Percepatan dan Pola Tandingan"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Flyer Game"
+          "name": "Flyer Game",
+          "type": "Rubrik"
         },
         "flyer-game/csd/2021": {
           "name": "Flyer Game",
@@ -2132,6 +2166,9 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Penelaahan Sejawat"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrik"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum guru"
@@ -2172,7 +2209,8 @@
           "type": "Penelaahan Sejawat"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Aplikasi dan Pemecahan Masalah"
+          "name": "Aplikasi dan Pemecahan Masalah",
+          "type": "Rubrik"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Mengeksplorasi Halaman Web"
@@ -2198,6 +2236,9 @@
         },
         "video_debugging/csd/2021": {
           "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrik"
         },
         "html-web-page/csd/2021": {
           "type": "Penelaahan Sejawat"
@@ -2228,6 +2269,9 @@
           "name": "Pengantar CSS - Bagian 2",
           "type": "Video"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrik"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "Penelaahan Sejawat"
         },
@@ -2255,6 +2299,9 @@
         "person-web-page-reflect/csd/2021": {
           "type": "Panduan Proyek"
         },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrik"
+        },
         "publishing_your_website/csd/2021": {
           "name": "Sedang diterbitkan situs web",
           "type": "Video"
@@ -2276,6 +2323,9 @@
         },
         "classes/csd/2021": {
           "name": "Kelas"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrik"
         },
         "plan-a-multi-page-website/csd/2021": {
           "type": "Panduan Proyek"

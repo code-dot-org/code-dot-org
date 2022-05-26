@@ -2547,21 +2547,16 @@ hy:
         csd3-2021:
           lessons:
             Variables:
-              key: փոփոխականների
               name: փոփոխականների
             Text:
-              key: տեքստ
               name: տեքստ
             Conditionals:
-              key: conditionals
               name: conditionals
             Functions:
-              key: գործառույթները
               name: գործառույթները
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Գործառույթները պարամետրերով
               name: Գործառույթները պարամետրերով
         csp1-2021:
           lesson_groups:
@@ -2574,7 +2569,6 @@ hy:
         csp3-2021:
           lessons:
             Debugging:
-              key: Debugging
               name: Debugging
         csp4-2021:
           lesson_groups:
@@ -2612,7 +2606,6 @@ hy:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Տեղափոխել այն, տեղափոխել այն
               name: Տեղափոխել այն, տեղափոխել այն
             'Loops: Getting Loopy':
               name: Getting Loopy
@@ -2626,7 +2619,6 @@ hy:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binary Bracelets
               name: Binary Bracelets
             'Events: The Big Event':
               name: The Big Event
@@ -2644,16 +2636,11 @@ hy:
             'Algorithms: Graph Paper Programming':
               name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
-              key: Relay programming
               name: Relay programming
             Conditionals with Cards:
-              key: Conditionals with Cards
               name: Conditionals with Cards
             'Unplugged: Binary':
-              key: 'Unplugged: Binary'
               name: Binary Images
-            Artist Binary:
-              key: Artist Binary
           lesson_groups:
             csf_events:
               display_name: Իրադարձություններ
@@ -2669,8 +2656,6 @@ hy:
               display_name: Digital Citizenship
         coursee-2021:
           lessons:
-            Conditionals:
-              key: conditionals
             'Functions: Songwriting':
               name: songwriting
           lesson_groups:
@@ -2685,13 +2670,10 @@ hy:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Envelope Variables
               name: Envelope Variables
             Internet:
-              key: Internet
               name: Համացանց
             For Loop Fun:
-              key: For Loop Fun
               name: For Loop Fun
           lesson_groups:
             csf_digcit:
@@ -2771,22 +2753,16 @@ hy:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: loops
               name: loops
             Events:
-              key: Իրադարձություններ
               name: Իրադարձություններ
             Conditionals:
-              key: conditionals
               name: conditionals
             Functions:
-              key: գործառույթները
               name: գործառույթները
             Variables:
-              key: փոփոխականների
               name: փոփոխականների
             For Loops:
-              key: For Loops
               name: For Loops
           lesson_groups:
             k5_getting_started_1:
@@ -2956,7 +2932,6 @@ hy:
           lessons:
             Debugging:
               name: Debugging
-              key: Debugging
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2975,7 +2950,6 @@ hy:
           lessons:
             Move It, Move It:
               name: Տեղափոխել այն, տեղափոխել այն
-              key: Տեղափոխել այն, տեղափոխել այն
             Getting Loopy:
               name: Getting Loopy
             'Loops: Getting Loopy':
@@ -2993,7 +2967,6 @@ hy:
               name: The Big Event
             Binary Bracelets:
               name: Binary Bracelets
-              key: Binary Bracelets
             'Events: The Big Event':
               name: The Big Event
           lesson_groups:
@@ -3013,10 +2986,8 @@ hy:
               name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
               name: Relay programming
-              key: Relay programming
             Conditionals with Cards:
               name: Conditionals with Cards
-              key: Conditionals with Cards
             'Algorithms: Graph Paper Programming':
               name: Գրաֆիկի Թուղթ Ծրագրավորում
           lesson_groups:
@@ -3034,8 +3005,6 @@ hy:
               name: songwriting
             'Functions: Songwriting':
               name: songwriting
-            Conditionals:
-              key: conditionals
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -3049,11 +3018,9 @@ hy:
           lessons:
             For Loop Fun:
               name: For Loop Fun
-              key: For Loop Fun
             The Internet:
               name: Համացանց
             Internet:
-              key: Internet
               name: Համացանց
           lesson_groups:
             lessonGroup-7:
@@ -3122,7 +3089,6 @@ hy:
           lessons:
             The Internet:
               name: Համացանց
-              key: Համացանց
           lesson_groups:
             lessonGroup-7:
               display_name: Digital Citizenship
@@ -3151,37 +3117,39 @@ hy:
           lessons:
             Loops:
               name: loops
-              key: loops
             Events:
               name: Իրադարձություններ
-              key: Իրադարձություններ
             Conditionals:
               name: conditionals
-              key: conditionals
             Functions:
               name: գործառույթները
-              key: գործառույթները
             Variables:
               name: փոփոխականների
-              key: փոփոխականների
             For Loops:
               name: For Loops
-              key: For Loops
         csd3-2022:
           lessons:
             Variables:
               name: փոփոխականների
-              key: փոփոխականների
             Text:
               name: տեքստ
-              key: տեքստ
             Conditionals:
               name: conditionals
-              key: conditionals
             Functions:
               name: գործառույթները
-              key: գործառույթները
         csd6-2022:
           lessons:
             Functions:
               name: գործառույթները
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview

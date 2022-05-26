@@ -2117,6 +2117,18 @@
           "build long bridge": {
             "name": "magtayo ng mahabang tulay"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          }
         }
       }
     }

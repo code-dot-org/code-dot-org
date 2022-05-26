@@ -2987,6 +2987,30 @@
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
           "moving east and looping": "krećući se prema istoku i petljajući"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "skupljanje",
+          "patrolling": "patroliranje",
+          "wandering": "lutanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "spinning right": "vrteći se udesno"
+        },
+        "allthethings_fish_tank": {
+          "shrinking": "skupljanje",
+          "patrolling": "patroliranje",
+          "wandering": "lutanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "spinning right": "vrteći se udesno"
         }
       }
     }

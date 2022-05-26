@@ -60,7 +60,6 @@ zu:
         csd3-2021:
           lessons:
             Text:
-              key: Umbhalo
               name: Umbhalo
         csp5-2021:
           lesson_groups:
@@ -74,4 +73,3 @@ zu:
           lessons:
             Text:
               name: Umbhalo
-              key: Umbhalo

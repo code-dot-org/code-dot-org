@@ -378,6 +378,7 @@
   homepage_slot_text_link_buy: "Légy részese"
   homepage_slot_text_link_donate: "Adományozz"
   homepage_slot_text_link_shop: "Pólók, sapkák & egyéb"
+  homepage_slot_text_link_thebadguys: "Kódolás A rossz fiúk filmmel"
   homepage_slot_text_link_administrators: "Hozd a CS-t az iskoládba"
   homepage_gallery_header: "Több mint %{project_count} millió Code.org projekt készült eddig"
   homepage_header_donors: "A Code.org megköszöni a támogatókat"
@@ -1091,6 +1092,12 @@
   coursed-2021_gradelevel: 8+ évfolyam
   coursee-2021_gradelevel: 8-tól 12 éves korig
   coursef-2021_gradelevel: 9-től 13 éves korig
+  coursea-2022_gradelevel: 4-től 7 éves korig
+  courseb-2022_gradelevel: 5-tól 8 éves korig
+  coursec-2022_gradelevel: 6-tól 10 éves korig
+  coursed-2022_gradelevel: 8+ évfolyam
+  coursee-2022_gradelevel: 8-tól 12 éves korig
+  coursef-2022_gradelevel: 9-től 13 éves korig
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"
@@ -1227,6 +1234,12 @@
   coursed-2021_shortdescription_congrats: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
   coursee-2021_shortdescription_congrats: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
   coursef-2021_shortdescription_congrats: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
+  coursea-2022_shortdescription_congrats: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+  courseb-2022_shortdescription_congrats: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+  coursec-2022_shortdescription_congrats: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+  coursed-2022_shortdescription_congrats: A diákok fejlesztik a hurkok, feltételrendszerek és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
+  coursee-2022_shortdescription_congrats: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
+  coursef-2022_shortdescription_congrats: Ismerje meg a különböző típusú hurkok, események, függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
   codeorg_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   codeintl_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   thinkersmithspanish_longdescription: "Az előre meghatározott \"Robot Szótár\" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt."
@@ -1459,6 +1472,7 @@
   header_educate_beyond: "A Code.org-on túl"
   header_educate_inspire: "Motiválj egy tanulót"
   header_educate_community: "Online közösség"
+  header_educate_requirements: "Technikai követelmények"
   header_educate_tools: "Eszközök és videók"
   header_about_us: "Rólunk"
   header_about_leadership: "Vezetőség"
@@ -1772,3 +1786,5 @@
   ai_cognimates_description: "AI oktatási platform játékok építéséhez, robotok programozásához és képzéséhez."
   ai_try_activity: "Tevékenység kipróbálása"
   outbreak_tile_subtitle: "Egy vírus fertőzte meg a Szörnyek Városát! Kódolj egy járványszimulátort, és készíts előrejelzéseket arról, hogy mi fog történni a Szörnyek Városának szomszédaival."
+  top_hoc_tutorial_applab_alt_text: "Egy barna kéz, a mutatóujj egy érintőképernyős táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt."
+  minecraft_tile_alt: "Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet ábrázoló háttér előtt, korallokkal, delfinekkel és hínárral."
