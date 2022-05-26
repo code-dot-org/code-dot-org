@@ -13,6 +13,7 @@ import {
   sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../../templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROVIDER_NAME = {
@@ -42,7 +43,8 @@ class SyncOmniAuthSectionControl extends React.Component {
 
   state = {
     buttonState: READY,
-    isDialogOpen: true
+    isDialogOpen: false,
+    syncFailErrorLog: ''
   };
 
   onClick = () => {
@@ -95,7 +97,13 @@ class SyncOmniAuthSectionControl extends React.Component {
         utils.reload();
       })
       .catch(error_message => {
-        this.setState({buttonState: FAILURE});
+        this.setState({
+          buttonState: FAILURE,
+          syncFailErrorLog: '' + error_message
+        });
+
+        // ERROR LOG HERE
+
         console.log(error_message);
       });
   };
@@ -133,13 +141,16 @@ class SyncOmniAuthSectionControl extends React.Component {
           <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
           <div style={styles.scroll}>
             <pre>
-              <code>Sample error.</code>
+              <code>{this.state.syncFailErrorLog}</code>
             </pre>
           </div>
           <div style={styles.needHelpMessage}>
-            <a href="https://support.code.org/hc/en-us/articles/6496495212557">
-              {i18n.loginTypeSyncButtonDialogNeedHelp()}
-            </a>
+            <SafeMarkdown
+              markdown={i18n.loginTypeSyncButtonDialogNeedHelp({
+                syncFailureSupportArticle:
+                  'https://support.code.org/hc/en-us/articles/6496495212557'
+              })}
+            />
           </div>
           <div style={styles.closeButton}>
             <Button
@@ -219,9 +230,7 @@ function iconProps(buttonState) {
 
 const styles = {
   dialog: {
-    paddingLeft: '20px',
-    paddingRight: '20px',
-    paddingBottom: '20px',
+    padding: '10px 20px 20px 20px',
     maxHeight: '400px'
   },
   scroll: {
