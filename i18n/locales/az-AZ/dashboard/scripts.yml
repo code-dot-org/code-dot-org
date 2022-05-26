@@ -167,8 +167,6 @@ az:
           lessons:
             Play Lab:
               name: Oyun labı
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
         artist:
           title: Rəssam
@@ -177,7 +175,6 @@ az:
           lessons:
             Artist:
               name: Rəssam
-              description_teacher: Bu dərsdə şagirdlər ekrandakı rəsmləri tamamlamaq üçün rəssamı idarə edəcəklər. Bu rəssam mərhələsi, tələbələrə '100 piksel irəli hərəkət etmək' və '90 dərəcə sağa dönmək' kimi proqramlaşdırma bloklarından istifadə edərək tədricən çətinlik dərəcəsi artan şəkilləri qurmağa imkan verəcək.
           student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           title: Ənənəvi labirint
@@ -186,8 +183,6 @@ az:
           lessons:
             Maze:
               name: Labirint
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: Əsəbi quşlar, Bitkilər və Zombilər və Buz dövründən Scrat personajı ilə kompüter elmlərinin əsas anlayışlarında özünüzü sınayın!
         frozen:
           title: Anna və Elza ilə proqramlaşdır
@@ -196,8 +191,6 @@ az:
           lessons:
             Artist:
               name: Anna və Elza ilə proqramlaşdır
-              description_student: Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır, lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və xüsusilə bucaqlar haqqında anlayışı olmalıdır.
-              description_teacher: Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır, lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və xüsusilə bucaqlar haqqında anlayışı olmalıdır.
           student_description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!
         course4:
           title: Kurs 4
@@ -336,8 +329,6 @@ az:
           lessons:
             Infinity:
               name: Disney Sonsuz Oyun Labaratoriyası
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün Play Lab-dan istifadə edin.
         algebrademo:
           title: Cəbr Demo
@@ -493,8 +484,6 @@ az:
           lessons:
             Flappy Code:
               name: Qanadlı Kod
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Mozaika
@@ -503,7 +492,6 @@ az:
           lessons:
             Jigsaw:
               name: Mozaika
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
           student_description: Pazl dərsimizi sınayın
         step:
           title: addım
@@ -1509,11 +1497,6 @@ az:
           lessons:
             Spring 2016:
               name: Yaz 2016
-        iceage:
-          lessons:
-            Ice Age Play Lab:
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
         CSPPD3-Unit3:
           lessons:
             Complete the Challenge:
@@ -1558,8 +1541,6 @@ az:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Laboratoriyası
-              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
-              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: Gumball Play Lab ilə hekayə yaradın və ya oyun qurun!
         starwars:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (JavaScript)'
@@ -1568,11 +1549,6 @@ az:
           lessons:
             Hour of Code 2015:
               name: Kod Saatı 2015
-              description_student: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərsin iki versiyası var.
-              description_teacher: |-
-                Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərsin iki versiyası var. Bu versiya həm drag-drop bloklarından, həm də JavaScript-dən istifadə edir. Tələbələr klaviaturada yazmağı bacarmalıdırlar. Kompüterdə yaşlı tələbələr üçün JavaScript öyrənmək əyləncəli ola bilər və əlavə problem yarada bilər. Əgər sinifinizdə kodlaşdırmanı artıq öyrənmiş tələbələriniz varsa, dərsliyin bu versiyası da əladır. 11+ yaş üçün tövsiyə olunur.
-
-                [Bloklu versiya](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) həmçinin klaviaturası olmayan mobil cihazlarda, gənc tələbələr və beynəlxalq tələbələr üçün mövcuddur və tövsiyə olunur.
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
         starwarsblocks:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (Blockly)'
@@ -1581,11 +1557,6 @@ az:
           lessons:
             Hour of Code 2015:
               name: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (Blockly)'
-              description_student: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərsin iki versiyası var.
-              description_teacher: |-
-                Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərsin iki versiyası var. Bu versiya drag-drop bloklarından istifadə edir və klaviaturası olmayan mobil cihazlarda, gənc tələbələr və beynəlxalq tələbələr üçün ən yaxşı şəkildə işləyir. 6+ yaş üçün tövsiyə olunur.
-
-                [JavaScript](s/starwars) versiyası da mövcuddur. Kompüterdə yaşlı tələbələr üçün JavaScript öyrənmək əyləncəli ola bilər və əlavə problem yarada bilər. Nəzərə alın ki, JavaScript sintaksisi tərcümə olunmur və ilk Kod Saatı üçün burada tapılan tərcümə edilmiş bloklar daha yaxşı giriş təqdim edir. Əgər sinifinizdə kodlaşdırmanı artıq öyrənmiş tələbələriniz varsa, dərsliyin bu versiyası da əladır. 11+ yaş üçün tövsiyə olunur.
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
         mc:
           title: Maynkraft Kod Saatı
@@ -1594,8 +1565,6 @@ az:
           lessons:
             Hour of Code 2015:
               name: Kod Saatı 2015
-              description_student: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
-              description_teacher: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
         oceans:
           description: Süni intellekt və maşın öyrənməsinin dünya problemlərini həll etmək üçün necə istifadə oluna biləcəyini öyrənin.
@@ -1603,8 +1572,6 @@ az:
           lessons:
             Oceans:
               name: Okeanlar
-              description_student: İlk tələbələr okeandan zibil çıxarmaq üçün obyektləri "balıq" və ya "balıq deyil" kimi təsnif edirlər. Daha sonra tələbələr suya aid olan digər dəniz canlılarını da daxil etmək üçün təlim məlumat dəstini genişləndirməli olacaqlar. Fəaliyyətin ikinci hissəsində tələbələr təsadüfi yaradılan balıq şəkillərinə tətbiq etmək üçün öz etiketlərini seçəcəklər. Bu təlim datası sonra özü yeni şəkilləri etiketləyə bilən maşın öyrənmə modeli üçün istifadə olunur.
-              description_teacher: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Birincisi, tələbələr okeandan zibil çıxarmağa cəhd etmək üçün obyektləri "balıq" və ya "balıq deyil" kimi təsnif edirlər. Daha sonra tələbələr suya aid olan digər dəniz canlılarını da daxil etmək üçün təlim məlumat dəstini genişləndirməli olacaqlar. Fəaliyyətin ikinci hissəsində tələbələr təsadüfi yaradılan balıq şəkillərinə tətbiq etmək üçün öz etiketlərini seçəcəklər. Bu təlim datası sonra özü yeni şəkilləri etiketləyə bilən maşın öyrənmə modeli üçün istifadə olunur.
           student_description: Süni intellekt və maşın öyrənməsinin dünya problemlərini həll etmək üçün necə istifadə oluna biləcəyini öyrənin.
         CSPPD3-Unit3-pt2:
           title: 'Kompüter Elmləri Prinsipləri: Bölmə 3 PD Problemləri'
@@ -2615,8 +2582,6 @@ az:
               name: Draw Loop və Randomization
             Drawing in Game Lab:
               name: Oyun laboratoriyasında rəsm
-              description_student: Sinif bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ekranda fiqurları yerləşdirmək üçün ondan istifadə etməyə başlayır. Bu dərs ardıcıllıq və sazlamanın əsaslarını, eləcə də bir neçə sadə əmrləri əhatə edir. Dərsin sonunda sinif əvvəlki dərsdə tərtib etdikləri şəklin onlayn versiyasını yaradır.
-              description_teacher: Şagirdlər bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ondan formaları ekranda yerləşdirmək üçün istifadə etməyə başlayırlar. Onlar ardıcıllıq və sazlamanın əsaslarını, həmçinin bir neçə sadə əmrləri öyrənirlər. Dərsin sonunda tələbələr əvvəlki dərsdə rəsm aləti ilə hazırladıqları şəkilləri proqramlaşdıra biləcəklər.
             'Project: Interactive Card':
               name: 'Layihə: İnteraktiv kart'
             Sprites and Images:
@@ -2629,7 +2594,6 @@ az:
               name: Dəyişənlər və Animasiya
             Velocity:
               name: Sürət
-              description_student: Spriteləri hərəkət etdirmək üçün sayğac naxışının necə istifadə edildiyini qısa nəzərdən keçirdikdən sonra sinif sürəti və fırlanma sürətini birbaşa təyin edən xüsusiyyətlərlə tanış olur. Bu yeni xassələri müxtəlif yollarla istifadə etdikcə, əsas yan sürüşmə oyunu yaratmaq üçün lazım olan bacarıqları inkişaf etdirirlər.
             Complex Sprite Movement:
               name: Kompleks Sprite Hərəkatı
             Collisions:
@@ -2656,21 +2620,8 @@ az:
               name: Şərti ifadələr
             Keyboard Input:
               name: Klaviatura Girişi
-            Booleans Unplugged:
-              description_student: Bu dərs boolean dəyərləri və məntiqi, həmçinin şərti ifadələri təqdim edir. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Sonra sinif getdikcə mürəkkəbləşən məntiq ifadələri əsasında obyektləri qruplaşdırır, sonra şərtilərin proqramın axınına necə təsir edə biləcəyinə baxır.
-              description_teacher: |-
-                Bu dərsdə tələbələr boolean dəyərləri və məntiqi, həmçinin şərti ifadələrlə tanış olurlar. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Bu, tələbələri ikili sualla çoxlu potensial dəyərlərə (yaş kimi) malik bir əmlakı necə çərçivəyə sala biləcəkləri barədə düşünməyə vadar edir.
-
-                Oradan tələbələrə oxşar, lakin müxtəlif fiziki xassələri olan bir qrup obyekt verilir. Tərəfdaşla birlikdə onlar bu obyektləri AND və OR ilə mürəkkəb booleanlar da daxil olmaqla getdikcə mürəkkəbləşən məntiqi ifadələrə əsaslanaraq qruplaşdırırlar.
-
-                Nəhayət, biz qərar qəbul etmək və ya proqramın axınına təsir etmək üçün bir vasitə kimi Şərtləri aşkar edirik, məntiqi ifadələrdən giriş kimi istifadə edirik.
-            Project - Interactive Card:
-              description_student: 1-ci fəsil üçün bu məcmu layihədə sinif bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayır.
-              description_teacher: 1-ci Fəsil üçün bu məcmu layihədə tələbələr bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayırlar.
             Project - Design a Game:
               name: Layihə - Oyun dizayn edin
-              description_student: Sinif əvvəlki iki dərsdəki layihə təlimatından istifadə edərək orijinal oyunları planlaşdırır və qurur. Fərdi və ya cütlərlə işləyərək, sinif planlaşdırır, inkişaf etdirir və oyunlar haqqında rəy verir. Həmyaşıdların rəyini daxil etdikdən sonra sinif tamamlanmış oyunları paylaşır.
-              description_teacher: Şagirdlər öz layihələrinə rəhbərlik etmək üçün əvvəlki iki dərsdəki layihə təlimatından istifadə edərək öz oyunlarını planlaşdırıb quracaqlar. Fərdi və ya cütlükdə işləyərək, tələbələr ilk olaraq bir sıra nümunə oyunlardan ilham alaraq qurmaq istədikləri oyun növünə qərar verəcəklər. Daha sonra onlar oyunun davranışını təsvir edəcək və qurmaq üçün lazım olacaq dəyişənləri, spritləri və funksiyaları əhatə edəcək boş layihə bələdçisini tamamlayacaqlar. Code Studio-da bir sıra səviyyələr onları bu planı həyata keçirmək üçün istifadə edə biləcəkləri ümumi ardıcıllıqla təklif edir. Prosesin bir hissəsində tələbələr öz layihələrini həmyaşıdlarının nəzərdən keçirilməsi üçün paylaşacaq və oyunlarını bitirən kimi rəyləri birləşdirəcəklər. Dərsin sonunda tələbələr tamamladıqları oyunları sinif yoldaşları ilə bölüşəcəklər. Bu layihə bir neçə dərsi əhatə edəcək və asanlıqla 3-5 dərs müddətindən istənilən yerə keçə bilər.
             Parameters and Randomization:
               name: Parametrlər və Randomizasiya
             Shapes and Randomization:
@@ -2772,23 +2723,12 @@ az:
           lessons:
             Intro to Problem Solving:
               name: Problem Həllinə giriş
-              description_student: Sinif, mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyir. Dərsin sonunda qruplar fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problem həlli növləri ilə əlaqə qururlar.
-              description_teacher: Bu dərsdə tələbələr mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyirlər. Qrupların 1-ci raundda olduğundan daha çox qəpik tutmağa çalışmaq məqsədi ilə öz qayıqlarında işləmək üçün iki dövrə var. Fəaliyyətin strukturu problemin həlli prosesinin müxtəlif addımlarını göstərir ki, bu da tələbələrə dərsdə daha ətraflı şəkildə təqdim olunacaq. sonrakı dərs. Dərsin sonunda tələbələr fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problem həlli növləri ilə əlaqə qururlar.
             The Problem Solving Process:
               name: Məsələnin həlli prosesi
-              description_student: Bu dərs sinifin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Sinif bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə, sonra həll etməkdə yaxşı olduqları problemlə, sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirir. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
-              description_teacher: Bu dərs tələbələrin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Dərs tələbələrdən gündəlik həyatda qarşılaşdıqları bütün müxtəlif növ problemləri beyin fırtınası etmələrini xahiş etməklə başlayır. Daha sonra tələbələrə problemin həlli prosesinin dörd addımı göstərilir və bu mücərrəd addımları problemlərin həlli ilə bağlı faktiki təcrübələri ilə əlaqələndirmək üçün birlikdə işləyirlər. Əvvəlcə tələbələr bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə əlaqələndirirlər, daha sonra həll etməkdə yaxşı olduqları problemlə, daha sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirirlər. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
             Exploring Problem Solving:
               name: Problemin həllini araşdırmaq
-              description_student: 'Bu dərsdə sinif problemin həlli prosesini üç müxtəlif problemə tətbiq edir: söz axtarışı, ad günü partiyası üçün oturma təşkili və səfərin planlaşdırılması. Problemlər getdikcə mürəkkəbləşir və problemin həlli prosesinin bu tip problemlərin həlli zamanı xüsusilə faydalı olduğunu vurğulamaq üçün zəif müəyyən edilir.'
-              description_teacher: |-
-                Bu dərsdə tələbələr hər bir addımın dəyərini daha yaxşı başa düşmək üçün problemin həlli prosesini üç fərqli problemə tətbiq edirlər. Onlar söz axtarışını həll edəcək, ad günü partiyası üçün oturacaqlar təşkil edəcək və səfər planlaşdıracaqlar. Problemlər getdikcə mürəkkəbləşir və problemin həlli prosesinin bu tip problemlərin həlli zamanı xüsusilə faydalı olduğunu vurğulamaq üçün zəif müəyyən edilir. Dərs tələbələrin problemin həlli prosesi ilə bağlı təcrübələrini əks etdirmələri ilə yekunlaşır. Onlar hər bir addımın daxil edilməsini əsaslandıracaq və sualları və ya açıq uçlu problemləri daha yaxşı müəyyənləşdirməyə kömək edə biləcək strategiyaları müzakirə edəcəklər, çünki bu, çox vaxt ən kritik addımdır.
-
-                Bu dərsi tamamlamaq üçün çox güman ki, iki və ya daha çox dərs müddəti lazım olacaq. İlk iki problem bir sinif dövrünə uyğun ola bilər, lakin üçüncü problem ikinci günə köçürülməlidir.
             What is a Computer?:
               name: Kompüter nədir?
-              description_student: Bu dərsdə sinif kompüterin ilkin tərifini hazırlayır. Kompüter üçün mümkün təriflər üzərində beyin fırtınası keçirdikdən sonra sinif qruplar şəklində şəkilləri poster kağızında “kompüterdir” və ya “kompüter deyil” kimi təsnif etmək üçün işləyir və ən çətin kateqoriyalardan bəzilərini seçmək üçün motivasiyalarını izah edir. Sonra müəllim kompüterin tərifini təqdim edir və qruplara yeni tərifə uyğun olaraq öz posterlərinə yenidən baxmağa icazə verir.
-              description_teacher: Bu dərsdə tələbələr kompüterin ilkin tərifini hazırlayırlar. Dərsə başlamaq üçün sinif kompüter üçün mümkün təriflər üzərində beyin fırtınası aparacaq və bu beyin fırtınasının nəticələrini lövhədə yerləşdirəcək. Sonra tələbələr qruplarda işləyərək şəkilləri poster kağızında “kompüterdir” və ya “kompüter deyil” şəklində çeşidləyəcəklər. Qruplar öz posterlərini otağın ətrafında yerləşdirəcək və ən çətin kateqoriyalardan bəzilərini seçmək üçün motivasiyalarını qısaca izah edəcəklər. Daha sonra müəllim kompüterin tərifini təqdim edəcək və tələbələrə öz posterlərini yeni tərifə uyğun olaraq nəzərdən keçirməyə icazə verəcək.
             Representing Information:
               name: Məlumatı təmsil edən
             Processing with Bits:
@@ -2941,10 +2881,6 @@ az:
         minecraft:
           description_short: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını proqramlaşdırın.
           description: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını proqramlaşdırın.
-          lessons:
-            Minecraft Hour of Code Designer:
-              description_student: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
-              description_teacher: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
           student_description: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını proqramlaşdırın.
         flappy-impact-study:
           title: Sorğu ilə Flappy Kodu
@@ -3631,8 +3567,6 @@ az:
           description_audience: 'Yaşlar: 7-11'
           description_short: C Kursundan anlayışları sürətlə əhatə edin, sonra alqoritmlər, iç-içə döngələr, şərtlər və s. ilə daha da irəli gedin.
           lessons:
-            'Algorithms: Graph Paper Programming':
-              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar. Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə sonlandırıla bilər."
             Nested Loops:
               name: Iç-içə dövrlər
         coursee-2017:
@@ -3659,8 +3593,6 @@ az:
               name: Layihənizi Qurun
             Presentation Your Project:
               name: Layihənizi təqdim edin
-            'Algorithms: Dice Race':
-              description_student: Alqoritmlər üzrə bu dərsdə oyunu kompüter nöqteyi-nəzərindən necə təsvir edəcəyinizi öyrənin.
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             'Functions: Songwriting':
@@ -3669,7 +3601,6 @@ az:
               name: Artistdəki funksiyalar
             Functions in Bee:
               name: Arıdakı funksiyalar
-              description_student: Bütün nektar və balları toplamaq üçün çox uzun kodlar yazma.Onun yerinə funksiyalardan istifadə et!
             Functions in Farmer:
               name: Fermerdəki Funksiyalar
             Present Your Project:
@@ -4219,7 +4150,6 @@ az:
           lessons:
             Minecraft Hour of Code:
               name: 'Minecraft: Qəhrəmanın səyahəti'
-              description_teacher: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
           student_description: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a səyahət.
           name: qəhrəman
         csp-explore-2017:
@@ -4393,8 +4323,6 @@ az:
           lessons:
             Drawing in Game Lab:
               name: Oyun laboratoriyasında rəsm
-              description_student: Sinif bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ekranda fiqurları yerləşdirmək üçün ondan istifadə etməyə başlayır. Bu dərs ardıcıllıq və sazlamanın əsaslarını, eləcə də bir neçə sadə əmrləri əhatə edir. Dərsin sonunda sinif əvvəlki dərsdə tərtib etdikləri şəklin onlayn versiyasını yaradır.
-              description_teacher: Şagirdlər bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ondan formaları ekranda yerləşdirmək üçün istifadə etməyə başlayırlar. Onlar ardıcıllıq və sazlamanın əsaslarını, həmçinin bir neçə sadə əmrləri öyrənirlər. Dərsin sonunda tələbələr əvvəlki dərsdə rəsm aləti ilə hazırladıqları şəkilləri proqramlaşdıra biləcəklər.
             Shapes and Randomization:
               name: Formalar və Randomizasiya
             Variables:
@@ -4403,24 +4331,12 @@ az:
               name: Spraytlar
             The Draw Loop:
               name: Bərabərlik Döngüsü
-            Booleans Unplugged:
-              description_student: Bu dərs boolean dəyərləri və məntiqi, həmçinin şərti ifadələri təqdim edir. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Sonra sinif getdikcə mürəkkəbləşən məntiq ifadələri əsasında obyektləri qruplaşdırır, sonra şərtilərin proqramın axınına necə təsir edə biləcəyinə baxır.
-              description_teacher: |-
-                Bu dərsdə tələbələr boolean dəyərləri və məntiqi, həmçinin şərti ifadələrlə tanış olurlar. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Bu, tələbələri ikili sualla çoxlu potensial dəyərlərə (yaş kimi) malik bir əmlakı necə çərçivəyə sala biləcəkləri barədə düşünməyə vadar edir.
-
-                Oradan tələbələrə oxşar, lakin müxtəlif fiziki xassələri olan bir qrup obyekt verilir. Tərəfdaşla birlikdə onlar bu obyektləri AND və OR ilə mürəkkəb booleanlar da daxil olmaqla getdikcə mürəkkəbləşən məntiqi ifadələrə əsaslanaraq qruplaşdırırlar.
-
-                Nəhayət, biz qərar qəbul etmək və ya proqramın axınına təsir etmək üçün bir vasitə kimi Şərtləri aşkar edirik, məntiqi ifadələrdən giriş kimi istifadə edirik.
             Conditionals:
               name: Şərti ifadələr
             Keyboard Input:
               name: Klaviatura Girişi
-            Project - Interactive Card:
-              description_student: 1-ci fəsil üçün bu məcmu layihədə sinif bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayır.
-              description_teacher: 1-ci Fəsil üçün bu məcmu layihədə tələbələr bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayırlar.
             Velocity:
               name: Sürət
-              description_student: Spriteləri hərəkət etdirmək üçün sayğac naxışının necə istifadə edildiyini qısa nəzərdən keçirdikdən sonra sinif sürəti və fırlanma sürətini birbaşa təyin edən xüsusiyyətlərlə tanış olur. Bu yeni xassələri müxtəlif yollarla istifadə etdikcə, əsas yan sürüşmə oyunu yaratmaq üçün lazım olan bacarıqları inkişaf etdirirlər.
             Complex Sprite Movement:
               name: Kompleks Sprite Hərəkatı
             Collisions:
@@ -4433,8 +4349,6 @@ az:
               name: Oyun Dizayn Prosesindən istifadə
             Project - Design a Game:
               name: Layihə - Oyun dizayn edin
-              description_student: Sinif əvvəlki iki dərsdəki layihə təlimatından istifadə edərək orijinal oyunları planlaşdırır və qurur. Fərdi və ya cütlərlə işləyərək, sinif planlaşdırır, inkişaf etdirir və oyunlar haqqında rəy verir. Həmyaşıdların rəyini daxil etdikdən sonra sinif tamamlanmış oyunları paylaşır.
-              description_teacher: Şagirdlər öz layihələrinə rəhbərlik etmək üçün əvvəlki iki dərsdəki layihə təlimatından istifadə edərək öz oyunlarını planlaşdırıb quracaqlar. Fərdi və ya cütlükdə işləyərək, tələbələr ilk olaraq bir sıra nümunə oyunlardan ilham alaraq qurmaq istədikləri oyun növünə qərar verəcəklər. Daha sonra onlar oyunun davranışını təsvir edəcək və qurmaq üçün lazım olacaq dəyişənləri, spritləri və funksiyaları əhatə edəcək boş layihə bələdçisini tamamlayacaqlar. Code Studio-da bir sıra səviyyələr onları bu planı həyata keçirmək üçün istifadə edə biləcəkləri ümumi ardıcıllıqla təklif edir. Prosesin bir hissəsində tələbələr öz layihələrini həmyaşıdlarının nəzərdən keçirilməsi üçün paylaşacaq və oyunlarını bitirən kimi rəyləri birləşdirəcəklər. Dərsin sonunda tələbələr tamamladıqları oyunları sinif yoldaşları ilə bölüşəcəklər. Bu layihə bir neçə dərsi əhatə edəcək və asanlıqla 3-5 dərs müddətindən istənilən yerə keçə bilər.
             CS Discoveries End of Semester Survey:
               name: CS Discoveries Semestr Sonu Sorğusu
             CS Discoveries Post-Course Survey:
@@ -4626,8 +4540,6 @@ az:
               name: Mənim robot dostlarım
             Building a Foundation:
               name: Təməl qurmaq
-            'Algorithms: Dice Race':
-              description_student: Alqoritmlər üzrə bu dərsdə oyunu kompüter nöqteyi-nəzərindən necə təsvir edəcəyinizi öyrənin.
             Introduction:
               name: Giriş
             Private and Personal Information:
@@ -4636,8 +4548,6 @@ az:
               name: Ulduz Müharibələri oyunu düzəldin
             'Functions: Songwriting':
               name: Mahnı yazma
-            Functions in Bee:
-              description_student: Bütün nektar və balları toplamaq üçün çox uzun kodlar yazma.Onun yerinə funksiyalardan istifadə et!
             Explore Project Ideas:
               name: Layihə ideyalarını araşdırın
             The Design Process:
@@ -4730,17 +4640,12 @@ az:
           lessons:
             Intro to Problem Solving:
               name: Problem Həllinə giriş
-              description_student: Sinif, mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyir. Dərsin sonunda qruplar fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problem həlli növləri ilə əlaqə qururlar.
             The Problem Solving Process:
               name: Məsələnin həlli prosesi
-              description_student: Bu dərs sinifin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Sinif bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə, sonra həll etməkdə yaxşı olduqları problemlə, sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirir. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
-              description_teacher: Bu dərs tələbələrin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Dərs tələbələrdən gündəlik həyatda qarşılaşdıqları bütün müxtəlif növ problemləri beyin fırtınası etmələrini xahiş etməklə başlayır. Daha sonra tələbələrə problemin həlli prosesinin dörd addımı göstərilir və bu mücərrəd addımları problemlərin həlli ilə bağlı faktiki təcrübələri ilə əlaqələndirmək üçün birlikdə işləyirlər. Əvvəlcə tələbələr bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə əlaqələndirirlər, daha sonra həll etməkdə yaxşı olduqları problemlə, daha sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirirlər. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
             Exploring Problem Solving:
               name: Problemin həllini araşdırmaq
-              description_student: 'Bu dərsdə sinif problemin həlli prosesini üç müxtəlif problemə tətbiq edir: söz axtarışı, ad günü partiyası üçün oturma təşkili və səfərin planlaşdırılması. Problemlər getdikcə mürəkkəbləşir və problemin həlli prosesinin bu tip problemlərin həlli zamanı xüsusilə faydalı olduğunu vurğulamaq üçün zəif müəyyən edilir.'
             What is a Computer?:
               name: Kompüter nədir?
-              description_student: Bu dərsdə sinif kompüterin ilkin tərifini hazırlayır. Kompüter üçün mümkün təriflər üzərində beyin fırtınası keçirdikdən sonra sinif qruplar şəklində şəkilləri poster kağızında “kompüterdir” və ya “kompüter deyil” kimi təsnif etmək üçün işləyir və ən çətin kateqoriyalardan bəzilərini seçmək üçün motivasiyalarını izah edir. Sonra müəllim kompüterin tərifini təqdim edir və qruplara yeni tərifə uyğun olaraq öz posterlərinə yenidən baxmağa icazə verir.
             Storage:
               name: Yaddaş
             Apps and Problem Solving:
@@ -5198,7 +5103,6 @@ az:
           lessons:
             Aquatic:
               name: 'Minecraft: Voyage Aquatic'
-              description_teacher: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
           name: suda yaşayan
         sconyers:
           lessons:
@@ -5300,7 +5204,6 @@ az:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
-              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar. Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə sonlandırıla bilər."
             Relay Programming:
               name: Estafet proqramlaşdırması
             Loops in Ice Age:
@@ -5366,7 +5269,6 @@ az:
               name: Rəqəmsal paylaşım
             Simon Says:
               name: Simon söyləyir
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             Designing for Accessibility:
               name: Əlçatanlıq üçün dizayn
             Songwriting:
@@ -5435,17 +5337,12 @@ az:
           lessons:
             Intro to Problem Solving:
               name: Problem Həllinə giriş
-              description_student: Sinif, mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyir. Dərsin sonunda qruplar fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problem həlli növləri ilə əlaqə qururlar.
             The Problem Solving Process:
               name: Məsələnin həlli prosesi
-              description_student: Bu dərs sinifin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Sinif bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə, sonra həll etməkdə yaxşı olduqları problemlə, sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirir. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
-              description_teacher: Bu dərs tələbələrin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Dərs tələbələrdən gündəlik həyatda qarşılaşdıqları bütün müxtəlif növ problemləri beyin fırtınası etmələrini xahiş etməklə başlayır. Daha sonra tələbələrə problemin həlli prosesinin dörd addımı göstərilir və bu mücərrəd addımları problemlərin həlli ilə bağlı faktiki təcrübələri ilə əlaqələndirmək üçün birlikdə işləyirlər. Əvvəlcə tələbələr bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə əlaqələndirirlər, daha sonra həll etməkdə yaxşı olduqları problemlə, daha sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirirlər. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
             Exploring Problem Solving:
               name: Problemin həllini araşdırmaq
-              description_student: 'Bu dərsdə sinif problemin həlli prosesini üç müxtəlif problemə tətbiq edir: söz axtarışı, ad günü partiyası üçün oturma təşkili və səfərin planlaşdırılması. Problemlər getdikcə mürəkkəbləşir və problemin həlli prosesinin bu tip problemlərin həlli zamanı xüsusilə faydalı olduğunu vurğulamaq üçün zəif müəyyən edilir.'
             What is a Computer?:
               name: Kompüter nədir?
-              description_student: Bu dərsdə sinif kompüterin ilkin tərifini hazırlayır. Kompüter üçün mümkün təriflər üzərində beyin fırtınası keçirdikdən sonra sinif qruplar şəklində şəkilləri poster kağızında “kompüterdir” və ya “kompüter deyil” kimi təsnif etmək üçün işləyir və ən çətin kateqoriyalardan bəzilərini seçmək üçün motivasiyalarını izah edir. Sonra müəllim kompüterin tərifini təqdim edir və qruplara yeni tərifə uyğun olaraq öz posterlərinə yenidən baxmağa icazə verir.
             Apps and Storage:
               name: Tətbiqlər və Yaddaş
         andrea-test:
@@ -5540,13 +5437,8 @@ az:
               name: " Yerlərə  Sağ-salamat Gediş"
             Loops in Artist:
               name: Rəssamdakı döngələr
-            Events in Play Lab:
-              description_student: Öz oyun və ya hekayənizi yaradın.
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
             Learn to Drag and Drop:
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             Programming with Rey and BB-8:
               name: Rey və BB-8 ilə proqramlaşdırma
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
@@ -5572,8 +5464,6 @@ az:
               name: Rey və BB-8 ilə proqramlaşdırma
             Loops in Ice Age:
               name: Buz Dövründə Dövrlər
-            Events in Play Lab:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
             Programming in Maze:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Harvester:
@@ -5640,8 +5530,6 @@ az:
           lessons:
             Drawing in Game Lab:
               name: Oyun laboratoriyasında rəsm
-              description_student: Sinif bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ekranda fiqurları yerləşdirmək üçün ondan istifadə etməyə başlayır. Bu dərs ardıcıllıq və sazlamanın əsaslarını, eləcə də bir neçə sadə əmrləri əhatə edir. Dərsin sonunda sinif əvvəlki dərsdə tərtib etdikləri şəklin onlayn versiyasını yaradır.
-              description_teacher: Şagirdlər bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ondan formaları ekranda yerləşdirmək üçün istifadə etməyə başlayırlar. Onlar ardıcıllıq və sazlamanın əsaslarını, həmçinin bir neçə sadə əmrləri öyrənirlər. Dərsin sonunda tələbələr əvvəlki dərsdə rəsm aləti ilə hazırladıqları şəkilləri proqramlaşdıra biləcəklər.
             Shapes and Randomization:
               name: Formalar və Randomizasiya
             Variables:
@@ -5650,24 +5538,12 @@ az:
               name: Spraytlar
             The Draw Loop:
               name: Bərabərlik Döngüsü
-            Booleans Unplugged:
-              description_student: Bu dərs boolean dəyərləri və məntiqi, həmçinin şərti ifadələri təqdim edir. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Sonra sinif getdikcə mürəkkəbləşən məntiq ifadələri əsasında obyektləri qruplaşdırır, sonra şərtilərin proqramın axınına necə təsir edə biləcəyinə baxır.
-              description_teacher: |-
-                Bu dərsdə tələbələr boolean dəyərləri və məntiqi, həmçinin şərti ifadələrlə tanış olurlar. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Bu, tələbələri ikili sualla çoxlu potensial dəyərlərə (yaş kimi) malik bir əmlakı necə çərçivəyə sala biləcəkləri barədə düşünməyə vadar edir.
-
-                Oradan tələbələrə oxşar, lakin müxtəlif fiziki xassələri olan bir qrup obyekt verilir. Tərəfdaşla birlikdə onlar bu obyektləri AND və OR ilə mürəkkəb booleanlar da daxil olmaqla getdikcə mürəkkəbləşən məntiqi ifadələrə əsaslanaraq qruplaşdırırlar.
-
-                Nəhayət, biz qərar qəbul etmək və ya proqramın axınına təsir etmək üçün bir vasitə kimi Şərtləri aşkar edirik, məntiqi ifadələrdən giriş kimi istifadə edirik.
             Conditionals:
               name: Şərti ifadələr
             Keyboard Input:
               name: Klaviatura Girişi
-            Project - Interactive Card:
-              description_student: 1-ci fəsil üçün bu məcmu layihədə sinif bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayır.
-              description_teacher: 1-ci Fəsil üçün bu məcmu layihədə tələbələr bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayırlar.
             Velocity:
               name: Sürət
-              description_student: Spriteləri hərəkət etdirmək üçün sayğac naxışının necə istifadə edildiyini qısa nəzərdən keçirdikdən sonra sinif sürəti və fırlanma sürətini birbaşa təyin edən xüsusiyyətlərlə tanış olur. Bu yeni xassələri müxtəlif yollarla istifadə etdikcə, əsas yan sürüşmə oyunu yaratmaq üçün lazım olan bacarıqları inkişaf etdirirlər.
             Complex Sprite Movement:
               name: Kompleks Sprite Hərəkatı
             Collisions:
@@ -5680,8 +5556,6 @@ az:
               name: Oyun Dizayn Prosesindən istifadə
             Project - Design a Game:
               name: Layihə - Oyun dizayn edin
-              description_student: Sinif əvvəlki iki dərsdəki layihə təlimatından istifadə edərək orijinal oyunları planlaşdırır və qurur. Fərdi və ya cütlərlə işləyərək, sinif planlaşdırır, inkişaf etdirir və oyunlar haqqında rəy verir. Həmyaşıdların rəyini daxil etdikdən sonra sinif tamamlanmış oyunları paylaşır.
-              description_teacher: Şagirdlər öz layihələrinə rəhbərlik etmək üçün əvvəlki iki dərsdəki layihə təlimatından istifadə edərək öz oyunlarını planlaşdırıb quracaqlar. Fərdi və ya cütlükdə işləyərək, tələbələr ilk olaraq bir sıra nümunə oyunlardan ilham alaraq qurmaq istədikləri oyun növünə qərar verəcəklər. Daha sonra onlar oyunun davranışını təsvir edəcək və qurmaq üçün lazım olacaq dəyişənləri, spritləri və funksiyaları əhatə edəcək boş layihə bələdçisini tamamlayacaqlar. Code Studio-da bir sıra səviyyələr onları bu planı həyata keçirmək üçün istifadə edə biləcəkləri ümumi ardıcıllıqla təklif edir. Prosesin bir hissəsində tələbələr öz layihələrini həmyaşıdlarının nəzərdən keçirilməsi üçün paylaşacaq və oyunlarını bitirən kimi rəyləri birləşdirəcəklər. Dərsin sonunda tələbələr tamamladıqları oyunları sinif yoldaşları ilə bölüşəcəklər. Bu layihə bir neçə dərsi əhatə edəcək və asanlıqla 3-5 dərs müddətindən istənilən yerə keçə bilər.
             CS Discoveries End of Semester Survey:
               name: CS Discoveries Semestr Sonu Sorğusu
           student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
@@ -6169,17 +6043,12 @@ az:
           lessons:
             Intro to Problem Solving:
               name: Problem Həllinə giriş
-              description_student: Sinif, mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyir. Dərsin sonunda qruplar fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problem həlli növləri ilə əlaqə qururlar.
             The Problem Solving Process:
               name: Məsələnin həlli prosesi
-              description_student: Bu dərs sinifin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Sinif bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə, sonra həll etməkdə yaxşı olduqları problemlə, sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirir. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
-              description_teacher: Bu dərs tələbələrin il ərzində istifadə edəcəyi formal problem həlli prosesini təqdim edir, Müəyyən et - Hazırla - Sınaq - Düşün. Dərs tələbələrdən gündəlik həyatda qarşılaşdıqları bütün müxtəlif növ problemləri beyin fırtınası etmələrini xahiş etməklə başlayır. Daha sonra tələbələrə problemin həlli prosesinin dörd addımı göstərilir və bu mücərrəd addımları problemlərin həlli ilə bağlı faktiki təcrübələri ilə əlaqələndirmək üçün birlikdə işləyirlər. Əvvəlcə tələbələr bu addımları əvvəlki dərsdəki alüminium qayıq problemi ilə əlaqələndirirlər, daha sonra həll etməkdə yaxşı olduqları problemlə, daha sonra həll etməkdə təkmilləşdirmək istədikləri problemlə əlaqələndirirlər. Dərsin sonunda sinif vahid və il ərzində istifadə olunacaq posterlərə yapışdırmaq üçün prosesin hər bir addımı üçün ümumi faydalı strategiyaların siyahısını toplayır.
             Exploring Problem Solving:
               name: Problemin həllini araşdırmaq
-              description_student: 'Bu dərsdə sinif problemin həlli prosesini üç müxtəlif problemə tətbiq edir: söz axtarışı, ad günü partiyası üçün oturma təşkili və səfərin planlaşdırılması. Problemlər getdikcə mürəkkəbləşir və problemin həlli prosesinin bu tip problemlərin həlli zamanı xüsusilə faydalı olduğunu vurğulamaq üçün zəif müəyyən edilir.'
             What is a Computer?:
               name: Kompüter nədir?
-              description_student: Bu dərsdə sinif kompüterin ilkin tərifini hazırlayır. Kompüter üçün mümkün təriflər üzərində beyin fırtınası keçirdikdən sonra sinif qruplar şəklində şəkilləri poster kağızında “kompüterdir” və ya “kompüter deyil” kimi təsnif etmək üçün işləyir və ən çətin kateqoriyalardan bəzilərini seçmək üçün motivasiyalarını izah edir. Sonra müəllim kompüterin tərifini təqdim edir və qruplara yeni tərifə uyğun olaraq öz posterlərinə yenidən baxmağa icazə verir.
             Apps and Storage:
               name: Tətbiqlər və Yaddaş
         csd2-pilot:
@@ -6213,8 +6082,6 @@ az:
           lessons:
             Drawing in Game Lab:
               name: Oyun laboratoriyasında rəsm
-              description_student: Sinif bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ekranda fiqurları yerləşdirmək üçün ondan istifadə etməyə başlayır. Bu dərs ardıcıllıq və sazlamanın əsaslarını, eləcə də bir neçə sadə əmrləri əhatə edir. Dərsin sonunda sinif əvvəlki dərsdə tərtib etdikləri şəklin onlayn versiyasını yaradır.
-              description_teacher: Şagirdlər bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ondan formaları ekranda yerləşdirmək üçün istifadə etməyə başlayırlar. Onlar ardıcıllıq və sazlamanın əsaslarını, həmçinin bir neçə sadə əmrləri öyrənirlər. Dərsin sonunda tələbələr əvvəlki dərsdə rəsm aləti ilə hazırladıqları şəkilləri proqramlaşdıra biləcəklər.
             Shapes and Randomization:
               name: Formalar və Randomizasiya
             Variables:
@@ -6223,24 +6090,12 @@ az:
               name: Spraytlar
             The Draw Loop:
               name: Bərabərlik Döngüsü
-            Booleans Unplugged:
-              description_student: Bu dərs boolean dəyərləri və məntiqi, həmçinin şərti ifadələri təqdim edir. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Sonra sinif getdikcə mürəkkəbləşən məntiq ifadələri əsasında obyektləri qruplaşdırır, sonra şərtilərin proqramın axınına necə təsir edə biləcəyinə baxır.
-              description_teacher: |-
-                Bu dərsdə tələbələr boolean dəyərləri və məntiqi, həmçinin şərti ifadələrlə tanış olurlar. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Bu, tələbələri ikili sualla çoxlu potensial dəyərlərə (yaş kimi) malik bir əmlakı necə çərçivəyə sala biləcəkləri barədə düşünməyə vadar edir.
-
-                Oradan tələbələrə oxşar, lakin müxtəlif fiziki xassələri olan bir qrup obyekt verilir. Tərəfdaşla birlikdə onlar bu obyektləri AND və OR ilə mürəkkəb booleanlar da daxil olmaqla getdikcə mürəkkəbləşən məntiqi ifadələrə əsaslanaraq qruplaşdırırlar.
-
-                Nəhayət, biz qərar qəbul etmək və ya proqramın axınına təsir etmək üçün bir vasitə kimi Şərtləri aşkar edirik, məntiqi ifadələrdən giriş kimi istifadə edirik.
             Conditionals:
               name: Şərti ifadələr
             Keyboard Input:
               name: Klaviatura Girişi
-            Project - Interactive Card:
-              description_student: 1-ci fəsil üçün bu məcmu layihədə sinif bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayır.
-              description_teacher: 1-ci Fəsil üçün bu məcmu layihədə tələbələr bu nöqtəyə qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv təbrik kartı planlaşdırır və hazırlayırlar.
             Velocity:
               name: Sürət
-              description_student: Spriteləri hərəkət etdirmək üçün sayğac naxışının necə istifadə edildiyini qısa nəzərdən keçirdikdən sonra sinif sürəti və fırlanma sürətini birbaşa təyin edən xüsusiyyətlərlə tanış olur. Bu yeni xassələri müxtəlif yollarla istifadə etdikcə, əsas yan sürüşmə oyunu yaratmaq üçün lazım olan bacarıqları inkişaf etdirirlər.
             Complex Sprite Movement:
               name: Kompleks Sprite Hərəkatı
             Collisions:
@@ -6253,8 +6108,6 @@ az:
               name: Oyun Dizayn Prosesindən istifadə
             Project - Design a Game:
               name: Layihə - Oyun dizayn edin
-              description_student: Sinif əvvəlki iki dərsdəki layihə təlimatından istifadə edərək orijinal oyunları planlaşdırır və qurur. Fərdi və ya cütlərlə işləyərək, sinif planlaşdırır, inkişaf etdirir və oyunlar haqqında rəy verir. Həmyaşıdların rəyini daxil etdikdən sonra sinif tamamlanmış oyunları paylaşır.
-              description_teacher: Şagirdlər öz layihələrinə rəhbərlik etmək üçün əvvəlki iki dərsdəki layihə təlimatından istifadə edərək öz oyunlarını planlaşdırıb quracaqlar. Fərdi və ya cütlükdə işləyərək, tələbələr ilk olaraq bir sıra nümunə oyunlardan ilham alaraq qurmaq istədikləri oyun növünə qərar verəcəklər. Daha sonra onlar oyunun davranışını təsvir edəcək və qurmaq üçün lazım olacaq dəyişənləri, spritləri və funksiyaları əhatə edəcək boş layihə bələdçisini tamamlayacaqlar. Code Studio-da bir sıra səviyyələr onları bu planı həyata keçirmək üçün istifadə edə biləcəkləri ümumi ardıcıllıqla təklif edir. Prosesin bir hissəsində tələbələr öz layihələrini həmyaşıdlarının nəzərdən keçirilməsi üçün paylaşacaq və oyunlarını bitirən kimi rəyləri birləşdirəcəklər. Dərsin sonunda tələbələr tamamladıqları oyunları sinif yoldaşları ilə bölüşəcəklər. Bu layihə bir neçə dərsi əhatə edəcək və asanlıqla 3-5 dərs müddətindən istənilən yerə keçə bilər.
             Shapes and Parameters:
               name: Forma və parametrlər
             Random Numbers:
@@ -6790,14 +6643,6 @@ az:
               name: Sprite Xüsusiyyətləri
             The Draw Loop:
               name: Bərabərlik Döngüsü
-            Booleans Unplugged:
-              description_student: Bu dərs boolean dəyərləri və məntiqi, həmçinin şərti ifadələri təqdim edir. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Sonra sinif getdikcə mürəkkəbləşən məntiq ifadələri əsasında obyektləri qruplaşdırır, sonra şərtilərin proqramın axınına necə təsir edə biləcəyinə baxır.
-              description_teacher: |-
-                Bu dərsdə tələbələr boolean dəyərləri və məntiqi, həmçinin şərti ifadələrlə tanış olurlar. Sinif sadə bir Stand Up, Sit Down oyununu oynamaqla başlayır, burada boolean (doğru/yanlış) ifadələr şəxsi xüsusiyyətləri (saç və ya göz rəngi, geyim növü, yaş və s.) təsvir edir. Bu, tələbələri ikili sualla çoxlu potensial dəyərlərə (yaş kimi) malik bir əmlakı necə çərçivəyə sala biləcəkləri barədə düşünməyə vadar edir.
-
-                Oradan tələbələrə oxşar, lakin müxtəlif fiziki xassələri olan bir qrup obyekt verilir. Tərəfdaşla birlikdə onlar bu obyektləri AND və OR ilə mürəkkəb booleanlar da daxil olmaqla getdikcə mürəkkəbləşən məntiqi ifadələrə əsaslanaraq qruplaşdırırlar.
-
-                Nəhayət, biz qərar qəbul etmək və ya proqramın axınına təsir etmək üçün bir vasitə kimi Şərtləri aşkar edirik, məntiqi ifadələrdən giriş kimi istifadə edirik.
             Conditionals:
               name: Şərti ifadələr
             Keyboard Input:
@@ -6840,17 +6685,10 @@ az:
               name: " Yerlərə  Sağ-salamat Gediş"
             Learn to Drag and Drop:
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             'Programming: Happy Maps':
               name: Şən xəritələr
             Programming with Rey and BB-8:
               name: Rey və BB-8 ilə proqramlaşdırma
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
-            Events in Play Lab:
-              description_student: Öz oyun və ya hekayənizi yaradın.
-            Safety in My Online Neighborhood:
-              description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
         courseb-2020:
           title: B Kursu (2020)
@@ -6874,8 +6712,6 @@ az:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Harvester:
               name: Taxılbiçən ilə proqramlaşdırma
-            Events in Play Lab:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
         coursec-2020:
           title: C Kursu (2020)
@@ -6933,7 +6769,6 @@ az:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
-              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar. Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə sonlandırıla bilər."
             Relay Programming:
               name: Estafet proqramlaşdırması
             Build a Star Wars Game:
@@ -6971,7 +6806,6 @@ az:
           lessons:
             Simon Says:
               name: Simon söyləyir
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             Private and Personal Information:
               name: Özəl və şəxsi informasiya
             Access Ability:
@@ -7519,24 +7353,15 @@ az:
           description_short: Problemləri həll etmək üçün insanların kompüterlərlə necə işlədiyini öyrənin.
           lessons:
             Intro to Problem Solving:
-              key: Problem Həllinə giriş
               name: Problem Həllinə giriş
             The Problem Solving Process:
-              key: Məsələnin həlli prosesi
               name: Məsələnin həlli prosesi
             Exploring Problem Solving:
-              key: Problemin həllini araşdırmaq
               name: Problemin həllini araşdırmaq
             What is a Computer?:
-              key: Kompüter nədir?
               name: Kompüter nədir?
             Storage:
-              key: Yaddaş
               name: Yaddaş
-            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
-              description_student: |-
-                **Günün Sualı : Nə bizə birlikdə işləməyə və sualları komanda şəklində həll etməkdə kömək edə bilər?**
-                Bu dərs siz qrup şəklində mümkün olacaq qədər çox kitabı dəstəkləyəcək spagetti körpüsü dizayn edəcək, quracaq, yoxlayacaq və əks etdirəcəksiniz.
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -7547,16 +7372,12 @@ az:
         csd2-2021:
           lessons:
             Intro to HTML:
-              key: HTML-ə giriş
               name: HTML-ə giriş
             Headings:
-              key: Başlıqlar
               name: Başlıqlar
             Websites for a Purpose:
-              key: Məqsəd üçün veb saytlar
               name: Məqsəd üçün veb saytlar
             CSS Classes:
-              key: CSS dərsləri
               name: CSS dərsləri
             lesson-1:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
@@ -7566,55 +7387,38 @@ az:
         csd3-2021:
           lessons:
             Drawing in Game Lab:
-              key: Oyun laboratoriyasında rəsm
               name: Oyun laboratoriyasında rəsm
             Shapes and Parameters:
-              key: Forma və parametrlər
               name: Forma və parametrlər
             Variables:
-              key: dəyişənlər
               name: dəyişənlər
             Random Numbers:
-              key: Təsadufi rəqəmlər
               name: Təsadufi rəqəmlər
             Sprites:
-              key: Spraytlar
               name: Spraytlar
             Sprite Properties:
-              key: Sprite Xüsusiyyətləri
               name: Sprite Xüsusiyyətləri
             Text:
-              key: mətn
               name: mətn
             The Draw Loop:
-              key: Bərabərlik Döngüsü
               name: Bərabərlik Döngüsü
             Conditionals:
-              key: Şərti ifadələr
               name: Şərti ifadələr
             Keyboard Input:
-              key: Klaviatura Girişi
               name: Klaviatura Girişi
             Velocity:
-              key: Sürət
               name: Sürət
             Complex Sprite Movement:
-              key: Kompleks Sprite Hərəkatı
               name: Kompleks Sprite Hərəkatı
             Collisions:
-              key: Toqquşmalar
               name: Toqquşmalar
             Functions:
-              key: Funksiyalar
               name: Funksiyalar
             The Game Design Process:
-              key: Oyun Dizayn Prosesi
               name: Oyun Dizayn Prosesi
             Using the Game Design Process:
-              key: Oyun Dizayn Prosesindən istifadə
               name: Oyun Dizayn Prosesindən istifadə
             Project - Design a Game:
-              key: Layihə - Oyun dizayn edin
               name: Layihə - Oyun dizayn edin
             lesson-1:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
@@ -7628,36 +7432,23 @@ az:
           student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd4-2021:
           lessons:
-            Analysis of Design:
-              key: Dizaynın təhlili
             Understanding Your User:
-              key: İstifadəçinizi Anlamaq
               name: İstifadəçinizi Anlamaq
             User Interfaces:
-              key: İstifadəçi Araüzü
               name: İstifadəçi Araüzü
             Feedback and Testing:
-              key: Əks-əlaqə və Sınaq
               name: Əks-əlaqə və Sınaq
             Designing Apps for Good:
-              key: Əmtəə üçün proqramların dizaynı
               name: Əmtəə üçün proqramların dizaynı
             Market Research:
-              key: Bazar Araşdırması
               name: Bazar Araşdırması
             Prototype Testing:
-              key: İlk Nümunə Testi
               name: İlk Nümunə Testi
-            Digital Design:
-              key: Rəqəmsal Dizayn
             Testing the App:
-              key: Tətbiqi yoxlamaq
               name: Tətbiqi yoxlamaq
             Improving and Iterating:
-              key: Təkmilləşdirmə və təkrarlama
               name: Təkmilləşdirmə və təkrarlama
             Project - App Presentation:
-              key: Layihə - Proqram Təqdimatı
               name: Layihə - Proqram Təqdimatı
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
@@ -7667,19 +7458,14 @@ az:
         csd5-2021:
           lessons:
             Representing Images:
-              key: Şəkilləri təmsil edir
               name: Şəkilləri təmsil edir
             Keeping Data Secret:
-              key: Məlumatlar Gizli Saxlanır
               name: Məlumatlar Gizli Saxlanır
             Combining Representations:
-              key: Nümayəndəlikləri birləşdirən
               name: Nümayəndəlikləri birləşdirən
             Problem Solving and Data:
-              key: Sual həll etmə və Data
               name: Sual həll etmə və Data
             Making Decisions with Data:
-              key: Data ilə bağlı qərar vermək
               name: Data ilə bağlı qərar vermək
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
@@ -7689,19 +7475,14 @@ az:
         csd6-2021:
           lessons:
             Designing Screens with Code:
-              key: Kod ilə ekran dizaynı
               name: Kod ilə ekran dizaynı
             Board Events:
-              key: İdarə Heyətinin Tədbirləri
               name: İdarə Heyətinin Tədbirləri
             Getting Properties:
-              key: Xüsusiyyətləri əldə etmək
               name: Xüsusiyyətləri əldə etmək
             Making Music:
-              key: Musiqi bəstələmək
               name: Musiqi bəstələmək
             Functions with Parameters:
-              key: Parametrli funksiyalar
               name: Parametrli funksiyalar
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
@@ -7711,10 +7492,8 @@ az:
         csp1-2021:
           lessons:
             Representing Information:
-              key: Məlumatı təmsil edən
               name: Məlumatı təmsil edən
             Binary Numbers:
-              key: İkilik rəqəmlər
               name: İkilik rəqəmlər
             'Lesson 14: Assessment Day':
               name: Qiymətləndirmə günü
@@ -7724,10 +7503,8 @@ az:
         csp2-2021:
           lessons:
             The Need for Addressing:
-              key: Ünvanlama ehtiyacı
               name: Ünvanlama ehtiyacı
             Routers and Redundancy:
-              key: Routers and Redundancy
               name: Routers and Redundancy
             DNS and HTTP:
               name: HTTP və DNS
@@ -7742,13 +7519,10 @@ az:
         csp3-2021:
           lessons:
             Introduction to Apps:
-              key: Tətbiqlərə giriş
               name: Tətbiqlərə giriş
             Intro to Programming:
-              key: Proqramlaşdırmaya giriş
               name: Proqramlaşdırmaya giriş
             Debugging:
-              key: Sazlama
               name: Sazlama
             'Lesson 11: Assessment Day':
               name: Qiymətləndirmə günü
@@ -7787,12 +7561,6 @@ az:
               display_name: Alqoritmlər
         csp7-2021:
           lessons:
-            Project - Make a Library Part 1:
-              key: Layihə - Kitabxana yaradın 1-ci hissə
-            Project - Make a Library Part 2:
-              key: Layihə - Kitabxana yaradın 2-ci hissə
-            Project - Make a Library Part 3:
-              key: Layihə - Kitabxana yaradın 3-ci hissə
             'Lesson 11: Assessment Day':
               name: Qiymətləndirmə günü
           lesson_groups:
@@ -7801,9 +7569,6 @@ az:
             lessonGroup-3:
               display_name: Sorğu
         csp8-2021:
-          lessons:
-            Create PT - Complete the Task:
-              key: Create PT - Complete the Task
           lesson_groups:
             lessonGroup-2:
               display_name: PT yarat
@@ -7815,10 +7580,6 @@ az:
               name: Datadan öyrənmə
             Machine Learning and Bias:
               name: Avtomatlaşdırılmış Öyrənmə
-            Project - Tell a Data Story - Part 1:
-              key: Layihə - Məlumat hekayəsini danışın - 1-ci hissə
-            Project - Tell a Data Story - Part 2:
-              key: Layihə - Məlumat hekayəsini danışın - 2-ci hissə
             'Lesson 9: Assessment Day':
               name: Qiymətləndirmə günü
           lesson_groups:
@@ -7829,15 +7590,9 @@ az:
         csp10-2021:
           lessons:
             Protecting Data Part 1:
-              key: Datanı Qoruma 1-ci Hissə
               name: Datanı Qoruma 1-ci Hissə
             Protecting Data Part 2:
-              key: Datanı Qoruma 2-ci Hissə
               name: Datanı Qoruma 2-ci Hissə
-            'Project: Innovation Simulation Part 6':
-              description_student: Dərsin icmalı
-            'Project: Innovation Simulation Part 7':
-              description_student: Dərsin icmalı
             'Lesson 14: Unit Assessment Day':
               name: Qiymətləndirmə günü
           lesson_groups:
@@ -7847,24 +7602,12 @@ az:
           description_short: Ön-oxucular üçün kompüter elmlərinə giriş.
           description_audience: 'Yaşlar: 4-7'
           lessons:
-            Safety in My Online Neighborhood:
-              description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
             Learn to Drag and Drop:
-              key: Dartıb buraxmağı oyrən
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             'Programming: Happy Maps':
-              key: 'Proqramlaşdırma: Xoşbəxt Xəritələr'
               name: Şən xəritələr
             Programming with Rey and BB-8:
-              key: Rey və BB-8 ilə proqramlaşdırma
               name: Rey və BB-8 ilə proqramlaşdırma
-            Loops in Ice Age:
-              key: Buz Dövründə Dövrlər
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
-            Events in Play Lab:
-              description_student: Öz oyun və ya hekayənizi yaradın.
             lesson-1:
               name: Kurs layihələrinin sonu!
           lesson_groups:
@@ -7883,7 +7626,6 @@ az:
           description_audience: 'Yaşlar: 5-8'
           lessons:
             Move It, Move It:
-              key: Hərəkət et
               name: Hərəkət et
             Sequencing in Maze:
               name: Angry Birds ilə sıralama
@@ -7891,12 +7633,6 @@ az:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Harvester:
               name: Taxılbiçən ilə proqramlaşdırma
-            Loops in Harvester:
-              key: Biçinçidə Dövrlər
-            Loops in Artist:
-              key: Rəssamdakı döngələr
-            Events in Play Lab:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
             lesson-1:
               name: Kurs layihələrinin sonu!
           lesson_groups:
@@ -7915,19 +7651,12 @@ az:
           description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini, hekayələrini və oyunlarını yarat.
           description_audience: 'Yaşlar: 6-10'
           lessons:
-            'Programming: My Robotic Friends':
-              key: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Programming in Maze:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Collector:
               name: Laurel ilə xəzinə toplama
             Binary Bracelets:
-              key: ikili bilərziklər
               name: ikili bilərziklər
-            Loops in Harvester:
-              key: Biçinçidə Dövrlər
-            Looking Ahead:
-              key: İrəliyə Baxmaq
             'Events: The Big Event':
               name: Böyük hadisə
             'End of Course Project: Create a Play Lab Game':
@@ -7955,31 +7684,18 @@ az:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
             Relay Programming:
-              key: Estafet proqramlaşdırması
               name: Estafet proqramlaşdırması
             Build a Star Wars Game:
-              key: Ulduz Müharibələri oyunu düzəldin
               name: Ulduz Müharibələri oyunu düzəldin
             Dance Party:
-              key: Rəqs şənliyi
               name: Rəqs şənliyi
             Loops in Ice Age:
-              key: Buz Dövründə Dövrlər
               name: Buz Dövründə Dövrlər
-            Loops in Artist:
-              key: Rəssamdakı döngələr
             Conditionals with Cards:
-              key: Kartlarla şərtlər
               name: Kartlarla şərtlər
             'Unplugged: Binary':
-              key: 'Sərbəst: İkilik say sistemi '
               name: İkilik təsvirlər
-            Artist Binary:
-              key: 'Rəssam: ikilik sistem'
-            Be A Super Digital Citizen:
-              key: Super bir rəqəmsal vətəndaş olun
             End of Course Project:
-              key: Kurs layihələrinin sonu!
               name: Kurs layihələrinin sonu!
             lesson-1:
               name: Sözlərin Gücü
@@ -8003,30 +7719,17 @@ az:
         coursee-2021:
           description_audience: 'Yaşlar: 8-12'
           lessons:
-            Conditionals:
-              key: Şərti ifadələr
             Simon Says:
-              key: Simon söyləyir
               name: Alqoritmi izləyin.
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             Private and Personal Information:
-              key: Özəl və şəxsi informasiya
               name: Özəl və şəxsi informasiya
-            About Me:
-              key: Haqqımda
             Digital Sharing:
-              key: Rəqəmsal paylaşım
               name: Rəqəmsal paylaşım
             'Functions: Songwriting':
-              key: 'Funksiyalar: Mahnı yazmaq'
               name: Mahnı yazma
-            Functions in Artist:
-              key: Artistdəki funksiyalar
             Designing for Accessibility:
-              key: Əlçatanlıq üçün dizayn
               name: Əlçatanlıq üçün dizayn
             End of Course Project:
-              key: Kurs layihələrinin sonu!
               name: Kurs layihələrinin sonu!
             lesson-4:
               name: Super bir rəqəmsal vətəndaş olun
@@ -8052,29 +7755,21 @@ az:
           description_audience: 'Yaşlar: 9-13'
           lessons:
             The Power of Words:
-              key: Sözlərin Gücü
               name: Sözlərin Gücü
             Internet:
-              key: İnternet
               name: İnternet
-            Virtual Pet:
-              key: virtual ev heyvanı
             End of Course Project:
-              key: Kurs layihələrinin sonu!
               name: Kurs layihələrinin sonu!
             lesson-1:
               name: Əlçatanlıq üçün dizayn
             lesson-6:
               name: Sprite Laboratoriyasını təqdim edirik
-              description_student: Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
             lesson-7:
               name: Spraytlar düzəltmək
             lesson-8:
               name: Spritelar Hərəkətdə
             lesson-2:
               name: Sözlərin Gücü
-            lesson-11:
-              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin.
           lesson_groups:
             ramp_up:
               display_name: Spraytlar
@@ -8096,22 +7791,17 @@ az:
           description_audience: 'Yaşlar: 9-18'
           lessons:
             Dance Party:
-              key: Rəqs şənliyi
               name: Rəqs şənliyi
             Programming with Angry Birds:
-              key: Əsəbi quşlarla proqramlaşdırma
               name: Əsəbi quşlarla proqramlaşdırma
             Collecting Treasure with Laurel:
-              key: Laurel ilə xəzinə toplama
               name: Laurel ilə xəzinə toplama
             End of Course Project:
-              key: Kurs layihələrinin sonu!
               name: Kurs layihələrinin sonu!
             lesson-1:
               name: Rəqs şənliyi
             lesson-2:
               name: Spraytlar düzəltmək
-              description_student: Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz.
             lesson-3:
               name: Spritelar Hərəkətdə
           lesson_groups:
@@ -8137,22 +7827,13 @@ az:
           description_audience: 'Yaşlar: 4-8'
           lessons:
             Learn to Drag and Drop:
-              key: Dartıb buraxmağı oyrən
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             Programming in with Angry Birds:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming with Rey and BB-8:
-              key: Rey və BB-8 ilə proqramlaşdırma
               name: Rey və BB-8 ilə proqramlaşdırma
             Programming in Harvester:
               name: Taxılbiçən ilə proqramlaşdırma
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
-            On the Move with Events:
-              description_student: Öz oyun və ya hekayənizi yaradın.
-            A Royal Battle with Events:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
           lesson_groups:
             csf_sequencing:
               display_name: Ardıcıllıq qurmaq
@@ -8182,37 +7863,26 @@ az:
         csd4-preview-2021:
           lessons:
             Analysis of Design:
-              key: Dizaynın təhlili
               name: Dizaynın təhlili
             Understanding Your User:
-              key: İstifadəçinizi Anlamaq
               name: İstifadəçinizi Anlamaq
             User Interfaces:
-              key: İstifadəçi Araüzü
               name: İstifadəçi Araüzü
             Feedback and Testing:
-              key: Əks-əlaqə və Sınaq
               name: Əks-əlaqə və Sınaq
             Designing Apps for Good:
-              key: Əmtəə üçün proqramların dizaynı
               name: Əmtəə üçün proqramların dizaynı
             Market Research:
-              key: Bazar Araşdırması
               name: Bazar Araşdırması
             Prototype Testing:
-              key: İlk Nümunə Testi
               name: İlk Nümunə Testi
             Digital Design:
-              key: Rəqəmsal Dizayn
               name: Rəqəmsal Dizayn
             Testing the App:
-              key: Tətbiqi yoxlamaq
               name: Tətbiqi yoxlamaq
             Improving and Iterating:
-              key: Təkmilləşdirmə və təkrarlama
               name: Təkmilləşdirmə və təkrarlama
             Project - App Presentation:
-              key: Layihə - Proqram Təqdimatı
               name: Layihə - Proqram Təqdimatı
           lesson_groups:
             cspSurvey:
@@ -8222,19 +7892,14 @@ az:
         csd5-preview-2021:
           lessons:
             Representing Images:
-              key: Şəkilləri təmsil edir
               name: Şəkilləri təmsil edir
             Keeping Data Secret:
-              key: Məlumatlar Gizli Saxlanır
               name: Məlumatlar Gizli Saxlanır
             Combining Representations:
-              key: Nümayəndəlikləri birləşdirən
               name: Nümayəndəlikləri birləşdirən
             Problem Solving and Data:
-              key: Sual həll etmə və Data
               name: Sual həll etmə və Data
             Making Decisions with Data:
-              key: Data ilə bağlı qərar vermək
               name: Data ilə bağlı qərar vermək
           lesson_groups:
             cspSurvey:
@@ -8342,30 +8007,20 @@ az:
             Understanding the Computer Science Fundamentals Courses:
               name: Code.org nədir?
             Sequencing:
-              key: Ardıcıllıq qurmaq
               name: Ardıcıllıq qurmaq
             Loops:
-              key: dövrlər
               name: dövrlər
             Events:
-              key: Tədbirlər
               name: Tədbirlər
             Conditionals:
-              key: Şərti ifadələr
               name: Şərti ifadələr
             Functions:
-              key: Funksiyalar
               name: Funksiyalar
             Variables:
-              key: dəyişənlər
               name: dəyişənlər
             For Loops:
-              key: '"For" dövrü'
               name: '"For" dövrü'
-            Sprite Lab:
-              key: Sprite Laboratoriyası
             Next steps:
-              key: Növbəti addımlar
               name: Növbəti addımları atmaq
             Module 1:
               name: Modul 1
@@ -8438,63 +8093,44 @@ az:
           description_short: Bu pulsuz, müstəqil onlayn kursla Code.org-un Kompüter Elmlərinin Əsaslarından istifadə edərək kompüter elmini necə öyrətməyi öyrənin.
           lessons:
             Getting Started:
-              key: Başlanğıc
               name: Başlanğıc
             Computer Science Fundamentals:
-              key: Kompüter Elmləri Əsasları.
               name: Kompüter Elmləri Əsasları.
             Looking Ahead:
-              key: İrəliyə Baxmaq
               name: İrəliyə Baxmaq
             'Mastering the Basics: Sequencing':
-              key: 'Əsasları mənimsəmək: Ardıcıllıq'
               name: 'Əsasları mənimsəmək: Ardıcıllıq'
             'Mastering the Basics: Loops':
-              key: 'Əsasları mənimsəmək: Döngələr'
               name: 'Əsasları mənimsəmək: Döngələr'
             'Mastering the Basics: Conditionals':
-              key: 'Əsasları mənimsəmək: Şərtlər'
               name: 'Əsasları mənimsəmək: Şərtlər'
             'Mastering the Basics: Functions':
-              key: 'Əsaslara yiyələnmək: funksiyalar'
               name: 'Əsaslara yiyələnmək: funksiyalar'
             'Mastering the Basics: Events':
-              key: 'Əsasları mənimsəmək: Hadisələr'
               name: 'Əsasları mənimsəmək: Hadisələr'
             Best Practices for Teaching Computer Science:
-              key: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
               name: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
             Planning:
-              key: Planlama
               name: Planlama
             Next Steps:
-              key: Növbəti addımlar
               name: Növbəti addımlar
         vpl-csd-2021:
           lessons:
             Module 1:
-              key: Modul 1
               name: Modul 1
             Module 2:
-              key: Modul 2
               name: Modul 2
             Module 3:
-              key: Modul 3
               name: Modul 3
             Module 4:
-              key: Modul 4
               name: Modul 4
             Module 5:
-              key: Modul 5
               name: Modul 5
             Module 6:
-              key: Modul 6
               name: Modul 6
             Module 7:
-              key: Modul 7
               name: Modul 7
             Module 8:
-              key: Modul 8
               name: Modul 8
           lesson_groups:
             CSD_Module 1:
@@ -8516,25 +8152,13 @@ az:
         vpl-csp-2021:
           lessons:
             Module 1:
-              key: Modul 1
               name: Modul 1
             Module 2:
-              key: Modul 2
               name: Modul 2
             Module 3:
-              key: Modul 3
               name: Modul 3
             Module 4:
-              key: Modul 4
               name: Modul 4
-            Module 5:
-              key: Modul 5
-            Module 6:
-              key: Modul 6
-            Module 7:
-              key: Modul 7
-            Module 8:
-              key: Modul 8
         self-paced-pl-csd1-2021:
           lessons:
             lesson-4:
@@ -8700,43 +8324,9 @@ az:
             Assessment Day:
               name: Qiymətləndirmə günü
             lesson-1:
-              key: dərs-1
               name: Java Lab
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
-            lesson-15:
-              key: dərs-15
-            lesson-16:
-              key: dərs-16
-            lesson-17:
-              key: dərs-17
-            lesson-18:
-              key: dərs-18
-            lesson-19:
-              key: dərs-19
             lesson-20:
-              key: dərs-20
               name: Qiymətləndirmə günü
-            lesson-21:
-              key: dərs-21
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -8744,31 +8334,9 @@ az:
           lessons:
             Assessment Day:
               name: Qiymətləndirmə günü
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
             lesson-1:
-              key: dərs-1
               name: Java Lab
           lesson_groups:
             lesson group:
@@ -8778,33 +8346,9 @@ az:
             Assessment Day:
               name: Qiymətləndirmə günü
             lesson-1:
-              key: dərs-1
               name: Java Lab
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
-            lesson-16:
-              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -8813,30 +8357,8 @@ az:
             Assessment Day:
               name: Qiymətləndirmə günü
             lesson-1:
-              key: dərs-1
               name: Java Lab
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-            lesson-2:
-              key: dərs-2
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
           lesson_groups:
             lessonGroup-2:
@@ -8851,34 +8373,13 @@ az:
               name: Elementlər Axtarılır
             Assessment Day:
               name: Qiymətləndirmə günü
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
             lesson-7:
-              key: dərs-7
               name: Ters Elementlər
             lesson-8:
               name: Dəyişən Elementlər
-            lesson-9:
-              key: dərs-9
             lesson-10:
-              key: dərs-10
               name: Elementlər Axtarılır
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
@@ -8969,7 +8470,6 @@ az:
           lessons:
             lesson-1:
               name: Yazı yoxlayan arı
-              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
           title: Yazı yoxlayan arı
         csa5-exemplars:
           lessons:
@@ -9004,68 +8504,27 @@ az:
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
-        ai-ethics-2021:
-          lessons:
-            lesson-1:
-              key: dərs-1
-        poem-art-2021:
-          lessons:
-            lesson-1:
-              key: dərs-1
         poetry-2021:
           lessons:
             Code Your Own Poem:
               name: Özünün Şeirini kodlaşdır
             Choosing Words Carefully:
               name: Söz Seçimi
-            lesson-1:
-              key: dərs-1
             lesson-2:
-              key: dərs-2
               name: Özünün Şeirini kodlaşdır
             lesson-5:
-              key: dərs-5
               name: Söz Seçimi
-            lesson-7:
-              key: dərs-7
-            lesson-6:
-              key: dərs-6
           title: Kompüter Elmləri və Şeir
         hello-world-food-2021:
           lessons:
             Hello World:
               name: Salam Dünya
             lesson-1:
-              key: dərs-1
               name: Salam Dünya
           title: Salam Dünya
         hello-world-emoji-2021:
@@ -9073,7 +8532,6 @@ az:
             Hello World:
               name: Salam Dünya
             lesson-1:
-              key: dərs-1
               name: Salam Dünya
           title: Salam Dünya
         hello-world-animals-2021:
@@ -9081,7 +8539,6 @@ az:
             Hello World:
               name: Salam Dünya
             lesson-1:
-              key: dərs-1
               name: Salam Dünya
           title: Salam Dünya
         hello-world-retro-2021:
@@ -9089,28 +8546,17 @@ az:
             Hello World:
               name: Salam Dünya
             lesson-1:
-              key: dərs-1
               name: Salam Dünya
           title: Salam Dünya
         spelling-bee-2021:
           lessons:
-            Spelling Bee:
-              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
             lesson-1:
-              key: dərs-1
               name: Yazı yoxlayan arı
-              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: Məlumatların vizuallaşdırılması
-            lesson-1:
-              key: dərs-1
           title: Məlumatların vizuallaşdırılması
-        counting-csc-2021:
-          lessons:
-            lesson-1:
-              key: dərs-1
         hello-world-gabrielle-validation:
           lessons:
             lesson-1:
@@ -9126,7 +8572,6 @@ az:
           lessons:
             Follow the Algorithm:
               name: Alqoritmi izləyin.
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             'Hello World: Food':
               name: Salam Dünya
           lesson_groups:
@@ -9144,13 +8589,10 @@ az:
           lessons:
             Introducing Sprite Lab:
               name: Sprite Laboratoriyasını təqdim edirik
-              description_student: Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
             Making Sprites:
               name: Spraytlar düzəltmək
             Sprites in Action:
               name: Spritelar Hərəkətdə
-            'Mini-Project: User Input Programs':
-              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin.
           lesson_groups:
             lessonGroup-2:
               display_name: Spraytlar
@@ -9186,34 +8628,8 @@ az:
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-10:
-              key: dərs-10
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
-            lesson-15:
-              key: dərs-15
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
             lesson-5:
-              key: dərs-5
               name: Qiymətləndirmə günü
-            lesson-16:
-              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -9223,65 +8639,24 @@ az:
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-10:
-              key: dərs-10
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
-            lesson-16:
-              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         coursea-2022:
           lessons:
-            Safety in My Online Neighborhood:
-              description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
             Learn to Drag and Drop:
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
-              key: Dartıb buraxmağı oyrən
             Happy Maps:
               name: Şən xəritələr
             Programming with Rey and BB-8:
               name: Rey və BB-8 ilə proqramlaşdırma
-              key: Rey və BB-8 ilə proqramlaşdırma
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
-            'Mini-Project: On the Move with Play Lab':
-              description_student: Öz oyun və ya hekayənizi yaradın.
             End of Course Project:
               name: Kurs layihələrinin sonu!
             'Programming: Happy Maps':
-              key: 'Proqramlaşdırma: Xoşbəxt Xəritələr'
               name: Şən xəritələr
-            Loops in Ice Age:
-              key: Buz Dövründə Dövrlər
-            Events in Play Lab:
-              description_student: Öz oyun və ya hekayənizi yaradın.
             lesson-1:
-              key: dərs-1
               name: Kurs layihələrinin sonu!
           lesson_groups:
             csf_digcit:
@@ -9301,28 +8676,21 @@ az:
           lessons:
             Programming with Angry Birds:
               name: Əsəbi quşlarla proqramlaşdırma
-              key: Əsəbi quşlarla proqramlaşdırma
             Collecting Treasure with Laurel:
               name: Laurel ilə xəzinə toplama
-              key: Laurel ilə xəzinə toplama
             Making Sprites:
               name: Spraytlar düzəltmək
-              description_student: Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz.
             Sprites in Action:
               name: Spritelar Hərəkətdə
             Dance Party:
               name: Rəqs şənliyi
             End of Course Project:
               name: Kurs layihələrinin sonu!
-              key: Kurs layihələrinin sonu!
             lesson-2:
-              key: dərs-2
               name: Spraytlar düzəltmək
-              description_student: Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz.
             lesson-3:
               name: Spritelar Hərəkətdə
             lesson-1:
-              key: dərs-1
               name: Rəqs şənliyi
           lesson_groups:
             csf_sequencing:
@@ -9348,10 +8716,8 @@ az:
           lessons:
             Representing Information:
               name: Məlumatı təmsil edən
-              key: Məlumatı təmsil edən
             Binary Numbers:
               name: İkilik rəqəmlər
-              key: İkilik rəqəmlər
             Assessment Day:
               name: Qiymətləndirmə günü
             'Lesson 14: Assessment Day':
@@ -9363,10 +8729,8 @@ az:
           lessons:
             The Need for Addressing:
               name: Ünvanlama ehtiyacı
-              key: Ünvanlama ehtiyacı
             Routers and Redundancy:
               name: Routers and Redundancy
-              key: Routers and Redundancy
             HTTP and DNS:
               name: HTTP və DNS
             Assessment Day:
@@ -9382,13 +8746,10 @@ az:
           lessons:
             Introduction to Apps:
               name: Tətbiqlərə giriş
-              key: Tətbiqlərə giriş
             Intro to Programming:
               name: Proqramlaşdırmaya giriş
-              key: Proqramlaşdırmaya giriş
             Debugging:
               name: Sazlama
-              key: Sazlama
             Assessment Day:
               name: Qiymətləndirmə günü
             'Lesson 11: Assessment Day':
@@ -9427,15 +8788,12 @@ az:
           lessons:
             Move It, Move It:
               name: Hərəkət et
-              key: Hərəkət et
             Sequencing with Angry Birds:
               name: Angry Birds ilə sıralama
             Programming with Angry Birds:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming with Harvester:
               name: Taxılbiçən ilə proqramlaşdırma
-            'Mini-Project: A Royal Battle with Events':
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
             End of Course Project:
               name: Kurs layihələrinin sonu!
             Sequencing in Maze:
@@ -9444,14 +8802,7 @@ az:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Harvester:
               name: Taxılbiçən ilə proqramlaşdırma
-            Loops in Harvester:
-              key: Biçinçidə Dövrlər
-            Loops in Artist:
-              key: Rəssamdakı döngələr
-            Events in Play Lab:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
             lesson-1:
-              key: dərs-1
               name: Kurs layihələrinin sonu!
           lesson_groups:
             csf_digcit:
@@ -9476,17 +8827,12 @@ az:
               name: Böyük hadisə
             Binary Bracelets:
               name: ikili bilərziklər
-              key: ikili bilərziklər
             End of Course Project:
               name: Kurs layihələrinin sonu!
-            'Programming: My Robotic Friends':
-              key: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Programming in Maze:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Collector:
               name: Laurel ilə xəzinə toplama
-            Loops in Harvester:
-              key: Biçinçidə Dövrlər
             'Events: The Big Event':
               name: Böyük hadisə
             'End of Course Project: Create a Play Lab Game':
@@ -9517,21 +8863,12 @@ az:
           lessons:
             Assessment Day:
               name: Qiymətləndirmə günü
-            Project - Make a Library Part 1:
-              key: Layihə - Kitabxana yaradın 1-ci hissə
-            Project - Make a Library Part 2:
-              key: Layihə - Kitabxana yaradın 2-ci hissə
-            Project - Make a Library Part 3:
-              key: Layihə - Kitabxana yaradın 3-ci hissə
             'Lesson 11: Assessment Day':
               name: Qiymətləndirmə günü
           lesson_groups:
             csp_libraries:
               display_name: Kitabxanalar
         csp8-2022:
-          lessons:
-            Create PT - Complete the Task:
-              key: Create PT - Complete the Task
           lesson_groups:
             lessonGroup-2:
               display_name: PT yarat
@@ -9547,12 +8884,6 @@ az:
               name: Datadan öyrənmə
             Machine Learning and Bias:
               name: Avtomatlaşdırılmış Öyrənmə
-            lesson-10:
-              key: dərs-10
-            Project - Tell a Data Story - Part 1:
-              key: Layihə - Məlumat hekayəsini danışın - 1-ci hissə
-            Project - Tell a Data Story - Part 2:
-              key: Layihə - Məlumat hekayəsini danışın - 2-ci hissə
             'Lesson 9: Assessment Day':
               name: Qiymətləndirmə günü
           lesson_groups:
@@ -9562,20 +8893,10 @@ az:
           lessons:
             Protecting Data Part 1:
               name: Datanı Qoruma 1-ci Hissə
-              key: Datanı Qoruma 1-ci Hissə
             Protecting Data Part 2:
               name: Datanı Qoruma 2-ci Hissə
-              key: Datanı Qoruma 2-ci Hissə
-            Project   Innovation Simulation Part 6:
-              description_student: Dərsin icmalı
-            Project   Innovation Simulation Part 7:
-              description_student: Dərsin icmalı
             Assessment Day:
               name: Qiymətləndirmə günü
-            'Project: Innovation Simulation Part 6':
-              description_student: Dərsin icmalı
-            'Project: Innovation Simulation Part 7':
-              description_student: Dərsin icmalı
             'Lesson 14: Unit Assessment Day':
               name: Qiymətləndirmə günü
         coursed-2022:
@@ -9584,30 +8905,18 @@ az:
               name: Millimetrlik kağızda proqramlaşdırma
             Relay Programming:
               name: Estafet proqramlaşdırması
-              key: Estafet proqramlaşdırması
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
-              key: Ulduz Müharibələri oyunu düzəldin
             Dance Party:
               name: Rəqs şənliyi
-              key: Rəqs şənliyi
             Loops in Ice Age:
               name: Buz Dövründə Dövrlər
-              key: Buz Dövründə Dövrlər
             Conditionals with Cards:
               name: Kartlarla şərtlər
-              key: Kartlarla şərtlər
             End of Course Project:
               name: Kurs layihələrinin sonu!
-              key: Kurs layihələrinin sonu!
-            lesson-5:
-              key: dərs-5
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
-            Loops in Artist:
-              key: Rəssamdakı döngələr
-            lesson-6:
-              key: dərs-6
           lesson_groups:
             lessonGroup-6:
               display_name: Rəqəmsal vətəndaşlıq
@@ -9627,39 +8936,25 @@ az:
           lessons:
             Follow the Algorithm:
               name: Alqoritmi izləyin.
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             Be A Super Digital Citizen:
               name: Super bir rəqəmsal vətəndaş olun
             Private and Personal Information:
               name: Özəl və şəxsi informasiya
-              key: Özəl və şəxsi informasiya
             Digital Sharing:
               name: Rəqəmsal paylaşım
-              key: Rəqəmsal paylaşım
             Songwriting:
               name: Mahnı yazma
             Designing for Accessibility:
               name: Əlçatanlıq üçün dizayn
             End of Course Project:
               name: Kurs layihələrinin sonu!
-              key: Kurs layihələrinin sonu!
             Simon Says:
-              key: Simon söyləyir
               name: Alqoritmi izləyin.
-              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
             lesson-4:
               name: Super bir rəqəmsal vətəndaş olun
-            About Me:
-              key: Haqqımda
             'Functions: Songwriting':
-              key: 'Funksiyalar: Mahnı yazmaq'
               name: Mahnı yazma
-            Functions in Artist:
-              key: Artistdəki funksiyalar
-            Conditionals:
-              key: Şərti ifadələr
             lesson-1:
-              key: dərs-1
               name: Əlçatanlıq üçün dizayn
             'Hello World: Food':
               name: Salam Dünya
@@ -9681,43 +8976,23 @@ az:
           lessons:
             Introducing Sprite Lab:
               name: Sprite Laboratoriyasını təqdim edirik
-              description_student: Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
             Making Sprites:
               name: Spraytlar düzəltmək
             Sprites in Action:
               name: Spritelar Hərəkətdə
             The Power of Words:
               name: Sözlərin Gücü
-            'Mini-Project: User Input Programs':
-              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin.
             The Internet:
               name: İnternet
             End of Course Project:
               name: Kurs layihələrinin sonu!
-              key: Kurs layihələrinin sonu!
-            lesson-6:
-              key: dərs-6
             lesson-7:
-              key: dərs-7
               name: Spraytlar düzəltmək
             lesson-8:
               name: Spritelar Hərəkətdə
-            Virtual Pet:
-              key: virtual ev heyvanı
             lesson-2:
-              key: dərs-2
               name: Sözlərin Gücü
-            lesson-9:
-              key: dərs-9
-            lesson-10:
-              key: dərs-10
-            lesson-11:
-              key: dərs-11
-              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin.
-            lesson-5:
-              key: dərs-5
             Internet:
-              key: İnternet
               name: İnternet
           lesson_groups:
             ramp_up:
@@ -9748,24 +9023,13 @@ az:
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
-              key: Dartıb buraxmağı oyrən
               name: Dartıb buraxmağı oyrən
-              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             Programming with Angry Birds:
-              key: Əsəbi quşlarla proqramlaşdırma
               name: Əsəbi quşlarla proqramlaşdırma
             Programming with Rey and BB-8:
-              key: Rey və BB-8 ilə proqramlaşdırma
               name: Rey və BB-8 ilə proqramlaşdırma
             Programming with Harvester:
-              key: Taxılbiçən ilə proqramlaşdırma
               name: Taxılbiçən ilə proqramlaşdırma
-            Ocean Scene with Loops:
-              description_student: Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin.
-            On the Move with Events:
-              description_student: Öz oyun və ya hekayənizi yaradın.
-            A Royal Battle with Events:
-              description_student: Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin.
             Programming in with Angry Birds:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Harvester:
@@ -9839,34 +9103,8 @@ az:
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-10:
-              key: dərs-10
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
-            lesson-15:
-              key: dərs-15
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
             lesson-5:
-              key: dərs-5
               name: Qiymətləndirmə günü
-            lesson-16:
-              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -9876,34 +9114,8 @@ az:
               name: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-            lesson-5:
-              key: dərs-5
-            lesson-10:
-              key: dərs-10
-            lesson-6:
-              key: dərs-6
-            lesson-7:
-              key: dərs-7
-            lesson-9:
-              key: dərs-9
-            lesson-11:
-              key: dərs-11
-            lesson-12:
-              key: dərs-12
-            lesson-13:
-              key: dərs-13
-            lesson-14:
-              key: dərs-14
             lesson-15:
-              key: dərs-15
               name: Qiymətləndirmə günü
-            lesson-16:
-              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -9911,25 +9123,16 @@ az:
           lessons:
             The Power of Words:
               name: Sözlərin Gücü
-              key: Sözlərin Gücü
             Introducing Sprite Lab:
               name: Sprite Laboratoriyasını təqdim edirik
-              description_student: Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
-              key: Sprite Laboratoriyasını təqdim edirik
             Making Sprites:
               name: Spraytlar düzəltmək
-              key: Spraytlar düzəltmək
             Sprites in Action:
               name: Spritelar Hərəkətdə
-              key: Spritelar Hərəkətdə
-            'Mini-Project: User Input Programs':
-              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin.
             The Internet:
               name: İnternet
-              key: İnternet
             End of Course Project:
               name: Kurs layihələrinin sonu!
-              key: Kurs layihələrinin sonu!
           lesson_groups:
             lessonGroup-7:
               display_name: Rəqəmsal vətəndaşlıq
@@ -9945,12 +9148,8 @@ az:
           lessons:
             Assessment Day:
               name: Qiymətləndirmə günü
-              key: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
-            lesson-1:
-              key: dərs-1
             Console:
               name: Konsol
           lesson_groups:
@@ -9960,10 +9159,8 @@ az:
           lessons:
             Assessment Day:
               name: Qiymətləndirmə günü
-              key: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
             Console:
               name: Konsol
           lesson_groups:
@@ -9973,10 +9170,8 @@ az:
           lessons:
             Assessment Day:
               name: Qiymətləndirmə günü
-              key: Qiymətləndirmə günü
             Java Lab:
               name: Java Lab
-              key: Java Lab
             Console:
               name: Konsol
           lesson_groups:
@@ -10027,39 +9222,29 @@ az:
               name: Xoş gəldiniz və Giriş
             Getting Started:
               name: Başlanğıc
-              key: Başlanğıc
             Teaching a Lesson:
               name: Dərs keçmək
             Sequencing:
               name: Ardıcıllıq qurmaq
-              key: Ardıcıllıq qurmaq
             Loops:
               name: dövrlər
-              key: dövrlər
             Events:
               name: Tədbirlər
-              key: Tədbirlər
             Conditionals:
               name: Şərti ifadələr
-              key: Şərti ifadələr
             Functions:
               name: Funksiyalar
-              key: Funksiyalar
             Variables:
               name: dəyişənlər
-              key: dəyişənlər
             For Loops:
               name: '"For" dövrü'
-              key: '"For" dövrü'
             Taking next steps:
               name: Növbəti addımları atmaq
             Welcome to "Teaching Computer Science Fundamentals":
               name: Xoş gəldiniz və Giriş
             Lesson Planning:
-              key: Dərs Planlaşdırma
               name: Dərs keçmək
             Next steps:
-              key: Növbəti addımlar
               name: Növbəti addımları atmaq
         vpl-csd7-ci-pilot-2022:
           lessons:
@@ -10073,23 +9258,14 @@ az:
           lessons:
             Intro to Problem Solving:
               name: Problem Həllinə giriş
-              key: Problem Həllinə giriş
             The Problem Solving Process:
               name: Məsələnin həlli prosesi
-              key: Məsələnin həlli prosesi
             Exploring Problem Solving:
               name: Problemin həllini araşdırmaq
-              key: Problemin həllini araşdırmaq
             What is a Computer?:
               name: Kompüter nədir?
-              key: Kompüter nədir?
             Storage:
               name: Yaddaş
-              key: Yaddaş
-            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
-              description_student: |-
-                **Günün Sualı : Nə bizə birlikdə işləməyə və sualları komanda şəklində həll etməkdə kömək edə bilər?**
-                Bu dərs siz qrup şəklində mümkün olacaq qədər çox kitabı dəstəkləyəcək spagetti körpüsü dizayn edəcək, quracaq, yoxlayacaq və əks etdirəcəksiniz.
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -10102,20 +9278,15 @@ az:
           lessons:
             Intro to HTML:
               name: HTML-ə giriş
-              key: HTML-ə giriş
             Headings:
               name: Başlıqlar
-              key: Başlıqlar
             Websites for a Purpose:
               name: Məqsəd üçün veb saytlar
-              key: Məqsəd üçün veb saytlar
             CSS Classes:
               name: CSS dərsləri
-              key: CSS dərsləri
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
             lesson-1:
-              key: dərs-1
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
           lesson_groups:
             cspSurvey:
@@ -10124,59 +9295,41 @@ az:
           lessons:
             Drawing in Game Lab:
               name: Oyun laboratoriyasında rəsm
-              key: Oyun laboratoriyasında rəsm
             Shapes and Parameters:
               name: Forma və parametrlər
-              key: Forma və parametrlər
             Variables:
               name: dəyişənlər
-              key: dəyişənlər
             Random Numbers:
               name: Təsadufi rəqəmlər
-              key: Təsadufi rəqəmlər
             Sprites:
               name: Spraytlar
-              key: Spraytlar
             Sprite Properties:
               name: Sprite Xüsusiyyətləri
-              key: Sprite Xüsusiyyətləri
             Text:
               name: mətn
-              key: mətn
             The Draw Loop:
               name: Bərabərlik Döngüsü
-              key: Bərabərlik Döngüsü
             Conditionals:
               name: Şərti ifadələr
-              key: Şərti ifadələr
             Keyboard Input:
               name: Klaviatura Girişi
-              key: Klaviatura Girişi
             Velocity:
               name: Sürət
-              key: Sürət
             Complex Sprite Movement:
               name: Kompleks Sprite Hərəkatı
-              key: Kompleks Sprite Hərəkatı
             Collisions:
               name: Toqquşmalar
-              key: Toqquşmalar
             Functions:
               name: Funksiyalar
-              key: Funksiyalar
             The Game Design Process:
               name: Oyun Dizayn Prosesi
-              key: Oyun Dizayn Prosesi
             Using the Game Design Process:
               name: Oyun Dizayn Prosesindən istifadə
-              key: Oyun Dizayn Prosesindən istifadə
             Project - Design a Game:
               name: Layihə - Oyun dizayn edin
-              key: Layihə - Oyun dizayn edin
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
             lesson-1:
-              key: dərs-1
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
           lesson_groups:
             csd3_1:
@@ -10190,35 +9343,22 @@ az:
           lessons:
             Understanding Your User:
               name: İstifadəçinizi Anlamaq
-              key: İstifadəçinizi Anlamaq
             User Interfaces:
               name: İstifadəçi Araüzü
-              key: İstifadəçi Araüzü
             Feedback and Testing:
               name: Əks-əlaqə və Sınaq
-              key: Əks-əlaqə və Sınaq
             Designing Apps for Good:
               name: Əmtəə üçün proqramların dizaynı
-              key: Əmtəə üçün proqramların dizaynı
             Market Research:
               name: Bazar Araşdırması
-              key: Bazar Araşdırması
             Prototype Testing:
               name: İlk Nümunə Testi
-              key: İlk Nümunə Testi
             Testing the App:
               name: Tətbiqi yoxlamaq
-              key: Tətbiqi yoxlamaq
             Project - App Presentation:
               name: Layihə - Proqram Təqdimatı
-              key: Layihə - Proqram Təqdimatı
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
-              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
-            Analysis of Design:
-              key: Dizaynın təhlili
-            Digital Design:
-              key: Rəqəmsal Dizayn
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -10226,22 +9366,16 @@ az:
           lessons:
             Representing Images:
               name: Şəkilləri təmsil edir
-              key: Şəkilləri təmsil edir
             Combining Representations:
               name: Nümayəndəlikləri birləşdirən
-              key: Nümayəndəlikləri birləşdirən
             Keeping Data Secret:
               name: Məlumatlar Gizli Saxlanır
-              key: Məlumatlar Gizli Saxlanır
             Problem Solving and Data:
               name: Sual həll etmə və Data
-              key: Sual həll etmə və Data
             Making Decisions with Data:
               name: Data ilə bağlı qərar vermək
-              key: Data ilə bağlı qərar vermək
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
-              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -10249,10 +9383,8 @@ az:
           lessons:
             Introduction to AI Lab:
               name: Süni intellekt laboratoriyasına giriş
-              key: Süni intellekt laboratoriyasına giriş
             CS Discoveries Post-Course Survey:
               name: CS Kəşfləri Tələbə Kurs Öncəsi Anket
-              key: CS Kəşfləri Tələbə Kurs Öncəsi Anket
           lesson_groups:
             lessonGroup-4:
               display_name: Sorğu
@@ -10281,95 +9413,34 @@ az:
           lessons:
             Module 1:
               name: Modul 1
-              key: Modul 1
             Module 2:
               name: Modul 2
-              key: Modul 2
             Module 3:
               name: Modul 3
-              key: Modul 3
             Module 4:
               name: Modul 4
-              key: Modul 4
             Module 5:
               name: Modul 5
-              key: Modul 5
             Module 6:
               name: Modul 6
-              key: Modul 6
             Module 7:
               name: Modul 7
-              key: Modul 7
             Module 8:
               name: Modul 8
-              key: Modul 8
         vpl-csp-2022:
           lessons:
             Module 1:
               name: Modul 1
-              key: Modul 1
             Module 2:
               name: Modul 2
-              key: Modul 2
             Module 3:
               name: Modul 3
-              key: Modul 3
             Module 4:
               name: Modul 4
-              key: Modul 4
-            Module 5:
-              key: Modul 5
-            Module 6:
-              key: Modul 6
-            Module 7:
-              key: Modul 7
-            Module 8:
-              key: Modul 8
         self-paced-pl-csd1-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
           lesson_groups:
             lessonGroup-2:
               display_name: Xoş gəlmişsiniz
-        self-paced-pl-csd3-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-        self-paced-pl-csd4-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-        self-paced-pl-csp1-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-        self-paced-pl-csp2-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-        self-paced-pl-csp3-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
-        self-paced-pl-csp4-2022:
-          lessons:
-            lesson-1:
-              key: dərs-1
-            lesson-2:
-              key: dərs-2
         csa9-2022:
           lessons:
             Console:
@@ -10378,3 +9449,15 @@ az:
           lessons:
             lesson-1:
               name: Bölmə 1 Layihələri
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Yekun
+            lesson-1:
+              name: Yekun
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Yekun
+            lesson-1:
+              name: Yekun

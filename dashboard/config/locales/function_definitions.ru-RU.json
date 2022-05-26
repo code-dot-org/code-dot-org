@@ -4054,6 +4054,28 @@
           "draw ear stems": {
             "name": "нарисуй беруши"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "нарисовать квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "нарисуй фигуру",
+            "parameters": {
+              "sides": "стороны",
+              "length": "длина"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "функция 1"
+          },
+          "function 2": {
+            "name": "функция 2"
+          }
         }
       }
     }

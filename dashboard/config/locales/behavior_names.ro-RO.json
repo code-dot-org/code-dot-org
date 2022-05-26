@@ -55,7 +55,7 @@
           "wandering": "rătăcit",
           "shrinking": "micșorare",
           "spinning left": "învârtit spre stânga",
-          "moving west2": "deplasare către vest2",
+          "moving west2": "deplasare către vest",
           "spinning right2": "învârtit spre dreapta2",
           "growing2": "creștere2",
           "swimming left and right2": "înotat către stânga și către dreapta2",
@@ -69,7 +69,7 @@
           "spinning left2": "învârtit spre stânga2",
           "driving with arrow keys": "condus cu tastele cu săgeți",
           "fluttering": "fluturat",
-          "wobbling": "clătinat",
+          "wobbling": "Clătinat",
           "moving west and looping": "deplasare către vest și buclă",
           "moving east and looping": "deplasare către est și buclă"
         },
@@ -1454,7 +1454,7 @@
           "growing": "creștere",
           "jittering": "tremurat",
           "moving east": "deplasare către est",
-          "moving north": "deplasare către nord",
+          "moving north": "deplasare către nord2",
           "moving south": "deplasare către sud",
           "moving west": "deplasare către vest",
           "spinning right": "învârtit spre dreapta"
@@ -3136,6 +3136,32 @@
           "fluttering": "fluturat",
           "moving west and looping": "deplasare către vest și buclă",
           "moving east and looping": "deplasare către est și buclă"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "wandering": "rătăcit",
+          "growing": "creștere",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving north": "deplasare către nord",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "învârtit spre dreapta"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "înotat către stânga și către dreapta",
+          "shrinking": "micșorare",
+          "patrolling": "patrulare",
+          "wandering": "rătăcit",
+          "growing": "creștere",
+          "jittering": "tremurat",
+          "moving east": "deplasare către est",
+          "moving north": "deplasare către nord",
+          "moving south": "deplasare către sud",
+          "moving west": "deplasare către vest",
+          "spinning right": "învârtit spre dreapta"
         }
       }
     }

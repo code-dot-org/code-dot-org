@@ -17,7 +17,8 @@
           "name": "Flappy o‘yinini yarating",
           "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "preparation": "### Sizning kod soatingizdan bir hafta oldin\n\n-   [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) va [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) bilan tanishib chiqing. Hour of Code tadbiri. \n-   [Register your Hour of Code event](http://hourofcode.com), agar siz qalbakilashtirish yoki sinfda yordam olishni istasangiz. \n    Onlayn qo'llanmani o'zingiz ko'rib chiqing va to'ldiring: [Flappy Game](https://studio.code.org/flappy/1) \n    O'quvchilaringizdan uni to'ldirishni so'rashdan oldin, avval sinovdan o'tkazganingizga ishonch hosil qiling. Texnologiyangizni tekshirib ko'ring va sizning Kodeks soatingizdan oldin biron bir muammo bilan shug'ullanishingiz kerakligi to'g'risida qaror qabul qiling. \n    ### Soatingizdan bir kun oldin Kod\n    'Kodlash', 'dasturlash' va 'disk sozlamasi' so'zlarini doskaga yozing yoki agar sizda mavjud bo'lsa, ularni so'z devoringizga qo'shing. \n    Faoliyatni yakunlagan har bir talaba sertifikat olishi kerak. Hour of Codeingiz oxirida oson bo‘lishi uchun har bir o‘quvchiga [Print one](http://code.org/certificates) oldindan chop qilib qo‘ying. ",
-          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
+          "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
         "hourofcode/Maze": {
           "name": "Labirint",
@@ -29,6 +30,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Ice Age Play Lab",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "artist/Artist": {
@@ -38,7 +40,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball Play Lab",
-          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
+          "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
+          "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
         "dance/Dance Party": {
           "name": "Dance Party",
@@ -63,6 +67,7 @@
         },
         "playlab/Play Lab": {
           "name": "Play Lab - O‘yin laboratoriyasi",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "applab-intro/Intro to App Lab": {
@@ -85,6 +90,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Cheksiz O‘yin laboratoriyasi",
+          "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
         },
         "basketball/Bounce": {

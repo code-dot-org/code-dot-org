@@ -22,7 +22,7 @@ Kodlama Saati, "kod"un gizemini çözmek, temel bilgileri herkesin öğrenebilec
 - [Etkinlik düzenlediğinizde](#hosting-an-event)
 - [Kodlama Saati'ni başkalarına duyurun](#promote-hour-of-code)
 - [Hour of Code'u desteklemenin diğer yolları](#support-hour-of-code)
-- [Gönüllü SSS](#faq)
+- [Gönüllüler ile ilgili SSS](#faq)
 
 İster sanal olarak, ister bizzat isterse şirketinizle gönüllü olun, çabalarınız öğrencilerin bilgisayar bilimlerine ve kendi potansiyellerine bakış açısında büyük bir etki yaratabilir. Hâlâ sorularınız varsa [gönüllü araç kitimize göz atabilirsiniz](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
 
@@ -116,7 +116,7 @@ Etkinliğe sınıfta ev sahipliği yapıyorsanız size rehberlik etmesi için ö
 
 Hour of Code'u evde veya topluluk içinde düzenlemeyi düşünüyorsanız [ebeveynler](https://hourofcode.com/us/how-to/parents) ve [kuruluşlar veya şirketler](https://hourofcode.com/us/how-to/companies) için ayrıntılı Nasıl Yapılır? Rehberlerimize göz atmanızı öneririz.
 
-### 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Etkinliğiniz için bir tarih, biçim ve yer seçin.
 
@@ -238,7 +238,7 @@ Code.org'u ve Kodlama Saati'ni nasıl destekleyebileceğiniz ile ilgili daha faz
 
 <a id="faq"></a>
 
-## Gönüllülük SSS
+## Gönüllülük ile ilgili SSS
 
 ### [b]Henüz hiçbir öğretmenden istek almadım. Gönüllü olmaya nasıl devam ederim?
 

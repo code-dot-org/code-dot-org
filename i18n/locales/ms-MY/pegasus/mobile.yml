@@ -412,6 +412,10 @@
   coursed-2021_name: Kursus D (2021)
   coursee-2021_name: Kursus E (2021)
   coursef-2021_name: Kursus F (2021)
+  coursea-2022_name: Kursus A (2021)
+  courseb-2022_name: Kursus B (2021)
+  coursec-2022_name: Kursus C (2021)
+  coursed-2022_name: Kursus D (2021)
   pre-express-2018_name: Kursus Ekspres Prapembaca (2018)
   express-2019_name: Kursus Dipercepatkan (2019)
   pre-express-2019_name: Kursus Ekspres Prapembaca (2019)
@@ -514,6 +518,12 @@
   coursed-2021_gradelevel: Peringkat umur 7-11 tahun
   coursee-2021_gradelevel: Umur 8-12 tahun
   coursef-2021_gradelevel: Umur 9-13 tahun
+  coursea-2022_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2022_gradelevel: Umur 5-8 tahun
+  coursec-2022_gradelevel: Umur 6-10 tahun
+  coursed-2022_gradelevel: Peringkat umur 7-11 tahun
+  coursee-2022_gradelevel: Umur 8-12 tahun
+  coursef-2022_gradelevel: Umur 9-13 tahun
   accelerated_gradelevel: "Umur 10-18 tahun"
   thinkersmithspanish_platformtext: "Nirplag"
   thinkersmith_platformtext: "Nirplag"
@@ -562,6 +572,12 @@
   coursed-2021_shortdescription_congrats: Pelajar membangunkan pemahaman mereka mengenai gelung, bersyarat dan peristiwa. Di luar pengekodan, pelajar mempelajari tentang kewarganegaraan digital.
   coursee-2021_shortdescription_congrats: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
   coursef-2021_shortdescription_congrats: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
+  coursea-2022_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+  courseb-2022_shortdescription_congrats: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+  coursec-2022_shortdescription_congrats: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+  coursed-2022_shortdescription_congrats: Pelajar membangunkan pemahaman mereka mengenai gelung, bersyarat dan peristiwa. Di luar pengekodan, pelajar mempelajari tentang kewarganegaraan digital.
+  coursee-2022_shortdescription_congrats: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
+  coursef-2022_shortdescription_congrats: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
   hourofcode_longdescription: "Menulis atur cara komputer yang pertama"
   frozen_longdescription: "Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!"
   starwars_longdescription: "Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh."
