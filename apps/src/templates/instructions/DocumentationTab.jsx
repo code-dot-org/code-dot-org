@@ -40,12 +40,38 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
     }
   }
 
+  const getDropdownOptions = function() {
+    const options = [];
+    for (const key in classMap) {
+      options.push(<option value={key}>{key}</option>);
+    }
+    return options;
+  };
+
   return (
     <div>
-      {loading && <Spinner />}
+      {loading && (
+        <div style={styles.loadingContainer}>
+          <Spinner style={styles.spinner} />
+        </div>
+      )}
       {error && <p>Could not load documentation.</p>}
-      {!loading && data && selectedClass && (
-        <ProgrammingClassOverview programmingClass={classMap[selectedClass]} />
+
+      {!loading && data && (
+        <>
+          <select
+            value={selectedClass}
+            onChange={e => setSelectedClass(e.target.value)}
+            style={styles.select}
+          >
+            {getDropdownOptions()}
+          </select>
+          {selectedClass && (
+            <ProgrammingClassOverview
+              programmingClass={classMap[selectedClass]}
+            />
+          )}
+        </>
       )}
     </div>
   );
@@ -58,3 +84,15 @@ UnconnectedDocumentationTab.propTypes = {
 export default connect(state => ({
   programmingEnvironment: state.instructions.programmingEnvironment
 }))(UnconnectedDocumentationTab);
+
+const styles = {
+  select: {
+    width: 275,
+    marginTop: 5
+  },
+  loadingContainer: {
+    display: 'flex',
+    margin: '25px',
+    justifyContent: 'center'
+  }
+};
