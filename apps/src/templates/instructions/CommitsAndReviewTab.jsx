@@ -191,14 +191,25 @@ const CommitsAndReviewTab = props => {
             toggleResolveComment={toggleResolveComment}
           />
           {!openReviewData && !isReadOnlyWorkspace && (
-            <div style={styles.openCodeReview}>
+            <div style={styles.timelineAligned}>
               <Button
                 icon="comment"
                 onClick={handleOpenReview}
                 text={javalabMsg.startReview()}
                 color={Button.ButtonColor.blue}
+                disabled={!codeReviewEnabled}
               />
               {openReviewError && <CodeReviewError />}
+            </div>
+          )}
+          {!codeReviewEnabled && (
+            <div
+              style={{
+                ...styles.timelineAligned,
+                ...styles.reviewDisabledMsg
+              }}
+            >
+              {javalabMsg.codeReviewDisabledMessage()}
             </div>
           )}
         </>
@@ -270,7 +281,13 @@ const styles = {
     fontSize: 13,
     margin: 0
   },
-  openCodeReview: {
+  timelineAligned: {
     marginLeft: '30px'
+  },
+  reviewDisabledMsg: {
+    padding: '12px 6px',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    lineHeight: '22px'
   }
 };
