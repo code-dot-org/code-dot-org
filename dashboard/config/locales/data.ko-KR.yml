@@ -729,13 +729,23 @@ ko:
         csd_u6_circuit_playground: 물리적 컴퓨팅
         csd_u6_input_output: 인풋 및 아웃풋
         CSA-PL-for-loops: 자바 내 루프를 위하여
+        CSA-PL-variables: 자바로 변수 만들기
+        PL_CS_Journeys_Overview: CS 저니
         CSA-PL-intro-to-java-lab: 자바 연구소 기초
         CSA-PL-first-program: 자바로 프로그램 쓰기
+        CSD_u6_variables_part1: 'CSD: 변수'
         csd_u6_if_statements: 'CSD: If문'
         csc-poem-art-intro: 소개 영상
+        csc-poem-art-outro: 아우트로 동영상
         csd_u6_call_define_functions: 'CSD: 함수 호출 및 정의'
         csp_applab_parameters: 함수(값 전달)
+        starquilts_intro_artist: 스타 퀼트 소개
         CSA-PL-intro-to-arrays: 1차원 (1D) 어레이
+        CSA-PL-1d-arrays-new-values: 1D 어레이로 값 입력
+        CSA-PL-conditionals: 자바 조건문
+        CSA-PL-two-way-selection: 양방향 선택
+        CSA-PL-Printing-in-Java: 자바로 인쇄
+        CSA-PL-multi-selection-statements: 복수 선택 문
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

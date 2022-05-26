@@ -2320,6 +2320,9 @@
         "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
           "progression_name": "Prehľad lekcie"
         },
+        "737a9d39-005b-43b5-bd74-4580674f8165": {
+          "progression_name": "Sprievodca projektom"
+        },
         "308a55cf-4781-4887-b674-69824882ad64": {
           "progression_name": "Projekt webstránky"
         },
@@ -4177,6 +4180,9 @@
         "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
           "progression_name": "Prehľad lekcie"
         },
+        "a64ebebb-2737-43a0-b4d8-f7971096b3e0": {
+          "progression_name": "Sprievodca projektom"
+        },
         "174b4817-ee38-47a4-be7c-dbf4c4d752ea": {
           "progression_name": "Projekt webstránky"
         },
@@ -4910,6 +4916,9 @@
         },
         "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
           "progression_name": "Prehľad lekcie"
+        },
+        "cb0106eb-31ae-4c7c-bb6c-00ae7a829cfa": {
+          "progression_name": "Sprievodca projektom"
         },
         "5b3e0fbb-5198-4d7c-af25-62102d190e8c": {
           "progression_name": "Projekt webstránky"
@@ -12927,7 +12936,7 @@
           "progression_name": "Projektová práca"
         },
         "187ab288-8997-4b05-90b2-993b1d29c6ba": {
-          "name": "Recenzia"
+          "name": "Vzájomné hodnotenie"
         },
         "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
           "tips": [
@@ -13735,68 +13744,159 @@
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
           "tips": [
-            null
+            "Žiaci možno rozoznajú, že vstupom počasie, obľúbená farba alebo ročné obdobie a výstupom sú obrázky. Hoci presný spôsob, ako aplikácia spracúva informácie, nie je jasný, žiaci môžu poukázať na to, že pravdepodobne využíva viacero podmienok „ak/tak“ (\"„Ak je daždivé počasie, tak si zober dáždnik.“) alebo hľadá zhodu medzi vstupmi od používateľa a vlastnosťami oblečenia."
           ]
         },
         "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "description": "Požiadajte žiakov, aby povedali, aké informácie by sa podľa nich mali ukladať a prečo.",
           "tips": [
-            null
+            "Hoci nie je dôležité, aby sa žiaci na svojich odpovediach zhodli, v tejto diskusii sa oboznámia s myšlienkou ukladania informácií na neskôr a získajú podnet na to, aby sa zamysleli, aké informácie je v aplikácii vhodné ukladať a aké nie."
           ]
+        },
+        "2f41e74b-1693-4621-a008-ee942996e062": {
+          "description": "Táto vzorová aplikácia si od vás vypýta informácie, ktoré sa veľmi často nemenia, napríklad chce vedieť vašu obľúbenú farbu. Namiesto toho, aby ste tieto údaje museli zakaždým zadávať nanovo, by bolo užitočné, keby si aplikácia dokázala zapamätať naše odpovede tým, že si ich niekam uloží. Všetky počítače si dokážu ukladať informácie na neskôr a načítavať uložené informácie – umožňuje im to **pamäť**."
+        },
+        "dee06cd4-dac7-4000-bce5-c10bedcc7874": {
+          "description": "**Kľúčové pojmy:** \n\n-   **Pamäť** – schopnosť ukladať informácie na neskoršie použitie\n\n**Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**"
+        },
+        "b289fd48-6c31-480d-a98b-7d3d92fdca67": {
+          "name": "Aplikácie s pamäťou",
+          "description": "Pozrieme sa na niekoľko aplikácií, ktoré využívajú rôzne druhy informácií. Chceme určiť, aké informácie by sa mohli ukladať, aby sme ich nemuseli zakaždým zadávať nanovo."
+        },
+        "24dd5f31-50de-4a28-91c2-5d4591b8d1d8": {
+          "description": "**Skupiny:** Rozdeľte žiakov do skupín po dvoch alebo troch. Pri tejto aktivite bude každá skupina potrebovať prístup k počítaču.\n\n**Rozdajte:** Každej skupine dajte jednu kópiu sprievodcu aktivitou.\n\nV rámci celej triedy vyplňte prvú časť sprievodcu aktivitou, odkazujúcu na aplikáciu „Výber oblečenia“, s ktorou sa žiaci stretli v úvodnej aktivite.\n\nPovedzte žiakom, aby si otvorili Code Studio a pozreli si vzorové aplikácie."
         },
         "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "description": "**Monitorovanie:** Nechajte žiakom priestor na to, aby v skupinách vyplnili aj zvyšok sprievodcu aktivitou. Kým budú vypĺňať tabuľky, povedzte im, aby detailnejšie vysvetlili, prečo by sa podľa nich jednotlivé vstupy mali ukladať alebo nie.",
           "tips": [
-            null
+            "Rozhodnutie, aké informácie sa majú ukladať a aké nie, nie je úplne jednoznačné, keďže ide o rozhodnutie vývojára aplikácie. Najdôležitejšie je teda zdôvodnenie. Žiaci by mali svoje rozhodnutie vysvetľovať tým, či sa budú informácie často meniť alebo nie."
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "name": "Výber oblečenia",
+          "description": "Prvá aplikácia požiada používateľa, aby ako vstup zadal svoju obľúbenú farbu, aktuálne ročné obdobie a počasie. Výstupom aplikácie je obrázok oblečenia, ktorý vychádza zo vstupov používateľa.",
+          "progression_name": "Aplikácia: Výber oblečenia"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "name": "Nájdi svojich priateľov",
+          "description": "Druhá aplikácia vyzýva používateľa, aby ako vstup zadal, ktorých priateľov chce mať vo svojom zozname priateľov. Výstupom je mapa, kde je zobrazená poloha priateľov zo zoznamu.",
+          "progression_name": "Aplikácia: Nájdi svojich priateľov"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "name": "Výber detského filmu",
+          "description": "Tretia aplikácia vyzve používateľa, aby ako vstup zadal niekoľko informácií o tom, aké filmy uprednostňuje, a potom na základe zadaných preferencií ako výstup zobrazí odporúčanie na film.",
+          "progression_name": "Aplikácia: Výber detského filmu"
+        },
+        "2956f576-807d-495f-ae89-140842e245b0": {
+          "name": "Zásady",
+          "description": "Keď skupiny prejdú na záverečnú aktivitu, možno bude potrebné v krátkosti im vysvetliť, čo sa v zadaní úlohy myslí pod pojmom „zásady“. Uistite sa, aby mali všetky skupiny dostatok času na vymýšľanie zásad, aj keby to malo znamenať, že budú musieť preskočiť niektoré časti predchádzajúcej úlohy zameranej na vypĺňanie tabuľky."
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "description": "**Monitorovanie:** Ak sa skupiny pri písaní zásad zaseknú, spýtajte sa ich, aké vstupy podľa nich bolo vhodné ukladať v ostatných aplikáciách. Spýtajte sa ich, či dokážu nájsť nejaké podobnosti medzi vstupmi, ktoré sa ukladali, a podobne medzi tými, ktoré sa neukladali. Pripomeňte im, že môžu písať aj zásady zamerané na vstupy, ktoré sa neukladali.",
           "tips": [
-            null
+            "Odpovede žiakov sa môžu líšiť. Vo všeobecnosti by si však žiaci mali uvedomovať, že to, či by sa informácie mali ukladať alebo nie, závisí od toho, ako často sa menia (ak vôbec)."
           ]
+        },
+        "93237735-0211-4bda-be3e-0a22ee8e868a": {
+          "description": "Keď už väčšina skupín dopísala svoje zásady, obráťte sa na celú triedu a spýtajte sa, či by sa niektorá skupina chcela podeliť o svoje zásady."
+        },
+        "9f28ebbd-3614-4789-b84e-9f9037fc8c83": {
+          "description": "Teraz už vieme, že počítač je stroj, ktorý dokáže štyri veci: prijať vstup, vytvoriť výstup, ukladať informácie do pamäte a spracúvať informácie."
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "description": "Ukážte žiakom video, ktoré predstavuje model VVPS.",
+          "progression_name": "Video: Model VVPS"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "description": "Otvorte diskusiu pomocou nasledujúcich dvoch otázok.",
           "tips": [
-            null
+            "Ako majú vaši žiaci denníky, povedzte im, aby si odpovede zapísali do nich."
           ]
+        },
+        "bf776613-5d76-4349-8f6d-3df95766a838": {
+          "description": "1.  Zamyslite sa nad niečím, čo robíte na počítači. Aké sú pri tejto aktivite vstupy a výstupy, aké informácie sa ukladajú do pamäte a aké informácie sa spracúvajú?\n\n2.  Aké vstupy, výstupy, ukladanie do pamäte a spracúvanie využívajú moderné smartfóny?\n\nNakoniec sa pozrite na svoj plagát z lekcie „Čo je to počítač?“ a skúste sa zamyslieť nad tým, či by na základe tohto nového modelu VVPS nebolo vhodné preradiť niektoré stroje do kategórie „počítače“ alebo „nepočítače“."
         },
         "2d4d1c53-92af-4087-b1e7-964f95e3c3da": {
-          "name": "Denník"
+          "name": "Denník",
+          "description": "**Povedzte**: Skúste vymyslieť aplikáciu, ktorú by ste radi vytvorili. Aké informácie by potrebovala ukladať?"
         },
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "description": "**Zdieľanie:** Ak vám zvýši čas, dajte žiakom priestor na to, aby sa podelili o svoje nápady.",
           "tips": [
-            null
+            "Keď žiaci prezentujú svoje nápady, dozerajte na to, aby využívali kľúčový pojem z tejto lekcie:\n\n**pamäť** – schopnosť ukladať informácie na neskoršie použitie"
           ]
         },
+        "8a962e67-680c-4b35-8f29-bee873ebf2fe": {
+          "name": "Predstavenie projektu",
+          "description": "**Povedzte:** Ktorá z aplikácií, s ktorými sme sa v tomto tematickom celku stretli, sa vám páčila najviac? Aký problém riešila?\n\n**Zdieľanie:** Nechajte žiakom priestor, aby sa podelili o svoje obľúbené aplikácie."
+        },
+        "76ebb601-8ed2-4aa1-ac1e-4a8d04173f64": {
+          "description": "Od začiatku tematického celku sme sa učili o postupe riešenie problémov a o tom, ako počítače riešia problémy – spracúvajú informácie tým, že prijímajú vstupy a premieňajú ich na užitočné výstupy. Dnes začneme pracovať na projekte, v rámci ktorého budete vo dvojici navrhovať aplikáciu zameranú na riešenie problému podľa vášho výberu."
+        },
+        "400c20cd-fe74-435b-a883-db94d9c4ee41": {
+          "description": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**"
+        },
+        "a5bc259a-2779-4488-b754-f6485a212933": {
+          "name": "Sprievodca projektom",
+          "description": "**Rozdajte**: Dajte každému žiakovi jedného sprievodcu projektom a jednu hodnotiacu tabuľku alebo kontrolný zoznam pre žiakov. V rámci celej triedy si prejdite informácie uvedené na prvej strane sprievodcu projektom, kde nájdete vysvetlenie projektu, zoznam krokov a pokyny, aký výstup sa od žiakov očakáva. Potom poskytnite žiakom stručný prehľad každého z podrobnejšie rozpísaných krokov."
+        },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "description": "**1. krok: Vyberte si, s kým budete pracovať**: Rozdeľte žiakov do dvojíc alebo trojíc.",
           "tips": [
-            null
+            "**Vytváranie skupín:** Tento projekt je najlepšie robiť vo dvojiciach. V prípade potreby však môžu žiaci vytvoriť aj trojicu. Mali by ste sa vopred rozhodnúť, či žiakom dáte možnosť vybrať si, s kým budú na projekte pracovať."
           ]
         },
         "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "description": "**2. krok: Vymýšľajte problémy**: Vyzvite skupiny, aby strávili niekoľko minút tým, že budú v rámci tichého brainstormingu vymýšľať problémy a zaznamenávať ich do sprievodcu projektom. Prechádzajte sa po triede a upozorňujte žiakov na to, že v tomto bode by sa ešte nemali zamýšľať nad aplikáciou, ktorú by chceli vytvoriť, dokonca ani nad tým, či by sa daný problém dal vyriešiť pomocou aplikácie. Uistite sa, aby žiaci celý proces začínali tým, že identifikujú problém, nie riešenie.",
           "tips": [
-            null
+            "**Pomoc s brainstormingom:** Pozorne počúvajte rozhovory medzi žiakmi. Snažte sa odhaliť, ktorí žiaci sa zasekli a prečo. Majú príliš vysoké ciele? Pomôžte týmto žiakom nazerať na problémy ako niečo, čo ich otravuje alebo im spôsobuje isté nepohodlie, prípadne ako príležitosť viac či menej zlepšiť kvalitu svojho života. "
           ]
         },
+        "4118dd91-3977-4ade-825a-32aa7f2996c1": {
+          "description": "**3. krok: Vyberte si problém**: Sprievodca projektom žiakom poskytuje viacero kritérií, pomocou ktorých môžu posúdiť, ktorý z vymenovaných problémov by chceli skúsiť vyriešiť. Povedzte žiakom, že ak potrebujú viac informácií o tom, ako budú neskôr musieť svoje problémy definovať, môžu sa pozrieť na 4. krok. Dajte žiakom niekoľko minút na to, aby v skupinách prediskutovali svoje možnosti a vybrali si problém, ktorý by chceli svojou aplikáciou riešiť."
+        },
         "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "description": "**4. krok: Definujte svoj problém**: V tomto kroku budú žiaci potrebovať vhodne nastaviť rozsah svojho problému tým, že zadefinujú svoju cieľovú skupinu, konkrétne vymedzia problém a určia, podľa čoho budú overovať, či je už problém vyriešený.",
           "tips": [
-            null
+            "**Akú veľkú pomoc ponúknuť:** V tomto bode už žiaci majú veľa skúseností s definovaním problémov. Onedlho po tomto kroku nasleduje proces spätnej väzby od/pre spolužiakov. Motivujte ich k tomu, aby sa snažili byť čo najpodrobnejší, no snažte sa nedávať im konkrétne rady, ako by mali daný problém zadefinovať. "
           ]
         },
         "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "description": "**5. krok: Vaša aplikácia**: Keď už žiaci vymedzili svoj problém, nechajte ich prediskutovať, aká aplikácia by sa dala na riešenie daného problému využiť. Na začiatok im postačí všeobecný opis aplikácie z pohľadu používateľa a jej funkcií.",
           "tips": [
-            null
+            "**Aká aplikácia:** Výstupom tohto projektu má byť jednoduchá aplikácia podobná tým, s ktorými sa žiaci stretli v predchádzajúcej lekcii. Dokonca aj veľké problémy alebo časti veľkých problémov sa dajú riešiť vhodným zberom a spracúvaním údajov."
           ]
         },
+        "fe619886-9d11-4f22-9a63-fd59c89246d3": {
+          "description": "**6. krok: Vstup, výstup, pamäť, spracúvanie**: V tomto kroku žiaci navrhnú spôsob, ako bude ich aplikácia spracúvať údaje. \n\nŽiaci najprv nakreslia a potom opíšu výstupy svojej aplikácie. Vľavo môžu spraviť hrubý náčrt toho, ako bude ich aplikácia vyzerať. Nemusí ísť o konečnú podobu aplikácie – náčrt slúži na to, aby pomohol žiakom vymýšľať nápady a vysvetliť inej skupine, ako by ich aplikácia vyzerala. Vpravo majú k dispozícii priestor na označenie jednotlivých informácií zobrazených na obrazovke.\n\nNa základe výstupov, ktoré si vybrali, by si žiaci mali vybrať aj vstupy, ktoré budú na vytvorenie daných výstupov potrebovať. K dispozícii majú len 6 políčok, no môžu si ich vybrať aj viac. Toto „obmedzenie“ je do istej miery úmyselné, aby pomáhalo žiakom vhodne vymedziť rozsah funkcií svojej aplikácie.\n\nŽiaci opíšu, ako ich aplikácia spracúva údaje, na základe toho, ako by ich spracúvali sami. Hlavným cieľom tejto úlohy je zabezpečiť, že žiaci si vybrali vstupy, na základe ktorých sa dajú vytvoriť výstupy. Ak napríklad chcú vytvoriť zoznam kamarátov, ktorí majú tento mesiac narodeniny, tak rovnako počítač aj človek by potrebovali poznať dátumy narodenia všetkých kamarátov a zároveň vedieť, aký je aktuálny mesiac.\n\nŽiaci majú nakoniec za úlohu rozhodnúť, aké informácie (ak vôbec) je vhodné ukladať dlhodobo.\n\n**Rozdajte:** Aplikácie a riešenie problémov – vzájomné hodnotenie, jednu kópiu pre každú dvojicu.\n\n**7. krok: Vzájomné hodnotenie**: Každá skupina by si mala vymeniť sprievodcu projektom s inou skupinou. Mali by vyplniť prvý riadok vo vzájomnom hodnotení, kde zadávajú, ku ktorej konkrétnej časti projektu by ocenili spätnú väzbu. Potom žiaci odpovedajú na viacero konkrétnejších otázok a tiež majú príležitosť poskytnúť na daný nápad voľnejšiu spätnú väzbu.\n\nŽiaci by mali naspäť dostať sprievodcu projektom aj spätnú väzbu od spolužiakom. Na zadnej strane sú otázky, kde si môžu zaznamenať, aké zmeny alebo vylepšenia plánujú v aplikácii urobiť na základe poskytnutej spätnej väzby."
+        },
         "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "description": "**8. krok: Dokončite aplikáciu a vyrobte plagát**: V záverečnej fáze plánovania aplikácie by žiaci mali zakomponovať do plánu nápady svojich spolužiakov. Potom by mali pomocou pokynov uvedených v sprievodcovi aktivitou vyrobiť plagát, ktorý prezentuje ich aplikáciu.\n\nŽiaci by sa mali vrátiť k hodnotiacej tabuľke k tomuto projektu a overiť si, či ich projekt spĺňa stanovené podmienky. Môžete sa tiež rozhodnúť, že žiakom rozdáte kontrolný zoznam [r apps_and_problem_solving_-_student_checklist/csd/2021], aby žiaci mohli samostatne vyhodnotiť, ako dobre ich projekt spĺňa požiadavky projektu.",
           "tips": [
-            null
+            "**Hodnotiaca tabuľka a kontrolný zoznam:** Žiaci majú k dispozícii hodnotiacu tabuľku a kontrolný zoznam. Tieto dva materiály môžu využiť na reflexiu svojej práce a uistenie sa, či sú na správnej ceste. Odporúčame, aby žiaci na sebahodnotenie a reflexiu použili kontrolný zoznam, pretože pri hodnotení vlastného projektu je jednoduchší na spracovanie a porozumenie. Učiteľom však odporúčame, aby pri hodnotení projektov používali hodnotiacu tabuľku v plnom znení, aby dokázali žiakom poskytnúť presnejšiu spätnú väzbu.\n\nPríklady použitia hodnotiacej tabuľky nájdete v hornej časti plánu hodiny pod názvom _Vzorovo vyplnené hodnotiace tabuľky_ (viditeľné len pre overených učiteľov)."
           ]
+        },
+        "cabc123a-f4bd-41d6-87f7-f85807b42c97": {
+          "name": "Prezentácia aplikácií",
+          "description": "**Zdieľanie**: Rozhodnite sa, či a ako si budú žiaci navzájom prezentovať plagáty. Ak budú žiaci robiť formálnejšie prezentácie, na ich štruktúrovanie využite pokyny uvedené v 9. kroku sprievodcu projektom.\n\n**Vyzbierajte:** Na konci prezentácie od každej skupiny vyzbierajte vyplneného sprievodcu projektom, formulár so spätnou väzbou od spolužiakov a plagát."
         },
         "03ad2f47-6f62-4854-b398-3075d952d71e": {
           "name": "Reflexia",
+          "description": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**\n\n**Reflexia:** Žiaci sa vo svojich denníkoch zamyslia nad nasledujúcou otázkou:\n\n-   Na čo ste vo svojom projekte najviac hrdí?\n\nPošlite žiakov do Code Studia, kde vyplnia reflexiu zameranú na ich postoj k informatike. Hoci ich odpovede sú anonymné, keď dotazník vyplnia aspoň piati žiaci, budete mať k dispozícii súhrnné údaje o ich odpovediach.",
           "progression_name": "Reflexia"
+        },
+        "a37c4b7c-19a2-4517-b0f4-d4187aa8f1a2": {
+          "name": "Odprezentuj svoj projekt „investorom“",
+          "description": "Ak chcete k záverečnému projektu doplniť zaujímavý kontext, zahrajte sa v triede na investorov, ktorí si vyberajú projekty, ktoré podporia. Majte na mysli nasledujúce veci: \n\n-   Umožňuje aktuálna triedna kultúra, aby súťaživosť medzi žiakmi neprerástla do nepríjemných rozmerov? \n-   Pozvite členov učiteľského zboru, miestnych obyvateľov alebo rôznych profesionálov, aby si vypočuli žiacke záverečné prezentácie a rozhodli, ktorý nápad v pomyselnej súťaži získa prvé, druhé a tretie miesto. \n-   Na prvý alebo druhý deň pozvite na hodinu podnikateľov alebo iných profesionálov z miestnej komunity, aby žiakom vysvetlili, ako pri svojej práci využívajú informatiku."
+        },
+        "371d5237-e425-45ed-9e45-0879ff7105b7": {
+          "description": "Záverečný test po projekte nájdete v Code studiu v dolnej časti tematického celku Riešenie problémov a výpočtová technika.\n\nV štandardnom nastavení je test zamknutý a žiakom sa nezobrazuje. Ak chcete, aby ho žiaci videli a mohli test absolvovať, budete ho najprv musieť odomknúť kliknutím na tlačidlo „Nastavenia zámku“ a potom postupovať podľa zobrazených pokynov. Ak chcete viac informácií o odomykaní a zadávaní hodnotených úloh, [kliknite sem](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
         },
         "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
           "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
+        "7bc95fda-8bc5-4e9c-8e1c-504e1fe504b8": {
+          "name": "Pred hodinou"
         },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
@@ -13875,6 +13975,9 @@
         "805b87e8-c377-489d-84e2-8be6316309b1": {
           "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
         },
+        "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
+          "name": "Pred hodinou"
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
             "-   Jedným z hlavných cieľov kurzu Objavujeme informatiku je zvýšiť záujem ľudí o informatiku.  \n\n-   Preto je _nesmierne dôležité_ vedieť, aké postoje a názory na informatiku majú žiaci _pred_ kurzom, aby sme dokázali zmerať, ako veľmi sa u nich tieto veci zmenili _po absolvovaní_ kurzu.\n\n-   Upozorňujeme, že tento dotazník je pre žiakov **anonymný**\n\n-   Vyplnenie dotazníka nám tiež pomáha zistiť, akým spôsobom by sme mohli významne zlepšiť naše učebné osnovy, aby fungovali čo najlepšie pre žiakov aj učiteľov.\n\n**Budeme vám veľmi vďační, ak nám pomôžetete zozbierať tieto cenné údaje. Názory vašich žiakov sú pre nás dôležité!**"
@@ -13951,6 +14054,9 @@
         },
         "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
           "description": "Na to, aby ste mohli počas roka kontrolovať prácu svojich žiakov a aby mali vaši žiaci prístup k online nástrojom a zdrojom, všetci musia byť v Code studiu zapísaní v rovnakej triede. Navyše platí, že na zobrazenie hodnotených úloh a kľúčov s odpoveďami musíte byť „overený učiteľ“."
+        },
+        "625b6145-fb18-49d5-ba66-2f69668f8178": {
+          "name": "Pred hodinou"
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
@@ -14517,7 +14623,8 @@
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Sprievodca projektom"
         },
         "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7": {
           "progression_name": "Projekt webstránky"
@@ -14531,7 +14638,7 @@
           "progression_name": "Publikovanie tvojej webstránky"
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
-          "name": "Recenzia"
+          "name": "Vzájomné hodnotenie"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
           "tips": [

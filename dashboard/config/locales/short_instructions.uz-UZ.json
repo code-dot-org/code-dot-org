@@ -3098,7 +3098,17 @@
         "courseF_events_predict": "Taxmin qiling!",
         "courseF_label_predict": "Taxmin qiling!",
         "courseF_sprites_predict": "Taxmin qiling!",
-        "courseF_variables_predict": "Taxmin qiling!"
+        "courseF_variables_predict": "Taxmin qiling!",
+        "2-3 Maze 1": "Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)",
+        "2-3 Maze 2": "Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)",
+        "2-3 Maze 3": "Tinchlaning va menga yomon cho‘chqani topishga yordam bering. Aks holda jahlim chiqishi mumkin!",
+        "AllTheThings sprite lab with video": "Chakalakzorni ixtiyoriy baliq turiga o'zgartiring!",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Maddi videoda yaratgan 4x4 rasm bilan boshlaymiz. Sizning vazifangiz 4x4 katakchani pikselga 12 bitdan foydalangan holda ranglar bilan to‘ldirishdir. Mana talablar: 1-qator - qizil rang tuslari bilan to‘ldiring. 2-qator - yashil rang. 3-qator - ko‘k rang. 4-qator - kulrang tuslar. ",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Biz sizni Maddi yaratgan 4x2 o‘lchamdagi rasm bilan ishlashingizdan boshlaymiz, lekin biz so‘nggi ikkita kvadratni bo‘sh qoldirdik. Qanday ikkita rang yetishmayotganligini aniqlab, ularni kodlang.",
+        "MC Agent Freeplay": "\\*\\*Erkin o'yin: \\*\\* O'zingiz o'rganishingiz uchun vaqt!",
+        "Overworld Chop Tree - allthethings": "Yog‘och juda muhim manba hisoblanadi. Undan ko‘pgina narsalar yaratiladi. Daraxtga yurib boring va uni chopib tashlash uchun ‘destroy block‘ buyrug‘ini ishlating.",
+        "Test embedded K1 Blockly in instructions": "Jumboqni yechish uchun uchta \"G'arb tomon siljish\" va bitta \"makkajo'xorini olish\" blokidan foydalaning. ",
+        "U1L13 Text Compression": "Matnda takrorlanishlarni (takrorlangan so'zlar yoki iboralarni) izlang. O'ngdagi lug'atga o'zingiz ko'rayotgan takrorlanishlaringizni kiriting. Siz lug'atga yozuvlarni kiritganingizda, yozuvning belgisi naqsh o'rniga matnga kiritiladi."
       }
     }
   }

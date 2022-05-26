@@ -1836,6 +1836,18 @@
           "end game": {
             "name": "បញ្ចប់​ហ្គេម"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
         }
       }
     }

@@ -3178,6 +3178,30 @@
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
           "moving east and looping": "向東移動並循環"
+        },
+        "AllTheThings sprite lab with video": {
+          "shrinking": "縮小",
+          "patrolling": "巡邏",
+          "wandering": "徘徊",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "spinning right": "向右旋轉"
+        },
+        "allthethings_fish_tank": {
+          "shrinking": "縮小",
+          "patrolling": "巡邏",
+          "wandering": "徘徊",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "spinning right": "向右旋轉"
         }
       }
     }
