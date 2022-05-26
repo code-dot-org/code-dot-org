@@ -506,17 +506,41 @@
           ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "**Talakayin:**\n\n-   _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n-   _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n-   _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Pagsiklab",
+          "description": "_Sa aralin ngayon, pupunta ka sa “Monster Town” kung saan malapit nang mangyari ang paglaganap ng virus. Kailangan ni Dr. Monster ang iyong tulong para mapabagal ang pagkalat ng virus._\n\n_Lilikha ka ng outbreak simulator sa Sprite Lab, at pagkatapos ay gagamitin ito upang maunawaan kung paano kumalat ang isang virus. Matutulungan mo rin ang lahat ng halimaw na maging malusog muli!_",
           "progression_name": "Pagsiklab"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Gawin ito:** Basahin ang _Welcome to Monster Town_ bilang isang klase."
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Gawin ito:** Suriin ang bokabularyo, **mga modelo at simulation** sa mga mag-aaral, sa pamamagitan ng pagbuo ng nakaraang aralin. Ang simulation ay isang modelo sa computer ng isang proseso o sistema."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Ngayon, gagawin nating buhay ang isang lugar tulad ng Monster Town sa pamamagitan ng pagsulat ng ilang code. Sa simulation na ito, gagamit ka ng mga sprite para kumatawan sa iba't ibang halimaw. Ang mga sprite ay magkakaroon ng iba't ibang kasuotan upang sabihin sa atin ang mga bagay tulad ng kung sila ay may sakit o malusog. Gagamitin mo rin ang mga pag-uugali para gumalaw ang mga halimaw. Sa wakas, gagamit ka ng mga event para baguhin ang kasuotan ng isang sprite kapag nagdikit ang dalawang sprite sa screen na ito. Ito ay kumakatawan sa isang halimaw na nagpapasa ng virus sa isa pa. Gagawa ka ng mga hula tungkol sa kung ano ang mangyayari sa mga kapitbahay ng Monster Town, at tulungan silang maging malusog muli!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Gawin ito:** Ilipat ang mga mag-aaral sa kanilang mga computer, at pasimulan silang sundin ang mga instruksiyon sa bawat antas sa seksiyon ng pagbuo ng kasanayan. Kung maagang natapos ng mga mag-aaral ang seksiyong ito, maaari silang magpatuloy sa pag-eksperimento sa kanilang code sa Level 6 hanggang sa ang klase ay handa nang magpatuloy."
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Gawin ito:** Ibalik ang mga mag-aaral sa kanilang mga computer, at hayaan silang magtrabaho sa natitirang mga antas. Ang ilan sa mga antas na ito ay nag-aalok ng mga opsyonal na hamon. Hikayatin ang mga mag-aaral na basahin nang mabuti ang mga instruksiyon at mag-eksperimento sa kanilang mga simulation."
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Libreng Laro"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Ang mga simulation ay isang mahusay na paraan upang matutunan ang mga bagay na maaaring mahirap obserbahan sa totoong mundo. Tinutulungan nila ang mga siyentipiko na malutas ang mga problema, mahulaan kung paano lutasin ang problema, at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulation ay isang paraan upang ipakita kung ano ang hitsura ng isang virus outbreak sa Monster Town._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Talakayin:**\n\n-   Paano makakatulong ang mga simulation sa totoong mundo?\n-   Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n-   Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas."
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
@@ -1338,24 +1362,48 @@
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Sining ng Tula"
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Naihanda ang Kalagayan\n\nI-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.\n\nSabihin: _Ngayon ay gumugugol tayo ng isang oras sa pagtatrabaho sa ilang mga online na puzzle at pag-aaral ng mga kaugalian sa computer lab._\nAng layunin ng talakayang ito ay turuan ang mga mag-aaral kung ano ang aasahan at kung paano kumilos kapag pumasok sila sa computer lab."
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Gumamit ng mga kalmadong katawan sa lab\n-   Tandaan na huwag ngumuya ng gum o kendi\n-   I-sanitize ang iyong mga kamay\n-   Umupo kasama ang iyong partner sa isang computer\n-   Siguraduhing maabot ng unang \"driver\" ang mouse\n-   Kapag nadismaya ka, huwag pindutin o kalugin ang computer o monitor\n-   Sundin ang [20/20/20Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Paano haharapin ang [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) bawat 20-30 minuto (nangangailangan ng libreng pag-login sa GoNoodle).\n-   Tanungin ang iyong kapareha bago ka magtanong sa guro\n-   Panatilihing mahina ang volume para marinig ng iba ang kanilang mga kapareha\n-   Gamitin ang iyong journal para sa pagsubaybay ng mga damdamin at mga solusyon"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Talakayin:**\nMagkaroon ng magandang talakayan tungkol sa mga inaasahan sa computer lab upang matiyak na naiintindihan ng mga mag-aaral ang mga patakaran. Ang ilang mga paksa ng talakayan ay maaaring kabilang ang:\n\n-   Okey lang ba ang pagtakbo sa computer lab?\n-   Gaano kalakas tayong maglakad kapag tayo ay nasa computer lab?\n-   Ano ang dapat mong gawin kung natigil ka sa isang puzzle?\n-   Kung nadidismaya ka, makakatulong ba ang pagpindot sa computer?\n-   Kapag pupunta tayo sa computer lab, paano tayo maghahanda?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Silipin ang Mga Online na Puzzle\n\nGumawa ng isang puzzle mula sa aralin. Ipakita sa klase kung paano i-click ang larawan at ilagay ito sa tamang lugar sa pamamagitan ng pag-drag at pag-drop. Sadyang nagkamali gaya ng pag-click sa background o pag-drop sa larawan bago ito mapunta sa tamang lugar. Humingi ng tulong sa mga boluntaryo sa klase kapag naranasan mo ang mga problemang ito."
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Jigsaw"
+          "name": "Jigsaw",
+          "description": "_Layunin:_ Ito ay magtuturo sa mga mag-aaral kung paano gamitin ang Code.org upang makumpleto ang mga online na puzzle.\n\nIdinisenyo ang yugtong ito upang bigyan ang mga mag-aaral ng pagkakataong magsanay ng mga kasanayan sa koordinasyon ng kamay-mata, pag-click, at pag-drag at pag-drop. Maglalaro din ang mga mag-aaral ng mga sequence.\n\nIsaalang-alang ang paghiwa-hiwalay ng mga estudyante sa mga hakbang ng pag-drag at pagbaba at itala ang mga ito sa pisara. Halimbawa:\n\n1.  Ilipat ang arrow sa block.\n2.  I-click nang matagal ang pindutan ng mouse.\n3.  Igalaw ang mouse.\n4.  Bitawan ang pindutan.\n\nAng paggawa nito ay magbibigay sa mga mag-aaral ng pagsasanay sa paglikha ng isang _algorithm_, na isang konsepto na tuklasin sa paparating na mga aralin."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Maglaan ng ilang oras upang tahasang turuan ang mga mag-aaral kung paano mag-click, mag-drag, at mag-drop. Ipakilala ang wika sa paligid ng mga device na gagamitin ng mga mag-aaral kapag gumagawa sila ng mga puzzle. Kung mayroon kang mga tablet, gagamit ang mga mag-aaral ng _touch screen_. Kung mayroon kang mga laptop, malamang na gagamit sila ng _trackpad_. Ang mga desktop computer na tulad ng makikita mo sa isang lab ay aasa sa paggamit ng _mouse_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Ang mga guro ay gumaganap ng isang mahalagang papel sa edukasyon sa computer science at pagsuporta sa isang collaborative at makulay na kapaligiran sa silid-aralan. Sa panahon ng mga online na puzzle, pangunahin sa pagbibigay ng lakas ng loob at suporta ang tungkulin ng guro. Ang mga online na puzzle ay nakasentro sa mag-aaral, kaya dapat iwasan ng mga guro na mamagitan kapag natigil ang mga mag-aaral. Ang ilang mga ideya kung paano ito gagawin ay:",
           "tips": [
-            null
+            "Ipakita sa mga mag-aaral ang tamang paraan upang matulungan ang mga kaklase:\n\n-   Huwag umupo sa upuan ng kaklase\n-   Huwag gumamit ng keyboard ng kaklase\n-   Huwag hawakan ang mouse ng kaklase\n-   Siguraduhing mailarawan ng kaklase ang solusyon sa iyo nang malakas bago ka umalis"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Hamunin ang iyong mga mag-aaral na kumpletuhin ang tutorial na [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Hikayatin ang mga mag-aaral na may mga tanong/hamon na magsimula sa pamamagitan ng pagtatanong sa kanilang kapareha.\n-   Ang mga hindi nasagot na tanong ay maaaring ibahagi sa isang kalapit na grupo, na maaaring alam na ang solusyon.\n-   Ipalarawan sa mga mag-aaral ang problema na kanilang nakikita. Ano ang dapat gawin nito? Ano ang ginagawa nito? Ano ang sinasabi nito sa iyo?\n-   Paalalahanan ang mga dismayadong estudyante na ang pagkabigo ay isang hakbang sa landas tungo sa pag-aaral, at ang pagtitiyaga ay magbubunga.\n-   Kung ang isang mag-aaral ay natigil pa rin pagkatapos ng lahat ng ito, magtanong ng mga nangungunang tanong upang makuha ng mag-aaral ang isang pagkakamali sa kanilang sarili."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Mga antas"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "Ipasulat o iguhit sa mga mag-aaral ang tungkol sa kanilang natutunan o kung ano ang kanilang naramdaman nang matapos nila ang mga puzzle.\n\n**Mga Prompt:**\n\n-   Maaari ka bang gumuhit ng isang pagkakasunud-sunod para sa paghahanda upang pumunta sa computer lab?\n-   Gumuhit ng isang computer lab na \"Gawin\" at isang \"Huwag\"\n-   Iguhit at lagyan ng label ang pangalan ng bahagi ng computer na ginamit mo noong nag-click at nag-drag sa panahon ng mga puzzle. (mouse button, touch screen, trackpad)"
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Bigyan ang bawat mag-aaral ng [Exit Ticket](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod kung ano ang natutunan nila ngayon, kung ano ang kanilang nadama, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, sumulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat estudyante sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang \"Mga Exit Ticket\" sa isang bulletin board o ilang lugar na prominente sa paaralan bilang paalala ng iyong Hour of Code."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Higit pa sa Hour of Code\n\nPagkatapos ng iyong Hour of Code, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   Ituro ang mga kursong [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Ang anim na kursong ito ay idinisenyo sa mga batang mag-aaral. Ang mga mag-aaral ay gumagawa ng kanilang paraan sa pamamagitan ng isang serye ng mga puzzle na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyo na mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o nang personal.\n\n-   Mag-imbita ng eksperto sa computer science na makipag-usap sa iyong klase tungkol sa kanyang trabaho. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [mapa ng volunteer](https://code.org/volunteer/local)"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Panimula"
@@ -1574,19 +1622,43 @@
           "name": "Pagmumuni-muni"
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "**Talakayin:**\n\n-   _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n-   _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n-   _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "Pagsiklab",
+          "description": "_Sa aralin ngayon, pupunta ka sa “Monster Town” kung saan malapit nang mangyari ang paglaganap ng virus. Kailangan ni Dr. Monster ang iyong tulong para mapabagal ang pagkalat ng virus._\n\n_Lilikha ka ng outbreak simulator sa Sprite Lab, at pagkatapos ay gagamitin ito upang maunawaan kung paano kumalat ang isang virus. Matutulungan mo rin ang lahat ng halimaw na maging malusog muli!_",
           "progression_name": "Pagsiklab"
+        },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Gawin ito:** Basahin ang _Welcome to Monster Town_ bilang isang klase."
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**Gawin ito:** Suriin ang bokabularyo, **mga modelo at simulation** sa mga mag-aaral, sa pamamagitan ng pagbuo ng nakaraang aralin. Ang simulation ay isang modelo sa computer ng isang proseso o sistema."
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_Ngayon, gagawin nating buhay ang isang lugar tulad ng Monster Town sa pamamagitan ng pagsulat ng ilang code. Sa simulation na ito, gagamit ka ng mga sprite para kumatawan sa iba't ibang halimaw. Ang mga sprite ay magkakaroon ng iba't ibang kasuotan upang sabihin sa atin ang mga bagay tulad ng kung sila ay may sakit o malusog. Gagamitin mo rin ang mga pag-uugali para gumalaw ang mga halimaw. Sa wakas, gagamit ka ng mga event para baguhin ang kasuotan ng isang sprite kapag nagdikit ang dalawang sprite sa screen na ito. Ito ay kumakatawan sa isang halimaw na nagpapasa ng virus sa isa pa. Gagawa ka ng mga hula tungkol sa kung ano ang mangyayari sa mga kapitbahay ng Monster Town, at tulungan silang maging malusog muli!_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ]
         },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**Gawin ito:** Ilipat ang mga mag-aaral sa kanilang mga computer, at pasimulan silang sundin ang mga instruksiyon sa bawat antas sa seksiyon ng pagbuo ng kasanayan. Kung maagang natapos ng mga mag-aaral ang seksiyong ito, maaari silang magpatuloy sa pag-eksperimento sa kanilang code sa Level 6 hanggang sa ang klase ay handa nang magpatuloy."
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**Gawin ito:** Ibalik ang mga mag-aaral sa kanilang mga computer, at hayaan silang magtrabaho sa natitirang mga antas. Ang ilan sa mga antas na ito ay nag-aalok ng mga opsyonal na hamon. Hikayatin ang mga mag-aaral na basahin nang mabuti ang mga instruksiyon at mag-eksperimento sa kanilang mga simulation."
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Ang mga simulation ay isang mahusay na paraan upang matutunan ang mga bagay na maaaring mahirap obserbahan sa totoong mundo. Tinutulungan nila ang mga siyentipiko na malutas ang mga problema, mahulaan kung paano lutasin ang problema, at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulation ay isang paraan upang ipakita kung ano ang hitsura ng isang virus outbreak sa Monster Town._"
+        },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**Talakayin:**\n\n-   Paano makakatulong ang mga simulation sa totoong mundo?\n-   Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n-   Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas."
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "tips": [
@@ -1684,7 +1756,7 @@
         },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "tips": [
-            null
+            "Ipakita sa mga mag-aaral ang tamang paraan upang matulungan ang mga kaklase:\n\n-   Huwag umupo sa upuan ng kaklase\n-   Huwag gumamit ng keyboard ng kaklase\n-   Huwag hawakan ang mouse ng kaklase\n-   Siguraduhing mailarawan ng kaklase ang solusyon sa iyo nang malakas bago ka umalis"
           ]
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
@@ -1831,8 +1903,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Ang mga guro ay gumaganap ng isang mahalagang papel sa edukasyon sa computer science at pagsuporta sa isang collaborative at makulay na kapaligiran sa silid-aralan. Sa panahon ng mga online na puzzle, pangunahin sa pagbibigay ng lakas ng loob at suporta ang tungkulin ng guro. Ang mga online na puzzle ay nakasentro sa mag-aaral, kaya dapat iwasan ng mga guro na mamagitan kapag natigil ang mga mag-aaral. Ang ilang mga ideya kung paano ito gagawin ay:",
           "tips": [
-            null
+            "Ipakita sa mga mag-aaral ang tamang paraan upang matulungan ang mga kaklase:\n\n-   Huwag umupo sa upuan ng kaklase\n-   Huwag gumamit ng keyboard ng kaklase\n-   Huwag hawakan ang mouse ng kaklase\n-   Siguraduhing mailarawan ng kaklase ang solusyon sa iyo nang malakas bago ka umalis"
           ]
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
@@ -2805,8 +2878,9 @@
           ]
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Ang mga guro ay gumaganap ng isang mahalagang papel sa edukasyon sa computer science at pagsuporta sa isang collaborative at makulay na kapaligiran sa silid-aralan. Sa panahon ng mga online na puzzle, pangunahin sa pagbibigay ng lakas ng loob at suporta ang tungkulin ng guro. Ang mga online na puzzle ay nakasentro sa mag-aaral, kaya dapat iwasan ng mga guro na mamagitan kapag natigil ang mga mag-aaral. Ang ilang mga ideya kung paano ito gagawin ay:",
           "tips": [
-            null
+            "Ipakita sa mga mag-aaral ang tamang paraan upang matulungan ang mga kaklase:\n\n-   Huwag umupo sa upuan ng kaklase\n-   Huwag gumamit ng keyboard ng kaklase\n-   Huwag hawakan ang mouse ng kaklase\n-   Siguraduhing mailarawan ng kaklase ang solusyon sa iyo nang malakas bago ka umalis"
           ]
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
@@ -2824,7 +2898,7 @@
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "tips": [
-            null
+            "Ipakita sa mga mag-aaral ang tamang paraan upang matulungan ang mga kaklase:\n\n-   Huwag umupo sa upuan ng kaklase\n-   Huwag gumamit ng keyboard ng kaklase\n-   Huwag hawakan ang mouse ng kaklase\n-   Siguraduhing mailarawan ng kaklase ang solusyon sa iyo nang malakas bago ka umalis"
           ]
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {

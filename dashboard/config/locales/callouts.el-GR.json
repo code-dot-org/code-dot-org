@@ -458,6 +458,9 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Νέο μπλοκ*!",
           "poetry_remove_sprite": "Νέο μπλοκ*!"
+        },
+        "New Sprite Lab Project": {
+          "make_sprite": "Χρησιμοποιήστε τα κυβάκια εδώ για να δημιουργήσετε ένα χαρακτήρα ήρωα!"
         }
       }
     }

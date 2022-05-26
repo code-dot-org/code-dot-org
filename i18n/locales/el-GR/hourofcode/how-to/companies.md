@@ -10,7 +10,7 @@ title: Hour of Code How-To Guide for Companies
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Computational thinking helps nurture problem-solving skills, logic, and creativity. Και η τεχνολογία μεταμορφώνει κάθε βιομηχανία πάνω στον πλανήτη. Οι μαθητές σήμερα θα πρέπει να μάθουν πως να δημιουργούν τεχνολογία, όχι μόνο να τη χρησιμοποιούν. Ξεκινώντας νωρίς, οι μαθητές θα έχουν ένα θεμέλιο για επιτυχία σε οποιαδήποτε σταδιοδρομία του 21ου αιώνα.
 
 During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
 
@@ -64,7 +64,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
 
-### 1) Παρακολουθήστε το αναλυτικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1) Παρακολουθήστε το αναλυτικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determine a date, format, and location for your event
 

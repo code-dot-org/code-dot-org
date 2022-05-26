@@ -62,9 +62,9 @@ module Dashboard
     def has_permission?(permission)
       permission = permission.to_s.strip.downcase
       case permission
-        when 'admin' then admin?
-        when 'teacher' then teacher?
-        else !!Dashboard.db[:user_permissions][user_id: id, permission: permission]
+      when 'admin' then admin?
+      when 'teacher' then teacher?
+      else !!Dashboard.db[:user_permissions][user_id: id, permission: permission]
       end
     end
 

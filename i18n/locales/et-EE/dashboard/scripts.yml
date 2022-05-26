@@ -1419,7 +1419,6 @@ et:
               name: 'Päris elu algoritmid: Seemenda'
             Events in Play Lab:
               name: Sündmused Mängude Laboris
-              description_teacher: Selle online-tegevuses käigus on õpilastele võimalus õppida, kuidas kasutada Mängude Laboris (Play Lab) sündmuseid ja rakendada seni omandatud programmeerimisoskuseid, et luua animeeritud arvutimäng. On aeg olla loominguline ja luua Mängude Laboris lugu!
         courseb-2017:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1747,8 +1746,6 @@ et:
               name: Happy Maps
             Going Places Safely:
               name: Läheb asukohta turvaliselt
-            Events in Play Lab:
-              description_teacher: Selle online-tegevuses käigus on õpilastele võimalus õppida, kuidas kasutada Mängude Laboris (Play Lab) sündmuseid ja rakendada seni omandatud programmeerimisoskuseid, et luua animeeritud arvutimäng. On aeg olla loominguline ja luua Mängude Laboris lugu!
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie ja suur projekt
         express-2018:
@@ -2258,8 +2255,6 @@ et:
               name: Happy Maps
             Going Places Safely:
               name: Läheb asukohta turvaliselt
-            Events in Play Lab:
-              description_teacher: Selle online-tegevuses käigus on õpilastele võimalus õppida, kuidas kasutada Mängude Laboris (Play Lab) sündmuseid ja rakendada seni omandatud programmeerimisoskuseid, et luua animeeritud arvutimäng. On aeg olla loominguline ja luua Mängude Laboris lugu!
         courseb-2019:
           lesson_groups:
             csf_digcit:
@@ -2769,8 +2764,6 @@ et:
               name: Läheb asukohta turvaliselt
             'Programming: Happy Maps':
               name: Happy Maps
-            Events in Play Lab:
-              description_teacher: Selle online-tegevuses käigus on õpilastele võimalus õppida, kuidas kasutada Mängude Laboris (Play Lab) sündmuseid ja rakendada seni omandatud programmeerimisoskuseid, et luua animeeritud arvutimäng. On aeg olla loominguline ja luua Mängude Laboris lugu!
         courseb-2020:
           lesson_groups:
             csf_digcit:
@@ -2882,8 +2875,6 @@ et:
               name: Sõnamesilane
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
-            Tell a Story in Play Lab:
-              description_teacher: Selle online-tegevuses käigus on õpilastele võimalus õppida, kuidas kasutada Mängude Laboris (Play Lab) sündmuseid ja rakendada seni omandatud programmeerimisoskuseid, et luua animeeritud arvutimäng. On aeg olla loominguline ja luua Mängude Laboris lugu!
         csp1-2020:
           lesson_groups:
             cspSurvey:
@@ -3006,19 +2997,14 @@ et:
         csd3-2021:
           lessons:
             Variables:
-              key: Muutujad
               name: Muutujad
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Tingimuslaused
               name: Tingimuslaused
             Velocity:
-              key: Velocity
               name: Velocity
             Functions:
-              key: Funktsioonid
               name: Funktsioonid
           lesson_groups:
             cspSurvey:
@@ -3034,7 +3020,6 @@ et:
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Parameetritega funktsioonid
               name: Parameetritega funktsioonid
           lesson_groups:
             cspSurvey:
@@ -3042,7 +3027,6 @@ et:
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Binaararvud
               name: Binaararvud
           lesson_groups:
             cspSurvey:
@@ -3054,7 +3038,6 @@ et:
         csp3-2021:
           lessons:
             Debugging:
-              key: Debugimine
               name: Debugimine
         csp4-2021:
           lesson_groups:
@@ -3094,10 +3077,6 @@ et:
           lessons:
             'Programming: Happy Maps':
               name: Happy Maps
-            Loops in Ice Age:
-              key: Tsüklik - Jääaeg
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3108,12 +3087,9 @@ et:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Liiguta, liiguta
               name: Liiguta, liiguta
             'Loops: Getting Loopy':
               name: Muutub tsükliliseks
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3124,12 +3100,9 @@ et:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binaarsed käevõrud
               name: Binaarsed käevõrud
             'Events: The Big Event':
               name: Suursündmus
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3144,22 +3117,15 @@ et:
             'Algorithms: Graph Paper Programming':
               name: Millimeetripaberi programmeerimine
             Relay Programming:
-              key: Relee programmeerimine
               name: Relee programmeerimine
             Dance Party:
-              key: Tantsuõhtu
               name: Tantsuõhtu
             Loops in Ice Age:
-              key: Tsüklik - Jääaeg
               name: Tsüklik - Jääaeg
             Conditionals with Cards:
-              key: Tingimuslaused kaartidel
               name: Tingimuslaused kaartidel
             'Unplugged: Binary':
-              key: 'Unplugged: Binaar'
               name: Binaarsed pildid
-            Artist Binary:
-              key: Kunstnik Binaar
           lesson_groups:
             csf_events:
               display_name: Sündmused
@@ -3175,8 +3141,6 @@ et:
               display_name: Digitaalne kodakondsus
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Tingimuslaused
             'Functions: Songwriting':
               name: Laulude kirjutamine
           lesson_groups:
@@ -3191,13 +3155,10 @@ et:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Ümbriku muutujad
               name: Ümbriku muutujad
             Internet:
-              key: Internet
               name: Internet
             For Loop Fun:
-              key: For Loop Fun
               name: For Loop Fun
           lesson_groups:
             csf_digcit:
@@ -3215,7 +3176,6 @@ et:
         express-2021:
           lessons:
             Dance Party:
-              key: Tantsuõhtu
               name: Tantsuõhtu
             lesson-1:
               name: Tantsuõhtu
@@ -3293,22 +3253,16 @@ et:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Tsüklid
               name: Tsüklid
             Events:
-              key: Sündmused
               name: Sündmused
             Conditionals:
-              key: Tingimuslaused
               name: Tingimuslaused
             Functions:
-              key: Funktsioonid
               name: Funktsioonid
             Variables:
-              key: Muutujad
               name: Muutujad
             For Loops:
-              key: For tsükkel
               name: For tsükkel
           lesson_groups:
             k5_getting_started_1:
@@ -3338,7 +3292,6 @@ et:
         kodea-pd-2021:
           lessons:
             Next Steps:
-              key: Järgmised sammud
               name: Järgmised sammud
         csa1-exemplars:
           lesson_groups:
@@ -3492,10 +3445,6 @@ et:
               name: Happy Maps
             'Programming: Happy Maps':
               name: Happy Maps
-            Loops in Ice Age:
-              key: Tsüklik - Jääaeg
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3526,7 +3475,6 @@ et:
           lessons:
             Binary Numbers:
               name: Binaararvud
-              key: Binaararvud
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -3534,7 +3482,6 @@ et:
           lessons:
             Debugging:
               name: Debugimine
-              key: Debugimine
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3553,13 +3500,10 @@ et:
           lessons:
             Move It, Move It:
               name: Liiguta, liiguta
-              key: Liiguta, liiguta
             Getting Loopy:
               name: Muutub tsükliliseks
             'Loops: Getting Loopy':
               name: Muutub tsükliliseks
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3573,11 +3517,8 @@ et:
               name: Suursündmus
             Binary Bracelets:
               name: Binaarsed käevõrud
-              key: Binaarsed käevõrud
             'Events: The Big Event':
               name: Suursündmus
-            Events in Play Lab:
-              key: Sündmused Mängude Laboris
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3591,16 +3532,12 @@ et:
               name: Millimeetripaberi programmeerimine
             Relay Programming:
               name: Relee programmeerimine
-              key: Relee programmeerimine
             Dance Party:
               name: Tantsuõhtu
-              key: Tantsuõhtu
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
-              key: Tsüklik - Jääaeg
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
-              key: Tingimuslaused kaartidel
             'Algorithms: Graph Paper Programming':
               name: Millimeetripaberi programmeerimine
           lesson_groups:
@@ -3618,8 +3555,6 @@ et:
               name: Laulude kirjutamine
             'Functions: Songwriting':
               name: Laulude kirjutamine
-            Conditionals:
-              key: Tingimuslaused
           lesson_groups:
             csf_digcit:
               display_name: Digitaalne kodakondsus
@@ -3633,11 +3568,9 @@ et:
           lessons:
             For Loop Fun:
               name: For Loop Fun
-              key: For Loop Fun
             The Internet:
               name: Internet
             Internet:
-              key: Internet
               name: Internet
           lesson_groups:
             lessonGroup-7:
@@ -3708,7 +3641,6 @@ et:
           lessons:
             The Internet:
               name: Internet
-              key: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Digitaalne kodakondsus
@@ -3739,22 +3671,16 @@ et:
           lessons:
             Loops:
               name: Tsüklid
-              key: Tsüklid
             Events:
               name: Sündmused
-              key: Sündmused
             Conditionals:
               name: Tingimuslaused
-              key: Tingimuslaused
             Functions:
               name: Funktsioonid
-              key: Funktsioonid
             Variables:
               name: Muutujad
-              key: Muutujad
             For Loops:
               name: For tsükkel
-              key: For tsükkel
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3767,19 +3693,14 @@ et:
           lessons:
             Variables:
               name: Muutujad
-              key: Muutujad
             Text:
               name: Tekst
-              key: Tekst
             Conditionals:
               name: Tingimuslaused
-              key: Tingimuslaused
             Velocity:
               name: Velocity
-              key: Velocity
             Functions:
               name: Funktsioonid
-              key: Funktsioonid
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -3802,3 +3723,15 @@ et:
           lesson_groups:
             lessonGroup-4:
               display_name: Uuring
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Ülevaade
+            lesson-1:
+              name: Ülevaade
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Ülevaade
+            lesson-1:
+              name: Ülevaade

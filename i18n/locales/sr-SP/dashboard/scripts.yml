@@ -2072,29 +2072,22 @@ sr:
         csd3-2021:
           lessons:
             Variables:
-              key: Променљиве
               name: Променљиве
             Text:
-              key: текст
               name: текст
             Conditionals:
-              key: Кондиционали
               name: Кондиционали
             Velocity:
-              key: Брзина
               name: Брзина
             Functions:
-              key: Функције
               name: Функције
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Функције са параметрима
               name: Функције са параметрима
         csp3-2021:
           lessons:
             Debugging:
-              key: Отклањање грешака
               name: Отклањање грешака
         csp4-2021:
           lesson_groups:
@@ -2128,7 +2121,6 @@ sr:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Помери га, помери
               name: Помери га, помери
             'Loops: Getting Loopy':
               name: Запетљанције
@@ -2142,7 +2134,6 @@ sr:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Бинарне наруквице
               name: Бинарне наруквице
             'Events: The Big Event':
               name: Велики догађај
@@ -2158,16 +2149,11 @@ sr:
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
             Relay Programming:
-              key: Relay programming
               name: Relay programming
             Conditionals with Cards:
-              key: Услови са картама
               name: Услови са картама
             'Unplugged: Binary':
-              key: 'Unplugged: Binary'
               name: Binarne slike
-            Artist Binary:
-              key: Уметник Бинарно
           lesson_groups:
             csf_events:
               display_name: Догађаји
@@ -2180,9 +2166,6 @@ sr:
             lessonGroup-6:
               display_name: Дигитално држављанство
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Кондиционали
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2193,7 +2176,6 @@ sr:
         coursef-2021:
           lessons:
             Internet:
-              key: Интернет
               name: Интернет
           lesson_groups:
             csf_digcit:
@@ -2237,22 +2219,16 @@ sr:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Петље
               name: Петље
             Events:
-              key: Догађаји
               name: Догађаји
             Conditionals:
-              key: Кондиционали
               name: Кондиционали
             Functions:
-              key: Функције
               name: Функције
             Variables:
-              key: Променљиве
               name: Променљиве
             For Loops:
-              key: Бројачке петље
               name: Бројачке петље
         csa-videos:
           lesson_groups:
@@ -2336,7 +2312,6 @@ sr:
           lessons:
             Debugging:
               name: Отклањање грешака
-              key: Отклањање грешака
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2355,7 +2330,6 @@ sr:
           lessons:
             Move It, Move It:
               name: Помери га, помери
-              key: Помери га, помери
             Getting Loopy:
               name: Запетљанције
             'Loops: Getting Loopy':
@@ -2373,7 +2347,6 @@ sr:
               name: Велики догађај
             Binary Bracelets:
               name: Бинарне наруквице
-              key: Бинарне наруквице
             'Events: The Big Event':
               name: Велики догађај
           lesson_groups:
@@ -2389,10 +2362,8 @@ sr:
               name: Графиконско - Папирно Програмирање
             Relay Programming:
               name: Relay programming
-              key: Relay programming
             Conditionals with Cards:
               name: Услови са картама
-              key: Услови са картама
             'Algorithms: Graph Paper Programming':
               name: Графиконско - Папирно Програмирање
           lesson_groups:
@@ -2405,9 +2376,6 @@ sr:
             csf_conditionals:
               display_name: Кондиционали
         coursee-2022:
-          lessons:
-            Conditionals:
-              key: Кондиционали
           lesson_groups:
             csf_digcit:
               display_name: Дигитално држављанство
@@ -2420,7 +2388,6 @@ sr:
             The Internet:
               name: Интернет
             Internet:
-              key: Интернет
               name: Интернет
           lesson_groups:
             lessonGroup-7:
@@ -2461,7 +2428,6 @@ sr:
           lessons:
             The Internet:
               name: Интернет
-              key: Интернет
           lesson_groups:
             lessonGroup-7:
               display_name: Дигитално држављанство
@@ -2475,40 +2441,41 @@ sr:
           lessons:
             Loops:
               name: Петље
-              key: Петље
             Events:
               name: Догађаји
-              key: Догађаји
             Conditionals:
               name: Кондиционали
-              key: Кондиционали
             Functions:
               name: Функције
-              key: Функције
             Variables:
               name: Променљиве
-              key: Променљиве
             For Loops:
               name: Бројачке петље
-              key: Бројачке петље
         csd3-2022:
           lessons:
             Variables:
               name: Променљиве
-              key: Променљиве
             Text:
               name: текст
-              key: текст
             Conditionals:
               name: Кондиционали
-              key: Кондиционали
             Velocity:
               name: Брзина
-              key: Брзина
             Functions:
               name: Функције
-              key: Функције
         csd6-2022:
           lessons:
             Functions:
               name: Функције
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Преглед
+            lesson-1:
+              name: Преглед
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Преглед
+            lesson-1:
+              name: Преглед

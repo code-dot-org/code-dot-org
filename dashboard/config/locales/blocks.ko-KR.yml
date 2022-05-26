@@ -1043,9 +1043,13 @@ ko:
           BEHAVIOR:
             new Behavior(spinning_right, []): 오른쪽으로 회전
             new Behavior(spinning_left, []): 왼쪽으로 회전
+            new Behavior(fluttering, []): 너울거림
             new Behavior(jittering, []): 지터링
+            new Behavior(wobbling, []): 흔들림
             new Behavior(wandering, []): 배회
             new Behavior(patrolling, []): 순찰
+            new Behavior(moving_west_and_looping, []): 서쪽으로 이동 및  반복
+            new Behavior(moving_east_and_looping, []): 동쪽으로 이동 및  반복
             new Behavior(moving_north_and_looping, []): 북쪽으로 이동 및  반복
             new Behavior(moving_south_and_looping, []): 남쪽으로 이동 및  반복
       gamelab_comment:
@@ -1238,6 +1242,7 @@ ko:
             '180': 왼쪽으로
             '270': 위로
       gamelab_makeSpritesWithSize:
+        text: "{NUM}개의 새 {SIZE} {COSTUME} 스프라이트를 만드세요"
         options:
           SIZE:
             '30': 작음
@@ -1319,6 +1324,8 @@ ko:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 화살표 키로 이동
+            new Behavior(driving_with_arrow_keys, []): 화살표 키로 운전
             draggable(): 드래그 가능
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
@@ -1461,6 +1468,48 @@ ko:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
       gamelab_spriteSayTime:
         text: "{SPRITE}이(가){TEXT1}을(를) {NUM}초 동안 말함"
+      gamelab_spriteThink:
+        text: "{SPRITE}이(가) {SPEECH}을(를) 생각합니다"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}이(가) {TEXT1}을(를) {NUM}초 동안 생각합니다"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I am hungry, too."': 나도 배고파요.
+            '"I only want the biggest goat."': 가장 큰 염소만을 원해요.
+            '"I''m a green troll."': 나는 녹색 트롤입니다.
+            '"No one will cross my bridge."': 아무도 내 다리를 건너가질 못합니다.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"Time to make friends with the sheep."': 양과 친구가 될 시간.
+            '"She''ll never recognize me now."': 이제 그녀는 나를 알아보지 못할 거예요.
+            '"This costume keeps me warm."': 이 의상이 따뜻해요.
+            '"I am actually a wolf."': 저는 사실 여우예요.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I''m feeling sleepy."': 졸려요.
+            '"No one could ever beat me."': 아무도 나를 절대 이길 수 없어요.
+            '"I''ve done this race before."': 이 경주를 전에 한 적이 있어요.
+            '"My feet are bigger than Turtle''s feet."': 내 발은 거북이의 발 보다 더 커요.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
+        options:
+          THOUGHT:
+            '"Hmm..."': 흠……
+            '"I''m so hungry."': 너무 배가 고파요.
+            '"I''m a visitor in this town."': 저는 이 마을의 방문객이예요.
+            '"If we share, we''ll all have something to eat. "': 서로 나누면, 우리 모두 먹을
+              거를 갖게 될 거예요.
+            '"I''ll trick everyone into giving me their food."': 사람들에게 속임수를 써서 나에게
+              음식을 주게 할께요.
       gamelab_startAvoiding:
         text: "{SPRITE}이(가) {TARGET}을(를) 피하기 시작함"
       gamelab_startFollowing:
@@ -2034,22 +2083,28 @@ ko:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 시작합니다 '
         options:
           BEHAVIOR:
+            '"fluttering"': 너울거림
             '"growing"': 성장
             '"jittering"': 지터링
+            '"shrinking"': 축소
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
             '"swimming_left_and_right"': 수영
             '"wandering"': 배회
+            '"wobbling"': 흔들림
       Poetry_stopBehavior:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 멈춥니다 '
         options:
           BEHAVIOR:
+            '"fluttering"': 너울거림
             '"growing"': 성장
             '"jittering"': 지터링
+            '"shrinking"': 축소
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
             '"swimming_left_and_right"': 수영
             '"wandering"': 배회
+            '"wobbling"': 흔들림
             '"all"': "--모든 행동--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

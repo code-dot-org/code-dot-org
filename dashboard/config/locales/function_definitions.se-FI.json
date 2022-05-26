@@ -627,6 +627,22 @@
           "function 2": {
             "name": "funkšuvdna 2"
           }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkšuvdna 1"
+          },
+          "function 2": {
+            "name": "funkšuvdna 2"
+          }
         }
       }
     }

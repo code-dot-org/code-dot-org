@@ -627,6 +627,10 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
+    File.stubs(:write).with do |filename, data|
+      filename.to_s.end_with?("#{unit_group.name}.course") && data.include?(resource1.name) && data.include?(resource2.name)
+    end.once
+
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.resources.length
