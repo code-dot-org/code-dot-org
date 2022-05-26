@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
+import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
@@ -39,7 +39,9 @@ const DEFAULT_PROPS = {
   review: DEFAULT_REVIEW,
   isLastElementInTimeline: false,
   addCodeReviewComment: () => {},
-  closeReview: () => {}
+  closeReview: () => {},
+  toggleResolveComment: () => {},
+  viewAsCodeReviewer: false
 };
 
 const setUp = (overrideProps = {}) => {
@@ -122,7 +124,7 @@ describe('CodeReviewTimelineReview', () => {
     expect(wrapper.find(Comment)).to.have.length(2);
   });
 
-  it('displays code review disabled note if the review is not closed', () => {
+  it('displays code review disabled note if the review is not closed and not viewing as reviewer', () => {
     const wrapper = setUp();
     expect(wrapper.contains(javalabMsg.codeEditingDisabled())).to.be.true;
   });
@@ -133,15 +135,31 @@ describe('CodeReviewTimelineReview', () => {
     expect(wrapper.contains(javalabMsg.codeEditingDisabled())).to.be.false;
   });
 
-  it('displays CodeReviewCommentEditor if the review is open', () => {
+  it('hides code review disabled note if viewing as reviewer', () => {
     const review = {...DEFAULT_REVIEW, isOpen: true};
-    const wrapper = setUp({review: review});
+    const wrapper = setUp({review: review, viewAsCodeReviewer: true});
+    expect(wrapper.contains(javalabMsg.codeEditingDisabled())).to.be.false;
+  });
+
+  it('displays CodeReviewCommentEditor if the review is open and viewing as reviewer', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: true};
+    const wrapper = setUp({review: review, viewAsCodeReviewer: true});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(1);
   });
 
-  it('hides the CodeReviewCommentEditor if the reveiw is closed', () => {
+  it('hides the CodeReviewCommentEditor if the review is closed', () => {
     const review = {...DEFAULT_REVIEW, isOpen: false};
-    const wrapper = setUp({review: review});
+    const wrapper = setUp({review: review, viewAsCodeReviewer: true});
+    expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
+  });
+
+  // By design, the user will not leave notes on their own code review
+  it('hides the CodeReviewCommentEditor if the review is open but not viewing as reviewer', () => {
+    const review = {
+      ...DEFAULT_REVIEW,
+      isOpen: true
+    };
+    const wrapper = setUp({review: review, viewAsCodeReviewer: false});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);
   });
 });
