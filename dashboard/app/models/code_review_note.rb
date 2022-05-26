@@ -4,7 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  code_review_request_id :integer          not null
-#  commenter_id           :integer          not null
+#  commenter_id           :integer
 #  is_resolved            :boolean          not null
 #  comment                :text(16777215)   not null
 #  deleted_at             :datetime
@@ -14,6 +14,7 @@
 # Indexes
 #
 #  index_code_review_notes_on_code_review_request_id  (code_review_request_id)
+#
 class CodeReviewNote < ApplicationRecord
   # TODO: This model will be renamed to CodeReviewComment once the old models are
   # removed.
@@ -26,7 +27,7 @@ class CodeReviewNote < ApplicationRecord
   def summarize
     {
       id: id,
-      commenterName: commenter.name,    # TODO: handle deleted user
+      commenterName: commenter&.name,
       comment: comment,
       isResolved: is_resolved,
       createdAt: created_at

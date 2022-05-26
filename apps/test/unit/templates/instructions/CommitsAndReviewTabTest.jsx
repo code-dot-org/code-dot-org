@@ -69,4 +69,15 @@ describe('CommitsAndReviewTab', () => {
     const openReviewButton = wrapper.find(Button).at(1);
     expect(openReviewButton).to.have.length(0);
   });
+
+  it('disables the open review button when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton.props().disabled).to.be.true;
+  });
+
+  it('displays code review disabled message when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    expect(wrapper.contains(javalabMsg.codeReviewDisabledMessage())).to.be.true;
+  });
 });

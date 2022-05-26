@@ -1,6 +1,6 @@
 # Helper steps for creating and managing sections
 
-And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
+And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
   grade = participant_type == 'student' ? 'Other' : 'pl'
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type, grade: grade}))
   section_code = section['code']
@@ -37,7 +37,7 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
   }
 end
 
-Given (/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
+Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   browser_request(
     url: '/api/test/create_student_section_assigned_to_script',
     method: 'POST',

@@ -15,7 +15,7 @@ module TextRender
     end
 
     def avatar_image(name)
-      basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+      basename = name.downcase.gsub(/\W/, '_').squeeze('_')
 
       search_bases = []
       search_bases << sites_dir(@locals[:request].site, 'images', 'avatars', basename) if @locals.key?(:request)
