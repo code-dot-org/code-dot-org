@@ -33,7 +33,7 @@
 
 require 'dynamic_config/gatekeeper'
 
-MAX_INT_VALUE = 2**31 - 1
+MAX_INT_VALUE = (2**31) - 1
 
 class AuthoredHintViewRequest < ApplicationRecord
   belongs_to :user

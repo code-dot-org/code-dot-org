@@ -1267,7 +1267,11 @@
         "ml-use model card-choice3": "crwdns2883072:0crwdne2883072:0",
         "ml-use model card-choice4": "crwdns2883096:0crwdne2883096:0",
         "ml-use model card-choice5": "crwdns2883116:0crwdne2883116:0",
-        "helloworld_food_backgrounds": "crwdns2907904:0crwdne2907904:0"
+        "helloworld_food_backgrounds": "crwdns2907904:0crwdne2907904:0",
+        "MC Agent Freeplay": "crwdns2928626:0crwdne2928626:0",
+        "allthethings-playlab-project-backed": "crwdns2928240:0crwdne2928240:0",
+        "csa widget test2": "crwdns2928924:0crwdne2928924:0",
+        "gamelab free play": "crwdns2928608:0crwdne2928608:0"
       }
     }
   }

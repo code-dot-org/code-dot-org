@@ -28,7 +28,7 @@
           "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
           "preparation": "### Eine Woche vor deiner Hour of Code\n\n-   Überprüfe das Lehrerhandbuch [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/), um danach mit der Planung deines Hour of Code Events anzufangen. \n-   Registriere den Event [Register your Hour of Code event](http://hourofcode.com).\n-   Überprüfe und komplettiere das Online-Tutorial selbst.\n-   Stelle sicher, dass du das Tutorial erst selbst überprüfst, bevor du deine Studenten bittest es abzuarbeiten. Überprüfe deine technischen Ressourcen und entscheide, ob etwas noch einer Fehlersuche unterworfen werden muss, vor dem Start deiner Hour of Code.\n\n### Ein Tag vor deiner Hour of Code\n\n-   Schreibe die Worte “coding”, “programming” und “debugging” auf deine Tafel, oder füge sie an deine Pinnwand für Wörter hinzu.\n-   Jeder Student sollte eine Urkunde erhalten, wenn er dieses Tutorial erfolgreich abgeschlossen hat. Drucke [Print one](http://code.org/certificates) eine solche Urkunde für alle Studenten vorher aus, um es am Ende deiner Hour of Code einfacher zu machen.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
-          "student_overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden."
+          "student_overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden."
         },
         "hourofcode/Maze": {
           "name": "Labyrinth",
@@ -44,7 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Ice Age Spielelabor",
-          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.",
+          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
@@ -60,9 +60,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball Spielelabor",
-          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.",
+          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
-          "student_overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden."
+          "student_overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden."
         },
         "dance/Dance Party": {
           "name": "Tanzparty",
@@ -104,7 +104,7 @@
         },
         "playlab/Play Lab": {
           "name": "Spielelabor",
-          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.",
+          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
@@ -130,6 +130,7 @@
           "student_overview": "Irgendwann erreichen wir eine physikalische Grenze, wie schnell wir Bits senden können, und wenn wir eine große Menge an Informationen schneller senden wollen, müssen wir eine Möglichkeit finden, die gleichen Informationen mit weniger Bits darzustellen, d. h. wir müssen die Daten komprimieren"
         },
         "outbreak/Outbreak": {
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
         },
         "sports/Sports": {
@@ -138,7 +139,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Spielelabor",
-          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenstuffe entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Unterscheidung benutzt werden.",
+          "overview": "In dieser Lektion erhalten Studenten eine einführende Erfahrung in der Informatik, indem sie ein Spiel unter Einsatz von Basic Block-Code kreieren. Diese Lektion wurde für Studenten der mittleren Klassenebene entworfen, für das Alter zwischen 10 und 16, kann aber auch für jüngere oder ältere Studenten adaptiert werden, in dem die zur Verfügung gestellten Vorschläge zur Differenzierung benutzt werden.",
           "purpose": "Diese Lektion führt die grundlegenden Informatikkonzepte für Codierung und Programmierung (unter Einsatz von Blöcken) ein sowie einfache Debugging-Techniken.",
           "student_overview": "In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen."
         },
@@ -422,7 +423,7 @@
           "name": "Eingebettete Schleifen mit Anna und Elsa"
         },
         "express-2018/While Loops in Farmer": {
-          "name": "Während Schleifen mit dem Farmer"
+          "name": "While-Schleifen mit dem Farmer"
         },
         "express-2018/Until Loops in Maze": {
           "name": "‚Bis‘-Schleifen im Labyrinth"
@@ -734,7 +735,7 @@
           "name": "Bedingungen"
         },
         "csd3-2018/Keyboard Input": {
-          "name": "Tastatureingabe"
+          "name": "Tastatur-Eingabe"
         },
         "csd3-2018/Other Forms of Input": {
           "name": "Andere Formen der Eingabe"
@@ -767,7 +768,7 @@
           "name": "Projekt Ein Spiel erstellen"
         },
         "csd3-2018/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd6-2018/Innovations in Computing": {
           "name": "Innovationen in der Datenverarbeitung"
@@ -785,7 +786,7 @@
           "name": "Platinen-Ereignisse"
         },
         "csd6-2018/Getting Properties": {
-          "name": "Eigenschaften abrufen"
+          "name": "Abrufen von Eigenschaften"
         },
         "csd6-2018/Analog Input": {
           "name": "Analoger Eingang"
@@ -818,7 +819,7 @@
           "name": "Projekt: Prototyp einer Innovation"
         },
         "csd6-2018/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd5-2018/Representation Matters": {
           "name": "Darstellung ist wichtig"
@@ -830,7 +831,7 @@
           "name": "ASCII- und Binärdarstellung"
         },
         "csd5-2018/Representing Images": {
-          "name": "Darstellen von Bildern"
+          "name": "Darstellung von Bildern"
         },
         "csd5-2018/Representing Numbers": {
           "name": "Zahlendarstellung"
@@ -839,7 +840,7 @@
           "name": "Daten geheim halten"
         },
         "csd5-2018/Combining Representations": {
-          "name": "Kombinieren von Darstellungen"
+          "name": "Kombinierte Darstellungen"
         },
         "csd5-2018/Project - Create a Representation": {
           "name": "Projekt - Erstellen einer Darstellung"
@@ -866,7 +867,7 @@
           "name": "Projekt - Lösen eines Datenproblems"
         },
         "csd5-2018/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd-post-survey-2018/CSD post-course survey": {
           "name": "Erkenntnisse aus der Informatik Befragung der SchülerInnen nach dem Kurs ('18-'19)"
@@ -908,7 +909,7 @@
           "name": "Digitaler Entwurf"
         },
         "csd4-2018/Linking Screens": {
-          "name": "Verknüpfung der Bildschirme"
+          "name": "Verknüpfung von Bildschirmen"
         },
         "csd4-2018/Testing the App": {
           "name": "Testen der App"
@@ -920,7 +921,7 @@
           "name": "Projekt - App-Präsentation"
         },
         "csd4-2018/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd2-2018/Exploring Websites": {
           "name": "Erkunde Webseiten"
@@ -965,7 +966,7 @@
           "name": "Projekt - Private Portfolio-Website"
         },
         "csd2-2018/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd1-2018/Intro to Problem Solving": {
           "name": "Einführung in die Problemlösung"
@@ -1202,7 +1203,7 @@
           "name": "Über mich mit Sprite Lab"
         },
         "coursee-2019/Access Ability": {
-          "name": "Entwerfen für Barrierefreiheit"
+          "name": "Design für Barrierefreiheit"
         },
         "coursee-2019/Nested Loops in Bee": {
           "name": "Eingebettete Schleifen im Labyrinth"
@@ -1262,7 +1263,7 @@
           "name": "Wenn/Sonst mit der Biene"
         },
         "express-2019/While Loops in Farmer": {
-          "name": "Während Schleifen mit dem Farmer"
+          "name": "While-Schleifen mit dem Farmer"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Bedingungen in Minecraft: Voyage Aquatic"
@@ -1436,7 +1437,7 @@
           "name": "Bedingungen"
         },
         "csd3-2019/Keyboard Input": {
-          "name": "Tastatureingabe"
+          "name": "Tastatur-Eingabe"
         },
         "csd3-2019/Other Forms of Input": {
           "name": "Andere Formen der Eingabe"
@@ -1484,7 +1485,7 @@
           "name": "Platinen-Ereignisse"
         },
         "csd6-2019/Getting Properties": {
-          "name": "Eigenschaften abrufen"
+          "name": "Abrufen von Eigenschaften"
         },
         "csd6-2019/Analog Input": {
           "name": "Analoger Eingang"
@@ -1553,7 +1554,7 @@
           "name": "Digitaler Entwurf"
         },
         "csd4-2019/Linking Screens": {
-          "name": "Verknüpfung der Bildschirme"
+          "name": "Verknüpfung von Bildschirmen"
         },
         "csd4-2019/Testing the App": {
           "name": "Testen der App"
@@ -1574,7 +1575,7 @@
           "name": "ASCII- und Binärdarstellung"
         },
         "csd5-2019/Representing Images": {
-          "name": "Darstellen von Bildern"
+          "name": "Darstellung von Bildern"
         },
         "csd5-2019/Representing Numbers": {
           "name": "Zahlendarstellung"
@@ -1583,7 +1584,7 @@
           "name": "Daten geheim halten"
         },
         "csd5-2019/Combining Representations": {
-          "name": "Kombinieren von Darstellungen"
+          "name": "Kombinierte Darstellungen"
         },
         "csd5-2019/Project - Create a Representation": {
           "name": "Projekt - Erstellen einer Darstellung"
@@ -2192,7 +2193,7 @@
           "name": "Bedingungen"
         },
         "csd3-2017/Keyboard Input": {
-          "name": "Tastatureingabe"
+          "name": "Tastatur-Eingabe"
         },
         "csd3-2017/Other Forms of Input": {
           "name": "Andere Formen der Eingabe"
@@ -2240,7 +2241,7 @@
           "name": "Platinen-Ereignisse"
         },
         "csd6-2017/Getting Properties_": {
-          "name": "Eigenschaften abrufen"
+          "name": "Abrufen von Eigenschaften"
         },
         "csd6-2017/Analog Input_": {
           "name": "Analoger Eingang"
@@ -2351,7 +2352,7 @@
           "name": "ASCII- und Binärdarstellung"
         },
         "csd5-2017/Representing Images": {
-          "name": "Darstellen von Bildern"
+          "name": "Darstellung von Bildern"
         },
         "csd5-2017/Representing Numbers": {
           "name": "Zahlendarstellung"
@@ -2360,7 +2361,7 @@
           "name": "Daten geheim halten"
         },
         "csd5-2017/Combining Representations": {
-          "name": "Kombinieren von Darstellungen"
+          "name": "Kombinierte Darstellungen"
         },
         "csd5-2017/Project - Create a Representation": {
           "name": "Projekt - Erstellen einer Darstellung"
@@ -2423,7 +2424,7 @@
           "name": "Digitaler Entwurf"
         },
         "csd4-2017/Linking Screens": {
-          "name": "Verknüpfung der Bildschirme"
+          "name": "Verknüpfung von Bildschirmen"
         },
         "csd4-2017/Testing the App": {
           "name": "Testen der App"
@@ -2450,7 +2451,7 @@
           "name": "Offline: Madlibs"
         },
         "course4/Artist: Variables": {
-          "name": "Künstler: Variablen"
+          "name": "Künstler: Variables"
         },
         "course4/Play Lab: Variables": {
           "name": "Spielelabor: Variablen"
@@ -2677,6 +2678,8 @@
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "-   Auf der Website [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) finden Sie weitere Inhalte zur Online-Sicherheit.",
+          "purpose": "Das Hauptziel dieser Stunde ist es, die Erfahrung der SchülerInnen mit Computern zu erweitern. Indem wir die grundlegenden Computerfunktionen wie Klicken, Ziehen und Ablegen behandeln, schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Aufgaben. Diese Stunde bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
           "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
         },
         "coursef-2021/lesson-6": {
@@ -2698,6 +2701,7 @@
         "coursef-2021/Virtual Pet": {
           "name": "Miniprojekt: Virtuelles Haustier",
           "overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Stunde ermöglicht es den SchülerInnenn, Programmierkonzepte aus vorherigen Stunden in einem anderen kreativen Kontext anzuwenden.",
           "student_overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!"
         },
@@ -2724,23 +2728,27 @@
         "coursef-2021/Loops with the Artist": {
           "name": "Zeichen mit Schleifen",
           "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Die SchülerInnen üben die Verwendung von Schleifen, ein Konzept, das in den kommenden Stunden immer wieder aufgegriffen wird.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "In dieser Lektion beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der `Künstler`-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach geführten Aufgaben gelangen die SchülerInnen auf einem Level für freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Variablen sind im Wesentlichen Platzhalter für Werte, die zum Zeitpunkt der Ausführung Ihres Programms noch unbekannt sind, oder für Werte, die sich während der Ausführung eines Programms ändern können. Sie sind für die Erstellung von dynamischem Code von entscheidender Bedeutung, da sie es ermöglichen, dass sich Ihr Programm auf der Grundlage einer beliebigen Anzahl von potenziellen Änderungen ändert und wächst. In dieser Phase wird die Verwendung von Variablen vertieft, wobei die grundlegendsten Möglichkeiten zum Festlegen und Verwenden von Variablen genutzt werden.",
           "student_overview": "In dieser Lektion erstellen Sie Zeichnungen mit Variablen, die sich während der Ausführung des Programms ändern."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "name": "Eingebettete Schleifen im Labyrinth",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, ihr Verständnis von Schleifen auf ein ganz neues Level zu bringen. Beim Spiel mit der Biene und bei Pflanzen gegen Zombies lernen die SchülerInnen, wie man eine Schleife so programmiert, dass sie in eine andere Schleife eingebettet ist. Sie werden auch dazu ermutigt, herauszufinden, wie kleine Änderungen an beiden Schleifen ihr Programm beeinflussen, wenn sie auf \"Ausführen\" klicken.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In dieser Unterrichtsstunde wird die Funktionsweise von Bee-Puzzles vorgestellt (oder wiederholt) und die SchülerInnen lernen _verschachtelte Schleifen_ kennen. In der nächsten Stunde werden wir uns wieder mit Variablen beschäftigen.",
           "student_overview": "Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du eine Schleife in eine andere Schleife einfügst."
         },
         "coursef-2021/Variables that Change in Bee": {
           "name": "Verändern von Variablen mit der Biene",
           "overview": "In dieser Lektion wird veranschaulicht, wie Variablen Programme leistungsfähiger machen können, indem sie es ermöglichen, Werte zu ändern, während der Code ausgeführt wird.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Stunde veranschaulicht den Nutzen von Code mit sich ändernden Werten. Die SchülerInnen werden darauf vorbereitet, wie \"for\"-Schleifen in den kommenden Stunden funktionieren.",
           "student_overview": "Diese Biene liebt Variablen!"
         },
@@ -2754,12 +2762,14 @@
         "coursef-2021/For Loops in Bee": {
           "name": "\\`Für´-Schleifen mit der Biene",
           "overview": "Im Bienen-Umfeld konzentriert sich diese Lektion auf `für`-Schleifen und die Verwendung einer inkrementierenden Variablen zur Lösung komplizierterer Aufgaben. Die SchülerInnen beginnen mit der Wiederholung von Schleifen aus früheren Lektionen und gehen dann durch die Verwendung von ‚für‘-Schleifen, um kompliziertere Aufgaben effektiver lösen zu können.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Das heutige Konzept, for-Schleifen, ist ein sehr wichtiges Thema in der Informatik. Sie werden nicht nur häufig verwendet, sondern das Erlernen von for-Schleifen fördert auch das Erlernen anderer wichtiger Konzepte (z. B. Variablen und Parameter). Die SchülerInnen werden viel Übung darin haben, Probleme kritisch zu durchdenken, wenn sie gelernt haben, die Anfangs-, End- und Schrittwerte für jede for-Schleife bestimmen. Dieses Konzept beinhaltet auch viel Mathematik, können es deshalb mit einer Mathematikstunde verbinden, um den Unterricht noch umfassender zu gestalten.",
           "student_overview": "Summ-Summ. Bei diesen Aufgabenführen Sie eine Biene mit `für`-Schleifen zu Nektar und Honig!"
         },
         "coursef-2021/For Loops in Artist": {
           "name": "\\`Für´-Schleifen mit dem Künstler",
           "overview": "In dieser Lektion üben die SchülerInnen weiterhin `für` Schleifen, diesmal aber mit Artist. Die SchülerInnen werden Aufgaben lösen, bei denen sie die Ideen von Variablen, Schleifen und \"Für\"-Schleifen kombinieren, um komplexe Designs zu erstellen. Am Ende haben sie die Möglichkeit, ihre eigene Kunst in einem Level für freie Gestaltung zu kreieren.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Kreativität und kritisches Denkvermögen arbeiten herrlich zusammen in dieser Lektion. Die Studenten werden ihre Übungen mit 'for'-Schleifen und Variablen weiterführen, während sie unglaubliche Bilder erzeugen. Diese Lektion inspiriert einen kreativen Kopf und lehrt gleichzeitig die Kernkonzepte der Informatik.",
           "student_overview": "Machen Sie sich bereit für Ihr nächstes Meisterwerk. Hier werden Sie `für`-Schleifen verwenden, um einige atemberaubende Bilder zu erstellen."
         },
@@ -2772,6 +2782,7 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Ausbruch",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
         },
         "coursef-2021/AI for Oceans": {
@@ -3026,6 +3037,7 @@
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Ernten mit Schleifen",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In dieser Lektion verwenden die SchülerInnen Schleifen, um Aktionen wie das Ernten von Kürbissen zu wiederholen. Es werden neue Muster entstehen und die SchülerInnen werden Kreativität und logisches Denken einsetzen, um zu bestimmen, welcher Code wie oft wiederholt werden muss.",
           "student_overview": "Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!"
         },
@@ -3045,11 +3057,13 @@
         "coursec-2021/Build a Flappy Game": {
           "name": "Erstelle ein Flappy-Spiel",
           "overview": "In dieser speziellen Phase können die SchülerInnen ihr eigenes Flappy Bird-Spiel erstellen, indem sie mit Hilfe von Eventhandlern Mausklicks und Kollisionen von Objekten erkennen. Am Ende dieses Levels können die SchülerInnen ihr Spiel anpassen, indem sie die Grafik oder die Regeln ändern.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Ereignisse sind in Computerprogrammen sehr häufig. In dieser Lektion werden die SchülerInnen ihr Verständnis von Ereignissen vertiefen, indem sie ein _Flappy Bird_ Spiel erstellen. Die SchülerInnen lernen, ihre Figur über den Bildschirm zu bewegen, Geräusche zu machen und auf Hindernisse zu reagieren, die auf vom Benutzer ausgelösten Ereignissen basieren.",
           "student_overview": "Erstellen Sie Ihr eigenes Flappy Bird-Spiel ganz nach Belieben und teilen Sie es dann mit Ihren Freunden!"
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Hier werden die SchülerInnen ihr Verständnis von Ereignissen mithilfe von Play Lab weiter ausbauen. Die SchülerInnen verwenden Ereignisse, um Figuren auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von Benutzereingaben zu ändern. Am Ende der Rätselsequenz haben die SchülerInnen die Möglichkeit, ihre Projekte vorzustellen.",
           "student_overview": "Es ist an der Zeit, kreativ zu werden und ein Spiel in Play Lab zu entwickeln!"
         },
@@ -3091,6 +3105,7 @@
         "coursed-2021/Introduction to Online Puzzles": {
           "name": "Einführung in Online-Aufgaben",
           "overview": "Bei dieser Aufgabengruppe beginnen die SchülerInnen mit einer Einführung (oder einem Überblick, je nach dem Erfahrungsstand Ihrer Klasse) in den Online-Arbeitsbereich von Code.org. Es gibt dort Videos, welche die grundlegende Funktionalität des Arbeitsbereichs erklären, einschließlich der Schaltflächen `Ausführen`, `Zurücksetzen` und `Schritt`. In diesen Videos wird auch das Ziehen von Blockly-Bausteinen, das Löschen von Blockly-Bausteinen und das Verbinden von Blockly-Bausteinen besprochen. Als nächstes üben die SchülerInnen ihre _Sequenzierungs-_ und \\_Debugging-Kenntnisse im Labyrinth. Dort begegnen die SchülerInnen neuen Arten von Aufgaben wie Collector, Artist und Harvester, wenn sie die elementaren Grundlagen von Schleifen kennenlernen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Wir wissen, dass es in jeder Klasse ein breites Spektrum an Kenntnissen zu jedem Thema gibt. Einige SchülerInneninnen und SchülerInnen in Ihrer Klasse sind vielleicht Computerassistenten, während andere noch nicht viel Erfahrung haben. Um gleiche Spiel- (und Lern-) Bedingungen zu schaffen, haben wir diese \"Aufbauphase\" für Kurs D entwickelt. Sie kann entweder als Einführung oder als Wiederholung der Nutzung von Code.org und der grundlegenden Konzepte der Informatik verwendet werden. Diese Phase deckt alle Voraussetzungen ab, die für den Beginn von Kurs D erforderlich sind.",
           "student_overview": "In dieser Lektion üben Sie die Kenntnisse, e Sie für diesen Kurs benötigen."
         },
@@ -3103,6 +3118,7 @@
         "coursed-2021/Debugging in Collector": {
           "name": "Debuggen mit Laurel",
           "overview": "In dieser Online-Aktivität üben die SchülerInnen die Fehlersuche/das Debuggen in der \"Sammler\"-Umgebung. Die SchülerInnen werden das Lesen und Bearbeiten von Code üben, um Aufgaben mit einfachen Algorithmen, Schleifen und gerschachtelten Schleifen zu lösen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Ziel dieser Lektion ist es, den SchülerInnenn beizubringen, dass es normal ist, beim Erlernen einer neuen Fähigkeit zu versagen. Die SchülerInnen erhalten vorgefertigte Programme, die NICHT funktionieren. Sie werden gebeten, diese Programme zu korrigieren. Dieser Prozess, Debugging genannt, vermittelt den SchülerInnenn wichtige Fähigkeiten zur Problemlösung und zum kritischen Denken. Diese Fähigkeiten werden übertragen, wenn die SchülerInnen mit immer schwierigeren Programmierprojekten fortfahren.",
           "student_overview": "Sind Sie beim Kodieren schon einmal auf Probleme gestoßen? In dieser Lektion werden Sie in die Geheimnisse des Debuggens eingeweiht. Debugging ist der Prozess des Identifizierens und Behebens von Problemen in Ihrem Code."
         },
@@ -3137,12 +3153,14 @@
         "coursed-2021/Loops in Artist": {
           "name": "Formen mit Schleifen zeichnen",
           "overview": "Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Gelegenheit, wirklich kreativ zu sein. Diese Aktivität dient auch als Debugging-Übung für zusätzliche Problemlösungsübungen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Serie hebt die Leistungsfähigkeit von Schleifen mit einer Reihe von Rätseln hervor, die die SchülerInnen zum Nachdenken darüber anregen sollen, warum \"Wiederholungsschleifen\" der Langschrift überlegen sind.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Eingebettete Schleifen im Labyrinth",
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, ihr Verständnis von Schleifen auf ein ganz neues Level zu bringen. Beim Spiel mit der Biene und bei Pflanzen gegen Zombies lernen die SchülerInnen, wie man eine Schleife so programmiert, dass sie in eine andere Schleife eingebettet ist. Sie werden auch dazu ermutigt, herauszufinden, wie kleine Änderungen an beiden Schleifen ihr Programm beeinflussen, wenn sie auf \"Ausführen\" klicken.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In dieser Einführung in verschachtelte Schleifen verlassen die SchülerInnen ihre gewohnte Umgebung, um effizientere Lösungen für Rätsel zu finden. In früheren Rätseln wurden die SchülerInnen durch Schleifen dazu gebracht, Wiederholungen zu erkennen. Hier lernen die SchülerInnen, Muster _innerhalb_ wiederholter Muster zu erkennen, um diese verschachtelten Schleifen zu entwickeln. Diese Phase beginnt damit, dass die SchülerInneninnen und SchülerInnen aufgefordert werden, ein Rätsel zu lösen, bei dem der Code irritierend und zu komplex ist, um ihn auf dem langen Weg auszuschreiben. Nachdem ein Video in verschachtelte Schleifen einführt, wird den SchülerInnenn ein Beispiel gezeigt und sie werden aufgefordert, vorherzusagen, was passiert, wenn eine Schleife in eine andere Schleife eingefügt wird. Auf diese Weise können die SchülerInnen ihr Verständnis von Schleifen in der Programmierung festigen und ausbauen.",
           "student_overview": "Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du geschachtelte Schleife erstellst"
         },
@@ -3163,17 +3181,20 @@
         "coursed-2021/Conditionals in Bee": {
           "name": "Wenn/Sonst mit der Biene",
           "overview": "Bis zu diesem Zeitpunkt haben die SchülerInnen Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Bedingungen, dies es ihnen ermöglichen, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Nach der Einführung in die Konditionale in \"Konditionale mit Karten\" werden die SchülerInnen nun üben, sie in ihren Programmen zu verwenden. Die \"if / else\"-Blöcke ermöglichen ein flexibleres Programm. Die Biene wird nur Nektar sammeln, _wenn_ es eine Blume gibt, oder Honig machen, _wenn_ es eine Wabe gibt.",
           "student_overview": "Sie haben die Bedingungen verstanden - jetzt ist es an der Zeit, Bee so zu programmieren, dass sie diese Bedingungen beim Sammeln von Honig und Nektar verwendet. "
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "Während-Schleifen in Farmer",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Wenn Ihre SchülerInnen ihre Kenntnisse über Schleifen vertiefen, werden sie auf Probleme stoßen, bei denen ein Befehl wiederholt werden muss, aber nicht bekannt ist, wie oft er wiederholt werden muss. Hier kommen while-Schleifen ins Spiel. In der heutigen Lektion werden die SchülerInnen ein grundlegendes Verständnis für bedingungsbasierte Schleifen entwickeln und ihr Wissen über Schleifen im Allgemeinen erweitern.",
           "student_overview": "Schleifen sind beim Codieren extrem nützlich. In dieser Lektion lernen Sie eine neue Art von Schleifen kennen:die `während`-Schleifen!"
         },
         "coursed-2021/Until Loops in Maze": {
           "name": "‚Bis‘-Schleifen im Labyrinth",
           "overview": "In dieser Lektion lernen die SchülerInnen `bis`-Schleifen kennen. Die SchülerInnen entwickeln Programme, bei denen die Hauptfigur Aktionen wiederholt, bis sie den gewünschten Haltepunkt erreicht haben.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In dieser Reihe von Rätseln wird das Wissen über Schleifen durch die Hinzufügung der `until`-Bedingung gefestigt und ausgebaut. Durch die Verknüpfung dieser Konzepte können die SchülerInnen das Potenzial für die Erstellung komplexer und innovativer Programme erkunden.",
           "student_overview": "Man kann einige erstaunliche Dinge tun, wenn man `bis`-Schleifen verwendet!"
         },
@@ -3443,18 +3464,21 @@
         },
         "coursee-2021/Simon Says": {
           "overview": "In dieser Lektion spielen die SchülerInnen ein Spiel, das sie zum Nachdenken darüber anregen soll, wie Befehle gegeben werden müssen, um das richtige Ergebnis zu erzielen. Auf diese Weise können sie in den kommenden Lektionen leichter zu Sprite Lab übergehen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Lektion soll die SchülerInnen darauf vorbereiten, über eines der wichtigsten Programmierkonzepte in Sprite Lab nachzudenken: Verhalten.",
           "student_overview": "Spiele ein Spiel und denk darüber nach, welche Befehle benötigt werden, um das richtige Ergebnis zu erzielen."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "name": "Schwimmende Fische mit Sprite Lab.",
           "overview": "In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Lektion soll die SchülerInnen mit dem Kernvokabular von Sprite Lab vertraut machen und ihnen die Möglichkeit geben, Konzepte, die sie in anderen Umgebungen gelernt haben, auf dieses Tool anzuwenden. Durch die Erstellung eines Aquariums beginnen die SchülerInnen, das Programmiermodell dieses Tools zu verstehen und Wege zu erkunden, wie sie es nutzen können, um sich auszudrücken.",
           "student_overview": "Lernen Sie, wie man Sprites erstellt und bearbeitet."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Tanzparty für Außerirdische mit Sprite-Labor",
           "overview": "Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Behaviors werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine \"Tanzparty für Aliens\" zu erstellen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Lektion bietet eine großartige Einführung in die Programmierung von Ereignissen und gibt den SchülerInnenn sogar die Möglichkeit, ihre Kreativität unter Beweis zu stellen! Am Ende der Lektion haben die SchülerInnen die Möglichkeit, ihre Projekte vorzustellen.",
           "student_overview": "Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können."
         },
@@ -3472,7 +3496,7 @@
           "student_overview": "Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind."
         },
         "coursee-2021/About Me": {
-          "name": "Über mich mit Sprite Lab",
+          "name": "Miniprojekt: Über mich",
           "overview": "Die SchülerInnen wenden ihr Wissen über die Weitergabe persönlicher und privater Informationen im Internet an, indem sie in diesem **Miniprojekt** ein interaktives Poster erstellen.",
           "preparation": "-   (Optional) Drucken Sie Kopien des **\\*Planungsleitfadens** für die SchülerInnen aus oder verteilen Sie digitale Kopien. - Überlegen Sie sich, ob Sie selbst ein Beispielprojekt anfertigen, das Sie mit der Klasse teilen können. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "Diese Lektion soll die vorherige Lektion über persönliche und private Informationen für die SchülerInnen persönlich relevant machen. Anhand von SAFE (persönlich) und UNSAFE (privat) Beispielen üben die SchülerInnen die sichere Selbstdarstellung im Internet, indem sie mit SpriteLab ihre eigenen Sprite-Kostüme entwerfen und Text generieren.",
@@ -3487,6 +3511,7 @@
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Zeichen mit Schleifen",
           "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Die SchülerInnen üben die Verwendung von Schleifen, ein Konzept, das in den kommenden Stunden immer wieder aufgegriffen wird.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
@@ -3512,12 +3537,14 @@
         "coursee-2021/Functions in Minecraft": {
           "name": "Funktionen in Minecraft",
           "overview": "Die SchülerInnen verstehen in diesem unterhaltsamen und interaktiven Minecraft-Abenteuer allmählich, wie nützlich Funktionen sein können!",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Die SchülerInnen entdecken die Vielseitigkeit der Programmierung, indem sie Funktionen in verschiedenen Umgebungen üben. Dabei erkennen sie wiederverwendbare Muster und sind in der Lage, benannte Blöcke einzubinden, um vordefinierte Funktionen aufzurufen.",
           "student_overview": "Verstehen Sie, wie Sie Funktionen für den effizientesten Code nutzen können?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Funktionen mit dem Künstler",
           "overview": "Die SchülerInnen lernen die Verwendung von Funktionen mit Artist kennen. Sie erstellen und verändern tolle Bilder. Bei komplizierteren Mustern lernen die SchülerInnen die geschachtelten Funktionen kennen, indem sie eine Funktion in einer anderen Funktion aufrufen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Eine der wichtigsten Komponenten dieser Lektion ist es, den SchülerInneninnen und SchülerInnenn einen Raum zu geben, in dem sie etwas schaffen können, auf das sie stolz sind. Die Rätsel werden immer komplexer, aber jedes neue Rätsel baut auf dem vorherigen Rätsel auf. Am Ende dieser Lektion werden die SchülerInnen selbstbewusst und stolz auf ihre harte Arbeit sein.",
           "student_overview": "Mit Funktionen komplexe Zeichnungen leichter erstellen!"
         },
@@ -3531,17 +3558,19 @@
         "coursee-2021/Conditionals": {
           "name": "Bedingungen mit dem Farmer",
           "overview": "Diese Lektion führt die SchülerInnen in `Während`-Schleifen und `wenn/andere` Aussagen ein. _Während-Schleifen_ sind Schleifen, die Befehle so lange wiederholen, wie eine Bedingung zutrifft. Während-Schleifen werden verwendet, wenn der Programmierer nicht genau weiß, wie oft die Befehle wiederholt werden müssen, aber der Programmierer weiß, welche Bedingung erfüllt sein muss, damit die Schleife weiterläuft. \\`Wenn / Sonst'-Anweisungen bieten Flexibilität bei der Programmierung, indem ganze Codeabschnitte nur dann ausgeführt werden, wenn etwas zutrifft andernfalls wird etwas anderes ausgeführt.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "In dieser Lektion lernen die SchülerInnen while-Schleifen und \"if / else\"-Anweisungen kennen.",
           "student_overview": "In dieser unterhaltsamen und herausfordernden Serie können Sie dem Computer sagen, was er unter bestimmten Bedingungen tun soll."
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Funktionen mit der Erntearbeiterin",
           "overview": "Die SchülerInnen haben gelernt, wie man in Artist eindrucksvolle Zeichnungen erstellt und in Bee, wie man durch Labyrinthe zu navigiert. Heute werden sie Funktionen für das Einbringen von Erntegut in Farmer verwenden. In dieser Lektion wird den SchülerInnen gezeigt, dass es vorteilhaft ist, Funktionen auf die neue Art und Weise zu verwenden, indem sie sie mit `während`-Schleifen und `wenn/sonst`-Anweisungen kombinieren.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
           "purpose": "Diese Lektion soll die SchülerInnen dazu anregen, Konditionale mit Funktionen zu verwenden. Diese Rätsel sollen die Problemlösungskompetenz und das kritische Denken fördern.",
           "student_overview": "Funktionen werden Ihnen viel Arbeit ersparen, wenn Sie dem Farmer bei der Ernte helfen!"
         },
         "coursee-2021/lesson-1": {
-          "name": "Entwerfen für Barrierefreiheit",
+          "name": "Design für Barrierefreiheit",
           "overview": "In dieser Lektion erfahren die SchülerInnen mehr über Barrierefreiheit und die Bedeutung von Empathie im Rahmen eines Brainstorming und die Entwicklung barrierefreier Lösungen für hypothetische Apps.",
           "preparation": "-   Lesen Sie zum Kontext die **\\*Arten von Behinderungen**. - Lesen Sie sich die Anmerkungen des Referenten auf dem **\\*Diaplan** durch. - Bereiten Sie genügend Skizzen-/Zeichenmaterial für alle SchülerInnen vor.",
           "purpose": "Durch das Erlernen der Barrierefreiheit erkennen die SchülerInnen die Auswirkungen der Computertechnik über ihr eigenes Leben hinaus. Barrierefreiheit scheint vielleicht kein relevantes CS-Thema zu sein, aber die Entwicklung von Technologien, die für unterversorgte Nutzer zugänglich sind, trägt dazu bei, dass die Technik auch für alle anderen besser wird."
@@ -3560,7 +3589,7 @@
           "name": "Entwurf einer Datenerhebung"
         },
         "csd7-2021/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd4-2021/Analysis of Design": {
           "name": "Test nach dem Projekt"
@@ -3596,7 +3625,7 @@
           "name": "Projekt - App-Präsentation"
         },
         "csd4-2021/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd6-2021/Innovations in Computing": {
           "name": "Test nach dem Projekt",
@@ -3617,7 +3646,7 @@
           "name": "Platinen-Ereignisse"
         },
         "csd6-2021/Getting Properties": {
-          "name": "Eigenschaften abrufen"
+          "name": "Abrufen von Eigenschaften"
         },
         "csd6-2021/Analog Input": {
           "name": "Analoger Eingang",
@@ -3654,7 +3683,7 @@
           "overview": "In diesem Abschlussprojekt für den Kurs entwickeln und testen die SchülerInnen gemeinsam einen Prototyp für ein innovatives Computergerät, das auf dem Circuit Playground basiert. Unter Verwendung der auf der Platine verfügbaren In- und Outputs werden sie in Gruppenarbeit Programme erstellen, die interessante und einzigartige Benutzerinteraktionen ermöglichen."
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd5-2021/Representation Matters": {
           "name": "Test nach dem Projekt"
@@ -3666,13 +3695,13 @@
           "name": "ASCII- und Binärdarstellung"
         },
         "csd5-2021/Representing Images": {
-          "name": "Darstellen von Bildern"
+          "name": "Darstellung von Bildern"
         },
         "csd5-2021/Representing Numbers": {
           "name": "Zahlendarstellung"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Kombinieren von Darstellungen"
+          "name": "Kombinierte Darstellungen"
         },
         "csd5-2021/Keeping Data Secret": {
           "name": "Daten geheim halten"
@@ -3696,7 +3725,7 @@
           "name": "Problemlösung mit Big Data"
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd3-2021/Programming for Entertainment": {
           "name": "Test nach dem Projekt"
@@ -3733,7 +3762,7 @@
           "name": "Bedingungen"
         },
         "csd3-2021/Keyboard Input": {
-          "name": "Tastatureingabe"
+          "name": "Tastatur-Eingabe"
         },
         "csd3-2021/Mouse Input": {
           "name": "Input mit der Maus"
@@ -3766,7 +3795,7 @@
           "name": "Projekt Ein Spiel erstellen"
         },
         "csd3-2021/lesson-1": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Einführung in die Problemlösung"
@@ -3847,7 +3876,7 @@
           "name": "CSS-Klassen"
         },
         "csd2-2021/Linking Pages": {
-          "name": "Verknüpfe Seiten"
+          "name": "Verknüpfung von Seiten"
         },
         "csd2-2021/Project - Website for a Purpose": {
           "name": "Projekt - Website für einen Zweck"
@@ -3856,7 +3885,7 @@
           "name": "Beurteilung durch SchulkollegInnen und letzter Schliff"
         },
         "csd2-2021/lesson-1": {
-          "name": "Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs"
+          "name": "CS Discoveries Nachbefragung"
         },
         "pre-express-2020/Learn to Drag and Drop": {
           "name": "Erlerne Drag und Drop"
@@ -3919,7 +3948,7 @@
           "name": "Wenn/Sonst mit der Biene"
         },
         "express-2020/While Loops with the Farmer": {
-          "name": "Während Schleifen mit dem Farmer"
+          "name": "While-Schleifen mit dem Farmer"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Bedingungen in Minecraft: Voyage Aquatic"
@@ -4165,7 +4194,7 @@
           "name": "Funktionen mit dem Künstler"
         },
         "coursee-2020/Designing for Accessibility": {
-          "name": "Entwerfen für Barrierefreiheit"
+          "name": "Design für Barrierefreiheit"
         },
         "coursee-2020/End of Course Project": {
           "name": "Projekt am Ende des Kurses"

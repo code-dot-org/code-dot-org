@@ -1822,6 +1822,55 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_delete_own_account?
   end
 
+  test 'shared_sections_with returns sections shared between students' do
+    section_1 = create :section
+    section_2 = create :section
+    student_1 = create(:follower, section: section_1).student_user
+    student_2 = create(:follower, section: section_1).student_user
+    create(:follower, section: section_2, student_user: student_2)
+
+    shared_sections = student_1.shared_sections_with(student_2)
+    assert_equal shared_sections.length, 1
+    assert_equal shared_sections.first.id, section_1.id
+  end
+
+  test 'shared_sections_with returns empty array if there are no shared sections' do
+    section_1 = create :section
+    section_2 = create :section
+    student_1 = create(:follower, section: section_1).student_user
+    student_2 = create(:follower, section: section_2).student_user
+
+    shared_sections = student_1.shared_sections_with(student_2)
+    assert_equal shared_sections.length, 0
+  end
+
+  test 'in_code_review_group_with? returns true if users are in a shared code review group' do
+    student_1 = create :student
+    student_2 = create :student
+    section = create :section
+    student_1_follower = create(:follower, section: section, student_user: student_1)
+    student_2_follower = create(:follower, section: section, student_user: student_2)
+    code_review_group = create :code_review_group, section: section
+    create :code_review_group_member, code_review_group: code_review_group, follower: student_1_follower
+    create :code_review_group_member, code_review_group: code_review_group, follower: student_2_follower
+
+    assert student_1.in_code_review_group_with?(student_2)
+  end
+
+  test 'in_code_review_group_with? returns false if users are not in a shared code review group' do
+    student_1 = create :student
+    student_2 = create :student
+    section = create :section
+    student_1_follower = create(:follower, section: section, student_user: student_1)
+    student_2_follower = create(:follower, section: section, student_user: student_2)
+    code_review_group = create :code_review_group, section: section
+    code_review_group_2 = create :code_review_group, section: section
+    create :code_review_group_member, code_review_group: code_review_group, follower: student_1_follower
+    create :code_review_group_member, code_review_group: code_review_group_2, follower: student_2_follower
+
+    refute student_1.in_code_review_group_with?(student_2)
+  end
+
   test 'can_create_personal_login? is false for teacher' do
     refute @teacher.can_create_personal_login?
   end
@@ -3683,7 +3732,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
+    Timecop.travel(Date.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
@@ -3705,7 +3754,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
+    Timecop.travel(Date.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save

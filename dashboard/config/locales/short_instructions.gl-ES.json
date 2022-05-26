@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "Vostede consegue realizar a mesma tarefa máis facilmente\ncun bucle?",
         "2-3 Bee Loops 3A": "Vostede consegue usar un bucle para recoller todo o néctar?",
         "2-3 Maze 10": "Léveme até a maldade verde! (Coidado coa dinamita)",
-        "2-3 Maze 2": "Este porco está me irritando. Axúdame a chegar até el!",
+        "2-3 Maze 2": "Léveme até a maldade verde! (Coidado coa dinamita)",
         "2-3 Maze 4": "Léveme até a maldade verde! (Coidado coa dinamita)",
         "2-3 Maze 6": "Fica calmo e axúdame a chegar até o porco malvado. Se nón\neu vou ficar branco!",
         "2-3 Maze 7": "Léveme até a maldade verde! (Coidado coa dinamita)",
@@ -348,7 +348,12 @@
         "courseF_artist_for_challenge2_2021": "Consegues descobrir como recrear este debuxo\ncun único bucle?",
         "courseF_bee2": "Vostede consegue usar un bucle para recoller todo o néctar?",
         "courseF_bee_for8_2021": "Conseguido! Cal debe ser o teu incremento\npara recoller 3, 6, 9, 12, 15 néctares?\\\r\nPista: canto precisas\nagregar a cada número para obter o número seguinte?",
-        "courseF_bee_for_challenge2_2021": "Resolve este desafío usando o menor número\nde bloques posíbel."
+        "courseF_bee_for_challenge2_2021": "Resolve este desafío usando o menor número\nde bloques posíbel.",
+        "2-3 Maze 1": "Léveme até a maldade verde! (Coidado coa dinamita)",
+        "2-3 Maze 3": "Fica calmo e axúdame a chegar até o porco malvado. Se nón\neu vou ficar branco!",
+        "Overworld Chop Tree - allthethings": "A madeira é un recurso moi importante. Moitas cousas son feitas con ela. Anda até a árbore e usa o comando \"destruír bloque\" para derrubala.",
+        "U1L13 Text Compression": "Busca patróns (frases ou palabras repetidas) no texto. Introduce os patróns que vexas no dicionario da dereita. A medida que introduces entradas no dicionario, introdúcese o símbolo da entrada no texto no lugar do patrón.",
+        "allthethings-anigif-instructions": "Móveme para o leste para chegar até o porco!"
       }
     }
   }

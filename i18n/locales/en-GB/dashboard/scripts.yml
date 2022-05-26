@@ -321,10 +321,8 @@ en-GB:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: Text
               name: Text
         csp4-2021:
           lesson_groups:
@@ -377,10 +375,8 @@ en-GB:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Loops
               name: Loops
             Variables:
-              key: Variables
               name: Variables
         dlp21-csp-mod4:
           lesson_groups:
@@ -462,15 +458,11 @@ en-GB:
           lessons:
             Loops:
               name: Loops
-              key: Loops
             Variables:
               name: Variables
-              key: Variables
         csd3-2022:
           lessons:
             Variables:
               name: Variables
-              key: Variables
             Text:
               name: Text
-              key: Text

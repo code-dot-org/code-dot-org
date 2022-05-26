@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'cannot delete levels that other levels reference as children' do
-    child = create(:level, parent_levels: [create(:level)])
+    child = create(:multi, parent_levels: [create(:level)])
 
     refute child.destroy
 
@@ -12,7 +12,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'can delete levels that other levels reference as parents' do
-    child = create(:level)
+    child = create(:free_response)
     parent = create(:level, child_levels: [child])
 
     assert parent.destroy
@@ -22,7 +22,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'deleting a parent level will also remove associations' do
-    child = create(:level)
+    child = create(:multi)
     parent = create(:level, child_levels: [child])
     assert child.levels_parent_levels.present?
 
@@ -54,7 +54,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   test 'scoped parent/child relationships' do
     parent = create :level
 
-    contained = create :level
+    contained = create :free_response
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: contained,
@@ -117,12 +117,12 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_equal [], level.child_levels.contained
 
     # can add
-    first_contained = create :level
+    first_contained = create :multi
     level.update!(contained_level_names: [first_contained.name])
     assert_equal [first_contained], level.child_levels.contained
 
     # can reorder
-    second_contained = create :level
+    second_contained = create :free_response
     level.update!(contained_level_names: [first_contained.name, second_contained.name])
     assert_equal [first_contained, second_contained], level.child_levels.contained
     level.update!(contained_level_names: [second_contained.name, first_contained.name])
@@ -131,20 +131,25 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     # can remove
     level.update!(contained_level_names: [])
     assert_equal [], level.reload.child_levels.contained
+
+    # cannot add contained levels of other types
+    bogus_contained = create :match
+    refute level.update(contained_level_names: [bogus_contained.name])
+    assert_includes level.errors.full_messages.first, 'cannot add contained level of type Match'
   end
 
   test 'clone_child_levels clones child levels' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
     Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
   test 'clone_child_levels returns update params' do
     parent = create :level
-    child = create :level, name: 'child_level'
-    ParentLevelsChildLevel.create(
+    child = create :free_response, name: 'child_level'
+    assert ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: child,
       kind: ParentLevelsChildLevel::CONTAINED

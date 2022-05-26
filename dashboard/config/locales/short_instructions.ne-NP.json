@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "This time, use a loop to gather all of the nectar.",
         "2-3 Bee Loops 3A": "Use a `repeat` loop to collect all of the nectar.",
         "2-3 Maze 10": "Guide me to the green evilness! (Watch out for TNT)",
-        "2-3 Maze 2": "This pig is ruffling my feathers. Help me get to him!",
+        "2-3 Maze 2": "Guide me to the green evilness! (Watch out for TNT)",
         "2-3 Maze 4": "Guide me to the green evilness! (Watch out for TNT)",
         "2-3 Maze 6": "Keep calm and help me find the bad pig. Otherwise\nI might get angry!",
         "2-3 Maze 7": "Guide me to the green evilness! (Watch out for TNT)",
@@ -380,7 +380,11 @@
         "Dance_Party_extras_speed": "गति बढाउनुहोस्, यसलाई सुस्त गर्नुहोस् (विस्तृत विवरणका लागि \"More\" क्लिक गर्नुहोस्)",
         "Dance_Party_extras_speed_2019": "गति बढाउनुहोस्, यसलाई सुस्त गर्नुहोस् (विस्तृत विवरणका लागि \"More\" क्लिक गर्नुहोस्)",
         "Dance_Party_extras_visible": "तिनीहरु कहाँ गए ? (विस्तृत विवरणको लागि \"More\" मा क्लिक गर्नुहोस्)",
-        "Dance_Party_extras_visible_2019": "तिनीहरु कहाँ गए ? (विस्तृत विवरणको लागि \"More\" मा क्लिक गर्नुहोस्)"
+        "Dance_Party_extras_visible_2019": "तिनीहरु कहाँ गए ? (विस्तृत विवरणको लागि \"More\" मा क्लिक गर्नुहोस्)",
+        "2-3 Maze 1": "Guide me to the green evilness! (Watch out for TNT)",
+        "2-3 Maze 3": "Keep calm and help me find the bad pig. Otherwise\nI might get angry!",
+        "Overworld Chop Tree - allthethings": "Wood is a very important resource. Many things\nare made from it. Walk to the tree and use the “destroy block” command to\nchop it down.",
+        "allthethings-anigif-instructions": "Move me East to get me to the pig!"
       }
     }
   }
