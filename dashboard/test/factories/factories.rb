@@ -1601,14 +1601,6 @@ FactoryGirl.define do
     comment 'a comment about your project'
   end
 
-  factory :code_review_note do
-    association :commenter, factory: :student
-    association :code_review_request, factor: code_review
-
-    comment 'a comment about your project'
-    is_resolved false
-  end
-
   factory :code_review_group do
     sequence(:name) {|n| "group_name_#{n}"}
     association :section
