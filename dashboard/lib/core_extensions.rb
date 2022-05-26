@@ -18,5 +18,5 @@ module CoreExtensions
   end
 end
 
-Hash.send(:include, CoreExtensions::Hash::Camelizing)
-I18n.send(:extend, CoreExtensions::I18n::En)
+Hash.include CoreExtensions::Hash::Camelizing
+I18n.extend CoreExtensions::I18n::En

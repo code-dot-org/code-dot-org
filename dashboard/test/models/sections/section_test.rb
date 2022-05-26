@@ -276,7 +276,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'add_student raises for admin students' do
     assert_raises do
       assert_does_not_create(Follower) do
-        @section.add_student (create :admin)
+        @section.add_student(create(:admin))
       end
     end
   end

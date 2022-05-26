@@ -1272,9 +1272,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level3], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # Everything has Lesson <number> when nothing is lockable
-    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
-    assert (/^Lesson 2:/.match(unit.lessons[1].localized_title))
-    assert (/^Lesson 3:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert(/^Lesson 2:/.match(unit.lessons[1].localized_title))
+    assert(/^Lesson 3:/.match(unit.lessons[2].localized_title))
 
     unit = create :script
     lesson_group = create :lesson_group, script: unit
@@ -1286,9 +1286,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
-    assert (/^Lesson/.match(unit.lessons[0].localized_title).nil?)
-    assert (/^Lesson 1:/.match(unit.lessons[1].localized_title))
-    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson/.match(unit.lessons[0].localized_title).nil?)
+    assert(/^Lesson 1:/.match(unit.lessons[1].localized_title))
+    assert(/^Lesson 2:/.match(unit.lessons[2].localized_title))
 
     unit = create :script
     lesson_group = create :lesson_group, script: unit
@@ -1300,9 +1300,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
-    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
-    assert (/^Lesson/.match(unit.lessons[1].localized_title).nil?)
-    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert(/^Lesson/.match(unit.lessons[1].localized_title).nil?)
+    assert(/^Lesson 2:/.match(unit.lessons[2].localized_title))
   end
 
   test "update_i18n without metdata" do

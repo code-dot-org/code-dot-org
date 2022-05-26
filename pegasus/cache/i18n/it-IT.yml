@@ -1365,6 +1365,7 @@ it-IT:
   coursee-2020_name: Corso E (2020)
   coursef-2020_name: Corso F (2020)
   coursed-2021_name: Corso D (2021)
+  coursed-2022_name: Corso D (2021)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
   express-2019_name: Corso Rapido (2017)
@@ -1487,6 +1488,12 @@ it-IT:
   coursed-2021_gradelevel: Da 7 a 11 anni
   coursee-2021_gradelevel: Da 8 a 12 anni
   coursef-2021_gradelevel: Da 9 a 13 anni
+  coursea-2022_gradelevel: Da 4 a 7 anni
+  courseb-2022_gradelevel: Da 5 a 8 anni
+  coursec-2022_gradelevel: Da 6 a 10 anni
+  coursed-2022_gradelevel: Da 7 a 11 anni
+  coursee-2022_gradelevel: Da 8 a 12 anni
+  coursef-2022_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -1735,6 +1742,36 @@ it-IT:
     con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018,
     è la più aggiornata in italiano ==>'
   coursef-2021_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli,
+    eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+    dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+    Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso
+    che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la
+    versione 2018, è la più aggiornata in italiano ==>'
+  coursea-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  courseb-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della
+    sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+    storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursec-2022_shortdescription_congrats: 'Crea programmi con sequenze di istruzioni,
+    cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+    di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+    Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia
+    animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
+    in italiano ==>'
+  coursed-2022_shortdescription_congrats: 'Gli studenti sviluppano la comprensione
+    dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli
+    eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto
+    di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è
+    la più aggiornata in italiano ==>'
+  coursee-2022_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni
+    condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di
+    questo corso, puoi progettare e creare un progetto finale che potrai condividere
+    con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018,
+    è la più aggiornata in italiano ==>'
+  coursef-2022_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli,
     eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
     dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
     Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso
