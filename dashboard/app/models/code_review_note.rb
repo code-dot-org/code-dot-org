@@ -20,6 +20,8 @@ class CodeReviewNote < ApplicationRecord
   # removed.
 
   belongs_to :commenter, class_name: 'User'
+  # TODO: When the column is renamed, update this association
+  belongs_to :code_review, class_name: 'CodeReview', foreign_key: :code_review_request_id
 
   acts_as_paranoid
 
