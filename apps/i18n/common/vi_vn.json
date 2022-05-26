@@ -11,6 +11,7 @@
   "abusiveUrl": "Địa chỉ trang web của nội dung được báo cáo",
   "achievements": "Thành tựu",
   "activity": "Hoạt động",
+  "activityHeaderName": "{activityName}",
   "actions": "Hành động",
   "add": "Thêm",
   "additionalInformationHeader": "Thông tin thêm",

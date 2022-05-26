@@ -1908,6 +1908,18 @@
               "binary": "binario"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "debuxar un cadrado"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "lonxitude"
+            }
+          }
         }
       }
     }

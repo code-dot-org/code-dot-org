@@ -2651,26 +2651,20 @@ sq:
         csd3-2021:
           lessons:
             Variables:
-              key: variabla
               name: variabla
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Kushtet
               name: Kushtet
             Functions:
-              key: funksione
               name: funksione
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funksionet me parametra
               name: Funksionet me parametra
         csp3-2021:
           lessons:
             Debugging:
-              key: Rregullimi
               name: Rregullimi
         csp4-2021:
           lesson_groups:
@@ -2704,7 +2698,6 @@ sq:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Lëvize atë, lëvize atë
               name: Lëvize atë, lëvize atë
             'Loops: Getting Loopy':
               name: Duke u Çmëndur
@@ -2718,7 +2711,6 @@ sq:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Byzylykët Binarë
               name: Byzylykët Binarë
             'Events: The Big Event':
               name: Eventi i Madh
@@ -2738,16 +2730,11 @@ sq:
             'Algorithms: Graph Paper Programming':
               name: Programimi Grafik me Letër
             Relay Programming:
-              key: Programimi i Besuar
               name: Programimi i Besuar
             Conditionals with Cards:
-              key: Kushtoret me Karta
               name: Kushtoret me Karta
             'Unplugged: Binary':
-              key: 'Unplugged: Binare'
               name: Imazhet Binare
-            Artist Binary:
-              key: Artist Binar
           lesson_groups:
             csf_events:
               display_name: Ngjarje
@@ -2763,8 +2750,6 @@ sq:
               display_name: Shtetësi Dixhitale
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Kushtet
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
           lesson_groups:
@@ -2779,13 +2764,10 @@ sq:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Variablat Zarf
               name: Variablat Zarf
             Internet:
-              key: Internet
               name: Interneti
             For Loop Fun:
-              key: Qef me Ciklet For
               name: Qef me Ciklet For
           lesson_groups:
             csf_digcit:
@@ -2865,22 +2847,16 @@ sq:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: cikle
               name: cikle
             Events:
-              key: Ngjarje
               name: Ngjarje
             Conditionals:
-              key: Kushtet
               name: Kushtet
             Functions:
-              key: funksione
               name: funksione
             Variables:
-              key: variabla
               name: variabla
             For Loops:
-              key: Për Ciklet
               name: Për Ciklet
           lesson_groups:
             k5_getting_started_1:
@@ -2898,7 +2874,6 @@ sq:
         kodea-pd-2021:
           lessons:
             Next Steps:
-              key: Hapat e ardhshme
               name: Hapat e ardhshme
         csa1-exemplars:
           lesson_groups:
@@ -3071,7 +3046,6 @@ sq:
           lessons:
             Debugging:
               name: Rregullimi
-              key: Rregullimi
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3090,7 +3064,6 @@ sq:
           lessons:
             Move It, Move It:
               name: Lëvize atë, lëvize atë
-              key: Lëvize atë, lëvize atë
             Getting Loopy:
               name: Duke u Çmëndur
             'Loops: Getting Loopy':
@@ -3108,7 +3081,6 @@ sq:
               name: Eventi i Madh
             Binary Bracelets:
               name: Byzylykët Binarë
-              key: Byzylykët Binarë
             'Events: The Big Event':
               name: Eventi i Madh
           lesson_groups:
@@ -3126,10 +3098,8 @@ sq:
               name: Programimi Grafik me Letër
             Relay Programming:
               name: Programimi i Besuar
-              key: Programimi i Besuar
             Conditionals with Cards:
               name: Kushtoret me Karta
-              key: Kushtoret me Karta
             'Algorithms: Graph Paper Programming':
               name: Programimi Grafik me Letër
           lesson_groups:
@@ -3147,8 +3117,6 @@ sq:
               name: Të shkruarit e Këngëve
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
-            Conditionals:
-              key: Kushtet
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -3162,11 +3130,9 @@ sq:
           lessons:
             For Loop Fun:
               name: Qef me Ciklet For
-              key: Qef me Ciklet For
             The Internet:
               name: Interneti
             Internet:
-              key: Internet
               name: Interneti
           lesson_groups:
             lessonGroup-7:
@@ -3235,7 +3201,6 @@ sq:
           lessons:
             The Internet:
               name: Interneti
-              key: Interneti
           lesson_groups:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
@@ -3264,37 +3229,39 @@ sq:
           lessons:
             Loops:
               name: cikle
-              key: cikle
             Events:
               name: Ngjarje
-              key: Ngjarje
             Conditionals:
               name: Kushtet
-              key: Kushtet
             Functions:
               name: funksione
-              key: funksione
             Variables:
               name: variabla
-              key: variabla
             For Loops:
               name: Për Ciklet
-              key: Për Ciklet
         csd3-2022:
           lessons:
             Variables:
               name: variabla
-              key: variabla
             Text:
               name: Tekst
-              key: Tekst
             Conditionals:
               name: Kushtet
-              key: Kushtet
             Functions:
               name: funksione
-              key: funksione
         csd6-2022:
           lessons:
             Functions:
               name: funksione
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Përmbledhja
+            lesson-1:
+              name: Përmbledhja
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Përmbledhja
+            lesson-1:
+              name: Përmbledhja

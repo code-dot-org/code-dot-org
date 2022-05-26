@@ -252,11 +252,17 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
+        "coursee-2019/Simon Says": {
+          "name": "Κάνε ό,τι κάνω"
+        },
         "coursee-2019/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"
         },
         "express-2019/Dance Party": {
           "name": "Πάρτι Χορού"
+        },
+        "coursec-2019/Powerful Passwords": {
+          "name": "Ισχυρά Συνθηματικά"
         },
         "coursec-2019/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
@@ -703,6 +709,9 @@
         },
         "coursec-2020/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursee-2020/Simon Says": {
+          "name": "Κάνε ό,τι κάνω"
         },
         "coursee-2020/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"

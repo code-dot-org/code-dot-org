@@ -5704,3 +5704,80 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       ml-intro app lab-book recommender 5-2021:
         display_name: Tətbiqinizi özəlləşdirin
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: mavi
+        - text: yaşıl
+        - {}
+        - text: sarı
+        - {}
+        - text: qırmızı
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - {}
+        - text: '2'
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: Burada təsvir edin
+      allthethings_external_not_displayed_as_unplugged:
+        content1: Burada təsvir edin
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - {}
+        title: Çoxlu seçim
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Yuxarıdakılardan heç biri
