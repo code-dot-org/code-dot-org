@@ -5,9 +5,7 @@ import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Heading1 from '../../lib/ui/Headings';
-import color from '@cdo/apps/util/color';
+import {Heading1} from './Headings';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -106,7 +104,7 @@ class SyncOmniAuthSectionControl extends React.Component {
 
   openDialog = () => {
     console.log('Open dialog');
-    this.setState({isDialogOpen: true});
+    this.setState({isDialogOpen: true, buttonState: READY});
   };
 
   closeDialog = () => {
@@ -136,17 +134,23 @@ class SyncOmniAuthSectionControl extends React.Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <Heading1>Sync error</Heading1>
-          <p>Test error message</p>
-          <a href="sampleLink">Need additional help?</a>
-          <DialogFooter>
+          <Heading1>{'Sync error'}</Heading1>
+          <div style={styles.scroll}>
+            <pre>
+              <code>Sample error.</code>
+            </pre>
+          </div>
+          <div style={styles.needHelpMessage}>
+            <a href="sampleLink">Need additional help?</a>
+          </div>
+          <div style={styles.closeButton}>
             <Button
               __useDeprecatedTag
               text={i18n.closeDialog()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
-          </DialogFooter>
+          </div>
         </BaseDialog>
       </div>
     );
@@ -216,42 +220,22 @@ function iconProps(buttonState) {
 }
 
 const styles = {
-  headerName: {
-    width: '60%',
-    float: 'left',
-    marginRight: 5
+  dialog: {
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    paddingBottom: '20px',
+    maxHeight: '400px'
   },
-  headerIcon: {
-    width: '20%',
-    float: 'left'
+  scroll: {
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    maxHeight: '200px',
+    paddingTop: '10px'
   },
-  button: {
-    float: 'left'
+  needHelpMessage: {
+    paddingTop: '20px'
   },
-  buttonWithMargin: {
-    marginRight: 5,
-    float: 'left'
-  },
-  verticalAlign: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  sectionCodeBox: {
-    float: 'right',
-    lineHeight: '30px'
-  },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'copy'
-  },
-  noSectionCode: {
-    color: color.teal,
-    textDecoration: 'none',
-    cursor: 'pointer'
-  },
-  sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif'
+  closeButton: {
+    paddingTop: '20px'
   }
 };
