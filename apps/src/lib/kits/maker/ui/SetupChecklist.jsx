@@ -49,7 +49,7 @@ export default class SetupChecklist extends Component {
   state = {...initialState};
 
   static propTypes = {
-    webSerialPort: PropTypes.instanceOf(WebSerialPortWrapper),
+    webSerialPort: PropTypes.object,
     stepDelay: PropTypes.number
   };
 
@@ -71,7 +71,8 @@ export default class SetupChecklist extends Component {
 
   detect() {
     const {webSerialPort} = this.props;
-    const setupChecker = new SetupChecker(webSerialPort);
+    const wrappedSerialPort = new WebSerialPortWrapper(webSerialPort);
+    const setupChecker = new SetupChecker(wrappedSerialPort);
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
@@ -110,9 +111,9 @@ export default class SetupChecklist extends Component {
 
       // Can we talk to the firmware?
       .then(() =>
-        this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
-        )
+        this.detectStep(STATUS_BOARD_CONNECT, () => {
+          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected);
+        })
       )
 
       // Can we initialize components successfully?
