@@ -3,11 +3,7 @@ require 'test_helper'
 class ProfanityHelperTest < ActionView::TestCase
   setup do
     # A list of keys used by our shared cache that should be cleared between every test.
-    [
-      ProfanityHelper::PROFANITY_PREFIX,
-      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
-      AzureTextToSpeech::AZURE_TTS_PREFIX
-    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
+    CDO.shared_cache.delete_matched(ProfanityHelper::PROFANITY_PREFIX)
   end
 
   test 'throttled_find_profanities: yields profanities if cached' do
