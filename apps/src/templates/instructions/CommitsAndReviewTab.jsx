@@ -9,6 +9,9 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
+import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
+import project from '@cdo/apps/code-studio/initApp/project';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -21,12 +24,16 @@ const CommitsAndReviewTab = props => {
     viewAsTeacher,
     userIsTeacher,
     codeReviewEnabled,
-    locale
+    locale,
+    isReadOnlyWorkspace,
+    setIsReadOnlyWorkspace
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
+  const [timelineLoadingError, setTimelineLoadingError] = useState(null);
+  const [openReviewError, setOpenReviewError] = useState(null);
 
   const dataApi = useMemo(
     () =>
@@ -44,9 +51,10 @@ const CommitsAndReviewTab = props => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setTimelineLoadingError(false);
     } catch (err) {
-      // TODO: display error message TBD
       console.log(err);
+      setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
   }, [dataApi]);
@@ -60,9 +68,17 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+  const addCodeReviewComment = async (
+    commentText,
+    reviewId,
+    onSuccess,
+    onFailure
+  ) => {
     try {
-      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      const newComment = await dataApi.submitNewCodeReviewComment(
+        commentText,
+        reviewId
+      );
       setOpenReviewData({
         ...openReviewData,
         comments: [...openReviewData.comments, newComment]
@@ -74,13 +90,45 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const closeReview = async () => {
+  const toggleResolveComment = async (
+    commentId,
+    isResolved,
+    onSuccess,
+    onFailure
+  ) => {
     try {
-      const closedReview = await dataApi.closeReview(openReviewData);
+      const comment = await dataApi.toggleResolveComment(commentId, isResolved);
+      onSuccess(comment);
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const handleCloseReview = async (onSuccess, onFailure) => {
+    try {
+      const closedReview = await dataApi.closeReview(openReviewData.id);
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
+      setIsReadOnlyWorkspace(false);
+      onSuccess();
     } catch (err) {
-      // TODO: what happens when review fails to close
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const handleOpenReview = async () => {
+    try {
+      await project.save(true);
+      const currentVersion = project.getCurrentSourceVersionId();
+      const newReview = await dataApi.openNewCodeReview(currentVersion);
+      setOpenReviewData(newReview);
+      setIsReadOnlyWorkspace(true);
+      setOpenReviewError(false);
+    } catch (err) {
+      console.log(err);
+      setOpenReviewError(true);
     }
   };
 
@@ -129,38 +177,65 @@ const CommitsAndReviewTab = props => {
           />
         </div>
       </div>
-      <CodeReviewTimeline
-        timelineData={[
-          ...timelineData,
-          ...(openReviewData ? [openReviewData] : [])
-        ]}
-        addCodeReviewComment={addCodeReviewComment}
-        closeReview={closeReview}
-      />
-      {!openReviewData && (
-        <Button
-          icon="comment"
-          onClick={() => {}}
-          text={javalabMsg.startReview()}
-          color={Button.ButtonColor.blue}
-          style={styles.openCodeReview}
-        />
+      {timelineLoadingError ? (
+        <CodeReviewError />
+      ) : (
+        <>
+          <CodeReviewTimeline
+            timelineData={[
+              ...timelineData,
+              ...(openReviewData ? [openReviewData] : [])
+            ]}
+            addCodeReviewComment={addCodeReviewComment}
+            closeReview={handleCloseReview}
+            toggleResolveComment={toggleResolveComment}
+          />
+          {!openReviewData && !isReadOnlyWorkspace && (
+            <div style={styles.timelineAligned}>
+              <Button
+                icon="comment"
+                onClick={handleOpenReview}
+                text={javalabMsg.startReview()}
+                color={Button.ButtonColor.blue}
+                disabled={!codeReviewEnabled}
+              />
+              {openReviewError && <CodeReviewError />}
+            </div>
+          )}
+          {!codeReviewEnabled && (
+            <div
+              style={{
+                ...styles.timelineAligned,
+                ...styles.reviewDisabledMsg
+              }}
+            >
+              {javalabMsg.codeReviewDisabledMessage()}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
 };
 
 export const UnconnectedCommitsAndReviewTab = CommitsAndReviewTab;
-export default connect(state => ({
-  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Instructor,
-  userIsTeacher: state.currentUser.userType === 'teacher',
-  channelId: state.pageConstants.channelId,
-  serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptId: state.pageConstants.serverScriptId,
-  locale: state.pageConstants.locale
-}))(CommitsAndReviewTab);
+export default connect(
+  state => ({
+    codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
+    viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+    viewAsTeacher: state.viewAs === ViewType.Instructor,
+    userIsTeacher: state.currentUser.userType === 'teacher',
+    channelId: state.pageConstants.channelId,
+    serverLevelId: state.pageConstants.serverLevelId,
+    serverScriptId: state.pageConstants.serverScriptId,
+    locale: state.pageConstants.locale,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
+  }),
+  dispatch => ({
+    setIsReadOnlyWorkspace: isReadOnly =>
+      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+  })
+)(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
   // Populated by redux
@@ -171,7 +246,9 @@ CommitsAndReviewTab.propTypes = {
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  isReadOnlyWorkspace: PropTypes.bool,
+  setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
 const styles = {
@@ -197,14 +274,20 @@ const styles = {
   },
   messageText: {
     fontSize: 13,
-    marginBottom: '25px',
+    margin: '15px 5px 25px 16px',
     color: color.light_gray
   },
   refreshButtonStyle: {
     fontSize: 13,
     margin: 0
   },
-  openCodeReview: {
+  timelineAligned: {
     marginLeft: '30px'
+  },
+  reviewDisabledMsg: {
+    padding: '12px 6px',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    lineHeight: '22px'
   }
 };

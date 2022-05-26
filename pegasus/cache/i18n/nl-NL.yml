@@ -1430,6 +1430,12 @@ nl-NL:
   coursed-2021_gradelevel: Rang 8+
   coursee-2021_gradelevel: Leeftijden 8-12
   coursef-2021_gradelevel: Leeftijden 9-13
+  coursea-2022_gradelevel: Leeftijden 4-7
+  courseb-2022_gradelevel: Leeftijden 5-8
+  coursec-2022_gradelevel: Leeftijden van 6-10
+  coursed-2022_gradelevel: Rang 8+
+  coursee-2022_gradelevel: Leeftijden 8-12
+  coursef-2022_gradelevel: Leeftijden 9-13
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
@@ -1649,6 +1655,27 @@ nl-NL:
     maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
     met je vrienden en familie.
   coursef-2021_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
+    functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+    technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
+    Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je
+    kunt delen met vrienden en familie.
+  coursea-2022_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  courseb-2022_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  coursec-2022_shortdescription_congrats: Maak programma's met sequencing, loops en
+    gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+    technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van
+    de cursus je eigen spel of verhaal dat je kunt delen!
+  coursed-2022_shortdescription_congrats: Studenten ontwikkelen hun begrip van loops,
+    conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
+  coursee-2022_shortdescription_congrats: Begin met coderen met algoritmen, loops,
+    conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en
+    maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+    met je vrienden en familie.
+  coursef-2022_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
     functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
     technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
     Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je

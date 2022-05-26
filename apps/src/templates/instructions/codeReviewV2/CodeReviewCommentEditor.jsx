@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Editor} from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
@@ -6,9 +6,13 @@ import './codeReviewCommentEditor.scss';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const textArea = useRef(null);
+  const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
+    false
+  );
 
   const handleSubmit = () => {
     addCodeReviewComment(
@@ -20,6 +24,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
 
   const onSubmitSuccess = () => {
     clearTextBox();
+    setDisplayAddCommentFailure(false);
   };
 
   const clearTextBox = () => {
@@ -29,7 +34,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   };
 
   const onSubmitFailure = () => {
-    // TODO: handle submit failure
+    setDisplayAddCommentFailure(true);
   };
 
   return (
@@ -55,13 +60,14 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
         ]}
         ref={textArea}
       />
-      <div style={styles.buttons}>
+      <div style={styles.submit}>
         <Button
           onClick={handleSubmit}
           text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
           style={styles.submitButton}
         />
+        {displayAddCommentFailure && <CodeReviewError />}
       </div>
     </>
   );
@@ -78,9 +84,10 @@ const styles = {
     border: `1px solid ${color.droplet_bright_blue}`,
     borderRadius: '4px'
   },
-  buttons: {
+  submit: {
     display: 'flex',
-    justifyContent: 'end'
+    alignItems: 'end',
+    flexDirection: 'column'
   },
   submitButton: {
     marginTop: '10px'

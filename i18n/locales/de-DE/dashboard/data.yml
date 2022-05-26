@@ -576,9 +576,24 @@ de:
         CSA-PL-debugging-temp: Einführung in die Fehlerbehebung in Java – Temp
         csd_u6_circuit_playground: Physische Datenverarbeitung
         csd_u6_input_output: Input und Output
+        CSA-PL-for-loops: For-Schleifen in Java
+        CSA-PL-variables: Erstellen von Variablen in Java
         PL_CS_Journeys_Overview: Informatik-Erlebnis
+        CSA-PL-intro-to-java-lab: Java Lab Grundlagen
+        CSA-PL-first-program: Programmieren in Java
+        CSD_u6_variables_part1: 'CSD: Variablen'
+        csd_u6_if_statements: 'CSD: If-Anweisungen'
+        csc-poem-art-intro: Einführungsvideo
+        csc-poem-art-outro: Schlussvideo
+        csd_u6_call_define_functions: 'CSD: Aufrufen und Definieren von Funktionen'
         csp_applab_parameters: Funktionen mit Parametern
+        starquilts_intro_artist: Einführung in Star Quilts
         CSA-PL-intro-to-arrays: Eindimensionale (1D) Arrays
+        CSA-PL-1d-arrays-new-values: Eingeben von Werten in 1D-Arrays
+        CSA-PL-conditionals: Bedingte Anweisungen in Java
+        CSA-PL-two-way-selection: Zweifach-Auswahl
+        CSA-PL-Printing-in-Java: Drucken in Java
+        CSA-PL-multi-selection-statements: Mehrfachauswahl-Anweisungen
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

@@ -24,7 +24,8 @@
         "flappy/Flappy Code": {
           "name": "Flappy",
           "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
-          "preparation": "### Jeden týden před Vaší „Hodinou programování“\n\n-   Podívejte se na [Průvodce hodinou programování](http://hourofcode.com/resources/how-to/) a Nejlepší praktiky úspěšných vzdělavatelů][1] abyste mohli začít plánovat svou akci Hodina programování. \n-   [Zaregistrujte se na svou akci „Hodina programování“](http://hourofcode.com) jestliže chcete dostat uznání nebo podporu třídy.\n-   Podívejte se na online výukový kurz a absolvujte ho sami: [Udělejte si plácací hru](https://studio.code.org/flappy/1) \n-   Než požádáte své studenty o jeho absolvování, nezapomeňte ho nejprve vyzkoušet. Zkontrolujte si techniku a rozhodněte se, zda před zahájením „Hodiny programování“ nepotřebujete něco vyřešit.\n\n### Jeden den před Vaší „Hodinou programování“\n\n-   Napište na tabuli slova „programování“, „tvorba programů“ and „ladění“ nebo je přidejte na stěnu slov, jestliže ji v učebně máte.\n-   Každý student, který absolvuje tuto aktivitu, musí obdržet certifikát. Předem [vytiskněte po jednom](http://code.org/certificates) certifikátu pro každého, abyste to na konci „Hodiny programování“ měli snazší."
+          "preparation": "### Jeden týden před Vaší „Hodinou programování“\n\n-   Podívejte se na [Průvodce hodinou programování](http://hourofcode.com/resources/how-to/) a Nejlepší praktiky úspěšných vzdělavatelů][1] abyste mohli začít plánovat svou akci Hodina programování. \n-   [Zaregistrujte se na svou akci „Hodina programování“](http://hourofcode.com) jestliže chcete dostat uznání nebo podporu třídy.\n-   Podívejte se na online výukový kurz a absolvujte ho sami: [Udělejte si plácací hru](https://studio.code.org/flappy/1) \n-   Než požádáte své studenty o jeho absolvování, nezapomeňte ho nejprve vyzkoušet. Zkontrolujte si techniku a rozhodněte se, zda před zahájením „Hodiny programování“ nepotřebujete něco vyřešit.\n\n### Jeden den před Vaší „Hodinou programování“\n\n-   Napište na tabuli slova „programování“, „tvorba programů“ and „ladění“ nebo je přidejte na stěnu slov, jestliže ji v učebně máte.\n-   Každý student, který absolvuje tuto aktivitu, musí obdržet certifikát. Předem [vytiskněte po jednom](http://code.org/certificates) certifikátu pro každého, abyste to na konci „Hodiny programování“ měli snazší.",
+          "student_overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky."
         },
         "hourofcode/Maze": {
           "name": "Bludiště",
@@ -38,6 +39,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Doba ledová Play Lab",
+          "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "hello-world-emoji-2021/Hello World": {
@@ -51,7 +53,9 @@
           "student_overview": "Vytvářejte krásné obrazy programováním Umělce."
         },
         "gumball/Gumball Play Lab": {
-          "name": "Gumball Play Lab"
+          "name": "Gumball Play Lab",
+          "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
+          "student_overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky."
         },
         "dance/Dance Party": {
           "name": "Taneční večírek",
@@ -90,6 +94,7 @@
         },
         "playlab/Play Lab": {
           "name": "Play Lab",
+          "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "applab-intro/Intro to App Lab": {
@@ -119,6 +124,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
+          "overview": "V této lekci získají žáci úvodní prožitek s počítačovou vědou a vytvoří si hru pomocí základního blokového programování. Tato lekce byla navržena pro žáky středních tříd od 10 do 16 let, ale pomocí dodaných odlišovacích návrhů ji lze adaptovat i pro mladší nebo starší žáky.",
           "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "basketball/Bounce": {

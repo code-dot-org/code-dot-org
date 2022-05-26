@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:33:38 UTC",
+    "serialized_at": "2022-05-20 17:14:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -64,7 +65,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org.\r\n\r\nStudents review the Submission Requirements and Scoring Guidelines for the Create PT. Subsequently they review three example scored Create PT submissions with commentary to better understand how the Submission Requirements and Scoring Guidelines are used together. In a wrap-up conversation they identify a piece of advice, a \"gotcha\", and a remaining question they have about the Create PT.",
-        "preparation": "* Print or prepare to distribute digital copies of Create PT Task Instructions\n* Briefly review all of the graded sample Create PTs included in the lesson plan\n",
+        "preparation": "* Print or prepare to distribute digital copies of Create PT Task Instructions\n* Briefly review all of the graded sample Create PTs included in the lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. This lesson is designed to introduce what these nuances are, and begin to provide some answers to the questions that will inevitably arise. Keep in mind that the next lesson provides a more structured set of responses to those questions, and so today students are just diving in to what the task looks like.",
         "student_overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org."
       },
@@ -83,7 +84,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. ",
-        "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide",
+        "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT."
       },
       "seeding_key": {
@@ -102,7 +103,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.",
-        "preparation": "* Review pages 6-15 of the Create PT - Survival Guide",
+        "preparation": "* Review pages 6-15 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "student_overview": "This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project."
       },
       "seeding_key": {

@@ -650,6 +650,9 @@
           },
           "draw a square 20": {
             "name": "desenează un pătrat 20"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "NEW Course 4 Artist Functions 14": {
@@ -661,6 +664,9 @@
           },
           "draw a square 20": {
             "name": "desenează un pătrat 20"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1564,11 +1570,17 @@
         "courseE_artist_concept4": {
           "draw a square": {
             "name": "desenează un pătrat"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_concept4_2018": {
           "draw a square": {
             "name": "desenează un pătrat"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1745,6 +1757,9 @@
           },
           "draw square": {
             "name": "desenează pătrat"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -1756,6 +1771,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1767,6 +1785,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1778,6 +1799,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1810,6 +1834,9 @@
           },
           "do something": {
             "name": "facă ceva"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8b_2019": {
@@ -1818,6 +1845,9 @@
           },
           "do something": {
             "name": "facă ceva"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8b_2020": {
@@ -1826,6 +1856,9 @@
           },
           "do something": {
             "name": "facă ceva"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -1837,6 +1870,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1848,6 +1884,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1859,6 +1898,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions9": {
@@ -1917,6 +1959,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -1931,6 +1976,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -1945,6 +1993,9 @@
           },
           "staggered squares": {
             "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -3101,16 +3152,25 @@
         "Course 4 Artist Functions challenge": {
           "draw a square 20": {
             "name": "desenează un pătrat 20"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
             "name": "desenează un pătrat 20"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
             "name": "desenează un pătrat 20"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
           }
         },
         "2-3 Artist Functions 1": {
@@ -3584,6 +3644,20 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "pătrat grădină"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "desenați o formă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime"
+            }
           }
         }
       }

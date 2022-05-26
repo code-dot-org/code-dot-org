@@ -32,7 +32,7 @@ WEIGHTED_COUNT = "SUM(" \
 # @return [String] formatted query
 def generate_from_where(start_date, end_date: nil, tutorial: true, tutorial_pixel: true, finished: false)
   start_day = start_date.strftime('%Y-%m-%d')
-  end_day = (end_date || start_date + 1).strftime('%Y-%m-%d')
+  end_day = (end_date || (start_date + 1)).strftime('%Y-%m-%d')
 
   # The hoc_activities table has four columns we potentially care about;
   # activities logged by the tracking pixel use `pixel_started_at` and

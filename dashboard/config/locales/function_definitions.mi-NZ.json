@@ -1991,6 +1991,18 @@
               "binary": "tāhūrua"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tāngia he tapawhā"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "roanga"
+            }
+          }
         }
       }
     }
