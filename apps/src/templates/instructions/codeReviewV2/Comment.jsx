@@ -10,6 +10,9 @@ import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+//const MARKDOWN = '```';
 
 class Comment extends Component {
   static propTypes = {
@@ -107,6 +110,14 @@ class Comment extends Component {
       () => {
         // TODO: handle set resolve failure
       }
+    );
+  };
+
+  renderText = () => {
+    return (
+      <div>
+        <SafeMarkdown markdown={this.props.comment} />
+      </div>
     );
   };
 
@@ -231,7 +242,7 @@ class Comment extends Component {
                 styles.lessVisibleBackgroundColor)
             }}
           >
-            {commentText}
+            {this.renderText(commentText)}
           </div>
         )}
         {hasError && this.renderErrorMessage()}
