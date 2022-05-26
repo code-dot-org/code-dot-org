@@ -955,6 +955,15 @@ mr:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): उजवीकडे स्पिन होणे
+            new Behavior(spinning_left, []): डावीकडे स्पिन होणे
+            new Behavior(fluttering, []): फडफडणे
+            new Behavior(jittering, []): थरथरणे
+            new Behavior(wobbling, []): डगमगणे
+            new Behavior(wandering, []): भटकणे
+            new Behavior(patrolling, []): गस्त घालणे
+            new Behavior(moving_west_and_looping, []): पश्चिमेकडे जाणे आणि लूपिंग
+            new Behavior(moving_east_and_looping, []): पूर्वेकडे जाणे आणि लूपिंग
             new Behavior(moving_north_and_looping, []): उत्तरेकडे जाणे आणि लुपिंग
               करणे
             new Behavior(moving_south_and_looping, []): दक्षिणेकडे जाणे आणि लुपिंग
@@ -1152,6 +1161,7 @@ mr:
             '180': डावा
             '270': वर
       gamelab_makeSpritesWithSize:
+        text: "{NUM} नवीन {SIZE} {COSTUME} स्प्राइट बनवा"
         options:
           SIZE:
             '30': लहान
@@ -1236,6 +1246,8 @@ mr:
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ॲरो कीज वापरून हालचाल करणे
+            new Behavior(driving_with_arrow_keys, []): ॲरो कीज वापरून ड्रायव्हिंग
             draggable(): ड्रॅग करण्यायोग्य
       gamelab_pointInDirection:
         text: पॉइंट {SPRITE} {DIRECTION}
@@ -1388,6 +1400,50 @@ mr:
         text: "{SPRITE} {SPEECH} म्हणा"
       gamelab_spriteSayTime:
         text: "{SPRITE}{NUM}सेकंदांसाठी{TEXT1}सांगणे"
+      gamelab_spriteThink:
+        text: "{SPRITE} विचार करा {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}विचार करा{TEXT1}काही{NUM}सेकंदांसाठी"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} विचार करा {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I am hungry, too."': मला सुद्धा भूक लागली आहे.
+            '"I only want the biggest goat."': मलाच सर्वात मोठी बकरी हवी आहे.
+            '"I''m a green troll."': मी ग्रीन ट्रोल आहे.
+            '"No one will cross my bridge."': कोणीही माझा पूल ओलांडणार नाही.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} विचार करा {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"Time to make friends with the sheep."': मेंढ्यांशी मैत्री करण्याची वेळ
+              आली आहे.
+            '"She''ll never recognize me now."': ती मला आता कधीच ओळखणार नाही.
+            '"This costume keeps me warm."': हा पोशाख मला गरम ठेवतो.
+            '"I am actually a wolf."': मी खरं तर लांडगा आहे.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} विचार करा {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m feeling sleepy."': मला झोप येत आहे.
+            '"No one could ever beat me."': मला कोणीही पराभूत करू शकत नाही.
+            '"I''ve done this race before."': ही शर्यत मी यापूर्वीही केली आहे.
+            '"My feet are bigger than Turtle''s feet."': कासवाच्या पायापेक्षा माझे
+              पाय मोठे आहेत.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} विचार करा {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m so hungry."': मला खूप भूक लागली आहे.
+            '"I''m a visitor in this town."': मी या गावात एक पाहुणा आहे.
+            '"If we share, we''ll all have something to eat. "': जर आपण शेअर केले
+              तर आपल्या सर्वांना खायला काहीतरी मिळेल.
+            '"I''ll trick everyone into giving me their food."': मी प्रत्येकाला फसवीन
+              मला त्यांचे अन्न देण्यासाठी.
       gamelab_startAvoiding:
         text: "{SPRITE} {TARGET} टाळण्यास सुरवात करतात"
       gamelab_startFollowing:
@@ -1902,12 +1958,28 @@ mr:
         text: स्प्राइट {ANIMATION_NAME} ने {BEHAVIOR} सुरू केले
         options:
           BEHAVIOR:
+            '"fluttering"': फडफडणे
+            '"growing"': आकार वाढवणे
+            '"jittering"': थरथरणे
+            '"shrinking"': आकार कमी होणे
+            '"spinning_left"': डावीकडे स्पिन होणे
+            '"spinning_right"': उजवीकडे स्पिन होणे
             '"swimming_left_and_right"': पोहणे
+            '"wandering"': भटकणे
+            '"wobbling"': डगमगणे
       Poetry_stopBehavior:
         text: 'स्प्राइट {ANIMATION_NAME} {BEHAVIOR} थांबवते '
         options:
           BEHAVIOR:
+            '"fluttering"': फडफडणे
+            '"growing"': आकार वाढवणे
+            '"jittering"': थरथरणे
+            '"shrinking"': आकार कमी होणे
+            '"spinning_left"': डावीकडे स्पिन होणे
+            '"spinning_right"': उजवीकडे स्पिन होणे
             '"swimming_left_and_right"': पोहणे
+            '"wandering"': भटकणे
+            '"wobbling"': डगमगणे
             '"all"': "--सर्व वर्तन---"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

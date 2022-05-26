@@ -2722,6 +2722,28 @@
           "move and get nectar with counter": {
             "name": "ಸರಿಸಿ ಮತ್ತು ಕೌಂಟರ್‌ನೊಂದಿಗೆ ಮಕರಂದವನ್ನು ಪಡೆಯಿರಿ"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "sides": "ಬದಿಗಳು",
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "ಫಂಕ್ಷನ್ 1"
+          },
+          "function 2": {
+            "name": "ಫಂಕ್ಷನ್ 2"
+          }
         }
       }
     }

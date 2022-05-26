@@ -2402,3 +2402,79 @@ lt-LT:
         - {}
         questions:
         - {}
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: mėlyna
+        - text: žalia spalva
+        - {}
+        - {}
+        - {}
+        - text: raudona spalva
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: aprašymas čia
+      allthethings_external_not_displayed_as_unplugged:
+        content1: aprašymas čia
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kuri rodyklė nuveda pabaisiuką prie lobio?
+        title: Parink teisingą atsakymą
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}

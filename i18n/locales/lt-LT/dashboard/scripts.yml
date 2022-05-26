@@ -2655,29 +2655,22 @@ lt:
         csd3-2021:
           lessons:
             Variables:
-              key: Kintamieji
               name: Kintamieji
             Text:
-              key: Tekstas
               name: Tekstas
             Conditionals:
-              key: Sąlyginiai sakiniai
               name: Sąlyginiai sakiniai
             Velocity:
-              key: Greitis
               name: Greitis
             Functions:
-              key: Komandų kūrimas
               name: Komandų kūrimas
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Komandos su parametrais
               name: Komandos su parametrais
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Dvejetainiai skaičiai
               name: Dvejetainiai skaičiai
         csp4-2021:
           lesson_groups:
@@ -2711,7 +2704,6 @@ lt:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Judėk, judėk
               name: Judėk, judėk
             'Loops: Getting Loopy':
               name: Kartojimo supratimas
@@ -2725,7 +2717,6 @@ lt:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Dvejetainės apyrankės
               name: Dvejetainės apyrankės
             'Events: The Big Event':
               name: Didelis įvykis
@@ -2743,16 +2734,11 @@ lt:
             'Algorithms: Graph Paper Programming':
               name: Programavimas ant languoto popieriaus
             Relay Programming:
-              key: Programavimas komandoje
               name: Programavimas komandoje
             Conditionals with Cards:
-              key: Sąlyginiai sakiniai su kortomis
               name: Sąlyginiai sakiniai su kortomis
             'Unplugged: Binary':
-              key: 'Be kompiuterio: dvejetainiai skaičiai'
               name: Dvejetainiai vaizdai
-            Artist Binary:
-              key: 'Meninkas: dvejetainis'
           lesson_groups:
             csf_events:
               display_name: Įvykiai
@@ -2768,8 +2754,6 @@ lt:
               display_name: Virtuali pilietybė
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Sąlyginiai sakiniai
             'Functions: Songwriting':
               name: Dainų rašymas
           lesson_groups:
@@ -2784,7 +2768,6 @@ lt:
         coursef-2021:
           lessons:
             Internet:
-              key: Internetas
               name: Internetas
           lesson_groups:
             csf_digcit:
@@ -2866,22 +2849,16 @@ lt:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Kartojimas
               name: Kartojimas
             Events:
-              key: Įvykiai
               name: Įvykiai
             Conditionals:
-              key: Sąlyginiai sakiniai
               name: Sąlyginiai sakiniai
             Functions:
-              key: Komandų kūrimas
               name: Komandų kūrimas
             Variables:
-              key: Kintamieji
               name: Kintamieji
             For Loops:
-              key: Kartojimas
               name: Kartojimas
           lesson_groups:
             k5_getting_started_1:
@@ -2903,7 +2880,6 @@ lt:
         kodea-pd-2021:
           lessons:
             Next Steps:
-              key: Kiti žingsniai
               name: Kiti žingsniai
         csa1-exemplars:
           lesson_groups:
@@ -3067,7 +3043,6 @@ lt:
           lessons:
             Binary Numbers:
               name: Dvejetainiai skaičiai
-              key: Dvejetainiai skaičiai
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3086,7 +3061,6 @@ lt:
           lessons:
             Move It, Move It:
               name: Judėk, judėk
-              key: Judėk, judėk
             Getting Loopy:
               name: Kartojimo supratimas
             'Loops: Getting Loopy':
@@ -3104,7 +3078,6 @@ lt:
               name: Didelis įvykis
             Binary Bracelets:
               name: Dvejetainės apyrankės
-              key: Dvejetainės apyrankės
             'Events: The Big Event':
               name: Didelis įvykis
           lesson_groups:
@@ -3120,10 +3093,8 @@ lt:
               name: Programavimas ant languoto popieriaus
             Relay Programming:
               name: Programavimas komandoje
-              key: Programavimas komandoje
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
-              key: Sąlyginiai sakiniai su kortomis
             'Algorithms: Graph Paper Programming':
               name: Programavimas ant languoto popieriaus
           lesson_groups:
@@ -3141,8 +3112,6 @@ lt:
               name: Dainų rašymas
             'Functions: Songwriting':
               name: Dainų rašymas
-            Conditionals:
-              key: Sąlyginiai sakiniai
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -3157,7 +3126,6 @@ lt:
             The Internet:
               name: Internetas
             Internet:
-              key: Internetas
               name: Internetas
           lesson_groups:
             lessonGroup-7:
@@ -3222,7 +3190,6 @@ lt:
           lessons:
             The Internet:
               name: Internetas
-              key: Internetas
           lesson_groups:
             lessonGroup-7:
               display_name: Virtuali pilietybė
@@ -3251,40 +3218,41 @@ lt:
           lessons:
             Loops:
               name: Kartojimas
-              key: Kartojimas
             Events:
               name: Įvykiai
-              key: Įvykiai
             Conditionals:
               name: Sąlyginiai sakiniai
-              key: Sąlyginiai sakiniai
             Functions:
               name: Komandų kūrimas
-              key: Komandų kūrimas
             Variables:
               name: Kintamieji
-              key: Kintamieji
             For Loops:
               name: Kartojimas
-              key: Kartojimas
         csd3-2022:
           lessons:
             Variables:
               name: Kintamieji
-              key: Kintamieji
             Text:
               name: Tekstas
-              key: Tekstas
             Conditionals:
               name: Sąlyginiai sakiniai
-              key: Sąlyginiai sakiniai
             Velocity:
               name: Greitis
-              key: Greitis
             Functions:
               name: Komandų kūrimas
-              key: Komandų kūrimas
         csd6-2022:
           lessons:
             Functions:
               name: Komandų kūrimas
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Peržiūra
+            lesson-1:
+              name: Peržiūra
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Peržiūra
+            lesson-1:
+              name: Peržiūra

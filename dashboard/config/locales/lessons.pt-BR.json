@@ -27,7 +27,8 @@
           "name": "Código do Flappy bird",
           "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "preparation": "### Uma semana antes de sua Hora do Código\n\n— Revise o [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)Guia do Educador de Hora do Código e [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)Melhores Práticas de Educadores de Sucesso para começar a planejar seu evento Hora do Código. \n— [Register your Hour of Code event](http://hourofcode.com)Registre seu evento Hora do Código se você deseja receber algum produto promocional ou suporte para a sala de aula.\n— Revise e conclua o tutorial on-line sozinho: [Make a Flappy Game](https://studio.code.org/flappy/1)Crie um jogo do Flappy.\n— Verifique se ele foi testado antes de pedir aos estudantes que o concluam. Confira seus recursos tecnológicos e decida se é necessário solucionar algum problema antes de sua Hora do Código.\n\n### Um dia antes de sua Hora do Código\n\n— Escreva as palavras \"codificação\", \"programação\" e \"depuração\" no quadro ou adicione-as ao seu mural de palavras, se tiver um.\n— Cada estudante que concluir a atividade deverá receber um certificado. [Print one](http://code.org/certificates)Imprima um para todos com antecedência para facilitar no final de sua Hora do Código.",
-          "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração."
+          "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
+          "student_overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas."
         },
         "hourofcode/Maze": {
           "name": "Labirinto",
@@ -43,6 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Laboratório da Era do Gelo",
+          "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
           "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
         },
@@ -58,7 +60,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Laboratório do Gumball",
-          "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração."
+          "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
+          "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
+          "student_overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas."
         },
         "dance/Dance Party": {
           "name": "Festa dançante",
@@ -101,6 +105,7 @@
         },
         "playlab/Play Lab": {
           "name": "Laboratório",
+          "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
           "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
         },
@@ -131,6 +136,7 @@
         },
         "infinity/Infinity": {
           "name": "Laboratório Infinito Disney",
+          "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
           "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
         },

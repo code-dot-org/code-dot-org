@@ -116,7 +116,7 @@ Nếu bạn là người chủ trì một sự kiện ở lớp học, hãy sử
 
 Nếu bạn đang cân nhắc tổ chức Giờ lập trình tại nhà hoặc trong cộng đồng, chúng tôi khuyên bạn nên xem qua một số Hướng dẫn thực hiện chuyên sâu của chúng tôi dành cho [phụ huynh](https://hourofcode.com/us/how-to/parents) và [tổ chức hoặc doanh nghiệp](https://hourofcode.com/us/how-to/companies).
 
-### 1. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Xác định ngày, hình thức và địa điểm tổ chức sự kiện
 
@@ -158,7 +158,7 @@ Nếu sự kiện của bạn trên nền tảng trực tuyến, bạn sẽ mu�
 
 Chúng tôi cung cấp nhiều bài hướng dẫn thú vị, theo hình thức tự học cho mọi độ tuổi và trình độ. Sinh viên thường thử các bài tự hướng dẫn, mặc dù bạn có thể muốn bắt đầu sự kiện bằng một [video truyền cảm hứng](https://hourofcode.com/us/promote/resources#videos) cho mọi người cùng xem.
 
-<a href="https://hourofcode.com/us/learn">Hãy khám phá các hoạt động</a> và quyết định trước xem bạn có muốn chọn một bài hướng dẫn duy nhất cho tất cả khách mời của mình không, hoặc để từng trẻ tự chọn. **Tất cả các hoạt động trong Giờ lập trình** yêu cầu thời gian chuẩn bị tối thiểu và dưới dạng tự hướng dẫn – cho phép người tham gia thực hiện theo tốc độ và cấp độ kỹ năng của riêng họ.
+<a href="https://hourofcode.com/us/learn">Hãy khám phá các hoạt động</a> và quyết định trước xem bạn có muốn chọn một bài hướng dẫn duy nhất cho tất cả khách mời của mình không, hoặc để từng trẻ tự chọn. **Tất cả các hoạt động trong Giờ lập trình** yêu cầu thời gian chuẩn bị tối thiểu và dưới dạng tự học – cho phép người tham gia thực hiện theo tốc độ và cấp độ kỹ năng của riêng họ.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 

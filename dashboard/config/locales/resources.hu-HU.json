@@ -520,6 +520,9 @@
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
         },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "Rubrika"
+        },
         "implementation_guide/coursef/2021": {
           "name": "Bevezetési Útmutató"
         },
@@ -791,6 +794,9 @@
         "variables_video/express/2021": {
           "name": "változók"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "Rubrika"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Tanári fórum"
         },
@@ -820,6 +826,9 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Értékelés"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "Rubrika"
         },
         "implementation_guide/coursee/2021": {
           "name": "Bevezetési Útmutató"
@@ -864,14 +873,23 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Videó"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrika"
+        },
         "cleaning_survey_data/csd/2021": {
           "type": "Videó"
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "Videó"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrika"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Videó"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "Rubrika"
         },
         "design_mode/csd/2021": {
           "name": "Tervező mód"
@@ -885,6 +903,9 @@
         },
         "design_mode_1/csd/2021": {
           "name": "Tervező mód"
+        },
+        "app-presentation/csd/2021": {
+          "type": "Rubrika"
         },
         "teacher_forum/csd/2021": {
           "name": "Tanári fórum"
@@ -913,6 +934,9 @@
         "if_statements_1/csd/2021": {
           "name": "Ha nyilatkozatok"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrika"
+        },
         "introduction_to_arrays/csd/2021": {
           "type": "Videó"
         },
@@ -929,11 +953,17 @@
         "circuits-logic-video/csd/2021": {
           "type": "Videó"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrika"
+        },
         "representing-information-1/csd/2021": {
           "name": "Az információ ábrázolása"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Videó"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubrika"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Videó"
@@ -953,6 +983,9 @@
         },
         "video_training_data_and_bias/csd/2021": {
           "type": "Videó"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrika"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Síkidomok rajzolása"
@@ -987,6 +1020,9 @@
         "sprite_properties/csd/2021": {
           "name": "Sprite tulajdonságok"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrika"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Videó"
         },
@@ -995,6 +1031,9 @@
         },
         "animating-sprites/csd/2021": {
           "type": "Videó"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrika"
         },
         "boolean_expressions/csd/2021": {
           "name": "Logikai kifejezések",
@@ -1012,8 +1051,17 @@
         "if_else_statements/csd/2021": {
           "type": "Videó"
         },
+        "interactive_card/csd/2021": {
+          "type": "Rubrika"
+        },
         "velocity_1/csd/2021": {
           "type": "Videó"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "Rubrika"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Rubrika"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "funkciók",
@@ -1021,6 +1069,9 @@
         },
         "functions_1/csd/2021": {
           "name": "funkciók"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrika"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Tanári fórum"
@@ -1040,6 +1091,9 @@
         "what-do-computers-do/csd/2021": {
           "type": "Videó"
         },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "Rubrika"
+        },
         "html_tags/csd/2021": {
           "name": "HTML-címkék"
         },
@@ -1058,6 +1112,9 @@
         "video_debugging/csd/2021": {
           "type": "Videó"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrika"
+        },
         "formatting_html/csd/2021": {
           "name": "HTML formázás"
         },
@@ -1070,11 +1127,17 @@
         "intro_to_css_-_part_2/csd/2021": {
           "type": "Videó"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrika"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Videó"
         },
         "creative_commons_search/csd/2021": {
           "name": "Creative Commons keresés"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrika"
         },
         "publishing_your_website/csd/2021": {
           "name": "Webhelyének közzététele",
@@ -1088,6 +1151,9 @@
         },
         "how-search-works-video/csd/2021": {
           "type": "Videó"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrika"
         },
         "hyperlinks/csd/2021": {
           "name": "Hiperhivatkozások"

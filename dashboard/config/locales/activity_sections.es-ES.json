@@ -1473,7 +1473,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -9354,7 +9354,7 @@
         },
         "0406b536-ef27-4e66-aebd-6163d05bcc36": {
           "name": "Reflexión",
-          "description": "Hacer que los estudiantes escriban sobre lo que aprendieron, por qué es útil y cómo se sienten al respecto puede ayudar a solidificar cualquier conocimiento que hayan obtenido hoy y a crear una hoja de revisión para que la vean en el futuro.\n\n\\*\\*Indicaciones: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   ¿Cómo te sentiste durante la lección de hoy?\n-   ¿Qué tipo de errores encontraste hoy?\n-   Dibuja un error que hayas encontrado en uno de los rompecabezas hoy. ¿Qué hiciste para «depurar» el programa?"
+          "description": "Solicitar a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto, puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso para que puedan consultarla en el futuro.\n\n\\*\\*Preguntas: \\*\\*\n\n-   ¿De qué ha tratado la lección de hoy?\n-   ¿Cómo te has sentido durante la lección de hoy?\n-   ¿Qué tipo de errores has encontrado hoy?\n-   Dibuja un error que hayas encontrado en uno de los rompecabezas de hoy. ¿Qué has hecho para \"depurar\" el programa?"
         },
         "52871970-e896-42ac-905c-d5968ce5e009": {
           "description": "Utilice estas actividades para mejorar el aprendizaje de los/as estudiantes. Pueden ser utilizados como actividades fuera de la clase u otro enriquecimiento.\n\n**Plantar bugs**\n\nPida a los/as estudiantes que vuelvan a los niveles anteriores, añadiendo errores a sus soluciones. A continuación, pueden pedir a otros/as estudiantes que apliquen debug a su trabajo. Esto también se puede hacer con desafíos de papel.\n\nCuando otros/as estudiantes estén debugging, asegúrese de que las críticas sean constructivas. Si esto fuera un problema para su clase, repase acerca del debugging respetuoso antes de esta actividad jugando con otro/a estudiante."
@@ -9439,7 +9439,7 @@
           "name": "Introducción",
           "description": "Hoy los alumnos aprenderán a trabajar con sprites en Sprite Lab.\n\n\\*\\*Pantalla: \\*\\* Saca un rompecabezas anterior de Code.org, idealmente uno que contenga un «personaje principal» como _Scrat_ de _Ice Age_ o uno de los _Angry Birds._\n\n\\*\\*Discusión: \\*\\* Infórmales a los alumnos que el personaje de la pantalla es un sprite. Es un gráfico controlado por un programa. En esta lección, los estudiantes tendrán la oportunidad de elegir sus propios sprites para controlarlos.\n\nEsta demostración y discusión pueden ayudar a los alumnos a entrar en el entorno de Sprite Lab.\n\n#### [Sandbox para profesores de peces de natación](https://studio.code.org/levels/18623)\n\nCon un proyector, muestre el nivel del sandbox a sus alumnos. El objetivo es mostrarles algunas de las formas únicas en que funciona Sprite Lab. Modele la redacción de algunos programas y pida a los estudiantes que compartan sus observaciones.\n\n-   \\_ ¿Qué bloques necesitaríamos conectar para hacer girar la planta rodadora? \\_\n-   \\_ ¿Qué pasaría si le dijéramos al sprite que comience dos comportamientos a la vez? \\_\n-   \\_ ¿Alguna vez el sprite detendrá estos comportamientos por sí solo? \\_\n-   \\_Si queremos que el sprite detenga un comportamiento cuando hacemos clic en él, ¿cómo podríamos hacerlo? \\_\n\nAntes de entrar en la actividad principal, introduce o revisa el vocabulario de la lección de hoy.",
           "tips": [
-            "Sprite Lab funciona de forma diferente en algunos aspectos de las demás herramientas en línea del curso. Lo más importante es que todo el código se ejecuta en orden e inmediatamente a menos que se adjunte a un bloque de eventos. Decirle a un sprite que comience e inicie el mismo comportamiento no producirá ningún efecto observable porque no hay tiempo entre cada acción. "
+            "El Laboratorio de Sprite funciona de manera diferente a las otras herramientas en línea del curso. Lo más importante es que todo el código se ejecuta en orden y de forma inmediata, a menos que esté unido a un bloque de eventos. Decirle a un sprite que comience y empiece el mismo comportamiento no resultará en ningún efecto observable porque no hay tiempo entre cada acción. "
           ]
         },
         "34fa0257-d60c-41dd-b16e-fde95d6ca02c": {
@@ -13019,7 +13019,7 @@
           "progression_name": "Bucles \"for\" y LEDs de colores"
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
@@ -15298,23 +15298,49 @@
           ]
         },
         "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "description": "**Paso 5: Tu Aplicación**: Una vez que los alumnos hayan definido su problema, pídeles que hablen de una aplicación que podría utilizarse para resolver su problema. Para empezar, solo tendrán que proporcionar una descripción de alto nivel de la aplicación que describa cómo la usaría un usuario y qué hace.",
           "tips": [
-            null
+            "**¿Qué tipo de Aplicación?:** Se supone que este proyecto debe dar lugar a una aplicación sencilla, en línea con las vistas en la lección anterior. Incluso los grandes problemas o partes de los grandes problemas pueden resolverse recogiendo y procesando la información de forma adecuada."
           ]
         },
+        "fe619886-9d11-4f22-9a63-fd59c89246d3": {
+          "description": "**Paso 6: Entrada, Salida, Almacenamiento, Proceso**: En este paso los estudiantes diseñan la forma en que su aplicación funcionará realmente para procesar los datos. \n\nEn primer lugar, los alumnos dibujarán y luego describirán los resultados de sus aplicaciones. En el lado izquierdo pueden hacer un boceto de cómo sería su aplicación. No es necesario que se trate de un borrador final, sino que sólo sirve para ayudarles a aportar ideas y comunicar a otro grupo el aspecto de su aplicación. En el lado derecho tienen espacio para etiquetar cada pieza individual de información en la pantalla.\n\nUtilizando las salidas que los alumnos seleccionaron como guía, los alumnos deben elegir las entradas que necesitarán para crearlas. Sólo se proporcionan 6 espacios, aunque los alumnos pueden optar por elegir más. Esto es en cierto modo intencionado para ayudar a los estudiantes a delimitar la funcionalidad de su aplicación.\n\nLos estudiantes describirán la forma en que su aplicación procesa los datos utilizando como modelo la forma en que ellos mismos los procesarían. El objetivo aquí es principalmente asegurarse de que los estudiantes han seleccionado entradas que podrían ser procesadas para producir las salidas. Por ejemplo, si se trata de encontrar una lista de amigos que cumplen años este mes, tanto el ordenador como el ser humano necesitarían conocer la lista de cumpleaños de los amigos y el mes actual.\n\nPor último, se pide a los alumnos que decidan qué información, si es que hay alguna, tiene sentido almacenar a largo plazo.\n\n**Distribuir:** Aplicaciones y Resolución de Problemas - Revisión por Pares, una copia a cada pareja de estudiantes\n\n**Paso 7: Revisión por Pares**: Cada grupo debe intercambiar sus guías de proyecto con otro. Deben rellenar la primera línea de la revisión por pares, en la que se pregunta sobre qué parte específica de su proyecto les gustaría recibir comentarios. A continuación, hay una serie de preguntas dirigidas, así como la oportunidad de proporcionar una opinión más abierta sobre la idea.\n\nLos estudiantes deben recibir las guías de sus proyectos, así como los comentarios de sus compañeros. En el reverso, hay preguntas en las que pueden indicar qué cambios o mejoras pretenden introducir en sus proyectos basándose en los comentarios."
+        },
         "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "description": "**Paso 8: Finalizar la aplicación y hacer el póster**: Los estudiantes deben incorporar las ideas de sus compañeros para finalizar su idea de aplicación. A continuación, deben elaborar un póster para presentar su aplicación siguiendo las indicaciones de la guía de actividades.\n\nLos alumnos deben revisar la rúbrica de este proyecto para ver cómo se alinea su proyecto. También puede decidir distribuir la [r apps_and_problem_solving_-_student_checklist/csd/2021] para que los estudiantes puedan autoevaluar si su proyecto cumple con los requisitos de este proyecto.",
           "tips": [
-            null
+            "\\*\\*Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso _Ejemplos de Rúbricas Marcadas_ en la parte superior del plan de la lección (sólo visible para profesores verificados)"
           ]
+        },
+        "cabc123a-f4bd-41d6-87f7-f85807b42c97": {
+          "name": "Presentación de Aplicaciones",
+          "description": "**Compartir:** Decide si los alumnos compartirán sus pósters entre ellos y cómo lo harán. Si los estudiantes van a hacer presentaciones más formales, utiliza las directrices que se ofrecen en el paso 9 de la guía del proyecto para estructurar las presentaciones.\n\n**Recoger:** Al final de la presentación, recoge las guías del proyecto completadas, los formularios de opinión de los compañeros y los pósters de cada grupo."
         },
         "03ad2f47-6f62-4854-b398-3075d952d71e": {
           "name": "Reflexión",
+          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**\n\n**Reflexión:** Los alumnos reflexionan sobre la siguiente pregunta en sus diarios: \n\n-   ¿De qué estás más orgullo en tu proyecto?\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Reflexión"
+        },
+        "a37c4b7c-19a2-4517-b0f4-d4187aa8f1a2": {
+          "name": "Tanque de Tiburones",
+          "description": "Realiza un simulacro de \"Tanque de Tiburones\" como telón de fondo de este proyecto de unidad. Algunas cosas a tener en cuenta: \n\n-   ¿La mentalidad de tu clase es tal que esta competición puede mantenerse en un nivel saludable? \n-   Invita al profesorado / personal, a los residentes locales o a otros profesionales a escuchar las presentaciones de la fase 2 y a decidir cuál es la idea que ocupa el primer, segundo y tercer lugar. \n-   Invita a empresarios locales / otros profesionales a compartir durante el Día 1 o el Día 2 para que los estudiantes puedan ver cómo la informática se relaciona con los trabajos en su zona."
+        },
+        "371d5237-e425-45ed-9e45-0879ff7105b7": {
+          "description": "La prueba fin de proyecto se encuentra en la parte inferior de la página de resumen de la unidad de Resolución de Problemas y Computación en Code Studio.\n\nEsta prueba está bloqueada y oculta a la vista de los alumnos por defecto.  Para que los estudiantes puedan ver y realizar esta prueba, deberás desbloquearla haciendo clic en el botón \"Bloquear Configuración\" y siguiendo las instrucciones que aparecen. [Pulsa aquí para obtener más información sobre el desbloqueo y la admisión de evaluaciones](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
         },
         "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
           "description": "A lo largo del año, para que puedas ver el trabajo de los alumnos y para que éstos puedan acceder a las herramientas y recursos en línea, todos los alumnos deben estar en la misma sección en Code Studio. Para ver las evaluaciones y las claves de respuesta que Code.org proporciona, también es necesario ser un \"profesor verificado\"."
         },
+        "7bc95fda-8bc5-4e9c-8e1c-504e1fe504b8": {
+          "name": "Antes de la clase",
+          "description": "#### Asegúrate de estar registrado en Code Studio con una cuenta de profesor \"verificada\".\n\nCualquiera puede crear una cuenta de profesor en Code Studio, lo que significa que necesitamos una capa adicional de autorización para permitir a los profesores de Descubrimientos de Informática ver las evaluaciones, las claves de respuestas y cualquier otra garantía a la que los estudiantes no deberían poder acceder trivialmente. Si has asistido a una Code.org TeacherCon durante el verano, ya deberías tener este acceso.\n\nPara comprobar si tienes acceso:\n\n1.  Navega hasta la [página de resumen del curso de la Unidad 1](https://studio.code.org/s/csd1-2018)\n2.  ¿Ves la encuesta previa al curso Descubrimientos de Informática como la primera \"etapa\" del curso?\n3.  Si no es así, por favor, rellena [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Recuerda que la verificación de la cuenta de profesor puede tardar más o menos un día, ¡así que realiza este paso con antelación!\n\nSi no tienes una cuenta de profesor verificada, puedes crear una sección para tu clase, pero no podrás administrar la encuesta previa al curso el primer día.\n\n#### Crear una sección de clase en Code Studio.\n\nPara crear una sección:\n\n1.  Navega hasta la [Página de Inicio del Profesor](https://studio.code.org/home)\n2.  Pulsa 'Nueva sección' en la pestaña 'Secciones de la Clase'.\n3.  Elige 'Inicio de Sesión por Correo Electrónico' \n4.  En el espacio proporcionado, asigna un nombre a tu sección (por ejemplo, CSD Periodo 1), el grado de tus estudiantes, Curso: 'Descubrimientos de Informática', Unidad actual: 'Unidad 1: Resolución de Problemas', y haz clic en 'Guardar'\n5.  Una vez creada la sección, pulsa en el nombre de la sección\n6.  En la nueva página, verás una única URL de acceso que distribuirás a tus alumnos en clase. \n\nPara ver un vídeo con estos pasos y más información sobre cómo navegar por tu cuenta de Code.org, vete a la [Lista de Reproducción de Vídeos de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
+        },
+        "7211ed44-e31e-47ce-926a-6b39c4a36f52": {
+          "name": "Al comienzo de la clase",
+          "description": "1.  Pide a los estudiantes que creen una cuenta de Code Studio en <https://studio.code.org> si aún no la tienen\n2.  Comparte la URL de la sección con los estudiantes y diles que naveguen hasta ella para unirse a tu sección\n3.  Puedes confirmar que un estudiante se ha unido con éxito a tu sección teniendo abierta la página de progreso de la sección en la página de inicio del profesor y pulsando actualizar a medida que los estudiantes se unen. Los estudiantes deberían ver una pequeña barra verde en la parte superior de su página que dice 'Te has unido con éxito...' \n4.  Desde [studio.code.org](https://studio.code.org) haz que los estudiantes localicen el mosaico de Descubrimientos de Informática y hagan clic en 'Ver curso' y luego vayan a la Unidad 1.\n\nUna vez que los estudiantes estén viendo la página de la Unidad 1, estarán listos para realizar la encuesta previa al curso de CSD"
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "description": "#### ¡Importante! ¡Pide a tus alumnos que realicen la encuesta previa al curso de CSD!\n\nLos alumnos pueden encontrar un enlace a la encuesta en Code Studio como primer elemento de la página de resumen de la Unidad 1. Para asegurarse de que los estudiantes sólo realicen la encuesta en el momento adecuado, ésta está \"bloqueada\" y no pueden verla hasta que tú la \"desbloquees\". El documento [r how-to-administer-a-locked-assessment/csd/2021] proporciona detalles sobre cómo hacerlo cuando estés listo. Ten en cuenta que las instrucciones para administrar una evaluación y una encuesta son las mismas.    \n\n**¿Cuánto tiempo se tarda?** La encuesta requiere algo de tiempo: son aproximadamente 30 preguntas.  Puedes considerar realizarla en un día de administración en la escuela, o como una tarea temprana.\n\n**¿Cuándo debo hacer la encuesta?** Como se trata de una encuesta previa al curso, es importante que los alumnos la realicen lo antes posible, antes de que hayan tenido mucha (o ninguna) exposición a la clase, para que podamos medir con precisión los cambios de actitudes y creencias provocados por el curso.",
           "tips": [
             "-   Uno de los principales objetivos de Descubrimientos CS es ampliar la participación en la informática.  \n\n-   Por lo tanto, es _crucial_ tener una idea de las actitudes y creencias de los estudiantes sobre la informática _antes_ del curso para que podamos medir la cantidad de cambio que se produjo _después_ del curso.\n\n-   Ten en cuenta que esta encuesta es **anónima para los estudiantes**.\n\n-   Completarla también nos ayuda a entender las mejoras importantes que podemos hacer en el plan de estudios para mejorar la experiencia del profesor y del estudiante.\n\n**Por favor, ayuda a que tus alumnos contribuyan a este conjunto de datos vitales.  ¡Sus voces marcan la diferencia!**."
           ]
@@ -15339,34 +15365,54 @@
           "description": "**Muestra:** Muestra a los estudiantes la Pregunta del Día\n\n**Pregunta del Día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?** "
         },
         "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
+          "name": "Construyendo una Mesa de Periódicos",
           "description": "**Agrupar**: Poner a los alumnos en grupos de 2 o 3."
+        },
+        "fae1250c-e3ce-4abb-8d77-7ba1b4df7f05": {
+          "description": "Hoy vamos a construir mesas con papel de periódico y cinta adhesiva. Cada mesa debe sostener libros a una altura mínima de 30 cm del suelo.  Tendrás la oportunidad de construir al menos dos mesas y utilizar tu experiencia con cada una de ellas para mejorar tus diseños. Antes de empezar, decidir en grupo qué tipo de diseño os gustaría hacer con vuestra primera mesa. Anota tus ideas y los posibles puntos débiles de este diseño en tu guía de actividades."
         },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
           "description": "**Distribuir**: Un ejemplar de la guía de actividades a cada grupo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Obtención de Copias de Google Docs:** Las Guías de Actividades de este plan de estudios están disponibles como Google Docs, Word Docs y PDFs. Si quieres editar o hacer tu propia copia de un Google Doc puedes hacerlo sin solicitar acceso. Sólo tienes que acceder con una cuenta de Google, hacer clic en \"Archivo\" y \"Hacer una copia\" en el menú. A continuación, puedes compartir tu propia copia con los alumnos."
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
           "name": "Objetivo y Reglas",
           "description": "En grupo, lee las secciones Objetivo y Reglas de la guía de actividades y responde a las preguntas.",
           "tips": [
-            null
+            "Esta actividad puede necesitar algo de espacio. También puedes considerar la posibilidad de realizar esta actividad en el pasillo o en algún otro espacio si tu sala es muy limitada, o añadir reglas adicionales si es necesario."
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
           "name": "Desarrolla un Plan",
+          "description": "Concede a los alumnos un par de minutos para que comenten en grupos el enfoque que adoptarán con esta primera mesa. Una vez que los grupos hayan anotado sus ideas y algunos posibles puntos débiles, pueden acercarse a ti para coger el periódico, la cinta adhesiva y empezar a construir sus mesas.",
           "tips": [
-            null
+            "Guarda los materiales hasta que los alumnos presenten un plan para su mesa. El objetivo no es retrasarles demasiado, sino darles un momento para que reflexionen brevemente sobre los posibles enfoques que podrían adoptar. Esta es una de las formas en que esta actividad anticipa el paso de planificación del proceso de resolución de problemas que los alumnos verán en las lecciones siguientes."
           ]
         },
+        "9ed66e94-d0f7-41c7-bcc6-0ad4280881ab": {
+          "name": "Prueba tu mesa",
+          "description": "Una vez que los grupos estén listos, pídeles que prueben sus mesas colocando libros individuales en la parte superior. Recuérdales las reglas, concretamente que no pueden tocar o ajustar las mesas una vez que hayan empezado a añadir libros, y que los libros deben estar al menos a 30 cm del suelo. Pídeles que anoten el número total de libros que tienen en sus guías de actividades."
+        },
         "49050d16-5918-4c25-b43d-144649ad574c": {
-          "name": "Evaluación y Mejora"
+          "name": "Evaluación y Mejora",
+          "description": "Este primer intento de construir nuestras mesas ha sido sólo para familiarizarnos con el desafío. Vamos a construir una segunda mesa para ver si podemos mejorar el número de libros que aguantan nuestras mesas. Pero antes de empezar, veamos qué podemos aprender de este ensayo."
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "description": "**Compartir:** Pide a los alumnos que compartan los resultados de su primera prueba con los grupos vecinos. Pide a los grupos que se centren especialmente en cuál fue el fallo final de su mesa (por ejemplo, no era lo suficientemente ancha, era inestable, etc.) y que hagan una lluvia de ideas para solucionar esos problemas.",
           "tips": [
             "Aunque algunos alumnos verán esta parte como una competición, insiste en que cada grupo busca mejorar su propio diseño, no competir contra los demás. El objetivo es que cada alumno se desafíe a sí mismo en primer lugar, no a los demás."
           ]
+        },
+        "937e5140-1635-48fd-a02f-79fc0b208510": {
+          "description": "### Desarrolla un Plan"
+        },
+        "b5b18fcc-941a-43df-9a83-9967b566b043": {
+          "description": "Ahora que has tenido la oportunidad de aprender de la primera ronda de creación de mesas, vamos a realizar de nuevo la misma actividad. Primero, tu grupo desarrollará un nuevo plan. Al igual que antes, regístralo en tu guía de actividades, y una vez que estés listo me acercaré y te daré un nuevo periódico."
+        },
+        "0a0a6ac4-694b-4da2-95e5-5ad4662f0ca3": {
+          "description": "**Apoyo**: Mientras circulas de grupo en grupo, haz preguntas sobre el enfoque del grupo en el rediseño. Por ejemplo: \"¿Qué aspecto de vuestra mesa necesitaba mejorar más?\" \"¿Qué ideas de otros grupos habéis querido incorporar a la vuestra?\" \"¿Habéis sentido la necesidad de reestructurar completamente vuestra mesa, o de hacer pequeñas modificaciones?\" \n\nUna vez que los grupos hayan preparado sus nuevos planos, dales un nuevo periódico y haz que cada uno construya una nueva mesa.\n\n### Prueba tu mesa\n\nLos grupos pueden probar sus diseños igual que antes y anotar los resultados en sus guías de actividades."
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
           "name": "Reflexionar",
@@ -15391,7 +15437,16 @@
         "805b87e8-c377-489d-84e2-8be6316309b1": {
           "description": "A lo largo del año, para que puedas ver el trabajo de los alumnos y para que éstos puedan acceder a las herramientas y recursos en línea, todos los alumnos deben estar en la misma sección en Code Studio. Para ver las evaluaciones y las claves de respuesta que Code.org proporciona, también es necesario ser un \"profesor verificado\"."
         },
+        "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
+          "name": "Antes de la clase",
+          "description": "#### Asegúrate de estar registrado en Code Studio con una cuenta de docente \"verificada\".\n\nCualquiera puede crear una cuenta de profesor en Code Studio, lo que significa que necesitamos una capa adicional de autorización para permitir a los profesores de Descubrimientos de Informática ver las evaluaciones, las claves de respuestas y cualquier otra garantía a la que los estudiantes no deberían poder acceder trivialmente. Si has asistido a una Code.org TeacherCon durante el verano, ya deberías tener este acceso.\n\nPara comprobar si tiene acceso:\n\n1.  Navega hasta la [página de resumen del curso de la Unidad 1](https://studio.code.org/s/csd1-2018)\n2.  ¿Ves la encuesta previa al curso de Descubrimientos de Informática como la primera \"etapa\" del curso?\n3.  Si no es así, rellena [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Recuerda que la verificación de la cuenta de profesor puede tardar más o menos un día, ¡así que, por favor, realiza este paso con antelación!\n\nSi no tienes una cuenta de profesor verificada, puedes crear una sección para tu clase, pero no podrás administrar la encuesta previa al curso el primer día.\n\n#### Crear una sección de clase en Code Studio.\n\nPara crear una sección:\n\n1.  Navega hasta la [Página de Inicio del Profesor](https://studio.code.org/home)\n2.  Pulsa 'Nueva sección' en la pestaña 'Secciones de la Clase'\n3.  Elige 'Inicio de Sesión por Correo Electrónico' \n4.  En el espacio proporcionado, asigna a tu sección un nombre (por ejemplo, CSD Periodo 1), el grado de tus estudiantes, Curso: 'Descubrimientos de Informática', Unidad actual: 'Unidad 1: Resolución de Problemas', y haz clic en 'Guardar'\n5.  Una vez creada la sección, pulsa en el nombre de la sección\n6.  En la nueva página, verás una única URL de unión que distribuirás a tus estudiantes en la clase. \n\nPara ver un vídeo con estos pasos y más información sobre cómo navegar por tu cuenta de Code.org, dirígete a la [Lista de Reproducción de Vídeos de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
+        },
+        "9f212653-f99f-40a5-aee5-1ce6ad6b9d86": {
+          "name": "Al comienzo de la clase",
+          "description": "1.  Pide a los estudiantes que creen una cuenta de Code Studio en <https://studio.code.org> si aún no la tienen\n2.  Comparte la URL de la sección con los estudiantes y diles que naveguen hasta ella para unirse a tu sección\n3.  Puedes confirmar que un estudiante se ha unido con éxito a tu sección teniendo abierta la página de progreso de la sección en la página de inicio del profesor y pulsando actualizar a medida que los estudiantes se unen. Los estudiantes deberían ver una pequeña barra verde en la parte superior de su página que dice 'Te has unido con éxito...' \n4.  Desde [studio.code.org](https://studio.code.org) haz que los estudiantes localicen el mosaico de Descubrimientos de Informática y hagan clic en 'Ver curso' y luego vayan a la Unidad 1.\n\nUna vez que los estudiantes estén viendo la página de la Unidad 1, estarán listos para realizar la encuesta previa al curso de CSD"
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "description": "#### ¡Importante! ¡Pide a tus alumnos que realicen la encuesta previa al curso de CSD!\n\nLos alumnos pueden encontrar un enlace a la encuesta en Code Studio como primer elemento de la página de resumen de la Unidad 1. Para asegurarse de que los estudiantes sólo realicen la encuesta en el momento adecuado, ésta está \"bloqueada\" y no pueden verla hasta que tú la \"desbloquees\". El documento [r how-to-administer-a-locked-assessment/csd/2021] proporciona detalles sobre cómo hacerlo cuando estés listo. Ten en cuenta que las instrucciones para administrar una evaluación y una encuesta son las mismas.    \n\n**¿Cuánto tiempo se tarda?** La encuesta requiere algo de tiempo: son aproximadamente 30 preguntas.  Puedes considerar realizarla en un día de administración en la escuela, o como una tarea temprana.\n\n**¿Cuándo debo hacer la encuesta?** Como se trata de una encuesta previa al curso, es importante que los alumnos la realicen lo antes posible, antes de que hayan tenido mucha (o ninguna) exposición a la clase, para que podamos medir con precisión los cambios de actitudes y creencias provocados por el curso.",
           "tips": [
             "-   Uno de los principales objetivos de Descubrimientos CS es ampliar la participación en la informática.  \n\n-   Por lo tanto, es _crucial_ tener una idea de las actitudes y creencias de los estudiantes sobre la informática _antes_ del curso para que podamos medir la cantidad de cambio que se produjo _después_ del curso.\n\n-   Ten en cuenta que esta encuesta es **anónima para los estudiantes**.\n\n-   Completarla también nos ayuda a entender las mejoras importantes que podemos hacer en el plan de estudios para mejorar la experiencia del profesor y del estudiante.\n\n**Por favor, ayuda a que tus alumnos contribuyan a este conjunto de datos vitales.  ¡Sus voces marcan la diferencia!**."
           ]
@@ -15416,34 +15471,58 @@
           "description": "**Muestra:** Muestra a los estudiantes la Pregunta del Día\n\n**Pregunta del Día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?** "
         },
         "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "name": "Construyendo un Puente con Espaguetis",
           "description": "**Agrupar**: Poner a los alumnos en grupos de 2 o 3."
+        },
+        "7962df65-9338-4d88-aff7-3e531f947173": {
+          "description": "Hoy vamos a construir puentes con espaguetis. Cada puente tendrá que cruzar un hueco de 1 pie (o 30 cm) y sostener tantos libros como sea posible.  Tendrás la oportunidad de construir al menos dos puentes y utilizar tu experiencia con cada uno de ellos para mejorar tus diseños. Antes de empezar, decidir en grupo qué tipo de diseño os gustaría hacer con vuestro primer puente. Anota tus ideas y los posibles puntos débiles de este diseño en tu guía de actividades."
         },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
           "description": "**Distribuir**: Un ejemplar de la guía de actividades a cada grupo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Obtención de Copias de Google Docs:** Las Guías de Actividades de este plan de estudios están disponibles como Google Docs, Word Docs y PDFs. Si quieres editar o hacer tu propia copia de un Google Doc puedes hacerlo sin solicitar acceso. Sólo tienes que acceder con una cuenta de Google, hacer clic en \"Archivo\" y \"Hacer una copia\" en el menú. A continuación, puedes compartir tu propia copia con los alumnos."
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
           "name": "Objetivo y Reglas",
           "description": "En grupo, lee las secciones Objetivo y Reglas de la guía de actividades y responde a las preguntas.",
           "tips": [
-            null
+            "Esta actividad puede requerir algo de espacio y puede ser un poco desordenada. También puedes considerar la posibilidad de enseñar esta actividad en el pasillo o en algún otro espacio si tu clase es muy limitada, o añadir reglas adicionales si es necesario."
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
           "name": "Desarrolla un Plan",
+          "description": "Concede a los alumnos un par de minutos para que discutan en grupos el enfoque que adoptarán con este primer puente. Una vez que los grupos hayan anotado sus ideas y algunos posibles puntos débiles, ya pueden ir a buscar sus espaguetis y empezar a construir los puentes.  Reparte aproximadamente 250 gramos de espaguetis a cada grupo.",
           "tips": [
-            null
+            "Guarda los materiales hasta que los alumnos presenten un plan para su puente. El objetivo no es retrasarles demasiado, sino darles un momento para que reflexionen brevemente sobre los posibles enfoques que podrían adoptar. Esta es una de las formas en que esta actividad anticipa el paso de planificación del proceso de resolución de problemas que los alumnos verán en lecciones posteriores."
           ]
         },
+        "8ce3a7bc-8653-4f02-b3cd-21f88b8d2217": {
+          "name": "Prueba tu Puente",
+          "description": "Una vez que los grupos estén listos, pídeles que prueben sus puentes colocando libros individuales sobre el puente. Recuérdales las reglas, en concreto que no pueden tocar o ajustar los puentes una vez que hayan colocado un libro en ellos. Pídeles que anoten el número total de libros colocados en sus guías de actividad."
+        },
         "e4c5a863-1f7b-4d7e-994a-a4750df74d0f": {
-          "name": "Evaluación y Mejora"
+          "name": "Evaluación y Mejora",
+          "description": "Este primer intento de construir nuestro puente ha sido una gran oportunidad para aprender más sobre el problema. Vamos a construir un segundo puente para ver si podemos mejorar el número de libros que aguantan nuestros puentes. Pero antes de empezar, vamos a ver qué podemos aprender de este ensayo."
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "description": "**Compartir:** Pide a los alumnos que compartan los resultados de su primera prueba con los grupos vecinos. Pide a los grupos que se centren especialmente en cuál fue el fallo final de su puente (por ejemplo, no era lo suficientemente largo, era inestable, etc.) y que hagan una lluvia de ideas para solucionar esos problemas.",
           "tips": [
             "Aunque algunos alumnos verán esta parte como una competición, insiste en que cada grupo busca mejorar su propio diseño, no competir contra los demás. El objetivo es que cada alumno se desafíe a sí mismo en primer lugar, no a los demás."
           ]
+        },
+        "4102495d-f93b-4b89-ba0d-044a44901c70": {
+          "description": "**Si esta actividad se desarrolla en dos días, puedes optar por hacer una pausa aquí.**\n\n### Desarrolla un plan"
+        },
+        "5f6c0c4e-0216-4316-a1e7-82eaeb469b5e": {
+          "description": "Ahora que has tenido la oportunidad de aprender de la primera ronda de elaboración de puentes, vamos a realizar de nuevo la misma actividad. Primero, tu grupo desarrollará un nuevo plan. Al igual que antes, regístralo en tu guía de actividades, y una vez que estés listo me acercaré y te daré nuevos espaguetis."
+        },
+        "a4db4016-ed32-427d-8a58-6b5119dc0070": {
+          "description": "**Apoyo**: Mientras circulas de grupo en grupo, haz preguntas sobre el enfoque del grupo en el rediseño. Por ejemplo: \"¿Qué aspecto de vuestro puente necesitaba mejorar más?\" \"¿Qué ideas de otros grupos habéis querido incorporar al vuestro?\" \" ¿Habéis sentido la necesidad de reestructurar completamente vuestro puente, o de hacer pequeñas modificaciones?\" \n\nUna vez que los grupos hayan preparado sus nuevos planos, dales más espaguetis y haz que cada uno construya un nuevo puente."
+        },
+        "d1d70672-7b59-43f6-a03b-2b89b504e2fb": {
+          "name": "Prueba tu mesa",
+          "description": "Los grupos pueden probar sus diseños como antes y registrar los resultados en sus guías de actividad."
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
           "name": "Reflexionar",
@@ -15468,7 +15547,16 @@
         "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
           "description": "A lo largo del año, para que puedas ver el trabajo de los alumnos y para que éstos puedan acceder a las herramientas y recursos en línea, todos los alumnos deben estar en la misma sección en Code Studio. Para ver las evaluaciones y las claves de respuesta que Code.org proporciona, también es necesario ser un \"profesor verificado\"."
         },
+        "625b6145-fb18-49d5-ba66-2f69668f8178": {
+          "name": "Antes de la clase",
+          "description": "#### Asegúrate de estar registrado en Code Studio con una cuenta de profesor \"verificada\".\n\nCualquiera puede crear una cuenta de profesor en Code Studio, lo que significa que necesitamos una capa adicional de autorización para permitir a los profesores de Descubrimientos de Informática ver las evaluaciones, las claves de respuestas y cualquier otra garantía a la que los estudiantes no deberían poder acceder trivialmente. Si has asistido a una Code.org TeacherCon durante el verano, ya deberías tener este acceso.\n\nPara comprobar si tienes acceso:\n\n1.  Navega hasta la [página de resumen del curso de la Unidad 1](https://studio.code.org/s/csd1-2018)\n2.  ¿Ves la encuesta previa al curso Descubrimientos de Informática como la primera \"etapa\" del curso?\n3.  Si no es así, rellena [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Recuerda que puede tardar más o menos un día en convertirse en una cuenta de profesor verificada, ¡así que realiza este paso con antelación!\n\nSi no tienes una cuenta de profesor verificada, puedes crear una sección para tu clase, pero no podrás administrar la encuesta previa al curso el primer día.\n\n#### Crear una sección de clase en Code Studio.\n\nPara crear una sección:\n\n1.  Navega hasta la [Página de Inicio del Profesor](https://studio.code.org/home)\n2.  Pulsa 'Nueva sección' en la pestaña 'Secciones de la Clase'\n3.  Selecciona 'Inicio de Sesión por Correo Electrónico' \n4.  En el espacio proporcionado, asigna a tu sección un nombre (por ejemplo, CSD Periodo 1), el grado de tus estudiantes, Curso: 'Descubrimientos de la Informática', Unidad actual: 'Unidad 1: Resolución de Problemas', y haz clic en 'Guardar'\n5.  Una vez creada la sección, pulsa en el nombre de la sección\n6.  En la nueva página, verás una única URL de acceso que distribuirás a tus estudiantes en la clase. \n\nPara ver un vídeo con estos pasos y más información sobre cómo navegar por tu cuenta de Code.org, dirígete a la [Lista de Reproducción de Vídeos de Code.org](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)."
+        },
+        "ca8d4fdf-1c4a-445e-b8bc-9bf50538cdb4": {
+          "name": "Al comienzo de la clase",
+          "description": "1.  Pide a los estudiantes que creen una cuenta de Code Studio en <https://studio.code.org> si aún no la tienen\n2.  Comparte la URL de la sección con los estudiantes y diles que naveguen hasta ella para unirse a tu sección\n3.  Puedes confirmar que un estudiante se ha unido con éxito a tu sección teniendo abierta la página de progreso de la sección en la página de inicio del profesor y pulsando actualizar a medida que los estudiantes se unen. Los estudiantes deberían ver una pequeña barra verde en la parte superior de su página que dice 'Te has unido con éxito...' \n4.  Desde [studio.code.org](https://studio.code.org) haz que los estudiantes localicen el mosaico de Descubrimientos de Informática y hagan clic en 'Ver curso' y luego vayan a la Unidad 1.\n\nUna vez que los estudiantes estén viendo la página de la Unidad 1, estarán listos para realizar la encuesta previa al curso de CSD"
+        },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "description": "#### ¡Importante! ¡Pide a tus alumnos que realicen la encuesta previa al curso de CSD!\n\nLos alumnos pueden encontrar un enlace a la encuesta en Code Studio como primer elemento de la página de resumen de la Unidad 1. Para asegurarse de que los estudiantes sólo realicen la encuesta en el momento adecuado, ésta está \"bloqueada\" y no pueden verla hasta que tú la \"desbloquees\". El documento [r how-to-administer-a-locked-assessment/csd/2021] proporciona detalles sobre cómo hacerlo cuando estés listo. Ten en cuenta que las instrucciones para administrar una evaluación y una encuesta son las mismas.    \n\n**¿Cuánto tiempo se tarda?** La encuesta requiere algo de tiempo: son aproximadamente 30 preguntas.  Puedes considerar realizarla en un día de administración en la escuela, o como una tarea temprana.\n\n**¿Cuándo debo hacer la encuesta?** Como se trata de una encuesta previa al curso, es importante que los alumnos la realicen lo antes posible, antes de que hayan tenido mucha (o ninguna) exposición a la clase, para que podamos medir con precisión los cambios de actitudes y creencias provocados por el curso.",
           "tips": [
             "-   Uno de los principales objetivos de Descubrimientos CS es ampliar la participación en la informática.  \n\n-   Por lo tanto, es _crucial_ tener una idea de las actitudes y creencias de los estudiantes sobre la informática _antes_ del curso para que podamos medir la cantidad de cambio que se produjo _después_ del curso.\n\n-   Ten en cuenta que esta encuesta es **anónima para los estudiantes**.\n\n-   Completarla también nos ayuda a entender las mejoras importantes que podemos hacer en el plan de estudios para mejorar la experiencia del profesor y del estudiante.\n\n**Por favor, ayuda a que tus alumnos contribuyan a este conjunto de datos vitales.  ¡Sus voces marcan la diferencia!**."
           ]
@@ -15477,7 +15565,7 @@
           "name": "Preparación",
           "description": "**Pregunta:** ¿Qué hace que alguien sea un buen solucionador de problemas?  Prepárate para compartir tres ideas con tu grupo.",
           "tips": [
-            null
+            "**Diario:** El diario es una práctica clave en Descubrimientos de Informática.  Los estudiantes pueden llevar un diario en hojas sueltas, en cuadernos o digitalmente.  Para más información, consulta la Guía de CSD para escribir un diario.\n\n**Diapositivas:** Las diapositivas de esta unidad están disponibles en la sección \"Recursos del Profesor\" del plan de la lección.  Si quieres editar tu propia copia de un paquete de diapositivas, puedes hacerlo sin solicitar acceso. Sólo tienes que acceder con una cuenta de Google, hacer clic en \"Archivo\" y \"Hacer una copia\" en el menú."
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
@@ -15493,34 +15581,54 @@
           "description": "**Muestra:** Muestra a los estudiantes la Pregunta del Día\n\n**Pregunta del Día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?** "
         },
         "241975ce-013e-4f72-a787-8800069fd731": {
+          "name": "Construyendo una Torre de Papel",
           "description": "**Agrupar**: Poner a los alumnos en grupos de 2 o 3."
+        },
+        "65b2f259-5822-4187-8150-74f47cffc9e2": {
+          "description": "Hoy vamos a construir torres de papel. Tendrás la oportunidad de construir al menos dos torres y utilizar tu experiencia con cada una de ellas para mejorar tus diseños. Antes de empezar, decidiréis en grupo qué tipo de diseño os gustaría hacer con vuestra primera torre. Anota tus ideas y los posibles puntos débiles de este diseño en tu guía de actividad."
         },
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
           "description": "**Distribuir**: Un ejemplar de la guía de actividades a cada grupo.",
           "tips": [
-            null
+            "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\n\n**Obtención de Copias de Google Docs:** Las Guías de Actividades de este plan de estudios están disponibles como Google Docs, Word Docs y PDFs. Si quieres editar o hacer tu propia copia de un Google Doc puedes hacerlo sin solicitar acceso. Sólo tienes que acceder con una cuenta de Google, hacer clic en \"Archivo\" y \"Hacer una copia\" en el menú. A continuación, puedes compartir tu propia copia con los alumnos."
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
           "name": "Objetivo y Reglas",
           "description": "En grupo, lee las secciones Objetivo y Reglas de la guía de actividades y responde a las preguntas.",
           "tips": [
-            null
+            "Esta actividad necesita espacio. Lo ideal es que cada grupo tenga su propio espacio para realizar sus pruebas. También puedes considerar la posibilidad de enseñar esta actividad en el pasillo o en alguna otra zona amplia si tu clase es muy reducida."
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
           "name": "Desarrolla un Plan",
+          "description": "Concede a los alumnos un par de minutos para que comenten en grupos el enfoque que adoptarán con esta primera torre. Una vez que los grupos hayan anotado sus ideas y algunos posibles puntos débiles, pueden acercarse a ti para obtener su papel y comenzar a construir las torres.",
           "tips": [
-            null
+            "Guarda el papel hasta que los alumnos presenten un plan para su torre. El objetivo no es retrasarles demasiado, sino darles un momento para que reflexionen brevemente sobre los posibles enfoques que podrían adoptar. Esta es una de las formas en que esta actividad anticipa el paso de planificación del proceso de resolución de problemas que los alumnos verán en las lecciones siguientes."
           ]
         },
+        "a6ec15d7-7a48-466b-b9a2-b312a529e47b": {
+          "name": "Prueba tu mesa",
+          "description": "Una vez que los grupos estén preparados, pídeles que prueben sus torres registrando su altura y que comprueben si pueden mantenerse en pie por sí solas. Recuérdales las reglas, concretamente que no pueden tocar o ajustar las torres una vez que las suelten."
+        },
         "185b70c9-2353-4632-aec9-7372f25cb1a6": {
-          "name": "Evaluación y Mejora"
+          "name": "Evaluación y Mejora",
+          "description": "Este primer intento de construir nuestras torres ha sido sólo para familiarizarnos con el desafío. Vamos a construir una segunda torre y ver si podemos mejorar la altura de nuestra torre sin que se caiga. Pero antes de empezar, vamos a ver qué podemos aprender de este ensayo."
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "description": "**Compartir:** Pide a los estudiantes que compartan los resultados de su primera ejecución con los grupos vecinos. Pide a los grupos que se centren especialmente en cuál fue el fallo final de su torre (por ejemplo, es alta pero no se mantiene en pie, se mantiene en pie pero es muy corta, etc.) y que hagan una lluvia de ideas para solucionar esos problemas.",
           "tips": [
             "Aunque algunos alumnos verán esta parte como una competición, insiste en que cada grupo busca mejorar su propio diseño, no competir contra los demás. El objetivo es que cada alumno se desafíe a sí mismo en primer lugar, no a los demás."
           ]
+        },
+        "653eab77-81ff-43eb-9ae6-e35f41a327b1": {
+          "description": "### Desarrolla un Plan"
+        },
+        "4e3954fe-a5a3-435d-ab87-3d03fb0e6351": {
+          "description": "Ahora que has tenido la oportunidad de aprender de la primera ronda de construcción de torres, vamos a realizar de nuevo la misma actividad. Primero, tu grupo desarrollará un nuevo plan. Al igual que antes, regístralo en tu guía de actividad, y una vez que estés listo volveré a darte más papel."
+        },
+        "47624ed7-f42e-49bd-adeb-2e4218b7d205": {
+          "description": "**Apoyo**: Mientras circulas de grupo en grupo, haz preguntas sobre el enfoque del grupo en el rediseño. Por ejemplo: \"¿Qué aspecto de vuestra torre necesitaba mejorar más?\" \"¿Qué ideas de otros grupos habéis querido incorporar a la vuestra?\" \" ¿Habéis sentido la necesidad de reconstruir completamente vuestra torre, o de hacer pequeñas modificaciones?\" \n\nUna vez que los grupos hayan preparado sus nuevos planos, dales más hojas de papel y haz que cada uno construya una nueva torre.\n\n### Prueba tu Torre\n\nLos grupos pueden probar sus diseños igual que antes y anotar los resultados en sus guías de actividad."
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
           "name": "Reflexionar",
@@ -15557,24 +15665,40 @@
         "b9d78148-7cc9-4625-998e-f58589c75a3f": {
           "description": "**Pregunta del día: ¿Cómo podemos aplicar el proceso de resolución de problemas a muchos tipos diferentes de problemas?**"
         },
+        "96af8b5e-a825-4e00-9a61-9695bef83520": {
+          "description": "**Agrupar:** Para las tres actividades, los alumnos deben trabajar juntos en grupo, aunque registren sus resultados individualmente. Los grupos de 2 a 4 alumnos son los que mejor funcionan.\n\n**Distribuir:** Reparte la guía de actividad, una copia para cada alumno. Por ahora pueden estar boca abajo para que los tangrams no sean visibles."
+        },
         "7ce61da1-8486-4987-a971-d02802cf3223": {
           "name": "Resolviendo Problemas",
+          "description": "#### Tangrams",
           "tips": [
-            null
+            "**Integrando el Proceso de Resolución de Problemas:** Los tangrams pueden llevar realmente varios minutos, especialmente si los estudiantes se acercan sin algún tipo de estrategia. Recuérdales que un paso es prepararse antes de lanzarse a la caza.\n\n**Haz que sea una carrera:** Hacer de este problema una carrera es una buena manera de impulsar la motivación y también de asegurarse de que los grupos no compartan las soluciones una vez que las hayan encontrado.\n\n**Clave:** Una clave que muestra las posibles soluciones se puede encontrar en línea siguiendo el enlace proporcionado anteriormente."
           ]
+        },
+        "20605e84-9e6e-4eef-b9c2-f68fbe7cf880": {
+          "description": "Una vez que los alumnos estén en grupos, entrégales las hojas con las piezas de color canela. Pídeles que den la vuelta a sus guías de actividad y que comiencen el primer reto. Van a crear las imágenes utilizando sus piezas de color canela que pueden recortar.\n\n**Circular:** Pasea por la sala observando cómo los alumnos están abordando el problema. Asegúrate de que los grupos no están compartiendo las respuestas. Anímales a pensar en cómo la elaboración de un plan podría ayudarles a abordar esta tarea.\n\nCuando todos los grupos hayan terminado, vuelve a reunir a la clase. Pide a los alumnos que pasen a la última página de la guía de actividad, donde hay una tabla para anotar sus experiencias con el problema. Anotarán qué partes de la resolución de este problema corresponden a cada paso del proceso de resolución de problemas.\n\n**Debatir:** Comenta brevemente con los alumnos qué partes de la actividad consideraron que entraban dentro de cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos compartan.\n\n-   **Definir**: Este problema ya estaba muy bien definido. Sin embargo, no todos los problemas lo están.\n-   **Preparar**: Desarrollar un plan con un equipo (como dividir las imágenes o simplemente trabajar juntos en cada imagen) hace que este problema sea mucho más fácil de resolver que colocar las piezas en lugares al azar.\n-   **Intentar**: La paciencia y la persistencia son importantes para llevar a cabo el plan.\n-   **Reflexionar**: Si tus primeros planes no funcionan, puedes reagruparte y elegir un nuevo plan."
         },
         "be784b81-94c2-46a8-9f54-6eb72fa47020": {
+          "description": "#### Elige una Mascota",
           "tips": [
-            null
+            "**Integrando el Proceso de Resolución de Problemas:** Este problema es particularmente desafiante si no defines bien el problema. Si lo tomas al pie de la letra, tu trabajo consiste en adivinar y comprobar al azar dónde colocar cada una de las mascotas hasta encontrar una solución. Es mucho más fácil si primero haces una lista de las posibles mascotas de cada persona, y luego eliges primero las mascotas de las personas más exigentes.\n\nEste no es el único enfoque del problema, y no debes apresurarte a presentarlo como tal. Más bien, anima a los alumnos a que comenten entre ellos lo que conocen que debe ser cierto al final y si los diferentes enfoques podrían ayudar.\n\n**Ampliación del Problema:** Si un grupo termina mucho antes que los demás, puedes darles una hoja en blanco y pedirles que vuelvan a resolver el problema pero con una nueva condición que tú elijas (por ejemplo, elige a una persona en su solución y pregúntale si puede resolver el problema con un requisito añadido)."
           ]
         },
+        "84c7a582-b61f-4103-9b8e-f1cb375f8a86": {
+          "description": "Pasa la clase al problema de elegir una mascota. Los grupos pueden seguir trabajando juntos en sus soluciones, pero no deben compartirlas con otros grupos.\n\n**Circular:** Como antes, circula por la sala anotando los tipos de estrategias que los grupos están utilizando. Recuérdales que utilicen los pasos del proceso de resolución de problemas para ayudarles si se atascan.\n\nUna vez que los grupos hayan terminado de resolver el problema, pídeles que pasen a la última página de la guía de actividad para anotar cómo han utilizado el proceso de resolución de problemas para resolver este problema.\n\n**Debatir:** Comenta brevemente con los alumnos qué partes de la actividad consideraron que correspondían a cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos compartan.\n\n-   **Definir**: El problema parece ser un problema de elección de una mascota para cada persona según los requisitos. Si primero se descompone ese problema en la elección de una mascota de una lista de posibles mascotas, es mucho más fácil.\n-   **Preparar**: Pide a los alumnos que compartan qué tipo de estrategias consideraron antes de empezar a asignar los asientos a las personas.\n-   **Intentar**: Al igual que antes, la paciencia y la persistencia son importantes para llevar a cabo el plan.\n-   **Reflexionar**: Si las primeras estrategias no funcionan, los grupos pueden reagruparse y probar un enfoque más estructurado."
+        },
         "90e3e011-8930-435c-8840-88bcb72a94b1": {
+          "description": "#### Planificar un Evento de Adopción de Mascotas",
           "tips": [
-            null
+            "**Integración del Proceso de Resolución de Problemas:** Este problema es intencionadamente muy abierto y de hecho, hace que los estudiantes desarrollen los criterios que utilizarán para medir el éxito. Este problema es el que mejor resalta los 4 pasos del proceso y lleva a los estudiantes más intencionadamente a través de las etapas de Definir, Preparar, Probar y Reflexionar.\n\n**Dar Ideas de Recursos:** Los alumnos pueden limitarse a hacer una lluvia de ideas por sí mismos, pero también hay que darles a conocer otros recursos como motores de búsqueda y buscadores de imágenes para ayudarles a inspirarse si están atascados. Deja que miren otras páginas de eventos y folletos en línea para obtener ayuda.\n\n**Cuándo Parar:** Este problema puede durar fácilmente 50 minutos de clase. Informa a los alumnos con antelación de que hay límites de tiempo en lo que están haciendo y anímales a pensar cómo mejorarían su plan utilizando el proceso de resolución de problemas si tuvieran más tiempo para hacer repeticiones."
           ]
+        },
+        "57d8a9aa-841c-468d-abcd-d9a82353eac3": {
+          "description": "Pasa la clase al problema de Planificar un evento de adopción de mascotas. Cada miembro del grupo desarrollará individualmente un plan para una disposición que siga los criterios que desarrollarán como equipo.  Deja tiempo a los alumnos para que elijan los objetivos que utilizarán en su planificación. Por ejemplo, puede haber ciertas cosas que les gustaría mover, lugares a los que la gente tendrá que ir, personas que quieren que les ayuden, etc.\n\n**Circular:** Una vez que los grupos tengan los objetivos, avanzarán en la actividad desarrollando un plan para crear el evento de adopción. Dales un límite de tiempo en esta parte del proceso, por ejemplo, 15 minutos, para asegurarte de que se centran en los elementos clave de su plan en lugar de perfeccionarlo. Deberán anotar la información clave de su plan en sus guías de actividad.\n\nVuelve a reunir a los grupos y pídeles que compartan sus planes iniciales. En las guías de actividad pueden anotar los comentarios de sus compañeros sobre sus planes.\n\nUna vez que los grupos hayan comentado lo que les gusta o no les gusta de los planes propuestos por sus compañeros, pueden volver a examinarlos y mejorarlos. ¿Hay otras cosas que les gustaría hacer? ¿Tienen nuevos objetivos? Dales varios minutos para que mejoren sus planes antes de decidir la versión final.\n\nVuelve a reunir a la clase y pídeles que anoten los diferentes pasos del proceso de resolución de problemas que han utilizado en sus guías de actividad.\n\n**Debatir:** Comenta brevemente con los alumnos qué partes de la actividad consideraron que correspondían a cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos compartan.\n\n-   **Definir**: Este problema no estaba bien definido. Tenían que decidir por sí mismos cómo era un \"buen\" evento de adopción y esta definición podría haber cambiado a lo largo del proceso.\n-   **Preparar**: Restringir una lista de posibles diseños es útil. También puedes optar por señalar que toda esta actividad es un ejemplo de preparación. Algunas distribuciones no tienen sentido u otras funcionan mejor, por lo que necesitas hacer el tipo de planificación que están haciendo aquí.\n-   **Intentar**: Al igual que antes, la paciencia y la persistencia son importantes para llevar a cabo el plan\n-   **Reflexionar**: En este problema, la reflexión se produjo principalmente a través de los comentarios de los compañeros. Algunos diseños pueden no parecer tan prácticos a otros miembros del grupo. Algunos son divertidos pero requieren demasiados movimientos o demasiadas cosas nuevas. La opinión es una parte importante del paso de reflexión, especialmente en el trabajo en grupo."
         },
         "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
           "name": "Entendiendo el Proceso de Resolución de Problemas",
+          "description": "**Sugerencia:** Habéis resuelto una serie de problemas muy diferentes. Con vuestros grupos de mesa, revisar las notas que habéis tomado sobre cada uno de los problemas. Estáis preparados para informar sobre las siguientes preguntas:\n\n-   Para cada paso del proceso de resolución de problemas, ¿cuál es su propósito? ¿Por qué se incluye?\n-   ¿Hay algún tipo de problema que el proceso de resolución de problemas sea especialmente útil para solucionar?\n\n**Debatir:** Después de que las mesas hayan comentado sus respuestas durante varios minutos, invita a toda la clase a compartir sus razones para incluir cada paso en el proceso. Una vez que se haya debatido cada paso, pasa a la segunda pregunta. Esta pregunta puede tener muchas respuestas y debe permitir que los alumnos compartan sus ideas y experiencias. Si no surge de forma natural al acabar la conversación, ofrece algunas o todas las ideas mencionadas en los objetivos de la discusión.",
           "tips": [
             "**Objetivo:** Los alumnos han practicado el proceso de resolución de problemas en una serie de problemas diferentes. Ayúdales a sintetizar las notas que han ido tomando para comprender mejor el papel de cada paso y el valor del proceso de resolución de problemas en general. A continuación se presenta un ejemplo de conclusiones, pero deberías permitir que los alumnos compartan sus propias ideas antes de ofrecer las tuyas.\n\n**Definir:** sin definir un problema puedes resolver el problema equivocado, no saber por dónde empezar o no saber cuándo has terminado\n\n**Preparar:** Incluso los problemas bien definidos suelen tener muchos enfoques posibles. Haz que cada intento tenga más probabilidades de éxito examinando primero tus opciones y anticipando los retos\n\n**Intentar:** Si no lo intentas, nunca llegarás a ninguna parte. Es importante ser persistente y paciente mientras tu plan pueda funcionar.\n\n**Reflexionar:** Es probable que no resuelvas el problema a la primera o que haya una forma mejor de resolverlo. Aprende de tus intentos anteriores y prepárate para comenzar el proceso de nuevo.\n\n**El Proceso de Resolución de Problemas:** Aunque te des cuenta de que lo utilizas incluso para problemas pequeños y triviales, este proceso es increíblemente útil para problemas grandes, complejos, mal definidos o abiertos. Te ayuda a progresar cuando el camino a seguir no siempre está claro."
           ]
@@ -15588,7 +15712,7 @@
         "05109520-cc5d-4422-8447-09b5e315232c": {
           "description": "**Debatir:** Hacer que los grupos lo compartan rápidamente antes de asumir las sugerencias de la clase en su conjunto.",
           "tips": [
-            null
+            "Hay muchas estrategias diferentes para ayudar a definir los problemas, incluidas las preguntas de la guía de actividad de la lección anterior.  Algunas preguntas potencialmente útiles son:\n\n-   ¿A quiénes afecta el problema en particular? ¿Qué necesitan específicamente? ¿En qué tipo de situaciones?\n-   ¿Por qué existe el problema? (¿Y por qué existe ese problema?) Siga preguntando para llegar al núcleo del problema.\n-   ¿Cómo podría saber que el problema se ha resuelto? ¿Qué podría observar o medir?"
           ]
         },
         "33b1ee6f-b47b-4f4c-ac14-1d3d3098f82e": {
@@ -15609,21 +15733,36 @@
         "2194dc5a-79f0-4b48-9630-5dca26cb5b56": {
           "description": "**Pregunta del día: ¿Cómo podemos aplicar el proceso de resolución de problemas a muchos tipos diferentes de problemas?**"
         },
+        "eff02381-b2ea-4996-ab09-917babc4eac7": {
+          "description": "**Agrupar:** Para las tres actividades, los alumnos deben trabajar juntos en grupo, aunque registren sus resultados individualmente. Los grupos de 2 a 4 alumnos son los que mejor funcionan.\n\n\\*\\* Distribuir:\\*\\* Reparte la guía de la actividad, una copia para cada alumno. Por ahora pueden estar boca abajo para que el laberinto no sea visible."
+        },
         "9844b63f-04a1-4011-87f7-eec3c63a5496": {
           "name": "Resolviendo Problemas",
+          "description": "#### Laberinto",
           "tips": [
-            null
+            "**Integración del Proceso de Resolución de Problemas:** Esta sopa de letras puede llevar varios minutos, especialmente si los alumnos se acercan sin algún tipo de estrategia. Recuérdales que un paso es la preparación antes de lanzarse a la caza.\n\n**Haz que sea una carrera:** Convertir este problema en una carrera es una buena manera de impulsar la motivación y también de asegurar que los grupos no compartan las ubicaciones de las palabras una vez que las hayan encontrado.\n\n**Clave:** Una clave que muestra las posibles soluciones se puede encontrar en línea siguiendo el enlace proporcionado anteriormente."
           ]
+        },
+        "f4f2b18a-fa02-4674-9da2-e6b949e94ebc": {
+          "description": "Una vez que los alumnos estén en parejas, pídeles que den vuelta a sus guías de actividad y comiencen el primer desafío. Encontrarán la solución a un laberinto de varios pasos.\n\n**Circular:** Recorre la sala observando cómo los alumnos abordan el problema. Asegúrate de que los grupos no están compartiendo las soluciones. Anímales a pensar en cómo la elaboración de un plan podría ayudarles a abordar esta tarea.\n\nCuando todos los grupos hayan terminado, vuelve a reunir a la clase. Pide a los alumnos que pasen a la última página de la guía de actividad, donde hay una tabla para anotar sus experiencias con el problema. Anotarán qué partes de la resolución de este problema corresponden a cada paso del proceso de resolución de problemas.\n\n**Debatir:** Comentar brevemente con los alumnos qué partes de la actividad consideraron que entraban dentro de cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos los compartan.\n\n-   **Definir**: Este problema ya estaba muy bien definido. Sin embargo, no todos los problemas lo están.\n-   **Preparar**: Desarrollar un plan con un equipo (como dividir el laberinto, o simplemente ser metódico en la búsqueda de un camino) hace que este problema sea mucho más fácil de resolver que intentarlo al azar.\n-   **Intentar**: La paciencia y la persistencia son importantes para llevar a cabo tu plan.\n-   **Reflexionar**: Si tus primeros planes no funcionan, puedes reagruparte y elegir un nuevo plan."
         },
         "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
+          "description": "#### Carrera de Relevos por Parejas",
           "tips": [
-            null
+            "**Integrando el Proceso de Resolución de Problemas:** Este problema es particularmente desafiante si no defines bien el problema. Si lo tomas al pie de la letra, tu trabajo consiste en adivinar y comprobar al azar la asociación de los jugadores hasta encontrar una solución rápida. Es mucho más fácil si primero se te ocurren estrategias generales (enviar a los rápidos de vuelta, emparejar a los lentos).\n\nEste no es el único enfoque del problema, y no debes apresurarte a presentarlo como tal. Más bien, anima a los alumnos a debatir entre ellos lo que saben que debe ser cierto al final y si los diferentes enfoques podrían ayudar.\n\n**Dibujar Imágenes:** Es probable que los alumnos obtengan mejores resultados si prueban diferentes soluciones. Es posible que prefieras utilizar un diario o un papel de borrador para que los alumnos realicen una lluvia de ideas.\n\n**Ampliación del Problema:** Si un grupo termina mucho antes que los demás, puedes darles una hoja en blanco y pedirles que resuelvan el problema de nuevo pero con un tiempo más corto.  El tiempo mínimo para la solución es de 42 minutos, y si los alumnos ya han alcanzado ese tiempo, desafíalos a que expliquen cómo saben que su tiempo es el más rápido."
           ]
         },
+        "6f32d83e-49ad-486b-affb-8be6f7c7c9f4": {
+          "description": "Pasa la clase al problema de la carrera de relevos por parejas. Los grupos pueden seguir trabajando juntos en sus soluciones, pero no deben compartirlas con otros grupos.\n\n**Circular:** Como antes, circula por la sala anotando los tipos de estrategias que los grupos están utilizando. Recuérdales que utilicen los pasos del proceso de resolución de problemas para ayudarles si se atascan.\n\nUna vez que los grupos hayan terminado de resolver el problema, pídeles que pasen a la última página de la guía de actividad para anotar cómo han utilizado el proceso de resolución de problemas para resolver este problema.\n\n**Debatir:** Comenta brevemente con los alumnos qué partes de la actividad consideraron que correspondían a cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos compartan.\n\n-   **Definir**: El problema parece ser un problema de conseguir que un equipo se mueva rápidamente. Si, en cambio, se piensa que es un problema de hacer que la gente rápida haga más viajes o de emparejar a la gente lenta para que no frene a la gente rápida, el problema puede resolverse más rápidamente.\n-   **Preparar**: Pide a los alumnos que compartan qué tipo de estrategias consideraron antes de empezar a probar soluciones.\n-   **Intentar**: Al igual que antes, la paciencia y la persistencia son importantes para llevar a cabo el plan.\n-   \\*\\*Reflexionar: Si las primeras estrategias no funcionan, los grupos pueden reagruparse y probar un enfoque más estructurado."
+        },
         "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
+          "description": "#### Crear un Juego",
           "tips": [
-            null
+            "**Integración del Proceso de Resolución de Problemas:** Este problema es intencionadamente muy abierto y de hecho, hace que los estudiantes desarrollen los criterios que utilizarán para medir el éxito. Este problema es el que mejor resalta los 4 pasos del proceso y lleva a los estudiantes más intencionadamente a través de las etapas de Definir, Preparar, Probar y Reflexionar.\n\n**Dar Ideas de Recursos:** Los alumnos pueden limitarse a hacer una lluvia de ideas por sí mismos, pero también hay que darles a conocer otros recursos como motores de búsqueda y buscadores de imágenes para ayudarles a inspirarse si están atascados. Deja que busquen ayuda en otros juegos en línea.\n\n**Cuándo Parar:** Este problema puede durar fácilmente 50 minutos de clase. Informa a los alumnos con antelación de que hay límites de tiempo en lo que están haciendo y anímales a pensar cómo mejorarían su ruta utilizando el proceso de resolución de problemas si tuvieran más tiempo para repetir."
           ]
+        },
+        "fdb68438-a8b1-4310-aed5-72afcc6beaff": {
+          "description": "Pasa la clase al problema de Crear un Juego. Cada miembro del grupo desarrollará individualmente un plan para un trazado que siga los criterios que desarrollarán como equipo.  Da tiempo a los alumnos para que elijan los objetivos que utilizarán para planificar su juego. Por ejemplo, puede haber ciertas restricciones de espacio, número de estudiantes incluidos, etc.\n\nUna vez que los grupos tengan los objetivos, avanzarán en la actividad desarrollando un plan para hacer su juego. Dales un límite de tiempo en esta parte del proceso, por ejemplo, 15 minutos, para asegurarte de que se centran en los elementos clave de su plan en lugar de perfeccionarlo. Deberán anotar la información clave de su plan en sus guías de actividad.\n\nVuelve a reunir a los grupos y pídeles que compartan sus planes iniciales. En las guías de actividad pueden anotar los comentarios de sus compañeros sobre sus planes.\n\nUna vez que los grupos hayan comentado lo que les gusta o no les gusta de los planes propuestos por sus compañeros, pueden volver a examinarlos y mejorarlos. ¿Hay otras cosas que les gustaría hacer? ¿Tienen nuevos objetivos? Dales varios minutos para que mejoren sus planes antes de decidir la versión final.\n\nVuelve a reunir a la clase y pídeles que anoten los diferentes pasos del proceso de resolución de problemas que han utilizado en sus guías de actividad.\n\n**Debatir:** Comenta brevemente con los alumnos qué partes de la actividad consideraron que correspondían a cada paso del proceso de resolución de problemas. A continuación se exponen algunos puntos posibles después de que los alumnos compartan.\n\n-   **Definir**: Este problema no estaba bien definido. Tenían que decidir por sí mismos cómo era un \"buen\" juego y esta definición podría haber cambiado a lo largo del proceso.\n-   \\*\\*Preparar: Restringir una lista de posibles diseños es útil. También puedes optar por señalar que toda esta actividad es un ejemplo de preparación. Algunos juegos no tienen sentido y otros funcionan mejor, por lo que hay que hacer el tipo de planificación que están haciendo aquí.\n-   **Intentar**: Al igual que antes, la paciencia y la persistencia son importantes para llevar a cabo tu plan\n-   **Reflexionar**: En este problema la reflexión vino principalmente a través de la de los comentarios de los compañeros. Algunos juegos pueden no ser tan interesantes para otros miembros del grupo. Algunos son divertidos pero requieren demasiado trabajo o demasiados materiales. Los comentarios son una parte importante del paso de reflexión, especialmente en el trabajo en grupo."
         },
         "9ceef85f-40f8-4692-bcb4-1a689968a685": {
           "name": "Entendiendo el Proceso de Resolución de Problemas",
@@ -15647,73 +15786,125 @@
         "c5579cff-7b72-4ce8-8f6e-922a512e41f0": {
           "description": "Excelente trabajo de todos. Ahora entendemos mucho sobre el proceso de resolución de problemas. Esta va a ser una herramienta increíblemente útil que utilizaremos repetidamente a lo largo del año mientras profundizamos en la comprensión del mundo de la informática."
         },
+        "48127896-3722-4288-ba60-9b0bc14e3c1b": {
+          "description": "**Diario y Debate**"
+        },
         "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "description": "**Sugerencia:** Si pudieras decir algo importante a todo el mundo, ¿qué sería?  ¿Por qué es importante para ti?",
           "tips": [
-            null
+            "El objetivo del debate es ayudar a los alumnos a ver el desarrollo web como una forma de autoexpresión y comunicación, y establecer la expectativa de que tienen algo valioso que aportar.  Aunque algunos estudiantes quieran compartir algo tonto, anima a los alumnos a considerar que tienen algo valioso que decir y que otros pueden beneficiarse de ello.  Esta conversación debe establecer una atmósfera positiva que respete la diversidad de perspectivas que puede aportar el grupo."
           ]
         },
+        "c7ee926a-19b5-45b6-a0a7-3e9d6699e9ce": {
+          "description": "Permite a los alumnos compartir sus contribuciones con el grupo."
+        },
+        "5c1f9e0d-0ea4-4cd8-bbcf-693a8a546e80": {
+          "description": "Hay muchas formas de compartir con el mundo.  Hoy vamos a ver cómo la gente utiliza las páginas web para compartir lo que tiene que decir."
+        },
+        "692fa31e-7394-45e4-9df4-9136bd7f1ef7": {
+          "description": "**Pregunta del Día: ¿Por qué la gente crea páginas web?**"
+        },
+        "fef149c4-da5f-4737-806d-cee5311c12f2": {
+          "name": "Páginas Web Personales",
+          "description": "La mayoría de las páginas web que visitamos son creadas por grandes organizaciones que tienen mucha gente trabajando en ellas.  Pero cualquiera puede crear su propia página web personal y publicarla en Internet.  Hoy vamos a ver algunas páginas web personales.  Estas páginas fueron creadas por una sola persona que tenía algo que quería compartir con el mundo."
+        },
         "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "description": "**Agrupar:** Colocar a los alumnos en parejas.\n\n**Distribuir:** Repartir una copia de la guía de actividad a cada estudiante.\n\nDirige a los alumnos al nivel \"Ejemplos de Páginas Web\" en Code Studio.",
           "progression_name": "Ejemplos de Páginas Web Personales"
         },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "Exploración de sitios web",
+          "description": "Esta guía de actividad pide a los alumnos que consideren por qué la gente hace páginas web personales y qué tipo de intereses pueden publicarse en ellas.",
           "tips": [
-            null
+            "No es necesario que los alumnos lo hagan \"bien\" en cada sitio, pero deben demostrar que han reflexionado sobre las razones por las que alguien podría crear una página web. Si los alumnos tienen dificultades para identificar la finalidad que tiene un sitio web para su creador, prueba a plantear las siguientes preguntas:\n\n-   ¿Quiere el creador de la página web que el usuario haga algo?\n-   ¿Intenta la página web convencer al usuario de algo en particular?\n-   ¿Sirve el sitio web como una forma de expresión personal para el creador?\n\nLos sitios son intencionadamente sencillos, para ayudar a establecer las expectativas sobre los sitios web que los alumnos crearán a lo largo de la unidad."
           ]
+        },
+        "13a35f1c-deed-4a3d-9dd2-be2b7f6e5333": {
+          "description": "-   ¿Qué comparte esta persona con el mundo?\n-   ¿Por qué es importante para ellos?\n\nAnima a los alumnos a ser lo más concretos posible cuando hagan una lluvia de ideas sobre los propósitos de estos sitios."
+        },
+        "5f55a18c-a9cc-4cbb-96ea-55eb630fdf3f": {
+          "description": "**Compartir:** Una vez que todos han tenido la oportunidad de hacer una lluvia de ideas sobre sus sitios, puedes dar a los estudiantes la oportunidad de compartir sus ideas."
         },
         "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
+          "description": "**Debatir:** Permite que los alumnos hagan preguntas sobre estos sitios de ejemplo. Asegúrate de que entienden cómo un pequeño sitio que es principalmente una herramienta para la expresión individual puede ser también un sitio útil para otras personas.",
           "tips": [
-            null
+            "El objetivo de este debate es preparar a los alumnos para que piensen en sí mismos como posibles creadores de sitios web.  Cuando los alumnos analicen el tema, anímalos a imaginar por qué podrían crear un sitio similar a los de los ejemplos y cuáles podrían ser sus motivaciones.  Recuérdales que en esta unidad tendrán la oportunidad de crear un sitio web que se compartirá con todo el mundo."
           ]
+        },
+        "d621ad85-b16c-458c-8473-abe27aef3168": {
+          "name": "Objetivos del Desarrollo Web",
+          "description": "**Pregunta del Día: ¿Por qué la gente crea páginas web?**\n\n**Diario 3-2-1:**\n\n3 - ¿Cuáles son los tres temas sobre los que podrías estar interesado en crear una página web?\n\n2 - ¿Cuáles son las dos razones por las que crees que alguien podría visitar una página web creada por tí?\n\n1 - ¿Qué es lo que más te interesa aprender sobre la creación de páginas web?"
         },
         "248256b0-de8c-4fcf-8f60-58492ef07802": {
+          "name": "La Necesidad de HTML",
+          "description": "**Mostrar:** Visualizar la imagen dentro del [Ejemplo de Texto en Sitio Web](https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/)",
           "tips": [
-            null
+            "Si este sitio está bloqueado para los alumnos, es posible que tu departamento de TI tenga que poner en la lista blanca codeprojects.org.  Este es el mismo sitio que los estudiantes utilizarán para publicar sus propias páginas web, por lo que es importante que tengan acceso."
           ]
+        },
+        "bfa97d60-7eba-481f-b055-1d2ed1207fe9": {
+          "description": "**Sugerencia:** Imagina que quieres explicar a una persona por teléfono cómo dibujar esta página web. Escribe unas instrucciones claras para que lo que dibujen se ajuste perfectamente a esta imagen."
         },
         "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
+          "description": "**Debatir:** Una vez que los alumnos hayan escrito sus instrucciones, pídeles que las compartan brevemente con un compañero.",
           "tips": [
-            null
+            "**Objetivo:** Actividades como ésta se utilizan a menudo en los cursos de informática con el fin de resaltar la precisión necesaria para comunicar instrucciones a un ordenador. En este caso, el objetivo es similar. Se quiere destacar el reto de diferenciar el contenido real de la página y las instrucciones que indican cómo debe estructurarse. Esta demostración ayuda a justificar la creación de HTML con el fin de etiquetar piezas de contenido para ayudar al ordenador a entender lo que son y por lo tanto, cómo deben ser."
           ]
         },
+        "c9391ac2-6364-4957-ae92-c6bbd6b0cc11": {
+          "description": "**Demostración:** Realiza una demostración rápida utilizando las instrucciones que aparecen a continuación.\n\n-   Escoge a un estudiante para que comparta verbalmente una de sus instrucciones contigo.\n-   El profesor debe actuar como la persona que está al teléfono intentando dibujar la página web\n-   Dibuja públicamente la página web exactamente como dicen las instrucciones del alumno. Por ejemplo, si te dicen \"Escribe más grande\", escribe la palabra \"más grande\" en la página. Si no indican dónde va el texto, coloque el texto en lugares aleatorios.\n-   A medida que el alumno te vaya dando instrucciones, pídele que te diga si lo has dibujado correctamente. Si no lo has dibujado correctamente, pídele que especifique más sus instrucciones hasta que puedas dibujarlo correctamente.\n-   Cambia de alumno después de un par de instrucciones para que participen más alumnos.\n-   Lleva un registro de las instrucciones que te dan los alumnos y de las mejoras que hacen en las instrucciones en algún lugar visible también.\n-   Repite este proceso hasta que hayas recreado la mayor parte de la página web.\n\n**Debatir:** Una vez que hayas terminado de dibujar la página, elabora rápidamente una lista con todos los tipos de información que debían tener en cuenta en sus instrucciones. Por ejemplo, ubicación, tamaño, fuente, etc."
+        },
+        "8410909f-137b-47cf-bf22-7001ab81d9b2": {
+          "description": "Hay mucha información que debemos comunicar si queremos crear páginas web. No basta con saber qué contenido quieres poner en tu página, como las palabras o las imágenes. Tienes que saber dónde deben estar las cosas y cómo deben verse. Hoy vamos a empezar a aprender los lenguajes utilizados en la web para representar esta información adicional."
+        },
+        "d1123153-e61b-4554-accf-c057d9e6672b": {
+          "description": "**Pregunta del Día: ¿Cómo podemos decirle al ordenador _qué_ poner en la página web y _cómo_ organizarlo?**\n\n**Vocabulario Clave:**\n\n-   **Contenido del sitio web**: El texto y las imágenes de un sitio web.\n-   **Estructura del sitio web**: Cómo se organiza el contenido de un sitio web"
+        },
+        "7a3cc0d5-ec23-4a25-9428-268f620ddf17": {
+          "name": "Explorando HTML ",
+          "description": "Hoy vamos a empezar a trabajar con muchos recursos. A medida que vayamos descubriendo cada tipo de recurso, lo iremos añadiendo a la lista aquí, al frente del aula, y al final de la lección repasaremos cómo se utiliza cada uno."
+        },
         "3af02eab-916a-4774-8a13-5a420dd53fc5": {
+          "description": "**Exponer:** En la parte delantera del aula, escribe el título \"Recursos\" en la pizarra o en un papel de cartel en blanco, dejando espacio para enumerar los distintos recursos que aparecen en la lección.",
           "tips": [
-            null
+            "**Utilización de los recursos:** A continuación encontrarás recomendaciones para utilizar los numerosos recursos que se presentan a los alumnos en la lección. Espera a que los alumnos hayan visto todos estos recursos para repasarlos al final de la lección, pero añádelos a la lista y pon un ejemplo del uso correcto a medida que vayan apareciendo.\n\n-   **Vídeos:** Se ven en clase, pero los alumnos pueden volver a ellos.\n-   **Pestaña de Ayuda y Consejos** Esta pestaña contiene todos los vídeos y niveles de mapa relevantes para un nivel concreto.\n-   **Niveles del Mapa:** Contienen texto y diagramas que explican el contenido. Están pensados como recursos útiles para los alumnos, no como lecturas de clase. Son un buen lugar para repasar después de aprender el contenido o cuando los estudiantes se atascan en los niveles.\n-   **Instrucciones de Nivel:** Las instrucciones pueden introducir pequeños fragmentos de contenido nuevo. Cada nivel cuenta con una sección \"Haz esto\" que explica lo que los estudiantes deben hacer en ese nivel. Es importante que los alumnos lean estas instrucciones y no sólo la sección \"Haz esto\".\n-   \\*\\*Consejos Desplegables de Nivel: Los alumnos pueden hacer clic en estos consejos en las áreas de instrucción de las lecciones. Los estudiantes deben utilizar estos consejos como un primer lugar para buscar ayuda antes de hablar con sus compañeros o con un profesor.\n-   **Herramienta de Inspección:** Resalta el código correspondiente a un elemento de la página web cuando se pasa por encima en el área de vista previa.\n-   **Color de la Burbuja:** Las burbujas pueden volverse verdes pero no hay validación de corrección. El color verde sólo significa que el alumno ha hecho clic en Continuar o Terminar para un nivel. Se debe entender desde el principio que esto es más una herramienta para ellos que una indicación de integridad o corrección."
           ]
         },
         "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
           "tips": [
-            null
+            "Después de dar a los alumnos un tiempo para conocer la herramienta, pídeles que compartan cualquier cosa que hayan descubierto.  El vídeo del siguiente nivel les dará un breve repaso, así que no pasa nada si no se dan cuenta de todo."
           ],
           "progression_name": "Experimento con el Laboratorio Web"
         },
         "08e81098-b771-4c82-bb64-9108ece6c97c": {
+          "description": "**Pregunta a tener en cuenta con el vídeo:**\n\n-   ¿Cuáles son las diferentes partes del Laboratorio Web y para qué se utilizan?",
           "tips": [
-            null
+            "**Objetivos del Debate:**\nAunque no hay objetivos de aprendizaje amplios para este vídeo, los alumnos deben entender que las instrucciones de los niveles del Laboratorio Web aparecen en el panel ancho de la parte superior, y que los tres paneles inferiores, de izquierda a derecha, incluyen la lista de archivos en los que están trabajando, el área donde escriben su código y el área donde ven los resultados de su código. Por ahora, no necesitan preocuparse por cada botón, ya que se les explicará más adelante, pero deben entender que la herramienta de inspección les ayuda a enlazar partes de la página web con el código que las ha creado, y el botón de refrescar y guardar les permite actualizar su página web si no se actualiza automáticamente cuando cambian el código.\n\nAunque no forma parte del vídeo, el panel de instrucciones también suele incluir preguntas y respuestas desplegables que los alumnos pueden utilizar cuando están completando una actividad, y en algunos niveles las pestañas de la parte superior del panel de instrucciones llevarán a los alumnos a un área de \"Ayuda y Consejos\" que incluye información de referencia relevante para las actividades."
           ],
           "progression_name": "Video: introducción al Laboratorio web - Parte 1"
         },
         "693d5350-e425-4ae5-926e-85984858fb31": {
           "tips": [
-            null
+            "**Utilización de la Herramienta**\nA medida que los alumnos exploran el sitio, asegúrese de que entienden cómo utilizar la herramienta inspector, los consejos desplegables en la parte derecha del panel de instrucciones y la pestaña \"Ayuda y Consejos\", que les dará acceso al vídeo anterior.\n\n**Debate sobre HTML**\nDeberías reunir a los alumnos una vez que hayan pasado un par de minutos mirando este nivel. Los temas de debate que aparecen en el nivel deben utilizarse en una estructura estándar de Pensar-Pareja-Compartir.\n\n-   ¿Qué texto aparece tanto en el código como en la página web?\n-   ¿Cómo comunica este lenguaje información adicional sobre la forma de representar el texto?\n\nEl objetivo del debate es señalar las características del HTML que los alumnos están observando. Las dos principales conclusiones (reforzadas también en el vídeo posterior) son que HTML utiliza un sistema de etiquetas para rodear el contenido e indicar qué es y cómo debe mostrarse."
           ],
           "progression_name": "Explorar HTML"
         },
         "470c3268-f70d-43ac-831f-b37c3103531b": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Por qué son útiles las etiquetas HTML?\n-   ¿Qué hace la etiqueta de párrafo?",
           "tips": [
-            null
+            "**Objetivos del Debate**\n\n**Vocabulario Clave:**\n\n-   HTML - Lenguaje de Marcado de Hipertexto, un lenguaje utilizado para crear páginas web\n-   Elemento HTML - Parte de una página web, marcada por una etiqueta de inicio y a menudo cerrada con una etiqueta de fin\n-   Etiqueta HTML - Conjunto especial de caracteres que indica el comienzo y el final de un elemento HTML y el tipo de ese elemento\n\nCuando los alumnos hablen de las etiquetas HTML, asegúrate de que entienden que éstas se utilizan para estructurar, u organizar, el contenido en la pantalla. Hablar de la organización, la estructura o el papel del contenido en la página (título, párrafo, lista, etc.) es más preciso que hablar de aspectos concretos de su apariencia (como el tamaño o el espaciado).\n\nAunque ciertas funciones estructurales pueden asociarse a la apariencia (los títulos son más grandes), HTML no especifica nada en particular sobre la apariencia. Esto permite a los usuarios con diferentes necesidades, como los discapacitados visuales, interactuar con el contenido estructurado de la manera que tenga más sentido para ellos. Más adelante en la unidad, los alumnos aprenderán sobre estilos y CSS, que les permite especificar el tamaño, el color y el espaciado exactos de sus elementos HTML.\n\nLa etiqueta de párrafo separa el texto en párrafos. Puedes seguir esta cuestión preguntando a los alumnos cómo creen que un navegador web para ciegos podría tratar los párrafos. Por ejemplo, mientras que las personas videntes pueden utilizar el espaciado y las nuevas líneas para separar los párrafos, ¿qué debería hacer un lector de pantalla?"
           ],
           "progression_name": "Video: introducción al Laboratorio web - Parte 2"
         },
         "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
           "tips": [
-            null
+            "**Utilización de la Herramienta:**\nMientras los alumnos trabajan en este nivel, asegúrate de que vean que hay un nuevo mapa de nivel disponible para ellos en la pestaña \"Ayuda y Consejos\". Este es un buen lugar para buscar recursos extra que les ayuden a completar el nivel."
           ],
           "progression_name": "Practica"
         },
         "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
           "tips": [
-            null
+            "**Utilización de la Herramienta:** Este nivel contiene una nueva pestaña, \"Rúbrica\", que orienta sobre cómo se puede evaluar el trabajo de los alumnos y permite dejar comentarios. Esto hace que el nivel sea especialmente útil como evaluación. Los estudiantes pueden ver cómo se evalúa su trabajo haciendo clic en la pestaña \"Rúbrica\". Posteriormente, cualquier comentario del profesor aparecerá en la misma zona. [Pulsa Aquí](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) para saber más sobre cómo hacer comentarios a los alumnos\n\nPuedes utilizar este nivel como una evaluación formativa para los estudiantes. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Evaluación"
         },
@@ -15724,55 +15915,98 @@
           "progression_name": "Desafío"
         },
         "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Pregunta del Día: ¿Cómo podemos decirle al ordenador _qué_ poner en la página web y _cómo_ organizarlo?**."
         },
         "7d15a1cb-357e-419d-b469-608585606064": {
+          "description": "**Indicación del Diario:** En tus propias palabras, ¿cómo ayuda el HTML a resolver el problema de decirle a un ordenador qué aspecto tiene una página web, y no sólo qué contenido hay en ella?",
           "tips": [
-            null
+            "**Objetivo:** Las respuestas de los alumnos variarán, pero probablemente se centrarán en el hecho de que el uso de etiquetas ayuda al ordenador a saber qué \"son\" las diferentes piezas de contenido. El uso de estas etiquetas ayuda al ordenador a saber qué aspecto deben tener las etiquetas. Si es necesario retomar esta discusión después de que los alumnos hayan visto más etiquetas, también está bien. En cualquier caso, utiliza esta conversación para motivar el punto de conclusión del \"contenido\" frente a la \"estructura\".\n\nMientras los alumnos discuten sobre el HTML como solución, asegúrate de que utilizan el vocabulario clave de la lección: \n\n-   **contenido del sitio web** - el texto y las imágenes de un sitio web\n-   **estructura del sitio web** - cómo se organiza el contenido de un sitio web \n-   **HTML** - Lenguaje de Marcado de Hipertexto, un lenguaje utilizado para crear páginas web\n-   **Elemento HTML** - Parte de un sitio web, marcada por una etiqueta de inicio y a menudo cerrada con una etiqueta de fin.\n-   **Etiqueta HTML** - Conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de dicho elemento\n\nEl contenido son las palabras literales que se escriben en la página. Utilizando HTML, los alumnos están proporcionando una estructura a la página, explicando cómo deben interpretarse esas piezas de contenido. Más adelante en la unidad, los alumnos aprenderán CSS, un lenguaje que les permite dar estilo a los elementos de forma individual. Por ahora, sin embargo, los estilos que se aplican en base a sus etiquetas HTML son sólo los estilos por defecto de su navegador web. No es necesario que los alumnos entiendan completamente esta diferencia en este momento, ya que será mucho más clara una vez que aprendan CSS más adelante en la unidad."
           ]
+        },
+        "d9c6c38b-5e56-4632-bffd-b90416bc9e3a": {
+          "description": "**Debatir:** Después de que los alumnos hayan tenido tiempo para reflexionar individualmente en el diario, permíteles debatir con un compañero y luego compartir con la clase."
+        },
+        "a96a699b-d8d1-4a85-862b-64ea97193f5b": {
+          "description": "El lenguaje HTML utiliza etiquetas para ayudar al ordenador a saber lo que son las diferentes partes del contenido de la página web. De momento sólo hemos aprendido a decirle al ordenador que un texto es un párrafo, o que una parte de tu página web es el cuerpo. Ya hemos visto cómo esto afecta al aspecto y la estructura de nuestras páginas web. A medida que avancemos, aprenderemos más etiquetas y veremos más ejemplos de cómo este lenguaje nos ayuda a estructurar nuestras páginas web."
+        },
+        "39414af8-86bb-4ab7-8ee3-f1790aee342b": {
+          "description": "**Revisar:** Vuelve a la lista de recursos de la lección que escribiste en la pizarra y revisa como clase cómo se supone que deben ser utilizados. Consulta el consejo de enseñanza anterior para ver los usos recomendados."
         },
         "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
+          "name": "Póster de Etiquetas",
+          "description": "**Diario:** Pide a los alumnos que hagan un gráfico en T en una página en blanco de sus diarios y que rotulen en la parte superior \"Etiquetas HTML\"",
           "tips": [
-            null
+            "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Cuadro de Referencia / Póster:** A lo largo de esta unidad, los alumnos llevarán un registro de las etiquetas que aprendan. En este calentamiento se pide a los alumnos que registren las etiquetas HTML que aprenden escribiéndolas en sus diarios. Si lo deseas, también puedes llevar un registro de la misma información en un póster compartido en clase o en un gráfico de referencia que actualices después de cada lección. A lo largo de la unidad se les indicará cuándo deben actualizar sus diarios, y la actualización del gráfico de referencia puede servir de refuerzo para ese proceso.\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>"
           ]
         },
+        "552e474b-947e-42e6-843f-5773cd440a41": {
+          "description": "**Sugerencia:** Ayer aprendiste sobre HTML, el lenguaje de la World Wide Web. El HTML utiliza etiquetas para estructurar el contenido de las páginas web.  En vuestros grupos, pensar en todas las etiquetas que recordéis y lo que hacen.\n\nDeja unos minutos de reflexión a los alumnos para que piensen en todas las etiquetas que puedan."
+        },
+        "fde80161-cf61-46a3-8f1e-136bf92adafd": {
+          "description": "Ahora que has tenido tiempo para pensar en las tuyas, comparte tus listas con un compañero y comprueba si hay algo más que puedas añadir."
+        },
         "970d404e-3aef-4384-88d6-da840d2bd8ca": {
+          "description": "**Debatir:** Las parejas deben debatir entre sí y anotar sus ideas en sus diarios. A continuación, comparte con toda la clase y añade las diferentes etiquetas a un póster o a un gráfico de referencia, si decides hacer uno.  A medida que se repasan las etiquetas, destaca cómo el trabajo conjunto permitió a los alumnos hacer sus listas más completas.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este debate es repasar las etiquetas que los alumnos vieron en la lección anterior.\n\n-   `<!DOCTYPE html>` - Indica al ordenador que se trata de un documento escrito en HTML\n-   `<html>` - Indica el comienzo de tu código escrito en HTML\n-   `<head>` - Contiene información (a veces llamada \"metadatos\") sobre tu página web\n-   `<body>` - Contiene todo el contenido principal de tu página web\n-   `<p>` - Define un párrafo"
           ]
+        },
+        "3241d5aa-2d32-4c9b-a432-c5f5f24da2c6": {
+          "description": "Normalmente somos capaces de resolver mejor los problemas cuando trabajamos con otra persona.  Eso también es cierto en la programación de nuestros sitios web.  Hoy vamos a ver algunas formas de trabajar juntos para resolver diferentes problemas que puedan tener nuestros sitios web."
+        },
+        "e32cc803-2dfe-4291-adf2-c3067aa47c80": {
+          "description": "**Pregunta del Día: ¿Cómo podemos colaborar para solucionar los problemas de nuestros sitios web?**"
         },
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
           "name": "Programación de pares",
+          "description": "**Grupo:** Coloca a los alumnos en parejas.",
           "tips": [
             "**Programación por Parejas:** La programación por parejas se practica en la educación y en la industria.  Los alumnos que programan en parejas tienen más confianza en sus capacidades y es más probable que sigan estudiando informática. Esta práctica es más eficaz si se introduce pronto y el profesor hace cumplir las reglas para cambiar de pareja.  Puedes leer más sobre la programación en parejas en la guía del plan de estudios vinculada a la página del plan de estudios de Descubrimientos de Informática en <https://studio.code.org/courses/csd>."
           ]
         },
+        "ddb7f09c-b9f6-4a84-bb26-3abd9a9294ff": {
+          "description": "Hoy volveremos a trabajar en el Laboratorio Web, pero esta vez utilizaremos la **programación en parejas**.  La programación en parejas ayuda a la gente a hacer mejores programas trabajando juntos, pero hay algunas reglas que tenemos que seguir para asegurarnos de que funciona bien."
+        },
+        "4b49ed96-4d51-4f8a-a926-4475a76529fc": {
+          "description": "**Presentación:** Muestra el vídeo de Pair Programming."
+        },
         "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
+          "description": "**Revisión:** Asegúrate de que los alumnos entienden las reglas de la programación por parejas:",
           "tips": [
-            null
+            "Algunas clases pueden necesitar más apoyo para comunicarse y colaborar eficazmente.  Si lo consideras oportuno, pide a tus alumnos que hagan una lluvia de ideas con una lista de \"frases\" que puedan utilizar para comunicarse de forma respetuosa y eficaz antes de dividirse en parejas (\"¿Has pensado en...?\" \"¿Qué tal...?\" \"Creo que el problema podría ser...\").  A medida que los alumnos avanzan en la lección, recuérdales que su principal objetivo hoy es aprender a trabajar juntos en una página web, ¡lo cual es incluso más importante que la etiqueta de encabezamiento!"
           ]
         },
+        "52fd4953-d84b-4892-a256-4792347224e0": {
+          "description": "-   Sólo hay un ordenador.\n-   El conductor es el único que toca el teclado/ratón.\n-   El navegante debe buscar problemas en el código y seguir el plan de alto nivel.\n-   Tanto el conductor como el navegante deben comunicarse constantemente.\n-   El conductor y el navegante deben intercambiarse cuando el profesor lo indique, normalmente cada pocos minutos."
+        },
+        "52aeb427-5dad-444d-a251-86e1fb832f6d": {
+          "name": "Laboratorio Web: Cabeceras",
+          "description": "**Transición:** Haz que las parejas vayan a Code Studio y que ambos se registren utilizando la función \"Pair Programming\". \n\n**Sugerencia:** Recuerda a los estudiantes que deben intercambiar el conductor y el navegante cada tres minutos.  Puedes proyectar un temporizador digital en la parte delantera de la sala."
+        },
         "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Por qué crees que los programadores profesionales utilizan la programación por parejas?\n-   ¿Cómo crees que la programación en parejas te ayudará a programar mejor?",
           "tips": [
-            null
+            "**Objetivo:**\nLos objetivos de este debate se centran menos en las respuestas particulares a esta pregunta y más en la promoción de actitudes positivas hacia la programación en parejas. A medida que los alumnos discutan sus posibles beneficios, asegúrate de que entiendan que se trata de una práctica estándar en la industria, no sólo de algo que hacen los alumnos en el aula."
           ],
           "progression_name": "Vídeo: Programación en Pareja"
         },
         "27e7e382-bef2-4576-94b2-15f081c1c260": {
           "tips": [
-            null
+            "**Depuración**:\nLos alumnos pueden señalar que cuando el código está organizado y utiliza espacios en blanco, es mucho más fácil encontrar errores, pero cualquier consejo razonable sobre la depuración podría servir aquí.\n\nPermite a los alumnos que compartan sus consejos y sigue insistiendo en que la aparición de errores es una parte normal de la programación. Los alumnos conocerán un proceso de depuración formal más adelante en la lección."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
-            null
+            "[pull-right]\n\n![](<https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg>)\n\n[/pull-right]\n\n**Tipos de Niveles:** Esta pregunta de opción múltiple que pide a los estudiantes elegir cómo se van a mostrar las cabeceras HTML en una página web. Puedes ver qué estudiantes han respondido correctamente a la pregunta yendo a ese nivel y sacando el Panel del Profesor de la parte derecha. Los alumnos que hayan respondido correctamente a la pregunta tendrán una burbuja verde. Los estudiantes tienen tantas oportunidades como quieran para responder correctamente, por lo que adivinar y comprobar también puede conducir a una respuesta correcta. [Pulsa aquí para saber más sobre el uso del panel del profesor con los alumnos](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)."
           ],
           "progression_name": "Comprobación Rápida"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Qué es la depuración?\n-   ¿Cuáles son los cuatro pasos de la depuración?",
           "tips": [
-            null
+            "Los alumnos deben identificar la depuración como el proceso de encontrar y solucionar problemas en su código. Los cuatro pasos del proceso de depuración son: describir el fallo, buscar el fallo, probar pequeñas soluciones (o cambiar el código) y documentar lo que se ha aprendido.\n\nTambién puedes consultar la Guía de Depuración que se encuentra en la página del plan de estudios de Descubrimientos CS."
           ],
           "progression_name": "Vídeo: Depuración"
         },
@@ -15785,12 +16019,20 @@
         "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
           "progression_name": "Desafíos"
         },
+        "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
+          "description": "**Pregunta del Día: ¿Cómo podemos trabajar juntos para solucionar los problemas de nuestros sitios web?**\n\n**Sugerencia:** Pide a los estudiantes que actualicen su registro de \"Etiquetas HTML\" con las etiquetas de encabezamiento que aprendieron en esta lección.\n\n**Vocabulario Clave:**\n\n-   **cabecera** - título o resumen de un documento o sección de un documento"
+        },
         "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
+          "description": "**Sugerencia:** Hoy has aprendido mucho sobre la depuración, que es una habilidad importante para los programadores.  ¿De qué manera te ha ayudado hoy a depurar el trabajar con un compañero?",
           "tips": [
-            null
+            "Comprueba que los alumnos describen formas eficaces de colaboración."
           ]
         },
+        "ec9d873f-eb15-42ae-b9cd-a291ddaca6e2": {
+          "description": "**Sugerencia:** ¿Cuál es un valor personal que te gustaría compartir con el mundo?"
+        },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
+          "description": "Permite a los voluntarios exponer los valores personales que consideren importantes.",
           "tips": [
             null
           ]

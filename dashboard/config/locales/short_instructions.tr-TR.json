@@ -94,15 +94,15 @@
         "2-3 Bee Loops 7": "Ne kadar harikulade bir çiçek tarlası! Arının her bir çiçeğe gitmesini sağla. 7 bloktan daha az blokla gidebilir mi?",
         "2-3 Bee Loops 8": "Bu mor çiçekler her bulmacayı yeniden başlattığınızda farklı nektarlara sahip. \\\r\n\\\r\n Tüm nektarları toplamak için 'nektar süresince' (while nectar) döngüsünü kullan. \\\r\n\\\r\nBu döngü'' nektar>0'' şartını sağladığı sürece çalışacak.",
         "2-3 Bee Loops Assessment 1": "Değerlendirme - Bir sürece döngüsü kullanarak bu çiçekteki tüm nektarları toplayın.",
-        "2-3 Maze 1": "Yaramaz domuzu yakalamak için bana yardım edebilir misin? Birkaç 'ilerle' bloğunu 'çalıştığı zaman' bloğunun altına sıralayın ve 'çalıştır' a basın. ",
+        "2-3 Maze 1": "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)",
         "2-3 Maze 10": "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)",
         "2-3 Maze 12": "Bu beş bloğu sadece iki blokla yer değiştirebilir misin? (İpucu: \"kez tekrarla\" bloğunu kullanarak döngü oluştur.)",
         "2-3 Maze 13": "Sadece iki blok kullanarak beni domuzun yanına götür.",
         "2-3 Maze 15": "Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.",
         "2-3 Maze 16": "Döngüler içlerine birden fazla blok alabilir! Zombiyi ayçiçeğine götürmek için bu dizi kodun tamamını döngüleyebilir misin?",
         "2-3 Maze 16 before": "Beni domuza götür.",
-        "2-3 Maze 2": "Bu domuz beni çileden çıkartıyor. Onu yakalamama yardım et!",
-        "2-3 Maze 3": "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!",
+        "2-3 Maze 2": "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)",
+        "2-3 Maze 3": "Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!",
         "2-3 Maze 4": "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)",
         "2-3 Maze 6": "Sakin ol ve kötü domuzu bulmama yardım et. Yoksa sinirlenebilirim!",
         "2-3 Maze 7": "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)",
@@ -3734,7 +3734,16 @@
         "CourseD_EOC_dance": "Kendi dansını oluştur!",
         "CourseD_EOC_starwars": "Kendi Stars Wars oyununu oluştur!",
         "New Bounce Project": "Kendi zıplama oyununu oluştur. Tüm görünümü ve kuralları değiştirebilirsin. Bitirdiğinde, \"BİTİR\" düğmesine tıklayıp, arkadaşlarının oyununu telefonlarında denemelerine izin ver.",
-        "course2_artist_prog_challenge2": "_Bu yoldaki sarı çizgileri boyamama yardım et!_"
+        "course2_artist_prog_challenge2": "_Bu yoldaki sarı çizgileri boyamama yardım et!_",
+        "AllTheThings sprite lab with video": "Kuru otu herhangi bir türde balığa değiştirin!",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Sizi bu videoda oluşturulmuş 4x4'lük Maddie resmiyle başlattık. İlk görevin 4x4'lük ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 - mavi tonları. Sıra 4 - gri tonları.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "-   Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n-   Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin.",
+        "Artist Autorun Test": "Bu 3 kareyi çizmek için \"tekrarla\" bloğunu kullan.",
+        "MC Agent Freeplay": "**Serbest Oyun:**  Kendi başına keşfetme zamanı!",
+        "Overworld Chop Tree - allthethings": "Odun çok önemli bir kaynaktır. Birçok şey ondan yapılır. Ağaca doğru yürüyün ve \"bloğu yok et\" komutunu kullanarak ağacı kesin.",
+        "Test embedded K1 Blockly in instructions": "Bu bulmacayı çözmek için üç 'batıya doğru ilerle' bloğu ve bir 'mısırı topla' bloğu kullanın.",
+        "U1L13 Text Compression": "Yazı içindeki kalıplara bak (tekrarlı kelime veya ifade). Sözlükte gördüğün kalıpları gir. Sen sözlükteki bilgileri girdikçe semboller kalıpların yerine yerleşecektir.",
+        "allthethings-anigif-instructions": "Beni domuza götürmek için doğuya ilerle!"
       }
     }
   }

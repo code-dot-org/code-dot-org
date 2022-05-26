@@ -2040,8 +2040,6 @@ nn:
               name: Variablar i Spellab
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
-              description_student: Unngå lavaen! Her skal du lære om betingelser i
-                Minecraft-verdenen.
             Building a Foundation:
               name: Bygge eit fundament
             Nested Loops in Bee/Zombie:
@@ -2642,8 +2640,6 @@ nn:
               name: Istid Spel-lab
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
-              description_student: Unngå lavaen! Her skal du lære om betingelser i
-                Minecraft-verdenen.
             Envelope Variables:
               name: Konvolutt-variablar
             Variables in Play Lab:
@@ -4312,25 +4308,18 @@ nn:
         csd3-2021:
           lessons:
             Variables:
-              key: Variablar
               name: Variablar
             Sprites:
-              key: Sprites
               name: Sprites
             Sprite Properties:
-              key: Eigenskapar ved Sprite
               name: Eigenskapar ved Sprite
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Velocity:
-              key: Fart
               name: Fart
             Functions:
-              key: Funksjonar
               name: Funksjonar
           lesson_groups:
             csd3_1:
@@ -4360,7 +4349,6 @@ nn:
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funksjonar med parameter
               name: Funksjonar med parameter
           lesson_groups:
             csd6_1:
@@ -4372,7 +4360,6 @@ nn:
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Binære tal
               name: Binære tal
           lesson_groups:
             cspSurvey:
@@ -4388,7 +4375,6 @@ nn:
         csp3-2021:
           lessons:
             Debugging:
-              key: Feilsøking
               name: Feilsøking
         csp4-2021:
           lesson_groups:
@@ -4446,8 +4432,6 @@ nn:
           lessons:
             'Programming: Happy Maps':
               name: Glade Kart
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4460,15 +4444,11 @@ nn:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Flytt den, flytt den
               name: Flytt den, flytt den
             'Loops: Getting Loopy':
               name: Me blir sløyfete
             The Right App:
-              key: Den rette appen
               name: Den rette appen
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4481,12 +4461,9 @@ nn:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binær armbånd
               name: Binær armbånd
             'Events: The Big Event':
               name: Den store hendinga
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4504,19 +4481,14 @@ nn:
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
             Relay Programming:
-              key: Programmeringsstafett
               name: Programmeringsstafett
             Dance Party:
-              key: Dansefest
               name: Dansefest
             Conditionals with Cards:
-              key: Vilkår med kort
               name: Vilkår med kort
             'Unplugged: Binary':
-              key: 'Trådlaust: Binær'
               name: Binære bilete
             Artist Binary:
-              key: 'Kunstnar: binær'
               name: 'Kunstnar: Binærbilete'
           lesson_groups:
             csf_sequencing:
@@ -4535,15 +4507,9 @@ nn:
               display_name: Digitalt statsborgerskap
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Betingelser
-            Simon Says:
-              key: Simon seier
             Private and Personal Information:
-              key: Privat og personleg informasjon
               name: Privat og personleg informasjon
             Digital Sharing:
-              key: Digital deling
               name: Digital deling
             'Functions: Songwriting':
               name: Låtskriving
@@ -4563,13 +4529,10 @@ nn:
             din eigen kunst, historie eller spel.
           lessons:
             Envelope Variables:
-              key: Konvolutt-variablar
               name: Konvolutt-variablar
             Internet:
-              key: Internett
               name: Internett
             For Loop Fun:
-              key: Morro med for-løkker
               name: Morro med for-løkker
           lesson_groups:
             ramp_up:
@@ -4589,7 +4552,6 @@ nn:
         express-2021:
           lessons:
             Dance Party:
-              key: Dansefest
               name: Dansefest
             lesson-1:
               name: Dansefest
@@ -4613,10 +4575,8 @@ nn:
         pre-express-2021:
           lessons:
             On the Move with Events:
-              key: Hendingar i Spellab
               name: Hendingar i Spellab
             A Royal Battle with Events:
-              key: Hendingar i Spellab
               name: Hendingar i Spellab
           lesson_groups:
             csf_sequencing:
@@ -4690,25 +4650,18 @@ nn:
         k5-onlinepd-2021:
           lessons:
             Sequencing:
-              key: Sekvensiering
               name: Sekvensiering
             Loops:
-              key: Løkker
               name: Løkker
             Events:
-              key: Hendingar
               name: Hendingar
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funksjonar
               name: Funksjonar
             Variables:
-              key: Variablar
               name: Variablar
             For Loops:
-              key: For-løkker
               name: For-løkker
           lesson_groups:
             k5_getting_started_1:
@@ -4740,10 +4693,8 @@ nn:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Grunnleggande datavitskap
               name: Grunnleggande datavitskap
             Next Steps:
-              key: Neste steg
               name: Neste steg
         self-paced-pl-csd2-2021:
           lessons:
@@ -4917,8 +4868,6 @@ nn:
               name: Glade Kart
             'Programming: Happy Maps':
               name: Glade Kart
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4957,7 +4906,6 @@ nn:
           lessons:
             Binary Numbers:
               name: Binære tal
-              key: Binære tal
           lesson_groups:
             cspSurvey:
               display_name: Undersøking
@@ -4971,7 +4919,6 @@ nn:
           lessons:
             Debugging:
               name: Feilsøking
-              key: Feilsøking
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -4998,16 +4945,12 @@ nn:
           lessons:
             Move It, Move It:
               name: Flytt den, flytt den
-              key: Flytt den, flytt den
             Getting Loopy:
               name: Me blir sløyfete
             The Right App:
               name: Den rette appen
-              key: Den rette appen
             'Loops: Getting Loopy':
               name: Me blir sløyfete
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -5023,11 +4966,8 @@ nn:
               name: Den store hendinga
             Binary Bracelets:
               name: Binær armbånd
-              key: Binær armbånd
             'Events: The Big Event':
               name: Den store hendinga
-            Events in Play Lab:
-              key: Hendingar i Spel-lab
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -5069,13 +5009,10 @@ nn:
               name: Programmering på millimeterpapir
             Relay Programming:
               name: Programmeringsstafett
-              key: Programmeringsstafett
             Dance Party:
               name: Dansefest
-              key: Dansefest
             Conditionals with Cards:
               name: Vilkår med kort
-              key: Vilkår med kort
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
           lesson_groups:
@@ -5094,18 +5031,12 @@ nn:
           lessons:
             Private and Personal Information:
               name: Privat og personleg informasjon
-              key: Privat og personleg informasjon
             Digital Sharing:
               name: Digital deling
-              key: Digital deling
             Songwriting:
               name: Låtskriving
-            Simon Says:
-              key: Simon seier
             'Functions: Songwriting':
               name: Låtskriving
-            Conditionals:
-              key: Betingelser
           lesson_groups:
             csf_sprites:
               display_name: Sprites
@@ -5121,11 +5052,9 @@ nn:
           lessons:
             For Loop Fun:
               name: Morro med for-løkker
-              key: Morro med for-løkker
             The Internet:
               name: Internett
             Internet:
-              key: Internett
               name: Internett
           lesson_groups:
             ramp_up:
@@ -5148,10 +5077,8 @@ nn:
         pre-express-2022:
           lessons:
             On the Move with Events:
-              key: Hendingar i Spellab
               name: Hendingar i Spellab
             A Royal Battle with Events:
-              key: Hendingar i Spellab
               name: Hendingar i Spellab
           lesson_groups:
             csf_sequencing:
@@ -5211,7 +5138,6 @@ nn:
           lessons:
             The Internet:
               name: Internett
-              key: Internett
           lesson_groups:
             lessonGroup-7:
               display_name: Digitalt statsborgerskap
@@ -5246,25 +5172,18 @@ nn:
           lessons:
             Sequencing:
               name: Sekvensiering
-              key: Sekvensiering
             Loops:
               name: Løkker
-              key: Løkker
             Events:
               name: Hendingar
-              key: Hendingar
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Functions:
               name: Funksjonar
-              key: Funksjonar
             Variables:
               name: Variablar
-              key: Variablar
             For Loops:
               name: For-løkker
-              key: For-løkker
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5281,25 +5200,18 @@ nn:
           lessons:
             Variables:
               name: Variablar
-              key: Variablar
             Sprites:
               name: Sprites
-              key: Sprites
             Sprite Properties:
               name: Eigenskapar ved Sprite
-              key: Eigenskapar ved Sprite
             Text:
               name: Tekst
-              key: Tekst
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Velocity:
               name: Fart
-              key: Fart
             Functions:
               name: Funksjonar
-              key: Funksjonar
           lesson_groups:
             csd3_1:
               display_name: 'Kapittel 1: Bilder og animasjonar'
@@ -5340,3 +5252,15 @@ nn:
           lessons:
             Post-Course Survey:
               name: Undersøking etter kurs
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Oversyn
+            lesson-1:
+              name: Oversyn
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Oversyn
+            lesson-1:
+              name: Oversyn

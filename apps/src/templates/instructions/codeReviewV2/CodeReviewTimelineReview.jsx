@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
@@ -7,7 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
@@ -16,22 +17,19 @@ const CodeReviewTimelineReview = ({
   review,
   isLastElementInTimeline,
   addCodeReviewComment,
-  closeReview
+  closeReview,
+  toggleResolveComment,
+  viewAsCodeReviewer
 }) => {
   const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   const handleCloseCodeReview = () => {
-    closeReview(onCloseReviewSuccess, onCloseReviewFailure);
-  };
-
-  const onCloseReviewSuccess = () => {
-    setDisplayCloseError(false);
-  };
-
-  const onCloseReviewFailure = () => {
-    setDisplayCloseError(true);
+    closeReview(
+      () => setDisplayCloseError(false), // on success
+      () => setDisplayCloseError(true) // on failure
+    );
   };
 
   return (
@@ -65,6 +63,13 @@ const CodeReviewTimelineReview = ({
             </div>
           )}
         </div>
+        {isOpen && !viewAsCodeReviewer && (
+          <div style={styles.codeWorkspaceDisabledMsg}>
+            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
+            &nbsp;
+            {javalabMsg.codeEditingDisabled()}
+          </div>
+        )}
         {comments &&
           comments.map(comment => {
             // When we create the V2 comment, no longer convert, use the new comment shape
@@ -72,44 +77,45 @@ const CodeReviewTimelineReview = ({
               id: comment.id,
               name: comment.commenterName,
               commentText: comment.comment,
-              timestampString: comment.createdAt
+              timestampString: comment.createdAt,
+              isResolved: comment.isResolved
             };
             return (
               <Comment
                 comment={convertDataForComponent}
                 key={`code-review-comment-${comment.id}`}
-                onResolveStateToggle={() => {}}
+                onResolveStateToggle={toggleResolveComment}
                 onDelete={() => {}}
-                viewAsCodeReviewer={true}
+                viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
           })}
-        {isOpen && (
+        {isOpen && viewAsCodeReviewer && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)
             }
           />
         )}
-        {isOpen && (
-          <div style={styles.codeWorkspaceDisabledMsg}>
-            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
-            {javalabMsg.codeEditingDisabled()}
-          </div>
-        )}
       </div>
     </CodeReviewTimelineElement>
   );
 };
 
+export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
+
+export default connect(state => ({
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+}))(CodeReviewTimelineReview);
+
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
   review: reviewShape,
   addCodeReviewComment: PropTypes.func.isRequired,
-  closeReview: PropTypes.func.isRequired
+  closeReview: PropTypes.func.isRequired,
+  toggleResolveComment: PropTypes.func.isRequired,
+  viewAsCodeReviewer: PropTypes.bool
 };
-
-export default CodeReviewTimelineReview;
 
 const styles = {
   wrapper: {
