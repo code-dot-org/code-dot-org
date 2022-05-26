@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 
@@ -13,20 +12,18 @@ export default function MethodSummaryTable({methods, includeLink}) {
           <tr key={method.key}>
             <td style={styles.method}>
               <h3>
-                {method.name}
-                {includeLink && (
-                  <>
-                    {' '}
-                    <a
-                      onClick={() =>
-                        $(`#method-${method.key}`)[0].scrollIntoView()
-                      }
-                      aria-label="link to details"
-                      style={styles.detailLink}
-                    >
-                      <FontAwesome icon="external-link" style={styles.icon} />
-                    </a>
-                  </>
+                {includeLink ? (
+                  <a
+                    onClick={() =>
+                      $(`#method-${method.key}`)[0].scrollIntoView()
+                    }
+                    aria-label="link to details"
+                    style={styles.methodLink}
+                  >
+                    {method.name}
+                  </a>
+                ) : (
+                  method.name
                 )}
               </h3>
               {method.content && (
@@ -52,7 +49,7 @@ const styles = {
     borderColor: color.lighter_gray,
     padding: 5
   },
-  icon: {
-    fontSize: 14
+  methodLink: {
+    cursor: 'pointer'
   }
 };
