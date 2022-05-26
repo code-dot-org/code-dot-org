@@ -918,7 +918,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.code_review_requests
   # Table: dashboard.code_review_notes
   #
-  test "soft deletes comments for purged user" do
+  test "deletes comment text and soft deletes comments for purged user" do
     student = create :student
     review = create :code_review, user_id: student.id
     student_2 = create :student
