@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
-#
+
 require_relative '../deployment.rb'
 require 'os'
-require 'cdo/chat_client'
 require 'open3'
 
 # Terminates a build being executed by aws/ci_build (our polling-based continuous deployment system) by killing
@@ -11,11 +10,21 @@ require 'open3'
 # While each build task is typically capable of being executed again successfully after being terminated abruptly,
 # this script may leave some build components/tasks in an unstable state.
 
+# Execute a system command. Raise an error if the command does not complete successfully. Log the output
+# and also return the output to the caller.
+def execute_system_command(command)
+  CDO.log.info "Executing command: #{command}"
+  stdout, stderr, status = Open3.capture3(command)
+  raise stderr unless status == 0
+  CDO.log.info stdout
+  stdout
+end
+
 CDO.log.info 'Terminating currently executing build (aws/ci_build) including its child processes ...'
 
 raise "#{$0} does not work in development mode." if rack_env?(:development)
 raise "#{$0} only works in Linux operating systems." unless OS.linux?
-raise "{$0} must be run on a daemon server." unless CDO.daemon
+raise "#{$0} must be run on a daemon server." unless CDO.daemon
 
 # Use `ps` to find all processes where the executable was `sh` and output the Process ID, Process Group ID, and the
 # arguments the command was invoked with. Due to how the aws/ci_build script is invoked via cron, we can only identify
@@ -30,21 +39,21 @@ raise "{$0} must be run on a daemon server." unless CDO.daemon
 
 # Command issued by cron to execute the continuous deployment system.
 BUILD_COMMAND = "/bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/#{CDO.env}/Gemfile bundle exec /home/ubuntu/#{CDO.env}/bin/cronjob /home/ubuntu/#{CDO.env}/aws/ci_build dev+build@code.org".freeze
+# Flag file at the root of the project indicating that a build is currently executing.
+STARTED = 'build-started'.freeze
 
-find_build_process_command = "ps -C sh -o pid,pgid,args"
-find_stdout, find_stderr, find_status = Open3.capture3(find_build_process_command)
-raise find_stderr unless find_status == 0
-raise "First line of output from executing 'ps' is not the expected column headers 'PID  PGID COMMAND'" unless find_stdout.lines.first.include?('PID  PGID COMMAND')
+process_list = execute_system_command("ps -C sh -o pid,pgid,args")
 
-# Remove the column headers from the command output and find the line representing the parent build process.
-build_process_info = find_stdout.lines.drop(1).select {|line| line.include? BUILD_COMMAND}.first
+# Remove the first line of output (column headers) and find the line representing the parent build process.
+build_process_info = process_list.lines.drop(1).select {|line| line.include? BUILD_COMMAND}.first
 raise "The aws/ci_build process is not currently running" unless build_process_info
 process_id, process_group_id = build_process_info.delete_suffix(BUILD_COMMAND + "\n").split(' ')
 raise "Process ID of the parent build process - #(process_id} - should be the same as the Process Group ID - #{process_group_id}" unless process_id == process_group_id
 
-kill_command = "kill -9 -#{process_group_id}"
-kill_stdout, kill_stderr, kill_status = Open3.capture3(kill_command)
-raise kill_stderr unless kill_status == 0
+# The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
+execute_system_command("kill -9 -#{process_group_id}")
+CDO.log.info 'Done killing the current build and its child processes!'
 
-CDO.log.info kill_stdout
-CDO.log.info 'Done killing the current build and its child processes! If there are new commits on origin, a new build may start within 1 minute.'
+CDO.log.info 'Deleting the file build-started to prevent a new build from starting on the current commit.'
+FileUtils.rm STARTED if File.file?(STARTED)
+CDO.log.info 'If there are new commits on origin the next execution of aws/ci_build may pull those commits and start a new build.'
