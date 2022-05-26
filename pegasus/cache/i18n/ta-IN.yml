@@ -69,6 +69,7 @@ ta-IN:
   csedweek_map_legend_title: குறியீடு விளக்கம்
   csedweek_map_legend_event: ஒரு மணி நேர குறியீடு நிகழ்வு
   csedweek_map_legend_cs_tech_jam: சிறப்பு நிகழ்வு
+  cded_sign_up: பதிவு செய்யவும்
   cded_try_it: இதை முயற்சிக்கவும்
   try_now: இப்பொழுது முயற்சிக்கவும்
   california_heading: உங்கள் பள்ளி கூடத்தில் கணினி அறிவியலை கற்றுக்கொடுக்க கேட்டுக்கொள்ளவும்
@@ -159,11 +160,13 @@ ta-IN:
   homepage_slot_text_frozen: அண்ணா மற்றும் எல்சாவுடன் உறைந்திருக்கும்
   homepage_slot_text_course4: கோர்ஸ் 4
   homepage_slot_text_flappy: 'பிளாப்பி கோட் '
+  homepage_action_text_sign_up: பதிவு செய்யவும்
   homepage_action_text_try_it: இதை முயற்சிக்கவும்
   homepage_action_text_girlvideo: ஒரு பெண்ணை ஊக்குவிக்கவும்
   homepage_signpetition_dropdown_text: நான் ஒப்புக்கொள்கிறேன்
   homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_link_hoc: நிரல்தொடர் மணியை முயல்க
+  homepage_slot_text_link_thebadguys: தி பேட் கைஸ் உடன் குறியீடு
   homepage_below_hero_announcement_text: உங்கள் தனியுரிமையைப் பற்றி நாங்கள் அக்கறை
     கொண்டுள்ளோம், மே 25 முதல் எங்கள் தனியுரிமைக் கொள்கையில் சில புதுப்பிப்புகளைச்
     செய்கிறோம்.
@@ -265,6 +268,7 @@ ta-IN:
   dashboard_teacher: ஆசிரியர்
   dashboard_student: மாணவர்
   learn_more: இப்பொழுது முயற்சிக்கவும்
+  learn_sign_up_button: பதிவு செய்யவும்
   hoc2014_try_frozen: உறைந்ததிலிருந்து அண்ணா மற்றும் எல்சாவுடன் கலைஞர்
   carousel_heading_international: உங்கள் மொழியிலுள்ள பயிற்சிகள்
   frozen_name: அண்ணா மற்றும் எல்சாவுடன் குறியீடு
@@ -307,6 +311,7 @@ ta-IN:
   coursee-2020_name: பாடநெறி உ(2020)
   coursef-2020_name: பாடநெறி ஊ (2020)
   coursed-2021_name: பாடநெறி ஈ (2021)
+  coursed-2022_name: பாடநெறி ஈ (2021)
   pre-express-2018_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2018)
   pre-express-2019_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2019)
   pre-express-2020_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2020)
@@ -387,6 +392,12 @@ ta-IN:
   coursed-2021_gradelevel: தரம் 8+
   coursee-2021_gradelevel: வயது 8-12
   coursef-2021_gradelevel: வயது 9-13
+  coursea-2022_gradelevel: வயது 4-7
+  courseb-2022_gradelevel: வயது 5-8
+  coursec-2022_gradelevel: வயது 6-10
+  coursed-2022_gradelevel: தரம் 8+
+  coursee-2022_gradelevel: வயது 8-12
+  coursef-2022_gradelevel: வயது 9-13
   accelerated_gradelevel: வயது 9-18
   thinkersmithspanish_platformtext: அன்பிளக்டு
   thinkersmith_platformtext: அன்பிளக்டு
