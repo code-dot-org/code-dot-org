@@ -76,7 +76,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']}.join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -143,15 +143,19 @@ class ProgrammingExpression < ApplicationRecord
     record.id
   end
 
-  def documentation_path
+  def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
 
   def studio_documentation_path
+    programming_environment_programming_expression_path(programming_environment.name, key)
+  end
+
+  def documentation_path
     if DCDO.get('use-studio-code-docs', false)
-      documentation_path
+      studio_documentation_path
     else
-      programming_environment_programming_expression_path(programming_environment.name, key)
+      cb_documentation_path
     end
   end
 
@@ -206,7 +210,6 @@ class ProgrammingExpression < ApplicationRecord
       tips: tips,
       parameters: palette_params,
       examples: examples,
-      programmingEnvironmentName: programming_environment.name,
       video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }

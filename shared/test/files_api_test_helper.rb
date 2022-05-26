@@ -46,6 +46,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def get_codeproject_object(filename, body = '', headers = {})
+    get "/projects/weblab/#{@channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
   def put_object(filename, body = '', headers = {})
     put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
