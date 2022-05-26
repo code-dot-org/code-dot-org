@@ -5,15 +5,13 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "is_maker_unit": true,
       "is_migrated": true,
-      "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-25 17:26:34 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-05-26 01:49:43 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -541,6 +539,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +611,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +635,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +659,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +683,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +707,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +731,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +755,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
