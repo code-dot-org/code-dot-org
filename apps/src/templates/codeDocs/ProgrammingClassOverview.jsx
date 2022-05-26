@@ -14,7 +14,7 @@ export default function ProgrammingClassOverview({
   includeMethodSummary
 }) {
   return (
-    <div style={{width: '100%'}}>
+    <div style={{width: '100%'}} className="programming-class-overview">
       <h1>{programmingClass.name}</h1>
       {programmingClass.category && (
         <div>
@@ -89,7 +89,7 @@ export default function ProgrammingClassOverview({
           <h2>{i18n.methods()}</h2>
           <MethodSummaryTable
             methods={programmingClass.methods}
-            programmingClassLink={''}
+            includeLink={true}
           />
         </div>
       )}
