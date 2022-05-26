@@ -19,7 +19,7 @@ export default function MethodSummaryTable({
             <td style={styles.method}>
               <h3>
                 {method.name}
-                {programmingClassLink && (
+                {programmingClassLink !== undefined && (
                   <>
                     {' '}
                     <TextLink
