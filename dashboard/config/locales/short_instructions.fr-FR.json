@@ -91,15 +91,15 @@
         "2-3 Bee Loops 7": "Quel magnifique champ de fleurs ! Aide l'abeille à visiter chaque fleur. Peux-tu trouver une façon de le faire avec moins de 7 blocs ?",
         "2-3 Bee Loops 8": "Ces fleurs pourpres ont une quantité inconnue de nectar. Utilise une boucle «Tant que nectar» pour recueillir tout le nectar. Cette boucle s'exécutera tant que la condition est vraie, dans ce cas «Nectar > 0».",
         "2-3 Bee Loops Assessment 1": "Évaluation - utilise une boucle «Tant que» pour recueillir tout le nectar de cette fleur.",
-        "2-3 Maze 1": "Peux-tu m'aider à attraper le vilain cochon ? Assemble quelques blocs `avancer plus` sous le bloc de démarrage et clique sur « Démarrer ». ",
+        "2-3 Maze 1": "Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)",
         "2-3 Maze 10": "Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)",
         "2-3 Maze 12": "Peux-tu remplacer ces cinq blocs par deux blocs seulement ? (Indice : tu dois créer une boucle en utilisant un bloc «Répéter» pour réussir ce niveau.)",
         "2-3 Maze 13": "Amène-moi au cochon ! Tu ne peux utiliser qu’un seul bloc ˋavancer plus\\` cette fois-ci",
         "2-3 Maze 15": "Utilise deux boucles « Répéter » pour aller au cochon avec le plus petit nombre de blocs possible.",
         "2-3 Maze 16": "Amène-moi jusqu'au tournesol. Mets la séquence en boucle !",
         "2-3 Maze 16 before": "Amène-moi au cochon.",
-        "2-3 Maze 2": "Ce cochon m'agace. Aide moi à l'attraper !",
-        "2-3 Maze 3": "Suis le chemin et conduis-moi jusqu'au vilain cochon. Évite la TNT ou les plumes vont voler !",
+        "2-3 Maze 2": "Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)",
+        "2-3 Maze 3": "Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!",
         "2-3 Maze 4": "Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)",
         "2-3 Maze 6": "Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!",
         "2-3 Maze 7": "Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)",
@@ -3713,7 +3713,17 @@
         "CSD U5 black white images pixelation 5_2021": "Dessine ce que tu veux",
         "CSD games conditionals bowl_2021": "Modifier le code pour que toutes les commandes console.log affichent true",
         "CSD games conditionals practice spaceship_2021": "Modifier le code pour que toutes les commandes console.log affichent true",
-        "courseB_maze_seq12": "Maintenant attrape le cochon comme tu peux!"
+        "courseB_maze_seq12": "Maintenant attrape le cochon comme tu peux!",
+        "AllTheThings sprite lab with video": "Change le virevoltant en n'importe quel type de poisson !",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Nous commençons avec l'image 4x4 que Maddie a créée dans la vidéo. Votre tâche consiste à remplir une grille 4x4 avec des couleurs en utilisant 12 bits par pixel. Voici les exigences : Ligne 1 - remplir avec des nuances de rouge. Rangée 2 - nuances de vert. Rangée 3 - nuances de bleu. Rangée 4 - nuances de gris.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Nous commençons avec l'image 4x2 que Maddie créait, mais nous avons omis les deux derniers carrés. Terminez l'image en trouvant les deux couleurs manquantes et encodez-les.",
+        "Artist Autorun Test": "Utilise le bloc « Répéter » pour dessiner ces 3 carrés.",
+        "MC Agent Freeplay": "**Jeu libre :**  c'est le moment pour vous d'explorer !",
+        "Overworld Chop Tree - allthethings": "Le bois est une ressource très importante. Beaucoup de choses sont faites à partir du bois. Marche jusqu’à l'arbre et utilise la commande « Détruire bloc » pour l’abattre.",
+        "Test embedded K1 Blockly in instructions": "Utilise trois blocs `déplacer vers l'Ouest` et un bloc `ramasser le maïs` pour résoudre cette énigme.",
+        "U1L13 Text Compression": "Cherche des motifs (répétition de mots ou de phrases) dans le texte. Rentre les motifs que tu as trouvé dans le dictionnaire à droite. En même temps que tu rentres les motifs dans le dictionnaire, le symbole pour cette entrée remplace le motif dans le texte.",
+        "U2L10 NetSim Automatic DNS": "Dans cette version d'Internet Simulator, un système de noms de domaine (DNS) vous est fourni et connaît les adresses IP de tous les ordinateurs connectés. Envoyez un message sous la forme GET [hostname] au service DNS à l'adresse <yourRouterNumber>.15 pour obtenir l'adresse d'un élève.",
+        "allthethings-anigif-instructions": "Déplace-moi vers l'Est pour m’amener au cochon !"
       }
     }
   }

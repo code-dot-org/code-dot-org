@@ -661,6 +661,7 @@ mr-IN:
         - correct: true
         questions:
         - {}
+        title: 'अंदाज वर्तवा '
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -669,6 +670,7 @@ mr-IN:
         - correct: true
         questions:
         - {}
+        title: 'अंदाज वर्तवा '
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -677,6 +679,7 @@ mr-IN:
         - correct: true
         questions:
         - {}
+        title: 'अंदाज वर्तवा '
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -3999,6 +4002,7 @@ mr-IN:
         - correct: true
         questions:
         - {}
+        title: 'अंदाज वर्तवा '
       BigEvent-Unplugged:
         markdown: |-
           # द बिग इव्हेंट
@@ -4191,3 +4195,101 @@ mr-IN:
       csf_safety_in_my_online_neighborhood:
         markdown: "# माझा ऑनलाईन शेजार \n\n##तुम्ही सुरक्षितपणे एखाद्या ठिकाणी ऑनलाईन
           कसे जाऊ शकता?"
+      CSD U2 Image challenge_pilot_2021:
+        display_name: इमेज जोडत आहे
+      CSD U2 Image practice_pilot_2021:
+        display_name: इमेज जोडत आहे
+      CSD U3 drawing practice choice_2021:
+        display_name: सराव
+      CSD games cake challenge choice_2021:
+        display_name: चॅलेंजेस
+      CSD games platform challenge choice_2021:
+        display_name: चॅलेंजेस
+      CSD web draw loop practice choice_2021:
+        display_name: सराव
+      CSD web movement practice choice_2021:
+        display_name: सराव
+      CSD web text practice choice_2021:
+        display_name: सराव
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: निळा
+        - text: 'हिरवा
+
+'
+        - {}
+        - text: पिवळा
+        - correct: true
+        - text: लाल
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: येथे वर्णन आहे
+      allthethings_external_not_displayed_as_unplugged:
+        content1: येथे वर्णन आहे
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      ml-club app-choice parent:
+        display_name: तुमचा अॅप कस्टमाइझ करा
+      ml-intro app lab-book recommender 5-2021:
+        display_name: तुमचा अॅप कस्टमाइझ करा
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: वरीलपैकी एकही नाही

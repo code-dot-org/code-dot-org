@@ -105,15 +105,15 @@
         "2-3 Bee Loops 5": "Kształt tej ścieżki jest inny niż innych ścieżek. \n\nCzy potrafisz zebrać cały nektar, używając tak mało bloków, jak to tylko możliwe?",
         "2-3 Bee Loops 6": "Czy potrafisz znaleźć najszybszą drogę dla pszczółki, aby zebrać cały nektar i wyprodukować cały miód?",
         "2-3 Bee Loops 7": "Jaka piękna łąka z kwiatami! Pomóż pszczółce odwiedzić każdy z nich. Czy potrafisz to zrobić za pomocą mniej niż 7 bloków?",
-        "2-3 Maze 1": "Czy pomożesz mi złapać niesforną świnkę? Ustaw parę bloków 'idź naprzód' pod blokiem 'po uruchomieniu' i naciśnij 'Uruchom'. ",
+        "2-3 Maze 1": "Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)",
         "2-3 Maze 10": "Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)",
         "2-3 Maze 12": "Czy możesz dostać mnie do świnki tworząc pętlę, która używa tylko jednego bloku 'idź naprzód' wewnątrz bloku 'powtórz'?",
         "2-3 Maze 13": "Doprowadź mnie do świnki! Możesz teraz użyć tylko jednego bloku idź naprzód",
         "2-3 Maze 15": "W tej łamigłówce dwie pętle 'powtórz' pomogą ci dotrzeć do świnki za pomocą mniejszej liczby bloków!",
         "2-3 Maze 16": "Pętle działają  nawet z wieloma blokami w środku. Czy potrafisz umieścić ten ciąg bloków w pętli, aby doprowadzić zombie do słonecznika?",
         "2-3 Maze 16 before": "Czy potrafisz znaleźć najszybszy sposób na doprowadzenie mnie do świnki?",
-        "2-3 Maze 2": "Ta świnka jeży moje piórka. Pomóż mi, by ją dopaść!",
-        "2-3 Maze 3": "Wyznacz ścieżkę i zaprowadź mnie do tej głupiutkiej świnki. Unikaj TNT, bo inaczej piórka będą latały!",
+        "2-3 Maze 2": "Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)",
+        "2-3 Maze 3": "Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!",
         "2-3 Maze 4": "Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)",
         "2-3 Maze 6": "Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!",
         "2-3 Maze 7": "Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)",
@@ -3779,7 +3779,16 @@
         "CSD U5 black white images pixelation_2021": "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek",
         "CSDU6 arrays select rainbow_2021": "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)",
         "CSDU6 arrays select random_2021": "Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)",
-        "CSDU6 arrays select variable_2021": "Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)"
+        "CSDU6 arrays select variable_2021": "Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)",
+        "AllTheThings sprite lab with video": "Zmień biegacza w dowolny rodzaj ryby!",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Na początek dajemy Ci obraz wielkości 4x4, który Maddie stworzyła na wideo. Twoim zadaniem jest wypełnić siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 - wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami niebieskiego. Wiersz 4 - odcieniami szarości.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Maddie rozpoczęła tworzyć obrazek o wielkości 4x2, ale zostawiła ostatnie dwa kwadraty. Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.",
+        "Artist Autorun Test": "Teraz umieść funkcję w pętli, aby narysować te 3 kwadraty.",
+        "MC Agent Freeplay": "Zabaw się:  Czas na samodzielną eksplorację!",
+        "Overworld Chop Tree - allthethings": "Drewno to bardzo ważny materiał. Można z niego zbudować wiele rzeczy. Podejdź do drzewa i skorzystaj z polecenia \"zniszcz blok\", aby je ściąć.",
+        "Test embedded K1 Blockly in instructions": "Użyj trzech bloków \"przesuń na zachód\" i jednego loku \"zbierz kukurydzę\", aby rozwiązać tę łamigłówkę.",
+        "U1L13 Text Compression": "Poszukaj wzorców (powtarzające się słowa lub frazy) w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast wzorca.",
+        "allthethings-anigif-instructions": "Przenieś mnie na wschód (E - East), aby doprowadzić mnie do świnki!"
       }
     }
   }

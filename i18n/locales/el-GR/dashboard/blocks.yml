@@ -1019,6 +1019,20 @@ el:
         text: όταν {SPRITE} πατηθεί
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): περιστροφή δεξιά
+            new Behavior(spinning_left, []): περιστροφή αριστερά
+            new Behavior(fluttering, []): τριγύρισμα
+            new Behavior(jittering, []): τρεμούλιασμα
+            new Behavior(wobbling, []): ταλάντευση
+            new Behavior(wandering, []): περιπλάνηση
+            new Behavior(patrolling, []): περιφρούρηση
+            new Behavior(moving_west_and_looping, []): μετακίνηση δυτικά και δημιουργία βρόχου
+            new Behavior(moving_east_and_looping, []): μετακίνηση ανατολικά και δημιουργία βρόχου
+            new Behavior(moving_north_and_looping, []): μετακίνηση βόρεια και δημιουργία βρόχου
+            new Behavior(moving_south_and_looping, []): μετακίνηση νότια και δημιουργία βρόχου
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
       gamelab_costumeImage:
@@ -1746,15 +1760,27 @@ el:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': τριγύρισμα
             '"growing"': αυξάνεται
+            '"jittering"': τρεμούλιασμα
             '"shrinking"': συρρικνώνεται
+            '"spinning_left"': περιστροφή αριστερά
+            '"spinning_right"': περιστροφή δεξιά
             '"swimming_left_and_right"': κολύμβηση
+            '"wandering"': περιπλάνηση
+            '"wobbling"': ταλάντευση
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': τριγύρισμα
             '"growing"': αυξάνεται
+            '"jittering"': τρεμούλιασμα
             '"shrinking"': συρρικνώνεται
+            '"spinning_left"': περιστροφή αριστερά
+            '"spinning_right"': περιστροφή δεξιά
             '"swimming_left_and_right"': κολύμβηση
+            '"wandering"': περιπλάνηση
+            '"wobbling"': ταλάντευση
       Poetry_whenLineShows:
         options:
           'N':

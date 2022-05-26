@@ -552,7 +552,8 @@
         },
         "exploring_apps/coursef/2021": {
           "name": "Preskúmanie aplikácií",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "type": "Zdroj"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Predstavenie Sprite Labu",
@@ -570,7 +571,8 @@
           "type": "Prezentácia"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Zdroj"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Postavy v akcii",
@@ -593,7 +595,8 @@
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
           "name": "Objav silu slov: kvíz pre lekciu",
-          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
+          "type": "Zdroj"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
           "name": "Objav silu slov: kvíz pre lekciu",
@@ -632,7 +635,8 @@
         },
         "teacher_sandbox_level/coursef/2021": {
           "name": "Úroveň Priestor učiteľa",
-          "url": "https://studio.code.org/levels/27300"
+          "url": "https://studio.code.org/levels/27300",
+          "type": "Zdroj"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
           "name": "Miniprojekt: Programy reagujúce na vstupy používateľa",
@@ -711,7 +715,8 @@
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
-          "url": "http://get-site-ip.com/"
+          "url": "http://get-site-ip.com/",
+          "type": "Zdroj"
         },
         "design-process/coursef/2021": {
           "name": "Proces návrhu",
@@ -723,55 +728,68 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Základy informatiky – záverečný projekt",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Hodnotiaca tabuľka"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/coursef-2021/standards"
+          "url": "https://studio.code.org/s/coursef-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/coursef/2021": {
           "name": "Slovná zásoba z kurzu\t",
-          "url": "https://studio.code.org/s/coursef-2021/vocab"
+          "url": "https://studio.code.org/s/coursef-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/coursef/2021": {
           "name": "Implementačná Príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/coursef/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide/coursef/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/coursef/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Dokumentácia pre Sprite Lab",
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Zdroj"
         },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
+          "type": "Zdroj"
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Digitálne stopy: prezentácia k lekcii",
@@ -810,7 +828,8 @@
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "Smajlíkovia",
@@ -840,7 +859,8 @@
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Pravidlo 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Zdroj"
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Dieliky k hre Veselé mapy",
@@ -852,11 +872,13 @@
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie a jej veľký projekt",
-          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
+          "type": "Zdroj"
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Príbeh o hľadaní chrobákov a chýb",
@@ -923,47 +945,58 @@
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/courseb-2021/standards"
+          "url": "https://studio.code.org/s/courseb-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities/courseb/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/courseb/2021": {
           "name": "Slovná zásoba z kurzu",
-          "url": "https://studio.code.org/s/courseb-2021/vocab"
+          "url": "https://studio.code.org/s/courseb-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/courseb/2021": {
           "name": "Implementačná Príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/courseb/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide/courseb/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/courseb/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "virtual_lesson_modifications/courseb/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
+          "type": "Zdroj"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Prezentácia z lekcie",
@@ -990,7 +1023,8 @@
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Pravidlo 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Zdroj"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -1020,7 +1054,8 @@
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
+          "type": "Zdroj"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
@@ -1028,7 +1063,8 @@
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "Pravidlo 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Zdroj"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -1042,11 +1078,13 @@
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "happy-map-cards-xl/coursea/2021": {
           "name": "Karty s veselými mapami XL",
@@ -1058,7 +1096,8 @@
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Smajlíkovia",
@@ -1071,11 +1110,13 @@
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "csf_lesson_recommendations/coursea/2021": {
           "name": "Odporúčania k lekciám od CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Zdroj"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Mysli celým telom, keď si online",
@@ -1084,11 +1125,13 @@
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "Odporúčania k lekciám od CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Zdroj"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Veľká udalosť",
@@ -1109,7 +1152,8 @@
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
@@ -1117,11 +1161,13 @@
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Zdroj"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
           "name": "Odporúčania k lekciám od CSF",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Zdroj"
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "Sprievodca plánovaním projektu s Umelcom",
@@ -1134,47 +1180,58 @@
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/coursea-2021/standards"
+          "url": "https://studio.code.org/s/coursea-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities/coursea/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/coursea/2021": {
           "name": "Slovná zásoba z kurzu",
-          "url": "https://studio.code.org/s/coursea-2021/vocab"
+          "url": "https://studio.code.org/s/coursea-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/coursea/2021": {
           "name": "Implementačná príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide/coursea/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/coursea/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "virtual_lesson_modifications/coursea/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
+          "type": "Zdroj"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "STOP zákernosti na internete: Prezentácia k lekcii",
@@ -1225,7 +1282,8 @@
         },
         "debugging_guide/coursec/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+          "type": "Zdroj"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
@@ -1248,7 +1306,8 @@
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
+          "type": "Zdroj"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veľká udalosť",
@@ -1322,47 +1381,58 @@
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/coursec-2021/standards"
+          "url": "https://studio.code.org/s/coursec-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities/coursec/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/coursec/2021": {
           "name": "Slovná zásoba z kurzu",
-          "url": "https://studio.code.org/s/coursec-2021/vocab"
+          "url": "https://studio.code.org/s/coursec-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/coursec/2021": {
           "name": "Implementačná Príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/coursec/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide_1/coursec/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/coursec/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
+          "type": "Zdroj"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "Silnejšie heslá: prezentácia k lekcii",
@@ -1380,7 +1450,8 @@
         },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": "Silnejšie heslá: kvíz k lekcii",
-          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
+          "type": "Zdroj"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
           "name": "Silnejšie heslá: kvíz k lekcii",
@@ -1483,7 +1554,8 @@
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Tanečná párty: bez počítača",
-          "url": "https://curriculum.code.org/hoc/unplugged/4/"
+          "url": "https://curriculum.code.org/hoc/unplugged/4/",
+          "type": "Zdroj"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -1526,55 +1598,68 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Základy informatiky: kurz D – Sprievodca plánovaním záverečného projektu v expresnom kurze",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Sprievodca projektom"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/coursed-2021/standards"
+          "url": "https://studio.code.org/s/coursed-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities/coursed/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/coursed/2021": {
           "name": "Slovná zásoba z kurzu",
-          "url": "https://studio.code.org/s/coursed-2021/vocab"
+          "url": "https://studio.code.org/s/coursed-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/coursed/2021": {
           "name": "Implementačná Príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/coursed/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide/coursed/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/coursed/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/coursed/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "virtual_lesson_modifications/coursed/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit",
+          "type": "Zdroj"
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "Bloky bludiska bez počítača",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Zdroj"
         },
         "pair_programming/express/2021": {
           "name": "Programovanie v páre",
@@ -1604,7 +1689,8 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Zdroj"
         },
         "making_sprites/express/2021": {
           "name": "Vytváranie postáv",
@@ -1612,7 +1698,8 @@
           "type": "Prezentácia"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Zdroj"
         },
         "sprites_in_action/express/2021": {
           "name": "Postavy v akcii",
@@ -1674,23 +1761,28 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Základy informatiky: expresný kurz – Sprievodca plánovaním záverečného projektu v expresnom kurze",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Sprievodca projektom"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Základy informatiky – záverečný projekt",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Hodnotiaca tabuľka"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/express-2021/standards"
+          "url": "https://studio.code.org/s/express-2021/standards",
+          "type": "Zdroj"
         },
         "course_vocabulary_1/express/2021": {
           "name": "Slovná zásoba z kurzu\t",
-          "url": "https://studio.code.org/s/express-2021/vocab"
+          "url": "https://studio.code.org/s/express-2021/vocab",
+          "type": "Zdroj"
         },
         "teacher_forum_1/express/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "debugging_guide/express/2021": {
           "name": "Sprievodca ladením",
@@ -1726,15 +1818,18 @@
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
+          "url": "https://studio.code.org/s/pre-express-2021/standards",
+          "type": "Zdroj"
         },
         "course_vocabulary/pre-express/2021": {
           "name": "Slovná zásoba z kurzu\t",
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+          "url": "https://studio.code.org/s/pre-express-2021/vocab",
+          "type": "Zdroj"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "debugging_guide/pre-express/2021": {
           "name": "Sprievodca ladením",
@@ -1750,7 +1845,8 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Zdroj"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "name": "Buď super digitálny občan: snímky pre lekciu",
@@ -1795,7 +1891,8 @@
         },
         "digital-sharing-lesson/coursee/2021": {
           "name": "Učebný plán: Digitálne zdieľanie",
-          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing",
+          "type": "Zdroj"
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etiketa digitálneho zdieľania (video)",
@@ -1844,7 +1941,8 @@
         },
         "types_of_disabilities/coursee/2021": {
           "name": "Typy zdravotných postihnutí",
-          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
+          "type": "Zdroj"
         },
         "end-of-course-project-guide/coursee/2021": {
           "name": "Sprievodca záverečným projektom",
@@ -1852,7 +1950,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Základy informatiky – záverečný projekt",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Hodnotiaca tabuľka"
         },
         "design-process/coursee/2021": {
           "name": "Proces návrhu",
@@ -1860,47 +1959,58 @@
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "72 kreatívnych spôsobov pre vašich žiakov, ako im ukázať, čo vedia",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
+          "type": "Zdroj"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "Mapovanie štandardov CSTA",
-          "url": "https://studio.code.org/s/coursee-2021/standards"
+          "url": "https://studio.code.org/s/coursee-2021/standards",
+          "type": "Zdroj"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
           "name": "Pokyny Common Core a NGSS",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
+          "type": "Zdroj"
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "Medzipredmetové doplňujúce aktivity",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Zdroj"
         },
         "course_vocabulary/coursee/2021": {
           "name": "Slovná zásoba z kurzu\t",
-          "url": "https://studio.code.org/s/coursee-2021/vocab"
+          "url": "https://studio.code.org/s/coursee-2021/vocab",
+          "type": "Zdroj"
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementačná Príručka",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Zdroj"
         },
         "lesson_type_guide/coursee/2021": {
           "name": "Príručka pre typy lekcií",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Zdroj"
         },
         "debugging_guide/coursee/2021": {
           "name": "Sprievodca ladením",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Zdroj"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Sprievodca osnovami",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+          "type": "Zdroj"
         },
         "2021_change_log/coursee/2021": {
           "name": "Zoznam zmien pre rok 2021",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+          "type": "Zdroj"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Fórum učiteľov",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Zdroj"
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Dokumentácia pre Sprite Lab",
@@ -1908,7 +2018,8 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Úpravy virtuálnych lekcií",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
+          "type": "Zdroj"
         },
         "classifying_fish/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -1944,6 +2055,9 @@
         "patterns_in_data_1/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "shoe_survey/csd/2021": {
+          "type": "Zdroj"
+        },
         "patterns_in_data_3/csd/2021": {
           "type": "Kľúč s odpoveďami"
         },
@@ -1955,6 +2069,9 @@
         },
         "classification_models_1/csd/2021": {
           "type": "Prezentácia"
+        },
+        "fruit_veggie_cards/csd/2021": {
+          "type": "Zdroj"
         },
         "introduction_to_ai_lab/csd/2021": {
           "name": "Úvod do UI Labu",
@@ -1973,8 +2090,20 @@
         "_key_training_a_model_in_ai_lab/csd/2021": {
           "type": "Kľúč s odpoveďami"
         },
+        "accuracy_in_ai_lab/csd/2021": {
+          "type": "Zdroj"
+        },
+        "selecting_features/csd/2021": {
+          "type": "Zdroj"
+        },
+        "using_data_with_categorical_features/csd/2021": {
+          "type": "Zdroj"
+        },
         "importing_models_in_app_lab/csd/2021": {
           "type": "Prezentácia"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "type": "Zdroj"
         },
         "ai_training_data_bias/csd/2021": {
           "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
@@ -1998,6 +2127,9 @@
         },
         "_key_zoo_models/csd/2021": {
           "type": "Kľúč s odpoveďami"
+        },
+        "selecting_a_label/csd/2021": {
+          "type": "Zdroj"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
@@ -2032,6 +2164,9 @@
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
           "type": "Kľúč s odpoveďami"
         },
+        "using_data_with_numerical_features/csd/2021": {
+          "type": "Zdroj"
+        },
         "customizing_apps/csd/2021": {
           "type": "Prezentácia"
         },
@@ -2050,11 +2185,17 @@
         "make_a_machine_learning_app/csd/2021": {
           "type": "Prezentácia"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "issue_statements/csd/2021": {
           "type": "Prezentácia"
         },
         "survey_planning/csd/2021": {
           "type": "Prezentácia"
+        },
+        "creating_a_survey/csd/2021": {
+          "type": "Zdroj"
         },
         "survey_data_in_ai_lab/csd/2021": {
           "type": "Prezentácia"
@@ -2071,8 +2212,26 @@
         "creating_an_app/csd/2021": {
           "type": "Prezentácia"
         },
+        "_template_5_why_s/csd/2021": {
+          "type": "Zdroj"
+        },
         "design_an_ai_app/csd/2021": {
           "type": "Prezentácia"
+        },
+        "model_card_-_digital_template/csd/2021": {
+          "type": "Zdroj"
+        },
+        "model_card_-_printable_template/csd/2021": {
+          "type": "Zdroj"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
+        "csd_curriculum_guide/csd/2021": {
+          "type": "Zdroj"
+        },
+        "csd_implementation_guide/csd/2021": {
+          "type": "Zdroj"
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "Prezentácia"
@@ -2113,6 +2272,9 @@
         "user_centered_design_try_reflect_/csd/2021": {
           "type": "Príklad"
         },
+        "user-interface-screens/csd/2021": {
+          "type": "Zdroj"
+        },
         "user-experience-computer/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
@@ -2122,16 +2284,28 @@
         "improve-a-screen-exemplar-19/csd/2021": {
           "type": "Príklad"
         },
+        "paper-prototype-sample-feedback/csd/2021": {
+          "type": "Zdroj"
+        },
         "improve-a-screen/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
         "user-interviews-1/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "user-interviews/csd/2021": {
+          "type": "Zdroj"
+        },
         "computer-science-practices/csd/2021": {
+          "name": "Informatické prístupy",
+          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
           "type": "Reflexia"
         },
+        "paper-prototypes/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "sample_marked_rubrics/csd/2021": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
           "type": "Príklad"
         },
         "app-design-kickoff-2019/csd/2021": {
@@ -2156,10 +2330,12 @@
           "type": "Sprievodca aktivitou"
         },
         "design_mode/csd/2021": {
-          "name": "Dizajnový mód"
+          "name": "Dizajnový mód",
+          "type": "Zdroj"
         },
         "design_mode_elements/csd/2021": {
-          "name": "Prvky dizajnového módu"
+          "name": "Prvky dizajnového módu",
+          "type": "Zdroj"
         },
         "paper_prototype_planning/csd/2021": {
           "type": "Príklad"
@@ -2185,15 +2361,32 @@
         "screen-design-1/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "model-screen-design/csd/2021": {
+          "type": "Zdroj"
+        },
         "intro_to_design_mode/csd/2021": {
           "name": "Úvod do dizajnového módu",
           "type": "Video"
         },
         "design_mode_1/csd/2021": {
-          "name": "Dizajnový mód"
+          "name": "Dizajnový mód",
+          "type": "Zdroj"
         },
         "design_mode_elements_1/csd/2021": {
-          "name": "Prvky dizajnového módu"
+          "name": "Prvky dizajnového módu",
+          "type": "Zdroj"
+        },
+        "changing_screens/csd/2021": {
+          "type": "Zdroj"
+        },
+        "importing_screens/csd/2021": {
+          "type": "Zdroj"
+        },
+        "multi-screen_apps/csd/2021": {
+          "type": "Zdroj"
+        },
+        "responding_to_user_input/csd/2021": {
+          "type": "Zdroj"
         },
         "digital-prototype-user-testing/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2207,6 +2400,9 @@
         "updating-your-prototype/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "app-presentation/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "app-presentation-template/csd/2021": {
           "type": "Prezentácia"
         },
@@ -2214,6 +2410,7 @@
           "type": "Príklad"
         },
         "sample_marked_rubrics_1_1/csd/2021": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
           "type": "Príklad"
         },
         "peer_review_1/csd/2021": {
@@ -2238,24 +2435,68 @@
         "csd_unit_6_-_physical_computing/csd/2021": {
           "type": "Prezentácia"
         },
+        "designing_screens_with_code/csd/2021": {
+          "type": "Zdroj"
+        },
+        "random_numbers_1/csd/2021": {
+          "type": "Zdroj"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "type": "Zdroj"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Ako pracujú počítače: Hardvér a softvér",
           "type": "Video"
         },
+        "circuit_playground/csd/2021": {
+          "type": "Zdroj"
+        },
         "input-and-events/csd/2021": {
           "type": "Sprievodca aktivitou"
+        },
+        "board_events/csd/2021": {
+          "type": "Zdroj"
+        },
+        "physical_input/csd/2021": {
+          "type": "Zdroj"
+        },
+        "physical_output/csd/2021": {
+          "type": "Zdroj"
+        },
+        "taking_input_with_getproperty/csd/2021": {
+          "type": "Zdroj"
         },
         "analog-digital-video/csd/2021": {
           "type": "Video"
         },
+        "analog_sensors/csd/2021": {
+          "type": "Zdroj"
+        },
+        "changing_sensor_scale/csd/2021": {
+          "type": "Zdroj"
+        },
+        "date_and_change_events/csd/2021": {
+          "type": "Zdroj"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
         "booleans_and_comparison_operators_1/csd/2021": {
-          "name": "Logické výrazy a porovnávacie znamienka"
+          "name": "Logické výrazy a porovnávacie znamienka",
+          "type": "Zdroj"
         },
         "functions_2/csd/2021": {
-          "name": "Funkcie"
+          "name": "Funkcie",
+          "type": "Zdroj"
+        },
+        "if_statements_1/csd/2021": {
+          "type": "Zdroj"
         },
         "make-game-guide/csd/2021": {
           "type": "Sprievodca aktivitou"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
         },
         "make_a_game_sample_marked_rubrics/csd/2021": {
           "type": "Príklad"
@@ -2265,24 +2506,55 @@
           "type": "Video"
         },
         "arrays/csd/2021": {
-          "name": "Rady"
+          "name": "Rady",
+          "type": "Zdroj"
+        },
+        "circuits_and_leds/csd/2021": {
+          "type": "Zdroj"
+        },
+        "color_lights/csd/2021": {
+          "type": "Zdroj"
         },
         "playing_notes/csd/2021": {
-          "name": "Hranie nôt"
+          "name": "Hranie nôt",
+          "type": "Zdroj"
+        },
+        "producing_output/csd/2021": {
+          "type": "Zdroj"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "Cykly \"Pre\"",
           "type": "Video"
         },
         "for_loops/csd/2021": {
-          "name": "Cykly \"Pre\""
+          "name": "Cykly \"Pre\"",
+          "type": "Zdroj"
+        },
+        "modifying_arrays/csd/2021": {
+          "type": "Zdroj"
         },
         "accelerometer_events/csd/2021": {
-          "name": "Udalosti s akcelerometrom"
+          "name": "Udalosti s akcelerometrom",
+          "type": "Zdroj"
+        },
+        "the_accelerometer/csd/2021": {
+          "type": "Zdroj"
         },
         "circuits-logic-video/csd/2021": {
           "name": "Ako pracujú počítače: Obvody a logika",
           "type": "Video"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
+        "circuits_and_buttons/csd/2021": {
+          "type": "Zdroj"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Sprievodca projektom"
         },
         "peer_review_1_1/csd/2021": {
           "type": "Príklad"
@@ -2291,13 +2563,20 @@
           "type": "Príklad"
         },
         "sample_marked_rubrics_4/csd/2021": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
           "type": "Príklad"
+        },
+        "circuit_playground_1/csd/2021": {
+          "type": "Zdroj"
         },
         "unit-5-data-society/csd/2021": {
           "type": "Prezentácia"
         },
         "representation-matters-exemplar-2019/csd/2021": {
           "type": "Príklad"
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "type": "Zdroj"
         },
         "representation-matters/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2313,6 +2592,9 @@
         },
         "ascii-exemplar-2019/csd/2021": {
           "type": "Príklad"
+        },
+        "ascii-text/csd/2021": {
+          "type": "Zdroj"
         },
         "ascii-challenges/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2353,6 +2635,9 @@
         "unit_5_data_society_1/csd/2021": {
           "type": "Prezentácia"
         },
+        "create_a_representation/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "create_a_representation_marked_rubrics/csd/2021": {
           "type": "Príklad"
         },
@@ -2374,14 +2659,23 @@
         "interpreting-data/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "interpreting-data-1/csd/2021": {
+          "type": "Zdroj"
+        },
         "making-decisions-with-data-exemplar-2019/csd/2021": {
           "type": "Príklad"
         },
         "making-decisions-with-data/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "problem-solving-process-with-data/csd/2021": {
+          "type": "Zdroj"
+        },
         "automating-data-decisions-exemplar-2019/csd/2021": {
           "type": "Príklad"
+        },
+        "data-decisions-resource/csd/2021": {
+          "type": "Zdroj"
         },
         "automating-data-decisions-1/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2413,9 +2707,16 @@
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Sprievodca projektom"
         },
         "project_guide_exemplar/csd/2021": {
+          "name": "Vzorový sprievodca projektom",
           "type": "Príklad"
         },
         "peer_review_exemplar_1/csd/2021": {
@@ -2428,6 +2729,7 @@
           "type": "Prezentácia"
         },
         "sample_marked_rubrics_3/csd/2021": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
           "type": "Príklad"
         },
         "cs-entertainment-activity/csd/2021": {
@@ -2459,12 +2761,28 @@
           "name": "Video: Kreslenie v Game Labe - 2. časť",
           "type": "Video"
         },
+        "drawing_shapes/csd/2021": {
+          "type": "Zdroj"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "type": "Zdroj"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "type": "Zdroj"
+        },
         "introduction-to-variables/csd/2021": {
           "name": "Predstavenie premenných",
           "type": "Video"
         },
+        "naming_variables/csd/2021": {
+          "type": "Zdroj"
+        },
         "variables_1/csd/2021": {
-          "name": "Premenné"
+          "name": "Premenné",
+          "type": "Zdroj"
+        },
+        "random_numbers/csd/2021": {
+          "type": "Zdroj"
         },
         "introduction_to_sprites/csd/2021": {
           "type": "Video"
@@ -2473,14 +2791,22 @@
           "name": "Záložka s animáciami",
           "type": "Video"
         },
+        "animation_tab/csd/2021": {
+          "type": "Zdroj"
+        },
         "sprites_1/csd/2021": {
-          "name": "Objekt \"sprite\""
+          "name": "Objekt \"sprite\"",
+          "type": "Zdroj"
         },
         "sprite_properties/csd/2021": {
-          "name": "Vlastnosti postáv"
+          "name": "Vlastnosti postáv",
+          "type": "Zdroj"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
           "type": "Príklad"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
         },
         "sprite-scene-planning/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2492,14 +2818,21 @@
           "type": "Video"
         },
         "the_draw_loop/csd/2021": {
-          "name": "Cyklus kreslenia"
+          "name": "Cyklus kreslenia",
+          "type": "Zdroj"
         },
         "animating-sprites/csd/2021": {
           "name": "Pohyb \"sprite\" objektu",
           "type": "Video"
         },
+        "the_counter_pattern/csd/2021": {
+          "type": "Zdroj"
+        },
         "animated-scene-planning-exemplar-2020/csd/2021": {
           "type": "Príklad"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
         },
         "animated-scene/csd/2021": {
           "type": "Sprievodca aktivitou"
@@ -2513,10 +2846,15 @@
           "type": "Video"
         },
         "booleans_and_comparison_operators/csd/2021": {
-          "name": "Logické výrazy a porovnávacie znamienka"
+          "name": "Logické výrazy a porovnávacie znamienka",
+          "type": "Zdroj"
+        },
+        "if_statements/csd/2021": {
+          "type": "Zdroj"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
-          "name": "Výroky \"If-Else\""
+          "name": "Výroky \"If-Else\"",
+          "type": "Zdroj"
         },
         "if_else_statements/csd/2021": {
           "name": "Podmienkové výroky (if/else)",
@@ -2530,21 +2868,27 @@
           "type": "Príklad"
         },
         "interactive-card-project-guide-2019/csd/2021": {
-          "name": "Interaktívna pohľadnica"
+          "name": "Interaktívna pohľadnica",
+          "type": "Sprievodca projektom"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "Interaktívna pohľadnica",
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
         },
         "interactive_card/csd/2021": {
-          "name": "Interaktívna pohľadnica"
+          "name": "Interaktívna pohľadnica",
+          "type": "Hodnotiaca tabuľka"
+        },
+        "extra_code_in_challenge_levels_1/csd/2021": {
+          "type": "Zdroj"
         },
         "velocity_1/csd/2021": {
           "name": "Rýchlosť",
           "type": "Video"
         },
         "velocity_2/csd/2021": {
-          "name": "Rýchlosť"
+          "name": "Rýchlosť",
+          "type": "Zdroj"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Detekcia kolízie",
@@ -2557,32 +2901,41 @@
           "type": "Sprievodca aktivitou"
         },
         "collision_detection/csd/2021": {
-          "name": "Detekcia kolízie"
+          "name": "Detekcia kolízie",
+          "type": "Zdroj"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
           "type": "Príklad"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Posúvačka (side-scroller)"
+          "name": "Posúvačka (side-scroller)",
+          "type": "Hodnotiaca tabuľka"
         },
         "side-scroller/csd/2021": {
-          "name": "Posúvačka (side-scroller)"
+          "name": "Posúvačka (side-scroller)",
+          "type": "Sprievodca projektom"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "type": "Zdroj"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
           "type": "Príklad"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Lietajúca hra"
+          "name": "Lietajúca hra",
+          "type": "Hodnotiaca tabuľka"
         },
         "flyer-game/csd/2021": {
-          "name": "Lietajúca hra"
+          "name": "Lietajúca hra",
+          "type": "Sprievodca projektom"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Funkcie",
           "type": "Video"
         },
         "functions_1/csd/2021": {
-          "name": "Funkcie"
+          "name": "Funkcie",
+          "type": "Zdroj"
         },
         "planning-your-platform-game-exemplar-2020/csd/2021": {
           "type": "Príklad"
@@ -2593,8 +2946,14 @@
         "make-your-own-game-sample-marked-rubrics/csd/2021": {
           "type": "Príklad"
         },
+        "make-your-own-game/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
         "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Fórum učiteľov"
@@ -2688,28 +3047,54 @@
           "type": "Sprievodca aktivitou"
         },
         "what-do-computers-do/csd/2021": {
+          "name": "Čo robia počítače",
+          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
           "type": "Video"
         },
         "storage-1/csd/2021": {
+          "name": "Aplikácie s pamäťou",
+          "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
           "type": "Príklad"
         },
         "storage/csd/2021": {
+          "name": "Aplikácie s pamäťou",
+          "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
           "type": "Sprievodca aktivitou"
         },
         "project-propose-an-app-2020/csd/2021": {
+          "name": "Vzorový sprievodca projektom",
+          "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
           "type": "Príklad"
         },
         "app-proposal-project/csd/2021": {
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
           "type": "Sprievodca aktivitou"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "type": "Recenzia"
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1pJbXBKzppBtWwjo3bBXD8fE_QfI4yt2gQQD1hou1_Gg/",
+          "type": "Vzájomné hodnotenie"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
+          "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
           "type": "Príklad"
         },
         "peer_review_exemplar/csd/2021": {
+          "name": "Vzorové vzájomné hodnotenie",
+          "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
           "type": "Príklad"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
+          "type": "Hodnotiaca tabuľka"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2021": {
+          "name": "Aplikácie a riešenie problémov – kontrolný zoznam pre žiakov",
+          "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
+          "type": "Zdroj"
         },
         "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
           "type": "Príklad"
@@ -2728,6 +3113,9 @@
         },
         "exploring-problem-solving-animal-theme-2020/csd/2021": {
           "type": "Príklad"
+        },
+        "solving-problems-tangrams-2020/csd/2021": {
+          "type": "Zdroj"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
           "name": "Riešenie problémov",
@@ -2750,7 +3138,8 @@
           "type": "Prezentácia"
         },
         "html_tags/csd/2021": {
-          "name": "HTML tag-y"
+          "name": "HTML tag-y",
+          "type": "Zdroj"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Video"
@@ -2763,7 +3152,8 @@
           "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
-          "name": "Nadpisy a odseky "
+          "name": "Nadpisy a odseky ",
+          "type": "Zdroj"
         },
         "video_debugging/csd/2021": {
           "type": "Video"
@@ -2774,14 +3164,24 @@
         "peer-review-html-web-page-exemplar-2020/csd/2021": {
           "type": "Príklad"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "mini-project-html-page/csd/2021": {
           "type": "Prezentácia"
         },
         "html-web-page/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "html-page/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
+        "formatting_html/csd/2021": {
+          "type": "Zdroj"
         },
         "lists/csd/2021": {
-          "name": "Zoznamy"
+          "name": "Zoznamy",
+          "type": "Zdroj"
         },
         "digital-footprint/csd/2021": {
           "name": "Digitálna stopa",
@@ -2801,14 +3201,26 @@
           "name": "Úvod do CSS - časť 2",
           "type": "Video"
         },
+        "style_sheets/csd/2021": {
+          "type": "Zdroj"
+        },
+        "text_properties/csd/2021": {
+          "type": "Zdroj"
+        },
         "project-guide-your-personal-style-exemplar-2020/csd/2021": {
           "type": "Príklad"
         },
         "peer-review-your-personal-style-exemplar-2020/csd/2021": {
           "type": "Príklad"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
         "your-personal-style-1/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Sprievodca projektom"
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "type": "Príklad"
@@ -2819,6 +3231,12 @@
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
+        "creative_commons_search/csd/2021": {
+          "type": "Zdroj"
+        },
+        "images_in_html/csd/2021": {
+          "type": "Zdroj"
+        },
         "define-your-webpage-2020/csd/2021": {
           "type": "Príklad"
         },
@@ -2827,6 +3245,9 @@
         },
         "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
           "type": "Príklad"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Sprievodca projektom"
         },
         "practices-reflection-exemplar-2020/csd/2021": {
           "type": "Príklad"
@@ -2838,11 +3259,23 @@
           "type": "Príklad"
         },
         "personal-web-page-1/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
         },
         "publishing_your_website/csd/2021": {
           "name": "Publikovanie tvojej webstránky",
           "type": "Video"
+        },
+        "personal_web_page_-_student_checklist/csd/2021": {
+          "type": "Zdroj"
+        },
+        "extra_code_in_challenge_levels/csd/2021": {
+          "type": "Zdroj"
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "type": "Príklad"
@@ -2874,8 +3307,20 @@
         "internet-scavenger-hunt/csd/2021": {
           "type": "Sprievodca aktivitou"
         },
+        "classes/csd/2021": {
+          "type": "Zdroj"
+        },
         "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
           "type": "Príklad"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Hodnotiaca tabuľka"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Sprievodca projektom"
+        },
+        "hyperlinks/csd/2021": {
+          "type": "Zdroj"
         },
         "practices-reflection-l21-exemplar-2020/csd/2021": {
           "type": "Príklad"
@@ -2887,7 +3332,10 @@
           "type": "Príklad"
         },
         "website-for-a-purpose/csd/2021": {
-          "type": "Recenzia"
+          "type": "Vzájomné hodnotenie"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Sprievodca projektom"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Plány hodín"
