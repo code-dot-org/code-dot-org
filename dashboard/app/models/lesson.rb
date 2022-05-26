@@ -258,6 +258,12 @@ class Lesson < ApplicationRecord
     localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
   end
 
+  def lesson_feedback_url
+    url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{localized_name}"
+    url += "&survey_data[course_name]=#{script.unit_group.localized_title}" if script.unit_group
+    url + "{noformat}"
+  end
+
   def lesson_plan_pdf_url
     if script.is_migrated && has_lesson_plan
       Services::CurriculumPdfs.get_lesson_plan_url(self)
@@ -328,6 +334,7 @@ class Lesson < ApplicationRecord
       end
 
       if has_lesson_plan
+        lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version.recommended?
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
