@@ -329,6 +329,8 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
+  # List of units in the CSD course offering which use the maker tools.
+  # Used to determine the most recent Maker Unit to show on the Maker Homepage
   def self.maker_units(user)
     # only units in CSD should be included in the maker units
     return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.key == 'csd'}
