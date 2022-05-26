@@ -3733,6 +3733,28 @@
           "garden square": {
             "name": "dördbucaqlı bağ"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
         }
       }
     }

@@ -4352,6 +4352,28 @@
           "reset game": {
             "name": "ripristina il gioco"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "disegna un quadrato"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "disegna una forma",
+            "parameters": {
+              "sides": "lati",
+              "length": "lunghezza"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funzione 1"
+          },
+          "function 2": {
+            "name": "funzione 2"
+          }
         }
       }
     }

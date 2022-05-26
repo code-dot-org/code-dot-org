@@ -694,6 +694,13 @@ in:
         CSA-PL-two-way-selection: crwdns2917518:0crwdne2917518:0
         CSA-PL-Printing-in-Java: crwdns2917520:0crwdne2917520:0
         CSA-PL-multi-selection-statements: crwdns2917522:0crwdne2917522:0
+        PL_CSP_TeacherTips_Advice: crwdns2927700:0crwdne2927700:0
+        PL_CSP_TeacherTips_IntroToCSP: crwdns2927702:0crwdne2927702:0
+        PL_CSP_TeacherTips_Debugging: crwdns2927704:0crwdne2927704:0
+        PL_CSP_TeacherTips_LeadLearner: crwdns2927706:0crwdne2927706:0
+        PL_CSP_TeacherTips_APExam: crwdns2927708:0crwdne2927708:0
+        PL_CSP_TeacherTips_EIPM: crwdns2927710:0crwdne2927710:0
+        PL_CSD_CircuitPlayground_Overview: crwdns2927712:0crwdne2927712:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

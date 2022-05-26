@@ -241,6 +241,12 @@
         },
         "csta/1B-AP-16": {
           "description": "Schopnosť zaujať s pomocou učiteľa rôzne roly pri spolupráci s rovesníkmi počas dizajnovej, implementačnej a kontrolnej fázy vývoja programu."
+        },
+        "csta/2-IC-20": {
+          "description": "Porovnávanie výhod a nevýhod výpočtovej techniky, ktorá má vplyv na každodenné aktivity ľudí a ich kariérne možnosti. "
+        },
+        "csta/2-CS-02": {
+          "description": "Navrhovanie projektov, koré spájajú hardvérové a softvérové súčasti na zbieranie a výmenu údajov."
         }
       }
     }

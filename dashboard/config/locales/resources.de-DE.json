@@ -1639,7 +1639,8 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "GFK-Kurs D Projektplanungsleitfaden für den Abschluss des Kurses",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Projektleitfaden"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "CSTA-Normen-Mapping",
@@ -1802,7 +1803,8 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "CSF-Express-Projektplanungsleitfaden für den Abschluss des Kurses",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Projektleitfaden"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Grundlagen der Informatik - das Abschlussprojekt",
@@ -1983,7 +1985,7 @@
           "type": "Manipulatoren"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Entwerfen für Barrierefreiheit",
+          "name": "Design für Barrierefreiheit",
           "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
           "type": "Folien"
         },
@@ -2269,7 +2271,7 @@
           "type": "Ressource"
         },
         "computer-science-practices/csd/2021": {
-          "type": "Reflektieren"
+          "type": "Reflexion"
         },
         "paper-prototypes/csd/2021": {
           "name": "Papier-Prototypen",
@@ -2282,7 +2284,7 @@
           "name": "Marktforschung"
         },
         "design_mode/csd/2021": {
-          "name": "Entwurfsmodus",
+          "name": "Designmodus",
           "type": "Ressource"
         },
         "design_mode_elements/csd/2021": {
@@ -2300,7 +2302,7 @@
           "type": "Video"
         },
         "design_mode_1/csd/2021": {
-          "name": "Entwurfsmodus",
+          "name": "Designmodus",
           "type": "Ressource"
         },
         "design_mode_elements_1/csd/2021": {
@@ -2389,6 +2391,9 @@
         "date_and_change_events/csd/2021": {
           "type": "Ressource"
         },
+        "emoji-race-guide/csd/2021": {
+          "type": "Projektleitfaden"
+        },
         "booleans_and_comparison_operators_1/csd/2021": {
           "type": "Ressource"
         },
@@ -2447,11 +2452,17 @@
           "name": "Wie Computer funktionieren: Schaltkreise und Logik",
           "type": "Video"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Projektleitfaden"
+        },
         "circuits_and_buttons/csd/2021": {
           "type": "Ressource"
         },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Bewertungsleitfaden"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "circuit_playground_1/csd/2021": {
           "type": "Ressource"
@@ -2541,6 +2552,7 @@
           "name": "Daten in der Praxis"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Auswirkungen auf die Gesellschaft",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -2549,6 +2561,7 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Trainingsdaten und Verzerrungen",
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
@@ -2556,6 +2569,9 @@
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Bewertungsleitfaden"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "unit_5_data_society_2/csd/2021": {
           "type": "Folien"
@@ -2660,7 +2676,8 @@
           "name": "Interaktive Karte"
         },
         "interactive-card-project-guide-2019/csd/2021": {
-          "name": "Interaktive Karte"
+          "name": "Interaktive Karte",
+          "type": "Projektleitfaden"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "Interaktive Karte",
@@ -2693,18 +2710,20 @@
           "type": "Bewertungsleitfaden"
         },
         "side-scroller/csd/2021": {
-          "name": "Side-Scroller"
+          "name": "Side-Scroller",
+          "type": "Projektleitfaden"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "Geschwindigkeit und das Zählermuster",
           "type": "Ressource"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Flieger-Spiel",
+          "name": "Flyer-Spiel",
           "type": "Bewertungsleitfaden"
         },
         "flyer-game/csd/2021": {
-          "name": "Flieger-Spiel"
+          "name": "Flyer-Spiel",
+          "type": "Projektleitfaden"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Funktionen",
@@ -2713,6 +2732,9 @@
         "functions_1/csd/2021": {
           "name": "Funktionen",
           "type": "Ressource"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Peer Review"
@@ -2794,7 +2816,7 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
-          "name": "Video: Paar-Programmierung",
+          "name": "Video: Paarweise Programmierung",
           "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
@@ -2802,6 +2824,7 @@
           "type": "Ressource"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Fehlersuche",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
@@ -2812,6 +2835,9 @@
         },
         "html-web-page/csd/2021": {
           "type": "Peer Review"
+        },
+        "html-page/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "formatting_html/csd/2021": {
           "name": "HTML-Formatierung",
@@ -2824,6 +2850,12 @@
         "digital-footprint/csd/2021": {
           "name": "Digitaler Fußabdruck",
           "type": "Folien"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Sozialer Spürhund"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Sozialer Spürhund"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Einführung in CSS - Teil 1",
@@ -2845,6 +2877,9 @@
         "your-personal-style-1/csd/2021": {
           "type": "Peer Review"
         },
+        "your-personal-style/csd/2021": {
+          "type": "Projektleitfaden"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
@@ -2859,14 +2894,20 @@
         "layout-properties/csd/2021": {
           "name": "Layout-Eigenschaften"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Projektleitfaden"
+        },
         "personal-web-page-1/csd/2021": {
           "type": "Peer Review"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "personal-web-page/csd/2021": {
           "type": "Bewertungsleitfaden"
         },
         "publishing_your_website/csd/2021": {
-          "name": "Veröffentlichung Deiner Website",
+          "name": "Veröffentlichung deiner Website",
           "type": "Video"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
@@ -2876,12 +2917,15 @@
           "type": "Ressource"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Umgang mit Meinungsverschiedenheiten",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Teamarbeit",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: So funktioniert die Suche",
           "type": "Video"
         },
         "classes/csd/2021": {
@@ -2891,12 +2935,18 @@
         "website-for-a-purpose-1/csd/2021": {
           "type": "Bewertungsleitfaden"
         },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Projektleitfaden"
+        },
         "hyperlinks/csd/2021": {
           "name": "Hyperlinks",
           "type": "Ressource"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Peer Review"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Projektleitfaden"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Stundenpläne"

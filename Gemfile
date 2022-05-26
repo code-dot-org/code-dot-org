@@ -356,3 +356,8 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
+
+gem 'crowdin-api', '~> 1.2.1'

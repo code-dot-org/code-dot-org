@@ -15,6 +15,8 @@ class HttpCache
     'language_',
     # Offline experiment flag, to allow users into the pilot
     'offline_pilot',
+    # Experiment flag used to debug the onetrust cookie experience.
+    'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze

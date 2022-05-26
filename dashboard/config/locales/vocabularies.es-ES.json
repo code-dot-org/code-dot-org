@@ -952,6 +952,30 @@
           "word": "almacenamiento",
           "definition": "guardar la información para utilizarla en el futuro"
         },
+        "html/csd/2021": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, (HTML) lenguaje utilizado para crear páginas web"
+        },
+        "html_element/csd/2021": {
+          "word": "Elemento HTML",
+          "definition": "Un fragmento de un sitio web, marcado por una etiqueta de inicio y a menudo cerrado con una etiqueta de fin"
+        },
+        "html_tag/csd/2021": {
+          "word": "Etiqueta HTML",
+          "definition": "El conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento"
+        },
+        "website_content/csd/2021": {
+          "word": "Contenido del Sitio Web",
+          "definition": "el texto y las imágenes de un sitio web"
+        },
+        "website_structure/csd/2021": {
+          "word": "Estructura del Sitio Web",
+          "definition": "cómo se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2021": {
+          "word": "Cabecera",
+          "definition": "Título o resumen de un documento o sección de un documento."
+        },
         "digital_footprint/csd/2021": {
           "word": "Huella digital"
         },

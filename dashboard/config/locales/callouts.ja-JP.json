@@ -1894,7 +1894,8 @@
           "courseA_collector_preLoops1_1": "ここをクリックしてプログラムが動くのを見てみよう！"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。",
+          "make_sprite": "Spriteを作成するには、ここのブロックを使用します！"
         }
       }
     }
