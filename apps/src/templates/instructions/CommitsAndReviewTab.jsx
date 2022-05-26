@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -12,6 +13,7 @@ import Button from '@cdo/apps/templates/Button';
 import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import {timelineElementType} from './codeReviewV2/CodeReviewDataApi';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -105,6 +107,64 @@ const CommitsAndReviewTab = props => {
     }
   };
 
+  const deleteCodeReviewComment = async (commentId, onSuccess, onFailure) => {
+    try {
+      await dataApi.deleteCodeReviewComment(commentId);
+
+      // Check open review
+      if (openReviewData !== null) {
+        const commentIndex = _.findIndex(
+          openReviewData.comments,
+          comment => comment.id === commentId
+        );
+        if (commentIndex > -1) {
+          const updatedComments = [...openReviewData.comments];
+          updatedComments.splice(commentIndex, 1);
+          const updatedOpenReviewData = _.cloneDeep(openReviewData);
+          updatedOpenReviewData.comments = updatedComments;
+          setOpenReviewData(updatedOpenReviewData);
+          onSuccess();
+          return;
+        }
+      }
+
+      // Check other reviews if the comment was not found in the open review
+      const updatedTimelineData = [...timelineData];
+      let reviewIndex;
+      let commentIndex;
+      for (let i = 0; i < updatedTimelineData.length; i++) {
+        if (
+          updatedTimelineData[i].timelineElementType !==
+          timelineElementType.review
+        ) {
+          continue;
+        }
+
+        commentIndex = _.findIndex(
+          updatedTimelineData[i].comments,
+          comment => comment.id === commentId
+        );
+
+        if (commentIndex > -1) {
+          reviewIndex = i;
+          break;
+        }
+      }
+
+      const review = _.cloneDeep(updatedTimelineData[reviewIndex]);
+      const updatedComments = [...review.comments];
+      updatedComments.splice(commentIndex, 1);
+      review.comments = updatedComments;
+      updatedTimelineData[reviewIndex] = review;
+
+      setTimelineData(updatedTimelineData);
+      onSuccess();
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
   const handleCloseReview = async (onSuccess, onFailure) => {
     try {
       const closedReview = await dataApi.closeReview(openReviewData.id);
@@ -189,6 +249,7 @@ const CommitsAndReviewTab = props => {
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
             toggleResolveComment={toggleResolveComment}
+            deleteCodeReviewComment={deleteCodeReviewComment}
           />
           {!openReviewData && !isReadOnlyWorkspace && (
             <div style={styles.timelineAligned}>

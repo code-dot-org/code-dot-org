@@ -156,6 +156,14 @@ class Ability
         code_review_note.code_review.user_id == user.id
       end
 
+      can :destroy, CodeReviewNote do |code_review_note|
+        # Teachers can delete comments on their student's projects,
+        # their own comments anywhere, and comments on their projects.
+        code_review_note.code_review.owner&.student_of?(user) ||
+          (user.teacher? && user.id == code_review_note.commenter_id) ||
+          (user.teacher? && user.id == code_review_note.code_review.user_id)
+      end
+
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id

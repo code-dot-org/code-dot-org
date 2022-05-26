@@ -136,6 +136,18 @@ export default class CodeReviewDataApi {
     });
   }
 
+  deleteCodeReviewComment(commentId) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_review_notes/${commentId}`,
+        type: 'DELETE',
+        headers: {'X-CSRF-Token': this.token}
+      })
+        .done(resolve)
+        .fail(reject);
+    });
+  }
+
   closeReview(reviewId) {
     return new Promise((resolve, reject) => {
       $.ajax({
