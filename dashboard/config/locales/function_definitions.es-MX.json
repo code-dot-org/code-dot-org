@@ -4501,6 +4501,28 @@
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "Dibuja un cuadrado"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "función 1"
+          },
+          "function 2": {
+            "name": "función 2"
+          }
         }
       }
     }

@@ -4451,25 +4451,25 @@ it-IT:
             errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
-          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
-            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
+          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
-            'vai avanti'.
+            `vai avanti`.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Non lo so.
           feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
-        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
-            problema?
+        - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
+            c'è un problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -5082,15 +5082,17 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         - text: Non lo so.
           feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
             da ogni fiore e creare miele in ogni alveare.
@@ -5100,15 +5102,17 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         - text: Non lo so.
           feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
             da ogni fiore e creare miele in ogni alveare.
@@ -6787,18 +6791,19 @@ it-IT:
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
         markdown: |-
-          # Cittadino Super Digitale
+          # Super Cittadino Digitale
 
-          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
+          ## Come possiamo essere di aiuto quando assistiamo al cyberbullismo?
       csf_password_power-up:
         content1: descrizione qui
         markdown: |-
           # Migliora la Tua Password
 
-          ## Suggerimenti della Password da Ricordare
+          ## Consigli da ricordare sulla password
 
           * Inizia con una **frase** memorabile
-          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
+          * Non utilizzare mai  per la tua password alcuna informazione legate alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -7023,24 +7028,24 @@ it-IT:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BigEvent-Unplugged_2020:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BinaryBracelets-Unplugged:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
@@ -7164,14 +7169,14 @@ it-IT:
           * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
       ConditionalsWithCards-Unplugged:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       DigitalCitizenship-Unplugged:
         markdown: |-
           # Cittadinanza Digitale
@@ -7179,12 +7184,12 @@ it-IT:
           Alcune informazioni non sono sicure da condividere online. Questa lezione ti aiuterà a imparare la differenza tra informazioni sicure e private.
       GraphPaperProgramming-Unplugged:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       MyRoboticFriends-Unplugged:
@@ -7213,7 +7218,7 @@ it-IT:
         markdown: |-
           # Informazioni Private e Personali
 
-          ## Quali informazioni su di te si possono condividere online?
+          ## Quali informazioni su di te possono essere condivise online?
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Scherma la Cattiveria
@@ -7356,14 +7361,14 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       GettingLoopy-Unplugged_2020:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       Internet-Unplugged:
         markdown: |-
           # Internet.
@@ -7378,12 +7383,12 @@ it-IT:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged:
         markdown: |-
           # I miei amici robot ripetitivi
@@ -7422,10 +7427,10 @@ it-IT:
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       RelayProgramming-Unplugged_2020:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       Social Sleuth_2018_2019:
         markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
           Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
@@ -7470,23 +7475,19 @@ it-IT:
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2019:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       TheRightAppMarkdownLevel_2019_2020:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseE_project_exemplars_2019:
         markdown: |2-
 
@@ -7542,7 +7543,7 @@ it-IT:
         markdown: |-
           # Segui la Traccia Digitale
 
-          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+          ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Il mio quartiere digitale
@@ -7650,21 +7651,21 @@ it-IT:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BinaryBracelets-Unplugged_2021:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD U1 Test:
         title: Computer e Risoluzione di Problemi - Verifica finale
       ConditionalsWithCards-Unplugged_2021:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       CourseF_outbreak_story:
         content1: descrizione qui
         markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
@@ -7798,12 +7799,12 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged_2021:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       GraphPaperProgramming-Unplugged_2021:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       HappyMaps-Unplugged_2021:
@@ -7820,7 +7821,7 @@ it-IT:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged_2021:
         markdown: |-
           # I miei amici robot ripetitivi
@@ -8845,24 +8846,22 @@ it-IT:
         markdown: |-
           # Informazioni Private e Personali
 
-          ## Quali informazioni su di te si possono condividere online?
+          ## Quali informazioni su di te possono essere condivise online?
       RelayProgramming-Unplugged_2021:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       Songwriting-Unplugged_2021:
         markdown: |-
           # Scrivereunacanzone.
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2021:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC_2021:
         display_name: Progetto di fine corso
         description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
@@ -8902,25 +8901,25 @@ it-IT:
             Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
-          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
-            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
+          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
-            'vai avanti'.
+            `vai avanti`.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
-        - text: Scrat non si muoverà dal primo blocco.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non si sposterà dal primo blocco.
           feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
-        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
-            problema?
+        - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
+            c'è un problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -9046,18 +9045,21 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
-        - text: L'ape cercherà di prendere il miele sia dai fiori che dai favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
+        - text: L'ape cercherà di ottenere miele e nettare sia dai fiori che dal favo.
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
@@ -9136,7 +9138,7 @@ it-IT:
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
-        - text: Questo programma non livellerà l'ultima buca.
+        - text: Questo programma lascerà intatta l'ultima buca.
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         questions:
@@ -9172,7 +9174,7 @@ it-IT:
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
-        - text: Lo zombie sarà bloccato in avanti alla fine del sentiero.
+        - text: Lo zombie resterà bloccato alla fine del percorso di avanzamento.
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
         questions:
@@ -9219,8 +9221,8 @@ it-IT:
           feedback: Sbagliato. L'alieno blu inizierà a muoversi verso l'alto e verso
             il basso sullo schermo.
         questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai sull'alieno?
+        - text: Guarda attentamente il codice qui sotto. Cosa accadrà dopo aver cliccato
+            sull'alieno?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La contadina raccoglierà due zucche.
@@ -9278,7 +9280,7 @@ it-IT:
         - text: La balla di fieno inizierà a rotolare
           correct: true
           feedback: Corretto!
-        - text: La balla di fieno si accenderà e si spegnerà.
+        - text: Il cespuglio rotolante si accenderà e si spegnerà.
           feedback: Sbagliato. La balla di fieno inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9437,23 +9439,24 @@ it-IT:
       csf_be_a_super_digital_citizen_2021:
         content1: descrizione qui
         markdown: |-
-          # Cittadino Super Digitale
+          # Super Cittadino Digitale
 
-          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
+          ## Come possiamo essere di aiuto quando assistiamo al cyberbullismo?
       csf_digital_trails_2021:
         markdown: |-
           # Segui la Traccia Digitale
 
-          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+          ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_password_power-up_2021:
         content1: descrizione qui
         markdown: |-
           # Migliora la Tua Password
 
-          ## Suggerimenti della Password da Ricordare
+          ## Consigli da ricordare sulla password
 
           * Inizia con una **frase** memorabile
-          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
+          * Non utilizzare mai  per la tua password alcuna informazione legate alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -9948,3 +9951,82 @@ it-IT:
         display_name: Pratica
       csd-pre-survey-levelgroup_21_22:
         title: Alla Scoperta dell'Informatica - Indagine preliminare
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: blu
+        - text: verde
+        - {}
+        - text: giallo
+        - correct: true
+        - text: rosso
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: descrizione qui
+      allthethings_external_not_displayed_as_unplugged:
+        content1: descrizione qui
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Quale freccia fa arrivare il Flurb al tesoro?
+        title: Esercizio di Verifica (Risposte Multiple)
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Nessuno dei precedenti

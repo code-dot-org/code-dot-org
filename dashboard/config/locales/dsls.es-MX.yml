@@ -3541,12 +3541,12 @@ es-MX:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       ForLoopFun-Unplugged_2020:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -7047,7 +7047,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -8857,7 +8857,7 @@ es-MX:
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8874,7 +8874,7 @@ es-MX:
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8891,7 +8891,7 @@ es-MX:
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8908,7 +8908,7 @@ es-MX:
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8961,76 +8961,76 @@ es-MX:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y tratará de recoger más néctar del que hay en
             las flores. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: La abeja no recogerá néctar o miel.
@@ -10587,7 +10587,7 @@ es-MX:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GettingLoopy-Unplugged_2021:
         markdown: |-
           # Cómo hacerse Loopy
@@ -11688,12 +11688,12 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -11706,18 +11706,18 @@ es-MX:
             problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - text: El pájaro se quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
-        - text: El pájaro se estrellará contra la pared.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
+        - text: El pájaro chocará con la pared.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
@@ -12075,16 +12075,17 @@ es-MX:
         display_name: Práctica con el Artista
       courseF_beeFor_practice:
         description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) "para" y
+          la abeja!
+        display_name: Práctica con la abeja
       courseF_beeVar_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con las variables y la abeja!"
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_bee_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y la abeja!"
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y la abeja!"
+        display_name: Práctica con la abeja
       courseF_events_freeplay:
         description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
           ¡Sigue añadiendo a tu programa o empieza algo nuevo!
@@ -12155,11 +12156,11 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 píxeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle (loop) de `repetir`.
+            que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: La computadora pedirá un número al usuario.
+        - text: El ordenador pedirá al usuario un número.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
@@ -12240,20 +12241,20 @@ es-MX:
         answers:
         - text: El programa imprimirá "¡Hola nombre!"
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
-            escribas.
-        - text: El programa te dará la bienvenida con el nombre que escribas.
+            usted escriba.
+        - text: El programa le dará la bienvenida con el nombre que introduzca.
           correct: true
           feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
           feedback: Es incorrecto. El texto se imprime en la pantalla.
-        - text: La computadora hará otra pregunta.
+        - text: El ordenador hará otra pregunta.
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
-        - text: 'Este programa te permite escribir con el teclado para responder una
-            pregunta. El bloque `imprimir` muestra el texto en la pantalla. Haz una
-            predicción: ¿qué ocurrirá después de responder la pregunta?'
+        - text: 'Este programa le permite responder a una pregunta escribiendo con
+            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
+            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
       courseF_variables_projects:
         description: Crearás una tarjeta de felicitaciones, un chatbot o una historia
           de espacio en blanco. Si ya has terminado la \"Parte 1"\ de tu proyecto,
@@ -12355,10 +12356,10 @@ es-MX:
         display_name: Ejemplos de Proyecto
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este programa.
+        - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -13268,3 +13269,82 @@ es-MX:
 
       ml-use models applab-practice choice-2021:
         display_name: Practica con Modelos en el Laboratorio de Aplicaciones
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: azul
+        - text: verde
+        - {}
+        - text: amarillo
+        - correct: true
+        - text: rojo
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: descripción aquí
+      allthethings_external_not_displayed_as_unplugged:
+        content1: descripción aquí
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: "¿Qué flecha lleva al Flurb hacia el tesoro?"
+        title: Opción múltiple
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Ninguna de las anteriores

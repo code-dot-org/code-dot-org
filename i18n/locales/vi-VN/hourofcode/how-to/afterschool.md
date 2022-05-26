@@ -16,7 +16,7 @@ Thử Giờ lập trình là một cách đơn giản và thú vị để giới
 
 * * *
 
-## 1. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Chọn bài hướng dẫn
 

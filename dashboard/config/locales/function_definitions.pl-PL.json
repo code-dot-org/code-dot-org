@@ -4449,6 +4449,28 @@
           "draw ear stems": {
             "name": "narysuj łodygi"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
         }
       }
     }

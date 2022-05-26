@@ -3421,6 +3421,28 @@
           "potential solution": {
             "name": "potensial yechim"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
         }
       }
     }
