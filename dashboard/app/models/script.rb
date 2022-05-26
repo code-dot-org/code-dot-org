@@ -1583,6 +1583,7 @@ class Script < ApplicationRecord
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.key == 'csd'
     summary
   end
 
