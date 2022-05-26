@@ -20,7 +20,7 @@ const CodeReviewTimeline = props => {
     timelineData,
     addCodeReviewComment,
     closeReview,
-    resolveComment
+    toggleResolveComment
   } = props;
 
   const timelineEndRef = useRef(null);
@@ -59,7 +59,7 @@ const CodeReviewTimeline = props => {
               isLastElementInTimeline={lastElementInTimeline}
               addCodeReviewComment={addCodeReviewComment}
               closeReview={closeReview}
-              resolveComment={resolveComment}
+              toggleResolveComment={toggleResolveComment}
             />
           );
         }
@@ -75,7 +75,7 @@ CodeReviewTimeline.propTypes = {
   ),
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
-  resolveComment: PropTypes.func.isRequired
+  toggleResolveComment: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimeline;

@@ -90,14 +90,14 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const resolveComment = async (
+  const toggleResolveComment = async (
     commentId,
     isResolved,
     onSuccess,
     onFailure
   ) => {
     try {
-      const comment = await dataApi.resolveComment(commentId, isResolved);
+      const comment = await dataApi.toggleResolveComment(commentId, isResolved);
       onSuccess(comment);
     } catch (err) {
       console.log(err);
@@ -188,7 +188,7 @@ const CommitsAndReviewTab = props => {
             ]}
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
-            resolveComment={resolveComment}
+            toggleResolveComment={toggleResolveComment}
           />
           {!openReviewData && !isReadOnlyWorkspace && (
             <div style={styles.openCodeReview}>

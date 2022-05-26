@@ -40,7 +40,7 @@ const DEFAULT_PROPS = {
   isLastElementInTimeline: false,
   addCodeReviewComment: () => {},
   closeReview: () => {},
-  resolveComment: () => {},
+  toggleResolveComment: () => {},
   viewAsCodeReviewer: false
 };
 

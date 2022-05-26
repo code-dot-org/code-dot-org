@@ -18,7 +18,7 @@ const CodeReviewTimelineReview = ({
   isLastElementInTimeline,
   addCodeReviewComment,
   closeReview,
-  resolveComment,
+  toggleResolveComment,
   viewAsCodeReviewer
 }) => {
   const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
@@ -84,7 +84,7 @@ const CodeReviewTimelineReview = ({
               <Comment
                 comment={convertDataForComponent}
                 key={`code-review-comment-${comment.id}`}
-                onResolveStateToggle={resolveComment}
+                onResolveStateToggle={toggleResolveComment}
                 onDelete={() => {}}
                 viewAsCodeReviewer={viewAsCodeReviewer}
               />
@@ -113,7 +113,7 @@ CodeReviewTimelineReview.propTypes = {
   review: reviewShape,
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
-  resolveComment: PropTypes.func.isRequired,
+  toggleResolveComment: PropTypes.func.isRequired,
   viewAsCodeReviewer: PropTypes.bool
 };
 
