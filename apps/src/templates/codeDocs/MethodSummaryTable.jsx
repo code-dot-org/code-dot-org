@@ -24,7 +24,7 @@ export default function MethodSummaryTable({methods, includeLink}) {
                       aria-label="link to details"
                       style={styles.detailLink}
                     >
-                      <FontAwesome icon="external-link" />
+                      <FontAwesome icon="external-link" style={styles.icon} />
                     </a>
                   </>
                 )}
@@ -51,5 +51,8 @@ const styles = {
     borderWidth: 1,
     borderColor: color.lighter_gray,
     padding: 5
+  },
+  icon: {
+    fontSize: 14
   }
 };
