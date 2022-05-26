@@ -3683,7 +3683,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
+    Timecop.travel(Date.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
@@ -3705,7 +3705,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
+    Timecop.travel(Date.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
