@@ -330,7 +330,8 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units(user)
-    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
+    # only units in CSD should be included in the maker units
+    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.key == 'csd'}
     return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
