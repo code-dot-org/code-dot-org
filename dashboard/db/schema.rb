@@ -313,7 +313,7 @@ ActiveRecord::Schema.define(version: 2022_05_25_181706) do
     t.integer "code_review_request_id", null: false
     t.integer "commenter_id"
     t.boolean "is_resolved", null: false
-    t.text "comment", size: :medium, null: false
+    t.text "comment", size: :medium
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
