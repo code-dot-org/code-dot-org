@@ -6,7 +6,7 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
-require 'cdo/crowdin/utils'
+require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 require 'fileutils'
