@@ -364,9 +364,13 @@ export class WorkshopForm extends React.Component {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
     const showFeeInput =
-      isCsf && !HideFeeInformationSubjects.includes(this.state.subject);
+      isCsf &&
+      this.state.subject &&
+      !HideFeeInformationSubjects.includes(this.state.subject);
     const showMapChoice =
-      isCsf && !HideOnWorkshopMapSubjects.includes(this.state.subject);
+      isCsf &&
+      this.state.subject &&
+      !HideOnWorkshopMapSubjects.includes(this.state.subject);
     const showFundedInput = !isAdminCounselor;
 
     return (
