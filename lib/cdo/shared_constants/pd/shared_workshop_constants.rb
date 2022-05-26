@@ -42,6 +42,7 @@ module Pd
     SUBJECT_NAMES = {
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
+      SUBJECT_CSF_DISTRICT: SUBJECT_CSF_DISTRICT = 'District'.freeze,
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
@@ -111,6 +112,7 @@ module Pd
       COURSE_CSF => [
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
+        SUBJECT_CSF_DISTRICT,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ],
       COURSE_ADMIN_COUNSELOR => [
