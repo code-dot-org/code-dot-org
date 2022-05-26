@@ -31,9 +31,11 @@ class CodeReviewsController < ApplicationController
     code_review = CodeReview.new(
       user_id: current_user.id,
       project_id: project.id,
-      project_version: params[:version],
       script_id: params[:scriptId],
-      level_id: params[:levelId]
+      level_id: params[:levelId],
+      project_level_id: params[:levelId],  # TODO: send projectLevelId from the client
+      project_version: params[:version],
+      storage_id: project.storage_id
     )
     authorize! :create, code_review, project
     code_review.save!
