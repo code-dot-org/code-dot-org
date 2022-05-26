@@ -290,15 +290,25 @@ class DeleteAccountsHelper
     comments_written = CodeReviewNote.where(commenter_id: user_id)
     comments_written_count = comments_written.count
     comments_written.each do |comment|
+      comment.comment = nil
       comment.commenter_id = nil
       comment.save!
     end
-    @log.puts "Anonymized #{comments_written_count} CodeReviewNote" if comments_written_count > 0
-    # soft delete the code reviews of the user. This also soft deletes any comments on those reviews.
+    comments_written.destroy_all
+    @log.puts "Cleared and deleted #{comments_written_count} CodeReviewNote" if comments_written_count > 0
+    # Clear comments and soft delete any code reviews for the user.
     code_reviews = CodeReview.where(user_id: user_id)
     code_reviews_count = code_reviews.count
+    code_reviews.each do |code_review|
+      next unless code_review.comments
+      code_review.comments.each do |comment|
+        comment.comment = nil
+        comment.save!
+      end
+    end
+    # soft delete the code reviews of the user. This also soft deletes any comments on those reviews.
     code_reviews.destroy_all
-    @log.puts "Deleted #{code_reviews_count} CodeReview" if code_reviews_count > 0
+    @log.puts "Cleared and deleted #{code_reviews_count} CodeReview" if code_reviews_count > 0
   end
 
   def check_safety_constraints(user)
