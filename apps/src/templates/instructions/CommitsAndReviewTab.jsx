@@ -25,6 +25,7 @@ const CommitsAndReviewTab = props => {
     userIsTeacher,
     codeReviewEnabled,
     locale,
+    isReadOnlyWorkspace,
     setIsReadOnlyWorkspace
   } = props;
 
@@ -83,6 +84,21 @@ const CommitsAndReviewTab = props => {
         comments: [...openReviewData.comments, newComment]
       });
       onSuccess();
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const toggleResolveComment = async (
+    commentId,
+    isResolved,
+    onSuccess,
+    onFailure
+  ) => {
+    try {
+      const comment = await dataApi.toggleResolveComment(commentId, isResolved);
+      onSuccess(comment);
     } catch (err) {
       console.log(err);
       onFailure();
@@ -172,16 +188,28 @@ const CommitsAndReviewTab = props => {
             ]}
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
+            toggleResolveComment={toggleResolveComment}
           />
-          {!openReviewData && (
-            <div style={styles.openCodeReview}>
+          {!openReviewData && !isReadOnlyWorkspace && (
+            <div style={styles.timelineAligned}>
               <Button
                 icon="comment"
                 onClick={handleOpenReview}
                 text={javalabMsg.startReview()}
                 color={Button.ButtonColor.blue}
+                disabled={!codeReviewEnabled}
               />
               {openReviewError && <CodeReviewError />}
+            </div>
+          )}
+          {!codeReviewEnabled && (
+            <div
+              style={{
+                ...styles.timelineAligned,
+                ...styles.reviewDisabledMsg
+              }}
+            >
+              {javalabMsg.codeReviewDisabledMessage()}
             </div>
           )}
         </>
@@ -200,7 +228,8 @@ export default connect(
     channelId: state.pageConstants.channelId,
     serverLevelId: state.pageConstants.serverLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
-    locale: state.pageConstants.locale
+    locale: state.pageConstants.locale,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
@@ -218,6 +247,7 @@ CommitsAndReviewTab.propTypes = {
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
+  isReadOnlyWorkspace: PropTypes.bool,
   setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
@@ -244,14 +274,20 @@ const styles = {
   },
   messageText: {
     fontSize: 13,
-    marginBottom: '25px',
+    margin: '15px 5px 25px 16px',
     color: color.light_gray
   },
   refreshButtonStyle: {
     fontSize: 13,
     margin: 0
   },
-  openCodeReview: {
+  timelineAligned: {
     marginLeft: '30px'
+  },
+  reviewDisabledMsg: {
+    padding: '12px 6px',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    lineHeight: '22px'
   }
 };

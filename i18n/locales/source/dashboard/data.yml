@@ -695,6 +695,13 @@ en:
         CSA-PL-two-way-selection: Two-way selection
         CSA-PL-Printing-in-Java: Printing in Java
         CSA-PL-multi-selection-statements: Multi-selection Statements
+        PL_CSP_TeacherTips_Advice: 'Teacher Tips: Advice to New CS Teachers'
+        PL_CSP_TeacherTips_IntroToCSP: 'Teacher Tips: Intro to CS Principles'
+        PL_CSP_TeacherTips_Debugging: 'Teacher Tips: Help with Debugging'
+        PL_CSP_TeacherTips_LeadLearner: 'Teacher Tips: How to be a Lead Learner'
+        PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
+        PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

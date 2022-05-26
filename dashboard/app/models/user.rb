@@ -2107,6 +2107,14 @@ class User < ApplicationRecord
     sections_as_student.empty?
   end
 
+  def shared_sections_with(other_user)
+    sections_as_student & other_user.sections_as_student
+  end
+
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
+  end
+
   # Users who might otherwise have orphaned accounts should have the option
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
