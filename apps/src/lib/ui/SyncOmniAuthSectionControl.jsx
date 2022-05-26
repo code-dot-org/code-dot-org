@@ -78,8 +78,6 @@ class SyncOmniAuthSectionControl extends React.Component {
       // On click after failure, reset the button so the user can try again.
       this.setState({buttonState: READY});
       this.openDialog();
-      // CREATE OR TOGGLE VISIBILITY OF DIALOG HERE
-
       return;
     }
 
@@ -103,12 +101,10 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   openDialog = () => {
-    console.log('Open dialog');
     this.setState({isDialogOpen: true, buttonState: READY});
   };
 
   closeDialog = () => {
-    console.log('Close dialog');
     this.setState({isDialogOpen: false});
   };
 
