@@ -36,6 +36,8 @@ import {
 } from '../permission';
 import {
   Subjects,
+  HideFeeInformationSubjects,
+  HideOnWorkshopMapSubjects,
   VirtualOnlySubjects,
   NotFundedSubjects,
   MustSuppressEmailSubjects
@@ -361,8 +363,10 @@ export class WorkshopForm extends React.Component {
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
-    const showFeeInput = isCsf;
-    const showMapChoice = isCsf;
+    const showFeeInput =
+      isCsf && !HideFeeInformationSubjects.includes(this.state.subject);
+    const showMapChoice =
+      isCsf && !HideOnWorkshopMapSubjects.includes(this.state.subject);
     const showFundedInput = !isAdminCounselor;
 
     return (
