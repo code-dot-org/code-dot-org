@@ -53,15 +53,6 @@
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
 <% secret; end -%>
 
-  ReportingDBDomainNameRecord:
-    Type: AWS::Route53::RecordSetGroup
-    Properties:
-      HostedZoneName: <%=domain%>.
-      RecordSets:
-        - Name: <%="#{subdomain}-db-reporting.#{domain}"%>
-          Type: CNAME
-          TTL: <%= DNS_TTL %>
-          ResourceRecords: [!GetAtt ReportingDBProxyEndpoint.Endpoint]
   DBProxy:
     Type: AWS::RDS::DBProxy
     Properties:
