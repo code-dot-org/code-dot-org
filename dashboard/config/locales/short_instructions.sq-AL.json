@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "Mund t'a kryesh detyrën tënde më me lehtësi me një cikël?",
         "2-3 Bee Loops 3A": "A mund të përdorësh një cikël për të mbledhur gjithë\nnektarin?",
         "2-3 Maze 10": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
-        "2-3 Maze 2": "Ky derrkuci po më bezdis pendët. Më ndihmo ta arrij atë!",
+        "2-3 Maze 2": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
         "2-3 Maze 4": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
         "2-3 Maze 6": "Qetësohu dhe më ndihmo të gjej derrkucin e keq. Përndryshe\nunë mund të nevrikosem!",
         "2-3 Maze 7": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
@@ -378,7 +378,11 @@
         "courseF_artist_for_challenge2_2021": "A mund të kuptoni se si të rikrijoni këtë vizatim me një cikël të thjeshtë?",
         "courseF_bee2": "A mund të përdorësh një cikël për të mbledhur gjithë\nnektarin?",
         "courseF_bee_for8_2021": "Çfarë do të bëje nëse do të hiqnim disa blloqe? A mund t'i shtosh përsëri për të ndihmuar bletën të mbledhi nektar?\\\r\nMos harro:\nNëse cikli numëron për sipër, rritësi i shtohet variablës së numëruesit sa herë i shkon. Sa duhet të jetë rritësi për të mbledhur 3, 6, 9 nektar? \\\r",
-        "courseF_bee_for_challenge2_2021": "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
+        "courseF_bee_for_challenge2_2021": "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve.",
+        "2-3 Maze 1": "Me udhëhiq për tek green evilness! (Kujdes nga TNT)",
+        "2-3 Maze 3": "Qetësohu dhe më ndihmo të gjej derrkucin e keq. Përndryshe\nunë mund të nevrikosem!",
+        "Overworld Chop Tree - allthethings": "Druri është një burim shumë i rëndësishëm. Shumë gjera\njanë bërë prej saj. Ecni në pemë dhe përdorni komandën \"shkatërro bllokun\" për\nta prerë atë.",
+        "allthethings-anigif-instructions": "Më leviz drejt lindjes për të me çuar te derrkuci!"
       }
     }
   }

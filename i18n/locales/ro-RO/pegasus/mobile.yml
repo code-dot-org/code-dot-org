@@ -977,6 +977,10 @@
   coursed-2021_name: "	\nCurs D (2021)"
   coursee-2021_name: "	\nCurs E (2021)"
   coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2021)
+  courseb-2022_name: Curs B (2021)
+  coursec-2022_name: Curs C (2021)
+  coursed-2022_name: "	\nCurs D (2021)"
   express-2018_name: Curs Expres (2018)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
   express-2019_name: Curs expres (2019)
@@ -1097,6 +1101,12 @@
   coursed-2021_gradelevel: Gradele 8+
   coursee-2021_gradelevel: Vârste 8-12 ani
   coursef-2021_gradelevel: Clasele 10+
+  coursea-2022_gradelevel: Clasele 5+
+  courseb-2022_gradelevel: Clasele 6+
+  coursec-2022_gradelevel: Clasele 7+
+  coursed-2022_gradelevel: Gradele 8+
+  coursee-2022_gradelevel: Vârste 8-12 ani
+  coursef-2022_gradelevel: Clasele 10+
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1233,6 +1243,12 @@
   coursed-2021_shortdescription_congrats: Elevii învață despre bucle, relații de condiționalitate și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
   coursee-2021_shortdescription_congrats: Începe să scrii cod cu algoritmi, bucle, relații de condiționalitate și evenimente, după care vei trece la funcții. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
   coursef-2021_shortdescription_congrats: Învață să folosești diferite tipuri de bucle, evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici de rezolvare a problemelor și discută despre impactul social al computerelor și al Internetului. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
+  coursea-2022_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+  courseb-2022_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+  coursec-2022_shortdescription_congrats: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți!
+  coursed-2022_shortdescription_congrats: Elevii învață despre bucle, relații de condiționalitate și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
+  coursee-2022_shortdescription_congrats: Începe să scrii cod cu algoritmi, bucle, relații de condiționalitate și evenimente, după care vei trece la funcții. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
+  coursef-2022_shortdescription_congrats: Învață să folosești diferite tipuri de bucle, evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici de rezolvare a problemelor și discută despre impactul social al computerelor și al Internetului. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   thinkersmithspanish_longdescription: "Folosind un limbaj predefinit \"Vocabularul Robotului\", elevii vor descoperi; mijloace prin care care să se ghideze pentru a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil. Această segment învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de debugging."

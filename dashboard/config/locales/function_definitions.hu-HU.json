@@ -4161,6 +4161,27 @@
           "move and get nectar with counter": {
             "name": "menj és gyűjts nektárt számlálóval"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "függvény 1"
+          },
+          "function 2": {
+            "name": "függvény 2"
+          }
         }
       }
     }

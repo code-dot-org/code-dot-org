@@ -19,6 +19,7 @@
   "closeReview": "Close review",
   "codeEditingDisabled": "Code editing is disabled while your project is in review",
   "codeReview": "Code Review",
+  "codeReviewDisabledMessage": "Code review is disabled. Your teacher must place you in a code review group to enable this feature.",
   "commentProfanityFound": "Your comment contains inappropriate language, so it will not be saved. Please update your comment to remove the {wordCount, plural, one {word} other {words}} \"{words}\".",
   "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",

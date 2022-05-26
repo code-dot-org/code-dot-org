@@ -14,7 +14,7 @@
         "2-3 Bee Loops 2A": "Sa oras na ito, gumamit ng loop para tipunin ang lahat ng mga nektar.",
         "2-3 Bee Loops 3A": "Gamitin ang `repeat` na loop para kolektahin ang lahat ng mga nektar.",
         "2-3 Maze 10": "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)",
-        "2-3 Maze 2": "Ang baboy na ito ay dumadampi sa aking mga balahibo. Tulungan akong makuha siya!",
+        "2-3 Maze 2": "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)",
         "2-3 Maze 4": "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)",
         "2-3 Maze 7": "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)",
         "2-3 Maze 8": "Dalhin ako sa baboy!",
@@ -2794,7 +2794,23 @@
         "HOC 2018 Level_6": "Mag-navigate sa yelo upang maabot ang salmon.",
         "HOC 2018 Level_7a": "Hanapin ang mga guho sa ilalim ng dagat na ito para sa isang kaban.",
         "HOC 2018 Level_9b": "Gamitin ang korales bilang mga waypoint upang maabot ang kayamanan.",
-        "U4 Model Design 1_2021": "Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)"
+        "U4 Model Design 1_2021": "Magdagdag ng malaking red na button sa iyong screen gamit ang Design Mode. (I-click para sa buong mga instruksyon.)",
+        "2-3 Maze 1": "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Sinimulan ka namin sa 4x4 na larawang ginawa ni Maddie sa video. Ang iyong gawain ay punan ang isang 4x4 grid ng mga kulay gamit ang 12-bit bawat pixel. Narito ang mga kinakailangan: Hilera 1 - punan ang mga kulay ng pula. Hilera 2 - mga kulay ng berde. Hilera 3 - mga kulay ng asul. Row 4 - mga kulay ng abo.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Sinimulan ka namin sa 4x2 na larawang ginawa ni Maddie, ngunit iniwan namin ang huling dalawang parisukat. Tapusin ang larawan sa pamamagitan ng pag-alam kung aling dalawang kulay ang nawawala at i-encode ang mga ito.",
+        "Frequency Analysis": "Test",
+        "MC Agent Freeplay": "**Libreng Laro:** Oras na para magtuklas nang ikaw lang!",
+        "Overworld Chop Tree - allthethings": "Ang kahoy ay isang napakahalagang kayamanan. Maraming mga bagay ang nagawa mula nito. Maglakad papunta sa kahoy at gamitin ang \"destroy block\" na utos para putulin ito.",
+        "Pixelation - Lesson 15 - Color Shades": "Sinimulan ka namin sa hanay ng mga kulay ng pula na ginawa ni Maddie sa video. Mag-eksperimento sa 6-bit na kulay sa pamamagitan ng pagpuno sa ibabang hilera ng larawan ng mga shade ng ibang kulay. Narito ang isang halimbawa na may ilang mga kulay ng asul. Subukan ang iyong sariling kulay!",
+        "Pixelation - Lesson 15 - Color Shades 4x4": "Sinimulan ka namin sa 4x4 na larawang ginawa ni Maddie sa video. Ang iyong gawain ay punan ang isang 4x4 grid ng mga kulay gamit ang 12-bit bawat pixel. Narito ang mga kinakailangan: Hilera 1 - punan ang mga kulay ng pula. Hilera 2 - mga kulay ng berde. Hilera 3 - mga kulay ng asul. Row 4 - mga kulay ng abo.",
+        "Pixelation - Lesson 15 - Complete 3-bit color": "Sinimulan ka namin sa 4x2 na larawang ginawa ni Maddie, ngunit iniwan namin ang huling dalawang parisukat. Tapusin ang larawan sa pamamagitan ng pag-alam kung aling dalawang kulay ang nawawala at i-encode ang mga ito.",
+        "Pixelation 4x4 Empty": "Ang lapad at taas ay naka-encode na ngayon sa data ng pixel. Maaari mo bang malaman kung paano ayusin ang mga sukat?",
+        "Pixelation Bee": "Ang mas malaking larawan ng isang bubuyog ay nag-e-encode ng kulay na may 12 bits kada pixel, ngunit ang pagtingin sa hex ay ginagawang mas madaling makita ang kulay ng bawat pixel. Kung lumipat ka sa binary mode - kumapit ka - ito ay maraming bit. Narito ang isa pang bagay na dapat subukan: i-slide ang mga bit kada pixel hanggang 24 bits bawat pixel. Ano ang nangyayari? Maaari mo bang ipaliwanag ang pag-uugaling ito?",
+        "Pixelation Flappy": "Narito ang isang mas malaking larawan sa 9 bits kada pixel. Sa 9 bits kada pixel maaari kang maglarawan ng 512 iba't ibang kulay. Mag-click upang makita ang susunod na larawan na mas sopistikado, ngunit mas madaling maunawaan.",
+        "U1L13 Text Compression": "Maghanap ng mga pattern (paulit-ulit na salita o parirala) sa teksto. Ilagay ang mga pattern na nakikita mo sa diksyunaryo sa kanan. Habang nagta-type ka ng mga entry sa diksyunaryo, ipinapasok sa teksto bilang kapalit ng pattern ang simbolo sa entry.",
+        "U2L10 NetSim Automatic DNS": "Sa bersiyong ito ng Internet Simulator, isang Domain Name System (DNS) ang ibinigay sa iyo at alam ang mga IP address ng lahat ng konektadong computer. Magpadala ng mensahe sa form na GET [hostname] sa serbisyo ng DNS sa address <yourRouterNumber>. 15 upang makuha ang address ng estudyante.",
+        "Vigenere": "Test",
+        "allthethings-anigif-instructions": "Dalhin ako sa Kanluran para marating ko ang baboy!"
       }
     }
   }

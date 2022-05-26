@@ -2419,26 +2419,20 @@ kk:
         csd3-2021:
           lessons:
             Variables:
-              key: Айнымалылар
               name: Айнымалылар
             Text:
-              key: Мәтін
               name: Мәтін
             Conditionals:
-              key: Шарттар
               name: Шарттар
             Functions:
-              key: Функциялар
               name: Функциялар
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Параметрлі Функциялар
               name: Параметрлі Функциялар
         csp3-2021:
           lessons:
             Debugging:
-              key: Бағдарламаны дұрыстау
               name: Бағдарламаны дұрыстау
         csp4-2021:
           lesson_groups:
@@ -2472,7 +2466,6 @@ kk:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Қозғал, Қозғал
               name: Қозғал, Қозғал
             'Loops: Getting Loopy':
               name: Ілмектерді үйрену
@@ -2486,7 +2479,6 @@ kk:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Екілік Білезіктер
               name: Екілік Білезіктер
             'Events: The Big Event':
               name: Үлкен Оқиға
@@ -2504,16 +2496,11 @@ kk:
             'Algorithms: Graph Paper Programming':
               name: Миллиметрлік Бағдарламалау
             Relay Programming:
-              key: Релелік Бағдарламалау
               name: Релелік Бағдарламалау
             Conditionals with Cards:
-              key: Картаға қатысты шартты белгілер
               name: Картаға қатысты шартты белгілер
             'Unplugged: Binary':
-              key: 'Kомпьютерсіз: Екілік жүйе'
               name: Екілік Суреттер
-            Artist Binary:
-              key: Кейіпкер Екілік жүйе
           lesson_groups:
             csf_events:
               display_name: Шаралар
@@ -2529,8 +2516,6 @@ kk:
               display_name: Сандық Азаматтық
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Шарттар
             'Functions: Songwriting':
               name: Ән Жазу
           lesson_groups:
@@ -2545,13 +2530,10 @@ kk:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Конверт Айнымалылары
               name: Конверт Айнымалылары
             Internet:
-              key: Ғаламтор
               name: Ғаламтор
             For Loop Fun:
-              key: Көңілді For циклі
               name: Көңілді For циклі
           lesson_groups:
             csf_digcit:
@@ -2629,22 +2611,16 @@ kk:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Ілмек
               name: Ілмек
             Events:
-              key: Шаралар
               name: Шаралар
             Conditionals:
-              key: Шарттар
               name: Шарттар
             Functions:
-              key: Функциялар
               name: Функциялар
             Variables:
-              key: Айнымалылар
               name: Айнымалылар
             For Loops:
-              key: For ілмектері
               name: For ілмектері
           lesson_groups:
             k5_getting_started_1:
@@ -2806,7 +2782,6 @@ kk:
           lessons:
             Debugging:
               name: Бағдарламаны дұрыстау
-              key: Бағдарламаны дұрыстау
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2825,7 +2800,6 @@ kk:
           lessons:
             Move It, Move It:
               name: Қозғал, Қозғал
-              key: Қозғал, Қозғал
             Getting Loopy:
               name: Ілмектерді үйрену
             'Loops: Getting Loopy':
@@ -2843,7 +2817,6 @@ kk:
               name: Үлкен Оқиға
             Binary Bracelets:
               name: Екілік Білезіктер
-              key: Екілік Білезіктер
             'Events: The Big Event':
               name: Үлкен Оқиға
           lesson_groups:
@@ -2859,10 +2832,8 @@ kk:
               name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
-              key: Релелік Бағдарламалау
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
-              key: Картаға қатысты шартты белгілер
             'Algorithms: Graph Paper Programming':
               name: Миллиметрлік Бағдарламалау
           lesson_groups:
@@ -2880,8 +2851,6 @@ kk:
               name: Ән Жазу
             'Functions: Songwriting':
               name: Ән Жазу
-            Conditionals:
-              key: Шарттар
           lesson_groups:
             csf_digcit:
               display_name: Сандық Азаматтық
@@ -2895,11 +2864,9 @@ kk:
           lessons:
             For Loop Fun:
               name: Көңілді For циклі
-              key: Көңілді For циклі
             The Internet:
               name: Ғаламтор
             Internet:
-              key: Ғаламтор
               name: Ғаламтор
           lesson_groups:
             lessonGroup-7:
@@ -2968,7 +2935,6 @@ kk:
           lessons:
             The Internet:
               name: Ғаламтор
-              key: Ғаламтор
           lesson_groups:
             lessonGroup-7:
               display_name: Сандық Азаматтық
@@ -2997,37 +2963,39 @@ kk:
           lessons:
             Loops:
               name: Ілмек
-              key: Ілмек
             Events:
               name: Шаралар
-              key: Шаралар
             Conditionals:
               name: Шарттар
-              key: Шарттар
             Functions:
               name: Функциялар
-              key: Функциялар
             Variables:
               name: Айнымалылар
-              key: Айнымалылар
             For Loops:
               name: For ілмектері
-              key: For ілмектері
         csd3-2022:
           lessons:
             Variables:
               name: Айнымалылар
-              key: Айнымалылар
             Text:
               name: Мәтін
-              key: Мәтін
             Conditionals:
               name: Шарттар
-              key: Шарттар
             Functions:
               name: Функциялар
-              key: Функциялар
         csd6-2022:
           lessons:
             Functions:
               name: Функциялар
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Қысқаша шолу
+            lesson-1:
+              name: Қысқаша шолу
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Қысқаша шолу
+            lesson-1:
+              name: Қысқаша шолу
