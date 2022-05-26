@@ -77,6 +77,7 @@
   "fileImportWarningConfirm": "Do you want to replace these files with the files from your backpack?",
   "fileLoadError": "There was an error loading the file {filename}.",
   "fileNotFoundException": "Your code threw a FileNotFoundException while running for file name: {causeMessage}",
+  "genericError": "Error",
   "genericSaveErrorTitle": "Save error",
   "genericErrorMessage": "Please try again",
   "import": "Import",
