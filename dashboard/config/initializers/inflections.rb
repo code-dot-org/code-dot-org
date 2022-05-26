@@ -16,6 +16,12 @@
 # end
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.acronym "CDO" # "code dot org"
-  inflect.acronym "DSL" # "Domain-specific language"
+  inflect.acronym "AFE" # Amazon Future Engineer
+  inflect.acronym "CDO" # Code Dot Org
+  inflect.acronym "CSD" # Computer Science Discoveries
+  inflect.acronym "CSF" # Computer Science Fundamentals
+  inflect.acronym "CSP" # Computer Science Principles
+  inflect.acronym "CSTA" # Computer Science Teachers Association
+  inflect.acronym "DSL" # Domain-Specific Language
+  inflect.acronym "JSON" # JavaScript Object Notation
 end
