@@ -2107,7 +2107,7 @@ class User < ApplicationRecord
     sections_as_student.empty?
   end
 
-  def shared_sections_with?(other_user)
+  def shared_sections_with(other_user)
     sections_as_student & other_user.sections_as_student
   end
 

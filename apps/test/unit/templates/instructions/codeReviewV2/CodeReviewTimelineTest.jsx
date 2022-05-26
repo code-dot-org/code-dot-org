@@ -54,7 +54,7 @@ const DEFAULT_PROPS = {
   ],
   addCodeReviewComment: () => {},
   closeReview: () => {},
-  resolveComment: () => {}
+  toggleResolveComment: () => {}
 };
 
 const setUp = (overrideProps = {}) => {

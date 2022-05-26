@@ -137,7 +137,7 @@ export default class CodeReviewDataApi {
     });
   }
 
-  resolveComment(commentId, isResolved) {
+  toggleResolveComment(commentId, isResolved) {
     return new Promise((resolve, reject) => {
       $.ajax({
         url: `/code_review_notes/${commentId}`,

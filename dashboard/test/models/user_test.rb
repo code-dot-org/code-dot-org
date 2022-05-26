@@ -1822,25 +1822,25 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_delete_own_account?
   end
 
-  test 'shared_sections_with? returns sections shared between students' do
+  test 'shared_sections_with returns sections shared between students' do
     section_1 = create :section
     section_2 = create :section
     student_1 = create(:follower, section: section_1).student_user
     student_2 = create(:follower, section: section_1).student_user
     create(:follower, section: section_2, student_user: student_2)
 
-    shared_sections = student_1.shared_sections_with?(student_2)
+    shared_sections = student_1.shared_sections_with(student_2)
     assert_equal shared_sections.length, 1
     assert_equal shared_sections.first.id, section_1.id
   end
 
-  test 'shared_sections_with? returns empty array if there are no shared sections' do
+  test 'shared_sections_with returns empty array if there are no shared sections' do
     section_1 = create :section
     section_2 = create :section
     student_1 = create(:follower, section: section_1).student_user
     student_2 = create(:follower, section: section_2).student_user
 
-    shared_sections = student_1.shared_sections_with?(student_2)
+    shared_sections = student_1.shared_sections_with(student_2)
     assert_equal shared_sections.length, 0
   end
 
