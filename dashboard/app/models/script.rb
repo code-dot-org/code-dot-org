@@ -330,8 +330,7 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units(user)
-    # only units in CSD should be included in the maker units
-    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.key == 'csd'}
+    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
     return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
@@ -721,18 +720,25 @@ class Script < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a unit family.
+  # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
   # @return [Script|nil] Returns the latest version in a unit family.
-  def self.latest_stable_version(family_name, locale: 'en-us')
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    unit_versions = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    unit_versions = Script.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
 
     # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
+    # Match on version year if one is supplied.
     locale_str = locale&.to_s
     supported_stable_units = unit_versions.select do |unit|
       is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
-      unit.stable? && is_supported
+      if version_year
+        unit.stable? && is_supported && unit.version_year == version_year
+      else
+        unit.stable? && is_supported
+      end
     end
 
     supported_stable_units&.first

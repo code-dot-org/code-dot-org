@@ -518,6 +518,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
   end
 
+  test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
+    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+
+    assert_equal unit_2017, Script.latest_stable_version('fake-family', version_year: '2017')
+  end
+
   test 'self.latest_assigned_version returns nil if no units in family are assigned to user' do
     unit1 = create :script, name: 's-1', family_name: 'family-1'
     student = create :student
