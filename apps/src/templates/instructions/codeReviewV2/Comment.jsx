@@ -110,8 +110,18 @@ class Comment extends Component {
     );
   };
 
+  deleteCodeReviewComment = () => {
+    this.props.onDelete(
+      this.props.comment.id,
+      () => {},
+      () => {
+        // TODO: Handle comment delete failure
+      }
+    );
+  };
+
   getMenuItems = () => {
-    const {viewAsCodeReviewer, viewAsTeacher, onDelete} = this.props;
+    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
     const {hideResolved, isCommentResolved} = this.state;
     let menuItems = [];
     if (isCommentResolved) {
@@ -136,7 +146,7 @@ class Comment extends Component {
     if (viewAsTeacher) {
       // Instructors can delete comments
       menuItems.push({
-        onClick: onDelete,
+        onClick: this.deleteCodeReviewComment,
         text: javalabMsg.delete(),
         iconClass: 'trash'
       });
