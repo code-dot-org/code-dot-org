@@ -335,7 +335,7 @@ class Lesson < ApplicationRecord
 
       if has_lesson_plan
         # only collect lesson feedback on the most recent stable english version of the course
-        lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version.recommended?
+        lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version&.recommended?
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
