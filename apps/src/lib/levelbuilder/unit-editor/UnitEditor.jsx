@@ -595,6 +595,7 @@ class UnitEditor extends React.Component {
             <label>
               Is a Maker Unit
               <input
+                className="maker-unit-checkbox"
                 type="checkbox"
                 checked={this.state.isMakerUnit}
                 style={styles.checkbox}
