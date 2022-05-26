@@ -773,9 +773,12 @@ describe('project.js', () => {
         });
       });
 
-      it('fails when channel not found', done => {
+      it('redirects to new project when channel not found', done => {
         project.load().catch(() => {
-          expect(project.notFound()).to.be.true;
+          expect(utils.navigateToHref).to.have.been.calledOnce;
+          expect(utils.navigateToHref.firstCall.args[0]).to.equal(
+            '/projects/artist'
+          );
           done();
         });
       });
