@@ -1,7 +1,10 @@
+$color-accent: hotpink;
+
 p{
   font-size: 24px;
 
   span {
     font-family: 'Gotham 7r', sans-serif;
+    color: $color-accent;
   }
 }
