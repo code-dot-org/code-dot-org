@@ -122,7 +122,7 @@ class Ability
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
       end
       can :destroy, ReviewableProject, user_id: user.id
-      can :project_commits, ProjectVersion do |_, project_owner|
+      can :view_project_commits, User do |project_owner|
         project_owner.id === user.id || can?(:code_review, project_owner)
       end
 
