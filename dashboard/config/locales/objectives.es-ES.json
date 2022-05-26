@@ -1460,6 +1460,15 @@
         "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
           "description": "Utiliza el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso informático."
         },
+        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
+          "description": "Identificar y definir un problema que pueda ser resuelto utilizando la informática"
+        },
+        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
+          "description": "Diseñar una aplicación que introduzca, emita, almacene y procese información para resolver un problema"
+        },
+        "5caf913a-779e-4174-9e9f-b6a87756263e": {
+          "description": "Proporcionar e incorporar los comentarios de los compañeros para mejorar un dispositivo informático."
+        },
         "74336c50-eaa5-4dce-a478-27925ce67729": {
           "description": "Mejorar de forma iterativa la solución de un problema"
         },
@@ -1489,6 +1498,27 @@
         },
         "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
           "description": "Evaluar el grado de definición de un problema y utilizar estrategias para definirlo con mayor precisión"
+        },
+        "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
+          "description": "Identificar las razones por las que alguien puede visitar un determinado sitio web"
+        },
+        "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
+          "description": "Explica que HTML permite a un programador comunicar la forma en que debe estructurarse el contenido en una página web"
+        },
+        "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
+          "description": "Escribe un documento HTML sencillo que utilice etiquetas de apertura y cierre para estructurar el contenido"
+        },
+        "c783566f-9577-4876-96f7-594f4dccd8aa": {
+          "description": "Entiende cómo utilizar los recursos de las lecciones que se ofrecen en el Laboratorio Web"
+        },
+        "7298cc4c-c0b2-40d2-b508-5e460f8d7653": {
+          "description": "Utiliza las etiquetas de cabecera para cambiar la apariencia del texto en una página web."
+        },
+        "8301013f-1346-4f62-a416-ed9371bf3588": {
+          "description": "Organiza el contenido en títulos, subtítulos y párrafos."
+        },
+        "6b4d8978-99c8-4541-9213-fa14c4132c62": {
+          "description": "Utiliza una práctica estructurada para crear en colaboración un dispositivo digital."
         }
       }
     }

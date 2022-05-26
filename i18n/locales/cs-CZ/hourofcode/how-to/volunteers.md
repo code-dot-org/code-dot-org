@@ -22,7 +22,7 @@ Hodina programování je hodinový úvod do počítačových věd, který by mě
 - [Když pořádáte akci](#hosting-an-event)
 - [Šiřte osvětu o Hodině programování](#promote-hour-of-code)
 - [Další způsoby, jak podpořit Hodinu programování](#support-hour-of-code)
-- [Často kladené dotazy o dobrovolnictví](#faq)
+- [Nejčastější dotazy k dobrovolnictví](#faq)
 
 Ať už děláte svou dobrovolnickou práci virtuálně, osobně nebo za firmu, Vaše úsilí může mít obrovský vliv na způsob, jakým studenti nahlížejí na počítačovou vědu a na své vlastní možnosti. Jestliže dosud máte nějaké dotazy [podívejte se do naší nástrojové sady pro dobrovolníky]({{ localized_files/hoc_volunteer_toolkit }}).
 
@@ -116,7 +116,7 @@ Jestliže jste pořadatelem nějaké třídní akce, použijte jako návod vzoro
 
 Jestliže uvažujete, že byste Hodinu programování pořádali doma nebo ve společenství, doporučujeme Vám podívat se na některé naše hloubkové návodné průvodce pro [rodiče](https://hourofcode.com/us/how-to/parents) a [organizace nebo firmy](https://hourofcode.com/us/how-to/companies).
 
-### 1. Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Určete datum, formát a místo své události
 
@@ -238,7 +238,7 @@ Další nápady na to, jak podpořit Code.org a Hodinu programování, najdete n
 
 <a id="faq"></a>
 
-## Často kladené dotazy o dobrovolnictví
+## Nejčastější dotazy k dobrovolnictví
 
 ### Učitel mě zatím nekontaktoval. Jak se i přesto mohu stát dobrovolníkem?
 

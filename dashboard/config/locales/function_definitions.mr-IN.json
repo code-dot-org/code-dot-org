@@ -2770,6 +2770,28 @@
           "move and get nectar with counter": {
             "name": "हालचाल करा आणि काऊंटर वापरून परागकण गोळा करा."
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "एक आकार काढा",
+            "parameters": {
+              "sides": "बाजू",
+              "length": "लांबी"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
         }
       }
     }

@@ -330,6 +330,7 @@
   coursee-2017_name: ಕೋರ್ಸ್‌ ಇ (2017)
   coursef-2017_name: ಕೋರ್ಸ್‌ ಎಫ್‌ (2017)
   coursed-2021_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
+  coursed-2022_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
   pre-express-2018_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2018)
   pre-express-2019_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2019)
   pre-express-2020_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2020)
@@ -414,6 +415,12 @@
   coursed-2021_gradelevel: ವಯಸ್ಸು 7-11
   coursee-2021_gradelevel: ವಯಸ್ಸು 8-12
   coursef-2021_gradelevel: ವಯಸ್ಸು 9-13
+  coursea-2022_gradelevel: ವಯಸ್ಸು 4-7
+  courseb-2022_gradelevel: ವಯಸ್ಸು 5-8
+  coursec-2022_gradelevel: ವಯಸ್ಸು 6-10
+  coursed-2022_gradelevel: ವಯಸ್ಸು 7-11
+  coursee-2022_gradelevel: ವಯಸ್ಸು 8-12
+  coursef-2022_gradelevel: ವಯಸ್ಸು 9-13
   accelerated_gradelevel: "ವಯಸ್ಸು 10-18"
   frozen_shortdescription: "ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಐಸ್‌ನ ಮ್ಯಾಜಿಕ್ ಮತ್ತು ಸೌಂದರ್ಯವನ್ನು ಅನಾವರಣಗೊಳಿಸುತ್ತಿದ್ದಂತೆಯೇ ಕೋಡ್ ಅನ್ನು ನಾವು ಬಳಸೋಣ."
   starwars_shortdescription: "ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ."

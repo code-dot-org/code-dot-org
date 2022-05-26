@@ -680,21 +680,16 @@ ku:
         csd3-2021:
           lessons:
             Variables:
-              key: گۆڕاوەکان
               name: گۆڕاوەکان
             Text:
-              key: دەق
               name: دەق
             Conditionals:
-              key: مەرجیەکان
               name: مەرجیەکان
             Functions:
-              key: فرمانەکان
               name: فرمانەکان
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: فەرمانی بە پێوەر
               name: فەرمانی بە پێوەر
         csp4-2021:
           lesson_groups:
@@ -734,7 +729,6 @@ ku:
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
-              key: بەرنامەڕێژی بە پێشبڕکێ
               name: بەرنامەڕێژی بە پێشبڕکێ
           lesson_groups:
             csf_loops:
@@ -742,9 +736,6 @@ ku:
             csf_conditionals:
               display_name: مەرجیەکان
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: مەرجیەکان
           lesson_groups:
             csf_nested_loops:
               display_name: مەرجیەکان
@@ -784,16 +775,12 @@ ku:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: گرێکان
               name: گرێکان
             Conditionals:
-              key: مەرجیەکان
               name: مەرجیەکان
             Functions:
-              key: فرمانەکان
               name: فرمانەکان
             Variables:
-              key: گۆڕاوەکان
               name: گۆڕاوەکان
         dlp21-csp-mod4:
           lesson_groups:
@@ -864,7 +851,6 @@ ku:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
-              key: بەرنامەڕێژی بە پێشبڕکێ
             'Algorithms: Graph Paper Programming':
               name: بەرنامەڕێژی پەڕەی هێڵکاری
           lesson_groups:
@@ -873,9 +859,6 @@ ku:
             csf_conditionals:
               display_name: مەرجیەکان
         coursee-2022:
-          lessons:
-            Conditionals:
-              key: مەرجیەکان
           lesson_groups:
             csf_functions:
               display_name: فرمانەکان
@@ -914,7 +897,6 @@ ku:
           lessons:
             The Internet:
               name: ئینتەرنێت
-              key: ئینتەرنێت
           lesson_groups:
             lessonGroup-8:
               display_name: گۆڕاوەکان
@@ -926,30 +908,22 @@ ku:
           lessons:
             Loops:
               name: گرێکان
-              key: گرێکان
             Conditionals:
               name: مەرجیەکان
-              key: مەرجیەکان
             Functions:
               name: فرمانەکان
-              key: فرمانەکان
             Variables:
               name: گۆڕاوەکان
-              key: گۆڕاوەکان
         csd3-2022:
           lessons:
             Variables:
               name: گۆڕاوەکان
-              key: گۆڕاوەکان
             Text:
               name: دەق
-              key: دەق
             Conditionals:
               name: مەرجیەکان
-              key: مەرجیەکان
             Functions:
               name: فرمانەکان
-              key: فرمانەکان
         csd6-2022:
           lessons:
             Functions:

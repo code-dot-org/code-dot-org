@@ -976,6 +976,7 @@
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
   coursed-2021_name: Kurz D (2021)
+  coursed-2022_name: Kurz D (2021)
   express-2018_name: Rychlý kurz (2018)
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
@@ -984,6 +985,7 @@
   pre-express-2020_name: Rychlokurz pro předškoláky (2020)
   express-2021_name: Rychlý kurz (2021)
   pre-express-2021_name: Rychlý kurz pro předškoláky (2021)
+  express-2022_name: Rychlý kurz (2021)
   csd2_name: 'Jednotka 2: Vývoj webových stránek'
   csd3_name: 'Jednotka 3: Animace a hry'
   accelerated_name: "Zrychlený kurz"
@@ -1097,6 +1099,12 @@
   coursed-2021_gradelevel: Známky 8+
   coursee-2021_gradelevel: Věk 8-12
   coursef-2021_gradelevel: Věk 9 - 13
+  coursea-2022_gradelevel: Věk 4 - 7
+  courseb-2022_gradelevel: Věk 5 - 8
+  coursec-2022_gradelevel: Věk 6-10
+  coursed-2022_gradelevel: Známky 8+
+  coursee-2022_gradelevel: Věk 8-12
+  coursef-2022_gradelevel: Věk 9 - 13
   accelerated_gradelevel: "Věk 10-18"
   codeorg_platformtext: "Moderní prohlížeče, smartphony, tablety"
   codeintl_platformtext: "Moderní prohlížeče, smartphony, tablety"
@@ -1233,6 +1241,12 @@
   coursed-2021_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
   coursee-2021_shortdescription_congrats: Začněte programovat s algoritmy, cykly, podmínkami a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
   coursef-2021_shortdescription_congrats: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
+  coursea-2022_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  courseb-2022_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  coursec-2022_shortdescription_congrats: Vytvářejte programy s posloupnostmi, cykly a událostmi. Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
+  coursed-2022_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
+  coursee-2022_shortdescription_congrats: Začněte programovat s algoritmy, cykly, podmínkami a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
+  coursef-2022_shortdescription_congrats: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
   codeorg_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   codeintl_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   thinkersmithspanish_longdescription: "Použitím předdefinovaného \"slovníkového Robota\" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění."

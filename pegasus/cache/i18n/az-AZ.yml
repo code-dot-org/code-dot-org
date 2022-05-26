@@ -1321,6 +1321,7 @@ az-AZ:
   coursee-2020_name: E Kursu (2020)
   coursef-2020_name: F Kursu (2020)
   coursed-2021_name: D Kursu (2021)
+  coursed-2022_name: D Kursu (2021)
   express-2018_name: Ekspress Kurs (2018)
   pre-express-2018_name: Ön-oxucu Ekspres Kursu (2018)
   express-2019_name: Ekspress Kurs (2019)
@@ -1443,6 +1444,12 @@ az-AZ:
   coursed-2021_gradelevel: 8+ siniflər
   coursee-2021_gradelevel: 8-12 yaş
   coursef-2021_gradelevel: 9-13 yaş
+  coursea-2022_gradelevel: 4-7 yaş
+  courseb-2022_gradelevel: 5-8 yaş
+  coursec-2022_gradelevel: 6-10 yaş
+  coursed-2022_gradelevel: 8+ siniflər
+  coursee-2022_gradelevel: 8-12 yaş
+  coursef-2022_gradelevel: 9-13 yaş
   accelerated_gradelevel: 10+ yaş (Kurs 3-dən sonra)
   codeorg_platformtext: Müasir brauzerlər, smartfonlar, planşetlər
   codeintl_platformtext: Müasir brauzerlər, smartfonlar, planşetlər
@@ -1660,6 +1667,27 @@ az-AZ:
     kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
     və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
   coursef-2021_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən,
+    funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli
+    üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə
+    edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz
+    bir baş daşı layihəsi hazırlayın və yaradın.
+  coursea-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
+    əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
+    yaradın.
+  courseb-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
+    əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
+    yaradın.
+  coursec-2022_shortdescription_congrats: Ardıcıllıq, döngələr və hadisələrlə proqramlar
+    yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli
+    üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda
+    paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
+  coursed-2022_shortdescription_congrats: Şagirdlər döngələr, şərtlər və hadisələr
+    haqqında anlayışlarını inkişaf etdirirlər. Kodlaşdırmadan əlavə, tələbələr rəqəmsal
+    vətəndaşlıq haqqında məlumat əldə edirlər.
+  coursee-2022_shortdescription_congrats: Alqoritmlər, döngələr, şərtlər və hadisələrlə
+    kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
+    və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
+  coursef-2022_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən,
     funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli
     üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə
     edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz

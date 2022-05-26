@@ -1985,6 +1985,18 @@
               "binary": "binari"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "dibuixa un quadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "longitud"
+            }
+          }
         }
       }
     }

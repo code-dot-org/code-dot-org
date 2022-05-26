@@ -880,6 +880,7 @@
   coursee-2020_name: Μάθημα E (2020)
   coursef-2020_name: Μάθημα F (2020)
   coursed-2021_name: Μάθημα D (2021)
+  coursed-2022_name: Μάθημα D (2021)
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: "Επιστήμη Υπολογιστών στην Αλγεβρα"
@@ -987,6 +988,12 @@
   coursed-2021_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2021_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2021_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2022_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2022_gradelevel: Ηλικίες 5-8
+  coursec-2022_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2022_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2022_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2022_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"

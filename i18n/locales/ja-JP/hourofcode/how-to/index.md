@@ -27,7 +27,7 @@ title: Hour of Code ハウツーガイド
 
 <a id="how-to-video"></a>
 
-## Hour of Code ハウツーガイドのビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## Hour of Code ハウツーガイドのビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

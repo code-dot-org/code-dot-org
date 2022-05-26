@@ -3990,6 +3990,27 @@
           "move and get nectar with counter": {
             "name": "זוז ואסוף צוף עם מונה"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "צייר ריבוע"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "צייר צורה",
+            "parameters": {
+              "length": "אורך"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "פונקציה 1"
+          },
+          "function 2": {
+            "name": "פונקציה 2"
+          }
         }
       }
     }

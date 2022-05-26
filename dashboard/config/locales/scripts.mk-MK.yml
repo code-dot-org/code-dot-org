@@ -266,10 +266,8 @@ mk:
         csd3-2021:
           lessons:
             Variables:
-              key: Променливи
               name: Променливи
             Text:
-              key: Текст
               name: Текст
         csp4-2021:
           lesson_groups:
@@ -322,10 +320,8 @@ mk:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Лупови
               name: Лупови
             Variables:
-              key: Променливи
               name: Променливи
         dlp21-csd:
           lesson_groups:
@@ -399,15 +395,11 @@ mk:
           lessons:
             Loops:
               name: Лупови
-              key: Лупови
             Variables:
               name: Променливи
-              key: Променливи
         csd3-2022:
           lessons:
             Variables:
               name: Променливи
-              key: Променливи
             Text:
               name: Текст
-              key: Текст
