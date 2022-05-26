@@ -5,7 +5,9 @@ $width-md: 970px;
 $width-sm: 600px;
 
 // Styles
-a:hover {
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
 }
 

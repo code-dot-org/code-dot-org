@@ -21,7 +21,9 @@ $width-xs: 360px;
     background: linear-gradient(180deg, #51466E 0%, #75659F 100%);
   }
 
-  a:hover {
+  a:hover,
+  a:active,
+  a:visited {
     text-decoration: none;
   }
 
