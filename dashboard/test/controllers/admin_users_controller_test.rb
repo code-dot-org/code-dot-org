@@ -3,6 +3,8 @@ require 'cdo/activity_constants'
 
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  
+  self.use_transactional_test_case = true
 
   setup do
     @admin = create(:admin)
