@@ -4,13 +4,8 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
-import {TextLink} from '@dsco_/link';
 
-export default function MethodSummaryTable({
-  methods,
-  programmingClassLink,
-  openLinkInNewTab = false
-}) {
+export default function MethodSummaryTable({methods, includeLink}) {
   return (
     <table style={{...tableLayoutStyles.table, width: '100%'}}>
       <tbody>
@@ -19,14 +14,18 @@ export default function MethodSummaryTable({
             <td style={styles.method}>
               <h3>
                 {method.name}
-                {programmingClassLink !== undefined && (
+                {includeLink && (
                   <>
                     {' '}
-                    <TextLink
-                      href={`${programmingClassLink}#method-${method.key}`}
-                      openInNewTab={openLinkInNewTab}
-                      icon={<FontAwesome icon="external-link" />}
-                    />
+                    <a
+                      onClick={() =>
+                        $(`#method-${method.key}`)[0].scrollIntoView()
+                      }
+                      aria-label="link to details"
+                      style={styles.detailLink}
+                    >
+                      <FontAwesome icon="external-link" />
+                    </a>
                   </>
                 )}
               </h3>
@@ -43,8 +42,7 @@ export default function MethodSummaryTable({
 
 MethodSummaryTable.propTypes = {
   methods: PropTypes.arrayOf(PropTypes.object).isRequired,
-  programmingClassLink: PropTypes.string,
-  openLinkInNewTab: PropTypes.bool
+  includeLink: PropTypes.bool
 };
 
 const styles = {
