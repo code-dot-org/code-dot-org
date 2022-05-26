@@ -377,6 +377,7 @@
   homepage_slot_text_link_buy: "Terlibat"
   homepage_slot_text_link_donate: "Membuat sumbangan"
   homepage_slot_text_link_shop: "Kaos, topi, & banyak lagi"
+  homepage_slot_text_link_thebadguys: "Buat Kode dengan The Bad Guys"
   homepage_slot_text_link_administrators: "Bawa CS ke sekolah mu"
   homepage_gallery_header: "Lebih dari %{project_count} juta proyek Code.org telah dibuat"
   homepage_header_donors: "Code.org mengucapkan terima kasih kepada para pendukungnya"
@@ -384,6 +385,10 @@
   homepage_donors_donate: "Donasi"
   homepage_below_hero_announcement_text: "Kami peduli pada privasi anda dan membuat beberapa pembaruan pada kebijakan privasi, efektif 25 mei."
   homepage_below_hero_announcement_link_text: "Pelajari lebih lanjut"
+  homepage_higher_power_body: "Buat dengan Dance Party, dapatkan kesempatan untuk melihat band tersebut secara langsung."
+  homepage_thebadguys_body: "Buat kode petualangan bersama Ms. Tarantula, Mr. Wolf, dan karakter lainnya dari film, **The Bad Guys**!"
+  homepage_csa_subhead: "Pendekatan baru ke"
+  homepage_csa_title: "AP® Computer Science A"
   contact_form_topic_student: "Saya seorang siswa"
   contact_form_topic_parent: "Saya orang tua"
   contact_form_topic_teacher: "Saya seorang guru"
@@ -515,6 +520,8 @@
   video_title_marco_belinelli: "Jam kode dengan Marco Belinelli"
   video_title_chris_bosh: "Ilmu komputer di Chris Bosh"
   video_title_my_name_is_aracely: "Nama saya Aracely"
+  video_title_change_face_of_cs: "Ubah Rupa Ilmu Komputer"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 menit"
   video_2min: "2 menit"
   video_3min: "3 menit"
@@ -982,6 +989,7 @@
   coursee-2020_name: Kursus E (2020)
   coursef-2020_name: Kursus F (2020)
   coursed-2021_name: Kursus D (2021)
+  coursed-2022_name: Kursus D (2021)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
   express-2019_name: Kursus Kilat (2019)
@@ -1103,6 +1111,12 @@
   coursed-2021_gradelevel: Kelas 8+
   coursee-2021_gradelevel: Usia 8-12
   coursef-2021_gradelevel: Usia 9-13
+  coursea-2022_gradelevel: Usia 4-7
+  courseb-2022_gradelevel: Usia 5-8
+  coursec-2022_gradelevel: Usia 6-10
+  coursed-2022_gradelevel: Kelas 8+
+  coursee-2022_gradelevel: Usia 8-12
+  coursef-2022_gradelevel: Usia 9-13
   accelerated_gradelevel: "Usia 10 + (setelah Kursus 3)"
   codeorg_platformtext: "Browser modern, smartphone, tablet"
   codeintl_platformtext: "Browser modern, smartphone, tablet"
@@ -1241,6 +1255,12 @@
   coursed-2021_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
   coursee-2021_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
   coursef-2021_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
+  coursea-2022_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  courseb-2022_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  coursec-2022_shortdescription_congrats: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+  coursed-2022_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+  coursee-2022_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+  coursef-2022_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
   codeorg_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   codeintl_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   thinkersmithspanish_longdescription: "Dengan menggunakan  \"Kosakata Robot/ Vocabulary Robot\" siswa akan mencari&aacute; cara untuk memandu satu sama lain untuk menyelesaikan tugas-tugas tertentu&iacute;  tanpa mendiskusikannya terlebih dahulu. Pelajaran ini&ntilde;  mengajarkan anak-anak hubungan&oacute;  antara simbol dan tindakan, &iacute; serta keterampilan yang sangat berharga dari debugging&oacute;."
@@ -1494,6 +1514,7 @@
   header_educate_beyond: "Di Luar Code.org"
   header_educate_inspire: "Menginspirasi seorang Siswa"
   header_educate_community: "Komunitas Online"
+  header_educate_requirements: "Persyaratan Teknis"
   header_educate_tools: "Alat dan Video"
   header_about_us: "Tentang Kami"
   header_about_leadership: "Kepemimpinan"
@@ -1716,6 +1737,8 @@
   hoc2018_dance_video2: "Pesta dansa-event"
   hoc2018_dance_video3: "Pesta dans-properti"
   hoc2018_dance_video4: "Pesta dansa-selamat"
+  dance_box_higher_power_line_1: "Buat kode dansa untuk lagu \"Higher Power\" Coldplay dan Anda bisa mendapatkan kesempatan untuk melihat band ini secara langsung!"
+  dance_box_higher_power_line_2: "Kunjungi <a href=\"%{path}\">code.org/coldplay</a> untuk informasi selengkapnya."
   page_not_found_title: "Halaman tidak ditemukan"
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: "Halaman yang anda cari tidak ada di alamat ini. Periksa alamat web dan daftar ulang. Atau, kembali ke homepage."
@@ -1808,4 +1831,7 @@
   ai_cognimates_description: "Platform pendidikan AI untuk membangun game, robot pemrograman dan pelatihan."
   ai_try_activity: "Coba aktivitas"
   outbreak_tile_subtitle: "Virus telah menginfeksi Monster Town! Buat code simulator kejadian dan buat prediksi tentang dampak yang akan timbul terhadap kota-kota di sekitar Monster Town."
+  outbreak_tile_alt: "Sebuah simulasi tentang penyebaran virus melalui sekelompok monster ungu."
   footer_cookie_notice: "Informasi Cookie"
+  top_hoc_tutorial_applab_alt_text: "Tangan cokelat dengan jari telunjuk menyentuh tablet layar sentuh yang memancarkan bintang dan sinar cahaya berlatar belakang biru"
+  minecraft_tile_alt: "Dua karakter Minecraft, Steve dan Alex, dengan latar belakang yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut"

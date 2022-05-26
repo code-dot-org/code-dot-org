@@ -3163,6 +3163,32 @@
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "ว่ายน้ำไปทางซ้ายและขวา",
+          "shrinking": "หดตัว",
+          "patrolling": "เดินลาดตระเวน",
+          "wandering": "เคลื่อนที่",
+          "growing": "ขยายตัว",
+          "jittering": "กระสับกระส่าย",
+          "moving east": "เคลื่อนไปทางตะวันออก",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving south": "เคลื่อนที่ไปทางใต้",
+          "moving west": "เคลื่อนที่ไปทางตะวันตก",
+          "spinning right": "หมุนไปทางขวา"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "ว่ายน้ำไปทางซ้ายและขวา",
+          "shrinking": "หดตัว",
+          "patrolling": "เดินลาดตระเวน",
+          "wandering": "เคลื่อนที่",
+          "growing": "ขยายตัว",
+          "jittering": "กระสับกระส่าย",
+          "moving east": "เคลื่อนไปทางตะวันออก",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving south": "เคลื่อนที่ไปทางใต้",
+          "moving west": "เคลื่อนที่ไปทางตะวันตก",
+          "spinning right": "หมุนไปทางขวา"
         }
       }
     }

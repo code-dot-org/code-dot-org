@@ -2621,6 +2621,28 @@
               "binary": "binær"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "Funksjon 1"
+          },
+          "function 2": {
+            "name": "Funksjon 2"
+          }
         }
       }
     }

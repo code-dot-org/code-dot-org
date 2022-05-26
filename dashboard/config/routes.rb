@@ -976,7 +976,7 @@ Dashboard::Application.routes.draw do
     get :peers_with_open_reviews, on: :collection
   end
 
-  resources :code_review_notes, only: [:create]
+  resources :code_review_notes, only: [:create, :update]
 
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member
