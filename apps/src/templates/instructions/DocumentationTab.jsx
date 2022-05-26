@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
+import {TextLink} from '@dsco_/link';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const DEFAULT_CLASS = 'General - Basics';
+const DEFAULT_CLASS = 'Java Basics - The main Method';
 
 const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   const {loading, data, error} = useFetch(
@@ -29,7 +32,6 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
         classMap[key] = classDoc;
       }
     }
-    console.log(classMap);
 
     if (!selectedClass) {
       if (classMap[DEFAULT_CLASS] && !selectedClass) {
@@ -43,7 +45,11 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   const getDropdownOptions = function() {
     const options = [];
     for (const key in classMap) {
-      options.push(<option value={key}>{key}</option>);
+      options.push(
+        <option key={key} value={key}>
+          {key}
+        </option>
+      );
     }
     return options;
   };
@@ -51,24 +57,42 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   return (
     <div>
       {loading && (
-        <div style={styles.loadingContainer}>
+        <div style={styles.loadingInformation}>
           <Spinner style={styles.spinner} />
         </div>
       )}
-      {error && <p>Could not load documentation.</p>}
+      {error && (
+        <p style={styles.loadingInformation}>
+          {i18n.errorLoadingDocumentation()}
+        </p>
+      )}
 
       {!loading && data && (
         <>
-          <select
-            value={selectedClass}
-            onChange={e => setSelectedClass(e.target.value)}
-            style={styles.select}
-          >
-            {getDropdownOptions()}
-          </select>
+          <div style={styles.header}>
+            <select
+              value={selectedClass}
+              onChange={e => setSelectedClass(e.target.value)}
+              style={styles.select}
+            >
+              {getDropdownOptions()}
+            </select>
+            {selectedClass && (
+              <TextLink
+                href={`/docs/ide/${programmingEnvironment}/classes/${
+                  classMap[selectedClass].key
+                }`}
+                openInNewTab={true}
+                icon={
+                  <FontAwesome icon="external-link" style={styles.docLink} />
+                }
+              />
+            )}
+          </div>
           {selectedClass && (
             <ProgrammingClassOverview
               programmingClass={classMap[selectedClass]}
+              includeMethodSummary={true}
             />
           )}
         </>
@@ -90,9 +114,16 @@ const styles = {
     width: 275,
     marginTop: 5
   },
-  loadingContainer: {
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  loadingInformation: {
     display: 'flex',
     margin: '25px',
     justifyContent: 'center'
+  },
+  docLink: {
+    marginRight: 15
   }
 };
