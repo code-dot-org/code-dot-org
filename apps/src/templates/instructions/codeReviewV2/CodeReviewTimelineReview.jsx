@@ -22,7 +22,15 @@ const CodeReviewTimelineReview = ({
   viewAsCodeReviewer,
   deleteCodeReviewComment
 }) => {
-  const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
+  const {
+    id,
+    createdAt,
+    isOpen,
+    version,
+    isVersionExpired,
+    ownerName,
+    comments
+  } = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
@@ -47,6 +55,7 @@ const CodeReviewTimelineReview = ({
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>{javalabMsg.codeReview()}</div>
+            <div style={styles.date}>{'requested by' + ownerName}</div>
             <div style={styles.date}>
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
