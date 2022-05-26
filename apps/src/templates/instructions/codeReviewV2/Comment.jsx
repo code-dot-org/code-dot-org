@@ -5,7 +5,7 @@ import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
-import {commentShape} from './commentShape';
+import {commentShape} from '@cdo/apps/templates/instructions/codeReview/commentShape';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -21,17 +21,24 @@ class Comment extends Component {
     viewAsTeacher: PropTypes.bool
   };
 
-  state = {
-    hideResolved: true,
-    isUpdating: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isCommentResolved: props.comment.isResolved,
+      hideResolved: true,
+      isUpdating: false
+    };
+  }
 
   componentDidUpdate(prevProps) {
     // We always hide the comment when it changes to resolved.
     // We never hide a comment that is unresolved.
     // A user can choose to show/hide a comment that is resolved.
-    if (!prevProps.comment.isResolved && this.props.comment.isResolved) {
-      this.setState({hideResolved: true});
+    if (prevProps.comment.isResolved !== this.props.comment.isResolved) {
+      this.setState({
+        hideResolved: this.props.comment.isResolved,
+        isCommentResolved: this.props.comment.isResolved
+      });
     }
   }
 
@@ -91,17 +98,23 @@ class Comment extends Component {
     });
   };
 
+  handleToggleResolved = () => {
+    const newIsResolvedStatus = !this.props.comment.isResolved;
+    this.props.onResolveStateToggle(
+      this.props.comment.id,
+      newIsResolvedStatus,
+      () => this.setState({isCommentResolved: newIsResolvedStatus}),
+      () => {
+        // TODO: handle set resolve failure
+      }
+    );
+  };
+
   getMenuItems = () => {
-    const {
-      viewAsCodeReviewer,
-      viewAsTeacher,
-      onDelete,
-      onResolveStateToggle
-    } = this.props;
-    const {isResolved} = this.props.comment;
-    const {hideResolved} = this.state;
+    const {viewAsCodeReviewer, viewAsTeacher, onDelete} = this.props;
+    const {hideResolved, isCommentResolved} = this.state;
     let menuItems = [];
-    if (isResolved) {
+    if (isCommentResolved) {
       // resolved comments can be collapsed/expanded
       menuItems.push({
         onClick: this.toggleHideResolved,
@@ -113,11 +126,11 @@ class Comment extends Component {
       // Code owners can resolve/unresolve comment
       // TODO: Allow teachers to resolve/unresolve comments too
       menuItems.push({
-        onClick: onResolveStateToggle,
-        text: isResolved
+        onClick: this.handleToggleResolved,
+        text: isCommentResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
-        iconClass: isResolved ? 'circle-o' : 'check-circle'
+        iconClass: isCommentResolved ? 'circle-o' : 'check-circle'
       });
     }
     if (viewAsTeacher) {
@@ -162,21 +175,21 @@ class Comment extends Component {
       timestampString,
       isFromTeacher,
       isFromOlderVersionOfProject,
-      isResolved,
       hasError
     } = this.props.comment;
 
-    const {hideResolved, isUpdating} = this.state;
+    const {hideResolved, isUpdating, isCommentResolved} = this.state;
 
     return (
       <div
         style={{
           ...styles.commentContainer,
-          ...((isFromOlderVersionOfProject || isResolved) && styles.lessVisible)
+          ...((isFromOlderVersionOfProject || isCommentResolved) &&
+            styles.lessVisible)
         }}
       >
         <div style={styles.commentHeaderContainer}>
-          {isResolved && (
+          {isCommentResolved && (
             <i
               className="fa fa-check-circle resolved-checkmark"
               style={styles.check}
@@ -208,13 +221,13 @@ class Comment extends Component {
             )}
           </span>
         </div>
-        {!(isResolved && hideResolved) && (
+        {!(isCommentResolved && hideResolved) && (
           <div
             className="code-review-comment-body"
             style={{
               ...styles.comment,
               ...(isFromTeacher && styles.commentFromTeacher),
-              ...((isFromOlderVersionOfProject || isResolved) &&
+              ...((isFromOlderVersionOfProject || isCommentResolved) &&
                 styles.lessVisibleBackgroundColor)
             }}
           >
