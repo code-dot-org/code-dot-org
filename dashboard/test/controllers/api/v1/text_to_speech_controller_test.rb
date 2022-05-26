@@ -14,7 +14,6 @@ class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
 
     # A list of keys used by our shared cache that should be cleared between every test.
     [
-      ProfanityHelper::PROFANITY_PREFIX,
       AzureTextToSpeech::AZURE_SERVICE_PREFIX,
       AzureTextToSpeech::AZURE_TTS_PREFIX
     ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
