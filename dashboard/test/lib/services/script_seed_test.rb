@@ -1137,7 +1137,7 @@ module Services
     test 'published state set to pilot when pilot_experiment is present' do
       unit = create :script
       assert_nil unit.pilot_experiment
-      assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
 
       json = ScriptSeed.serialize_seeding_json(unit)
       unit_data = JSON.parse(json)
