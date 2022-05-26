@@ -78,15 +78,15 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
               {getDropdownOptions()}
             </select>
             {selectedClass && (
-              <TextLink
-                href={`/docs/ide/${programmingEnvironment}/classes/${
-                  classMap[selectedClass].key
-                }`}
-                openInNewTab={true}
-                icon={
-                  <FontAwesome icon="external-link" style={styles.docLink} />
-                }
-              />
+              <div style={styles.docLink}>
+                <TextLink
+                  href={`/docs/ide/${programmingEnvironment}/classes/${
+                    classMap[selectedClass].key
+                  }`}
+                  openInNewTab={true}
+                  icon={<FontAwesome icon="external-link" />}
+                />
+              </div>
             )}
           </div>
           {selectedClass && (
@@ -124,6 +124,9 @@ const styles = {
     justifyContent: 'center'
   },
   docLink: {
-    marginRight: 15
+    marginRight: 5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 };
