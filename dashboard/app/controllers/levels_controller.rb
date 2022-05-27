@@ -144,7 +144,9 @@ class LevelsController < ApplicationController
     if @level.properties['encrypted']&.is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
-    @in_script = @level.script_levels.any?
+    bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
+    any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
+    @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
@@ -191,7 +193,7 @@ class LevelsController < ApplicationController
     # Levels which support (and have )solution blocks use those blocks
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
-    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+    can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
         @level.properties['solution_blocks']
     should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
     if can_use_solution_blocks && should_use_solution_blocks
@@ -290,7 +292,7 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
-  rescue ArgumentError => e
+  rescue ArgumentError, ActiveRecord::RecordInvalid => e
     render status: :not_acceptable, plain: e.message
   end
 

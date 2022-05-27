@@ -20,7 +20,8 @@ export const WebSocketMessageType = {
   DEBUG: 'DEBUG',
   STATUS: 'STATUS',
   TEST_RESULT: 'TEST_RESULT',
-  AUTHORIZER: 'AUTHORIZER'
+  AUTHORIZER: 'AUTHORIZER',
+  CONNECTED: 'CONNECTED'
 };
 
 export const JavabuilderExceptionType = {

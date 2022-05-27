@@ -1027,7 +1027,7 @@
           "description": "**Keçid:**\n\nAğıllı şəkildə sıxılmış mətn mesajı nümunəsinə baxaq."
         },
         "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": "#### Bu Sirr Mətninin şifrəsini açın (10-15 dəqiqə)\n\n-   **Fəaliyyət təlimatını paylayın və ya göstərin**\n-   Tələbələri tərəfdaşlara qoyun və ya fərdi şəkildə işləyin.\n-   **Tapşırıq:** Orijinal mətn nə idi?\n-   Şagirdlərə mətni deşifrə etmək üçün bir neçə dəqiqə vaxt verin. Mətn qısa bir şeir olmalıdır (aşağıdakı fəaliyyət xülasəsinə baxın)\n\n| Tələbə Fəaliyyət Bələdçisi                                               | Fəaliyyət xülasəsi                                                                    |\n| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |\n| **Paylaşdırın və ya göstərin** Fəaliyyət təlimatı                        | (Özünüzü göstərin və ya çəkin) Fəaliyyətin xülasəsi: Bu Mesajın şifrəsini açın        |\n| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png) | ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) |\n\n**Recap: Nə qədər sıxılmışdı?**\n\nCavab vermək üçün orijinal şeirdəki simvolların sayını sıxılmış versiyanı təmsil etmək üçün lazım olan simvolların sayı ilə müqayisə etməliyik.\n\nGəlin onu parçalayaq.\n\n-   **Göstərin** və ya **Özünüzü nümayiş etdirin** ideyaları: [r activity-recap-decode-this-message] \\(yuxarıdakı cədvəldə göstərilib)\n\n-   **Vacib Qeyd**:\n\n    -   Sıxılmış şeir təkcə bu hissə deyil: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png)\n\n Bunu İnternet üzərindən kiməsə göndərsəniz, o, kodu deşifrə edə bilməyəcək.\n     \\* Tam sıxılmış mətn HƏM sıxılmış mətni _həm də onu həll etmək üçün açarı ehtiva edir.\\\n     \\\\_ Beləliklə, mesajdakı simvolların ümumi sayını \\_plus\\* açardakı simvolların ümumi sayını orijinal üzərində nə qədər sıxdığınızı görmək üçün hesablamalısınız.  \n\n**Keçid**\n\nİndi özünüz bəzi şeyləri sıxışdırmaq üçün əlinizi sınayacaqsınız."
+          "description": "#### Bu Sirr Mətninin şifrəsini açın (10-15 dəqiqə)\n\n-   **Fəaliyyət təlimatını paylayın və ya göstərin**\n-   Tələbələri tərəfdaşlara qoyun və ya fərdi şəkildə işləyin.\n-   **Tapşırıq:** Orijinal mətn nə idi?\n-   Şagirdlərə mətni deşifrə etmək üçün bir neçə dəqiqə vaxt verin. Mətn qısa bir şeir olmalıdır (aşağıdakı fəaliyyət xülasəsinə baxın)\n\n| Tələbə Fəaliyyət Bələdçisi                                               | Fəaliyyət xülasəsi                                                                    |\n| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |\n| **Paylaşdırın və ya göstərin** Fəaliyyət təlimatı                        | (Özünüzü göstərin və ya çəkin) Fəaliyyətin xülasəsi: Bu Mesajın şifrəsini açın        |\n| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png) | ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) |\n\n**Recap: Nə qədər sıxılmışdı?**\n\nCavab vermək üçün orijinal şeirdəki simvolların sayını sıxılmış versiyanı təmsil etmək üçün lazım olan simvolların sayı ilə müqayisə etməliyik.\n\nGəlin onu parçalayaq.\n\n-   **Göstərin** və ya **Özünüzü nümayiş etdirin** ideyaları: [r activity-recap-decode-this-message] \\(yuxarıdakı cədvəldə göstərilib)\n\n-   **Vacib Qeyd**:\n\n    -   Sıxılmış şeir təkcə bu hissə deyil: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png)\n\n Bunu İnternet üzərindən kiməsə göndərsəniz, o, kodu deşifrə edə bilməyəcək.\n     \\* Tam sıxılmış mətn HƏM sıxılmış mətni *həm də onu həll etmək üçün açarı ehtiva edir.\\\n     \\* Beləliklə, mesajdakı simvolların ümumi sayını \\_plus* açardakı simvolların ümumi sayını orijinal üzərində nə qədər sıxdığınızı görmək üçün hesablamalısınız.  \n\n**Keçid**\n\nİndi özünüz bəzi şeyləri sıxışdırmaq üçün əlinizi sınayacaqsınız."
         },
         "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
           "description": "#### Mətn Sıxılma Vidcetindən istifadə edin\n\nVideonu göstərin - **Aloe Blacc ilə Mətn Kompressiyası**"
@@ -1549,6 +1549,16 @@
         "6fcca4d5-550e-479c-8da6-6212384d1e0b": {
           "name": "Təqdimatınızı hazırlayın.",
           "progression_name": "Təqdimatınızı hazırlayın."
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "f573a627-ebb0-443a-a0a1-6b4b64c933d5": {
+          "progression_name": "Əyləncədə CS-ni araşdırın"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Nümunə proqramlar",
+          "progression_name": "Nümunə proqramlar"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Dərsin icmalı"
@@ -3313,6 +3323,23 @@
           "name": "Layihə",
           "progression_name": "Layihə"
         },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "b13e1818-6495-44cb-97f3-69ea42c9ce0b": {
+          "progression_name": "Əyləncədə CS-ni araşdırın"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Nümunə proqramlar",
+          "progression_name": "Nümunə proqramlar"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "Rəsm Şekilləri",
+          "progression_name": "Rəsm Şekilləri"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Dərsin icmalı"
         },
@@ -3564,6 +3591,32 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "edb1b531-f884-4cdb-8763-205ccb5ccfb9": {
+          "name": "Yenilik Araşdırması",
+          "progression_name": "Yenilik Araşdırması"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Xüsusiyyətlərin qurulması"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "Kod ilə ekran dizaynı "
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Hadisələr və xüsusiyyətlər"
+        },
+        "8aaad068-43af-4e02-ab64-efac8c2f7b7f": {
+          "progression_name": "Emosiya qurğusu nümunəsi"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Bir App qurmaq",
+          "progression_name": "Bir App qurmaq"
+        },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Dərsin icmalı"
         },
@@ -3780,6 +3833,14 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "Dərsin icmalı",
+          "progression_name": "Dərsin icmalı"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "Dərsin icmalı",
+          "progression_name": "Dərsin icmalı"
+        },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "Dərsin icmalı",
           "progression_name": "Dərsin icmalı"
@@ -3889,6 +3950,14 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "Dərsin icmalı",
+          "progression_name": "Dərsin icmalı"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "Dərsin icmalı",
+          "progression_name": "Dərsin icmalı"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "Dərsin icmalı",
           "progression_name": "Dərsin icmalı"
@@ -3978,6 +4047,13 @@
           "name": "Dərsin icmalı",
           "progression_name": "Dərsin icmalı"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: Problemin Həll olunması prosesi",
+          "progression_name": "Video: Problemin Həll olunması prosesi"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Dərsin icmalı",
           "progression_name": "Dərsin icmalı"
@@ -4007,6 +4083,20 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "1509e490-4f28-4bc4-9303-c5c156208213": {
+          "name": "Ən yaxşı veb saytlar",
+          "progression_name": "Ən yaxşı veb saytlar"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "Nümunəvi şəxsi saytlar",
+          "progression_name": "Nümunəvi şəxsi saytlar"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "Dərsin icmalı"
@@ -4270,6 +4360,23 @@
         "2423f0a7-e415-4f4c-83d0-a6ff79c67ff3": {
           "name": "Kurs F: Play Lab Layihəsi - Yenidən nəzərdən keçirin",
           "progression_name": "Kurs F: Play Lab Layihəsi - Yenidən nəzərdən keçirin"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "ab7d99c8-e849-41ff-a55b-b66d48e1f5d1": {
+          "progression_name": "Əyləncədə CS-ni araşdırın"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Nümunə proqramlar",
+          "progression_name": "Nümunə proqramlar"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "Rəsm Şekilləri",
+          "progression_name": "Rəsm Şekilləri"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Dərsin icmalı"
@@ -4591,6 +4698,13 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "82524fd8-6d75-46e4-9cb3-719ff43e17da": {
+          "name": "Yenilik Araşdırması",
+          "progression_name": "Yenilik Araşdırması"
+        },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "Dərsin icmalı"
         },
@@ -4821,6 +4935,13 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
+        },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "Dərsin icmalı"
+        },
+        "68e9b02b-4cbe-479b-a935-5dbe004f1e73": {
+          "name": "Ən yaxşı veb saytlar",
+          "progression_name": "Ən yaxşı veb saytlar"
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Dərsin icmalı"
@@ -5131,6 +5252,10 @@
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
+        },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "Dərsin icmalı",
+          "progression_name": "Dərsin icmalı"
         },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "Dərsin icmalı",
@@ -9435,6 +9560,26 @@
             null
           ]
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -9958,6 +10103,28 @@
             null
           ]
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "ilhamlanmaq"
+        },
+        "ecaf188e-1d18-4418-9881-296b1f090f2e": {
+          "name": "Yenilik Araşdırması"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Yenilik Araşdırması"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -10335,6 +10502,39 @@
           ]
         },
         "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Əksetmə"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
           "tips": [
             null
           ]
@@ -10749,6 +10949,24 @@
           "tips": [
             null
           ]
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Nümunə proqramlar"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -11614,7 +11832,7 @@
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
-          "name": "Plan inkişaf etdir",
+          "name": "Plan hazırlayın",
           "tips": [
             null
           ]
@@ -11625,6 +11843,39 @@
           ]
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Məsələnin həlli prosesi",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Problemin Həll olunması prosesi"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
           "tips": [
             null
           ]
@@ -11876,7 +12127,7 @@
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
-          "name": "Plan inkişaf etdir",
+          "name": "Plan hazırlayın",
           "tips": [
             null
           ]
@@ -11919,7 +12170,7 @@
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
-          "name": "Plan inkişaf etdir",
+          "name": "Plan hazırlayın",
           "tips": [
             null
           ]
@@ -11962,7 +12213,7 @@
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
-          "name": "Plan inkişaf etdir",
+          "name": "Plan hazırlayın",
           "tips": [
             null
           ]
@@ -12033,6 +12284,21 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]

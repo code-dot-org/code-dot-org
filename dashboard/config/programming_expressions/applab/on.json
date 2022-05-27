@@ -3,7 +3,7 @@
   "name": "colorLeds[i].on()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Turns the specified colorLED on.\r\n\r\nThis method works just like `led.on()` and will keep whichever LED is specified on. You can turn the colorLED off with `colorLeds[i].off()`.\r\n\r\nBy default, `colorLeds[i].on()` turns on all three parts of the LED (red, green, and blue) to produce white. Use `colorLeds[i].color()` to change the color. `colorLeds[i].color()` does not need to be used with the on method, it automatically turns the LED(s) on.",
+  "content": "Turns the specified colorLED on.\r\n\r\nThis method works just like [`led.on()`(#f78183)](/docs/applab/led.on/) and will keep whichever LED is specified on. You can turn the colorLED off with `colorLeds[i].off()`.\r\n\r\nBy default, `colorLeds[i].on()` turns on all three parts of the LED (red, green, and blue) to produce white. Use `colorLeds[i].color()` to change the color. `colorLeds[i].color()` does not need to be used with the on method, it automatically turns the LED(s) on.",
   "examples": [
     {
       "name": "Alternating Lights",

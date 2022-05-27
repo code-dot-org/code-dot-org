@@ -62,10 +62,8 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        # Explicitly use the writer connection to make this write call. This
-        # isn't necessary as long as we're still using SeamlessDatabasePool,
-        # but will be once we update to Rails 6
-        MultipleDatabasesTransitionHelper.use_writer_connection do
+        # Explicitly use the writer connection to make this write call
+        ActiveRecord::Base.connected_to(role: :writing) do
           @level_source = LevelSource.find_identical_or_create(
             @level,
             params[:program].strip_utf8mb4
@@ -110,7 +108,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    MultipleDatabasesTransitionHelper.use_writer_connection do
+    ActiveRecord::Base.connected_to(role: :writing) do
       @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
       @new_level_completed = false

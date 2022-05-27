@@ -1044,18 +1044,6 @@ uz:
       JavaScript-ni o'qitadigan vositalardan foydalanish imkoniyati sizning o'quvchilaringiz
       bo'lmasligi mumkin.
     review_terms: Yangilangan shartlarni ko'rib chiqish
-  donor_interstitial:
-    title: Sizning bepul CS kurslaringiz bular orqali amalga oshiriladi...
-    subtitle: Biz qo'llab-quvvatlagan Code.org-ning muvaffaqiyatini ta'minlagan saxovatli
-      donorlarga minnatdorchilik bildiramiz. [Donorlar](%{donors_url}) ning doimiy
-      saxovati tufayli biz Code.org-ni dunyo bo'ylab maktablar va talabalar uchun
-      bepul taqdim etib boramiz!
-    local_supporters: Mahalliy qo'llab-quvvatlovchilar
-    global_supporters: Global qo'llab-quvvatlovchilar
-    support_codeorg_1: Code.org-ga berilgan har bir dollar ko'proq talabalarga imkoniyatlar
-      yaratadi.
-    support_codeorg_2: " Code.org-ni qo'llab-quvvatlash uchun [hoziroq xayriya qiling](%{donate_url})."
-    get_started: Code.org saytidan boshlang
   school_info_interstitial:
     title: Biz har bir o'quvchini kompyuter fanlariga jalb qilmoqchimiz - bizning
       rivojlanishimizni kuzatishda yordam bering!

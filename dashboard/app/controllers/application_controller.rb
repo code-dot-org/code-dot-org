@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include MultipleDatabasesTransitionHelper::ControllerFilter
+  include Services::DatabaseConnections::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -94,9 +94,10 @@ class ApplicationController < ActionController::Base
   def prevent_caching
     # Rails has some logic to normalize the cache-control header that varies
     # from version to version. Ideally, we would include 'no-cache' here but
-    # that causes Rails 5.2 to remove 'must-revalidate' which causes issues
-    # on older mobile Safari browsers. See Rails logic at
-    # https://github.com/rails/rails/blob/v5.2.4.4/actionpack/lib/action_dispatch/http/cache.rb#L185
+    # that causes Rails (starting in 5.2, still true as of 6.0) to remove
+    # 'must-revalidate' which causes issues on older mobile Safari browsers.
+    # See Rails logic at
+    # https://github.com/rails/rails/blob/v6.0.4.4/actionpack/lib/action_dispatch/http/cache.rb#L184
     response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"

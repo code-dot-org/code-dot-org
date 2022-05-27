@@ -36,7 +36,7 @@
 class ParentLevelsChildLevel < ApplicationRecord
   belongs_to :parent_level, class_name: 'Level'
   belongs_to :child_level, class_name: 'Level'
-  validates_uniqueness_of :child_level, scope: :parent_level
+  validates_uniqueness_of :child_level, scope: :parent_level, message: ->(plcl, _data) {"child_level #{plcl.child_level&.name&.dump} is already taken for parent_level #{plcl.parent_level&.name&.dump}"}
 
   default_scope {order(position: :asc)}
 
@@ -49,5 +49,25 @@ class ParentLevelsChildLevel < ApplicationRecord
 
   VALID_KINDS.each do |kind|
     scope kind, -> {where(kind: kind)}
+  end
+
+  validate :validate_child_level_type
+  def validate_child_level_type
+    if kind == CONTAINED
+      unless %w(Multi FreeResponse).include?(child_level.type)
+        error_message = "cannot add contained level of type #{child_level.type}"
+        errors.add(:child_level_id, error_message)
+
+        # Explicitly surface this error to the associated parent level if
+        # possible, to make it visible to levelbuilders.
+        parent_level&.errors&.add(:child_level, error_message)
+      end
+    end
+    if kind == SUBLEVEL && parent_level.is_a?(BubbleChoice)
+      if %w(BubbleChoice LevelGroup).include?(child_level.type)
+        error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
+        errors.add(:child_level_id, error_message)
+      end
+    end
   end
 end

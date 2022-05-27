@@ -384,6 +384,7 @@
   homepage_below_hero_announcement_text: "我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。"
   homepage_below_hero_announcement_link_text: "了解详情"
   homepage_higher_power_body: "与舞蹈派对一起创作，获得观看乐队现场表演的机会。"
+  homepage_thebadguys_body: "与狼蛛女士、沃尔夫先生和其他坏家伙一起编写一段冒险故事！"
   contact_form_topic_student: "我是学生"
   contact_form_topic_parent: "我是家长"
   contact_form_topic_teacher: "我的老师或教育家"
@@ -974,6 +975,7 @@
   coursee-2020_name: 课程 E (2019)
   coursef-2020_name: 课程 F （2019）
   coursed-2021_name: 课程 D （2021）
+  coursed-2022_name: 课程 D （2021）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
@@ -1094,6 +1096,12 @@
   coursed-2021_gradelevel: 8年级以上
   coursee-2021_gradelevel: 年龄 8-12
   coursef-2021_gradelevel: 年龄 9-13
+  coursea-2022_gradelevel: 年龄 4-7
+  courseb-2022_gradelevel: 年龄 5-8
+  coursec-2022_gradelevel: 年龄 6-10
+  coursed-2022_gradelevel: 8年级以上
+  coursee-2022_gradelevel: 年龄 8-12
+  coursef-2022_gradelevel: 年龄 9-13
   accelerated_gradelevel: "10-18 岁"
   codeorg_platformtext: "现代浏览器、智能手机、平板电脑"
   codeintl_platformtext: "现代浏览器、智能手机、平板电脑"
@@ -1230,6 +1238,12 @@
   coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
   coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
   coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursea-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursec-2022_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursed-2022_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursee-2022_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursef-2022_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
   codeorg_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。"
   codeintl_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。"
   khan_longdescription: "在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！"
@@ -1470,7 +1484,7 @@
   header_about_team: "全体成员"
   header_about_news: "新闻室"
   header_about_evaluation: "评估"
-  header_about_jobs: "招聘"
+  header_about_jobs: "职业机会"
   header_about_contact: "联系我们"
   header_about_faqs: "常见问答"
   header_learn: "学习"
@@ -1684,6 +1698,8 @@
   hoc2018_dance_video2: "舞蹈派对 - 事件"
   hoc2018_dance_video3: "舞蹈派对 - 属性"
   hoc2018_dance_video4: "舞蹈派对 - 祝贺"
+  dance_box_higher_power_line_1: "为酷玩乐队的“更高的力量”编一支舞蹈，你就有机会看到乐队的现场表演！"
+  dance_box_higher_power_line_2: "查看<a href=\"%{path}\">code.org/coldplay</a>了解更多信息。"
   page_not_found_title: "找不到页面"
   page_not_found_header: '404：找不到页面'
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"

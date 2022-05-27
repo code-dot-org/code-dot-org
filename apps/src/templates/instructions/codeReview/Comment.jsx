@@ -9,6 +9,7 @@ import {commentShape} from './commentShape';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class Comment extends Component {
   static propTypes = {
@@ -21,7 +22,8 @@ class Comment extends Component {
   };
 
   state = {
-    hideResolved: true
+    hideResolved: true,
+    isUpdating: false
   };
 
   componentDidUpdate(prevProps) {
@@ -31,6 +33,16 @@ class Comment extends Component {
     if (!prevProps.comment.isResolved && this.props.comment.isResolved) {
       this.setState({hideResolved: true});
     }
+  }
+
+  componentDidMount() {
+    // Using the _isMounted pattern to prevent resetting updating state
+    // if a comment has been deleted and removed from the DOM.
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   renderName = () => {
@@ -118,8 +130,22 @@ class Comment extends Component {
     }
 
     return menuItems.map((item, index) => {
+      const onClickWrapper = () => {
+        this.setState({isUpdating: true});
+        // Wrap onClick in a promise because some menu items onClick
+        // do not make async requests and thus do not return a promise
+        // (eg, hiding/showing comments)
+
+        // Return promise for tests.
+        return Promise.resolve(item.onClick()).then(() => {
+          if (this._isMounted) {
+            this.setState({isUpdating: false});
+          }
+        });
+      };
+
       return (
-        <a onClick={item.onClick} key={index} className="comment-menu-item">
+        <a onClick={onClickWrapper} key={index} className="comment-menu-item">
           <span
             style={styles.icon}
             className={'fa fa-fw fa-' + item.iconClass}
@@ -140,7 +166,7 @@ class Comment extends Component {
       hasError
     } = this.props.comment;
 
-    const {hideResolved} = this.state;
+    const {hideResolved, isUpdating} = this.state;
 
     return (
       <div
@@ -164,18 +190,22 @@ class Comment extends Component {
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            <InlineDropdownMenu
-              selector={
-                <img
-                  src={
-                    '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
-                  }
-                  style={{height: '3px', display: 'flex'}}
-                />
-              }
-            >
-              {this.getMenuItems()}
-            </InlineDropdownMenu>
+            {isUpdating ? (
+              <Spinner size="small" />
+            ) : (
+              <InlineDropdownMenu
+                selector={
+                  <img
+                    src={
+                      '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
+                    }
+                    style={{height: '3px', display: 'flex'}}
+                  />
+                }
+              >
+                {this.getMenuItems()}
+              </InlineDropdownMenu>
+            )}
           </span>
         </div>
         {!(isResolved && hideResolved) && (

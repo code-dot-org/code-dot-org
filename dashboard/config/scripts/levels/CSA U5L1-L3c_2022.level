@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A teacher wants to store the test scores for several students. They have the following values:\r\n\r\n![](https://images.code.org/6059a832c5556c09251e2ada5e1b6eb0-image-1650909645550.png)\r\n\r\nwhere each row represents a unique student. Each column represents the math scores, reading scores, and writing scores, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `scores`(#e7e8ea) using the `new`(#e7e8ea) keyword.\r\n\r\n2. Assign the values for each row and column in the `scores`(#e7e8ea) array.\r\n\r\n::: details [**Show Me How**]\r\nA two-dimensional (2D) array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = new dataType[numRows][numCols];\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and set the `numRows`(#e7e8ea) and `numCols`(#e7e8ea) to the number of rows and columns for the 2D array.\r\n\r\nValues are added to a 2D array using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col] = value;\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) where you want to store the value.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Add the values to the 2D array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "bubble_choice_description": "A teacher wants to store the test scores for several students. Declare and initialize a 2D array to store the values.",
+    "display_name": "Test Scores",
+    "thumbnail_url": "https://images.code.org/e166ed6b688f2950c2c3e13f659ef818-image-1650909545091.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI6ZY3MuxfksVV2qvDm7\nmIcSgA3t79OWWsdyMuyvVdm7Vmr0kW5hzM2wifKRiRHLp3CyKigiWwxL9vnZ\nZgmnTQudHlwpMSMtEot5gsYXm7+3hd8v3lFW6ywyiP3xnrPOa79+HUJpdduN\nRv6HDNv2yUrJ7ScxCouwqpienCX/dsQnztSIiLODTVkHo1toWviSzLnBqSPY\nlfZTSATeJ6tAvPw3ERpHT7PVdcylJ/UQQl1JGeVXbBneEtGfz84n2ZxjOxKe\nSFVrkOCJVwBkfYIfdm+EhuC8S3OTncszlzpP+VihX/LXIRIxDw7nFcLjLfLT\n3ibVfSTdokynaMx5cPic8p6OblQwDYQdRiH1o4aarFFE26G+JJ5uVEcxtmxn\nI2tlhL1Mr+Mp9wHaxkPszGBRHH/rUPFIicvdY1Ct0CE0BKm/WRmXvwe50/0+\npKY5tp8wx2uOaDSYQM8DVI+BtJ2X23n9nfj2VKLORKEEvqwdbEmpe/Y+uHQK\nqbGTbKE/QEz3+4DGfiN/yTWCyzHjVqG+wUKzyZfQt1ov619tBqqCqCEgC42R\nLGD3YTnOLi0rtHzTI7NyG2ER20DjwpvnGaz10dMoXFKVVnttnEbanmUV/JEb\nBioi/fYcOaFkAm0ISYFI4FcsVNnX4PXU2IU5yojZ8WJoTHOqex2qCz6j5O1r\naG7BKgAEOGjpsmkKUnq/y0LxIJSemixQk7LxlAuSFEsBMf7o401pYMAwSNci\nr+6h39zpfCcCPrCtRGrGDQDvIw39BzTcNBQMjb39oQ1QRU/S5fsYKta6Wr9R\ng5cQ+bRFISWuZg==\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:49:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:58.721+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3b_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3b_2022\"},{\"changed_at\":\"2022-04-12 18:50:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:58.721+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3b_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3b_2022\"},{\"changed_at\":\"2022-04-12 18:50:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:44:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 17:32:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 18:01:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 19:11:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 19:59:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

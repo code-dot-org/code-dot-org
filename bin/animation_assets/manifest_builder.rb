@@ -145,10 +145,10 @@ class ManifestBuilder
         verbose "Writing #{png_destination}"
         objects['png'].get(response_target: png_destination)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json and #{name}.png from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json and #{name}.png from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       end
 
@@ -324,16 +324,16 @@ The animation has been skipped.
         json_response = objects['json'].get
         metadata = JSON.parse(json_response.body.read)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       rescue JSON::JSONError => json_error
-        next <<-WARN
-There was an error parsing #{name}.json:
-#{json_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error parsing #{name}.json:
+          #{json_error}
+          The animation has been skipped.
         WARN
       end
 
@@ -356,10 +356,10 @@ The animation has been skipped.
       begin
         metadata['version'] = objects['png'].object.version_id
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving the version_id for #{name}.png from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving the version_id for #{name}.png from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       end
 
@@ -372,9 +372,9 @@ The animation has been skipped.
         metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
       end
 
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
+      verbose <<~EOS
+        #{bold name} @ #{metadata['version']}
+        #{JSON.pretty_generate metadata}
       EOS
 
       metadata

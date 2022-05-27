@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 kn:
   activerecord:
     attributes:
@@ -120,6 +126,10 @@ kn:
       title: 'ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ'
     dance-2019:
       title: 'ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ'
+    hello-world:
+      title: 'ಹಲೋ ವರ್ಲ್ಡ್'
+    poem-art:
+      title: 'ಕವನ ಕಲೆ'
     hoc:
       title: 'ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌'
       body: 'ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ಟ್ರೈ ಮಾಡಿ. ಲಕ್ಷಾಂತರ ಜನರು ಈಗಾಗಲೇ ಪ್ರಯತ್ನಿಸಿದ್ದಾರೆ.'
@@ -168,6 +178,7 @@ kn:
     startover_ok: "ಮೊದಲಿನಿಂದ ಆರಂಭ"
     startover_cancel: "ರದ್ದುಮಾಡಿ"
   terms_interstitial:
+    accept_tos: Code.org ಗೆ ಸೈನ್ ಇನ್ ಮಾಡುವ ಮೂಲಕ, ನೀವು ನಮ್ಮ [ಸೇವಾ ನಿಯಮಗಳು](%{tos_url}) ಮತ್ತು [ಗೌಪ್ಯತೆ ನೀತಿ](%{privacy_url}) ಒಪ್ಪುತ್ತೀರಿ.
     print: "ಮುದ್ರಿಸಿ"
   school_info_interstitial:
     save: "ಉಳಿಸಿ"

@@ -2,6 +2,22 @@
 ne:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -470,7 +486,7 @@ ne:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
           UNIT:
@@ -513,6 +529,12 @@ ne:
             '90': तल
             '180': बाँया
             '270': माथि
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': medium
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:

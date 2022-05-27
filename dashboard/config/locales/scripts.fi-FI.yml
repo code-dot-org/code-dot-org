@@ -2992,19 +2992,14 @@ fi:
         csd3-2021:
           lessons:
             Variables:
-              key: Muuttujat
               name: Muuttujat
             Text:
-              key: teksti
               name: teksti
             Conditionals:
-              key: Ehtolausekkeet
               name: Ehtolausekkeet
             Velocity:
-              key: Nopeus
               name: Nopeus
             Functions:
-              key: Funktiot
               name: Funktiot
           lesson_groups:
             csd3_1:
@@ -3034,7 +3029,6 @@ fi:
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Parametrilliset funktiot
               name: Parametrilliset funktiot
           lesson_groups:
             csd6_1:
@@ -3054,7 +3048,6 @@ fi:
         csp3-2021:
           lessons:
             Debugging:
-              key: Virheen etsintä
               name: Virheen etsintä
         csp4-2021:
           lesson_groups:
@@ -3104,7 +3097,6 @@ fi:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Liikuta, liikuta
               name: Liikuta, liikuta
             'Loops: Getting Loopy':
               name: Mennään silmukoille
@@ -3118,7 +3110,6 @@ fi:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binäärikorut
               name: Binäärikorut
             'Events: The Big Event':
               name: Suuri tapahtuma
@@ -3136,19 +3127,13 @@ fi:
             'Algorithms: Graph Paper Programming':
               name: Ruutupaperiohjelmointi
             Relay Programming:
-              key: Releohjelmointi
               name: Releohjelmointi
             Dance Party:
-              key: Tanssibileet
               name: Tanssibileet
             Conditionals with Cards:
-              key: Ehtolauseet pelikorteilla
               name: Ehtolauseet pelikorteilla
             'Unplugged: Binary':
-              key: 'Tietokoneeton tekeminen: binääri'
               name: Binäärikuvat
-            Artist Binary:
-              key: 'Taiteilija: binääri'
           lesson_groups:
             csf_events:
               display_name: Tapahtumat
@@ -3165,10 +3150,7 @@ fi:
         coursee-2021:
           lessons:
             'Conditionals in Minecraft: Voyage Aquatic':
-              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
               name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
-            Conditionals:
-              key: Ehtolausekkeet
             'Functions: Songwriting':
               name: Säveltäminen
           lesson_groups:
@@ -3183,13 +3165,10 @@ fi:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Kirjekuorimuuttujat
               name: Kirjekuorimuuttujat
             Internet:
-              key: Internet
               name: Internetti
             For Loop Fun:
-              key: Silmukkahupia
               name: Silmukkahupia
           lesson_groups:
             csf_digcit:
@@ -3207,10 +3186,8 @@ fi:
         express-2021:
           lessons:
             Dance Party:
-              key: Tanssibileet
               name: Tanssibileet
             'Conditionals in Minecraft: Voyage Aquatic':
-              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
               name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             lesson-1:
               name: Tanssibileet
@@ -3264,22 +3241,16 @@ fi:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Silmukat
               name: Silmukat
             Events:
-              key: Tapahtumat
               name: Tapahtumat
             Conditionals:
-              key: Ehtolausekkeet
               name: Ehtolausekkeet
             Functions:
-              key: Funktiot
               name: Funktiot
             Variables:
-              key: Muuttujat
               name: Muuttujat
             For Loops:
-              key: Silmukat
               name: Silmukat
           lesson_groups:
             k5_getting_started_1:
@@ -3301,7 +3272,6 @@ fi:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Tietojenkäsittelyn Perusteet
               name: Tietojenkäsittelyn Perusteet
         self-paced-pl-csd2-2021:
           lessons:
@@ -3398,7 +3368,6 @@ fi:
               name: Tanssibileet
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
-              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             lesson-1:
               name: Tanssibileet
           lesson_groups:
@@ -3422,7 +3391,6 @@ fi:
           lessons:
             Debugging:
               name: Virheen etsintä
-              key: Virheen etsintä
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3441,7 +3409,6 @@ fi:
           lessons:
             Move It, Move It:
               name: Liikuta, liikuta
-              key: Liikuta, liikuta
             Getting Loopy:
               name: Mennään silmukoille
             'Loops: Getting Loopy':
@@ -3459,7 +3426,6 @@ fi:
               name: Suuri tapahtuma
             Binary Bracelets:
               name: Binäärikorut
-              key: Binäärikorut
             'Events: The Big Event':
               name: Suuri tapahtuma
           lesson_groups:
@@ -3475,13 +3441,10 @@ fi:
               name: Ruutupaperiohjelmointi
             Relay Programming:
               name: Releohjelmointi
-              key: Releohjelmointi
             Dance Party:
               name: Tanssibileet
-              key: Tanssibileet
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
-              key: Ehtolauseet pelikorteilla
             'Algorithms: Graph Paper Programming':
               name: Ruutupaperiohjelmointi
           lesson_groups:
@@ -3499,11 +3462,8 @@ fi:
               name: Säveltäminen
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
-              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             'Functions: Songwriting':
               name: Säveltäminen
-            Conditionals:
-              key: Ehtolausekkeet
           lesson_groups:
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
@@ -3517,11 +3477,9 @@ fi:
           lessons:
             For Loop Fun:
               name: Silmukkahupia
-              key: Silmukkahupia
             The Internet:
               name: Internetti
             Internet:
-              key: Internet
               name: Internetti
           lesson_groups:
             lessonGroup-7:
@@ -3532,6 +3490,9 @@ fi:
           lessons:
             lesson-9:
               name: Silmukat
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3564,12 +3525,15 @@ fi:
           lessons:
             The Internet:
               name: Internetti
-              key: Internetti
           lesson_groups:
             lessonGroup-7:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-8:
               display_name: Muuttujat
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -3578,19 +3542,85 @@ fi:
           lessons:
             Loops:
               name: Silmukat
-              key: Silmukat
             Events:
               name: Tapahtumat
-              key: Tapahtumat
             Conditionals:
               name: Ehtolausekkeet
-              key: Ehtolausekkeet
             Functions:
               name: Funktiot
-              key: Funktiot
             Variables:
               name: Muuttujat
-              key: Muuttujat
             For Loops:
               name: Silmukat
-              key: Silmukat
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+            csd1_1:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            csd1_2:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Muuttujat
+            Text:
+              name: teksti
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+          lesson_groups:
+            csd3_1:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            csd3_2:
+              display_name: 'Luku 2: Pelien rakentaminen'
+            cspSurvey:
+              display_name: Kysely
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            csd4_2:
+              display_name: 'Luku 2: Apsin prototypointi'
+            cspSurvey:
+              display_name: Kysely
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funktiot
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
+            lessonGroup-4:
+              display_name: Kysely
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Yleiskatsaus
+            lesson-1:
+              name: Yleiskatsaus
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Yleiskatsaus
+            lesson-1:
+              name: Yleiskatsaus

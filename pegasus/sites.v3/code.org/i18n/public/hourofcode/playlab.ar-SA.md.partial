@@ -5,28 +5,28 @@ theme: responsive
 video_player: true
 ---
 
-# معمل الألعاب - دورة تعليمية لـAn Hour of Code
+# معمل الألعاب - دورة تعليمية لـساعة البرمجة
 
 {{ hoc_playlab_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### Lesson Plans:
+### خطط الدرس
 
 - [معمل الألعاب]({{ hoc_playlab_cb_url }})
 
-### أنشطة الامتداد:
+### أنشطة إضافية
 
-- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
 - [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
 ### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
 - [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- حدث يبث مباشرةً:[دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,9 +34,9 @@ video_player: true
 
 ## نظرة عامة
 
-انشئ قصة أو اصنع لعبة باستخدام معمل الألعاب! انشئ حيوانات وقراصنة والأموات الأحياء ونينجا والمزيد من الشخصيات المتحركة وقم بعمل أصوات ونقاط تسجيل وكرات نار!
+انشئ قصة أو اصنع لعبة باستخدام معمل الألعاب! انشئ حيوانات وقراصنة وزومبي ونينجا والمزيد من الشخصيات المتحركة وقم بعمل أصوات ونقاط تسجيل وقم حتى برمي كرات من نار!
 
-**الفئة العمرية الموصى بها:** 4-104
+**الفئة العمرية الموصى بها:** ٤-١٠٤
 
 **متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
 

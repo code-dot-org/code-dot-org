@@ -20,12 +20,14 @@ import {
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
 
 $(document).ready(function() {
   prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
+  renderCopyLessonButton();
 });
 
 function prepareBlockly() {
@@ -138,3 +140,23 @@ function prepareExpandableImageDialog() {
     container
   );
 }
+
+const renderCopyLessonButton = () => {
+  const element = document.getElementById('copy-lesson-button');
+
+  // this will only be present for levelbuilders, in the extra links box
+  if (element) {
+    const lessonData = getScriptData('lesson');
+    const lessonId = lessonData['id'];
+    const lessonName = lessonData['displayName'];
+
+    ReactDOM.render(
+      <CloneLessonDialogButton
+        lessonId={lessonId}
+        lessonName={lessonName}
+        buttonText="Copy"
+      />,
+      element
+    );
+  }
+};

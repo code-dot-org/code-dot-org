@@ -95,12 +95,20 @@ export default class CoreLibrary {
     });
   }
 
-  drawSpeechBubble(text, x, y, bubbleType) {
+  /**
+   * Draws a speech bubble with multi-lane text.
+   * @param {String} text
+   * @param {Number} spriteX - corner of sprite
+   * @param {Number} spriteY - top of sprite
+   * @param {String} bubbleType - 'say' or 'think'
+   */
+  drawSpeechBubble(text, spriteX, spriteY, bubbleType) {
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
     }
-    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    // Protect against crashes in the unlikely event that a
+    // non-string or non-number was passed.
     if (typeof text !== 'string') {
       text = '';
     }
@@ -127,51 +135,49 @@ export default class CoreLibrary {
         ? 1
         : -1
     )[0];
-    let width =
-      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
-    width = Math.max(width, 50);
-    const height = lines.length * textSize + padding * 2;
+    const bubbleWidth = Math.max(
+      50,
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2
+    );
+    const bubbleHeight = lines.length * textSize + padding * 2;
+
+    const tailHeight = 10;
+    const bubbleY = Math.max(
+      0,
+      Math.min(APP_HEIGHT, spriteY) - bubbleHeight - tailHeight
+    );
+    const bubbleX = Math.max(
+      0,
+      Math.min(APP_WIDTH - bubbleWidth, spriteX - bubbleWidth / 2)
+    );
     const radius = padding;
-
-    let tailSize = 10;
-    let tailTipX = x;
-
-    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
-    // In other words, x and y indicate the default position of the bubble's triangular tip.
-    y = Math.min(y, APP_HEIGHT);
-    const spriteX = x;
-    if (y - height - tailSize < 1) {
-      tailSize = Math.max(1, y - height);
-      y = height + tailSize;
-    }
-    if (spriteX - width / 2 < 1) {
-      tailTipX = Math.max(spriteX, radius + tailSize);
-      x = width / 2;
-    }
-    if (spriteX + width / 2 > APP_WIDTH) {
-      tailTipX = Math.min(spriteX, APP_WIDTH - radius);
-      x = APP_WIDTH - width / 2;
-    }
-
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(
+    drawUtils.speechBubble(
       this.p5,
-      x,
-      y,
-      width,
-      height,
+      bubbleX,
+      bubbleY,
+      bubbleWidth,
+      bubbleHeight,
+      spriteX,
+      spriteY,
       {
-        tailSize,
-        tailTipX,
+        tailHeight,
         radius
       },
       bubbleType
     );
 
     // Draw text within bubble.
-    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
-      horizontalAlign: this.p5.CENTER
-    });
+    drawUtils.multilineText(
+      this.p5,
+      lines,
+      bubbleX + bubbleWidth / 2,
+      bubbleY + padding,
+      textSize,
+      {
+        horizontalAlign: this.p5.CENTER
+      }
+    );
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
@@ -463,13 +469,17 @@ export default class CoreLibrary {
 
   onPromptAnswer(variableName, userInput) {
     this.numActivePrompts--;
-    this.promptVars[variableName] = userInput;
+    // Check to see if the user entered a number.
+    const typedInput = isNaN(parseFloat(userInput))
+      ? userInput
+      : parseFloat(userInput);
+    this.promptVars[variableName] = typedInput;
     const callbacks = this.userInputEventCallbacks[variableName];
     if (callbacks) {
       // Make sure to call the setter callback to set the variable
       // before the user callback, which may rely on the variable's new value
       callbacks.setterCallbacks.forEach(callback => {
-        callback(userInput);
+        callback(typedInput);
       });
       callbacks.userCallbacks.forEach(callback => {
         callback();

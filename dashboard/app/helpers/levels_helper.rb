@@ -201,14 +201,15 @@ module LevelsHelper
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
+      channel = get_channel_for(@level, @script&.id, @user)
       view_options(
-        channel: get_channel_for(@level, @script&.id, @user),
+        channel: channel,
         reduce_channel_updates: @script ?
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel
-      readonly_view_options if @user
+      # readonly if viewing another user's channel or a code review is open for that project
+      readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
     end
 
     view_options(
@@ -373,14 +374,14 @@ module LevelsHelper
         # connection (ScriptLevel#show, for example), so
         # make sure that we're using the write connection
         # here.
-        MultipleDatabasesTransitionHelper.use_writer_connection do
+        ActiveRecord::Base.connected_to(role: :writing) do
           section.save(validate: false)
         end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:muteMusic] = !!current_user.mute_music
+      @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
@@ -438,7 +439,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options

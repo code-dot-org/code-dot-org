@@ -5,28 +5,28 @@ theme: responsive
 video_player: true
 ---
 
-# اكتب أول برنامج كمبيوتر لك: دورة تعليمية لـAn Hour of Code
+# اكتب أول برنامج كمبيوتر لك: دورة تعليمية لـساعة البرمجة
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### Lesson Plans:
+### خطط الدرس
 
 - [اكتب أول برنامج كمبيوتر لك]({{ hoc_hourofcode_cb_url }})
 
-### أنشطة الامتداد:
+### أنشطة إضافية
 
-- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
 - [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
 ### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
 - [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- حدث يبث مباشرةً:[دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,9 +34,9 @@ video_player: true
 
 ## نظرة عامة
 
-تعلم المفاهيم الأساسية لعلوم الكمبيوتر من خلال برمجة السحب والإسقاط. هذه محاضرات فيديو تعليمية تشبه الألعاب وموجهة ذاتيًّا بقيادة Bill Gates وMark Zuckerberg وAngry Birds وPlants vs. Zombies. تعلَّم إعادة الحلقات والمتغيرات والخوارزميات الأساسية. متوفر في 37 لغة.
+تعلم المفاهيم الأساسية لعلوم الكمبيوتر من خلال برمجة السحب والإسقاط. هذه محاضرات فيديو تعليمية تشبه الألعاب وموجهة ذاتيًّا بقيادة Bill Gates وMark Zuckerberg وAngry Birds وPlants vs. Zombies. تعلَّم عن حلقات التكرار والمتغيرات والخوارزميات الأساسية. متوفر في ٧٣ لغة.
 
-**الفئة العمرية الموصى بها:** 4-104
+**الفئة العمرية الموصى بها:** ٤-١٠٤
 
 **متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
 

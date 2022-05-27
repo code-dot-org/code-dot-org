@@ -37,7 +37,7 @@ class BubbleChoice < DSLDefined
   ALPHABET = ('a'..'z').to_a
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
@@ -45,7 +45,7 @@ class BubbleChoice < DSLDefined
       sublevels
       level 'level1'
       level 'level2'
-    ruby
+    RUBY
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
@@ -220,9 +220,6 @@ class BubbleChoice < DSLDefined
     # otherwise, update sublevels to match
     levels_child_levels.sublevel.destroy_all
     Level.where(name: sublevel_names).each do |new_sublevel|
-      if new_sublevel.is_a?(BubbleChoice) ||  new_sublevel.is_a?(LevelGroup)
-        raise "BubbleChoice level #{name.dump} cannot contain #{new_sublevel.class.name} level #{new_sublevel.name.dump}"
-      end
       ParentLevelsChildLevel.create!(
         child_level: new_sublevel,
         kind: ParentLevelsChildLevel::SUBLEVEL,

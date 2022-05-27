@@ -897,6 +897,10 @@ az:
         outbreak_outro: 'Epidemiya Simulyatoru: Pulsuz Oyna'
         PL_overview_CSP: Kompüter Elmləri Prinsipləri nədir?
         PL_CSP_EIPMOverview: EIPM Dərsləri üçün bələdçi
+        PL_CS_Journeys_Overview: 'CS Səyahətlər
+
+'
+        csp_applab_parameters: Parametrli funksiyalar
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına

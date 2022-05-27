@@ -1,0 +1,25 @@
+{
+  "category_key": "org_code_media",
+  "content": "",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "SoundLoader",
+  "name": "SoundLoader",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "name": "public static double[] read(String filename) throws SoundException, FileNotFoundException",
+      "position": 0,
+      "key": "read",
+      "overload_of": null,
+      "content": "Extracts audio samples from a WAV or AU file into an array.\n\nThis method will throw `SoundException` if there is an error reading the file and `FileNotFoundException` when the file cannot be found in the asset manager.\n",
+      "parameters": "[{\"name\":\"filename\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the audio file\"}]",
+      "examples": "[]",
+      "syntax": "This method will return an array of samples as doubles, at 44.1 kilohertz. This means that 441000 samples are played per second.\n",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

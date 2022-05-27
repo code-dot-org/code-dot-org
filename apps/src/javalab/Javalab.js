@@ -19,7 +19,9 @@ import javalab, {
   setIsTesting,
   openPhotoPrompter,
   closePhotoPrompter,
-  setBackpackEnabled
+  setBackpackEnabled,
+  appendMarkdownLog,
+  setIsReadOnlyWorkspace
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -268,6 +270,10 @@ Javalab.prototype.init = function(config) {
   getStore().dispatch(setIsStartMode(this.isStartMode));
   getStore().dispatch(setLevelName(this.level.name));
 
+  // For javalab, we don't use pageConstants.isReadOnlyWorkspace because
+  // the readOnly state can change when a code review is opened or closed
+  getStore().dispatch(setIsReadOnlyWorkspace(!!config.readonlyWorkspace));
+
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
 
@@ -291,6 +297,9 @@ Javalab.prototype.init = function(config) {
     )
   );
 
+  // Used for some post requests made in Javalab, namely
+  // when providing overrideSources or commiting code.
+  // Code review manages a csrf token separately.
   fetch('/project_versions/get_token', {
     method: 'GET'
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
@@ -372,7 +381,10 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    getStore().getState().currentUser,
+    this.onMarkdownMessage,
+    this.csrf_token
   );
 
   let connectToJavabuilder;
@@ -500,6 +512,10 @@ Javalab.prototype.closePhotoPrompter = function() {
 Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
   // Only pass the selected photo to the mini-app if it supports the photo prompter
   this.miniApp?.onPhotoPrompterFileSelected?.(photo);
+};
+
+Javalab.prototype.onMarkdownMessage = function(message) {
+  getStore().dispatch(appendMarkdownLog(message));
 };
 
 export default Javalab;

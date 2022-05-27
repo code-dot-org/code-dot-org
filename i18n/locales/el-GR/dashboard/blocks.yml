@@ -4,6 +4,22 @@ el:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': μεσαία
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': μεσαία
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
@@ -1003,6 +1019,20 @@ el:
         text: όταν {SPRITE} πατηθεί
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): περιστροφή δεξιά
+            new Behavior(spinning_left, []): περιστροφή αριστερά
+            new Behavior(fluttering, []): τριγύρισμα
+            new Behavior(jittering, []): τρεμούλιασμα
+            new Behavior(wobbling, []): ταλάντευση
+            new Behavior(wandering, []): περιπλάνηση
+            new Behavior(patrolling, []): περιφρούρηση
+            new Behavior(moving_west_and_looping, []): μετακίνηση δυτικά και δημιουργία βρόχου
+            new Behavior(moving_east_and_looping, []): μετακίνηση ανατολικά και δημιουργία βρόχου
+            new Behavior(moving_north_and_looping, []): μετακίνηση βόρεια και δημιουργία βρόχου
+            new Behavior(moving_south_and_looping, []): μετακίνηση νότια και δημιουργία βρόχου
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
       gamelab_costumeImage:
@@ -1015,7 +1045,7 @@ el:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
         text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'κάθε {N} {UNIT} '
         options:
           UNIT:
@@ -1153,8 +1183,6 @@ el:
         options:
           EFFECT:
             '"rain"': βροχή
-      gamelab_makeNewScaledSprite:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeProjectile:
@@ -1164,6 +1192,12 @@ el:
             '90': κάτω
             '180': αριστερά
             '270': επάνω
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': μεσαία
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
@@ -1726,15 +1760,27 @@ el:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': τριγύρισμα
             '"growing"': αυξάνεται
+            '"jittering"': τρεμούλιασμα
             '"shrinking"': συρρικνώνεται
+            '"spinning_left"': περιστροφή αριστερά
+            '"spinning_right"': περιστροφή δεξιά
             '"swimming_left_and_right"': κολύμβηση
+            '"wandering"': περιπλάνηση
+            '"wobbling"': ταλάντευση
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': τριγύρισμα
             '"growing"': αυξάνεται
+            '"jittering"': τρεμούλιασμα
             '"shrinking"': συρρικνώνεται
+            '"spinning_left"': περιστροφή αριστερά
+            '"spinning_right"': περιστροφή δεξιά
             '"swimming_left_and_right"': κολύμβηση
+            '"wandering"': περιπλάνηση
+            '"wobbling"': ταλάντευση
       Poetry_whenLineShows:
         options:
           'N':

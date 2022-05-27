@@ -9,9 +9,9 @@ module JavalabFilesHelper
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(upload_request)
     end
-    response.code == '200'
+    return response
   rescue StandardError
-    false
+    nil
   end
 
   # Get all files related to the project at the given channel id as a hash.

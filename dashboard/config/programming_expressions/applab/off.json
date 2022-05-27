@@ -3,7 +3,7 @@
   "name": "colorLeds[i].off()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Turns the specified colorLED off.\r\n\r\nThis method works just like `led.off()` and will turn whichever LED is specified off. You can turn the colorLED back on with `colorLeds[i].on()`.",
+  "content": "Turns the specified colorLED off.\r\n\r\nThis method works just like [`led.off()`(#f78183)](/docs/applab/led.off/) and will turn whichever LED is specified off. You can turn the colorLED back on with `colorLeds[i].on()`.",
   "examples": [
     {
       "name": "Alternating Lights",

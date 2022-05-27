@@ -13,6 +13,19 @@ sk:
       Adding Screens: Pridanie obrazoviek
       Animate Your Scene: Animuj svoju scénu
       App Lab Intro - Video: Úvod do App Labu – video
+      'App: Choose a Kid''s Movie': 'Aplikácia: Výber detského filmu'
+      'App: Friend Finder': 'Aplikácia: Nájdi svojich priateľov'
+      'App: Guess the Number': 'Aplikácia: Uhádni číslo'
+      'App: How Many Countries': 'Aplikácia: Koľko krajín'
+      'App: Is It Your Birthday?': 'Aplikácia: Máš dnes narodeniny?'
+      'App: My Famous Birthday': 'Aplikácia: Moje slávne narodeniny'
+      'App: National Parks': 'Aplikácia: Národné parky'
+      'App: Outfit Picker': 'Aplikácia: Výber oblečenia'
+      'App: Pet Chooser': 'Aplikácia: Výber zvieratka'
+      'App: Stamp Notebook': 'Aplikácia: Pečiatkovanie v zápisníku'
+      'App: Story Creator': 'Aplikácia: Tvorba príbehov'
+      'App: The Fastest Finger': 'Aplikácia: Rýchle prsty'
+      'App: Where Should I Live?': 'Aplikácia: Kde mám bývať?'
       Arrays: Rady
       Artist Intro with JR Hildebrand: Úvod k Umelcovi s JR Hildebrandom
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
@@ -221,6 +234,7 @@ sk:
       Project: Projekt
       Project - Background and Variables: Projekt - Pozadie a premenné
       Project - Sprites and Interactions: Projekt - "Sprite" objekty a interakcie
+      Project Guide: Sprievodca projektom
       Project Work: Projektová práca
       Properties: Vlastnosti
       Publishing Your Website: Publikovanie tvojej webstránky
@@ -280,6 +294,7 @@ sk:
       The Power of Words - Unplugged Activity: Objav silu slov – aktivita bez počítača
       The Right App - Unplugged Activity: Vhodná aplikácia – aktivita bez počítača
       Tour of Design Mode: Predstavenie dizajnového módu
+      Train an AI to Clean the Ocean: Vycvičte umelú inteligenciu na čistenie oceánov
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
@@ -332,6 +347,7 @@ sk:
       'Video: Harvesting with Conditionals': 'Video: Zber úrody s podmienkami'
       'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
       'Video: How to Make a Sprite': 'Video: Ako vytvoriť sprajt'
+      'Video: IOSP Model': 'Video: Model VVPS'
       'Video: Ice Age Loops': 'Video: Cykly Doby ľadovej'
       'Video: If/Else Statements': 'Video: Podmienkové výroky'
       'Video: Impacts on Society': 'Video: Vplyv na spoločnosť'
@@ -369,7 +385,7 @@ sk:
       'Video: Outbreak Simulator: Introduction': 'Video: Veľa sprajtov'
       'Video: Pair Programming': 'Video: Párové programovanie'
       'Video: Pair Programming ': 'Video: Párové programovanie'
-      'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
+      'Video: Problem Solving Process': 'Video: Postup riešenia problémov'
       'Video: Programming with Blocks': 'Video: Programovanie pomocou blokov'
       'Video: Programming with Rey and BB-8': 'Video: Programovanie s Rey a BB-8'
       'Video: Properties': 'Video: Vlastnosti'

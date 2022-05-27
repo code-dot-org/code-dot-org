@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A researcher wants to store data from the World Happiness Report for several countries for 2015 and 2016. They have the following values:\r\n\r\n![](https://images.code.org/6ac016ef6d30f133c73a82ad5a14414e-image-1650916959390.png)\r\n\r\nwhere each row represents Canada, Denmark, Finland, Iceland, Norway, and Switzerland. Each column represents happiness rank in 2015, happiness score in 2015, the happiness rank in 2016, and the happiness score in 2016, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `double`(#e7e8ea) array called `happiness`(#e7e8ea) using the `new`(#e7e8ea) keyword.\r\n\r\n2. Assign the values for each row and column in the `happiness`(#e7e8ea) array.\r\n\r\n::: details [**Show Me How**]\r\nA two-dimensional (2D) array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = new dataType[numRows][numCols];\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and set the `numRows`(#e7e8ea) and `numCols`(#e7e8ea) to the number of rows and columns for the 2D array.\r\n\r\nValues are added to a 2D array using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col] = value;\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) where you want to store the value.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Add the values to the 2D array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "bubble_choice_description": "A researcher wants to store data from the World Happiness Report for several countries for 2015 and 2016. Declare and initialize a 2D array to store the values.",
+    "display_name": "World Happiness",
+    "thumbnail_url": "https://images.code.org/563aefa1a5cd9b0ba66788cf86fc038f-image-1650917246147.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI7IpF45J2CWKBfng8yy\nqnnpwVZ+xtb/RiILcNY9/PxsMqwx/E9iIKwJp55ZOauwLoYVO/fl6D2vwzop\np5YISEmJKM57D9S/1Wcsrspt17qJd2oB7XEW8ehVSmvtsZvlVgVP3fPth+Hf\nizXRQ6c9HvoQnlN99U0eMiZJyYRb0xTeA726UD07YVIBz8imi2yObJmFRcsz\nwMLObw94ticHkAl/85KO3HFNwfg7LKbs0hXOJkNbGKyaFbqoil/+Vzdyy2jG\ntAHhRYDiZ67wYDtbmk+jNOXShogFYfUUF1XOISj/U8Uu0bZz5f7x+3nvUITp\nT6rqSkVUThHDiEE/1L7sfyusNI+YOWuxucgM/OBurEpMWdvJQQ0LUreIMXrC\nm5HvNF4AQwUmmsw6jre9f55euxkWoCKA2meB2RPkVTUFqk8QrTsfq2Xxgcst\nf8JsMDEhvv28JlOdiRGjs+znyn2qJv2D/wmUnNOEk202/WHVHn8It1B/xuFU\n/qtwHSf5EP8fTutoGYSqADDA9e2FslvOpLDbxld8J1MLstngWJ1M/GeZEH5R\n+U6vsbkSL3u3YVMBJmXSbCPwbQQrByvnpL7smRG7ecmplwQO8/+pF6GElXCm\nZieWj47rjHawoQG8VQL8ucC0YOg3+qStHjpeuOqzLE+Pm9L8vFM4+oZUfP4a\nf1zG7RRamoGiS46/Egl14MAAEtcV1I7IwPURj5vWP9XJ1Xk3rKfsYMQ/bmk3\nGULk7afbuopmFFRc7we6C7OXBOiQf+eJ9IRYxkgnjTZa0ytwamnskCX0HigB\nx8Mm/1IYbExxlpD8QBgsmXNszwn1DuGK+JLjruR9ySQMRuIEVdgb74opyw0T\nF64NM3TBGiuyHZZANMpf2gkCg9hY9qVd50/h1a/+Ak1cF6deqnKOZ+EGx72y\nWxm+ulkL5zt8qh5/zLHe+ZGXeI6Wc5durC0X/Ii4oeuCSUAALwg+SqYbTRji\nc/K1laQdMPLgbXC7JCcWa/zmAycVY5azq1Drgvc1JhDsa663LriBWtmCxGVb\nj+fImMe5yk3Cp1k5zo0I4KMUZRk69DORKrh2H4tvMiVbf9BYri2+IHgHqxeL\nEk6sMThI4PvMO5lfw0BKo8caaJo5Neq1ny3dDj5LN4HGnoLzqrP4aQaUYZNM\nPMojnPJLr7/rFrwVwoMR8N7eYRPLNHYFCkZubdZJuhKRxZhcswKxIoGN48G+\nSLmlVKtgU81OBFkRXEYl\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:50:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:50:13.579+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3c_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3c_2022\"},{\"changed_at\":\"2022-04-12 18:50:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:50:13.579+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3c_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3c_2022\"},{\"changed_at\":\"2022-04-12 18:50:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:44:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 17:32:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 19:10:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:07:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:08:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:11:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

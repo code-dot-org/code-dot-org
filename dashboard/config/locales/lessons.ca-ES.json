@@ -2,817 +2,599 @@
   "ca-ES": {
     "data": {
       "lessons": {
-        "coursef-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "flappy/Flappy Code": {
+          "name": "Codi Flappy"
         },
-        "coursef-2021/lesson-7": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "hourofcode/Maze": {
+          "name": "Laberint"
         },
-        "coursef-2021/lesson-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "frozen/Artist": {
+          "name": "Codi amb Anna i Elsa"
         },
-        "coursef-2021/Virtual Pet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "artist/Artist": {
+          "name": "Artista"
         },
-        "coursef-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "dance/Dance Party": {
+          "name": "Festa de ball"
         },
-        "coursef-2021/lesson-9": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Viatge aquàtic"
         },
-        "coursef-2021/lesson-10": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "mc/Hour of Code 2015": {
+          "name": "Hora del Codi de Minecraft"
         },
-        "coursef-2021/lesson-11": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "playlab/Play Lab": {
+          "name": "Play Lab"
         },
-        "coursef-2021/Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "infinity/Infinity": {
+          "name": "Disney infinit Play Lab"
         },
-        "coursef-2021/Variables that Change in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2018/Move It, Move It": {
+          "name": "Mou-lo, Mou-lo"
         },
-        "coursef-2021/Nested Loops in the Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2018/Your Digital Footprint": {
+          "name": "La vostra empremta digital"
         },
-        "coursef-2021/Variables that Change in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Mapes feliços"
         },
-        "coursef-2021/For Loop Fun": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursea-2018/Going Places Safely": {
+          "name": "Anant a llocs segurs"
         },
-        "coursef-2021/For Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
         },
-        "coursef-2021/For Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2018/Relay Programming": {
+          "name": "Programació en relleus"
         },
-        "coursef-2021/Simulating Experiments": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
         },
-        "coursef-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2018/Digital Citizenship": {
+          "name": "Ciutadania digital"
         },
-        "coursef-2021/AI for Oceans": {
-          "overview": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Imatges binàries"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Imatges binàries"
+        },
+        "express-2018/Internet": {
+          "name": "Internet"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Col·laboració oberta"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Els meus amics robòtics"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Col·laboració oberta"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "La vostra empremta digital"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Abella ortogràfica"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Condicionals"
+        },
+        "csd3-2018/Functions": {
+          "name": "Funcions"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funcions amb Paràmetres"
+        },
+        "csd2-2018/Lists": {
+          "name": "Llistes"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Anant a llocs segurs"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Mapes feliços"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "La vostra empremta digital"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Imatges binàries"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Ciutadania digital"
+        },
+        "coursed-2019/Dance Party": {
+          "name": "Festa de ball"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Col·laboració oberta"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "express-2019/Dance Party": {
+          "name": "Festa de ball"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Abella ortogràfica"
+        },
+        "csd3-2019/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Condicionals"
+        },
+        "csd3-2019/Functions": {
+          "name": "Funcions"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Funcions amb Paràmetres"
+        },
+        "csd2-2019/Lists": {
+          "name": "Llistes"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmes: Tàngrams"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmes reals: Planta una llavor"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmes reals: Planta una llavor"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Abella ortogràfica"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Bucles imbricats"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmes de la vida quotidiana: Avions de paper"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmes reals: Planta una llavor"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Bucles imbricats"
+        },
+        "express-2017/Introduction": {
+          "name": "Introducció"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Bucles imbricats"
+        },
+        "csd3-2017/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Condicionals"
+        },
+        "csd3-2017/Functions": {
+          "name": "Funcions"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funcions amb Paràmetres"
+        },
+        "csd2-2017/Lists": {
+          "name": "Llistes"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Sense connexió: Tangrams"
+        },
+        "course4/Maze and Bee": {
+          "name": "Laberint i abella"
+        },
+        "course4/Artist": {
+          "name": "Artista"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Sense connexió: Sobres de variables"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Sense connexió: Madlibs"
+        },
+        "course4/Artist: Variables": {
+          "name": "Artista: Variables"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: Variables"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Sense connexió: Diversió amb bucles"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Abelles: Per bucles"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Artista: Per bucles"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: Per bucles"
+        },
+        "course4/Artist: Functions": {
+          "name": "Artista: Funcions"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Sense connexió: Composició musical amb paràmetres"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artista: Funcions amb paràmetres"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: Funcions amb paràmetres"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Abelles: Les funcions amb paràmetres"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Sense connexió: Binari"
+        },
+        "course4/Artist Binary": {
+          "name": "Artista binari"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Súper-repte - Variables"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Súper-repte - funcions i paràmetres"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmes de la vida quotidiana: Avions de paper"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Laberint: seqüència"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Artista: seqüència"
+        },
+        "course2/Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "course2/Maze: Loops": {
+          "name": "Laberint: bucles"
+        },
+        "course2/Artist: Loops": {
+          "name": "Artista: bucles"
+        },
+        "course2/Bee: Loops": {
+          "name": "Abella: bucles"
+        },
+        "course2/Relay programming": {
+          "name": "Programació en relleus"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Abella: Correcció d'errors"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Artista: Correcció d'errors"
+        },
+        "course2/Conditionals": {
+          "name": "Condicionals"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Abella: Condicionals"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "course2/The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Play Lab: Crea una història"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "La vostra empremta digital"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Artista: bucles imbricats"
+        },
+        "course3/Computational Thinking": {
+          "name": "Pensament computacional"
+        },
+        "course3/Maze": {
+          "name": "Laberint"
+        },
+        "course3/Artist": {
+          "name": "Artista"
+        },
+        "course3/Artist: Functions": {
+          "name": "Artista: Funcions"
+        },
+        "course3/Bee: Functions": {
+          "name": "Abella: funcions"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Abella: Condicionals"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Laberint: els condicionals"
+        },
+        "course3/Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "course3/Dice Race": {
+          "name": "Cursa de daus"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Artista: bucles imbricats"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Pagesa - bucles mentre"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Abella: bucles imbricats"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Abella: Correcció d'errors"
+        },
+        "course3/Bounce": {
+          "name": "Rebota"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Play Lab: Crea una història"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Play Lab: Creeu un joc"
+        },
+        "course3/Internet": {
+          "name": "Internet"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Col·laboració oberta"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Ciutadania digital"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Artista: patrons"
+        },
+        "course1/Happy Maps": {
+          "name": "Mapes feliços"
+        },
+        "course1/Move it, Move it": {
+          "name": "Mou-te, mou-te"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Trencaclosques: Aprendre a arrossegar i deixar anar"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Laberint: seqüència"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Laberint: Depuració"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmes reals: Planta una llavor"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Abella: seqüència"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artista: seqüència"
+        },
+        "course1/Building a Foundation": {
+          "name": "Posant les bases"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artista: formes"
+        },
+        "course1/Spelling Bee": {
+          "name": "Abella ortogràfica"
+        },
+        "course1/Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "course1/Maze: Loops": {
+          "name": "Laberint: bucles"
+        },
+        "course1/Bee: Loops": {
+          "name": "Abella: bucles"
+        },
+        "course1/The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: Crea una història"
+        },
+        "course1/Going Places Safely": {
+          "name": "Anant a llocs segurs"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artista: bucles"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Puzzle"
         },
         "coursef-2021/Internet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Digital Trails": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Internet"
         },
         "courseb-2021/Move It, Move It": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Mou-lo, Mou-lo"
         },
         "courseb-2021/Loops: Getting Loopy": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/The Right App": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Fent bucles"
         },
         "coursea-2021/Programming: Happy Maps": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops: Happy Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Mapes feliços"
         },
         "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "El gran esdeveniment"
         },
         "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Polseres binàries"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Programació de paper quadriculat"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Programació en relleus"
         },
         "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Festa de ball"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Programming with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Debugging with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Collecting Treasure with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Creating Art with Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Swimming Fish in Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-3": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Virtual Pet with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Condicionals amb targetes"
         },
         "express-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Nested Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Looking Ahead with Minecraft ": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/If/Else with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/While Loops with the Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Harvesting with Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Variables with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Changing Variables with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/A Royal Battle with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Simon Says": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Private and Personal Information": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/About Me": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Digital Sharing": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Programming and Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Frozen": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Festa de ball"
         },
         "coursee-2021/Functions: Songwriting": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Composició de cançons"
         },
-        "coursee-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "Funcions amb Paràmetres"
         },
-        "coursee-2021/Functions in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "Variables"
         },
-        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "text"
         },
-        "coursee-2021/Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "Condicionals"
         },
-        "coursee-2021/Functions in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Functions": {
+          "name": "Funcions"
         },
-        "coursee-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "express-2020/Dance Party": {
+          "name": "Festa de ball"
         },
-        "coursee-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2020/Move It, Move It": {
+          "name": "Mou-lo, Mou-lo"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Fent bucles"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Programació de paper quadriculat"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Programació en relleus"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Festa de ball"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Condicionals amb targetes"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Imatges binàries"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Polseres binàries"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "El gran esdeveniment"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Composició de cançons"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Mapes feliços"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internet"
         }
       }
     }

@@ -29,11 +29,18 @@ const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
+const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 
 // Exported for test
 export const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
+  sources: {
+    'MyClass.java': {
+      text: '',
+      isVisible: true,
+      isValidation: false
+    }
+  },
   displayTheme: DisplayTheme.LIGHT,
   validation: {},
   renderedEditorHeight: 400,
@@ -52,7 +59,8 @@ export const initialState = {
   disableFinishButton: false,
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
+  isReadOnlyWorkspace: false
 };
 
 // Action Creators
@@ -69,6 +77,11 @@ export const appendOutputLog = output => ({
 export const appendNewlineToConsoleLog = () => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'newline'}
+});
+
+export const appendMarkdownLog = log => ({
+  type: APPEND_CONSOLE_LOG,
+  log: {type: 'markdown', text: log}
 });
 
 export const clearConsoleLogs = () => ({
@@ -250,6 +263,11 @@ export const setConsoleHeight = height => ({
 export const setEditorColumnHeight = editorColumnHeight => ({
   type: EDITOR_COLUMN_HEIGHT,
   editorColumnHeight
+});
+
+export const setIsReadOnlyWorkspace = isReadOnlyWorkspace => ({
+  type: SET_IS_READONLY_WORKSPACE,
+  isReadOnlyWorkspace
 });
 
 // Reducer
@@ -445,6 +463,12 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPhotoPrompterOpen: false,
       photoPrompterPromptText: ''
+    };
+  }
+  if (action.type === SET_IS_READONLY_WORKSPACE) {
+    return {
+      ...state,
+      isReadOnlyWorkspace: action.isReadOnlyWorkspace
     };
   }
   return state;

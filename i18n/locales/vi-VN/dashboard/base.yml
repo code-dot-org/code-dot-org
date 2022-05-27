@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 vi:
   errors:
     messages:
@@ -609,6 +615,10 @@ vi:
       title: 'Bữa Tiệc Khiêu Vũ'
     dance-2019:
       title: 'Bữa Tiệc Khiêu Vũ'
+    hello-world:
+      title: 'Xin chào cả thế giới'
+    poem-art:
+      title: 'Tranh thơ ca'
     hoc:
       title: 'Mê cung cổ điển'
       body: 'Hãy thử những điều cơ bản của khoa học máy tính. Hàng triệu người đã sử dụng nó.'

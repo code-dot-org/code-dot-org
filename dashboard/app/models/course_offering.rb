@@ -21,7 +21,7 @@ class CourseOffering < ApplicationRecord
 
   has_many :course_versions
 
-  validates :category, acceptance: {accept: SharedCourseConstants::COURSE_OFFERING_CATEGORIES.to_h.keys.map(&:to_s), message: "must be one of the course offering categories. Expected one of: #{SharedCourseConstants::COURSE_OFFERING_CATEGORIES.to_h.keys.map(&:to_s)}. Got: \"%{value}\"."}
+  validates :category, acceptance: {accept: SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
