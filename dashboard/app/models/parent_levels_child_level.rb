@@ -79,11 +79,11 @@ class ParentLevelsChildLevel < ApplicationRecord
 
   private
 
+  # Indicate there is a problem with the child level by adding an ActiveRecord
+  # error to this object. Also add the same error to the parent_level, since
+  # this makes it easier to surface the error to levelbuilders in some cases.
   def add_child_error(message)
     errors.add(:child_level_id, message)
-
-    # Explicitly surface this error to the associated parent level if
-    # possible, to make it visible to levelbuilders, if possible.
     parent_level&.errors&.add(:child_level, message)
   end
 end
