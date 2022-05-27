@@ -119,6 +119,12 @@ describe('CodeReviewTimelineReview', () => {
     expect(wrapper.find('Button')).to.have.length(0);
   });
 
+  it('hides the close button if not viewAsCodeReviewer', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: true};
+    const wrapper = setUp({review: review, viewAsCodeReviewer: true});
+    expect(wrapper.find('Button')).to.have.length(0);
+  });
+
   it('displays Comments for each comment', () => {
     const wrapper = setUp();
     expect(wrapper.find(Comment)).to.have.length(2);
