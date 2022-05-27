@@ -1,6 +1,6 @@
 require 'csv'
+require 'google_drive'
 require 'json'
-require_relative '../../../lib/cdo/google/drive'
 
 module DataIOHelper
   # @param data [Hash]
@@ -18,6 +18,7 @@ module DataIOHelper
     JSON.parse(file_content)
   end
 
+  # Create CSV rows with headers from an array of hashes.
   # @param data_array [Array<Hash>]
   # @return Array<Array>
   def convert_to_csv_rows(data_array)
@@ -39,15 +40,25 @@ module DataIOHelper
     end
   end
 
-  # @param rows [Array<Array>]
-  # @param spreadsheet_path [string]
-  # @param sheet_name [string]
-  # @param credential_json [string]
-  def write_to_gsheet(rows, spreadsheet_path, sheet_name, credential_json)
-    raise 'Invalid inputs' if rows.nil? || spreadsheet_path.empty? || sheet_name.empty? || credential_json.empty?
+  # Append data to a Google spreadsheet.
+  # The spreadsheet must exists.
+  # @param rows_with_headers [Array<Array>]
+  # @param spreadsheet_name [String]
+  # @param sheet_name [String]
+  # @credential_json [String] Google credential json file
+  def append_to_gsheet(rows_with_headers, spreadsheet_name, sheet_name, credential_json)
+    raise 'Invalid inputs!' if rows_with_headers.nil? || spreadsheet_name.empty? || sheet_name.empty? || credential_json.empty?
+    @gdrive_session ||= GoogleDrive::Session.from_service_account_key(credential_json)
 
-    @gdrive_export_secret ||= read_from_json(credential_json)['gdrive_export_secret']
-    @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(@gdrive_export_secret.to_json))
-    @google_drive.add_sheet_to_spreadsheet(rows, spreadsheet_path, sheet_name)
+    spreadsheet = @gdrive_session.spreadsheet_by_title(spreadsheet_name)
+    raise "#{spreadsheet_name} gsheet doesn't exist!" if spreadsheet.nil?
+
+    worksheet = spreadsheet.worksheet_by_title(sheet_name)
+    worksheet ||= spreadsheet.add_worksheet(sheet_name, 200)
+
+    # Delete new data headers if the worksheet already has data
+    rows_with_headers.shift if worksheet.num_rows > 0
+    worksheet.insert_rows(worksheet.num_rows + 1, rows_with_headers)
+    worksheet.save
   end
 end
