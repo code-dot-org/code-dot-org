@@ -260,7 +260,11 @@ class Lesson < ApplicationRecord
 
   def lesson_feedback_url
     url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{localized_name}"
-    url += "&survey_data[course_name]=#{script.unit_group.localized_title}" if script.unit_group
+    url += if script.unit_group
+             "&survey_data[course_name]=#{script.unit_group.localized_title}&survey_data[unit_name]=#{script.localized_title}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
+           else
+             "&survey_data[course_name]=#{script.localized_title}"
+           end
     url + "{noformat}"
   end
 
