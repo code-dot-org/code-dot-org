@@ -66,13 +66,13 @@ class ParentLevelsChildLevel < ApplicationRecord
       end
     end
     if kind == PROJECT_TEMPLATE
-      raise ArgumentError, 'level cannot be its own project template level' if child_level == parent_level
-      raise ArgumentError, "template level type #{child_level.type} does not match level type #{parent_level.type}" unless child_level.type == parent_level.type
+      add_child_error('level cannot be its own project template level') if child_level == parent_level
+      add_child_error("template level type #{child_level.type} does not match level type #{parent_level.type}") unless child_level.type == parent_level.type
       if child_level.project_template_level
-        raise ArgumentError, 'the project template level you have selected already has its own project template level'
+        add_child_error('the project template level you have selected already has its own project template level')
       end
       if parent_level.parent_levels.project_template.any?
-        raise ArgumentError, 'this level is already a project template level of another level'
+        add_child_error('this level is already a project template level of another level')
       end
     end
   end
