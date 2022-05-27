@@ -2,6 +2,10 @@ require_relative 'core_validator.rb'
 require_relative 'data_io_helper'
 require_relative '../../../lib/cdo/crowdin/client_extentions.rb'
 
+#
+# A tool to download and validate translations made by specific users/vendors in Crowdin.
+# Can run frequently as a cronjob.
+#
 class CrowdinValidator
   include CoreValidator
   include DataIOHelper

@@ -2,6 +2,9 @@ require 'csv'
 require 'google_drive'
 require 'json'
 
+#
+# A helper module for reading/writing data to/from JSON, CSV, and Google spreadsheet (gsheet).
+#
 module DataIOHelper
   # @param data [Hash]
   # @param file_name [string]
