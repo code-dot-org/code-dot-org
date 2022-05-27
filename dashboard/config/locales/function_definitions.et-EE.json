@@ -1991,6 +1991,18 @@
               "binary": "binaarne"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
         }
       }
     }

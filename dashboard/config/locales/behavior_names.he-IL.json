@@ -3158,6 +3158,32 @@
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "shrinking": "להתכווץ",
+          "patrolling": "לסייר",
+          "wandering": "לשוטט",
+          "growing": "לגדול",
+          "jittering": "לרעוד",
+          "moving east": "לנוע מזרחה",
+          "moving north": "לנוע צפונה",
+          "moving south": "לנוע דרומה",
+          "moving west": "לנוע מערבה",
+          "spinning right": "להסתובב ימינה"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "shrinking": "להתכווץ",
+          "patrolling": "לסייר",
+          "wandering": "לשוטט",
+          "growing": "לגדול",
+          "jittering": "לרעוד",
+          "moving east": "לנוע מזרחה",
+          "moving north": "לנוע צפונה",
+          "moving south": "לנוע דרומה",
+          "moving west": "לנוע מערבה",
+          "spinning right": "להסתובב ימינה"
         }
       }
     }

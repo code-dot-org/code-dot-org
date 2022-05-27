@@ -5387,3 +5387,80 @@ ar-SA:
 
           * [CNet] (https://www.cnet.com/smart-home/)
           * [IoT Evolution] (http://www.iotevolutionworld.com/smart-home/)
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: أزرق
+        - text: أخضر
+        - {}
+        - text: أصفر
+        - correct: true
+        - text: أحمر
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: الوصف هنا
+      allthethings_external_not_displayed_as_unplugged:
+        content1: الوصف هنا
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: أي سهم الذي يوصل فلورب إلى الكنز؟
+        title: إختيارات متعددة
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: لا شيء مما سبق

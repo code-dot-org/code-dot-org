@@ -27,7 +27,8 @@
           "name": "Flappy",
           "overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti.",
           "preparation": "### Una settimana prima dell'Ora del Codice\n\n-   Ripassa la [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) e [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per iniziare a pianificare il tuo evento l'Ora del Codice.\n-   [Register your Hour of Code event](http://hourofcode.com)se desideri ricevere gadget o supporto in classe.\n-   Rivedi e completa da solo il tutorial online: [Make a Flappy Game](https://studio.code.org/flappy/1) \n-   Assicurati di provarlo prima di chiedere ai tuoi studenti di completarlo. Controlla la tua tecnologia e decidi se devi risolvere qualsiasi criticità prima dell'Ora del Codice.\n\n### Un giorno prima dell'Ora del Codice\n\n-   Scrivi le parole \"codifica\", \"programmazione\" e \"debug\" sulla lavagna o aggiungile al tuo muro delle parole se ne hai uno.\n-   Ogni studente che completa l'attività dovrebbe ricevere un certificato. [Print one](http://code.org/certificates) per tutti in anticipo per semplificare le cose alla fine della tua Ora del Codice.",
-          "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug."
+          "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug.",
+          "student_overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti."
         },
         "hourofcode/Maze": {
           "name": "Labirinto: Sequenze e Cicli",
@@ -43,6 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Laboratorio con L'Era Glaciale",
+          "overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti.",
           "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug.",
           "student_overview": "In questa lezione, gli studenti vivranno un'esperienza introduttiva con l'informatica e creeranno un gioco usando i codici dei blocchi di base."
         },
@@ -58,7 +60,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Laboratorio con Gumball",
-          "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug."
+          "overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti.",
+          "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug.",
+          "student_overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti."
         },
         "dance/Dance Party": {
           "name": "Ballando col codice",
@@ -100,6 +104,7 @@
         },
         "playlab/Play Lab": {
           "name": "Laboratorio",
+          "overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti.",
           "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug.",
           "student_overview": "In questa lezione, gli studenti vivranno un'esperienza introduttiva con l'informatica e creeranno un gioco usando i codici dei blocchi di base."
         },
@@ -132,6 +137,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity",
+          "overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti.",
           "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare (utilizzando blocchi), nonché le semplici tecniche di debug.",
           "student_overview": "In questa lezione, gli studenti vivranno un'esperienza introduttiva con l'informatica e creeranno un gioco usando i codici dei blocchi di base."
         },

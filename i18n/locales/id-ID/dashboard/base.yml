@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 id:
   errors:
     messages:
@@ -352,6 +358,7 @@ id:
       educate_beyond: "Di Luar Code.org"
       educate_inspire: "Menginspirasi seorang Siswa"
       educate_community: "Komunitas Online"
+      educate_requirements: "Persyaratan Teknis"
       educate_tools: "Alat dan Video"
       about_us: "Tentang Kami"
       about_leadership: "Kepemimpinan"
@@ -665,8 +672,10 @@ id:
       title: 'Pesta Tari'
     hello-world:
       title: 'Halo Dunia'
+      body: 'Pilih dari empat tema seru untuk membuat coding karakter yang interaktif di dunia yang kamu ciptakan.'
     poem-art:
       title: 'Seni Puisi'
+      body: 'Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.'
     hoc:
       title: 'Labirin Klasik'
       body: 'Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.'
