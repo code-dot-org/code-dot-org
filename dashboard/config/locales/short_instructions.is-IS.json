@@ -108,15 +108,15 @@
         "2-3 Bee Loops 7": "En fallegt blómaengi! Hjálpaðu býflugunni að heimsækja hvert blóm. Geturðu gert það með færri en 7 kubbum?",
         "2-3 Bee Loops 8": "Þessi fjólubláu blóm hafa mismunandi magn blómasafa í hvert sinn sem þrautin er keyrð. \n\nNotaðu `meðan blómasafi` lykkju til að safna öllum safanum. \n\nÞessi lykkja endurtekur sig á meðan skilyrðið er satt, hér `blómasafi > 0`.",
         "2-3 Bee Loops Assessment 1": "Mat: Notaðu `meðan` lykkju til að safna öllum blómasafanum úr þessum blómum.",
-        "2-3 Maze 1": "Getur þú hjálpað mér að ná óþekka svíninu? Smelltu saman tveimur `færa áfram` kubbum fyrir neðan `þegar keyrt` kubbinn og ýttu svo á \"Keyra\". ",
+        "2-3 Maze 1": "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)",
         "2-3 Maze 10": "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)",
         "2-3 Maze 12": "Getur þú komist til svínsins með því að búa til lykkju með aðeins einum `færa áfram` kubbi innan í `endurtaka`?",
         "2-3 Maze 13": "Komdu mér til svínsins! Í þetta sinn mátt þú aðeins nota einn \"færa áfram\" kubb",
         "2-3 Maze 15": "Notaðu tvær `endurtaka` lykkjur til að ná svíninu með sem fæstum kubbum!",
         "2-3 Maze 16": "Lykkjur geta ínnihaldið fleiri en einn kubb og samt virkað! Geturðu sett þessa röð kubba í lykkju og komið uppvakningnum til sólblómsins?",
         "2-3 Maze 16 before": "Geturðu fundið fljótlegustu aðferðina til að koma mér til svínsins?",
-        "2-3 Maze 2": "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að komast þangað!",
-        "2-3 Maze 3": "Færðu mig eftir slóðinni að kjánalega svíninu. Forðastu TNT sprengiefnið annars verður fjaðrafok!",
+        "2-3 Maze 2": "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)",
+        "2-3 Maze 3": "Slakaðu á og hjálpaðu mér að illa svíninu. Annars gæti ég reiðst!",
         "2-3 Maze 4": "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)",
         "2-3 Maze 6": "Slakaðu á og hjálpaðu mér að illa svíninu. Annars gæti ég reiðst!",
         "2-3 Maze 7": "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)",
@@ -3629,7 +3629,16 @@
         "CSD U5 black white images pixelation 5_2021": "Teiknaðu hvað sem þú vilt",
         "CSD U5 black white images pixelation_2021": "Ljúktu við X-ið með því að nota 0 og 1",
         "CSDU6 arrays select rainbow_2021": "Skrifaðu innihald fylkisins út á skjáinn í talnaröð. (Smelltu til að sjá nánari leiðbeiningar)",
-        "U4 Model Design 1_2021": "Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)"
+        "U4 Model Design 1_2021": "Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni. (Smelltu til að sjá ítarlegar leiðbeiningar)",
+        "AllTheThings sprite lab with video": "Breyttu Dusty (fokurtinni) í fisk.",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Þú byrjar með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla 4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð 1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti vantar og kóða þá.",
+        "Artist Autorun Test": "Settu nú fallið í lykkju til að teikna þessa 3 ferninga.",
+        "MC Agent Freeplay": "**Frjáls æfing:** Kannaðu heiminn!",
+        "Overworld Chop Tree - allthethings": "Viður er mjög mikilvægt hráefni. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu \"eyða blokk\" skipunina til að höggva það niður.",
+        "Test embedded K1 Blockly in instructions": "Notaðu þrjá `fara í vestur` kubba og einn `tína maís` kubb til að leysa þessa þraut.",
+        "U1L13 Text Compression": "Leitaðu að mynstrum ( endurteknum orðum eða klausum) í textanum. Færðu mynstrin sem þú greinir inn í orðabókina til hægri. Þegar þú ritar í orðabókina, er tákn færslunnar sett í textann í stað mynstursins.",
+        "allthethings-anigif-instructions": "Færðu mig í Austur svo ég nái svíninu!"
       }
     }
   }

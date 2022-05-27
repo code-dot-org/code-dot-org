@@ -116,7 +116,7 @@ Hour of Code イベントにリモートまたは対面方式にて参加する�
 
 Hour of Code を自宅または地元で開催することを検討している場合は、[保護者](https://hourofcode.com/us/how-to/parents) と [組織・団体](https://hourofcode.com/us/how-to/companies)向けの詳細なハウツーガイドをご覧ください。
 
-### 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. イベントの日程、形式、場所を決定する
 

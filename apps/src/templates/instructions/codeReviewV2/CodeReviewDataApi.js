@@ -14,17 +14,6 @@ export default class CodeReviewDataApi {
     this.locale = locale;
   }
 
-  // Temp method only used to set this.token
-  getCodeReviewCommentsForProject(onDone) {
-    return $.ajax({
-      url: `/code_review_comments/project_comments`,
-      method: 'GET',
-      data: {channel_id: this.channelId}
-    }).done((data, _, request) => {
-      this.token = request.getResponseHeader('csrf-token');
-    });
-  }
-
   getReviewablePeers() {
     return $.ajax({
       url: `/code_reviews/peers_with_open_reviews`,
@@ -73,17 +62,21 @@ export default class CodeReviewDataApi {
   };
 
   getCodeReviews() {
-    // TODO: csrf token get rid of this:
-    this.getCodeReviewCommentsForProject();
-
-    return $.ajax({
-      url: `/code_reviews`,
-      type: 'GET',
-      data: {
-        channelId: this.channelId,
-        levelId: this.levelId,
-        scriptId: this.scriptId
-      }
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_reviews`,
+        type: 'GET',
+        data: {
+          channelId: this.channelId,
+          levelId: this.levelId,
+          scriptId: this.scriptId
+        }
+      })
+        .done((codeReviews, _, request) => {
+          this.token = request.getResponseHeader('csrf-token');
+          resolve(codeReviews);
+        })
+        .fail(result => reject(result));
     });
   }
 
@@ -123,8 +116,28 @@ export default class CodeReviewDataApi {
     });
   }
 
+  toggleResolveComment(commentId, isResolved) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_review_notes/${commentId}`,
+        type: 'PATCH',
+        headers: {'X-CSRF-Token': this.token},
+        data: {isResolved}
+      })
+        .done(codeReviewComment => resolve(codeReviewComment))
+        .fail(result => reject(result));
+    });
+  }
+
+  deleteCodeReviewComment(commentId) {
+    return $.ajax({
+      url: `/code_review_notes/${commentId}`,
+      type: 'DELETE',
+      headers: {'X-CSRF-Token': this.token}
+    });
+  }
+
   closeReview(reviewId) {
-    // TODO: call API for close review
     return new Promise((resolve, reject) => {
       $.ajax({
         url: `/code_reviews/${reviewId}`,

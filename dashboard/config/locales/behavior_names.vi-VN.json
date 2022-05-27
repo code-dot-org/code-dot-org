@@ -3136,6 +3136,32 @@
           "wobbling": "nhúc nhích",
           "moving west and looping": "di chuyển sang trái và lặp lại",
           "moving east and looping": "di chuyển sang phải và lặp lại"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "bơi sang trái và phải",
+          "shrinking": "thu nhỏ",
+          "patrolling": "tuần tra",
+          "wandering": "lang thang",
+          "growing": "phóng to",
+          "jittering": "phập phồng",
+          "moving east": "di chuyển sang phải",
+          "moving north": "di chuyển lên trên",
+          "moving south": "di chuyển xuống dưới",
+          "moving west": "di chuyển sang trái",
+          "spinning right": "xoay phải"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "bơi sang trái và phải",
+          "shrinking": "thu nhỏ",
+          "patrolling": "tuần tra",
+          "wandering": "lang thang",
+          "growing": "phóng to",
+          "jittering": "phập phồng",
+          "moving east": "di chuyển sang phải",
+          "moving north": "di chuyển lên trên",
+          "moving south": "di chuyển xuống dưới",
+          "moving west": "di chuyển sang trái",
+          "spinning right": "xoay phải"
         }
       }
     }

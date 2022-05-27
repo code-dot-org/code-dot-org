@@ -3,6 +3,7 @@ kn:
   data:
     block_categories:
       Actions: ಕ್ರಿಯೆಗಳು
+      Category: ವಿಭಾಗ
       Color: ಬಣ್ಣ
       Conditionals: ಕಂಡೀಷನಲ್ಸ್‌
       Events: ಈವೆಂಟ್‌ಗಳು

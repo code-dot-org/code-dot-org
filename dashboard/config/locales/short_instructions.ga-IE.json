@@ -33,14 +33,14 @@
         "2-3 Bee Loops 3A": "Bain úsáid as lúb `athdhéan` chun an neachtar go léir a bhailiú.",
         "2-3 Bee Loops 8": "Athraíonn an méid neachtair sna bláthanna corcra seo gach uair a dhéanann tú an dúshlán. \n\nÚsáid an lúb `chomh fada is...` chun an neachtar go léir a bhailiú. \n\nRithfidh an lúb seo chomh fada is a bhíonn an coinníoll fíor, sa chás seo `neachtar > 0`.",
         "2-3 Bee Loops Assessment 1": "Measúnú: Úsáid lúb `chomh fada is` chun an neachtar go léir a bhailiú ó na bláthanna seo.",
-        "2-3 Maze 1": "An féidir leat cabhrú liom greim a fháil ar an muc dhána sin? Ceangail cúpla bloc `téigh ar aghaidh` leis an mbloc `nuair a ritear é` agus cliceáil \"Rith\". ",
+        "2-3 Maze 1": "Treoraigh go dtí an t-olcas uaine mé! (Seachain an TNT)",
         "2-3 Maze 10": "Treoraigh go dtí an t-olcas uaine mé! (Seachain an TNT)",
         "2-3 Maze 12": "An féidir leat mé a threorú go dtí an mhuc trí lúb a dhéanamh gan ach bloc amháin `téigh ar aghaidh` inti?",
         "2-3 Maze 13": "Treoraigh go dtí an mhuc mé! Níl cead agat níos mó ná bloc amháin `téigh ar aghaidh` a úsáid",
         "2-3 Maze 15": "Sa dúshlán seo, is féidir leat dhá bhloc `athdhéan` a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon is lú blocanna agus is féidir!",
         "2-3 Maze 16 before": "Cad é an bealach is tapúla chun mé a threorú go dtí an mhuc?",
-        "2-3 Maze 2": "Tá an mhuc seo ag cur colg orm. Cabhraigh liom teacht uirthi!",
-        "2-3 Maze 3": "Lean an cosán agus treoraigh chuig an mhuc amaideach mé. Seachain TNT nó pléascfaidh na cleití!",
+        "2-3 Maze 2": "Treoraigh go dtí an t-olcas uaine mé! (Seachain an TNT)",
+        "2-3 Maze 3": "Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b'fhéidir go dtiocfaidh fearg orm!",
         "2-3 Maze 4": "Treoraigh go dtí an t-olcas uaine mé! (Seachain an TNT)",
         "2-3 Maze 6": "Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b'fhéidir go dtiocfaidh fearg orm!",
         "2-3 Maze 7": "Treoraigh go dtí an t-olcas uaine mé! (Seachain an TNT)",
@@ -2169,7 +2169,11 @@
         "CSD U5 black white images pixelation 4_2021": "Cuir malaí ar an aghaidh (cliceáil anseo chun an pictiúr a fheiceáil)",
         "CSD U5 black white images pixelation 5_2021": "Anois, tarraing cibé is rogha leat",
         "CSD U5 black white images pixelation_2021": "Críochnaigh an cruth X trí 0-anna agus 1-anna a chlóscríobh",
-        "CSDU6 arrays select rainbow_2021": "Taispeáin na huimhreacha san eagar ar an scáileán in ord uimhreach. (Cliceáil chun na treoracha go léir a fháil)"
+        "CSDU6 arrays select rainbow_2021": "Taispeáin na huimhreacha san eagar ar an scáileán in ord uimhreach. (Cliceáil chun na treoracha go léir a fháil)",
+        "MC Agent Freeplay": "**Saorimirt:** Tá cead do chinn agat anois!",
+        "Overworld Chop Tree - allthethings": "Is acmhainn thábhachtach é adhmad. Déantar go leor rudaí éagsúla as. Siúil go dtí an crann agus úsáid an t-ordú \"scrios a bhfuil anseo\" chun é a leagan.",
+        "U1L13 Text Compression": "An bhfeiceann tú patrúin (focail nó frásaí a úsáidtear arís is arís eile) sa teacs? Cuir na patrúin a fheiceann tú san fhoclóir ar dheis. Nuair a chuireann tú iontrálacha nua san fhoclóir, cuirtear an tsiombail a bhaineann leis an iontráil sa téacs in áit an phatrúin.",
+        "allthethings-anigif-instructions": "Cuir soir go dtí an mhuc mé!"
       }
     }
   }

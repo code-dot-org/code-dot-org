@@ -1571,6 +1571,18 @@
           "my function": {
             "name": "моја функција"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "нацртај квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "дужина"
+            }
+          }
         }
       }
     }

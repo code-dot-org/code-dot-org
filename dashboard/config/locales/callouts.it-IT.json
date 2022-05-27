@@ -963,11 +963,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Questo numero indica la massima quantità di blocchi di questo tipo che puoi usare."
@@ -1362,13 +1362,13 @@
           "sticker2": "Aggiungilo nel mezzo del tuo programma."
         },
         "courseC_maze_debugging9_2019": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_debugging9_2020": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_debugging9_copy_2020": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_programming5": {
           "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
@@ -1440,10 +1440,10 @@
           "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
         },
         "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "express_maze_debugging9_2020": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "outbreak2": {
           "minitoolbox": "Clicca qui per espandere il blocco.",
@@ -1595,7 +1595,7 @@
           "courseC_maze_debugging5_1": "Questi blocchi grigi sono bloccati e non possono essere cancellati!"
         },
         "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Dopo aver attaccato tutti i blocchi tra loro, premi \"Esegui\" per far partire il programma."
@@ -1653,7 +1653,7 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp5_2021": {
           "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
@@ -1712,7 +1712,7 @@
           "grade2_CaringForNewPet_0_1": "Dopo aver collegato insieme tutti i blocchi, premi \"Esegui\" per far partire il tuo programma."
         },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "Nuovo blocco!"
@@ -1823,7 +1823,7 @@
           "sprites_category2": "Cerca un nuovo blocco qui."
         },
         "courseC_artist_prog2_2021": {
-          "slider": "Qui puoi rallentare il tuo programma."
+          "slider": "Qui puoi rallentare l'esecuzione del tuo programma."
         },
         "courseF_events_conflict": {
           "stops_block": "Nuovi blocchi qui!"
@@ -1873,7 +1873,7 @@
           "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
         },
         "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Prova ad attraversare il tuo codice un blocco per volta."
+          "stepButton": "Prova a scorrere il tuo codice un blocco per volta."
         },
         "courseF_events_choice_penguin": {
           "whenToWhile": "Prova a cambiare dal blocco \"quando\" al blocco \"mentre\"."

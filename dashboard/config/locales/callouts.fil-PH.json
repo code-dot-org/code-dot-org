@@ -1430,7 +1430,8 @@
           "MC_HOC_2016_New_Walk_callout2": "Pindutin ang \"Run\" upang magsimulang gumalaw."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo.",
+          "make_sprite": "Gamitin ang mga block dito para gumawa ng sprite!"
         }
       }
     }

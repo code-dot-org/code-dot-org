@@ -3565,6 +3565,28 @@
           "move and get nectar with counter": {
             "name": "bergerak dan dapatkan nektar dengan penghitung (counter)"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "gambarlah bentuk",
+            "parameters": {
+              "sides": "sisi",
+              "length": "panjang"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "function 1"
+          },
+          "function 2": {
+            "name": "function 2"
+          }
         }
       }
     }

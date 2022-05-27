@@ -816,8 +816,23 @@ fil:
         hello_world_congrats: Hello World - Gawin ang Gusto Mo
         poemart_intro: Introduksiyon sa Sining ng Tula
         csd_u6_input_output: Input at Output
+        CSA-PL-for-loops: Para sa mga loop sa Java
+        CSA-PL-variables: Paglikha ng mga Variable sa Java
         PL_CS_Journeys_Overview: Mga Paglalakbay sa CS
+        CSA-PL-intro-to-java-lab: Mga Pangunahing Kaalaman sa Java Lab
+        CSA-PL-first-program: Pagsusulat ng Programa sa Java
+        CSD_u6_variables_part1: 'CSD: Mga variable'
+        csd_u6_if_statements: 'CSD: Kung na Mga Pahayag'
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Pagtawag at Pagtukoy sa mga Function'
         csp_applab_parameters: Mga function na meron mga parameter
+        starquilts_intro_artist: Panimula sa Star Quilts
+        CSA-PL-1d-arrays-new-values: Paglalagay ng mga value sa 1D arrays
+        CSA-PL-conditionals: Mga Kondisyon na Pahayag sa Java
+        CSA-PL-two-way-selection: Dalawahang-daan na pagpili
+        CSA-PL-Printing-in-Java: Pagpi-print sa Java
+        CSA-PL-multi-selection-statements: Mga Pahayag ng Multi-selection
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang
