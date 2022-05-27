@@ -11,6 +11,8 @@ import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
+const FLASH_ERROR_TIME_MS = 5000;
+
 class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
@@ -27,7 +29,8 @@ class Comment extends Component {
       isCommentResolved: props.comment.isResolved,
       hideResolved: true,
       isUpdating: false,
-      isDeleted: false
+      isDeleted: false,
+      displayError: false
     };
   }
 
@@ -105,9 +108,7 @@ class Comment extends Component {
       this.props.comment.id,
       newIsResolvedStatus,
       () => this.setState({isCommentResolved: newIsResolvedStatus}),
-      () => {
-        // TODO: handle set resolve failure
-      }
+      this.flashErrorMessage
     );
   };
 
@@ -115,9 +116,7 @@ class Comment extends Component {
     this.props.onDelete(
       this.props.comment.id,
       () => this.setState({isDeleted: true}),
-      () => {
-        // TODO: Handle comment delete failure
-      }
+      this.flashErrorMessage
     );
   };
 
@@ -180,6 +179,11 @@ class Comment extends Component {
     });
   };
 
+  flashErrorMessage = () => {
+    this.setState({displayError: true});
+    setTimeout(() => this.setState({displayError: false}), FLASH_ERROR_TIME_MS);
+  };
+
   render() {
     if (this.state.isDeleted) {
       return null;
@@ -189,11 +193,15 @@ class Comment extends Component {
       commentText,
       timestampString,
       isFromTeacher,
-      isFromOlderVersionOfProject,
-      hasError
+      isFromOlderVersionOfProject
     } = this.props.comment;
 
-    const {hideResolved, isUpdating, isCommentResolved} = this.state;
+    const {
+      hideResolved,
+      isUpdating,
+      isCommentResolved,
+      displayError
+    } = this.state;
 
     return (
       <div
@@ -249,7 +257,7 @@ class Comment extends Component {
             {commentText}
           </div>
         )}
-        {hasError && this.renderErrorMessage()}
+        {displayError && this.renderErrorMessage()}
       </div>
     );
   }
