@@ -26,7 +26,8 @@ class Comment extends Component {
     this.state = {
       isCommentResolved: props.comment.isResolved,
       hideResolved: true,
-      isUpdating: false
+      isUpdating: false,
+      isDeleted: false
     };
   }
 
@@ -113,7 +114,7 @@ class Comment extends Component {
   deleteCodeReviewComment = () => {
     this.props.onDelete(
       this.props.comment.id,
-      () => {},
+      () => this.setState({isDeleted: true}),
       () => {
         // TODO: Handle comment delete failure
       }
@@ -180,6 +181,10 @@ class Comment extends Component {
   };
 
   render() {
+    if (this.state.isDeleted) {
+      return null;
+    }
+
     const {
       commentText,
       timestampString,
