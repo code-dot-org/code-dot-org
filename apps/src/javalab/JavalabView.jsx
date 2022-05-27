@@ -72,6 +72,8 @@ class JavalabView extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      // Whether the finish button is disabled in studioApp is dependent on whether the workspace
+      // is readonly, so if the readonly state changes, the disabled finish button state changes
       const disableFinishButton =
         (!!this.props.isReadOnlyWorkspace && !this.props.isSubmittable) ||
         !!this.props.isCodeReviewing;

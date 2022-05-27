@@ -3275,7 +3275,7 @@ columns:
         precision: 
         scale: 
       extra: ''
-    'null': false
+    'null': true
     default: 
     default_function: 
     collation: utf8mb4_unicode_520_ci
@@ -29902,7 +29902,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220525175523
+version: 20220525230111
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
