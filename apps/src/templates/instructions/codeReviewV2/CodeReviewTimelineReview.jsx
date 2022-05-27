@@ -50,7 +50,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && (
+          {isOpen && !viewAsCodeReviewer && (
             <div>
               <Button
                 icon="close"
