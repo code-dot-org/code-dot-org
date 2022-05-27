@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
@@ -8,7 +8,7 @@ import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const DEFAULT_CLASS = 'Java Basics - The main Method';
+const DEFAULT_CLASS_KEY = 'MainMethod';
 
 const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   const {loading, data, error} = useFetch(
@@ -18,41 +18,45 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   );
 
   const [selectedClass, setSelectedClass] = useState(null);
+  const [classMap, setClassMap] = useState({});
+  const [fallbackKey, setFallbackKey] = useState(null);
 
-  const classMap = {};
-  let firstKey = null;
-  if (data) {
-    for (const category of data) {
-      const categoryName = category.name;
-      for (const classDoc of category.docs) {
-        const key = `${categoryName} - ${classDoc.name}`;
-        if (!firstKey) {
-          firstKey = key;
+  useEffect(() => {
+    const classes = {};
+    let firstKey = null;
+    if (data) {
+      for (const category of data) {
+        const categoryName = category.name;
+        for (const classDoc of category.docs) {
+          const friendlyName = `${categoryName} - ${classDoc.name}`;
+          classes[classDoc.key] = {name: friendlyName, doc: classDoc};
+          if (!firstKey) {
+            firstKey = classDoc.key;
+          }
         }
-        classMap[key] = classDoc;
       }
     }
-
-    if (!selectedClass) {
-      if (classMap[DEFAULT_CLASS] && !selectedClass) {
-        setSelectedClass(DEFAULT_CLASS);
-      } else {
-        setSelectedClass(firstKey);
-      }
+    if (classes[DEFAULT_CLASS_KEY]) {
+      setFallbackKey(DEFAULT_CLASS_KEY);
+    } else {
+      setFallbackKey(firstKey);
     }
-  }
+    setClassMap(classes);
+  }, [data]);
 
   const getDropdownOptions = function() {
     const options = [];
     for (const key in classMap) {
       options.push(
         <option key={key} value={key}>
-          {key}
+          {classMap[key].name}
         </option>
       );
     }
     return options;
   };
+
+  const keyToShow = selectedClass || fallbackKey;
 
   return (
     <div>
@@ -67,34 +71,28 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
         </p>
       )}
 
-      {!loading && data && (
+      {!loading && classMap && keyToShow && (
         <>
           <div style={styles.header}>
             <select
-              value={selectedClass}
+              value={keyToShow}
               onChange={e => setSelectedClass(e.target.value)}
               style={styles.select}
             >
               {getDropdownOptions()}
             </select>
-            {selectedClass && (
-              <div style={styles.docLink}>
-                <TextLink
-                  href={`/docs/ide/${programmingEnvironment}/classes/${
-                    classMap[selectedClass].key
-                  }`}
-                  openInNewTab={true}
-                  icon={<FontAwesome icon="external-link" />}
-                />
-              </div>
-            )}
+            <div style={styles.docLink}>
+              <TextLink
+                href={`/docs/ide/${programmingEnvironment}/classes/${keyToShow}`}
+                openInNewTab={true}
+                icon={<FontAwesome icon="external-link" />}
+              />
+            </div>
           </div>
-          {selectedClass && (
-            <ProgrammingClassOverview
-              programmingClass={classMap[selectedClass]}
-              includeMethodSummary={true}
-            />
-          )}
+          <ProgrammingClassOverview
+            programmingClass={classMap[keyToShow].doc}
+            includeMethodSummary={true}
+          />
         </>
       )}
     </div>
