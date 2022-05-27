@@ -67,6 +67,7 @@ Scenario: congrats certificate pages
   When I am on "http://code.org/api/hour/finish/flappy"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized flappy certificate"
 
   When I type "Robo Coder" into "#name"
@@ -77,6 +78,7 @@ Scenario: congrats certificate pages
   When I am on "http://code.org/api/hour/finish/oceans"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
+  And I wait for image "#uitest-certificate img" to load
   And I see no difference for "uncustomized oceans certificate"
 
   When I type "Robo Coder" into "#name"
