@@ -122,8 +122,8 @@ class Ability
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
       end
       can :destroy, ReviewableProject, user_id: user.id
-      can :project_commits, ProjectVersion do |_, project_owner, project_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
+      can :view_project_commits, User do |project_owner|
+        project_owner.id === user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|
@@ -136,9 +136,24 @@ class Ability
         # 1) the user is the project owner
         # 2) the user is the teacher of the project owner
         # 3) the user and the project owner are in the same code reivew group
-        project.owner.id == user.id ||
-          project.owner.student_of?(user) ||
-          (project.owner.code_review_groups & user.code_review_groups).any?
+        project.owner.id == user.id || can?(:code_review, project.owner)
+      end
+
+      # A user can review the code of other_user if they are the other_user's teacher or if
+      # they're in a shared section with code review turned on and they're in the same code review group
+      can :code_review, User do |other_user|
+        return true if other_user.student_of?(user)
+
+        in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)
+        in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
+      end
+
+      can :create, CodeReviewNote do |code_review_note|
+        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
+      end
+
+      can :update, CodeReviewNote do |code_review_note|
+        code_review_note.code_review.user_id == user.id
       end
 
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
@@ -168,6 +183,7 @@ class Ability
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
         if level_to_view&.is_a?(Javalab)
+          # Code review V1
           reviewable_project = ReviewableProject.find_by(
             user_id: user_to_assume.id,
             script_id: script_level.script_id,
@@ -183,6 +199,18 @@ class Ability
               reviewable_project.project_id,
               reviewable_project.level_id,
               reviewable_project.script_id
+            )
+            can_view_as_user_for_code_review = true
+          end
+
+          # Code review V2
+          if user != user_to_assume &&
+            !user_to_assume.student_of?(user) &&
+            can?(:code_review, user_to_assume) &&
+            CodeReview.open_reviews.find_by(
+              user_id: user_to_assume.id,
+              script_id: script_level.script_id,
+              level_id: level_to_view&.id # TODO replace with project level id
             )
             can_view_as_user_for_code_review = true
           end

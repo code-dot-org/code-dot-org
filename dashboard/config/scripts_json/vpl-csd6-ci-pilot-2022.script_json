@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-23 20:48:37 UTC",
+    "serialized_at": "2022-05-25 17:26:34 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -417,6 +417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -438,7 +441,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,7 +466,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,7 +491,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -504,7 +516,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -522,6 +537,216 @@
     },
     {
       "chapter": 12,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -546,7 +771,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -571,7 +796,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -727,6 +952,126 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd6-ci-pilot-2022",
         "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "26befad0-b75b-4a02-a072-befa57630afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables  - Vid3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "cca8bf85-0e8e-46dc-bf13-b046c331d8e1"
       }
     },
     {

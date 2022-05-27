@@ -50,6 +50,18 @@ export default storybook => {
           showProjectThumbnails={true}
         />
       )
+    },
+    {
+      name: 'basic localized projects list',
+      description: `This is a simple projects list with stub data, rendered in a non-English locale`,
+      story: () => (
+        <ProjectsList
+          locale={'es-MX'}
+          projectsData={STUB_PROJECTS_DATA}
+          studioUrlPrefix={'https://studio.code.org'}
+          showProjectThumbnails={true}
+        />
+      )
     }
   ]);
 };
