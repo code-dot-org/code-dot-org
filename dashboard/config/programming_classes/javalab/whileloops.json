@@ -1,13 +1,13 @@
 {
   "category_key": "control_structures",
-  "content": "While Loops are commonly used in programming to execute a block of code while a condition remains true. You can generally use a `for loop` to perform the same operations as a `while loop`. \n\n`While loops`, however, allow you to repeat a block of code without specifying the same constraints in the `for loop` syntax. A `while loop` only includes the `testExpression` part of the `for loop` syntax.\n\n- a `while loop` evaluates the `testExpression` inside the parentheses \n- if that expression is true, the body of the loop will be executed\n- the body will be executed until, the `testExpression` evaluates to false ",
-  "examples": "[{\"name\":\"Print a Numbers in a Pre-Defined Range\",\"description\":\"```\\nint i = 0;\\nint n = 4;\\n\\nwhile(i \\u003c n)\\n{\\n      System.out.println(i);\\n      i++;\\n}\\n```\\n**output:**\\n\\n0\\n\\n1\\n\\n2\\n\\n3\"}]",
+  "content": "A `while` loop is commonly used to execute a block of code while a condition is `true`.\n\n- a `while` loop evaluates the `condition` inside the parentheses\n\n- if the condition is `true`, the body of the loop will execute\n\n- the body will be executed until the `condition` evaluates to `false`\n\n![](https://images.code.org/a3ea872832081dd1f6b3953a0a7322fc-Screen Shot 2022-05-16 at 2.39.03 PM.png)",
+  "examples": "[{\"name\":\"Print Numbers in a Pre-Defined Range\",\"description\":\"```\\nint i = 0;\\nint n = 4;\\n\\nwhile(i \\u003c n) {\\n   System.out.println(i);\\n   i++;\\n}\\n\\n```\\n**Output:**\\n\\n0\\n\\n1\\n\\n2\\n\\n3\"}]",
   "external_documentation": "",
   "fields": "[]",
   "key": "WhileLoops",
-  "name": "While Loops",
-  "syntax": "while (testExpression) {\n    // body of code\n}",
-  "tips": "*the following image indicates the logic within a `while loop`*\n\n![](https://images.code.org/a3ea872832081dd1f6b3953a0a7322fc-Screen Shot 2022-05-16 at 2.39.03 PM.png)",
+  "name": "while Loops",
+  "syntax": "```\nwhile (condition) {\n   // code to execute\n}\n```",
+  "tips": "",
   "methods": [
 
   ]

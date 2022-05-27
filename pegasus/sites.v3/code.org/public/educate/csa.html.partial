@@ -91,11 +91,11 @@ style_min: true
 <section class="cta-curriculum">
   <div class="cta-button-wrapper">
     <a href="https://studio.code.org/courses/csa-2022"><button>Check out the curriculum</button></a>
-    <p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>.</p>
+    <p class="tiny">You must become a verified teacher to use the CSA curriculum and JavaLab. Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="_blank">verification form</a>. If you are already verified for CSP/D, you already have access to CSA.</p>
   </div>
   <div class="afe">
     <h3>In partnership with <a href="https://www.amazonfutureengineer.com/" target="_blank"><img src="/images/fit-250/AFE-dark-logo.png" alt="Amazon Future Engineer logo"/></a></h3>
-    <p class="tiny">Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href="https://www.amazonfutureengineer.com/" target="_blank">Learn more here</a>.</p>
+    <p class="tiny">Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href="/afe">Learn about our partnership</a>.</p>
   </div>
   {{ clearfix }}
 </section>
@@ -247,7 +247,7 @@ style_min: true
   </details>
   <details>
     <summary>Why do I need to become a verified teacher to teach CSA and run code in Java Lab?</summary>
-    <p>Java Lab is a unique environment from all other Code.org programming environments and requires additional measures to ensure network security for all. <!--<a href="https://support.code.org/hc/en-us/articles/6104078305549" target="_blank">Read more about it here</a>.--></p>
+    <p>Java Lab is a unique environment from all other Code.org programming environments and requires additional measures to ensure network security for all. <a href="https://support.code.org/hc/en-us/articles/6104078305549" target="_blank">Read more about it here</a>.</p>
   </details>
   <details>
     <summary>How can I access answer keys?</summary>
