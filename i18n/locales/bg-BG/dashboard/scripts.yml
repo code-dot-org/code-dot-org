@@ -172,7 +172,6 @@ bg:
           lessons:
             Play Lab:
               name: Театрална лаборатория
-              description_student: В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код.
           student_description: Създайте история или направете игра с Театрална лаборатория!
           name: playlab
         artist:
@@ -343,7 +342,6 @@ bg:
           lessons:
             Infinity:
               name: Дисни Инфинити Игрална лаборатория
-              description_student: В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код.
           student_description: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
           name: безкрайност
         algebrademo:
@@ -1254,7 +1252,6 @@ bg:
           lessons:
             Ice Age Play Lab:
               name: Ледена епоха Play Lab
-              description_student: В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код.
           student_description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
         cspunit3temp:
           title: CSP блок 3 - програмиране
@@ -2263,8 +2260,6 @@ bg:
               name: 'Алгоритми: Танграми'
             Conditionals in Minecraft:
               name: Условия в Minecraft
-              description_student: Избегни лавата! Тук ще научиш за условията в света на Minecraft.
-              description_teacher: Този урок дава на учевиците възможност да учат и практикуват с услонията. Той предлага герои и настройки от Minecraft, и учениците ще извършват задачи като минни и строителни конструкции, като използват свои програми.
             Building a Foundation:
               name: Изграждане на база
             Loops in Artist:
@@ -2819,8 +2814,6 @@ bg:
               name: Ледена епоха Play Lab
             Conditionals in Minecraft:
               name: Условия в Minecraft
-              description_student: Избегни лавата! Тук ще научиш за условията в света на Minecraft.
-              description_teacher: Този урок дава на учевиците възможност да учат и практикуват с услонията. Той предлага герои и настройки от Minecraft, и учениците ще извършват задачи като минни и строителни конструкции, като използват свои програми.
             Envelope Variables:
               name: Плик с променливи
             For Loop Fun:
@@ -3288,8 +3281,6 @@ bg:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
-            Loops with Rey and BB-8:
-              description_student: 'Помогнете на BB-8 през лабиринти използвайки цикли! '
             Loops in Artist:
               name: Цикли в Художник
             'Events: The Big Event':
@@ -4073,8 +4064,6 @@ bg:
           lessons:
             Binary Bracelets:
               name: Двоични гривни
-            Loops with Rey and BB-8:
-              description_student: 'Помогнете на BB-8 през лабиринти използвайки цикли! '
             'Events: The Big Event':
               name: Голямото събитие
         coursed-2020:
@@ -4430,10 +4419,8 @@ bg:
         csd1-2021:
           lessons:
             The Problem Solving Process:
-              key: Процеса за Решаване на Проблеми
               name: Процеса за Решаване на Проблеми
             What is a Computer?:
-              key: Какво е Компютър?
               name: Какво е Компютър?
           lesson_groups:
             cspSurvey:
@@ -4441,7 +4428,6 @@ bg:
         csd2-2021:
           lessons:
             Headings:
-              key: Заглавия
               name: Заглавия
           lesson_groups:
             cspSurvey:
@@ -4449,31 +4435,22 @@ bg:
         csd3-2021:
           lessons:
             Variables:
-              key: Променливи
               name: Променливи
             Sprites:
-              key: Спрайт
               name: Спрайт
             Sprite Properties:
-              key: Свойства на Спрайта
               name: Свойства на Спрайта
             Text:
-              key: Текст
               name: Текст
             Conditionals:
-              key: Условия
               name: Условия
             Keyboard Input:
-              key: Въвеждане от Клавиатурата
               name: Въвеждане от Клавиатурата
             Velocity:
-              key: Скорост
               name: Скорост
             Collisions:
-              key: Сблъсъци
               name: Сблъсъци
             Functions:
-              key: Функции
               name: Функции
           lesson_groups:
             cspSurvey:
@@ -4485,13 +4462,10 @@ bg:
         csd5-2021:
           lessons:
             Representing Images:
-              key: Представяне на Изображения
               name: Представяне на Изображения
             Keeping Data Secret:
-              key: Пазене на Тайни Данни
               name: Пазене на Тайни Данни
             Combining Representations:
-              key: Комбиниране на Представяния
               name: Комбиниране на Представяния
           lesson_groups:
             cspSurvey:
@@ -4499,10 +4473,8 @@ bg:
         csd6-2021:
           lessons:
             Getting Properties:
-              key: Получаване на Свойства
               name: Получаване на Свойства
             Functions with Parameters:
-              key: Функции с параметри
               name: Функции с параметри
           lesson_groups:
             cspSurvey:
@@ -4510,7 +4482,6 @@ bg:
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Бинарни числа
               name: Бинарни числа
           lesson_groups:
             cspSurvey:
@@ -4526,7 +4497,6 @@ bg:
         csp3-2021:
           lessons:
             Debugging:
-              key: Отстраняване на грешки
               name: Отстраняване на грешки
         csp4-2021:
           lesson_groups:
@@ -4576,10 +4546,7 @@ bg:
             'Programming: Happy Maps':
               name: Щастливи карти
             Programming with Rey and BB-8:
-              key: Програмиране с Рей и BB-8
               name: Програмиране с Рей и BB-8
-            Loops in Ice Age:
-              key: Цикли в Ледена Епоха
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -4590,14 +4557,9 @@ bg:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Преместете го, преместете го
               name: Преместете го, преместете го
             'Loops: Getting Loopy':
               name: Да повтаряме
-            Loops in Harvester:
-              key: Цикли в Harvester
-            Loops in Artist:
-              key: Цикли в Художник
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -4608,10 +4570,7 @@ bg:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Двоични гривни
               name: Двоични гривни
-            Loops in Harvester:
-              key: Цикли в Harvester
             'Events: The Big Event':
               name: Голямото събитие
           lesson_groups:
@@ -4630,24 +4589,15 @@ bg:
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
             Relay Programming:
-              key: Повтори програмирането
               name: Повтори програмирането
             Dance Party:
-              key: Танцово Парти
               name: Танцово Парти
             Loops in Ice Age:
-              key: Цикли в Ледена Епоха
               name: Цикли в Ледена Епоха
-            Loops in Artist:
-              key: Цикли в Художник
             Conditionals with Cards:
-              key: Условия с карти
               name: Условия с карти
             'Unplugged: Binary':
-              key: 'Ънплъгд: двоичен код'
               name: Бинарни образи(картини)
-            Artist Binary:
-              key: 'Художник: Бинарен код'
           lesson_groups:
             csf_events:
               display_name: Събития
@@ -4663,17 +4613,13 @@ bg:
               display_name: Цифрови граждани
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Условия
             Private and Personal Information:
-              key: Лична Информация
               name: Лична Информация
             About Me:
               name: 'Мини-Проект: За Мен'
             'Functions: Songwriting':
               name: Писане на песен
             Designing for Accessibility:
-              key: Проектиране за Достъпност
               name: Проектиране за Достъпност
             lesson-1:
               name: Проектиране за Достъпност
@@ -4691,21 +4637,15 @@ bg:
         coursef-2021:
           title: Курс F (2021)
           lessons:
-            Loops with the Artist:
-              key: Цикли с Артиста
             Envelope Variables:
-              key: Плик с променливи
               name: Плик с променливи
             AI for Oceans:
               name: ИТ За Океани
             Internet:
-              key: Интернет
               name: Интернет
             For Loop Fun:
-              key: Повторения за забавление
               name: Повторения за забавление
             Virtual Pet:
-              key: Виртуален Домашен Любимец
               name: 'Мини-Проект: Виртуален Домашен Любимец'
             lesson-1:
               name: Проектиране за Достъпност
@@ -4739,7 +4679,6 @@ bg:
         express-2021:
           lessons:
             Dance Party:
-              key: Танцово Парти
               name: Танцово Парти
             lesson-1:
               name: Танцово Парти
@@ -4763,7 +4702,6 @@ bg:
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
-              key: Програмиране с Рей и BB-8
               name: Програмиране с Рей и BB-8
           lesson_groups:
             csf_loops:
@@ -4798,13 +4736,10 @@ bg:
         csd5-preview-2021:
           lessons:
             Representing Images:
-              key: Представяне на Изображения
               name: Представяне на Изображения
             Keeping Data Secret:
-              key: Пазене на Тайни Данни
               name: Пазене на Тайни Данни
             Combining Representations:
-              key: Комбиниране на Представяния
               name: Комбиниране на Представяния
           lesson_groups:
             cspSurvey:
@@ -4872,22 +4807,16 @@ bg:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Повторения
               name: Повторения
             Events:
-              key: Събития
               name: Събития
             Conditionals:
-              key: Условия
               name: Условия
             Functions:
-              key: Функции
               name: Функции
             Variables:
-              key: Променливи
               name: Променливи
             For Loops:
-              key: За циклите
               name: За циклите
           lesson_groups:
             k5_getting_started_1:
@@ -4928,13 +4857,10 @@ bg:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Основи на компютърните науки
               name: Основи на компютърните науки
             Planning:
-              key: Планиране
               name: Планиране
             Next Steps:
-              key: Следващи стъпки
               name: Следващи стъпки
         self-paced-pl-csd2-2021:
           lessons:
@@ -5106,7 +5032,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5171,7 +5096,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5179,7 +5103,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5189,11 +5112,8 @@ bg:
               name: Щастливи карти
             Programming with Rey and BB-8:
               name: Програмиране с Рей и BB-8
-              key: Програмиране с Рей и BB-8
             'Programming: Happy Maps':
               name: Щастливи карти
-            Loops in Ice Age:
-              key: Цикли в Ледена Епоха
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -5230,7 +5150,6 @@ bg:
           lessons:
             Binary Numbers:
               name: Бинарни числа
-              key: Бинарни числа
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -5244,7 +5163,6 @@ bg:
           lessons:
             Debugging:
               name: Отстраняване на грешки
-              key: Отстраняване на грешки
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -5267,15 +5185,10 @@ bg:
           lessons:
             Move It, Move It:
               name: Преместете го, преместете го
-              key: Преместете го, преместете го
             Getting Loopy:
               name: Да повтаряме
             'Loops: Getting Loopy':
               name: Да повтаряме
-            Loops in Harvester:
-              key: Цикли в Harvester
-            Loops in Artist:
-              key: Цикли в Художник
           lesson_groups:
             csf_digcit:
               display_name: Цифрови граждани
@@ -5289,9 +5202,6 @@ bg:
               name: Голямото събитие
             Binary Bracelets:
               name: Двоични гривни
-              key: Двоични гривни
-            Loops in Harvester:
-              key: Цикли в Harvester
             'Events: The Big Event':
               name: Голямото събитие
           lesson_groups:
@@ -5318,20 +5228,14 @@ bg:
               name: Програмиране на милиметрова хартия
             Relay Programming:
               name: Повтори програмирането
-              key: Повтори програмирането
             Dance Party:
               name: Танцово Парти
-              key: Танцово Парти
             Loops in Ice Age:
               name: Цикли в Ледена Епоха
-              key: Цикли в Ледена Епоха
             Conditionals with Cards:
               name: Условия с карти
-              key: Условия с карти
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
-            Loops in Artist:
-              key: Цикли в Художник
           lesson_groups:
             lessonGroup-6:
               display_name: Цифрови граждани
@@ -5345,7 +5249,6 @@ bg:
           lessons:
             Private and Personal Information:
               name: Лична Информация
-              key: Лична Информация
             'Mini-Project: About Me':
               name: 'Мини-Проект: За Мен'
             Songwriting:
@@ -5356,8 +5259,6 @@ bg:
               name: 'Мини-Проект: За Мен'
             'Functions: Songwriting':
               name: Писане на песен
-            Conditionals:
-              key: Условия
             lesson-1:
               name: Проектиране за Достъпност
           lesson_groups:
@@ -5383,7 +5284,6 @@ bg:
               name: 'Мини-Проект: Програми за Вход от Потребител'
             For Loop Fun:
               name: Повторения за забавление
-              key: Повторения за забавление
             Outbreak:
               name: Епидемия
             AI For Oceans:
@@ -5393,16 +5293,12 @@ bg:
             lesson-8:
               name: Спрайтове в Действие
             Virtual Pet:
-              key: Виртуален Домашен Любимец
               name: 'Мини-Проект: Виртуален Домашен Любимец'
             lesson-11:
               name: 'Мини-Проект: Програми за Вход от Потребител'
-            Loops with the Artist:
-              key: Цикли с Артиста
             AI for Oceans:
               name: ИТ За Океани
             Internet:
-              key: Интернет
               name: Интернет
           lesson_groups:
             ramp_up:
@@ -5429,7 +5325,6 @@ bg:
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
-              key: Програмиране с Рей и BB-8
               name: Програмиране с Рей и BB-8
           lesson_groups:
             csf_loops:
@@ -5493,7 +5388,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5501,7 +5395,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -5509,25 +5402,18 @@ bg:
           lessons:
             Introducing Sprite Lab:
               name: Въведение в Sprite Lab
-              key: Въведение в Sprite Lab
             Sprites in Action:
               name: Спрайтове в Действие
-              key: Спрайтове в Действие
             'Mini-Project: Virtual Pet':
               name: 'Мини-Проект: Виртуален Домашен Любимец'
-              key: 'Мини-Проект: Виртуален Домашен Любимец'
             'Mini-Project: User Input Programs':
               name: 'Мини-Проект: Програми за Вход от Потребител'
-              key: 'Мини-Проект: Програми за Вход от Потребител'
             Outbreak:
               name: Епидемия
-              key: Епидемия
             AI For Oceans:
               name: ИТ За Океани
-              key: ИТ За Океани
             The Internet:
               name: Интернет
-              key: Интернет
           lesson_groups:
             lessonGroup-7:
               display_name: Цифрови граждани
@@ -5541,7 +5427,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
             Console:
               name: Конзола
           lesson_groups:
@@ -5551,7 +5436,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
             Console:
               name: Конзола
           lesson_groups:
@@ -5561,7 +5445,6 @@ bg:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
-              key: Java (Джава) Практически Урок
             Console:
               name: Конзола
           lesson_groups:
@@ -5584,32 +5467,22 @@ bg:
           lessons:
             Loops:
               name: Повторения
-              key: Повторения
             Events:
               name: Събития
-              key: Събития
             Conditionals:
               name: Условия
-              key: Условия
             Functions:
               name: Функции
-              key: Функции
             Variables:
               name: Променливи
-              key: Променливи
             For Loops:
               name: За циклите
-              key: За циклите
-            Lesson Planning:
-              key: Планиране на Урок
         csd1-2022:
           lessons:
             The Problem Solving Process:
               name: Процеса за Решаване на Проблеми
-              key: Процеса за Решаване на Проблеми
             What is a Computer?:
               name: Какво е Компютър?
-              key: Какво е Компютър?
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -5617,7 +5490,6 @@ bg:
           lessons:
             Headings:
               name: Заглавия
-              key: Заглавия
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -5625,31 +5497,22 @@ bg:
           lessons:
             Variables:
               name: Променливи
-              key: Променливи
             Sprites:
               name: Спрайт
-              key: Спрайт
             Sprite Properties:
               name: Свойства на Спрайта
-              key: Свойства на Спрайта
             Text:
               name: Текст
-              key: Текст
             Conditionals:
               name: Условия
-              key: Условия
             Keyboard Input:
               name: Въвеждане от Клавиатурата
-              key: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
-              key: Скорост
             Collisions:
               name: Сблъсъци
-              key: Сблъсъци
             Functions:
               name: Функции
-              key: Функции
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -5661,13 +5524,10 @@ bg:
           lessons:
             Representing Images:
               name: Представяне на Изображения
-              key: Представяне на Изображения
             Combining Representations:
               name: Комбиниране на Представяния
-              key: Комбиниране на Представяния
             Keeping Data Secret:
               name: Пазене на Тайни Данни
-              key: Пазене на Тайни Данни
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -5675,7 +5535,6 @@ bg:
           lessons:
             Introduction to AI Lab:
               name: Въведение в AI Lab
-              key: Въведение в AI Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Проучване
@@ -5696,3 +5555,15 @@ bg:
           lessons:
             Console:
               name: Конзола
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Общ преглед
+            lesson-1:
+              name: Общ преглед
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Общ преглед
+            lesson-1:
+              name: Общ преглед

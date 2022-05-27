@@ -1365,10 +1365,10 @@
           "description": "Diseñar y realizar una prueba con prototipos de papel para recibir comentarios sobre un diseño"
         },
         "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
-          "description": "Analizar las pruebas con usuarios para identificar características que deberían ser eliminadas, añadidas o mejoradas."
+          "description": "Analizar las pruebas con usuarios para identificar características que deberían ser eliminadas, añadidas, o mejoradas."
         },
         "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
-          "description": "Asignar roles y responsabilidades a cada miembro al colaborar en la creación de un artefacto digital"
+          "description": "Asignar roles y responsabilidades a cada miembro del equipo al colaborar en la creación de un artefacto digital"
         },
         "fec5eaa1-f93f-4255-b69a-080150de17c0": {
           "description": "Seleccionar el elemento de entrada apropiado para un determinado tipo de información"
@@ -1392,7 +1392,7 @@
           "description": "Analizar la retroalimentación de los usuarios y los resultados de las pruebas en un artefacto computacional"
         },
         "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
-          "description": "Clasificar y priorizar los problemas según el impacto y la dificultad de implementación"
+          "description": "Clasificar y priorizar los problemas según el impacto y la facilidad de implementación"
         },
         "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
           "description": "Monitorear el progreso mientras realizan cambios a la aplicación"

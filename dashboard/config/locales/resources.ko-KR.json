@@ -699,7 +699,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS 기초 최종 프로젝트",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "채점판"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "CSTA 표준 매핑",
@@ -1628,7 +1629,8 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "CSF 과정 D 과정 말 프로젝트 계획 가이드",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "프로젝트 가이드"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "CSTA 표준 매핑",
@@ -1791,11 +1793,13 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "CSF 익스프레스 과정 말 프로젝트 계획 가이드",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "프로젝트 가이드"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "CS 기초 최종 프로젝트",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "채점판"
         },
         "csta_standards_mapping/express/2021": {
           "name": "CSTA 표준 매핑",
@@ -1987,7 +1991,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "CS 기초 최종 프로젝트",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "채점판"
         },
         "design-process/coursee/2021": {
           "name": "설계 프로세스",
@@ -2194,6 +2199,9 @@
         "make_a_machine_learning_app/csd/2021": {
           "type": "슬라이드"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "채점판"
+        },
         "issue_statements/csd/2021": {
           "type": "슬라이드"
         },
@@ -2231,11 +2239,14 @@
         "model_card_-_printable_template/csd/2021": {
           "type": "자료"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "채점판"
+        },
         "csd_curriculum_guide/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "csd_implementation_guide/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "슬라이드"
@@ -2244,19 +2255,20 @@
           "type": "비디오"
         },
         "user-interface-screens/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "paper-prototype-sample-feedback/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "user-interviews/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "computer-science-practices/csd/2021": {
           "type": "성찰"
         },
         "paper-prototypes/csd/2021": {
-          "name": "종이 프로토타입"
+          "name": "종이 프로토타입",
+          "type": "채점판"
         },
         "market-research/csd/2021": {
           "name": "시장 조사"
@@ -2266,38 +2278,38 @@
         },
         "design_mode/csd/2021": {
           "name": "디자인 모드",
-          "type": "리소스"
+          "type": "자료"
         },
         "design_mode_elements/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "whats-for-lunch-testing/csd/2021": {
           "type": "비디오"
         },
         "model-screen-design/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "intro_to_design_mode/csd/2021": {
           "type": "비디오"
         },
         "design_mode_1/csd/2021": {
           "name": "디자인 모드",
-          "type": "리소스"
+          "type": "자료"
         },
         "design_mode_elements_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "changing_screens/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "importing_screens/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "multi-screen_apps/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "responding_to_user_input/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "bugs-and-features-planning/csd/2021": {
           "name": "버그 및 특징"
@@ -2309,7 +2321,8 @@
           "name": "프로토타입 업데이트"
         },
         "app-presentation/csd/2021": {
-          "name": "앱 프레젠테이션"
+          "name": "앱 프레젠테이션",
+          "type": "채점판"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "앱 프레젠테이션"
@@ -2331,76 +2344,82 @@
           "type": "슬라이드"
         },
         "designing_screens_with_code/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "random_numbers_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "responding_to_user_input_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "컴퓨터 작동 방법: 하드웨어 및 소프트웨어",
           "type": "비디오"
         },
         "circuit_playground/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "board_events/csd/2021": {
           "name": "보드 이벤트",
-          "type": "리소스"
+          "type": "자료"
         },
         "physical_input/csd/2021": {
           "name": "물리적 인풋",
-          "type": "리소스"
+          "type": "자료"
         },
         "physical_output/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "taking_input_with_getproperty/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "analog-digital-video/csd/2021": {
           "type": "비디오"
         },
         "analog_sensors/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "changing_sensor_scale/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "date_and_change_events/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "functions_2/csd/2021": {
           "name": "함수",
-          "type": "리소스"
+          "type": "자료"
         },
         "if_statements_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "채점판"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "배열 소개",
           "type": "비디오"
         },
         "arrays/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "circuits_and_leds/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "color_lights/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "playing_notes/csd/2021": {
           "name": "플레잉 노트 ",
-          "type": "리소스"
+          "type": "자료"
         },
         "producing_output/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "반복을 위한",
@@ -2408,27 +2427,36 @@
         },
         "for_loops/csd/2021": {
           "name": "반복을 위한",
-          "type": "리소스"
+          "type": "자료"
         },
         "modifying_arrays/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "accelerometer_events/csd/2021": {
           "name": "가속도계 이벤트",
-          "type": "리소스"
+          "type": "자료"
         },
         "the_accelerometer/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "circuits-logic-video/csd/2021": {
           "name": "컴퓨터 작동 방법: 회로 및 로직",
           "type": "비디오"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "프로젝트 가이드"
+        },
         "circuits_and_buttons/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "채점판"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "circuit_playground_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "unit-5-data-society/csd/2021": {
           "type": "슬라이드"
@@ -2473,7 +2501,8 @@
           "type": "슬라이드"
         },
         "create_a_representation/csd/2021": {
-          "name": "표현 만들기"
+          "name": "표현 만들기",
+          "type": "채점판"
         },
         "structuring_data/csd/2021": {
           "name": "데이터 구조"
@@ -2520,6 +2549,7 @@
           "name": "실세상에서 데이터"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "동영상: 사회에 미치는 영향",
           "type": "비디오"
         },
         "video_machine_learning/csd/2021": {
@@ -2527,10 +2557,17 @@
           "type": "비디오"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "동영상: 교육 데이터 및 편견",
           "type": "비디오"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "동료 검토"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "채점판"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "unit_5_data_society_2/csd/2021": {
           "type": "슬라이드"
@@ -2545,26 +2582,26 @@
           "type": "비디오"
         },
         "drawing_shapes/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "shapes_and_parameters/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "introduction-to-variables/csd/2021": {
           "type": "비디오"
         },
         "naming_variables/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "variables_1/csd/2021": {
           "name": "변수",
-          "type": "리소스"
+          "type": "자료"
         },
         "random_numbers/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "introduction_to_sprites/csd/2021": {
           "type": "비디오"
@@ -2574,15 +2611,18 @@
           "type": "비디오"
         },
         "animation_tab/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "sprites_1/csd/2021": {
           "name": "스프라이트",
-          "type": "리소스"
+          "type": "자료"
         },
         "sprite_properties/csd/2021": {
           "name": "스프라이트 속성",
-          "type": "리소스"
+          "type": "자료"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "채점판"
         },
         "youtube-flipbook/csd/2021": {
           "type": "비디오"
@@ -2591,14 +2631,17 @@
           "type": "비디오"
         },
         "the_draw_loop/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "animating-sprites/csd/2021": {
           "name": "스프라이트 이동",
           "type": "비디오"
         },
         "the_counter_pattern/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "채점판"
         },
         "boolean_expressions/csd/2021": {
           "name": "불 연산식",
@@ -2609,23 +2652,29 @@
           "type": "비디오"
         },
         "booleans_and_comparison_operators/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "if_statements/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "if_else_statements/csd/2021": {
           "name": "If/Else 조건문",
           "type": "비디오"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "프로젝트 가이드"
+        },
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "동료 검토"
         },
+        "interactive_card/csd/2021": {
+          "type": "채점판"
+        },
         "extra_code_in_challenge_levels_1/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "velocity_1/csd/2021": {
           "name": "속도",
@@ -2633,29 +2682,34 @@
         },
         "velocity_2/csd/2021": {
           "name": "속도",
-          "type": "리소스"
+          "type": "자료"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "충돌 감지"
         },
         "collision_detection/csd/2021": {
           "name": "충돌 감지",
-          "type": "리소스"
+          "type": "자료"
         },
         "side-scroller-1/csd/2021": {
-          "name": "사이드 스크롤러"
+          "name": "사이드 스크롤러",
+          "type": "채점판"
         },
         "side-scroller/csd/2021": {
-          "name": "사이드 스크롤러"
+          "name": "사이드 스크롤러",
+          "type": "프로젝트 가이드"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "type": "리소스"
+          "name": "속도 및 카운터 패턴",
+          "type": "자료"
         },
         "flyer-game-1/csd/2021": {
-          "name": "플라이어 게임"
+          "name": "플라이어 게임",
+          "type": "채점판"
         },
         "flyer-game/csd/2021": {
-          "name": "플라이어 게임"
+          "name": "플라이어 게임",
+          "type": "프로젝트 가이드"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "함수",
@@ -2663,10 +2717,16 @@
         },
         "functions_1/csd/2021": {
           "name": "함수",
-          "type": "리소스"
+          "type": "자료"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "동료 검토"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "채점판"
         },
         "teacher_forum_1/csd/2021": {
           "name": "교사용 포럼"
@@ -2713,7 +2773,8 @@
           "type": "동료 검토"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "앱과 문제해결"
+          "name": "앱과 문제해결",
+          "type": "채점판"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
           "type": "자료"
@@ -2732,7 +2793,7 @@
         },
         "html_tags/csd/2021": {
           "name": "HTML 태그",
-          "type": "리소스"
+          "type": "자료"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "비디오"
@@ -2741,13 +2802,18 @@
           "type": "비디오"
         },
         "video_pair_programming/csd/2021": {
+          "name": "동영상: 페어 프로그래밍",
           "type": "비디오"
         },
         "headings_and_paragraphs/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "video_debugging/csd/2021": {
+          "name": "동영상: 디버깅",
           "type": "비디오"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "채점판"
         },
         "mini-project-html-page/csd/2021": {
           "type": "슬라이드"
@@ -2755,16 +2821,25 @@
         "html-web-page/csd/2021": {
           "type": "동료 검토"
         },
+        "html-page/csd/2021": {
+          "type": "프로젝트 가이드"
+        },
         "formatting_html/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "lists/csd/2021": {
           "name": "리스트",
-          "type": "리소스"
+          "type": "자료"
         },
         "digital-footprint/csd/2021": {
           "name": "디지털 발자국",
           "type": "슬라이드"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "소셜 탐정"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "소셜 탐정"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "CSS(스타일시트) 소개 - 파트 1",
@@ -2775,34 +2850,50 @@
           "type": "비디오"
         },
         "style_sheets/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "text_properties/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "채점판"
         },
         "your-personal-style-1/csd/2021": {
           "type": "동료 검토"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "creative-commons-video/csd/2021": {
           "type": "비디오"
         },
         "creative_commons_search/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "images_in_html/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "personal-web-page-1/csd/2021": {
           "type": "동료 검토"
         },
+        "person-web-page-reflect/csd/2021": {
+          "type": "프로젝트 가이드"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "채점판"
+        },
         "publishing_your_website/csd/2021": {
+          "name": "웹사이트 출판",
           "type": "비디오"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "extra_code_in_challenge_levels/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "name": "목적을 위한 웹사이트"
@@ -2811,23 +2902,35 @@
           "name": "목적을 위한 웹사이트"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "동영상: 의견 충돌 관리",
           "type": "비디오"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "동영상: 팀워크",
           "type": "비디오"
         },
         "how-search-works-video/csd/2021": {
+          "name": "동영상: 검색 작동방법",
           "type": "비디오"
         },
         "classes/csd/2021": {
           "name": "클래스",
-          "type": "리소스"
+          "type": "자료"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "채점판"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "hyperlinks/csd/2021": {
-          "type": "리소스"
+          "type": "자료"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "동료 검토"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "프로젝트 가이드"
         },
         "lesson_plans/pre-express/2020": {
           "name": "수업 계획"

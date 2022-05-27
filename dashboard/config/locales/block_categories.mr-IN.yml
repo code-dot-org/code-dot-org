@@ -3,6 +3,7 @@ mr:
   data:
     block_categories:
       Actions: कृती
+      Category: वर्ग
       Color: रंग
       Conditionals: कंडीशनल्स
       Events: ईव्हेंट्स

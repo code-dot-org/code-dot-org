@@ -10,7 +10,7 @@ title: Hour of Code How-To Guide for Volunteers
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Computational thinking helps nurture problem-solving skills, logic, and creativity. Και η τεχνολογία μεταμορφώνει κάθε βιομηχανία πάνω στον πλανήτη. Οι μαθητές σήμερα θα πρέπει να μάθουν πως να δημιουργούν τεχνολογία, όχι μόνο να τη χρησιμοποιούν.
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
@@ -22,7 +22,7 @@ The Hour of Code is a one-hour introduction to computer science designed to demy
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [Συχνές ερωτήσεις Εθελοντών](#faq)
 
 Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
@@ -116,7 +116,7 @@ If you are the host of an event with a classroom, use the sample agenda to guide
 
 If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
 
-### 1) Παρακολουθήστε το αναλυτικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1) Παρακολουθήστε το αναλυτικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determine a date, format, and location for your event
 
@@ -238,7 +238,7 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## Συχνές ερωτήσεις Εθελοντισμού
 
 ### Δεν έχει επικοινωνήσει μαζί μου κανένας εκπαιδευτικός. Πώς μπορώ να βοηθήσω αλλιώς;
 

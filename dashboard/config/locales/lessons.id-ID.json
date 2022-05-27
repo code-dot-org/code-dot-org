@@ -27,7 +27,8 @@
           "name": "Flappy Code",
           "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
           "preparation": "### Satu Minggu Sebelum Hour of Code Anda\n\n-   Tinjau kembali [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) dan [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk memulai perencanaan event Hour of Code Anda. \n-   [Register your Hour of Code event](http://hourofcode.com)  jika Anda ingin menerima alat peraga atau bantuan ruang kelas. \n-   Tinjau dan selesaikan tutorial online Anda sendiri: [Make a Flappy Game](https://studio.code.org/flappy/1) \n-   Pastikan mengujinya terlebih dahulu sebelum meminta murid Anda untuk menyelesaikannya. Periksa teknologi Anda dan putuskan apakah Anda perlu menyelesaikan masalah apa saja sebelum Hour of Code Anda.\n\n### Satu Hari Sebelum Hour of Code Anda\n\n-   Tuliskan kata-kata “coding”, “pemrograman”, dan “debugging” di papan atau tambahkan ke dinding kata jika sudah ada.\n-   Setiap murid yang menyelesaikan aktivitas akan mendapatkan sertifikat. [Print one](http://code.org/certificates) untuk semua murid terlebih dahulu untuk membuatnya lebih mudah pada akhir Hour of Code Anda.",
-          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana."
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
+          "student_overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan."
         },
         "hourofcode/Maze": {
           "name": "Labirin",
@@ -43,6 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Laboratorium Bermain Ice Age",
+          "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
           "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },
@@ -53,7 +55,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Laboratorium Bermain Gumball",
-          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana."
+          "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
+          "student_overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan."
         },
         "dance/Dance Party": {
           "name": "Pesta Tari",
@@ -85,6 +89,7 @@
         },
         "playlab/Play Lab": {
           "name": "Lab Permainan",
+          "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
           "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },
@@ -109,6 +114,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
+          "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
           "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },

@@ -941,6 +941,10 @@
           "word": "Spracúvanie",
           "definition": "Myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup."
         },
+        "storage/csd/2021": {
+          "word": "pamäť",
+          "definition": "schopnosť ukladať informácie na neskoršie použitie"
+        },
         "digital_footprint/csd/2021": {
           "word": "Digitálna stopa"
         },

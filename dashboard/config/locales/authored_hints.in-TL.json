@@ -3,8 +3,8 @@
     "data": {
       "authored_hints": {
         "2-3 Artist 1 new": {
-          "2-3_Artist_1_new_a": "crwdns2490116:0crwdne2490116:0",
-          "2-3_Artist_1_new_b": "crwdns2490118:0crwdne2490118:0"
+          "2-3_Artist_1_new_a": "crwdns2928172:0crwdne2928172:0",
+          "2-3_Artist_1_new_b": "crwdns2928174:0crwdne2928174:0"
         },
         "2-3 Artist 11": {
           "2-3_Artist_11_a": "crwdns2490376:0crwdne2490376:0"
@@ -74,7 +74,7 @@
           "2-3_Artist_Functions_3_a": "crwdns2491962:0crwdne2491962:0"
         },
         "2-3 Artist Functions 4": {
-          "2-3_Artist_Functions_4_a": "crwdns2491972:0crwdne2491972:0"
+          "2-3_Artist_Functions_4_a": "crwdns2928180:0crwdne2928180:0"
         },
         "2-3 Artist Loops New 11": {
           "2-3_Artist_Loops_New_11_a": "crwdns2490408:0[0]crwdne2490408:0",
@@ -177,7 +177,7 @@
           "2-3_Bee_Loops_7_b": "crwdns2490522:0crwdne2490522:0"
         },
         "2-3 Maze 1": {
-          "2-3_Maze_1_a": "crwdns2490042:0crwdne2490042:0"
+          "2-3_Maze_1_a": "crwdns2928142:0crwdne2928142:0"
         },
         "2-3 Maze 16": {
           "2-3_Maze_16_a": "crwdns2490264:0crwdne2490264:0",
@@ -266,7 +266,7 @@
           "4-5_Maze_10_a": "crwdns2491698:0crwdne2491698:0"
         },
         "4-5 Maze 4": {
-          "4-5_Maze_4_a": "crwdns2491672:0crwdne2491672:0"
+          "4-5_Maze_4_a": "crwdns2928146:0crwdne2928146:0"
         },
         "4-5 Maze 5": {
           "4-5_Maze_5_a": "crwdns2491676:0crwdne2491676:0",
@@ -377,7 +377,7 @@
           "Course_4_Bee_Params_8_a": "crwdns2489382:0crwdne2489382:0"
         },
         "Course 4 Play Lab Params 2": {
-          "Course_4_Play_Lab_Params_2_a": "crwdns2489186:0crwdne2489186:0"
+          "Course_4_Play_Lab_Params_2_a": "crwdns2928232:0crwdne2928232:0"
         },
         "Course 4 Play Lab Vars 2": {
           "Course_4_Play_Lab_Vars_2_a": "crwdns2488494:0crwdne2488494:0"
@@ -4679,8 +4679,8 @@
           "courseC_maze_programming2_b": "crwdns2534632:0crwdne2534632:0"
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_a": "crwdns2527672:0crwdne2527672:0",
-          "courseC_maze_programming3_b": "crwdns2527674:0[0]crwdne2527674:0"
+          "courseC_maze_programming3_a": "crwdns2928156:0crwdne2928156:0",
+          "courseC_maze_programming3_b": "crwdns2928158:0[0]crwdne2928158:0"
         },
         "courseC_maze_programming3_2018": {
           "courseC_maze_programming3_a": "crwdns2500362:0crwdne2500362:0",
@@ -10774,6 +10774,25 @@
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "crwdns2364204:0crwdne2364204:0"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "crwdns2928654:0crwdne2928654:0"
+        },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "crwdns2928208:0crwdne2928208:0"
+        },
+        "Farmer for Authored Hint testing": {
+          "first_hint": "crwdns2928248:0crwdne2928248:0",
+          "second_hint": "crwdns2928250:0crwdne2928250:0",
+          "last_hint": "crwdns2928252:0crwdne2928252:0"
+        },
+        "Farmer for TTS testing": {
+          "first_hint": "crwdns2928256:0crwdne2928256:0",
+          "second_hint": "crwdns2928258:0[0]crwdne2928258:0",
+          "last_hint": "crwdns2928260:0crwdne2928260:0"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "crwdns2928632:0crwdne2928632:0"
         }
       }
     }

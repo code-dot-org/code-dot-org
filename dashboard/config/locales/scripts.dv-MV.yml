@@ -127,10 +127,6 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        coursef-2021:
-          lessons:
-            AI for Oceans:
-              key: އޭއައި ފޯރ އޯޝަންސް
         express-2021:
           lesson_groups:
             lessonGroup-9:
@@ -142,7 +138,6 @@ dv:
         k5-onlinepd-2021:
           lessons:
             Events:
-              key: އިވެންޓުތައް
               name: އިވެންޓުތައް
         coursea-2022:
           lesson_groups:
@@ -164,10 +159,6 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        coursef-2022:
-          lessons:
-            AI for Oceans:
-              key: އޭއައި ފޯރ އޯޝަންސް
         pre-express-2022:
           lesson_groups:
             csf_events:
@@ -176,4 +167,3 @@ dv:
           lessons:
             Events:
               name: އިވެންޓުތައް
-              key: އިވެންޓުތައް

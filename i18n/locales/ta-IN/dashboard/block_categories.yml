@@ -2,6 +2,7 @@ ta:
   data:
     block_categories:
       Actions: செயல்கள்
+      Category: வகை
       Color: நிறம்
       Conditionals: நிபந்தனைகள்
       Dancers: நடனக்கலைஞர்கள்
