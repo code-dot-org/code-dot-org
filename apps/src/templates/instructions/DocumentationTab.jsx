@@ -10,7 +10,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const DEFAULT_CLASS_KEY = 'MainMethod';
 
-const UnconnectedDocumentationTab = function({programmingEnvironment}) {
+export const UnconnectedDocumentationTab = function({
+  programmingEnvironment,
+  defaultClassKey = DEFAULT_CLASS_KEY
+}) {
   const {loading, data, error} = useFetch(
     `/programming_environments/${programmingEnvironment}/get_summary_by_name`,
     null,
@@ -22,6 +25,8 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
   const [fallbackKey, setFallbackKey] = useState(null);
 
   useEffect(() => {
+    // parse the summary object, which is a list of categories each with a list of classes,
+    // into a flat object of classes.
     const classes = {};
     let firstKey = null;
     if (data) {
@@ -36,8 +41,8 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
         }
       }
     }
-    if (classes[DEFAULT_CLASS_KEY]) {
-      setFallbackKey(DEFAULT_CLASS_KEY);
+    if (classes[defaultClassKey]) {
+      setFallbackKey(defaultClassKey);
     } else {
       setFallbackKey(firstKey);
     }
@@ -100,7 +105,8 @@ const UnconnectedDocumentationTab = function({programmingEnvironment}) {
 };
 
 UnconnectedDocumentationTab.propTypes = {
-  programmingEnvironment: PropTypes.string
+  programmingEnvironment: PropTypes.string.isRequired,
+  defaultClassKey: PropTypes.string
 };
 
 export default connect(state => ({

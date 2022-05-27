@@ -87,10 +87,7 @@ export default function ProgrammingClassOverview({
       {programmingClass.methods?.length > 0 && includeMethodSummary && (
         <div>
           <h2>{i18n.methods()}</h2>
-          <MethodSummaryTable
-            methods={programmingClass.methods}
-            includeLink={true}
-          />
+          <MethodSummaryTable methods={programmingClass.methods} />
         </div>
       )}
       {programmingClass.methods?.length > 0 && (
