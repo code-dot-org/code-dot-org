@@ -333,7 +333,7 @@ class Script < ApplicationRecord
   # Used to determine the most recent Maker Unit to show on the Maker Homepage
   def self.maker_units(user)
     # only units in CSD should be included in the maker units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.course_version&.course_offering&.csd?}
+    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.get_course_version&.course_offering&.csd?}
   end
 
   class << self
