@@ -4,7 +4,7 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 
-export default function MethodSummaryTable({methods, includeLink}) {
+export default function MethodSummaryTable({methods}) {
   return (
     <table style={{...tableLayoutStyles.table, width: '100%'}}>
       <tbody>
@@ -12,19 +12,13 @@ export default function MethodSummaryTable({methods, includeLink}) {
           <tr key={method.key}>
             <td style={styles.method}>
               <h3>
-                {includeLink ? (
-                  <a
-                    onClick={() =>
-                      $(`#method-${method.key}`)[0].scrollIntoView()
-                    }
-                    aria-label="link to details"
-                    style={styles.methodLink}
-                  >
-                    {method.name}
-                  </a>
-                ) : (
-                  method.name
-                )}
+                <a
+                  onClick={() => $(`#method-${method.key}`)[0].scrollIntoView()}
+                  aria-label="link to details"
+                  style={styles.methodLink}
+                >
+                  {method.name}
+                </a>
               </h3>
               {method.content && (
                 <EnhancedSafeMarkdown markdown={method.content} />
