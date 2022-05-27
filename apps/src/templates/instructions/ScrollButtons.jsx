@@ -154,7 +154,10 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartUp}
         style={[styles.all, styles.arrowGlyph, upStyle]}
       >
-        <FontAwesome icon="caret-up" style={{lineHeight: '20px'}} />
+        <FontAwesome
+          icon="caret-up"
+          style={{lineHeight: '26px', pointerEvents: 'none'}}
+        />
       </div>
     );
 
@@ -181,7 +184,10 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartDown}
         style={[styles.all, styles.arrowGlyph, downStyle]}
       >
-        <FontAwesome icon="caret-down" style={{lineHeight: '20px'}} />
+        <FontAwesome
+          icon="caret-down"
+          style={{lineHeight: '26px', pointerEvents: 'none'}}
+        />
       </div>
     );
 
