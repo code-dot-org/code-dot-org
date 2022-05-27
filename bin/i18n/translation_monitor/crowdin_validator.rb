@@ -136,17 +136,21 @@ class CrowdinValidator
 
     # Find all translation errors
     errors = validate_all_translations(translations, source_strings)
-    error_rows = convert_to_csv_rows(errors)
 
-    if config['write_to_file']
-      write_to_json errors, config['errors_json']
-      puts "Wrote #{errors.size} errors to #{config['errors_json']}"
-      write_to_csv error_rows, config['errors_csv']
-      puts "Wrote #{errors.size} errors to #{config['errors_csv']}"
-    end
-    if config['write_to_gsheet']
-      write_to_gsheet error_rows, config['errors_gsheet'], config['crowdin_language_id'], GOOGLE_DRIVE_CREDENTIAL_FILE
-      puts "Wrote #{errors.size} errors to #{config['errors_gsheet']} gsheet"
+    if errors.empty?
+      puts "No errors, skip writing to files and ghseet."
+    else
+      error_rows_with_headers = convert_to_csv_rows(errors)
+      if config['write_to_file']
+        write_to_json errors, config['errors_json']
+        puts "Wrote #{errors.size} errors to #{config['errors_json']}"
+        write_to_csv error_rows_with_headers, config['errors_csv']
+        puts "Wrote #{errors.size} errors to #{config['errors_csv']}"
+      end
+      if config['write_to_gsheet']
+        append_to_gsheet error_rows_with_headers, config['errors_gsheet'], config['crowdin_language_id'], GOOGLE_DRIVE_CREDENTIAL_FILE
+        puts "Wrote #{errors.size} errors to '#{config['crowdin_language_id']}' tab in #{config['errors_gsheet']} gsheet"
+      end
     end
 
     [translations, source_strings, errors]
