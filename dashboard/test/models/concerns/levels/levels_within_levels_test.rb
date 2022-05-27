@@ -177,20 +177,16 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
   test 'level cannot be its own project template level' do
     level = create :level
-    e = assert_raises do
-      level.update!(project_template_level_name: level.name)
-    end
-    assert_includes e.message, 'level cannot be its own project template level'
+    refute level.update(project_template_level_name: level.name)
+    assert_includes level.errors.full_messages.first, 'level cannot be its own project template level'
   end
 
   test 'template level type must match level type' do
     applab = create :applab
     gamelab = create :gamelab
 
-    e = assert_raises do
-      applab.update!(project_template_level_name: gamelab.name)
-    end
-    assert_includes e.message, 'template level type Gamelab does not match level type Applab'
+    refute applab.update(project_template_level_name: gamelab.name)
+    assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
   end
 
   test 'project template level cannot have its own project template level' do
@@ -200,15 +196,11 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     project_backed_level.save!
 
     parent_level = create :level
-    e = assert_raises do
-      parent_level.update!(project_template_level_name: project_backed_level.name)
-    end
-    assert_includes e.message, 'the project template level you have selected already has its own project template level'
+    refute parent_level.update(project_template_level_name: project_backed_level.name)
+    assert_includes parent_level.errors.full_messages.first, 'the project template level you have selected already has its own project template level'
 
     template_template_level = create :level
-    e = assert_raises do
-      template_level.update!(project_template_level_name: template_template_level.name)
-    end
-    assert_includes e.message, 'this level is already a project template level of another level'
+    refute template_level.update(project_template_level_name: template_template_level.name)
+    assert_includes template_level.errors.full_messages.first, 'this level is already a project template level of another level'
   end
 end
