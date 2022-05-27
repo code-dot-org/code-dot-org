@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 hu:
   errors:
     messages:
@@ -340,6 +346,7 @@ hu:
       educate_beyond: "A Code.org-on túl"
       educate_inspire: "Motiválj egy tanulót"
       educate_community: "Online közösség"
+      educate_requirements: "Technikai követelmények"
       educate_tools: "Eszközök és videók"
       about_us: "Rólunk"
       about_leadership: "Vezetőség"
@@ -401,6 +408,7 @@ hu:
       playlab_k1: 'Játéklabor (nem olvasó)'
       poetry: 'Költészet'
       poetry_hoc: 'Versművészet'
+      sports: 'Sportok'
       spritelab: 'Sprite labor'
       starwars: 'Star Wars'
       starwarsblocks: 'Csillagok háborúja (blokkok)'
@@ -637,8 +645,10 @@ hu:
       title: 'Táncos buli'
     hello-world:
       title: 'Helló világ'
+      body: 'Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.'
     poem-art:
       title: 'Versművészet'
+      body: 'Fejezd ki magad! Készíts animált verseket kódok felhasználásával.'
     hoc:
       title: 'Hagyományos labirintus'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
@@ -682,6 +692,8 @@ hu:
     hero:
       title: "Minecraft"
       body: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
+    sports:
+      title: "Sportok"
     text-compression:
       title: "Szöveg tömörítése"
     unplugged:

@@ -1638,7 +1638,15 @@
         "courseB_collector_loops_challenge1_2021": "Bu dəfə məhdud sayda bloklarınız var. Xəzinənin hamısını alın!",
         "courseB_playlab_events3_2021": "Əjdərha Daisy-nin üzərinə basanda təsadüfi bir əhval -ruhiyyəyə keçməsini təmin etmək üçün bir hadisədən istifadə edin.",
         "courseB_playlab_events4_2021": "Bu səviyyəni bitirmək üçün əjdərhaya çatın!",
-        "courseB_playlab_events_challenge1_2021": "\"▼\" düyməsini basdığınız zaman heyvanların aşağı hərəkət etməsini təmin edin."
+        "courseB_playlab_events_challenge1_2021": "\"▼\" düyməsini basdığınız zaman heyvanların aşağı hərəkət etməsini təmin edin.",
+        "2-3 Maze 1": "Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)",
+        "2-3 Maze 2": "Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)",
+        "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4": "Maddie-in videoda yaratdığı 4x4 ölçülü görüntü ilə başlayırıq. Tapşırığınız, hər pikselə 12 bit istifadə edərək 4x4 toru rənglərlə doldurmaqdır. Tələblər budur: Sıra 1 - qırmızı çalarlarla doldurun. Sıra 2 - yaşıl çalarlar. Sıra 3 - mavi çalarlar. Sıra 4 - boz çalarlar.",
+        "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "Sizi Maddie-in yaratdığı 4x2 görüntü ilə başlayırıq, ancaq son iki lvadratı kənarda saxladıq. Hansı iki rəngin çatmadığını müəyyənləşdirərək görüntüyü bitirin və onları kodlaşdırın.",
+        "Overworld Chop Tree - allthethings": "Odun çox önəmli resursdur. Ondan çox şey düzəldilir. Ağaca doğru irəlilə və onu doğramaq üçün \"bloku dağıt\" əmrini işlədin.",
+        "Test embedded K1 Blockly in instructions": "Bu tapmacanı həll etmək üçün üç \"qərbə hərəkət et\" bloklarından və bir dənə qarğıdalı blokundan istifadə et.",
+        "U1L13 Text Compression": "Mətndə naxışlar axtarın (təkrarlanan sözlər və ya ifadələr). Gördüyünüz naxışları sağdakı lüğətə daxil edin. Lüğətə girişlər yazarkən giriş üçün simvol naxış yerinə mətnə daxil edilir.",
+        "allthethings-anigif-instructions": "Məni donuzu tutmaq üçün sola sürüşdür!"
       }
     }
   }

@@ -529,7 +529,7 @@
         "CourseD_EOC_artist_example2021": "Scena della spiaggia (artista)",
         "CourseE_Project_SpriteLab_2021": "Crea un progetto nel Laboratorio dei personaggi",
         "CourseF_app_computer": "Costruisci un computer",
-        "courseC_artist_prog7_2021": "Targhetta dell'animale",
+        "courseC_artist_prog7_2021": "Medaglietta dell'animale",
         "courseC_artist_prog_challenge1_2021": "Casa per animali",
         "courseC_artist_prog_challenge2a_2021": "Strada",
         "courseF_apps_aquarium": "Aquario virtuale",
@@ -560,7 +560,7 @@
         "Course F: Artist Project_spiral_examples_2021": "Spirale (Artista)",
         "CourseD_EOC_artist_2021": "Crea un disegno",
         "CourseD_EOC_bounce1_2021": "Crea una partita di basket",
-        "CourseD_EOC_bounce1_example_2021": "Velocità casuale sul balzo",
+        "CourseD_EOC_bounce1_example_2021": "Velocità casuale sul rimbalzo",
         "CourseD_EOC_dance_2021": "Crea un ballo",
         "CourseD_EOC_dance_examples_2021": "Festa in discoteca",
         "CourseD_EOC_starwars_2021": "Crea una partita di Guerre stellari",
@@ -705,7 +705,8 @@
         "Oceans_Video_Machine_Learning_2021": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
         "Oceans_Video_Training_Data_2021": "Video: Dati di apprendimento e distorsioni",
         "csd U3 conditional statements video_2021": "Video: Dichiarazioni condizionali",
-        "helloworld_food_backgrounds": "Clicca Eventi"
+        "helloworld_food_backgrounds": "Clicca Eventi",
+        "MC Agent Freeplay": "Tempo di giocare"
       }
     }
   }

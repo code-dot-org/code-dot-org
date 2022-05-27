@@ -436,6 +436,7 @@ fil:
       educate_beyond: Pagkatapos ng Code.org
       educate_inspire: Magbigay Inspirasyon sa Estudyante
       educate_community: Online na Komunidad
+      educate_requirements: Mga Kinakailangang Teknikal
       educate_tools: Mga Tools at Videos
       about_us: Tungkol sa Amin
       about_leadership: Pamumuno
@@ -838,8 +839,12 @@ fil:
       title: Dance Party
     hello-world:
       title: Hello World
+      body: Pumili mula sa apat na nakakatuwang tema para mag-code ng mga interactive
+        na karakter sa mundong nilikha mo.
     poem-art:
       title: Sining ng Tula
+      body: Ipahayag ang iyong sarili! Gumamit ng code upang lumikha ng mga animated
+        na tula.
     hoc:
       title: Klasiko na Maze
       body: Subukan ang mga pangunahing konsepto ng computer science. Milyon-milyon

@@ -60,7 +60,7 @@
       "url": "https://docs.google.com/document/d/1b_1Z5XBIo3jDiWna4zvYZqsM_Uky35q9g3N1enN6ZeI/edit?usp=sharing",
       "key": "coverage_of_topics_in_csa",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
@@ -72,7 +72,7 @@
       "url": "https://docs.google.com/document/d/1wRg7fzvmxUtFUcNVUiMI3OjBad0SvibY7jqeT5FMag4/edit?usp=sharing",
       "key": "csa_curriculum_guide",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
@@ -93,10 +93,10 @@
     },
     {
       "name": "CSA Syllabus",
-      "url": "https://drive.google.com/file/d/11d3cAVQzd41RYSZXBOFRczZ3J6c1trxy/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1jyDps9yvLsrdRvmkiuXLd221ozueIfal/view?usp=sharing",
       "key": "csa_syllabus",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
@@ -108,7 +108,7 @@
       "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
       "key": "culturally_responsive_pedagogy_and_equity",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {

@@ -6872,3 +6872,82 @@ mn-MN:
         display_name: Функцүүдийн дадлага
       CSD web conditionals practice choice_2021:
         display_name: Нөхцлүүдийн дадлага
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: цэнхэр
+        - text: ногоон
+        - {}
+        - {}
+        - correct: true
+        - text: улаан
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: тайлбар энд байна
+      allthethings_external_not_displayed_as_unplugged:
+        content1: тайлбар энд байна
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Аль сум Flurb-г эрдэнэс рүү хүргэх вэ?
+        title: Олон сонголт
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}

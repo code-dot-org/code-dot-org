@@ -587,6 +587,36 @@
           "moving north": "északra menni",
           "jittering": "idegeskedni",
           "patrolling": "járőrözni"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "gyógyulás"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "gyógyulás",
+          "moving left and right": "mozgatás balra és jobbra"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "gyógyulás",
+          "moving left and right": "mozgatás balra és jobbra"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "gyógyulás",
+          "moving left and right": "mozgatás balra és jobbra"
         }
       }
     }

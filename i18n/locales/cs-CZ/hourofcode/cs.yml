@@ -275,7 +275,7 @@ cs:
   front_volunteers: Hledáme technické dobrovolníky
   front_start_learning: Začněte se učit
   header_menu_resources: Zdroje
-  header_menu_faq: Časté otázky
+  header_menu_faq: Nejčastější dotazy
   header_menu_how_to: Návody
   header_menu_promote: Propagace
   header_menu_activities: Aktivity
@@ -630,7 +630,7 @@ cs:
     Tuto kampaň podporuje přes [400 partnerů](%{partners}) a 200&nbsp;000 vzdělavatelů
     po celém světě.
   hoc_faq_last_year: Vyzkoušejte kurzy
-  hoc_faq_when_is_hoc_q: Kdy začne akce Hodina kódu?
+  hoc_faq_when_is_hoc_q: Kdy začne Hodina kódu?
   hoc_faq_when_is_hoc_a: Hodinu kódu může uspořádat kdykoliv a kdokoliv. Cílem kampaně
     je poskytnout Hodinu kódu desítkám milionů žáků v jednom týdnu 7. - 13. prosince
     (%{campaign_date}), kdy slavíme <a href='http://csedweek.org'>Týden informatiky</a>.
@@ -652,7 +652,7 @@ cs:
     vědu. Pomáhá to v něm rozvíjet schopnost řešit problémy, logiku a kreativitu.
     Když začnou včas, budou mít studenti základ pro úspěch na jakékoli kariérní dráze
     21. století. Na další statistiky se můžete podívat [tady](%{stats_url}).
-  hoc_faq_how_participate_q: Jak se zúčastnit akce Hodina kódu?
+  hoc_faq_how_participate_q: Jak se Hodiny kódu zúčastním?
   hoc_faq_how_participate_a: "<a href='/how-to'>Naplánujte ji zde</a> tím, že si prohlídnete
     náši příručku. Hodinu kódu můžete organizovat na vaší škole nebo ve vaší komunitě,
     jako je mimoškolní klub, případně v práci. Můžete to zkusit i sami, jakmile začneme
@@ -661,190 +661,199 @@ cs:
     našeho návodného průvodce. Akci „Hodina programování“ můžete pořádat ve své škole
     nebo v jiném společenství — jako třeba v mimoškolním klubu, neziskové organizaci,
     nebo v práci. Nebo to prostě zkuste sami, až přijde %{campaign_date}."
-  hoc_faq_behind_hoc_q: Kdo je v pořádá akci Hodina kódu?
-  hoc_faq_behind_hoc_a: Hodina kódu je organizována <a href='http://code.org'>Code.org</a>,
-    veřejnou nezisková organizací (US § 501 c3), která se věnuje zvyšování zájmu o
-    informatiku ve společnosti, zvyšování účasti žen a menšin tím, že ji nabízí k
-    dispozici na více školách. Též se <a href='%{codeorg_url}/about/partners'>velká
-    skupina partnerů</a> spojila k podpoře této akce &mdash; Microsoftu, Apple, Amazon,
-    Boys and Girls Clubs of America, College Board a další.
-  hoc_faq_behind_hoc_a_markdown: "„Hodina programování“ je založena na našem „Týdnu
-    hodin programování a vzdělávání v počítačových vědách“  [Komise pro vzdělávání
-    a inspekci](%{partner_url}), jakož i na naší bezprecedentní spolupráci s partnery,
-    kteří se daly dohromady, aby podpořili „Hodinu programování“ — sem patří mimo
-    jiné Microsoft, Apple, Amazon, skupina „Boys and Girls Clubs of America“ („Klub
-    hochů a dívek Ameriky“) a Vysokoškolský panel."
-  hoc_faq_host_q: Nevím nic o kódování. Mohu uspořádat takovou akci?
-  hoc_faq_host_a: Samozřejmě. Aktivity Hodiny kódu jsou samostatně vedené. Vše, co
-    musíte udělat je <a href='%{codeorg_url}/learn'> zkusit naše aktuální kurzy</a>,
-    vybrat kurz, který chcete, a hodinu &mdash; my se postaráme o zbytek. Máme také
-    možnosti pro každý věk a úroveň zkušeností - od školky a dále. Začněte plánovat
-    vaše události čtením <a href='/how-to'>průvodce</a>.
-  hoc_faq_host_a_markdown: Samozřejmě. Aktivity „Hodiny programování“ probíhají pod
-    vlastním vedením. Jediné, co musíte udělat, je [zkusit naše aktuální výukové kurzy](%{codeorg_url}/learn),
-    vybrat si výukový kurz dle vlastní preference a vybrat si hodinu —  o ostatek
-    se postaráme my. Máme také možnosti pro všechny věkové kategorie a pro všechny
-    úrovně zkušeností, od školky výše. Chcete-li začít plánovat svou akci, nejprve
-    si přečtěte [návodného průvodce](%{howto}).
-  hoc_faq_devices_q: Jaké zařízení mám pro své studenty použít?
-  hoc_faq_devices_a: Code.org kurzy fungují na všech zařízeních a prohlížečích. Více
-    informací o technických záležitostech lekcí Code.org najdete ve <a href='%{codeorg_url}/educate/it'>
-    videu</a>. Technické požadavky pro jiné než Code.org lekce najdete <a href='%{codeorg_url}/learn'>zde</a>
-    v popisku konkrétního kurzu. Nezapomeňte, že pokud vaše škola nemůže přizpůsobit
-    kurzy nabízíme také jiné aktivity!
+  hoc_faq_behind_hoc_q: Kdo stojí za Hodinou kódu?
+  hoc_faq_behind_hoc_a: Hodinu kódu pomáhají zajišťovat <a href='%{partner_url}'>Poradní
+    a kontrolní výbory</a> vzdělávacího programu Hodina kódu a Týden informatiky,
+    stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
+    aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
+    Boys and Girls Clubs of America a College Board.
+  hoc_faq_behind_hoc_a_markdown: Hodinu kódu pomáhají zajišťovat [Poradní a kontrolní
+    výbory](%{partner_url}) vzdělávacího programu Hodina kódu a Týden informatiky,
+    stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
+    aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
+    Boys and Girls Clubs of America a College Board.
+  hoc_faq_host_q: O kódování nic nevím. Můžu událost uspořádat?
+  hoc_faq_host_a: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním vedením.
+    Jediné, co musíte udělat, je  <a href='%{codeorg_url}/learn'>vyzkoušet naše aktuální
+    výukové kurzy</a>, vybrat si kurz podle vlastních preferencí a zvolit hodinu –
+    o zbytek se postaráme my. K dispozici jsou možnosti pro všechny věkové kategorie
+    a všechny úrovně zkušeností – od dětí školkového věku dál. Chcete-li začít plánovat
+    akci, nejprve si přečtěte našeho <a href='/how-to'>průvodce</a>.
+  hoc_faq_host_a_markdown: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním
+    vedením. Jediné, co musíte udělat, je [vyzkoušet naše aktuální výukové kurzy](%{codeorg_url}/learn),
+    vybrat si kurz podle vlastních preferencí a zvolit hodinu – o zbytek se postaráme
+    my. K dispozici jsou možnosti pro všechny věkové kategorie a všechny úrovně zkušeností
+    – od dětí školkového věku dál. Chcete-li začít plánovat akci, nejprve si přečtěte
+    našeho [průvodce](%{howto}).
+  hoc_faq_devices_q: Na jakých zařízeních by měli studenti pracovat?
+  hoc_faq_devices_a: Výukové kurzy Code.org fungují na všech zařízeních a ve všech
+    prohlížečích. Další informace o technických požadavcích na výukové kurzy Code.org
+    najdete <a href='%{codeorg_url}/educate/it'>tady</a>. Technické požadavky na výukové
+    kurzy od jiných poskytovatelů než Code.org najdete na  <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
+    k pořádání výukových kurzů, nezapomeňte, že nabízíme také <a href='%{unplugged_url}'>aktivity
+    bez počítače</a>.
   hoc_faq_devices_a_markdown: Výukové kurzy Code.org fungují na všech zařízeních a
-    prohlížečích. Další informace o technických potřebách pro výukové kurzy Code.org
-    najdete [zde](%{codeorg_url}/educate/it). Technické potřeby pro výukové kurzy
-    jiné než Code.org najdete na [%{partner_url}/learn](%{codeorg_url}/learn) v popisu
-    konkrétního výukového kurzu.  Jestliže Vaše škola nemůže využít výukových kurzů,
-    nezapomeňte, že nabízíme také [aktivity bez elektřiny](%{unplugged_url})!
+    ve všech prohlížečích. Další informace o technických požadavcích na výukové kurzy
+    Code.org najdete [tady](%{codeorg_url}/educate/it). Technické požadavky na výukové
+    kurzy od jiných poskytovatelů než Code.org najdete na [%{partner_url}/learn](%{codeorg_url}/learn)
+    v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
+    k pořádání výukových kurzů, nezapomeňte, že nabízíme také [aktivity bez počítače](%{unplugged_url}).
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
-  hoc_faq_need_computers_a: Ne. Máme lekce, které fungují na počítačích, smartphonech,
-    tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste
-    a s čímkoliv. <p><i>Je několik možností:</i> <br> <ul> <li><b>Práce ve dvojicích.</b>
-    Výzkumy ukazují, že studenti se učí nejlépe <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programováním
-    ve dvojicích</a>, sdílením počítače, pracují-li společně. Povzbuďte své studenty,
-    aby pracovali ve dvojicích. <li><b>Použití projektoru.</b> Pokud máte projektor
-    a počítač připojený k webu, celá skupina může dělat Hodinu kódu společně. Sledujte
-    videa, střídejte se v řešení úkolů nebo odpovědí. <li><b>Bez připojení.</b> Nabízíme
-    i kurzy, které nevyžadují počítač.</ul>
+  hoc_faq_need_computers_a: Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích,
+    smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače.
+    Můžete se přidat odkudkoli a s jakýmkoli vybavením. <p><i>Tady je několik možností:</i>
+    <br> <ul> <li><b>Práce ve dvojicích.</b> <a href='%{pair_programming_research}'>Výzkumy
+    ukazují</a>, že studenti se nejlépe učí při <a href='%{pair_programming_video}'>programování
+    ve dvojicích</a>, když sdílejí počítač a pracují společně. Nechte studenty, ať
+    utvoří dvojice. <li><b>Projekce na plátno.</b> Pokud máte projektor a plátno a
+    můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu
+    společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání
+    otázek. <li><b>Výuka bez počítače.</b> Nabízíme <a href='%{unplugged_url}'>výukové
+    kurzy, které se úplně obejdou bez počítače</a>. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    Ne. Máme výukové kurzy „Hodinny programování“, které fungují na PC, inteligentních telefonech, tabletech, i některé, na které vůbec není potřeba žádný počítač! Můžete se přidat odkudkoli a s čímkoli.
+    Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích, smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače. Můžete se přidat odkudkoli a s jakýmkoli vybavením.
 
     _Tady je několik možností:_
 
-    - **Práce ve dvojicích.** [Výzkumy ukazují, že](%{pair_programming_research}) studenti se nejlépe učí při [programování ve dvojicích](%{pair_programming_video}), když sdílejí počítač a pracují společně. Vybídněte své studenty, aby utvořili dvojice.
-    - **Používejte promítačku.** Jestliže máte projektor a plátno k používání spolu s počítačem připojeným k webu, může celá Vaše skupina dělat Hodinu programování společně. Sledujte videa společně a střídejte se při řešení hlavolamů a zodpovídání otázek.
-    - **Vypněte.** Nabízíme [výukové kurzy nevyžadující vůbec žádný počítač](%{unplugged_url}).
-  hoc_faq_international_q: Jsem v České republice (<country>). Jakým způsobem se mohu
-    zúčastnit?
-  hoc_faq_international_a: Kdokoliv může organizovat Hodinu kódu kdekoliv na světě.
-    Minulý rok se pro Hodinu kódu spojili studenti celého světa. Více naleznete <a
-    href='/promote'>zde</a>.
-  hoc_faq_international_a_markdown: Pořádat hodinu programování může každý kdekoli
-    na světě. Poslední rok studenti na celém světě spojili na Hodinu programování.
-    Více si můžete zjistit [tady](%{promote}).
-  hoc_faq_tutorial_q: Jak mohu udělat výukový kurz pro akci Hodina kódu?
-  hoc_faq_tutorial_a: Pokud máte zájem se stát partnerem ve výuce, podívejte se na<a
-    href='/tutorial-guidelines'>naše pokyny a instrukce</a>. Rádi bychom pořádali
-    i řadu dalších možností, ale hlavním cílem je předat zkušenosti studentům a učitelům,
-    pro které je informatika něco úplně nového.
-  hoc_faq_tutorial_a_markdown: Jestliže máte zájem stát se partnerem výukového kurzu
-    [podívejte se na naše směrnice a doporučení](%{tutorial_guidelines}). Rádi bychom
-    pořádali mnoho různých zajímavých možností, ale primárním cílem je optimalizovat
-    prožitek pro studenty a učitele, pro které jsou počítačové vědy nové.
-  hoc_faq_account_q: Potřebují se studenti přihlásit pomocí účtu? Budu si muset založit
-    svůj účet?
-  hoc_faq_account_a: Ne. Aby si studenti mohli vyzkoušet Hodinu kódu, není potřeba
-    žádná registrace nebo přihlašování. Většina <a href='%{codeorg_url}/learn/beyond'>pokračujících
-    kurzů</a> vyžaduje účet pro uložení postupu. Registrace na Hodině kódu nevytvoří
-    automaticky účet v Code Studio. Pokud chcete pro studenty vytvořit účty, následujte
-    tyto <a href='https://youtu.be/_smelV_KISE'>instrukce</a>.
-  hoc_faq_account_a_markdown: Ne. K tomu, aby student vyzkoušel Hodinu programování
-    není potřeba naprosto žádná registrace ani přihlášení. Většina [pokračovacích
-    kurzů](%{codeorg_url}/learn/beyond) vyžaduje k uložení pokroku studenta vytvoření
-    účtu. Dále pak, přihlášením k „Hodině programování“ NEVYTVÁŘÍTE automaticky účet
-    na Code Studio. Jestliže chcete svým studentům vytvořit účty, postupujte prosím
-    podle následujících [pokynů](https://youtu.be/_smelV_KISE).
-  hoc_faq_high_school_q: Které činnosti bych měl(a) dělat se studenty středních škol?
-  hoc_faq_high_school_a: Přes všechny věkové kategorie doporučujeme vyzkoušet jeden
-    ze začátečnických kurzů na <a href='%{codeorg_url}/learn'>%{partner_url}/učit</a>
-    se začít, jako například kurz s Angry Birds nebo s Annou a Elsou. Student střední
-    školy by měl být schopen dokončit jeden z nich za 30 minut a poté může vyzkoušet
-    pokročilejší kurz v JavaScriptu, Khan Academy nebo CodeHS.
-  hoc_faq_high_school_a_markdown: Naše výukové kurzy „Hvězdné války“ a Minecraft jsou
-    ideální pro vysokoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a
-    volně hratelná úroveň obou těchto výukových kurzů. Alternativně doporučujeme vyzkoušet
-    některý z našich výukových kurzů pro začátečníky na [%{partner_url}/learn](%{codeorg_url}/learn),
-    kde můžete začít, jako například výukový kurz s Angry Birds nebo s Annou a Elsou.
-    Středoškolský student by měl být schopen absolvovat některý z těchto kurzů do
-    30 minut a pak může vyzkoušet pokročilejší výukový kurz v jazyce JavaScript, jako
-    například Khan Academy nebo CodeHS.
-  hoc_faq_scratch_q: Pro Hodinu kódu používám Scratch, ale co když mí studenti mají
-    iPady a ne notebooky ?
-  hoc_faq_scratch_a: Scratch nefunguje na tabletech. Jsou-li vaši studenti velmi mladí,
-    mohou používat aplikaci ScratchJR pro iPad. Pokud se podíváte na cvičení <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    můžete najít další cvičení, která na iPad fungují (od Code.org, Tynker, Lightbot
-    nebo CodeSpark).
-  hoc_faq_scratch_a_markdown: Scratch nelze spouštět na tabletech. Jestliže jsou Vaši
-    studenti mladí, mohou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí
-    číst). Když se podíváte na výukové kurzy na [%{partner_url}/learn](%{codeorg_url}/learn),
-    najdete tam další výukové kurzy, které fungují na iPads - od Code.org, Tynker,
-    Lightbot, nebo CodeSpark.
+    - **Práce ve dvojicích.** [Výzkumy ukazují](%{pair_programming_research}), že studenti se nejlépe učí při [programování ve dvojicích](%{pair_programming_video}), když sdílejí počítač a pracují společně. Nechte studenty, ať utvoří dvojice.
+    - **Projekce na plátno.** Pokud máte projektor a plátno a můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání otázek.
+    - **Výuka bez počítače.** Nabízíme [výukové kurzy, které se úplně obejdou bez počítače](%{unplugged_url}).
+  hoc_faq_international_q: 'Kde se nacházím: <country>. Jak se mohu zúčastnit ze zahraničí?'
+  hoc_faq_international_a: Hodinu kódu může uspořádat kdokoli – kdekoli na světě.
+    Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si můžete
+    zjistit <a href='/promote'>tady</a>.
+  hoc_faq_international_a_markdown: Hodinu kódu může uspořádat kdokoli – kdekoli na
+    světě. Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si
+    můžete zjistit [tady](%{promote}).
+  hoc_faq_tutorial_q: Jak můžu připravit výukový kurz Hodiny kódu?
+  hoc_faq_tutorial_a: Pokud máte zájem stát se partnerem výukového kurzu, <a href='/tutorial-guidelines'>podívejte
+    se na naše pokyny a instrukce</a>. Rádi bychom nabídli mnoho různých zajímavých
+    možností, ale primárním cílem je optimalizovat zkušenost pro studenty a učitele,
+    pro které jsou počítačové vědy nové.
+  hoc_faq_tutorial_a_markdown: Jestliže máte zájem stát se partnerem výukového kurzu,
+    [podívejte se na naše pokyny a instrukce](%{tutorial_guidelines}). Rádi bychom
+    nabídli mnoho různých zajímavých možností, ale primárním cílem je optimalizovat
+    zkušenost pro studenty a učitele, pro které jsou počítačové vědy nové.
+  hoc_faq_account_q: Musí se studenti přihlásit pomocí účtu?
+  hoc_faq_account_a: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
+    vůbec žádnou registraci ani přihlášení. Většina <a href='%{codeorg_url}/learn/beyond'>pokračovacích
+    kurzů</a> vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací
+    k Hodině kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
+    chcete vytvořit účty, postupujte prosím podle následujících <a href='https://youtu.be/_smelV_KISE'>pokynů</a>.
+  hoc_faq_account_a_markdown: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
+    vůbec žádnou registraci ani přihlášení. Většina [pokračovacích kurzů](%{codeorg_url}/learn/beyond)
+    vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací k Hodině
+    kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
+    chcete vytvořit účty, postupujte prosím podle následujících [pokynů](%{section_instructions_url}).
+  hoc_faq_high_school_q: Kterou aktivitu bych měl(a) dělat se studenty středních škol?
+  hoc_faq_high_school_a: Naše výukové kurzy Hvězdné války a Minecraft jsou ideální
+    pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a volně hratelná
+    úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet na rozjezd
+    některý z našich výukových kurzů pro začátečníky na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
+    například výukový kurz s Angry Birds nebo s Annou a Elsou. Středoškolský student
+    by měl takový kurz zvládnout do 30 minut a pak může vyzkoušet pokročilejší výukový
+    kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
+  hoc_faq_high_school_a_markdown: Naše výukové kurzy Hvězdné války a Minecraft jsou
+    ideální pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a
+    volně hratelná úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet
+    na rozjezd některý z našich výukových kurzů pro začátečníky na [%{partner_url}/learn](%{codeorg_url}/learn),
+    například výukový kurz s Angry Birds nebo s Annou a Elsou. Středoškolský student
+    by měl takový kurz zvládnout do 30 minut a pak může vyzkoušet pokročilejší výukový
+    kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
+  hoc_faq_scratch_q: Používám pro Hodinu kódu Scratch, ale co když mí studenti mají
+    iPady, a ne notebooky?
+  hoc_faq_scratch_a: Scratch nelze spouštět na tabletech. Pokud vyučujete mladší studenty,
+    můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí číst). Mezi výukovými
+    kurzy na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> najdete takové,
+    které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
+  hoc_faq_scratch_a_markdown: Scratch nelze spouštět na tabletech. Pokud vyučujete
+    mladší studenty, můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí
+    číst). Mezi výukovými kurzy na [%{partner_url}/learn](%{codeorg_url}/learn) najdete
+    takové, které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
   hoc_faq_count_hoc_q: Jak počítáte hodiny kódu?
-  hoc_faq_map_q: Proč nevidím svoji tečku na mapě?
-  hoc_faq_map_a: Je nám líto, že nevidíte vaší událost v mapě Hodiny kódu. Kvůli desítkám
-    tisíc organizátoru, kteří se registrují, mapa shromažďuje data jednou za čas.
-    Pokud kliknete na číslo nad mapou, budete přesměrování na seznam všech událostí
-    podle státu a můžete zde najít i vaši. Normálně trvá i 48 hodin, než se mapa aktualizuje.
-    Zkontrolujte to za pár dní!
-  hoc_faq_map_a_markdown: Litujeme, že tuto akci nevidíte na mapě „Hodiny programování“.
-    Protože se registrují desítky tisíc organizátorů, mapa agreguje data a zobrazuje
-    pro několik akcí jeden bod. Jestliže kliknete na odkaz [stránka událostí](%{events_url})
-    pod mapou, budete nasměrováni na seznam všech akcí podle stavu, a tam budete moci
-    najít svou akci. Kromě toho, vzhledem k těm tisícům lidí, kteří se do „Hodiny
-    programování“ zaregistrovali, aktualizace mapy a seznamu akcí si obyčejně vyžádá
-    48 hodin. Podívejte se sem znovu za několik dní!
-  hoc_faq_count_hoc_a: Systém ke sledování Hodiny kódu není přesné měření využití.
-    Nepočítáme unikátní ID studentů vždy dobře, protože nevyžadujeme, aby se studenti
-    přihlašovali nebo registrovali. Ve výsledku současně počítáme více i méně. Přečtěte
-    si veškeré detaily <a href='%{codeorg_url}/loc'>zde</a>.
-  hoc_faq_count_hoc_a_markdown: Sledovač „Hodiny programování“ není přesným měřidlem
-    užívání. Při sledování účasti v hodině programování nepočítáme přesně unikátní
-    ID studentů, zejména proto, že nevyžadujeme, aby se student přihlásil nebo zaregistroval.
-    Následkem toho nepočítáme účastníky přesně. Všechny podrobnosti si můžete přečíst
-    [zde](%{codeorg_url}/loc).
-  hoc_faq_one_hour_q: Kolik toho můžu za hodinu naučit?
-  hoc_faq_one_hour_a: Cílem Hodiny kódu není někoho učit tak, aby se stal expertem
-    v informatice za hodinu. Hodina stačí pouze na to, abychom ukázali, že informatika
-    je zábavná a kreativní, že je přístupná všem věkovým kategoriím, všem studentům,
-    bez rozdílu odkud jsou. Měřítkem úspěchu této kampaně není kolik informatiky se
-    studenti naučí - úspěchem je široká účast napříč pohlavími, etnickými a sociálně-ekonomickými
-    skupinami a výsledný nárůst zapojení, které sledujeme v kurzech informatiky na
-    všech úrovních. Miliony účastnících se učitelů a studentů se rozhodly jít dále
-    než udělat jednu hodinu - učit celý den, týden nebo ještě déle a mnoho studentů
-    se rozhodlo účastnit dalších kurzů (třeba i seminářů).<br/><br/> Kromě samotných
-    studentů je dalším kdo se učí i školitel, který získá větší sebevědomí po hodině,
-    kdy učí informatiku, i když nemají vysokoškolský titul právě z informatiky. Desítky
-    tisíc učitelů se rozhodly šířit informatiku dále nabízením dalších kurzů. Toto
-    platí i pro školní administrátory, kteří si uvědomují, že informatika je něco,
-    co jejich studenti chtějí a učitelé jsou schopni. <br/><br/> V závěru, vše co
-    se studenti mohou za hodinu naučit je, že to můžeme zvládnout.
+  hoc_faq_map_q: Proč nevidím svůj bod na mapě?
+  hoc_faq_map_a: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost. Vzhledem
+    k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje mapa
+    data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz na
+    <a href='%{events_url}'>stránku událostí</a> pod mapou, budete přesměrování na
+    seznam všech událostí podle států a můžete se dostat ke své události. Navíc se
+    k Hodině kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně
+    i 48 hodin. Podívejte se sem znovu za pár dní.
+  hoc_faq_map_a_markdown: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost.
+    Vzhledem k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje
+    mapa data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz
+    na [stránku událostí](%{events_url}) pod mapou, budete přesměrování na seznam
+    všech událostí podle států a můžete se dostat ke své události. Navíc se k Hodině
+    kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně i 48
+    hodin. Podívejte se sem znovu za pár dní.
+  hoc_faq_count_hoc_a: Nástroj na sledování Hodiny kódu neprovádí přesné měření využití.
+    Při sledování účasti na Hodině kódu nepočítáme přesně unikátní ID studentů, zejména
+    proto, že nevyžadujeme, aby se studenti přihlašovali nebo zaregistrovali. V důsledku
+    toho může být počet účastníků nadhodnocený nebo podhodnocený. Všechny podrobnosti
+    si můžete přečíst<a href='%{codeorg_url}/loc'>zde</a>.
+  hoc_faq_count_hoc_a_markdown: Nástroj na sledování Hodiny kódu neprovádí přesné
+    měření využití. Při sledování účasti na Hodině kódu nepočítáme přesně unikátní
+    ID studentů, zejména proto, že nevyžadujeme, aby se studenti přihlašovali nebo
+    zaregistrovali. V důsledku toho může být počet účastníků nadhodnocený nebo podhodnocený.
+    Všechny podrobnosti si můžete přečíst [zde](%{codeorg_url}/loc).
+  hoc_faq_one_hour_q: Kolik se toho dá za hodinu naučit?
+  hoc_faq_one_hour_a: Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty
+    na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová
+    věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro
+    všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se
+    studenti počítačových věd naučí – úspěch odráží široká účast lidí bez ohledu na
+    pohlaví a příslušnost k etnické nebo socioekonomické skupině i výsledný nárůst
+    účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních.
+    Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu –
+    absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli
+    zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké
+    škole). <br/><br/>Kromě studentů je hodina přínosná i pro pedagoga, který si díky
+    ní uvědomí, že dokáže vyučovat počítačové vědy, i když třeba nemá pro tento předmět
+    univerzitní diplom. Desítky tisíc učitelů se rozhodují rozvíjet se v počítačových
+    vědách dále, ať už absolvováním profesního rozvoje, nebo tím, že nabízí následné
+    online kurzy, případně obojím. A to platí i pro vedení škol, které si uvědomí,
+    že počítačové vědy jsou něčím, co studenti chtějí a co jim učitelé dovedou poskytovat.
+    <br/><br/>Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné
+    hodiny dozví především to, že na to mají.
   hoc_faq_one_hour_a_markdown: |-
-    Cílem „Hodiny programování“ není vyučit někoho během jedné hodiny tak, aby se stal expertem na počítačové vědy. Jedna hodina stačí jen na to, abyste se naučili, že počítačová věda je zábavná a tvořivá, že je dostupná lidem všech věkových kategorií, je pro všechny studenty, bez ohledu na jejich pozadí. Měřítkem úspěchu této kampaně není to, kolik se studenti počítačových věd naučí - úspěch je reflektován širokou účastí obou pohlaví a etnických a socioekonomických skupin a výsledným zvýšením účasti a zapojení, které vidíme v kurzech počítačových věd na všech úrovních. Miliony zúčastněných učitelů a studentů se rozhodlo pro více než jednu hodinu -  učit se celý den nebo celý týden nebo déle, a mnoho studentů se následkem toho rozhodlo zapsat se na celý kurz (nebo i na vysokoškolskou přednášku).
+    Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se studenti počítačových věd naučí – úspěch odráží široká účast lidí obou pohlaví, různých ras, lidí z odlišných etnických a socioekonomických skupin i výsledný nárůst účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních. Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu – absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké škole).
 
-    Kromě studentů je dalším „učícím se“ vzdělavatel, který získá během jedné hodiny sebedůvěru, že umí vyučovat počítačové vědy, ačkoli univerzitní diplom na výuku počítačových věd třeba nemá. Desítky tisíc učitelů se rozhodují pokračovat v počítačových vědách dále, ať už absolvováním PD studia nebo nabízením následných online kurzů, nebo obojím. A toto platí i pro vedení škol, které si uvědomí, že počítačové vědy jsou něčím, co jejich studenti chtějí a čeho jsou jejich učitelé schopni.
+    Kromě studentů je hodina přínosná i pro pedagoga, který si díky ní uvědomí, že dokáže vyučovat počítačové vědy, i když třeba nemá pro tento předmět univerzitní diplom. Desítky tisíc učitelů se rozhodují rozvíjet se v počítačových vědách dále, ať už absolvováním profesního rozvoje, nebo tím, že nabízí následné online kurzy, případně obojím. A to platí i pro vedení škol, které si uvědomí, že počítačové vědy jsou něčím, co studenti chtějí a co jim učitelé dovedou poskytovat.
 
-    Nadevše je potřeba zdůraznit, že tím, co se všichni účastníci mohou během jedné hodiny dozvědět, je, že to dokážeme.
+    Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné hodiny dozví především to, že na to mají.
   hoc_faq_more_questions_q: Máte ještě další otázky?
-  hoc_faq_more_questions_a: Zkuste najít odpověď na našem <a href='http://support.code.org'>fóru
-    pro podporu</a>.
-  hoc_faq_more_questions_a_markdown: Pokuste se najít odpověď v našem [fóru podpory](http://support.code.org).
-  hoc_faq_keep_learning_q: Jak mohu pokračovat se svým učením po hodině kódu?
-  hoc_faq_keep_learning_a: Kdykoliv a kdokoliv může pořádat Hodinu kódu. Kurzy zůstávají
-    po celý rok. Můžete očekávat, že všechny naše kurzy a výuky budou k dispozici
-    na našich stránkách trvale. Prosím přejděte na <a href='/promote'> sem</a> pro
-    návody k událostem a další zdroje, které vám pomohou s úspěšnou Hodinou kódu.
-  hoc_faq_keep_learning_a_markdown: "„Hodinu programování“ může pořádat kdokoli a
-    kdykoli. Výukové kurzy jsou tu celý rok. Můžete očekávat, že všechny naše výukové
+  hoc_faq_more_questions_a: Zkuste najít odpověď v našem <a href='http://support.code.org'>fóru
+    podpory</a>.
+  hoc_faq_more_questions_a_markdown: Zkuste najít odpověď v našem [fóru podpory](http://support.code.org).
+  hoc_faq_keep_learning_q: Jak mohu po Hodině kódu pokračovat ve studiu?
+  hoc_faq_keep_learning_a: Hodinu kódu může uspořádat kdokoli a kdykoli. Výukové kurzy
+    jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové kurzy a osnovy
+    budou na našem serveru k dispozici napořád. Podívejte se prosím na <a href='/promote'>naše
+    materiály</a>, kde najdete průvodce k pořádání akcí a další materiály, které vám
+    pomůžou připravit úspěšnou Hodinu kódu.
+  hoc_faq_keep_learning_a_markdown: Hodinu kódu může uspořádat kdokoli a kdykoli.
+    Výukové kurzy jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové
     kurzy a osnovy budou na našem serveru k dispozici napořád. Podívejte se prosím
-    na [naše prostředky](%{promote}), kde najdete průvodce k pořádání akcí a další
-    prostředky, pomocí kterých můžete své „Hodině programování“ zajistit úspěch."
+    na [naše materiály](%{promote}), kde najdete průvodce k pořádání akcí a další
+    materiály, které vám pomůžou připravit úspěšnou Hodinu kódu.
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
-  hoc_faq_certificates_a: Přejděte na naši <a href='%{codeorg_url}/certificates'>
-    stránku s certifikáty</a>, kde můžete dopředu tisknout certifikáty pro celou třídu.
+  hoc_faq_certificates_a: Přejděte na naši <a href='%{codeorg_url}/certificates'>stránku
+    s certifikáty</a>, kde si můžete dopředu vytisknout certifikáty pro celou třídu.
+    Dále můžete vytisknout <a href='%{codeorg_url}/certificates?course=mc'>speciální
+    certifikáty</a> pro studenty, kteří absolvují výukový kurz Minecraftu.
   hoc_faq_certificates_a_markdown: Přejděte na naši [stránku certifikátů](%{codeorg_url}/certificates),
-    kde můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
-    [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty vykonávající
-    výukový kurz Minecraft.
-  hoc_faq_logo_q: Jsou nějaká omezení toho, jak mohu používat logo nebo název Hodiny
-    programování?
-  hoc_faq_logo_a: "„Hodina programování“ je chráněnou obchodní známkou. Nechceme zamezit
-    jejímu užívání, ale chceme zajistit, aby toto užívání zůstalo v určitých mezích.
-    Viz prosím <a href='%{logo_url}'>tyto směrnice užívání</a>."
-  hoc_faq_logo_a_markdown: "„Hodina programování“ je chráněnou obchodní známkou. Nechceme
-    zamezit tomuto užívání, ale chceme zajistit, aby toto užívání zůstalo v určitých
-    mezích. Viz prosím [tyto směrnice užívání](%{logo_url})."
+    kde si můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
+    [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty, kteří
+    absolvují výukový kurz Minecraftu.
+  hoc_faq_logo_q: Existují omezení ohledně toho, jak mohu používat logo nebo název
+    Hodiny kódu?
+  hoc_faq_logo_a: Hour of Code (Hodina kódu) je ochranná známka. Nechceme bránit jejímu
+    používání, ale rádi bychom, aby se toto používání řídilo určitými pravidly. Projděte
+    si prosím <a href='%{logo_url}'>tyto pokyny pro používání</a>.
+  hoc_faq_logo_a_markdown: Hour of Code (Hodina kódu) je ochranná známka. Nechceme
+    bránit jejímu používání, ale rádi bychom, aby se toto používání řídilo určitými
+    pravidly. Projděte si prosím [tyto pokyny pro používání](%{logo_url}).
   stats_hoc_2013_image_alt: Statistika roku 2013 akce Hodina kódu
   stats_growth: Byl to nejrychlejší způsob, jak dosáhnout 15 milionů uživatelů.
   stats_i18n: Studenti se učí ve 40 jazycích

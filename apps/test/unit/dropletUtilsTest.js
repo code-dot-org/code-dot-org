@@ -133,7 +133,7 @@ const BASE_DROPLET_CONFIG = Object.freeze({
     }
   },
   paramButtonsForUnknownFunctions: true,
-  createSocketForKnownBlock: false
+  createSocketForKnownBlock: true
 });
 
 describe('dropletUtils', () => {
