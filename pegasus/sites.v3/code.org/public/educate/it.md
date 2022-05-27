@@ -18,7 +18,7 @@ theme: responsive
 
 <table>
  <tr>
-  <td style="vertical-align: top; border-color: transparent;">
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,10 +40,10 @@ theme: responsive
         </tr>
       </table>    
   </td>
-  <td style="vertical-align: top; border-color: transparent;">
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Operating System
+          Platform
         </th>
         <tr>
           <td>macOS 10.13</td>
