@@ -14,7 +14,7 @@ export default function ProgrammingClassOverview({
   includeMethodSummary
 }) {
   return (
-    <div style={{width: '100%'}} className="programming-class-overview">
+    <div style={{width: '100%'}}>
       <h1>{programmingClass.name}</h1>
       {programmingClass.category && (
         <div>
