@@ -51,8 +51,8 @@ class CrowdinValidator
 
     # Update configs using the history of last successful runs
     history = {}
-    if history_file
-      history = read_from_json(history_file) if File.exist?(history_file)
+    if history_file && File.exist?(history_file)
+      history = read_from_json(history_file)
       merge_configs_and_history(configs, history)
     end
 
@@ -204,7 +204,7 @@ class CrowdinValidator
   # Update the +config+ input with inferred date and output params.
   # @param config [Hash]
   def infer_config_params(config)
-    config['end_date'] ||= DateTime.now.utc.strftime(DATE_FORMAT)
+    config['end_date'] ||= Time.now.utc.strftime(DATE_FORMAT)
 
     # local file outputs
     output_folder = config['output_folder'] || OUTPUT_DIR
