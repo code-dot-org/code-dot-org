@@ -401,8 +401,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       {
         study: 'maker-serial-port',
         study_group: 'serial-port-lifecycle',
-        event: eventString,
-        data_json: dataJson
+        event: eventString
+        //data_json: dataJson
       },
       {includeUserId: true}
     );
