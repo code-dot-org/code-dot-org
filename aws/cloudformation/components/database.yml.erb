@@ -4,8 +4,10 @@
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
-      EngineVersion: 5.7.12
+      # Updating a Stack with a change to EngineVersion causes "Some Interruption".
+      # Each Database Instance in the cluster is restarted.
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
+      EngineVersion: 5.7.mysql_aurora.2.10.2
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
