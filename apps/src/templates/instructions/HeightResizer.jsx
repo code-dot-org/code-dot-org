@@ -28,7 +28,8 @@ class HeightResizer extends React.Component {
 
   state = {
     dragging: false,
-    dragStart: 0
+    dragStart: 0,
+    dragExtraHeight: 0
   };
 
   componentDidMount() {
@@ -84,9 +85,24 @@ class HeightResizer extends React.Component {
 
     const pageX = event.pageX || (event.touches && event.touches[0].pageX);
     const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+
+    // When we grab a horizontal bar, we want the vertical offset of the bar to stay under the mouse while
+    // dragging.  To achieve this, we determine how many pixels we need to add to the regular height calculation.
+    // If the user grabs the bar near its top, this value will be near RESIZER_HEIGHT, while if the user
+    // grabs the bar near its bottom, this value will be near 0.  When we handle the move event and use the
+    // mouse position to determine the height, we add this extra value.
+    // Note that this.props.resizeItemTop() is the number of pixels from the top of the window to the top of the
+    // TopInstructions (including its header), and this.props.position is the height of the TopInstructions,
+    // including the height of its header and the height of this HeightResizer.
+    const dragExtraHeight =
+      this.props.resizeItemTop() +
+      this.props.position -
+      (this.props.vertical ? pageX : pageY);
+
     this.setState({
       dragging: true,
-      dragStart: this.props.vertical ? pageX : pageY
+      dragStart: this.props.vertical ? pageX : pageY,
+      dragExtraHeight
     });
 
     this.showResizeCursor(true);
@@ -121,8 +137,14 @@ class HeightResizer extends React.Component {
       event.pageY !== undefined
         ? event.pageY
         : event.touches && event.touches[0].pageY;
+
+    // Calculate the height of the entire TopInstructions component, including its header and this
+    // HeightResizer.  We add the value of this.state.dragExtraHeight so that the bar remains under
+    // the mouse while dragging.
     const desiredHeight =
-      (this.props.vertical ? pageX : pageY) - this.props.resizeItemTop();
+      (this.props.vertical ? pageX : pageY) -
+      this.props.resizeItemTop() +
+      this.state.dragExtraHeight;
 
     this.props.onResize(desiredHeight);
   };
