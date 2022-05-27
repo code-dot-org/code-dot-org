@@ -56,17 +56,13 @@ class ParentLevelsChildLevel < ApplicationRecord
     if kind == CONTAINED
       unless %w(Multi FreeResponse).include?(child_level.type)
         error_message = "cannot add contained level of type #{child_level.type}"
-        errors.add(:child_level_id, error_message)
-
-        # Explicitly surface this error to the associated parent level if
-        # possible, to make it visible to levelbuilders.
-        parent_level&.errors&.add(:child_level, error_message)
+        add_child_error(error_message)
       end
     end
     if kind == SUBLEVEL && parent_level.is_a?(BubbleChoice)
       if %w(BubbleChoice LevelGroup).include?(child_level.type)
         error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
-        errors.add(:child_level_id, error_message)
+        add_child_error(error_message)
       end
     end
     if kind == PROJECT_TEMPLATE
@@ -79,5 +75,15 @@ class ParentLevelsChildLevel < ApplicationRecord
         raise ArgumentError, 'this level is already a project template level of another level'
       end
     end
+  end
+
+  private
+
+  def add_child_error(message)
+    errors.add(:child_level_id, message)
+
+    # Explicitly surface this error to the associated parent level if
+    # possible, to make it visible to levelbuilders, if possible.
+    parent_level&.errors&.add(:child_level, message)
   end
 end
