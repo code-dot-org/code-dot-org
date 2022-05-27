@@ -424,6 +424,7 @@ id:
       educate_beyond: Di Luar Code.org
       educate_inspire: Menginspirasi seorang Siswa
       educate_community: Komunitas Online
+      educate_requirements: Persyaratan Teknis
       educate_tools: Alat dan Video
       about_us: Tentang Kami
       about_leadership: Kepemimpinan
@@ -827,8 +828,11 @@ id:
       title: Pesta Tari
     hello-world:
       title: Halo Dunia
+      body: Pilih dari empat tema seru untuk membuat coding karakter yang interaktif
+        di dunia yang kamu ciptakan.
     poem-art:
       title: Seni Puisi
+      body: Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.
     hoc:
       title: Labirin Klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.

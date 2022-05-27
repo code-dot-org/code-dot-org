@@ -2398,6 +2398,28 @@
               "binary": "binaire"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "functie 1"
+          },
+          "function 2": {
+            "name": "functie 2"
+          }
         }
       }
     }

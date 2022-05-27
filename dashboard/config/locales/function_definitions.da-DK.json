@@ -2023,6 +2023,18 @@
               "width": "bredde"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          }
         }
       }
     }

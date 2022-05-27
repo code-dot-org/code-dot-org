@@ -22,7 +22,7 @@
         "2-3 Bee Loops 2A": "Voitko tehdä saman tehtävän helpommin käyttämällä loop?",
         "2-3 Bee Loops 3A": "Osaatko käytää silmukkaa kaiken meden keräämiseen?",
         "2-3 Maze 10": "Auta minut vihreän ilkiön luo! (Varo TNT:tä)",
-        "2-3 Maze 2": "Tuo possu pilaa höyheneni. Auta minua pääsemään sen luo!",
+        "2-3 Maze 2": "Auta minut vihreän ilkiön luo! (Varo TNT:tä)",
         "2-3 Maze 4": "Auta minut vihreän ilkiön luo! (Varo TNT:tä)",
         "2-3 Maze 6": "Pysy rauhallisena ja auta minua löytämään ilkeä possu. Muuten saatan suuttua!",
         "2-3 Maze 7": "Auta minut vihreän ilkiön luo! (Varo TNT:tä)",
@@ -429,7 +429,11 @@
         "scrat 16": "Pähkinöitä! Käytä \"jos\" lohkoa viedäksesi minut sinne pienimmällä määrällä lohkoja.",
         "scrat 17": "Ok, tehdäänpä se vielä uudestaan harjoituksen vuoksi – tämä on melko samanlainen, mutta varo seinää!",
         "scrat 18": "\"Jos - muuten\" -lohkot tarkistavat jonkin ehdon, ja tekevät sitten ainoastaan jomman kumman toiminnoista. Kokeile käyttää tätä uutta lohkoa saadaksesi minut tammenterhon luo.",
-        "scrat 20": "Osaatko ratkaista tämän vaikeamman sokkelon lisäämällä vain kolme uutta lohkoa? Jos teet sen oikein, voin kävellä mutkittelevan polun riippumatta sen pituudesta. Kiirehdi! Jää sulaa jo!"
+        "scrat 20": "Osaatko ratkaista tämän vaikeamman sokkelon lisäämällä vain kolme uutta lohkoa? Jos teet sen oikein, voin kävellä mutkittelevan polun riippumatta sen pituudesta. Kiirehdi! Jää sulaa jo!",
+        "2-3 Maze 1": "Auta minut vihreän ilkiön luo! (Varo TNT:tä)",
+        "2-3 Maze 3": "Pysy rauhallisena ja auta minua löytämään ilkeä possu. Muuten saatan suuttua!",
+        "MC Agent Freeplay": "**Vapaa peli:** Aika tehdä tutkimustyötä itsekseen!",
+        "Overworld Chop Tree - allthethings": "Puu on hyvin tärkeä resurssi. Monet asiat valmistetaan siitä. Kävele puun luokse ja kaada se käyttämällä \"tuhoa kuutio\" -komentoa."
       }
     }
   }

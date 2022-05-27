@@ -113,7 +113,13 @@
         "Oceans_Video_Training_Data_2021": "Video: Treniranje AI sustava",
         "helloworld_emoji_location": "Vremenski događaji",
         "helloworld_emoji_sizes": "Veličina",
-        "helloworld_emoji_sounds": "Zvukovi"
+        "helloworld_emoji_sounds": "Zvukovi",
+        "helloworld_animals_sizes": "Veličina",
+        "helloworld_animals_sounds": "Zvukovi",
+        "helloworld_food_sizes": "Veličina",
+        "helloworld_food_sounds": "Zvukovi",
+        "helloworld_retro_sizes": "Veličina",
+        "helloworld_retro_sounds": "Zvukovi"
       }
     }
   }
