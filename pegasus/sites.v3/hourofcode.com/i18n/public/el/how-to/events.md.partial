@@ -1,53 +1,53 @@
 ---
-title: Οδηγίες για εκδηλώσεις στην Ώρα του Κώδικα
+title: Κατευθυντήριες γραμμές Εκδηλώσεων Ώρας του Προγραμματισμού
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Πώς να οργανώσετε μία εκδήλωση για την Ώρα του Κώδικα
+# Πώς να οργανώσετε μία εκδήλωση ή μια συγκέντρωση για την Ώρα του Προγραμματισμού
 
-### Get your entire school or community involved in an Hour of Code!
+### Παροτρύνετε ολόκληρο το σχολείο ή την κοινότητά σας να συμμετέχει σε μια Ώρα του Προγραμματισμού!
 
 * * *
 
-## 1. Prepare for your event
+## 1. Προετοιμαστείτε για την εκδήλωσή σας
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Προσδιορίστε τον χώρο, την ημέρα και την ώρα.
+- Αποστείλετε [ένα γράμμα](https://hourofcode.com/promote/resources#sample-emails) στον τοπικό σας δήμαρχο, μέλος της Βουλής, διοικητή, ή ισχυρό επιχειρηματία και καλέστε τους να μιλήσουν. Ρίξτε μια ματιά σε [φαρέτρα όπλων-κατευθύνσεων]({{ localized_files/elected_official }}) όταν φιλοξενείτε ένα εκλεγμένο αξιωματούχο κατά τη διάρκεια μιας Ώρας του Προγραμματισμού για περισσότερες πληροφορίες.
+- Προσκαλέστε τα μέσα μαζικής ενημέρωσης/ τον τύπο. Δηλαδή τοπικούς σταθμούς ειδήσεων, εφημερίδες, bloggers με θέματα εκπαίδευσης/τεχνολογίας. Δείτε τον [ενημερωτικό φάκελο τύπου]({{ promote/press_kit_url }}) για βοήθεια.
 
-## 2. During your event
+## 2. Κατά τη διάρκεια της εκδήλωσής σας
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Εκτοξεύστε στα ύψη την επιτυχία της εκδήλωσής σας με ένα από τα δικά μας [εμπνευσμένα βίντεο]({{ promote/videos }}).
+- Κάντε μία εισαγωγή τονίζοντας τη σημασία της επιστήμης της πληροφορικής, χρησιμοποιώντας [στατιστικές και πληροφοριακά γραφήματα](%= resolve_url('/promote/stats') %).   
       
     
 - **Άλλες ιδέες για εκδηλώσεις**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Προσκαλέστε έναν/μία τοπικό/τοπική πολιτικό και βάλτε τους μαθητές να τον ή τη διδάξουν πώς να προγραμματίζει. 
+    - Βάλτε μια ομάδα μαθητών να επιδείξουν μια δραστηριότητα ανεμπόδιστη από τη μη χρήση σύνδεσης στο διαδίκτυο.
+    - Βάλτε μια ομάδα μαθητών να διδάσκει το διευθυντή ή μια ομάδα καθηγητών΄πώς να προγραμματίζει.
+    - Αν διδάσκεται ήδη η Επιστήμη των Υπολογιστών στο σχολείο σας, μπορούν μερικοί μαθητές να κάνουν εργασίες επίδειξης.
 
-## 3. Share how it went
+## 3.Μοιράσου τα αποτελέσματα της εκδήλωσης
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Μοιραστείτε εικόνες της εκδήλωσής σας στο Facebook και το Twitter και χρησιμοποιήστε τη χασ ταγκ **#HourOfCode**.
 
 * * *
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Φιλοξενείστε μια Οικογενειακή Νύχτα για τον Κώδικα με την Ώρα του Προγραμματισμού και προσκαλέστε γονείς να συμμετάσχουν 
 
 Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## Παράδειγμα πλάνου για μια σχολική συγκέντρωση ή εκδήλωση
 
 **Εκδήλωση:** Συνάντηση Ενημέρωσης για την Επιστήμη των Υπολογιστών για όλο το σχολείο
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Ημερομηνία:** {{ campaign_date/start_short }} (έναρξη της Εβδομάδας Εκπαίδευσης στην Επιστήμη της Πληροφορικής)
 
 **Χρόνος:** Κατά τη διάρκεια του σχολικού ωραρίου. Προτιμότερες οι εκδηλώσεις μέχρι το μεσημέρι. Περίπου 1 ώρα.
 
