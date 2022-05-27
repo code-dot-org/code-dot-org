@@ -138,8 +138,9 @@ const styles = {
   collapserButton: {
     position: 'absolute',
     right: 0,
-    marginTop: 5,
-    marginRight: 5
+    marginTop: 9,
+    marginRight: 5,
+    borderRadius: 10
   },
   scrollButtons: {
     margin: '0px 5px',
