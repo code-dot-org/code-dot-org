@@ -113,12 +113,16 @@ class Comment extends Component {
     );
   };
 
-  renderText = () => {
-    return (
-      <div>
-        <SafeMarkdown markdown={this.props.comment} />
-      </div>
-    );
+  renderText = commentText => {
+    if (commentText.startsWith('```')) {
+      return (
+        <div>
+          <SafeMarkdown markdown={commentText} />
+        </div>
+      );
+    } else {
+      return commentText;
+    }
   };
 
   getMenuItems = () => {
@@ -206,7 +210,9 @@ class Comment extends Component {
               style={styles.check}
             />
           )}
-          {this.renderName()}
+          <div style={isCommentResolved ? styles.iconName : {}}>
+            {this.renderName()}
+          </div>
           <span
             style={styles.rightAlignedCommentHeaderSection}
             className="comment-right-header"
@@ -260,6 +266,9 @@ const styles = {
   name: {
     fontFamily: '"Gotham 5r"'
   },
+  iconName: {
+    marginLeft: '20px'
+  },
   teacherName: {
     color: color.default_blue
   },
@@ -268,7 +277,6 @@ const styles = {
   },
   check: {
     position: 'absolute',
-    left: '-18px',
     lineHeight: '18px',
     fontSize: '15px'
   },
