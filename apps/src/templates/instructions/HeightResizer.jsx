@@ -62,6 +62,16 @@ class HeightResizer extends React.Component {
     }
   }
 
+  showResizeCursor = resizing => {
+    const cursor = !resizing
+      ? 'default'
+      : this.props.vertical
+      ? 'ew-resize'
+      : 'ns-resize';
+
+    document.body.style.cursor = cursor;
+  };
+
   onMouseDown = event => {
     if (event.button && event.button !== 0) {
       return;
@@ -78,6 +88,8 @@ class HeightResizer extends React.Component {
       dragging: true,
       dragStart: this.props.vertical ? pageX : pageY
     });
+
+    this.showResizeCursor(true);
   };
 
   onMouseUp = event => {
@@ -87,6 +99,8 @@ class HeightResizer extends React.Component {
     }
 
     this.setState({dragging: false});
+
+    this.showResizeCursor(false);
   };
 
   onMouseMove = event => {
