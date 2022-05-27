@@ -1,3 +1,7 @@
+require 'csv'
+require 'json'
+require_relative '../../../lib/cdo/google/drive'
+
 module DataIOHelper
   # @param data [Hash]
   # @param file_name [string]
@@ -42,13 +46,8 @@ module DataIOHelper
   def write_to_gsheet(rows, spreadsheet_path, sheet_name, credential_json)
     raise 'Invalid inputs' if rows.nil? || spreadsheet_path.empty? || sheet_name.empty? || credential_json.empty?
 
-    gdrive_export_secret = read_from_json(credential_json)['gdrive_export_secret']
-    google_drive ||= Google::Drive.new(service_account_key: StringIO.new(gdrive_export_secret.to_json))
-    google_drive.add_sheet_to_spreadsheet(rows, spreadsheet_path, sheet_name)
-  rescue => e
-    # TODO: delete this?
-    puts "Failed to write data #{rows.size} rows to '#{sheet_name}' sheet in '#{spreadsheet_path}' file."
-    puts "Error: #{e.message}"
-    puts e.backtrace
+    @gdrive_export_secret ||= read_from_json(credential_json)['gdrive_export_secret']
+    @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(@gdrive_export_secret.to_json))
+    @google_drive.add_sheet_to_spreadsheet(rows, spreadsheet_path, sheet_name)
   end
 end
