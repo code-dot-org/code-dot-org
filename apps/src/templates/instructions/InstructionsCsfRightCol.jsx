@@ -139,8 +139,7 @@ const styles = {
     position: 'absolute',
     right: 0,
     marginTop: 9,
-    marginRight: 5,
-    borderRadius: 10
+    marginRight: 5
   },
   scrollButtons: {
     margin: '0px 5px',
