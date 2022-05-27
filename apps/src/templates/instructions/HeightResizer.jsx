@@ -99,8 +99,14 @@ class HeightResizer extends React.Component {
       return;
     }
 
-    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
-    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    const pageX =
+      event.pageX !== undefined
+        ? event.pageX
+        : event.touches && event.touches[0].pageX;
+    const pageY =
+      event.pageY !== undefined
+        ? event.pageY
+        : event.touches && event.touches[0].pageY;
     const desiredHeight =
       (this.props.vertical ? pageX : pageY) - this.props.resizeItemTop();
 
