@@ -321,6 +321,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -858,6 +868,22 @@ FactoryGirl.define do
         standalone_unit.is_course = true
         standalone_unit.save!
       end
+    end
+  end
+
+  factory :project_storage do
+  end
+
+  factory :project do
+    transient do
+      owner create :user
+    end
+
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
     end
   end
 
@@ -1524,7 +1550,7 @@ FactoryGirl.define do
       country 'United States'
       postal_code '98109'
       latitude 47.620470
-      longitude (-122.349181)
+      longitude(-122.349181)
     end
 
     # Sydney Opera House
@@ -1533,7 +1559,7 @@ FactoryGirl.define do
       state 'New South Wales'
       country 'Australia'
       postal_code '2000'
-      latitude (-33.859100)
+      latitude(-33.859100)
       longitude 151.200200
     end
   end
@@ -1549,6 +1575,24 @@ FactoryGirl.define do
         create :script_level, script: tf.script, levels: [tf.level]
       end
     end
+  end
+
+  factory :code_review do
+    user_id 1
+    project_id 1
+    script_id 1
+    level_id 1
+    project_level_id 1
+    project_version "1"
+    storage_id 1
+  end
+
+  factory :code_review_note do
+    association :commenter, factory: :student
+    association :code_review
+
+    is_resolved false
+    comment 'a note about the project'
   end
 
   factory :code_review_comment do
@@ -1574,6 +1618,12 @@ FactoryGirl.define do
     association :user, factory: :student
     association :level
     association :script
+  end
+
+  factory :project_version do
+    sequence(:project_id)
+    sequence(:object_version_id)
+    comment 'a commit comment'
   end
 
   factory :teacher_score do
@@ -1609,7 +1659,7 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_pardot_memory do
-    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}

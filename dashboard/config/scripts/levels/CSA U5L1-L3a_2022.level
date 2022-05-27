@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A social media analyst wants to store the number of users on Twitter, Facebook, and Instagram for each quarter in 2020. They have the following values:\r\n\r\n![](https://images.code.org/6c303254a755bf005b15d8fd00093690-image-1650902164920.png)\r\n\r\nwhere each row represents each quarter in the year. Each column represents the number of users for Twitter, Facebook, and Instagram, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `numUsers`(#e7e8ea) using the `new`(#e7e8ea) keyword.\r\n\r\n2. Assign the values for each row and column in the `numUsers`(#e7e8ea) array.\r\n\r\n::: details [**Show Me How**]\r\nA two-dimensional (2D) array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = new dataType[numRows][numCols];\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and set the `numRows`(#e7e8ea) and `numCols`(#e7e8ea) to the number of rows and columns for the 2D array.\r\n\r\nValues are added to a 2D array using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col] = value;\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) where you want to store the value.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Add the values to the 2D array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Social Media Users",
+    "bubble_choice_description": "A social media analyst wants to store the number of users on Twitter, Facebook, and Instagram for each quarter in 2020. Declare and initialize a 2D array to store the values.",
+    "thumbnail_url": "https://images.code.org/c0c1c35b4e7cea8964e66c8463ae07c1-image-1650902307398.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI7qriU5UAWF1G4Q1Qnc\nIb0KmSEtZzSfjeex/CUkz11jVML1HWLKsO3cSl0++9uiZOYvNfQSe8KDZMtI\nMmx38A870ZAOngqj8Ovwy/bAiRFzK23Pjb1Xbs5elK9Uk8bYs/2fkLInJN55\ntCnYsF3h1s9QTkNhDhvMN22eBrdhfqEPhK42u+6HwzOX40oWYUgirLLy/o9V\nhu4ghpx+gFI46p+dhEQeWV46przM9m1lSrkjxJNfwArjo9vhq903XMvZkbpN\n/Y6xCe7tO/nUA6Y63GhxwTwg2kklXL3V8UHw8jkvhg1GAm6JvbxI0g2enD0v\nU2UCeTQx/ryNsbTPeXppBuuQzobcAIdo8PrNJVqZ+WVGYdMfONhWJS4ltqpk\nJA+2alZiJcRthYOWe59L0EwY3JS7K/ZTF0bdpz8fydKf+cu9fpuZMDU66/Hc\nP/pi7rAaih0JHWFroCeq/+lMIvy6xieQtnthJrBuGyJmtuD+LfW0bAtLn5iA\nSPAirvbxTOynAm5HG2LZ6QZjxdtm3XylYyez6lg9aHOSZgPxvwv4UuJbyt9R\ndd0VqJ2QXFzI20Ri346hveeTqr0T+ddTwkSqr0vZVRAzHwxiKzxA77o6aM/y\nLEV2P+AymJnvlM/UvVbQ0yIMVXf1TylPpFAyqjR0y8Xnlz0Yk0gqDncylI7s\nCA59rw2z1+E4NzvRznA+dVBy84tRJTGxZ2Wg9OpYiBKCqO8xtEx6FPsk2tv8\nrDACyAJ6fFZF1CY83stJQvgLTBSad48=\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:49:28.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:28.149+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L1_2022\"},{\"changed_at\":\"2022-04-12 18:49:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:28.149+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L1_2022\"},{\"changed_at\":\"2022-04-12 18:49:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 13:44:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:44:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:58:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 17:29:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

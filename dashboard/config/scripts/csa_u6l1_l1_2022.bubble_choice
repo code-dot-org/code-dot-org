@@ -1,6 +1,6 @@
 name 'CSA U6L1-L1_2022'
-display_name 'Neighborhood Lit Fest Project Examples'
-description 'Examples of the Neighborhood Lit Fest Project.'
+display_name 'Natural Language Processing Project Examples'
+description 'Examples of the Natural Language Processing Project.'
 
 sublevels
 level 'CSA U6L1-L1a_2022'

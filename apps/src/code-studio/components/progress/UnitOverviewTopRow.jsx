@@ -16,6 +16,7 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '../../../templates/FontAwesome';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -189,7 +190,14 @@ class UnitOverviewTopRow extends React.Component {
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
-                text={i18n.printingOptions()}
+                customText={
+                  <div>
+                    <FontAwesome icon="print" style={styles.icon} />
+                    <span style={styles.customText}>
+                      {i18n.printingOptions()}
+                    </span>
+                  </div>
+                }
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
@@ -249,6 +257,17 @@ const styles = {
   buttonsInRow: {
     display: 'flex',
     alignItems: 'center'
+  },
+  customText: {
+    margin: '0px 2px'
+  },
+  icon: {
+    margin: '0px 2px',
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
   },
   right: {
     position: 'absolute',

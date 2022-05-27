@@ -104,7 +104,7 @@ class LessonGroup extends React.Component {
           />
           <span style={headingTextStyle}>{displayName}</span>
           {hasLessonGroupInfo && (
-            <div>
+            <span>
               <FontAwesome
                 icon="info-circle"
                 style={styles.lessonGroupInfo}
@@ -123,7 +123,7 @@ class LessonGroup extends React.Component {
                 description={description}
                 closeDialog={this.closeLessonGroupInfoDialog}
               />
-            </div>
+            </span>
           )}
         </div>
         {!this.state.collapsed && (

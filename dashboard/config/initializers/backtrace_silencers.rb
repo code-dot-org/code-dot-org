@@ -8,10 +8,6 @@
 
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
-  # Added in Rails 5.2
-  /Single arity template handlers are deprecated/,
-  /SourceAnnotationExtractor is deprecated! Use Rails::SourceAnnotationExtractor instead/,
-
   # Added in Rails 6.0
   /Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1/,
   /The asset ".*" is not present in the asset pipeline.Falling back to an asset that may be in the public folder./,

@@ -94,6 +94,10 @@ class Bounce < Grid
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
   end
 
+  def uses_google_blockly?
+    true
+  end
+
   def toolbox(type)
     <<-XML.strip_heredoc.chomp
       <block type="bounce_moveLeft"></block>

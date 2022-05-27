@@ -15,7 +15,7 @@
             {
               "type": "radiogroup",
               "name": "assigned_or_chose_to_teach",
-              "title": "Which of the following most closely applies to you about teaching Computer Science Principles next school year? (Check one).",
+              "title": "Which of the following most closely applies to you about teaching Computer Science Principles next school year? (Check one.)",
               "choices": [
                 {
                   "value": "1",
@@ -61,8 +61,8 @@
                   "text": "Yes, currently offered"
                 },
                 {
-                  "value": "P",
-                  "text": "Planning to offer"
+                  "value": "p",
+                  "text": "Not currently offered, but planning to offer in the future"
                 },
                 {
                   "value": "N",
@@ -75,9 +75,15 @@
               ]
             },
             {
+              "type": "html",
+              "name": "planning_to_instructions",
+              "html": "<blockquote>If you are <strong>not sure</strong> or your school is <strong>planning to offer</strong> computer science courses in the future, we're interested in you answering the following questions about those plans to the best of your ability.</blockquote>",
+              "visibleIf": "{cs_offering}='p' or {cs_offering}='not_sure'"
+            },
+            {
               "type": "checkbox",
               "name": "contents_cs_course",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N'",
               "title": "What content is covered in computer science courses at your school (from introductory to advanced)? (Check all that apply.)",
               "choices": [
                 {
@@ -166,11 +172,11 @@
             {
               "type": "checkbox",
               "name": "take_cs_programming",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N'",
               "title": "Can students at your school get credit by taking computer science courses that teach programming through any of these other options? (Check all that apply.)",
               "choices": [
                 {
-                  "value": "credit_atschool",
+                  "value": "credit_at_school",
                   "text": "From a teacher in this school"
                 },
                 {
@@ -191,13 +197,13 @@
                 }
               ],
               "hasNone": true,
-              "noneText": "Grades 9-12 students in this school cannot take a computer science course that teaches programming or requires programming as a prerequisite",
+              "noneText": "None of these options are available to students at my school (or not sure)",
               "maxSelectedChoices": 5
             },
             {
               "type": "radiogroup",
               "name": "grad_requirement",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N'",
               "title": "In order to graduate from this high school, how many years of computer science are grades 9-12 students required to take? (Check one.) ",
               "choices": [
                 {
@@ -231,8 +237,8 @@
             {
               "type": "matrix",
               "name": "count_toward_requirement",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
-              "title": "Can computer science courses count towards students' high school graduation requirements in each of the following subject areas? (Check one in each row.) \n",
+              "visibleIf": "{cs_offering} <> 'N'",
+              "title": "Can computer science courses count towards students' high school graduation requirements in each of the following subject areas? (Check one in each row.)",
               "columns": [
                 {
                   "value": "1",
@@ -241,6 +247,10 @@
                 {
                   "value": "0",
                   "text": "No"
+                },
+                {
+                  "value": "99",
+                  "text": "Not sure"
                 }
               ],
               "rows": [
@@ -261,19 +271,19 @@
             {
               "type": "html",
               "name": "section_APCS_plans",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N'",
               "html": "<h1>Details on Offering AP Computer Science Principles at Your School"
             },
             {
               "type": "html",
               "name": "section_APCS_plans_intro",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N'",
               "html": "<h3>Please share more details about your plans for offering AP Computer Science Principles courses."
             },
             {
               "type": "checkbox",
               "name": "grade_levels_csp",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty and {assigned_or_chose_to_teach} <> 3",
+              "visibleIf": "{assigned_or_chose_to_teach} <> 3 and {cs_offering} <> 'N'",
               "title": "I plan to teach Computer Science Principles to students in the following grade levels. (Check all that apply.)",
               "choices": [
                 {
@@ -300,7 +310,7 @@
             {
               "type": "radiogroup",
               "name": "required_course_status",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N' ",
               "title": "Is AP Computer Science Principles (or will it be) offered as a required or elective course at your school? (Check one.)",
               "choices": [
                 {
@@ -320,7 +330,7 @@
             {
               "type": "radiogroup",
               "name": "section_time_minutes",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N' ",
               "title": "On average, how many MINUTES PER WEEK does (or will) a typical section of AP Computer Science Principles meet? (Check one.)",
               "choices": [
                 {
@@ -350,18 +360,15 @@
                 {
                   "value": "7",
                   "text": "301 or more"
-                },
-                {
-                  "value": "99",
-                  "text": "Not sure"
                 }
               ],
+              "hasNone": true,
               "noneText": "Not sure"
             },
             {
               "type": "radiogroup",
               "name": "course_length_weeks",
-              "visibleIf": "{cs_offering} anyof ['Y', 'P', 'not_sure'] or {cs_offering} empty",
+              "visibleIf": "{cs_offering} <> 'N' ",
               "title": "Approximately how many WEEKS does (or will) a typical section of AP Computer Science Principles run? (Check one.)",
               "choices": [
                 {
@@ -387,12 +394,9 @@
                 {
                   "value": "6",
                   "text": "30 or more (full year)"
-                },
-                {
-                  "value": "99",
-                  "text": "Not sure"
                 }
               ],
+              "hasNone": true,
               "noneText": "Not sure"
             }
           ]

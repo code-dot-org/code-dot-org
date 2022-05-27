@@ -25,6 +25,8 @@ export default storybook => {
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
+            isLoadingPersonalProjectsList={false}
+            isUserSignedIn={true}
             canShare={true}
           />
         )
@@ -33,7 +35,12 @@ export default storybook => {
         name: 'Empty Personal Project Table',
         description: 'Table when there are 0 personal projects',
         story: () => (
-          <PersonalProjectsTable personalProjectsList={[]} canShare={true} />
+          <PersonalProjectsTable
+            personalProjectsList={[]}
+            isLoadingPersonalProjectsList={false}
+            isUserSignedIn={true}
+            canShare={true}
+          />
         )
       }
     ]);

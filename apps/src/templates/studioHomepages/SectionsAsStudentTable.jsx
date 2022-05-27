@@ -15,7 +15,8 @@ class SectionsAsStudentTable extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
-    updateSectionsResult: PropTypes.func
+    updateSectionsResult: PropTypes.func,
+    isPlSections: PropTypes.bool
   };
 
   onLeave(sectionCode, sectionName) {
@@ -37,7 +38,14 @@ class SectionsAsStudentTable extends React.Component {
     const {sections, isRtl, canLeave} = this.props;
 
     return (
-      <table style={styles.table}>
+      <table
+        style={styles.table}
+        className={
+          this.props.isPlSections
+            ? 'ui-test-joined-pl-sections-table'
+            : 'ui-test-joined-student-sections-table'
+        }
+      >
         <thead>
           <tr style={styles.headerRow}>
             <td
@@ -116,19 +124,17 @@ class SectionsAsStudentTable extends React.Component {
               </td>
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  {!/^(C|G)-/.test(section.code) && (
-                    <Button
-                      __useDeprecatedTag
-                      style={{marginLeft: 5}}
-                      text={i18n.leaveSection()}
-                      onClick={this.onLeave.bind(
-                        this,
-                        section.code,
-                        section.name
-                      )}
-                      color={Button.ButtonColor.gray}
-                    />
-                  )}
+                  <Button
+                    __useDeprecatedTag
+                    style={{marginLeft: 5}}
+                    text={i18n.leaveSection()}
+                    onClick={this.onLeave.bind(
+                      this,
+                      section.code,
+                      section.name
+                    )}
+                    color={Button.ButtonColor.gray}
+                  />
                 </td>
               )}
             </tr>

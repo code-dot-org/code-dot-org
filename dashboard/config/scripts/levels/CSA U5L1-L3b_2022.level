@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A road safety team wants to brainstorm ways to reduce the number of major car accidents and needs to store information about car accidents that occurred in 2020. They have the following values:\r\n\r\n![](https://images.code.org/ace39fdd1e3b68194dc798e6dd90bc75-image-1650903038942.png)\r\n\r\nwhere each row represents a unique accident. Each column represents the severity of the accident, the number of vehicles, the number of casualties, the day of the week, and the speed limit, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `accidents`(#e7e8ea) using the `new`(#e7e8ea) keyword.\r\n\r\n2. Assign the values for each row and column in the `accidents`(#e7e8ea) array.\r\n\r\n::: details [**Show Me How**]\r\nA two-dimensional (2D) array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = new dataType[numRows][numCols];\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and set the `numRows`(#e7e8ea) and `numCols`(#e7e8ea) to the number of rows and columns for the 2D array.\r\n\r\nValues are added to a 2D array using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col] = value;\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) where you want to store the value.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Add the values to the 2D array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Road Safety",
+    "bubble_choice_description": "A road safety team wants to brainstorm ways to reduce the number of major car accidents and needs to store information about car accidents. Declare and initialize a 2D array to store the values.",
+    "thumbnail_url": "https://images.code.org/b658e681b2363cdcc0f3284481855f47-image-1650903162852.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4PTzYWDfp/T5Av+/Ku\nSFQ1EFp7nuNvJ+fSu2OG7zPE0iuXGbiXds76Pp2yKWGxJqEB/4Mb252YLdni\neMVF0BDvXMxPhtFIwj6JVX3DnoBDGQ4vWMSCEHNUCO80CeR25WDexWyYD44v\n8M+PbUl+DhS2hsdW0uGjva8xu6tXWpa9S7cM0hYVlvie32yFHV8rqcR/fcqR\ngxrgVgGR8oO61FYo6kjv9k73vpOagCzHV8munu09M9H/Un2sdBDVLXgR6odd\n8gmQTewzthH+b4MK96F9FsW8rTZ6aDHIUKorQ2lMlUPvZGrHQycLqb+H1RI6\nUHSCi7eEycM0WH0QWyJmcg1oTAKEipNOHCEjp35n2WjIEMlcgyxcSxAmaZGT\n1msnES91s4yAh/qz3lJqha146ADc6HkplzVoPWboQtgek+cnhpPoC/4oBeMx\nOgvkkCW1liBv5cCXN4E95xkD6q+qETAVOVge6hlhLSnMLy4T+4OzAXR5J7/W\nuomxb3WVRXTMR0nQKmBDHIuOOqP5mNxN1Ou8bYwhIgBMSBSCfC4hh4jym0BT\no1Nt6Q2Wk5bZ16B6/WRjCjFBh7S3c3QuooxOnZu6BZNwflHpnQDYabABk4Uq\n9Zo2Tmj4hz40aUYMo1mTOQwHDRNjt6JCeqVbFwCgt4Ii/NpSNWJrGdvn9IOd\nosce4KaKfByd7LFJv/1PR3V5Qg40SFi8ts0morJ6notNv8071ZTa6W3cr88a\neX+f4aNWZYIgfPKngk1Ly/l4/oLOfHsWSrq5ZYRsbeTTnUin5suyhk39V1vw\ns08A1P6yp9gxZYUWwUgJbDGL9WlWuWcMtJrljB+O/+bZ/n59B+1M/VYnfCk6\nZffinEEpHZcCuMLK16umYjXqlqHQ5ZsSHMaDLvA4GX+9D9mdx9EEZwbV7U1W\nlI1vTjwcDr0hfbewL5qewGXwiB6OE23DGCUPw1B1HWZ3RFWSJi25c8GlKJl8\nbNcWt9nJJWMWVQairOLDIdjEGyl0Hn+3t350d8T8++SWNtI=\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:49:41.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:41.557+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3a_2022\"},{\"changed_at\":\"2022-04-12 18:49:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:49:41.557+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3a_2022\"},{\"changed_at\":\"2022-04-12 18:49:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 15:44:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 16:12:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 17:32:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

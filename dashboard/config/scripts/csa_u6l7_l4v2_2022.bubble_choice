@@ -1,6 +1,6 @@
 name 'CSA U6L7-L4v2_2022'
 display_name 'Keywords and Parts-of-Speech'
-description 'level description here'
+description 'Use methods in the `String` class and `ArrayList`s to implement keyword extraction and parts-of-speech tagging techniques.'
 
 sublevels
 level 'CSA U6L7-L4a_2022'

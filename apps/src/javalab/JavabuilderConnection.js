@@ -9,6 +9,7 @@ import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -22,7 +23,10 @@ export default class JavabuilderConnection {
     setIsRunning,
     setIsTesting,
     executionType,
-    miniAppType
+    miniAppType,
+    currentUser,
+    onMarkdownLog,
+    csrfToken
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -35,6 +39,9 @@ export default class JavabuilderConnection {
     this.setIsTesting = setIsTesting;
     this.executionType = executionType;
     this.miniAppType = miniAppType;
+    this.currentUser = currentUser;
+    this.onMarkdownLog = onMarkdownLog;
+    this.csrfToken = csrfToken;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -65,7 +72,8 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_sources',
       requestData,
-      /* checkProjectEdited */ false
+      /* checkProjectEdited */ false,
+      /* usePostRequest */ true
     );
   }
 
@@ -81,11 +89,12 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(
       '/javabuilder/access_token_with_override_validation',
       requestData,
-      /* checkProjectEdited */ true
+      /* checkProjectEdited */ true,
+      /* usePostRequest */ true
     );
   }
 
-  connectJavabuilderHelper(url, data, checkProjectEdited) {
+  connectJavabuilderHelper(url, data, checkProjectEdited, usePostRequest) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -97,11 +106,21 @@ export default class JavabuilderConnection {
       return;
     }
 
-    const ajaxPayload = {
-      url: url,
-      type: 'get',
-      data: data
-    };
+    const ajaxPayload = usePostRequest
+      ? {
+          url: url,
+          type: 'post',
+          data: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': this.csrfToken
+          }
+        }
+      : {
+          url: url,
+          type: 'get',
+          data: data
+        };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
@@ -110,10 +129,7 @@ export default class JavabuilderConnection {
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
         if (error.status === 403) {
-          this.onOutputMessage(
-            javalabMsg.errorJavabuilderConnectionNotAuthorized()
-          );
-          this.onNewlineMessage();
+          this.displayUnauthorizedMessage(error);
         } else {
           this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
           this.onNewlineMessage();
@@ -142,6 +158,12 @@ export default class JavabuilderConnection {
   }
 
   onOpen() {
+    // We need to send an initial message to Javabuilder here in case there was an issue
+    // with our token. Javabuilder will send back an error message with details, but can
+    // only do so once we've sent a message. This is a bit of a hack, but this should only
+    // happen if our token was somehow valid for the initial Javabuilder HTTP request and
+    // then became invalid when establishing the WebSocket connection.
+    this.sendMessage(WebSocketMessageType.CONNECTED);
     this.miniApp?.onCompile?.();
   }
 
@@ -332,6 +354,30 @@ export default class JavabuilderConnection {
         break;
     }
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onNewlineMessage();
+  }
+
+  displayUnauthorizedMessage(error) {
+    const body = error.responseJSON;
+    if (body && body.type === WebSocketMessageType.AUTHORIZER) {
+      this.onAuthorizerMessage(body.value, body.detail);
+      return;
+    }
+
+    let unauthorizedMessage;
+    if (this.currentUser.signInState === SignInState.SignedIn) {
+      if (this.currentUser.userType === 'teacher') {
+        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionTeacher();
+      } else {
+        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionStudent();
+      }
+    } else {
+      unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
+    }
+
+    // Send unauthorized message as markdown as some unauthorized messages contain links
+    // for further details.
+    this.onMarkdownLog(unauthorizedMessage);
     this.onNewlineMessage();
   }
 }

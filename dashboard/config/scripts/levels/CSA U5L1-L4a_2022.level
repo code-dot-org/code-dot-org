@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A researcher wants to analyze the cost of living index for several countries. They have the following values:\r\n\r\n![](https://images.code.org/1c82c9f6dd34afdee23ce4fff6391076-image-1650920898553.png)\r\n\r\nwhere each row represents Australia, Brazil, Canada, France, and United States, respectively. Each column represents the cost of living index, the rent index, the groceries index, and the restaurant price index, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `double`(#e7e8ea) array called `livingCost`(#e7e8ea) to store the values.\r\n\r\n2. Print each value for Canada.\r\n\r\n::: details [**Show Me How**]\r\nA 2D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = { {row1value1, row1value2, row1value3}, {row2value1, row2value2, row2value3} };\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and add the values for each row in the 2D array inside curly braces `{ }`(#e7e8ea).\r\n\r\nValues are accessed using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col];\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) of the value you want to access.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "display_name": "Cost of Living",
+    "bubble_choice_description": "A researcher wants to analyze the cost of living index for several countries. Declare and initialize a 2D array to store the values.",
+    "thumbnail_url": "https://images.code.org/3c5b557945947706f94d7d0a295a7c63-image-1650921017189.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Print each value for Canada.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4nC4LcOPM/xn8eWeW/\nu2MuayCisaWv1muTQIBen/2tcDWHiez9uvzKvNfpTP0suHW+sEBnkUUtX3EA\nu1YNx8TbDq47DxiYukFlX7MqeYqg5BinHuJEPa3haQLMXpRHDQNFqZZSuc7R\n8XaVlgZk0TXWLyjB8ipye5CwLS+hql0EEOAW2fJ/SFcr9hX/11QjoZCb0whK\nm9yKVl7Vi6rK/+HUZDV9U8D794GcXF4f8dIBvSLfUzaLei/KfHQrT3hghR3K\n5/uOqD3I6vouJ3GEo99YnJUG6EO2at5Yyv5fuAVhlnZtblRtCHHiHMwDmW5d\nqns5L2/6qy5T2+Da99oEnuPkGREq1h8yYL9MoS4+KPgMVR0GzkbyhHpZR5w3\nkvLiMRu6Ognny4f4AcWVUWOipekZoAgV6b4PwzoYuGFu5iFB/ygXn5uZR6I4\nZX7S/hd6rge8uA/5gBRuu5TX9SN0hYZw1uSoC0NIWGA1AVTdqv/ebuZdSLl9\nCzE2QhrZkwwrBCLNIXCCl0IvUTLBLfIADvMTSjMVvgKUzkoPH9pIM9rOOEZi\n+Qd0TmXRmxhAmVdsmTnJSLISU4Gf+Cg7KFP1M8XbasXKuiZucx4TzKl6dmv1\nSNIH0Nhuyc+JtRyE957ytzXtT/hFr1c444z2Fx+J48cXHk+yJD2Qu1SXWnbx\nL9o0I7KZJi3Hkbmebr1ixgOasJRsd5drmh/IKhNpQbvY2VWY+n5CiMzOTSgm\n+bdsdXkbQN7TTuGUnSqiraXqcIahkI8FmtyNmjDR35Wtiii3ahUC8a8IXuxB\nR6cWBwI5MXwMcdnDkuBXSGzlhi8RIrzDKFORqTfSfDVhfKQCAHD+wlked8oQ\nw0/sAzlW0GvHLfMHrw1pmwr05QiMs47iVgsGN8/z3LL+O+yEBPNNZMfUn0Hf\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:52:01.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:52:01.438+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3d_2022\"},{\"changed_at\":\"2022-04-12 18:52:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:52:01.438+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3d_2022\"},{\"changed_at\":\"2022-04-12 18:52:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:01:40 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:11:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:12:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:16:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 23:54:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-26 00:41:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

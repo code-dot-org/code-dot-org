@@ -139,11 +139,8 @@ module Services
       end
 
       class LessonCrowdinSerializer < CrowdinSerializer
-        # Note that we don't include "name" here, because that's already
-        # handled by existing logic. We could in the future consider moving
-        # that (and possibly script stuff, too) out of whereever it exists
-        # and into this logic.
         attributes(
+          :name,
           :overview,
           :preparation,
           :purpose,

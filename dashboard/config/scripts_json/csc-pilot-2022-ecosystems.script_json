@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-ecosystems",
-    "serialized_at": "2022-04-22 20:29:10 UTC",
+    "serialized_at": "2022-04-27 21:55:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -516,19 +516,8 @@
       }
     },
     {
-      "key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
-      "position": 8,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
-        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
-      }
-    },
-    {
       "key": "b4025688-fd40-4651-b8e0-d4ad04f3b717",
-      "position": 9,
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -544,7 +533,7 @@
     },
     {
       "key": "e6d0ff9b-725f-45d4-a556-f134142da793",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
       },
@@ -555,7 +544,7 @@
     },
     {
       "key": "904c3551-9864-4258-8017-e96b1d905729",
-      "position": 11,
+      "position": 10,
       "properties": {
         "tips": [
           {
@@ -571,9 +560,9 @@
     },
     {
       "key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
-      "position": 12,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 7\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 6\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -583,13 +572,25 @@
     },
     {
       "key": "18951d48-856d-4d66-99a4-b5056bcf4611",
-      "position": 13,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7” slide\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "18951d48-856d-4d66-99a4-b5056bcf4611",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
+      }
+    },
+    {
+      "key": "884b98ab-a6c1-42ba-820a-d088bc64ef8a",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "884b98ab-a6c1-42ba-820a-d088bc64ef8a",
         "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
       }
     },
@@ -1417,13 +1418,10 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_algae_growth"
-        ],
-        "progression": "Prediction"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1433,7 +1431,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76"
+        "activity_section.key": "91a36036-9ce6-4a2b-bea6-dd233c8de60a"
       },
       "level_keys": [
         "csc_ecosystems_algae_growth"
@@ -1492,31 +1490,6 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_multiple_choice_2"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_multiple_choice_2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "e2735473-f5f1-487f-b11a-27bbc5526d23"
-      },
-      "level_keys": [
-        "csc_multiple_choice_2"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1537,6 +1510,31 @@
       },
       "level_keys": [
         "csc_ecosystems_ocean_coral_health"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_multiple_choice_2"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_multiple_choice_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "884b98ab-a6c1-42ba-820a-d088bc64ef8a"
+      },
+      "level_keys": [
+        "csc_multiple_choice_2"
       ]
     },
     {
@@ -2066,7 +2064,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "90016b1d-ac74-4f90-a88d-02eb15348a76"
+        "activity_section.key": "91a36036-9ce6-4a2b-bea6-dd233c8de60a"
       }
     },
     {
@@ -2095,18 +2093,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_multiple_choice_2",
-        "script_level.level_keys": [
-          "csc_multiple_choice_2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-ecosystems",
-        "activity_section.key": "e2735473-f5f1-487f-b11a-27bbc5526d23"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_ecosystems_ocean_coral_health",
         "script_level.level_keys": [
           "csc_ecosystems_ocean_coral_health"
@@ -2115,6 +2101,18 @@
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
         "activity_section.key": "18951d48-856d-4d66-99a4-b5056bcf4611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_multiple_choice_2",
+        "script_level.level_keys": [
+          "csc_multiple_choice_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "884b98ab-a6c1-42ba-820a-d088bc64ef8a"
       }
     },
     {
@@ -2269,7 +2267,7 @@
       "key": "ecosystems",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1PDi5BJoire7klvIUYG-z8HYofryBHiIsFhJ8P8i6t90/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1PDi5BJoire7klvIUYG-z8HYofryBHiIsFhJ8P8i6t90/template/preview",
         "type": "Slides"
       },
       "seeding_key": {

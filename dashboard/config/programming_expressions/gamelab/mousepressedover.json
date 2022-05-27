@@ -38,5 +38,5 @@
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the mouse is pressed over the sprite specified.",
   "syntax": "mousePressedOver(sprite)",
-  "tips": "- When testing your games that use keyboard or mouse input make sure you click in the display area before you run, otherwise the Workspace will record your keyboard and mouse actions.\r\n- To fine tune your mouse and sprite interactions use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprite."
+  "tips": "- When testing your games that use keyboard or mouse input make sure you click in the display area before you run, otherwise the Workspace will record your keyboard and mouse actions.\r\n- To fine tune your mouse and sprite interactions use [`setCollider`(#f78183)](/docs/gamelab/setCollider/) to change the shape and size of the collider area and set [`debug`(#f78183)](/docs/gamelab/debug/) to true for the sprite."
 }

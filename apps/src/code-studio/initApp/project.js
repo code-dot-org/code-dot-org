@@ -1052,14 +1052,18 @@ var projects = (module.exports = {
      */
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.saveSourceAndHtml_(
-            sourceAndHtml,
-            (err, result) => (err ? reject(err) : resolve()),
-            forceNewVersion,
-            preparingRemix
-          )
-        )
+        this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+          try {
+            this.saveSourceAndHtml_(
+              sourceAndHtml,
+              (err, result) => (err ? reject(err) : resolve()),
+              forceNewVersion,
+              preparingRemix
+            );
+          } catch (err) {
+            reject(err);
+          }
+        })
       );
 
     if (preparingRemix) {

@@ -13,7 +13,7 @@ class AdminReportsController < ApplicationController
   end
 
   def level_answers
-    MultipleDatabasesTransitionHelper.use_reader_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       @headers = ['Level ID', 'User Email', 'Data']
       @responses = {}
       @response_limit = 100
@@ -132,7 +132,7 @@ class AdminReportsController < ApplicationController
       ) && return
     end
 
-    MultipleDatabasesTransitionHelper.use_reader_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       locals_options = Properties.get("pd_progress_#{script.id}")
       if locals_options
         render locals: locals_options.symbolize_keys

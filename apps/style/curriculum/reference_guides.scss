@@ -1,11 +1,10 @@
-@import 'color';
+@import 'color.scss';
 @import 'font';
 @import "markdown";
 
 .page-content {
   display: flex;
-  gap: 10%;
-  width: 100%;
+  gap: 16px;
 }
 
 .page-actions {
