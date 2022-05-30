@@ -8,18 +8,19 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
+    "display_name": "User Story B",
+    "bubble_choice_description": "As an avian veterinary student, I want to identify groups of similar birds so I can study them for my final exams.",
+    "thumbnail_url": "https://images.code.org/d5bfefa347786f5d6bc25709905e1555-image-1648762646150.png",
     "encrypted_examples": [
 
     ],
-    "display_name": "User Story B",
-    "bubble_choice_description": "As an avian veterinary student, I want to identify groups of similar birds so I can study them for my final exams.",
-    "thumbnail_url": "https://images.code.org/d5bfefa347786f5d6bc25709905e1555-image-1648762646150.png"
+    "map_reference": "/programming_environments/javalab"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T13:29:48.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:29:48.084+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1a_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1a_2022\"},{\"changed_at\":\"2022-03-25 13:29:57 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 21:37:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:38:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:43:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:10:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:23:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:26:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:29:48.084+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1a_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1a_2022\"},{\"changed_at\":\"2022-03-25 13:29:57 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 21:37:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:38:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:43:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:10:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:23:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:26:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:37:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
