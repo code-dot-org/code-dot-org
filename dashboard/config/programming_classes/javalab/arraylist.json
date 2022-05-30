@@ -28,14 +28,26 @@
       "overload_of": null,
       "content": "The `add()` method is used to add a specific element to the list.",
       "parameters": "[{\"name\":\"element\",\"type\":\"E\",\"required\":true,\"description\":\"the object to add to the `ArrayList`\"}]",
-      "examples": "[{\"name\":\"Using add()\",\"code\":\"```\\nArrayList\\u003cString\\u003e test = new ArrayList\\u003c\\u003e();\\n\\n// adding elements\\ntest.add(\\\"It\\\");\\ntest.add(\\\"Is\\\");\\ntest.add(\\\"Cold\\\");\\n  \\n// printing all the elements\\nSystem.out.println(test);\\n```\\n\\n**Output:** \\n\\n[It, Is, Cold]\"}]",
+      "examples": "[{\"name\":\"\",\"code\":\"```\\nArrayList\\u003cString\\u003e test = new ArrayList\\u003c\\u003e();\\n\\n// adding elements\\ntest.add(\\\"It\\\");\\ntest.add(\\\"Is\\\");\\ntest.add(\\\"Cold\\\");\\n  \\n// printing all the elements\\nSystem.out.println(test);\\n```\\n\\n**Output:** \\n\\n[It, Is, Cold]\"}]",
       "syntax": "`public void add(E element)`",
       "external_link": null,
       "return_value": null
     },
     {
-      "name": "get",
+      "name": "add",
       "position": 2,
+      "key": "add2",
+      "overload_of": "add",
+      "content": "The `add()` method is used to add an element at a specified index to the list.",
+      "parameters": "[{\"name\":\"element\",\"type\":\"E\",\"required\":true,\"description\":\"the object to add to the `ArrayList`\"},{\"name\":\"index\",\"type\":\"int\",\"required\":true,\"description\":\"the position at which to insert the specified element\"}]",
+      "examples": "[{\"code\":\"```\\nArrayList\\u003cString\\u003e test = new ArrayList\\u003c\\u003e();\\n\\n// adding elements\\ntest.add(\\\"It\\\");\\ntest.add(\\\"Cold\\\");\\ntest.add(1, \\\"Is\\\");\\n  \\n// printing all the elements\\nSystem.out.println(test);\\n```\\n\\n**Output:** \\n\\n[It, Is, Cold]\"}]",
+      "syntax": "`public void add(int index, E element)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "get",
+      "position": 3,
       "key": "get",
       "overload_of": null,
       "content": "The `get()` method is used to retrieve the element at a specified position in an `ArrayList`.",
@@ -47,7 +59,7 @@
     },
     {
       "name": "remove",
-      "position": 3,
+      "position": 4,
       "key": "remove",
       "overload_of": null,
       "content": "The `remove()` method allows you to remove a specific element from an `ArrayList`.",
@@ -59,25 +71,13 @@
     },
     {
       "name": "size",
-      "position": 4,
+      "position": 5,
       "key": "size",
       "overload_of": null,
       "content": "The `size()` method returns the number of elements in an `ArrayList`.",
       "parameters": "[]",
       "examples": "[{\"name\":\"\",\"code\":\"\"}]",
       "syntax": "`public int size()`",
-      "external_link": null,
-      "return_value": null
-    },
-    {
-      "name": "add2",
-      "position": 5,
-      "key": "add2",
-      "overload_of": "add",
-      "content": "The `add()` method is used to add an element at a specified index to the list.",
-      "parameters": "[{\"name\":\"element\",\"type\":\"E\",\"required\":true,\"description\":\"the object to add to the `ArrayList`\"},{\"name\":\"index\",\"type\":\"int\",\"required\":true,\"description\":\"the position at which to insert the specified element\"}]",
-      "examples": "[{\"code\":\"```\\nArrayList\\u003cString\\u003e test = new ArrayList\\u003c\\u003e();\\n\\n// adding elements\\ntest.add(\\\"It\\\");\\ntest.add(\\\"Cold\\\");\\ntest.add(1, \\\"Is\\\");\\n  \\n// printing all the elements\\nSystem.out.println(test);\\n```\\n\\n**Output:** \\n\\n[It, Is, Cold]\"}]",
-      "syntax": "`public void add(int index, E element)`",
       "external_link": null,
       "return_value": null
     }
