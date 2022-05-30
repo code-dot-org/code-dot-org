@@ -12,7 +12,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-//const MARKDOWN = '```';
+const MARKDOWN = '```';
 
 class Comment extends Component {
   static propTypes = {
@@ -114,7 +114,7 @@ class Comment extends Component {
   };
 
   renderText = commentText => {
-    if (commentText.startsWith('```')) {
+    if (commentText.startsWith(MARKDOWN)) {
       return (
         <div>
           <SafeMarkdown markdown={commentText} />
