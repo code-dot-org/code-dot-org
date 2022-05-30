@@ -2419,6 +2419,9 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "Előkészítés\n\nÜdvözöld a diákokat az osztályban, és ismertesd nagyon röviden a napi tevékenységet.\n\nMondd a következőt: _A mai napon egy órát fogunk online rejtvényekkel foglalkozni, és megtanuljuk, hogy a számítógépes laborban hogyan kell viselkedni._.\nA beszélgetés célja, hogy a tanulók megtanulják, mire számíthatnak és hogyan viselkedjenek, amikor belépnek a számítógépes laborba."
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null

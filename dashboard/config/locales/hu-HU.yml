@@ -409,6 +409,7 @@ hu:
       educate_beyond: A Code.org-on túl
       educate_inspire: Motiválj egy tanulót
       educate_community: Online közösség
+      educate_requirements: Technikai követelmények
       educate_tools: Eszközök és videók
       about_us: Rólunk
       about_leadership: Vezetőség
@@ -470,6 +471,7 @@ hu:
       playlab_k1: Játéklabor (nem olvasó)
       poetry: Költészet
       poetry_hoc: Versművészet
+      sports: Sportok
       spritelab: Sprite labor
       starwars: Star Wars
       starwarsblocks: Csillagok háborúja (blokkok)
@@ -780,8 +782,11 @@ hu:
       title: Táncos buli
     hello-world:
       title: Helló világ
+      body: Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz
+        kódolni az általad létrehozott világban.
     poem-art:
       title: Versművészet
+      body: Fejezd ki magad! Készíts animált verseket kódok felhasználásával.
     hoc:
       title: Hagyományos labirintus
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
@@ -831,6 +836,8 @@ hu:
       title: Minecraft
       body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
         végig a Minecraft világán kódok segítségével.
+    sports:
+      title: Sportok
     text-compression:
       title: Szöveg tömörítése
     unplugged:

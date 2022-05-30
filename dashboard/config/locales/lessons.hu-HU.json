@@ -734,7 +734,11 @@
           "name": "Művész: ciklusok"
         },
         "jigsaw/Jigsaw": {
-          "name": "Kirakós játék"
+          "name": "Kirakós játék",
+          "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
+          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel egyenlőbb feltételeket lesznek az osztályban, amikor a diákok majd rejtvényeket fognak megoldani. Ez a lecke remek lehetőséget nyújt arra is, hogy bemutassuk az alapvető számítógépes hardverterminológiát, beleértve az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" fogalmakat, attól függően, hogy milyen eszközt használunk.",
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Szórakozás a For ciklussal"
@@ -756,6 +760,9 @@
         },
         "courseb-2021/lesson-1": {
           "name": "Kurzus Projekt vége"
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vidám térképek"
@@ -811,6 +818,9 @@
         },
         "express-2021/End of Course Project": {
           "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
