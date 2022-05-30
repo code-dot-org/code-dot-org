@@ -6,7 +6,7 @@ title: Πόροι
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Προωθήστε την Ώρα του Κώδικα
+# Προωθήστε την Ώρα του Προγραμματισμού
 
 ### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
@@ -36,7 +36,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="logo"></a>
 
-## Χρησιμοποιήστε το λογότυπο της Ώρας του Κώδικα για να τη διαδώσετε
+## Χρησιμοποιήστε το λογότυπο της Ώρας του Προγραμματισμού για να τη διαδώσετε
 
 [![εικόνα]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![εικόνα]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
