@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 vi:
   errors:
     messages:
@@ -374,6 +380,7 @@ vi:
       iceage: 'Kỉ băng hà'
       infinity: 'Vô cùng'
       minecraft_adventurer: 'Minecraft Chuyến phiêu lưu'
+      minecraft_aquatic: 'Minecraft Thủy sinh'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
@@ -462,6 +469,7 @@ vi:
     remove_parent_email_label: "Loại bỏ"
     none: "Không có"
     only_one_parent_email_supported_warning: "Lưu ý: Hiện tại, chúng tôi chỉ có thể hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh."
+    encrypted: "mã hóa"
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -963,3 +971,4 @@ vi:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: "Liên kết thư điện tử của bạn"
     not_now: "Để sau"
+  teacher_feedback: "Phản hồi của giáo viên"

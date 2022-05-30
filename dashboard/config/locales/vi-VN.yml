@@ -434,6 +434,7 @@ vi:
       iceage: Kỉ băng hà
       infinity: Vô cùng
       minecraft_adventurer: Minecraft Chuyến phiêu lưu
+      minecraft_aquatic: Minecraft Thủy sinh
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Phòng trò chơi
@@ -549,6 +550,7 @@ vi:
     none: Không có
     only_one_parent_email_supported_warning: 'Lưu ý: Hiện tại, chúng tôi chỉ có thể
       hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh.'
+    encrypted: mã hóa
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
@@ -1213,3 +1215,4 @@ vi:
       khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: Liên kết thư điện tử của bạn
     not_now: Để sau
+  teacher_feedback: Phản hồi của giáo viên

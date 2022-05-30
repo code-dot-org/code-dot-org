@@ -925,6 +925,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -970,6 +971,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1162,6 +1164,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
@@ -1205,6 +1208,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'

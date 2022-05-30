@@ -689,6 +689,7 @@ vi:
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poemart_intro: Giới thiệu Tranh thơ ca
         CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
+        PL_CS_Journeys_Overview: Hành trình KHMT
         csp_applab_parameters: Hàm và tham số
         CSA-PL-intro-to-arrays: Mảng một chiều (1D)
     callout:
