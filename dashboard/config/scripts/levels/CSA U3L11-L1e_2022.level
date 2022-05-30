@@ -8,18 +8,19 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
+    "display_name": "User Story E",
+    "bubble_choice_description": "As an advertising specialist, I want to identify the best basketball stadiums to advertise in so I can decide where to spend money for an upcoming campaign.",
+    "thumbnail_url": "https://images.code.org/f022d18e0d7baffd4d2e8009bb9ac775-image-1648762742415.png",
     "encrypted_examples": [
 
     ],
-    "display_name": "User Story E",
-    "bubble_choice_description": "As an advertising specialist, I want to identify the best basketball stadiums to advertise in so I can decide where to spend money for an upcoming campaign.",
-    "thumbnail_url": "https://images.code.org/f022d18e0d7baffd4d2e8009bb9ac775-image-1648762742415.png"
+    "map_reference": "/programming_environments/javalab"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T13:31:03.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:31:03.896+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1d_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1d_2022\"},{\"changed_at\":\"2022-03-25 13:31:12 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 21:39:18 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:43:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:01:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:10:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:27:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:31:03.896+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1d_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1d_2022\"},{\"changed_at\":\"2022-03-25 13:31:12 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 21:39:18 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:43:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:01:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:10:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:27:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:37:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
