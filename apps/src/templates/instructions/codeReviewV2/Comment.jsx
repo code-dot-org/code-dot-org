@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -14,54 +14,38 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const MARKDOWN = '```';
 
-class Comment extends Component {
-  static propTypes = {
-    comment: commentShape.isRequired,
-    onResolveStateToggle: PropTypes.func.isRequired,
-    onDelete: PropTypes.func.isRequired,
-    viewAsCodeReviewer: PropTypes.bool.isRequired,
-    // Populated by Redux
-    viewAsTeacher: PropTypes.bool
-  };
+function Comment({
+  comment,
+  onResolveStateToggle,
+  onDelete,
+  viewAsCodeReviewer,
+  viewAsTeacher
+}) {
+  const isMounted = useRef(false);
+  const [isCommentResolved, setIsCommentResolved] = useState(
+    comment.isResolved
+  );
+  const [hideResolved, setHideResolved] = useState(true);
+  const [isUpdating, setIsUpdating] = useState(false);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isCommentResolved: props.comment.isResolved,
-      hideResolved: true,
-      isUpdating: false
-    };
-  }
-
-  componentDidUpdate(prevProps) {
-    // We always hide the comment when it changes to resolved.
-    // We never hide a comment that is unresolved.
-    // A user can choose to show/hide a comment that is resolved.
-    if (prevProps.comment.isResolved !== this.props.comment.isResolved) {
-      this.setState({
-        hideResolved: this.props.comment.isResolved,
-        isCommentResolved: this.props.comment.isResolved
-      });
+  useEffect(prevProps => {
+    isMounted.current = true;
+    if (prevProps.comment.isResolved !== comment.isResolved) {
+      setHideResolved(comment.isResolved);
+      setIsCommentResolved(comment.isResolved);
     }
-  }
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
 
-  componentDidMount() {
-    // Using the _isMounted pattern to prevent resetting updating state
-    // if a comment has been deleted and removed from the DOM.
-    this._isMounted = true;
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
-  renderName = () => {
+  const renderName = () => {
     const {
       name,
       isFromTeacher,
       isFromCurrentUser,
       isFromProjectOwner
-    } = this.props.comment;
+    } = comment;
 
     if (isFromCurrentUser) {
       return <span style={styles.name}>{msg.you()}</span>;
@@ -88,32 +72,31 @@ class Comment extends Component {
     );
   };
 
-  renderFormattedTimestamp = timestampString =>
+  const renderFormattedTimestamp = timestampString => {
     moment(timestampString).format('M/D/YYYY [at] h:mm A');
+  };
 
-  renderErrorMessage = () => {
+  const renderErrorMessage = () => {
     return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
   };
 
-  toggleHideResolved = () => {
-    this.setState(state => {
-      return {hideResolved: !state.hideResolved};
-    });
+  const toggleHideResolved = () => {
+    setHideResolved(!hideResolved);
   };
 
-  handleToggleResolved = () => {
-    const newIsResolvedStatus = !this.props.comment.isResolved;
-    this.props.onResolveStateToggle(
-      this.props.comment.id,
+  const handleToggleResolved = () => {
+    const newIsResolvedStatus = !comment.isResolved;
+    onResolveStateToggle(
+      comment.id,
       newIsResolvedStatus,
-      () => this.setState({isCommentResolved: newIsResolvedStatus}),
+      () => setIsCommentResolved(newIsResolvedStatus),
       () => {
         // TODO: handle set resolve failure
       }
     );
   };
 
-  renderText = commentText => {
+  const renderText = commentText => {
     if (commentText.startsWith(MARKDOWN)) {
       return (
         <div>
@@ -125,14 +108,12 @@ class Comment extends Component {
     }
   };
 
-  getMenuItems = () => {
-    const {viewAsCodeReviewer, viewAsTeacher, onDelete} = this.props;
-    const {hideResolved, isCommentResolved} = this.state;
+  const getMenuItems = () => {
     let menuItems = [];
     if (isCommentResolved) {
       // resolved comments can be collapsed/expanded
       menuItems.push({
-        onClick: this.toggleHideResolved,
+        onClick: toggleHideResolved,
         text: hideResolved ? msg.show() : msg.hide(),
         iconClass: hideResolved ? 'eye' : 'eye-slash'
       });
@@ -141,7 +122,7 @@ class Comment extends Component {
       // Code owners can resolve/unresolve comment
       // TODO: Allow teachers to resolve/unresolve comments too
       menuItems.push({
-        onClick: this.handleToggleResolved,
+        onClick: handleToggleResolved,
         text: isCommentResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
@@ -159,15 +140,15 @@ class Comment extends Component {
 
     return menuItems.map((item, index) => {
       const onClickWrapper = () => {
-        this.setState({isUpdating: true});
+        setIsUpdating(true);
         // Wrap onClick in a promise because some menu items onClick
         // do not make async requests and thus do not return a promise
         // (eg, hiding/showing comments)
 
         // Return promise for tests.
         return Promise.resolve(item.onClick()).then(() => {
-          if (this._isMounted) {
-            this.setState({isUpdating: false});
+          if (isMounted.current) {
+            setIsUpdating(false);
           }
         });
       };
@@ -184,83 +165,91 @@ class Comment extends Component {
     });
   };
 
-  render() {
-    const {
-      commentText,
-      timestampString,
-      isFromTeacher,
-      isFromOlderVersionOfProject,
-      hasError
-    } = this.props.comment;
+  const {
+    commentText,
+    timestampString,
+    isFromTeacher,
+    isFromOlderVersionOfProject,
+    hasError
+  } = comment;
 
-    const {hideResolved, isUpdating, isCommentResolved} = this.state;
-
-    return (
-      <div
-        style={{
-          ...styles.commentContainer,
-          ...((isFromOlderVersionOfProject || isCommentResolved) &&
-            styles.lessVisible)
-        }}
-      >
-        <div style={styles.commentHeaderContainer}>
-          {isCommentResolved && (
-            <i
-              className="fa fa-check-circle resolved-checkmark"
-              style={styles.check}
-            />
-          )}
-          <div style={isCommentResolved ? styles.iconName : {}}>
-            {this.renderName()}
-          </div>
-          <span
-            style={styles.rightAlignedCommentHeaderSection}
-            className="comment-right-header"
-          >
-            <span style={styles.timestamp}>
-              {this.renderFormattedTimestamp(timestampString)}
-            </span>
-            {isUpdating ? (
-              <Spinner size="small" />
-            ) : (
-              <InlineDropdownMenu
-                selector={
-                  <img
-                    src={
-                      '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
-                    }
-                    style={{height: '3px', display: 'flex'}}
-                  />
-                }
-              >
-                {this.getMenuItems()}
-              </InlineDropdownMenu>
-            )}
-          </span>
-        </div>
-        {!(isCommentResolved && hideResolved) && (
-          <div
-            className="code-review-comment-body"
-            style={{
-              ...styles.comment,
-              ...(isFromTeacher && styles.commentFromTeacher),
-              ...((isFromOlderVersionOfProject || isCommentResolved) &&
-                styles.lessVisibleBackgroundColor)
-            }}
-          >
-            {this.renderText(commentText)}
-          </div>
+  return (
+    <div
+      style={{
+        ...styles.commentContainer,
+        ...((isFromOlderVersionOfProject || isCommentResolved) &&
+          styles.lessVisible)
+      }}
+    >
+      <div style={styles.commentHeaderContainer}>
+        {isCommentResolved && (
+          <i
+            className="fa fa-check-circle resolved-checkmark"
+            style={styles.check}
+          />
         )}
-        {hasError && this.renderErrorMessage()}
+        <div style={isCommentResolved ? styles.iconName : {}}>
+          {renderName()}
+        </div>
+        <span
+          style={styles.rightAlignedCommentHeaderSection}
+          className="comment-right-header"
+        >
+          <span style={styles.timestamp}>
+            {renderFormattedTimestamp(timestampString)}
+          </span>
+          {isUpdating ? (
+            <Spinner size="small" />
+          ) : (
+            <InlineDropdownMenu
+              selector={
+                <img
+                  src={
+                    '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
+                  }
+                  style={{height: '3px', display: 'flex'}}
+                />
+              }
+            >
+              {getMenuItems()}
+            </InlineDropdownMenu>
+          )}
+        </span>
       </div>
-    );
-  }
+      {!(isCommentResolved && hideResolved) && (
+        <div
+          className="code-review-comment-body"
+          style={{
+            ...styles.comment,
+            ...(isFromTeacher && styles.commentFromTeacher),
+            ...((isFromOlderVersionOfProject || isCommentResolved) &&
+              styles.lessVisibleBackgroundColor)
+          }}
+        >
+          {renderText(commentText)}
+        </div>
+      )}
+      {hasError && renderErrorMessage()}
+    </div>
+  );
 }
 
+Comment.propTypes = {
+  comment: commentShape.isRequired,
+  onResolveStateToggle: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  viewAsCodeReviewer: PropTypes.bool.isRequired,
+  // Populated by Redux
+  viewAsTeacher: PropTypes.bool
+};
+
 export const UnconnectedComment = Comment;
-export default connect(state => ({
-  viewAsTeacher: state.viewAs === ViewType.Instructor
-}))(Comment);
+export default connect(
+  state => ({
+    viewAsTeacher: state.viewAs === ViewType.Instructor
+  }),
+  {ViewType}
+)(Comment);
 
 const styles = {
   name: {
