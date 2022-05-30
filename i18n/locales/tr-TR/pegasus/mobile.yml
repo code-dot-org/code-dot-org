@@ -374,6 +374,7 @@
   homepage_slot_text_link_buy: "Dahil olun"
   homepage_slot_text_link_donate: "Bağış yap"
   homepage_slot_text_link_shop: "Tişörtler, şapkalar ve daha fazlası"
+  homepage_slot_text_link_thebadguys: "Kim Demiş Kötüyüz Diye? ile Kodlama"
   homepage_slot_text_link_administrators: "Okul veya bölgenizde düzenleyin"
   homepage_gallery_header: "%{project_count} milyonun üzerinde Code.org projeleri oluşturuldu"
   homepage_header_donors: "Code.org destekleyenlere teşekkürler"
@@ -971,6 +972,7 @@
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
@@ -1089,6 +1091,12 @@
   coursed-2021_gradelevel: 8+ sınıfları
   coursee-2021_gradelevel: 9. ve üzeri Sınıflar
   coursef-2021_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2022_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2022_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2022_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2022_gradelevel: 8+ sınıfları
+  coursee-2022_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2022_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: "10 Yaş ve Üstü (Ders 3 sonrası)"
   codeorg_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
   codeintl_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
@@ -1225,6 +1233,12 @@
   coursed-2021_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile ilgili bilgi edinecektir.
   coursee-2021_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
   coursef-2021_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
+  coursea-2022_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  courseb-2022_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursec-2022_shortdescription_congrats: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursed-2022_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile ilgili bilgi edinecektir.
+  coursee-2022_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+  coursef-2022_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
   codeorg_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   codeintl_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   khan_longdescription: "Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!"
@@ -1458,6 +1472,7 @@
   header_educate_beyond: "Code.org ötesi"
   header_educate_inspire: "Öğrenciye ilham ver"
   header_educate_community: "Çevrimiçi Topluluk"
+  header_educate_requirements: "Teknik Gereksinimler"
   header_educate_tools: "Araçlar ve videolar"
   header_about_us: "Hakkımızda"
   header_about_leadership: "Liderlik"
@@ -1720,3 +1735,5 @@
   outbreak_tile_title: "Salgın"
   outbreak_tile_subtitle: "Monster Town'a bir virüs bulaştı! Bir salgın simülatörü kodlayın ve Monster Town'ın komşularına ne olacağı hakkında tahminlerde bulunun."
   footer_cookie_notice: "Çerez Bildirimi"
+  top_hoc_tutorial_applab_alt_text: "Mavi bir arka plan üstünde yıldızlar ve ışık ışınları yayan bir dokunmatik tablete dokunan işaret parmağı olan kahverengi bir el"
+  minecraft_tile_alt: "İki Minecraft karakteri, Steve ve Alex, mercan, yunuslar ve yosun ile sulu bir Minecraft sahnesini gösteren bir arka planda"
