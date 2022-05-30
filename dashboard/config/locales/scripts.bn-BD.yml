@@ -1597,21 +1597,16 @@ bn:
         csd3-2021:
           lessons:
             Variables:
-              key: চলকগুলো
               name: চলকগুলো
             Text:
-              key: পাঠ
               name: পাঠ
             Conditionals:
-              key: শর্তযুক্ত
               name: শর্তযুক্ত
             Functions:
-              key: ফাংশনগুলি
               name: ফাংশনগুলি
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
               name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csp1-2021:
           lesson_groups:
@@ -1670,15 +1665,11 @@ bn:
             'Algorithms: Graph Paper Programming':
               name: ছক-কাগজে প্রোগ্রামিং
             Relay Programming:
-              key: রিলে-স্যুইচ প্রোগ্রামিং
               name: রিলে-স্যুইচ প্রোগ্রামিং
             Conditionals with Cards:
-              key: কার্ড সঙ্গে শর্ত
               name: কার্ড সঙ্গে শর্ত
             'Unplugged: Binary':
               name: দ্বিমিক ছবি
-            Artist Binary:
-              key: শিল্পী দ্বিমিক
           lesson_groups:
             csf_events:
               display_name: ঘটনাবলী
@@ -1690,8 +1681,6 @@ bn:
               display_name: দ্বি-আঙ্কিক
         coursee-2021:
           lessons:
-            Conditionals:
-              key: শর্তযুক্ত
             'Functions: Songwriting':
               name: গান লিখা
           lesson_groups:
@@ -1704,7 +1693,6 @@ bn:
         coursef-2021:
           lessons:
             Internet:
-              key: ইন্টারনেট
               name: ইন্টারনেট
           lesson_groups:
             csf_variables:
@@ -1746,22 +1734,16 @@ bn:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: চক্র
               name: চক্র
             Events:
-              key: ঘটনাবলী
               name: ঘটনাবলী
             Conditionals:
-              key: শর্তযুক্ত
               name: শর্তযুক্ত
             Functions:
-              key: ফাংশনগুলি
               name: ফাংশনগুলি
             Variables:
-              key: চলকগুলো
               name: চলকগুলো
             For Loops:
-              key: ফর লুপ
               name: ফর লুপ
           lesson_groups:
             k5_getting_started_1:
@@ -1889,10 +1871,8 @@ bn:
               name: ছক-কাগজে প্রোগ্রামিং
             Relay Programming:
               name: রিলে-স্যুইচ প্রোগ্রামিং
-              key: রিলে-স্যুইচ প্রোগ্রামিং
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
-              key: কার্ড সঙ্গে শর্ত
             'Algorithms: Graph Paper Programming':
               name: ছক-কাগজে প্রোগ্রামিং
           lesson_groups:
@@ -1908,8 +1888,6 @@ bn:
               name: গান লিখা
             'Functions: Songwriting':
               name: গান লিখা
-            Conditionals:
-              key: শর্তযুক্ত
           lesson_groups:
             ramp_up:
               display_name: নেষ্টেড লুপ
@@ -1922,7 +1900,6 @@ bn:
             The Internet:
               name: ইন্টারনেট
             Internet:
-              key: ইন্টারনেট
               name: ইন্টারনেট
           lesson_groups:
             lessonGroup-8:
@@ -1957,7 +1934,6 @@ bn:
           lessons:
             The Internet:
               name: ইন্টারনেট
-              key: ইন্টারনেট
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
@@ -1969,37 +1945,39 @@ bn:
           lessons:
             Loops:
               name: চক্র
-              key: চক্র
             Events:
               name: ঘটনাবলী
-              key: ঘটনাবলী
             Conditionals:
               name: শর্তযুক্ত
-              key: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
-              key: ফাংশনগুলি
             Variables:
               name: চলকগুলো
-              key: চলকগুলো
             For Loops:
               name: ফর লুপ
-              key: ফর লুপ
         csd3-2022:
           lessons:
             Variables:
               name: চলকগুলো
-              key: চলকগুলো
             Text:
               name: পাঠ
-              key: পাঠ
             Conditionals:
               name: শর্তযুক্ত
-              key: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
-              key: ফাংশনগুলি
         csd6-2022:
           lessons:
             Functions:
               name: ফাংশনগুলি
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: সংক্ষিপ্ত বিবরণ
+            lesson-1:
+              name: সংক্ষিপ্ত বিবরণ
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: সংক্ষিপ্ত বিবরণ
+            lesson-1:
+              name: সংক্ষিপ্ত বিবরণ
