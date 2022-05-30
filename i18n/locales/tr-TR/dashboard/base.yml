@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 tr:
   errors:
     messages:
@@ -346,6 +352,7 @@ tr:
       educate_beyond: "Code.org ötesi"
       educate_inspire: "Öğrenciye ilham ver"
       educate_community: "Çevrimiçi Topluluk"
+      educate_requirements: "Teknik Gereksinimler"
       educate_tools: "Araçlar ve videolar"
       about_us: "Hakkımızda"
       about_leadership: "Liderlik"
@@ -654,8 +661,10 @@ tr:
       title: 'Dans Partisi'
     hello-world:
       title: 'Merhaba Dünya'
+      body: 'Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.'
     poem-art:
       title: 'Şiir Sanatı'
+      body: 'Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
