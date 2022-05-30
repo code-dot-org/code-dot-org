@@ -4451,25 +4451,25 @@ it-IT:
             errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
-          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
-            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
+          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
-            'vai avanti'.
+            `vai avanti`.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Non lo so.
           feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
-        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
-            problema?
+        - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
+            c'è un problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -5082,15 +5082,17 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         - text: Non lo so.
           feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
             da ogni fiore e creare miele in ogni alveare.
@@ -5100,15 +5102,17 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         - text: Non lo so.
           feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
             da ogni fiore e creare miele in ogni alveare.
@@ -5733,7 +5737,8 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseE_EOC_2020:
         display_name: Progetto di fine corso
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
@@ -6787,18 +6792,19 @@ it-IT:
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
         markdown: |-
-          # Cittadino Super Digitale
+          # Super Cittadino Digitale
 
-          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
+          ## Come possiamo essere di aiuto quando assistiamo al cyberbullismo?
       csf_password_power-up:
         content1: descrizione qui
         markdown: |-
           # Migliora la Tua Password
 
-          ## Suggerimenti della Password da Ricordare
+          ## Consigli da ricordare sulla password
 
           * Inizia con una **frase** memorabile
-          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
+          * Non utilizzare mai per la tua password alcuna informazione legata alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -7023,24 +7029,24 @@ it-IT:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BigEvent-Unplugged_2020:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BinaryBracelets-Unplugged:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
@@ -7164,14 +7170,14 @@ it-IT:
           * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
       ConditionalsWithCards-Unplugged:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       DigitalCitizenship-Unplugged:
         markdown: |-
           # Cittadinanza Digitale
@@ -7179,12 +7185,12 @@ it-IT:
           Alcune informazioni non sono sicure da condividere online. Questa lezione ti aiuterà a imparare la differenza tra informazioni sicure e private.
       GraphPaperProgramming-Unplugged:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       MyRoboticFriends-Unplugged:
@@ -7213,7 +7219,7 @@ it-IT:
         markdown: |-
           # Informazioni Private e Personali
 
-          ## Quali informazioni su di te si possono condividere online?
+          ## Quali informazioni su di te possono essere condivise online?
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Scherma la Cattiveria
@@ -7305,20 +7311,20 @@ it-IT:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019_2020:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalFootprint-Unplugged:
@@ -7356,14 +7362,14 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       GettingLoopy-Unplugged_2020:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       Internet-Unplugged:
         markdown: |-
           # Internet.
@@ -7378,12 +7384,12 @@ it-IT:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged:
         markdown: |-
           # I miei amici robot ripetitivi
@@ -7422,10 +7428,10 @@ it-IT:
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       RelayProgramming-Unplugged_2020:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       Social Sleuth_2018_2019:
         markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
           Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
@@ -7470,23 +7476,19 @@ it-IT:
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2019:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       TheRightAppMarkdownLevel_2019_2020:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseE_project_exemplars_2019:
         markdown: |2-
 
@@ -7542,7 +7544,7 @@ it-IT:
         markdown: |-
           # Segui la Traccia Digitale
 
-          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+          ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Il mio quartiere digitale
@@ -7650,21 +7652,21 @@ it-IT:
         markdown: |-
           # Il Grande Evento
 
-          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+          In informatica, gli eventi sono azioni che un computer deve tenere sotto controllo. In questa lezione dovrai reagire in modo diverso a seconda del pulsante premuto.
       BinaryBracelets-Unplugged_2021:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD U1 Test:
         title: Computer e Risoluzione di Problemi - Verifica finale
       ConditionalsWithCards-Unplugged_2021:
         markdown: |-
-          # Condizionali con le Carte
+          # Istruzioni condizionali con le carte da gioco
 
-          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+          Gioca a carte e crea regole come "Se pesco una carta rossa, faccio un punto" e "Se pesco una carta nera, fai punto tu."
       CourseF_outbreak_story:
         content1: descrizione qui
         markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
@@ -7780,10 +7782,10 @@ it-IT:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalSharing-Unplugged_2021:
@@ -7798,12 +7800,12 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged_2021:
         markdown: |-
-          # Ripetizione
+          # A ripetizione di... ballo a ripetizione
 
-          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
       GraphPaperProgramming-Unplugged_2021:
         markdown: |-
-          # Programmazione su Carta Grafica
+          # Programmazione su carta a quadretti
 
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       HappyMaps-Unplugged_2021:
@@ -7820,7 +7822,7 @@ it-IT:
         markdown: |-
           # Spostalo, Spostalo
 
-          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+          Usa una mappa e dài istruzioni per raggiungere l'obiettivo.
       MyLoopyRoboticFriends-Unplugged_2021:
         markdown: |-
           # I miei amici robot ripetitivi
@@ -8845,24 +8847,22 @@ it-IT:
         markdown: |-
           # Informazioni Private e Personali
 
-          ## Quali informazioni su di te si possono condividere online?
+          ## Quali informazioni su di te possono essere condivise online?
       RelayProgramming-Unplugged_2021:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
-          insieme per trascrivere dei programmi atti a disegnare immagini. "
+          in gruppo per scrivere programmi per disegnare immagini. "
       Songwriting-Unplugged_2021:
         markdown: |-
           # Scrivereunacanzone.
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2021:
-        markdown: |-
-          # L'App Giusta
-
-          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
-          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
-          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
-
-          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+          e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
+          \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
+          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          è importante comprendere i bisogni altrui e tenerli presenti per progettare
+          le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC_2021:
         display_name: Progetto di fine corso
         description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
@@ -8902,25 +8902,25 @@ it-IT:
             Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
-          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
-            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
+          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
-            'vai avanti'.
+            `vai avanti`.
           correct: true
-          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
-            si muove in avanti abbastanza volte per raggiungere la ghianda.
-        - text: Scrat non si muoverà dal primo blocco.
+          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
+            non si muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non si sposterà dal primo blocco.
           feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
-        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
-            problema?
+        - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
+            c'è un problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -9046,18 +9046,21 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+        - text: L'ape si procurerà il nettare da ogni fiore e produrrà miele da ogni
+            favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
-            ad ogni fiore e fa il miele ad ogni nido.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` consente all'ape di procurarsi
+            il nettare da ogni fiore e produrre il miele da ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
-        - text: L'ape cercherà di prendere il miele sia dai fiori che dai favi.
-          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
-            all'ape ad ogni fiore e fare il miele ad ogni nido..
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
+        - text: L'ape cercherà di ottenere miele e nettare sia dai fiori che dal favo.
+          feedback: Sbagliato. Sbagliato. Il blocco `se c'è un fiore` consente all'ape
+            di ottenere il nettare da ogni fiore e di procurarsi il miele da ogni
+            favo.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
@@ -9136,7 +9139,7 @@ it-IT:
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
-        - text: Questo programma non livellerà l'ultima buca.
+        - text: Questo programma lascerà intatta l'ultima buca.
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         questions:
@@ -9172,7 +9175,7 @@ it-IT:
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
-        - text: Lo zombie sarà bloccato in avanti alla fine del sentiero.
+        - text: Lo zombie resterà bloccato alla fine del percorso di avanzamento.
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
         questions:
@@ -9199,10 +9202,12 @@ it-IT:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
             pensi che succederà quando cliccherai su "Esegui"?
       courseE_EOC_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       courseE_EOC_examples_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       courseE_multi_dance_events_predict1_2021:
         answers:
@@ -9219,8 +9224,8 @@ it-IT:
           feedback: Sbagliato. L'alieno blu inizierà a muoversi verso l'alto e verso
             il basso sullo schermo.
         questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai sull'alieno?
+        - text: Guarda attentamente il codice qui sotto. Cosa accadrà dopo aver cliccato
+            sull'alieno?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La contadina raccoglierà due zucche.
@@ -9278,7 +9283,7 @@ it-IT:
         - text: La balla di fieno inizierà a rotolare
           correct: true
           feedback: Corretto!
-        - text: La balla di fieno si accenderà e si spegnerà.
+        - text: Il cespuglio rotolante si accenderà e si spegnerà.
           feedback: Sbagliato. La balla di fieno inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9295,12 +9300,12 @@ it-IT:
           trascorri un po' tempo a osservare i progetti di esempio.
       courseF_events_predict_multi:
         answers:
-        - text: Il personaggiosi girerà soltanto verso destra.
-          feedback: Sbagliato. Il personaggio si muoverà anche verso est.
-        - text: Il personaggiosi muoverà semplicemente verso est.
+        - text: Il personaggio si girerà soltanto verso destra.
+          feedback: Sbagliato. Il personaggio si sposterà anche verso est.
+        - text: Il personaggio si sposterà semplicemente verso est.
           feedback: Sbagliato. Il personaggio non ha smesso di girare, quindi farà
             entrambe le cose contemporaneamente.
-        - text: Il personaggio girerà e si muoverà allo stesso tempo.
+        - text: Il personaggio girerà e si sposterà insieme.
           correct: true
           feedback: Corretto! Entrambi i comportamenti si manifesteranno contemporaneamente.
         - text: Il personaggio farà prima un giro e dopo si sposterà.
@@ -9373,8 +9378,8 @@ it-IT:
         answers:
         - text: Entrambi gli aerei si sposteranno di una casella lungo la griglia,
             poi si fermeranno.
-          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti", con cui
-            i personaggi continueranno a correre fin quando non gli diranno di fermarsi.
+          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti" che continuano
+            a compiersi finché non viene loro detto di fermarsi.
         - text: Entrambi gli aerei inizieranno a muoversi e non si fermeranno.
           correct: true
           feedback: Corretto! Questi comportamenti diranno agli aerei di iniziare
@@ -9384,8 +9389,8 @@ it-IT:
           feedback: Sbagliato. Ogni blocco di codice nel Laboratorio dei personaggi
             viene eseguito istantaneamente, uno dopo l'altro.
         - text: Gli aerei si scontrano.
-          feedback: Sbagliato. Gli aerei non sono posizionati in modo che si entrino
-            in contatto.
+          feedback: Sbagliato. Gli aerei non sono posizionati in modo da entrare in
+            contatto.
         questions:
         - text: Leggi il codice, poi fai una previsione.
       courseF_variables_predict_multi:
@@ -9397,15 +9402,16 @@ it-IT:
           correct: true
           feedback: Corretto! Quello che digiti viene usato al posto del blocco del
             nome.
-        - text: Il personaggio cambierà le sue dimensioni.
-          feedback: Sbagliato. Il testo viene stampato a video.
+        - text: Il personaggio cambierà dimensione.
+          feedback: Sbagliato. Il testo viene visualizzato sullo schermo.
         - text: Il computer farà un'altra domanda.
-          feedback: Sbagliato. Soltanto una domanda viene rivolta, proprio quando
-            il programma viene avviato.
+          feedback: Sbagliato. Viene rivolta solo una domanda, proprio quando il programma
+            viene avviato.
         questions:
         - text: 'Questo programma ti consente di rispondere a una domanda digitando
-            direttamente dalla tua tastiera. Il blocco "stampa" mostra il testo sullo
-            schermo. Fai una previsione: cosa succederà dopo aver risposto alla domanda?'
+            direttamente dalla tua tastiera. Il blocco `stampa` visualizza il testo
+            sullo schermo. Fai una previsione: cosa succederà dopo aver risposto alla
+            domanda?'
       courseF_variables_stop:
         content1: descrizione qui
         markdown: "# Stop!\n\n## Sei sicuro che tu sia pronto per procedere? \n\n\nNel
@@ -9437,23 +9443,24 @@ it-IT:
       csf_be_a_super_digital_citizen_2021:
         content1: descrizione qui
         markdown: |-
-          # Cittadino Super Digitale
+          # Super Cittadino Digitale
 
-          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
+          ## Come possiamo essere di aiuto quando assistiamo al cyberbullismo?
       csf_digital_trails_2021:
         markdown: |-
           # Segui la Traccia Digitale
 
-          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+          ## Quali sono le informazioni ADATTE da lasciare nelle tue tracce digitali?
       csf_password_power-up_2021:
         content1: descrizione qui
         markdown: |-
           # Migliora la Tua Password
 
-          ## Suggerimenti della Password da Ricordare
+          ## Consigli da ricordare sulla password
 
           * Inizia con una **frase** memorabile
-          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
+          * Non utilizzare mai per la tua password alcuna informazione legata alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -9477,7 +9484,8 @@ it-IT:
 
           ## Come muoverti in sicurezza online?
       express_EOC_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       grade2_multi_collector_A_predict1_2021:
         answers:
@@ -9514,27 +9522,31 @@ it-IT:
           ora per capire cos'è possibile fare. Entro la fine di questo corso, potrai
           creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
         teacher_markdown: |-
-          # Introduzione ai livelli aggiuntivi
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
-          Le scelte qui contenute conducono gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
+          Le scelte qui presentate accompagnano gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
       courseF_sprites_freeplay:
         display_name: 'Personaggi: gioco libero'
-        description: Tocca a te creare qualsiasi cosa tu desideri! Che tipo di progetto
+        description: Ora tocca a te creare qualunque cosa desideri! Che tipo di progetto
           realizzerai?
       courseF_sprites_practice:
-        display_name: La pratica dei personaggi
-        description: Hai fatto un ottimo lavoro finora!
-        teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+        display_name: Pratica con i personaggi
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con personaggi e comportamenti!
+        teacher_markdown: |+
+          # Panoramica degli esercizi opzionali
+          Gli esercizi opzionali mettono a disposizione un menu di esercizi aggiuntivi che gli studenti devono completare. Gli studenti devono completare almeno uno degli esercizi secondari qui presenti, ma possono cimentarsi con tutti quelli scelti (o che scegli tu).
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona la frutta.|Anima un veliero|Un giornata ventilata|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona il frutto.|Anima un veliero|Una giornata ventilata|
           |-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Recensione**|**Recensione**|**Recensione**|
-          | ***Concetto***|*personaggi, posizioni*|*personaggi, proprietà*|*personaggi, posizioni, comportamenti*|*comportamenti*|
+          | ***Digita*** |**Revisione**|**Review**|**Revisione**|**Revisione**|
+          | ***Idea***|*sprites, locations*|*personaggi, proprietà*|*sprites, locations, behaviors*|*comportamenti*|
+
+
       SimonSays-Unplugged_2021:
         markdown: |-
           # Segui l'algoritmo
@@ -9546,24 +9558,24 @@ it-IT:
         display_name: Esempi di progetti
       courseF_artist_practice:
         display_name: Pratica dell'artista
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          i cicli e l'Artista!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con i cicli e l'Artista!
       courseF_beeFor_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          cicli e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con cicli e api!
       courseF_beeVar_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          variabili e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con variabili e api!
       courseF_bee_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          cicli e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con cicli e api!
       courseF_events_freeplay:
         display_name: 'Eventi: gioco libero'
         description: Ora puoi mettere in pratica ciò hai imparato per migliorare ancora
@@ -9571,44 +9583,46 @@ it-IT:
           inizia qualcosa di nuovo!
       courseF_events_practice:
         display_name: Esercitazioni per gli eventi
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          gli eventi!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con gli eventi!
         teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Lancio!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Partenza!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
           |-|-|-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
-          | ***Concetto***|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*quando/durante gli eventi*|*quando/durante gli eventi*|
+          | ***Digita*** |**Revisione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
+          | ***Concetto***|*events, behaviors*|*eventi, comportamenti*|*events, behaviors*|*eventi, comportamenti*|*when/while events*|*quando/durante gli eventi*|
       courseF_text_practice:
         display_name: Pratica con il testo e i comandi
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          i testi e i comandi!
-        teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con i testi e i comandi!
+        teacher_markdown: |+
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Discorso in testo!|Dal testo ai comandi|Dai un nome al robot|Etichette delle variabili|Grande testo|Suggerimento per i colori|Iniziare da capo|
-          |-|-|-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
-          | ***Concetto***|*blocco stampa, eventi*|*comandi, eventi*|*aggiunta di caselle*|*etichette delle variabili corrispondenti*|*blocchi della schermata del titolo*|*memorizzazione colori*|*nessun nuovo contenuto*
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Utilizzo della voce per il testo|Testo dal prompt|Dài un nome al robot!|Etichette di variabili|Testo grande|Richiesta di colori|Ripartire da zero|
+          |-|-|-|-|-|-|-|-|
+          | ***Digita*** |**Revisione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Optional Content**|**Gioco libero**
+          | ***Concept***|*print block, events*|*discussioni, eventi*|*adding spaces*|*corrispondenza variabili di etichetta*|*title screen blocks*|*storicizzazione colori*|*nessun nuovo contenuto*
+
+
       courseF_variables_projects:
         display_name: Scegli un progetto
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
           caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
           alla \"Parte 2\".
         teacher_markdown: |
-          # Panoramica del livello delle scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma podevono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono essere incoraggiati a completare **due** livelli per lo stesso progetto.
 
-          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli studenti devono selezionare uno dei livelli contrassegnati come "Parte 1". Una volta che hanno terminato quel livello devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo livello fornirà agli studenti un feedback mentre mettono insieme i componenti base del loro progetto. Il secondo livello è' un "gioco libero" che consente agli studenti di apportare al loro codice tutte le modifiche che desiderano.
+          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due esercizi secondari. Per iniziare, gli studenti devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli studenti un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli studenti di apportare al loro codice tutte le modifiche desiderate.
       courseF_variables_samples:
         display_name: 'Esplorazione: Programmi di esempio'
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
@@ -9616,8 +9630,8 @@ it-IT:
           per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
           per iniziare a pianificare il tuo programma.
         teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
           Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
       express_EOC_examples_2021:
@@ -9628,7 +9642,7 @@ it-IT:
         markdown: |-
           # Storia delle caselle vuote
 
-          In questa lezione, imparerai a usare e scrivere storie delle caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
+          In questa lezione, imparerai a usare e scrivere storie con le caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
       CSD U3 Collisions SFLP:
         markdown: |+
           # Panoramica
@@ -9948,3 +9962,82 @@ it-IT:
         display_name: Pratica
       csd-pre-survey-levelgroup_21_22:
         title: Alla Scoperta dell'Informatica - Indagine preliminare
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: blu
+        - text: verde
+        - {}
+        - text: giallo
+        - correct: true
+        - text: rosso
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: descrizione qui
+      allthethings_external_not_displayed_as_unplugged:
+        content1: descrizione qui
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Quale freccia fa arrivare il Flurb al tesoro?
+        title: Esercizio di Verifica (Risposte Multiple)
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Nessuno dei precedenti
