@@ -128,7 +128,7 @@ class AdminReportsController < ApplicationController
       render(
         layout: 'application',
         html: "Script #{script_id_or_name} not found.",
-        status: :not_found
+        status: 404
       ) && return
     end
 
@@ -143,7 +143,7 @@ class AdminReportsController < ApplicationController
         render(
           layout: 'application',
           html: "PD progress data not found for #{sanitized_script_name}.",
-          status: :not_found
+          status: 404
         )
       end
     end
