@@ -6,7 +6,8 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
   setup_all do
     @project_owner = create :student
     @peer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    @teacher = create :teacher
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: @teacher
     student_follower = create :follower, section: section, student_user: @project_owner
     peer_follower = create :follower, section: section, student_user: @peer
 
@@ -53,5 +54,29 @@ class CodeReviewNotesControllerTest < ActionController::TestCase
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
     assert_equal true, response_json['isResolved']
+  end
+
+  test 'delete code review comment' do
+    review_note = create :code_review_note, code_review: @code_review, commenter: @peer
+
+    sign_in @teacher
+
+    delete :destroy, params: {
+      id: review_note.id
+    }
+
+    assert_response :success
+  end
+
+  test 'students cannot delete code review comment' do
+    review_note = create :code_review_note, code_review: @code_review, commenter: @peer
+
+    sign_in @project_owner
+
+    delete :destroy, params: {
+      id: review_note.id
+    }
+
+    assert_response :forbidden
   end
 end

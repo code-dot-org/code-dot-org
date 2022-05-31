@@ -19,7 +19,8 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview,
   toggleResolveComment,
-  viewAsCodeReviewer
+  viewAsCodeReviewer,
+  deleteCodeReviewComment
 }) => {
   const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
@@ -50,7 +51,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && (
+          {isOpen && !viewAsCodeReviewer && (
             <div>
               <Button
                 icon="close"
@@ -85,7 +86,7 @@ const CodeReviewTimelineReview = ({
                 comment={convertDataForComponent}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
-                onDelete={() => {}}
+                onDelete={deleteCodeReviewComment}
                 viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
@@ -114,7 +115,8 @@ CodeReviewTimelineReview.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
-  viewAsCodeReviewer: PropTypes.bool
+  viewAsCodeReviewer: PropTypes.bool,
+  deleteCodeReviewComment: PropTypes.func.isRequired
 };
 
 const styles = {

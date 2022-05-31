@@ -37,7 +37,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     @workshop = Pd::Workshop.find_by_id params[:workshop_id]
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
-        status: 404
+        status: :not_found
     end
 
     enrollment_email = params[:email]
@@ -157,7 +157,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def render_unsuccessful(error_message, options={})
     render json: options.merge({workshop_enrollment_status: error_message}),
-      status: 400
+      status: :bad_request
   end
 
   def workshop_closed?

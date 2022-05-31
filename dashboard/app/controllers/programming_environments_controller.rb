@@ -78,7 +78,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     if DCDO.get('use-studio-code-docs', false)
       @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
       return render :not_found unless @programming_environment
-      redirect_to(programming_environments_path(@programming_environment.name))
+      redirect_to(programming_environment_path(@programming_environment.name))
     else
       render_proxied_url(
         "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/",
@@ -92,7 +92,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def destroy
     @programming_environment.destroy!
-    render(status: 200, plain: "Destroyed #{@programming_environment.name}")
+    render(status: :ok, plain: "Destroyed #{@programming_environment.name}")
   rescue => e
     render(status: :not_acceptable, plain: e.message)
   end
