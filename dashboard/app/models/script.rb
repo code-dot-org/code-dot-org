@@ -59,7 +59,7 @@ class Script < ApplicationRecord
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
-  belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
+  belongs_to :wrapup_video, class_name: 'Video'
   belongs_to :user
   has_many :unit_group_units
   has_many :unit_groups, through: :unit_group_units
@@ -220,7 +220,7 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.blank?
+    professional_learning_course.present?
   end
 
   def generate_plc_objects
@@ -1602,7 +1602,7 @@ class Script < ApplicationRecord
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
-    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
+    hidden_section_ids.index_with {|_section_id| [id]}
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
@@ -1632,9 +1632,9 @@ class Script < ApplicationRecord
   def summarize_i18n_for_copy(new_name, new_course_version)
     resource_markdown_replacement_proc = proc {|r| "[r #{Services::GloballyUniqueIdentifiers.build_resource_key(r.copy_to_course_version(new_course_version))}]"}
     vocab_markdown_replacement_proc = proc {|v| "[v #{Services::GloballyUniqueIdentifiers.build_vocab_key(v.copy_to_course_version(new_course_version))}]"}
-    data = %w(title description student_description description_short description_audience).map do |key|
-      [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
-    end.to_h
+    data = %w(title description student_description description_short description_audience).index_with do |key|
+      I18n.t("data.script.name.#{name}.#{key}", default: '')
+    end
     Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
     Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
@@ -1946,7 +1946,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !get_pilot_experiment.blank?
+    get_pilot_experiment.present?
   end
 
   def has_pilot_access?(user = nil)

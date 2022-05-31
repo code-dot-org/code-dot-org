@@ -18,8 +18,8 @@
 class CodeReviewGroupMember < ApplicationRecord
   self.primary_key = :follower_id
 
-  belongs_to :follower, required: true
-  belongs_to :code_review_group, required: true
+  belongs_to :follower, optional: false
+  belongs_to :code_review_group, optional: false
 
   def name
     return follower.student_user.name

@@ -113,7 +113,7 @@ def main
     end
   end
 
-  contained_levels.map {|row| row[:contained_level_id]}.each do |contained_level_id|
+  contained_levels.pluck(:contained_level_id).each do |contained_level_id|
     LevelSource.
       where(level_id: contained_level_id).
       find_each do |level_source|

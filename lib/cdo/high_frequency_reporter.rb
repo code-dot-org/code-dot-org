@@ -81,7 +81,7 @@ class HighFrequencyReporter
     # for now alert on all new events. If we only want to alert on duplicate events
     # replace return value with commented line below.
     # @new_events.map {|e| e[:name]} & @old_events.map {|e| e[:name]}
-    @new_events.map {|e| e[:name]}
+    @new_events.pluck(:name)
   end
 
   def reset_new_events

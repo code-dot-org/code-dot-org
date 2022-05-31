@@ -42,7 +42,7 @@ module LessonImportHelper
         lesson.purpose = cb_lesson_data['cs_content']
         lesson.preparation = cb_lesson_data['prep']
         lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
-        lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
+        lesson.assessment_opportunities = cb_lesson_data['assessment'] if cb_lesson_data['assessment'].present?
         lesson.save!
 
         Script.merge_and_write_i18n(lesson.i18n_hash, lesson.script.name)
@@ -346,7 +346,7 @@ module LessonImportHelper
         }.to_json
       )
     end
-    activity_section.update_script_levels(sl_data) unless sl_data.blank?
+    activity_section.update_script_levels(sl_data) if sl_data.present?
     activity_section
   end
 

@@ -60,9 +60,9 @@ const_keys = %w(
   Threads_running
 )
 
-constants = const_keys.map do |key|
-  [key, status[key]]
-end.to_h
+constants = const_keys.index_with do |key|
+  status[key]
+end
 
 counter = 'Uptime_since_flush_status'
 exit 0 unless status[counter] && old_status[counter]
@@ -319,9 +319,9 @@ interval_keys = %w(
   Tc_log_page_waits
 )
 
-intervals = interval_keys.map do |key|
-  [key, (status[key].to_i - old_status[key].to_i)]
-end.to_h
+intervals = interval_keys.index_with do |key|
+  (status[key].to_i - old_status[key].to_i)
+end
 
 innodb_status = PEGASUS_DB.fetch('SHOW ENGINE INNODB STATUS').first[:Status]
 

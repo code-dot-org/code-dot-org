@@ -10,10 +10,10 @@ class CertificateImageTest < Minitest::Test
     assert CertificateImage.prefilled_title_course?('starwars')
     assert CertificateImage.prefilled_title_course?('mc')
     assert CertificateImage.prefilled_title_course?('20-hour')
-    assert !CertificateImage.prefilled_title_course?('course1')
-    assert !CertificateImage.prefilled_title_course?('course2')
-    assert !CertificateImage.prefilled_title_course?('course3')
-    assert !CertificateImage.prefilled_title_course?('course4')
+    assert_not CertificateImage.prefilled_title_course?('course1')
+    assert_not CertificateImage.prefilled_title_course?('course2')
+    assert_not CertificateImage.prefilled_title_course?('course3')
+    assert_not CertificateImage.prefilled_title_course?('course4')
   end
 
   def test_course_templates

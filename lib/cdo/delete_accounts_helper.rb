@@ -444,7 +444,7 @@ class DeleteAccountsHelper
   end
 
   def clean_pegasus_forms(forms_recordset)
-    form_ids = forms_recordset.map {|f| f[:id]}
+    form_ids = forms_recordset.pluck(:id)
     @pegasus_db[:form_geos].
       where(form_id: form_ids).
       update(
