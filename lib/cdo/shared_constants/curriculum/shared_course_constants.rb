@@ -1,5 +1,5 @@
 module Curriculum
-  module Curriculum::SharedCourseConstants
+  module SharedCourseConstants
     # Used to determine who can access curriculum content
     PUBLISHED_STATE = OpenStruct.new(
       {
