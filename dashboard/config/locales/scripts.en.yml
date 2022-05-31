@@ -25348,11 +25348,13 @@ en:
               name: Module 7
             Module 8:
               name: Module 8
-          title: CS Discoveries Virtual Professional Learning 2021 - 22
+          title: CS Discoveries Virtual Professional Learning 2022 - 23
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: vpl-csd-2022
         vpl-csp-2022:
           lessons:
             Module 1:
