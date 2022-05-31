@@ -15,7 +15,7 @@
 #
 
 class Census::ApCsOffering < ApplicationRecord
-  belongs_to :ap_school_code, foreign_key: [:school_code, :school_year], primary_key: [:school_code, :school_year], required: true
+  belongs_to :ap_school_code, foreign_key: [:school_code, :school_year], primary_key: [:school_code, :school_year], optional: false
   has_one :school, through: :ap_school_code
 
   COURSES = {

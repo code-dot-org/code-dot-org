@@ -114,7 +114,7 @@ class ProgrammingExpressionsController < ApplicationController
     return render :not_found unless @programming_expression
     begin
       @programming_expression.destroy
-      render(status: 200, plain: "Destroyed #{@programming_expression.name}")
+      render(status: :ok, plain: "Destroyed #{@programming_expression.name}")
     rescue
       render(status: :not_acceptable, plain: @programming_expression.errors.full_messages.join('. '))
     end
@@ -126,7 +126,7 @@ class ProgrammingExpressionsController < ApplicationController
     return render(status: not_acceptable, plain: 'Must provide destination programming environment') unless params[:destinationProgrammingEnvironmentName]
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
-      render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
+      render(status: :ok, json: {editUrl: edit_programming_expression_path(new_exp)})
     rescue => err
       render(json: {error: err.message}.to_json, status: :not_acceptable)
     end

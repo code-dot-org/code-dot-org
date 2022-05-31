@@ -867,7 +867,7 @@ class Lesson < ApplicationRecord
             Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
           end
 
-          unless copied_activity_section.tips.blank?
+          if copied_activity_section.tips.present?
             copied_activity_section.tips.each do |tip|
               next unless tip && tip['markdown']
               Services::MarkdownPreprocessor.sub_resource_links!(tip['markdown'], update_resource_link_on_clone)
@@ -889,7 +889,7 @@ class Lesson < ApplicationRecord
             "levels" => [copied_level]
           }
         end
-        copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
+        copied_activity_section.update_script_levels(sl_data) if sl_data.present?
         copied_activity_section
       end
       copied_lesson_activity
