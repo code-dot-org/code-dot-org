@@ -475,6 +475,16 @@ ActiveRecord::Schema.define(version: 2022_05_25_230111) do
     t.index ["name"], name: "index_courses_on_name"
   end
 
+  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "name"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["key"], name: "index_data_docs_on_key", unique: true
+    t.index ["name"], name: "index_data_docs_on_name"
+  end
+
   create_table "donor_schools", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "nces_id"

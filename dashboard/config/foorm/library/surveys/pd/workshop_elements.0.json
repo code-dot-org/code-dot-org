@@ -399,6 +399,55 @@
         },
         {
           "type": "matrix",
+          "name": "cs_community_v2",
+          "title": "How much do you agree or disagree with the following statements about your computer science teaching community?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "someone_to_turn_to",
+              "text": "When I need help teaching computer science, I have someone to turn to."
+            },
+            {
+              "value": "see_rp_as_resource",
+              "text": "I see my Regional Partner as a resource and support for computer science education in my community."
+            },
+            {
+              "value": "excited_to_collaborate_cohort",
+              "text": "This workshop has allowed me to meet computer science teachers in my community to collaborate with."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
           "name": "curriculum_impressions",
           "title": "Please rate the extent to which you agree or disagree with the following about the {workshop_course} curriculum?",
           "columns": [
@@ -1185,6 +1234,337 @@
                 {
                   "value": "conditionals_loops",
                   "text": "Use conditionals and loops to develop algorithms in Java."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "learning_objectives_panel_v2",
+          "elements": [
+            {
+              "type": "html",
+              "name": "question1",
+              "html": "COURSE: {workshop_course}",
+              "visible": false
+            },
+            {
+              "type": "html",
+              "name": "learning_objectives_preamble",
+              "html": "<p>We're interested in understanding how effective was the workshop in achieving its learning objectives.</p>\n\n\n<p>Please rate your level of agreement with each of the following statements about your understanding of {workshop_course}'s curricular structure and philosophy."
+            },
+            {
+              "type": "matrix",
+              "name": "teaching_activities_csd",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "After participating in this workshop I will incorporate activities that:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "debugging",
+                  "text": "Help students develop debugging skills."
+                },
+                {
+                  "value": "students_use_resources",
+                  "text": "Guide students to use resources."
+                },
+                {
+                  "value": "peer_collaboration",
+                  "text": "Encourage peer collaboration among students."
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "curriculum_resources",
+              "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'",
+              "title": "After participating in this workshop I feel prepared to use Code.org's {workshop_course} curriculum resources to:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "prep_lessons",
+                  "text": "Prepare lessons."
+                },
+                {
+                  "value": "programming_lessons",
+                  "text": "Facilitate programming lessons.",
+                  "visibleIf": "{workshop_course}='CS Discoveries'"
+                },
+                {
+                  "value": "non_programming_lessons",
+                  "text": "Facilitate non-programming lessons.",
+                  "visibleIf": "{workshop_course}='CS Discoveries'"
+                },
+                {
+                  "value": "unplugged_lessons",
+                  "text": "Facilitate unplugged lessons.",
+                  "visibleIf": "{workshop_course}='CS Principles'"
+                },
+                {
+                  "value": "plugged_lessons",
+                  "text": "Facilitate plugged lessons.",
+                  "visibleIf": "{workshop_course}='CS Principles'"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "deliver_course_equity",
+              "title": "Please rate your level of agreement with each of the following statements about how this workshop prepared you to deliver {workshop_course} with equity:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "describe_responsibility_equity",
+                  "text": "As a result of this workshop, I am better able to describe my responsibility to improve access, diversity, and inclusion in my CS classroom."
+                },
+                {
+                  "value": "plan_implement_summer",
+                  "text": "I feel empowered to take next steps to implement my commitment to foster equitable access, diversity, and inclusion in my CS classroom."
+                },
+                {
+                  "value": "curriculum_differentiation",
+                  "text": "After attending this workshop I know how to adapt the curriculum to meet the needs of specific student groups."
+                },
+                {
+                  "value": "manipulatives",
+                  "text": "After participating in this workshop I plan to utilize manipulatives in lessons as a strategy to make content and tasks easier to approach for students.",
+                  "visibleIf": "{workshop_course}='CS Principles'"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "preparation_implementation",
+              "title": "Please rate your level of agreement with each of the following statements about how this workshop prepared you to implement {workshop_course}:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "curriculum_schedule",
+                  "text": "After attending this workshop I know how to adapt the curriculum to match my classroom schedule.",
+                  "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'"
+                },
+                {
+                  "value": "opportunities_feedback",
+                  "text": "I am better prepared to identify opportunities to give feedback to students during instruction to support student learning."
+                },
+                {
+                  "value": "resources_prep_ap_exam",
+                  "text": "I know where to find the resources to help me design learning activities lessons to prepare students to take the AP exam.",
+                  "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'"
+                },
+                {
+                  "value": "content_matches_teaching_plan",
+                  "text": "The content of this workshop was relevant to what I plan to teach at the beginning of the course in the coming academic year."
+                },
+                {
+                  "value": "workshop_influenced_teach_plan",
+                  "text": "This workshop influenced the content I plan to present in my {workshop_course} classroom, to best meet the needs of my students. (If the content of the course is not within your control please select 'Strongly Disagree')",
+                  "visibleIf": "{workshop_course}='CS Discoveries'"
+                },
+                {
+                  "value": "show_what_you_know_week",
+                  "text": "I have a plan for using the 'Show what you know week' materials in my CS classroom.",
+                  "visibleIf": " {workshop_course}='Computer Science A'"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "prework_complete",
+              "title": "Prior to the workshop you received some pre-work in the 'Getting Started Modules'. Did you complete the pre-work? ",
+              "visibleIf": "{workshop_course}='Computer Science A'",
+              "choices": [
+                {
+                  "value": "all",
+                  "text": "I completed all of the pre-work"
+                },
+                {
+                  "value": "some",
+                  "text": "I completed some of the pre-work, not all of it"
+                },
+                {
+                  "value": "none",
+                  "text": "I was aware there was pre-work but didn't do it"
+                },
+                {
+                  "value": "didnt_know",
+                  "text": "I didn't know there was pre-work"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "prework_useful",
+              "title": "To what extent did you find the pre-work or 'Getting Started Modules' helpful for preparing you to engage with this workshop?",
+              "visibleIf": "{prework_complete}  anyof ['all', 'some'] ",
+              "rateMax": 7,
+              "minRateDescription": "Not Helpful At All",
+              "maxRateDescription": "Very Helpful"
+            },
+            {
+              "type": "matrix",
+              "name": "content_knowledge_java",
+              "visibleIf": "{workshop_course}='Computer Science A'",
+              "title": "After participating in this workshop I have developed content knowledge that will allow me to teach the following CSA concepts to my students:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "classes_and_objects",
+                  "text": "The relationship between classes and objects in Java."
+                },
+                {
+                  "value": "write_class",
+                  "text": "The structure of a class in Java."
+                },
+                {
+                  "value": "conditionals_loops",
+                  "text": "Conditionals and loops in Java."
                 }
               ]
             }

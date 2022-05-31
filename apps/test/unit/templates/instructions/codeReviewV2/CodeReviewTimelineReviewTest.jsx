@@ -41,6 +41,7 @@ const DEFAULT_PROPS = {
   addCodeReviewComment: () => {},
   closeReview: () => {},
   toggleResolveComment: () => {},
+  deleteCodeReviewComment: () => {},
   viewAsCodeReviewer: false
 };
 

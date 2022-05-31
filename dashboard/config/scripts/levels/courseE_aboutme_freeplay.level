@@ -40,12 +40,8 @@
     "short_instructions": "Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!",
     "mini_rubric": "false",
     "long_instructions": "Awesome job! Your poster is just as cool as Rikki's! \r\n\r\n<span style=\"color: #f00\">Rikki: Almost as cool. Almost. &#x1f609;</span>\r\n\r\nKeep going! Here are a few things Rikki is going to add to her poster. Try them out!\r\n\r\n1. Add a background! Choose a background that fits your poster.\r\n2. Add behaviors! Make each of your sprites react differently when clicked.\r\n3. Add other kinds of events! Apply your creativity and coding skills and try events other than `click`.\r\n",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "courseE_aboutme_2"
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
