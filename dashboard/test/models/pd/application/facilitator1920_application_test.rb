@@ -358,7 +358,7 @@ module Pd::Application
     test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
       %w(csf csd csp).each do |course|
         application = create :pd_facilitator1920_application, course: course
-        score_hash = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym].map {|key| [key, YES]}.to_h
+        score_hash = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym].index_with {|_key| YES}
 
         application.update(
           response_scores: {meets_minimum_criteria_scores: score_hash}.to_json

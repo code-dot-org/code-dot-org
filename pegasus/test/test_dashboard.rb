@@ -115,7 +115,7 @@ class DashboardTest < Minitest::Test
       end
 
       it 'returns false when appropriate' do
-        assert !@admin.followed_by?(@student.id)
+        assert_not @admin.followed_by?(@student.id)
       end
 
       it 'ignores deleted sections' do

@@ -80,7 +80,7 @@ module Cdo
       puts "Found #{folders.count} S3 subfolders."
 
       partitions = folders.map {|folder| folder.split('/').pop(num_partitions)}
-      partition_value_map = partitions.map {|partition| [partition.map {|part| part.split('=').last}, partition]}.to_h
+      partition_value_map = partitions.index_by {|partition| partition.map {|part| part.split('=').last}}
       existing_partitions = get_partitions(database, table).map(&:values)
       puts "Found #{existing_partitions.count} existing partitions."
 

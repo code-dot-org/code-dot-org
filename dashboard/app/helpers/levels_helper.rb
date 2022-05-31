@@ -655,7 +655,7 @@ module LevelsHelper
 
     # Expo-specific options (only needed for Applab and Gamelab)
     if (@level.is_a? Gamelab) || (@level.is_a? Applab)
-      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
+      app_options[:expoSession] = CDO.expo_session_secret.to_json if CDO.expo_session_secret.present?
     end
 
     # User/session-dependent options
