@@ -22,8 +22,20 @@
       "return_value": null
     },
     {
-      "name": "sqrt",
+      "name": "abs",
       "position": 1,
+      "key": "abs2",
+      "overload_of": "abs",
+      "content": "Returns the absolute value of an `int` value.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"int\",\"required\":true,\"description\":\"the value whose absolute value is to be determined\"}]",
+      "examples": "[{\"code\":\"```\\nint num = -20;\\n\\nSystem.out.println(Math.abs(num));\\n```\\n\\n**Output:**\\n\\n20\"}]",
+      "syntax": "`public static int abs(int a)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "sqrt",
+      "position": 2,
       "key": "math.sqrt-x",
       "overload_of": null,
       "content": "Returns the square root of `x`. The return value will always be a positive and correctly rounded number.",
@@ -35,7 +47,7 @@
     },
     {
       "name": "random",
-      "position": 2,
+      "position": 3,
       "key": "math.random",
       "overload_of": null,
       "content": "Returns a random value that is greater than or equal to `0.0` and less than `1.0`. ",
@@ -47,25 +59,13 @@
     },
     {
       "name": "pow",
-      "position": 3,
+      "position": 4,
       "key": "pow",
       "overload_of": null,
       "content": "Returns the first argument raised to the power of the second argument.",
       "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"the base\"},{\"name\":\"b\",\"type\":\"double\",\"required\":true,\"description\":\"the exponent\"}]",
       "examples": "[]",
       "syntax": "`public static double pow(double a, double b)`",
-      "external_link": null,
-      "return_value": null
-    },
-    {
-      "name": "abs2",
-      "position": 4,
-      "key": "abs2",
-      "overload_of": "abs",
-      "content": "Returns the absolute value of an `int` value.",
-      "parameters": "[{\"name\":\"a\",\"type\":\"int\",\"required\":true,\"description\":\"the value whose absolute value is to be determined\"}]",
-      "examples": "[{\"code\":\"```\\nint num = -20;\\n\\nSystem.out.println(Math.abs(num));\\n```\\n\\n**Output:**\\n\\n20\"}]",
-      "syntax": "`public static int abs(int a)`",
       "external_link": null,
       "return_value": null
     }
