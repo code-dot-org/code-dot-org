@@ -31,9 +31,9 @@ class FirehoseTest < Minitest::Test
       FirehoseClient.instance.put_record(stream, {})
     end
     FirehoseClient.instance.flush!
-    api_requests = @client.api_requests.map do |api_request|
-      [api_request[:params][:delivery_stream_name], api_request]
-    end.to_h
+    api_requests = @client.api_requests.index_by do |api_request|
+      api_request[:params][:delivery_stream_name]
+    end
 
     FirehoseClient::STREAMS.each do |_, stream_name|
       api_request = api_requests[stream_name]
