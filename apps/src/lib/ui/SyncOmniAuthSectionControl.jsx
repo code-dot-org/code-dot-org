@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Heading1} from './Headings';
+import {Heading1, Heading2} from './Headings';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -141,6 +141,7 @@ class SyncOmniAuthSectionControl extends React.Component {
           handleClose={this.closeDialog}
         >
           <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
+          <Heading2>{'Sample subheading'}</Heading2>
           <div style={styles.scroll}>
             <pre>
               <code>{this.state.syncFailErrorLog}</code>
