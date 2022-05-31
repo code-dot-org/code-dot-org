@@ -20,7 +20,8 @@ const CodeReviewTimelineReview = ({
   closeReview,
   toggleResolveComment,
   viewAsCodeReviewer,
-  deleteCodeReviewComment
+  deleteCodeReviewComment,
+  currentUserId
 }) => {
   const {
     id,
@@ -28,6 +29,7 @@ const CodeReviewTimelineReview = ({
     isOpen,
     version,
     isVersionExpired,
+    ownerId,
     ownerName,
     comments
   } = review;
@@ -54,8 +56,11 @@ const CodeReviewTimelineReview = ({
             <FontAwesome icon="comments-o" />
           </div>
           <div style={styles.title}>
-            <div style={styles.codeReviewTitle}>{javalabMsg.codeReview()}</div>
-            <div style={styles.date}>{'requested by' + ownerName}</div>
+            <div style={styles.codeReviewTitle}>
+              {ownerId === currentUserId
+                ? javalabMsg.codeReviewForYou()
+                : javalabMsg.codeReviewForStudent({student: ownerName})}
+            </div>
             <div style={styles.date}>
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
@@ -115,7 +120,8 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+  currentUserId: state.currentUser?.userId
 }))(CodeReviewTimelineReview);
 
 CodeReviewTimelineReview.propTypes = {
@@ -125,7 +131,8 @@ CodeReviewTimelineReview.propTypes = {
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
   viewAsCodeReviewer: PropTypes.bool,
-  deleteCodeReviewComment: PropTypes.func.isRequired
+  deleteCodeReviewComment: PropTypes.func.isRequired,
+  currentUserId: PropTypes.number
 };
 
 const styles = {
@@ -154,7 +161,14 @@ const styles = {
     fontStyle: 'italic'
   },
   codeReviewTitle: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    lineHeight: '14px',
+    marginBottom: '4px'
+  },
+  author: {
+    fontSize: '12px',
+    lineHeight: '12px',
+    marginBottom: '4px'
   },
   date: {
     fontSize: '12px',
