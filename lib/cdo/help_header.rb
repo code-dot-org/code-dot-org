@@ -114,7 +114,8 @@ class HelpHeader
       # We don't need to protect against cross-site issues if we are staying on our own site. We should avoid adding
       # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
       # which page the user probably wants to report.
-      entry[:rel] = "noopener noreferrer nofollow" if URI(entry[:url]).host.present?
+      entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
+                                                            blank?
     end
     entries
   end
