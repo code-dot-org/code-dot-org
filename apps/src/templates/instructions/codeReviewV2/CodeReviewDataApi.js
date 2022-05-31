@@ -21,7 +21,7 @@ export default class CodeReviewDataApi {
       type: 'GET',
       data: {
         scriptId: this.scriptId,
-        projectLevelId: this.projectLevelId
+        projectLevelId: this.projectLevelId || this.levelId
       }
     });
   }
