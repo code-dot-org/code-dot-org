@@ -24,7 +24,6 @@ const PROVIDER_NAME = {
 export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
-export const FAILURE = 'failure';
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -76,13 +75,6 @@ class SyncOmniAuthSectionControl extends React.Component {
       return;
     }
 
-    if (buttonState === FAILURE) {
-      // On click after failure, reset the button so the user can try again.
-      this.setState({buttonState: READY});
-      this.openDialog();
-      return;
-    }
-
     // Default case: Button is READY
     this.setState({buttonState: IN_PROGRESS});
     // Section code is the course ID, without the G- or C- prefix.
@@ -98,9 +90,10 @@ class SyncOmniAuthSectionControl extends React.Component {
       })
       .catch(sync_error => {
         this.setState({
-          buttonState: FAILURE,
+          buttonState: READY,
           syncFailErrorLog: '' + sync_error
         });
+        this.openDialog();
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
@@ -118,7 +111,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   openDialog = () => {
-    this.setState({isDialogOpen: true, buttonState: READY});
+    this.setState({isDialogOpen: true});
   };
 
   closeDialog = () => {
@@ -206,8 +199,7 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
 }
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, FAILURE])
-    .isRequired,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
   onClick: PropTypes.func
 };
 
@@ -216,8 +208,6 @@ function buttonText(buttonState, providerName) {
     return i18n.loginTypeSyncButton_inProgress({providerName});
   } else if (buttonState === SUCCESS) {
     return i18n.loginTypeSyncButton_success({providerName});
-  } else if (buttonState === FAILURE) {
-    return i18n.loginTypeSyncButton_failure_more_info({providerName});
   }
   return i18n.loginTypeSyncButton({providerName});
 }
@@ -227,11 +217,6 @@ function iconProps(buttonState) {
     return {
       icon: 'refresh',
       iconClassName: 'fa-spin fa-fw'
-    };
-  } else if (buttonState === FAILURE) {
-    return {
-      icon: 'exclamation-circle',
-      iconClassName: 'fa-fw'
     };
   }
   return {};
