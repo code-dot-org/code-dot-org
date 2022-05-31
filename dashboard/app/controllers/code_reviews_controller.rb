@@ -66,7 +66,7 @@ class CodeReviewsController < ApplicationController
   end
 
   # GET /code_reviews/peers_with_open_reviews
-  # Returns the list of open code reviews for the given script and level
+  # Returns the list of open code reviews for the given script and project level
   # from peers in the user's code review groups.
   def peers_with_open_reviews
     params.require([:scriptId, :projectLevelId])
