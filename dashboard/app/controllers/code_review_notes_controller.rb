@@ -1,7 +1,7 @@
 class CodeReviewNotesController < ApplicationController
   before_action :authenticate_user!
 
-  load_and_authorize_resource :code_review_note, only: [:update]
+  load_and_authorize_resource :code_review_note, only: [:update, :destroy]
 
   # POST /code_review_notes
   def create
@@ -33,5 +33,14 @@ class CodeReviewNotesController < ApplicationController
     end
 
     render json: @code_review_note.summarize
+  end
+
+  # DELETE /code_review_notes/:id
+  def destroy
+    if @code_review_note.delete
+      return head :ok
+    else
+      return head :bad_request
+    end
   end
 end
