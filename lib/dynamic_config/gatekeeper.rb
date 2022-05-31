@@ -125,7 +125,7 @@ class GatekeeperBase < DynamicConfigBase
   def feature_names
     Set.new.tap do |result|
       @datastore_cache.all.each do |feature, rules|
-        result << feature if rules.present?
+        result << feature unless rules.blank?
       end
     end
   end

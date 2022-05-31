@@ -178,7 +178,7 @@ class Pd::InternationalOptIn < ApplicationRecord
       chileanSchoolId
     )
 
-    keys.index_with {|v| I18n.t("pd.form_labels.#{v.underscore}")}
+    Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
   end
 
   def email_opt_in?

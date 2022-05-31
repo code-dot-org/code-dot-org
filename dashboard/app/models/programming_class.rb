@@ -159,7 +159,7 @@ class ProgrammingClass < ApplicationRecord
     # ones without overload_of set
     methods = []
     programming_methods.each do |m|
-      next if m.overload_of.present?
+      next unless m.overload_of.blank?
       methods += [m.summarize_for_show]
     end
     methods

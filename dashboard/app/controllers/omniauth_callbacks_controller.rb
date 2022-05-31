@@ -134,7 +134,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     email = auth_hash.info.email || ""
     hashed_email = nil
-    hashed_email = User.hash_email(email) if email.present?
+    hashed_email = User.hash_email(email) unless email.blank?
     auth_option = AuthenticationOption.new(
       user: current_user,
       email: email,
