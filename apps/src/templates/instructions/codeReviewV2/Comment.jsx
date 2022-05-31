@@ -12,6 +12,8 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
+const FLASH_ERROR_TIME_MS = 5000;
+
 function Comment({
   comment,
   onResolveStateToggle,
@@ -25,6 +27,8 @@ function Comment({
   );
   const [hideResolved, setHideResolved] = useState(true);
   const [isUpdating, setIsUpdating] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
+  const [displayError, setDisplayError] = useState(false);
 
   useEffect(() => {
     isMounted.current = true;
@@ -89,10 +93,12 @@ function Comment({
       comment.id,
       newIsResolvedStatus,
       () => setIsCommentResolved(newIsResolvedStatus),
-      () => {
-        // TODO: handle set resolve failure
-      }
+      flashErrorMessage
     );
+  };
+
+  const deleteCodeReviewComment = () => {
+    onDelete(comment.id, () => setIsDeleted(true), flashErrorMessage);
   };
 
   const getMenuItems = () => {
@@ -119,7 +125,7 @@ function Comment({
     if (viewAsTeacher) {
       // Instructors can delete comments
       menuItems.push({
-        onClick: this.deleteCodeReviewComment,
+        onClick: deleteCodeReviewComment,
         text: javalabMsg.delete(),
         iconClass: 'trash'
       });
@@ -152,13 +158,21 @@ function Comment({
     });
   };
 
+  const flashErrorMessage = () => {
+    setDisplayError(true);
+    setTimeout(() => setDisplayError(false), FLASH_ERROR_TIME_MS);
+  };
+
   const {
     commentText,
     timestampString,
     isFromTeacher,
-    isFromOlderVersionOfProject,
-    hasError
+    isFromOlderVersionOfProject
   } = comment;
+
+  if (isDeleted) {
+    return null;
+  }
 
   return (
     <div
@@ -216,7 +230,7 @@ function Comment({
           <SafeMarkdown markdown={commentText} />
         </div>
       )}
-      {hasError && renderErrorMessage()}
+      {displayError && renderErrorMessage()}
     </div>
   );
 }
