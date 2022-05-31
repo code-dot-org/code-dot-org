@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ProjectVersionsControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = false
+
   test "can create project version" do
     student = create :student
     sign_in student
