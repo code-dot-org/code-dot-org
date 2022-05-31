@@ -657,7 +657,7 @@ GEM
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-cache (1.6.1)
       rack (>= 0.4)
     rack-mini-profiler (1.0.0)
