@@ -7,9 +7,10 @@ export const timelineElementType = {
 };
 
 export default class CodeReviewDataApi {
-  constructor(channelId, levelId, scriptId, locale) {
+  constructor(channelId, levelId, projectLevelId, scriptId, locale) {
     this.channelId = channelId;
     this.levelId = levelId;
+    this.projectLevelId = projectLevelId;
     this.scriptId = scriptId;
     this.locale = locale;
   }
@@ -19,8 +20,8 @@ export default class CodeReviewDataApi {
       url: `/code_reviews/peers_with_open_reviews`,
       type: 'GET',
       data: {
-        levelId: this.levelId,
-        scriptId: this.scriptId
+        scriptId: this.scriptId,
+        projectLevelId: this.projectLevelId || this.levelId
       }
     });
   }
@@ -67,9 +68,7 @@ export default class CodeReviewDataApi {
         url: `/code_reviews`,
         type: 'GET',
         data: {
-          channelId: this.channelId,
-          levelId: this.levelId,
-          scriptId: this.scriptId
+          channelId: this.channelId
         }
       })
         .done((codeReviews, _, request) => {
@@ -167,6 +166,7 @@ export default class CodeReviewDataApi {
           channelId: this.channelId,
           scriptId: this.scriptId,
           levelId: this.levelId,
+          projectLevelId: this.projectLevelId || this.levelId,
           version: version
         }
       })
