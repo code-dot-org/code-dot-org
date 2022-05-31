@@ -12,8 +12,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const MARKDOWN = '```';
-
 function Comment({
   comment,
   onResolveStateToggle,
@@ -28,16 +26,17 @@ function Comment({
   const [hideResolved, setHideResolved] = useState(true);
   const [isUpdating, setIsUpdating] = useState(false);
 
-  useEffect(prevProps => {
+  useEffect(() => {
     isMounted.current = true;
-    if (prevProps.comment.isResolved !== comment.isResolved) {
-      setHideResolved(comment.isResolved);
-      setIsCommentResolved(comment.isResolved);
-    }
     return () => {
       isMounted.current = false;
     };
   }, []);
+
+  useEffect(() => {
+    setHideResolved(comment.isResolved);
+    setIsCommentResolved(comment.isResolved);
+  }, [comment.isResolved]);
 
   const renderName = () => {
     const {
@@ -94,18 +93,6 @@ function Comment({
         // TODO: handle set resolve failure
       }
     );
-  };
-
-  const renderText = commentText => {
-    if (commentText.startsWith(MARKDOWN)) {
-      return (
-        <div>
-          <SafeMarkdown markdown={commentText} />
-        </div>
-      );
-    } else {
-      return commentText;
-    }
   };
 
   const getMenuItems = () => {
@@ -226,7 +213,7 @@ function Comment({
               styles.lessVisibleBackgroundColor)
           }}
         >
-          {renderText(commentText)}
+          <SafeMarkdown markdown={commentText} />
         </div>
       )}
       {hasError && renderErrorMessage()}
