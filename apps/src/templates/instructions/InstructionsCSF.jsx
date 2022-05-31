@@ -278,12 +278,11 @@ class InstructionsCSF extends React.Component {
   }
 
   setInstructionsRef(instructions) {
-    this.instructions =
-      instructions && instructions.getWrappedInstance().instructions;
+    this.instructions = instructions?.getWrappedInstance().instructions;
 
     // TopInstructions, our parent, needs a ref to the body of the instructions
     // to determine its height.
-    this.props?.setInstructionsRef(instructions);
+    this.props.setInstructionsRef(instructions);
   }
 
   render() {

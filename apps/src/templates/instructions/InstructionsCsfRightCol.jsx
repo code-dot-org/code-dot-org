@@ -87,11 +87,15 @@ class InstructionsCsfRightCol extends React.Component {
   render() {
     const displayCollapserButton = this.shouldDisplayCollapserButton();
 
+    const scrollButtonsBelowCollapserStyle = this.props.isMinecraft
+      ? styles.craftStyles.scrollButtonsBelowCollapser
+      : styles.scrollButtonsBelowCollapser;
+
     const scrollButtonsHeight =
       this.props.height -
       HEADER_HEIGHT -
       RESIZER_HEIGHT -
-      (displayCollapserButton ? styles.scrollButtonsBelowCollapser.top : 0);
+      (displayCollapserButton ? scrollButtonsBelowCollapserStyle.top : 0);
 
     return (
       <div>
@@ -118,7 +122,7 @@ class InstructionsCsfRightCol extends React.Component {
                 (this.props.isRtl
                   ? styles.craftStyles.scrollButtonsRtl
                   : styles.craftStyles.scrollButtons),
-              displayCollapserButton && styles.scrollButtonsBelowCollapser
+              displayCollapserButton && scrollButtonsBelowCollapserStyle
             ]}
             ref={c => {
               this.scrollButtons = c;
@@ -160,6 +164,11 @@ const styles = {
     },
     scrollButtonsRtl: {
       right: 0
+    },
+    scrollButtonsBelowCollapser: {
+      position: 'relative',
+      top: 60,
+      margin: '0px'
     }
   }
 };

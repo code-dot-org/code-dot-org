@@ -100,14 +100,14 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-    const showItems = this.props.isMinecraft ? this.props.height > 46 : true;
+    const showItems = this.props.isMinecraft ? this.props.height > 50 : true;
     const centerItems = this.props.isMinecraft
       ? this.props.height > 100
-      : this.props.height > 56;
+      : this.props.height > 60;
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: this.getMargin(),
+      top: 0,
       margin: '0 0 3px 0',
       left: centerItems ? '50%' : 25,
       transform: 'translateX(-50%)'
