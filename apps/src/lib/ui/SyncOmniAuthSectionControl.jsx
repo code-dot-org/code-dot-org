@@ -96,15 +96,24 @@ class SyncOmniAuthSectionControl extends React.Component {
 
         utils.reload();
       })
-      .catch(error_message => {
+      .catch(sync_error => {
         this.setState({
           buttonState: FAILURE,
-          syncFailErrorLog: '' + error_message
+          syncFailErrorLog: '' + sync_error
         });
-
-        // ERROR LOG HERE
-
-        console.log(error_message);
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students',
+            event: 'sync-oauth-button-error',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              loginType: sectionProvider,
+              error_message: sync_error
+            })
+          },
+          {includeUserId: true}
+        );
       });
   };
 
