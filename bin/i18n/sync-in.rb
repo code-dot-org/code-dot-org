@@ -412,7 +412,9 @@ def select_redactable(i18n_strings)
     contained_levels = i18n_strings["contained levels"].map do |contained_level|
       select_redactable(contained_level)
     end
-    contained_levels.select!(&:present?)
+    contained_levels.select! do |result|
+      !result.blank?
+    end
     redactable["contained levels"] = contained_levels unless contained_levels.empty?
   end
 

@@ -50,10 +50,10 @@ class HttpCache
     hello-world-retro-2021
     hello-world-emoji-2021
     outbreak
-  ).index_with do |script_name|
+  ).map do |script_name|
     # Most scripts use the default route pattern.
-    "/s/#{script_name}/lessons/*"
-  end.merge(
+    [script_name, "/s/#{script_name}/lessons/*"]
+  end.to_h.merge(
     # Add the "special case" routes here.
     'hourofcode' => '/hoc/*',
     'flappy' => '/flappy/*'

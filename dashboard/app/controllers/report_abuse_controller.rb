@@ -64,7 +64,7 @@ class ReportAbuseController < ApplicationController
         raise ZendeskError.new(response.code, response.body) unless response.success?
       end
 
-      if params[:channel_id].present?
+      unless params[:channel_id].blank?
         channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
         assets_path = "/v3/assets/#{params[:channel_id]}/"
         files_path = "/v3/files/#{params[:channel_id]}/"

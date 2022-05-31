@@ -806,7 +806,7 @@ def run_feature(browser, feature, options)
   unless parsed_output.nil?
     scenario_count = parsed_output[:scenarios].to_i
     scenario_info = parsed_output[:info]
-    scenario_info = ", #{scenario_info}" if scenario_info.present?
+    scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
   rerun_info = " with #{reruns} reruns" if reruns > 0
