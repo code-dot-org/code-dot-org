@@ -129,7 +129,7 @@ module TextToSpeech
   # @return [String] URL where the TTS audio file can be downloaded from. `nil` is returned if any of
   # the params are blank or if TTS is not supported for the given locale.
   def tts_url(text, locale = I18n.locale)
-    return nil unless TextToSpeech.locale_supported?(locale) && text.present?
+    return nil unless TextToSpeech.locale_supported?(locale) && !text.blank?
     "https://tts.code.org/#{tts_path(text)}"
   end
 
