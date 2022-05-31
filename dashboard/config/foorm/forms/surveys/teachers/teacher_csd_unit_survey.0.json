@@ -8,7 +8,6 @@
         {
           "type": "panel",
           "name": "variable_panel",
-          "visible": "true",
           "elements": [
             {
               "type": "radiogroup",
@@ -194,7 +193,7 @@
         {
           "type": "html",
           "name": "unit_specific_header",
-          "visibleIf": "{unit_number} <= 7 and {unit_number} > 1 and {unit_number} notempty",
+          "visibleIf": "{unit_number} <= 7 and {unit_number} >= 1 and {unit_number} notempty",
           "html": "<h2>Objectives: CSD Unit {unit_number} - {unit_name}</h2>\n<p>How effective were the lessons and materials in this unit in helping your students learn?</p><p><br/></p><p><strong>By the end of this unit how many of your students can...</strong></p>"
         },
         {
@@ -204,7 +203,77 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>Unit 1 panel</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "identify_characteristics",
+              "title": "Identify the characteristics of a computer?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "use_problem_solving_process",
+              "title": "Use the problem-solving process to address problems?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "view_cs_as_fun",
+              "title": "View computer science as relevant, fun, and empowering?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 1"
@@ -216,7 +285,100 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>Unit 2 panel (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "use_html",
+              "title": "Create a website using HTML to structure their content",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "use_css",
+              "title": "Create a website using CSS to style their content",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "personal_expression",
+              "title": "Create a website as a form of personal expression",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "question5",
+              "title": "Think critically about their responsibilities as both creators and consumers of digital media",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 2"
@@ -228,7 +390,100 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>unit 3 panel (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "use_vars_if_input",
+              "title": "Create an interactive animation of game using programming concepts such as variables, if-statements, user-input, and randomness",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "breakdown_functions",
+              "title": "Break down programming projects into sprites and functions",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "give_peer_feedback",
+              "title": "Give constructive feedback to a peer or teammate when completing a project",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "see_programming_as_fun",
+              "title": "See programming as a fun and creative form of expression",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 3"
@@ -240,7 +495,77 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>Unit 4 panel (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "prioritize_user_need",
+              "title": "Prioritize the needs of a user when using the design process to solve a problem",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "assess_different_designs",
+              "title": "Identify user needs and assess how well different designs address them",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "develop_prototype",
+              "title": "Develop a digital prototype and consider how their interface affects the usability of their app",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 4"
@@ -252,7 +577,100 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>unit 5 panel (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "understand_role_of_data",
+              "title": "Understand the role of data and data representation in solving problems",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "understand_binary_representation",
+              "title": "Explain the common ways data is represented in binary code",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "implement_data_solution",
+              "title": "Implement a data-based solution to a problem",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "determine_what_can_be_automated",
+              "title": "Determine how different aspects of the problem solving process could be automated",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 5"
@@ -264,7 +682,77 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "html": "<h1>Unit 6 panel (hidden)</h1>",
+              "visible": false
+            },
+            {
+              "type": "rating",
+              "name": "build_with_integrated_inputs_outputs",
+              "title": "Design and build a physical computing device that integrated physical inputs and outputs with digital apps",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "create_prototypes",
+              "title": "Create app prototypes that use a physical device to solve real-world problems",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "use_physical_computing_to_solve_problems",
+              "title": "Use physical computing to solve problems in fun and innovative ways",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 6"
@@ -276,7 +764,100 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<em>Unit {unit_number} survey content under construction.</em>"
+              "visible": false,
+              "html": "<h1>unit 7 panel (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "create_model_in_app_lab",
+              "title": "Create a machine learning model in AP Lab to solve a problem",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "use_model_in_app_lab",
+              "title": "Create an app in App Lab that uses a machine learning model",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "understand_how_models_make_decisions",
+              "title": "Understand how machine learning models make decisions from data",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "create_models_from_own_data",
+              "title": "Create machine learning models from their own data to solve problems in their community",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ],
           "visibleIf": "{unit_number} = 7"
