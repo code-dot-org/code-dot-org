@@ -56,7 +56,7 @@ nameless_ids.each do |user_id|
   print "#{user_id}: "
   user = User.find(user_id)
 
-  if user.name.present?
+  unless user.name.blank?
     puts "skipping - name not blank"
     next
   end

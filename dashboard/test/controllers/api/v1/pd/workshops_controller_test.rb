@@ -1167,7 +1167,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   private
 
   def tomorrow_at(hour, minute = nil)
-    tomorrow = 1.day.from_now
+    tomorrow = Time.zone.now + 1.day
     Time.zone.local(tomorrow.year, tomorrow.month, tomorrow.mday, hour, minute)
   end
 
