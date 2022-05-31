@@ -54,7 +54,7 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.merge(
       # map array of field names to hash of {field_name: nil}
-      Hash[FIELDS_WITH_DYNAMIC_LABELS.map {|field_name| [field_name, nil]}]
+      FIELDS_WITH_DYNAMIC_LABELS.index_with {|_field_name| nil}
     ).freeze
   end
 end

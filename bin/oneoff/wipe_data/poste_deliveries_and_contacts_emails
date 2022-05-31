@@ -13,7 +13,7 @@ puts 'Populating hashed_email_to_birthday...'
 hashed_email_to_birthday = {}
 DASHBOARD_DB[:users].
   where(user_type: 'student').
-  where('hashed_email IS NOT NULL').
+  where.not(hashed_email: nil).
   paged_each(rows_per_fetch: 10_000) do |user|
   hashed_email_to_birthday[user[:hashed_email]] = user[:birthday].strftime('%F')
 end

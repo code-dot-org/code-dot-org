@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-24 13:40:11 UTC",
+    "serialized_at": "2022-05-31 16:47:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5825,7 +5825,7 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L4-L2_2022"
@@ -8704,6 +8704,18 @@
       }
     },
     {
+      "name": "Inheritance",
+      "url": "https://youtu.be/H0htNTwNvrY",
+      "key": "inheritance",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "inheritance"
+      }
+    },
+    {
       "name": "Java Lab Basics",
       "url": "https://youtu.be/Dk50QTwp6Bw",
       "key": "java_lab_basics",
@@ -9561,6 +9573,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "inheritance"
       }
     },
     {

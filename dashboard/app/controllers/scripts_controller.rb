@@ -221,7 +221,7 @@ class ScriptsController < ApplicationController
   def get_rollup_resources
     unit = Script.get_from_cache(params[:id])
     course_version = unit.get_course_version
-    return render status: 400, json: {error: 'Script does not have course version'} unless course_version
+    return render status: :bad_request, json: {error: 'Script does not have course version'} unless course_version
     rollup_pages = []
     if unit.lessons.any? {|l| !l.programming_expressions.empty?}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(unit), course_version_id: course_version.id))

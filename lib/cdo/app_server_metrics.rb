@@ -30,7 +30,7 @@ module Cdo
       # Disable the reporting endpoint with an empty-string :path by default.
       opts[:path] ||= ''
       super(app, opts)
-      @metrics = %i(active queued calling).map {|name| [name, []]}.to_h
+      @metrics = %i(active queued calling).index_with {|_name| []}
 
       @namespace = opts[:namespace] || 'App Server'
       @dimensions = opts[:dimensions] || {}
@@ -67,9 +67,9 @@ module Cdo
       stats = {}
       stats.merge! Raindrops::Linux.tcp_listener_stats(@tcp.uniq) if @tcp
       stats.merge! Raindrops::Linux.unix_listener_stats(@unix.uniq) if @unix
-      stats = %i(active queued).map do |name|
-        [name, stats.values.map(&name).inject(:+)]
-      end.to_h
+      stats = %i(active queued).index_with do |name|
+        stats.values.map(&name).inject(:+)
+      end
       stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
       stats
     end

@@ -152,7 +152,7 @@ class LessonsController < ApplicationController
     new_level_suffix = params[:newLevelSuffix].presence
     ActiveRecord::Base.transaction do
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
-      render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
+      render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
   rescue => err
     render(json: {error: err.message}.to_json, status: :not_acceptable)

@@ -54,7 +54,7 @@ def wipe_emails_from_poste_deliveries(contact_ids)
     PEGASUS_DB.transaction do
       contact_ids_slice.each do |contact_id|
         PEGASUS_DB[:poste_deliveries].where(contact_id: contact_id).
-          where('sent_at IS NOT NULL').
+          where.not(sent_at: nil).
           update(contact_email: '')
       end
     end

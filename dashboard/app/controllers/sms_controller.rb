@@ -4,7 +4,7 @@ class SmsController < ApplicationController
 
   # set up a client to talk to the Twilio REST API
   def send_to_phone
-    if params[:level_source] && !params[:level_source].empty? && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
+    if params[:level_source].present? && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms_link(level_source_url(level_source), params[:phone])
     elsif params[:channel_id] && params[:phone] && ProjectsController::STANDALONE_PROJECTS.include?(params[:type])
       url =

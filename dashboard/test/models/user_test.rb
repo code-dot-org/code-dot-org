@@ -3455,7 +3455,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.pluck(:title)
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3465,7 +3465,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries PL Course', 'PL Script Other'], courses_and_scripts.pluck(:title)
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3487,7 +3487,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal ['testcourse'], courses_and_scripts.pluck(:name)
     end
   end
 
@@ -3668,7 +3668,7 @@ class UserTest < ActiveSupport::TestCase
   test 'new users require a password if no authentication provided' do
     assert_raises(ActiveRecord::RecordInvalid) do
       user = create :user, password: nil
-      assert !user.errors[:password].empty?
+      assert_not user.errors[:password].empty?
     end
   end
 
