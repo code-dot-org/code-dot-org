@@ -41,6 +41,7 @@ const DEFAULT_PROPS = {
   addCodeReviewComment: () => {},
   closeReview: () => {},
   toggleResolveComment: () => {},
+  deleteCodeReviewComment: () => {},
   viewAsCodeReviewer: false
 };
 
@@ -116,6 +117,12 @@ describe('CodeReviewTimelineReview', () => {
   it('hides the close button if the code review is closed', () => {
     const review = {...DEFAULT_REVIEW, isOpen: false};
     const wrapper = setUp({review: review});
+    expect(wrapper.find('Button')).to.have.length(0);
+  });
+
+  it('hides the close button if not viewAsCodeReviewer', () => {
+    const review = {...DEFAULT_REVIEW, isOpen: true};
+    const wrapper = setUp({review: review, viewAsCodeReviewer: true});
     expect(wrapper.find('Button')).to.have.length(0);
   });
 

@@ -119,7 +119,7 @@ function Comment({
     if (viewAsTeacher) {
       // Instructors can delete comments
       menuItems.push({
-        onClick: onDelete,
+        onClick: this.deleteCodeReviewComment,
         text: javalabMsg.delete(),
         iconClass: 'trash'
       });
