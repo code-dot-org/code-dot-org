@@ -64,7 +64,7 @@ class CodeReview < ApplicationRecord
       isVersionExpired: false,    # TODO: implement this!
       isOpen: open?,
       createdAt: created_at,
-    }
+    }.merge!(summarize_owner_info)
   end
 
   def summarize_with_comments
