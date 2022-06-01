@@ -24,21 +24,6 @@ xhr.onload = function() {
 xhr.responseType = "document";
 xhr.send();
 
-/*
-function htmlToElement(html) {
-    var template = document.createElement('template');
-    html = html.trim(); // Never return a text node of whitespace as the result
-    template.innerHTML = html;
-    return template.content.firstChild;
-}
-
-fetch('/weblab/footer2.html').then(response => response.text()).then(data => {
-  footerContents = htmlToElement(data);
-  if (footerContents) {
-    applyFooter();
-  }
-});
-*/
 var applyFooter = function() {
   while (footerContents.childNodes.length > 0) {
     document.body.appendChild(footerContents.childNodes[0]);
