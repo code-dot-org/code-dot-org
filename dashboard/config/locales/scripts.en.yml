@@ -24489,6 +24489,7 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
