@@ -216,7 +216,7 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-  get '/projects/weblab_footer', to: 'projects#weblab_footer'
+  get '/weblab/footer', to: 'projects#weblab_footer'
 
   resources :projects, path: '/projects/', only: [:index] do
     collection do
