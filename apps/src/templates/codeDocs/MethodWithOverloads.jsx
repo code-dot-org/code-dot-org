@@ -159,7 +159,8 @@ const styles = {
     borderWidth: 1,
     borderRadius: 5,
     padding: 5,
-    marginBottom: 10
+    marginBottom: 10,
+    minWidth: 'fit-content'
   },
   openOverloadHeader: {
     backgroundColor: color.lightest_gray,
