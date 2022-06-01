@@ -249,10 +249,47 @@
                 {
                   "value": "workshop_increased_confidence",
                   "text": "This workshop increased my confidence that I can teach {workshop_course} as an AP course."
+                },
+                {
+                  "value": "resources_prep_ap_exam",
+                  "text": "I know where to find the resources to help me design learning activities lessons to prepare students to take the AP exam."
                 }
               ]
             }
           ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "prework_complete",
+          "title": "Prior to the workshop you received some pre-work in the 'Getting Started Modules'. Did you complete the pre-work? ",
+          "visibleIf": "{workshop_course}='Computer Science A'",
+          "choices": [
+            {
+              "value": "all",
+              "text": "I completed all of the pre-work"
+            },
+            {
+              "value": "some",
+              "text": "I completed some of the pre-work, not all of it"
+            },
+            {
+              "value": "none",
+              "text": "I was aware there was pre-work but didn't do it"
+            },
+            {
+              "value": "didnt_know",
+              "text": "I didn't know there was pre-work"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "prework_useful",
+          "title": "To what extent did you find the pre-work or 'Getting Started Modules' helpful for preparing you to engage with this workshop?",
+          "visibleIf": "{prework_complete}  anyof ['all', 'some'] ",
+          "rateMax": 7,
+          "minRateDescription": "Not Helpful At All",
+          "maxRateDescription": "Very Helpful"
         },
         {
           "type": "panel",
