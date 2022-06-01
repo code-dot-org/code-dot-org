@@ -12,6 +12,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import '@cdo/apps/templates/instructions/codeReviewV2/comment.scss';
 
 const FLASH_ERROR_TIME_MS = 5000;
 
@@ -221,7 +222,10 @@ function Comment({
               styles.lessVisibleBackgroundColor)
           }}
         >
-          <SafeMarkdown markdown={commentText} />
+          <SafeMarkdown
+            markdown={commentText}
+            className="code-custom-background"
+          />
         </div>
       )}
       {displayError && (
