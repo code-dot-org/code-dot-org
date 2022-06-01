@@ -74,6 +74,7 @@ export default class LibraryClientApi {
               study: 'applab_library_versions',
               event: event,
               data_json: JSON.stringify({
+                error: error.message,
                 channelId: this.channelId,
                 pathname: location.pathname
               })
