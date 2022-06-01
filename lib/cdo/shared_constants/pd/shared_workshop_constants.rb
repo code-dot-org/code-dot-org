@@ -228,10 +228,16 @@ module Pd
     }.freeze
 
     ACTIVE_COURSE_WORKSHOPS = {
-      CSD: 'CS Discoveries',
-      CSP: 'CS Principles',
-      CSA: 'Computer Science A'
+      CSD: COURSE_CSD,
+      CSP: COURSE_CSP,
+      CSA: COURSE_CSA
     }.freeze
+
+    ACTIVE_COURSES_WITH_SURVEYS = [
+      COURSE_CSD,
+      COURSE_CSP,
+      COURSE_CSA
+    ].freeze
 
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,
