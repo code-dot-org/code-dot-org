@@ -72,6 +72,7 @@ var ALLOWED_KEYS = new Set([
   'isProjectTemplateLevel',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'serverProjectLevelId',
   'serverScriptId',
   'exportApp',
   'expoGenerateApk',

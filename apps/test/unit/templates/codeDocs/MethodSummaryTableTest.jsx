@@ -22,24 +22,14 @@ describe('MethodSummaryTable', () => {
   });
 
   it('shows a table with the provided methods', () => {
-    const wrapper = shallow(
-      <MethodSummaryTable
-        methods={defaultMethods}
-        programmingClassLink="/docs/ide/java/classes/testclass"
-      />
-    );
+    const wrapper = shallow(<MethodSummaryTable methods={defaultMethods} />);
     const methodTable = wrapper.find('table').at(0);
     expect(methodTable).to.not.be.null;
     expect(methodTable.find('td').length).to.equal(2);
   });
 
   it('show the markdown content for each method', () => {
-    const wrapper = shallow(
-      <MethodSummaryTable
-        methods={defaultMethods}
-        programmingClassLink="/docs/ide/java/classes/testclass"
-      />
-    );
+    const wrapper = shallow(<MethodSummaryTable methods={defaultMethods} />);
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(2);
     expect(
       wrapper
@@ -56,24 +46,7 @@ describe('MethodSummaryTable', () => {
   });
 
   it('shows a link to the method', () => {
-    const wrapper = shallow(
-      <MethodSummaryTable
-        methods={defaultMethods}
-        programmingClassLink="/docs/ide/java/classes/testclass"
-      />
-    );
-    expect(wrapper.find('TextLink').length).to.equal(2);
-    expect(
-      wrapper
-        .find('TextLink')
-        .at(0)
-        .props().href
-    ).to.include('/docs/ide/java/classes/testclass');
-    expect(
-      wrapper
-        .find('TextLink')
-        .at(1)
-        .props().href
-    ).to.include('/docs/ide/java/classes/testclass');
+    const wrapper = shallow(<MethodSummaryTable methods={defaultMethods} />);
+    expect(wrapper.find('a').length).to.equal(2);
   });
 });
