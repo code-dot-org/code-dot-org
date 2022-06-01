@@ -227,7 +227,8 @@ const styles = {
     paddingTop: 6,
     width: '100%',
     boxSizing: 'border-box',
-    display: 'flex'
+    display: 'flex',
+    minWidth: 100
   },
   helpTabsLtr: {
     float: 'left',
