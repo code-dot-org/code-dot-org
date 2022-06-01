@@ -120,6 +120,7 @@ namespace :build do
     Dir.chdir(pegasus_dir) do
       ChatClient.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
+      RakeUtils.system 'sass', '--update', 'sites.v3/code.org/public/sass:sites.v3/code.org/public/css/generated'
       if CDO.daemon
         ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
