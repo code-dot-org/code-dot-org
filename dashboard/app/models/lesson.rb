@@ -265,7 +265,7 @@ class Lesson < ApplicationRecord
            else
              "&survey_data[course_name]=#{script.localized_title}"
            end
-    url + "{noformat}"
+    url
   end
 
   def lesson_plan_pdf_url
