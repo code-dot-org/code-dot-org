@@ -29,9 +29,11 @@ class CodeReviewNote < ApplicationRecord
     {
       id: id,
       commenterName: commenter&.name,
+      commenterId: commenter&.id,
       comment: comment,
       isResolved: is_resolved,
-      createdAt: created_at
+      createdAt: created_at,
+      isFromTeacher: code_review.owner.teachers.include?(commenter), # TODO: memoize teacher list on user?
     }
   end
 end
