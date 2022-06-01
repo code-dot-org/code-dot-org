@@ -236,7 +236,8 @@ module Pd
     ACTIVE_COURSES_WITH_SURVEYS = [
       COURSE_CSD,
       COURSE_CSP,
-      COURSE_CSA
+      COURSE_CSA,
+      COURSE_CSF
     ].freeze
 
     WORKSHOP_TYPES = {
