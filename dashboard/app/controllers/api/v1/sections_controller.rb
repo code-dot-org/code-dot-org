@@ -248,7 +248,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {result: 'success'}
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
-    render json: {result: 'invalid groups'}, status: 400
+    render json: {result: 'invalid groups'}, status: :bad_request
   end
 
   # POST /api/v1/sections/<id>/code_review_enabled
