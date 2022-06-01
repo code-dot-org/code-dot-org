@@ -48,7 +48,7 @@ export default class ReadOnlyBlockSpace extends React.Component {
 
   componentDidUpdate() {
     if (this.state.blockSpace) {
-      Blockly.svgResize(this.state.blockSpace);
+      Blockly.cdoUtils.workspaceSvgResize(this.state.blockSpace);
     }
   }
 
