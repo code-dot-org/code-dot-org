@@ -43,7 +43,7 @@ def get_rows
     find_each do |enrollment|
       results << [
         enrollment.workshop.regional_partner&.name,
-        enrollment.workshop.workshop_starting_date.strftime('%Y-%m-%d'),
+        enrollment.workshop.workshop_starting_date&.strftime('%Y-%m-%d'),
         enrollment.workshop.id,
         enrollment.code,
         enrollment.first_name,
