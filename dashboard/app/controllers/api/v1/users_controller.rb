@@ -155,7 +155,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.next_census_display = next_date
     @user.save
 
-    render status: 200, json: {next_census_display: @user.next_census_display}
+    render status: :ok, json: {next_census_display: @user.next_census_display}
   end
 
   # POST /api/v1/users/<user_id>/dismiss_census_banner
@@ -169,7 +169,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.next_census_display = Date.new(year, 11, 15)
     @user.save
 
-    render status: 200, json: {next_census_display: @user.next_census_display}
+    render status: :ok, json: {next_census_display: @user.next_census_display}
   end
 
   # POST /api/v1/users/<user_id>/dismiss_donor_teacher_banner

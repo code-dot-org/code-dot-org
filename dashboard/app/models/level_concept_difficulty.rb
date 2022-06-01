@@ -43,7 +43,7 @@ class LevelConceptDifficulty < ApplicationRecord
     return super if new_record?
 
     # Otherwise, make sure we write `nil` over unpassed attributes
-    defaults = Hash[CONCEPTS.map {|concept| [concept, nil]}]
+    defaults = CONCEPTS.index_with {|concept| nil}
     super(defaults.merge(attrs))
   end
 
