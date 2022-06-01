@@ -1162,7 +1162,7 @@ class Script < ApplicationRecord
       raise 'Can not have both a destination unit group and a destination professional learning course.'
     end
 
-    source_course_version = course_version || unit_group&.course_version
+    source_course_version = get_course_version
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
