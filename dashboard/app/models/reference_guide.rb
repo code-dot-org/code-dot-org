@@ -62,9 +62,9 @@ class ReferenceGuide < ApplicationRecord
     File.delete(file_path)
   end
 
-  def copy_to_course_version(course_version)
+  def copy_to_course_version(destination_course_version)
     copied_ref_guide = ReferenceGuide.find_or_create_by(
-      course_version_id: course_version.id,
+      course_version_id: destination_course_version.id,
       key: key
     ) do |created_ref_guide|
       created_ref_guide.update!(
