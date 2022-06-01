@@ -61,7 +61,8 @@
           "name": "Ahoj Svet",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
-          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov."
+          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
+          "student_overview": "V tejto lekcii sa naučíš základy informatiky programovaním v Sprite Lab. Sprite Lab je nástroj, ktorý môžeš použiť na vytváranie nápaditých a zábavných projektov. Naučíš sa vytvárať a animovať postavičky a nechať ich komunikovať pomocou udalostí."
         },
         "artist/Artist": {
           "name": "Umelec",
@@ -88,7 +89,8 @@
           "name": "Ahoj Svet",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
-          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov."
+          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
+          "student_overview": "V tejto lekcii sa naučíš základy informatiky programovaním v Sprite Lab. Sprite Lab je nástroj, ktorý môžeš použiť na vytváranie nápaditých a zábavných projektov. Naučíš sa vytvárať a animovať postavičky a nechať ich komunikovať pomocou udalostí."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Vodné dobrodužstvo",
@@ -102,13 +104,14 @@
           "overview": "V rámci tejto lekcie sa žiaci dozvedia, prečo je šifrovanie dôležité, a spoznajú jednoduché techniky prelomenia (alebo crackingu) tajných správ. Sami skúsia prelomiť správu zašifrovanú klasickou Cézarovou šifrou aj šifrou s náhodnou substitúciou. Žiaci by mali pochopiť, že v čase výkonných výpočtových nástrojov je potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie posolstvo tejto lekcie spočíva v tom, aby si žiaci uvedomili, ako a prečo hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť kvalitné šifrovanie nie je ľahké. Žiaci budú zasvätení do úvah, na čo všetko je potrebné myslieť pri vytváraní silného šifrovania, ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť sa na ochranu súkromia pri posielaní dát po internete je dôležitá pre každého používateľa internetu.",
           "preparation": "-   Preskúmajte obe verzie widgetu",
           "purpose": "„Šifrovanie“ je proces transformácie správy tak, aby bol originál „skrytý“ pred každým, kto nie je jej zamýšľaným príjemcom. Šifrovanie už nie je len pre armádu a špiónov. Šifrovanie používame každý deň na internete, predovšetkým na vykonávanie obchodných transakcií, a bez neho by sa naša ekonomika mohla zastaviť. \n\nTáto lekcia poskytuje žiakom prvú skúsenosť s tým, aké myslenie je potrebné pri šifrovaní správ v súvislosti s výpočtovými nástrojmi. Výpočtové nástroje výrazne zvyšujú silu a zložitosť algoritmov, ktoré používame na šifrovanie informácií, ale tie isté nástroje zvyšujú aj našu schopnosť prelomiť šifrovanie. Vývoj silného šifrovania sa opiera o znalosť problémov, ktoré sú pre počítače „ťažké“ vyriešiť, a o využitie tejto znalosti na šifrovanie správ. Ako zdroj informácií si môžete prečítať celú 5. kapitolu knihy _Blown to Bits_.  Poskytuje spoločenský kontext, ktorý možno budete chcieť preniesť do svojej triedy.",
-          "student_overview": "V tejto lekcii sa študenti dozvedia o nutnosti šifrovania a jednoduchých technikách prelomenia (alebo crackingu) tajných správ. Sami si skúsia prelomiť správu zašifrovanú klasickou Caesarovou šifrou i náhodnou substitučnou šifrou. Študenti by mali jednoznačne pochopiť, že v čase výkonných výpočtových nástrojov je potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie posolstvo tejto lekcie je v tom, aby si žiaci uvedomili, ako a prečo hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť kvalitné šifrovanie nie je ľahké. Študenti budú zasvätení do úvah, na čo všetko je potrebné myslieť pri vytváraní silného šifrovania, ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť sa na súkromie pri posielaní dát po internete je dôležitá pre každého používateľa internetu."
+          "student_overview": "V rámci tejto lekcie sa žiaci dozvedia, prečo je šifrovanie dôležité, a spoznajú jednoduché techniky prelomenia (alebo crackingu) tajných správ. Sami skúsia prelomiť správu zašifrovanú klasickou Cézarovou šifrou aj šifrou s náhodnou substitúciou. Žiaci by mali pochopiť, že v čase výkonných výpočtových nástrojov je potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie posolstvo tejto lekcie spočíva v tom, aby si žiaci uvedomili, ako a prečo hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť kvalitné šifrovanie nie je ľahké. Žiaci budú zasvätení do úvah, na čo všetko je potrebné myslieť pri vytváraní silného šifrovania, ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť sa na ochranu súkromia pri posielaní dát po internete je dôležitá pre každého používateľa internetu."
         },
         "hello-world-animals-2021/Hello World": {
           "name": "Ahoj Svet",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
-          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov."
+          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
+          "student_overview": "V tejto lekcii sa naučíš základy informatiky programovaním v Sprite Lab. Sprite Lab je nástroj, ktorý môžeš použiť na vytváranie nápaditých a zábavných projektov. Naučíš sa vytvárať a animovať postavičky a nechať ich komunikovať pomocou udalostí."
         },
         "starwars/Hour of Code 2015": {
           "name": "Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)",
@@ -142,7 +145,8 @@
           "name": "Ahoj Svet",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
-          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov."
+          "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
+          "student_overview": "V tejto lekcii sa naučíš základy informatiky programovaním v Sprite Lab. Sprite Lab je nástroj, ktorý môžeš použiť na vytváranie nápaditých a zábavných projektov. Naučíš sa vytvárať a animovať postavičky a nechať ich komunikovať pomocou udalostí."
         },
         "starwarsblocks/Hour of Code 2015": {
           "overview": "Na tejto lekcii získajú žiaci všetkých vekových kategórií úvodné skúsenosti s programovaním a informatikou v bezpečnom a podnetnom prostredí. Táto lekcia má dve verzie. Táto verzia využíva bloky na presúvanie a najlepšie sa hodí pre žiakov používajúcich mobilné zariadenia bez klávesnice, mladších žiakov a zahraničných žiakov. Odporúča sa pre vekovú kategóriu 6+.\n\nK dispozícii je aj verzia [JavaScript](s/starwars). Pre starších žiakov na počítačoch môže byť učenie sa jazyka JavaScript zábavné a predstavovať ďalšiu výzvu. Upozorňujeme, že syntax jazyka JavaScript nie je preložená a pre prvú Hodinu kódu poskytujú preložené bloky, ktoré nájdete tu, vhodnejší úvod. Táto verzia kurzu je skvelá aj vtedy, ak máte v triede žiakov, ktorí sa už naučili trochu programovať. Odporúča sa pre vekovú kategóriu 11+.",
@@ -851,19 +855,19 @@
           "name": "Úvod do riešenia problémov"
         },
         "csd1-2018/The Problem Solving Process": {
-          "name": "Proces riešenia problémov"
+          "name": "Postup riešenia problémov"
         },
         "csd1-2018/Exploring Problem Solving": {
-          "name": "Objavovanie riešenia problémov"
+          "name": "Objavujeme riešenie problémov"
         },
         "csd1-2018/What is a Computer?": {
-          "name": "Čo je počítač?"
+          "name": "Čo je to počítač?"
         },
         "csd1-2018/Input and Output": {
-          "name": "Vstup a Výstup"
+          "name": "Vstup a výstup"
         },
         "csd1-2018/Processing": {
-          "name": "Spracovanie"
+          "name": "Spracúvanie"
         },
         "csd1-2018/Apps and Storage": {
           "name": "Aplikácie a Pamäť"
@@ -1282,6 +1286,9 @@
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Kráľovská bitka s udalosťami"
         },
+        "csd3-2019/Programming for Entertainment": {
+          "name": "Záverečný test po projekte"
+        },
         "csd3-2019/Plotting Shapes": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
@@ -1345,11 +1352,17 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Projekt - Vytvor vlastnú hru"
         },
+        "csd6-2019/Innovations in Computing": {
+          "name": "Záverečný test po projekte"
+        },
         "csd6-2019/Designing Screens with Code": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Funkcie s parametrami"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Záverečný test po projekte"
         },
         "csd4-2019/Understanding Your User": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
@@ -1357,29 +1370,38 @@
         "csd4-2019/Digital Design": {
           "name": "Digitálny dizajn"
         },
+        "csd5-2019/Representation Matters": {
+          "name": "Záverečný test po projekte"
+        },
         "csd5-2019/Patterns and Representation": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Úvod do riešenia problémov"
         },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Záverečný test po projekte"
+        },
         "csd1-2019/Exploring Problem Solving": {
-          "name": "Objavovanie riešenia problémov"
+          "name": "Objavujeme riešenie problémov"
         },
         "csd1-2019/What is a Computer?": {
-          "name": "Čo je počítač?"
+          "name": "Čo je to počítač?"
         },
         "csd1-2019/Input and Output": {
-          "name": "Vstup a Výstup"
+          "name": "Vstup a výstup"
         },
         "csd1-2019/Processing": {
-          "name": "Spracovanie"
+          "name": "Spracúvanie"
         },
         "csd1-2019/Apps and Storage": {
           "name": "Aplikácie a Pamäť"
         },
         "csd1-2019/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
+        },
+        "csd2-2019/Exploring Websites": {
+          "name": "Záverečný test po projekte"
         },
         "csd2-2019/Websites for Expression ": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
@@ -1922,22 +1944,25 @@
           "name": "Úvod do riešenia problémov"
         },
         "csd1-2017/The Problem Solving Process": {
-          "name": "Proces riešenia problémov"
+          "name": "Postup riešenia problémov"
         },
         "csd1-2017/Exploring Problem Solving": {
-          "name": "Objavovanie riešenia problémov"
+          "name": "Objavujeme riešenie problémov"
         },
         "csd1-2017/What is a Computer?": {
-          "name": "Čo je počítač?"
+          "name": "Čo je to počítač?"
         },
         "csd1-2017/Input and Output": {
-          "name": "Vstup a Výstup"
+          "name": "Vstup a výstup"
         },
         "csd1-2017/Processing": {
-          "name": "Spracovanie"
+          "name": "Spracúvanie"
         },
         "csd1-2017/Storage": {
           "name": "Pamäť"
+        },
+        "csd1-2017/Apps and Problem Solving": {
+          "name": "Aplikácie a riešenie problémov"
         },
         "csd1-2017/Project - Propose an App": {
           "name": "Projekt - Navrhnite aplikáciu"
@@ -2299,8 +2324,10 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Nákaza",
+          "overview": "Táto hodina kombinuje **budovanie zručností** v súvislosti s udalosťami s **miniprojektom**, v rámci ktorého si žiaci vytvoria vlastnú počítačovú simuláciu v Sprite Labe. Žiaci budú skúmať simuláciu, aby pochopili, ako rýchlo sa môže vírus šíriť a čo sa dá urobiť na jeho spomalenie. ",
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
-          "purpose": "V predchádzajúcej lekcii žiaci zozbierali a vyhodnotili údaje z jednoduchej simulácie.  V tejto lekcii budú žiaci postupovať podľa pokynov a naprogramujú si vlastný simulačný model. Predchádzajúce vedomosti žiakov o vypuknutí vírusov v reálnom svete budú aplikované na fiktívny scenár. "
+          "purpose": "V predchádzajúcej lekcii žiaci zozbierali a vyhodnotili údaje z jednoduchej simulácie.  V tejto lekcii budú žiaci postupovať podľa pokynov a naprogramujú si vlastný simulačný model. Predchádzajúce vedomosti žiakov o vypuknutí vírusov v reálnom svete budú aplikované na fiktívny scenár. ",
+          "student_overview": "Do Monster Townu prenikol vírus! Naučte sa vytvoriť simulátor vírusu a pomôžte príšerkám, aby boli opäť zdravé."
         },
         "coursef-2021/AI for Oceans": {
           "name": "AI pomáha oceánom",
@@ -3064,8 +3091,14 @@
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
+        "csd4-2021/Analysis of Design": {
+          "name": "Záverečný test po projekte"
+        },
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "name": "Záverečný test po projekte"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funkcie s parametrami"
@@ -3073,8 +3106,14 @@
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
+        "csd5-2021/Representation Matters": {
+          "name": "Záverečný test po projekte"
+        },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Objavujeme informatiku: Záverečný dotazník"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "Záverečný test po projekte"
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Tvorba tvarov"
@@ -3138,31 +3177,77 @@
           "name": "Objavujeme informatiku: Záverečný dotazník"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Úvod do riešenia problémov"
+          "name": "Úvod do riešenia problémov",
+          "overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nV tejto lekcii žiaci pracujú v skupinách na navrhovaní lodiek z hliníkovej fólie. Cieľom je navrhnúť loďku, ktorá udrží čo najviac jednocentových mincí. Skupiny pracujú na svojich loďkách počas dvoch kôl, pričom ich cieľom je dosiahnuť, aby v druhom kole ich loďka udržala viac mincí než v prvom. Štruktúra aktivity odkazuje na rôzne kroky, z ktorých pozostáva proces riešenia problémov a žiaci sa s nimi podrobnejšie oboznámia v nasledujúcej lekcii. Na konci hodiny žiaci zreflektujú túto aktivitu a spoja si ju s prístupmi k riešeniu problémov, ktoré budú využívať po zvyšok kurzu.\n\n**K dispozícii sú aj alternatívne verzie tejto lekcie** \n\n-   [Novinový stôl](/s/csd1-2021/lessons/9/)\n-   [Špagetový most](/s/csd1-2021/lessons/10/)\n-   [Papierová veža](/s/csd1-2021/lessons/11/)",
+          "preparation": "**Pre každú skupinu**\n\n-   2 kusy hliníkovej fólie s rozmermi 12,5x12,5 cm\n-   1 nádoba, do ktorej sa dá napustiť 7,5 – 12,5 cm vody\n-   Viacero papierových utierok alebo handier na umiestnenie pod nádobu\n-   15 jednocentových mincí\n-   1 kópia sprievodcu aktivitou\n\n**Pre učiteľa**\n\n-   1 nádoba, do ktorej sa dá napustiť 7,5 – 12,5 cm vody\n-   50 jednocentových mincí\n-   Papierové utierky alebo handry do zásoby ",
+          "purpose": "Táto lekcia je zábavným úvodom k otvorenému, spoločnému a tvorivému riešeniu problémov, ktoré budú žiaci využívať po zvyšok tohto tematického celku a kurzu. Úloha s hliníkovými loďkami sa dá ľahko zameniť za niektorú z množstva iných úloh, pri ktorých si žiaci majú zadefinovať ciele, vytvoriť plán, vyskúšať riešenie, vyhodnotiť výsledky a potom svoje riešenie postupne zlepšovať. Výber úlohy, ktorá nesúvisí s výpočtovou technikou, je zámerný. Informatika je vo svojej podstate odbor zameraný na riešenie problémov, a tým, že v tomto bode ešte nevyužívame tradičné informatické úlohy, tento predmet rámcujeme ako kurz zameraný na všeobecnejšie riešenie problémov, ktorý informatiku využíva ako nový nástroj na riešenie istých typov úloh.",
+          "student_overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nBudete v skupine navrhovať a testovať loďku z hliníkovej fólie. Cieľom je navrhnúť loďku, ktorá udrží čo najviac jednocentových mincí."
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Záverečný test po projekte",
+          "overview": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**\n\nTáto lekcia predstavuje formálny postup riešenia problémov, podľa ktorého budú žiaci počas roka postupovať. Postup pozostáva zo štyroch krokov: definuj – priprav – vyskúšaj– vyhodnoť. Lekcia sa začína tým, že žiaci dostanú za úlohu vymenovať rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Žiaci sa potom oboznámia so štvoricou krokov, z ktorých pozostáva postup riešenia problémov, a spoločne sa snažia spojiť si tieto abstraktné kroky s vlastnými skúsenosťami s riešením problémov. Žiaci si tieto kroky najprv spoja s problémami, s ktorými sa stretli v predchádzajúcej lekcii, potom s nejakým problémom, ktorý už vedia dobre riešiť, a nakoniec s problémom, v riešení ktorého by sa chceli zlepšiť. Na konci hodiny žiaci v rámci triedy vytvoria zoznam všeobecne užitočných stratégií pre každý krok postupu riešenia problémov. Stratégie následne spíšu na plagáty, ktoré budú používať po zvyšok tematického celku a roka.",
+          "preparation": "Pre každého žiaka \n\n-   Vytlačte kópiu sprievodcu aktivitou\n\nPre triedu\n\n-   Plagátový papier\n-   Fixky alebo pastelky",
+          "purpose": "Cieľom tejto lekcie je ukotviť formálny postup riešenia problémov, ktorý budú žiaci využívať počas kurzu, jeho prepojením s reálnymi skúsenosťami žiakov s riešením problémov. V nasledujúcich tematických celkoch v kurze Objavujeme informatiku budú úlohy prezentované v kontextoch, ktoré žiakom môžu, no nemusia byť povedomé. Štruktúrovaný postup riešenia problémov preto bude pre žiakov dôležitým nástrojom, ktorý im pomôže úspešne riešiť aj nové a zložité úlohy.",
+          "student_overview": "**Otázka dňa: Aké bežné kroky môžeme použiť na riešenie rôznych typov problémov?**\n\nDnes sa budete učiť o postupe riešenia problémov, ktorý využívame v informatike, a pozrieme sa aj na niekoľko stratégií, ako jednotlivé kroky uskutočňovať. "
         },
         "csd1-2021/Exploring Problem Solving": {
-          "name": "Objavovanie riešenia problémov"
+          "name": "Objavujeme riešenie problémov",
+          "overview": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť pri rôznych druhoch problémov?**\n\nV tejto lekcii žiaci využijú postup riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu jednotlivých krokov. Vyriešia osemsmerovku, usporiadajú sedenie na narodeninovú oslavu a prerobia triedu. Každý ďalší problém je zložitejší a definovaný horšie než ten predchádzajúci, čím chceme zdôrazniť, že postup riešenia problémov je nápomocný najmä pri riešení takýchto problémov. Na konci hodiny sa žiaci zamyslia nad tým, ako využívali postup riešenia problémov. Zdôvodnia zahrnutie jednotlivých krokov a budú vymýšľať otázky a stratégie, ako čo najlepšie zadefinovať problémy s otvoreným riešením, pretože práve tento krok je často najdôležitejší.\n\nTáto lekcia pravdepodobne zaberie dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné presunúť do druhej.\n\n**K dispozícii sú aj alternatívne verzie tejto lekcie** \n\n-   [Zvieratá](/s/csd1-2021/lessons/12/)\n-   [Hry](/s/csd1-2021/lessons/13/)",
+          "preparation": "-   Vytlačte pre každého žiaka sprievodcu aktivitou\n-   Škrabací papier na riešenie narodeninovej oslavy\n-   Plagát na spísanie stratégií na definovanie problémov v záverečnej diskusii",
+          "purpose": "Táto lekcia žiakom poskytuje možnosť viac si vyskúšať postup riešenia problémov v praxi a v rôznych kontextoch. Vyzdvihuje fakt, že postup riešenia problémov je užitočný najmä vtedy, keď treba riešiť zle zadefinované problémy. Záverečný brainstorming v lekcii poskytne žiakom stratégie a otázky, pomocou ktorých budú schopní lepšie definovať problémy, keďže práve tento krok je často najdôležitejší. Problémy rozoberané v tejto lekcii slúžia aj na to, aby v nasledujúcej lekcii podporili diskusiu o tom, na riešenie akých typov problémov sú počítače stavané výnimočne dobre.",
+          "student_overview": "**Otázka dňa: Ako môžeme postup riešenia problémov využiť na riešenie rôznych typov problémov?**\n\nDnes využijete postup riešenia problémov na to, aby ste vyriešili tri rôzne problémy, pri ktorých bude každý ďalší problém náročnejší!"
         },
         "csd1-2021/What is a Computer?": {
-          "name": "Čo je počítač?"
+          "name": "Čo je to počítač?",
+          "overview": "**Otázka dňa: Čo je to počítač?**\n\nV tejto lekcii žiaci vytvoria predbežnú definíciu toho, čo je to počítač. Na začiatku lekcie budú žiaci vymýšľať možné definície počítača a svoje nápady budú písať na tabuľu. Potom budú pracovať v skupinách a na plagátový papier roztriedia obrázky do dvoch kategórií: „počítače“ a „nepočítače“. Skupiny rozmiestnia svoje plagáty po triede a stručne zdôvodnia, ako sa rozhodovali v najnáročnejších prípadoch. Učiteľ potom žiakom povie definíciu počítača a dá im možnosť upraviť svoje plagáty tak, aby na nich boli veci roztriedené v súlade s touto definíciou.",
+          "preparation": "**Pre každú skupinu** \n\n-   Vytlačte sprievodcov aktivitou. Upozorňujeme, že k dispozícii sú dva súbory obrázkov, no každej skupine postačí jeden.\n-   Nožnice (ak nebudete mať čas nastrihať obrázky pred hodinou) \n-   Plagátový papier\n-   Fixky alebo pastelky\n-   Lepidlo alebo lepiaca páska na pripevnenie obrázkov ",
+          "purpose": "Táto lekcia rozvíja tému riešenia problémov z predchádzajúcich lekcií a zameriava sa na špecifiká toho, ako sa pri riešení problémov využíva výpočtová technika. V tejto lekcii sa žiaci budú učiť o rôznych typoch počítačov a o tom, ako tieto počítače v rámci postupu riešenia problémov využívajú informácie. Nasledujúce lekcie sa budú podrobnejšie zameriavať na to, v čom spočívajú informačné problém a ako ich počítače riešia.",
+          "student_overview": "**Otázka dňa: Čo je to počítač?**\n\nV tejto lekcii sa budete v skupinách snažiť zistiť, čo robí počítač počítačom."
         },
         "csd1-2021/Input and Output": {
-          "name": "Vstup a Výstup"
+          "name": "Vstup a výstup",
+          "overview": "**Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**\n\nV tejto lekcii sa žiaci zaoberajú tým, ako počítače získavajú a poskytujú informácie používateľovi prostredníctvom vstupu a výstupu. Žiaci sa najprv zamyslia nad tým, aké informácie by boli potrebné na vyriešenie „myšlienkového“ problému, a potom na základe týchto informácií sformulujú odporučenie. Následne identifikujú vstupy a výstupy tohto procesu. Potom preskúmajú sériu aplikácií, ktorá tiež využíva tento proces, a pre každú z nich určia vstupy a výstupy informácií. Nakoniec sa pozrú na iné typy vstupov a výstupov, ktoré dokážu počítače využiť pri riešení problémov.",
+          "preparation": "-   Pripravte kópie sprievodcu aktivitou",
+          "purpose": "Na začiatku predchádzajúcej lekcie sa žiaci snažili vymenovať vlastnosti, na základe ktorých zariadenia klasifikujeme ako počítače. Táto lekcia predstavuje koncept vstupu a výstupu, ktoré medzi tieto vlastnosti patria. Žiaci majú za úlohu identifikovať rôzne spôsoby vstupu a výstupu v bežných aplikáciách.",
+          "student_overview": "**Otázka dňa: Ako počítače využívajú vstup a výstup na získavanie a poskytovanie informácií potrebných na riešenie problémov?**\n\nV tejto lekcii sa budete učiť o tom, ako počítače získavajú od používateľa informácie a ako používateľovi informácie poskytujú prostredníctvom rôznych vstupov a výstupov. "
         },
         "csd1-2021/Processing": {
-          "name": "Spracovanie"
+          "name": "Spracúvanie",
+          "overview": "\\*\\*Otázka dňa: Akými rôznymi spôsobmi počítače spracúvajú informácie?\n\\*\\*\n\nTáto lekcia žiakom predstavuje štyri bežné spôsoby spracovania údajov: ak/tak (podmienené príkazy), hľadanie zhody (vyhľadávanie), počítanie a porovnávanie. Žiaci sa s rôznymi typmi spracúvania najskôr oboznámia prostredníctvom vzorových aplikácií. Následne preskúmajú ďalšie aplikácie, aby určili, aké typy spracúvania sa v nich používajú. Potom vymyslia svoju vlastnú aplikáciu a rozhodnú, aké typy spracúvania by potrebovala využívať. Na záver pomocou brainstormingu skúsia prísť na ďalšie typy spracúvania, ktoré by mohli byť užitočné, no v hlavnej lekcii sa nespomínali.",
+          "purpose": "Táto lekcia žiakom predstaví spracúvanie v kontexte riešenia problémov pomocou počítača. Definícia spracúvania, s ktorou sa žiaci stretnú v tejto lekcii, je úmyselne sformulovaná čo najprístupnejšie. Žiaci by si mali uvedomiť, že k spracúvaniu dochádza vždy, keď počítač premieňa vstupy na výstupy, a že existuje množstvo rôznych spôsobov, ako to môžu počítače robiť. Táto lekcia neslúži na to, aby žiaci písali konkrétne algoritmy do ukážkových aplikácií.",
+          "student_overview": "**Otázka dňa: Akými rôznymi spôsobmi počítače spracúvajú informácie?**\n\nV tejto lekcii sa oboznámite so štyrmi hlavnými typmi spracúvania, ktorými počítače premieňajú vstupy na výstupy."
         },
         "csd1-2021/Storage": {
-          "name": "Pamäť"
+          "name": "Pamäť",
+          "overview": "**Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**\n\nV tejto lekcii sa žiaci oboznámia s poslednou súčasťou výpočtového modelu, ktorý prezentujeme v tomto tematickom celku: pamäť. Po vyskúšaní aplikácie „Výber oblečenia“ žiaci diskutujú o tom, aké informácie by mali byť v aplikácii uložené a aké informácie by sa mali zadávať ako vstupy pri každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, spíšu všeobecné zásady pre rozhodovanie, aké informácie by sa mali ukladať. Potom preskúmajú štyri súčasti výpočtového modelu, ktorý prezentujeme v tejto kapitole: vstup, výstup, pamäť a spracúvanie. Následne budú mať ešte jednu príležitosť upraviť svoje rozhodnutia o tom, ktoré položky zo skoršej časti tejto kapitoly by mali byť zatriedené do kategórie „počítače“. Hodina sa pre žiakov končí reflexiou zameranou na ich vlastné nápady na aplikácie a to, ako by sa v nich využívala pamäť.",
+          "preparation": "-   Vytlačte pre kažého žiaka kópiu sprievodcu aktivitou",
+          "purpose": "V 1. kapitole tohto tematického celku sa žiaci oboznámili s postupom riešenia problémov. V 2. kapitole sa naučili, ako riešia problémy počítače. V tomto bode už žiaci vedia, že počítače sú stroje na spracúvanie informácií, ktoré dokážu s informáciami narábať v štyroch rôznych ohľadoch: prijímajú vstupy, vytvárajú výstupy, ukladajú informácie pomocou pamäte a spracúvajú informácie. V tejto poslednej lekcii pred záverečným projektom k tematickému celku sa žiaci pozrú na rôzne typy vstupov, ktoré by mohli potrebovať na riešenie konkrétneho problému, a opíšu proces spracúvania a ukladania do pamäte, prostredníctvom ktorého by počítač vytvoril požadovaný výstup. Táto aktivita by žiakov mala pripraviť na to, aby boli nakoniec schopní vyriešiť problém navrhnutím vlastnej aplikácie a vysvetliť, ako by takáto aplikácia fungovala.",
+          "student_overview": "**Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu?**\n\nV tejto lekcii sa dozviete o poslednej vlastnosti, ktorá robí počítač počítačom – je ňou pamäť!"
         },
         "csd1-2021/Project - Propose an App": {
-          "name": "Projekt - Navrhnite aplikáciu"
+          "name": "Projekt - Navrhnite aplikáciu",
+          "overview": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**\n\nPo zvládnutí kapitoly zameranej na postup riešenia problémov a na záver kapitoly o počítačovom modeli vstup/výstup/pamäť/spracúvanie žiaci navrhnú aplikáciu, ktorej úlohou je vyriešiť problém z reálneho sveta. Projekt bude rozložený na niekoľko dní a jeho výstupom bude plagát, prostredníctvom ktorého žiaci vysvetlia ostatným spolužiakom funkcie svojej aplikácie. Žiakom pri práci na projekte pomôže sprievodca projektom, ktorý obsahuje podrobné pokyny a pomáha žiakom usporiadať si myšlienky. Projekt je určený na prácu vo dvojici, no je možné robiť ho aj samostatne.",
+          "preparation": "-   Pre každú dvojicu vytlačte jednu kópiu dokumentu [r app-proposal-project/csd/2021].\n-   Pripravte žiakom plagátový papier, perá, fixky a ďalšie kancelárske potreby na výrobu plagátov",
+          "purpose": "Tento projekt v sebe spája dve hlavné témy 1. tematického celku: riešenie problémov a počítačový model vstup-výstup-pamäť-spracúvanie. Projekt prepája obe témy so širším cieľom tematického celku, ktorým je identifikácia problémov z reálneho sveta a hľadanie spôsobov, ako ich vyriešiť pomocou techniky. Žiaci počas projektu spoločne pracujú na vytvorení aplikácie a zúčastňujú sa štruktúrovaného procesu spätnej väzby od spolužiakov,  s ktorým sa počas tohto kurzu stretnú ešte veľakrát. Projekt by mal byť pre žiakov zábavným a tvorivým zážitkom, ktorý im dá príležitosť prepojiť informatiku so svojimi vlastnými záujmami a cieľmi.",
+          "student_overview": "**Otázka dňa: Ako nám model VVPS pomáha navrhnúť aplikáciu, ktorá rieši problém?**\n\nV tejto lekcii strávite niekoľko dní vymýšľaním aplikácie, ktorá využíva model vstup-výstup-pamäť-spracúvanie na riešenie problému z reálneho sveta."
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Úvod do riešenia problémov – Novinový stôl (Alternatívna lekcia č. 1)",
+          "overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nV tejto lekcii žiaci pracujú v skupinách na navrhovaní novinových stolov. Cieľom je navrhnúť stôl, ktorá udrží čo najviac kníh. Skupiny pracujú na svojich stoloch počas dvoch kôl, pričom ich cieľom je dosiahnuť, aby v druhom kole ich stôl udržal viac kníh než v prvom. Štruktúra aktivity odkazuje na rôzne kroky, z ktorých pozostáva proces riešenia problémov a žiaci sa s nimi podrobnejšie oboznámia v nasledujúcej lekcii. Na konci hodiny žiaci zreflektujú túto aktivitu a spoja si ju s prístupmi k riešeniu problémov, ktoré budú využívať po zvyšok kurzu.\n\n**Táto lekcia je alternatívou k lekcii [Úvod do riešenia problémov – Hliníkové loďky](/s/csd1-2021/lessons/1/)**",
+          "preparation": "**Pre každú skupinu**\n\n-   2 výtlačky novín\n-   1 rolka lepiacej pásky\n-   1 kópia sprievodcu aktivitou\n\n**Pre učiteľa**\n\n-   10 – 20 kníh podobnej váhy.",
+          "purpose": "Táto lekcia je zábavným úvodom k otvorenému, spoločnému a tvorivému riešeniu problémov, ktoré budú žiaci využívať po zvyšok tohto tematického celku a kurzu. Úloha s novinovými stolmi sa dá ľahko zameniť za niektorú z množstva iných úloh, pri ktorých si žiaci majú zadefinovať ciele, vytvoriť plán, vyskúšať riešenie, vyhodnotiť výsledky a potom svoje riešenie postupne zlepšovať. Výber úlohy, ktorá nesúvisí s výpočtovou technikou, je zámerný. Informatika je vo svojej podstate odbor zameraný na riešenie problémov, a tým, že v tomto bode ešte nevyužívame tradičné informatické úlohy, tento predmet rámcujeme ako kurz zameraný na všeobecnejšie riešenie problémov, ktorý informatiku využíva ako nový nástroj na riešenie istých typov úloh.",
+          "student_overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nV tejto lekcii budete v skupine navrhovať, stavať a testovať stôl z novín a následne prehodnocovať svoj postup. Cieľom je navrhnúť stôl, ktorý udrží čo najviac kníh."
         },
         "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)"
+          "name": "Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)",
+          "purpose": "Táto lekcia žiakom poskytuje možnosť viac si vyskúšať postup riešenia problémov v praxi a v rôznych kontextoch. Vyzdvihuje fakt, že postup riešenia problémov je užitočný najmä vtedy, keď treba riešiť zle zadefinované problémy. Záverečný brainstorming v lekcii poskytne žiakom stratégie a otázky, pomocou ktorých budú schopní lepšie definovať problémy, keďže práve tento krok je často najdôležitejší. Problémy rozoberané v tejto lekcii slúžia aj na to, aby v nasledujúcej lekcii podporili diskusiu o tom, na riešenie akých typov problémov sú počítače stavané výnimočne dobre."
         },
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)"
+          "name": "Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)",
+          "purpose": "Táto lekcia žiakom poskytuje možnosť viac si vyskúšať postup riešenia problémov v praxi a v rôznych kontextoch. Vyzdvihuje fakt, že postup riešenia problémov je užitočný najmä vtedy, keď treba riešiť zle zadefinované problémy. Záverečný brainstorming v lekcii poskytne žiakom stratégie a otázky, pomocou ktorých budú schopní lepšie definovať problémy, keďže práve tento krok je často najdôležitejší. Problémy rozoberané v tejto lekcii slúžia aj na to, aby v nasledujúcej lekcii podporili diskusiu o tom, na riešenie akých typov problémov sú počítače stavané výnimočne dobre."
+        },
+        "csd2-2021/Exploring Web Pages": {
+          "name": "Záverečný test po projekte"
         },
         "csd2-2021/Headings": {
           "name": "Nadpisy"

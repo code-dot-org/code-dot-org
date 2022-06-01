@@ -13,6 +13,12 @@ Parameters:
     Type: String
     Default: master
     MaxLength: 16
+  DBInstanceType:
+    Type: String
+    Default: db.r5.2xlarge
+  DBBackupRetention:
+    Type: Number
+    Default: 5
 <% end -%>
 <% if frontends -%>
   DaemonInstanceType:

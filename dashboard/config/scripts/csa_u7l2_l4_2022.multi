@@ -29,6 +29,7 @@ public class QuizScore {
     score += score * b/100.0;
   }
 }
+```
  
 Assume that the following two methods appear in a class other than `QuizScore`.
 

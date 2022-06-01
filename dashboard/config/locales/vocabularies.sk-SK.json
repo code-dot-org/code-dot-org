@@ -925,11 +925,25 @@
         "function/csd/2021": {
           "word": "Funkcia"
         },
+        "computer/csd/2021": {
+          "word": "Počítač",
+          "definition": "Stroj, ktorý pracuje s informáciami"
+        },
         "input/csd/2021": {
-          "word": "Vstup"
+          "word": "Vstup",
+          "definition": "informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov"
+        },
+        "output/csd/2021": {
+          "word": "Výstup",
+          "definition": "informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom"
         },
         "processing/csd/2021": {
-          "word": "Spracovanie"
+          "word": "Spracúvanie",
+          "definition": "Myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup."
+        },
+        "storage/csd/2021": {
+          "word": "pamäť",
+          "definition": "schopnosť ukladať informácie na neskoršie použitie"
         },
         "digital_footprint/csd/2021": {
           "word": "Digitálna stopa"

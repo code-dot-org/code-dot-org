@@ -748,7 +748,7 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
-And (/^I select age (\d+) in the age dialog/) do |age|
+And(/^I select age (\d+) in the age dialog/) do |age|
   steps %Q{
     And element ".age-dialog" is visible
     And I select the "#{age}" option in dropdown "uitest-age-selector"
@@ -756,12 +756,12 @@ And (/^I select age (\d+) in the age dialog/) do |age|
   }
 end
 
-And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
+And(/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').val()")
   expect((select_options_text.include? option)).to eq(false)
 end
 
-And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
+And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
   select_options_text = @browser.execute_script("return $('#{selector} option').text()")
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
@@ -826,6 +826,11 @@ end
 
 Then /^I click an image "([^"]*)"$/ do |path|
   @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
+end
+
+Then /^I wait for image "([^"]*)" to load$/ do |selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -1000,10 +1005,10 @@ def js_async(js, *args, callback_fn: 'callback', finished_var: 'window.asyncCall
     js = "var #{callback_fn} = arguments[arguments.length - 1];\n#{js}"
     @browser.execute_async_script(js, *args)
   else
-    js = <<-JS
-#{finished_var} = undefined;
-var #{callback_fn} = function(result) { #{finished_var} = result; };
-#{js}
+    js = <<~JS
+      #{finished_var} = undefined;
+      var #{callback_fn} = function(result) { #{finished_var} = result; };
+      #{js}
     JS
     @browser.execute_script(js, *args)
     wait_short_until {@browser.execute_script("return #{finished_var};")}
@@ -1017,23 +1022,23 @@ def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, trie
     body = "'#{body.to_param}'" if body
   end
 
-  js = <<-JS
-var xhr = new XMLHttpRequest();
-xhr.open('#{method}', '#{url}', true);
-#{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
-var csrf = document.head.querySelector("meta[name='csrf-token']")
-if (csrf) {
-  xhr.setRequestHeader('X-Csrf-Token', csrf.content)
-}
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4) {
-    callback(JSON.stringify({
-      status: xhr.status,
-      response: xhr.responseText
-    }));
-  }
-};
-xhr.send(#{body});
+  js = <<~JS
+    var xhr = new XMLHttpRequest();
+    xhr.open('#{method}', '#{url}', true);
+    #{headers.map {|k, v| "xhr.setRequestHeader('#{k}', '#{v}');"}.join("\n")}
+    var csrf = document.head.querySelector("meta[name='csrf-token']")
+    if (csrf) {
+      xhr.setRequestHeader('X-Csrf-Token', csrf.content)
+    }
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        callback(JSON.stringify({
+          status: xhr.status,
+          response: xhr.responseText
+        }));
+      }
+    };
+    xhr.send(#{body});
   JS
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: tries) do
     result = js_async(js)

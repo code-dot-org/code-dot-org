@@ -971,6 +971,7 @@
   coursee-2020_name: Курс Е (2020)
   coursef-2020_name: Курс F (2020)
   coursed-2021_name: Курс D (2021)
+  coursed-2022_name: Курс D (2021)
   express-2018_name: Експрес курс (2018)
   express-2019_name: Експрес курс (2019)
   express-2020_name: Експрес курс (2020)
@@ -1084,6 +1085,12 @@
   coursed-2021_gradelevel: 8+ класи
   coursee-2021_gradelevel: Вік 8-12
   coursef-2021_gradelevel: Вік 9-13
+  coursea-2022_gradelevel: Вік 4-7
+  courseb-2022_gradelevel: Вік 5-8
+  coursec-2022_gradelevel: Вік 6-10
+  coursed-2022_gradelevel: 8+ класи
+  coursee-2022_gradelevel: Вік 8-12
+  coursef-2022_gradelevel: Вік 9-13
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"

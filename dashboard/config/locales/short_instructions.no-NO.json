@@ -51,7 +51,7 @@
         "2-3 Maze 13": "Få meg bort til grisen! Du kan kun bruke én `gå framover`-blokk denne gangen",
         "2-3 Maze 16": "Løkker fungerer til og med med mer enn en blokk inni! Kan du lage en løkke til denne sekvensen for å få zombien til solsikken?",
         "2-3 Maze 16 before": "Kan du finne raskeste måte å få meg til grisen?",
-        "2-3 Maze 2": "Denne grisen har røsket i fjærene mine. Hjelp meg å få tak i han!",
+        "2-3 Maze 2": "Før meg til den grønne ondskapen! (Se opp for dynamitt)",
         "2-3 Maze 4": "Før meg til den grønne ondskapen! (Se opp for dynamitt)",
         "2-3 Maze 6": "Hold deg i ro og hjelp meg med å finne den slemme grisen. Ellers blir jeg kanskje sinna!",
         "2-3 Maze 7": "Før meg til den grønne ondskapen! (Se opp for dynamitt)",
@@ -680,7 +680,13 @@
         "CSD U5 black white images pixelation 4_2021": "Tegn øyenbryn på smilefjeset (klikk her for å se bilde)",
         "CSD U5 black white images pixelation 5_2021": "Tegn hva du vil",
         "CSD U5 black white images pixelation_2021": "Fullfør X-formen ved å bruke 0 og 1-tall",
-        "CSDU6 arrays select rainbow_2021": "Skriv innholdet i matrisen på skjermen i numerisk rekkefølge. (Klikk her for detaljerte instruksjoner)"
+        "CSDU6 arrays select rainbow_2021": "Skriv innholdet i matrisen på skjermen i numerisk rekkefølge. (Klikk her for detaljerte instruksjoner)",
+        "2-3 Maze 1": "Før meg til den grønne ondskapen! (Se opp for dynamitt)",
+        "2-3 Maze 3": "Hold deg i ro og hjelp meg med å finne den slemme grisen. Ellers blir jeg kanskje sinna!",
+        "MC Agent Freeplay": "**Fritt spill:** Utforsk på egenhånd!",
+        "Overworld Chop Tree - allthethings": "Tre er en veldig viktig ressurs. Det er mange ting som lages av det. Gå til treet og bruk kommandoen \"ødelegg blokk\" for å hugge det ned.",
+        "U1L13 Text Compression": "Se etter mønster (repeterende ord eller fraser) i teksten. Legg inn mønstrene du finner i ordlisten til høyre. Når du legger inn et mønster i ordlisten, vil symbolet for mønsteret legges inn i teksten istedenfor mønsteret.",
+        "allthethings-anigif-instructions": "Flytt meg østover for å få meg til grisen!"
       }
     }
   }

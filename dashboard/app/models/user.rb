@@ -1500,6 +1500,7 @@ class User < ApplicationRecord
   # reset their password with their email (by looking up the hash)
 
   attr_accessor :raw_token
+
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1514,6 +1515,7 @@ class User < ApplicationRecord
   end
 
   attr_accessor :child_users
+
   def send_reset_password_for_users(email, users)
     if users.empty?
       not_found_user = User.new(email: email)
@@ -2103,6 +2105,14 @@ class User < ApplicationRecord
     return false if teacher_managed_account?
     # Students in sections may not delete their own account.
     sections_as_student.empty?
+  end
+
+  def shared_sections_with(other_user)
+    sections_as_student & other_user.sections_as_student
+  end
+
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
   end
 
   # Users who might otherwise have orphaned accounts should have the option

@@ -1271,7 +1271,9 @@
         "ml-use model card-choice2": "Añade una Imagen",
         "ml-use model card-choice3": "Añade un Sonido",
         "ml-use model card-choice4": "Abre una Página Web",
-        "ml-use model card-choice5": "Leer la Pantalla de Inicio en Voz Alta"
+        "ml-use model card-choice5": "Leer la Pantalla de Inicio en Voz Alta",
+        "MC Agent Freeplay": "Juego libre",
+        "gamelab free play": "Proyecto - Toques finales"
       }
     }
   }

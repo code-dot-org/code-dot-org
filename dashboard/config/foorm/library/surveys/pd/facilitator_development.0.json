@@ -20,7 +20,7 @@
             {
               "type": "matrix",
               "name": "choice_session_satisfaction_1",
-              "title": "For the keynote session by Hadi",
+              "title": "For the keynote session, 'Why is CS Education more important than ever?', led by Hadi",
               "columns": [
                 {
                   "value": "1",
@@ -73,7 +73,7 @@
             {
               "type": "matrix",
               "name": "choice_session_satisfaction_2",
-              "title": "For the keynote session by Jamila",
+              "title": "For the keynote session, 'Culturally Responsive Teaching', led by Jamila",
               "columns": [
                 {
                   "value": "1",
@@ -182,41 +182,44 @@
               "title": "Which choice session did you attend during the first round?",
               "choices": [
                 {
-                  "value": "option1",
+                  "value": "s22_r1_trauma_informed",
                   "text": "Trauma-informed Education: A Primer"
                 },
                 {
-                  "value": "option2",
+                  "value": "s22_r1_unit4",
                   "text": "Unit 4: Apps for Good-Locally"
                 },
                 {
-                  "value": "option3",
+                  "value": "s22_r1_demo_course",
                   "text": "Exploring a Demo Course Feature"
                 },
                 {
-                  "value": "option4",
+                  "value": "s22_r1_csc",
                   "text": "CS Connections - Integrating CS in Other Subjects"
                 },
                 {
-                  "value": "option5",
+                  "value": "s22_r1_accessibility",
                   "text": "Accessibility on the Code.org Platform"
                 },
                 {
-                  "value": "option6",
+                  "value": "s22_r1_naip",
                   "text": "Code.org's Native American & Indigenous Peoples Initiative (NAIPI)"
                 },
                 {
-                  "value": "option7",
+                  "value": "s22_r1_international",
                   "text": "Code.org Around the World"
+                },
+                {
+                  "value": "s22_r1_none",
+                  "text": "I did not attend a session during the first round"
                 }
-              ],
-              "hasNone": true,
-              "noneText": "I did not attend a session during the first round"
+              ]
             },
             {
               "type": "matrix",
               "name": "choice_session_satisfaction_4",
               "title": "For your round 1 session - {session_choice_round1}",
+              "visibleIf": "{session_choice_round1} <> 's22_r1_none'",
               "columns": [
                 {
                   "value": "1",
@@ -272,37 +275,40 @@
               "title": "Which choice session did you attend during the second round?",
               "choices": [
                 {
-                  "value": "option1",
+                  "value": "s22_r2_state_cs_policy",
                   "text": "The State of CS Policy 2022"
                 },
                 {
-                  "value": "option2",
+                  "value": "s22_r2_plan_aiml",
                   "text": "How to plan your own overview of the AI/ML unit"
                 },
                 {
-                  "value": "option3",
+                  "value": "s22_r2_csjourneys",
                   "text": "Supporting Student Journeys: Career Exposure & Exploration in CS Education"
                 },
                 {
-                  "value": "option4",
+                  "value": "s22_r2_cs_gender_gap",
                   "text": "Young Women in CS, why is this gap so challenging to close?"
                 },
                 {
-                  "value": "option5",
+                  "value": "s22_r2_codeorg_new",
                   "text": "What's new on Code.org's platform?"
                 },
                 {
-                  "value": "option6",
+                  "value": "s22_r2_equity_fellowship",
                   "text": "Building Equity in CS through Fellowship and Teacher Voices"
+                },
+                {
+                  "value": "s22_r2_none",
+                  "text": "I did not attend a session during the second round"
                 }
-              ],
-              "hasNone": true,
-              "noneText": "I did not attend a session during the first round"
+              ]
             },
             {
               "type": "matrix",
               "name": "choice_session_satisfaction_5",
               "title": "For your round 2 session - {session_choice_round2}",
+              "visibleIf": "{session_choice_round2} <> 's22_r2_none'",
               "columns": [
                 {
                   "value": "1",
