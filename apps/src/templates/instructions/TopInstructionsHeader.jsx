@@ -196,11 +196,14 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text
+    color: color.default_text,
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   audioRTL: {
     wrapper: {
-      float: 'left'
+      order: 5
     }
   },
   audio: {
@@ -217,11 +220,14 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      float: 'right'
+      order: 5
     }
   },
   helpTabs: {
-    paddingTop: 6
+    paddingTop: 6,
+    width: '100%',
+    boxSizing: 'border-box',
+    display: 'flex'
   },
   helpTabsLtr: {
     float: 'left',
