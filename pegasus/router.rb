@@ -230,6 +230,14 @@ class Documents < Sinatra::Base
     send_file(path)
   end
 
+  get '/weblab/style.css' do
+    content_type :css
+    css, digest = combine_css 'styles/weblab'
+    etag digest
+    cache :static
+    css
+  end
+
   get '/style.css' do
     content_type :css
     css, digest = combine_css 'styles', 'styles_min'

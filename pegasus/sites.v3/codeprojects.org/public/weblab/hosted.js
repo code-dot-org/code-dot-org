@@ -12,7 +12,7 @@ var onReadyStateChange = function(evt) {
 document.addEventListener("readystatechange", onReadyStateChange, false);
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "/hosted/footer");
+xhr.open("GET", "/weblab/footer");
 xhr.onload = function() {
   if (xhr.status === 200) {
     footerContents = xhr.responseXML.body;
