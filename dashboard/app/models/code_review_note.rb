@@ -33,7 +33,7 @@ class CodeReviewNote < ApplicationRecord
       comment: comment,
       isResolved: is_resolved,
       createdAt: created_at,
-      isFromTeacher: code_review.owner.teachers.include?(commenter), # TODO: memoize teacher list on user?
+      isFromTeacher: code_review.owner.memoized_teachers.include?(commenter), # TODO: memoize teacher list on user?
     }
   end
 end

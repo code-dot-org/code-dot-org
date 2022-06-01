@@ -7,7 +7,6 @@ import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from '@cdo/apps/templates/instructions/codeReview/commentShape';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
-import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -62,9 +61,7 @@ function Comment({
         >
           {commenterName}
           <span style={styles.nameSuffix}>
-            <Tooltip text={javalabMsg.onlyVisibleToYou()} place="top">
-              {` (${javalabMsg.teacherLabel()})`}
-            </Tooltip>
+            {` (${javalabMsg.teacherLabel()})`}
           </span>
         </span>
       );
@@ -157,12 +154,7 @@ function Comment({
     setTimeout(() => setDisplayError(false), FLASH_ERROR_TIME_MS);
   };
 
-  const {
-    comment: commentText,
-    createdAt,
-    isFromTeacher,
-    isFromOlderVersionOfProject
-  } = comment;
+  const {comment: commentText, createdAt, isFromTeacher} = comment;
 
   if (isDeleted) {
     return null;
@@ -172,8 +164,7 @@ function Comment({
     <div
       style={{
         ...styles.commentContainer,
-        ...((isFromOlderVersionOfProject || isCommentResolved) &&
-          styles.lessVisible)
+        ...(isCommentResolved && styles.lessVisible)
       }}
     >
       <div style={styles.commentHeaderContainer}>
@@ -218,8 +209,7 @@ function Comment({
           style={{
             ...styles.comment,
             ...(isFromTeacher && styles.commentFromTeacher),
-            ...((isFromOlderVersionOfProject || isCommentResolved) &&
-              styles.lessVisibleBackgroundColor)
+            ...(isCommentResolved && styles.lessVisibleBackgroundColor)
           }}
         >
           <SafeMarkdown
