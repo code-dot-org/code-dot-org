@@ -4,7 +4,7 @@ require 'cdo/activity_constants'
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  self.use_transactional_test_case = false
+  self.use_transactional_test_case = true
 
   setup_all do
     @project_owner = create :student
