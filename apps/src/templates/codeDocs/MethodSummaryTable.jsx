@@ -32,8 +32,7 @@ export default function MethodSummaryTable({methods}) {
 }
 
 MethodSummaryTable.propTypes = {
-  methods: PropTypes.arrayOf(PropTypes.object).isRequired,
-  includeLink: PropTypes.bool
+  methods: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
