@@ -2,26 +2,6 @@
 ro:
   data:
     script:
-      category:
-        csd_category_name: Descoperiri Informatice ('17-'18)
-        csd_2018_category_name: Descoperiri Informatice ('18-'19)
-        csd_2019_category_name: Descoperiri Informatice ('19-'20)
-        csd_2020_category_name: Descoperiri Informatice ('20-'21)
-        csd_2021_category_name: Descoperiri Informatice ('21-'22)
-        csf_category_name: Fundamentele CS
-        csf_international_category_name: Fundamentele internaționale ale Informaticii
-        csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-        csp_category_name: Pricipiile Informaticii ('15-'16)
-        csp_2018_category_name: Pricipii Informatice ('18-'19)
-        csp_2019_category_name: Pricipii Informatice ('19-'20)
-        csp_2020_category_name: Pricipii Informatice ('20-'21)
-        csp_2021_category_name: Pricipiile Informaticii ('21-'22)
-        cspexams_category_name: Principiile practicilor test CS
-        csp17_category_name: Pricipiile Informaticii ('17-'18)
-        full_course_category_name: Toate cursurile
-        hoc_category_name: Oră de Programare
-        math_category_name: Matematică
-        other_category_name: Alte
       name:
         course1:
           title: Curs 1

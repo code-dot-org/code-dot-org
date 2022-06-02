@@ -7702,7 +7702,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7719,7 +7719,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7736,7 +7736,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -11736,21 +11736,21 @@ es-MX:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - text: BB-8 llegará demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 girará en la dirección equivocada después del primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 girará en la dirección equivocada después del primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseD_EOC_2021:
         description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
@@ -11849,40 +11849,40 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - text: La abeja avanzará y recogerá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja girará en la dirección equivocada.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         questions:
-        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
-            ocurrirá si haces clic en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '10'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - text: La granjera recogerá todos los cultivos.
@@ -12001,26 +12001,26 @@ es-MX:
             clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá la lechuga.
+        - text: La granjera recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La cosechadora recogerá el maíz.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - text: Nada. No se usa la función en el programa.
-          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
+        - text: Nada. El programa no activa la función.
+          feedback: Incorrecto. El programa activa dos veces la función.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
+          feedback: Incorrecto. El programa activa dos veces la función.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
@@ -12048,14 +12048,14 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: El pez dorado flotará hasta la parte superior de la pantalla
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: " El pez dorado comenzará a dar vueltas"
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: " La planta rodadora comenzará a dar vueltas"
           correct: true
           feedback: "¡Correcto!"
-        - text: El pez dorado se encenderá y apagará.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?

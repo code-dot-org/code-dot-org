@@ -10,7 +10,7 @@ nav: promote_nav
 
 # Promosikan Hour of Code
 
-### Temukan semua bahan yang Anda butuhkan untuk membuat Hour of Code Anad menarik. Bingung harus mulai dari mana? Mulai dengan [panduan menggelar Hour of Code]({{ how_to_url }}) kami!
+### Temukan semua materi yang Anda butuhkan untuk membuat Hour of Code Anad menarik. Bingung harus mulai dari mana? Mulai dengan [panduan menggelar Hour of Code]({{ how_to_url }}) kami!
 
 * * *
 
@@ -100,9 +100,9 @@ Mulai di http://hourofcode.com/{{ country_language }}<br />
 
 <a id="help-schools"></a>
 
-### Menjadi sukarelawan di sekolah:
+### Menjadi relawan di sekolah:
 
-#### [Temukan bahan dan informasi selengkapnya tentang menjadi sukarelawan di sekolah di sini]({{ how_to_volunteers_url }}).
+#### [Temukan materi dan informasi selengkapnya tentang menjadi relawan di sekolah di sini]({{ how_to_volunteers_url }}).
 
 **Perihal:** Bisakah kami membantu Anda menggelar Hour of Code?
 
@@ -130,7 +130,7 @@ Kita hidup di dunia yang dikelilingi dengan teknologi. Dan kita tahu bahwa bidan
 
 Namun hanya sebagian kecil dari kita yang mempelajari **cara** kerja teknologi. Hanya 51% dari semua sekolah menengah yang mengajarkan ilmu komputer.
 
-Itulah sebabnya seluruh sekolah kami bergabung dalam acara pembelajaran terbesar dalam sejarah: Hour of Code, selama Computer Science Education Week ({{ campaign_date/full }}). Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Hour of code kami membuat pernyataan bahwa [NAMA SEKOLAH] siap untuk mengajarkan keterampilan abad ke-21 yang mendasar ini. Untuk melanjutkan kegiatan pemrograman kepada siswa Anda, kami ingin membuat acara Hour of Code kami dalam skala besar. Saya mendorong Anda untuk menjadi sukarelawan, menghubungi media lokal, membagikan informasi ini di saluran media sosial Anda dan mempertimbangkan untuk mengadakan Hour of Code di masyarakat.
+Itulah sebabnya seluruh sekolah kami bergabung dalam acara pembelajaran terbesar dalam sejarah: Hour of Code, selama Computer Science Education Week ({{ campaign_date/full }}). Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Hour of code kami membuat pernyataan bahwa [NAMA SEKOLAH] siap untuk mengajarkan keterampilan abad ke-21 yang mendasar ini. Untuk melanjutkan kegiatan pemrograman kepada siswa Anda, kami ingin membuat acara Hour of Code kami dalam skala besar. Saya mendorong Anda untuk menjadi relawan, menghubungi media lokal, membagikan informasi ini di saluran media sosial Anda dan mempertimbangkan untuk mengadakan Hour of Code di masyarakat.
 
 Ini adalah kesempatan untuk mengubah masa depan pendidikan di [NAMA KOTA].
 

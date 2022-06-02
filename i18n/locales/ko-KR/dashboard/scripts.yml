@@ -2,35 +2,6 @@
 ko:
   data:
     script:
-      category:
-        csd_category_name: CS 발견 ('17-'18)
-        csd_2018_category_name: CS 발견 ('18-'19)
-        csd_2019_category_name: CS 발견 ('19-'20)
-        csd_2020_category_name: CS 발견 ('20-'21)
-        csd_2021_category_name: CS 발견 ('21-'22)
-        csd_pilot_category_name: CS 발견 파일럿
-        csf_category_name: CS 기초
-        csf_2018_category_name: CS 기초 ('18-'19)
-        csf_2019_category_name: CS 기초 ('19-'20)
-        csf_2020_category_name: CS 기초 ('20-'21)
-        csf_2021_category_name: CS 기초 ('21-'22)
-        csf_international_category_name: CS 기초 인터네셔널
-        csf2_draft_category_name: '개발 중: 과정 A - F'
-        csp_category_name: CS 원리 ('15-'16)
-        csp_2018_category_name: CS 원리 ('18-'19)
-        csp_2019_category_name: CS 원리 ('19-'20)
-        csp_2020_category_name: CS 원리 ('20-'21)
-        csp_2021_category_name: CS 원리 ('21-'22)
-        cspexams_category_name: 컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트
-        csp17_category_name: CS 원리 ('17-'18)
-        aiml_2021_category_name: AI / ML
-        full_course_category_name: 전 과정
-        hoc_category_name: Hour of Code
-        math_category_name: 계산
-        research_studies_category_name: 리서치 연구
-        twenty_hour_category_name: 20 시간
-        tts_category_name: 텍스트 음성 변환
-        other_category_name: 기타
       name:
         course1:
           title: 과정1
@@ -17901,7 +17872,7 @@ ko:
             lesson-4:
               name: "[Optional] 우화 소개"
             lesson-5:
-              name: 우화 작성 계획
+              name: 우화 계획
             lesson-6:
               name: 우화 공유
         csd1-2022:

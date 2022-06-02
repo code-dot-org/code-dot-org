@@ -272,6 +272,12 @@
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Bir metinde mecazi ve gerçek dili temsil eder."
         },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
+        },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Tasarım sürecinde kullanıcının önemini tanımlayabilecektir."
         },
@@ -529,6 +535,12 @@
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "İnternette güvenli bir şekilde seyahat etme kurallarını açıklayın."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Bir algoritmayı bir programa çevirme"
@@ -1039,6 +1051,12 @@
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Öğrenciler, bilgisayar laboratuvarına geçtiklerinde onlardan nelerin beklendiğini tanımlayın."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
           "description": "Bilgisayar laboratuvarında düzgün davranışların modelini çıkarma"

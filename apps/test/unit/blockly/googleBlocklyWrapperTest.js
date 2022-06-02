@@ -30,7 +30,6 @@ describe('Google Blockly Wrapper', () => {
       'ALIGN_LEFT',
       'ALIGN_RIGHT',
       'applab_locale',
-      'bindEvent_',
       'blockRendering',
       'Block',
       'BlockFieldHelper',
