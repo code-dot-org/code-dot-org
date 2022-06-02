@@ -181,9 +181,12 @@ class TopInstructions extends Component {
     if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
-      // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-      // adjusts max height.
-      this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+      // Initially set to 22% of the window height. This might be adjusted when
+      // InstructionsWithWorkspace adjusts max height.
+      const defaultHeight = Math.round(window.innerHeight * 0.22);
+      this.props.setInstructionsRenderedHeight(
+        Math.min(maxNeededHeight, defaultHeight)
+      );
     }
 
     const promises = [];
