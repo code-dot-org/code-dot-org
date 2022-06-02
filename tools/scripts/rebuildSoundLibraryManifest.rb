@@ -290,7 +290,7 @@ class ManifestBuilder
         categories = []
         aliases.each do |a|
           if a.start_with? "category_"
-            categories.push (a.delete_prefix "category_")
+            categories.push(a.delete_prefix("category_"))
           end
         end
         metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}

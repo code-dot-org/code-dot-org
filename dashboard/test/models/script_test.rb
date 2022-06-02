@@ -1272,9 +1272,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level3], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # Everything has Lesson <number> when nothing is lockable
-    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
-    assert (/^Lesson 2:/.match(unit.lessons[1].localized_title))
-    assert (/^Lesson 3:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert(/^Lesson 2:/.match(unit.lessons[1].localized_title))
+    assert(/^Lesson 3:/.match(unit.lessons[2].localized_title))
 
     unit = create :script
     lesson_group = create :lesson_group, script: unit
@@ -1286,9 +1286,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
-    assert (/^Lesson/.match(unit.lessons[0].localized_title).nil?)
-    assert (/^Lesson 1:/.match(unit.lessons[1].localized_title))
-    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson/.match(unit.lessons[0].localized_title).nil?)
+    assert(/^Lesson 1:/.match(unit.lessons[1].localized_title))
+    assert(/^Lesson 2:/.match(unit.lessons[2].localized_title))
 
     unit = create :script
     lesson_group = create :lesson_group, script: unit
@@ -1300,9 +1300,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
-    assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
-    assert (/^Lesson/.match(unit.lessons[1].localized_title).nil?)
-    assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
+    assert(/^Lesson 1:/.match(unit.lessons[0].localized_title))
+    assert(/^Lesson/.match(unit.lessons[1].localized_title).nil?)
+    assert(/^Lesson 2:/.match(unit.lessons[2].localized_title))
   end
 
   test "update_i18n without metdata" do
@@ -2138,6 +2138,16 @@ class ScriptTest < ActiveSupport::TestCase
       refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
       assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
+    end
+
+    test 'can copy reference guides' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      ReferenceGuide.any_instance.expects(:write_serialization).once
+      File.stubs(:write)
+      @unit_in_course.unit_group.course_version.reference_guides = [create(:reference_guide)]
+      cloned_unit = @unit_in_course.clone_migrated_unit('coursename3-2021', destination_unit_group_name: @unit_group.name)
+      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal 1, @unit_group.course_version.reference_guides.count
     end
 
     test 'can copy a script without a course version' do
