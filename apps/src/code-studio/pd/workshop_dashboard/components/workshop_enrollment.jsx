@@ -35,7 +35,9 @@ export default class WorkshopEnrollment extends React.Component {
 
   shouldShowPreSurveys() {
     return (
-      Object.keys(ActiveCourseWorkshops).includes(this.props.workshopCourse) &&
+      Object.values(ActiveCourseWorkshops).includes(
+        this.props.workshopCourse
+      ) &&
       this.props.workshopSubject !==
         SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
     );
