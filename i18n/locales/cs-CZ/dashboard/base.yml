@@ -357,6 +357,7 @@ cs:
       educate_beyond: "Nad rámec Code.org"
       educate_inspire: "Inspirujte studenta"
       educate_community: "Online komunita"
+      educate_requirements: "Technické požadavky"
       educate_tools: "Nástroje a videa"
       about_us: "O nás"
       about_leadership: "Koordinátoři"
@@ -668,8 +669,10 @@ cs:
       title: 'Taneční večírek'
     hello-world:
       title: 'Ahoj, světe'
+      body: 'Vyberte si jeden ze čtyř zábavných motivů a naprogramujte interaktivní postavičky ve světě, co si sami vytvoříte.'
     poem-art:
       title: 'Básnické umění'
+      body: 'Vyjádřete se napsáním kódu animovaných básní.'
     hoc:
       title: 'Klasické bludiště'
       body: 'Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.'

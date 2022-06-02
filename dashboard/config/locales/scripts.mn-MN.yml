@@ -2,27 +2,6 @@
 mn:
   data:
     script:
-      category:
-        csd_category_name: КШУ-ны нээлтүүд ('17-'18)
-        csd_2018_category_name: КШУ-ны нээлтүүд ('18-'19)
-        csd_2019_category_name: КШУ-ны нээлтүүд ('19-'20)
-        csd_2020_category_name: КШУ-ны нээлтүүд ('20-'21)
-        csd_2021_category_name: КШУ-ны нээлтүүд ('21-'22)
-        csf_category_name: КШУ-ны үндсүүд
-        csf_international_category_name: КШУ-ны үндсүүд олон улсын
-        csf2_draft_category_name: 'Хөгжүүлж буй: А-F хичээлүүд'
-        csp_category_name: КШУ-ны зарчмууд ('15-'16)
-        csp_2018_category_name: КШУ-ны зарчмууд ('18-'19)
-        csp_2019_category_name: КШУ-ны зарчмууд ('19-'20)
-        csp_2020_category_name: КШУ-ны зарчмууд ('20-'21)
-        csp_2021_category_name: КШУ-ны зарчмууд ('21-'22)
-        cspexams_category_name: КШУ-ны зарчмуудын дадлага шалгалт
-        csp17_category_name: КШУ-ны зарчмууд ('17-'18)
-        full_course_category_name: Бүрэн хичээл
-        hoc_category_name: Кодын цаг
-        math_category_name: Математик
-        research_studies_category_name: Судалгааны сэдэв
-        other_category_name: Бусад
       name:
         course1:
           title: Хичээл 1

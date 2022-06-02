@@ -845,8 +845,24 @@ tr:
         CSA-PL-debugging-temp: Java Lab'da Hata ayıklamaya giriş - geçici
         csd_u6_circuit_playground: Fiziksel Bilişim
         csd_u6_input_output: Girdiler ve çıktılar
+        CSA-PL-for-loops: Java'da döngüler
+        CSA-PL-variables: Java'da Değişken Oluşturmak
+        PL_CS_Journeys_Overview: CS Journeys
+        CSA-PL-intro-to-java-lab: Java Laboratuvarı temelleri
+        CSA-PL-first-program: Java'da Program yazma
+        CSD_u6_variables_part1: 'CSD: Değişkenler'
+        csd_u6_if_statements: 'CSD: Eğer (If) İfadeleri'
+        csc-poem-art-intro: Giriş Videosu
+        csc-poem-art-outro: Çıkış Videosu
+        csd_u6_call_define_functions: 'CSD: Fonksiyonların Çağrılması ve Tanımlanması'
         csp_applab_parameters: Fonksiyon parametreleri
+        starquilts_intro_artist: Yıldızlı Örtülere Giriş
         CSA-PL-intro-to-arrays: Bir Boyutlu (1D) Diziler
+        CSA-PL-1d-arrays-new-values: 1 boyutlu dizilere değer girmek
+        CSA-PL-conditionals: Java'da Koşullu İfadeler
+        CSA-PL-two-way-selection: İki yönlü seçim
+        CSA-PL-Printing-in-Java: Java'da Yazdırma
+        CSA-PL-multi-selection-statements: Çok Seçenekli İfadeler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

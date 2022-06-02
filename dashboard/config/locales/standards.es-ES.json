@@ -334,6 +334,9 @@
         },
         "csta/2-CS-03": {
           "description": "Identificar y solucionar sistemáticamente los problemas de los dispositivos informáticos y sus componentes."
+        },
+        "csta/3A-AP-20": {
+          "description": "Evaluar las licencias que limitan o restringen el uso de dispositivos informáticos cuando se utilizan recursos como las bibliotecas."
         }
       }
     }

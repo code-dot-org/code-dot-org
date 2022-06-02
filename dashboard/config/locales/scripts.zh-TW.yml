@@ -2,27 +2,6 @@
 zh-TW:
   data:
     script:
-      category:
-        csd_category_name: 計算機科學探索（'17-'18）
-        csd_2018_category_name: 計算機科學探索（'18-'19）
-        csd_2019_category_name: 計算機科學探索（'19-'20）
-        csd_2020_category_name: 計算機科學探索（'20-'21）
-        csd_2021_category_name: 計算機科學探索（'21-'22）
-        csf_category_name: CS 基本原理
-        csf_international_category_name: 計算機科學基礎國際版
-        csf2_draft_category_name: 開發中：課程 A - F
-        csp_category_name: CS 原理 ('15-'16)
-        csp_2018_category_name: 計算機科學原理（'18-'19）
-        csp_2019_category_name: 計算機科學原理（'19-'20）
-        csp_2020_category_name: 計算機科學原理（'20-'21）
-        csp_2021_category_name: CS 原理 ('21-'22)
-        cspexams_category_name: 計算機科學原理應用測驗
-        csp17_category_name: CS 原理 ('17-'18)
-        full_course_category_name: 完整課程
-        hoc_category_name: 一小時玩程式
-        math_category_name: 運算
-        research_studies_category_name: 研究
-        other_category_name: 其它
       name:
         course1:
           title: 課程 1
@@ -6546,6 +6525,10 @@ zh-TW:
               name: 電腦科學原理調研21-22
             CSD pre-survey 21-2:
               name: 電腦科學發現調研21-22
+            CS Principles Pre-survey:
+              name: CSA預調查草案
+            Course Survey:
+              name: CSA課程後調查草案
         k1hoc2017:
           title: 2017 年 K-1 一小時玩程式
           lessons:
@@ -16830,6 +16813,8 @@ zh-TW:
               name: 迴圈
             lesson-21:
               name: 主控台
+            lesson-23:
+              name: CSA預調查
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -16999,6 +16984,12 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus和ScenePlus
         coursef-2022-pilot:
           lessons:
             The Power of Words:
@@ -17306,6 +17297,12 @@ zh-TW:
           lessons:
             Hello World CSC:
               name: 你好世界CSC
+            lesson-4:
+              name: "[Optional]寓言簡介"
+            lesson-5:
+              name: 計劃你的寓言
+            lesson-6:
+              name: 分享你的寓言
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey:
@@ -17576,12 +17573,16 @@ zh-TW:
           title: 電腦科學探索課後問卷調查
           description: 本單元包含《電腦科學探索》課後調查問卷。本單元可在學生們完成《電腦科學探索》最後一個單元後進行分配。
           student_description: 本單元包含一個調查問卷，待完成《電腦科學探索》所有單元後進行填寫。教師將告訴你何時填寫該調查問卷。
+        testtess2:
+          name: testtess2
         csp-post-survey-2022:
           title: 電腦科學原理課後問卷調查
         aiml-2022:
           lessons:
             Survey Planning:
               name: 設計數據收集
+          name: aiml-2022
+          description_short: 瞭解人工智慧和機器學習
         vpl-csd-2022:
           lessons:
             Module 1:

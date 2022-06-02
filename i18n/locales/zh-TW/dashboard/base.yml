@@ -360,6 +360,7 @@ zh-TW:
       educate_beyond: "超越 Code.org"
       educate_inspire: "激勵學生"
       educate_community: "線上社群"
+      educate_requirements: "技術要求"
       educate_tools: "工具和影片"
       about_us: "關於我們"
       about_leadership: "管理團隊"
@@ -427,6 +428,7 @@ zh-TW:
       starwars: '星際大戰'
       starwarsblocks: '星際大戰（程式積木）'
       starwarsblocks_hour: '星際大戰（程式積木）'
+      thebadguys: '壞蛋聯盟'
       loading: '正在載入…'
       weblab: 'Web Lab'
       view_all: '瀏覽所有專案…'
@@ -673,8 +675,10 @@ zh-TW:
       title: '舞蹈派對'
     hello-world:
       title: '你好世界'
+      body: '從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。'
     poem-art:
       title: '詩歌藝術'
+      body: '表達自己！使用代碼創建動畫詩歌。'
     hoc:
       title: '經典迷宮'
       body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
@@ -927,6 +931,7 @@ zh-TW:
     instructor_feedback: '教師回饋'
     peer_feedback: '同伴反饋'
     outdated: '這是先前版本的回饋內容'
+    review_count: '您必須完成本單元的%{review_count}評審'
     peer_review: '同儕審查'
   external_links:
     disclaimer: 免責聲明
@@ -993,6 +998,11 @@ zh-TW:
   no_course_access_teacher: "你沒有權限瀏覽這個課程。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。"
   no_script_access_student: "你沒有權限瀏覽這個單元。請向你的老師查詢指定的單元。"
   no_script_access_teacher: "你沒有權限瀏覽這個單元。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。"
+  no_level_access_student: "你無權訪問此級別。請詢問教師應該訪問什麼級別。"
+  no_level_access_teacher: "你沒有權限訪問此級別。如果你認為你應該有權限，請發送電子郵件至support@code.org讓我們解決這個問題。"
+  no_exemplar: "此級別沒有範例。"
+  no_exemplar_access_student: "學生無法訪問範例代碼。請詢教師應該訪問什麼級別。"
+  no_exemplar_access_teacher: "只有認證教師才能訪問範例代碼。如果你想成為一名認證教師，請寫信給support@code.org。"
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
   view_all_units: '檢視所有單元'
@@ -1010,9 +1020,13 @@ zh-TW:
       school_city: '學校所在城市'
       school_city_district: '學校城市/區'
       school_country: '學校所屬國家'
+      school_department_region: '學校部門/區域'
       colombian_school_city: '學校所在城市'
+      colombian_chilean_school_department: '學校部門/區域'
       colombian_school_municipality: '學校當局'
       colombian_chilean_school_name: '學校名稱'
+      chilean_school_commune: '社群'
+      chilean_school_id: '學校ID'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'
@@ -1037,6 +1051,7 @@ zh-TW:
         malaysia: 'Malaysia'
         mexico: 'Mexico'
         thailand: 'Thailand'
+        uzbekistan: '烏茲別克斯坦'
       ages:
         ages_under_6: '6 歲以下'
         ages_7_8: '7 - 8 歲'
