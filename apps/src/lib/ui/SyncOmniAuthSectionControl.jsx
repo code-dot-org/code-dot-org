@@ -141,7 +141,7 @@ class SyncOmniAuthSectionControl extends React.Component {
           handleClose={this.closeDialog}
         >
           <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
-          <Heading2>{'Sample subheading'}</Heading2>
+          <Heading2>{i18n.loginTypeSyncButtonDialogHeaderSub()}</Heading2>
           <div style={styles.scroll}>
             <pre>
               <code>{this.state.syncFailErrorLog}</code>
@@ -149,7 +149,7 @@ class SyncOmniAuthSectionControl extends React.Component {
           </div>
           <div style={styles.needHelpMessage}>
             <SafeMarkdown
-              markdown={i18n.loginTypeSyncButtonDialogNeedHelp({
+              markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({
                 syncFailureSupportArticle:
                   'https://support.code.org/hc/en-us/articles/6496495212557'
               })}
