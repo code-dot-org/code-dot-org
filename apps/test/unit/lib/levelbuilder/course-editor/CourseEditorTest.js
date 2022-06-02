@@ -86,12 +86,7 @@ describe('CourseEditor', () => {
           ]}
         />
       );
-      expect(
-        wrapper
-          .find('ResourcesEditor')
-          .first()
-          .props().useMigratedResources
-      ).to.be.true;
+      expect(wrapper.find('ResourcesEditor').first()).to.exist;
     });
   });
 

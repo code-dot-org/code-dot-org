@@ -2,29 +2,13 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import sinon from 'sinon';
 
 describe('ResourcesEditor', () => {
-  let defaultProps, updateResources;
+  let defaultProps;
 
   beforeEach(() => {
-    updateResources = sinon.spy();
     defaultProps = {
-      inputStyle: {},
-      resources: [
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''},
-        {link: '', type: ''}
-      ],
-      updateResources,
-      useMigratedResources: true
+      inputStyle: {}
     };
   });
 
@@ -32,7 +16,6 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={undefined}
         migratedResources={[
           {
             id: 1,
@@ -57,7 +40,6 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={undefined}
         migratedResources={[
           {
             id: 1,

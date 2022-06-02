@@ -203,7 +203,6 @@ class CourseEditor extends Component {
     } = this.props;
     const {
       announcements,
-      teacherResources,
       title,
       versionTitle,
       descriptionShort,
@@ -389,13 +388,8 @@ class CourseEditor extends Component {
             <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
-              resources={teacherResources}
               migratedResources={this.props.migratedTeacherResources}
-              updateResources={teacherResources =>
-                this.setState({teacherResources})
-              }
               courseVersionId={this.props.courseVersionId}
-              useMigratedResources
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
           </div>
@@ -405,7 +399,6 @@ class CourseEditor extends Component {
               inputStyle={styles.input}
               migratedResources={this.props.studentResources}
               courseVersionId={this.props.courseVersionId}
-              useMigratedResources
               studentFacing
             />
           </div>
