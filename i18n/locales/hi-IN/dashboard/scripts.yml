@@ -2,27 +2,6 @@
 hi:
   data:
     script:
-      category:
-        csd_category_name: CS अन्वेषण ('17-'18)
-        csd_2018_category_name: CS अन्वेषण ('18-'19)
-        csd_2019_category_name: CS अन्वेषण ('19-'20)
-        csd_2020_category_name: CS अन्वेषण ('20-'21)
-        csd_2021_category_name: CS अन्वेषण ('21-'22)
-        csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
-        csf_international_category_name: CS के मूल सिद्धांत अंतर्राष्ट्रीय
-        csf2_draft_category_name: 'विकास अधीन: कोर्स A - F'
-        csp_category_name: CS के सिद्धांत ('15-'16)
-        csp_2018_category_name: CS के सिद्धांत ('18-'19)
-        csp_2019_category_name: CS के सिद्धांत ('19-'20)
-        csp_2020_category_name: CS के सिद्धांत ('20-'21)
-        csp_2021_category_name: CS के सिद्धांत ('21-'22)
-        cspexams_category_name: CS के सिद्धांत अभ्यास टेस्ट
-        csp17_category_name: CS के सिद्धांत ('17-'18)
-        full_course_category_name: Full Courses
-        hoc_category_name: आवर ऑफ़ कोड
-        math_category_name: गणित
-        research_studies_category_name: शोध अध्ययन
-        other_category_name: अन्य
       name:
         course1:
           title: कोर्स 1
