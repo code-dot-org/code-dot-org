@@ -4,13 +4,22 @@
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
-      EngineVersion: 5.7.12
+      # Updating a Stack with a change to EngineVersion causes "Some Interruption".
+      # Each Database Instance in the cluster is restarted.
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
+      EngineVersion: 5.7.mysql_aurora.2.10.2
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-
+      EnableCloudwatchLogsExports:
+        - general
+        - audit
+        - error
+        - slowquery
+      DeletionProtection: true
+      BackupRetentionPeriod: !Ref DBBackupRetention
 <%
   # Integer range identifying each of the DB Instances to provision in the cluster.
   DB_INSTANCE_RANGE=(0..1)
@@ -65,6 +74,14 @@
 <%end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReaderDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
@@ -87,3 +104,49 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+  ReportingDBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Sub "${AWS::StackName}-reporting"
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReportingDBDomainName:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
+        - Name: <%="#{subdomain.delete_suffix('.' + domain)}-db-reporting.#{domain}"%>
+          Type: CNAME
+          TTL: <%= DNS_TTL %>
+          ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
+  ReportingDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reporting"
+      DBProxyName: !Ref ReportingDBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
+  ReportingDBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+    Properties:
+      DBProxyName: !Ref ReportingDBProxy
+      DBClusterIdentifiers: [!Ref AuroraCluster]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
+        # Send reporting/analytics queries to the reader database instances, but use the database connection
+        # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
+        # and to permit long running queries.
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
+        # exceed 5% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 5
+

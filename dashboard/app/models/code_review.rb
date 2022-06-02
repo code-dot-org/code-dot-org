@@ -1,32 +1,28 @@
 # == Schema Information
 #
-# Table name: code_review_requests
+# Table name: code_reviews
 #
-#  id              :bigint           not null, primary key
-#  user_id         :integer          not null
-#  script_id       :integer          not null
-#  level_id        :integer          not null
-#  project_id      :integer          not null
-#  project_version :string(255)      not null
-#  closed_at       :datetime
-#  deleted_at      :datetime
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                         :bigint           not null, primary key
+#  user_id                    :integer          not null
+#  project_id                 :integer          not null
+#  script_id                  :integer          not null
+#  level_id                   :integer          not null
+#  project_level_id           :integer          not null
+#  project_version            :string(255)      not null
+#  project_version_expires_at :datetime
+#  storage_id                 :integer          not null
+#  closed_at                  :datetime
+#  deleted_at                 :datetime
+#  created_at                 :datetime         not null
+#  updated_at                 :datetime         not null
 #
 # Indexes
 #
-#  index_code_review_requests_unique  (user_id,script_id,level_id,closed_at,deleted_at) UNIQUE
+#  index_code_reviews_for_peer_lookup               (user_id,script_id,project_level_id,closed_at,deleted_at)
+#  index_code_reviews_on_project_id_and_deleted_at  (project_id,deleted_at)
+#  index_code_reviews_unique                        (user_id,project_id,closed_at,deleted_at) UNIQUE
+#
 class CodeReview < ApplicationRecord
-  # TODO: Reorder columns so that the first three columns are id, user_id, project_id
-  # TODO: Change unique index to include just user_id, project_id, closed_at, and deleted_at
-  # TODO: Add index to look up by project_id
-  # TODO: Add column to store channel id
-  # TODO: Add column to store project version expiration
-
-  # This model was renamed partway through the development process. This line
-  # will be removed when the table is renamed before this work is completed.
-  self.table_name = 'code_review_requests'
-
   acts_as_paranoid
 
   belongs_to :owner, class_name: 'User', foreign_key: :user_id
@@ -68,7 +64,7 @@ class CodeReview < ApplicationRecord
       isVersionExpired: false,    # TODO: implement this!
       isOpen: open?,
       createdAt: created_at,
-    }
+    }.merge!(summarize_owner_info)
   end
 
   def summarize_with_comments
