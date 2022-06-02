@@ -19,6 +19,7 @@ const CommitsAndReviewTab = props => {
   const {
     channelId,
     serverLevelId,
+    serverProjectLevelId,
     serverScriptId,
     viewAsCodeReviewer,
     viewAsTeacher,
@@ -37,8 +38,14 @@ const CommitsAndReviewTab = props => {
 
   const dataApi = useMemo(
     () =>
-      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId, locale),
-    [channelId, serverLevelId, serverScriptId, locale]
+      new CodeReviewDataApi(
+        channelId,
+        serverLevelId,
+        serverProjectLevelId,
+        serverScriptId,
+        locale
+      ),
+    [channelId, serverLevelId, serverProjectLevelId, serverScriptId, locale]
   );
 
   useEffect(() => {
@@ -99,6 +106,16 @@ const CommitsAndReviewTab = props => {
     try {
       const comment = await dataApi.toggleResolveComment(commentId, isResolved);
       onSuccess(comment);
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const deleteCodeReviewComment = async (commentId, onSuccess, onFailure) => {
+    try {
+      await dataApi.deleteCodeReviewComment(commentId);
+      onSuccess();
     } catch (err) {
       console.log(err);
       onFailure();
@@ -189,6 +206,7 @@ const CommitsAndReviewTab = props => {
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
             toggleResolveComment={toggleResolveComment}
+            deleteCodeReviewComment={deleteCodeReviewComment}
           />
           {!openReviewData && !isReadOnlyWorkspace && (
             <div style={styles.timelineAligned}>
@@ -227,6 +245,7 @@ export default connect(
     userIsTeacher: state.currentUser.userType === 'teacher',
     channelId: state.pageConstants.channelId,
     serverLevelId: state.pageConstants.serverLevelId,
+    serverProjectLevelId: state.pageConstants.serverProjectLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
     locale: state.pageConstants.locale,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
@@ -245,6 +264,7 @@ CommitsAndReviewTab.propTypes = {
   userIsTeacher: PropTypes.bool,
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
+  serverProjectLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
   isReadOnlyWorkspace: PropTypes.bool,

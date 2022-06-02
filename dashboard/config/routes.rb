@@ -392,9 +392,11 @@ Dashboard::Application.routes.draw do
   get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
 
   # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
+  get '/s/:script_name/stage/:position/puzzle', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels')
   get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
 
   # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
   get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
@@ -913,7 +915,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
-  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
 
@@ -976,7 +977,7 @@ Dashboard::Application.routes.draw do
     get :peers_with_open_reviews, on: :collection
   end
 
-  resources :code_review_notes, only: [:create, :update]
+  resources :code_review_notes, only: [:create, :update, :destroy]
 
   resources :code_review_comments, only: [:create, :destroy] do
     patch :toggle_resolved, on: :member

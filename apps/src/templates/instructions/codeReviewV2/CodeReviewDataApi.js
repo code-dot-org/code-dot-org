@@ -7,22 +7,12 @@ export const timelineElementType = {
 };
 
 export default class CodeReviewDataApi {
-  constructor(channelId, levelId, scriptId, locale) {
+  constructor(channelId, levelId, projectLevelId, scriptId, locale) {
     this.channelId = channelId;
     this.levelId = levelId;
+    this.projectLevelId = projectLevelId;
     this.scriptId = scriptId;
     this.locale = locale;
-  }
-
-  // Temp method only used to set this.token
-  getCodeReviewCommentsForProject(onDone) {
-    return $.ajax({
-      url: `/code_review_comments/project_comments`,
-      method: 'GET',
-      data: {channel_id: this.channelId}
-    }).done((data, _, request) => {
-      this.token = request.getResponseHeader('csrf-token');
-    });
   }
 
   getReviewablePeers() {
@@ -30,8 +20,8 @@ export default class CodeReviewDataApi {
       url: `/code_reviews/peers_with_open_reviews`,
       type: 'GET',
       data: {
-        levelId: this.levelId,
-        scriptId: this.scriptId
+        scriptId: this.scriptId,
+        projectLevelId: this.projectLevelId || this.levelId
       }
     });
   }
@@ -73,17 +63,19 @@ export default class CodeReviewDataApi {
   };
 
   getCodeReviews() {
-    // TODO: csrf token get rid of this:
-    this.getCodeReviewCommentsForProject();
-
-    return $.ajax({
-      url: `/code_reviews`,
-      type: 'GET',
-      data: {
-        channelId: this.channelId,
-        levelId: this.levelId,
-        scriptId: this.scriptId
-      }
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/code_reviews`,
+        type: 'GET',
+        data: {
+          channelId: this.channelId
+        }
+      })
+        .done((codeReviews, _, request) => {
+          this.token = request.getResponseHeader('csrf-token');
+          resolve(codeReviews);
+        })
+        .fail(result => reject(result));
     });
   }
 
@@ -136,6 +128,14 @@ export default class CodeReviewDataApi {
     });
   }
 
+  deleteCodeReviewComment(commentId) {
+    return $.ajax({
+      url: `/code_review_notes/${commentId}`,
+      type: 'DELETE',
+      headers: {'X-CSRF-Token': this.token}
+    });
+  }
+
   closeReview(reviewId) {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -166,6 +166,7 @@ export default class CodeReviewDataApi {
           channelId: this.channelId,
           scriptId: this.scriptId,
           levelId: this.levelId,
+          projectLevelId: this.projectLevelId || this.levelId,
           version: version
         }
       })

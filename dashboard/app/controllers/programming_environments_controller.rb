@@ -3,7 +3,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   EXPIRY_TIME = 30.minutes
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
-  before_action :set_programming_environment, only: [:edit, :update, :destroy, :get_summary_by_name]
+  before_action :set_programming_environment, only: [:edit, :update, :destroy]
   authorize_resource
 
   def index
@@ -78,7 +78,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     if DCDO.get('use-studio-code-docs', false)
       @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
       return render :not_found unless @programming_environment
-      redirect_to(programming_environments_path(@programming_environment.name))
+      redirect_to(programming_environment_path(@programming_environment.name))
     else
       render_proxied_url(
         "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/",
@@ -98,6 +98,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def get_summary_by_name
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     return render :not_found unless @programming_environment
     return head :forbidden unless can?(:get_summary_by_name, @programming_environment)
     return render json: @programming_environment.categories_for_get
