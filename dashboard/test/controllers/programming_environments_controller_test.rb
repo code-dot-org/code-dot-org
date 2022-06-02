@@ -56,7 +56,6 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
   test 'page is not proxied to docs index if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).at_least_once
 
     create :programming_environment
     stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
