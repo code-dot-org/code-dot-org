@@ -33,6 +33,7 @@ Scenario: Teacher can view student versions
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait for the page to fully load
+  And I dismiss the teacher panel
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
   And element ".versionRow:nth-child(1) .img-upload" does not contain text "Restore"
