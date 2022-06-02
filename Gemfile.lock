@@ -628,8 +628,8 @@ GEM
       webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
     os (1.1.1)
-    parallel (1.12.1)
-    parallel_tests (2.27.0)
+    parallel (1.22.1)
+    parallel_tests (3.11.0)
       parallel
     paranoia (2.4.2)
       activerecord (>= 4.0, < 6.1)
