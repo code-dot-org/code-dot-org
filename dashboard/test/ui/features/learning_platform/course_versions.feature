@@ -127,13 +127,6 @@ Scenario: Switch versions using dropdown on script overview page
 
 @as_student
 @no_mobile
-Scenario: Course unit family names redirect to 2019 version
-  When I am on "http://studio.code.org/s/csp3"
-  And I get redirected to "/s/csp3-2019" via "dashboard"
-  And I wait until element "#ui-test-unversioned-script-redirect-dialog" is visible
-
-@as_student
-@no_mobile
 Scenario: Unversioned course url redirects to latest course version
   When I am on "http://studio.code.org/courses/ui-test-course"
   And I get redirected to "/courses/ui-test-course-2019" via "dashboard"
