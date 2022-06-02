@@ -342,7 +342,7 @@ class Script < ApplicationRecord
 
     def family_names
       Rails.cache.fetch('script/family_names', force: !Script.should_cache?) do
-        CourseVersion.course_offering_keys('Script')
+        (CourseVersion.course_offering_keys('Script') + ScriptConstants::FAMILY_NAMES).uniq.sort
       end
     end
 
