@@ -497,6 +497,7 @@ def localize_markdown_content
     curriculum/unplugged.md.partial
     educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
+    educate/it.md
     helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
