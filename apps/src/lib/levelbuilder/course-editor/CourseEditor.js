@@ -8,9 +8,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -54,7 +52,6 @@ class CourseEditor extends Component {
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
-    useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
@@ -68,13 +65,6 @@ class CourseEditor extends Component {
     super(props);
 
     const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.useMigratedResources) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
 
     this.state = {
       isSaving: false,
@@ -405,22 +395,20 @@ class CourseEditor extends Component {
                 this.setState({teacherResources})
               }
               courseVersionId={this.props.courseVersionId}
-              useMigratedResources={this.props.useMigratedResources}
+              useMigratedResources
               getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
           </div>
-          {this.props.useMigratedResources && (
-            <div>
-              <h4>Student Resources</h4>
-              <ResourcesEditor
-                inputStyle={styles.input}
-                migratedResources={this.props.studentResources}
-                courseVersionId={this.props.courseVersionId}
-                useMigratedResources
-                studentFacing
-              />
-            </div>
-          )}
+          <div>
+            <h4>Student Resources</h4>
+            <ResourcesEditor
+              inputStyle={styles.input}
+              migratedResources={this.props.studentResources}
+              courseVersionId={this.props.courseVersionId}
+              useMigratedResources
+              studentFacing
+            />
+          </div>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">

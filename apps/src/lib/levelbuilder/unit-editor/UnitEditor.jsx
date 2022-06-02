@@ -415,9 +415,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const useMigratedTeacherResources =
-      this.props.isMigrated && !this.state.teacherResources?.length;
-
     const allowMajorCurriculumChanges =
       this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
@@ -972,7 +969,7 @@ class UnitEditor extends React.Component {
                 updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
-                useMigratedResources={useMigratedTeacherResources}
+                useMigratedResources
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}

@@ -11,7 +11,6 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
@@ -42,7 +41,6 @@ const defaultProps = {
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
   initialAnnouncements: [],
-  useMigratedResources: false,
   coursePath: '/courses/test-course',
   initialInstructionType: InstructionType.teacher_led,
   initialInstructorAudience: InstructorAudience.teacher,
@@ -79,51 +77,11 @@ describe('CourseEditor', () => {
   };
 
   describe('Teacher Resources', () => {
-    it('adds empty resources if passed none', () => {
-      const wrapper = shallow(<CourseEditor {...defaultProps} />);
-      assert.deepEqual(wrapper.state('teacherResources'), [
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''}
-      ]);
-    });
-
-    it('adds empty resources if passed fewer than max', () => {
-      const wrapper = shallow(
-        <CourseEditor
-          {...defaultProps}
-          initialTeacherResources={[
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]}
-        />
-      );
-      assert.deepEqual(wrapper.state('teacherResources'), [
-        {type: ResourceType.curriculum, link: '/foo'},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''},
-        {type: '', link: ''}
-      ]);
-    });
-
     it('uses the migrated resource component for migrated resources', () => {
       const wrapper = shallow(
         <CourseEditor
           {...defaultProps}
-          useMigratedResources
-          initialMigratedTeacherResources={[
+          migratedTeacherResources={[
             {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
           ]}
         />
@@ -141,8 +99,8 @@ describe('CourseEditor', () => {
     const wrapper = createWrapper({});
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseUnitsEditor').length, 1);
-    assert.equal(wrapper.find('ResourcesEditor').length, 1);
-    assert.equal(wrapper.find('ResourcesDropdown').length, 1);
+    assert.equal(wrapper.find('ResourcesEditor').length, 2);
+    assert.equal(wrapper.find('ResourcesDropdown').length, 0);
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 6);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
