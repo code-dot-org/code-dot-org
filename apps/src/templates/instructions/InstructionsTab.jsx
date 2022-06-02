@@ -41,13 +41,16 @@ export default class InstructionsTab extends Component {
         : styles.text)
     };
     return (
-      <a
-        className={this.props.className}
-        onClick={this.props.onClick}
-        style={combinedStyle}
-      >
-        {this.props.text}
-      </a>
+      <div style={styles.tabWrapper}>
+        <a
+          className={this.props.className}
+          onClick={this.props.onClick}
+          style={combinedStyle}
+          title={this.props.text}
+        >
+          {this.props.text}
+        </a>
+      </div>
     );
   }
 }
@@ -57,17 +60,23 @@ const styles = {
     marginRight: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 6,
+    paddingBottom: 4,
     fontWeight: 'bold',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
   },
   tabRtl: {
     marginLeft: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 6,
+    paddingBottom: 4,
     fontWeight: 'bold',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
+  },
+  tabWrapper: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   text: {
     color: color.charcoal

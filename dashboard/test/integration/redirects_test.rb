@@ -65,6 +65,15 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/s/allthethings/stage/33/puzzle/1/page/1'
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
+
+    # ideally we would just return a 404, but it is easier to implement a
+    # redirect to a url which 404s.
+    get '/s/allthethings/stage/1/puzzle'
+    assert_redirected_to '/s/allthethings/lessons/1/levels'
+    e = assert_raises(ActionController::RoutingError) do
+      follow_redirect!
+    end
+    assert_includes e.message, 'No route matches'
   end
 
   test 'redirects urls with stage for lesson extras' do
@@ -98,6 +107,15 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/s/test-script/lockable/1/puzzle/1/page/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1/page/1'
+
+    # ideally we would just return a 404, but it is easier to implement a
+    # redirect to a url which 404s.
+    get '/s/test-script/lockable/1/puzzle'
+    assert_redirected_to '/s/test-script/lockable/1/levels'
+    e = assert_raises(ActionController::RoutingError) do
+      follow_redirect!
+    end
+    assert_includes e.message, 'No route matches'
   end
 
   test 'old script id paths redirect to named paths' do
