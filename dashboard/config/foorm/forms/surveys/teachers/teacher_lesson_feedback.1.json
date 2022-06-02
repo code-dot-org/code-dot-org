@@ -20,7 +20,7 @@
           "type": "html",
           "name": "heading_with_unit",
           "html": "<h3>Course: {course_name}<br/>Unit {unit_number}: {unit_name}<br/>Lesson {lesson_number}: {lesson_name}",
-          "visibleIf": "{unit_name}"
+          "visibleIf": "!!{unit_name}"
         },
         {
           "type": "html",
