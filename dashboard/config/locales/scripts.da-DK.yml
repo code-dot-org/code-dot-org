@@ -2497,29 +2497,22 @@ da:
         csd3-2021:
           lessons:
             Variables:
-              key: Variabler
               name: Variabler
             Sprites:
-              key: figure
               name: figure
             Text:
-              key: Tekst
               name: Tekst
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funktioner
               name: Funktioner
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funktioner med parametre
               name: Funktioner med parametre
         csp3-2021:
           lessons:
             Debugging:
-              key: Fejlfinding
               name: Fejlfinding
         csp4-2021:
           lesson_groups:
@@ -2553,7 +2546,6 @@ da:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Flyt det, flyt det
               name: Flyt det, flyt det
             'Loops: Getting Loopy':
               name: Blive Svimmel
@@ -2567,7 +2559,6 @@ da:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binære armbånd
               name: Binære armbånd
             'Events: The Big Event':
               name: Den store begivenhed
@@ -2585,19 +2576,13 @@ da:
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
             Relay Programming:
-              key: Stafet-programmering
               name: Stafet-programmering
             Dance Party:
-              key: Dance Party
               name: Dance Party
             Conditionals with Cards:
-              key: Betingelser med kortspil
               name: Betingelser med kortspil
             'Unplugged: Binary':
-              key: 'Unplugged: Binære'
               name: Binære billeder
-            Artist Binary:
-              key: Kunstner binære
           lesson_groups:
             csf_events:
               display_name: Hændelser
@@ -2613,8 +2598,6 @@ da:
               display_name: Digital statsborgerskab
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Betingelser
             'Functions: Songwriting':
               name: Sangskrivning
           lesson_groups:
@@ -2631,13 +2614,10 @@ da:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Omslut variabler
               name: Omslut variabler
             Internet:
-              key: Internet
               name: Internettet
             For Loop Fun:
-              key: For loop sjov
               name: For loop sjov
             lesson-5:
               name: Udbrud
@@ -2659,7 +2639,6 @@ da:
         express-2021:
           lessons:
             Dance Party:
-              key: Dance Party
               name: Dance Party
             lesson-1:
               name: Dance Party
@@ -2712,25 +2691,17 @@ da:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Løkker
               name: Løkker
             Events:
-              key: Hændelser
               name: Hændelser
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funktioner
               name: Funktioner
             Variables:
-              key: Variabler
               name: Variabler
             For Loops:
-              key: For Loops
               name: For Loops
-            Sprite Lab:
-              key: SpriteLab
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
@@ -2848,7 +2819,6 @@ da:
           lessons:
             Debugging:
               name: Fejlfinding
-              key: Fejlfinding
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2867,7 +2837,6 @@ da:
           lessons:
             Move It, Move It:
               name: Flyt det, flyt det
-              key: Flyt det, flyt det
             Getting Loopy:
               name: Blive Svimmel
             'Loops: Getting Loopy':
@@ -2885,7 +2854,6 @@ da:
               name: Den store begivenhed
             Binary Bracelets:
               name: Binære armbånd
-              key: Binære armbånd
             'Events: The Big Event':
               name: Den store begivenhed
           lesson_groups:
@@ -2901,13 +2869,10 @@ da:
               name: Programmering på millimeterpapir
             Relay Programming:
               name: Stafet-programmering
-              key: Stafet-programmering
             Dance Party:
               name: Dance Party
-              key: Dance Party
             Conditionals with Cards:
               name: Betingelser med kortspil
-              key: Betingelser med kortspil
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
           lesson_groups:
@@ -2925,8 +2890,6 @@ da:
               name: Sangskrivning
             'Functions: Songwriting':
               name: Sangskrivning
-            Conditionals:
-              key: Betingelser
           lesson_groups:
             csf_sprites:
               display_name: figure
@@ -2942,13 +2905,11 @@ da:
           lessons:
             For Loop Fun:
               name: For loop sjov
-              key: For loop sjov
             Outbreak:
               name: Udbrud
             The Internet:
               name: Internettet
             Internet:
-              key: Internet
               name: Internettet
           lesson_groups:
             ramp_up:
@@ -2991,10 +2952,8 @@ da:
           lessons:
             Outbreak:
               name: Udbrud
-              key: Udbrud
             The Internet:
               name: Internettet
-              key: Internettet
           lesson_groups:
             lessonGroup-7:
               display_name: Digital statsborgerskab
@@ -3010,40 +2969,41 @@ da:
           lessons:
             Loops:
               name: Løkker
-              key: Løkker
             Events:
               name: Hændelser
-              key: Hændelser
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Functions:
               name: Funktioner
-              key: Funktioner
             Variables:
               name: Variabler
-              key: Variabler
             For Loops:
               name: For Loops
-              key: For Loops
         csd3-2022:
           lessons:
             Variables:
               name: Variabler
-              key: Variabler
             Sprites:
               name: figure
-              key: figure
             Text:
               name: Tekst
-              key: Tekst
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Functions:
               name: Funktioner
-              key: Funktioner
         csd6-2022:
           lessons:
             Functions:
               name: Funktioner
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Oversigt
+            lesson-1:
+              name: Oversigt
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Oversigt
+            lesson-1:
+              name: Oversigt

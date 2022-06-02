@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ko:
   errors:
     messages:
@@ -354,6 +360,7 @@ ko:
       educate_beyond: "Code.org 너머"
       educate_inspire: "학생들에게 영감을 주기"
       educate_community: "온라인 커뮤니티"
+      educate_requirements: "기술적 요구사항"
       educate_tools: "툴과 동영상"
       about_us: "우리 소개"
       about_leadership: "리더십"
@@ -998,6 +1005,8 @@ ko:
   no_level_access_student: "이 레벨에 들어 올 수 없습니다. 선생님에게 어느 레벨을 들어야 하는지 물어 보세요."
   no_level_access_teacher: "이 단계에 들어 올 수 없습니다. 이 단계에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
   no_exemplar: "이 레벨에 모범 예시가 존재하지 않습니다."
+  no_exemplar_access_student: "학생은 예시 코드에 들어 올 수 없습니다. 선생님에게 어느 레벨을 들어야 하는지 물어 보세요."
+  no_exemplar_access_teacher: "검증된 교사만 예시 코드에 접속할 수 있습니다. 검증받기를 원하시면, support@code.org로 신청하세요."
   return_unit_overview: '단원 개요로 이동'
   return_course_overview: '과정 개요로 이동'
   view_all_units: '모든 단원 보기'

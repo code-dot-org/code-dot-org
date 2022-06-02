@@ -77,12 +77,17 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       },
       bodyClipPath
     );
+    const SPRITE = {
+      width: 96,
+      height: 124,
+      url: 'sprites.png'
+    };
     const body = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
       {
-        width: Blockly.SPRITE.width,
+        width: SPRITE.width,
         x: -SPRITE_LEFT,
-        height: Blockly.SPRITE.height,
+        height: SPRITE.height,
         y: -SPRITE_TOP,
         'clip-path': 'url(#blocklyTrashBodyClipPath)'
       },
@@ -108,9 +113,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.svgLid_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
       {
-        width: Blockly.SPRITE.width,
+        width: SPRITE.width,
         x: -SPRITE_LEFT,
-        height: Blockly.SPRITE.height,
+        height: SPRITE.height,
         y: -SPRITE_TOP,
         'clip-path': 'url(#blocklyTrashLidClipPath)'
       },

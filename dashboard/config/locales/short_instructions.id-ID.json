@@ -19,7 +19,7 @@
         "2-3 Bee Loops 2A": "Dapatkah kamu lakukan tugas yang sama lebih mudah dengan perulangan?",
         "2-3 Bee Loops 3A": "Bisakah Anda menggunakan perulangan untuk mengumpulkan semua nektar itu?",
         "2-3 Maze 10": "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)",
-        "2-3 Maze 2": "Babi ini mengerutkan buluku. Bantu aku mendekatinya!",
+        "2-3 Maze 2": "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)",
         "2-3 Maze 4": "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)",
         "2-3 Maze 6": "Tetap tenang dan bantu saya untuk menangkap si babi nakal itu. Kalau tidak saya akan marah!",
         "2-3 Maze 7": "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)",
@@ -3388,7 +3388,15 @@
         "scrat 16": "Biji ek! Gunakan blok \"jika\" (if) untuk mengantar saya ke sana dengan jumlah blok paling sedikit.",
         "scrat 17": "OK, mari kita coba lagi latihan itu - ini tidak terlalu berbeda, tapi waspada temboknya!",
         "scrat 18": "Blok \"jika tidak\" (if-else) memeriksa persyaratan, lalu melakukan satu hal ATAU yang lain, Untuk menjalankan saya ke biji ek tersebut cobalah gunakan blok baru ini.",
-        "scrat 20": "Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!"
+        "scrat 20": "Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!",
+        "2-3 Maze 1": "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)",
+        "2-3 Maze 3": "Tetap tenang dan bantu saya untuk menangkap si babi nakal itu. Kalau tidak saya akan marah!",
+        "AllTheThings sprite lab with video": "Ubah tumbleweed menjadi berbagai macam ikan!",
+        "MC Agent Freeplay": "**Main Bebas:**  Waktunya menjelajah sendiri!",
+        "Overworld Chop Tree - allthethings": "Kayu adalah sumber daya yang sangat penting. Banyak barang terbuat darinya. Pergilah ke pohon dan gunakan perintah \"hancurkan balok\" untuk menebangnya.",
+        "Test embedded K1 Blockly in instructions": "Gunakan tiga blok `move west` dan satu blok `pick corn` untuk memecahkan puzzle ini.",
+        "U1L13 Text Compression": "Perhatikan pola (pengulangan kata atau frase) dalam teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di tempat pola tersebut.",
+        "allthethings-anigif-instructions": "Pindahkan saya ke Timur untuk membawa saya ke babi!"
       }
     }
   }

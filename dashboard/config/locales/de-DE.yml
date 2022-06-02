@@ -133,6 +133,8 @@ de:
       Bitte melde dich stattdessen über dein Clever-Portal an.
     invalid_provider: Entschuldigung, %{provider} Konten können nicht mit Code.org
       Konten verbunden werden.
+    migration_required: Leider können wir keine Konten verbinden oder trennen, die
+      noch den alten Kontomodus verweden. Bitte aktualisieren Sie auf den neuen Kontomodus.
     unable_to_connect_provider: Nicht möglich dein Code.org-Konto mit deinem %{provider}-Konto
       zu verbinden. Bitte versuche es noch einmal.
     disconnect_successful: Erfolg! Wir haben das externe Konto von deinem Code.org
@@ -372,6 +374,8 @@ de:
       full_section: Wir konnten dich nicht zum Bereich %{section_code} zufügen weil
         bereits %{section_capacity} Studierende dabei sind. Bitte kontaktiere deine
         Lehrperson für Hilfe.
+      not_participant_type: Wir konnten Sie nicht zum Bereich %{section_code} hinzufügen,
+        da Sie nicht dem Teilnehmertyp des Bereichs entsprechen.
     mail:
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e)
@@ -435,6 +439,7 @@ de:
       educate_beyond: Jenseits von Code.org
       educate_inspire: Inspiriere einen Schüler/eine Schülerin
       educate_community: Online Community
+      educate_requirements: Technische Voraussetzungen
       educate_tools: Hilfsmittel und Videos
       about_us: 'Über uns '
       about_leadership: Die Leitung
@@ -502,6 +507,7 @@ de:
       starwars: Star Wars
       starwarsblocks: Star Wars (Bausteine)
       starwarsblocks_hour: Star Wars (Bausteine)
+      thebadguys: Die Gangster Gang
       loading: Wird geladen...
       weblab: Web Lab
       view_all: Alle Projekte anzeigen...
@@ -692,6 +698,8 @@ de:
       dieser Lehrer sie bereits in einer anderen Lerngruppe hat.
     third_party_login: Sie können Schüler nicht in eine Lerngruppe verschieben, der
       mit einem Drittanbieterwerkzeug synchronisiert ist.
+    not_correct_participant_type: Sie können diese Benutzer nicht verschieben, weil
+      sie keine Berechtigung haben, Teilnehmer im neuen Bereich zu sein.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -735,6 +743,8 @@ de:
       GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
     built_on_github: Gebaut auf GitHub von Microsoft
+    google_copyright: "&copy; Google Inc. verwendet mit Genehmigung. Google Classroom
+      ist eine Marke von Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE-Logo sowie
       Hour of Code&reg; sind Marken von Code.org."
     copyright: Copyright
@@ -754,6 +764,7 @@ de:
     how_it_works: So funktioniert es (Code ansehen)
     try_hour_of_code: Probiere die "Hour of Code" aus!
     store: Geschäft
+    cookie_notice: Cookie-Meldung
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -838,8 +849,11 @@ de:
       title: Tanzparty
     hello-world:
       title: Hallo Welt
+      body: Wähle aus unseren lustigen Themen aus und programmiere interaktiver Charakter
+        in einer Welt, die du erschaffen hast.
     poem-art:
       title: Dichtkunst
+      body: Drücke dich aus! Erstelle mit Code animierte Gedichte .
     hoc:
       title: Klassisches Labyrinth
       body: Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es
@@ -1288,6 +1302,17 @@ de:
   no_script_access_teacher: Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben,
     dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org,
     damit wir die Situation beheben können.
+  no_level_access_student: Sie haben keinen Zugang zu diesem Level. Bitte fragen Sie
+    Ihren Lehrer, auf welchem Level Sie sein sollten.
+  no_level_access_teacher: Sie haben keinen Zugriff auf dieses Level. Wenn Sie glauben,
+    dass Sie Zugang zu diesem Level haben sollten, schreiben Sie bitte an support@code.org,
+    damit wir die Situation beheben können.
+  no_exemplar: Für dieses Level gibt es kein Exemplar.
+  no_exemplar_access_student: SchülerInnen können nicht auf den Beispielcode zugreifen.
+    Bitte fragen Sie Ihren Lehrer, auf welchem Level sich befinden müssen.
+  no_exemplar_access_teacher: Nur verifizierte Lehrer können auf den Beispielcode
+    zugreifen. Wenn Sie ein verifizierter Lehrer werden möchten, schreiben Sie bitte
+    an support@code.org.
   return_unit_overview: Gehe zur Übersicht der Einheit
   return_course_overview: Gehe zur Übersicht
   view_all_units: Alle Einheiten anzeigen
@@ -1310,6 +1335,7 @@ de:
       colombian_chilean_school_department: Schule Gemeinde / Region
       colombian_school_municipality: Schule Gemeinde
       colombian_chilean_school_name: Schulname
+      chilean_school_commune: Gemeinde
       chilean_school_id: Schul-ID
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
@@ -1412,6 +1438,7 @@ de:
         Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen.
         Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url})
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
+      facilitator_not_listed: Mein Moderator ist nicht aufgeführt
       facilitator_not_applicable: Nicht anwendbar
       organizer_not_listed: Mein Organisator ist nicht aufgeführt
     logged_out:
@@ -1469,4 +1496,5 @@ de:
   behaviors:
     this_sprite: dieser Sprite
   unit_prefix: Lektion %{n}
+  code_org_logo_alt: Code.org Startseite
   teacher_feedback: Rückmeldung vom Lehrer

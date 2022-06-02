@@ -26,7 +26,7 @@
         "flappy/Flappy Code": {
           "name": "Flappy l'oiseau",
           "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
-          "student_overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies."
+          "student_overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées."
         },
         "hourofcode/Maze": {
           "name": "Labyrinthe",
@@ -40,13 +40,14 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Labo de jeux Âge de Glace",
-          "overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.",
+          "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base."
         },
         "hello-world-emoji-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
-          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires."
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "artist/Artist": {
           "name": "Artiste",
@@ -55,8 +56,8 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Labo de jeux Gumball",
-          "overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.",
-          "student_overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies."
+          "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
+          "student_overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées."
         },
         "dance/Dance Party": {
           "name": "Soirée Dansante",
@@ -68,7 +69,8 @@
         "hello-world-food-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
-          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires."
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft : Voyage Aquatique",
@@ -82,7 +84,8 @@
         "hello-world-animals-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
-          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires."
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars : Construire une Galaxie avec du Code (JavaScript)",
@@ -95,7 +98,7 @@
         },
         "playlab/Play Lab": {
           "name": "Labo de jeux",
-          "overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.",
+          "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base."
         },
         "applab-intro/Intro to App Lab": {
@@ -105,7 +108,8 @@
         "hello-world-retro-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
           "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
-          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires."
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "starwarsblocks/Hour of Code 2015": {
           "student_overview": "Ce cours permet aux apprenants de tous âges de s'initier au codage et à la science informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Ce cours est disponible en deux versions. "
@@ -121,12 +125,13 @@
           "student_overview": "Un virus est arrivé à Monstreville ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
         },
         "sports/Sports": {
+          "name": "Coder ton propre jeu de sports",
           "overview": "Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.",
           "student_overview": "Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !"
         },
         "infinity/Infinity": {
           "name": "Labo de Jeux de Disney Infinity",
-          "overview": "Dans cette leçon, les apprenants profitent d'une expérience d'introduction à l'informatique et créent un jeu en utilisant le code de bloc de base. Cette leçon a été conçue pour les apprenants des classes intermédiares, âgés de 10 à 16 ans, mais peut être adaptée pour les apprenants plus jeunes ou plus âgés en utilisant les suggestions de différenciation fournies.",
+          "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant ce cours, les apprenants seront initiés à l'informatique et créeront leur propre jeu à l'aide d'un code de base."
         },
         "basketball/Bounce": {
@@ -2791,10 +2796,10 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Épidémie",
-          "overview": "Cette leçon combine le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans Sprite Lab. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
+          "overview": "Cette leçon conjugue le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans le Labo Sprite. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans la leçon précédente, les élèves ont recueilli et interprété les données d'une simulation simple. Dans cette leçon, ils suivront des instructions afin de coder leur propre modèle de simulation. Les connaissances préalables des élèves au sujet des épidémies de virus dans le monde réel seront appliquées à un scénario fictif. ",
-          "student_overview": "Un virus est arrivé à Monster Town ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
+          "student_overview": "Un virus est arrivé à Monstreville ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
         },
         "coursef-2021/AI for Oceans": {
           "name": "IA pour les Océans",
@@ -3266,6 +3271,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les étudiants écriront des programmes qui répondent à des événements chronométrés et à des entrées utilisateur. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous travaillerez à travers les niveaux de programmation et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {

@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 23:41:41 UTC",
+    "serialized_at": "2022-05-24 12:00:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4091,7 +4091,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
+            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\nThere are also several videos student projects available for verified teachers - [r student_example_projects/csd/2022]. These videos were created during the pilot of this course by a participating teacher with her students, and are used with their permission.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
           }
         ]
       },
@@ -11105,6 +11105,18 @@
       }
     },
     {
+      "name": "Student Example Projects",
+      "url": "https://drive.google.com/drive/folders/19XYyV6BN1ZP8X2jPdk3_e38bZTtiLChY?usp=sharing",
+      "key": "student_example_projects",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_example_projects"
+      }
+    },
+    {
       "name": "Student Rubric - Interactive Art",
       "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
       "key": "student_rubric_-_interactive_art",
@@ -11462,6 +11474,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
         "resource.key": "project_guide_-_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "resource.key": "student_example_projects"
       }
     },
     {
