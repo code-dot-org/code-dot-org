@@ -148,6 +148,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               color={Button.ButtonColor.gray}
               target="_blank"
               style={styles.button}
+              className="rate-lesson-button"
             />
           </div>
         )}
