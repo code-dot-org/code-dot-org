@@ -5,7 +5,6 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "is_maker_unit": true,
       "is_migrated": true,
       "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
       "student_detail_progress_view": true
