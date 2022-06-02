@@ -84,10 +84,8 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
-  gem 'codecov', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'simplecov', '~> 0.9', require: false
   gem 'sqlite3'
   gem 'timecop'
 
@@ -352,3 +350,8 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
+
+gem 'crowdin-api', '~> 1.2.1'
