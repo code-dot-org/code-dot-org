@@ -72,11 +72,11 @@ class InstructionsCsfRightCol extends React.Component {
   }
 
   getColumnWidth() {
-    // If there is nothing to show in this column, at least have 10 pixels
-    // of padding.
+    // Leave at least 50 pixels in this column in case we are going to
+    // show some scroll buttons.
     const collapserWidth = this.shouldDisplayCollapserButton()
       ? $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true)
-      : 10;
+      : 50;
     return collapserWidth;
   }
 
