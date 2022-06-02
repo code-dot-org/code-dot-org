@@ -10,3 +10,5 @@ AllCops:
 # sure to NOT enforce rules that don't work on earlier versions
 Style/MapToHash:
   Enabled: false
+Style/SlicingWithRange:
+  Enabled: false
