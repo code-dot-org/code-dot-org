@@ -244,6 +244,10 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/sports/unversioned": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
@@ -378,6 +382,10 @@
         "for_loop/coursef/2021": {
           "word": "حلقة \"لِ\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد مسبقاً (مقدار الخطوة)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "التعلم الآلي",
