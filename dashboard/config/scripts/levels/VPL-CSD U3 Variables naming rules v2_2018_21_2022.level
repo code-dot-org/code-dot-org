@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:38.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -70,9 +66,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-04-26T18:52:38.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"},{\"changed_at\":\"2022-06-02 20:07:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
