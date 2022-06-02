@@ -1831,16 +1831,16 @@
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el GRAN pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle (loop) de \"repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
+          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "¡No puedes eliminar estos bloques, pero puedes editarlos!"
+          "MC_HOC_2017_06_Cole_1": "No puedes tirar esos bloques, pero ¡puedes editarlos!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "El Agente puede flotar sobre la lava, ¡pero Steve y Alex no!"
@@ -1865,7 +1865,7 @@
           "craft_what_is_iron": "¡Extrae este hierro!"
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+          "vp_costumes": "¡Haz clic aquí para añadir nuevos disfraces a tu proyecto!"
         },
         "Virtual Pet 6_2021": {
           "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
@@ -1981,7 +1981,7 @@
           "courseC_maze_programming7_2": "Estos bloques están hechos de piedra y no se pueden eliminar."
         },
         "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "Sólo dispones de uno de estos bloques en este puzle."
+          "courseC_starWars_loops2": "Sólo tienes disponible uno de estos bloques en este rompecabezas."
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "Sólo tienes disponible uno de estos bloques en este rompecabezas."
@@ -2031,7 +2031,7 @@
           "courseD_artist_functions1_1": "Comencemos usando este bloque para ayudar a crear el primer cuadrado."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
+          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después de dibujar la primera plaza?"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer el artista después de dibujar la primera plaza?"
@@ -2040,11 +2040,11 @@
           "courseD_artist_functions8_1": "Tus bloques para crear funciones se han ubicado bajo esta etiqueta en la caja de herramientas."
         },
         "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "Mantén este programa funcionando agregando más código al final.",
+          "courseE_artist_functions_challenge1_callout1": "Mantén este programa funcionando agregando más códigos al final.",
           "courseE_artist_functions_challenge1_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "Mantén este programa funcionando agregando más código al final.",
+          "courseE_artist_functions_challenge2_callout1": "Mantén este programa funcionando agregando más códigos al final.",
           "courseE_artist_functions_challenge2_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
         },
         "courseE_farmer_functions13_2021": {
@@ -2112,7 +2112,7 @@
           "whenKey": "Utiliza el nuevo bloque de eventos que se encuentra aquí."
         },
         "courseF_events_practice_reorder": {
-          "stopAllBug": "Este bloque está mal ordenado."
+          "stopAllBug": "Este bloque está en el orden incorrecto."
         },
         "courseF_events_predict": {
           "behaviors_edit": "Haz clic aquí para ver cómo funciona este comportamiento."
@@ -2124,13 +2124,13 @@
           "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Haga clic aquí para abrir la categoría Comportamientos."
+          "behaviors_category": "Haz clic aquí para abrir la categoría Comportamientos."
         },
         "courseF_sprites_make": {
           "sprites_category": "Haga clic aquí para abrir la categoría de Sprites."
         },
         "courseF_sprites_positioning": {
-          "locations_category": "Haga clic aquí para abrir la categoría de Ubicaciones."
+          "locations_category": "Haz clic aquí para abrir la categoría de Ubicaciones."
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Busca un nuevo bloque aquí."
