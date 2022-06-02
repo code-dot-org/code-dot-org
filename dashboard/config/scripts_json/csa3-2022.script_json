@@ -27,12 +27,11 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-19 20:51:37 UTC",
+    "serialized_at": "2022-05-31 20:41:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6336,6 +6335,18 @@
       }
     },
     {
+      "name": "Constants",
+      "url": "https://youtu.be/1lpARsAtV08",
+      "key": "constants",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constants"
+      }
+    },
+    {
       "name": "CS Bingo Cards",
       "url": "https://docs.google.com/presentation/d/1Vt6S729odlZHRhCs0tEIQ1vThjohUTcYzXAieyRT_cE/edit?usp=sharing",
       "key": "cs_bingo_cards_2",
@@ -7097,6 +7108,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "constants"
       }
     },
     {

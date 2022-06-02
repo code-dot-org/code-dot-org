@@ -50,7 +50,6 @@
     "parent_level_id": 14157,
     "long_instructions": "What more can you make your pet do? Try these ideas:\r\n* Change the background to something more habitable for your pet.\r\n* Add another food sprite, and modify `happiness` by any value you want when your pet eats it.\r\n* Edit the **wandering** behavior so that your pet moves slower or faster (hint: distance).\r\n* Make your pet perform a different behavior at the start, or change behaviors when certain foods are eaten.\r\n* Make one of your food sprites controllable by adding keypress events (example: press up to go up, down to go down).",
     "show_type_hints": "true",
-    "project_template_level_name": "Virtual Pet 2_2019",
     "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
     "block_pool": "gamelab",
     "block_pools": [

@@ -2287,26 +2287,20 @@ ca:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: text
               name: text
             Conditionals:
-              key: Condicionals
               name: Condicionals
             Functions:
-              key: Funcions
               name: Funcions
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funcions amb Paràmetres
               name: Funcions amb Paràmetres
         csp3-2021:
           lessons:
             Debugging:
-              key: Depuració
               name: Depuració
         csp4-2021:
           lesson_groups:
@@ -2343,7 +2337,6 @@ ca:
           description_audience: De 5 a 8 anys
           lessons:
             Move It, Move It:
-              key: Mou-lo, Mou-lo
               name: Mou-lo, Mou-lo
             'Loops: Getting Loopy':
               name: Fent bucles
@@ -2360,7 +2353,6 @@ ca:
           description_audience: De 6 a 10 anys
           lessons:
             Binary Bracelets:
-              key: Polseres binàries
               name: Polseres binàries
             'Events: The Big Event':
               name: El gran esdeveniment
@@ -2379,19 +2371,13 @@ ca:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
             Relay Programming:
-              key: Programació en relleus
               name: Programació en relleus
             Dance Party:
-              key: Festa de ball
               name: Festa de ball
             Conditionals with Cards:
-              key: Condicionals amb targetes
               name: Condicionals amb targetes
             'Unplugged: Binary':
-              key: 'Sense connexió: Binari'
               name: Imatges binàries
-            Artist Binary:
-              key: Artista binari
           lesson_groups:
             csf_events:
               display_name: Esdeveniments
@@ -2408,8 +2394,6 @@ ca:
         coursee-2021:
           description_audience: De 8 a 12 anys
           lessons:
-            Conditionals:
-              key: Condicionals
             'Functions: Songwriting':
               name: Composició de cançons
           lesson_groups:
@@ -2427,7 +2411,6 @@ ca:
           description_audience: De 9 a 13 anys
           lessons:
             Internet:
-              key: Internet
               name: Internet
           lesson_groups:
             csf_digcit:
@@ -2448,7 +2431,6 @@ ca:
           description_audience: De 9 a 18 anys
           lessons:
             Dance Party:
-              key: Festa de ball
               name: Festa de ball
             lesson-1:
               name: Festa de ball
@@ -2487,25 +2469,17 @@ ca:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Bucles
               name: Bucles
             Events:
-              key: Esdeveniments
               name: Esdeveniments
             Conditionals:
-              key: Condicionals
               name: Condicionals
             Functions:
-              key: Funcions
               name: Funcions
             Variables:
-              key: Variables
               name: Variables
             For Loops:
-              key: Per bucles
               name: Per bucles
-            Sprite Lab:
-              key: Laboratori de personatges
           lesson_groups:
             k5_getting_started_1:
               display_name: Introducció
@@ -2514,7 +2488,6 @@ ca:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Fonaments de la informàtica
               name: Fonaments de la informàtica
         csa-videos:
           lesson_groups:
@@ -2620,7 +2593,6 @@ ca:
           lessons:
             Debugging:
               name: Depuració
-              key: Depuració
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2639,7 +2611,6 @@ ca:
           lessons:
             Move It, Move It:
               name: Mou-lo, Mou-lo
-              key: Mou-lo, Mou-lo
             Getting Loopy:
               name: Fent bucles
             'Loops: Getting Loopy':
@@ -2658,7 +2629,6 @@ ca:
               name: El gran esdeveniment
             Binary Bracelets:
               name: Polseres binàries
-              key: Polseres binàries
             'Events: The Big Event':
               name: El gran esdeveniment
           lesson_groups:
@@ -2677,13 +2647,10 @@ ca:
               name: Programació de paper quadriculat
             Relay Programming:
               name: Programació en relleus
-              key: Programació en relleus
             Dance Party:
               name: Festa de ball
-              key: Festa de ball
             Conditionals with Cards:
               name: Condicionals amb targetes
-              key: Condicionals amb targetes
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
           lesson_groups:
@@ -2702,8 +2669,6 @@ ca:
               name: Composició de cançons
             'Functions: Songwriting':
               name: Composició de cançons
-            Conditionals:
-              key: Condicionals
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
@@ -2719,7 +2684,6 @@ ca:
             The Internet:
               name: Internet
             Internet:
-              key: Internet
               name: Internet
           lesson_groups:
             lessonGroup-7:
@@ -2766,7 +2730,6 @@ ca:
           lessons:
             The Internet:
               name: Internet
-              key: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Ciutadania digital
@@ -2783,37 +2746,39 @@ ca:
           lessons:
             Loops:
               name: Bucles
-              key: Bucles
             Events:
               name: Esdeveniments
-              key: Esdeveniments
             Conditionals:
               name: Condicionals
-              key: Condicionals
             Functions:
               name: Funcions
-              key: Funcions
             Variables:
               name: Variables
-              key: Variables
             For Loops:
               name: Per bucles
-              key: Per bucles
         csd3-2022:
           lessons:
             Variables:
               name: Variables
-              key: Variables
             Text:
               name: text
-              key: text
             Conditionals:
               name: Condicionals
-              key: Condicionals
             Functions:
               name: Funcions
-              key: Funcions
         csd6-2022:
           lessons:
             Functions:
               name: Funcions
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Vista general
+            lesson-1:
+              name: Vista general
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Vista general
+            lesson-1:
+              name: Vista general

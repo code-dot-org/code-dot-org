@@ -2073,26 +2073,20 @@ sl:
         csd3-2021:
           lessons:
             Variables:
-              key: Spremenljivke
               name: Spremenljivke
             Text:
-              key: Besedilo
               name: Besedilo
             Conditionals:
-              key: Pogoji
               name: Pogoji
             Functions:
-              key: Funkcije
               name: Funkcije
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funkcije s parametri
               name: Funkcije s parametri
         csp3-2021:
           lessons:
             Debugging:
-              key: Odpravljanje napak
               name: Odpravljanje napak
         csp4-2021:
           lesson_groups:
@@ -2126,7 +2120,6 @@ sl:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Premakni se, premakni
               name: Premakni se, premakni
           lesson_groups:
             csf_digcit:
@@ -2153,16 +2146,11 @@ sl:
             'Algorithms: Graph Paper Programming':
               name: Obarvajmo kvadratke
             Relay Programming:
-              key: Relejsko programiranje
               name: Relejsko programiranje
             Conditionals with Cards:
-              key: Pogojniki s kartami
               name: Pogojniki s kartami
             'Unplugged: Binary':
-              key: 'Brez prijave: Binarno'
               name: Binarne slike
-            Artist Binary:
-              key: Umetnik Binarno
           lesson_groups:
             csf_events:
               display_name: Dogodki
@@ -2178,8 +2166,6 @@ sl:
               display_name: Digitalno državljanstvo
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Pogoji
             'Functions: Songwriting':
               name: Napiši pesem
           lesson_groups:
@@ -2194,13 +2180,10 @@ sl:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Spremeljivke v ovojnicah
               name: Spremeljivke v ovojnicah
             Internet:
-              key: Internet
               name: Internet
             For Loop Fun:
-              key: Zabava s "for" zankami
               name: Zabava s "for" zankami
           lesson_groups:
             csf_digcit:
@@ -2272,19 +2255,14 @@ sl:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Zanke
               name: Zanke
             Events:
-              key: Dogodki
               name: Dogodki
             Conditionals:
-              key: Pogoji
               name: Pogoji
             Functions:
-              key: Funkcije
               name: Funkcije
             Variables:
-              key: Spremenljivke
               name: Spremenljivke
           lesson_groups:
             k5_getting_started_1:
@@ -2294,7 +2272,6 @@ sl:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Osnove Računalništva
               name: Osnove Računalništva
         csa1-exemplars:
           lesson_groups:
@@ -2437,7 +2414,6 @@ sl:
           lessons:
             Debugging:
               name: Odpravljanje napak
-              key: Odpravljanje napak
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2456,7 +2432,6 @@ sl:
           lessons:
             Move It, Move It:
               name: Premakni se, premakni
-              key: Premakni se, premakni
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2483,10 +2458,8 @@ sl:
               name: Obarvajmo kvadratke
             Relay Programming:
               name: Relejsko programiranje
-              key: Relejsko programiranje
             Conditionals with Cards:
               name: Pogojniki s kartami
-              key: Pogojniki s kartami
             'Algorithms: Graph Paper Programming':
               name: Obarvajmo kvadratke
           lesson_groups:
@@ -2504,8 +2477,6 @@ sl:
               name: Napiši pesem
             'Functions: Songwriting':
               name: Napiši pesem
-            Conditionals:
-              key: Pogoji
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2519,11 +2490,9 @@ sl:
           lessons:
             For Loop Fun:
               name: Zabava s "for" zankami
-              key: Zabava s "for" zankami
             The Internet:
               name: Internet
             Internet:
-              key: Internet
               name: Internet
           lesson_groups:
             lessonGroup-7:
@@ -2589,7 +2558,6 @@ sl:
           lessons:
             The Internet:
               name: Internet
-              key: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Digitalno državljanstvo
@@ -2618,34 +2586,37 @@ sl:
           lessons:
             Loops:
               name: Zanke
-              key: Zanke
             Events:
               name: Dogodki
-              key: Dogodki
             Conditionals:
               name: Pogoji
-              key: Pogoji
             Functions:
               name: Funkcije
-              key: Funkcije
             Variables:
               name: Spremenljivke
-              key: Spremenljivke
         csd3-2022:
           lessons:
             Variables:
               name: Spremenljivke
-              key: Spremenljivke
             Text:
               name: Besedilo
-              key: Besedilo
             Conditionals:
               name: Pogoji
-              key: Pogoji
             Functions:
               name: Funkcije
-              key: Funkcije
         csd6-2022:
           lessons:
             Functions:
               name: Funkcije
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Pregled
+            lesson-1:
+              name: Pregled
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Pregled
+            lesson-1:
+              name: Pregled

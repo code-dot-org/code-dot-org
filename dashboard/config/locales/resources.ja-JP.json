@@ -2067,6 +2067,7 @@
           "name": "現実世界のデータ"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "ビデオ: 社会への影響",
           "type": "ビデオ"
         },
         "video_machine_learning/csd/2021": {
@@ -2075,6 +2076,7 @@
           "type": "ビデオ"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "ビデオ:トレーニングデータとバイアス",
           "type": "ビデオ"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
@@ -2246,6 +2248,7 @@
           "type": "ビデオ"
         },
         "video_debugging/csd/2021": {
+          "name": "ビデオ: デバッグ",
           "type": "ビデオ"
         },
         "html-web-page-1/csd/2021": {
@@ -2312,12 +2315,15 @@
           "name": "ある目的のためのウェブサイト"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": " ビデオ: 不一致の管理",
           "type": "ビデオ"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "ビデオ: チームワーク",
           "type": "ビデオ"
         },
         "how-search-works-video/csd/2021": {
+          "name": "ビデオ: 検索の仕組み",
           "type": "ビデオ"
         },
         "classes/csd/2021": {

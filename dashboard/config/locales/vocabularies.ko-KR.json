@@ -245,6 +245,10 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "모델 및 시뮬레이션",
+          "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
+        },
         "event/sports/unversioned": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
@@ -379,6 +383,10 @@
         "for_loop/coursef/2021": {
           "word": "For 루프",
           "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "모델 및 시뮬레이션",
+          "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
         },
         "machine_learning/coursef/2021": {
           "word": "머신 러닝",

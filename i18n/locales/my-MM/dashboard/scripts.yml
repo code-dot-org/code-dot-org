@@ -346,10 +346,8 @@ my:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: စာ
               name: စာ
         csp4-2021:
           lesson_groups:
@@ -400,15 +398,12 @@ my:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Loops
               name: Loops
             Variables:
-              key: Variables
               name: Variables
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: ကွန်ပျူတာသိပ္ပံအခြေခံ။
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
         self-paced-pl-csd2-2021:
           lessons:
@@ -490,15 +485,11 @@ my:
           lessons:
             Loops:
               name: Loops
-              key: Loops
             Variables:
               name: Variables
-              key: Variables
         csd3-2022:
           lessons:
             Variables:
               name: Variables
-              key: Variables
             Text:
               name: စာ
-              key: စာ

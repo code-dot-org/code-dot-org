@@ -2036,7 +2036,7 @@ de-DE:
           correct: true
         questions:
         - {}
-        title: Mache eine Vorhersage
+        title: Eine Vorhersage treffen
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -2049,7 +2049,7 @@ de-DE:
           correct: true
         questions:
         - {}
-        title: Mache eine Vorhersage
+        title: Eine Vorhersage treffen
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -2062,7 +2062,7 @@ de-DE:
           correct: true
         questions:
         - {}
-        title: Mache eine Vorhersage
+        title: Eine Vorhersage treffen
       CSD U6 tugowar stop:
         markdown: |
           # Stopp
@@ -10956,7 +10956,7 @@ de-DE:
           correct: true
         questions:
         - {}
-        title: Mache eine Vorhersage
+        title: Eine Vorhersage treffen
       CSD U6 tugowar stop_2021:
         markdown: |
           # Stopp
@@ -11025,3 +11025,97 @@ de-DE:
         title: Daten und Gesellschaft Test nach Ende des Projekts
       CSD U5 test_2021:
         title: Daten und Gesellschaft Test nach Ende des Projekts
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: blau
+          correct: true
+        - text: grün
+          correct: true
+        - correct: true
+        - text: gelb
+          correct: true
+        - correct: true
+        - text: rot
+          correct: true
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+          correct: true
+        - text: '1'
+          correct: true
+        - text: '2'
+          correct: true
+        - text: '4'
+          correct: true
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: hier die Beschreibung
+      allthethings_external_not_displayed_as_unplugged:
+        content1: hier die Beschreibung
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: Welcher Pfeil bringt den Flurb zum Schatz?
+        title: Multiple-Choice
+      ml-club app-choice parent:
+        display_name: Passe deine App an
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Passe deine App an
+      test questionless single multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: Nichts davon
+          correct: true

@@ -3345,6 +3345,32 @@
           "moving east and looping": "crwdns2698877:0crwdne2698877:0",
           "moving north and looping": "crwdns2698879:0crwdne2698879:0",
           "moving south and looping": "crwdns2698881:0crwdne2698881:0"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "crwdns2928710:0crwdne2928710:0",
+          "shrinking": "crwdns2928712:0crwdne2928712:0",
+          "patrolling": "crwdns2928714:0crwdne2928714:0",
+          "wandering": "crwdns2928716:0crwdne2928716:0",
+          "growing": "crwdns2928718:0crwdne2928718:0",
+          "jittering": "crwdns2928720:0crwdne2928720:0",
+          "moving east": "crwdns2928722:0crwdne2928722:0",
+          "moving north": "crwdns2928724:0crwdne2928724:0",
+          "moving south": "crwdns2928726:0crwdne2928726:0",
+          "moving west": "crwdns2928728:0crwdne2928728:0",
+          "spinning right": "crwdns2928730:0crwdne2928730:0"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "crwdns2928680:0crwdne2928680:0",
+          "shrinking": "crwdns2928682:0crwdne2928682:0",
+          "patrolling": "crwdns2928684:0crwdne2928684:0",
+          "wandering": "crwdns2928686:0crwdne2928686:0",
+          "growing": "crwdns2928688:0crwdne2928688:0",
+          "jittering": "crwdns2928690:0crwdne2928690:0",
+          "moving east": "crwdns2928692:0crwdne2928692:0",
+          "moving north": "crwdns2928694:0crwdne2928694:0",
+          "moving south": "crwdns2928696:0crwdne2928696:0",
+          "moving west": "crwdns2928698:0crwdne2928698:0",
+          "spinning right": "crwdns2928700:0crwdne2928700:0"
         }
       }
     }

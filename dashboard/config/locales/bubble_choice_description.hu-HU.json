@@ -20,7 +20,9 @@
         "helloworld_retro_sounds": "Tanuld meg, hogany kell hangot lejátszani.",
         "international_outbreak_freeplay": "Folytasd a már látott blokkokkal!",
         "courseF_sprites_moreSprites": "Gyakorold a sprite elkészítését és elhelyezését!",
-        "courseF_sprites_positioning": "Gyakorold a sprite elkészítését és elhelyezését!"
+        "courseF_sprites_positioning": "Gyakorold a sprite elkészítését és elhelyezését!",
+        "CourseF_outbreak5": "Segíts a sprite-jaidnak, hogy idővel automatikusan jobban érezzék magukat!",
+        "CourseF_outbreak8": "Használd a projektedet a mondanivalód megosztására. Mit szeretnél, mit tanuljanak mások ebből?"
       }
     }
   }
