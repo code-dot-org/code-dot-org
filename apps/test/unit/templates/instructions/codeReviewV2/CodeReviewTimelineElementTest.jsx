@@ -10,8 +10,7 @@ import javalabMsg from '@cdo/javalab/locale';
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
   isLast: false,
-  projectVersionId: 'asdfjkl',
-  isProjectVersionExpired: false
+  projectVersionId: 'asdfjkl'
 };
 
 const setUp = (overrideProps = {}, child) => {
@@ -60,11 +59,10 @@ describe('CodeReviewTimelineElement', () => {
   });
 
   describe('Commit', () => {
-    it('displays an eyeball link if there is a version and it is not expired', () => {
+    it('displays an eyeball link if there is a version', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: false
+        projectVersionId: 'asdfjkl'
       });
       expect(wrapper.find('EyeballLink')).to.have.length(1);
     });
@@ -73,15 +71,6 @@ describe('CodeReviewTimelineElement', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
         projectVersionId: null
-      });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
-    });
-
-    it('hides eyeball link if the version is expired', () => {
-      const wrapper = setUp({
-        type: codeReviewTimelineElementType.COMMIT,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: true
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });
@@ -116,11 +105,10 @@ describe('CodeReviewTimelineElement', () => {
   });
 
   describe('Code review', () => {
-    it('displays an eyeball link if there is a version and it is not expired', () => {
+    it('displays an eyeball link if there is a version', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: false
+        projectVersionId: 'asdfjkl'
       });
       expect(wrapper.find('EyeballLink')).to.have.length(1);
     });
@@ -129,15 +117,6 @@ describe('CodeReviewTimelineElement', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
         projectVersionId: null
-      });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
-    });
-
-    it('hides eyeball link if the version is expired', () => {
-      const wrapper = setUp({
-        type: codeReviewTimelineElementType.CODE_REVIEW,
-        projectVersionId: 'asdfjkl',
-        isProjectVersionExpired: true
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });
