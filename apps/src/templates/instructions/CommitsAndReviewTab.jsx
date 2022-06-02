@@ -19,24 +19,33 @@ const CommitsAndReviewTab = props => {
   const {
     channelId,
     serverLevelId,
+    serverProjectLevelId,
     serverScriptId,
     viewAsCodeReviewer,
     viewAsTeacher,
     userIsTeacher,
     codeReviewEnabled,
     locale,
+    isReadOnlyWorkspace,
     setIsReadOnlyWorkspace
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
+  const [timelineLoadingError, setTimelineLoadingError] = useState(null);
   const [openReviewError, setOpenReviewError] = useState(null);
 
   const dataApi = useMemo(
     () =>
-      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId, locale),
-    [channelId, serverLevelId, serverScriptId, locale]
+      new CodeReviewDataApi(
+        channelId,
+        serverLevelId,
+        serverProjectLevelId,
+        serverScriptId,
+        locale
+      ),
+    [channelId, serverLevelId, serverProjectLevelId, serverScriptId, locale]
   );
 
   useEffect(() => {
@@ -49,9 +58,10 @@ const CommitsAndReviewTab = props => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setTimelineLoadingError(false);
     } catch (err) {
-      // TODO: display error message TBD
       console.log(err);
+      setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
   }, [dataApi]);
@@ -65,13 +75,46 @@ const CommitsAndReviewTab = props => {
     }
   };
 
-  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+  const addCodeReviewComment = async (
+    commentText,
+    reviewId,
+    onSuccess,
+    onFailure
+  ) => {
     try {
-      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      const newComment = await dataApi.submitNewCodeReviewComment(
+        commentText,
+        reviewId
+      );
       setOpenReviewData({
         ...openReviewData,
         comments: [...openReviewData.comments, newComment]
       });
+      onSuccess();
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const toggleResolveComment = async (
+    commentId,
+    isResolved,
+    onSuccess,
+    onFailure
+  ) => {
+    try {
+      const comment = await dataApi.toggleResolveComment(commentId, isResolved);
+      onSuccess(comment);
+    } catch (err) {
+      console.log(err);
+      onFailure();
+    }
+  };
+
+  const deleteCodeReviewComment = async (commentId, onSuccess, onFailure) => {
+    try {
+      await dataApi.deleteCodeReviewComment(commentId);
       onSuccess();
     } catch (err) {
       console.log(err);
@@ -151,24 +194,43 @@ const CommitsAndReviewTab = props => {
           />
         </div>
       </div>
-      <CodeReviewTimeline
-        timelineData={[
-          ...timelineData,
-          ...(openReviewData ? [openReviewData] : [])
-        ]}
-        addCodeReviewComment={addCodeReviewComment}
-        closeReview={handleCloseReview}
-      />
-      {!openReviewData && (
-        <div style={styles.openCodeReview}>
-          <Button
-            icon="comment"
-            onClick={handleOpenReview}
-            text={javalabMsg.startReview()}
-            color={Button.ButtonColor.blue}
+      {timelineLoadingError ? (
+        <CodeReviewError />
+      ) : (
+        <>
+          <CodeReviewTimeline
+            timelineData={[
+              ...timelineData,
+              ...(openReviewData ? [openReviewData] : [])
+            ]}
+            addCodeReviewComment={addCodeReviewComment}
+            closeReview={handleCloseReview}
+            toggleResolveComment={toggleResolveComment}
+            deleteCodeReviewComment={deleteCodeReviewComment}
           />
-          {openReviewError && <CodeReviewError />}
-        </div>
+          {!openReviewData && !isReadOnlyWorkspace && (
+            <div style={styles.timelineAligned}>
+              <Button
+                icon="comment"
+                onClick={handleOpenReview}
+                text={javalabMsg.startReview()}
+                color={Button.ButtonColor.blue}
+                disabled={!codeReviewEnabled}
+              />
+              {openReviewError && <CodeReviewError />}
+            </div>
+          )}
+          {!codeReviewEnabled && (
+            <div
+              style={{
+                ...styles.timelineAligned,
+                ...styles.reviewDisabledMsg
+              }}
+            >
+              {javalabMsg.codeReviewDisabledMessage()}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
@@ -183,8 +245,10 @@ export default connect(
     userIsTeacher: state.currentUser.userType === 'teacher',
     channelId: state.pageConstants.channelId,
     serverLevelId: state.pageConstants.serverLevelId,
+    serverProjectLevelId: state.pageConstants.serverProjectLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
-    locale: state.pageConstants.locale
+    locale: state.pageConstants.locale,
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
@@ -200,8 +264,10 @@ CommitsAndReviewTab.propTypes = {
   userIsTeacher: PropTypes.bool,
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
+  serverProjectLevelId: PropTypes.number,
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
+  isReadOnlyWorkspace: PropTypes.bool,
   setIsReadOnlyWorkspace: PropTypes.func.isRequired
 };
 
@@ -228,14 +294,20 @@ const styles = {
   },
   messageText: {
     fontSize: 13,
-    marginBottom: '25px',
+    margin: '15px 5px 25px 16px',
     color: color.light_gray
   },
   refreshButtonStyle: {
     fontSize: 13,
     margin: 0
   },
-  openCodeReview: {
+  timelineAligned: {
     marginLeft: '30px'
+  },
+  reviewDisabledMsg: {
+    padding: '12px 6px',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    lineHeight: '22px'
   }
 };

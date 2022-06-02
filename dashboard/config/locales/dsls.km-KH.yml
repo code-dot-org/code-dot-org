@@ -3304,3 +3304,78 @@ km-KH:
         title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       csd-pre-survey-levelgroup_21_22:
         title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: ពណ៌​ខៀវ
+        - text: ពណ៌​បៃតង
+        - {}
+        - {}
+        - {}
+        - text: ពណ៌ក្រហម
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: ការណែនាំ​ នៅទីនេះ
+      allthethings_external_not_displayed_as_unplugged:
+        content1: ការណែនាំ​ នៅទីនេះ
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}

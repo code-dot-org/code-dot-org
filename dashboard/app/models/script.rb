@@ -1162,6 +1162,7 @@ class Script < ApplicationRecord
       raise 'Can not have both a destination unit group and a destination professional learning course.'
     end
 
+    source_course_version = get_course_version
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
@@ -1203,6 +1204,10 @@ class Script < ApplicationRecord
 
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
+        end
+
+        source_course_version&.reference_guides&.each do |reference_guide|
+          reference_guide.copy_to_course_version(destination_unit_group.course_version)
         end
 
         if destination_professional_learning_course.nil?

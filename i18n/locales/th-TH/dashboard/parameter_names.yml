@@ -10,6 +10,8 @@ th:
       length: ความยาว
       min: ค่าต่ำสุด
       points: คะแนน
+      radius: รัศมี
+      sides: ด้านข้าง
       size: ขนาด
       speed: ความเร็ว
       width: ความกว้าง

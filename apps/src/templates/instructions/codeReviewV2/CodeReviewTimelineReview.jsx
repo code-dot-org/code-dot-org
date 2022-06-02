@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
@@ -7,7 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
@@ -16,22 +17,30 @@ const CodeReviewTimelineReview = ({
   review,
   isLastElementInTimeline,
   addCodeReviewComment,
-  closeReview
+  closeReview,
+  toggleResolveComment,
+  viewAsCodeReviewer,
+  deleteCodeReviewComment,
+  currentUserId
 }) => {
-  const {createdAt, isOpen, version, isVersionExpired, comments} = review;
+  const {
+    id,
+    createdAt,
+    isOpen,
+    version,
+    isVersionExpired,
+    ownerId,
+    ownerName,
+    comments
+  } = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   const handleCloseCodeReview = () => {
-    closeReview(onCloseReviewSuccess, onCloseReviewFailure);
-  };
-
-  const onCloseReviewSuccess = () => {
-    setDisplayCloseError(false);
-  };
-
-  const onCloseReviewFailure = () => {
-    setDisplayCloseError(true);
+    closeReview(
+      () => setDisplayCloseError(false), // on success
+      () => setDisplayCloseError(true) // on failure
+    );
   };
 
   return (
@@ -47,12 +56,16 @@ const CodeReviewTimelineReview = ({
             <FontAwesome icon="comments-o" />
           </div>
           <div style={styles.title}>
-            <div style={styles.codeReviewTitle}>{javalabMsg.codeReview()}</div>
+            <div style={styles.codeReviewTitle}>
+              {ownerId === currentUserId
+                ? javalabMsg.codeReviewForYou()
+                : javalabMsg.codeReviewForStudent({student: ownerName})}
+            </div>
             <div style={styles.date}>
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && (
+          {isOpen && !viewAsCodeReviewer && (
             <div>
               <Button
                 icon="close"
@@ -65,40 +78,62 @@ const CodeReviewTimelineReview = ({
             </div>
           )}
         </div>
-        {comments &&
-          comments.map(comment => (
-            <Comment
-              comment={comment}
-              key={`code-review-comment-${comment.id}`}
-              onResolveStateToggle={() => {}}
-              onDelete={() => {}}
-              viewAsCodeReviewer={true}
-            />
-          ))}
-        {isOpen && (
-          <CodeReviewCommentEditor
-            addCodeReviewComment={addCodeReviewComment}
-          />
-        )}
-        {isOpen && (
+        {isOpen && !viewAsCodeReviewer && (
           <div style={styles.codeWorkspaceDisabledMsg}>
-            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
+            <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
+            &nbsp;
             {javalabMsg.codeEditingDisabled()}
           </div>
+        )}
+        {comments &&
+          comments.map(comment => {
+            // When we create the V2 comment, no longer convert, use the new comment shape
+            const convertDataForComponent = {
+              id: comment.id,
+              name: comment.commenterName,
+              commentText: comment.comment,
+              timestampString: comment.createdAt,
+              isResolved: comment.isResolved
+            };
+            return (
+              <Comment
+                comment={convertDataForComponent}
+                key={`code-review-comment-${comment.id}`}
+                onResolveStateToggle={toggleResolveComment}
+                onDelete={deleteCodeReviewComment}
+                viewAsCodeReviewer={viewAsCodeReviewer}
+              />
+            );
+          })}
+        {isOpen && viewAsCodeReviewer && (
+          <CodeReviewCommentEditor
+            addCodeReviewComment={(commentText, onSuccess, onFailure) =>
+              addCodeReviewComment(commentText, id, onSuccess, onFailure)
+            }
+          />
         )}
       </div>
     </CodeReviewTimelineElement>
   );
 };
 
+export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
+
+export default connect(state => ({
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+  currentUserId: state.currentUser?.userId
+}))(CodeReviewTimelineReview);
+
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
   review: reviewShape,
   addCodeReviewComment: PropTypes.func.isRequired,
-  closeReview: PropTypes.func.isRequired
+  closeReview: PropTypes.func.isRequired,
+  toggleResolveComment: PropTypes.func.isRequired,
+  viewAsCodeReviewer: PropTypes.bool,
+  deleteCodeReviewComment: PropTypes.func.isRequired,
+  currentUserId: PropTypes.number
 };
-
-export default CodeReviewTimelineReview;
 
 const styles = {
   wrapper: {
@@ -126,7 +161,14 @@ const styles = {
     fontStyle: 'italic'
   },
   codeReviewTitle: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    lineHeight: '14px',
+    marginBottom: '4px'
+  },
+  author: {
+    fontSize: '12px',
+    lineHeight: '12px',
+    marginBottom: '4px'
   },
   date: {
     fontSize: '12px',

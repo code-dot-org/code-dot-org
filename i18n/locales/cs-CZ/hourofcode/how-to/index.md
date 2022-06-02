@@ -27,7 +27,7 @@ Zkusit Hodinu programování je jednoduchý a zábavný způsob, jak studentům 
 
 <a id="how-to-video"></a>
 
-## 1. Sledujte návodné video Hodiny programování <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Sledujte návodné video Hodiny programování <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -150,7 +150,7 @@ Co když nějaký student skončí dříve?
 ## Jiné zdroje Hodiny kódu pro pedagogy:
 
 - Navštivte [fórum učitelů Hodiny kódu ](http://forum.code.org/c/plc/hour-of-code) a získejte radu, vhled a podporu od ostatních pedagogů.
-- Projděte si [Nejčastěji kladené otázky (FAQ) o Hodině kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Projděte si [nejčastější dotazy (FAQ) k Hodině kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Co následuje po Hodině kódu?
 

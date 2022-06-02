@@ -2129,29 +2129,22 @@ lv:
         csd3-2021:
           lessons:
             Variables:
-              key: Mainīgie
               name: Mainīgie
             Text:
-              key: Teksts
               name: Teksts
             Conditionals:
-              key: Sazarojumi
               name: Sazarojumi
             Velocity:
-              key: Ātrums
               name: Ātrums
             Functions:
-              key: Funkcijas
               name: Funkcijas
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funkcijas ar parametriem
               name: Funkcijas ar parametriem
         csp3-2021:
           lessons:
             Debugging:
-              key: Atkļūdošana
               name: Atkļūdošana
         csp4-2021:
           lesson_groups:
@@ -2185,7 +2178,6 @@ lv:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Ej, ej
               name: Ej, ej
             'Loops: Getting Loopy':
               name: Kļūst ciklisks
@@ -2199,7 +2191,6 @@ lv:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binārās aproces
               name: Binārās aproces
             'Events: The Big Event':
               name: Lielais notikums
@@ -2217,16 +2208,11 @@ lv:
             'Algorithms: Graph Paper Programming':
               name: Rūtiņpapīra programmēšana
             Relay Programming:
-              key: Releju programmēšana
               name: Releju programmēšana
             Conditionals with Cards:
-              key: nosacījumi ar kārtēm
               name: nosacījumi ar kārtēm
             'Unplugged: Binary':
-              key: 'Atvienots: binārs'
               name: Binārie Attēli
-            Artist Binary:
-              key: 'Mākslinieks: Binārais'
           lesson_groups:
             csf_events:
               display_name: Pasākumi
@@ -2242,8 +2228,6 @@ lv:
               display_name: Digitālā pilsonība
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Sazarojumi
             'Functions: Songwriting':
               name: Dziesmu rakstīšana
           lesson_groups:
@@ -2258,13 +2242,10 @@ lv:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Aplokšņu mainīgie
               name: Aplokšņu mainīgie
             Internet:
-              key: Internets
               name: Internets
             For Loop Fun:
-              key: Jautrība ar "For" Cikliem
               name: Jautrība ar "For" Cikliem
           lesson_groups:
             csf_digcit:
@@ -2312,22 +2293,16 @@ lv:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Cikli
               name: Cikli
             Events:
-              key: Pasākumi
               name: Pasākumi
             Conditionals:
-              key: Sazarojumi
               name: Sazarojumi
             Functions:
-              key: Funkcijas
               name: Funkcijas
             Variables:
-              key: Mainīgie
               name: Mainīgie
             For Loops:
-              key: '"par" cikli'
               name: '"par" cikli'
           lesson_groups:
             k5_getting_started_1:
@@ -2419,7 +2394,6 @@ lv:
           lessons:
             Debugging:
               name: Atkļūdošana
-              key: Atkļūdošana
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2438,7 +2412,6 @@ lv:
           lessons:
             Move It, Move It:
               name: Ej, ej
-              key: Ej, ej
             Getting Loopy:
               name: Kļūst ciklisks
             'Loops: Getting Loopy':
@@ -2456,7 +2429,6 @@ lv:
               name: Lielais notikums
             Binary Bracelets:
               name: Binārās aproces
-              key: Binārās aproces
             'Events: The Big Event':
               name: Lielais notikums
           lesson_groups:
@@ -2472,10 +2444,8 @@ lv:
               name: Rūtiņpapīra programmēšana
             Relay Programming:
               name: Releju programmēšana
-              key: Releju programmēšana
             Conditionals with Cards:
               name: nosacījumi ar kārtēm
-              key: nosacījumi ar kārtēm
             'Algorithms: Graph Paper Programming':
               name: Rūtiņpapīra programmēšana
           lesson_groups:
@@ -2493,8 +2463,6 @@ lv:
               name: Dziesmu rakstīšana
             'Functions: Songwriting':
               name: Dziesmu rakstīšana
-            Conditionals:
-              key: Sazarojumi
           lesson_groups:
             csf_digcit:
               display_name: Digitālā pilsonība
@@ -2508,11 +2476,9 @@ lv:
           lessons:
             For Loop Fun:
               name: Jautrība ar "For" Cikliem
-              key: Jautrība ar "For" Cikliem
             The Internet:
               name: Internets
             Internet:
-              key: Internets
               name: Internets
           lesson_groups:
             lessonGroup-7:
@@ -2553,7 +2519,6 @@ lv:
           lessons:
             The Internet:
               name: Internets
-              key: Internets
           lesson_groups:
             lessonGroup-7:
               display_name: Digitālā pilsonība
@@ -2567,40 +2532,41 @@ lv:
           lessons:
             Loops:
               name: Cikli
-              key: Cikli
             Events:
               name: Pasākumi
-              key: Pasākumi
             Conditionals:
               name: Sazarojumi
-              key: Sazarojumi
             Functions:
               name: Funkcijas
-              key: Funkcijas
             Variables:
               name: Mainīgie
-              key: Mainīgie
             For Loops:
               name: '"par" cikli'
-              key: '"par" cikli'
         csd3-2022:
           lessons:
             Variables:
               name: Mainīgie
-              key: Mainīgie
             Text:
               name: Teksts
-              key: Teksts
             Conditionals:
               name: Sazarojumi
-              key: Sazarojumi
             Velocity:
               name: Ātrums
-              key: Ātrums
             Functions:
               name: Funkcijas
-              key: Funkcijas
         csd6-2022:
           lessons:
             Functions:
               name: Funkcijas
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Pārskats
+            lesson-1:
+              name: Pārskats
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Pārskats
+            lesson-1:
+              name: Pārskats

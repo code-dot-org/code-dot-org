@@ -27,7 +27,8 @@
           "name": "Flappy Kod",
           "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "preparation": "### Hour of Code'dan Bir Hafta Önce\n\n-   Hour of Code etkinliğinizi planlamaya başlamak için [Hour of Code Eğitmen Kılavuzu](http://hourofcode.com/resources/how-to/) ve \\[Başarılı Eğitmenlerden En İyi Uygulamalar[1]’ı inceleyin. \n-   Sınıf desteği veya promosyon ürünleri almak istiyorsanız [Hour of Code etkinliğinizi Kaydedin](http://hourofcode.com).\n-   Çevrimiçi anlatımı inceleyin ve tamamlayın: [Bir Flappy Oyunu Yap](https://studio.code.org/flappy/1) \n-   Öğrencilerinizden tamamlamalarını istemeden önce siz test edin. Hour of Code'dan önce teknolojinizi kontrol edin ve herhangi bir konuda sorun gidermeye ihtiyaç olup olmadığına karar verin.\n\n### Hour of Code'dan Bir Gün Önce\n\n-   Tahtaya \"kodlama\", \"programlama\" ve \"hata ayıklama\" sözcüklerini yazın ve elinizde varsa bunları sözcük duvarınıza ekleyin.\n-   Aktiviteyi tamamlayan her öğrenci bir sertifika almalıdır. Hour of Code'un sonunda işinizi kolaylaştırması için önceden herkes için [bir tane yazdırın](http://code.org/certificates).",
-          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
+          "student_overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir."
         },
         "hourofcode/Maze": {
           "name": "Labirent",
@@ -43,6 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Buz Devri Oyun Laboratuvarı",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
@@ -58,7 +60,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball oyun Labaratuarı",
-          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
+          "student_overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir."
         },
         "dance/Dance Party": {
           "name": "Dans Partisi",
@@ -100,6 +104,7 @@
         },
         "playlab/Play Lab": {
           "name": "Oyun Laboratuvarı",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
@@ -132,6 +137,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },

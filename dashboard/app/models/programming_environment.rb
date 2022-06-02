@@ -25,6 +25,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   alias_attribute :categories, :programming_environment_categories
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   after_destroy :remove_serialization
@@ -138,7 +139,9 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_get
-    categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_get", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    end
   end
 
   def self.get_published_environments_from_cache

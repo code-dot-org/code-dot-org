@@ -2258,6 +2258,12 @@
           "randomly set the rotation of a sprite": "losowo ustaw rotację duszka",
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Przesuń duszka w lewo po ekranie. Jeśli zniknie z lewej strony ekranu, przesuń go z powrotem na prawą stronę ekranu.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Przesuń duszka w prawo po ekranie. Jeśli zniknie z prawej strony ekranu, przesuń go z powrotem na lewą stronę ekranu."
+        },
+        "AllTheThings sprite lab with video": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Porusza się tam i z powrotem w jednym kierunku. Aby zmienić kierunek patrolowania duszka, zmień jego „kierunek ruchu”"
+        },
+        "allthethings_fish_tank": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Porusza się tam i z powrotem w jednym kierunku. Aby zmienić kierunek patrolowania duszka, zmień jego „kierunek ruchu”"
         }
       }
     }
