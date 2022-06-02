@@ -977,7 +977,16 @@
           "definition": "Título o resumen de un documento o sección de un documento."
         },
         "digital_footprint/csd/2021": {
-          "word": "Huella digital"
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre un individuo en varios sitios web de Internet."
+        },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Hojas de Estilo en Cascada; lenguaje utilizado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2021": {
+          "word": "Selector CSS",
+          "definition": "la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo"
         },
         "copyright/csd/2021": {
           "word": "Derechos de autor",
