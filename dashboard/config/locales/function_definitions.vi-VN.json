@@ -3287,6 +3287,28 @@
           "move and get nectar with counter": {
             "name": "di chuyển và lấy mật hoa bằng biến đếm"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "sides": "các cạnh",
+              "length": "chiều dài"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
         }
       }
     }

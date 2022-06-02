@@ -1178,10 +1178,8 @@ module Pd::Application
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
     def on_successful_create
-      on_completed_app unless status == 'incomplete'
-    end
+      return if status == 'incomplete'
 
-    def on_completed_app
       queue_email :confirmation, deliver_now: true
       auto_score!
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL

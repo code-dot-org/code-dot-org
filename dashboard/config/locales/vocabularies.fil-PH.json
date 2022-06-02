@@ -186,6 +186,10 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Mga Modelo at Simulation",
+          "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
+        },
         "event/sports/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
@@ -272,6 +276,10 @@
         },
         "input/coursef/2021": {
           "word": "Input"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Mga Modelo at Simulation",
+          "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "internet/coursef/2021": {
           "word": "Internet"

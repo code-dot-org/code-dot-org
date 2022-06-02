@@ -6,9 +6,9 @@ title: Segédanyagok
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Népszerűsítsd a Kódolás órája kezdeményezést
+# Népszerűsítsd a Kódolás óráját
 
-### Használd fel az összes rendelkezésre álló forrást a Kódolás órája népszerűsítéséhez. Nem vagy biztos benne, hogy is kezd? Nézd meg elsőként [útmutatónkat]({{ how_to_url }}), amelyből megtudhatod, hogyan is vágj neki egy Kódolás órája rendezvénynek!
+### Keresd meg az összes szükséges forrást a Kódolás órája népszerűsítéséhez. Nem tudod, hol kezdjed? Nézd meg elsőként [Útmutató a Kódolás órájának a megrendezéséhez]({{ how_to_url }}) útmutatónkat.
 
 * * *
 
@@ -16,13 +16,13 @@ title: Segédanyagok
 
 <a id="posters"></a>
 
-## Függeszd ki ezeket a posztereket az iskoládban
+## Rakd ki ezeket a posztereket az iskoládban
 
-Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szerepelnek! Az új poszter kollekció ebben az évben is 6 posztert tartalmaz, továbbá 126 "Résztvettem a Kódolás óráján" matricát. A készletek limitáltak, ezért ne habozz és [rendelt meg a posztereket](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) most. Ha szeretnéd a posztereket saját magad kinyomtatni, kattints a fenti linkre, hogy letölthesd a nyomtatható verziót.
+Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások szerepelnek! Ebben az évben minden készlethez 6 poszter és 126 "Megcsináltam a Kódolás óráját" matrica tartozik. A készletek limitáltak, ezért [rendeld meg a posztereket](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) gyorsan. Ha magad szeretnéd kinyomtatni a posztereket, a nyomtatható változat megtekintéséhez és elmentéséhez, egyszerűen kattints az alábbi képre.
 
 {{ promote_new_posters }}
 
-* Érdekelnek az előző évek poszterei? [Kattins ide]({{ promote/previous_posters_url }})!
+* A korábbi évek posztereit keresed? [Itt találhatók]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
@@ -36,7 +36,7 @@ Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szere
 
 <a id="logo"></a>
 
-## Használd a Kódolás órája logóját a népszerűsítéshez
+## A Kódolás órája nészerűsítéséhez használd a Kódolás órája logóját
 
 [![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![kép]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
@@ -84,7 +84,7 @@ Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szere
 
 **Tárgy:** Csatlakozz hozzám és több mint 100 millió diákhoz a Kódolás órájára <br />
 
-A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. But only 51% of all high schools offer computer science. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban is hallottál már a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját.
+A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. A középiskoláknak azonban csak 51%-a kínál számítástechnikát. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban is hallottál már a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját.
 
 A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. A világ összes Apple áruháza vendégül láttott egy Kódolás órája eseményt, és a kampány részeként olyan vezetők, mint az amerikai elnök, Obama vagy a kanadai miniszterelnök, Justin Trudeau is megírták első kódsoraikat a kampány részeként.
 
@@ -110,7 +110,7 @@ A kampány {{ campaign_date/short }} ideje alatt a világ diákjainak 10%-a ünn
 
 A diákok saját alkalmazásokat vagy játékokat készíthetnek, amelyeket meg tudnak mutatni a szüleiknek, sőt kapnak kinyomtatott Kódolás órája tanúsítványt is, amelyet hazavihetnek. Az egész a jókedvről szól! Interaktív, gyakorlati jellegű tevékenységekkel a diákok sokkal közérthetőbb módon tanulhatják meg a számítógépes gondolkodást és képességeket.
 
-A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. But only 51% of all high schools offer computer science. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban már hallottál a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját. Még olyan vezetők is, mint az amerikai elnök, Obama, vagy a francia miniszterelnök, Justin Trudeau is megírták első kódsoraikat a kampány részeként.
+A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. A középiskoláknak azonban csak 51%-a kínál számítástechnikát. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban már hallottál a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját. Még olyan vezetők is, mint az amerikai elnök, Obama, vagy a francia miniszterelnök, Justin Trudeau is megírták első kódsoraikat a kampány részeként.
 
 Az eseményről bővebben a http://hourofcode.com oldalon olvashatsz tovább. Vagy tudasd velünk, ha szeretnél beszélgetni iskolád részvételéről [iskola neve]. <br />
 
@@ -126,7 +126,7 @@ Kedves Szülők,
 
 Egy olyan világban élünk, melyet átsző a technológia. És tudjuk, hogy gyermekeink bármilyen területen is helyezkednek el felnőttként, a sikerük kulcsa egyre inkább a technológia működésének megértésén múlik.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+De csak nagyon kevesen tanuljuk meg, **hogyan** működik a technológia. A középiskoláknak mindössze 51%-a kínál számítástechnikát.
 
 Éppen ezért kell az egész iskolának csatlakoznia a történelem legnagyobb oktatási eseményéhez: a Kódolás órájához, a Számítástechnika Oktatási Héten ({{kampány_date / teljes}}). Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A Kódolás órája büszkén jelenti, hogy készen áll arra, hogy [Iskola neve]-ban/ben megtanítsa ezeket, a 21. századi alapvető készségeket. Ahhoz, hogy a diákokat a jövőben is ösztönözzük a programozási tevékenységek folytatására, szeretnénk ezt az eseményt feledhetetlenné tenni. Ne félj jelentkezni önkéntesnek. Lépj kapcsolatba a helyi médiával, oszd meg a hírt a közösségi oldalakon, és fontold meg további Kódolás órája események szervezését a környezetedben.
 
@@ -144,11 +144,11 @@ További részletek a http://hourofcode.com/{{ country }} weboldalon. Segíts, h
 
 **Tárgy**: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
+Számítógépek mindenütt jelen vannak, megváltoztatják a bolygó valamennyi iparágát, mégis a középiskolák mindössze 51%-ában tanítanak számítástechnikát. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
 
 A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
+Éppen ezért a(z) [ISKOLA NÉVE] iskolából [X számú] diák, az összes diák, részt vesz a történelem legnagyobb oktatási eseményén: az Informatikai oktatás hét (december 6-12.) keretében a Kódolás óráján.
 
 Meg szeretnélek hívni, hogy részt vegyél a kick off eseményünkön és hogy lásd, ahogy a gyerekek elkezdik a munkát [DATE] napon.
 
@@ -172,7 +172,7 @@ Tisztelt [Polgármester / képviselő / államtitkár]:
 
 Tisztában van vele, hogy a számítástechnika az első számú forrása a béreknek.? Több mint 500 000 számítástechnikához kapcsolódó munkahely nyitott országszerte, ám tavaly csak 42 969 számítástechnikai hallgató végzett az egyetemeken.
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+A számítástechnika ma már alapvető fontosságú minden iparágban, a legtöbb iskolában mégsem oktatják. A(z) [ISKOLA NÉVE] iskolában ezen megpróbálunk változtatni.
 
 Éppen ezért kell az egész iskolának csatlakoznia a történelem legnagyobb oktatási eseményéhez: a Kódolás órájához, a Számítástechnika Oktatási Héten ({{kampány_date / teljes}}). Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját.
 
