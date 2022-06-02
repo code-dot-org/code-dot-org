@@ -3333,6 +3333,32 @@
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
           "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen"
         }
       }
     }

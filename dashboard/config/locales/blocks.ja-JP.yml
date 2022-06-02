@@ -1254,6 +1254,7 @@ ja:
             '180': 左 に
             '270': 上 に
       gamelab_makeSpritesWithSize:
+        text: "{NUM} 個の新しい {SIZE} {COSTUME}スプライトを作る"
         options:
           SIZE:
             '30': 小
@@ -1474,6 +1475,46 @@ ja:
         text: "{SPRITE} が {SPEECH} と言う"
       gamelab_spriteSayTime:
         text: "{SPRITE}が{NUM}秒間、{TEXT1}と言います"
+      gamelab_spriteThink:
+        text: "{SPRITE} が {SPEECH} と考える"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}が{NUM}秒間、{TEXT1}と考える"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} が {THOUGHT} と考える"
+        options:
+          THOUGHT:
+            '"Hmm..."': まあいい……話してみろ。
+            '"I am hungry, too."': 私もお腹が空いています。
+            '"I only want the biggest goat."': 私はただ一番大きいヤギがほしいです。
+            '"I''m a green troll."': 私は緑のトロルです。
+            '"No one will cross my bridge."': 誰も私の橋を渡ることはありません。
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} が {THOUGHT} と考える"
+        options:
+          THOUGHT:
+            '"Hmm..."': まあいい……話してみろ。
+            '"Time to make friends with the sheep."': 羊と友達になる時間です。
+            '"She''ll never recognize me now."': この羊は今私のことがわからないでしょう。
+            '"This costume keeps me warm."': このコスチュームは私を温めてくれます。
+            '"I am actually a wolf."': 私は本当はオオカミなのです。
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} が {THOUGHT} と考える"
+        options:
+          THOUGHT:
+            '"Hmm..."': まあいい……話してみろ。
+            '"I''m feeling sleepy."': 眠たいです。
+            '"No one could ever beat me."': 誰も私を打ち負かすことができませんでした。
+            '"I''ve done this race before."': このレースは以前やったことがあります。
+            '"My feet are bigger than Turtle''s feet."': 私の足はカメの足よりも大きくなっています。
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} が {THOUGHT} と考える"
+        options:
+          THOUGHT:
+            '"Hmm..."': まあいい……話してみろ。
+            '"I''m so hungry."': お腹がとても空いています。
+            '"I''m a visitor in this town."': 私はこの町の訪問者です。
+            '"If we share, we''ll all have something to eat. "': 私たちが分け合えば私たち全員に食べるものが行き渡ります。
+            '"I''ll trick everyone into giving me their food."': みんなが私に食べ物をくれるようにしてみます。
       gamelab_startAvoiding:
         text: "{SPRITE} が {TARGET} を避け始めます"
       gamelab_startFollowing:

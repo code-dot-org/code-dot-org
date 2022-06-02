@@ -1043,7 +1043,15 @@ th:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): หมุนไปทางขวา
+            new Behavior(spinning_left, []): หมุนไปทางซ้าย
+            new Behavior(fluttering, []): กระพือปีก
+            new Behavior(jittering, []): กระสับกระส่าย
+            new Behavior(wobbling, []): โยกเยก
             new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(patrolling, []): เดินลาดตระเวน
+            new Behavior(moving_west_and_looping, []): เคลื่อนที่ไปทางตะวันตกและวนรอบ
+            new Behavior(moving_east_and_looping, []): เคลื่อนไปทางตะวันออกและวนรอบ
             new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
             new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
       gamelab_comment:
@@ -1088,6 +1096,7 @@ th:
         options:
           CHOICE:
             '"this"': นี้
+            '"other"': อย่างอื่น
       gamelab_getTime:
         text: เวลาเป็น {UNIT}
         options:
@@ -1316,6 +1325,7 @@ th:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
+            new Behavior(driving_with_arrow_keys, []): ขับด้วยปุ่มลูกศร
             draggable(): ลากได้
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
@@ -2025,14 +2035,28 @@ th:
         text: 'สไปร์ท {ANIMATION_NAME} เริ่ม {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': กระพือปีก
+            '"growing"': ขยายตัว
+            '"jittering"': กระสับกระส่าย
+            '"shrinking"': หดตัว
+            '"spinning_left"': หมุนไปทางซ้าย
+            '"spinning_right"': หมุนไปทางขวา
             '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
+            '"wobbling"': โยกเยก
       Poetry_stopBehavior:
         text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': กระพือปีก
+            '"growing"': ขยายตัว
+            '"jittering"': กระสับกระส่าย
+            '"shrinking"': หดตัว
+            '"spinning_left"': หมุนไปทางซ้าย
+            '"spinning_right"': หมุนไปทางขวา
             '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
+            '"wobbling"': โยกเยก
             '"all"': "--ทุกพฤติกรรม--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

@@ -1964,6 +1964,18 @@
               "binary": "dvejetainis"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          }
         }
       }
     }

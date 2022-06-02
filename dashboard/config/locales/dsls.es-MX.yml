@@ -3541,12 +3541,12 @@ es-MX:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       ForLoopFun-Unplugged_2020:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -7047,7 +7047,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -8851,13 +8851,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8868,13 +8868,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8885,13 +8885,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8902,13 +8902,13 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
-            que estar en el bucle `repetir`.
+            que estar en el bucle (loop) de `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
-            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
+            `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
             hagas clic en "Ejecutar"?
@@ -8961,76 +8961,76 @@ es-MX:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y tratará de recoger más néctar del que hay en
             las flores. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
             una.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
-          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
-            correcta de néctar, pero solo llegará a 4 flores.
+          feedback: Incorrecto. Con el bucle (loop)`para`, la abeja podrá recoger
+            la cantidad correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
-        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
+        markdown: "¡Ah! Usar bucles (loops)´para´hace este puzle mucho más fácil!"
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: La abeja no recogerá néctar o miel.
@@ -10580,14 +10580,14 @@ es-MX:
           En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
-          # Historias de Espacios en Blanco
+          # Historias del espacio en blanco
 
-          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+          En esta lección, aprenderás a usar y escribir historias de espacio en blanco. Mira este video para aprender cómo esto se conecta con las ciencias de la computación.
       ForLoopFun-Unplugged_2021:
         markdown: |
           # Por el Divertido de Loop
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles (loops) nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar los bucles (loops) con estructuras extras ya construidos.
       GettingLoopy-Unplugged_2021:
         markdown: |-
           # Cómo hacerse Loopy
@@ -11688,12 +11688,12 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avance".
+            "avanzar".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -11706,18 +11706,18 @@ es-MX:
             problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - text: El pájaro se quedará a un paso del cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
-        - text: El pájaro se estrellará contra la pared.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
+        - text: El pájaro chocará con la pared.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
             en "Ejecutar"?
@@ -12071,20 +12071,21 @@ es-MX:
         display_name: Proyecto de fin de curso
       courseF_artist_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
-        display_name: Práctica con Artista
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y el Artista!"
+        display_name: Práctica con el Artista
       courseF_beeFor_practice:
         description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) "para" y
+          la abeja!
+        display_name: Práctica con la abeja
       courseF_beeVar_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con las variables y la abeja!"
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_bee_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles y la abeja!"
-        display_name: Práctica con Abeja
+          todas las que puedas. ¡Sigue practicando con los bucles (loops) y la abeja!"
+        display_name: Práctica con la abeja
       courseF_events_freeplay:
         description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
           ¡Sigue añadiendo a tu programa o empieza algo nuevo!
@@ -12097,9 +12098,9 @@ es-MX:
           # Resumen del Nivel de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones siguientes para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecer|Inflar un pez|Un pingüino en movimiento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecerse|Inflar un pez|Un pingüino en movimiento|
           |-|-|-|-|-|-|-|
           | ***Tipo*** |**Revisar**|**Debug**|**Corregir**|**Debug**|**Contenido Opcional**|**Contenido Opcional**
           | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos when/while*|
@@ -12134,18 +12135,17 @@ es-MX:
           Estas opciones llevan a los alumnos a aplicaciones que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
       courseF_labels_predict_multi:
         answers:
-        - text: '"¡Una pizza marchando!"'
+        - text: '"¡Una pizza viene enseguida!"'
           feedback: No es correcto. Las etiquetas de las variables no coinciden.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
-        - text: '"¡Una comida marchando!"'
+        - text: '"¡Una comida viene enseguida!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una que viene enseguida!"'
           correct: true
           feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
         - text: No se imprimirá nada.
-          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
-            de impresión seguirán funcionando.
+          feedback: No es correcto. El evento y el bloque de impresión seguirán funcionando.
         questions:
         - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
             se imprimirá si el usuario escribe "pizza"?
@@ -12223,18 +12223,18 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. Sigue practicando con el texto y las indicaciones."
-        display_name: Práctica de Texto y Avisos
+          todas las que puedas. ¡Sigue practicando con el texto y los apuntes!"
+        display_name: Práctica de Texto y Apuntes
         teacher_markdown: |+
           # Visión General de los Niveles de Elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
           Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Avisos|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Apuntes|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
           |-|-|-|-|-|-|-|-|
-          | ***Tipo*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
-          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+          | ***Teclear*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
+          | ***Concepto***|*print block, events*|*apuntes, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
 
 
       courseF_variables_predict_multi:
@@ -12256,9 +12256,9 @@ es-MX:
             el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
             una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
       courseF_variables_projects:
-        description: Crearás una tarjeta de felicitación, un chatbot o una historia
-          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
-          a la "Parte 2".
+        description: Crearás una tarjeta de felicitaciones, un chatbot o una historia
+          de espacio en blanco. Si ya has terminado la \"Parte 1"\ de tu proyecto,
+          pasa a la \"Parte 2\".
         display_name: Elige un Proyecto
         teacher_markdown: |
           # Visión General del Nivel de Elección
@@ -12268,8 +12268,8 @@ es-MX:
       courseF_variables_samples:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
           en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
-          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
-          listo para empezar a planificar tu propio programa.
+          a continuación para ver qué te interesa crear. Pulsa \"Terminar"\ cuando
+          estés listo/a para empezar a planificar tu propio programa.
         display_name: Exploración - Ejemplos de Programas
         teacher_markdown: |
           # Visión General de los Niveles de Elección
@@ -12278,12 +12278,12 @@ es-MX:
           Los alumnos deben mirar estos proyectos cuidadosamente antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o hacer que los alumnos los exploren por su cuenta.
       courseF_variables_stop:
         content1: descripción aquí
-        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
-          \n\n\nEn el siguiente nivel, comenzarás a escribir el código de tu proyecto.
-          Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
-          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo/a para seguir
+          adelante? \n\n\nEn el siguiente nivel, comenzarás a escribir el código de
+          tu proyecto. Esto funciona mejor si ya tienes un plan.\n\nTu plan completo
+          debe incluir:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
           style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
-          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
+          que estás construyendo. Por ejemplo, una tarjeta de felicitaciones, un chatbot
           o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
           El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
           de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
@@ -12356,10 +12356,10 @@ es-MX:
         display_name: Ejemplos de Proyecto
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - text: Laurel recogerá 4 piezas del tesoro con este programa.
+        - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -13269,3 +13269,82 @@ es-MX:
 
       ml-use models applab-practice choice-2021:
         display_name: Practica con Modelos en el Laboratorio de Aplicaciones
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: azul
+        - text: verde
+        - {}
+        - text: amarillo
+        - correct: true
+        - text: rojo
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: descripción aquí
+      allthethings_external_not_displayed_as_unplugged:
+        content1: descripción aquí
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        questions:
+        - text: "¿Qué flecha lleva al Flurb hacia el tesoro?"
+        title: Opción múltiple
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Ninguna de las anteriores

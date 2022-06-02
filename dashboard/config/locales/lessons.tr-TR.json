@@ -27,7 +27,8 @@
           "name": "Flappy Kod",
           "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "preparation": "### Hour of Code'dan Bir Hafta Önce\n\n-   Hour of Code etkinliğinizi planlamaya başlamak için [Hour of Code Eğitmen Kılavuzu](http://hourofcode.com/resources/how-to/) ve \\[Başarılı Eğitmenlerden En İyi Uygulamalar[1]’ı inceleyin. \n-   Sınıf desteği veya promosyon ürünleri almak istiyorsanız [Hour of Code etkinliğinizi Kaydedin](http://hourofcode.com).\n-   Çevrimiçi anlatımı inceleyin ve tamamlayın: [Bir Flappy Oyunu Yap](https://studio.code.org/flappy/1) \n-   Öğrencilerinizden tamamlamalarını istemeden önce siz test edin. Hour of Code'dan önce teknolojinizi kontrol edin ve herhangi bir konuda sorun gidermeye ihtiyaç olup olmadığına karar verin.\n\n### Hour of Code'dan Bir Gün Önce\n\n-   Tahtaya \"kodlama\", \"programlama\" ve \"hata ayıklama\" sözcüklerini yazın ve elinizde varsa bunları sözcük duvarınıza ekleyin.\n-   Aktiviteyi tamamlayan her öğrenci bir sertifika almalıdır. Hour of Code'un sonunda işinizi kolaylaştırması için önceden herkes için [bir tane yazdırın](http://code.org/certificates).",
-          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
+          "student_overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir."
         },
         "hourofcode/Maze": {
           "name": "Labirent",
@@ -43,6 +44,7 @@
         },
         "iceage/Ice Age Play Lab": {
           "name": "Buz Devri Oyun Laboratuvarı",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
@@ -58,7 +60,9 @@
         },
         "gumball/Gumball Play Lab": {
           "name": "Gumball oyun Labaratuarı",
-          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır."
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
+          "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
+          "student_overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir."
         },
         "dance/Dance Party": {
           "name": "Dans Partisi",
@@ -100,6 +104,7 @@
         },
         "playlab/Play Lab": {
           "name": "Oyun Laboratuvarı",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
@@ -132,6 +137,7 @@
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
+          "overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir.",
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun oluşturur."
         },
@@ -3421,25 +3427,34 @@
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi",
           "overview": "Bu ders, öğrencilerin kendi etkileşimli animasyonlarını ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını içerir. Davranışlara ek olarak günümüzde öğrenciler, \"uzaylı dans partisi\" oluşturmak için kullanıcı girdisini olaylar olarak dahil edecektir.  ",
+          "purpose": "Bu ders, programlamadaki olaylara harika bir giriş niteliğinde olup öğrencilere yaratıcılıklarını gösterme şansı da verir! Dersin sonunda öğrencilere projelerini paylaşma fırsatı sunulacaktır.",
           "student_overview": "Sınıflar ile paylaşılabilen etkileşimli bir proje oluşturun."
         },
         "coursee-2021/lesson-4": {
           "name": "Süper Bir Dijital Vatandaş Olun",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÇevrimiçi araçlar çocuklara güç verirken büyük sorumlulukları da beraberinde getirir. Ancak çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Karşı çıkmaktan ihtiyacı olanlara yardım etmeye kadar her şey dahil olmak üzere, öğrencilerinize hareket geçme ve çatışmaları çözmeye dair uygun yolları gösterin.",
+          "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için çalışma kağıtlarını yazdırın.\n-   Öğrenciler için renkli kalemler veya keçeli kalemler hazırlayın.",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Siberzorbalık, Dijital Dram ve Nefret Konuşması üzerine yoğunlaşmaktadır. Öğrenciler bu zorlu konuları ele alır ve olumlu, destekleyici çevrimiçi topluluklar oluşturmak ve çevrimiçi zulümle mücadele etmek için astarların aktif rolünü oynarlar.",
           "student_overview": "Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi öğrenin."
         },
         "coursee-2021/Private and Personal Information": {
           "name": "Özel ve Kişisel Bilgiler",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dersi ilk olarak Common Sense Education oluşturmuştur. [Daha fazla bilgi edinin.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBaşkalarıyla paylaşmak ve bağlantı kurmak öğrencilerimizin doğasında var. Ancak çevrimiçi paylaşım bazı risklerle birlikte gelir. Çocukların çevrimiçi ortamda güçlü, olumlu ve güvenli ilişkiler kurmalarına nasıl yardımcı olabiliriz? Öğrencilerinizin kişisel olan bilgiler ve gizli tutulması daha iyi olan bilgiler arasındaki farkı öğrenmelerine yardımcı olun.",
           "preparation": "-   Öğretim materyallerini gözden geçirin.\n-   Her öğrenci için baskı sadaka (ler).",
           "purpose": "Common Sense'in Dijital Vatandaşlık Müfredatı, çocuklar, medya ve teknoloji üzerine yapılan en son araştırmalara dayanan altı temel konuya değinmektedir. Bu ders Gizlilik ve Güvenlik üzerine yoğunlaşmaktadır. Öğrenciler kişisel bilgileri nasıl koruyacaklarını öğrenirler ve veri gizliliği haklarını daha derinlemesine anlayarak kendileri ve başkalarını savunabilirler.",
           "student_overview": "İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek."
         },
         "coursee-2021/About Me": {
           "name": "Ben ve Hareketli Nesne Laboratuvarı Hakkında",
+          "overview": "Öğrenciler, bu **mini projede** etkileşimli bir poster oluşturarak kişisel ve özel bilgilerini web üzerinde paylaşma ile ilgili anladıklarını uygulayacaklar.",
+          "preparation": "-   (İsteğe bağlı) Öğrenciler için **\\*planlama kılavuzunun** kopyalarını yazdırın veya dijital kopyalarını dağıtın.\n-   Sınıfla paylaşmak için kendiniz bir örnek proje yapmayı düşünün.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
+          "purpose": "Bu ders, kişisel ve özel bilgilerle ilgili önceki dersi öğrenciler için anlamlı hale getirmek içindir. GÜVENLİ (kişisel) ve GÜVENLİ OLMAYAN (özel) örnekleri göz önünde bulundurarak öğrenciler, Hareketli Nesne Laboratuvarını kullanarak kendi hareketli nesne kostümlerini tasarlamak ve metin oluşturmak için web üzerinde güvenli bir şekilde kendilerini ifade etme alıştırması yaparlar.",
           "student_overview": "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar."
         },
         "coursee-2021/Digital Sharing": {
           "name": "Dijital Paylaşım",
+          "preparation": "-   Aşağıdaki \"Bağlantılar\"da **\\*Telif Hakkı Paylaşımı videosunu** bulun\n-   Telif Hakkı ve Yaratıcılık'tan **\\*Dijital Paylaşım Ders Planı**'nın tamamını indirin ve inceleyin\n-   Öğretmen olarak ders için bir eser yaratın (resim, şarkı, slayt gösterisi vb.)\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Bu öğenin paylaşımını çoğaltmak için bir tablete veya akıllı telefona ihtiyacınız olacak",
+          "purpose": "Öğrenciler yakında paylaşmak için projeler oluşturacaklar ve bu projelerin çoğu, öğrencilerin kendilerinin oluşturmadığı kod veya görüntüleri içerecek. Bu ders, öğrencilere kendilerine ait olmayan içeriği kullanmanın doğru yolunu gösterme amacını taşıyor.",
           "student_overview": "Bu derste, sahiplik ve telif hakkına dair zorlukları ve faydaları öğreneceksiniz. "
         },
         "coursee-2021/Programming and Loops with the Artist": {
@@ -3450,16 +3465,20 @@
         },
         "coursee-2021/Nested Loops in Artist": {
           "name": "İç İçe Döngüleri kullanarak Süslü Şekiller",
+          "preparation": "-   Sınıfınız için olası sorunlu alanları bulmak üzere bulmacalarla oynayın.\n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.\n-   Dönüşler ve açılarla ilgili olarak öğrencilerinizin ne tür desteklere ihtiyaç duyabileceğini düşünün.",
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Oyuncuda, sevdikleri ile gururla paylaşabilecekleri tasarımlar oluşturacaklar. \n\nBu aktivitenin amacı, sanatsal zihinleri olan öğrencilere kodlamayı başka bir yaratıcı çıkış noktası olarak görmeleri için ilham vermenin bir yolu olarak iç içe geçmiş döngüleri kullanmaktır. Bu bulmaca dizisi, tamamı iç içe döngüler kapsamında olan eleştirel düşünme becerileri, temel geometriyi anlama ve yaratıcılığı geliştirmek üzere oluşturulmuştur.",
           "student_overview": "Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız."
         },
         "coursee-2021/Nested Loops in Frozen": {
           "overview": "Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!",
+          "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
+          "purpose": "Bu derste öğrenciler, paylaşmaktan heyecan duyacakları görüntüler oluşturmak için iç içe döngüleri kullanma becerilerini uygulayacaklar.",
           "student_overview": "Anna ve Elsa'nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın."
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Şarkı yazma",
           "overview": "Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.",
+          "preparation": "-   (İsteğe bağlı) **\\*Eylem Halinde Ders** Videosunu izleyin.\n-   Her grup için birkaç **\\*çalışma sayfası** yazdırın.\n-   Her öğrenci için bir **\\*değerlendirme** yazdırın.\n-   Aktivite için şarkılara ve şarkı sözlerine güvenli erişim.\n-   Her öğrencinin bir günlüğü olduğundan emin olun.",
           "purpose": "Fonksiyonların kullanımı, kodu basitleştirmeye ve öğrencinin programlarını düzenleme kabiliyetlerini geliştirmeye yardım eder. Öğrenciler, fonksiyonları yazmanın programlarını okumayı ve eğer bir şeyler yanlış giderse hata ayıklamayı kolaylaştırabileceğini hemen anlayacaklar. ",
           "student_overview": "Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir."
         },
@@ -3485,20 +3504,25 @@
         "coursee-2021/Conditionals": {
           "name": "Çiftçi Koşulları",
           "overview": "Bu ders öğrencilere `while` döngüleri ve`if / else` ifadeleri tanıtır. \\_ While loops\\_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.",
+          "purpose": "Bu ders öğrencilere while döngülerini ve \"if / else\" ifadelerini tanıtmaktadır.",
           "student_overview": "Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin."
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Hasatçı Fonksiyonları",
           "overview": "Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince` döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.",
+          "purpose": "Bu ders, öğrencileri fonksiyonlarla koşulları kullanmaya daha fazla teşvik etmek içindir. Bu bulmacalar problem çözme ve eleştirel düşünme becerilerini geliştirmeyi amaçlamaktadır.",
           "student_overview": "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!"
         },
         "coursee-2021/lesson-1": {
           "name": "Erişilebilirlik için Tasarlama",
-          "overview": "Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek."
+          "overview": "Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.",
+          "preparation": "-   Bağlam için **\\*engel türleri** hakkında bilgi edinin.\n-   **\\*slayt bölümündeki** konuşmacı notlarını okuyun.\n-   Tüm öğrenciler için yeterli eskiz/çizim malzemesi hazırlayın.",
+          "purpose": "Erişilebilirlik hakkında bilgi edinerek öğrenciler, bilgi işlemin kendi hayatlarının ötesindeki etkilerini fark ederler. Erişilebilirlik, alakalı bir CS konusu gibi görünmeyebilir ancak yetersiz hizmet alan kullanıcılar için erişilebilir bir teknoloji oluşturmak, teknolojinin herkes için daha iyi hale getirilmesine yardımcı olur."
         },
         "coursee-2021/End of Course Project": {
           "name": "Ders Projesinin Sonu",
           "overview": "Bir sonraki dört ders öğrencilerin kodlama becerilerini bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır, öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek, bitirme çalışmalarını oluşturup sunarak vakit geçirecekler. \\\\r\n\\\\r\nKeşfetme aşamasında öğrenciler ilham almak için hem Sanatçı hem de Hareketli Nesne Laboratuvarında önceden hazırlanmış projelerin örnekleri ile oynayacak. Sonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini Sanatçı, Hareketli Nesne Laboratuvarı veya bildikleri başka bir arayüzde oluşturmak için öğrencilere alan verilecektir (bu muhtemelen projenin en uzun aşamasıdır). En sonunda öğrenciler bitmiş çalışmalarını akranlarına sunabilecekler.",
+          "preparation": "-   Hem Sanatçı hem de Hareketli Nesne Laboratuvarı ile kendi projenizi yapmak için zaman ayırın. Her aracın yetenekleri ve sınırlamaları hakkında bilgi edinin.\n-   **\\*Değerlendirme tablosunu** sınıf hedeflerinize uyacak şekilde değiştirin ve her öğrenci için bir kopya yazdırın.\n-   **\\*Proje tasarım çalışma sayfasını** sınıfınıza uyacak şekilde değiştirin ve her öğrenci için bir paket yazdırın.",
           "purpose": "Öğrenciler doğrudan projelerini inşa etmeye hazır olabilirler, ancak bu ders fikirlerini planlara dönüştürmeye yardımcı olacaktır. Bu yapı hayalperestleri topraklanmış tutacak ve karanlıkta kalan hisler için bir yol aydınlatacak. Öğrencilere projelerini oluşturmak ve revize etmek için yeterli zaman sağlayın. Bu derste kaçınılmaz olarak yer alan deneme yanılma, problem çözme ve kalıcılık öğretilecektir.",
           "student_overview": "Bu kadar büyük projeler zaman alır ve bir sürü planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını serbest bırak!"
         },

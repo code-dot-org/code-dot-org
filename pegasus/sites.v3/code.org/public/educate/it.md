@@ -14,17 +14,57 @@ theme: responsive
 - All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
 - Looking for mobile device support details? Read below.
 
-## Supported Browsers and Platforms
+## Minimum Supported Browsers and Platforms
 
-Code.org takes a tiered approach to the level of support we provide for different browsers and platforms to ensure we are building a stellar experience for most of our users, and an acceptable experience for the rest. We support the following combinations of operating systems and browsers:
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser
+        </th>
+        <tr>
+          <td>Chrome 87.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 11.x</td>
+        </tr>
+        <tr>
+          <td>Edge 87.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>    
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
 
-| **Browser**                   | **Operating System**                                                                                               |
-|-------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| Chrome 87.x and higher        | Windows 7 and higher <br><br> macOS 10.13 and higher <br><br> Android 6 and higher <br><br> ChromeOS (Chromebooks) |
-| Safari 13.x and higher        | macOS 10.13 and higher                                                                                             |
-| Mobile Safari 11.x and higher | iOS 11.x and higher                                                                                                |
-| Edge 87.x and higher          | Windows 10 and higher                                                                                              |
-| Firefox 91.x and higher       | Windows 7 and higher                                                                                               |
 
 ## Sites to Unblock
 

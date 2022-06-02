@@ -4417,6 +4417,28 @@
           "reset game": {
             "name": "začať od začiatku"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkcia 1"
+          },
+          "function 2": {
+            "name": "funkcia 2"
+          }
         }
       }
     }
