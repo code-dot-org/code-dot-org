@@ -126,8 +126,6 @@ class UnitOverviewTopRow extends React.Component {
       courseVersionId
     } = this.props;
 
-    const useMigratedTeacherResources = isMigrated && !teacherResources.length;
-
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     // Adjust styles if locale is RTL
@@ -177,14 +175,13 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Instructor &&
-            ((!useMigratedTeacherResources && teacherResources.length > 0) ||
-              (useMigratedTeacherResources &&
-                migratedTeacherResources.length > 0)) && (
+            ((!isMigrated && teacherResources.length > 0) ||
+              (isMigrated && migratedTeacherResources.length > 0)) && (
               <ResourcesDropdown
                 resources={teacherResources}
                 migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={useMigratedTeacherResources}
+                useMigratedResources={isMigrated}
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (

@@ -7,10 +7,11 @@ import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from '@cdo/apps/templates/instructions/codeReview/commentShape';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
-import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import '@cdo/apps/templates/instructions/codeReviewV2/comment.scss';
 
 const FLASH_ERROR_TIME_MS = 5000;
 
@@ -19,7 +20,8 @@ function Comment({
   onResolveStateToggle,
   onDelete,
   viewAsCodeReviewer,
-  viewAsTeacher
+  viewAsTeacher,
+  currentUserId
 }) {
   const isMounted = useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
@@ -43,44 +45,33 @@ function Comment({
   }, [comment.isResolved]);
 
   const renderName = () => {
-    const {
-      name,
-      isFromTeacher,
-      isFromCurrentUser,
-      isFromProjectOwner
-    } = comment;
+    const {commenterName, commenterId, isFromTeacher} = comment;
 
-    if (isFromCurrentUser) {
+    if (commenterId === currentUserId) {
       return <span style={styles.name}>{msg.you()}</span>;
     }
 
-    const teacherCommentSuffix = ` (${javalabMsg.teacherLabel()})`;
-    const authorCommentSuffix = ` (${javalabMsg.authorLabel()})`;
-    return (
-      <span>
+    if (isFromTeacher) {
+      return (
         <span
-          style={{...(isFromTeacher && styles.teacherName), ...styles.name}}
+          style={{
+            ...styles.teacherName,
+            ...styles.name
+          }}
         >
-          {name}
+          {commenterName}
           <span style={styles.nameSuffix}>
-            {isFromTeacher && (
-              <Tooltip text={javalabMsg.onlyVisibleToYou()} place="top">
-                {teacherCommentSuffix}
-              </Tooltip>
-            )}
-            {isFromProjectOwner && authorCommentSuffix}
+            {` (${javalabMsg.teacherLabel()})`}
           </span>
         </span>
-      </span>
-    );
+      );
+    }
+
+    return <span style={styles.name}>{commenterName}</span>;
   };
 
   const renderFormattedTimestamp = timestampString => {
     moment(timestampString).format('M/D/YYYY [at] h:mm A');
-  };
-
-  const renderErrorMessage = () => {
-    return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
   };
 
   const toggleHideResolved = () => {
@@ -163,12 +154,7 @@ function Comment({
     setTimeout(() => setDisplayError(false), FLASH_ERROR_TIME_MS);
   };
 
-  const {
-    commentText,
-    timestampString,
-    isFromTeacher,
-    isFromOlderVersionOfProject
-  } = comment;
+  const {comment: commentText, createdAt, isFromTeacher} = comment;
 
   if (isDeleted) {
     return null;
@@ -178,14 +164,14 @@ function Comment({
     <div
       style={{
         ...styles.commentContainer,
-        ...((isFromOlderVersionOfProject || isCommentResolved) &&
-          styles.lessVisible)
+        ...(isCommentResolved && styles.lessVisible)
       }}
     >
       <div style={styles.commentHeaderContainer}>
         {isCommentResolved && (
-          <i
-            className="fa fa-check-circle resolved-checkmark"
+          <FontAwesome
+            className="resolved-checkmark"
+            icon="check-circle"
             style={styles.check}
           />
         )}
@@ -197,7 +183,7 @@ function Comment({
           className="comment-right-header"
         >
           <span style={styles.timestamp}>
-            {renderFormattedTimestamp(timestampString)}
+            {renderFormattedTimestamp(createdAt)}
           </span>
           {isUpdating ? (
             <Spinner size="small" />
@@ -223,14 +209,18 @@ function Comment({
           style={{
             ...styles.comment,
             ...(isFromTeacher && styles.commentFromTeacher),
-            ...((isFromOlderVersionOfProject || isCommentResolved) &&
-              styles.lessVisibleBackgroundColor)
+            ...(isCommentResolved && styles.lessVisibleBackgroundColor)
           }}
         >
-          <SafeMarkdown markdown={commentText} />
+          <SafeMarkdown
+            markdown={commentText}
+            className="code-custom-background"
+          />
         </div>
       )}
-      {displayError && renderErrorMessage()}
+      {displayError && (
+        <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>
+      )}
     </div>
   );
 }
@@ -241,13 +231,15 @@ Comment.propTypes = {
   onDelete: PropTypes.func.isRequired,
   viewAsCodeReviewer: PropTypes.bool.isRequired,
   // Populated by Redux
-  viewAsTeacher: PropTypes.bool
+  viewAsTeacher: PropTypes.bool,
+  currentUserId: PropTypes.number
 };
 
 export const UnconnectedComment = Comment;
 export default connect(
   state => ({
-    viewAsTeacher: state.viewAs === ViewType.Instructor
+    viewAsTeacher: state.viewAs === ViewType.Instructor,
+    currentUserId: state.currentUser?.userId
   }),
   {ViewType}
 )(Comment);
