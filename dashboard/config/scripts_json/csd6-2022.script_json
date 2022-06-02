@@ -23,12 +23,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-24 12:00:04 UTC",
+    "serialized_at": "2022-06-02 13:57:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
