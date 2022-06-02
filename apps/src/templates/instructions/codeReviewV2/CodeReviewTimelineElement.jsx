@@ -15,20 +15,18 @@ export const codeReviewTimelineElementType = {
 // 1. CREATED - this is the node that represents the first element on the timeline, it has a line extending below
 //    it unless it is also the only element in the timeline. Otherwise this node does not vary from project to project.
 // 2. COMMIT - this represents a commit to the project. It will display an eyeball on the left which links to the
-//    project version if the project version is present and not expired. It also handles a child which represents
+//    project version if the project version is present. It also handles a child which represents
 //    the specific content in the commit. If it is the last element in the timeline, it will not have a line extending
 //    down from it.
 // 3. CODE_REVIEW - this represnts a code review request and comments made. It will display an eyeball to the left
-//    which links to the project version if it is present and not expired. It takes a child which should be the actual
+//    which links to the project version if it is present. It takes a child which should be the actual
 //    code review component. If it is the last element in the timeline it will not have a line extending below it.
 const CodeReviewTimelineElement = ({
   type,
   isLast,
   projectVersionId,
-  isProjectVersionExpired,
   children
 }) => {
-  const displayVersion = !isProjectVersionExpired && !!projectVersionId;
   const versionLink =
     location.origin + location.pathname + '?version=' + projectVersionId;
 
@@ -51,7 +49,8 @@ const CodeReviewTimelineElement = ({
     return (
       <div style={styles.element}>
         <div style={styles.eyeColumn}>
-          {displayVersion && <EyeballLink versionHref={versionLink} />}
+          {/* TODO only display version to owner */}
+          {!!projectVersionId && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
           <TimelineDot color={color.dark_charcoal} hasCheck={true} />
@@ -66,7 +65,8 @@ const CodeReviewTimelineElement = ({
     return (
       <div style={styles.element}>
         <div style={{...styles.eyeColumn, ...styles.reviewEye}}>
-          {displayVersion && <EyeballLink versionHref={versionLink} />}
+          {/* TODO only display version to owner */}
+          {!!projectVersionId && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
           <div>{children}</div>
@@ -82,7 +82,6 @@ CodeReviewTimelineElement.propTypes = {
     .isRequired,
   isLast: PropTypes.bool,
   projectVersionId: PropTypes.string,
-  isProjectVersionExpired: PropTypes.bool,
   children: PropTypes.node
 };
 

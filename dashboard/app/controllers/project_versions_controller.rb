@@ -30,8 +30,7 @@ class ProjectVersionsController < ApplicationController
       {
         createdAt: commit.created_at,
         comment: commit.comment,
-        projectVersion: commit.object_version_id,
-        isVersionExpired: version_expired?(commit.created_at)
+        projectVersion: commit.object_version_id
       }
     end
     render :ok, json: commits.to_json
