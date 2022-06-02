@@ -81,7 +81,6 @@ function showCourseEditor() {
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}
-        useMigratedResources={courseEditorData.course_summary.is_migrated}
         courseVersionId={courseEditorData.course_summary.course_version_id}
         coursePath={courseEditorData.course_summary.course_path}
         courseOfferingEditorLink={
