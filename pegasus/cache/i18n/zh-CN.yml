@@ -1016,6 +1016,7 @@ zh-CN:
   coursee-2020_name: 课程 E (2019)
   coursef-2020_name: 课程 F （2019）
   coursed-2021_name: 课程 D （2021）
+  coursed-2022_name: 课程 D （2021）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
@@ -1136,6 +1137,12 @@ zh-CN:
   coursed-2021_gradelevel: 8年级以上
   coursee-2021_gradelevel: 年龄 8-12
   coursef-2021_gradelevel: 年龄 9-13
+  coursea-2022_gradelevel: 年龄 4-7
+  courseb-2022_gradelevel: 年龄 5-8
+  coursec-2022_gradelevel: 年龄 6-10
+  coursed-2022_gradelevel: 8年级以上
+  coursee-2022_gradelevel: 年龄 8-12
+  coursef-2022_gradelevel: 年龄 9-13
   accelerated_gradelevel: 10-18 岁
   codeorg_platformtext: 现代浏览器、智能手机、平板电脑
   codeintl_platformtext: 现代浏览器、智能手机、平板电脑
@@ -1274,6 +1281,12 @@ zh-CN:
   coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
   coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
   coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursea-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursec-2022_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursed-2022_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursee-2022_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursef-2022_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   khan_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
