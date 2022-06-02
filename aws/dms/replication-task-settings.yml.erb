@@ -253,7 +253,7 @@ TargetMetadata:
   # Enter the maximum size, in kilobytes, for an individual LOB.
   # When a task is configured to run in limited LOB mode, the Max LOB size (K) option sets the maximum size LOB that AWS DMS accepts.
   # Any LOBs that are larger than this value will be truncated to this value.
-  LobMaxSize: 128
+  LobMaxSize: 512
 
   # In full LOB mode AWS DMS migrates all LOBs from source to target regardless of size.
   # In this configuration, AWS DMS has no information about the maximum size of LOBs to expect.
@@ -275,7 +275,7 @@ TargetMetadata:
   # InlineLobMaxSize in FullLobMode. The default value for InlineLobMaxSize is 0 and the range is 1 –102400 kilobytes
   # (100 MB). Set a value for InlineLobMaxSize only if you know that most of the LOBs are smaller than the value
   # specified in InlineLobMaxSize.
-  InlineLobMaxSize: 128
+  InlineLobMaxSize: 512
 
   # The target table schema name. If this metadata option is empty, the schema from the source table is used.
   # AWS DMS automatically adds the owner prefix for the target database to all tables if no source schema is defined.
