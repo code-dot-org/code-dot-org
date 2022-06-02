@@ -965,11 +965,6 @@ class UnitEditor extends React.Component {
               <div />
               <ResourcesEditor
                 inputStyle={styles.input}
-                resources={this.state.teacherResources}
-                updateResources={teacherResources =>
-                  this.setState({teacherResources})
-                }
-                useMigratedResources
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
@@ -984,7 +979,6 @@ class UnitEditor extends React.Component {
                 </div>
                 <ResourcesEditor
                   inputStyle={styles.input}
-                  useMigratedResources
                   courseVersionId={this.props.initialCourseVersionId}
                   migratedResources={this.props.studentResources}
                   studentFacing
