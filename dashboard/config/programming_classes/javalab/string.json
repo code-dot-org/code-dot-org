@@ -16,7 +16,7 @@
       "overload_of": null,
       "content": "Creates a `String` object that represents the same sequence of characters as the argument",
       "parameters": "[{\"name\":\"original\",\"type\":\"String\",\"required\":true,\"description\":\"a `String` that the `String` object will copy\"}]",
-      "examples": "[{\"name\":\"Using the Constructor\",\"description\":\"```\\nString tempString = new String(\\\"hello\\\");\\n``` \"}]",
+      "examples": "[{\"name\":\"\",\"description\":\"```\\nString tempString = new String(\\\"hello\\\");\\n``` \"}]",
       "syntax": "`String(String original)`",
       "external_link": null,
       "return_value": null
@@ -82,8 +82,20 @@
       "return_value": null
     },
     {
-      "name": "toString",
+      "name": "substring",
       "position": 6,
+      "key": "substring2",
+      "overload_of": "substring",
+      "content": "The `substring()` method returns a `String` containing the characters from the specified starting index up to (but not including) the specified ending index.",
+      "parameters": "[{\"name\":\"start\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the first character to start at\"},{\"name\":\"end\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the last character to stop at\"}]",
+      "examples": "[{\"code\":\"```\\nString test = \\\"welcome\\\";\\nSystem.out.println(test.substring(2,4));\\n```\\n**Output:**\\n\\nlc\"}]",
+      "syntax": "`public String substring(int start, int end)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "toString",
+      "position": 7,
       "key": "tostring",
       "overload_of": null,
       "content": "The `toString()` method returns the `String` itself.",
@@ -95,7 +107,7 @@
     },
     {
       "name": "toLowerCase",
-      "position": 7,
+      "position": 8,
       "key": "tolowercase",
       "overload_of": null,
       "content": "The `toLowerCase()` method returns the `String` converted to lowercase letters.",
@@ -107,25 +119,13 @@
     },
     {
       "name": "toUpperCase",
-      "position": 8,
+      "position": 9,
       "key": "touppercase",
       "overload_of": null,
       "content": "The `toUpperCase()` method returns the `String` converted to uppercase letters.",
       "parameters": "[]",
       "examples": "[{\"name\":\"\",\"code\":\"```\\nString test = new String(\\\"Welcome, Anna!\\\");\\nSystem.out.println(test.toUpperCase());\\n```\\n\\n**Output:**\\n\\nWELCOME, ANNA!\"}]",
       "syntax": "`public String toUpperCase()`",
-      "external_link": null,
-      "return_value": null
-    },
-    {
-      "name": "substring2",
-      "position": 9,
-      "key": "substring2",
-      "overload_of": "substring",
-      "content": "The `substring()` method returns a `String` containing the characters from the specified starting index up to (but not including) the specified ending index.",
-      "parameters": "[{\"name\":\"start\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the first character to start at\"},{\"name\":\"end\",\"type\":\"int\",\"required\":true,\"description\":\"the index of the last character to stop at\"}]",
-      "examples": "[{\"code\":\"```\\nString test = \\\"welcome\\\";\\nSystem.out.println(test.substring(2,4));\\n```\\n**Output:**\\n\\nlc\"}]",
-      "syntax": "`public String substring(int start, int end)`",
       "external_link": null,
       "return_value": null
     }

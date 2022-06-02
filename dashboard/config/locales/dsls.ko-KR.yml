@@ -1161,6 +1161,7 @@ ko-KR:
         - correct: true
         questions:
         - {}
+        title: 예측하기
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -1169,6 +1170,7 @@ ko-KR:
         - correct: true
         questions:
         - {}
+        title: 예측하기
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -1177,6 +1179,7 @@ ko-KR:
         - correct: true
         questions:
         - {}
+        title: 예측하기
       Dance_Party_extras_intro:
         markdown: "# 계속 춤추세요! \n\n2부에서는 자신만의 프로젝트를 만듭니다. 여기에는 퍼즐은 없어요. 대신, 더 복잡한 댄스
           파티를 만드는 다양한 방법을 보여주는 프로젝트는 많이 있어요. \n\n다음 레벨들은 _어떤 순서로든_ 할 수 있습니다. 여기저기
@@ -1218,6 +1221,40 @@ ko-KR:
           낮춰요 \n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       Internet Simulator Setup:
         content1: 설명 입력
+        markdown: "# Code.org의 인터넷 시뮬레이터\n\n_비고: 이 튜토리얼에 나열된 이 설명은 인터넷 시뮬레이터를 Code.org
+          컴퓨터 과학 원리 커리큘럼과는 별개로, 단독 툴로서 사용하고자 하는 교사를 위한  것입니다. Code.org CSP 커리큘럼의 일부로서
+          설계된 활동을 사용할 계획이면, [CSP 커리큘럼 페이지.](https://code.org/educate/csp)로 바로 가십시오_\n\n###
+          콘텐츠\n여기에는 배경과 정보가 수록된 페이지 3개가 있습니다:\n\n* 인터넷 시뮬레이터란? 개관 (아래 참조)\n* [설정 설명](/s/netsim/lessons/1/levels/2)\n*
+          [FAQ](/s/netsim/lessons/1/levels/3)\n \n### 인터넷 시뮬레이터란? 개관:\n\n인터넷 시뮬레이터는
+          Code.org가 새 고등학교 [컴퓨터 과학 원리](https://code.org/educate/csp) 학급을 위해 개발한 툴입니다.
+          이 툴은 학생들에게 네트워크로 연결된 컴퓨터에 결부된 여러 종류의 문제를 경험하도록 (또는 해결하도록) 설계되었습니다. 인터넷 시뮬레이터는
+          인터넷의 여러 겹을 연이어 쌓도록 커리큘럼 내 단원 1과 2 전체에서 여러 레슨에서 사용합니다. \n\n이 툴을 여러분이 설계한
+          활동과 함께 학급에서 사용할 생각이면, [레슨 플랜](https://curriculum.code.org/csp/unit1)을 통해
+          이 툴에 익숙해질 것을 권합니다. 다음 페이지에 있는 **설정 설명**은 Code.org CSP 커리큘럼과는 별개로 인터넷 시뮬레이터를
+          사용하고자 하는 교사를 위한  것입니다. . \n\n툴 자체는 이러한 개념을 _가르치지_않고 차라리 복수의 학생들이 함께 와서 이진수
+          또는 십진수, ascii 기반 메시지를 서로 또는 다른 학급원에게 전송하기 위한 환경을 제공합니다. 여러 종류의 문제에 노출되고
+          호스트 간 데이터와 연결을 시각화하며 인터넷과 관련된 다양한 개념 학습을 지원하는 방식으로 **환경을 구성할 수 있습니다.**\n\n인터넷
+          시뮬레이터는 문제를 풀기 위해 직접 협력하여 일하는 학생들과 함께 *교실*에서 사용하도록 설계되었습니다.  종종 문제점은 커뮤니케이션
+          프로토콜 발명 또는 정보의 인터넷 상에서의 운반을 실행가능하게 하는 구조화된 방식으로 인코딩하는 방법의 발명을 수반합니다.\n\n**Code.org's
+          컴퓨터 과학 원리 커리큘럼**에서 우리는 전형적으로 레슨과 활동을 다음과 같은 방식으로 구조화합니다:\n\n* **먼저 학생들에게
+          도전을 제시합니다**\n * 예. 물리적 인터넷은 본래 신뢰할 수 없으며 메시지를 빠뜨릴 수 있습니다. \n* **이슈를 잘 이해하기
+          위해 시뮬레이터로 실험할 기회를 줍니다.** \n * 예. 라우터 로그를 보고 모든 메시지의 10-20%가 누락되고 패킷이 무질서하게
+          라우팅될 수 있다는 점을 발견합니다.\n* **도전에 대한 해결책을 스스로 발견할 기회를 줍니다.** \n  * 예. 이 신뢰할
+          수 없는 네트워크 상에서 메시지를  신뢰할 수 있게 전송하는 프로토콜 발명\n* **최종적으로, 학생들은 그 프로토콜 또는 발명이
+          \"실제 세상\"에서 어떻게 작용하는지 조사합니다**\n * 예. TCP가 정말로 어떻게 작동하는지 조사하고 동영상을 시청합니다.\n\n###
+          인터넷 시뮬레이터가 무엇을 하도록 구성할 수 있습니까?\n\n가장 기본적으로, 인터넷 시뮬레이터는 코디네이션 또는 동기화 없이 단일
+          공유 와이어를 통해 단일 비트의 정보를 소통할 수 있습니다. 가장 고급 단계에서는,  TCP/IP 또는 HTTP와 유사한 프로토콜을
+          만들 것을 요구하는,  IP 주소와 DNS, 고정 크기 패킷을 사용하여, 복수 라우터 상에서 신뢰할 수 없는 연결을 시뮬레이션할
+          수 있습니다. \n\n우리는 인터넷 시뮬레이터를 일정 주제를 가르치는데 도움이 되는 다양한 구성으로 설정하고 있습니다. 그러나,
+          학급을 위해 인터넷 시뮬레이션을 사용하고자 하면, 컨트롤하고 싶은 일부 사용자 설정을 알아야 하거나 또는 학생들에게 특정 방식으로
+          설정하라고 말해야 합니다.\n\n예: 인터넷 시뮬레이터의 특징 중 하나는 전송하는 데이터의 이진, 십진, 16진, ASCII 표현으로
+          보여줄 수 있습니다. 일부 구성에서, 사용자는 또한  비트 해석 방법을 말해주기 위해 \"덩어리 크기\"를 설정할 수 있습니다.
+          직접 설계한 레슨의 경우, 제공한 구성 중 하나를 선택할 수 있지만 학생들은 비트를 특정 표현으로만 보여주도록 해야 하거나 또는
+          아마도 덩어리 크기를 특정 값으로 설정하길 원할 수도 있습니다.\n\n더 큰 포인트는 여기서 제공된 구성은 교사가 특정 주제를 가르치기
+          위한 시작 점이라는 것입니다. 어떤 독창성을 발휘하고 시뮬레이터를 필요에 맞게 더 정교하게 사용하는 전략을 가르쳐야 합니다.\n\n\n
+          <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_다음:
+          설정 설명_\n\n\n"
       Internet Simulator Setup 2:
         content1: 설명 입력
       Internet Simulator Setup 3:
@@ -5973,6 +6010,7 @@ ko-KR:
         - correct: true
         questions:
         - {}
+        title: 예측하기
       CSD games cake challenge choice_2021:
         display_name: 도전
       CSD games functions practice choice_2021:
@@ -6014,3 +6052,85 @@ ko-KR:
           # 디지털 트레일 팔로우
 
           ## 어떤 정보가 디지털 흔적으로 남아도 되는 정보입니까?
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: 파랑
+        - text: 초록
+        - {}
+        - text: 노란
+        - correct: true
+        - text: 빨강
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: 설명 입력
+      allthethings_external_not_displayed_as_unplugged:
+        content1: 설명 입력
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        questions:
+        - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
+        title: 객관식
+      ml-club app-choice parent:
+        display_name: 앱 사용자 지정
+      ml-intro app lab-book recommender 5-2021:
+        display_name: 앱 사용자 지정
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: 해당 사항 없음

@@ -491,6 +491,10 @@ class User < ApplicationRecord
     self.parent_email = parent_email_preference_email
   end
 
+  def memoized_teachers
+    @memoized_teachers ||= teachers.to_a
+  end
+
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
   validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
@@ -2105,6 +2109,14 @@ class User < ApplicationRecord
     return false if teacher_managed_account?
     # Students in sections may not delete their own account.
     sections_as_student.empty?
+  end
+
+  def shared_sections_with(other_user)
+    sections_as_student & other_user.sections_as_student
+  end
+
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
   end
 
   # Users who might otherwise have orphaned accounts should have the option

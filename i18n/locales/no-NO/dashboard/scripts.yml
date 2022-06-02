@@ -1427,7 +1427,6 @@
               name: 'Algoritmer: Tangram'
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
-              description_student: Unngå lavaen! Her skal du lære om betingelser i Minecraft-verdenen.
             Building a Foundation:
               name: Bygg ett grunnlag
             Nested Loops in Bee/Zombie:
@@ -1956,7 +1955,6 @@
               name: Istid Spill-lab
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
-              description_student: Unngå lavaen! Her skal du lære om betingelser i Minecraft-verdenen.
             Envelope Variables:
               name: Konvolutt variabler
             For Loop Fun:
@@ -3287,22 +3285,16 @@
         csd3-2021:
           lessons:
             Variables:
-              key: Variabler
               name: Variabler
             Sprite Properties:
-              key: Figuregenskaper
               name: Figuregenskaper
             Text:
-              key: tekst
               name: tekst
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Velocity:
-              key: Hastighet
               name: Hastighet
             Functions:
-              key: Funksjoner
               name: Funksjoner
           lesson_groups:
             csd3_1:
@@ -3332,7 +3324,6 @@
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Funksjoner med parametre
               name: Funksjoner med parametre
           lesson_groups:
             csd6_1:
@@ -3344,7 +3335,6 @@
         csp1-2021:
           lessons:
             Binary Numbers:
-              key: Binære Tall
               name: Binære Tall
           lesson_groups:
             cspSurvey:
@@ -3360,7 +3350,6 @@
         csp3-2021:
           lessons:
             Debugging:
-              key: Feilsøking
               name: Feilsøking
         csp4-2021:
           lesson_groups:
@@ -3413,7 +3402,6 @@
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Flytt den, flytt den
               name: Flytt den, flytt den
             'Loops: Getting Loopy':
               name: Gå i spinn
@@ -3427,7 +3415,6 @@
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binær armbånd
               name: Binær armbånd
             'Events: The Big Event':
               name: Den store begivenheten
@@ -3446,19 +3433,13 @@
             'Algorithms: Graph Paper Programming':
               name: Millimeterpapirprogrammering
             Relay Programming:
-              key: Relé programmering
               name: Relé programmering
             Dance Party:
-              key: Dansefest
               name: Dansefest
             Conditionals with Cards:
-              key: Betingelser med kort
               name: Betingelser med kort
             'Unplugged: Binary':
-              key: 'Frakoblet: Binær'
               name: Binære Bilder
-            Artist Binary:
-              key: Kunstner Binær
           lesson_groups:
             csf_events:
               display_name: Hendelser
@@ -3474,8 +3455,6 @@
               display_name: Digitalt statsborgerskap
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Betingelser
             'Functions: Songwriting':
               name: Låtskriving
           lesson_groups:
@@ -3491,13 +3470,10 @@
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
           lessons:
             Envelope Variables:
-              key: Konvolutt variabler
               name: Konvolutt variabler
             Internet:
-              key: Internett
               name: Internett
             For Loop Fun:
-              key: Morro med for løkker
               name: Morro med for løkker
           lesson_groups:
             csf_digcit:
@@ -3515,7 +3491,6 @@
         express-2021:
           lessons:
             Dance Party:
-              key: Dansefest
               name: Dansefest
             lesson-1:
               name: Dansefest
@@ -3601,22 +3576,16 @@
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Løkker
               name: Løkker
             Events:
-              key: Hendelser
               name: Hendelser
             Conditionals:
-              key: Betingelser
               name: Betingelser
             Functions:
-              key: Funksjoner
               name: Funksjoner
             Variables:
-              key: Variabler
               name: Variabler
             For Loops:
-              key: For-løkker
               name: For-løkker
           lesson_groups:
             k5_getting_started_1:
@@ -3638,10 +3607,8 @@
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Grunnleggende informatikk
               name: Grunnleggende informatikk
             Next Steps:
-              key: De Neste Trinnene
               name: De Neste Trinnene
         self-paced-pl-csd2-2021:
           lessons:
@@ -3826,7 +3793,6 @@
           lessons:
             Binary Numbers:
               name: Binære Tall
-              key: Binære Tall
           lesson_groups:
             cspSurvey:
               display_name: Undersøkelse
@@ -3840,7 +3806,6 @@
           lessons:
             Debugging:
               name: Feilsøking
-              key: Feilsøking
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3859,7 +3824,6 @@
           lessons:
             Move It, Move It:
               name: Flytt den, flytt den
-              key: Flytt den, flytt den
             Getting Loopy:
               name: Gå i spinn
             'Loops: Getting Loopy':
@@ -3877,7 +3841,6 @@
               name: Den store begivenheten
             Binary Bracelets:
               name: Binær armbånd
-              key: Binær armbånd
             'Events: The Big Event':
               name: Den store begivenheten
           lesson_groups:
@@ -3897,13 +3860,10 @@
               name: Millimeterpapirprogrammering
             Relay Programming:
               name: Relé programmering
-              key: Relé programmering
             Dance Party:
               name: Dansefest
-              key: Dansefest
             Conditionals with Cards:
               name: Betingelser med kort
-              key: Betingelser med kort
             'Algorithms: Graph Paper Programming':
               name: Millimeterpapirprogrammering
           lesson_groups:
@@ -3922,8 +3882,6 @@
               name: Låtskriving
             'Functions: Songwriting':
               name: Låtskriving
-            Conditionals:
-              key: Betingelser
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3937,11 +3895,9 @@
           lessons:
             For Loop Fun:
               name: Morro med for løkker
-              key: Morro med for løkker
             The Internet:
               name: Internett
             Internet:
-              key: Internett
               name: Internett
           lesson_groups:
             lessonGroup-7:
@@ -4015,7 +3971,6 @@
           lessons:
             The Internet:
               name: Internett
-              key: Internett
           lesson_groups:
             lessonGroup-7:
               display_name: Digitalt statsborgerskap
@@ -4047,22 +4002,16 @@
           lessons:
             Loops:
               name: Løkker
-              key: Løkker
             Events:
               name: Hendelser
-              key: Hendelser
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Functions:
               name: Funksjoner
-              key: Funksjoner
             Variables:
               name: Variabler
-              key: Variabler
             For Loops:
               name: For-løkker
-              key: For-løkker
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4079,22 +4028,16 @@
           lessons:
             Variables:
               name: Variabler
-              key: Variabler
             Sprite Properties:
               name: Figuregenskaper
-              key: Figuregenskaper
             Text:
               name: tekst
-              key: tekst
             Conditionals:
               name: Betingelser
-              key: Betingelser
             Velocity:
               name: Hastighet
-              key: Hastighet
             Functions:
               name: Funksjoner
-              key: Funksjoner
           lesson_groups:
             csd3_1:
               display_name: 'Kapittel 1: Bilder og animasjoner'
@@ -4131,3 +4074,15 @@
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
             lessonGroup-4:
               display_name: Undersøkelse
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Oversikt
+            lesson-1:
+              name: Oversikt
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Oversikt
+            lesson-1:
+              name: Oversikt

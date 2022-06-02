@@ -10,7 +10,6 @@
         "2-3 Artist Loops New 15": "Now, draw anything you like!",
         "2-3 Bee Loops 2A": "This time, use a loop to gather all of the nectar.",
         "2-3 Bee Loops 3A": "Use a `repeat` loop to collect all of the nectar.",
-        "2-3 Maze 2": "This pig is ruffling my feathers. Help me get to him!",
         "2-3 Maze 6": "Keep calm and help me find the bad pig. Otherwise\nI might get angry!",
         "2-3 Maze 8": "Get me to the pig!",
         "2-3 Maze Loops 17": "Use what you learned to get me to the sunflower!",
@@ -116,7 +115,9 @@
         "Underground Avoiding Lava_2021": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
         "Underground If Statements_2021": "Now things are getting tricky. Mine 3 redstone, but don’t fall into the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
         "Underground Iron_2021": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
-        "Underground Mining Coal_2021": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal."
+        "Underground Mining Coal_2021": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
+        "2-3 Maze 3": "Keep calm and help me find the bad pig. Otherwise\nI might get angry!",
+        "Overworld Chop Tree - allthethings": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the \"destroy block\" command to chop it down."
       }
     }
   }

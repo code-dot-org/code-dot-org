@@ -2979,7 +2979,7 @@
             "name": "pătrate așezate în zig-zag"
           },
           "draw a line of squares": {
-            "name": "desenează un rând de pătrate"
+            "name": "desenează un rând de hexagoane"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
@@ -3644,6 +3644,20 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "pătrat grădină"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "desenați o formă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime"
+            }
           }
         }
       }
