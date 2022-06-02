@@ -74,12 +74,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
+  blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -305,7 +305,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function(
     helpClickFunc
   ) {
-    blocklyWrapper.bindEvent_(
+    blocklyWrapper.browserEvents.bind(
       blocklyWrapper.mainBlockSpace.getCanvas(),
       blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
       blocklyWrapper.mainBlockSpace,
