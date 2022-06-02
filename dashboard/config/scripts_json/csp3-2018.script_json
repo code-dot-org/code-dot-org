@@ -27,12 +27,11 @@
       "project_sharing": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2018"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
-    "family_name": "csp3",
-    "serialized_at": "2022-03-22 21:16:31 UTC",
+    "family_name": null,
+    "serialized_at": "2022-06-02 13:57:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
