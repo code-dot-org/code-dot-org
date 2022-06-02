@@ -275,5 +275,20 @@ ta:
         poetry_module_conditionals: நிபந்தனை சார்ந்தவை - Coding with Poetry
         poemart_intro: கவிதை கலை அறிமுகம்
         CSA-PL-debugging-temp: Java Lab - temp-ல் பிழைத்திருத்தத்திற்கான அறிமுகம்
+        CSA-PL-for-loops: ஜாவாவில் லூப்களுக்கு
+        CSA-PL-variables: ஜாவாவில் மாறிகளை உருவாக்குதல்
         PL_CS_Journeys_Overview: CS பயணங்கள்
+        CSA-PL-intro-to-java-lab: ஜாவா லேப் அடிப்படைகள்
+        CSA-PL-first-program: ஜாவாவில் ஒரு நிரலை எழுதுதல்
+        CSD_u6_variables_part1: 'CSD: மாறிகள்'
+        csd_u6_if_statements: 'CSD: அறிக்கைகள் என்றால்'
+        csc-poem-art-intro: அறிமுக வீடியோ
+        csc-poem-art-outro: அவுட்ரோ வீடியோ
+        csd_u6_call_define_functions: 'CSD: அழைப்பு மற்றும் செயல்பாடுகளை வரையறுத்தல்'
+        starquilts_intro_artist: ஸ்டார் க்வில்ட்ஸ் அறிமுகம்
         CSA-PL-intro-to-arrays: ஒரு பரிமாண (1D) அணிவரிசைகள்
+        CSA-PL-1d-arrays-new-values: 1D வரிசைகளில் மதிப்புகளை உள்ளிடுகிறது
+        CSA-PL-conditionals: ஜாவாவில் நிபந்தனை அறிக்கைகள்
+        CSA-PL-two-way-selection: இரு வழி தேர்வு
+        CSA-PL-Printing-in-Java: ஜாவாவில் அச்சிடுதல்
+        CSA-PL-multi-selection-statements: பல தேர்வு அறிக்கைகள்

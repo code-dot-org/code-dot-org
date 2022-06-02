@@ -8,11 +8,11 @@ title: Panduan Cara Melakukan Jam Kod untuk Selepas Sekolah
 
 ### Sertai pergerakan ini dan perkenalkan pelajar anda kepada sains komputer dengan langkah ini.
 
-Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di dalam planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya. Dengan memulakannya lebih awal, mereka akan mempunyai asas untuk berjaya di dalam mana-mana laluan kerjaya abad ke-21.
+Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya. Dengan memulakannya lebih awal, mereka akan mempunyai asas untuk berjaya di dalam mana-mana laluan kerjaya pada abad ke-21.
 
 Mencuba Jam Kod ialah cara mudah dan menyeronokkan bagi memperkenalkan pelajar kepada sains komputer, mungkin untuk pertama kalinya. Jika anda memerlukan bantuan tambahan, anda boleh meminta [sukarelawan tempatan]({{ urls/volunteer_local }}) membantu menjalankan Jam Kod di kelas atau kelab anda selepas sekolah.
 
-### Jam Kod juga boleh dianjurkan dari jarak jauh! Untuk memulakan, sila lihat [petua untuk menganjurkan acara Jam Kod maya](https://hourofcode.com/us/how-to/virtual).
+### Hour of Code juga boleh dianjurkan dari jarak jauh! Untuk memulakan, sila lihat [petua untuk menganjurkan acara Hour of Code maya](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 

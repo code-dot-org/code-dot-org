@@ -2423,18 +2423,25 @@ zh-CN:
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: 我叫Caia，是一名诗人，也是一名计算机科学专业的学生。我从编程中学到了很多东西，这些东西让我成为了一个更好的诗人，而我的诗歌也让我在编程方面做得更好，因为你必须认真思考你选择的词语，还有当它们汇集在一起时你会创造什么。
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: 在接下来的一个小时里，你将通过创作一首动画诗来学习计算机科学和诗歌。从本质上讲，诗歌是用文字创造艺术。我创作诗歌是为了表达我自己；我试图用自己独特的风格和韵律去激发受众的想象力和情感。
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: 就像艺术一样，诗歌可以有很多不同的解释。同一首诗对不同的人可能有不同的含义，每首诗都有自己的意境。意境是你从一首诗中得到的感觉。有时人们会将某些颜色和意象与不同的意境联系起来。
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: 例如，黄色使我感到愉悦。当我想到恐惧之类的情绪时，我有时会在脑海中浮现一个漆黑的暴风雨之夜。在这个活动中，你将有机会根据你的感受来阐述和动画化一首诗的意境。
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: 让我们看看如何使用代码来实现这一点。你将看到屏幕被分为三个主要部分。左边是游戏空间。你的动画诗将在这里出现。每首诗都有一个标题和一个作者。
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: 中间是工具箱。课程中新的代码模块会出现在这里。
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: 右边是工作区。可将工具箱的模块拖放到这里，来构建自己的程序。
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
       9:
@@ -2443,3 +2450,92 @@ zh-CN:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: 中间是工具箱。课程中新的代码模块会出现在这里。
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg

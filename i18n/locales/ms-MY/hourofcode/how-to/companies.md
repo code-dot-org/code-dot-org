@@ -1,38 +1,38 @@
 ---
-title: Panduan Cara Melakukan Jam Kod untuk Syarikat
+title: Panduan Cara Melakukan Hour of Code untuk Syarikat
 ---
 
 {{ signup_button }}
 
-# Cara syarikat anda boleh berinteraksi dengan Jam Kod
+# Cara syarikat anda berinteraksi dengan Hour of Code
 
-### Ketahui cara anda dan pekerja anda boleh memberikan inspirasi kepada pelajar untuk mencuba sains komputer!
+### Ketahui cara anda dan pekerja anda yang memberikan inspirasi kepada pelajar untuk mencuba sains komputer!
 
 * * *
 
-Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di dalam planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya. Dengan memulakannya lebih awal, mereka akan mempunyai asas untuk berjaya di dalam mana-mana laluan kerjaya abad ke-21.
+Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya. Dengan memulakannya lebih awal, mereka akan mempunyai asas untuk berjaya di dalam mana-mana laluan kerjaya pada abad ke-21.
 
-Semasa kempen Jam Kod, syarikat anda boleh membantu meningkatkan kesedaran mengenai pergerakan sains komputer. Sama ada anda menjadi sukarelawan individu atau merancang acara untuk syarikat anda, semua usaha anda boleh memberikan kesan yang amat besar kepada cara wanita muda dan pelajar daripada kumpulan kaum dan etnik yang terpinggir melihat sains komputer dan potensi mereka sendiri.
+Semasa kempen Hour of Code, syarikat anda boleh membantu meningkatkan kesedaran mengenai perkembangan sains komputer. Sama ada anda menjadi sukarelawan individu atau merancang acara untuk syarikat anda, semua usaha anda boleh memberikan kesan yang amat besar kepada wanita muda dan pelajar daripada kumpulan kaum dan etnik yang terpinggir tentang sains komputer dan potensi diri mereka sendiri.
 
-- [Galakkan pekerja untuk menjadi sukarelawan dengan kelas](#encourage-employees)
-- [Hubungkan syarikat anda dengan sekolah](#connect-with-a-school)
-- [Anjurkan acara Jam Kod anda sendiri](#host-hour-of-code)
-- [Promosikan Jam Kod](#promote-hour-of-code)
-- [Lebih banyak cara menyokong Jam Kod](#support-hour-of-code)
+- [Galakkan pekerja untuk menjadi sukarelawan dalam kelas](#menggalakkan-pekerja)
+- [Hubungkan syarikat anda dengan sekolah](#berhubung-dengan-sekolah)
+- [Anjurkan acara Hour of Code anda sendiri](#hos-hour-of-code)
+- [Promosikan Hour of Code](#promosikan-hour-of-code)
+- [Lebih banyak cara menyokong Hour of Code](#support-hour-of-code)
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Galakkan pekerja untuk menjadi sukarelawan dengan kelas
+## Galakkan pekerja untuk menjadi sukarelawan dalam kelas
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-Satu cara yang paling memuaskan hati untuk menyertai acara Jam Kod ialah menjadi sukarelawan dengan kelas tempatan, sama ada secara bersemuka atau maya. Paling baik antara semua ialah anda tidak perlu menjadi jurutera untuk menjadi sukarelawan. Anda masih boleh memberikan pengalaman bermakna kepada pelajar dengan berkongsi pengalaman kerjaya anda sendiri dan cara CS atau teknologi telah memberikan kesan kepada peranan anda.
+Satu cara yang paling memuaskan hati untuk menyertai acara Hour of Code ialah menjadi sukarelawan bersama kelas tempatan, sama ada secara bersemuka atau maya. Paling baik antara semua ialah anda tidak perlu menjadi jurutera untuk menjadi sukarelawan. Anda masih boleh memberikan pengalaman bermakna kepada pelajar dengan berkongsi pengalaman kerjaya anda sendiri dan cara CS atau teknologi telah memberikan kesan kepada peranan anda.
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})
 
-Sebaik sahaja sukarelawan mendaftarkan diri, guru dapat menyemak profil mereka pada [peta sukarelawan](https://code.org/volunteer/local) kami - oleh itu profil perlu dihantar selengkap yang mungkin. Jika anda sesuai untuk kelas mereka, guru akan menghubungi anda melalui platform (kami tidak akan kongsikan alamat e-mel anda dengan guru). Kemudian, anda boleh menyelaraskan perincian secara langsung dengan guru di sekitar [cara menjadi sukarelawan terbaik dengan kelas mereka](https://hourofcode.com/us/how-to/volunteers).
+Sebaik sahaja sukarelawan mendaftarkan diri, guru dapat menyemak profil mereka pada [peta sukarelawan](https://code.org/volunteer/local) kami - oleh itu profil perlu dihantar selengkap yang mungkin. Jika anda sesuai untuk kelas mereka, guru akan menghubungi anda melalui platform (kami tidak akan kongsikan alamat e-mel anda dengan guru). Kemudian, anda boleh menyelaraskan perincian secara langsung dengan guru di sekitar anda[cara menjadi sukarelawan terbaik dengan kelas mereka](https://hourofcode.com/us/how-to/volunteers).
 
 Untuk panduan lebih lanjut mengenai sukarelawan dan sampel pemesejan bagi membuatkan syarikat anda teruja dengan Jam Kod, sila lihat [panduan untuk rakan kongsi]({{ localized_files/hoc_corporate_toolkit }}) kami.
 
@@ -46,25 +46,25 @@ Anda tidak perlu menggunakan peta sukarelawan kami untuk berhubung dengan kelas 
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-Dari sana, anda boleh melayari laman web sekolah tersebut untuk mencari maklumat hubungan yang sesuai untuk dihubungi seperti pentadbir yang merangkap sebagai Pengetua atau Naib Pengetua, pengajar teknologi atau sains komputer, atau malah PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, cawangan YMCA dan banyak lagi untuk menganjur bersama sesuatu acara.
+Dari situ, anda boleh melayari laman web sekolah tersebut untuk mencari maklumat hubungan yang sesuai untuk dihubungi seperti pentadbir yang merangkap sebagai Pengetua atau Naib Pengetua, pengajar teknologi atau sains komputer, atau malah PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, cawangan YMCA dan banyak lagi untuk menganjur bersama sesuatu acara.
 
 Jika anda tidak boleh berhubung dengan sekolah, sila [hubungi kami](https://support.code.org/hc/en-us/requests/new) dan kami akan menghubungkan anda dengan satu daripada rakan kongsi tempatan kami sekiranya boleh.
 
 * * *
 
-<h4><font color="00adbc"><i>“Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. Satu perkara yang mengagumkan ialah guru menyedari bahawa sebilangan pelajar yang tidak berjaya melakukan dengan baik dari segi akademik, sangat cemerlang dengan cara pemikiran mereka seperti pembangun dan membantu individu lain - menempatkan diri mereka di dalam ruang untuk berasa yakin.”</i></font></h4>
+<h4><font color="00adbc"><i>“Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. Satu perkara yang mengagumkan ialah guru menyedari bahawa sebilangan pelajar yang tidak berjaya melakukan dengan baik daripada segi akademik, sangat cemerlang dengan cara pemikiran mereka seperti pembangun dan membantu individu lain - menempatkan diri mereka di dalam ruang untuk berasa yakin.”</i></font></h4>
 
-Sukarelawan Jam Kod
+Sukarelawan Hour of Code
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Anjurkan acara Jam Kod anda sendiri
+## Anjurkan acara Hour of Code anda sendiri
 
-Jika anda mahu berusaha melampaui janggkaan, syarikat anda juga boleh menganjurkan acara Jam Kod. Tiada formula khusus untuk menganjurkan sesuatu acara, oleh itu kami menggalakkan anda menjadi lebih kreatif! Memandangkan bilangan kakitangan kami yang kecil (tetapi sangat kuat), Code.org tidak mempunyai pasukan yang khusus untuk menyelaraskan acara Jam Kod. Walau bagaimanapun, berikut ialah beberapa petua untuk memulakannya.
+Jika anda mahu berusaha melampaui janggkaan, syarikat anda juga boleh menganjurkan acara Hour of Code. Tiada formula khusus untuk menganjurkan sesuatu acara, oleh itu kami menggalakkan anda menjadi lebih kreatif! Memandangkan bilangan kakitangan kami yang kecil (tetapi sangat kuat), Code.org tidak mempunyai pasukan yang khusus untuk menyelaraskan acara Hour of Code. Walau bagaimanapun, berikut ialah beberapa petua untuk memulakan acara itu.
 
-### 1. Sila tonton video panduan cara <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Sila tonton video panduan cara memulakan Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Tentukan tarikh, format dan lokasi untuk acara anda
 
@@ -72,7 +72,7 @@ Kami telah melihat acara yang dilangsungkan secara [maya](https://hourofcode.com
 
 <br />
 
-#### Agenda contoh:
+#### Contoh Agenda:
 
 |Masa | Item Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minit | Menunjukkan [video inspirasi](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minit | Perkenalkan diri anda dan ketahui lebih lanjut tentang pelajar: Di manakah anda bekerja, apakah yang anda lakukan dan apakah yang paling anda suka tentang pekerjaan anda? Apakah atau siapakah yang memberikan inspirasi kepada anda? Bagaimanakah anda mula berminat dalam bidang sains komputer? Adakah anda mempunyai mentor? Sila tanya pelajar soalan dan tinggalkan masa untuk sesi Soalan & Lazim. |  
@@ -91,26 +91,26 @@ Kami telah melihat acara yang dilangsungkan secara [maya](https://hourofcode.com
 
 #### Peranti:
 
-Pengalaman Jam Kod terbaik merangkumi komputer yang disambungkan kepada Internet. Tetapi anda tidak memerlukan komputer untuk setiap kanak-kanak dan anda juga boleh melakukan Jam Kod tanpa komputer sama sekali! Untuk aktiviti nirplag, hanya saringkan bahagian Teknologi Kelas untuk menunjukkan pilihan bagi "Tanpa komputer atau peranti".
+Pengalaman Hour of Code terbaik merangkumi komputer yang disambungkan kepada Internet. Tetapi anda tidak memerlukan komputer untuk setiap kanak-kanak dan anda juga boleh melakukan Hour of Code tanpa komputer sama sekali! Untuk aktiviti nirplag, hanya saringkan bahagian Teknologi Kelas untuk menunjukkan pilihan bagi "Tanpa komputer atau peranti".
 
 - **Uji aktiviti** pada komputer atau peranti. Pastikan kedua-duanya berfungsi dengan betul pada pelayar bersama bunyi dan video.
 - **Tidak mempunyai peranti yang mencukupi?** Gunakan pengaturcaraan berpasangan. Apabila pelajar berpasangan, mereka saling membantu antara satu sama lain dan kurang bergantung pada guru. Mereka akan melihat bahawa sains komputer ialah mengenai sosial dan kerjasama.
 - **Sediakan fon kepala** untuk peserta anda, atau minta mereka membawanya sendiri, sekiranya mereka akan mencuba tutorial yang berfungsi paling baik dengan bunyi.
-- **Masalah dengan lebar jalur yang rendah**? Merancang untuk menunjukkan video di bahagian depan acara, supaya setiap peserta tidak memuat turun video mereka sendiri. Atau cuba aktiviti nirplag / di luar talian.
+- **Masalah dengan lebar jalur yang rendah**? Merancang untuk menunjukkan video di bahagian depan acara, supaya setiap peserta tidak memuat turun video mereka sendiri. Atau cuba aktiviti mengenyahplag / di luar talian.
 
 #### Acara Maya:
 
-Jika acara anda dilakukan secara maya, anda akan memutuskan mengenai platform persidangan anda (dan mengujinya) sebelum acara anda bermula. Ini boleh memberikan kesan kepada bilangan pelajar yang anda rasa selesa untuk berinteraksi, oleh itu lebih baik menentukan perkara ini sebelum menjemput kelas atau mempromosikan acara anda. Untuk idea mengenai cara menjalankan Jam Kod dari jauh, sila baca [petua untuk acara Jam Kod maya kami](https://hourofcode.com/us/how-to/virtual).
+Jika acara anda dilakukan secara maya, anda akan memutuskan mengenai platform persidangan anda (dan mengujinya) sebelum acara anda bermula. Ini boleh memberikan kesan kepada bilangan pelajar yang anda rasa selesa untuk berinteraksi, oleh itu lebih baik menentukan perkara ini sebelum menjemput kelas atau mempromosikan acara anda. Untuk idea mengenai cara menjalankan Hour of Code dari jauh, sila baca [petua untuk acara Hour of Code maya kami](https://hourofcode.com/us/how-to/virtual).
 
 ### 4. Pilih aktiviti
 
 Kami menyediakan pelbagai tutorial berpandukan pelajar yang menyeronokkan untuk semua peringkat umur dan tahap pengalaman. Pelajar sangat suka mencuba tutorial pandu diri ini, walaupun anda mungkin mahu memulakan acara tersebut dengan [video inspirasi](https://hourofcode.com/us/promote/resources#videos) untuk semua individu menonton bersama.
 
-<a href="https://hourofcode.com/us/learn">Terokai aktiviti</a> dan buat keputusan lebih awal sekiranya anda mahu memilih tutorial tunggal untuk semua tetamu anda, atau biarkan setiap kanak-kanak memilihnya sendiri. **Semua aktiviti Jam Kod** memerlukan masa persiapan minimum dan pandu diri - membolehkan peserta melakukan kerja mengikut kadar dan tahap kemahiran mereka sendiri.
+<a href="https://hourofcode.com/us/learn">Terokai aktiviti</a> dan buat keputusan lebih awal sekiranya anda mahu memilih tutorial tunggal untuk semua tetamu anda, atau biarkan setiap kanak-kanak memilihnya sendiri. **Semua aktiviti Hour of Code** memerlukan masa persiapan minimum dan pandu diri - membolehkan peserta melakukan kerja mengikut kadar dan tahap kemahiran mereka sendiri.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang akan diadakan, anda boleh mula menjemput pelajar, sekolah, sekolah, atau komuniti yang lebih besar. Kami menyarankan supaya memulakan dengan sekolah setempat yang mempunyai hubungan dengan anda atau [melayari peta ](https://hourofcode.com/us/map) acara Jam Kod kami.
+Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang akan diadakan, anda boleh mula menjemput pelajar, sekolah, sekolah, atau komuniti yang lebih besar. Kami menyarankan supaya memulakan dengan sekolah setempat yang mempunyai hubungan dengan anda atau [melayari peta ](https://hourofcode.com/us/map) acara Hour of Code kami.
 
 <a id="celebrate"></a>
 
@@ -118,19 +118,19 @@ Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang aka
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-Selepas pelajar atau tetamu telah melengkapkan acara Jam Kod mereka, sudah tiba masanya untuk meraikan kejayaan mereka. Berikut ialah beberapa idea untuk membuatkan acara anda lebih menyeronokkan:
+Selepas pelajar atau tetamu telah melengkapkan acara Hour of Code mereka, sudah tiba masanya untuk meraikan kejayaan mereka. Berikut ialah beberapa idea untuk membuatkan acara anda lebih menyeronokkan:
 
 - [Cetak sijil]({{ urls/certificates }}) untuk peserta dan pelajar.
-- [Cetakkan pelekat "Saya telah melaksanakan Jam Kod!"]({{ promote/resources_stickers }}) atau dapatkan hadiah lain dan item promosi syarikat di dalam [Amazon Store Code.org](https://code.org/shop). 
-- Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
+- [Cetakkan pelekat "Saya telah melaksanakan Hour of Code!"]({{ promote/resources_stickers }}) atau dapatkan hadiah lain dan item promosi syarikat di dalam [Amazon Store Code.org](https://code.org/shop). 
+- Kongsikan foto dan video acara Hour of Code anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Promosikan Jam Kod
+## Promosikan Hour of Code
 
-Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan acara Jam Kod.
+Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan acara Hour of Code.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
@@ -142,7 +142,7 @@ Apabila anda mendaftar acara Jam Kod, anda akan menerima komunikasi e-mel yang b
 
 Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan contoh ini untuk disiarkan di dalam media sosial dan kongsikan dengan pekerja anda.
 
-#### Pengumuman am Jam Kod
+#### Pengumuman am Hour of Code
 
 - Sains komputer mengubah dunia kita. Bantu pelajar untuk menjadi sebahagian daripada perubahan ini bermula dengan #HourOfCode. https://hourofcode.com/ 
 - Jangan hanya gunakan teknologi—ketahui cara membinanya. Bantu seseorang individu memulakan dengan #HourOfCode. https://hourofcode.com/ 
@@ -169,7 +169,7 @@ Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan
 
 <a id="support-hour-of-code"></a>
 
-## Lebih banyak cara menyokong Jam Kod
+## Lebih banyak cara menyokong Hour of Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 

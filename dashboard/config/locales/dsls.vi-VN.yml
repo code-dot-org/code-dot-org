@@ -972,10 +972,121 @@ vi-VN:
           </div>
       Internet Simulator Setup:
         content1: mô tả ở đây
+        markdown: "# Hoạt động mô phỏng Internet của Code.org\n\n_Lưu ý: Hướng dẫn
+          liệt kê trong bài hướng dẫn này dành cho giáo viên muốn sử dụng Hoạt động
+          mô phỏng Internet như một công cụ độc lập, tách biệt với giáo trình Nguyên
+          tắc cơ bản của khoa học máy tính của Code.org. Nếu bạn định sử dụng các
+          hoạt động được thiết kế như một phần của chương trình giảng dạy CSP của
+          Code.org, vui lòng truy cập [trang giáo trình CSP.](https://code.org/educate/csp)_\n\n###
+          Nội dung\nCó 3 trang kiến thức nền tảng và thông tin ở đây:\n\n* Hoạt động
+          mô phỏng Internet là gì? Tổng quan (xem dưới đây)\n* [hướng dẫn thiết lập](/s/netsim/lessons/1/levels/2)\n*
+          [Câu hỏi thường gặp](/s/netsim/lessons/1/levels/3)\n \n### Hoạt động mô
+          phỏng Internet là gì? Tổng quan:\n\nHoạt động mô phỏng Internet là một công
+          cụ do Code.org phát triển cho lớp [Nguyên tắc cơ bản của khoa học máy tính](https://code.org/educate/csp)
+          bậc trung học mới của chúng tôi. Công cụ này được thiết kế để giúp học sinh
+          có trải nghiệm thực tiễn với (và giải) các loại bài toán khác nhau liên
+          quan đến máy tính nối mạng. Hoạt động mô phỏng Internet được sử dụng trong
+          nhiều bài học xuyên suốt Học phần 1 và 2 trong chương trình giảng dạy của
+          chúng tôi để xây dựng liên tiếp các lớp khác nhau của Internet.\n\nNếu bạn
+          đang cân nhắc sử dụng công cụ này trong lớp học với các hoạt động do bạn
+          thiết kế, chúng tôi khuyên bạn nên làm quen với công cụ này qua [giáo án](https://curriculum.code.org/csp/unit1)
+          của chúng tôi. **Hướng dẫn thiết lập** trên trang tiếp theo dành cho những
+          giáo viên muốn sử dụng Hoạt động mô phỏng Internet tách biệt với chương
+          trình giảng dạy CSP của Code.org.\n\nBản thân công cụ không _hướng dẫn_
+          về những khái niệm này, mà mang đến một môi trường để nhiều học sinh làm
+          việc cùng nhau và gửi tin nhắn dựa trên mã nhị phân, thập phân hoặc ascii
+          cho nhau hoặc các bạn học khác. **Môi trường này có thể thiết lập cấu hình**
+          theo nhiều cách khác nhau để giải quyết các loại vấn đề khác nhau, trực
+          quan hóa dữ liệu và kết nối giữa các máy chủ cũng như hỗ trợ học các khái
+          niệm khác nhau liên quan đến Internet.\n\nHoạt động mô phỏng Internet được
+          thiết kế để sử dụng trong *lớp học* với Học sinh trực tiếp hợp tác giải
+          quyết vấn đề. Thông thường, những vấn đề này liên quan đến việc phát minh
+          ra giao thức giao tiếp hoặc phát minh ra cách mã hóa thông tin theo cấu
+          trúc để giúp việc vận chuyển thông tin qua Internet trở nên khả thi.\n\n**Trong
+          chương trình giảng dạy Nguyên tắc cơ bản của khoa học máy tính của Code.org**,
+          chúng tôi thường thiết kế các bài học và hoạt động như sau:\n\n* **Đầu tiên,
+          cho học sinh tham gia thử thách**\n * Ví dụ: Internet vật lý vốn không đáng
+          tin cậy và có thể làm rơi tin nhắn\n* **Cho cơ hội thử nghiệm với hoạt động
+          mô phỏng để hiểu khái quát vấn đề**\n  * Ví dụ. nhìn vào nhật ký bộ định
+          tuyến để phát hiện ra rằng 10-20% tin nhắn đều bị rơi và các gói dữ liệu
+          có thể bị định tuyến không theo thứ tự\n* **Cho họ cơ hội nghĩ ra giải pháp
+          chinh phục thử thách của riêng mình**\n  * Ví dụ: nghĩ ra giao thức của
+          riêng mình để gửi tin nhắn một cách ổn định trên hệ thống không ổn định
+          này\n* **Cuối cùng, Học sinh nghiên cứu cách thức hoạt động của giao thức
+          hoặc phát minh đó “trong thế giới thực”**\n * Ví dụ: Nghiên cứu cách thức
+          hoạt động thực sự của TCP và xem video\n\n### Hoạt động mô phỏng Internet
+          được thiết lập với mục đích gì?\n\nỞ mức cơ bản nhất, Hoạt động mô phỏng
+          Internet có thể giao tiếp một bit thông tin qua một dây chia sẻ duy nhất
+          mà không cần phối hợp hoặc đồng bộ hóa. Ở mức cao nhất, hoạt động này có
+          thể mô phỏng các kết nối không ổn định qua nhiều bộ định tuyến, sử dụng
+          địa chỉ IP, DNS và các gói có kích thước cố định cần tạo các giao thức tương
+          tự như TCP/IP hoặc HTTP.\n\nChúng tôi đã thiết lập Hoạt động mô phỏng Internet
+          ở nhiều cấu hình khác nhau, tạo điều kiện cho hoạt động giảng dạy các chủ
+          đề nhất định. Nhưng nếu sử dụng Hoạt động mô phỏng Internet cho lớp học,
+          bạn nên biết một số cài đặt giao diện người dùng mà bạn có thể muốn kiểm
+          soát hoặc yêu cầu học sinh của mình thiết lập theo một cách cụ thể.\n\nVí
+          dụ: một trong những tính năng của Hoạt động mô phỏng Internet là bạn có
+          thể giới thiệu cách biểu diễn theo hệ nhị phân, thập phân, hex và ASCII
+          của bất kỳ dữ liệu nào bạn gửi đi. Trong một số cấu hình, người dùng cũng
+          có thể đặt “kích thước đoạn thông tin” để chỉ định cách dịch các bit. Trong
+          bài học mà bạn tự thiết kế, bạn có thể chọn một trong các cấu hình mà chúng
+          tôi đã cung cấp, nhưng có thể cần yêu cầu học sinh chỉ trình bày một cách
+          biểu diễn cụ thể của bit hoặc có thể bạn muốn kích thước đoạn thông tin
+          được đặt thành một giá trị cụ thể.\n\nVấn đề quan trọng hơn là cấu hình
+          nêu ở đây dùng làm điểm khởi đầu cho quá trình giảng dạy một chủ đề cụ thể.
+          Bạn có thể cần phải sử dụng một số kỹ năng và chiến lược giảng dạy để tinh
+          chỉnh thêm cách sử dụng Hoạt động mô phỏng sao cho phù hợp với nhu cầu của
+          bạn.\n\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_Tiếp
+          theo: Hướng dẫn thiết lập_\n\n\n"
       Internet Simulator Setup 2:
         content1: mô tả ở đây
+        markdown: |+
+          # Hoạt động mô phỏng Internet: Hướng dẫn thiết lập
+
+          1. **Tạo nhóm đào tạo trong Code Studio.** Để học Học sinh trong lớp có thể giao tiếp với nhau, họ cần liên kết với cùng một nhóm đào tạo trong Code Studio. Sau khi đăng nhập bằng tài khoản giáo viên, bạn cần tạo nhóm đào tạo mà tất cả học sinh của bạn tham gia. Cách tạo nhóm đào tạo:
+           * Điều hướng tới mục [nhóm đào tạo](https://code.org/teacher-dashboard#/sections) trên bảng điều khiển dành cho giáo viên
+           * Nhấp chuột vào nút ‘Nhóm đào tạo mới’. Chúng tôi khuyên bạn nên chọn Phương thức đăng nhập là ‘Email’ và ‘cspunit1’ cho khóa học.
+           <br>
+          < img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **Yêu cầu học sinh tham gia nhóm đào tạo của bạn.** Sau khi tạo nhóm đào tạo, hãy nhấp chuột vào liên kết ‘Quản lý học sinh’ trong nhóm đào tạo đó. Bạn sẽ thấy mã nhóm đào tạo để yêu cầu học sinh tham gia sau khi tạo tài khoản Code Studio của riêng mình.
+          <br>
+          <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **Gửi cho học sinh URL tới phiên bản Hoạt động mô phỏng Internet mà bạn muốn sử dụng.** Chúng tôi đã tạo một số cấu hình khác nhau của Hoạt động mô phỏng Internet có sẵn tại [code.org/internetsimulator](http://code.org/internetsimulator). Khi bạn tìm thấy cấu hình phù hợp với hoạt động của mình, hãy chia sẻ URL với học sinh. Nếu tất cả học sinh thuộc cùng một nhóm đào tạo thì học sinh sẽ tự động có thể kết nối với nhau khi truy cập cùng một URL.
+
+          _Tiếp theo: Câu hỏi thường gặp_
+
+
+
       Internet Simulator Setup 3:
         content1: mô tả ở đây
+        markdown: "# Hoạt động mô phỏng Internet: Câu hỏi thường gặp \n\n#### Tôi
+          có thể tìm thấy các hoạt động bạn đã thiết kế để sử dụng với Hoạt động mô
+          phỏng Internet ở đâu?\nCó thể tìm thấy các hoạt động chúng tôi đã thiết
+          kế cho chương trình giảng dạy Nguyên tắc cơ bản của khoa học máy tính, bao
+          gồm các cấu hình Hoạt động mô phỏng Internet cụ thể trong các giáo án của
+          Học phần [tại đây](https://code.org/educate/csp). Nhiều giáo án có video
+          hỗ trợ “Mẹo & thủ thuật dành cho giáo viên” trình bày ví dụ minh họa cho
+          Hoạt động mô phỏng Internet được sử dụng như một hoạt động trong lớp học.
+          Bạn có thể sử dụng ngay các hoạt động này hoặc có thể tự do chỉnh sửa để
+          phù hợp nhất với lớp học của mình!\n\n#### Tôi có thể tùy chỉnh Hoạt động
+          mô phỏng Internet cho lớp học của mình không? \nHiện tại, chúng tôi rất
+          tiếc là không có cách nào để cá nhân không trực thuộc Code.org tạo cấu hình
+          và hướng dẫn cụ thể cho Hoạt động mô phỏng Internet. Chúng tôi đã cố gắng
+          đưa ra nhiều cấu hình khác nhau và hy vọng có thể phù hợp với lớp học và
+          hoạt động của bạn. Về lâu dài, chúng tôi muốn tìm cách cho phép người khác
+          thiết lập cấu hình công cụ này.\n\n#### Học sinh của tôi không thể nhìn
+          thấy nhau khi họ truy cập URL mà tôi cung cấp cho Hoạt động mô phỏng Internet.
+          Tôi phải làm gì? \nĐể Học sinh có thể nhìn thấy nhau trong phòng chờ của
+          Hoạt động mô phỏng Internet, họ sẽ cần ở trong cùng một nhóm đào tạo. Hãy
+          kiểm tra kỹ xem bạn đã hoàn thành hướng dẫn thiết lập nhóm đào tạo ở trang
+          trước hay chưa và các học sinh nêu trên đã tham gia mã nhóm đào tạo cụ thể
+          đó chưa. Ngoài ra, một số học sinh có thể tham gia nhiều nhóm đào tạo nếu
+          họ đã làm bài tập trên Code.org trước đó, vì vậy hãy đảm bảo rằng họ biết
+          tên nhóm đào tạo của bạn và đã chọn nhóm đó trong menu thả xuống trước khi
+          vào phòng chờ.\n\n\n\n"
       K-1 Artist 1 Multi 1:
         answers:
         - {}

@@ -81,7 +81,7 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 - Periksa [ praktek-praktek terbaik](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dari penyelenggara Hour of Code sebelumnya.
 - Tonton rekaman kami [ panduan pendidik untuk webinar Hour of Code](https://youtu.be/EJeMeSW2-Mw).
 - Kunjungi Forum Jam Pemrograman untuk mendapatkan petunjuk, wawasan dan dukungan dari penyelenggara lainnya.
-- Baca[T&J tentang Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Baca[Pertanyaan Umum tentang Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
 

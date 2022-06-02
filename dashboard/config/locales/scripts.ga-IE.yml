@@ -2,26 +2,6 @@
 ga:
   data:
     script:
-      category:
-        csd_category_name: Fionnachtana sa Ríomheolaíocht (2017-2018)
-        csd_2018_category_name: Fionnachtana sa Ríomheolaíocht (2018-2019)
-        csd_2019_category_name: Fionnachtana sa Ríomheolaíocht (2019-2020)
-        csd_2020_category_name: Fionnachtana sa Ríomheolaíocht (2020-2021)
-        csd_2021_category_name: Fionnachtana sa Ríomheolaíocht (2021-2022)
-        csf_category_name: Buntús na Ríomheolaíochta
-        csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
-        csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
-        csp_category_name: Foras Feasa ar an Ríomheolaíocht ('15-'16)
-        csp_2018_category_name: Foras Feasa ar an Ríomheolaíocht ('18-'19)
-        csp_2019_category_name: Foras Feasa ar an Ríomheolaíocht ('19-'20)
-        csp_2020_category_name: Foras Feasa ar an Ríomheolaíocht ('20-'21)
-        csp_2021_category_name: Foras Feasa ar an Ríomheolaíocht ('21-'22)
-        cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
-        csp17_category_name: Foras Feasa ar an Ríomheolaíocht (2017-2018)
-        full_course_category_name: Cúrsaí Iomlána
-        hoc_category_name: An Uair Chódála
-        math_category_name: Matamaitic
-        other_category_name: Eile
       name:
         course1:
           title: Cúrsa 1
