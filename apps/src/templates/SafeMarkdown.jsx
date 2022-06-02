@@ -41,14 +41,22 @@ class SafeMarkdown extends React.Component {
 
     const rendered = parser.processSync(this.props.markdown).contents;
 
+    const markdownProps = {};
+    if (this.props.className) {
+      markdownProps.className = this.props.className;
+    }
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
-    // returned). We prefer consistency over flexibility, so here we wrap
-    // the result in a div if it wasn't already
-    if (rendered && rendered.type === 'div' && !this.props.className) {
+    // returned) or we're assigning props. We prefer consistency over flexibility,
+    // so here we wrap the result in a div if it wasn't already
+    if (
+      rendered &&
+      rendered.type === 'div' &&
+      !Object.keys(markdownProps).length
+    ) {
       return rendered;
     } else {
-      return <div className={this.props.className || ''}>{rendered}</div>;
+      return <div {...markdownProps}>{rendered}</div>;
     }
   }
 }
