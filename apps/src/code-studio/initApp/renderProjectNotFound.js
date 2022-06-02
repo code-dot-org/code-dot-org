@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import AlertExclamation from '../components/AlertExclamation';
 import msg from '@cdo/locale';
 
-export function NotFoundAlert() {
+export function ProjectNotFoundAlert() {
   return (
     <AlertExclamation>
       <div className="exclamation-abuse">
@@ -22,7 +22,7 @@ export function NotFoundAlert() {
  * @param {string} tosText
  */
 export default (project, tosText) => {
-  ReactDOM.render(<NotFoundAlert />, document.getElementById('codeApp'));
+  ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
 };
 
 const styles = {

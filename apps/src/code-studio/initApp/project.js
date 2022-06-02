@@ -100,7 +100,7 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
-let loadResponseCode = null;
+let fetchChannelResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -502,8 +502,8 @@ var projects = (module.exports = {
     return hasEditPermissions && isEditOrViewPage;
   },
 
-  notFound() {
-    return loadResponseCode >= 400 && loadResponseCode < 500;
+  channelNotFound() {
+    return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
   },
 
   __TestInterface: {
@@ -1696,9 +1696,9 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          loadResponseCode = err.cause;
           return Promise.reject(err);
         })
+
         .then(this.fetchSource.bind(this))
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
@@ -1818,9 +1818,10 @@ var projects = (module.exports = {
    */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) =>
-        err ? reject(err) : resolve(data)
-      );
+      channels.fetch(channelId, (err, data, jqXhr, response) => {
+        fetchChannelResponseCode = response?.status;
+        err ? reject(err) : resolve(data);
+      });
     }).catch(err => {
       this.logError_(
         'load-channel-error',
