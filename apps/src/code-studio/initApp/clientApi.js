@@ -131,9 +131,7 @@ var base = {
         callback(null, data, jqXHR);
       })
       .fail(function(response, status, error) {
-        var err = new Error('status: ' + status + '; error: ' + error, {
-          cause: response.status
-        });
+        var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, undefined /*data*/, undefined /*jqXHR*/, response);
       });
   },

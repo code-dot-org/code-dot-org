@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
-import renderNotFound from './renderNotFound';
+import renderProjectNotFound from './renderProjectNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -263,8 +263,8 @@ function loadProjectAndCheckAbuse(appOptions) {
         resolve(appOptions);
       })
       .catch(() => {
-        if (project.notFound()) {
-          renderNotFound(project);
+        if (project.channelNotFound()) {
+          renderProjectNotFound(project);
           return;
         }
       });

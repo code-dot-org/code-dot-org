@@ -775,7 +775,7 @@ describe('project.js', () => {
 
       it('fails when channel not found', done => {
         project.load().catch(() => {
-          expect(project.notFound()).to.be.true;
+          expect(project.channelNotFound()).to.be.true;
           done();
         });
       });
