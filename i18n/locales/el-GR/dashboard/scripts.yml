@@ -1946,6 +1946,8 @@ el:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Simon Says:
+              name: Κάνε ό,τι κάνω
             Songwriting:
               name: Σύνθεση τραγουδιού
         express-2019:
@@ -2018,6 +2020,8 @@ el:
               name: Το Μεγάλο Γεγονός
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
+            Powerful Passwords:
+              name: Ισχυρά Συνθηματικά
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2451,6 +2455,8 @@ el:
           lessons:
             Conditionals:
               name: Συνθήκες
+            Simon Says:
+              name: Κάνε ό,τι κάνω
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2481,6 +2487,8 @@ el:
           lessons:
             Conditionals:
               name: Συνθήκες
+            Simon Says:
+              name: Κάνε ό,τι κάνω
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2496,6 +2504,8 @@ el:
           lessons:
             Conditionals:
               name: Συνθήκες
+            Simon Says:
+              name: Κάνε ό,τι κάνω
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2610,6 +2620,8 @@ el:
             csf_events:
               display_name: Συμβάντα
           lessons:
+            Powerful Passwords:
+              name: Ισχυρά Συνθηματικά
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
             'Events: The Big Event':
@@ -2654,6 +2666,8 @@ el:
             csf_functions:
               display_name: Συναρτήσεις
           lessons:
+            Simon Says:
+              name: Κάνε ό,τι κάνω
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
         coursef-2020:
@@ -2837,28 +2851,20 @@ el:
         csd3-2021:
           lessons:
             Variables:
-              key: Μεταβλητές
               name: Μεταβλητές
             Random Numbers:
-              key: Τυχαίοι αριθμοί
               name: Τυχαίοι αριθμοί
             Sprites:
-              key: Χαρακτήρας
               name: Χαρακτήρας
             Sprite Properties:
-              key: Ιδιότητες Χαρακτήρα
               name: Ιδιότητες Χαρακτήρα
             Text:
-              key: κείμενο
               name: κείμενο
             Conditionals:
-              key: Συνθήκες
               name: Συνθήκες
             Velocity:
-              key: Ταχύτητα
               name: Ταχύτητα
             Functions:
-              key: Συναρτήσεις
               name: Συναρτήσεις
           lesson_groups:
             cspSurvey:
@@ -2874,7 +2880,6 @@ el:
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Συναρτήσεις με παραμέτρους
               name: Συναρτήσεις με παραμέτρους
           lesson_groups:
             cspSurvey:
@@ -2890,7 +2895,6 @@ el:
         csp3-2021:
           lessons:
             Debugging:
-              key: Εντοπισμός σφαλμάτων
               name: Εντοπισμός σφαλμάτων
         csp4-2021:
           lesson_groups:
@@ -2939,8 +2943,6 @@ el:
           lessons:
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
-            Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2951,7 +2953,6 @@ el:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Μετακίνησέ το, Μετακίνησέ το
               name: Μετακίνησέ το, Μετακίνησέ το
             'Loops: Getting Loopy':
               name: Επαναλαμβανόμαστε
@@ -2965,7 +2966,6 @@ el:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Δυαδικά Βραχιόλια
               name: Δυαδικά Βραχιόλια
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
@@ -2984,22 +2984,15 @@ el:
             'Algorithms: Graph Paper Programming':
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             Relay Programming:
-              key: Προγραμματισμός Ρελέ
               name: Προγραμματισμός Ρελέ
             Dance Party:
-              key: Πάρτι Χορού
               name: Πάρτι Χορού
             Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
               name: Βρόχοι στην Εποχή των Παγετώνων
             Conditionals with Cards:
-              key: Υποθέσεις με Κάρτες
               name: Υποθέσεις με Κάρτες
             'Unplugged: Binary':
-              key: 'Εκτός Σύνδεσης: Δυαδικοί'
               name: Δυαδικές Εικόνες
-            Artist Binary:
-              key: Δυαδικοί Καλλιτέχνη
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -3015,8 +3008,6 @@ el:
               display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Συνθήκες
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
           lesson_groups:
@@ -3033,13 +3024,10 @@ el:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Μεταβλητές
               name: Μεταβλητές
             Internet:
-              key: Διαδίκτυο
               name: Το Διαδίκτυο
             For Loop Fun:
-              key: Διασκέδαση με το Βρόχο Για
               name: Διασκέδαση με το Βρόχο Για
             lesson-8:
               name: Χαρακτήρες σε Δράση
@@ -3063,7 +3051,6 @@ el:
         express-2021:
           lessons:
             Dance Party:
-              key: Πάρτι Χορού
               name: Πάρτι Χορού
             lesson-1:
               name: Πάρτι Χορού
@@ -3124,25 +3111,17 @@ el:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Βρόχοι
               name: Βρόχοι
             Events:
-              key: Συμβάντα
               name: Συμβάντα
             Conditionals:
-              key: Συνθήκες
               name: Συνθήκες
             Functions:
-              key: Συναρτήσεις
               name: Συναρτήσεις
             Variables:
-              key: Μεταβλητές
               name: Μεταβλητές
             For Loops:
-              key: Βρόχοι Για
               name: Βρόχοι Για
-            Sprite Lab:
-              key: Sprite Lab
           lesson_groups:
             k5_getting_started_1:
               display_name: Εισαγωγή
@@ -3163,7 +3142,6 @@ el:
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: Βασικές αρχές της επιστήμης υπολογιστών
               name: Βασικές αρχές της επιστήμης υπολογιστών
         outbreak-module:
           title: Έξαρση
@@ -3179,6 +3157,10 @@ el:
               display_name: Μονάδα 4
             lessonGroup-7:
               display_name: Μονάδα 5
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Δοκιμή
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3248,8 +3230,6 @@ el:
               name: Χαρούμενοι Χάρτες
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
-            Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3290,7 +3270,6 @@ el:
           lessons:
             Debugging:
               name: Εντοπισμός σφαλμάτων
-              key: Εντοπισμός σφαλμάτων
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3313,7 +3292,6 @@ el:
           lessons:
             Move It, Move It:
               name: Μετακίνησέ το, Μετακίνησέ το
-              key: Μετακίνησέ το, Μετακίνησέ το
             Getting Loopy:
               name: Επαναλαμβανόμαστε
             'Loops: Getting Loopy':
@@ -3331,7 +3309,6 @@ el:
               name: Το Μεγάλο Γεγονός
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
-              key: Δυαδικά Βραχιόλια
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
           lesson_groups:
@@ -3357,16 +3334,12 @@ el:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             Relay Programming:
               name: Προγραμματισμός Ρελέ
-              key: Προγραμματισμός Ρελέ
             Dance Party:
               name: Πάρτι Χορού
-              key: Πάρτι Χορού
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
-              key: Βρόχοι στην Εποχή των Παγετώνων
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
-              key: Υποθέσεις με Κάρτες
             'Algorithms: Graph Paper Programming':
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           lesson_groups:
@@ -3385,8 +3358,6 @@ el:
               name: Σύνθεση τραγουδιού
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
-            Conditionals:
-              key: Συνθήκες
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -3404,7 +3375,6 @@ el:
               name: Χαρακτήρες σε Δράση
             For Loop Fun:
               name: Διασκέδαση με το Βρόχο Για
-              key: Διασκέδαση με το Βρόχο Για
             Outbreak:
               name: Έξαρση
             The Internet:
@@ -3412,7 +3382,6 @@ el:
             lesson-8:
               name: Χαρακτήρες σε Δράση
             Internet:
-              key: Διαδίκτυο
               name: Το Διαδίκτυο
           lesson_groups:
             ramp_up:
@@ -3425,6 +3394,8 @@ el:
           lessons:
             lesson-9:
               name: Βρόχοι
+            lesson-23:
+              name: Πράξη για την κυβερνοασφάλεια
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
@@ -3454,17 +3425,20 @@ el:
           lessons:
             lesson-9:
               name: Βρόχοι
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus και ScenePlus
         coursef-2022-pilot:
           lessons:
             Sprites in Action:
               name: Χαρακτήρες σε Δράση
-              key: Χαρακτήρες σε Δράση
             Outbreak:
               name: Έξαρση
-              key: Έξαρση
             The Internet:
               name: Το Διαδίκτυο
-              key: Το Διαδίκτυο
           lesson_groups:
             lessonGroup-7:
               display_name: Ψηφιακή υπηκοότητα
@@ -3488,24 +3462,16 @@ el:
           lessons:
             Loops:
               name: Βρόχοι
-              key: Βρόχοι
             Events:
               name: Συμβάντα
-              key: Συμβάντα
             Conditionals:
               name: Συνθήκες
-              key: Συνθήκες
             Functions:
               name: Συναρτήσεις
-              key: Συναρτήσεις
             Variables:
               name: Μεταβλητές
-              key: Μεταβλητές
             For Loops:
               name: Βρόχοι Για
-              key: Βρόχοι Για
-            Lesson Planning:
-              key: Σχεδιασμός μαθημάτων
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3518,28 +3484,20 @@ el:
           lessons:
             Variables:
               name: Μεταβλητές
-              key: Μεταβλητές
             Random Numbers:
               name: Τυχαίοι αριθμοί
-              key: Τυχαίοι αριθμοί
             Sprites:
               name: Χαρακτήρας
-              key: Χαρακτήρας
             Sprite Properties:
               name: Ιδιότητες Χαρακτήρα
-              key: Ιδιότητες Χαρακτήρα
             Text:
               name: κείμενο
-              key: κείμενο
             Conditionals:
               name: Συνθήκες
-              key: Συνθήκες
             Velocity:
               name: Ταχύτητα
-              key: Ταχύτητα
             Functions:
               name: Συναρτήσεις
-              key: Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3562,3 +3520,15 @@ el:
           lesson_groups:
             lessonGroup-4:
               display_name: Έρευνα
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Επισκόπηση
+            lesson-1:
+              name: Επισκόπηση
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Επισκόπηση
+            lesson-1:
+              name: Επισκόπηση

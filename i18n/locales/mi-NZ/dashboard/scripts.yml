@@ -2132,21 +2132,16 @@ mi:
         csd3-2021:
           lessons:
             Variables:
-              key: Ngā Taurangi
               name: Ngā Taurangi
             Text:
-              key: Kuputuhi
               name: Kuputuhi
             Conditionals:
-              key: Ngā Here
               name: Ngā Here
             Functions:
-              key: Ngā Taumahi
               name: Ngā Taumahi
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Ngā Taumahi Whai Tawhā
               name: Ngā Taumahi Whai Tawhā
         csp4-2021:
           lesson_groups:
@@ -2180,7 +2175,6 @@ mi:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: E Neke, E Neke
               name: E Neke, E Neke
             'Loops: Getting Loopy':
               name: Kia Koromeke
@@ -2194,7 +2188,6 @@ mi:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Kōmore Ā-Rua
               name: Kōmore Ā-Rua
             'Events: The Big Event':
               name: Te Takahanga Nui
@@ -2212,16 +2205,11 @@ mi:
             'Algorithms: Graph Paper Programming':
               name: Papatono Pepa Kauwhata
             Relay Programming:
-              key: Papatonotanga ā-Tānga
               name: Papatonotanga ā-Tānga
             Dance Party:
-              key: Te Pāti Kanikani
               name: Te Pāti Kanikani
             'Unplugged: Binary':
-              key: 'Momotu: Tāhūrua'
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              key: Rehetoi Tāhūrua
           lesson_groups:
             csf_events:
               display_name: Ngā Takunetanga
@@ -2237,8 +2225,6 @@ mi:
               display_name: Te Kirirarautanga Matihiko
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Ngā Here
             'Functions: Songwriting':
               name: Te Tito Waiata
           lesson_groups:
@@ -2253,13 +2239,10 @@ mi:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Ngā Taurangi Kōpaki
               name: Ngā Taurangi Kōpaki
             Internet:
-              key: Te Ipurangi
               name: Te Ipurangi
             For Loop Fun:
-              key: Kia Ngahau te Mahi Koromeke
               name: Kia Ngahau te Mahi Koromeke
           lesson_groups:
             csf_digcit:
@@ -2275,7 +2258,6 @@ mi:
         express-2021:
           lessons:
             Dance Party:
-              key: Te Pāti Kanikani
               name: Te Pāti Kanikani
             lesson-1:
               name: Te Pāti Kanikani
@@ -2341,22 +2323,16 @@ mi:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Ngā Koromeke
               name: Ngā Koromeke
             Events:
-              key: Ngā Takunetanga
               name: Ngā Takunetanga
             Conditionals:
-              key: Ngā Here
               name: Ngā Here
             Functions:
-              key: Ngā Taumahi
               name: Ngā Taumahi
             Variables:
-              key: Ngā Taurangi
               name: Ngā Taurangi
             For Loops:
-              key: Mō Ngā Koromeke
               name: Mō Ngā Koromeke
           lesson_groups:
             k5_getting_started_1:
@@ -2508,7 +2484,6 @@ mi:
           lessons:
             Move It, Move It:
               name: E Neke, E Neke
-              key: E Neke, E Neke
             Getting Loopy:
               name: Kia Koromeke
             'Loops: Getting Loopy':
@@ -2526,7 +2501,6 @@ mi:
               name: Te Takahanga Nui
             Binary Bracelets:
               name: Kōmore Ā-Rua
-              key: Kōmore Ā-Rua
             'Events: The Big Event':
               name: Te Takahanga Nui
           lesson_groups:
@@ -2542,10 +2516,8 @@ mi:
               name: Papatono Pepa Kauwhata
             Relay Programming:
               name: Papatonotanga ā-Tānga
-              key: Papatonotanga ā-Tānga
             Dance Party:
               name: Te Pāti Kanikani
-              key: Te Pāti Kanikani
             'Algorithms: Graph Paper Programming':
               name: Papatono Pepa Kauwhata
           lesson_groups:
@@ -2563,8 +2535,6 @@ mi:
               name: Te Tito Waiata
             'Functions: Songwriting':
               name: Te Tito Waiata
-            Conditionals:
-              key: Ngā Here
           lesson_groups:
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
@@ -2578,11 +2548,9 @@ mi:
           lessons:
             For Loop Fun:
               name: Kia Ngahau te Mahi Koromeke
-              key: Kia Ngahau te Mahi Koromeke
             The Internet:
               name: Te Ipurangi
             Internet:
-              key: Te Ipurangi
               name: Te Ipurangi
           lesson_groups:
             lessonGroup-7:
@@ -2647,7 +2615,6 @@ mi:
           lessons:
             The Internet:
               name: Te Ipurangi
-              key: Te Ipurangi
           lesson_groups:
             lessonGroup-7:
               display_name: Te Kirirarautanga Matihiko
@@ -2676,36 +2643,26 @@ mi:
           lessons:
             Loops:
               name: Ngā Koromeke
-              key: Ngā Koromeke
             Events:
               name: Ngā Takunetanga
-              key: Ngā Takunetanga
             Conditionals:
               name: Ngā Here
-              key: Ngā Here
             Functions:
               name: Ngā Taumahi
-              key: Ngā Taumahi
             Variables:
               name: Ngā Taurangi
-              key: Ngā Taurangi
             For Loops:
               name: Mō Ngā Koromeke
-              key: Mō Ngā Koromeke
         csd3-2022:
           lessons:
             Variables:
               name: Ngā Taurangi
-              key: Ngā Taurangi
             Text:
               name: Kuputuhi
-              key: Kuputuhi
             Conditionals:
               name: Ngā Here
-              key: Ngā Here
             Functions:
               name: Ngā Taumahi
-              key: Ngā Taumahi
         csd6-2022:
           lessons:
             Functions:

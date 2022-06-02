@@ -2402,21 +2402,16 @@ ne:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: Text
               name: Text
             Conditionals:
-              key: Conditionals
               name: Conditionals
             Functions:
-              key: Functions
               name: Functions
         csd6-2021:
           lessons:
             Functions with Parameters:
-              key: Functions with Parameters
               name: Functions with Parameters
         csp1-2021:
           lesson_groups:
@@ -2429,7 +2424,6 @@ ne:
         csp3-2021:
           lessons:
             Debugging:
-              key: Debugging
               name: Debugging
         csp4-2021:
           lesson_groups:
@@ -2467,7 +2461,6 @@ ne:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Move It, Move It
               name: Move It, Move It
             'Loops: Getting Loopy':
               name: Getting Loopy
@@ -2481,7 +2474,6 @@ ne:
         coursec-2021:
           lessons:
             Binary Bracelets:
-              key: Binary Bracelets
               name: Binary Bracelets
             'Events: The Big Event':
               name: The Big Event
@@ -2499,16 +2491,11 @@ ne:
             'Algorithms: Graph Paper Programming':
               name: Graph Paper Programming
             Relay Programming:
-              key: Relay programming
               name: Relay programming
             Conditionals with Cards:
-              key: Conditionals with Cards
               name: Conditionals with Cards
             'Unplugged: Binary':
-              key: 'Unplugged: Binary'
               name: Binary Images
-            Artist Binary:
-              key: Artist Binary
           lesson_groups:
             csf_events:
               display_name: घटनाहरु
@@ -2524,8 +2511,6 @@ ne:
               display_name: Digital Citizenship
         coursee-2021:
           lessons:
-            Conditionals:
-              key: Conditionals
             'Functions: Songwriting':
               name: Songwriting
           lesson_groups:
@@ -2540,15 +2525,10 @@ ne:
         coursef-2021:
           lessons:
             Envelope Variables:
-              key: Envelope Variables
               name: Envelope Variables
-            AI for Oceans:
-              key: महासागरका लागि A.I
             Internet:
-              key: Internet
               name: The Internet
             For Loop Fun:
-              key: For Loop Fun
               name: For Loop Fun
           lesson_groups:
             csf_digcit:
@@ -2626,22 +2606,16 @@ ne:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Loops
               name: Loops
             Events:
-              key: घटनाहरु
               name: घटनाहरु
             Conditionals:
-              key: Conditionals
               name: Conditionals
             Functions:
-              key: Functions
               name: Functions
             Variables:
-              key: Variables
               name: Variables
             For Loops:
-              key: For Loops
               name: For Loops
           lesson_groups:
             k5_getting_started_1:
@@ -2793,7 +2767,6 @@ ne:
           lessons:
             Debugging:
               name: Debugging
-              key: Debugging
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2812,7 +2785,6 @@ ne:
           lessons:
             Move It, Move It:
               name: Move It, Move It
-              key: Move It, Move It
             Getting Loopy:
               name: Getting Loopy
             'Loops: Getting Loopy':
@@ -2830,7 +2802,6 @@ ne:
               name: The Big Event
             Binary Bracelets:
               name: Binary Bracelets
-              key: Binary Bracelets
             'Events: The Big Event':
               name: The Big Event
           lesson_groups:
@@ -2850,10 +2821,8 @@ ne:
               name: Graph Paper Programming
             Relay Programming:
               name: Relay programming
-              key: Relay programming
             Conditionals with Cards:
               name: Conditionals with Cards
-              key: Conditionals with Cards
             'Algorithms: Graph Paper Programming':
               name: Graph Paper Programming
           lesson_groups:
@@ -2871,8 +2840,6 @@ ne:
               name: Songwriting
             'Functions: Songwriting':
               name: Songwriting
-            Conditionals:
-              key: Conditionals
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -2886,13 +2853,9 @@ ne:
           lessons:
             For Loop Fun:
               name: For Loop Fun
-              key: For Loop Fun
             The Internet:
               name: The Internet
-            AI for Oceans:
-              key: महासागरका लागि A.I
             Internet:
-              key: Internet
               name: The Internet
           lesson_groups:
             lessonGroup-7:
@@ -2961,7 +2924,6 @@ ne:
           lessons:
             The Internet:
               name: The Internet
-              key: The Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Digital Citizenship
@@ -2987,32 +2949,8 @@ ne:
           lessons:
             lesson-2:
               name: "[MODÈLE] Résumé de l'unité"
-              description_student: |-
-                **Vous devrez :**
-
-                -   Explorer les projets de fin de chapitre.
-
-                \*\*Temps suggéré : 10 minutes.
-              description_teacher: |-
-                **Vous devrez :**
-
-                -   Explorer les projets de fin de chapitre.
-
-                \*\*Temps suggéré : 10 minutes.
             lesson-3:
               name: "[MODÈLE] Leçons de contenu"
-              description_student: |-
-                **Vous devrez :**
-
-                -   Insérez les objectifs de la leçon.
-
-                \*\*Temps suggéré : \_\_\_\_ minutes.
-              description_teacher: |-
-                **Vous devrez :**
-
-                -   Insérez les objectifs de la leçon.
-
-                \*\*Temps suggéré : \_\_\_\_ minutes.
             lesson-7:
               name: Async Prep
         vpl-csd5-summer-pilot-2022:
@@ -3030,22 +2968,16 @@ ne:
           lessons:
             Loops:
               name: Loops
-              key: Loops
             Events:
               name: घटनाहरु
-              key: घटनाहरु
             Conditionals:
               name: Conditionals
-              key: Conditionals
             Functions:
               name: Functions
-              key: Functions
             Variables:
               name: Variables
-              key: Variables
             For Loops:
               name: For Loops
-              key: For Loops
         vpl-csd1-ci-pilot-2022:
           name: vpl-csd1-ci-pilot-2022
           title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
@@ -3074,36 +3006,29 @@ ne:
             \*\*Durée suggérée : 30 minutes.
 
             Traduit avec www.DeepL.com/Translator (version gratuite)
-        vpl-csd2-ci-pilot-2022:
-          lessons:
-            lesson-5:
-              description_student: |-
-                **Vous devrez :**
-
-                -   Explorer les projets de fin de chapitre.
-
-                \*\*Temps suggéré : 10 minutes.
-              description_teacher: |-
-                **Vous devrez :**
-
-                -   Explorer les projets de fin de chapitre.
-
-                \*\*Temps suggéré : 10 minutes.
         csd3-2022:
           lessons:
             Variables:
               name: Variables
-              key: Variables
             Text:
               name: Text
-              key: Text
             Conditionals:
               name: Conditionals
-              key: Conditionals
             Functions:
               name: Functions
-              key: Functions
         csd6-2022:
           lessons:
             Functions:
               name: Functions
+        dlp-csd-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview
+        dlp-csp-overview-2022:
+          lessons:
+            Overview:
+              name: Overview
+            lesson-1:
+              name: Overview

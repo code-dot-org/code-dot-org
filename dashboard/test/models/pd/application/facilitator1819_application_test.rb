@@ -148,8 +148,8 @@ module Pd::Application
 
     test 'to_cohort_csv' do
       optional_columns = {registered_workshop: true, accepted_teachercon: false}
-      assert (header = Facilitator1819Application.cohort_csv_header(optional_columns))
-      assert (row = @application.to_cohort_csv_row(optional_columns))
+      assert(header = Facilitator1819Application.cohort_csv_header(optional_columns))
+      assert(row = @application.to_cohort_csv_row(optional_columns))
       assert_equal CSV.parse(header).length, CSV.parse(row).length,
         "Expected header and row to have the same number of columns"
     end
