@@ -121,6 +121,6 @@ class ProgrammingClassesController < ApplicationController
   end
 
   def set_class_by_keys
-    @programming_class = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_classes&.find_by_key(params[:programming_class_key])
+    @programming_class = ProgrammingClass.get_from_cache(params[:programming_environment_name], params[:programming_class_key])
   end
 end
