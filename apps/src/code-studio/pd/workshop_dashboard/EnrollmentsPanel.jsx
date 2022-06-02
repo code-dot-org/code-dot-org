@@ -8,7 +8,10 @@ import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  SubjectNames,
+  ActiveCoursesWithSurveys
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
   shouldUseFoormSurvey,
   shouldShowSurveyResults
@@ -185,9 +188,7 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
-    if (
-      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
-    ) {
+    if (!ActiveCoursesWithSurveys.includes(course)) {
       return null;
     }
 
