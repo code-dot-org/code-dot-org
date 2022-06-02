@@ -87,7 +87,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def studio_documentation_path
-    if DCDO.get('use-studio-code-docs', false) && ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
+    if ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
       "/docs/#{name}"
     else
       programming_environment_path(name)
