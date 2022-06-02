@@ -1610,7 +1610,7 @@ class Script < ApplicationRecord
   def section_hidden_unit_info(user)
     return {} unless user&.teacher?
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
-    hidden_section_ids.index_with {|section_id| [id]}
+    hidden_section_ids.index_with {|_section_id| [id]}
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted

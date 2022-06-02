@@ -717,11 +717,10 @@ class Pd::Workshop < ApplicationRecord
     end
 
     # Get number of sessions attended by teacher
-    attendance_count_by_teacher = 
+    attendance_count_by_teacher =
       teachers_attending.uniq.index_with do |teacher|
         teachers_attending.count(teacher)
       end
-    
 
     # Return only teachers who attended all sessions
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
