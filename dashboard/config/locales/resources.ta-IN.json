@@ -1589,6 +1589,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
+          "name": "AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்",
           "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
         },
         "types_of_disabilities/coursee/2021": {
@@ -1711,11 +1712,17 @@
         "paper-prototypes/csd/2021": {
           "type": "ருபிரிக்"
         },
+        "design_mode/csd/2021": {
+          "name": "வடிவமைப்பு முறை"
+        },
         "whats-for-lunch-testing/csd/2021": {
           "type": "காணொளி"
         },
         "intro_to_design_mode/csd/2021": {
           "type": "காணொளி"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "வடிவமைப்பு முறை"
         },
         "app-presentation/csd/2021": {
           "type": "ருபிரிக்"
@@ -1733,6 +1740,9 @@
         "how_computers_word_hardware_software/csd/2021": {
           "type": "காணொளி"
         },
+        "board_events/csd/2021": {
+          "name": "குழு நிகழ்வுகள்"
+        },
         "analog-digital-video/csd/2021": {
           "type": "காணொளி"
         },
@@ -1747,6 +1757,9 @@
         },
         "loops_in_app_lab/csd/2021": {
           "type": "காணொளி"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "முடுக்கமானி நிகழ்வுகள்"
         },
         "circuits-logic-video/csd/2021": {
           "type": "காணொளி"
@@ -1838,7 +1851,11 @@
           "type": "ருபிரிக்"
         },
         "flyer-game-1/csd/2021": {
+          "name": "ஃப்ளையர் கேம்",
           "type": "ருபிரிக்"
+        },
+        "flyer-game/csd/2021": {
+          "name": "ஃப்ளையர் கேம்"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "செயல்பாடுகள்",

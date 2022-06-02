@@ -4863,3 +4863,11 @@ ta-IN:
         - {}
         - {}
         - text: மேலே கொடுக்கப்பட்டதில் எதுவும் இல்லை.
+      CSD U2 Image challenge_pilot_2021:
+        display_name: படங்களைச் சேர்த்தல்
+      CSD U2 Image practice_pilot_2021:
+        display_name: படங்களைச் சேர்த்தல்
+      ml-club app-choice parent:
+        display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
+      ml-intro app lab-book recommender 5-2021:
+        display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்

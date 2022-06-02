@@ -757,6 +757,9 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Feltételek kártyákkal"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "Projektútmutató"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Bevezetési Útmutató"
         },
@@ -794,6 +797,9 @@
         "variables_video/express/2021": {
           "name": "változók"
         },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "Projektútmutató"
+        },
         "rubric-csf-final-projects/express/2021": {
           "type": "Rubrika"
         },
@@ -826,6 +832,9 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Értékelés"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Hozzáférhetőség tervezése"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Rubrika"
@@ -888,6 +897,9 @@
         "the-design-thinking-process/csd/2021": {
           "type": "Videó"
         },
+        "computer-science-practices/csd/2021": {
+          "type": "Tükrözés"
+        },
         "paper-prototypes/csd/2021": {
           "type": "Rubrika"
         },
@@ -922,11 +934,17 @@
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Videó"
         },
+        "board_events/csd/2021": {
+          "name": "Táblás események"
+        },
         "analog-digital-video/csd/2021": {
           "type": "Videó"
         },
         "analog_sensors/csd/2021": {
           "name": "Analóg szenzorok"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Projektútmutató"
         },
         "functions_2/csd/2021": {
           "name": "funkciók"
@@ -943,6 +961,9 @@
         "circuits_and_leds/csd/2021": {
           "name": "Áramkörök és LED-ek"
         },
+        "playing_notes/csd/2021": {
+          "name": "Hangjegyek lejátszása"
+        },
         "loops_in_app_lab/csd/2021": {
           "name": "Számláló ciklusok",
           "type": "Videó"
@@ -950,11 +971,20 @@
         "for_loops/csd/2021": {
           "name": "Számláló ciklusok"
         },
+        "accelerometer_events/csd/2021": {
+          "name": "Gyorsulást mérő események"
+        },
         "circuits-logic-video/csd/2021": {
           "type": "Videó"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Projektútmutató"
+        },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Rubrika"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Projektútmutató"
         },
         "representing-information-1/csd/2021": {
           "name": "Az információ ábrázolása"
@@ -975,6 +1005,7 @@
           "type": "Videó"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Videó: Hatás a társadalomra",
           "type": "Videó"
         },
         "video_machine_learning/csd/2021": {
@@ -986,6 +1017,9 @@
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Rubrika"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Projektútmutató"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Síkidomok rajzolása"
@@ -1051,6 +1085,9 @@
         "if_else_statements/csd/2021": {
           "type": "Videó"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Projektútmutató"
+        },
         "interactive_card/csd/2021": {
           "type": "Rubrika"
         },
@@ -1060,8 +1097,19 @@
         "side-scroller-1/csd/2021": {
           "type": "Rubrika"
         },
+        "side-scroller/csd/2021": {
+          "type": "Projektútmutató"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Sebesség és ellentétes mód"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Repülős játék",
           "type": "Rubrika"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Repülős játék",
+          "type": "Projektútmutató"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "funkciók",
@@ -1069,6 +1117,9 @@
         },
         "functions_1/csd/2021": {
           "name": "funkciók"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Projektútmutató"
         },
         "make_your_own_game/csd/2021": {
           "type": "Rubrika"
@@ -1110,10 +1161,14 @@
           "name": "Címsorok és bekezdések"
         },
         "video_debugging/csd/2021": {
+          "name": "Videó: Hibaelhárítás",
           "type": "Videó"
         },
         "html-web-page-1/csd/2021": {
           "type": "Rubrika"
+        },
+        "html-page/csd/2021": {
+          "type": "Projektútmutató"
         },
         "formatting_html/csd/2021": {
           "name": "HTML formázás"
@@ -1130,11 +1185,20 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Rubrika"
         },
+        "your-personal-style/csd/2021": {
+          "type": "Projektútmutató"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Videó"
         },
         "creative_commons_search/csd/2021": {
           "name": "Creative Commons keresés"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Projektútmutató"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Projektútmutató"
         },
         "personal-web-page/csd/2021": {
           "type": "Rubrika"
@@ -1144,19 +1208,27 @@
           "type": "Videó"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Videó: Nézeteltérés kezelése",
           "type": "Videó"
         },
         "how-teamwork-works/csd/2021": {
           "type": "Videó"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Videó: Hogyan működik a keresés?",
           "type": "Videó"
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Rubrika"
         },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Projektútmutató"
+        },
         "hyperlinks/csd/2021": {
           "name": "Hiperhivatkozások"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Projektútmutató"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Óravázlatok"

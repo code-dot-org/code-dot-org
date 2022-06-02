@@ -591,10 +591,10 @@
           "validation": "**Come faccio a completare questo esercizio?**\n\n-   Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.\n\n_L'esercizio terminerà dopo 7 battute._"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
+          "voyage_aquatic_10a": "Guarda la **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
+          "voyage_aquatic_10a": "Guarda la **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "Puoi usare il blocco `se c'è strada` per girare dalla parte giusta."
@@ -700,7 +700,7 @@
           "Function_intro_Ryan_a": "Puoi richiamare una funzione più volte in un programma!  Prova a richiamarla due volte per risolvere questo esercizio."
         },
         "HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
+          "voyage_aquatic_10a": "Guarda la **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
         },
         "HOC 2018 Level_7a": {
           "aquatic7": "Puoi usare il blocco `se c'è strada` per girare dalla parte giusta."
@@ -1735,11 +1735,11 @@
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops3_2019": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1759,12 +1759,12 @@
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.",
-          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco `vai verso Sud`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco `vai verso Est`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Usa questo percorso per raccogliere tutte le pannocchie!"
         },
         "courseA_harvester_loops5_2019": {
           "courseA_harvester_loops5_a": "Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.",
-          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco `vai verso Sud`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco `vai verso Est`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Usa questo percorso per raccogliere tutte le pannocchie!"
         },
         "courseA_harvester_loops5_2020": {
@@ -2410,15 +2410,15 @@
           "courseB_artist_loops3_b": "L'artista dovrà muoversi verso Sud `S ↓` per disegnare questa linea."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
+          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
           "courseB_artist_loops3_b": "L'artista dovrà muoversi verso Sud `S ↓` per disegnare questa linea."
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
+          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
           "courseB_artist_loops3_b": "L'artista dovrà muoversi verso Sud `S ↓` per disegnare questa linea."
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
+          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
           "courseB_artist_loops3_b": "L'artista dovrà muoversi verso Sud `S ↓` per disegnare questa linea."
         },
         "courseB_artist_loops4": {
@@ -3370,17 +3370,17 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
-          "courseB_starWars_prog9_c": "Un `ciclo` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
+          "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
-          "courseB_starWars_prog9_c": "Un `ciclo` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
+          "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
-          "courseB_starWars_prog9_c": "Un `ciclo` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
+          "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Puoi usare il blocco `imposta il personaggio 1 come ...` per aggiungere un personaggio nella scena.",
@@ -5859,10 +5859,10 @@
           "courseD_bounce_events1s_b": "Per risolvere questo esercizio, dopo aver premuto \"Esegui\", devi muovere la mano fino al canestro disegnato sulla sinistra."
         },
         "courseD_bounce_events2s_2018": {
-          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento `vai` per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2019": {
-          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento `vai` per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2020": {
           "courseD_bounce_events2s_a": "Dovrai programmare due gestori di eventi di movimento `vai` per completare questo esercizio:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
@@ -8813,7 +8813,7 @@
           "alternate": "Il blocco `alternano ogni` si trova nella categoria \"Ballerini\"."
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
+          "voyage_aquatic_10a": "Guarda la **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come potresti usare un'istruzione condizionale per attraversare il Monumento oceanico?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Puoi usare il blocco `se c'è strada` per girare dalla parte giusta."
@@ -9054,7 +9054,7 @@
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops4_2021": {
           "courseA_harvester_loops4_a": "Non aver paura di premere \"Esegui\" per vedere cosa succede!",
@@ -9062,7 +9062,7 @@
         },
         "courseA_harvester_loops5_2021": {
           "courseA_harvester_loops5_a": "Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.",
-          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco `vai verso Sud`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco `vai verso Est`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Il programma finale dovrà avere **un** ciclo <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **un** blocco <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> e **un** blocco <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Usa questo percorso per raccogliere tutte le pannocchie!"
         },
         "courseA_harvester_loops5a_2021": {
@@ -9259,7 +9259,7 @@
           "courseB_artist_loops2_b": "Prova prima ad eseguire il codice per vedere dove va a finire l'artista."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
+          "courseB_artist_loops3_a": "Ricorda che devi utilizzare un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> per scrivere un codice migliore!",
           "courseB_artist_loops3_b": "L'artista dovrà muoversi verso Sud `S ↓` per disegnare questa linea."
         },
         "courseB_artist_loops4_2021": {
@@ -9505,7 +9505,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
-          "courseB_starWars_prog9_c": "Un `ciclo` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
+          "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Puoi usare il blocco `imposta il personaggio 1 come ...` per aggiungere un personaggio nella scena.",
