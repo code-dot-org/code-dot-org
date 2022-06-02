@@ -2,19 +2,71 @@
 hu:
   data:
     progressions:
+      '"If/Else" with the Bee': If/Else a méhecskével
+      8-Bit Binary Number Widget: 8-bites bináris számú widget
+      AI Lab and Isaac's Data: MI laboratórium és Isaac adatok
+      AI Lab and Kim's Data: MI laboratórium és Kim adatok
       AI Machine Learning - Video: Mesterséges intelligencia gépi tanulás - videó
+      'AI for Oceans: Fish vs Not Fish': 'MI az óceánokért: Hal kontra nem hal'
+      'AI for Oceans: Types of Fish': 'MI az óceánokért: Halfajták'
       'AI: Impact on Society - Video': 'Mesterséges intelligencia: a társadalomra
         gyakorolt hatás - videó'
       'AI: Training Data & Bias - Video': 'Mesterséges intelligencia: adatok és előítéletek
         - videó'
+      Accelerometer Events: Gyorsulást mérő események
+      Add Content and HTML: Tartalom és HTML hozzáadása
+      Add Content and Structure to Your Page: Tartalom és struktúra hozzáadása az
+        oldalhoz
+      Add Movement: Mozgás hozzáadása
+      Add Sprites: Sprite-ok hozzáadása
+      Add Style: Stílus hozzáadása
+      Add Style to Your Page: Stílus hozzáadása az oldalhoz
+      Add Text: Szöveg hozzáadása
+      Add a Welcome Screen: Üdvözlő képernyő hozzáadása
+      Adding Images: Képek hozzáadása
+      Adding New Screens: Új képernyők hozzáadása
+      Adding Pages: Oldalak hozzáadása
+      Adding Screens: Képernyők hozzáadása
       Alien Defender: Földönkívüli támadás
+      Alternative Datasets: Alternatív adatkészletek
       Analog Sensors: Analóg szenzorok
+      Animate Your Scene: Jelenet animálása
       App Lab Intro - Video: Bevezetés az App Lab világába - videó
+      'App Project: Screen Design': 'Alkalmazás projekt: Képernyőterv készítése'
+      'App: Choose a Kid''s Movie': 'Alkalmazás: Egy gyerekfilm kiválasztása'
+      'App: Friend Finder': 'Alkalmazás: Barátkereső'
+      'App: Guess the Number': 'App: Számok kitalálása'
+      'App: How Many Countries': 'Alkalmazás: Hány ország?'
+      'App: Improved Pet App': 'Alkalmazás: Továbbfejlesztett kisállat alkalmazás'
+      'App: Is It Your Birthday?': 'Alkalmazás: Születésnapod van?'
+      'App: My Famous Birthday': 'Alkalmazás: Az én nevezetes születésnapom'
+      'App: National Parks': 'Alkalmazás: Nemzeti parkok'
+      'App: Outfit Picker': 'Alkalmazás: Ruhaválasztó'
+      'App: Pet Chooser': 'Alkalmazás: Kisállat választó'
+      'App: Stamp Notebook': 'Alkalmazás: Bélyegalbum'
+      'App: Story Creator': 'Alkalmazás: Történetmesélő'
+      'App: The Fastest Finger': 'Alkalmazás: A leggyorsabb ujj'
+      'App: Where Should I Live?': 'Alkalmazás: Hol éljek? '
+      Artist Intro with JR Hildebrand: Művész bemutatása JR Hildebranddal
+      Artist Intro with JR Hildebrande: Művész bemutatása JR Hildebrande-dal
       Artist Project: Művész-projekt
       'Artist: Variables': 'Művész: változók'
       Assessment: Értékelés
+      Attribution: Tulajdonság
       Back and Forth: Előre és hátra
+      Basic Conditionals: Alapvető feltételes utasítások
       Bass, Mid, and Treble: Basszus, közép- és magashangok
+      Be a Super Digital Citizen: Légy egy igazi digitális polgár
+      Begin planning your project: Kezdd el tervezni a projekted
+      Begin planning your project_2018: Kezdd el tervezni a 2018-as projetedet
+      Binary Bracelets - Unplugged Activity: Bináris karkötők - Számítógép nélküli
+        tevékenység
+      Binary Number Widget: Bináris szám widget
+      Binary Numbers: Bináris számok
+      Board Events: Táblás események
+      Board Input and Output: Tábla bemenet és kimenet
+      Book Recommender App: Könyvajánló alkalmazás
+      Book Recommender Model Card: Könyvajánló modellkártya
       Bunny Jumper: Ugró nyuszi
       Buttons and Switch: Gombok és kapcsolók
       CSS Classes: CSS osztályok
@@ -27,19 +79,71 @@ hu:
       Course E Sprite Lab Project: Tanfolyam E Sprite labor projekt
       Course F Artist Project: Tanfolyam F Művész projekt
       Course F Sprite Lab Project: Tanfolyam F Sprite labor projekt
+      Create an App in App Lab: Alkalmazás létrehozása az App Lab-ban
+      Create your project: Projekt létrehozása
       Creating Sprites: Sprite-ok létrehozása
       Creative Commons Search: Creative Commons keresés
+      Customize: Testreszabás
+      Customize Your App: Alkalmazás testreszabása
       Dance Crews: Tánccsapatok
+      Data Visualization: Adatvizualizáció
+      De-bugging with the Step Button: Hibaelhárítás a Lépés gombbal
       Debugging: Hibakeresés
+      Debugging with the Step Button: Hibaelhárítás a Lépés gombbal
+      'Demo App: Interactive Card': 'Demoalkalmazás: Interaktív kártya'
+      Demo Apps: Demoalkalmazások
       Design Mode: Tervező mód
+      Design Your Game: Játék tervezése
+      Design Your Prototype: Prototípus tervezése
+      Design a Screen for your App: Képernyő tervezése az alkalmazáshoz
+      Design an AI App - AI Lab: MI alkalmazás - MI labor tervezése
+      Design an AI App - App Lab: MI alkalmazás - alkalmazáslabor tervezése
+      Designing for Accessibility: Hozzáférhetőség tervezése
+      Digital Sharing - Unplugged Activity: Digitális megosztás - számítógép nélküli
+        tevékenység
+      Draw Your Background: Saját háttér megrajzolása
+      Draw a Background: Háttér megrajzolása
       Drawing: Rajz
       Drawing Shapes: Síkidomok rajzolása
+      Driver Alert System: Riasztórendszer autóvezetőknek
       Editing Images: Képek szerkesztése
       End of Course Projects: Tanfolyam végi projektek
+      Escape Room Example: Példa szabadulószobára
       Events: Események
+      Events and Linking Screens: Események és képernyők összekapcsolása
+      Events and Properties: Események és tulajdonságok
       Example: Példa
+      Example Animated Scene: Példa animált jelenetre
+      Example App Types: Példa alkalmazástípusokra
+      'Example App: Zoo Classification': 'Példa alkalmazásra: Állatkerti osztályozás'
+      Example Apps: Példa alkalmazásokra
+      Example Projects: Példa projektekre
+      Example projects: Példa projektekre
+      Exemplar Personal Websites: Példa személyes weboldalakra
+      Expanding Personal Website: Személyes weboldal bővítése
+      Expanding Your Website: Saját weboldal bővítése
+      Experiment with Web Lab: Kísérletezés a weblaborral
+      Exploration: Felfedezés
       'Exploration: Adding Style': 'Felfedezés: stílus hozzáadása'
+      'Exploration: For Loops': 'Felfedezés: Hurkok'
+      'Exploration: Rikki''s Poster': 'Felfedezés: Rikki plakátja'
+      'Exploration: Sample Apps': 'Felfedezés: Alkalmazásminták'
+      'Exploration: Sample Programs': 'Felfedezés: Mintaprogramok'
+      'Exploration: Sample Project': 'Felfedezés: Mintaprojek'
       Explore HTML: Fedezd fel a HTML-t
+      Exploring CS in Entertainment: 'Felfedezés: Számítástechnika a szórakoztatóiparban'
+      Exploring more CSS: 'Felfedezés: még több számítástechnika'
+      Extra Challenge: Extra feladat
+      'Extra Challenge: Sound Board': 'Extra feladat: Hangfal'
+      Final Room Escape App: Utolsó szabadulószoba alkalmazás
+      Find the Wizard: Varázsló keresése
+      Finish a Screen: Képernyő befejezése
+      Finish the Prototype: Prototípus befejezése
+      Finishing Functions: Függvények befejezése
+      Finishing Touches: Utolsó simítások
+      Flyer Game: Repülős játék
+      Follow the Algorithm - Unplugged Activity: Kövesd az algoritmust - számítógép
+        nélküli tevékenység
       For Loops: Számláló ciklusok
       Formatting HTML: HTML formázás
       Free Play: Ingyenes Játék
@@ -63,18 +167,112 @@ hu:
       Levels: Szintek
       Lists: Listák
       Lists in HTML: HTML listák
+      Make an Interactive Card: Interaktív kártya készítése
+      Make it Interactive: Tedd interaktívvá
+      Making Scenes: Jelenetek készítése
+      Making Songs: Dalok készítése
+      Making Sounds: Hangok készítése
+      Making an Interactive Card: Interaktív kártya készítése
+      'Maze Intro: Programming with Blocks': 'Bevezetés a labirintusba: Programozás
+        blokkokkal'
       Measures: Ütem
+      Medical Dataset Model Cards: Orvosi adathalmaz modellkártyák
+      Medical Priority App: Orvosi prioritás alkalmazás
       'Minecraft: Hero''s Journey': 'Minecraft: Hős utazás'
+      'Mini-Project: About Me': 'Miniprojekt: Rólam'
+      'Mini-Project: Alien Dance Moves': 'Miniprojekt: Földönkvüli tánclépései'
+      'Mini-Project: Alien Dance Party': 'Miniprojekt: Földönkvüli táncos buli'
+      'Mini-Project: Create a Virtual Pet': 'Miniprojekt: Virtuális kisállat létrehozása'
+      'Mini-Project: Outbreak Simulator': 'Miniprojekt: Járványszimulátor'
+      'Mini-Project: Royal Battle': 'Miniprojekt: Királyi csata'
+      'Mini-Project: Snowflake #1': 'Miniprojekt: 1. hópehely'
+      'Mini-Project: Snowflake #2': 'Miniprojekt: 2. hópehely'
+      'Mini-Project: Swimming Fish': 'Miniprojekt: Úszó hal'
+      'Mini-Project: Swimming Fish (continued)': 'Miniprojekt: Úszó hal (folytatás)'
+      'Mini-Project: User Input Programs': 'Miniprojekt: Felhasználói adatbeviteli
+        programok'
+      'Mini-Project: Virtual Pet': 'Miniprojekt: Virtuális kisállat'
+      'Mini-project: Chase Game': 'Miniprojekt: Üldözős játék'
+      'Mini-project: Flappy Game': 'Miniprojekt: Flappy játék'
+      'Mini-project: Interactive Poster': 'Miniprojekt: Interaktív poszter'
+      'Mini-project: Jorge the Dog': 'Miniprojekt: Jorge, a kutya'
+      'Mini-project: Sticker Art': 'Miniprojekt: Matricaművészet'
+      'Mini-project: Sticker Design': 'Miniprojekt: Matricatervezés'
+      Modify simulation variables: Szimulációs változók módosítása
       More Buttons: Több gomb
+      More Input: További bemenet
+      More Parameters: További paraméterek
+      Motorcycle: Motorkerékpár
+      Move It Move it Video  - Unplugged Activity: Mozgás, mozgás videó - Számítógépnélküli
+        tevékenység
+      Movement with the Counter Pattern: Mozgás ellentétes módon
+      Multiframe Animations: Többkockás animációk
+      Musical Arrays: Zenei tömbök
+      My Loopy Robotic Friends - Unplugged Activity: Az én dilis robotbarátaim - számítógép
+        nélküli tevékenység
+      My Robotic Friends - Unplugged Activity: Az én robotbarátaim - számítógép nélküli
+        tevékenység
+      Nested Loops with the Bee: Beágyazott hurkok a méhecskével
+      New Challenge Introduction: Bevezetés az új feladatba
+      New Shapes: Új alakzatok
+      Orientation: Tájolás
       Overview: Összefoglaló
+      'Overview: Design Mode': 'Összefoglalás: Tervezési mód'
+      'Overview: If Statements': 'Összefoglalás: If utasítások'
+      'Overview: Images': 'Összefoglalás: Képek'
+      'Overview: onEvent': 'Összefoglalás: onEvent'
+      'Overview: setPosition': 'Összefoglalás: setPosition'
       Pair Programming: Páros programozás
+      Pet Recommender: Kisállat ajánló
       Picturing Data: Az adatok leképezése
+      Pizza Party Data: Pizzaparti adatok
+      Pizza Recommendations: Pizza ajánlások
+      Plan Your Project: Saját projekt tervezése
+      Plan Your Scene: Saját helyszín tervezése
+      Planning: Tervezés
+      Platform Jumper - Background and Variables: Platform Jumper - Háttér és változók
+      Platform Jumper - Items: Platform Jumper - Elemek
+      Platform Jumper - Platforms: Platform Jumper - Platformok
+      Platform Jumper - Player: Platform Jumper - Játékos
+      Platform Jumper Review: Platform Jumper ismertető
+      Player Controls: Játékosvezérlők
+      Playing Notes: Hangjegyek lejátszása
+      Playing with Notes: Hangjegyek lejátszása
+      Post-Course Survey Instructions: Utasítás tanfolyam utáni felméréshez
+      Practice: Gyakorlás
+      Predict: Előrejelzés
+      Prediction: Előrejelzés
+      Prepare for your presentation: Prezentáció előkészítése
+      Prepare for your presentation_2018: 2018-as prezentáció előkészítése
+      Problem Solving: Problémamegoldás
+      Problem Solving Process for Programming: Problémamegoldási folyamat a programozáshoz
       Programming with Rey and BB-8: Programozás Rey és BB-8 segítségével
+      Programs that Repeat: Ismétlődő programok
+      Project: Projekt
+      Project - Background and Variables: Projekt - Háttér és változók
+      Project - Sprites and Interactions: Projekt - Sprite-ok és interakciók
+      Project Guide: Projektútmutató
+      Project Work: Projektmunka
       Properties: Tulajdonságok
       Publishing Your Website: Webhelyének közzététele
       Quarter Notes: Negyedek
+      Quick Check: Gyors ellenőrzés
+      RGB Exploration: RGB színek felfedezése
       RGB Widget: RGB widget
       Random Numbers: Véletlen számok
+      Raspado Recommender: Raspado ajánló
+      Reading Sensors: Érzékelők olvasása
+      Recognizing Expressions: Kifejezések felismerése
+      Recognizing Fish: Hal felismerése
+      Recognizing Fish Features: Halak tulajdonságainak felismerése
+      Recognizing Shapes: Alakzatok felismerése
+      Reflection: Tükrözés
+      Relay Programming - Unplugged Activity: Váltó programozás - Számítógép nélküli
+        tevékenység
+      Repeat Blocks: Blokkok megismétlése
+      Repeat Blocks with BB-8: Blokkok megismétlése BB-8-cal
+      Repeat Blocks with the Artist: Blokkok ismétlése a művésszel
+      Repeat Unit Statements: Egységmegállapítások megismétlése
       Review: Felülvizsgálat
       Revise Artist Project: Tekintsd át a Művész projektet
       Sample Game: Minta játék
@@ -89,15 +287,105 @@ hu:
       Sprite Velocity: Sprite sebesség
       Teach AI a New Word: Mesterséges intelligencia tanítása egy új világnak
       Text Compression: Szöveg tömörítése
+      The Buzzer: A csengő
+      The Collector: A gyűjtő
+      The Internet - Unplugged Activity: Az internet - számítógép nélküli tevékenysége
+      The Power of Words - Unplugged Activity: A szavak ereje - számítógép nélküli
+        tevékenység
+      The Right App - Unplugged Activity: A megfelelő alkalmazás - számítógép nélküli
+        tevékenység
+      Top Websites: A legjobb weboldalak
+      Train AI to Clean the Ocean: MI betanítása az óceán megtisztítására
+      Train a Model in AI Lab: Egy modell betanítása az MI laborban
+      Train an AI to Clean the Ocean: MI betanítása az óceán megtisztítására
+      UI Element Properties: A felhasználói felület elemeinek tulajdonságai
+      Ultimate Shoe Recommender: A legjobb cipőajánló
+      Unit 5 Lesson 1 Overview: 5. egység 1. lecke Összefoglalás
+      Upload Your Images: Képek feltöltése
+      User Interface: Felhasználói felület
+      Using Getters and Setters: Lekérdezők és beállítók használata
+      Using HTML Tags: HTML-címkék használata
+      Using Random Numbers: Véletlen számok használata
+      Using Training Data: Képzési adatok használata
+      Using the LED: LED használata
+      Using the Switch: Kapcsoló használata
       Variables: változók
+      Velocity and the Counter Pattern: Sebesség és ellentétes mód
       Video: Videó
+      Video - Encryption and Public Keys: Videó - Titkosítás és nyilvános kulcsok
+      'Video - Maze Intro: Programming with Blocks': 'Videó - Bevezetés a labirintusba:
+        Programozás blokkokkal'
+      'Video:  Debugging with the Step Button': Videó - Hibaelhárítás a Lépés gombbal
+      'Video:  Minecraft - The Agent': 'Videó:  Minecraft - Az ügynök'
+      'Video:  Text  and Prompts': 'Videó:  Szöveg és parancsok'
+      'Video: "If/Else"': 'Videó: If/Else'
+      'Video: AI: What is Machine Learning?': 'Videó: MI: Mi az a gépi tanulás?'
+      'Video: Amazon and Data': 'Videó: Amazon és adatok'
+      'Video: Artist Intro with JR Hildebrand': 'Videó: Művész bemutatása JR Hildebranddal'
+      'Video: Artist Intro with JR Hildebrande': 'Videó: Művész bemutatása JR Hildebrande-dal'
+      'Video: Circuits and Logic': 'Videó: Áramkörök és logika'
+      'Video: Code Your Own Flappy Game': 'Videó: Saját Flappy-játék kódolása'
       'Video: Conditionals': 'Video: feltételes utasítások'
+      'Video: Conditionals: If Statements': 'Videó: Feltételek: If utasítások'
+      'Video: Conditionals: If and If/Else Statements': 'Videó: Feltételek: If és
+        If/Else utasítások'
+      'Video: Dance Party Events': 'Videó: Táncparti események'
+      'Video: Dance Party Measures': 'Videó: Táncparti ütemek'
+      'Video: Dance Party Party On!': 'Videó: Táncparti indul a táncparti!'
+      'Video: Dance Party Properties': 'Videó: Táncparti tulajdonságok'
+      'Video: Dance Party Warm Up': 'Videó: Táncparti bemelegítés'
+      'Video: De-bugging with the Step Button': 'Videó: Hibaelhárítás a Lépés gombbal'
+      'Video: Debugging': 'Videó: Hibaelhárítás'
+      'Video: Debugging with Scrat ': 'Videó: Hibaelhárítás Scrattel'
+      'Video: Debugging with the Step Button': 'Videó: Hibaelhárítás a Lépés gombbal'
+      'Video: Events': 'Videó: Események'
+      'Video: Follow The Digital Trail': 'Videó: Digitális nyomok követése'
       'Video: For Loops': 'Videó: Ciklusok'
+      'Video: Happy Maps - Unplugged Activity': 'Videó: Boldog térképek - számítógép
+        nélküli tevékenység'
+      'Video: Harvesting with Conditionals': 'Videó: Aratás feltételekkel'
+      'Video: How Search Works': 'Videó: Hogyan működik a keresés?'
+      'Video: How to Create a Simple Function': 'Videó: Hogyan hozzunk létre egy egyszerű
+        függvényt?'
+      'Video: How to Make a Sprite': 'Videó: Hogyan készítsünk sprite-ot?'
+      'Video: IOSP Model': 'Video: IOSP-model'
+      'Video: Ice Age Loops': 'Videó: Jégkorszaki hurkok'
       'Video: If/Else Statements': 'Video: feltételes utasítások'
+      'Video: Impact on Society': 'Videó: Hatás a társadalomra'
+      'Video: Impacts on Society': 'Videó: Hatás a társadalomra'
       'Video: Intro to CSS': 'Videó: bevezetés a CSS-be'
+      'Video: Intro to CSS - Part 1': 'Videó: Bevezetés a CSS-be - 1. rész'
+      'Video: Intro to CSS - Part 2': 'Videó: Bevezetés a CSS-be - 2. rész'
       'Video: Intro to CSS Part 2': 'Videó: bevezetés a CSS-be, 2. rész'
+      'Video: Intro to Design Mode': 'Videó: Bevezetés a tervezési módba'
+      'Video: Introducing Sprite Lab': 'Videó: Bevezetés a Sprite-laborba'
       'Video: Introduction to Arrays': 'Videó: bevezető a Tömbök-höz'
+      'Video: Introduction to Play Lab': 'Videó: Bevezetés a játéklaborba'
       'Video: Introduction to Sprites': 'Videó: bevezető a sprite-okhoz'
+      'Video: Introduction to Variables': 'Videó: Bevezetés a változókba'
+      'Video: Loops in Artist': 'Videó: Hurok a művészben'
+      'Video: Loops with the Artist': 'Videó: Hurok a művésszel'
+      'Video: Managing Disagreement': 'Videó: Nézeteltérés kezelése'
+      'Video: Maze Intro - Programming with Blocks': 'Videó: Bevezetés a labirintusba
+        - Programozás blokkokkal'
+      'Video: Maze Intro - Programming with Blocks ': 'Videó: Bevezetés a labirintusba
+        - Programozás blokkokkal '
+      'Video: Maze Intro: Programming with Blocks': 'Videó: Bevezetés a labirintusba:
+        Programozás blokkokkal'
+      'Video: Measures': 'Videó: Ütemek'
+      'Video: Minecraft - Congratulations': 'Videó: Minecraft - gratulációk'
+      'Video: Minecraft - Functions': 'Videó: Minecraft - függvények'
+      'Video: Minecraft - Repeat Loops': 'Videó: Minecraft - Hurkok megismétlése'
+      'Video: Minecraft - The Agent': 'Videó: Minecraft - Az ügynök'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Videó: Minecraft: Utazás vízi
+        körülmények között'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Videó: Minecraft: Utazás
+        vízi gratulációk'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Videó: Minecraft: Bevezetés
+        a vízi utazásba'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Videó: Minecraft: Vízi utazás
+        vízi ismétlés eddig'
+      'Video: Nested Loops with the Bee': 'Videó: Beágyazott hurkok a méhecskével'
       'Video: Problem Solving Process': 'Videó: probléma-megoldási folyamat'
       'Video: Sprite Movement': 'Videó: mozgó sprite'
       'Video: Velocity': 'Videó: sebesség'

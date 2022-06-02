@@ -2,8 +2,6 @@
 mk:
   data:
     script:
-      category:
-        math_category_name: Математика
       name:
         usability:
           lessons:

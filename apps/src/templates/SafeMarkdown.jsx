@@ -18,6 +18,49 @@ import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
 import externalLinks from './plugins/externalLinks';
 
+/**
+ * Basic component for rendering a markdown string as HTML, with sanitization.
+ * Can safely render markdown even from untrusted sources, without potentially
+ * exposing us to an XSS injection.
+ */
+class SafeMarkdown extends React.Component {
+  static propTypes = {
+    markdown: PropTypes.string.isRequired,
+    openExternalLinksInNewTab: PropTypes.bool,
+    className: PropTypes.string
+  };
+
+  render() {
+    // We only open external links in a new tab if it's explicitly specified
+    // that we do so; this is absolutely not something we want to do as a
+    // general practice, but unfortunately there are some situations in which
+    // it is currently a requirement.
+    const parser = this.props.openExternalLinksInNewTab
+      ? markdownToReactExternalLinks
+      : markdownToReact;
+
+    const rendered = parser.processSync(this.props.markdown).contents;
+
+    const markdownProps = {};
+    if (this.props.className) {
+      markdownProps.className = this.props.className;
+    }
+    // rehype-react will only wrap the compiled markdown in a <div> tag
+    // if it needs to (ie, if there would otherwise be multiple elements
+    // returned) or we're assigning props. We prefer consistency over flexibility,
+    // so here we wrap the result in a div if it wasn't already
+    if (
+      rendered &&
+      rendered.type === 'div' &&
+      !Object.keys(markdownProps).length
+    ) {
+      return rendered;
+    } else {
+      return <div {...markdownProps}>{rendered}</div>;
+    }
+  }
+}
+
 // create custom sanitization schema as per
 // https://github.com/syntax-tree/hast-util-sanitize#schema
 // to support our custom syntaxes
@@ -90,36 +133,4 @@ const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
   links: 'all'
 });
 
-/**
- * Basic component for rendering a markdown string as HTML, with sanitization.
- * Can safely render markdown even from untrusted sources, without potentially
- * exposing us to an XSS injection.
- */
-export default class SafeMarkdown extends React.Component {
-  static propTypes = {
-    markdown: PropTypes.string.isRequired,
-    openExternalLinksInNewTab: PropTypes.bool
-  };
-
-  render() {
-    // We only open external links in a new tab if it's explicitly specified
-    // that we do so; this is absolutely not something we want to do as a
-    // general practice, but unfortunately there are some situations in which
-    // it is currently a requirement.
-    const parser = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks
-      : markdownToReact;
-
-    const rendered = parser.processSync(this.props.markdown).contents;
-
-    // rehype-react will only wrap the compiled markdown in a <div> tag
-    // if it needs to (ie, if there would otherwise be multiple elements
-    // returned). We prefer consistency over flexibility, so here we wrap
-    // the result in a div if it wasn't already
-    if (rendered && rendered.type === 'div') {
-      return rendered;
-    } else {
-      return <div>{rendered}</div>;
-    }
-  }
-}
+export default SafeMarkdown;

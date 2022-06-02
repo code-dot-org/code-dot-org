@@ -6,7 +6,7 @@
 #  code_review_request_id :integer          not null
 #  commenter_id           :integer
 #  is_resolved            :boolean          not null
-#  comment                :text(16777215)   not null
+#  comment                :text(16777215)
 #  deleted_at             :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -29,9 +29,11 @@ class CodeReviewNote < ApplicationRecord
     {
       id: id,
       commenterName: commenter&.name,
+      commenterId: commenter&.id,
       comment: comment,
       isResolved: is_resolved,
-      createdAt: created_at
+      createdAt: created_at,
+      isFromTeacher: code_review.owner.memoized_teachers.include?(commenter)
     }
   end
 end

@@ -1637,7 +1637,8 @@
           "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy.",
+          "make_sprite": "Pomocí těchto bloků vytvoř sprajta."
         }
       }
     }

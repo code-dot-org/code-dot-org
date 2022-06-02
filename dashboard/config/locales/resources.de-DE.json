@@ -781,19 +781,19 @@
           "type": "Video zur Lektion"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "Digitale Pfade: Digitale Pfadquadrate",
+          "name": "Digitale Spuren: Digitale Spurenquadrate",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
           "type": "Handout für Studenten"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "name": "Digitale Pfade: Tierspuren",
+          "name": "Digitale Spuren: Tierspuren",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Handout für Studenten"
         },
         "mimi-activity/courseb/2021": {
           "name": "Bewegung, Bewegung",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
-          "type": "Karte Aktivität"
+          "type": "Aktivitätenkarte"
         },
         "mimi-debugging/courseb/2021": {
           "name": "Bewegung, Bewegung",
@@ -811,7 +811,7 @@
           "type": "Video für Lehrkräfte"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -1077,7 +1077,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -1097,7 +1097,7 @@
           "type": "Manipulatoren"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -1112,7 +1112,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -1127,7 +1127,7 @@
           "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Ressource"
         },
@@ -1317,7 +1317,7 @@
           "type": "Handout für Studenten"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Gefühlsgesichter Emotion Image",
+          "name": "Gefühlsgesichter – Gefühlsbild",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
           "type": "Ressource"
         },

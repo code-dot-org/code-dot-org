@@ -2,31 +2,6 @@
 ar:
   data:
     script:
-      category:
-        csd_category_name: استكشافات علوم الكمبيوتر (2017-2018)
-        csd_2018_category_name: استكشافات علوم الكمبيوتر (2018-2019)
-        csd_2019_category_name: استكشافات علوم الكمبيوتر (2019 - 2020)
-        csd_2020_category_name: استكشافات علوم الكمبيوتر (2120 - 2020)
-        csd_2021_category_name: استكشافات علوم الكمبيوتر (2021-2022)
-        csf_category_name: أساسيات علم الحاسوب
-        csf_2018_category_name: أساسيات علم الحاسوب (2018)
-        csf_2019_category_name: أساسيات علم الحاسوب (2019)
-        csf_2020_category_name: أساسيات علم الحاسوب (2120)
-        csf_2021_category_name: أساسيات علم الحاسوب (2221)
-        csf_international_category_name: أساسيات علم الحاسوب (دولي)
-        csf2_draft_category_name: 'قيد التطوير: الدورات A - F'
-        csp_category_name: مبادئ علم الحاسوب ('15-'16)
-        csp_2018_category_name: مبادئ علم الحاسوب (2018-2019)
-        csp_2019_category_name: مبادئ علم الحاسوب (2019 - 2020)
-        csp_2020_category_name: مبادئ علم الحاسوب (2120 - 2020)
-        csp_2021_category_name: مبادئ علم الحاسوب ('21-'22)
-        cspexams_category_name: اختبار التدرب على دورة مبادئ علم الحاسوب
-        csp17_category_name: مبادئ علم الحاسوب (2017-2018)
-        full_course_category_name: الدورات الكاملة
-        hoc_category_name: ساعة البرمجة
-        math_category_name: العمليات الحسابية
-        research_studies_category_name: دراسات بحثية
-        other_category_name: الأخرى
       name:
         course1:
           title: الدرس الأول

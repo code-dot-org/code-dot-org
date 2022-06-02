@@ -2,35 +2,6 @@
 de:
   data:
     script:
-      category:
-        csd_category_name: CS Discoveries ('17-'18)
-        csd_2018_category_name: CS Discoveries ('18-'19)
-        csd_2019_category_name: CS Discoveries ('19-'20)
-        csd_2020_category_name: CS Discoveries ('20-'21)
-        csd_2021_category_name: CS Discoveries ('21-'22)
-        csf_category_name: Einführung in Informatik und Programmieren
-        csf_2018_category_name: Grundlagen der Informatik (18-19)
-        csf_2019_category_name: Grundlagen der Informatik (19-20)
-        csf_2020_category_name: Grundlagen der Informatik (20-21)
-        csf_2021_category_name: Grundlagen der Informatik (21-22)
-        csf_international_category_name: Informatik Grundlagen international
-        csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
-        csp_category_name: Grundsätze der Informatik ('15-'16)
-        csp_2018_category_name: CS Principles ('18-'19)
-        csp_2019_category_name: Grundsätze der Informatik ('19-'20)
-        csp_2020_category_name: Grundsätze der Informatik ('20-'21)
-        csp_2021_category_name: Grundsätze der Informatik ('21-'22)
-        cspexams_category_name: Praxistest Grundlagen der Informatik
-        csp17_category_name: CS Principles ('17-'18)
-        aiml_2021_category_name: KI / ML
-        csc_2021_category_name: Grundlagen der Informatik (21-22)
-        full_course_category_name: Vollständige Kurse
-        hoc_category_name: Hour of Code
-        math_category_name: Mathematik
-        research_studies_category_name: Forschung
-        twenty_hour_category_name: 20-Stunden
-        tts_category_name: Text-zu-Sprache
-        other_category_name: Andere
       name:
         course1:
           title: Kurs 1

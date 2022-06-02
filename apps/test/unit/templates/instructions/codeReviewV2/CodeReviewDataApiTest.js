@@ -79,13 +79,19 @@ const fakeReviewData = [
 
 const fakeChannelId = 1;
 const fakeLevelId = 2;
-const fakeScriptId = 3;
+const fakeProjectLevelId = 3;
+const fakeScriptId = 4;
 
 describe('CodeReviewDataApi', () => {
   describe('getInitialTimelineData', () => {
     let dataApi;
     before(() => {
-      dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
       sinon.stub(CodeReviewDataApi.prototype, 'getCommits').callsFake(() => {
         return Promise.resolve(fakeCommitData);
       });
@@ -127,7 +133,12 @@ describe('CodeReviewDataApi', () => {
   describe('closeReview', () => {
     let dataApi, ajaxStub;
     before(() => {
-      dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
     });
 
     beforeEach(() => {
@@ -165,7 +176,12 @@ describe('CodeReviewDataApi', () => {
     let dataApi, ajaxStub;
     const fakeVersion = 'asdfjkl';
     before(() => {
-      dataApi = new CodeReviewDataApi(fakeChannelId, fakeLevelId, fakeScriptId);
+      dataApi = new CodeReviewDataApi(
+        fakeChannelId,
+        fakeLevelId,
+        fakeProjectLevelId,
+        fakeScriptId
+      );
     });
 
     beforeEach(() => {
@@ -190,6 +206,7 @@ describe('CodeReviewDataApi', () => {
         data: {
           channelId: fakeChannelId,
           scriptId: fakeScriptId,
+          projectLevelId: fakeProjectLevelId,
           levelId: fakeLevelId,
           version: fakeVersion
         }

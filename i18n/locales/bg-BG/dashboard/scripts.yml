@@ -2,31 +2,6 @@
 bg:
   data:
     script:
-      category:
-        csd_category_name: CS Открития (`17-`18)
-        csd_2018_category_name: CS Открития (`18-`19)
-        csd_2019_category_name: CS Открития (`19-`20)
-        csd_2020_category_name: CS Открития (`20-`21)
-        csd_2021_category_name: CS Открития (`21-`22)
-        csf_category_name: CS основи
-        csf_2018_category_name: CS Основи (`18-`19)
-        csf_2019_category_name: CS Основи (`19-`20)
-        csf_2020_category_name: CS Основи (`20-`21)
-        csf_2021_category_name: CS Основи (`21-`22)
-        csp_category_name: CS Принципи (`15-`16)
-        csp_2018_category_name: CS Принципи (`18-`19)
-        csp_2019_category_name: CS Принципи (`19-`20)
-        csp_2020_category_name: CS Принципи (`20-`21)
-        csp_2021_category_name: CS Принципи (`21-`22)
-        cspexams_category_name: CS принципи практически тест
-        csp17_category_name: '"15-" 16 CS принципи'
-        csc_2021_category_name: CS Връзки (`21-`22)
-        full_course_category_name: Пълните курсове
-        hoc_category_name: Hour of Code
-        math_category_name: Математика
-        twenty_hour_category_name: 20-Часа
-        tts_category_name: Text-to-Speech
-        other_category_name: Друго
       name:
         course1:
           title: Курс 1 - за малките читатели

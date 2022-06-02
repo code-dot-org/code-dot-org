@@ -139,7 +139,9 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_get
-    categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    Rails.cache.fetch("programming_environment/#{name}/categories_for_get", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+    end
   end
 
   def self.get_published_environments_from_cache

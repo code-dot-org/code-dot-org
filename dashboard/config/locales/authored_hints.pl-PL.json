@@ -10828,6 +10828,14 @@
         },
         "MC Agent Freeplay": {
           "MC_HOC_2017_13_Cole_a": "Spróbuj tak pokierować Agentem tak, aby zbudował kilka dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!"
+        },
+        "Farmer for Authored Hint testing": {
+          "second_hint": "To jest druga wskazówka. Ma wideo z podpowiedziami.",
+          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego."
+        },
+        "Farmer for TTS testing": {
+          "second_hint": "To jest druga wskazówka. Zawiera obraz. \n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)",
+          "last_hint": "To trzecia i ostatnia wskazówka. Nie ma nic specjalnego."
         }
       }
     }

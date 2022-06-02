@@ -5,11 +5,13 @@ import Example from './Example';
 import FieldsTable from './FieldsTable';
 import MethodWithOverloads from './MethodWithOverloads';
 import i18n from '@cdo/locale';
+import MethodSummaryTable from './MethodSummaryTable';
 
 export default function ProgrammingClassOverview({
   programmingClass,
   programmingEnvironmentName,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
+  includeMethodSummary
 }) {
   return (
     <div style={{width: '100%'}}>
@@ -82,9 +84,15 @@ export default function ProgrammingClassOverview({
           <FieldsTable fields={programmingClass.fields} />
         </div>
       )}
-      {programmingClass.methods?.length > 0 && (
+      {programmingClass.methods?.length > 0 && includeMethodSummary && (
         <div>
           <h2>{i18n.methods()}</h2>
+          <MethodSummaryTable methods={programmingClass.methods} />
+        </div>
+      )}
+      {programmingClass.methods?.length > 0 && (
+        <div>
+          <h2>{i18n.methodDetails()}</h2>
           {programmingClass.methods.map(method => (
             <MethodWithOverloads
               key={method.key}
@@ -112,5 +120,6 @@ const programmingClassShape = PropTypes.shape({
 ProgrammingClassOverview.propTypes = {
   programmingClass: programmingClassShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
+  includeMethodSummary: PropTypes.bool
 };

@@ -42,6 +42,7 @@ module Pd
     SUBJECT_NAMES = {
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
+      SUBJECT_CSF_DISTRICT: SUBJECT_CSF_DISTRICT = 'District'.freeze,
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
@@ -111,6 +112,7 @@ module Pd
       COURSE_CSF => [
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
+        SUBJECT_CSF_DISTRICT,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ],
       COURSE_ADMIN_COUNSELOR => [
@@ -134,6 +136,14 @@ module Pd
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
+    ].freeze
+
+    HIDE_FEE_INFORMATION_SUBJECTS = [
+      SUBJECT_CSF_DISTRICT
+    ].freeze
+
+    HIDE_ON_WORKSHOP_MAP_SUBJECTS = [
+      SUBJECT_CSF_DISTRICT
     ].freeze
 
     ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
@@ -228,10 +238,17 @@ module Pd
     }.freeze
 
     ACTIVE_COURSE_WORKSHOPS = {
-      CSD: 'CS Discoveries',
-      CSP: 'CS Principles',
-      CSA: 'Computer Science A'
+      CSD: COURSE_CSD,
+      CSP: COURSE_CSP,
+      CSA: COURSE_CSA
     }.freeze
+
+    ACTIVE_COURSES_WITH_SURVEYS = [
+      COURSE_CSD,
+      COURSE_CSP,
+      COURSE_CSA,
+      COURSE_CSF
+    ].freeze
 
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,

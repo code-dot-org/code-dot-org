@@ -23,5 +23,6 @@ export const reviewShape = PropTypes.shape({
   version: PropTypes.string,
   isVersionExpired: PropTypes.bool,
   timelineElementType: PropTypes.string.isRequired,
+  ownerName: PropTypes.string,
   comments: PropTypes.arrayOf(reviewCommentShape)
 });
