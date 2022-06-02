@@ -72,18 +72,18 @@ class InstructionsCsfRightCol extends React.Component {
   }
 
   getColumnWidth() {
+    // If there is nothing to show in this column, at least have 10 pixels
+    // of padding.
     const collapserWidth = this.shouldDisplayCollapserButton()
       ? $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true)
-      : 0;
-    const scrollButtonWidth = this.props.displayScrollButtons
-      ? $(ReactDOM.findDOMNode(this.scrollButtons)).outerWidth(true)
-      : 0;
-    return Math.max(collapserWidth, scrollButtonWidth);
+      : 10;
+    return collapserWidth;
   }
 
   getColumnHeight() {
     if (this.collapser) {
-      return getOuterHeight(this.collapser, true);
+      // Include 30 pixels for any scroll buttons that need to be shown.
+      return getOuterHeight(this.collapser, true) + 30;
     } else {
       return 0;
     }
