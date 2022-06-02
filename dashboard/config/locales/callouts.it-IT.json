@@ -1790,25 +1790,25 @@
         },
         "courseF_apps_aquarium": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_card": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
         },
         "courseF_apps_chatbot": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_collector": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_madlib": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
         },
         "courseF_apps_pet": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_editable_card": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
@@ -1861,16 +1861,16 @@
         },
         "courseF_text_print": {
           "print_block": "Il blocco stampa lo trovi qui!",
-          "text_print_finish": "IL tuo messaggio è apparso in alto? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_print_finish": "Il tuo messaggio è stato visualizzato in alto? Se sì, clicca `Fine`. Altrimenti, clicca `Reset`, modifica il tuo codice, e clicca di nuovo su `Esegui`."
         },
         "courseF_text_prompts": {
           "prompt_block": "Il blocco comando lo trovi qui!"
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
         },
         "Virtual Pet 6_2021": {
-          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Prova a scorrere il tuo codice un blocco per volta."
