@@ -1,7 +1,4 @@
 class ProgrammingEnvironmentsController < ApplicationController
-  include ProxyHelper
-  EXPIRY_TIME = 30.minutes
-
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
   before_action :set_programming_environment, only: [:edit, :update, :destroy]
   authorize_resource
