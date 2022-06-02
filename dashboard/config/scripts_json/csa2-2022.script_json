@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-13 22:04:49 UTC",
+    "serialized_at": "2022-05-31 20:41:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7850,6 +7850,13 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.8"
       }
     },
@@ -8068,6 +8075,13 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.3"
       }
     },
     {

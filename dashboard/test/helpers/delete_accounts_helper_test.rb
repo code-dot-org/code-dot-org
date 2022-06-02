@@ -915,6 +915,55 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.code_review_requests
+  # Table: dashboard.code_review_notes
+  #
+  test "deletes comment text and soft deletes comments for purged user" do
+    student = create :student
+    review = create :code_review, user_id: student.id
+    student_2 = create :student
+    comment = create :code_review_note, commenter: student_2, code_review: review
+    assert_nil review.deleted_at
+    assert_nil comment.deleted_at
+    refute_nil comment.comment
+
+    purge_user student
+    review.reload
+    comment.reload
+    # assert that the review and comment were soft-deleted, and the comment text was hard-deleted.
+    refute_nil review.deleted_at
+    refute_nil comment.deleted_at
+    assert_nil comment.comment
+    # the commenter was not deleted, so their id should remain on the comment
+    refute_nil comment.commenter
+  end
+
+  test "anonymizes and deletes code review comments written by user" do
+    student = create :student
+    comment = create :code_review_note, commenter: student
+    refute_nil comment.commenter
+    refute_nil comment.comment
+    assert_nil comment.deleted_at
+
+    purge_user student
+    comment.reload
+    assert_nil comment.commenter
+    refute_nil comment.deleted_at
+    assert_nil comment.comment
+  end
+
+  test "soft deletes empty code review" do
+    student = create :student
+    review = create :code_review, user_id: student.id
+    assert_nil review.deleted_at
+
+    purge_user student
+    review.reload
+
+    refute_nil review.deleted_at
+  end
+
+  #
   # Table: dashboard.pd_applications
   #
 

@@ -258,7 +258,8 @@
         "iceage_hello1": "Sid (hahmo 1) haluaa koota kaikki uuteen seikkailuun. Voitko auttaa häntä sanomaan \"Moi! siirtämällä \"hahmo 1 sanoo\" lohko työtilaan ja yhdistämällä sen \"suorittaessa\" tapahtuman alle.\n\nÄlä unohda kirjoittaa \"Moi!\" lohkon sisään!",
         "iceage_hello2": "Manu (hahmo 2) löysi Sidin (hahmo 1) ja haluaa kutsua hänet seikkailulle. Auta heitä tervehtimään toisiaan käyttämällä \"hahmo \\_\\_\\_ sanoo\" lohkoa kahdesti.",
         "iceage_move_to_actor": "Diego (hahmo 1) etsii Manua (hahmo 2). Voitko auttaa saattamaan nämä kaksi yhteen? Yhdistä lohko \"kun hahmo koskee\" tapahtumaan soittaaksesi äänen kun he löytävät toisensa.",
-        "iceage_move_to_flag": "Jyrsis etsii tammenterhoaan! Voitko auttaa häntä liikkumaan viimeiset 200 kuvapistettä?"
+        "iceage_move_to_flag": "Jyrsis etsii tammenterhoaan! Voitko auttaa häntä liikkumaan viimeiset 200 kuvapistettä?",
+        "MC Agent Freeplay": "**Vapaa peli:** Nyt määräät sinä! Käytä Agentin koodia apuna maailman tutkimisessa."
       }
     }
   }

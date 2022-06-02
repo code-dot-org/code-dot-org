@@ -5366,3 +5366,80 @@ id-ID:
       csf_safety_in_my_online_neighborhood:
         markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
           tempat-tempat online secara aman?"
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      Eval Contracts F:
+        answers:
+        - ''
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: biru
+        - text: hijau
+        - {}
+        - text: kuning
+        - correct: true
+        - text: merah
+        questions:
+        - {}
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: deskripsi di sini
+      allthethings_external_not_displayed_as_unplugged:
+        content1: deskripsi di sini
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Panah mana yang mendapatkan Flurb untuk harta?
+        title: Pilihan Berganda
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - text: Tidak satu pun dari yang di atas

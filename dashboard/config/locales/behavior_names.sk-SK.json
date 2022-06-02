@@ -3333,6 +3333,32 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "plávať vľavo a vpravo",
+          "shrinking": "zmenšovať sa",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa",
+          "growing": "rásť",
+          "jittering": "chvieť sa",
+          "moving east": "posúvať sa na východ",
+          "moving north": "posúvať sa na sever",
+          "moving south": "posúvať sa na juh",
+          "moving west": "posúvať sa na západ",
+          "spinning right": "točenie vpravo"
         }
       }
     }

@@ -1293,10 +1293,10 @@
           "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
         "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
-          "description": " Evaluar de manera crítica un objeto, en base a su diseño y considerar si este cumple con ciertos requerimientos."
+          "description": " Evaluar de manera crítica un objeto en base a su diseño y considerar si este cumple con ciertos requerimientos."
         },
         "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
-          "description": "Identificar la empatía con el usuario como un componente importante del proceso de diseño."
+          "description": "Identificar la empatía por el usuario como un componente importante del proceso de diseño."
         },
         "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
           "description": " Evaluar de manera crítica un diseño a través de la perspectiva de un perfil de usuario."
@@ -1323,13 +1323,85 @@
           "description": "Utilizar los comentarios para crear un plan de desarrollo para una aplicación."
         },
         "3b9c322a-6a98-4473-8079-d20160c3e352": {
-          "description": "Clasificar y ordenar por prioridades los comentarios de los usuarios para una aplicación."
+          "description": "Clasificar y priorizar los comentarios de los usuarios para una aplicación."
         },
         "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
           "description": "Mejorar el diseño de una pantalla a partir de los comentarios de los usuarios."
         },
         "b09ef219-e569-45de-94f7-3e7beec34d72": {
           "description": "Analizar los apuntes tomados en la entrevista para identificar las necesidades del usuario"
+        },
+        "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
+          "description": "Diseñar un prototipo de papel de una aplicación que responda a las necesidades específicas de un usuario"
+        },
+        "6d0afa47-7d02-480b-9369-b4aabf3b6841": {
+          "description": "Identificar las mejoras de una aplicación a partir de las pruebas con usuarios"
+        },
+        "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
+          "description": "Diseñar la interfaz de usuario de una aplicación"
+        },
+        "b3622011-d99b-4a7b-9818-63ff04be86f8": {
+          "description": "Desarrollar un plan colaborativo para diseñar un artefacto computacional"
+        },
+        "6fa760e4-910d-4f77-99be-68f7673581d6": {
+          "description": "Describir los usuarios objetivo de un artefacto computacional"
+        },
+        "d1a36c22-f6c1-42c6-bf97-88091a1201c6": {
+          "description": "Evaluar un diseño basado en su habilidad para cumplir con las necesidades del usuario objetivo"
+        },
+        "3e59ba97-41b3-4967-9366-d38699ab43bb": {
+          "description": "Evaluar el propósito y el impacto de un artefacto computacional"
+        },
+        "01fafc69-a442-46b9-8274-d8ec27670236": {
+          "description": "Explicar el propósito de cada uno de los elementos de interfaz de usuario al desarrollar una aplicación"
+        },
+        "c2f81013-f143-44b7-940d-fba98243bb3d": {
+          "description": "Explicar el rol de los prototipos de papel en el desarrollo de aplicaciones."
+        },
+        "3a6f69e7-fc2d-4f5a-bebe-8336c819e788": {
+          "description": "Crear un prototipo de papel que incorpore el flujo de usuarios para un artefacto computacional."
+        },
+        "41aa43b4-0a6f-4377-927a-e1d6042149cb": {
+          "description": "Diseñar y realizar una prueba con prototipos de papel para recibir comentarios sobre un diseño"
+        },
+        "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
+          "description": "Analizar las pruebas con usuarios para identificar características que deberían ser eliminadas, añadidas, o mejoradas."
+        },
+        "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
+          "description": "Asignar roles y responsabilidades a cada miembro del equipo al colaborar en la creación de un artefacto digital"
+        },
+        "fec5eaa1-f93f-4255-b69a-080150de17c0": {
+          "description": "Seleccionar el elemento de entrada apropiado para un determinado tipo de información"
+        },
+        "a39d3b79-7607-4435-9ecb-d2b1041334ec": {
+          "description": "Crear un prototipo digital de la pantalla de una aplicación"
+        },
+        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
+          "description": "Crear un evento que detecta y responde a las entradas de usuario"
+        },
+        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
+          "description": "Integrar todos los componentes del trabajo colaborativo en un artefacto computacional final."
+        },
+        "f027b687-253c-4337-bfa7-815483f163d6": {
+          "description": "Crear un prototipo digital que incorpore el flujo de usuarios para un artefacto computacional"
+        },
+        "d40519ba-f2c6-485e-919d-b4752a96e391": {
+          "description": "Diseñar y realizar pruebas con prototipos digitales para recopilar comentarios sobre un diseño."
+        },
+        "6aab1c32-4afe-4d2a-a747-61bf6f0ce7b3": {
+          "description": "Analizar la retroalimentación de los usuarios y los resultados de las pruebas en un artefacto computacional"
+        },
+        "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
+          "description": "Clasificar y priorizar los problemas según el impacto y la facilidad de implementación"
+        },
+        "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
+          "description": "Monitorear el progreso mientras realizan cambios a la aplicación"
+        },
+        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
+          "description": "Presentar claramente información técnica a usuarios no técnicos"
+        },
+        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
+          "description": "Reflexionar sobre el desarrollo de un proyecto en curso"
         },
         "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
           "description": "Identifica las innovaciones informáticas en un campo determinado"

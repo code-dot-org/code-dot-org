@@ -1130,6 +1130,11 @@
           "do something": {
             "name": "do something"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
         }
       }
     }

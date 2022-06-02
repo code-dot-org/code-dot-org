@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 de:
   errors:
     messages:
@@ -122,6 +128,7 @@ de:
     not_linked: "Sorry, dein Code.org-Konto ist nicht mit %{provider} verbunden. Bitte logge dich unten mit deinem Passwort ein."
     use_clever: "Es tut uns leid, dein Code.org-Konto ist nicht mit %{provider} verknüpft. Bitte melde dich stattdessen über dein Clever-Portal an."
     invalid_provider: "Entschuldigung, %{provider} Konten können nicht mit Code.org Konten verbunden werden."
+    migration_required: "Leider können wir keine Konten verbinden oder trennen, die noch den alten Kontomodus verweden. Bitte aktualisieren Sie auf den neuen Kontomodus."
     unable_to_connect_provider: "Nicht möglich dein Code.org-Konto mit deinem %{provider}-Konto zu verbinden. Bitte versuche es noch einmal."
     disconnect_successful: "Erfolg! Wir haben das externe Konto von deinem Code.org Konto entfernt."
     already_in_use: "Dein %{provider} Account ist bereits verbunden mit einem anderen Code.org account."
@@ -295,6 +302,7 @@ de:
       provider_managed_section: "Diese Lerngruppe wird von einem anderen Anbieter verwaltet und kann nicht beitreten werden. Bitten deinen Lehrer, Dich über %{provider} hinzuzufügen und diese Lerngruppe erneut zu synchronisieren."
       restricted_section: "Wir konnten dich nicht zum Bereich %{section_code} zufügen, weil dieser gesperrt ist. Bitte kontaktiere deine Lehrperson für Hilfe."
       full_section: "Wir konnten dich nicht zum Bereich %{section_code} zufügen weil bereits %{section_capacity} Studierende dabei sind. Bitte kontaktiere deine Lehrperson für Hilfe."
+      not_participant_type: "Wir konnten Sie nicht zum Bereich %{section_code} hinzufügen, da Sie nicht dem Teilnehmertyp des Bereichs entsprechen."
     mail:
       student_disassociated:
         subject: "Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e) Schüler(in) zugeordnet."
@@ -352,6 +360,7 @@ de:
       educate_beyond: "Jenseits von Code.org"
       educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
       educate_community: "Online Community"
+      educate_requirements: "Technische Voraussetzungen"
       educate_tools: "Hilfsmittel und Videos"
       about_us: "Über uns "
       about_leadership: "Die Leitung"
@@ -419,6 +428,7 @@ de:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bausteine)'
       starwarsblocks_hour: 'Star Wars (Bausteine)'
+      thebadguys: 'Die Gangster Gang'
       loading: 'Wird geladen...'
       weblab: 'Web Lab'
       view_all: 'Alle Projekte anzeigen...'
@@ -554,6 +564,7 @@ de:
     all_students_must_be_in_current_section: "Alle Studenten müssen derzeit in Ihrer Lerngruppe eingeschrieben sein."
     already_enrolled_in_new_section: "Sie können diese Schüler nicht bewegen, weil dieser Lehrer sie bereits in einer anderen Lerngruppe hat."
     third_party_login: "Sie können Schüler nicht in eine Lerngruppe verschieben, der mit einem Drittanbieterwerkzeug synchronisiert ist."
+    not_correct_participant_type: "Sie können diese Benutzer nicht verschieben, weil sie keine Berechtigung haben, Teilnehmer im neuen Bereich zu sein."
   share:
     title: "Mit Code Studio lernen"
     description: "Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code."
@@ -576,6 +587,7 @@ de:
     code_from_html: 'Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der GNU LGPL 2.1</a> lizensiert ist.'
     powered_by_aws: 'Betrieben von Amazon Web Services'
     built_on_github: 'Gebaut auf GitHub von Microsoft'
+    google_copyright: '&copy; Google Inc. verwendet mit Genehmigung. Google Classroom ist eine Marke von Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE-Logo sowie Hour of Code&reg; sind Marken von Code.org.'
     copyright: 'Copyright'
     more: 'Mehr'
@@ -594,6 +606,7 @@ de:
     how_it_works: 'So funktioniert es (Code ansehen)'
     try_hour_of_code: 'Probiere die "Hour of Code" aus!'
     store: 'Geschäft'
+    cookie_notice: 'Cookie-Meldung'
   reference_area:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'
@@ -662,8 +675,10 @@ de:
       title: 'Tanzparty'
     hello-world:
       title: 'Hallo Welt'
+      body: 'Wähle aus unseren lustigen Themen aus und programmiere interaktiver Charakter in einer Welt, die du erschaffen hast.'
     poem-art:
       title: 'Dichtkunst'
+      body: 'Drücke dich aus! Erstelle mit Code animierte Gedichte .'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
@@ -985,6 +1000,11 @@ de:
   no_course_access_teacher: "Du hast keinen Zugriff auf diesen Kurs. Falls du der Meinung bist, dass du Zugriff auf diesen Kurs haben solltest, dann schreibe bitte eine E-Mail an support@code.org, sodass wir die Situation überprüfen können"
   no_script_access_student: "Du hast keinen Zugriff auf diese Lerneinheit. Bitte frag Deinen Lehrer, auf welcher Lerneinheit du sein solltest."
   no_script_access_teacher: "Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben, dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org, damit wir die Situation beheben können."
+  no_level_access_student: "Sie haben keinen Zugang zu diesem Level. Bitte fragen Sie Ihren Lehrer, auf welchem Level Sie sein sollten."
+  no_level_access_teacher: "Sie haben keinen Zugriff auf dieses Level. Wenn Sie glauben, dass Sie Zugang zu diesem Level haben sollten, schreiben Sie bitte an support@code.org, damit wir die Situation beheben können."
+  no_exemplar: "Für dieses Level gibt es kein Exemplar."
+  no_exemplar_access_student: "SchülerInnen können nicht auf den Beispielcode zugreifen. Bitte fragen Sie Ihren Lehrer, auf welchem Level sich befinden müssen."
+  no_exemplar_access_teacher: "Nur verifizierte Lehrer können auf den Beispielcode zugreifen. Wenn Sie ein verifizierter Lehrer werden möchten, schreiben Sie bitte an support@code.org."
   return_unit_overview: 'Gehe zur Übersicht der Einheit'
   return_course_overview: 'Gehe zur Übersicht'
   view_all_units: 'Alle Einheiten anzeigen'
@@ -1007,6 +1027,7 @@ de:
       colombian_chilean_school_department: 'Schule Gemeinde / Region'
       colombian_school_municipality: 'Schule Gemeinde'
       colombian_chilean_school_name: 'Schulname'
+      chilean_school_commune: 'Gemeinde'
       chilean_school_id: 'Schul-ID'
       ages: 'Welches Alter unterrichten Sie in diesem Jahr?'
       subjects: 'Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?'
@@ -1086,6 +1107,7 @@ de:
       intro: "Vielen Dank, dass Sie sich die Zeit nehmen, sich über den Lehrplan von Code.org zu informieren. Unsere Mission, allen Kindern in allen Schulen der Welt Möglichkeiten zum Informatikunterricht zu bieten, wäre ohne Sie nicht möglich gewesen."
       instructions: "Bitte füllen Sie das untenstehende Formular aus, um anzugeben, dass Sie 1) an einem Schulungsworkshop teilgenommen haben, der von einem der internationalen Partner von Code.org durchgeführt wird, und 2) Sie zustimmen, Ihre Informationen an unseren internationalen Partner in Ihrem Land weiterzugeben, damit dieser Ihre Laufbahn als Informatiklehrer unterstützen kann."
       thanks_markdown: "Danke, dass Sie sich angemeldet haben! Wir freuen uns darauf, Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen. Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url}) eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!"
+      facilitator_not_listed: "Mein Moderator ist nicht aufgeführt"
       facilitator_not_applicable: "Nicht anwendbar"
       organizer_not_listed: "Mein Organisator ist nicht aufgeführt"
     logged_out:
@@ -1124,4 +1146,5 @@ de:
   behaviors:
     this_sprite: "dieser Sprite"
   unit_prefix: "Lektion %{n}"
+  code_org_logo_alt: "Code.org Startseite"
   teacher_feedback: "Rückmeldung vom Lehrer"

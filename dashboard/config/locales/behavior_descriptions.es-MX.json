@@ -2258,6 +2258,12 @@
           "randomly set the rotation of a sprite": "configura aleatoriamente la rotación de un sprite",
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Mueve un sprite hacia la izquierda por la pantalla. Cuando se salga del lado izquierdo de la pantalla, vuelve a moverlo hacia el lado derecho de la misma.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Mueve un sprite hacia la derecha por la pantalla. Cuando se salga del lado derecho de la pantalla, vuelve a moverlo hacia el lado izquierdo de la misma."
+        },
+        "AllTheThings sprite lab with video": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Se mueve hacia adelante y hacia atrás en una dirección. Para cambiar la dirección en la que patrulla un sprite, cambia su \"dirección de movimiento\""
+        },
+        "allthethings_fish_tank": {
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Se mueve hacia adelante y hacia atrás en una dirección. Para cambiar la dirección en la que patrulla un sprite, cambia su \"dirección de movimiento\""
         }
       }
     }
