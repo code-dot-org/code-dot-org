@@ -788,7 +788,7 @@
         {
           "type": "html",
           "name": "instructional_focus_statements",
-          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered.\" </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
         },
         {
           "type": "panel",
@@ -1465,11 +1465,6 @@
                   "text": "I am better prepared to identify opportunities to give feedback to students during instruction to support student learning."
                 },
                 {
-                  "value": "resources_prep_ap_exam",
-                  "text": "I know where to find the resources to help me design learning activities lessons to prepare students to take the AP exam.",
-                  "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'"
-                },
-                {
                   "value": "content_matches_teaching_plan",
                   "text": "The content of this workshop was relevant to what I plan to teach at the beginning of the course in the coming academic year."
                 },
@@ -1484,39 +1479,6 @@
                   "visibleIf": " {workshop_course}='Computer Science A'"
                 }
               ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "prework_complete",
-              "title": "Prior to the workshop you received some pre-work in the 'Getting Started Modules'. Did you complete the pre-work? ",
-              "visibleIf": "{workshop_course}='Computer Science A'",
-              "choices": [
-                {
-                  "value": "all",
-                  "text": "I completed all of the pre-work"
-                },
-                {
-                  "value": "some",
-                  "text": "I completed some of the pre-work, not all of it"
-                },
-                {
-                  "value": "none",
-                  "text": "I was aware there was pre-work but didn't do it"
-                },
-                {
-                  "value": "didnt_know",
-                  "text": "I didn't know there was pre-work"
-                }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "prework_useful",
-              "title": "To what extent did you find the pre-work or 'Getting Started Modules' helpful for preparing you to engage with this workshop?",
-              "visibleIf": "{prework_complete}  anyof ['all', 'some'] ",
-              "rateMax": 7,
-              "minRateDescription": "Not Helpful At All",
-              "maxRateDescription": "Very Helpful"
             },
             {
               "type": "matrix",
@@ -1796,7 +1758,7 @@
         {
           "type": "html",
           "name": "prioritize_time_statements",
-          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">It’s important that the teacher prioritize their time and resources for students who have the most need. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \tThe teacher should ensure that their time, and students’ access to resources are distributed equally for all. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"It’s important that the teacher prioritize their time and resources for students who have the most need.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \t\"The teacher should ensure that their time, and students’ access to resources are distributed equally for all.\" </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
         },
         {
           "type": "html",

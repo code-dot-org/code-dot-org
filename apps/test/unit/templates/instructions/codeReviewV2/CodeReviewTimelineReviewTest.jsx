@@ -17,6 +17,8 @@ const DEFAULT_REVIEW = {
   version: 'asdfjkl',
   isVersionExpired: false,
   timelineElementType: timelineElementType.review,
+  ownerId: 2,
+  ownerName: 'Jerry',
   comments: [
     {
       id: 123,
@@ -42,7 +44,8 @@ const DEFAULT_PROPS = {
   closeReview: () => {},
   toggleResolveComment: () => {},
   deleteCodeReviewComment: () => {},
-  viewAsCodeReviewer: false
+  viewAsCodeReviewer: false,
+  currentUserId: 1
 };
 
 const setUp = (overrideProps = {}) => {
@@ -75,6 +78,21 @@ describe('CodeReviewTimelineReview', () => {
     wrapper = setUp({review: expiredVersionReview});
     timelineElement = wrapper.find('CodeReviewTimelineElement');
     expect(timelineElement.props().isProjectVersionExpired).to.be.true;
+  });
+
+  it('displays your code review header if you are the owner of the review', () => {
+    const review = {...DEFAULT_REVIEW, ownerId: 123};
+    const wrapper = setUp({review: review, currentUserId: 123});
+    expect(wrapper.contains(javalabMsg.codeReviewForYou())).to.be.true;
+  });
+
+  it('displays other students code review header if they are the owner', () => {
+    const wrapper = setUp();
+    expect(
+      wrapper.contains(
+        javalabMsg.codeReviewForStudent({student: DEFAULT_REVIEW.ownerName})
+      )
+    ).to.be.true;
   });
 
   it('displays the close button if the code review is not closed', () => {

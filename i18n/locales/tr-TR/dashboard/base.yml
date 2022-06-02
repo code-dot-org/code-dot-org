@@ -69,6 +69,7 @@ tr:
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
   next_resource: Sonraki Kaynak
+  done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: "İptal"
   okay: "Tamam"
   or: "veya"
@@ -285,6 +286,7 @@ tr:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
     registered: "%{section_name} için kayıt oldunuz."
+    captcha_required: 'Bu bölüme katılmak için lütfen CAPTCHA alanını doldurun.'
     already_exists: 'Zaten %{section_name} bölümüne katıldınız.'
     error:
       signed_in: 'Devam etmeden önce lütfen çıkış yapınız'
@@ -295,6 +297,8 @@ tr:
       blank_code: "Lütfen bir bölge kodu girin"
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
       provider_managed_section: "Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini iste  ve bu bölümü yeniden senkronize et."
+      restricted_section: "Bölüm kilitli olduğu için sizi %{section_code} bölümüne ekleyemedik. Lütfen yardım için öğretmeninize başvurun."
+      full_section: "Bölümde zaten %{section_capacity} öğrenci olduğu için sizi %{section_code} bölümüne ekleyemedik. Lütfen yardım için öğretmeninize başvurun."
       not_participant_type: "Bölüm için katılımcı türünü karşılamadığınız için sizi %{section_code} bölümüne ekleyemedik."
     mail:
       student_disassociated:
@@ -343,6 +347,7 @@ tr:
       game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
       sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
       sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
+      web_lab_documentation: "Web Laboratuvarı Belgelendirmesi"
       educate_overview: "Eğitimci genel bakış"
       educate_elementary: "İlköğretim Okulu"
       educate_middle: "Ortaokul"
@@ -352,6 +357,7 @@ tr:
       educate_beyond: "Code.org ötesi"
       educate_inspire: "Öğrenciye ilham ver"
       educate_community: "Çevrimiçi Topluluk"
+      educate_requirements: "Teknik Gereksinimler"
       educate_tools: "Araçlar ve videolar"
       about_us: "Hakkımızda"
       about_leadership: "Liderlik"
@@ -419,6 +425,7 @@ tr:
       starwars: 'Yıldız Savaşları'
       starwarsblocks: 'Yıldız savaşları (blok)'
       starwarsblocks_hour: 'Yıldız savaşları (blok)'
+      thebadguys: 'Kim Demiş Kötüyüz Diye?'
       loading: 'Yükleniyor...'
       weblab: 'Web Laboratuvarı'
       view_all: 'Tüm projeleri görüntüle...'
@@ -461,6 +468,7 @@ tr:
       worked_with: 'İle çalıştı'
       update_lock_settings: 'Kilit ayarlarını burada değiştirin.'
       clear_response: 'Net yanıt'
+    student_code_view_diabled: 'Bu aktivite için öğrenci kodu görüntülenemiyor.'
   user:
     email_confirm_needed: 'E-posta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -575,6 +583,8 @@ tr:
     art_from_html_old: "Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.\n"
     code_from_html: 'Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> altında lisanslı kullanır.'
     powered_by_aws: 'Amazon Web Services tarafından desteklenmektedir'
+    built_on_github: 'Microsoft''tan GitHub üzerinde oluşturuldu'
+    google_copyright: '&copy; Google Inc. tarafından sağlandı. Google Classroom bir Google Inc. markasıdır.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kodlama Saati&reg; Code.org''un ticari markalarıdır.'
     copyright: 'Telif Hakkı'
     more: 'Daha Fazla'
@@ -585,12 +595,14 @@ tr:
     tos_short: 'Koşullar'
     tos: 'Şartlar'
     privacy: 'Gizlilik Politikası'
+    privacy_updated: 'Gizlilik Politikası (güncellendi)'
     secure: 'Güvenli sürüm'
     report_abuse: 'Hata Rapor Et'
     built_on_code_studio: 'Kod Stüdyosunda Yapıldı'
     make_my_own_app: 'Kendi programımı yap'
     how_it_works: 'Nasıl çalışır'
     try_hour_of_code: 'Kodlama Saati''ni Deneyin!'
+    store: 'Mağaza'
     cookie_notice: 'Çerez Bildirimi'
   reference_area:
     title: 'Yardım ister misiniz?'
@@ -660,8 +672,10 @@ tr:
       title: 'Dans Partisi'
     hello-world:
       title: 'Merhaba Dünya'
+      body: 'Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.'
     poem-art:
       title: 'Şiir Sanatı'
+      body: 'Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
@@ -919,6 +933,7 @@ tr:
     peer_feedback: 'Geribildirim Gönder'
     outdated: 'Bu geribildirim daha önce yollanan gönderiye eklendi'
     review_in_progress: 'Gözden geçirmeye hazır'
+    review_count: 'Bu ünite için %{review_count} inceleme tamamlamanız gerekir'
     peer_review: 'Eş gözden geçirme'
   external_links:
     disclaimer: Yasal uyarı
@@ -985,6 +1000,11 @@ tr:
   no_course_access_teacher: "Bu derse erişiminiz bulunmamaktadır. Bu derse erişiminizin olması gerektiğini düşünüyorsanız, lütfen durumu düzeltebilmemiz için support@code.org adresine yazın."
   no_script_access_student: "Bu üniteye erişiminiz bulunmamaktadır. Lütfen hangi ünitede olmanız gerektiğini öğretmeninize sorun."
   no_script_access_teacher: "Bu üniteye erişiminiz bulunmamaktadır. Bu derse erişiminizin olması gerektiğini düşünüyorsanız, lütfen durumu düzeltebilmemiz için support@code.org adresine yazın."
+  no_level_access_student: "Bu seviyeye erişiminiz bulunmamaktadır. Lütfen hangi seviyede olmanız gerektiğini öğretmeninize sorun."
+  no_level_access_teacher: "Bu seviyeye erişiminiz bulunmamaktadır. Bu seviyeye erişiminizin olması gerektiğini düşünüyorsanız, lütfen durumu düzeltebilmemiz için support@code.org adresine yazın."
+  no_exemplar: "Bu seviye için örnek yok."
+  no_exemplar_access_student: "Öğrenciler örnek koda erişemez. Lütfen öğretmeninize hangi seviyede olmanız gerektiğini sorun."
+  no_exemplar_access_teacher: "Örnek koda yalnızca doğrulanmış öğretmenler erişebilir. Doğrulanmış bir öğretmen olmak istiyorsanız, lütfen support@code.org adresine yazın."
   return_unit_overview: 'Ünite genel bakışına git'
   return_course_overview: 'Ünite genel bakışına git'
   view_all_units: 'Tüm üniteleri göster'
@@ -1002,9 +1022,13 @@ tr:
       school_city: 'Okulun bulunduğu şehir'
       school_city_district: 'Okul İl/İlçe'
       school_country: 'Okulun bulunduğu ülke'
+      school_department_region: 'Okul Bölümü/Bölgesi'
       colombian_school_city: 'Okulun bulunduğu şehir'
+      colombian_chilean_school_department: 'Okul Bölümü/Bölgesi'
       colombian_school_municipality: 'Okulun Bulunduğu Belediye'
       colombian_chilean_school_name: 'Okulun Adı'
+      chilean_school_commune: 'Topluluk'
+      chilean_school_id: 'Okul Kimliği'
       ages: 'Bu yıl hangi yaş gruplarına öğretiyorsunuz?'
       subjects: 'Bu yıl hangi konuları öğretiyorsunuz?'
       resources: 'Aşağıdaki BB eğitim kaynaklarından hangilerini kullanırsınız?'
@@ -1029,6 +1053,7 @@ tr:
         malaysia: 'Malezya'
         mexico: 'Meksika'
         thailand: 'Tayland'
+        uzbekistan: 'Özbekistan'
       ages:
         ages_under_6: '< 6 yaş'
         ages_7_8: '7-8 yaş'
@@ -1113,6 +1138,7 @@ tr:
       error_wrong_provider: 'Yanlış sağlayıcı. Lütfen Google ile giriş yaptığınızdan emin olun.'
       error_invalid_user: 'Geçersiz kullanıcı kimliği. Lütfen yeniden giriş yapmayı deneyin.'
       error_no_code: 'Lütfen giriş kodunuzu girin.'
+      confirm_login: 'Google hesabınız ile giriş yapmak için "Doğrula"yı seçin.'
   parent_email_banner:
     text: "** Ebeveyn veya veli misiniz? ** Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için e-postanızı bu hesaba bağlayın!"
     link_your_email: "E-postanızı bağlayın"
@@ -1120,4 +1146,5 @@ tr:
   behaviors:
     this_sprite: "bu hareketli nesne"
   unit_prefix: "Birim %{n}"
+  code_org_logo_alt: "Code.org Ana Sayfası"
   teacher_feedback: "Öğretmen Geribildirimi"

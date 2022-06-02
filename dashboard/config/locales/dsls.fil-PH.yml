@@ -729,6 +729,7 @@ fil-PH:
         - correct: true
         questions:
         - {}
+        title: Gumawa ng Prediksiyon
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -737,6 +738,7 @@ fil-PH:
         - correct: true
         questions:
         - {}
+        title: Gumawa ng Prediksiyon
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -745,6 +747,7 @@ fil-PH:
         - correct: true
         questions:
         - {}
+        title: Gumawa ng Prediksiyon
       Dance_Party_extras_intro:
         markdown: "# Patuloy na magsayaw! \n\nPara sa bahagi 2, lilikhain mo ang iyong
           sariling proyekto. Walang mga puzzle dito - sa halip may isang pangkat ng
@@ -2883,6 +2886,7 @@ fil-PH:
         - correct: true
         questions:
         - {}
+        title: Gumawa ng Prediksiyon
       Choose 2 Test:
         answers:
         - correct: true
@@ -2960,3 +2964,23 @@ fil-PH:
         - {}
         - {}
         - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Magdagdag ng Mga Imahe
+      CSD U2 Image practice_pilot_2021:
+        display_name: Magdagdag ng Mga Imahe
+      CSD U3 drawing practice choice_2021:
+        display_name: Pagsasanay
+      CSD games cake challenge choice_2021:
+        display_name: Mga Hamon
+      CSD games platform challenge choice_2021:
+        display_name: Mga Hamon
+      CSD web draw loop practice choice_2021:
+        display_name: Pagsasanay
+      CSD web movement practice choice_2021:
+        display_name: Pagsasanay
+      CSD web text practice choice_2021:
+        display_name: Pagsasanay
+      ml-club app-choice parent:
+        display_name: I-customize ang App Mo
+      ml-intro app lab-book recommender 5-2021:
+        display_name: I-customize ang App Mo

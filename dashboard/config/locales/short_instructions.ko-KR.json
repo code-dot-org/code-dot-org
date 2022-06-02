@@ -3655,7 +3655,11 @@
         "Test embedded K1 Blockly in instructions": "이 퍼즐을 풀기 위해 `서쪽으로 이동` 블록 세 개와  `옥수수 따기` 블록 한 개를 사용하세요.",
         "U1L13 Text Compression": "이 텍스트에서 패턴 (반복되는 단어 또는 구문)을 찾아 보세요. 찾은 패턴을 우측 사전에 입력하세요. 입력내용을 사전에 입력할 때, 입력내용을 위한 기호가 패턴 자리에 있는 텍스트 안으로 삽입됩니다.",
         "Vigenere": "테스트",
-        "allthethings-anigif-instructions": "오른쪽으로 이동해서 돼지를 잡을 수 있게 해주세요!"
+        "allthethings-anigif-instructions": "오른쪽으로 이동해서 돼지를 잡을 수 있게 해주세요!",
+        "NetSim Standalone Automatic DNS": "이 시뮬레이터 버전에서는 도메인 네임 시스템 (DNS)이 제공되며 이 시스템은 연결된 모든 컴퓨터의 IP 주소를 알고 있습니다. 메시지를 GET [hostname] 양식으로 주소가 <yourRouterNumber>.15인 DNS 서비스로 전송하여 학생들의 주소를 얻으세요.",
+        "NetSim Standalone Freeplay": "이 구성에서 옵션 대부분은 켜져 있으며, 여러분은 그러한 옵션으로 플레이할 수 있습니다. 재미있게 즐기세요!",
+        "NetSim Standalone SendAB": "여러분과 여러분의 파트너는 상태 A 또는 상태 B 중 하나로만 있을 수 있는 단일 와이어를 공유합니다. 이 와이어를 언제든 둘 중 하나의 상태에 설정할 수 있고 언제든 그 와이어의 상태를 읽을 수 있습니다. 이 시스템과 효과적으로 소통할 수 있는 방법을 알아 낼 수 있나요?",
+        "U2L10 NetSim Automatic DNS": "이 시뮬레이터 버전에서는 도메인 네임 시스템 (DNS)이 제공되며 이 시스템은 연결된 모든 컴퓨터의 IP 주소를 알고 있습니다. 메시지를 GET [hostname] 양식으로 주소가 <yourRouterNumber>.15인 DNS 서비스로 전송하여 학생들의 주소를 얻으세요."
       }
     }
   }

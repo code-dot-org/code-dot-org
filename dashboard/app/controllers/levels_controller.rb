@@ -147,9 +147,11 @@ class LevelsController < ApplicationController
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
-    @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
-    fb = FirebaseHelper.new('shared')
-    @dataset_library_manifest = fb.get_library_manifest
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    if @level.is_a? Applab
+      fb = FirebaseHelper.new('shared')
+      @dataset_library_manifest = fb.get_library_manifest
+    end
   end
 
   use_reader_connection_for_route(:get_rubric)

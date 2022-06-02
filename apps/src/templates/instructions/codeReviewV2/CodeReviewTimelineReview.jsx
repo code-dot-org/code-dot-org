@@ -20,9 +20,19 @@ const CodeReviewTimelineReview = ({
   closeReview,
   toggleResolveComment,
   viewAsCodeReviewer,
-  deleteCodeReviewComment
+  deleteCodeReviewComment,
+  currentUserId
 }) => {
-  const {id, createdAt, isOpen, version, isVersionExpired, comments} = review;
+  const {
+    id,
+    createdAt,
+    isOpen,
+    version,
+    isVersionExpired,
+    ownerId,
+    ownerName,
+    comments
+  } = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
@@ -46,7 +56,11 @@ const CodeReviewTimelineReview = ({
             <FontAwesome icon="comments-o" />
           </div>
           <div style={styles.title}>
-            <div style={styles.codeReviewTitle}>{javalabMsg.codeReview()}</div>
+            <div style={styles.codeReviewTitle}>
+              {ownerId === currentUserId
+                ? javalabMsg.codeReviewForYou()
+                : javalabMsg.codeReviewForStudent({student: ownerName})}
+            </div>
             <div style={styles.date}>
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
@@ -73,17 +87,9 @@ const CodeReviewTimelineReview = ({
         )}
         {comments &&
           comments.map(comment => {
-            // When we create the V2 comment, no longer convert, use the new comment shape
-            const convertDataForComponent = {
-              id: comment.id,
-              name: comment.commenterName,
-              commentText: comment.comment,
-              timestampString: comment.createdAt,
-              isResolved: comment.isResolved
-            };
             return (
               <Comment
-                comment={convertDataForComponent}
+                comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
                 onDelete={deleteCodeReviewComment}
@@ -106,7 +112,8 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+  currentUserId: state.currentUser?.userId
 }))(CodeReviewTimelineReview);
 
 CodeReviewTimelineReview.propTypes = {
@@ -116,7 +123,8 @@ CodeReviewTimelineReview.propTypes = {
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
   viewAsCodeReviewer: PropTypes.bool,
-  deleteCodeReviewComment: PropTypes.func.isRequired
+  deleteCodeReviewComment: PropTypes.func.isRequired,
+  currentUserId: PropTypes.number
 };
 
 const styles = {
@@ -145,7 +153,14 @@ const styles = {
     fontStyle: 'italic'
   },
   codeReviewTitle: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    lineHeight: '14px',
+    marginBottom: '4px'
+  },
+  author: {
+    fontSize: '12px',
+    lineHeight: '12px',
+    marginBottom: '4px'
   },
   date: {
     fontSize: '12px',

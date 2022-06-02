@@ -102,6 +102,12 @@
           "name": "Szöveg tömörítése",
           "student_overview": "Egy bizonyos ponton elérjük a fizikai határát annak, hogy milyen gyorsan tudunk biteket küldeni, és ezért, ha szeretnénk nagyobb információ mennyiséget gyorsabban küldeni, akkor meg kell próbálni ugyanannyi információt kevesebb biten tárolni - tömöríteni kell az adatokat.  "
         },
+        "outbreak/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity játéklabor",
           "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
@@ -280,6 +286,9 @@
         "csd3-2018/Functions": {
           "name": "funkciók"
         },
+        "csd6-2018/Board Events": {
+          "name": "Táblás események"
+        },
         "csd6-2018/Functions with Parameters": {
           "name": "Paraméteres függvények"
         },
@@ -358,6 +367,9 @@
         "coursee-2019/Private and Personal Information": {
           "name": "Magán és személyes információk"
         },
+        "coursee-2019/Access Ability": {
+          "name": "Hozzáférhetőség tervezése"
+        },
         "coursee-2019/Functions: Songwriting": {
           "name": "Dalszerzés paraméterekkel"
         },
@@ -408,6 +420,9 @@
         },
         "csd3-2019/Functions": {
           "name": "funkciók"
+        },
+        "csd6-2019/Board Events": {
+          "name": "Táblás események"
         },
         "csd6-2019/Functions with Parameters": {
           "name": "Paraméteres függvények"
@@ -477,6 +492,9 @@
         },
         "csd3-2017/Functions": {
           "name": "funkciók"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Táblás események"
         },
         "csd6-2017/Functions with Parameters_": {
           "name": "Paraméteres függvények"
@@ -734,10 +752,45 @@
           "name": "Művész: ciklusok"
         },
         "jigsaw/Jigsaw": {
-          "name": "Kirakós játék"
+          "name": "Kirakós játék",
+          "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
+          "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel egyenlőbb feltételeket lesznek az osztályban, amikor a diákok majd rejtvényeket fognak megoldani. Ez a lecke remek lehetőséget nyújt arra is, hogy bemutassuk az alapvető számítógépes hardverterminológiát, beleértve az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" fogalmakat, attól függően, hogy milyen eszközt használunk.",
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+        },
+        "coursef-2021/Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/lesson-11": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2021/Loops with the Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Variables that Change in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
         },
         "coursef-2021/For Loop Fun": {
           "name": "Szórakozás a For ciklussal"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/For Loops in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/lesson-5": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
         },
         "coursef-2021/Internet": {
           "name": "Az internet"
@@ -757,6 +810,9 @@
         "courseb-2021/lesson-1": {
           "name": "Kurzus Projekt vége"
         },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+        },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vidám térképek"
         },
@@ -773,8 +829,17 @@
           "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
           "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
         },
+        "coursec-2021/Loops in Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
         "coursec-2021/Events: The Big Event": {
           "name": "A nagy esemény"
+        },
+        "coursec-2021/Build a Flappy Game": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursec-2021/Events in Play Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
         },
         "coursec-2021/Picturing Data": {
           "name": "Az adatok leképezése"
@@ -788,15 +853,36 @@
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Grafikus programozás"
         },
+        "coursed-2021/Introduction to Online Puzzles": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
         "coursed-2021/Relay Programming": {
           "name": "Váltó programozás"
+        },
+        "coursed-2021/Debugging in Collector": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
         },
         "coursed-2021/Dance Party": {
           "name": "Táncos buli",
           "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
         },
+        "coursed-2021/Loops in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Nested Loops in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
         "coursed-2021/Conditionals with Cards": {
           "name": "Feltételek kártyákkal"
+        },
+        "coursed-2021/Conditionals in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/While Loops in Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
         },
         "coursed-2021/End of Course Project": {
           "name": "Kurzus Projekt vége"
@@ -812,21 +898,57 @@
         "express-2021/End of Course Project": {
           "name": "Kurzus Projekt vége"
         },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "A rejtvény befejezéséhez kattints és húzd át"
+        },
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
           "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
         },
+        "coursee-2021/Simon Says": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
         "coursee-2021/Private and Personal Information": {
           "name": "Magán és személyes információk"
+        },
+        "coursee-2021/About Me": {
+          "name": "Miniprojekt: Rólam"
         },
         "coursee-2021/Digital Sharing": {
           "name": "Digitális megosztás"
         },
+        "coursee-2021/Programming and Loops with the Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
         "coursee-2021/Functions: Songwriting": {
           "name": "Dalszerzés paraméterekkel"
         },
+        "coursee-2021/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Functions in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Conditionals": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Functions in Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/lesson-1": {
+          "name": "Hozzáférhetőség tervezése"
+        },
         "coursee-2021/End of Course Project": {
           "name": "Kurzus Projekt vége"
+        },
+        "csd6-2021/Board Events": {
+          "name": "Táblás események"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Paraméteres függvények"
@@ -926,6 +1048,9 @@
         },
         "coursee-2020/Functions: Songwriting": {
           "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2020/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
         },
         "coursee-2020/End of Course Project": {
           "name": "Kurzus Projekt vége"
