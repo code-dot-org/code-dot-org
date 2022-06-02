@@ -193,7 +193,7 @@ class LevelsController < ApplicationController
     # Levels which support (and have )solution blocks use those blocks
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
-    can_use_solution_blocks = @level.respond_to?("get_solution_blocks") &&
+    can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
         @level.properties['solution_blocks']
     should_use_solution_blocks = type == 'required_blocks' || type == 'recommended_blocks'
     if can_use_solution_blocks && should_use_solution_blocks
@@ -292,6 +292,8 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  rescue ArgumentError, ActiveRecord::RecordInvalid => e
+    render status: :not_acceptable, plain: e.message
   end
 
   # POST /levels/:id/update_start_code

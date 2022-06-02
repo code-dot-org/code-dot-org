@@ -1288,6 +1288,7 @@ tr-TR:
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
@@ -1408,6 +1409,12 @@ tr-TR:
   coursed-2021_gradelevel: 8+ sınıfları
   coursee-2021_gradelevel: 9. ve üzeri Sınıflar
   coursef-2021_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2022_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2022_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2022_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2022_gradelevel: 8+ sınıfları
+  coursee-2022_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2022_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1627,6 +1634,28 @@ tr-TR:
     arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın
     ve oluşturun.
   coursef-2021_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve
+    koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
+    ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
+    bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi
+    tasarlayınız ve oluşturunuz.
+  coursea-2022_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin
+    temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya
+    da hikaye oluştur.
+  courseb-2022_shortdescription_congrats: Bilgisayar bilimi ve internet güvenliğinin
+    temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya
+    da hikaye oluştur.
+  coursec-2022_shortdescription_congrats: Döngüler, olaylar ve koşullar içeren programlar
+    oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme
+    tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
+    kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+  coursed-2022_shortdescription_congrats: Öğrenciler; döngüler, koşullar ve olaylara
+    dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık
+    ile ilgili bilgi edinecektir.
+  coursee-2022_shortdescription_congrats: Algoritmalar, döngüler, koşullar ve olaylarla
+    kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında,
+    arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın
+    ve oluşturun.
+  coursef-2022_shortdescription_congrats: Farklı döngüler, olaylar, fonksiyonlar ve
     koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
     ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
     bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi

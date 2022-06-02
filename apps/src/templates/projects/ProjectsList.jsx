@@ -1,13 +1,15 @@
-import PropTypes from 'prop-types';
-import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import commonMsg from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
+import PropTypes from 'prop-types';
+import React from 'react';
 import orderBy from 'lodash/orderBy';
+
+import commonMsg from '@cdo/locale';
+
+import wrappedSortable from '../tables/wrapped_sortable';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -32,16 +34,6 @@ const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
 
-/**
- * Takes a date formatted as YYYY-MM-DD and returns it as MM/DD/YYYY.
- * @param {string} dateString
- * @returns {string}
- */
-const dateFormatter = dateString => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString();
-};
-
 const thumbnailFormatter = thumbnailUrl => {
   return thumbnailUrl ? (
     <ImageWithStatus
@@ -56,11 +48,12 @@ const thumbnailFormatter = thumbnailUrl => {
 
 class ProjectsList extends React.Component {
   static propTypes = {
+    localeCode: PropTypes.string,
     projectsData: PropTypes.array.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
-    showProjectThumbnails: PropTypes.bool.isRequired
+    studioUrlPrefix: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -127,6 +120,18 @@ class ProjectsList extends React.Component {
     );
   };
 
+  /**
+   * Takes a date formatted as YYYY-MM-DD and returns it as MM/DD/YYYY, or the
+   * localized equivalent if using a non-English locale.
+   *
+   * @param {string} dateString
+   * @returns {string}
+   */
+  dateFormatter = dateString => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(this.props.localeCode || []);
+  };
+
   getColumns = sortable => {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
@@ -182,7 +187,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [dateFormatter],
+          formatters: [this.dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }
