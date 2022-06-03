@@ -1,8 +1,6 @@
 class ProjectVersionsController < ApplicationController
   before_action :authenticate_user!
 
-  include ProjectVersionHelper
-
   # POST /project_versions
   def create
     _, project_id = storage_decrypt_channel_id(params[:storage_id])
