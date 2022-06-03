@@ -96,7 +96,6 @@ describe('CourseOverviewTopRow', () => {
             url: 'https://forum.code.org/'
           }
         ]}
-        useMigratedResources
         isInstructor={false}
       />
     );
@@ -124,7 +123,6 @@ describe('CourseOverviewTopRow', () => {
             url: 'https://forum.code.org/'
           }
         ]}
-        useMigratedResources
         isInstructor={false}
       />
     );

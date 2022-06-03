@@ -174,7 +174,6 @@ describe('UnitOverviewTopRow', () => {
                 url: 'https://example.com/b'
               }
             ]}
-            useMigratedResources={true}
           />
         )
       ).to.be.true;

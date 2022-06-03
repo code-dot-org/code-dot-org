@@ -153,7 +153,6 @@ class UnitOverviewTopRow extends React.Component {
               <ResourcesDropdown
                 migratedResources={studentResources}
                 unitId={scriptId}
-                useMigratedResources
                 studentFacing
               />
             )}
@@ -176,7 +175,6 @@ class UnitOverviewTopRow extends React.Component {
               <ResourcesDropdown
                 migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (

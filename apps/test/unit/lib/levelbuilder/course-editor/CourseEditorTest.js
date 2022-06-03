@@ -43,7 +43,9 @@ const defaultProps = {
   coursePath: '/courses/test-course',
   initialInstructionType: InstructionType.teacher_led,
   initialInstructorAudience: InstructorAudience.teacher,
-  initialParticipantAudience: ParticipantAudience.student
+  initialParticipantAudience: ParticipantAudience.student,
+  migratedTeacherResources: [],
+  studentResources: []
 };
 
 describe('CourseEditor', () => {
