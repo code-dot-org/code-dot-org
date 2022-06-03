@@ -1,3 +1,8 @@
+---
+title: Code.org in Farsi
+theme: responsive
+---
+
 ![Young students showing off their work in a classroom](images/iranianstudents.png)
 
 Code.org in Farsi (Persian)
@@ -25,7 +30,7 @@ Why now? Three reasons: (1) The Afghan refugee crisis creates a unique need for 
 How can you help?
 The project would require both volunteer support, as well as financial support, especially to translate the content in Code.org. 
 
-1. **Volunteer to translate:** Any volunteer can help us with translation, just visit [code.org/translate](code.org/translate). Or, if you live in Seattle, [sign up](https://docs.google.com/forms/d/e/1FAIpQLSfa2fCZPDBtv7NpgrjcUGwhRr1JDjz3wNPbfMYOW3x9Q_nljQ/viewform) for our in-person translation party on June 26 (and enjoy free Chelo Kabab with Hadi and members of the Code.org team!)
+1. **Volunteer to translate:** Any volunteer can help us with translation, just visit [code.org/translate](code.org/translate).
 
 2. **Donate:** The financial support would cover professional translation (including voice-over for videos), as well as administrative costs + travel to enable the rest of the work. The budget for the entire project is $300,000. If you compare that to the potential to support 15 million students, a $100 gift = 5,000 students who gain access. To donate, [click here](https://donate.code.org/give/410070/#!/donation/checkout).
 
