@@ -5,10 +5,10 @@ Factory.define('CodeReviewComment')
   .attr('name', 'Charlie Brown')
   .attr(
     'commentText',
-    "Don't worry about the world coming to an end today. It's already tomorrow in Australia."
+    'This is brilliant and you are doing a great job and I love the simplicity here'
   )
   .attr('timestampString', '2019-01-29T02:49:08.000Z')
-  .attr('isResolved', false)
-  .attr('isFromTeacher', false)
-  .attr('isFromCurrentUser', false)
-  .attr('isFromOlderVersionOfProject', false);
+  .attr('onResolveStateToggle', () => {})
+  .attr('onDelete', () => {})
+  .attr('viewAsCodeReviewer', false)
+  .attr('viewAsTeacher', false);
