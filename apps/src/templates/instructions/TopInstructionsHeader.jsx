@@ -232,11 +232,9 @@ const styles = {
     minWidth: 100
   },
   helpTabsLtr: {
-    float: 'left',
     paddingLeft: 30
   },
   helpTabsRtl: {
-    float: 'right',
     paddingRight: 30
   },
   collapserIcon: {
