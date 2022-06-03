@@ -1319,7 +1319,7 @@ class User < ApplicationRecord
   end
 
   # Is the given script hidden for this user (based on the sections that they are in)
-  def script_hidden?(script)
+  def unit_hidden?(script)
     return false if try(:teacher?)
 
     return false if sections_as_student.empty?
