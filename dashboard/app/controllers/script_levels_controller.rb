@@ -515,7 +515,7 @@ class ScriptLevelsController < ApplicationController
 
     @code_review_enabled_for_level = @level.is_a?(Javalab) &&
       current_user.present? &&
-      (@script_level.script.can_be_instructor?(current_user) || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+      (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
     # Javalab exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
