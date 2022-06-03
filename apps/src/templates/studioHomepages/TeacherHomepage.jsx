@@ -244,13 +244,12 @@ export const UnconnectedTeacherHomepage = ({
           isTeacher={true}
           hasFeedback={false}
         />
-        {hasFeedback &&
-          (plCourses?.length > 0 || topPlCourse)(
-            <StudentFeedbackNotification
-              studentId={teacherId}
-              isProfessionalLearningCourse={true}
-            />
-          )}
+        {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
+          <StudentFeedbackNotification
+            studentId={teacherId}
+            isProfessionalLearningCourse={true}
+          />
+        )}
         {(plCourses?.length > 0 || topPlCourse) && (
           <RecentCourses
             courses={plCourses}
