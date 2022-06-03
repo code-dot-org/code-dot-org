@@ -8,7 +8,6 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -46,7 +45,6 @@ class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
     initialHasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -64,8 +62,6 @@ class CourseEditor extends Component {
   constructor(props) {
     super(props);
 
-    const teacherResources = [...props.initialTeacherResources];
-
     this.state = {
       isSaving: false,
       error: null,
@@ -74,7 +70,6 @@ class CourseEditor extends Component {
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       pilotExperiment: this.props.initialPilotExperiment,
-      teacherResources: teacherResources,
       title: this.props.initialTitle,
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,

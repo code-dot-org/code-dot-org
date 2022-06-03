@@ -9,9 +9,6 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExt
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -65,7 +62,6 @@ class UnitEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
@@ -110,15 +106,6 @@ class UnitEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.isMigrated) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
-
     this.state = {
       isSaving: false,
       error: null,
@@ -160,7 +147,6 @@ class UnitEditor extends React.Component {
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      teacherResources: teacherResources,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
@@ -364,8 +350,6 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type),
       resourceIds: this.props.migratedTeacherResources.map(
         resource => resource.id
       ),
