@@ -291,6 +291,7 @@
           "type": "comment",
           "name": "prework_comment",
           "title": "If you have any thoughts on how we can improve the pre-work to be more helpful to participants in future workshops, please use this space to share them.",
+          "visibleIf": "{workshop_course} = 'Computer Science A'",
           "cols": 6,
           "rows": 2
         },
