@@ -230,12 +230,7 @@ describe('UnitEditor', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
-        expect(
-          wrapper
-            .find('ResourcesEditor')
-            .first()
-            .props().useMigratedResources
-        ).to.be.true;
+        expect(wrapper.find('ResourcesEditor').first()).to.exist;
       });
     });
 
