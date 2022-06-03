@@ -35,7 +35,6 @@ export default class CourseOverviewTopRow extends Component {
           <ResourcesDropdown
             migratedResources={migratedTeacherResources}
             unitGroupId={id}
-            useMigratedResources
           />
         )}
         {isInstructor && (
@@ -52,7 +51,6 @@ export default class CourseOverviewTopRow extends Component {
           <ResourcesDropdown
             migratedResources={studentResources}
             unitGroupId={id}
-            useMigratedResources
             studentFacing
           />
         )}
