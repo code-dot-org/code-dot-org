@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape} from './resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -12,11 +11,9 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
-    useMigratedResources: PropTypes.bool.isRequired,
     isInstructor: PropTypes.bool
   };
 
@@ -25,27 +22,22 @@ export default class CourseOverviewTopRow extends Component {
       id,
       courseOfferingId,
       courseVersionId,
-      teacherResources,
       migratedTeacherResources,
       studentResources,
       showAssignButton,
       sectionsForDropdown,
-      useMigratedResources,
       isInstructor
     } = this.props;
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor &&
-          ((useMigratedResources && migratedTeacherResources.length > 0) ||
-            (!useMigratedResources && teacherResources.length > 0)) && (
-            <ResourcesDropdown
-              resources={teacherResources}
-              migratedResources={migratedTeacherResources}
-              unitGroupId={id}
-              useMigratedResources={useMigratedResources}
-            />
-          )}
+        {isInstructor && migratedTeacherResources.length > 0 && (
+          <ResourcesDropdown
+            migratedResources={migratedTeacherResources}
+            unitGroupId={id}
+            useMigratedResources
+          />
+        )}
         {isInstructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
