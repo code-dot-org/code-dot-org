@@ -1328,7 +1328,7 @@ class User < ApplicationRecord
     unit_group = unit.try(:unit_group)
     return false unless unit_group
 
-    get_student_hidden_ids(unit_group.id, false).include?(unit.id)
+    get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1339,7 +1339,7 @@ class User < ApplicationRecord
     unit = Script.get_from_cache(unit_name)
     return [] if unit.nil?
 
-    teacher? ? get_instructor_hidden_ids(true) : get_student_hidden_ids(unit.id, true)
+    teacher? ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1349,7 +1349,7 @@ class User < ApplicationRecord
   def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_instructor_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
+    teacher? ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -2547,7 +2547,7 @@ class User < ApplicationRecord
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden units.
   # @return {number[]} Set of lesson/unit ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_lessons)
+  def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
