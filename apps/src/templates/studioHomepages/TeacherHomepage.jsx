@@ -19,7 +19,7 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -245,7 +245,7 @@ export const UnconnectedTeacherHomepage = ({
           hasFeedback={false}
         />
         {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
-          <StudentFeedbackNotification
+          <ParticipantFeedbackNotification
             studentId={teacherId}
             isProfessionalLearningCourse={true}
           />

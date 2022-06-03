@@ -4,7 +4,7 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 
-export default class StudentFeedbackNotification extends Component {
+export default class ParticipantFeedbackNotification extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     isProfessionalLearningCourse: PropTypes.bool
