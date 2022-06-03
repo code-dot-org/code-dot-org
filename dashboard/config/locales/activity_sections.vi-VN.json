@@ -923,6 +923,9 @@
         "30f90504-21cc-4713-949c-c5bcdb5c3288": {
           "progression_name": "chơi miễn phí"
         },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Dự án Sprite Lab"
+        },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Dự án nghệ thuật",
           "progression_name": "Dự án nghệ thuật"
@@ -947,9 +950,15 @@
           "name": "chơi miễn phí",
           "progression_name": "chơi miễn phí"
         },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Dự án Sprite Lab"
+        },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Dự án nghệ thuật",
           "progression_name": "Dự án nghệ thuật"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Dự án Sprite Lab"
         },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Dự án nghệ thuật",
@@ -1299,6 +1308,9 @@
             "Hãy chỉ cho học sinh cách phù hợp để giúp các bạn trong lớp:\n\n-   Không ngồi vào ghế của bạn cùng lớp\n-   Không sử dụng bàn phím của bạn cùng lớp\n-   Không chạm vào chuột của bạn cùng lớp\n-   Đảm bảo rằng bạn cùng lớp có thể mô tả lời giải thành tiếng cho bạn trước bạn bước đi"
           ]
         },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Cấp độ"
+        },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Phản ánh"
         },
@@ -1532,6 +1544,7 @@
           "description": "### Biến chuỗi thức ăn (45-60 phút)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png)![](https://curriculum.code.org/media/uploads/mathSmall.png)![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Khoa học máy tính + Anh văn + Toán + Khoa học**\n\n[\\*\\*Biến chuỗi thức ăn\\*\\*](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit?usp=sharing) là hoạt động tùy chọn phù hợp với hệ thống Common Core ELA (Tiêu chuẩn chung cho Anh văn căn bản), Common Core Math (Tiêu chuẩn chung cho Toán căn bản) và Next Generation Science Standards (Tiêu chuẩn khoa học thế hệ mới) do cộng đồng giáo viên thiết lập. Học sinh sẽ xác định các giá trị khác nhau cho các biến có trong chuỗi thức ăn (Ví dụ: thực vật, động vật, sinh vật phân hủy, v.v.) trong quá trình ghi lại các giá trị này trên giấy ghi chú và minh họa chu trình của vật chất trong môi trường. Học sinh cũng sẽ tìm hiểu Quy tắc 10% và mô tả thêm về dòng năng lượng với lời nhắc viết bài.\n\n\\_Các tiêu chuẩn áp dụng: \\_\n\n-   **CCSS.ELA-LITERACY.W.5.2.B:** Phát triển chủ đề với các dữ kiện, định nghĩa, chi tiết cụ thể, trích dẫn hoặc thông tin và ví dụ khác liên quan đến chủ đề.\n\n-   **CCSS.MATH.CONTENT.5.NF.B.7.C:** Giải các bài toán trong thế giới thực liên quan đến phép chia các phân số đơn vị cho các số nguyên khác không và chia các số nguyên cho các phân số đơn vị, ví dụ: bằng cách sử dụng mô hình phân số và phương trình dưới dạng hình ảnh để biểu diễn bài toán.\n\n-   **NGSS.5-LS2-1:** Phát triển mô hình mô tả chu trình của vật chất trong hệ thống thực vật, động vật, sinh vật phân hủy và môi trường."
         },
         "d2b97c32-0187-432e-9fa2-979e9f34280a": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:** Gợi cho học sinh nhớ lại những hoạt động trong bài học trước hoặc yêu cầu họ chia sẻ.\n\n**Thảo luận:** Các chương trình máy tính yêu cầu chúng ta cung cấp thông tin như thế nào?\n\n**Mục tiêu thảo luận:** Học sinh nên suy nghĩ về trải nghiệm của bản thân với tư cách là người dùng và thời điểm máy tính yêu cầu họ cung cấp thông tin. Có rất nhiều cách để nhập thông tin vào máy tính, nhưng trước mắt hãy tập trung vào ý tưởng nhập thông tin vào lời nhắc."
         },
         "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d": {
@@ -1554,6 +1567,7 @@
           ]
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:** Sử dụng các slide bài học để ôn lại từ vựng cho bài học này. Hãy chắc chắn rằng học sinh có thể nhớ lại bài học mà họ đã tiếp xúc với từng khái niệm trong số này."
         },
         "75769a9e-4f2f-41af-b9b0-cb51cfadab11": {
@@ -1564,6 +1578,7 @@
           "description": "Chọn một (hoặc cả hai) lời nhắc suy nghĩ bên dưới để cung cấp cho học sinh. Họ có thể ghi nhật ký cá nhân hoặc thảo luận các câu trả lời trong nhóm hoặc cả lớp.\n\n**Lời nhắc:**\n\n-   Biến và chiếc hộp có điểm gì giống nhau? Có điểm gì khác nhau?\n-   Tại sao người lập trình cần biến?"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:** Sử dụng slide bài học, ôn lại các khái niệm mà học sinh đã khám phá cho đến thời điểm hiện tại trong khóa học: nhân vật, hành vi, sự kiện và văn bản. Cuối cùng, hãy ôn lại cách hoạt động của lời nhắc và biến.\n\n#### Dự đoán\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán hiện tượng sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian để suy ngẫm về những chi tiết mà họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "tips": [
             "Một trong những phần khó nhất khi tìm hiểu về biến là đảm bảo rằng nhãn của biến luôn phù hợp. Trong cấp độ này, hãy đảm bảo rằng học sinh nhận thấy sự khác biệt giữa biến **bữa ăn** và biến **thức ăn**. Học sinh nên hiểu rằng cách tốt nhất để giải quyết vấn đề này là chỉ sử dụng một biến, đảm bảo rằng nhãn luôn phù hợp.\n\nBạn cũng có thể hướng dẫn cả lớp sửa lỗi trong chương trình bằng cấp độ [Hộp cát dành cho giáo viên](https://studio.code.org/levels/27300) này với máy chiếu của bạn."
@@ -1606,6 +1621,7 @@
           "description": "**Lời nhắc:**\n\n-   Hình khối hoặc hình dạng thú vị nhất mà bạn đã lập trình hôm nay là gì? Hãy vẽ ra nào!\n-   Hình khối hoặc hình dạng mà bạn muốn lập trình là gì? Bạn có thể nghĩ ra mã lệnh để vẽ hình đó không?"
         },
         "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
+          "name": "Đánh giá",
           "description": "Bạn nên giúp học sinh nhớ lại những kiến thức đã biết về biến cho đến thời điểm hiện tại.\n\n-   Biến có đặc điểm nào giống như một chiếc hộp hoặc một thùng chứa?\n-   Khi thông tin được lưu trữ trong biến, sau này chúng ta sẽ sử dụng thông tin như thế nào trong chương trình?"
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
@@ -1709,6 +1725,9 @@
         "30ee92f3-9378-4f76-acea-3c22d8df60dd": {
           "name": "Vòng lặp for với Chú ong",
           "description": "#### Bài tập rrực tuyến\n\nMột số học sinh có thể gặp khó khăn trong việc phân biệt giữa vòng lặp repeat (lặp lại) và vòng lặp for (với). Chúng tội khuyên bạn chuẩn bị sẵn giấy nháp để học sinh dự đoán các giá trị như giá trị đầu, cuối và bước. Việc triển khai lập trình theo cặp giữa các lớp cũng có thể hữu ích cho học sinh của bạn."
+        },
+        "1668a313-16da-49db-9713-13d7ad33889e": {
+          "progression_name": "Đánh giá"
         },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
           "progression_name": "Bài học mở rộng"
@@ -2343,6 +2362,7 @@
           "description": "Hãy dùng các hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể dùng bên ngoài các hoạt động trên lớp hoặc các hoạt động bổ sung khác.\n\n**Nhìn vào bản chất**\n\nKhi chia sẻ liên kết đến câu chuyện của mình, bạn cũng chia sẻ toàn bộ mã lệnh đằng sau. Đây là cách tuyệt vời để học sinh học hỏi lẫn nhau.\n\n-   Đăng liên kết đến các câu chuyện đã hoàn thành lên mạng\n    -   Tạo câu chuyện của riêng bạn để chia sẻ!\n-   Khi học sinh tải lên liên kết, hãy yêu cầu học sinh nhấp vào nút “Cách hoạt động” để xem mã lệnh đằng sau câu chuyện.\n-   Thảo luận theo nhóm về các cách khác nhau mà bạn cùng lớp đã lập trình câu chuyện của mình.\n    -   Điều gì khiến bạn ngạc nhiên?\n    -   Bạn muốn thử điều gì?\n-   Chọn câu chuyện của người khác và nhấp vào `Remix` (chỉnh sửa) để phát triển trên nền tảng câu chuyện đó. (Đừng lo, câu chuyện gốc sẽ không bị ảnh hưởng.)"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:**\n\n\\*Truyền cảm hứng và giúp học sinh sẵn sàng cho hoạt động hôm nay. Hãy bắt đầu bằng cách cho học sinh nhớ lại những gì đã làm trong các bài học trước khi sử dụng Play Lab.\n\\*Ôn lại từ vựng **sự kiện**.\n\\*Nếu bạn đã tạo dự án mẫu của riêng mình thì hãy chia sẻ ngay bây giờ."
         },
         "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c": {
@@ -2738,6 +2758,7 @@
           "description": "Hãy dùng các hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể dùng bên ngoài các hoạt động trên lớp hoặc các hoạt động bổ sung khác.\n\n**Nhìn vào bản chất**\n\nKhi chia sẻ liên kết đến câu chuyện của mình, bạn cũng chia sẻ toàn bộ mã lệnh đằng sau. Đây là cách tuyệt vời để học sinh học hỏi lẫn nhau.\n\n-   Đăng liên kết đến các câu chuyện đã hoàn thành lên mạng\n    -   Tạo câu chuyện của riêng bạn để chia sẻ!\n-   Khi học sinh tải lên liên kết, hãy yêu cầu học sinh nhấp vào nút “Cách hoạt động” để xem mã lệnh đằng sau câu chuyện.\n-   Thảo luận theo nhóm về các cách khác nhau mà bạn cùng lớp đã lập trình câu chuyện của mình.\n    -   Điều gì khiến bạn ngạc nhiên?\n    -   Bạn muốn thử điều gì?\n-   Chọn câu chuyện của người khác và nhấp vào `Remix` (chỉnh sửa) để phát triển trên nền tảng câu chuyện đó. (Đừng lo, câu chuyện gốc sẽ không bị ảnh hưởng.)"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:**\n\n-   Giúp học sinh hào hứng và sẵn sàng cho hoạt động hôm nay. Bắt đầu bằng cách yêu cầu học sinh nhớ lại những gì họ đã làm trong bài học trước đó bằng cách sử dụng các công cụ Họa sĩ.\n-   Ôn lại từ vựng **vòng lặp**.\n-   Nếu bạn đã tạo riêng dự án mẫu, hãy chia sẻ ngay."
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
@@ -4178,6 +4199,7 @@
           "description": "Cho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về buổi học hôm nay?\n-   Điều gì giúp bạn nhận ra rằng hàm có thể hỗ trợ chương trình của bạn?\n-   Vòng lặp `while` (khi) và mệnh đề `if/else` (nếu/nếu không) hỗ trợ chương trình của bạn như thế nào?"
         },
         "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
+          "name": "Đánh giá",
           "description": "**Thảo luận:** Các chương trình máy tính yêu cầu chúng ta cung cấp thông tin như thế nào?\n\n**Mục tiêu thảo luận:** Học sinh nên suy nghĩ về trải nghiệm của bản thân với tư cách là người dùng và thời điểm máy tính yêu cầu họ cung cấp thông tin. Có rất nhiều cách để nhập thông tin vào máy tính, nhưng trước mắt hãy tập trung vào ý tưởng nhập thông tin vào lời nhắc."
         },
         "25823095-1532-4221-8a37-b07d1788c3ee": {
@@ -4200,6 +4222,7 @@
           ]
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
+          "name": "Đánh giá",
           "description": "**Làm như sau:** Sử dụng các slide bài học để ôn lại từ vựng cho bài học này. Hãy chắc chắn rằng học sinh có thể nhớ lại bài học mà họ đã tiếp xúc với từng khái niệm trong số này."
         },
         "e852c6f5-b85a-4e1c-abe5-c5ec5b111f83": {
@@ -4210,6 +4233,7 @@
           "description": "Chọn một (hoặc cả hai) lời nhắc suy nghĩ bên dưới để cung cấp cho học sinh. Họ có thể ghi nhật ký cá nhân hoặc thảo luận các câu trả lời trong nhóm hoặc cả lớp.\n\n**Lời nhắc:**\n\n-   Biến và chiếc hộp có điểm gì giống nhau? Có điểm gì khác nhau?\n-   Tại sao người lập trình cần biến?"
         },
         "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
+          "name": "Đánh giá",
           "description": "Bạn nên giúp học sinh nhớ lại những kiến thức đã biết về biến cho đến thời điểm hiện tại.\n\n-   Biến có đặc điểm nào giống như một chiếc hộp hoặc một thùng chứa?\n-   Khi thông tin được lưu trữ trong biến, sau này chúng ta sẽ sử dụng thông tin như thế nào trong chương trình?"
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
@@ -4242,6 +4266,9 @@
         "eac3c96a-98e8-4d3f-95de-b60f44c66df2": {
           "name": "Vòng lặp for với chương trình Chú ong",
           "description": "#### Bài tập rrực tuyến\n\nMột số học sinh có thể gặp khó khăn trong việc phân biệt giữa vòng lặp repeat (lặp lại) và vòng lặp for (với). Chúng tội khuyên bạn chuẩn bị sẵn giấy nháp để học sinh dự đoán các giá trị như giá trị đầu, cuối và bước. Việc triển khai lập trình theo cặp giữa các lớp cũng có thể hữu ích cho học sinh của bạn."
+        },
+        "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
+          "progression_name": "Đánh giá"
         },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
           "progression_name": "Bài học mở rộng"
@@ -6982,6 +7009,9 @@
             null
           ]
         },
+        "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
+          "name": "Đánh giá"
+        },
         "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
           "tips": [
             null
@@ -7050,6 +7080,9 @@
           "tips": [
             null
           ]
+        },
+        "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
+          "name": "Đánh giá"
         },
         "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
           "tips": [

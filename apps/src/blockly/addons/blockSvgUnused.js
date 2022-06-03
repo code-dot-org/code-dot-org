@@ -133,16 +133,21 @@ export default class BlockSvgUnused {
 
     // We bind to mousedown rather than click so we can interrupt the drag
     // that would otherwise be initiated.
-    Blockly.bindEvent_(this.frameHelp_, 'mousedown', this, function(e) {
-      if (Blockly.utils.isRightButton(e)) {
-        // Right-click.
-        return;
-      }
+    Blockly.cdoUtils.bindBrowserEvent(
+      this.frameHelp_,
+      'mousedown',
+      this,
+      function(e) {
+        if (Blockly.utils.isRightButton(e)) {
+          // Right-click.
+          return;
+        }
 
-      this.helpClickFunc_(e);
-      e.stopPropagation();
-      e.preventDefault();
-    });
+        this.helpClickFunc_(e);
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    );
   }
 
   render(svgGroup) {

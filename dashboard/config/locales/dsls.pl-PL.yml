@@ -6331,64 +6331,87 @@ pl-PL:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
       Choose 2 Test:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
         questions:
-        - {}
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz <u>dwie</u> odpowiedzi
       Eval Contracts F:
         answers:
-        - ''
+        - tekst|obraz|łańcuch|liczba|łańcuch
+        title: Umowa tekstowa
       Multi Horizontal Scroll Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 3 bity
+        - text: 4 bity
+        - text: 5 bitów
+        - text: 6 bitów
+        - text: 7 bitów
+          correct: true
+        - text: 12 bitów
         questions:
-        - {}
+        - text: |-
+            Standardowa klawiatura QWERTY składa się z 47 klawiszy, które mogą umieszczać znaki na ekranie. Każdy z tych klawiszy może również wyświetlać drugi znak, przytrzymując jednocześnie klawisz „Shift” (Załóżmy, że wszystkie inne klawisze są ignorowane w tym pytaniu).
+
+            Ile bitów potrzebujesz, aby zakodować wszystko, co można wpisać na tej klawiaturze?
       Submittable Multi:
         answers:
         - text: niebieski
         - text: zielony
-        - {}
+        - text: morski
         - text: żółty
-        - correct: true
+        - text: oczywiście prawdziwy pomarańczowy
+          correct: true
         - text: czerwony
         questions:
-        - {}
+        - text: 'Jaki jest Twój ulubiony kolor? '
       Test Contained Multi:
         answers:
         - text: '0'
+          feedback: Nie, to jest 1 - 1.
         - text: '1'
+          feedback: Nie, to jest 1 * 1.
         - text: '2'
           correct: true
+          feedback: Tak, jesteś geniuszem
         - text: '4'
+          feedback: Nie, to nie jest nawet blisko.
         questions:
-        - {}
+        - text: Ile jest 1 + 1?
+        content1: Oto kilka informacji.
+        title: Zawiera wiele
       allthethings_external_displayed_as_unplugged:
         content1: opis tutaj
+        markdown: Ten poziom zewnętrzny powinien być wyświetlany jako bez komputera.
       allthethings_external_not_displayed_as_unplugged:
         content1: opis tutaj
+        markdown: Ten poziom zewnętrzny nie powinien być wyświetlany jako bez komputera.
       contained_Choose_2_Test:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
         questions:
-        - {}
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz <u>dwie</u> odpowiedzi
       contained_Choose_2_Test_2:
         answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Wiersz 2
+          correct: true
+        - text: Wiersz 3
+          correct: true
+        - text: Wiersz 4
+        - text: Wiersz 5
         questions:
-        - {}
+        - text: Które wiersze kodu należy usunąć, aby program działał zgodnie z przeznaczeniem?
+            Wybierz **dwie** odpowiedzi
       contained_Happy_Maps_Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
@@ -6402,9 +6425,31 @@ pl-PL:
         title: Test wielokrotnego wyboru
       test questionless single multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: |-
+            Wywoływanie parametrów funkcji
+             ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)
+        - text: "Definiowanie parametrów funkcji  \n ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
+          correct: true
+        - text: |-
+            Przemieszczanie żółwia po ekranie
+             ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)
+        - text: |-
+            Nadawanie kierunku żółwiowi
+             ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)
+        - text: |-
+            Ustawianie właściwości pióra
+             ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)
         - text: Żadne z powyższych
+      Sample CSP Assessment:
+        title: Przykład sprawdzianu CSP
+      Video - The Future of Big Data:
+        markdown: |+
+          # Przyszłość Giga Danych
+
+          [![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0)
+
+          [Source](http://www.fwthinking.com/video/clips/future-big-data-video/)
+
+
+
+

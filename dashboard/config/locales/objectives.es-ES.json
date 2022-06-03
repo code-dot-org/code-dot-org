@@ -1519,6 +1519,57 @@
         },
         "6b4d8978-99c8-4541-9213-fa14c4132c62": {
           "description": "Utiliza una práctica estructurada para crear en colaboración un dispositivo digital."
+        },
+        "05f3226e-a69a-45ca-8264-e6cacdfb11ee": {
+          "description": "Crea una página web con HTML"
+        },
+        "cec2c627-e5a4-418b-bbd9-2f2811e12060": {
+          "description": "Comprender y explicar las razones por las que es difícil controlar quién ve la información publicada en línea."
+        },
+        "efb37b92-5146-4ab0-803f-3e5af49fdb2b": {
+          "description": "Comprender y justificar las directrices para publicar información en línea de forma segura. "
+        },
+        "f37f28fd-4bc2-4e94-9dc0-6f33f4cb4788": {
+          "description": "Utiliza los selectores CSS para dar estilo a los elementos de texto HTML."
+        },
+        "11d70e24-1663-4d02-a703-df9dc90d95ce": {
+          "description": "Enlace a una hoja de estilo externa."
+        },
+        "841a5265-0723-41ea-b44b-d400888b94b3": {
+          "description": "Explica las diferencias entre HTML y CSS tanto en el uso como en la sintaxis."
+        },
+        "c90f8313-22ae-45e6-9450-a0714af452cc": {
+          "description": "Explica la finalidad de los derechos de autor."
+        },
+        "db0482b9-a7da-40d5-a2d1-1a3dc9f4c50a": {
+          "description": "Identificar los derechos y restricciones que otorgan las distintas licencias Creative Commons."
+        },
+        "47b9c8f4-c0ee-4b41-9eb6-a30052d7c23c": {
+          "description": "Respeta la ley de propiedad intelectual, citando con precisión al autor cuando utilices su trabajo."
+        },
+        "9aafa27a-70aa-484d-badc-18eb0a076314": {
+          "description": "Añadir una imagen a una página web."
+        },
+        "e8ff26cd-097b-400e-889c-c6c44d5a3137": {
+          "description": "Identificar los sitios web como una forma de expresión personal."
+        },
+        "b0ff1a83-f9f0-4b45-a330-b8c8c1bcf6fd": {
+          "description": "Utiliza las propiedades CSS para cambiar el tamaño, la posición y los bordes de los elementos."
+        },
+        "5b97326f-0ff4-4591-aa66-f7ace264770c": {
+          "description": "Crea un conjunto de reglas CSS para el elemento `body` que afecta a todos los elementos de la página."
+        },
+        "aa0cfb82-8457-4535-a490-96e328cee54e": {
+          "description": "Separar lógicamente el contenido, la estructura y el formato de un artefacto digital"
+        },
+        "791ac437-7323-4d8d-bb8a-7136ea43bdc4": {
+          "description": "Crear documentación que explique las decisiones de diseño de un artefacto"
+        },
+        "a09ff0ba-c097-4db6-819d-99100bf952ff": {
+          "description": "Crear un artefacto digital"
+        },
+        "9237d04e-dcfc-44eb-bdcf-251e970323ef": {
+          "description": "Crear un artefacto digital"
         }
       }
     }

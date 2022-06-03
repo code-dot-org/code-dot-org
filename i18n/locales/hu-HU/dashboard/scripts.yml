@@ -2,12 +2,6 @@
 hu:
   data:
     script:
-      category:
-        csf_category_name: A számítógép-tudomány alapjai
-        csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
-        hoc_category_name: A kódolás órája
-        math_category_name: Matematika
-        other_category_name: Egyéb
       name:
         course1:
           title: 1.  tanfolyam
@@ -301,6 +295,8 @@ hu:
           lessons:
             K-5 Courses:
               name: Alsó tagozatos tanfolyamok
+            Reflection:
+              name: Tükrözés
             Teacher Dashboard:
               name: Tanári nyitólap
             Unplugged lessons:
@@ -424,6 +420,8 @@ hu:
               name: Feladványok
         cspunit1:
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Text Compression:
               name: Szöveg tömörítése
         algebraPD:
@@ -619,6 +617,8 @@ hu:
               name: A számítógép-tudomány alapjai
             Getting Started:
               name: Első lépések
+            Planning:
+              name: Tervezés
         ECSPD2:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
@@ -880,6 +880,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             The Internet:
               name: Az internet
             Unit 1 Chapter 1 Assessment:
@@ -993,6 +995,8 @@ hu:
           lessons:
             Design Mode:
               name: Tervező mód
+        CSDU1-Draft:
+          description_short: Problémamegoldás
         CSDU5-Draft:
           description_short: Adat
         CSF_Secret_Sample_Story:
@@ -1469,6 +1473,8 @@ hu:
               name: Számláló ciklusok
             Map:
               name: Térkép
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
         workshop-gamelab:
@@ -1501,8 +1507,12 @@ hu:
               name: Listák
             For Loops:
               name: Számláló ciklusok
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
+            Board Events_:
+              name: Táblás események
             Functions with Parameters_:
               name: Paraméteres függvények
         csd3-draft:
@@ -2121,6 +2131,8 @@ hu:
           lessons:
             Functions with Parameters_:
               name: Paraméteres függvények\_
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
         coursee-2018:
@@ -2193,6 +2205,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Unit 1 Chapter 1 Assessment:
               name: 1.  lecke 1. fejezet végi értékelés
             The Internet:
@@ -2448,6 +2462,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         dance-extras:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
           student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
@@ -2557,10 +2573,14 @@ hu:
               name: Csoportos megoldás
             End of Course Project:
               name: Kurzus Projekt vége
+            Access Ability:
+              name: Hozzáférhetőség tervezése
             Digital Sharing:
               name: Digitális megosztás
             Simon Says:
               name: Simon mondja
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
             Songwriting:
               name: Dalszerzés paraméterekkel
           student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
@@ -2765,6 +2785,8 @@ hu:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
         csp4-pilot:
@@ -2775,6 +2797,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Összefoglaló
           lessons:
@@ -2789,6 +2813,8 @@ hu:
             csp1_2:
               display_name: '2.  fejezet: Az internet feltalálása'
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Unit 1 Chapter 1 Assessment:
               name: 1.  lecke 1. fejezet végi értékelés
             The Internet:
@@ -2860,6 +2886,8 @@ hu:
             required:
               display_name: Összefoglaló
           lessons:
+            Binary Numbers:
+              name: Bináris számok
             Representing Information:
               name: Az információ ábrázolása
         time4csdemo:
@@ -2881,6 +2909,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp2-pilot-staging:
           title: '2.  lecke: Az internet'
           lesson_groups:
@@ -2890,6 +2920,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2898,12 +2930,16 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2912,6 +2948,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2920,6 +2958,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2928,6 +2968,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2936,6 +2978,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -2956,6 +3000,8 @@ hu:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Összefoglaló
         fit2019-novice:
@@ -3143,6 +3189,8 @@ hu:
               name: Első lépések
             Computer Science Fundamentals:
               name: A számítógép-tudomány alapjai
+            Planning:
+              name: Tervezés
             Loops:
               name: hurkok
             Conditionals:
@@ -3168,6 +3216,8 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -3251,12 +3301,16 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         csd2-2020:
           lesson_groups:
             cspSurvey:
@@ -3293,6 +3347,8 @@ hu:
             cspSurvey:
               display_name: Kérdőív
           lessons:
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
         csd3-2020:
@@ -3435,12 +3491,16 @@ hu:
               name: Simon mondja
             Private and Personal Information:
               name: Magán és személyes információk
+            Access Ability:
+              name: Hozzáférhetőség tervezése
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
             End of Course Project:
               name: Kurzus Projekt vége
             Digital Sharing:
               name: Digitális megosztás
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
           student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
         coursef-2020:
           title: F tanfolyam (2020)
@@ -3519,6 +3579,8 @@ hu:
           lessons:
             Representing Information:
               name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
@@ -3560,6 +3622,8 @@ hu:
             content:
               display_name: Tartalom
           lessons:
+            Example Projects:
+              name: Példa projektekre
             Functions:
               name: funkciók
         code-break:
@@ -3676,6 +3740,8 @@ hu:
               name: CSP tesztelés
         2021drafting:
           lessons:
+            lesson-3:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
             End of Course Project:
               name: Kurzus Projekt vége
           lesson_groups:
@@ -3737,6 +3803,8 @@ hu:
               display_name: Kérdőív
         csd6-2021:
           lessons:
+            Board Events:
+              name: Táblás események
             Functions with Parameters:
               name: Paraméteres függvények
           lesson_groups:
@@ -3746,6 +3814,8 @@ hu:
           lessons:
             Representing Information:
               name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
@@ -3769,12 +3839,16 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -3894,12 +3968,18 @@ hu:
           lessons:
             Private and Personal Information:
               name: Magán és személyes információk
+            About Me:
+              name: 'Miniprojekt: Rólam'
             Digital Sharing:
               name: Digitális megosztás
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
             End of Course Project:
               name: Kurzus Projekt vége
+            lesson-1:
+              name: Hozzáférhetőség tervezése
           lesson_groups:
             ramp_up:
               display_name: Egymásba ágyazott ciklusok
@@ -3922,8 +4002,14 @@ hu:
               name: Az internet
             For Loop Fun:
               name: Szórakozás a For ciklussal
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuális kisállat'
             End of Course Project:
               name: Kurzus Projekt vége
+            lesson-1:
+              name: Hozzáférhetőség tervezése
+            lesson-11:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
           lesson_groups:
             ramp_up:
               display_name: sprite-ok
@@ -3978,6 +4064,9 @@ hu:
             csf_events:
               display_name: Események
         csf-2021-pilot:
+          lessons:
+            user-input-programs:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
           lesson_groups:
             ramp_up:
               display_name: Bevezető
@@ -4134,6 +4223,8 @@ hu:
               name: Első lépések
             Computer Science Fundamentals:
               name: A számítógép-tudomány alapjai
+            Planning:
+              name: Tervezés
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -4164,6 +4255,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Teszt
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -4191,6 +4286,8 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
+            lessonGroup-3:
+              display_name: Projekt
             lessonGroup-4:
               display_name: Bemutatók és erőforrások
         hello-world-draft:
@@ -4305,6 +4402,8 @@ hu:
               name: Fizikai kimenet
             lesson-18:
               name: Prototípus készítése
+            lesson-19:
+              name: Projekt
           lesson_groups:
             lessonGroup-3:
               display_name: Sablonok
@@ -4328,6 +4427,8 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Leckék
+            lessonGroup-3:
+              display_name: Projekt
             lessonGroup-4:
               display_name: Bemutatók és erőforrások
         tesstest921:
@@ -4530,8 +4631,11 @@ hu:
               name: Betüző méh
         explore-data-1-2021:
           lessons:
+            Exploring Box Plots and Histograms:
+              name: Adatvizualizáció
             lesson-1:
               name: Dobozdiagramok és hisztogramok felfedezése
+          title: Adatvizualizáció
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -4556,6 +4660,8 @@ hu:
               display_name: Tartalom
         2022drafting:
           lessons:
+            lesson-5:
+              name: 'Miniprojekt: Rólam'
             For Loop Fun:
               name: Szórakozás a For ciklussal
           lesson_groups:
@@ -4566,6 +4672,11 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
         csf-2022-pilot:
+          lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
           lesson_groups:
             lessonGroup-2:
               display_name: sprite-ok
@@ -4575,6 +4686,8 @@ hu:
               display_name: Kurzus Projekt vége
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: Táblás események
             lesson-10:
               name: Bemenetek kombinálása
             Functions with Parameters:
@@ -4660,6 +4773,8 @@ hu:
           lessons:
             Representing Information:
               name: Az információ ábrázolása
+            Binary Numbers:
+              name: Bináris számok
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
@@ -4681,12 +4796,16 @@ hu:
               display_name: Feltételek
             csp_functions:
               display_name: funkciók
+            csp_project:
+              display_name: Projekt
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+            csp_project:
+              display_name: Projekt
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -4769,14 +4888,22 @@ hu:
           lessons:
             Private and Personal Information:
               name: Magán és személyes információk
+            'Mini-Project: About Me':
+              name: 'Miniprojekt: Rólam'
             Digital Sharing:
               name: Digitális megosztás
             Songwriting:
               name: Dalszerzés paraméterekkel
+            Designing for Accessibility:
+              name: Hozzáférhetőség tervezése
             End of Course Project:
               name: Kurzus Projekt vége
+            About Me:
+              name: 'Miniprojekt: Rólam'
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            lesson-1:
+              name: Hozzáférhetőség tervezése
             'Hello World: Food':
               name: Helló világ
           lesson_groups:
@@ -4794,12 +4921,20 @@ hu:
               display_name: Kurzus Projekt vége
         coursef-2022:
           lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
             For Loop Fun:
               name: Szórakozás a For ciklussal
             The Internet:
               name: Az internet
             End of Course Project:
               name: Kurzus Projekt vége
+            Virtual Pet:
+              name: 'Miniprojekt: Virtuális kisállat'
+            lesson-11:
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
             Internet:
               name: Az internet
           lesson_groups:
@@ -4913,6 +5048,10 @@ hu:
               name: ImagePlus és ScenePlus
         coursef-2022-pilot:
           lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Miniprojekt: Virtuális kisállat'
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Felhasználói adatbeviteli programok'
             The Internet:
               name: Az internet
             End of Course Project:
@@ -5059,6 +5198,8 @@ hu:
               display_name: Kérdőív
         csd6-2022:
           lessons:
+            Board Events:
+              name: Táblás események
             Combining Inputs and Outputs:
               name: Bemenetek kombinálása
             Functions:

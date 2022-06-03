@@ -57,6 +57,9 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Το Ψηφιακό σου Αποτύπωμα"
         },
+        "courseb-2018/Copyright and Creativity": {
+          "name": "Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια"
+        },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Μη εντοπισμένα bugs"
         },
@@ -147,8 +150,14 @@
         "coursee-2018/Conditionals with Cards": {
           "name": "Υποθέσεις με Κάρτες"
         },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα"
+        },
         "coursee-2018/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Κοινοποίηση στον ψηφιακό κόσμο"
         },
         "coursee-2018/Internet": {
           "name": "Το Διαδίκτυο"
@@ -179,6 +188,9 @@
         },
         "pre-express-2018/Your Digital Footprint": {
           "name": "Το Ψηφιακό σου Αποτύπωμα"
+        },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια"
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Η μέλισσα της ορθογραφίας"
@@ -252,8 +264,14 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
+        "coursef-2019/Digital Sharing": {
+          "name": "Κοινοποίηση στον ψηφιακό κόσμο"
+        },
         "coursee-2019/Simon Says": {
           "name": "Κάνε ό,τι κάνω"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα"
         },
         "coursee-2019/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"
@@ -269,6 +287,9 @@
         },
         "coursec-2019/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "Οπτικοποίηση Δεδομένων"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Η μέλισσα της ορθογραφίας"
@@ -595,7 +616,10 @@
           "name": "Καλλιτέχνης: Επαναλήψεις"
         },
         "jigsaw/Jigsaw": {
-          "name": "Παζλ"
+          "name": "Παζλ",
+          "overview": "Αυτό το μάθημα θα δίνει σε μαθητές μια ιδέα του τι να περιμένουν όταν κατευθύνονται στο εργαστήρι υπολογιστή. Ξεκινάει με μια σύντομη συζήτηση γνωρίζοντάς τους με τους τρόπους του εργαστηρίου υπολογιστών, έπειτα συνεχίζουν στη χρήση του υπολογιστή για να ολοκληρώσουν διαδικτυακά παζλ.",
+          "preparation": "-   Εξετάστε τον ιστότοπο της [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) για περισσότερο περιεχόμενο για τη διαδικτυακή ασφάλεια.",
+          "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
         },
         "coursef-2021/lesson-8": {
           "name": "Χαρακτήρες σε Δράση"
@@ -615,11 +639,17 @@
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Επαναλαμβανόμαστε"
         },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
+        },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Χαρούμενοι Χάρτες"
         },
         "coursec-2021/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2021/Picturing Data": {
+          "name": "Οπτικοποίηση Δεδομένων"
         },
         "coursec-2021/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
@@ -646,6 +676,15 @@
         "express-2021/lesson-1": {
           "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "Κάντε κλικ και σύρετε για να τελειώσετε τα παζλ."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "name": "Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα"
+        },
+        "coursee-2021/Digital Sharing": {
+          "name": "Κοινοποίηση στον ψηφιακό κόσμο"
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"
@@ -710,8 +749,17 @@
         "coursec-2020/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
         },
+        "coursec-2020/Picturing Data": {
+          "name": "Οπτικοποίηση Δεδομένων"
+        },
         "coursee-2020/Simon Says": {
           "name": "Κάνε ό,τι κάνω"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Κοινοποίηση στον ψηφιακό κόσμο"
         },
         "coursee-2020/Functions: Songwriting": {
           "name": "Σύνθεση τραγουδιού"

@@ -42,7 +42,7 @@ Weitere Anweisungen, dazu, wie Sie Mitarbeiter für dieses Projekt gewinnen und 
 
 
 
-## 2. Schauen Sie sich dieses hilfreiche Video an  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. Schauen Sie sich dieses hilfreiche Video an  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 
 
@@ -100,7 +100,7 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 **Wenn Ihre TeilnehmerInnen auf Schwierigkeiten stoßen, können Sie sagen: **
 
 - "Ich weiß nicht. Wir sollten die Lösung gemeinsam suchen." 
-- "Programmieren lernen ist wie das Lernen einer Fremdsprache - wir beherrschen das niemals gleich fließend.""
+- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
 **Was tun, wenn jemand früher fertig ist?**
 
@@ -111,7 +111,7 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 ## 7) Feiern Sie!
 
-- [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Teilnehmer und Schüler.
+- [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre TeilnehmerInnen und SchülerInnen aus. 
 - [Drucken Sie "I did an hour of code!"]({{ promote/resources_stickers }}}) Aufkleber.
 - [Bestellen Sie spezielle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre MitarbeiterInnen. 
 - Posten Sie Fotos und Videos von Ihrer Hour of Code in den Sozialen Medien. Erwähnen Sie dabei #HourofCode und @codeorg, damit wir Ihren gemeinsamen Erfolg mitfeiern können! 

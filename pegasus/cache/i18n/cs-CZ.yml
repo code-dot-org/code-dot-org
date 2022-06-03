@@ -479,6 +479,7 @@ cs-CZ:
   homepage_slot_text_link_buy: Zapojte se
   homepage_slot_text_link_donate: Přispějte
   homepage_slot_text_link_shop: Trička, čepice a další
+  homepage_slot_text_link_thebadguys: Kódujte se Zlouny
   homepage_slot_text_link_administrators: Přineste informatiku do své školy
   homepage_gallery_header: Vytvořeno více než %{project_count} milionů projektů Code.org
   homepage_header_donors: Code.org děkuje svým příznivcům
@@ -2133,6 +2134,7 @@ cs-CZ:
   header_educate_beyond: Nad rámec Code.org
   header_educate_inspire: Inspirujte studenta
   header_educate_community: Online komunita
+  header_educate_requirements: Technické požadavky
   header_educate_tools: Nástroje a videa
   header_about_us: O nás
   header_about_leadership: Koordinátoři
@@ -2592,3 +2594,8 @@ cs-CZ:
   outbreak_tile_title: Epidemie
   outbreak_tile_subtitle: Město příšer nakazil virus! Nakódujte simulátor šíření nákazy
     a pokuste se předpovědět, co se stane sousedům Města příšer.
+  top_hoc_tutorial_applab_alt_text: Hnědá ruka, která se ukazováčkem dotýká tabletu
+    s dotykovou obrazovkou, ze které vychází hvězdy a paprsky světla proti modrému
+    pozadí
+  minecraft_tile_alt: Dvě postavičky z Minecraftu, Steve a Alex. Na pozadí se zobrazuje
+    vodní scéna z Minecraftu s korály, delfíny a chaluhami.
