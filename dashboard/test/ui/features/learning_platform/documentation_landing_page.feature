@@ -5,8 +5,8 @@ Feature: Documentation Landing Page
   Scenario: Documentation landing page displays
     Given I am on "http://studio.code.org/docs/"
     And I wait until element ".container" is visible
-    And I wait until ".content" contains text "IDEs"
-    And I wait until ".content" contains text "Sprite Lab"
+    And I wait until ".container" contains text "IDEs"
+    And I wait until ".container" contains text "Sprite Lab"
 
   Scenario: Applab Documentation landing page displays
     Given I am on "http://studio.code.org/docs/ide/applab/"
