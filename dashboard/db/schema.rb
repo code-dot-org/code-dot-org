@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_25_230111) do
+ActiveRecord::Schema.define(version: 2022_06_03_175343) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -340,7 +340,6 @@ ActiveRecord::Schema.define(version: 2022_05_25_230111) do
     t.integer "level_id", null: false
     t.integer "project_level_id", null: false
     t.string "project_version", null: false
-    t.datetime "project_version_expires_at"
     t.integer "storage_id", null: false
     t.datetime "closed_at"
     t.datetime "deleted_at"
@@ -2206,17 +2205,6 @@ ActiveRecord::Schema.define(version: 2022_05_25_230111) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
-  add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
-  add_foreign_key "census_submission_form_maps", "census_submissions"
-  add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
-  add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "ib_school_codes", "schools"
-  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
