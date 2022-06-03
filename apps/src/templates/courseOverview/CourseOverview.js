@@ -124,7 +124,6 @@ class CourseOverview extends Component {
       descriptionTeacher,
       sectionsInfo,
       sectionsForDropdown,
-      teacherResources,
       migratedTeacherResources,
       studentResources,
       viewAs,
@@ -137,8 +136,7 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn,
-      useMigratedResources
+      isSignedIn
     } = this.props;
 
     const showNotification =
@@ -216,11 +214,9 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             id={id}
             title={title}
-            teacherResources={teacherResources}
             migratedTeacherResources={migratedTeacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
-            useMigratedResources={useMigratedResources}
             isInstructor={viewAs === ViewType.Instructor}
           />
         </div>

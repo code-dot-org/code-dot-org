@@ -6,7 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
@@ -31,7 +30,6 @@ const NEXT_BUTTON_TEXT = {
 class UnitOverviewTopRow extends React.Component {
   static propTypes = {
     assignedSectionId: PropTypes.number,
-    teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     showAssignButton: PropTypes.bool,
@@ -111,7 +109,6 @@ class UnitOverviewTopRow extends React.Component {
       unitTitle,
       viewAs,
       isRtl,
-      teacherResources,
       migratedTeacherResources,
       studentResources,
       showAssignButton,
@@ -156,7 +153,7 @@ class UnitOverviewTopRow extends React.Component {
               <ResourcesDropdown
                 migratedResources={studentResources}
                 unitId={scriptId}
-                useMigratedResources={true}
+                useMigratedResources
                 studentFacing
               />
             )}
@@ -175,13 +172,11 @@ class UnitOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Instructor &&
-            ((!isMigrated && teacherResources.length > 0) ||
-              (isMigrated && migratedTeacherResources.length > 0)) && (
+            (isMigrated && migratedTeacherResources.length > 0) && (
               <ResourcesDropdown
-                resources={teacherResources}
                 migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={isMigrated}
+                useMigratedResources
               />
             )}
           {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
