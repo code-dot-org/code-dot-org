@@ -72,7 +72,7 @@ const styles = {
     marginRight: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 5,
+    paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
     whiteSpace: 'nowrap'
@@ -81,7 +81,7 @@ const styles = {
     marginLeft: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 5,
+    paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
     whiteSpace: 'nowrap'
