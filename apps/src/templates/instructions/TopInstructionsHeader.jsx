@@ -87,6 +87,7 @@ function TopInstructionsHeader(props) {
             headerHasFocus={false}
             onClick={handleDocumentationClick}
             isMinecraft={isMinecraft}
+            style={styles.documentationButton}
           />
         )}
         <div
@@ -264,6 +265,11 @@ const styles = {
         color: color.default_text
       }
     }
+  },
+  documentationButton: {
+    order: 4,
+    whiteSpace: 'nowrap',
+    minWidth: 'fit-content'
   }
 };
 
