@@ -97,6 +97,7 @@ class UnitEditor extends React.Component {
     initialUseLegacyLessonPlans: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
+    isCSDCourseOffering: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -590,23 +591,27 @@ class UnitEditor extends React.Component {
               }}
             />
           )}
-          <label>
-            Is a Maker Unit
-            <input
-              type="checkbox"
-              checked={this.state.isMakerUnit}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({isMakerUnit: !this.state.isMakerUnit})
-              }
-            />
-            <HelpTip>
-              <p>
-                If checked, this unit uses the maker toolkit and teachers who
-                teach it may be eligible for maker toolkit discounts.
-              </p>
-            </HelpTip>
-          </label>
+          {this.props.isCSDCourseOffering && (
+            <label>
+              Is a Maker Unit
+              <input
+                className="maker-unit-checkbox"
+                type="checkbox"
+                checked={this.state.isMakerUnit}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({isMakerUnit: !this.state.isMakerUnit})
+                }
+              />
+              <HelpTip>
+                <p>
+                  If checked, this unit is in CSD and uses the maker toolkit.
+                  Checking this will add this unit to the list of units that can
+                  show up on the maker homepage.
+                </p>
+              </HelpTip>
+            </label>
+          )}
           <label>
             Supported locales
             <HelpTip>
