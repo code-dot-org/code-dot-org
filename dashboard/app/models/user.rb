@@ -1346,7 +1346,7 @@ class User < ApplicationRecord
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(unit_group = nil)
+  def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
     teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
