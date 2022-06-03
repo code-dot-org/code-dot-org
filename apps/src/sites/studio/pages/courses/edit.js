@@ -14,10 +14,6 @@ function showCourseEditor() {
   const unitData = document.querySelector('script[data-course-editor]');
   const courseEditorData = JSON.parse(unitData.dataset.courseEditor);
 
-  const teacherResources = (
-    courseEditorData.course_summary.teacher_resources || []
-  ).map(([type, link]) => ({type, link}));
-
   registerReducers({
     resources: createResourcesReducer('teacherResource'),
     studentResources: createResourcesReducer('studentResource')
@@ -71,7 +67,6 @@ function showCourseEditor() {
           unit => unit.name
         )}
         unitNames={courseEditorData.script_names.sort()}
-        initialTeacherResources={teacherResources}
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
