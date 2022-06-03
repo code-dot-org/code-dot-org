@@ -28,6 +28,7 @@ There are over 15 million Farsi-speaking students living in Iran and neighboring
 **Why now?** Three reasons: (1) The Afghan refugee crisis creates a unique need for a large population of children. (2) Code.org recently did the software engineering to support right-to-left languages properly. (3) And lastly, because we finally have a big enough team that we could do this without hiring dedicated staff — in other words, it’s finally affordable! 
 
 **How can you help?**
+
 The project would require both volunteer support, as well as financial support, especially to translate the content in Code.org. 
 
 1. **Volunteer to translate:** Any volunteer can help us with translation, just visit [code.org/translate](code.org/translate). Or, if you live in Seattle, [sign up](https://docs.google.com/forms/d/e/1FAIpQLSfa2fCZPDBtv7NpgrjcUGwhRr1JDjz3wNPbfMYOW3x9Q_nljQ/viewform) for our in-person translation party on June 26 (and enjoy free Chelo Kabab with Hadi and members of the Code.org team!)
