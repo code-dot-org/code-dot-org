@@ -516,7 +516,7 @@
         },
         "CourseD_Dance_2020_01": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
-          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
+          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para tocar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
@@ -610,7 +610,7 @@
         },
         "Dance_2019_01": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
-          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
+          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para tocar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "Dance_2019_02": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
@@ -896,7 +896,7 @@
           "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
@@ -962,14 +962,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "El código no será muy diferente de lo que fue en el último desafío, excepto que tendrás que girar al artista para saltar hacia abajo, y luego hacerlo dar la vuelta para estar listo para saltar hacia adelante otra vez.",
-          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "La segunda mitad de tu código debe tener casi el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_, saltarás y girarás a la _derecha_.",
           "courseF_artist_variables5_b": "La primera mitad de tu código dibujará tres triángulos, y la segunda mitad dibujará los otros tres.",
           "courseF_artist_variables5_c": "Comienza por duplicar el código en la primera mitad de tu programa, luego modifícalo para que se muestre el diseño.",
-          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
@@ -3724,11 +3724,11 @@
           "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle (loop) de \"repetir\" para modificar las veces que se repite."
         },
         "courseC_artist_loops2a_2019": {
-          "courseC_artist_loops2a_a": "Dentro del loop, querrás saltar a 200 más de 200, luego dibuja la calcomanía del pájaro, y luego gira 30 grados.",
+          "courseC_artist_loops2a_a": "Dentro de tu bucle (loop), querrás saltar al centro, luego girar, y después dibujar una pegatina (sticker).",
           "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle (loop) de \"repetir\" para modificar las veces que se repite."
         },
         "courseC_artist_loops2a_2020": {
-          "courseC_artist_loops2a_a": "Dentro del loop, querrás saltar a 200 más de 200, luego dibuja la calcomanía del pájaro, y luego gira 30 grados.",
+          "courseC_artist_loops2a_a": "Dentro de tu bucle (loop), querrás saltar al centro, luego girar, y después dibujar una pegatina (sticker).",
           "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle (loop) de \"repetir\" para modificar las veces que se repite."
         },
         "courseC_artist_loops3a": {
@@ -3741,11 +3741,11 @@
         },
         "courseC_artist_loops3a_2019": {
           "courseC_artist_loops3a_a": "Deberás agregar un bloque dentro de su bucle (loop), después de la primera pegatina (sticker).",
-          "courseC_artist_loops3a_b": "Use el menú desplegable en el bloque \"dibujar calcomanía\" para encontrar la calcomanía del murciélago."
+          "courseC_artist_loops3a_b": "Tu programa debería tener el siguiente aspecto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n¡Puedes usar los stickers que quieras!"
         },
         "courseC_artist_loops3a_2020": {
           "courseC_artist_loops3a_a": "Deberás agregar un bloque dentro de su bucle (loop), después de la primera pegatina (sticker).",
-          "courseC_artist_loops3a_b": "Use el menú desplegable en el bloque \"dibujar calcomanía\" para encontrar la calcomanía del murciélago."
+          "courseC_artist_loops3a_b": "Tu programa debería tener el siguiente aspecto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n¡Puedes usar los stickers que quieras!"
         },
         "courseC_artist_loops4a": {
           "courseC_artist_loops4a_a": "Usa este bloque para saltar hacia adelante:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\n¡No te olvides de cambiar la distancia!"
@@ -3848,19 +3848,19 @@
           "courseC_artist_loopsPrePre1a_b": "Para avanzar 50 píxeles , utiliza este bloque :\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
+          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
+          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
+          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
+          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3": {
@@ -4809,7 +4809,7 @@
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
           "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabeza."
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los rompecabezas anteriores para lograr todos los giros.",
@@ -4834,17 +4834,17 @@
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
           "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabeza."
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
           "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabeza."
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
           "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabeza."
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
         },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2_a": "Para repetir código, arrastra un bucle (loop) de ´repetir´ y luego coloca el bloque que quieres repetir dentro."
@@ -4916,27 +4916,27 @@
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops8": {
@@ -4962,23 +4962,23 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
           "course_starWars_loops8_b": "Piensa en la primera parte de este problema como un problema del escalón. ¿Cómo resolviste eso antes?",
-          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabeza. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2018": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabeza. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2019": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabeza. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2020": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabeza. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_1_2018": {
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
@@ -5656,7 +5656,7 @@
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
           "courseD_bee_conditionals4_b": "Usa una instrucción \\`si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals5": {
@@ -5805,18 +5805,18 @@
         },
         "courseD_bee_nestedLoops1_2018": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para obtener todo el néctar?",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para recoger todo el néctar?",
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1_2019": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para obtener todo el néctar?",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para recoger todo el néctar?",
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1_2020": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para obtener todo el néctar?",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para recoger todo el néctar?",
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1a": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
@@ -5824,15 +5824,15 @@
         },
         "courseD_bee_nestedLoops1a_2018": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1a_2019": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1a_2020": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops2": {
           "courseD_bee_nestedLoops2_a": "Para resolver este desafío, deberás anidar un bucle (loop) de 'repetir' dentro de otro.",
@@ -5861,18 +5861,18 @@
         },
         "courseD_bee_nestedLoops7_2018": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
-          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este rompecabezas.",
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n-   repetir 4\n    -   repetir 3\n        -   repetir 12\n            -   recoger néctar\n        -   avanzar\n    -   girar a la derecha"
         },
         "courseD_bee_nestedLoops7_2019": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
-          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este rompecabezas.",
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n-   repetir 4\n    -   repetir 3\n        -   repetir 12\n            -   recoger néctar\n        -   avanzar\n    -   girar a la derecha"
         },
         "courseD_bee_nestedLoops7_2020": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
-          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este rompecabezas.",
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n-   repetir 4\n    -   repetir 3\n        -   repetir 12\n            -   recoger néctar\n        -   avanzar\n    -   girar a la derecha"
         },
         "courseD_bounce_events10s_2018": {
           "courseD_bounce_events10s_a": "Deberías tener estos dos eventos en tu código:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -6601,17 +6601,17 @@
         },
         "courseD_maze_nestedLoops3_2018": {
           "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un bucle (loop) de 'repetir' dentro de otro.",
-          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón.",
+          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón.",
           "courseD_maze_nestedLoops3_c": "Intenta escribir código para una porción recta del camino y un giro. ¿Puedes repetir esto para llegar al girasol?"
         },
         "courseD_maze_nestedLoops3_2019": {
           "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un bucle (loop) de 'repetir' dentro de otro.",
-          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón.",
+          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón.",
           "courseD_maze_nestedLoops3_c": "Intenta escribir código para una porción recta del camino y un giro. ¿Puedes repetir esto para llegar al girasol?"
         },
         "courseD_maze_nestedLoops3_2020": {
           "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un bucle (loop) de 'repetir' dentro de otro.",
-          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón.",
+          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón.",
           "courseD_maze_nestedLoops3_c": "Intenta escribir código para una porción recta del camino y un giro. ¿Puedes repetir esto para llegar al girasol?"
         },
         "courseD_maze_nestedLoops4": {
@@ -6640,15 +6640,15 @@
         },
         "courseD_maze_nestedLoops5_2018": {
           "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
-          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón."
+          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops5_2019": {
           "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
-          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón."
+          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops5_2020": {
           "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
-          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón."
+          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops6": {
           "courseD_maze_nestedLoops6_a": "Si te has atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
@@ -6656,17 +6656,17 @@
           "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
         "courseD_maze_nestedLoops6_2018": {
-          "courseD_maze_nestedLoops6_a": "Si te has atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
+          "courseD_maze_nestedLoops6_a": "Si estas atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
           "courseD_maze_nestedLoops6_b": "Anidar bucles (loops) de 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
           "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
         "courseD_maze_nestedLoops6_2019": {
-          "courseD_maze_nestedLoops6_a": "Si te has atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
+          "courseD_maze_nestedLoops6_a": "Si estas atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
           "courseD_maze_nestedLoops6_b": "Anidar bucles (loops) de 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
           "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
         "courseD_maze_nestedLoops6_2020": {
-          "courseD_maze_nestedLoops6_a": "Si te has atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
+          "courseD_maze_nestedLoops6_a": "Si estas atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
           "courseD_maze_nestedLoops6_b": "Anidar bucles (loops) de 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
           "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
@@ -8786,45 +8786,45 @@
         },
         "CourseD_Dance_2020_01_2021": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
-          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
+          "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para tocar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes pulsar una tecla de flecha.\n\n_Este nivel termina después de 4 compases._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
           "challenges": "**Desafío opcional**\n\nUsa más de un bloque <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes pulsar las teclas de flecha.\n\n_Este nivel termina después de 4 compases._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes presionar las teclas de flecha.\n\n_Este nivel termina después de 6 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 7 medidas._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 11 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de los primeros 4 compases de la canción.\n\n_Este nivel termina después de 7 compases._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de las primeras 4 medidas de la canción.\n\n_Este nivel termina después de 7 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Crea múltiples grupos de bailarines de respaldo."
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 compases._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Experimenta cambiando otras propiedades, como el ancho o la rotación."
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 compases._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 medidas._",
           "tint_hint": "¿Notaste que tus bailarines no cambian al color exacto que eliges? Esto se debe a que los **tintes** mezclan el color que eliges con los colores de la bailarina."
         },
         "CourseD_Dance_2020_09_2021": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Solo tienes que presionar el botón \"Finalizar\"!",
-          "repeat_every_ideas": "**¿Necesitas algunas ideas?**\n\n-   Cambia repetidamente el tamaño de un bailarín para que crezca.\n-   Cambia repetidamente la rotación de un bailarín para que gire.\n-   Cambia repetidamente la posición horizontal o vertical de un bailarín para que se mueva por la pantalla.\n\n_¡También puedes usar números negativos para crear el efecto opuesto!_",
+          "repeat_every_ideas": "**¿Necesitas algunas ideas?**\n\n-   Cambia repetidamente el tamaño de un bailarín para que crezca.\n-   Cambia repetidamente la rotación de un bailarín para que gire.\n\n_¡También puedes usar números negativos para crear el efecto opuesto!_",
           "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como `(Aleatorio)`, `(Siguiente)` o `(Anterior)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "¿Ves las **Linternas Marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías utilizar un condicional con ellas para atravesar el Monumento Oceánico?"
+          "voyage_aquatic_10a": "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías utilizar un condicional con ellas para atravesar el Monumento Oceánico?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Puedes usar el bloque de \"si hay camino\" para ayudarte a hacer los giros correctos."
@@ -8856,13 +8856,13 @@
           "verionhistory": "¿Te sientes atascado/a? Siempre puedes restablecer tu código haciendo clic en \"Historial de versiones\" y eligiendo \"Volver a empezar\"."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Si utilizas las funciones correctamente, este es el camino por el que viajarás.",
-          "Function_intro_Ryan_a": "¡Puedes usar una función varias veces dentro de tu programa!  Trata de usarla dos veces para resolver este rompecabezas."
+          "Function_intro_Ryan_b": "Si utilizas las funciones correctamente, este es el camino por el que viajarás...",
+          "Function_intro_Ryan_a": "¡Puedes usar una función varias veces dentro de tu programa!  Trata de usarla dos veces para resolver este puzle."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Arrastra un bloque de \"avanzar\" de la caja de herramientas al espacio de trabajo y conéctalo debajo del bloque \"al ejecutar\".",
           "MC_HOC_2017_01_RETRY_b": "No olvides hacer clic en \"Ejecutar\" para ejecutar el código para el Agent.",
-          "MC_HOC_2017_01_RETRY_c": "¡Una vez que el Agent haya ejecutado todo su código, podrás mover al jugador con las teclas de flecha!"
+          "MC_HOC_2017_01_RETRY_c": "¡Una vez que el Agent haya ejecutado todo el programa, podrás mover al jugador con las teclas de flecha!"
         },
         "MC_HOC_2017_02_Cole_2021": {
           "MC_HOC_2017_02_Cole_a": "Mueve al Agente dos espacios hacia adelante para que se pare sobre la placa de presión.  Eso le abrirá la puerta a tu jugador.",
@@ -8872,33 +8872,33 @@
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Una vez que lleves al Agente a la placa de presión, ¡puedes usar las teclas de flecha para mover al jugador hasta la brújula!",
-          "MC_HOC_2017_03_Cole_b": "¿Crees que el código es demasiado largo? Intenta usar el bucle (loop) de \"repetir\" para averiguar la manera de acortarlo!"
+          "MC_HOC_2017_03_Cole_b": "¿Crees que el código es demasiado largo? Intenta usar el bucle \"repetir\" para averiguar la manera de acortarlo!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"girar a la derecha\" para cambiar la dirección del Agente",
-          "MC_HOC_2017_04POINT5_RYAN_a": "El Agent solo tiene que llegar al primer plato de presión para que Alex o Steve puedan llegar al hacha."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"Girar a la derecha\" para cambiar la dirección del Agente",
+          "MC_HOC_2017_04POINT5_RYAN_a": "El Agente solo necesita llegar a la primera placa de presión para permitir que Alex o Steve lleguen hasta el hacha."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "El Agente necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle (loop) de \"repetir\" para que esto ocurra?",
+          "MC_HOC_2017_04_Cole_a": "El Agente necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle \"repetir\" para que esto ocurra?",
           "MC_HOC_2017_04_Cole_c": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
           "MC_HOC_2017_04_Cole_b": "Una vez que el Agente llegue a la placa de presión, le abrirá la puerta al jugador."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "¿Sabías que puedes poner más de una parte de un código dento de un bucle (loop)? Intenta poner avanzar **y** colocar una placa dentro de \"repetir\" para completar el rompecabezas.",
-          "MC_HOC_2017_05_Cole_b": "Lleva al agente al otro lado del río y construye un puente sobre la marcha."
+          "MC_HOC_2017_05_Cole_a": "¿Sabías que puedes poner más de una parte de un código dento de un bucle? Intenta poner avanzar **y** colocar una placa dentro de \"repetir\" para completar el puzle.",
+          "MC_HOC_2017_05_Cole_b": "Lleva al agente al otro lado del río y construye un puente según avanzas."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "¿Cuántas veces se ejecuta este bucle (loop)? ¿Cuántas veces _debería_ ejecutarse?",
+          "MC_HOC_2017_06_Cole_a": "¿Cuántas veces se ejecuta este bucle? ¿Cuántas veces _debería_ ejecutarse?",
           "MC_HOC_2017_06_Cole_b": "¡Ayuda al Agente a construir un puente sobre el agua! "
         },
         "MC_HOC_2017_07_Cole_2021": {
           "MC_HOC_2017_07_Cole_c": "Todo lo que necesita que el Agente haga es abrir el camino hacia la vagoneta.",
-          "MC_HOC_2017_07_Cole_a": "Para completar este rompecabezas, descubre qué hace la función \"despejar camino\" y úsala las veces que sean necesarias utilizando el pequeño bloque verde \"despejar camino\" de la caja de herramientas.",
-          "MC_HOC_2017_07_Cole_b": "Prueba mezclando los bloques de funciones con otros bloques de la caja de herramientas para resolver este rompecabezas."
+          "MC_HOC_2017_07_Cole_a": "Para completar este puzle, descubre qué hace la función \"Despejar camino\" y úsala las veces que sean necesarias utilizando el pequeño bloque verde \"despejar camino\" de la caja de herramientas.",
+          "MC_HOC_2017_07_Cole_b": "Prueba a mezclar los bloques de funciones con otros bloques de la caja de herramientas para resolver este puzle."
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "MC_HOC_2017_10_Cole_b": "¿No sabes a dónde ir? ¡Mira a ver si puedes encontrar la línea de puntos!",
-          "MC_HOC_2017_10_Cole_a": "¡Usa funciones para que resolver este rompecabezas sea más fácil!"
+          "MC_HOC_2017_10_Cole_a": "¡Usa funciones para que resolver este puzle sea más fácil!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
@@ -9597,12 +9597,12 @@
           "courseC_artist_loops1b_a": "Este es el primer bloque que necesitarás:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuedes elegir tanto izquierda como derecha y cualquier número de grados."
         },
         "courseC_artist_loops2a_2021": {
-          "courseC_artist_loops2a_a": "Dentro del loop, querrás saltar a 200 más de 200, luego dibuja la calcomanía del pájaro, y luego gira 30 grados.",
-          "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle \"repetir\" para modificar las veces que se repite."
+          "courseC_artist_loops2a_a": "Dentro de tu bucle (loop), querrás saltar al centro, luego girar, y después dibujar una pegatina (sticker).",
+          "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle (loop) de \"repetir\" para modificar las veces que se repite."
         },
         "courseC_artist_loops3a_2021": {
-          "courseC_artist_loops3a_a": "Deberás agregar un bloque dentro de su loop, después de la calcomanía del pájaro.",
-          "courseC_artist_loops3a_b": "Use el menú desplegable en el bloque \"dibujar calcomanía\" para encontrar la calcomanía del murciélago."
+          "courseC_artist_loops3a_a": "Deberás agregar un bloque dentro de su bucle (loop), después de la primera pegatina (sticker).",
+          "courseC_artist_loops3a_b": "Tu programa debería tener el siguiente aspecto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n¡Puedes usar los stickers que quieras!"
         },
         "courseC_artist_loops4a_2021": {
           "courseC_artist_loops4a_a": "Usa este bloque para saltar hacia adelante:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\n¡No te olvides de cambiar la distancia!",
@@ -9614,27 +9614,27 @@
           "courseC_artist_loops5b_c": "¡Tu programa debería verse así!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops6a_2021": {
-          "courseC_artist_loops6a_a": "Para hacer un diseño como el de la parte superior, salta hacia adelante menos de 75 pixeles entre cada pegatina."
+          "courseC_artist_loops6a_a": "Para hacer un diseño como el de la parte superior, salta hacia adelante menos de 75 pixeles entre cada pegatina (sticker)."
         },
         "courseC_artist_loops7a_2021": {
           "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
+          "courseC_artist_prog2_a": "\"Si usas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\".",
           "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas"
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas."
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Para terminar el cohete, ¡simplemente dibuja el triángulo en la parte superior!",
-          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
+          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques de 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog4_c": "Para dibujar un triángulo, deberás:\n\n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar"
         },
         "courseC_artist_prog5_2021": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
@@ -9658,7 +9658,7 @@
           "courseC_artist_prog_challenge2_b": "Después de dibujar la segunda línea, gira a la derecha antes de dibujar tu tercera línea."
         },
         "courseC_collector_loops_challenge2_2021": {
-          "courseC_maze_loops_challenge2_b": "¡Utiliza los loops de tal manera de no quedarse sin los bloques \"recoger\"!"
+          "courseC_maze_loops_challenge2_b": "¡Utiliza los bucles (loops) de tal manera de no quedarse sin los bloques de \"recoger\"!"
         },
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_a": "Cuando estás parado en un espacio con tesoros, utiliza el <xml><block type=\"collector_collect\"/></xml> bloque para recogerlo.",
@@ -9694,11 +9694,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque de `recoger` muchas veces para recoger el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
+          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque de `recoger` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el rompecabeza!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9816,7 +9816,7 @@
         },
         "courseC_maze_loops_challenge1a_2021": {
           "courseC_maze_loops_challenge1_a": "Piensa en este camino como si fueran dos partes diferentes. Cada una tiene un patrón que puedes repetir.",
-          "courseC_maze_loops_challenge1_b": "¿Recuerdas cómo usar los loops para repetir el patrón de escalera?"
+          "courseC_maze_loops_challenge1_b": "¿Recuerdas cómo usar los bucles (loops) para repetir el patrón de escalera?"
         },
         "courseC_maze_programming1_2021": {
           "courseC_maze_programming1_0": "Asegúrate que todos los bloques se han unido correctamente, luego haz clic en \"Ejecutar\" nuevamente."
@@ -9860,17 +9860,17 @@
           "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
-          "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los puzles anteriores para lograr todos los giros.",
-          "courseC_starWars_loops10_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado**.",
-          "courseC_starWars_loops10_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle."
+          "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los rompecabezas anteriores para lograr todos los giros.",
+          "courseC_starWars_loops10_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado** (nested loop).",
+          "courseC_starWars_loops10_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
-          "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este puzle."
+          "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
         },
         "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2_a": "Para repetir código, arrastra un bucle ´repetir´ y luego coloca dentro el bloque que quieres repetir."
+          "courseC_starWars_loops2_a": "Para repetir código, arrastra un bucle (loop) de ´repetir´ y luego coloca el bloque que quieres repetir dentro."
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2_a": "Para repetir código, arrastra un bucle (loop) de ´repetir´ y luego coloca el bloque que quieres repetir dentro."
@@ -9878,7 +9878,7 @@
         "courseC_starWars_loops4_2021": {
           "courseC_starWars_loops4_c": "Haciendo clic en la flecha pequeña al lado \"izquierdo\" en el bloque girar te permitirá cambiarlo a la \"derecha\".",
           "courseC_starWars_loops4_a": "Usa dos bloques \"repetir\".",
-          "courseC_starWars_loops4_b": "Cada bucle 'repetir' tendrá sólo un comando dentro de él: `avanzar`."
+          "courseC_starWars_loops4_b": "Cada bucle (loop) de 'repetir' tendrá sólo un comando dentro de él: `avanzar`."
         },
         "courseC_starWars_loops4_dani": {
           "courseC_starWars_loops4_c": "Haciendo clic en la flecha pequeña al lado \"izquierdo\" en el bloque girar te permitirá cambiarlo a la \"derecha\".",
@@ -9886,7 +9886,7 @@
           "courseC_starWars_loops4_b": "Cada bucle (loop) de 'repetir' tendrá sólo un comando dentro de él: `avanzar`."
         },
         "courseC_starWars_loops5_2021": {
-          "courseC_starWars_loops5_a": "La mejor solución utiliza un único \"movimiento hacia adelante\", luego un giro y después un bucle."
+          "courseC_starWars_loops5_a": "La mejor solución utiliza un único \"avanzar\", luego un giro y después un bucle (loop)."
         },
         "courseC_starWars_loops5_dani": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
@@ -9894,7 +9894,7 @@
         },
         "courseC_starWars_loops6_2021": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
-          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado**."
+          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado** (nested loop)."
         },
         "courseC_starWars_loops6_dani": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
@@ -9902,8 +9902,8 @@
         },
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este puzle, prueba a escribir todos los pasos en un trozo de papel y busca un patrón.",
-          "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle."
+          "courseC_starWars_loops7_b": ".Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
@@ -9921,8 +9921,8 @@
           "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
         },
         "courseC_starWars_loops9_2021": {
-          "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle `repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este desafío. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de`repetir`.",
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_1_2021": {
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
@@ -10100,22 +10100,22 @@
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle para recoger todo el néctar?",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para recoger todo el néctar?",
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1a_2021": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops2_2021": {
-          "courseD_bee_nestedLoops2_a": "Para resolver este puzle, deberás anidar un bucle 'repetir' dentro de otro.",
-          "courseD_bee_nestedLoops2_b": "¿No puedes averiguar dónde poner los bucles? Trata de escribir el código en el papel paso a paso y buscar un patrón.",
-          "courseD_bee_nestedLoops2_c": "Recuerda que puedes poner más de un bloque dentro de un loop."
+          "courseD_bee_nestedLoops2_a": "Para resolver este desafío, deberás anidar un bucle (loop) de 'repetir' dentro de otro.",
+          "courseD_bee_nestedLoops2_b": "¿No puedes averiguar dónde poner los bucles (loops)? Trata de escribir el código en el papel paso a paso y buscar un patrón.",
+          "courseD_bee_nestedLoops2_c": "Recuerda que puedes poner más de un bloque dentro de un bucle (loop)."
         },
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
-          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este rompecabezas.",
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n-   repetir 4\n    -   repetir 3\n        -   repetir 12\n            -   recoger néctar\n        -   avanzar\n    -   girar a la derecha"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Deberías tener estos dos eventos en tu código:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10212,15 +10212,15 @@
           "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle `mientras` puede ayudar!"
         },
         "courseD_farmer_while1_2021": {
-          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle '(loop) de 'repetir' para esto?",
-          "courseD_farmer_while1_b": "Usa el bloque `quitar 1` cuando estés parado en la pila de tierra para quitarlo."
+          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle 'repetir' para esto?",
+          "courseD_farmer_while1_b": "Usa el bloque `quita 1` cuando estés delante de la pila de tierra para quitarla."
         },
         "courseD_farmer_while2_2021": {
           "courseD_farmer_while2_a": "Solo necesitarás moverte una vez para llegar al hoyo.",
-          "courseD_farmer_while2_b": "Necesitarás usar el bloque 'llenar 1' seis veces. ¿Puedes usar un bucle (loop) para hacerlo más fácil?"
+          "courseD_farmer_while2_b": "Necesitarás usar el bloque 'llenar 1' seis veces. ¿Puedes usar un bucle para hacerlo más fácil?"
         },
         "courseD_farmer_while3_2021": {
-          "courseD_farmer_while3_a": "Un bucle (loop) puede ayudarte a simplificar tu código aquí.",
+          "courseD_farmer_while3_a": "Un bucle puede ayudarte aquí a simplificar tu código.",
           "courseD_farmer_while3_b": "No tendrías que usar ningún bloque de`girar` para llegar a la pila."
         },
         "courseD_farmer_while4_2021": {
@@ -10255,7 +10255,7 @@
         "courseD_harvester_nested_loops_challenge1_2021": {
           "courseD_harvester_nested_loops_challenge1_a": "¡Intenta seguir este camino para recoger todo el maíz! ",
           "courseD_harvester_nested_loops_challenge1_b": "Para recoger más de un pedazo de maíz, necesitas usar ´recoger maíz´más de una vez.",
-          "courseD_harvester_nested_loops_challenge1_c": "¡Deberás agregar un loop pequeño dentro de tu loop principal para resolver este desafío!"
+          "courseD_harvester_nested_loops_challenge1_c": "¡Deberás agregar un bucle (loop) pequeño dentro de tu bucle (loop) principal para resolver este desafío!"
         },
         "courseD_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
@@ -10309,23 +10309,23 @@
           "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
         },
         "courseD_maze_nestedLoops3_2021": {
-          "courseD_maze_nestedLoops3_a": "Para resolver este puzle, deberás \"anidar\" un bucle 'repetir' dentro de otro.",
-          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle? Trata de escribir el código paso a paso, y buscar un patrón.",
+          "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un bucle (loop) de 'repetir' dentro de otro.",
+          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón.",
           "courseD_maze_nestedLoops3_c": "Intenta escribir código para una porción recta del camino y un giro. ¿Puedes repetir esto para llegar al girasol?"
         },
         "courseD_maze_nestedLoops4_2021": {
           "courseD_maze_nestedLoops4_a": "Intenta utilizar este camino a través del laberinto.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
-          "courseD_maze_nestedLoops4_b": "Si el patrón es difícil de ver, intenta programarlo todo primero y ver qué cosas se repiten una y otra vez antes de colocar los bucles.",
-          "courseD_maze_nestedLoops4_c": "Intenta usar un bucle 'repetir' dentro de otro para reducir la cantidad de código que necesitas."
+          "courseD_maze_nestedLoops4_b": "Si el patrón es difícil de ver, intenta programarlo todo primero y ver qué cosas se repiten una y otra vez antes de colocar los bucles (loops).",
+          "courseD_maze_nestedLoops4_c": "Intenta usar un bucle (loop) de 'repetir' dentro de otro para reducir la cantidad de código que necesitas."
         },
         "courseD_maze_nestedLoops5_2021": {
-          "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle anidado.",
-          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar el bucle? Trata de escribir el código paso a paso, y buscar un patrón."
+          "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
+          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops6_2021": {
-          "courseD_maze_nestedLoops6_a": "Si te has atascado, intenta escribir el código sin bucles primero y busca patrones.",
-          "courseD_maze_nestedLoops6_b": "Anidar bucles 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
-          "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles 'repetir' anidados para resolver este puzle."
+          "courseD_maze_nestedLoops6_a": "Si estas atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
+          "courseD_maze_nestedLoops6_b": "Anidar bucles (loops) de 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
+          "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
         "courseD_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Si el pájaro no llega hasta el cerdo, asegúrate de que los tres bloques están totalmente juntos y, luego, vuelve a hacer clic en \"Ejecutar\".",
@@ -10387,7 +10387,7 @@
           "courseE_artist_functions1_c": "Para código más corto, intenta usar un loop 'repetir' para dibujar los cuadrados de los anteojos."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lados de 100 pixels.",
+          "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.",
           "courseD_artist_functions2_c": "Asegúrate de utilizar el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Tu programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Volver a usar la función"
         },
@@ -10407,7 +10407,7 @@
         },
         "courseE_artist_functions5_2021": {
           "courseD_artist_functions5_a": "¡No te rindas! Recuerda lo que has estado aprendiendo.",
-          "courseD_artist_functions5_b": "Las funciones facilitan la llamada al código guardado en cualquier momento, ¡no solo desde dentro de un bucle (loop)!",
+          "courseD_artist_functions5_b": "Las funciones facilitan la llamada al código guardado en cualquier momento, ¡no solo desde dentro de un loop!",
           "courseD_artist_functions5_c": "¡Empieza creando tu función \"dibuja una estrella\" y después utiliza esta función para dibujar las tres estrellas!"
         },
         "courseE_artist_functions5_dani": {
@@ -10433,13 +10433,13 @@
           "courseD_artist_functions8_d": "Para hacer una línea de cuadrados,\n\n-   repite 3 veces\n-   dibuja un cuadrado\n-   salta **100 pixeles** hacia adelante"
         },
         "courseE_artist_functions8c_2021": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece,   No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece, ¡Aquí no tendrías que \"mover\" ni \"saltar\" ningún bloque!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
-          "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
+          "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle de repetición para iniciar el siguiente ejercicio!"
         },
         "courseE_artist_functions9_2021": {
           "courseD_artist_functions9_e": "¿Puedes identificar los cuatro lugares donde se puede usar la `línea de triángulos` en este dibujo? \n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Este rompecabezas puede dividirse en tres partes:\n\n-   crear la función `dibujar un triángulo`\n-   crear la función `dibujar una línea de triángulos`\n-   usar la función `dibujar una línea de triángulos` cuatro veces para completar el dibujo",
+          "courseD_artist_functions9_a": "Este desafío puede dividirse en tres partes:\n\n-   crear la función `dibujar un triángulo`\n-   crear la función `dibujar una línea de triángulos`\n-   usar la función `dibujar una línea de triángulos` cuatro veces para completar el dibujo",
           "courseD_artist_functions9_b": "Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 ó 120 grados antes de dibujar la línea siguiente del triángulo.",
           "courseD_artist_functions9_c": "Para dibujar una línea de triángulos: \n\n-   repite 4 veces \n    -   dibuja un triángulo \n    -   salta 50 pixeles hacia adelante",
           "courseD_artist_functions9_d": "Para dibujar el diamante: \n\n-   repite 2 veces \n    -   dibuja una línea de triángulos \n    -   gira 60 grados \n    -   dibuja una línea de triángulos \n    -   gira 120 grados"
@@ -10453,7 +10453,7 @@
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_a": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes.",
-          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un bucle (loop) para llegar a ella?"
+          "courseE_farmer_functions1_b": "Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un loop para llegar a ella?"
         },
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_a": "Asegúrate de revisar la definición de la función . ¿Puede decir lo que hace?",
@@ -10468,7 +10468,7 @@
           "courseE_farmer_functions2ba_a": "¡Utiliza el bloque verde 'obtener todas las calabazas' para asegurarte de conseguir todas las calabazas!"
         },
         "courseE_farmer_functions3c1_2021": {
-          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este rompecabezas.",
+          "coursee_farmer_functions3c1_2018_a": "Tendrás que utilizar la función de 'recoger por el camino' tres veces para resolver este puzle.",
           "coursee_farmer_functions3c1_2018_b": "¿Qué código necesitas agregar para doblar las esquinas?"
         },
         "courseE_farmer_functions7a1_2021": {
@@ -10476,13 +10476,13 @@
           "courseE_farmer_functions7a1_2018_b": "¡No olvides usar tu función cuando hayas terminado de crearla!"
         },
         "courseE_farmer_functions8a1_2021": {
-          "courseE_farmer_functions8a1_2018a": "Empieza este rompecabezas codificando la misma función que hiciste en el último rompecabezas.",
+          "courseE_farmer_functions8a1_2018a": "Empieza este puzle creando la misma función que hiciste en el último puzle.",
           "courseE_farmer_functions8a1_2018b": "Después de ejecutar la función por primera vez, tendrás que hacer un giro adicional antes de que se pueda ejecutar otra vez."
         },
         "courseE_farmer_functions9a1_2021": {
-          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos rompecabezas.",
-          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del rompecabezas anterior para resolver la primera mitad de este rompecabezas.",
-          "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último cultivo de lechuga antes de que puedas llamar a tu función de nuevo."
+          "courseE_farmer_functions9a1_2018a": "Usarás la misma función que creaste en los últimos puzles.",
+          "courseE_farmer_functions9a1_2018b": "Usa los mismos pasos del puzle anterior para resolver la primera mitad de este puzle.",
+          "courseE_farmer_functions9a1_2018c": "Deberás `girar` algunas veces y `avanzar` para llegar al último sembrado de lechugas antes de que puedas activar tu función de nuevo."
         },
         "courseE_farmer_ramp11a_2021": {
           "courseE_farmer_ramp12_a": "En lugar de usar un bucle (loop) de 'repetir' para decirle a la granjera cuántas veces recoger tierra, ahora puedes usar un bloque 'mientras hay tierra'.  ",
@@ -10637,7 +10637,7 @@
           "changePropBlock": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_sprites_clouds": {
-          "behavior_list": "Pruebe a utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
+          "behavior_list": "Pruebe a utilizar comportamientos como \"moverse hacia el este y hacer un bucle (loop)\", \"girar a la derecha\" y \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
           "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples preguntas, utilice la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"

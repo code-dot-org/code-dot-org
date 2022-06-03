@@ -16034,8 +16034,29 @@
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
           "description": "Permite a los voluntarios exponer los valores personales que consideren importantes.",
           "tips": [
-            null
+            "Este debate permite a los alumnos compartir ideas para sus páginas web, pero no es necesario que todos las compartan si prefieren no hacerlo.  El objetivo de la conversación es que los alumnos empiecen a pensar en el tema y que se animen a pensar en los sitios web como una forma de expresarse."
           ]
+        },
+        "366eae3e-3558-47d9-b1af-684ae299ae52": {
+          "description": "Todos tenemos cosas que son importantes para nosotros. Los sitios web nos permiten compartir esas cosas con todo el mundo. Hoy vamos a trabajar utilizando lo que hemos aprendido sobre HTML para compartir algo que nos parece importante."
+        },
+        "3e7affb7-de21-4896-b724-8e056583c6fd": {
+          "description": "**Pregunta del Día: ¿Cómo puedo utilizar HTML para transmitir un valor personal?**"
+        },
+        "64a76ce6-6f12-4b18-b60f-bcdc6176b382": {
+          "description": "**Distribuir:** Entrega a cada alumno un ejemplar de la Guía del Proyecto."
+        },
+        "dc1a7ae9-d6ff-465a-a192-a84f781caa63": {
+          "name": "Paso 1: Definir - Indica tu Objetivo",
+          "description": "Los alumnos ya habrán expuesto un valor personal en el calentamiento, pero esta es una oportunidad para que afinen lo que quieren decir, o incluso para que cambien de opinión sobre el tema de su sitio web."
+        },
+        "7fa27266-1361-4191-9a77-71b76afa3ee2": {
+          "name": "Paso 2: Preparar - Diseña tu Página",
+          "description": "Mientras los alumnos responden a las preguntas sobre el diseño de la página, asegúrate de que diferencian entre el contenido de la página y la forma en que ese contenido está organizado o estructurado.  Una vez que hayan completado sus diseños, comprueba que pueden identificar qué etiquetas serán necesarias para los diferentes textos de las páginas web."
+        },
+        "d3dcdf17-fcf3-4c54-8ce0-bf2385c11ebf": {
+          "name": "Paso 3: Intenta - Desarrolla tu Página",
+          "description": "Después de haber revisado los diseños, permite a los estudiantes entrar en Code Studio y codificar sus páginas. Tendrán la oportunidad de repasar todas las etiquetas que han aprendido antes de empezar con sus páginas web. Pueden completar estas actividades como repaso o utilizarlas como recursos mientras trabajan en sus proyectos."
         },
         "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
           "progression_name": "Revisión: HTML"
@@ -16049,59 +16070,131 @@
         "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
           "progression_name": "Revisa tu Página"
         },
+        "82667ca3-ae19-4a64-a593-8b412d262586": {
+          "name": "Paso 4: Reflexiona",
+          "description": "Los alumnos deben tener la oportunidad de pensar en lo que más les ha gustado de sus páginas.  También puedes permitir que los alumnos muestren formal o informalmente su trabajo al resto de la clase."
+        },
+        "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
+          "name": "Comentarios de los Compañeros",
+          "description": "Como parte de este proyecto, puedes dar a los estudiantes la oportunidad de hacer comentarios a sus compañeros utilizando el formulario de revisión por pares.  Esto probablemente prolongará el proyecto al menos un día."
+        },
+        "5831c988-975f-41b0-aac2-9530489ccc10": {
+          "description": "**Pregunta del Día: ¿Cómo puedo utilizar HTML para transmitir un valor personal?**"
+        },
+        "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
+          "description": "**Sugerencia:** ¿Qué aspectos de tu página web podrían mejorarse y que todavía no sabes hacer?"
+        },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
+          "description": "A medida que los alumnos compartan sus ideas, colócalas en la pizarra o en un póster, e intenta señalar los conocimientos que aprenderán en las próximas lecciones.",
           "tips": [
-            null
+            "Utiliza esta puesta en común para que los alumnos se entusiasmen con las cosas que aprenderán en las próximas lecciones. Si creas un póster, también puedes tachar los temas a medida que los vayas enseñando. En el caso de los temas que no están contemplados en el plan de estudios, puedes indicar a los alumnos temas similares que sí están contemplados o, si procede, dirigirlos a recursos externos que les guíen en el aprendizaje de esos conocimientos."
           ]
         },
         "b9efce7e-87cf-466d-8916-1ef98f26db40": {
-          "name": "Tu huella Digital"
+          "name": "Tu huella Digital",
+          "description": "**Sugerencia:** Pide a los alumnos que consideren a qué sitios web han dado información personal. En pequeños grupos, invita a los alumnos a elaborar una lista de sitios web en los que tienen cuentas (incluso si utilizan el inicio de sesión con Facebook, Google o similares) y qué tipo de información creen que estos sitios web pueden tener sobre ellos."
         },
         "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
+          "description": "**Debatir:** Pide a los alumnos que hagan una lluvia de ideas en silencio o que escriban en un diario, luego que lo compartan con un compañero y por último, que lo compartan con toda la clase. Crea una lista exhaustiva de todos los sitios web que pueden tener su información personal.",
           "tips": [
-            null
+            "**Objetivo:** Este debate no consiste en elaborar una lista exhaustiva de la información personal que los alumnos pueden haber compartido con sitios web, ni tampoco se trata de asustarlos para que no compartan información. El objetivo es que los alumnos empiecen a pensar de forma más crítica sobre cuándo y dónde comparten información sobre ellos mismos.\n\nEsto les preparará para la actividad principal del día, en la que se analizarán datos y públicos específicos para considerar cuándo es importante su privacidad y si están renunciando a ella sin saberlo.\n\nSi los alumnos tienen problemas para pensar en la información, puedes seguir con algunas indicaciones más específicas: \n\n-   ¿Qué información sabes que has dado a un sitio web (por ejemplo, tu dirección de correo electrónico)?\n-   ¿Qué información podrías haber dado a un sitio web sin saberlo (por ejemplo, una foto con la dirección de tu casa)?\n-   ¿Qué información pueden haber compartido otras personas sobre ti sin tu conocimiento o permiso (por ejemplo, etiquetándote en Facebook)?"
           ]
+        },
+        "c4655dca-e5f0-4b84-8d9b-7212f13b440f": {
+          "description": "Hay mucha información que ponemos en Internet, tanto si es nuestra intención como si no.  Aunque nos parezca bien que parte de esa información esté en línea, hay otras cosas que nos gustaría mantener en privado. Toda la información sobre nosotros que se puede encontrar en Internet se conoce como nuestra huella digital. Debemos tener cuidado con la información que se incluye en esa huella digital."
+        },
+        "4c49a2d4-20e8-4c45-9abe-ff95adb5d085": {
+          "description": "**Vocabulario Clave:**\n\n-   **Huella Digital** - La información recopilada sobre un individuo a través de múltiples sitios web en Internet.\n\n**Pregunta del Día: ¿Cómo puedes asegurarte de que tu información privada siga siendo privada?**"
+        },
+        "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9": {
+          "name": "Investigando los Perfiles Sociales",
+          "description": "**Objetivo:** Explorar cómo pequeñas piezas de información personal, repartidas en múltiples sitios de Internet, pueden producir una imagen bastante detallada de una persona, conocida como [v digital_footprint/csd/2021].\n\n**Agrupar:** Esta actividad se puede hacer individualmente, pero es mejor cuando los estudiantes están en grupos de 2-3\n\n**Distribuir:** Guía de la actividad \"Detective Social\"\n\n**Transición:** Envía a los alumnos a Code Studio."
         },
         "71a885a3-e705-4367-8d43-5711b5af7e8f": {
           "progression_name": "Investigador Social"
         },
         "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
+          "description": "[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Paso 1:** Los alumnos examinan todas las páginas de redes sociales proporcionadas en Code Studio. Las páginas representan a varios individuos únicos, cada uno de los cuales tiene una cuenta en tres plataformas de redes sociales. Se distribuyen de la siguiente manera (no compartas esto con los estudiantes):",
           "tips": [
-            null
+            "Se pide a los alumnos que elijan dos usuarios de entre los perfiles disponibles, pero si tienes poco tiempo, puedes pedir a los alumnos que completen sólo una de las huellas."
           ]
+        },
+        "2487e526-f969-4440-bea4-f970fa05528d": {
+          "description": "**Paso 2:** Una vez que hayan consultado las páginas, los alumnos intentarán averiguar quiénes son los dos usuarios y responderán a algunas preguntas detalladas sobre ellos. Las preguntas sobre la huella están diseñadas para empujar a los estudiantes a combinar detalles de múltiples plataformas sociales y a comprender que, en conjunto, los perfiles representan información más detallada de la que los usuarios probablemente pretenden revelar sobre sí mismos. Es posible que algunas preguntas no puedan ser contestadas por todos los usuarios o que tengan diferentes niveles de detalles (la dirección completa de un usuario, pero sólo la ciudad y el estado de otro)."
+        },
+        "f4eb6112-53c1-43fb-825c-8b064cb9af9f": {
+          "description": "**Compartir:** Pide a la clase que comparta las huellas digitales que han desarrollado a través de la actividad."
+        },
+        "d8c2fd98-00cb-4da5-865a-517396312eec": {
+          "description": "**Debatir:**\n\n-   ¿Qué información ha sido más difícil de encontrar?\n-   ¿Qué detalles eran inocuos por sí solos, pero revelaban información privada cuando se combinaban con otros detalles?\n-   ¿Cómo te hace esto pensar de manera diferente sobre lo que eliges para publicar en línea?"
+        },
+        "4ceacace-978a-4cfc-8073-7a068146ea78": {
+          "name": "Configurando tu Huella Digital",
+          "description": "**Pregunta del Día: ¿Cómo puedes asegurarte de que tu información privada siga siendo privada?**"
+        },
+        "e14f1593-1162-4c12-88e3-9b6a1c7e7286": {
+          "description": "La actividad de hoy se ha centrado en cómo los sitios web de las redes sociales contribuyen a la huella digital. Mientras nos preparamos para publicar nuestras primeras páginas web, tendrás que pensar en cómo éstas contribuyen a tu huella digital."
         },
         "69dde422-3372-406e-9efe-b1df46472d00": {
+          "description": "**Sugerencia:** Con tu compañero de mesa, elabora una lista de comprobación que puedas utilizar para determinar lo que debe y no debe publicarse en línea.",
           "tips": [
-            null
+            "**Objetivo:** Utiliza este debate para crear una lista de comprobación duradera de las buenas prácticas a la hora de publicar información en línea. Las posibles comprobaciones incluyen:\n\n-   ¿Podría alguien identificarme con esta información?: por ejemplo, nombre, dirección, número de teléfono, etc.\n-   ¿Quiero que todo el mundo vea esto? No publiques nada que no quieras que se publique al mundo.\n-   ¿Quiero que esto sea permanente?: Pierdes el control de la información una vez que se publica y podría estar presente durante toda tu vida.\n\nLas listas de los alumnos pueden ser diferentes, pero deben abarcar estos principios y otros adicionales que hayan visto en la lección de hoy.\n\nAsegúrate de que los alumnos utilizan el vocabulario clave de la lección:\n\n**huella digital** - la información recopilada sobre un individuo en múltiples sitios web de Internet"
           ]
+        },
+        "0db491eb-577a-4715-873f-1ea5a2282093": {
+          "description": "\\*\\* Compartir:\\*\\* Permite que los grupos compartan sus listas de comprobación, utilizando las respuestas para elaborar una lista de comprobación de publicación en la web para toda la clase. Considera la posibilidad de hacer un póster con la lista de comprobación de toda la clase y que puedas consultar a lo largo de la unidad."
+        },
+        "ea8f89ca-3e2f-435d-8b7d-53e2eb1f83cd": {
+          "name": "Diario: Apariencia HTML",
+          "description": "**Mostrar:** Envía a los estudiantes a la página web de ejemplo en Code Studio o muéstrala en la pizarra."
+        },
+        "274e44d0-b3dd-47d0-bec2-7878f59d38fd": {
+          "description": "**Sugerencia:** Echa un vistazo a la página web de Code Studio. Si quisieras crear una página como ésta, ¿qué sabes hacer ya? ¿Qué necesitas aprender a hacer todavía?"
         },
         "3412213d-9a22-470e-859c-66b9a752d6bb": {
+          "description": "**Debatir:** Pide a los alumnos que compartan las partes que conocen y las que no conocen",
           "tips": [
-            null
+            "**Objetivo:** Los alumnos deben darse cuenta de que pueden conseguir la estructura y el tamaño del texto correcto utilizando títulos (por ejemplo, `<h1>`) y párrafos `<p>`. Pueden notar que no pueden cambiar el color del texto. Otros estilos que deben observar son que todos los párrafos están en cursiva, que los nombres de los discursos están subrayados y que las citas son mucho más pequeñas que los párrafos."
           ]
         },
+        "716adb76-8da2-4226-9ab8-2a57536da9a6": {
+          "description": "Hasta ahora sólo hemos hecho páginas web en las que controlamos el contenido y la estructura, como por ejemplo qué partes de las páginas son títulos o párrafos.  Hemos utilizado HTML como lenguaje para especificar el contenido y la estructura de las páginas.  Aunque el HTML nos permite cierto control sobre el aspecto de la página, no da a los desarrolladores mucho control sobre el aspecto y el estilo específicos de cada elemento. Para ello, necesitamos un lenguaje que exprese el _estilo_."
+        },
+        "e205ebdc-a224-4b80-9e0a-290dadcd0ab2": {
+          "description": "**Pregunta del Día: ¿Cómo podemos cambiar el estilo del texto en una página web?**"
+        },
         "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "name": "Laboratorio Web: Introducción a CSS",
+          "description": "**Agrupar:** Poner a los estudiantes en parejas.\n\n**Transición:** Envía a los estudiantes a Code Studio.\n\nPermite a los estudiantes explorar la página web de ejemplo en Code Studio.",
           "progression_name": "Ejemplo de Sitio Web"
         },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
-            null
+            "Pide a los alumnos que exploren este nivel con un compañero. Después, dirige una breve charla para que los compañeros compartan con la clase sus respuestas a las tres preguntas de las instrucciones. El vídeo posterior debería ayudar a reforzar lo que los alumnos han descubierto, por lo que no es necesario dirigir una larga conversación de repaso."
           ],
           "progression_name": "Exploración"
         },
+        "cd1f7371-824e-4e5b-b9c6-947a9c38572d": {
+          "description": "**Mostrar:** Ver y comentar en clase el vídeo de CSS."
+        },
         "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿En qué se diferencia el estilo de una página web de la estructura?\n-   ¿Por qué quieres que tu página web tenga un estilo determinado?",
           "tips": [
-            null,
-            null
+            "**Vocabulario Clave**\n\n-   **CSS** - Hojas de Estilo en Cascada; un lenguaje utilizado para describir el estilo de los elementos HTML\n-   **Selector CSS** - la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo\n\nLos alumnos deben entender que la estructura de la página está ahí para organizar la información de forma lógica, pero no le dice al ordenador cómo mostrarla.  Así, por ejemplo, la estructura podría incluir diferentes cabeceras y párrafos, pero no diría nada sobre el color del texto o su tamaño.  El estilo de la página es lo específico de su apariencia.  Sin un estilo concreto, cada navegador web decidiría por sí mismo cómo mostrar los distintos elementos de la página.\n\nLos estilos son importantes para permitir a los desarrolladores web decidir exactamente cómo se ve una página web en la pantalla.  Como los estilos están separados de la estructura y el contenido, los desarrolladores web pueden cambiar el estilo de toda una página muy fácilmente, sin tener que hacer ningún cambio en la estructura y el contenido de la página web.  Esto significa que es muy fácil que las páginas web tengan un aspecto individual que esté unificado en toda la página.",
+            "**Imágenes en el Vídeo**: Alrededor de los 40 segundos, el vídeo menciona brevemente que los alumnos han aprendido a añadir imágenes a su sitio web. En una versión anterior del plan de estudios, cuando se grabó originalmente este vídeo, los alumnos aprendieron las imágenes antes de aprender CSS. En la versión actual del plan de estudios, los estudiantes aún no han visto los vídeos. Es un pequeño momento en el vídeo, pero si los estudiantes preguntan sobre ello, aprovecha el momento para crear entusiasmo, ya que los estudiantes aprenderán sobre las imágenes ¡en sólo unas pocas lecciones!"
           ],
           "progression_name": "Vídeo: Introducción a CSS - Parte 1"
+        },
+        "111d1cba-08a3-4658-bb00-cb5e3c52427e": {
+          "description": "**Circular:** Ayuda a los alumnos a continuar con la progresión de la lección."
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "Desarrollo de Habilidades"
         },
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
+          "description": "**Pregunta a tener en cuenta con el vídeo:**\n\n-   ¿Cómo sabe la página web qué hoja de estilo debe utilizar?",
           "tips": [
-            null
+            "Asegúrate de que todos los alumnos entiendan cómo enlazar con su hoja de estilo desde cada página web."
           ],
           "progression_name": "Video: Introducción a CSS - Parte 2"
         },
@@ -16119,28 +16212,60 @@
         },
         "3a9a8696-72e3-4e6f-9812-59e180a16192": {
           "tips": [
-            null
+            "**Nota sobre fuentes y familias de fuentes**\n\nPara que un navegador web muestre una fuente, la **fuente** debe estar disponible en el dispositivo en el que se ejecuta el navegador web. No hay garantía de que un dispositivo tenga un tipo de letra concreto, por lo que es mucho más seguro utilizar **familias de fuentes**, que permiten muchas fuentes diferentes que tienen el mismo aspecto general.\n\nSi los alumnos quieren especificar una fuente exacta, tendrán que utilizar una fuente de la web, de modo que el navegador pueda descargar esa fuente específica para utilizarla al mostrar la página. Puede encontrar más información sobre estas fuentes en **Google Fonts** y **W3Schools**."
           ],
           "progression_name": "Desafíos"
         },
         "727aa204-0664-456f-b5fc-1f6409b65e88": {
+          "description": "**Revisión:** Revisa brevemente el paradigma \"Contenido-Estructura-Estilo\" que se encuentra en el área de \"Ayuda y Consejos\" de los niveles de Code Studio. Dibuja un gráfico en forma de T en la pizarra y rotula un lado con HTML y otro con CSS.  Pide a los alumnos que trabajen en pequeños grupos para pensar en todas las diferencias que puedan entre los dos lenguajes, y luego vuelvan a reunirse como grupo y compartirlas.",
           "tips": [
-            null
+            "Asegúrate de que los alumnos distinguen entre el modo en que HTML indica la estructura de un documento y el modo en que CSS permite a los alumnos establecer los estilos, así como las diferencias en el aspecto de los lenguajes en la pantalla y en su uso."
           ]
+        },
+        "655444e5-8cbb-4ba3-9b9a-76c1bd9473f3": {
+          "name": "Grabación de Propiedades CSS",
+          "description": "**Pregunta del Día: ¿Cómo podemos cambiar el estilo del texto en una página web?**"
         },
         "39d79388-46f2-4f41-839d-c2bc3002d969": {
+          "description": "**Configuración:** Solicita a los estudiantes que creen una nueva página en sus diarios llamada Propiedades CSS.",
           "tips": [
-            null
+            "**¿Diario o Póster?** Al igual que con la página de \"Etiquetas HTML\" en sus diarios, puedes elegir que tu clase lleve un registro de las Propiedades CSS en un póster de clase compartido."
           ]
+        },
+        "6b222417-5594-4fd8-b943-3a43810b6cab": {
+          "description": "**Agrupar:** Coloca a los estudiantes en grupos de dos a cinco - necesitarás al menos un grupo para cada una de las propiedades introducidas en esta lección.\n\n**Rompecabezas:** Asigna a cada grupo una de las propiedades presentadas hoy. Cada grupo tiene que hacer una descripción y un ejemplo de su propiedad.\n\n**Vocabulario Clave:**\n\n-   **CSS** - Hojas de Estilo en Cascada; un lenguaje utilizado para describir cómo se debe aplicar el estilo a los elementos HTML \n-   **Selector CSS** - la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo\n\n**Compartir:** Pide a los grupos que añadan las propiedades a sus diarios o al póster de la clase \"Propiedades CSS\"."
+        },
+        "5572ccc6-7ab9-4dca-a02c-8ecd22e87705": {
+          "description": "**Sugerencia:** ¿Cuál es la característica especial de su estilo personal que te gustaría compartir con el mundo?"
         },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
+          "description": "Permite a los voluntarios exponer los aspectos de su estilo personal que consideren importantes.",
           "tips": [
-            null
+            "Este debate permite a los alumnos compartir ideas para sus páginas web, pero no es necesario que todos las compartan si prefieren no hacerlo.  El objetivo de la conversación es que los alumnos empiecen a pensar en el tema y que se animen a pensar en los sitios web como una forma de expresarse."
           ]
         },
+        "34b6bea7-f311-4ca7-9f74-61eb2de89d85": {
+          "description": "Los sitios web nos permiten compartir nuestro estilo de forma creativa.  Hoy vamos a trabajar para utilizar lo que hemos aprendido sobre CSS para compartir nuestro estilo con el mundo."
+        },
+        "7a747047-71f8-4a20-a01d-08a0e043207c": {
+          "description": "**Pregunta del Día: ¿Cómo puedes expresar tu estilo personal en una página web?**"
+        },
+        "6dc9f036-e336-44a3-b163-9ca08d321bb6": {
+          "description": "**Distribuir:** Entrega a cada alumno un ejemplar de la Guía del Proyecto."
+        },
+        "c4f6d157-8bd5-40ec-98a9-65cd3d968b8c": {
+          "name": "Paso 1: Definir - Indica tu Objetivo",
+          "description": "Los alumnos ya habrán descrito su estilo personal en el calentamiento, pero esta es una oportunidad para que afinen lo que quieren decir, o incluso para que cambien de opinión sobre el estilo de su sitio web."
+        },
+        "d37f1e1e-0f76-4f17-b871-cd5233590f47": {
+          "name": "Paso 2: Preparar - Diseña tu Página",
+          "description": "Cuando los alumnos respondan a las preguntas sobre el diseño de la página, asegúrate de que diferencian entre el contenido de la página y la forma en que se aplica el estilo a ese contenido.  Una vez que hayan completado sus diseños, comprueba que pueden identificar qué propiedades CSS serán necesarias para los diferentes textos de las páginas web."
+        },
         "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
+          "name": "Paso 3: Intenta - Desarrolla tu Página",
+          "description": "Después de haber revisado los diseños, permite a los alumnos entrar en code studio y codificar sus páginas.  Tendrán la oportunidad de repasar todas las etiquetas que han aprendido antes de empezar con sus páginas web. Pueden completar estas actividades como repaso o utilizarlas como recursos mientras trabajan en sus proyectos.",
           "tips": [
-            null
+            "**Nuevo Estilo, Nuevo Proyecto**: Con el fin de crear oportunidades para que los alumnos desarrollen una variedad de proyectos y contribuir a reforzar sus nuevos conocimientos de CSS, este proyecto no está vinculado al mini-proyecto HTML anterior de la lección 4. Si los estudiantes quieren aprovechar su trabajo anterior, pueden volver a su proyecto y copiar y pegar su código HTML en este proyecto. O bien, pueden usar esto como una oportunidad para construir un sitio web completamente nuevo que se adapte a su personalidad."
           ]
         },
         "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
@@ -16158,64 +16283,126 @@
         "30535418-4101-4313-b0f2-fb2afdde6b62": {
           "progression_name": "Revisa tu Página"
         },
+        "16a4d86c-4053-4aee-a16a-c2418ab69bd8": {
+          "name": "Paso 4: Reflexiona",
+          "description": "Los alumnos deben tener la oportunidad de pensar en lo que más les ha gustado de sus páginas.  También puedes permitir que los alumnos muestren formal o informalmente su trabajo al resto de la clase."
+        },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
-          "name": "Comentarios de los compañeros"
+          "name": "Comentarios de los compañeros",
+          "description": "Como parte de este proyecto, puedes dar a los estudiantes la oportunidad de hacer comentarios a sus compañeros utilizando el formulario de revisión por pares.  Esto probablemente prolongará el proyecto al menos un día."
+        },
+        "3656d6a8-efb7-4950-97ee-4415833d7ec8": {
+          "description": "\\*\\*¿Cómo puedes expresar tu estilo personal en una página web?\n\n**Sugerencia:** ¿Qué es lo que mejoraría tu página web y que todavía no sabes hacer?"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
+          "description": "A medida que los alumnos compartan sus ideas, colócalas en la pizarra o en un póster, e intenta señalar los conocimientos que aprenderán en las próximas lecciones.",
           "tips": [
-            null
+            "Utiliza esta puesta en común para que los alumnos se entusiasmen con las cosas que aprenderán en las próximas lecciones. Si creas un póster, también puedes tachar los temas a medida que los vayas enseñando.  En el caso de los temas que no están contemplados en el plan de estudios, puedes indicar a los alumnos temas similares que sí están contemplados o, si procede, dirigirlos a recursos externos que les guíen en el aprendizaje de esos conocimientos."
           ]
+        },
+        "fef614e1-ce46-4fe4-a713-7cd4394c1332": {
+          "name": "Uso de tu Trabajo",
+          "description": "Todos habéis trabajado duro para crear un nuevo sitio web que vais a publicar al mundo. Sin embargo, cuando se publica algo, puede ser difícil controlar lo que otras personas hacen con él. A veces la gente utiliza nuestro trabajo de formas que no nos parecen justas. Voy a describirte algunas situaciones.  Si crees que lo que ha pasado es justo, ponte de pie. Si crees que fue injusto, siéntate."
         },
         "3356cda1-c8fe-4475-aaf6-1361379c848f": {
+          "description": "1.  Haces una foto impresionante y alguien la pone en su cuenta de redes sociales con tu nombre al lado.\n2.  Escribes una historia y otra persona la publica y dice que la ha escrito ella.\n3.  Escribes una canción y alguien la canta a sus amigos.\n4.  Escribes una canción y alguien la canta en un concierto y gana mucho dinero.\n5.  Haces una foto y otra persona le hace un Photoshop y pone la nueva versión en su página web.",
           "tips": [
-            null
+            "El objetivo de estas preguntas es relacionar cuestiones más amplias sobre los derechos de autor con las propias experiencias de los alumnos al crear y compartir contenidos en línea. Para que esto les resulte más cercano, puedes cambiar las preguntas para elegir formas particulares de medios sociales que les interesen a los alumnos. Si sabes que los alumnos no utilizan mucho las redes sociales, modifica la pregunta para que refleje otro ámbito en el que tus alumnos puedan pensar que su propio trabajo creativo se ha utilizado de forma inapropiada."
           ]
+        },
+        "cc6c7ed6-ebad-4438-9198-e25fa7d61234": {
+          "description": "**Sugerencia:** ¿Qué reglas pondrías a la gente que quiere usar tu trabajo creativo?"
         },
         "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
+          "description": "**Debatir:** Pida a los alumnos que escriban un diario individualmente, que lo compartan con un compañero y que, finalmente, lo comenten con toda la clase.",
           "tips": [
-            null
+            "Este debate sirve para que los alumnos piensen en el problema antes de presentarles la solución de Creative Commons. Mientras los alumnos discuten las reglas que les gustaría para su propio trabajo, asegúrate de enfatizar y destacar los principios que corresponden a las propiedades de Creative Commons que explorarán más adelante en la lección."
           ]
         },
+        "36bd75d0-1aa9-4fd5-82f7-84b15aa6c2f0": {
+          "description": "No pasa nada si no todos están de acuerdo en cómo quieren que se utilice su obra. La ley de derechos de autor dice que quien crea un nuevo contenido, como una imagen, una historia o una canción, puede decidir cómo pueden utilizarlo otras personas."
+        },
+        "29bd3aba-9e14-4d7d-b88c-54ea4d67f323": {
+          "description": "**Vocabulario Clave:**\n\n-   **derechos de autor** - derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo\n\n**Pregunta del Día: ¿Qué tipo de normas protegen los derechos de todos cuando utilizamos los contenidos de los demás?**"
+        },
+        "2822dc84-309f-40d5-91c8-f7e68188487c": {
+          "name": "La Solución Creative Commons",
+          "description": "Los derechos de autor se conceden en el momento en que se crea algo, así que, a menos que se diga explícitamente lo contrario, tenemos que asumir que cualquier imagen, vídeo u otro medio que encontremos en línea está totalmente cubierto por la ley de derechos de autor, lo que significa que nadie más puede hacer copias o publicarlo en línea sin permiso. \n\nSin embargo, a veces queremos que la gente comparta nuestro trabajo para que más personas puedan verlo.  La licencia Creative Commons (CC) se desarrolló para ayudar a los creadores de contenidos a tener un control más específico sobre la forma en que otras personas pueden utilizar su trabajo."
+        },
+        "51ea51b8-4f71-49d9-8eac-f6118f5364cf": {
+          "description": "**Presentación:** Muestra el vídeo a la clase.  Este vídeo es de la Biblioteca McLaughlin de la Universidad de Guelph. \n\n**Agrupar:** Coloca a los estudiantes en parejas.\n\n**Distribuir:** Entrega a cada estudiante una copia de la guía de actividad."
+        },
+        "0a1fb44a-12cf-4dd2-ab20-acf365289d46": {
+          "description": "#### Licencia de tu Trabajo\n\n**Componentes de la Licencia**"
+        },
         "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
+          "description": "La primera parte de esta guía de actividad abarca los componentes de una licencia Creative Commons. Pide a los alumnos que piensen de forma crítica sobre el valor que cada componente añade al creador, pero también sobre las formas en que puede limitar el intercambio cultural de ideas, conectando los componentes de la licencia con los escenarios que han considerado antes en la clase.",
           "tips": [
-            null
+            "A medida que los alumnos repasan la guía, el objetivo no es que memoricen todos los aspectos de las distintas licencias, sino que comprendan que los creadores pueden elegir el modo en que su trabajo será utilizado por otras personas.  Esta actividad debería prepararles para utilizar de forma legal y responsable las imágenes que encuentren en la red en sus propios sitios web."
           ]
         },
         "957ba0ee-6412-418d-bb42-811c2ea546cc": {
+          "description": "**Otras Opciones**\n\nLa segunda parte de la guía presenta a los alumnos otras licencias y escenarios que probablemente encontrarán al buscar imágenes. ",
           "tips": [
-            null
+            "Los alumnos también pueden tener curiosidad por saber cómo atribuir las imágenes que ellos mismos toman.  Puedes recordarles que, como creadores de contenidos, pueden **elegir** la licencia que quieren utilizar, e inscribirse como creadores junto con la licencia elegida."
           ]
+        },
+        "ef076e07-e82a-4f80-9bb1-0b1d811c0b1b": {
+          "description": "**Elección de la Licencia Correcta**\n\nLa segunda página de esta actividad proporciona a los estudiantes cuatro licencias CC y dos escenarios de creadores de contenidos. Para cada escenario, se pide a los alumnos que evalúen cuál de las cuatro licencias proporcionadas es la _menos restrictiva_ pero que sigue respondiendo a las preocupaciones y necesidades del creador de contenidos."
         },
         "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
+          "description": "**Debatir:** Pide a varios alumnos que compartan sus respuestas a los escenarios de _Elegir la Licencia Correcta_. Fomenta el debate si los estudiantes identifican diferentes licencias para los mismos escenarios.",
           "tips": [
-            null
+            "**Objetivo:** Aunque puede que no haya una licencia \"correcta\" específica para cada uno de estos escenarios, anima a los alumnos a considerar siempre si la licencia que han elegido es más restrictiva de lo que estrictamente debe ser. Uno de los objetivos de diseño de la licencia Creative Commons es aumentar la cantidad de material creativo disponible para el público en general, promoviendo el intercambio de propiedad intelectual para el bien común. Con esto en mente, sólo deberíamos añadir las restricciones mínimas necesarias para satisfacer los deseos del creador de contenidos."
           ]
+        },
+        "038ca026-dab7-4b7a-8c7b-c6266154edcf": {
+          "description": "**Búsqueda de Imágenes**\n\nEn la última parte de la guía se pide a los alumnos que busquen las imágenes que deseen e identifiquen las licencias bajo las que fueron publicadas.\n\nComo no podemos saber qué sitios pueden estar bloqueados en tu zona, hemos evitado indicar a los alumnos un motor de búsqueda específico. No todos los motores de búsqueda facilitan la configuración de los filtros de Creative Commons; algunos de los más fáciles son:\n\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Búsqueda Avanzada de Imágenes de Google](https://www.google.com/advanced_image_search)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n-   [Wordpress Openverse](https://wordpress.org/openverse/) (antes Creative Commons Search)\n\nAdemás, [esta guía de la Biblioteca de la Facultad de Derecho de Harvard](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) tiene una variedad de motores de búsqueda que podrían utilizarse para las imágenes de Creative Commons. Esto puede ser abrumador para los alumnos, pero podría ser un buen recurso para situaciones específicas o para encontrar motores de búsqueda adicionales que estén disponibles en tu colegio.\n\nComo ocurre con cualquier sitio con contenido crowdsourced, los resultados de los motores de búsqueda cambiarán de un día para otro, y algunos de esos resultados pueden ser inapropiados para el aula. Es posible que desees comprobar estos sitios poco antes de mostrarlos a la clase, y decidir lo que es mejor para tu aula.\n\n**Compartir:** Permite que los alumnos compartan las imágenes y las licencias que han encontrado, si las imágenes podrían incluirse en un sitio web del alumno y, en caso afirmativo, qué normas tendría que seguir el alumno para utilizar la imagen."
+        },
+        "d5a7f547-8873-4260-b32e-b863b2dc5b29": {
+          "name": "Tu Propia Licencia CC",
+          "description": "**Pregunta del Día: ¿Qué tipo de normas protegen los derechos de todos cuando utilizamos los contenidos de los demás?**"
+        },
+        "aba827e0-c4a3-455f-9c37-d7d46c47ea2e": {
+          "description": "**Vocabulario Clave:**\n\n-   **copyright**: - el derecho legal exclusivo a imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y a autorizar a otros a hacer lo mismo."
         },
         "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
+          "description": "**Diario:** Piensa en algunas de las fotos, dibujos y trabajos escritos que has creado en el pasado, o incluso en el sitio web que crearás en esta clase. Sin una licencia clara, todas esas cosas están cubiertas por el copyright totalmente restrictivo. ¿Qué licencia Creative Commons preferirías utilizar (si es que hay alguna) y por qué?",
           "tips": [
-            null
+            "Mientras los alumnos discuten las ventajas y desventajas de los distintos tipos de licencias, asegúrate de que reconocen que los derechos de autor están destinados a proteger los derechos de los creadores de contenidos, como ellos mismos. Estos derechos incluyen que se les reconozca como creadores cuando la obra se exhibe, o que se decida quién puede utilizarla y ganar dinero con ella."
           ]
+        },
+        "47e36a31-e0c8-4fee-b730-e8c5050fa8b6": {
+          "description": "-   Consulta el [buscador de licencias Creative Commons](https://creativecommons.org/choose/)"
         },
         "48accbcd-e23c-4d31-aa68-baed73694793": {
-          "name": "Usando Imágenes"
+          "name": "Usando Imágenes",
+          "description": "Hoy vamos a añadir algunas imágenes a nuestros sitios. Esto puede hacer que los sitios web sean mucho más divertidos, pero también significa que tendremos que tener mucho cuidado para asegurarnos de que somos seguros y responsables en su uso."
         },
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
+          "description": "**Sugerencia:** En tu diario, piensa en algunas pautas que deberíamos tener en cuenta al utilizar imágenes. ¿Cómo podemos asegurarnos de que estamos seguros y respetamos los derechos de los demás?",
           "tips": [
-            null
+            "A medida que los alumnos elaboren sus directrices, puedes optar por recordarles las actividades recientes que han realizado en relación con el intercambio de información personal y el respeto de los derechos de autor.  Es posible que muchas clases quieran añadir otras directrices, como definir lo que es apropiado en un entorno escolar, o asegurarse de que las personas que aparecen en la imagen están conformes con que la imagen se publique en línea.  En cualquier caso, asegúrate de que las directrices son suficientes antes de seguir adelante."
           ]
+        },
+        "992521a5-bde4-4478-91be-3b6a5344bacd": {
+          "description": "**Debatir:** Pide a los alumnos que escriban un diario individualmente, que lo compartan con un compañero y que, por último, lo comenten con toda la clase. Puedes optar por crear un póster con las pautas que los alumnos han creado, y preguntarles si parece que falta algo en la lista.\n\n**Pregunta del Día: ¿Cómo podemos añadir imágenes en nuestras páginas web, asegurándonos de que respetamos los derechos de todos?**"
         },
         "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
           "name": "Añadiendo Imágenes",
           "tips": [
-            null
+            "A medida que los estudiantes comienzan a utilizar imágenes, pueden tener problemas a la hora de encontrar el tamaño adecuado para sus páginas.  En estas dos lecciones, los alumnos aprenderán a cambiar el tamaño de sus imágenes con CSS.  Por ahora, los alumnos pueden utilizar un redimensionador de imágenes en línea, como el que se encuentra en <https://resizeimage.net/>, para cambiar el tamaño de las imágenes.  También pueden utilizar el atributo [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) dentro de la etiqueta [\\`img\\`](/docs/weblab/img/) para cambiar su tamaño mientras se carga la página."
           ]
         },
         "f69595ea-98fa-4c39-9686-6916ab265ab4": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "397c0b58-b779-4a76-afd5-4592332a561c": {
+          "description": "**Nivel 1:** Los alumnos pueden encontrarse con algunas etiquetas de imagen que incluyen una barra al final, como esta: `<img src=\"imgURL.jpg\" alt=\"mi imagen\" />`\n\nEstas barras al final están ahí para indicar que esta etiqueta se cierra automáticamente, pero son opcionales y no tienen ningún efecto en la página web.\n\n\\*\\*Nivel 2: Debido al tipo de licencia utilizada, los estudiantes no están obligados legalmente a incluir la atribución, pero es un buen hábito que deben adquirir al desarrollar sus sitios web.\n\n**Nivel 5 - Motores de Búsqueda Recomendados:** Debido a que no podemos saber qué sitios pueden estar bloqueados en tu zona, hemos evitado indicar a los estudiantes un motor de búsqueda específico. No todos los motores de búsqueda facilitan la configuración de los filtros de Creative Commons - algunos de los más fáciles son:\n\n-   [Búsqueda de Creative Commons](https://search.creativecommons.org/)\n-   [Búsqueda Avanzada de Imágenes de Google](https://www.google.com/advanced_image_search)\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nComo ocurre con cualquier sitio con contenido de origen colectivo, los resultados de los motores de búsqueda cambiarán de un día para otro, y algunos de esos resultados pueden ser inapropiados para el aula. Es posible que quieras comprobar estos sitios poco antes de mostrarlos a la clase, y decidir qué es lo mejor para tu aula."
+        },
         "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
           "tips": [
-            null
+            "Aunque este nivel puede utilizarse para evaluar la comprensión de la sintaxis de la etiqueta `<img>`,  su objetivo principal es que los alumnos conozcan los tipos de errores más comunes que pueden encontrar al añadir imágenes a las páginas web."
           ],
           "progression_name": "Practica"
         },
@@ -16229,39 +16416,101 @@
           "progression_name": "Desafíos"
         },
         "869d287c-19c3-4e38-83bf-0498821d1157": {
-          "name": "Usando Imágenes"
+          "name": "Usando Imágenes",
+          "description": "**Pregunta del Día: ¿Cómo podemos añadir imágenes en nuestros sitios web, al tiempo que nos aseguramos de respetar los derechos de todos?**\n\n**Diario 3-2-1:**\n\n-   ¿Cuáles son las **3** maneras en que puedes utilizar las imágenes para mejorar tu sitio web?\n-   ¿Cuáles son los **2** retos que supone añadir imágenes a un sitio web?\n-   ¿Cuál es **1** modo de respetar los derechos de las personas al utilizar imágenes?"
+        },
+        "f3996d83-1be3-4964-8f5d-6ca80974d7e2": {
+          "name": "Exprésate",
+          "description": "**Sugerencia:** ¿Cuáles son las formas en que tú o tus amigos os expresáis? Piensa en diferentes formas de comunicación, actividades o espacios que consideres una forma de autoexpresión."
         },
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
+          "description": "**Debatir:** Los estudiantes deben hacer una lluvia de ideas de forma independiente, luego compartirlas con un compañero y, finalmente, compartirlas con toda la clase.",
           "tips": [
-            null
+            "**Objetivo:** Este calentamiento debe generar una lista de formas en que los alumnos expresan sus ideas. Si necesitan ayuda para empezar, ofréceles un par de ejemplos de la lista que aparece a continuación. El objetivo de este calentamiento es enmarcar el desarrollo de la web como otra forma de autoexpresión. "
           ]
         },
+        "384ab1ae-3b23-4ee4-bb78-19e695c63015": {
+          "description": "Compartimos nuestros pensamientos, sentimientos e ideas de muchas maneras diferentes. Algunas personas pueden expresar sus pensamientos en línea, otras pueden hacerlo a través de su forma de vestir, haciendo una canción o un dibujo. La autoexpresión es una parte importante de nuestras vidas y, como vamos a ver, hacer páginas web es otra forma de expresar nuestras ideas, intereses y sentimientos."
+        },
+        "9f949a84-aa34-4646-9ce1-132bf89514f0": {
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar los sitios web para expresarnos?**"
+        },
+        "1296352e-2e42-45a9-a7c7-2cbc4e7f5689": {
+          "name": "Revisión del Proceso de Resolución de Problemas",
+          "description": "**Revisión:** Revisar el marco del proceso de resolución de problemas: Definir, Preparar, Probar, Reflexionar"
+        },
+        "1bead7d0-5102-4ba1-9de7-3c9366841210": {
+          "description": "Aunque no solemos pensar en la auto-expresión como un \"problema\" que tenemos que resolver, podemos utilizar el proceso de resolución de problemas como ayuda para expresarnos con nuestras páginas web.  Hoy vamos a \"definir\" el problema que van a resolver nuestras páginas web."
+        },
+        "8aaf1b58-dda9-4a40-a345-cf5179d83904": {
+          "description": "#### Guía de Planificación del Sitio Web Personal\n\n**Distribuir:** Pide a los estudiantes que abran un diario o distribuye opcionalmente copias de la guía de actividad."
+        },
         "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
+          "description": "**Lluvia de Ideas sobre el Contenido:** Lee esta sección de la guía de actividad. A continuación, concede a los alumnos varios minutos para que, en silencio, hagan una lluvia de ideas sobre el contenido que podrían incluir en un sitio web personal.",
           "tips": [
-            null
+            "**Utiliza los Diarios:** La actividad de la lección de hoy puede completarse fácilmente en los diarios de los alumnos. Proyecta o comparte las instrucciones y deja que los alumnos completen su trabajo en sus diarios."
           ]
+        },
+        "e4261b9d-c28d-451a-9e05-ced5dc5f1659": {
+          "description": "**Compartir:** Pide a los alumnos que compartan sus ideas de contenido con un compañero."
+        },
+        "0243ad63-e883-4d8a-b2f9-8d0b646cf48d": {
+          "description": "A la hora de compartir ideas con otras personas es importante tener en cuenta no sólo lo que quieres decir, sino cómo quieres decirlo. Acabas de crear una lista de ideas que podrías compartir en tus sitios web personales. Vamos a ver algunos sitios web personales que han creado otros estudiantes y pensemos en el contenido que comparten y en cómo presentan ese mensaje."
+        },
+        "25dba02a-ff28-4ae0-b4d1-6d90b1d545ba": {
+          "description": "**Ver Páginas Web Personales:** Envía a los estudiantes a Code.org y haz que miren las páginas web de ejemplo en parejas. Pueden utilizar estas páginas web como inspiración para sus propias páginas web personales. Puedes repasar los propósitos de las distintas páginas web y por qué son personalmente significativas para sus creadores."
         },
         "890f7764-695b-4258-acbb-9b7e29804fc5": {
           "progression_name": "Ejemplos de Sitios Web Personales"
         },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
+          "description": "**Propósito de la Página Web:** Concede a los alumnos algo de tiempo para que piensen en los propósitos que tendrán sus propias páginas web. Intenta alejar la conversación del contenido exacto de la página, que tendrán tiempo de planificar en una lección posterior.",
           "tips": [
-            null
+            "Los alumnos deben identificar sus sitios web como una oportunidad para expresarse y alcanzar sus propios objetivos. Comprueba que cada alumno tiene una explicación de por qué su sitio es personalmente significativo."
           ]
+        },
+        "30cecc18-d9a2-4653-967d-0c73584a3390": {
+          "description": "**Compartir:** Ofrece a los estudiantes la oportunidad de compartir los propósitos de su sitio web con un compañero."
+        },
+        "6f94a537-b863-41a9-9112-04b40d781104": {
+          "name": "Diario 3-2-1",
+          "description": "**Pregunta del Día: ¿Cómo podemos utilizar los sitios web para expresarnos?**"
         },
         "15cd087e-202a-4116-9feb-708690d683a2": {
+          "description": "**Sugerencia:** Ahora que has tenido la oportunidad de compartir tus ideas para el sitio web, escribe...",
           "tips": [
-            null
+            "Cuando los alumnos compartan los diferentes aspectos de las páginas web, asegúrate de que el debate pone de manifiesto los aspectos creativos de la creación de páginas web y que éstas pueden ser una forma de expresión personal única para cada individuo."
           ]
+        },
+        "35a6e056-5d49-4122-bb4d-05651dcdea5a": {
+          "description": "-   3 razones por las que tu sitio será especial para ti\n-   2 razones por las que el sitio de tu compañero será especial para él\n-   1 cosa que aún te gustaría aprender a hacer en HTML o CSS"
+        },
+        "1440eec7-adb9-4275-b750-cd69a18005a4": {
+          "description": "En las próximas lecciones, trabajaremos para hacer realidad muchas de tus ideas. Algunos de los contenidos que quieras compartir podrían cambiar a medida que avancemos en la unidad, pero este objetivo de utilizar los sitios web para expresarse estará presente en todo momento."
+        },
+        "880281a5-a3bc-4ac7-8712-87fb7a79ee31": {
+          "description": "**Recoger:** Si los alumnos no pusieron sus ideas para la página web en un diario, recógelas. Volverán a hacer referencia explícita a ellas cuando comiencen su proyecto."
+        },
+        "149e485f-35bf-40c0-b2bd-f32a5e23c5bc": {
+          "name": "Debatir: ¿Qué Estilos Quieres?",
+          "description": "**Muestra:** Envía a los estudiantes a la página web de ejemplo en Code Studio o muéstrala en la pizarra.\n\n**Pregunta:** ¿Cuáles son los dos estilos CSS de esta página que ya conoces?  ¿Cuáles son los dos estilos de la página que aún no sabes codificar?"
         },
         "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
+          "description": "**Debatir:** Pide a los alumnos que compartan los diferentes estilos de la página.",
           "tips": [
-            null
+            "\\*\\*Objetivo: Esta conversación sirve para repasar las propiedades de CSS que los alumnos ya han aprendido y muestra algunas de las nuevas propiedades que aprenderán en esta lección.  Algunas de las nuevas propiedades mostradas son:\n\n-   Añadir colores de fondo a las cosas\n-   Poder mover cosas en la página (las imágenes a la izquierda del texto)\n-   Poder añadir bordes y redondear las esquinas de las imágenes"
           ]
         },
+        "4b780102-cec7-4198-8182-6c47ee8c7511": {
+          "description": "Hoy vamos a aprender más propiedades que podemos utilizar para dar estilo a nuestras páginas web, lo que te permitirá añadir algunos de los estilos que hemos enumerado en este análisis."
+        },
+        "e718e826-2624-47b2-a10f-d185cab3dfa3": {
+          "description": "**Pregunta del Día: ¿Cómo podemos aplicar estilo a las imágenes y a los diseños de nuestras páginas?**"
+        },
         "c816e4df-5e8b-4408-844a-1346d1f42700": {
+          "name": "Laboratorio Web: Estilos de Elementos con CSS",
           "tips": [
-            null
+            "**Programación en Parejas:** Considera la posibilidad de utilizar la programación en parejas para una parte o la totalidad de esta lección, en particular cuando los alumnos están aprendiendo nuevas propiedades de CSS."
           ]
         },
         "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
@@ -16285,34 +16534,74 @@
         "fa81a49c-8be7-43ac-92fe-cbc509b0970c": {
           "progression_name": "Desafíos"
         },
+        "1c2ae083-6309-42cf-8c70-0988461e549b": {
+          "description": "**Pregunta del Día: ¿Cómo podemos aplicar estilo a las imágenes y a los diseños de nuestras páginas?**\n\n**Diario:** Pide a los alumnos que añadan las nuevas propiedades que han aprendido a la página de Propiedades CSS en su diario o en el póster de la clase.\n\n**Sugerencia:** ¿Cómo podrías utilizar estos nuevos estilos en tu página web personal?"
+        },
+        "411e5353-2fbf-4061-bef1-aac7c9964654": {
+          "description": "**Sugerencia:** Hemos aprendido mucho de HTML y CSS en esta unidad, y también mucho sobre cómo ser ciudadanos digitales responsables.  Estamos a punto de planificar los detalles de nuestras páginas web. Reflexionar unos minutos sobre algunas de las cosas más importantes que debemos recordar durante el proyecto en estas categorías:\n\n1.  Las etiquetas HTML y los consejos/trucos para utilizarlas\n2.  Propiedades CSS y consejos/trucos para utilizarlas\n3.  Cómo ser responsable y seguro en Internet"
+        },
         "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
+          "description": "**Debatir:** Pide a los alumnos que compartan sus ideas y las expongan delante de la clase.",
           "tips": [
-            null
+            "**Objetivo:** Esta es una oportunidad para que los alumnos se recuerden a sí mismos (y para que tú compruebes) las cosas más importantes que han aprendido en la unidad hasta el momento.  Aunque el enfoque puede variar de una clase a otra, la mayoría de las clases deberían tener algunas cosas que decir en cada categoría.  Asegúrate de que en tus conversaciones destacas las diferencias entre estructura (HTML) y estilo (CSS).  Si has notado obstáculos particulares en tus alumnos, este es un buen lugar para asegurarte de que están preparados para superarlos."
           ]
+        },
+        "964298df-2ee6-4599-b083-443043b27e80": {
+          "description": "**Pregunta del Día: ¿Qué tenemos que hacer como preparación para construir nuestras páginas web?**"
+        },
+        "d9a91abd-47dc-4c64-bf0d-d3ad71bae66c": {
+          "description": "**Distribuir:** Entrega los diarios de los estudiantes o la guía de actividad, si los alumnos no están usando diarios.  Si están disponibles, los estudiantes pueden usar lápices de colores o ceras para dibujar sus páginas."
+        },
+        "a4d0e27a-435a-45bd-90df-4bbec9637f31": {
+          "name": "Describe tu Página",
+          "description": "Concede a los alumnos unos minutos para que describan y diseñen su página.  Recuérdales que deben pensar tanto en el diseño como en el contenido, pero que no es necesario que incluyan cada palabra de la página.  También pueden poner más detalles sobre los estilos de los elementos en la siguiente sección."
+        },
+        "c59b5fcd-d561-4a97-acdb-e8b4e189c040": {
+          "name": "Describe tus Estilos",
+          "description": "Cada alumno debe elegir etiquetas relacionadas con algunos de los elementos de sus páginas y describir cómo serán esos elementos (color, tamaño, etc.).  No es necesario que escriban las propiedades CSS exactas, pero debe haber suficiente información que les sirva de guía cuando hagan sus páginas."
         },
         "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
+          "name": "Encuentra tus Imágenes",
+          "description": "**Transición** Permite a los alumnos que busquen en Internet las imágenes que quieren utilizar para sus páginas web. Asegúrate de que anotan la información sobre los derechos de autor y de que pueden decirte de dónde procede la imagen, para que ellos (o tú) podáis encontrarla en el futuro.",
           "tips": [
-            null
+            "Puedes pedirle a cada alumno que revise el plan de su página web antes de permitirles conectarse a Internet para encontrar sus imágenes. Asegúrate de que cada alumno haya hecho un boceto de la página y haya descrito los estilos de algunas etiquetas diferentes. El boceto y la descripción deben mostrar que la página será suficiente para demostrar que han adquirido los conocimientos y la comprensión del capítulo."
           ]
+        },
+        "4c8f3dd3-5f9e-4ba9-b560-8516e918e45f": {
+          "description": "**Pregunta del Día: ¿Qué tenemos que hacer como preparación para construir nuestras páginas web?**"
         },
         "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
+          "description": "**Sugerencia:** Piensa en la parte \"Definir\" de este proyecto.  Explica dos formas en las que tu plan hará que tu página web personal tenga éxito.",
           "tips": [
-            null
+            "Comprueba que los alumnos han vinculado las decisiones de diseño al propósito del sitio web, tal y como se explica en la lección \"Sitios Web para la Expresión\"."
           ]
+        },
+        "f293f068-51c1-4293-ab2f-0a8731d8ad4f": {
+          "description": "**Recoger:** Recoge los diarios o las guías de actividad donde los alumnos planificaron sus páginas.  Los necesitarán en la siguiente lección."
+        },
+        "b026c0db-9a6a-4c60-8fa5-8964a21ebd9f": {
+          "name": "Depuración 3-2-1",
+          "description": "En esta lección, codificarás tu página web y la compartirás con el mundo.  Una de las partes más importantes de la codificación es la depuración."
         },
         "710ee97e-1fb7-429d-a724-cb0a92f72425": {
+          "description": "**Pregunta:** \n\n-   ¿Cuáles son los **3** errores más importantes que has visto hasta ahora al hacer páginas web? \n-   ¿Cuáles son las **2** cosas que puedes hacer mientras codificas para que los errores sean más fáciles de encontrar y arreglar? \n-   ¿Cuál es **1** consejo que le darías a alguien que tiene un error?",
           "tips": [
-            null
+            "El propósito de este debate es tanto normalizar la depuración como asegurarse de que los estudiantes comienzan la parte de codificación del proyecto con algunas buenas estrategias que les ayudarán a depurar.  Los errores más comunes que pueden haber visto pueden ser errores de ortografía, olvidar enlazar la hoja de estilo, no anidar correctamente las etiquetas, etc. Esto variará de una clase a otra, pero la mayoría de los estudiantes habrán encontrado varios errores en el capítulo. Mientras codifican, los estudiantes deben utilizar un formato adecuado que les ayude a leer su código, codificar pequeños trozos a la vez, comprobarlos sobre la marcha, y utilizar buenas normas de nomenclatura. En cuanto a los consejos de depuración, los alumnos pueden dar consejos sobre la actitud (\"no te rindas\", \"recuerda que es normal\"), recursos recomendados (\"pide a un amigo que lo mire\", \"mira los niveles del mapa\"), consejos basados en el proceso (\"describe primero el fallo y luego búscalo antes de cambiar las cosas\", \"mira lo que se ha estropeado y comprueba la ortografía en esa parte\") o consejos basados en las herramientas (\"mira encima de dónde está el color rosa\", \"usa la herramienta inspector\"). Da tiempo a los alumnos para que compartan sus consejos y asegúrate de que hacen referencia al proceso de depuración."
           ]
         },
+        "491aad33-b3c4-4c36-887a-0df138c18ddd": {
+          "description": "Concede a los alumnos unos minutos para que hagan una lluvia de ideas y luego permíteles que las compartan con la clase.  Puedes proyectar sus ideas y dejar la pantalla en alto mientras los estudiantes codifican sus páginas.\n\n\\*\\*Pregunta del Día: ¿Qué conocimientos y prácticas nos ayudan a codificar las páginas web?"
+        },
         "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
+          "name": "Sitios Web Personales",
+          "description": "**Distribuir:** Devuelve a los estudiantes las partes \"Definir\" y \"Preparar\" de la Guía del Proyecto. Distribuye también a los alumnos una copia de la rúbrica o de la lista de control del alumno. Pídeles que lean los requisitos de este proyecto para que puedan autoevaluarse y reflexionar mientras trabajan.\n\n**Transición:** Envía a los estudiantes a Code Studio.",
           "tips": [
-            null
+            "**Rúbrica y Lista de Control:** Los estudiantes tienen dos recursos que pueden utilizar para la auto-reflexión y para asegurarse de que están en el camino correcto: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de control para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más detallada y específica a los alumnos."
           ]
         },
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
-            null
+            "**Punto de Control de la Planificación:** Revisa los planes de los alumnos antes de permitirles continuar en el resto de los niveles.\n\n**Nuevo Código y Niveles de Desafío Anteriores:** A lo largo de la unidad, los estudiantes pueden haber aprendido código adicional en los niveles de desafío de diferentes lecciones. A medida que los estudiantes se acercan a este proyecto, es posible que quieran volver a ver el código que aprendieron en estos niveles o visitarlos por primera vez para aprender nuevos códigos para usar en este proyecto. Para ayudar a guiar a los alumnos hacia los niveles anteriores, puedes utilizar el [r extra_code_in_challenge_levels/csd/2021] como recurso para encontrar rápidamente dónde se introdujeron nuevos códigos en los niveles de desafío anteriores."
           ],
           "progression_name": "Guía de Proyecto"
         },
@@ -16320,8 +16609,9 @@
           "progression_name": "Proyecto de Sitio Web"
         },
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
+          "description": "**Preguntas a tener en cuenta con el vídeo:**\n\n-   ¿Cuáles crees que son tus responsabilidades como editor de un sitio web?\n-   ¿Por qué te gustaría ver el código o remezclar el sitio de otra persona?",
           "tips": [
-            null
+            "**Objetivo**\n\nEl contenido del vídeo es bastante sencillo, pero ésta es la última comprobación con los alumnos antes de que lo publiquen, por lo que es un buen momento para asegurarse de que han pensado bien en las implicaciones de la publicación a todo el mundo. Deben asegurarse de que no están compartiendo ninguna información sensible y de que tienen los derechos para utilizar todo el contenido de la página.\n\nCuando empiecen a compartir, también deben pensar en cómo respetan el trabajo de los demás editores de la página, en particular de sus compañeros de clase. Puede dedicar algún tiempo a establecer normas en el aula sobre la forma de hablar y opinar sobre las páginas de sus compañeros, así como directrices para utilizar el código que otros han escrito."
           ],
           "progression_name": "Vídeo: Publicando tu Sitio Web"
         },
@@ -16329,11 +16619,36 @@
           "progression_name": "Publicar tu sitio web"
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
-          "name": "Revisión por pares"
+          "name": "Revisión por pares",
+          "description": "**Distribuye:** Las guías de reflexión y revisión por pares de la \"Página web personal\".\n\n**Soporte:** Ayuda a los alumnos a completar la Página Web Personal - Guía de Reflexión.  En esta guía se pide a los alumnos que reflexionen sobre si la página web cumple los criterios que se les ocurrieron en la fase \"Definir\" y si han seguido el plan que hicieron en la fase \"Preparar\". A continuación, les pregunta qué es lo que más les gusta y qué querrían mejorar en su página, así como qué tipo de comentarios les serían útiles.\n\n**Agrupar:** Coloca a los alumnos en parejas."
+        },
+        "6b3cfe52-1dd0-4a4c-8de2-360db4cd636d": {
+          "name": "Revisión Previa",
+          "description": "Antes de que los alumnos revisen el trabajo de los demás, cada uno de ellos debe rellenar la parte superior de la guía con lo que más le interesa comentar."
+        },
+        "4c77683d-f5ce-4793-a6b2-7b99901aaa77": {
+          "name": "Sección de Revisores",
+          "description": "Después de cambiar de guía, los alumnos evalúan si los proyectos cumplen los criterios de la rúbrica.  Anima a los alumnos a encontrar evidencias de aprendizaje en los proyectos de sus compañeros, pero también a sugerir cómo se podrían llevar a cabo los proyectos. Es posible que tengas que ayudar a los estudiantes a proporcionar comentarios constructivos."
+        },
+        "0792fa5e-646b-4a0f-b83d-19d7683ecaed": {
+          "name": "Comentarios de Respuesta Libre",
+          "description": "A continuación, los alumnos utilizan la estructura \"Me gusta, Me gustaría, Qué pasaría si\" para proporcionarse comentarios más abiertos. Una vez más, algunas clases pueden necesitar apoyo específico para proporcionar comentarios constructivos."
+        },
+        "de945d97-6003-41a8-aa24-26bc06841303": {
+          "name": "Respuesta del Creador",
+          "description": "A continuación, los alumnos deben volver atrás y los creadores reflexionar sobre cómo los comentarios pueden ayudarles a mejorar su proyecto. Los alumnos pueden volver a Code Studio para hacer las revisiones que hayan decidido.\n\nLos estudiantes deben volver a revisar la rúbrica de este proyecto para ver cómo se alinea su proyecto. También puedes decidir distribuir la Lista de Control de la Página Web Personal para que los alumnos puedan autoevaluar si su proyecto cumple con los requisitos de este proyecto."
+        },
+        "83101615-6d17-4c95-b86d-8275cdf19921": {
+          "description": "**Recoger:** Guías de Proyecto y Guías de Revisión por Pares."
+        },
+        "59bb1048-4c00-4d84-b98d-a9ce8a302d72": {
+          "name": "Diario: Sitio Web Personal",
+          "description": "**Pregunta del Día: ¿Qué conocimientos y prácticas nos ayudan cuando codificamos páginas web?**\n\n**Sugerencia:** Tras el primer día de creación de tu sitio web personal, reflexiona sobre tu experiencia.\n\n-   ¿Cómo utilizaste el proceso de resolución de problemas para crear tu sitio?\n-   ¿Qué otros conocimientos y prácticas te han ayudado a la hora de crear tu página web?"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
+          "description": "**Debatir:** Pide a los alumnos que compartan los diferentes conocimientos y prácticas que han utilizado.",
           "tips": [
-            null
+            "**Objetivo:** Los alumnos deben reflexionar sobre la evolución del proceso hasta el momento.  Si los alumnos tienen problemas para pensar en diferentes prácticas que sean útiles, puedes recordarles las cinco prácticas de la informática: resolución de problemas, persistencia, creatividad, comunicación y colaboración.  Los alumnos también pueden mencionar prácticas más específicas, como el uso de la documentación, la planificación, el trabajo en equipo y la depuración. Pide a los alumnos que expliquen cómo les ayudaron estas prácticas al codificar."
           ]
         },
         "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
@@ -16427,6 +16742,9 @@
             null
           ]
         },
+        "cb743363-7f60-4fc8-9fa3-af3ab23ec321": {
+          "name": "Debatir: ¿Qué Estilos Quieres?"
+        },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
           "tips": [
             null
@@ -16468,6 +16786,9 @@
           "tips": [
             null
           ]
+        },
+        "967af757-c353-4f6b-bbe2-493cb9d31fa1": {
+          "name": "Encuentra tus Imágenes"
         },
         "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
           "progression_name": "Sube tus Imágenes"
@@ -16538,6 +16859,9 @@
         },
         "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
           "progression_name": "Comprueba Tu Trabajo"
+        },
+        "01c5f83f-7728-465f-b43d-1a5c9f05f982": {
+          "name": "Diario 3-2-1"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [

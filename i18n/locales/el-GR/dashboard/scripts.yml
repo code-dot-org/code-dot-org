@@ -2,22 +2,6 @@
 el:
   data:
     script:
-      category:
-        csf_category_name: Βασικές αρχές της Επιστήμης των Υπολογιστών
-        csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
-        csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
-        csp_category_name: Αρχές επιστήμης υπολογιστών ('15-'16)
-        csp_2018_category_name: Αρχές επιστήμης υπολογιστών ('18-'19)
-        csp_2019_category_name: Αρχές επιστήμης υπολογιστών ('19-'20)
-        csp_2020_category_name: Αρχές επιστήμης υπολογιστών ('20-'21)
-        csp_2021_category_name: Αρχές επιστήμης υπολογιστών ('21-'22)
-        cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
-        csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
-        full_course_category_name: Πλήρη μαθήματα
-        hoc_category_name: Ώρα του Κώδικα
-        math_category_name: Μαθηματικά
-        twenty_hour_category_name: 20ωρο
-        other_category_name: Άλλα
       name:
         course1:
           title: Μάθημα 1
@@ -1069,6 +1053,8 @@ el:
           lessons:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1388,6 +1374,8 @@ el:
               name: Φωλιασμένες Επαναλήψεις
             Conditionals:
               name: Συνθήκες
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1424,6 +1412,8 @@ el:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Conditionals:
               name: Συνθήκες
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1471,6 +1461,8 @@ el:
               name: Εισαγωγή
             Conditionals:
               name: Συνθήκες
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1590,6 +1582,8 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
             Move It, Move It:
               name: Μετακίνησέ το, Μετακίνησέ το
+            Copyright and Creativity:
+              name: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
         coursed-2018:
           assignment_family_title: Μάθημα D
           lessons:
@@ -1640,6 +1634,8 @@ el:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Introduction:
               name: Εισαγωγή
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
             Internet:
@@ -1650,6 +1646,8 @@ el:
               name: Υποθέσεις με Κάρτες
             Minecraft Hour of Code:
               name: Η Ώρα του Κώδικα με το Minecraft
+            Copyright and Creativity:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
         coursef-2018:
           assignment_family_title: Μάθημα F
           lessons:
@@ -1809,6 +1807,8 @@ el:
               name: Μετακίνησέ το, Μετακίνησέ το
             Your Digital Footprint:
               name: Το Ψηφιακό σου Αποτύπωμα
+            Copyright and Creativity:
+              name: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
             'Persistence & Frustration: Stevie and the Big Project':
               name: Ο Στίβι και το Μεγάλο Πρότζεκτ
         fit-test:
@@ -1890,6 +1890,8 @@ el:
               name: Το Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
         dance-low:
           lessons:
             Dance Party:
@@ -1940,12 +1942,16 @@ el:
               name: Φωλιασμένες Επαναλήψεις
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
             Simon Says:
               name: Κάνε ό,τι κάνω
             Songwriting:
@@ -2022,6 +2028,8 @@ el:
               name: Δυαδικά Βραχιόλια
             Powerful Passwords:
               name: Ισχυρά Συνθηματικά
+            Picturing Data:
+              name: Οπτικοποίηση Δεδομένων
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2457,6 +2465,8 @@ el:
               name: Συνθήκες
             Simon Says:
               name: Κάνε ό,τι κάνω
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2489,6 +2499,8 @@ el:
               name: Συνθήκες
             Simon Says:
               name: Κάνε ό,τι κάνω
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2506,6 +2518,8 @@ el:
               name: Συνθήκες
             Simon Says:
               name: Κάνε ό,τι κάνω
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2626,6 +2640,8 @@ el:
               name: Δυαδικά Βραχιόλια
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
+            Picturing Data:
+              name: Οπτικοποίηση Δεδομένων
         coursed-2020:
           title: Μάθημα D (2020)
           lesson_groups:
@@ -2668,8 +2684,12 @@ el:
           lessons:
             Simon Says:
               name: Κάνε ό,τι κάνω
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
         coursef-2020:
           title: Μάθημα F (2020)
           lesson_groups:
@@ -2690,6 +2710,8 @@ el:
               name: Το Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
         express-2020:
           lesson_groups:
             csf_warmup:
@@ -2969,6 +2991,8 @@ el:
               name: Δυαδικά Βραχιόλια
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
+            Picturing Data:
+              name: Οπτικοποίηση Δεδομένων
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3008,6 +3032,10 @@ el:
               display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
           lessons:
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
           lesson_groups:
@@ -3307,6 +3335,8 @@ el:
           lessons:
             The Big Event:
               name: Το Μεγάλο Γεγονός
+            Picturing Data:
+              name: Οπτικοποίηση Δεδομένων
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
             'Events: The Big Event':
@@ -3354,6 +3384,10 @@ el:
           title: Μάθημα D (2021)
         coursee-2022:
           lessons:
+            Private and Personal Information:
+              name: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+            Digital Sharing:
+              name: Κοινοποίηση στον ψηφιακό κόσμο
             Songwriting:
               name: Σύνθεση τραγουδιού
             'Functions: Songwriting':

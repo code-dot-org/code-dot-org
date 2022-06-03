@@ -489,6 +489,10 @@ pl-PL:
   homepage_below_hero_announcement_link_text: Dowiedz się więcej
   homepage_higher_power_body: Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu
     na żywo.
+  homepage_csa_subhead: Nowe podejście do
+  homepage_csa_title: AP® Computer Science A
+  homepage_csa_body: Zapewnij uczniom kreatywne projekty związane ze światem rzeczywistym
+    w naszym programie nauczania opartym na równości.
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -1334,6 +1338,7 @@ pl-PL:
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
+  pre-express-2022_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2022)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
