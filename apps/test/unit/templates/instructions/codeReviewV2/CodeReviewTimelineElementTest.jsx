@@ -1,7 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CodeReviewTimelineElement, {
+import {
+  UnconnectedCodeReviewTimelineElement as CodeReviewTimelineElement,
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import color from '@cdo/apps/util/color';
@@ -10,7 +11,8 @@ import javalabMsg from '@cdo/javalab/locale';
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
   isLast: false,
-  projectVersionId: 'asdfjkl'
+  projectVersionId: 'asdfjkl',
+  viewAsCodeReviewer: false
 };
 
 const setUp = (overrideProps = {}, child) => {
@@ -59,10 +61,11 @@ describe('CodeReviewTimelineElement', () => {
   });
 
   describe('Commit', () => {
-    it('displays an eyeball link if there is a version', () => {
+    it('displays an eyeball link if there is a version and viewAsCodeReviewer is false', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
-        projectVersionId: 'asdfjkl'
+        projectVersionId: 'asdfjkl',
+        viewAsCodeReviewer: false
       });
       expect(wrapper.find('EyeballLink')).to.have.length(1);
     });
@@ -70,7 +73,17 @@ describe('CodeReviewTimelineElement', () => {
     it('hides eyeball link if there is not a version', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT,
-        projectVersionId: null
+        projectVersionId: null,
+        viewAsCodeReviewer: false
+      });
+      expect(wrapper.find('EyeballLink')).to.have.length(0);
+    });
+
+    it('hides eyeball link if viewAsCodeReviewer is true', () => {
+      const wrapper = setUp({
+        type: codeReviewTimelineElementType.COMMIT,
+        projectVersionId: 'asdfjkl',
+        viewAsCodeReviewer: true
       });
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });

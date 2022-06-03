@@ -185,6 +185,8 @@ const styles = {
   }
 };
 
+export const UnconnectedCodeReviewTimelineElement = CodeReviewTimelineElement;
+
 export default connect(state => ({
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing
 }))(CodeReviewTimelineElement);
