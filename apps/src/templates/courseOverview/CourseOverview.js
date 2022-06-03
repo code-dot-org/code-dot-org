@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
@@ -49,7 +48,6 @@ class CourseOverview extends Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -65,8 +63,7 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired,
-    useMigratedResources: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   constructor(props) {
