@@ -117,7 +117,16 @@ module UsersHelper
   #   }
   # }
   def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
-    user_data = user_summary(user)
+    user_data = {}
+    if user
+      user_data[:disableSocialShare] = true if user.under_13?
+      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
+      user_data[:isTeacher] = true if user.teacher?
+      user_data[:isVerifiedInstructor] = true if user.verified_instructor?
+      user_data[:linesOfCode] = user.total_lines
+      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
+    end
+
     merge_unit_progress(user_data, user, unit, exclude_level_progress)
 
     if unit.has_peer_reviews?
@@ -144,20 +153,6 @@ module UsersHelper
     return attempted_ids.max_by {|id| level_progress[id][:result]} unless attempted_ids.empty?
 
     return ids[0]
-  end
-
-  # Some summary user data we include in user_progress requests
-  def user_summary(user)
-    user_data = {}
-    if user
-      user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
-      user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedInstructor] = true if user.verified_instructor?
-      user_data[:linesOfCode] = user.total_lines
-      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
-    end
-    user_data
   end
 
   # Get level progress for a set of users within this unit.
