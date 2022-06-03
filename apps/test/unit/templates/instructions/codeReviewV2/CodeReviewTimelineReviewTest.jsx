@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
-import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
@@ -55,7 +57,7 @@ const setUp = (overrideProps = {}) => {
 describe('CodeReviewTimelineReview', () => {
   it('renders a CodeReviewTimelineElement with type code_review, expected isLast', () => {
     const wrapper = setUp({isLastElementInTimeline: true});
-    const timelineElement = wrapper.find('CodeReviewTimelineElement');
+    const timelineElement = wrapper.find(CodeReviewTimelineElement);
     expect(timelineElement.props().type).to.equal(
       codeReviewTimelineElementType.CODE_REVIEW
     );
@@ -64,7 +66,7 @@ describe('CodeReviewTimelineReview', () => {
 
   it('passes project version to CodeReviewTimelineElement', () => {
     const wrapper = setUp();
-    const timelineElement = wrapper.find('CodeReviewTimelineElement');
+    const timelineElement = wrapper.find(CodeReviewTimelineElement);
     expect(timelineElement.props().projectVersionId).to.equal('asdfjkl');
   });
 
