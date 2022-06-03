@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -25,10 +26,14 @@ const CodeReviewTimelineElement = ({
   type,
   isLast,
   projectVersionId,
+  viewAsCodeReviewer,
   children
 }) => {
   const versionLink =
     location.origin + location.pathname + '?version=' + projectVersionId;
+
+  // You can only see previous versions of your own project
+  const displayEyeball = !viewAsCodeReviewer && !!projectVersionId;
 
   if (type === codeReviewTimelineElementType.CREATED) {
     return (
@@ -49,8 +54,7 @@ const CodeReviewTimelineElement = ({
     return (
       <div style={styles.element}>
         <div style={styles.eyeColumn}>
-          {/* TODO only display version to owner */}
-          {!!projectVersionId && <EyeballLink versionHref={versionLink} />}
+          {displayEyeball && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
           <TimelineDot color={color.dark_charcoal} hasCheck={true} />
@@ -65,8 +69,7 @@ const CodeReviewTimelineElement = ({
     return (
       <div style={styles.element}>
         <div style={{...styles.eyeColumn, ...styles.reviewEye}}>
-          {/* TODO only display version to owner */}
-          {!!projectVersionId && <EyeballLink versionHref={versionLink} />}
+          {displayEyeball && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
           <div>{children}</div>
@@ -182,4 +185,6 @@ const styles = {
   }
 };
 
-export default CodeReviewTimelineElement;
+export default connect(state => ({
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+}))(CodeReviewTimelineElement);
