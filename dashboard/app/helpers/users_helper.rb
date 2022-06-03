@@ -128,7 +128,6 @@ module UsersHelper
     end
 
     merge_unit_progress(user_data, user, unit, exclude_level_progress)
-
     if unit.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, unit).try(:map) do |summary|
         summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(unit))
