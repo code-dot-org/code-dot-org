@@ -76,14 +76,16 @@ class InstructionsCsfRightCol extends React.Component {
     // show some scroll buttons.
     const collapserWidth = this.shouldDisplayCollapserButton()
       ? $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true)
-      : 50;
+      : this.props.collapsed
+      ? 10
+      : 80;
     return collapserWidth;
   }
 
   getColumnHeight() {
     if (this.collapser) {
-      // Include 30 pixels for any scroll buttons that need to be shown.
-      return getOuterHeight(this.collapser, true) + 30;
+      // Include 20 pixels for any scroll buttons that need to be shown.
+      return getOuterHeight(this.collapser, true) + 20;
     } else {
       return 0;
     }
@@ -100,7 +102,7 @@ class InstructionsCsfRightCol extends React.Component {
       this.props.height -
       HEADER_HEIGHT -
       RESIZER_HEIGHT -
-      (displayCollapserButton ? scrollButtonsBelowCollapserStyle.top : 0);
+      (displayCollapserButton ? scrollButtonsBelowCollapserStyle.top : 10);
 
     return (
       <div>
@@ -151,8 +153,9 @@ const styles = {
     marginRight: 5
   },
   scrollButtons: {
-    margin: '0px 5px',
-    minWidth: '40px'
+    margin: '10px 0px 5px 0px',
+    minWidth: '40px',
+    position: 'relative'
   },
   scrollButtonsBelowCollapser: {
     position: 'relative',
