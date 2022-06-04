@@ -100,7 +100,9 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-    const showItems = this.props.isMinecraft ? this.props.height > 50 : true;
+    const showItems = this.props.isMinecraft
+      ? this.props.height > 50
+      : this.props.height > 20;
     const centerItems = this.props.isMinecraft
       ? this.props.height > 100
       : this.props.height > 60;
@@ -156,7 +158,7 @@ class ScrollButtons extends React.Component {
       >
         <FontAwesome
           icon="caret-up"
-          style={{lineHeight: '26px', pointerEvents: 'none'}}
+          style={{lineHeight: '22px', pointerEvents: 'none'}}
         />
       </div>
     );
@@ -186,7 +188,7 @@ class ScrollButtons extends React.Component {
       >
         <FontAwesome
           icon="caret-down"
-          style={{lineHeight: '26px', pointerEvents: 'none'}}
+          style={{lineHeight: '22px', pointerEvents: 'none'}}
         />
       </div>
     );
@@ -209,7 +211,7 @@ const styles = {
     margin: 0
   },
   arrowGlyph: {
-    fontSize: 60,
+    fontSize: 50,
     color: color.purple,
     cursor: 'pointer'
   }
