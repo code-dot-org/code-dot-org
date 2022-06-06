@@ -1,3 +1,8 @@
+---
+title: Code.org in Farsi
+theme: responsive
+---
+
 ![Young students showing off their work in a classroom](images/iranianstudents.png)
 
 Code.org in Farsi (Persian)
@@ -20,16 +25,16 @@ I finally have an idea that could change this. The idea involves recruiting supp
 
 There are over 15 million Farsi-speaking students living in Iran and neighboring countries. Code.org in Farsi would enable these students the same access that is already available to students in all the other major languages of the world. Talent is everywhere, but opportunity is not. Code.org in Farsi would open a door to opportunity that would otherwise be closed.
 
-Why now? Three reasons: (1) The Afghan refugee crisis creates a unique need for a large population of children. (2) Code.org recently did the software engineering to support right-to-left languages properly. (3) And lastly, because we finally have a big enough team that we could do this without hiring dedicated staff — in other words, it’s finally affordable! 
+**Why now?** Three reasons: (1) The Afghan refugee crisis creates a unique need for a large population of children. (2) Code.org recently did the software engineering to support right-to-left languages properly. (3) And lastly, because we finally have a big enough team that we could do this without hiring dedicated staff — in other words, it’s finally affordable! 
 
-How can you help?
+**How can you help?**
+
 The project would require both volunteer support, as well as financial support, especially to translate the content in Code.org. 
 
 1. **Volunteer to translate:** Any volunteer can help us with translation, just visit [code.org/translate](code.org/translate). Or, if you live in Seattle, [sign up](https://docs.google.com/forms/d/e/1FAIpQLSfa2fCZPDBtv7NpgrjcUGwhRr1JDjz3wNPbfMYOW3x9Q_nljQ/viewform) for our in-person translation party on June 26 (and enjoy free Chelo Kabab with Hadi and members of the Code.org team!)
 
 2. **Donate:** The financial support would cover professional translation (including voice-over for videos), as well as administrative costs + travel to enable the rest of the work. The budget for the entire project is $300,000. If you compare that to the potential to support 15 million students, a $100 gift = 5,000 students who gain access. To donate, [click here](https://donate.code.org/give/410070/#!/donation/checkout).
 
-3. **Spread the word:** Share this page on social media, or among your Iranian friends and family. 
-
+3. **Spread the word:** Share this page on social media, or among your Iranian friends and family.
 
 4. **Help teach Code.org in Farsi!**  [Sign up](http://go.pardot.com/l/153401/2022-05-31/pq1716) to be the first to hear when we have completed the translation work. Don’t worry, we won’t send you lots of emails.

@@ -12,9 +12,9 @@ nav: how_to_nav
 
 计算思维有助于培养问题解决能力、逻辑能力和创造力。 科技正改变着地球上的每一个行业。 今天的学生应该学习如何创造技术，而不仅仅是使用它。 如果早点开始，他们将为在21世纪的任何职业道路上取得成功打下基础。
 
-尝试编程一个小时是向学生介绍计算机科学的简单而有趣的方式，也许是第一次，它非常适合课堂和课后设置。 Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+尝试编程一小时是向学生介绍计算机科学的简单而有趣的方式，也许是第一次，它非常适合课堂和课后设置。 Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [观看编程一小时指引视频](#how-to-video)
+- [观看编程一小时指南视频](#how-to-video)
 - [探索活动和教程](#explore-activities)
 - [制定一天的计划](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
@@ -29,7 +29,7 @@ nav: how_to_nav
 
 <a id="how-to-video"></a>
 
-## 1. 观看编程一小时指引视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 观看编程一小时指南视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -115,7 +115,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 指导学生参与活动
 
-- 将教程链接写在白板上。在参与者数量下面找到你所选教程的[信息]({{ urls/learn }})中列出的链接。
+- 将教程链接写在白板上。在参与者数量下面找到[你所选教程的信息]({{ urls/learn }})中列出的链接。
 
 当你的学生遇到困难时，你完全可以用这样的方式回答：
 
