@@ -5,7 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {currentLocation, navigateToHref} from '@cdo/apps/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
+import {SHOW_REVIEW_TAB_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 
 const ReviewNavigator = ({
   viewPeerList,
@@ -20,7 +20,7 @@ const ReviewNavigator = ({
     let url =
       currentLocation().origin +
       currentLocation().pathname +
-      `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+      `?${SHOW_REVIEW_TAB_URL_PARAM}=true`;
 
     // If teacher account is viewing as participant, set up URLs
     // to persist this setting when they click to view another project.

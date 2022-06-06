@@ -13,7 +13,7 @@ import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
-export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
+export const SHOW_REVIEW_TAB_URL_PARAM = 'showReviewTab';
 
 const CommitsAndReviewTab = props => {
   const {
