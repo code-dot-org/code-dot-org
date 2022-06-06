@@ -52,13 +52,7 @@ describe('Code Review Comment', () => {
 
   it('body has a blue background when from teacher', () => {
     renderAndCheckBackgroundColor(color.lightest_cyan, {
-      isFromTeacher: true
-    });
-  });
-
-  it('body is grayed out from previous versions of projects', () => {
-    renderAndCheckBackgroundColor(color.background_gray, {
-      isFromOlderVersionOfProject: true
+      viewAsTeacher: true
     });
   });
 
