@@ -475,6 +475,9 @@
         "exploring_apps_1/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
         },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "Video"
         },
@@ -527,6 +530,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
         },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -770,6 +776,9 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
@@ -793,6 +802,12 @@
         "turns_angles/express/2021": {
           "type": "Video"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
         "pause_and_think_online/express/2021": {
           "type": "Video"
         },
@@ -804,6 +819,9 @@
         },
         "variables_video/express/2021": {
           "name": "Mga variable"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "rubric-csf-final-projects/express/2021": {
           "type": "Rubric"
@@ -826,6 +844,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Pagtitipon ng Guro"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
         },
@@ -834,6 +855,9 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Pagtatasa"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Pagdidisenyo sa Accessibility"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Rubric"
@@ -846,6 +870,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
@@ -959,6 +986,9 @@
         "analog-digital-video/csd/2021": {
           "type": "Video"
         },
+        "emoji-race-guide/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "functions_2/csd/2021": {
           "name": "Mga function"
         },
@@ -972,6 +1002,9 @@
         "arrays/csd/2021": {
           "name": "Mga Array"
         },
+        "playing_notes/csd/2021": {
+          "name": "Mga Tala ng Laro"
+        },
         "loops_in_app_lab/csd/2021": {
           "name": "For Loops",
           "type": "Video"
@@ -979,12 +1012,21 @@
         "for_loops/csd/2021": {
           "name": "For Loops"
         },
+        "accelerometer_events/csd/2021": {
+          "name": "Mga Event sa Accelerometer"
+        },
         "circuits-logic-video/csd/2021": {
           "name": "Paano Gumagana ang Kompyuter: Circuits & Logic",
           "type": "Video"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Rubric"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "representation-matters-exemplar-2019/csd/2021": {
           "name": "Ang Representasyon ay Mahalaga"
@@ -1044,6 +1086,7 @@
           "name": "Mga Datos sa Tunay na Mundo"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Epekto sa Lipunan",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -1051,10 +1094,17 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Data ng Pagsasanay at Pagkiling",
           "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Pagsusuri ng Peer"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Rubric"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1106,6 +1156,12 @@
         "if_else_statements/csd/2021": {
           "type": "Video"
         },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
         "interactive_card/csd/2021": {
           "type": "Rubric"
         },
@@ -1123,10 +1179,23 @@
           "name": "Pagtukoy sa mga Banggaan"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Scroller sa Gilid",
           "type": "Rubric"
         },
+        "side-scroller/csd/2021": {
+          "name": "Scroller sa Gilid",
+          "type": "Gabay sa Proyekto"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Bilis at ang Counter Pattern"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Flyer Game",
           "type": "Rubric"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flyer Game",
+          "type": "Gabay sa Proyekto"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Mga function",
@@ -1134,6 +1203,12 @@
         },
         "functions_1/csd/2021": {
           "name": "Mga function"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Pagsusuri ng Peer"
         },
         "make_your_own_game/csd/2021": {
           "type": "Rubric"
@@ -1166,7 +1241,8 @@
           "name": "Mga App at Paglutas ng Problema"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Mga App at Paglutas ng Problema"
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Pagsusuri ng Peer"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Mga App at Paglutas ng Problema",
@@ -1179,19 +1255,33 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Video: Pair Programming",
           "type": "Video"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Pag-dedebug",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
           "type": "Rubric"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "html-page/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "lists/csd/2021": {
           "name": "Mga listahan"
         },
         "digital-footprint/csd/2021": {
           "name": "Digital na Bakas"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Social Sleuth"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Social Sleuth"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Intro sa CSS - Yugto 1",
@@ -1204,25 +1294,44 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Rubric"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
         "images_in_html/csd/2021": {
           "name": "Mga Larawan sa HTML"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "personal-web-page/csd/2021": {
           "type": "Rubric"
         },
         "publishing_your_website/csd/2021": {
+          "name": "Pag-publish ng Website Mo",
           "type": "Video"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Pamamahala ng Di-pagkakasundo",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Teamwork",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Paano Gumagana ang Paghahanap",
           "type": "Video"
         },
         "classes/csd/2021": {
@@ -1230,6 +1339,15 @@
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Rubric"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Mga Banghay-Aralin"

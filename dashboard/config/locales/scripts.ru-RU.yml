@@ -2,16 +2,6 @@
 ru:
   data:
     script:
-      category:
-        csf_category_name: Основы информатики
-        csf2_draft_category_name: 'В разработке: Курсы A - F'
-        cspexams_category_name: Практический тест по основам информатики
-        csp17_category_name: "«16 - 17» Основы информатики"
-        full_course_category_name: Курсы полностью
-        hoc_category_name: Час Кода
-        math_category_name: Математика
-        tts_category_name: Озвучивание текста
-        other_category_name: Другое
       name:
         course1:
           title: Курс 1

@@ -1036,10 +1036,17 @@ hu:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): forgatás jobbra
+            new Behavior(spinning_left, []): forgatás balra
             new Behavior(fluttering, []): csapkodva
+            new Behavior(jittering, []): remegés
             new Behavior(wobbling, []): kalimpálva
+            new Behavior(wandering, []): kóborlás
+            new Behavior(patrolling, []): járőrözés
             new Behavior(moving_west_and_looping, []): nyugat felé menni és ismételgetni
             new Behavior(moving_east_and_looping, []): kelet felé menni és ismételgetni
+            new Behavior(moving_north_and_looping, []): mozgatás északra és ciklusokban
+            new Behavior(moving_south_and_looping, []): mozgatás délre és ciklusokban
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:
@@ -1313,6 +1320,7 @@ hu:
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): mozgatás a nyílbillentyűkkel
             new Behavior(driving_with_arrow_keys, []): irányítás nyilakkal
             draggable(): vonszolható
       gamelab_pointInDirection:
@@ -2080,14 +2088,26 @@ hu:
         options:
           BEHAVIOR:
             '"fluttering"': csapkodva
+            '"growing"': növekedés
+            '"jittering"': remegés
+            '"shrinking"': zsugorodás
+            '"spinning_left"': forgatás balra
+            '"spinning_right"': forgatás jobbra
             '"swimming_left_and_right"': úszás
+            '"wandering"': kóborlás
             '"wobbling"': kalimpálva
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} abbahagyja a {BEHAVIOR} viselkedést
         options:
           BEHAVIOR:
             '"fluttering"': csapkodva
+            '"growing"': növekedés
+            '"jittering"': remegés
+            '"shrinking"': zsugorodás
+            '"spinning_left"': forgatás balra
+            '"spinning_right"': forgatás jobbra
             '"swimming_left_and_right"': úszás
+            '"wandering"': kóborlás
             '"wobbling"': kalimpálva
             '"all"': "--összes viselkedés--"
       Poetry_stringValue:

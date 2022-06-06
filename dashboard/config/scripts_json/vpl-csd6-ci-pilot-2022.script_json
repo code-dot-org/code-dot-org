@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-01 18:41:23 UTC",
+    "serialized_at": "2022-06-02 18:56:44 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -459,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -557,6 +560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -580,6 +586,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_2222"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -603,6 +612,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_2222"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -625,6 +637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,7 +661,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -665,6 +683,50 @@
     {
       "chapter": 16,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      },
+      "level_keys": [
+        "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      },
+      "level_keys": [
+        "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -687,8 +749,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 19,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -711,8 +773,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 20,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -735,8 +797,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 6,
+      "chapter": 21,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -759,8 +821,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
+      "chapter": 22,
+      "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -783,8 +845,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 8,
+      "chapter": 23,
+      "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -807,8 +869,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 9,
+      "chapter": 24,
+      "position": 11,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -831,8 +893,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 10,
+      "chapter": 25,
+      "position": 12,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -855,8 +917,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 11,
+      "chapter": 26,
+      "position": 13,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -879,7 +941,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -904,7 +966,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -929,7 +991,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1128,6 +1190,30 @@
         "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222",
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd6-ci-pilot-2022",
+        "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222",
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

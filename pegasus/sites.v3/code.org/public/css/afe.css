@@ -1,0 +1,40 @@
+.clearfix {
+  clear: both;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+section {
+  margin: 3em 0;
+}
+
+section:nth-of-type(2) img {
+  width: 100%;
+}
+
+h2, h3 {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+ul li {
+  margin-bottom: 1em;
+}
+
+li span {
+  display: block;
+  margin-top: 1em;
+}
+
+.amazon-future-engineer-eligibility-container {
+  margin: 1em 0;
+}

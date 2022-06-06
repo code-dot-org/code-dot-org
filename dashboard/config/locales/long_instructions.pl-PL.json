@@ -3244,7 +3244,13 @@
         "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color": "# Kolorowanie pikseli: Zadanie 1\n\n**Wskazówki:**\n\n-   Na początek dajemy ci obrazek o wielkości 4x2, który zaczęła tworzyć Maddie. Usunęliśmy z niego 2 ostatnie kwadraty.\n-   Dokończ obrazek dodając i kodując dwa brakujące kolory.",
         "Artist Autorun Test": "Teraz umieść funkcję w pętli, aby narysować te 3 kwadraty.",
         "MC Agent Freeplay": "Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie eksplorację tego świata.",
-        "U1L13 Text Compression": "Poszukaj wzorców (powtarzające się słowa lub frazy) w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast wzorca."
+        "U1L13 Text Compression": "Poszukaj wzorców (powtarzające się słowa lub frazy) w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast wzorca.",
+        "2-3 Artist Loops 2": "Teraz użyj bloku \"powtórz\", aby z komórki utworzyć powłokę.",
+        "Allthethings Java Lab 1": "To jest przykładowy poziom Java Lab.",
+        "Allthethings Java Lab 6": "To jest przykładowy poziom Java Lab.",
+        "Allthethings Java Lab Validation": "To jest przykładowy poziom Java Lab z testami walidacyjnymi.",
+        "Allthethings Java Lab submittable": "To jest przykładowy poziom Java Lab.",
+        "PS fr prediction q1": "Jak _Ty_ myślisz, co się stanie?"
       }
     }
   }

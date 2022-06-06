@@ -460,12 +460,12 @@
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
         "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società",
           "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
@@ -476,12 +476,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società",
           "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
@@ -509,7 +509,7 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?"
         },
         "courseF_text_choice_title": {
@@ -527,19 +527,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "cosa desideri per il tuo compleanno?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fine",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Grazie per aver chattato!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "50d489a15105b987ec6d4410900c95dd": "Inserisci un termine che indichi un'azione:"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",

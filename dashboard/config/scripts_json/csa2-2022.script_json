@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-01 20:53:23 UTC",
+    "serialized_at": "2022-06-03 12:52:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1806,7 +1806,7 @@
       "key": "f3e35839-453f-4935-b605-db036c310dd6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different direction. Students may wonder how to implement this in their `PainterPlus` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different direction. Students may wonder how to implement this in their `PainterPlus` class."
       },
       "seeding_key": {
         "activity_section.key": "f3e35839-453f-4935-b605-db036c310dd6",
@@ -1814,12 +1814,59 @@
       }
     },
     {
-      "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
+      "key": "e2c37533-524e-45a2-af55-b6a2803f6452",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Project Mercury Pastries Food Truck problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
+        "description": "Subclasses do not inherit the constructors from a superclass. To use this constructor in the `Painter` class, we will need to implement it in our `PainterPlus` class. Let's start by identifying the components of this type of constructor.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c37533-524e-45a2-af55-b6a2803f6452",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "position": 8,
+      "properties": {
+        "description": "The `PainterPlus` class inherits the instance variables defined in the `Painter` class. The actual parameters that are passed in the call to the superclass constructor provide values that the constructor can use to initialize the object's instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "93f43edb-5f75-43ae-860d-68512a815df7",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck is starting its business in The Neighborhood, and the owner needs our help! They need to track the desserts they sell and manage their customers and orders. Throughout the upcoming lessons, we will use our software engineering skills to help solve the problems they encounter as they get their business started in The Neighborhood.",
         "duration": "10",
         "name": "Writing and Using Constructors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "93f43edb-5f75-43ae-860d-68512a815df7",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
         "progression_name": "Writing and Using Constructors",
         "tips": [
           {
@@ -1835,7 +1882,7 @@
     },
     {
       "key": "91729f1e-501d-43a8-a62b-e4b5a81cd8ad",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack.",
         "remarks": true
@@ -1847,7 +1894,7 @@
     },
     {
       "key": "f0f2b1d5-86d6-4055-9e6b-f165e195c4c4",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `Dessert` class to the Backpack."
       },
@@ -2244,7 +2291,7 @@
       "key": "96dbc988-7a58-47ee-9e83-02d670ec7d2b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that a superclass reference can be used as a formal parameter in a method to accept superclass and subclass types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
         "tips": [
           {
             "type": "teachingTip",

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:52.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -217,10 +213,14 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "map_reference": "/courses/vpl-csd-2022/guides/collision-detection",
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:52.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:52.796+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 collisions car intro_2020\\\"\"],\"cloned_from\":\"VPL - CSD U3 collisions car intro_2020\"}]"

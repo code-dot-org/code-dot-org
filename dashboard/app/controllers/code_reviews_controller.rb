@@ -19,7 +19,7 @@ class CodeReviewsController < ApplicationController
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
-    code_reviews = CodeReview.where(project_id: project.id)
+    code_reviews = CodeReview.includes(:owner, comments: :commenter).where(project_id: project.id)
     render json: code_reviews.map(&:summarize_with_comments)
   end
 

@@ -87,17 +87,9 @@ const CodeReviewTimelineReview = ({
         )}
         {comments &&
           comments.map(comment => {
-            // When we create the V2 comment, no longer convert, use the new comment shape
-            const convertDataForComponent = {
-              id: comment.id,
-              name: comment.commenterName,
-              commentText: comment.comment,
-              timestampString: comment.createdAt,
-              isResolved: comment.isResolved
-            };
             return (
               <Comment
-                comment={convertDataForComponent}
+                comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
                 onDelete={deleteCodeReviewComment}
