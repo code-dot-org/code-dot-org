@@ -370,13 +370,13 @@ const styles = {
   },
   leftCol: {
     position: 'absolute',
-    bottom: 13,
+    bottom: RESIZER_HEIGHT,
     left: 0,
     marginLeft: 0
   },
   leftColRtl: {
     position: 'absolute',
-    bottom: 13,
+    bottom: RESIZER_HEIGHT,
     right: 0,
     marginRight: 0
   }
