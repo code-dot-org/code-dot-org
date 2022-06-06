@@ -263,7 +263,7 @@ module UsersHelper
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
   private def merge_user_progress_by_level(
-    unit:,
+    script:,
     user:,
     user_levels_by_level:,
     teacher_feedback_by_level:,
@@ -271,10 +271,10 @@ module UsersHelper
     include_timestamp: false
   )
     progress = {}
-    unit.script_levels.each do |sl|
+    script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
-        level_for_progress = level.get_level_for_progress(user, unit)
+        level_for_progress = level.get_level_for_progress(user, script)
         ul = user_levels_by_level.try(:[], level_for_progress.id)
 
         feedback = teacher_feedback_by_level.try(:[], level_for_progress.id)
