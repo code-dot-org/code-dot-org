@@ -752,6 +752,11 @@ ms:
         math: 'Matematik'
         science: 'Sains'
         la: 'Seni bahasa'
+        other: "Lain-lain"
+      resources:
+        other: "Lain-lain"
+      robotics:
+        other: "Lain-lain"
       workshop_course:
         csf_express: 'Asas CS (Praekspres atau Ekspres)'
       email_opt_in:
