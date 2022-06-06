@@ -34,6 +34,8 @@ const CodeReviewTimelineReview = ({
     );
   };
 
+  const viewingAsOwner = ownerId === currentUserId;
+
   return (
     <CodeReviewTimelineElement
       type={codeReviewTimelineElementType.CODE_REVIEW}
@@ -47,7 +49,7 @@ const CodeReviewTimelineReview = ({
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>
-              {ownerId === currentUserId
+              {viewingAsOwner
                 ? javalabMsg.codeReviewForYou()
                 : javalabMsg.codeReviewForStudent({student: ownerName})}
             </div>
@@ -55,7 +57,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && !viewAsCodeReviewer && (
+          {isOpen && viewingAsOwner && (
             <div>
               <Button
                 icon="close"
@@ -68,7 +70,7 @@ const CodeReviewTimelineReview = ({
             </div>
           )}
         </div>
-        {isOpen && !viewAsCodeReviewer && (
+        {isOpen && viewingAsOwner && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
             &nbsp;
@@ -87,7 +89,7 @@ const CodeReviewTimelineReview = ({
               />
             );
           })}
-        {isOpen && viewAsCodeReviewer && (
+        {isOpen && !viewingAsOwner && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)
