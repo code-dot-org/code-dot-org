@@ -88,7 +88,7 @@ fr:
     submit: Ajouter un indice
   appname: Code.org
   stage: étape
-  stage_number: Leçon %{number}
+  stage_number: 'Leçon %{number} '
   puzzle: Énigme
   trophies: trophées
   courses: Cours

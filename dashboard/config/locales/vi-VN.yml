@@ -383,6 +383,7 @@ vi:
       educate_beyond: Đằng sau Code.org
       educate_inspire: Truyền cảm hứng cho Hssv
       educate_community: Cộng đồng trực tuyến
+      educate_requirements: Điều kiện kỹ thuật
       educate_tools: Các công cụ và video
       about_us: Về chúng tôi
       about_leadership: Khả năng lãnh đạo
@@ -434,6 +435,7 @@ vi:
       iceage: Kỉ băng hà
       infinity: Vô cùng
       minecraft_adventurer: Minecraft Chuyến phiêu lưu
+      minecraft_aquatic: Minecraft Thủy sinh
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Phòng trò chơi
@@ -549,6 +551,7 @@ vi:
     none: Không có
     only_one_parent_email_supported_warning: 'Lưu ý: Hiện tại, chúng tôi chỉ có thể
       hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh.'
+    encrypted: mã hóa
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
@@ -758,8 +761,12 @@ vi:
       title: Bữa Tiệc Khiêu Vũ
     hello-world:
       title: Xin chào cả thế giới
+      body: Hãy chọn trong bốn chủ đề thú vị để lập trình các nhân vật tương tác trong
+        thế giới do chính bạn tạo ra.
     poem-art:
       title: Tranh thơ ca
+      body: Hãy thể hiện bản thân! Hãy dùng mã lệnh để tạo bài thơ có hình chuyển
+        động.
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những điều cơ bản của khoa học máy tính. Hàng triệu người đã sử
@@ -1213,3 +1220,4 @@ vi:
       khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: Liên kết thư điện tử của bạn
     not_now: Để sau
+  teacher_feedback: Phản hồi của giáo viên

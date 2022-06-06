@@ -2,11 +2,6 @@
 he:
   data:
     script:
-      category:
-        csf_category_name: יסודות מדעי המחשב
-        hoc_category_name: שעת הקוד
-        math_category_name: מתמטיקה
-        other_category_name: אחר
       name:
         course1:
           title: מסלול 1

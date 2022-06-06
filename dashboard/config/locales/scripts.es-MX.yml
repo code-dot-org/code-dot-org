@@ -2,38 +2,6 @@
 es-MX:
   data:
     script:
-      category:
-        csd_category_name: Descubrimientos de Ciencias de la Computación ('17-'18)
-        csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
-        csd_2019_category_name: Descubrimientos de Ciencias de la Computación ('19-'20)
-        csd_2020_category_name: Descubrimientos de Ciencias de la Computación ('20-'21)
-        csd_2021_category_name: Descubrimientos de Ciencias de la Computación ('21-'22)
-        csd_pilot_category_name: Piloto de Descubrimientos en Ciencias de la Computación
-        csf_category_name: Fundamentos de Ciencias de la Computación
-        csf_2018_category_name: Fundamentos de Ciencias de la Computación ('18-'19)
-        csf_2019_category_name: Fundamentos de Ciencias de la Computación ('19-'20)
-        csf_2020_category_name: Fundamentos de Ciencias de la Computación ('20-'21)
-        csf_2021_category_name: Fundamentos de Ciencias de la Computación ('21-'22)
-        csf_international_category_name: Fundamentos de Ciencias de la Computación
-          (internacional)
-        csf2_draft_category_name: 'En desarrollo: cursos A-F'
-        csp_category_name: Principios de Informática ('15-'16)
-        csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
-        csp_2019_category_name: Principios de Ciencias de la Computación ('19-'20)
-        csp_2020_category_name: Principios de Ciencias de la Computación ('20-'21)
-        csp_2021_category_name: Principios de Ciencias de la Computación ('21-'22)
-        cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
-          Computación
-        csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
-        aiml_2021_category_name: IA / ML
-        csc_2021_category_name: Conexiones CS ('21-'22)
-        full_course_category_name: Cursos completos
-        hoc_category_name: Hora del código
-        math_category_name: Matemáticas
-        research_studies_category_name: Estudios de investigación
-        twenty_hour_category_name: 20 horas
-        tts_category_name: Texto-a-voz
-        other_category_name: Otro
       name:
         course1:
           title: Curso 1
@@ -27464,16 +27432,6 @@ es-MX:
               name: Aprendizaje de los Principios de Informática
             lesson-3:
               name: Enseñanza de los Principios de Informática
-          student_description: |-
-            En este módulo, se presentarán prácticas auténticas de informática que los estudiantes realizarán a lo largo del curso Descubrimientos de informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Descubrimientos de Informática y harás un plan sobre cómo apoyar el aprendizaje de los estudiantes mientras enseñas el curso.
-
-            **Podrás**:
-
-            -   Considerar el papel del profesor en un aula de Descubrimientos de Informática.
-            -   Aprenderás sobre las prácticas auténticas de informática que los estudiantes desarrollarán a lo largo del curso Descubrimientos de Informática.
-            -   Hacer un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua, y la promoción de una cultura de inclusión.
-
-            **Tiempo sugerido**: 50 minutos
         csa9-2022:
           lessons:
             The AP CSA Exam:

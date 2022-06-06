@@ -2,36 +2,6 @@
 pl:
   data:
     script:
-      category:
-        csd_category_name: Odkrycia Informatyki ('17-'18)
-        csd_2018_category_name: Odkrycia Informatyki ('18-'19)
-        csd_2019_category_name: Odkrycia Informatyki ('19-'20)
-        csd_2020_category_name: Odkrycia Informatyki ('20-'21)
-        csd_2021_category_name: Odkrycia Informatyki ('21-'22)
-        csd_pilot_category_name: Pilotaż Odkryć Informatyki
-        csf_category_name: Podstawy Informatyki
-        csf_2018_category_name: Podstawy Informatyki ('18-'19)
-        csf_2019_category_name: Podstawy Informatyki ('19-'20)
-        csf_2020_category_name: Podstawy Informatyki ('20-'21)
-        csf_2021_category_name: Podstawy Informatyki ('21-'22)
-        csf_international_category_name: Podstawy Informatyki, Mędzynarodowe
-        csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
-        csp_category_name: Zasady Informatyki ('15-'16)
-        csp_2018_category_name: Zasady Informatyki ('18-'19)
-        csp_2019_category_name: Zasady Informatyki ('19-'20)
-        csp_2020_category_name: Zasady Informatyki ('20-'21)
-        csp_2021_category_name: Zasady Informatyki ('21-'22)
-        cspexams_category_name: Praktyczny Test Podstaw Informatyki
-        csp17_category_name: Zasady Informatyki ('17-'18)
-        aiml_2021_category_name: AI / ML
-        csc_2021_category_name: Powiązania z informatyką ('21-'22)
-        full_course_category_name: Pełne Kursy
-        hoc_category_name: Godzina Kodowania
-        math_category_name: Matematyka
-        research_studies_category_name: Studia badawcze
-        twenty_hour_category_name: 20 Godzina
-        tts_category_name: Zamiana tekstu na mowę
-        other_category_name: Inni/inne
       name:
         course1:
           title: Kurs 1
@@ -16141,6 +16111,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -16737,6 +16709,16 @@ pl:
             lesson-3:
               name: Nauczanie Zasad Informatyki
           name: self-paced-pl-csp4-2021
+          student_description: |-
+            W tym module zapoznasz się z autentycznymi praktykami informatycznymi, z którymi uczniowie będą się spotykać podczas kursu Odkrycia Informatyki. Praktyki te obejmują debugowanie, używanie zasobów i programowanie w parach. Poznasz także rolę nauczyciela kursu Odkrycia Inforematyki w klasie i opracujesz plan, w jaki sposób będziesz wspierać naukę uczniów podczas prowadzenia tego kursu.
+
+            **Będziesz**:
+
+            -   Rozważ rolę nauczyciela kursu Odkrycia Informatyki w klasie.
+            -   Dowiedz się o autentycznych praktykach informatycznych, które uczniowie rozwiną podczas tego kursu.
+            -   Zaplanuj, w jaki sposób będziesz wspierać naukę uczniów poprzez różnicowanie, ciągłą ocenę i promowanie kultury włączania.
+
+            **Sugerowany czas**: 50 minut
         self-paced-pl-csp5-2021:
           name: self-paced-pl-csp5-2021
         self-paced-pl-csp6-2021:
@@ -17956,12 +17938,15 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa6-exemplars
+          title: Jednostka 6 - Rozszerzanie możliwości programu [Exemplars]
         2022drafting:
           lessons:
             lesson-1:
               name: Obliczenia ze zmiennymi
             lesson-2:
               name: Wiele duszków
+            lesson-3:
+              name: 'Mini-projekt: Gra kolekcjonera'
             lesson-4:
               name: Symulator pandemii
             lesson-5:
@@ -18047,6 +18032,8 @@ pl:
               name: Wiele duszków
             lesson-2:
               name: Obliczenia ze zmiennymi
+            lesson-3:
+              name: 'Mini-projekt: Gra kolekcjonera'
             Introducing Sprite Lab:
               name: Wprowadzenie Sprite Lab
             Making Sprites:
@@ -18129,6 +18116,7 @@ pl:
             lessonGroup-3:
               display_name: Rozdział 2
           name: csd6-pilot-2022
+          title: Pilotaż informatyki z urzdzeniami fizycznymi (2022)
         csa8-exemplars:
           lessons:
             lesson-1:
@@ -18147,6 +18135,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-8:
               name: Rozszerzanie standardowych algorytmów
+            lesson-9:
+              name: Przemierzanie wielu list
             lesson-10:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -18165,8 +18155,15 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa8-exemplars
+          title: Jednostka 8 - Nadawanie życia obiektom [Exemplars]
         alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels:
+              name: Instruktor na poziomach szkolenia
+            Dani Test Lesson 2:
+              name: Instruktor w Szkoleniu LevelGroup
           name: alltheselfpacedplthings
+          title: Wszystkie PL rzeczy we własnym tempie
         csa7-pilot-facilitator:
           lessons:
             Accessing Object Behavior:
@@ -18263,6 +18260,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -18297,6 +18296,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -19112,6 +19113,8 @@ pl:
               name: Internet
             End of Course Project:
               name: Koniec projektu kursu
+            lesson-6:
+              name: 'Mini-projekt: Gra kolekcjonera'
             lesson-7:
               name: Tworzenie duszków
             lesson-8:
@@ -19148,6 +19151,8 @@ pl:
               name: Wiele duszków
             "[New] Counting with Variables":
               name: Obliczenia ze zmiennymi
+            "[New] Mini-Project: Collector Game":
+              name: 'Mini-projekt: Gra kolekcjonera'
           lesson_groups:
             ramp_up:
               display_name: Duszki
@@ -19606,6 +19611,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:
@@ -19640,6 +19647,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             lesson-7:
               name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              name: Przemierzanie wielu list
             lesson-9:
               name: Ochrona prywatności i bezpieczeństwa
             lesson-11:
@@ -19895,6 +19904,8 @@ pl:
               name: Implementacja sortowania przez scalanie
             Expanding Standard Algorithms:
               name: Rozszerzanie standardowych algorytmów
+            Traversing Multiple Lists:
+              name: Przemierzanie wielu list
             Defending Privacy and Security:
               name: Ochrona prywatności i bezpieczeństwa
             Inclusive Playground Project - Day 1:

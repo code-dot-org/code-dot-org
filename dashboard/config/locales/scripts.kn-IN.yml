@@ -2,11 +2,6 @@
 kn:
   data:
     script:
-      category:
-        csf_category_name: CS ಫಂಡಮೆಂಟಲ್ಸ್
-        hoc_category_name: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-        math_category_name: ಗಣಿತ
-        other_category_name: ಇತರೆ
       name:
         course1:
           description_audience: ವಯಸ್ಸು 4-6

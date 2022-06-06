@@ -349,6 +349,7 @@ zh-CN:
       educate_beyond: Code.org 意外的内容
       educate_inspire: 鼓舞学生
       educate_community: 在线社区
+      educate_requirements: 技术要求
       educate_tools: 工具和视频
       about_us: 关于我们
       about_leadership: 管理团队
@@ -682,8 +683,10 @@ zh-CN:
       title: 舞蹈派对
     hello-world:
       title: 你好世界
+      body: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
     poem-art:
       title: 诗歌艺术
+      body: 表达自己！使用代码创建动画诗歌。
     hoc:
       title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
@@ -1017,7 +1020,7 @@ zh-CN:
   no_level_access_teacher: 你不能进入这个等级。如果你认为可以访问这个等级，请写信给 support@code.org，以便我们可以解决这种情况。
   no_exemplar: 这个级别没有范例。
   no_exemplar_access_student: 学生无法访问示例代码。请询教师，应该访问什么等级。
-  no_exemplar_access_teacher: 只有经过认证的教师才能访问示例代码。如果你想成为一名认证教师，请写信给support@code.org.
+  no_exemplar_access_teacher: 只有经过认证的教师才能访问示例代码。如果你想成为一名认证教师，请写信给support@code.org。
   return_unit_overview: 转到单元概述
   return_course_overview: 转到课程概述
   view_all_units: 查看所有单元

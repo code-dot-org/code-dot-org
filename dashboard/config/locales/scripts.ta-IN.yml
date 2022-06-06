@@ -2,11 +2,6 @@
 ta:
   data:
     script:
-      category:
-        csf_category_name: CS அடிப்படைகள்
-        hoc_category_name: நிரல்வரி நேரம்
-        math_category_name: கணிதம்
-        other_category_name: வேறு
       name:
         course1:
           title: கோர்ஸ் 1
@@ -243,6 +238,8 @@ ta:
             Zombies! ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
         cspunit1:
           lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
             Text Compression:
               name: உரை சுருக்க
         text-compression:
@@ -334,6 +331,8 @@ ta:
           name: பெருங்கடல்கள்
         csp1-2017:
           lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
             The Internet:
               name: இணையம்
         csp2-2017:
@@ -369,6 +368,10 @@ ta:
           lessons:
             Introduction to Text Compression:
               name: உரை சுருக்க அறிமுகம்
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: வடிவமைப்பு முறை
         CSDU1-Draft:
           lessons:
             Exploring Apps:
@@ -742,6 +745,8 @@ ta:
               name: பட்டியல்கள்
             Map:
               name: வரைபடம்
+            Board Events:
+              name: குழு நிகழ்வுகள்
         coursee-ramp:
           lessons:
             Conditionals:
@@ -750,6 +755,10 @@ ta:
           lessons:
             Lists:
               name: பட்டியல்கள்
+            Board Events:
+              name: குழு நிகழ்வுகள்
+            Board Events_:
+              name: குழு நிகழ்வுகள்
         csd3-draft:
           lessons:
             Variables:
@@ -1437,6 +1446,10 @@ ta:
               name: CSP முன் ஆய்வு 21-22
             CSD pre-survey 21-2:
               name: CSP முன் ஆய்வு 21-22
+            CS Principles Pre-survey:
+              name: CSA முன்-கணிப்பு வரைவு
+            Course Survey:
+              name: CSA படிப்புக்குப் பிந்தைய ஆய்வு வரைவு
         hero:
           description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு திரும்பியுள்ளது!
             குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
@@ -1752,6 +1765,10 @@ ta:
               name: சராசரி ஸ்கிரீன் அவுட்
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
+        csd6-2018:
+          lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
         coursee-2018:
           assignment_family_title: பாடநெறி உ
           lesson_groups:
@@ -1858,6 +1875,8 @@ ta:
               name: விவசாயியுடன் நிபந்தனைகள்
         csp1-2018:
           lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
             The Internet:
               name: இணையம்
         csp2-2018:
@@ -2190,10 +2209,14 @@ ta:
               name: சுழல்களால் வரைதல்
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
+            Access Ability:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Swimming Fish with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
+            Designing for Accessibility:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             Songwriting:
               name: பாடல் எழுதுதல்
         express-2019:
@@ -2455,6 +2478,10 @@ ta:
               name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
+        csd6-2019:
+          lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -2467,6 +2494,8 @@ ta:
               display_name: கண்ணோட்டம்
         csp1-2019:
           lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
             The Internet:
               name: இணையம்
         csp2-2019:
@@ -2481,6 +2510,9 @@ ta:
           lesson_groups:
             required:
               display_name: கண்ணோட்டம்
+          lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
         time4csdemo:
           lessons:
             'Programming: My Robotic Friends':
@@ -2847,6 +2879,10 @@ ta:
               display_name: பட்டியல்கள்
             csp_loops:
               display_name: சுழற்சிகள்
+        csd6-2020:
+          lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
         csd3-2020:
           lessons:
             Variables:
@@ -3009,6 +3045,8 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Access Ability:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops in Frozen:
@@ -3023,6 +3061,8 @@ ta:
               name: கலைஞருடன் செயல்பாடுகள்
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
+            Designing for Accessibility:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
         coursef-2020:
           title: பாடநெறி ஊ (2020)
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
@@ -3181,6 +3221,10 @@ ta:
               name: நிகழ்வுகளுடன் நகர்வில்
             A Royal Battle with Events:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
+        csp1-2020:
+          lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
         csp2-2020:
           lessons:
             Packets:
@@ -3207,6 +3251,8 @@ ta:
               name: மாறிலிகள்
         virtual-holding-place:
           lessons:
+            Example Projects:
+              name: எடுத்துக்காட்டு திட்டங்கள்
             Functions:
               name: செயல்பாடுகள்
         code-break:
@@ -3350,6 +3396,14 @@ ta:
               name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
+        csd6-2021:
+          lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
         csp2-2021:
           lessons:
             Packets:
@@ -3532,8 +3586,12 @@ ta:
               name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
+            Designing for Accessibility:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
+            lesson-1:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
           lesson_groups:
             ramp_up:
               display_name: உள்ளமை சுழல்கள்
@@ -3573,6 +3631,8 @@ ta:
               name: கலைஞருடன் சுழல்களுக்கு
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
+            lesson-1:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             lesson-7:
               name: உருவங்களை உருவாக்குதல்
             lesson-9:
@@ -4270,8 +4330,11 @@ ta:
               name: வணக்கம் உலகம்
         explore-data-1-2021:
           lessons:
+            Exploring Box Plots and Histograms:
+              name: தரவு காட்சிப்படுத்தல்
             lesson-1:
               name: பாக்ஸ் ப்ளாட்ஸ் மற்றும் ஹிஸ்டோகிராம்களை ஆராய்தல்
+          title: தரவு காட்சிப்படுத்தல்
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -4327,6 +4390,8 @@ ta:
               display_name: பாடநெறி திட்டத்தின் முடிவு
         csd6-pilot-2022:
           lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
             lesson-10:
               name: உள்ளீடுகளை இணைத்தல்
             Functions with Parameters:
@@ -4463,6 +4528,10 @@ ta:
               display_name: மாறிலிகள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: பைனரி எண்கள்
         csp2-2022:
           lessons:
             Packets:
@@ -4645,6 +4714,8 @@ ta:
               name: விவசாயியுடன் நிபந்தனைகள்
             Functions with Harvester:
               name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
+            Designing for Accessibility:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             End of Course Project:
               name: பாடநெறி திட்டத்தின் முடிவு
             Simon Says:
@@ -4661,6 +4732,8 @@ ta:
               name: விவசாயியுடன் நிபந்தனைகள்
             Functions in Harvester:
               name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
+            lesson-1:
+              name: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
             'Hello World: Food':
               name: வணக்கம் உலகம்
           lesson_groups:
@@ -5211,6 +5284,12 @@ ta:
           lessons:
             Hello World CSC:
               name: ஹலோ வேர்ல்ட் CSC
+            lesson-4:
+              name: "[Optional] கட்டுக்கதைகள் அறிமுகம்"
+            lesson-5:
+              name: உங்கள் கட்டுக்கதையைத் திட்டமிடுங்கள்
+            lesson-6:
+              name: உங்கள் கட்டுக்கதையைப் பகிரவும்
         csd3-2022:
           lessons:
             Variables:
@@ -5225,6 +5304,8 @@ ta:
               name: செயல்பாடுகள்
         csd6-2022:
           lessons:
+            Board Events:
+              name: குழு நிகழ்வுகள்
             Combining Inputs and Outputs:
               name: உள்ளீடுகளை இணைத்தல்
             Functions:
@@ -5237,6 +5318,11 @@ ta:
             எப்போது முடிந்தது என்பதற்கான கருத்தாய்வு இந்தத் தொகுப்பில் உள்ளது. இந்தக்
             கருத்தாய்வை எப்போது மேற்கொள்ள வேண்டும் என்பதை உங்கள் ஆசிரியர் உங்களுக்குச்
             சொல்வார்.
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் பற்றி அறிக
         csa9-2022:
           lessons:
             Console:
