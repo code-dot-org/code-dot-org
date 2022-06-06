@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_03_175343) do
+ActiveRecord::Schema.define(version: 2022_05_25_230111) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -320,7 +320,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_175343) do
     t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
-  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "script_id", null: false
     t.integer "level_id", null: false
@@ -333,7 +333,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_175343) do
     t.index ["user_id", "script_id", "level_id", "closed_at", "deleted_at"], name: "index_code_review_requests_unique", unique: true
   end
 
-  create_table "code_reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "code_reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "project_id", null: false
     t.integer "script_id", null: false
@@ -345,6 +345,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_175343) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "project_version_expires_at"
     t.index ["project_id", "deleted_at"], name: "index_code_reviews_on_project_id_and_deleted_at"
     t.index ["user_id", "project_id", "closed_at", "deleted_at"], name: "index_code_reviews_unique", unique: true
     t.index ["user_id", "script_id", "project_level_id", "closed_at", "deleted_at"], name: "index_code_reviews_for_peer_lookup"
@@ -474,7 +475,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_175343) do
     t.index ["name"], name: "index_courses_on_name"
   end
 
-  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "data_docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "name"
     t.text "content"
