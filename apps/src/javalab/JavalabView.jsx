@@ -20,6 +20,7 @@ import TopInstructions, {
 import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
+import {SHOW_REVIEW_TAB_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
@@ -180,6 +181,16 @@ class JavalabView extends React.Component {
     );
   };
 
+  getSelectedInstructionsTab = () => {
+    if (queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true') {
+      return TabType.REVIEW;
+    } else if (queryParams(SHOW_REVIEW_TAB_URL_PARAM) === 'true') {
+      return TabType.REVIEW_V2;
+    } else {
+      return null;
+    }
+  };
+
   render() {
     const {
       displayTheme,
@@ -227,11 +238,7 @@ class JavalabView extends React.Component {
                   experiments.JAVALAB_DOCUMENTATION
                 )}
                 displayReviewTab
-                initialSelectedTab={
-                  queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? TabType.REVIEW
-                    : null
-                }
+                initialSelectedTab={this.getSelectedInstructionsTab()}
                 explicitHeight={height}
                 resizable={false}
               />
