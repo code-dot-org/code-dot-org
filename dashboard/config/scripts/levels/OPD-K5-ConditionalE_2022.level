@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2022-03-09T19:21:11.000Z",
-  "level_num": "custom",
-  "user_id": 837,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"magmaBlock\",\"magmaBlock\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"magmaBlock\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\"]",
@@ -47,7 +43,7 @@
     "boat": "false",
     "video_key": "mc_2018_conditionals",
     "short_instructions": "Search these underwater ruins for a chest.",
-    "long_instructions": "**Try this student lesson level from Course E - Lesson 14, Level 10:  Conditionals in Minecraft: Voyage Aquatic.**\r\n\r\nYou found the underwater ruins. Search the sandstone for a **chest** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) containing **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) treasure.\r\n\r\n",
+    "long_instructions": "**Try this student lesson level from Course E - Lesson 12, Level 10:  Conditionals in Minecraft: Voyage Aquatic.**\r\n\r\nYou found the underwater ruins. Search the sandstone for a **chest** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) containing **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) treasure.\r\n\r\n",
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the if path block to help you make the right turns.\",\"hint_id\":\"aquatic7\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c4196b1d3b9c88377a2e3cd214d6c48/HOC 2018 Level_7a.mp3\"}]",
     "name_suffix": "_2022",
@@ -55,9 +51,13 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2022-03-09T19:21:11.000Z",
+  "level_num": "custom",
+  "user_id": 837,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:11.829+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-ConditionalE-2021\\\"\"],\"cloned_from\":\"OPD-K5-ConditionalE-2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:11.829+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-ConditionalE-2021\\\"\"],\"cloned_from\":\"OPD-K5-ConditionalE-2021\"},{\"changed_at\":\"2022-06-03 20:19:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
