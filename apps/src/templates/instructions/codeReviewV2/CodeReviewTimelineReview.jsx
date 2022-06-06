@@ -19,7 +19,6 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview,
   toggleResolveComment,
-  viewAsCodeReviewer,
   deleteCodeReviewComment,
   currentUserId
 }) => {
@@ -81,11 +80,11 @@ const CodeReviewTimelineReview = ({
           comments.map(comment => {
             return (
               <Comment
+                isViewingAsCodeReviewOwner={ownerId === currentUserId}
                 comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
                 onDelete={deleteCodeReviewComment}
-                viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
           })}
@@ -104,7 +103,6 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   currentUserId: state.currentUser?.userId
 }))(CodeReviewTimelineReview);
 
@@ -114,7 +112,6 @@ CodeReviewTimelineReview.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
-  viewAsCodeReviewer: PropTypes.bool,
   deleteCodeReviewComment: PropTypes.func.isRequired,
   currentUserId: PropTypes.number
 };
