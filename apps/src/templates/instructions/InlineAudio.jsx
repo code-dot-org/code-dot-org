@@ -141,10 +141,10 @@ class InlineAudio extends React.Component {
     });
 
     audio.addEventListener('ended', e => {
-      this.setState({
+      this.setState((prevState, prevProps) => ({
         playing: false,
-        autoplayed: this.props.ttsAutoplayEnabled
-      });
+        autoplayed: prevProps.ttsAutoplayEnabled
+      }));
     });
 
     audio.addEventListener('error', e => {

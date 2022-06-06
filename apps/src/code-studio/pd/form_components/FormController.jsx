@@ -379,12 +379,12 @@ export default class FormController extends React.Component {
     });
 
     pageData = Object.assign(pageData, page.processPageData(pageData));
-    this.setState({
+    this.setState(prevState => ({
       data: {
-        ...this.state.data,
+        ...prevState.data,
         ...pageData
       }
-    });
+    }));
 
     const pageRequiredFields = pageFields.filter(f =>
       requiredFields.includes(f)

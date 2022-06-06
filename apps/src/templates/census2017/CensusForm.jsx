@@ -88,21 +88,21 @@ class CensusForm extends Component {
   };
 
   handleSchoolYearChange = event => {
-    this.setState({
-      schoolYear: event ? event.value : this.props.initialSchoolYear
-    });
+    this.setState((prevState, prevProps) => ({
+      schoolYear: event ? event.value : prevProps.initialSchoolYear
+    }));
   };
 
   handleChange = (field, event) => {
-    this.setState(
+    this.setState(prevState => (
       {
         submission: {
-          ...this.state.submission,
+          ...prevState.submission,
           [field]: event.target.value
         }
       },
       this.checkShowFollowUp
-    );
+    ));
   };
 
   handleSchoolDropdownChange = (field, event) => {
@@ -110,12 +110,12 @@ class CensusForm extends Component {
   };
 
   handleDropdownChange = (field, event) => {
-    this.setState({
+    this.setState(prevState => ({
       submission: {
-        ...this.state.submission,
+        ...prevState.submission,
         [field]: event ? event.value : ''
       }
-    });
+    }));
   };
 
   checkShowFollowUp() {
@@ -136,21 +136,21 @@ class CensusForm extends Component {
   }
 
   togglePledge() {
-    this.setState({
+    this.setState(prevState => ({
       submission: {
-        ...this.state.submission,
-        acceptedPledge: !this.state.submission.acceptedPledge
+        ...prevState.submission,
+        acceptedPledge: !prevState.submission.acceptedPledge
       }
-    });
+    }));
   }
 
   toggleOtherCS() {
-    this.setState({
+    this.setState(prevState => ({
       submission: {
-        ...this.state.submission,
-        otherCS: !this.state.submission.otherCS
+        ...prevState.submission,
+        otherCS: !prevState.submission.otherCS
       }
-    });
+    }));
   }
 
   toggleTopics(option) {
@@ -162,15 +162,15 @@ class CensusForm extends Component {
   }
 
   selectOption(option) {
-    this.setState({
-      selectedTopics: this.state.selectedTopics.concat(option)
-    });
+    this.setState(prevState => ({
+      selectedTopics: prevState.selectedTopics.concat(option)
+    }));
   }
 
   clearOption(option) {
-    this.setState({
-      selectedTopics: _.without(this.state.selectedTopics, option)
-    });
+    this.setState(prevState => ({
+      selectedTopics: _.without(prevState.selectedTopics, option)
+    }));
   }
 
   updateOtherTopicsDesc(event) {
@@ -284,28 +284,28 @@ class CensusForm extends Component {
   }
 
   validateSubmission() {
-    this.setState(
+    this.setState(prevState => (
       {
         errors: {
-          ...this.state.errors,
-          email: this.validateNotBlank(this.state.submission.email),
+          ...prevState.errors,
+          email: this.validateNotBlank(prevState.submission.email),
           topics: this.validateTopics(),
           frequency: this.validateFrequency(),
-          country: this.validateNotBlank(this.state.submission.country),
+          country: this.validateNotBlank(prevState.submission.country),
           nces: this.validateSchoolDropdown(),
           school: this.validateSchool(),
-          role: this.validateNotBlank(this.state.submission.role),
-          hoc: this.validateNotBlank(this.state.submission.hoc),
-          afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
-          tenHours: this.validateNotBlank(this.state.submission.tenHours),
-          twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
-          share: this.validateNotBlank(this.state.submission.share),
-          optIn: this.validateNotBlank(this.state.submission.optIn),
+          role: this.validateNotBlank(prevState.submission.role),
+          hoc: this.validateNotBlank(prevState.submission.hoc),
+          afterSchool: this.validateNotBlank(prevState.submission.afterSchool),
+          tenHours: this.validateNotBlank(prevState.submission.tenHours),
+          twentyHours: this.validateNotBlank(prevState.submission.twentyHours),
+          share: this.validateNotBlank(prevState.submission.share),
+          optIn: this.validateNotBlank(prevState.submission.optIn),
           existingInaccuracyReason: this.validateExistingInaccuracyReason()
         }
       },
       this.censusFormSubmit
-    );
+    ));
   }
 
   censusFormSubmit() {

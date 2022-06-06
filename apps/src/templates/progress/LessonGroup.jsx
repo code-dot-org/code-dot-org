@@ -36,19 +36,19 @@ class LessonGroup extends React.Component {
   };
 
   toggleCollapsed = () =>
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
+    this.setState(prevState => ({
+      collapsed: !prevState.collapsed
+    }));
 
   openLessonGroupInfoDialog = () => {
     /*
     Because the info button is on the header which collapses when clicked we have to
     reverse the collapsing when you click the info button
     */
-    this.setState({
-      collapsed: !this.state.collapsed,
+    this.setState(prevState => ({
+      collapsed: !prevState.collapsed,
       lessonGroupInfoDialogOpen: true
-    });
+    }));
     firehoseClient.putRecord(
       {
         study: 'unit_overview_page',

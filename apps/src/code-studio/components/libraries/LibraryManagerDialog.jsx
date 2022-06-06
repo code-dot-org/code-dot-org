@@ -80,12 +80,12 @@ export class LibraryManagerDialog extends React.Component {
         this.setState({classLibraries, projectLibraries});
       },
       error => {
-        this.setState({
+        this.setState(prevState => ({
           errorMessages: {
-            ...this.state.errorMessages,
+            ...prevState.errorMessages,
             loadClassLibraries: i18n.errorFindingClassLibraries()
           }
-        });
+        }));
       }
     );
 
@@ -109,10 +109,10 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   setLibraryToImport = event => {
-    this.setState({
+    this.setState(prevState => ({
       importLibraryId: event.target.value,
-      errorMessages: {...this.state.errorMessages, importFromId: undefined}
-    });
+      errorMessages: {...prevState.errorMessages, importFromId: undefined}
+    }));
   };
 
   addLibraryToProject = libraryJson => {
@@ -142,13 +142,13 @@ export class LibraryManagerDialog extends React.Component {
 
   addLibraryById = (libraryJson, error) => {
     if (error) {
-      this.setState({
+      this.setState(prevState => ({
         errorMessages: {
-          ...this.state.errorMessages,
+          ...prevState.errorMessages,
           importFromId: i18n.libraryImportError()
         },
         isLoading: false
-      });
+      }));
     } else if (libraryJson) {
       this.addLibraryToProject(libraryJson);
     }

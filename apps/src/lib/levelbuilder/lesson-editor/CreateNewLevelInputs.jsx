@@ -34,13 +34,13 @@ export default class CreateNewLevelInputs extends Component {
     const needMoreLevelInformation =
       this.state.levelName === '' || this.state.levelType === '';
     if (needMoreLevelInformation) {
-      this.setState({
+      this.setState(prevState => ({
         creatingLevel: false,
         error:
-          this.state.levelType === ''
+          prevState.levelType === ''
             ? 'Please choose a level type'
             : 'Please enter a level name'
-      });
+      }));
     } else {
       $.ajax({
         url: '/levels?do_not_redirect=true',

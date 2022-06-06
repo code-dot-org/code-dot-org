@@ -26,13 +26,13 @@ class BonusLevels extends React.Component {
 
   nextLesson = () => {
     if (!this.isRightArrowDisabled()) {
-      this.setState({lessonIndex: this.state.lessonIndex + 1});
+      this.setState(prevState => ({lessonIndex: prevState.lessonIndex + 1}));
     }
   };
 
   previousLesson = () => {
     if (!this.isLeftArrowDisabled()) {
-      this.setState({lessonIndex: this.state.lessonIndex - 1});
+      this.setState(prevState => ({lessonIndex: prevState.lessonIndex - 1}));
     }
   };
 

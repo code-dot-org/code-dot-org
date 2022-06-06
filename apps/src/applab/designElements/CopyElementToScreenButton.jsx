@@ -54,7 +54,7 @@ class CopyElementToScreenButton extends React.Component {
   };
 
   handleDropdownClick = event => {
-    this.setState({opened: !this.state.opened});
+    this.setState(prevState => ({opened: !prevState.opened}));
   };
 
   handleMenuClick = screenId => {

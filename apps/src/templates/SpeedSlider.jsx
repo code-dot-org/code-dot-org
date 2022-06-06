@@ -108,10 +108,10 @@ class SpeedSlider extends React.Component {
 
   onKnobMouseDown = event => {
     const mousePosition = this.mouseToSvg_(event);
-    this.setState({
+    this.setState((prevState, prevProps) => ({
       dragStart: mousePosition.x,
-      valueStart: this.props.value
-    });
+      valueStart: prevProps.value
+    }));
     this.startDragging();
   };
 

@@ -130,33 +130,33 @@ $(window).load(function() {
     };
 
     onDomainChange = (domainKey, newType) => {
-      this.setState({
-        domainTypes: this.state.domainTypes.map(object => {
+      this.setState(prevState => ({
+        domainTypes: prevState.domainTypes.map(object => {
           if (object.key === domainKey) {
             object.type = newType;
           }
           return object;
         })
-      });
+      }));
     };
 
     onDomainAdd = () => {
       const nextDomainID = this.grabUniqueID();
-      this.setState({
-        domainTypes: this.state.domainTypes.concat({
+      this.setState(prevState => ({
+        domainTypes: prevState.domainTypes.concat({
           key: 'domain' + nextDomainID,
           type: blockValueType.NUMBER,
           order: nextDomainID
         })
-      });
+      }));
     };
 
     onDomainRemove = domainKey => {
-      this.setState({
-        domainTypes: this.state.domainTypes.filter(
+      this.setState(prevState => ({
+        domainTypes: prevState.domainTypes.filter(
           object => object.key !== domainKey
         )
-      });
+      }));
     };
 
     render() {

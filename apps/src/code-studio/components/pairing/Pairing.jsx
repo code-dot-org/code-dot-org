@@ -47,11 +47,11 @@ export default class Pairing extends React.Component {
   }
 
   handleSectionChange = event => {
-    this.setState({
+    this.setState(prevState => ({
       pairings: [],
-      sections: this.state.sections,
+      sections: prevState.sections,
       selectedSectionId: +event.target.value
-    });
+    }));
   };
 
   refreshUserMenu = () => {

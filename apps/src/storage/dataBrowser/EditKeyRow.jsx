@@ -35,10 +35,10 @@ class EditKeyRow extends React.Component {
   handleChange = event => this.setState({newValue: event.target.value});
 
   handleEdit = () =>
-    this.setState({
+    this.setState((prevState, prevProps) => ({
       isEditing: true,
-      newValue: editableValue(this.props.value)
-    });
+      newValue: editableValue(prevProps.value)
+    }));
 
   handleSave = () => {
     this.props.hideError();

@@ -102,7 +102,7 @@ export default class AudioRecorder extends React.Component {
         },
         {includeUserId: true}
       );
-      this.setState({recording: !this.state.recording});
+      this.setState(prevState => ({recording: !prevState.recording}));
     });
 
     //Stop recording after set amount of time
@@ -116,7 +116,7 @@ export default class AudioRecorder extends React.Component {
       this.recorder.stopRecording().then(blob => {
         this.saveAudio(blob);
       });
-      this.setState({recording: !this.state.recording});
+      this.setState(prevState => ({recording: !prevState.recording}));
     }
   };
 

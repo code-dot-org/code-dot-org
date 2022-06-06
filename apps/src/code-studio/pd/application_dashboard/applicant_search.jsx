@@ -42,10 +42,10 @@ export default class ApplicantSearch extends React.Component {
       })}`,
       dataType: 'json'
     }).done(data => {
-      this.setState({
-        lastSearch: this.state.email,
+      this.setState(prevState => ({
+        lastSearch: prevState.email,
         results: data
-      });
+      }));
     });
   };
 

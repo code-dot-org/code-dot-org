@@ -189,9 +189,9 @@ export default class VariableFormGroup extends React.Component {
       this.props.onChange(values);
     }
 
-    this.setState({
-      selected: values[this.props.sourceName]
-    });
+    this.setState((prevState, prevProps) => ({
+      selected: values[prevProps.sourceName]
+    }));
   };
 
   render() {

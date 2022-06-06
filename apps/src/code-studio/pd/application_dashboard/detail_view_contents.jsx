@@ -211,9 +211,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleLockClick = () => {
-    this.setState({
-      locked: !this.state.locked
-    });
+    this.setState(prevState => ({
+      locked: !prevState.locked
+    }));
   };
 
   handleStatusChange = event => {
@@ -226,17 +226,17 @@ export class DetailViewContents extends React.Component {
       !this.state.scholarship_status &&
       ScholarshipStatusRequiredStatuses.includes(event.target.value)
     ) {
-      this.setState({
+      this.setState((prevState, prevProps) => ({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
                                 getApplicationStatuses(
-                                  this.props.viewType,
-                                  this.props.applicationData
+                                  prevProps.viewType,
+                                  prevProps.applicationData
                                     .update_emails_sent_by_system
                                 )[event.target.value]
                               }.`,
         showCantSaveStatusDialog: true
-      });
+      }));
     } else if (
       this.props.applicationData.regional_partner_id &&
       this.props.applicationData.update_emails_sent_by_system &&

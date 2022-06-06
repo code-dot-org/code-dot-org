@@ -21,14 +21,14 @@ export class CreateStandardsReportDialog extends Component {
   };
 
   handleNext = () => {
-    this.setState(
-      {currentPage: this.state.currentPage + 1},
+    this.setState(prevState => (
+      {currentPage: prevState.currentPage + 1},
       this.props.handleNext
-    );
+    ));
   };
 
   handleBack = () => {
-    this.setState({currentPage: this.state.currentPage - 1});
+    this.setState(prevState => ({currentPage: prevState.currentPage - 1}));
   };
 
   handleClose = () => {

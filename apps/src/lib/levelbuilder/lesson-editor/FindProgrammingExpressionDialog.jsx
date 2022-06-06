@@ -142,11 +142,11 @@ export class FindProgrammingExpressionDialog extends Component {
   };
 
   handleSelectProgrammingExpression = e => {
-    this.setState({
-      selectedProgrammingExpression: this.state.programmingExpressions.find(
+    this.setState(prevState => ({
+      selectedProgrammingExpression: prevState.programmingExpressions.find(
         expression => expression.uniqueKey === e.target.value
       )
-    });
+    }));
   };
 
   doSearch() {

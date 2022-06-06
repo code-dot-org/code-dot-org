@@ -54,18 +54,18 @@ class ProgressLesson extends React.Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     // If we're assigned a lesson id, and it is for this lesson, uncollapse
     if (nextProps.currentLessonId !== this.props.currentLessonId) {
-      this.setState({
+      this.setState((prevState, prevProps) => ({
         collapsed:
-          this.state.collapsed &&
-          nextProps.currentLessonId !== this.props.lesson.id
-      });
+          prevState.collapsed &&
+          nextProps.currentLessonId !== prevProps.lesson.id
+      }));
     }
   }
 
   toggleCollapsed = () =>
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
+    this.setState(prevState => ({
+      collapsed: !prevState.collapsed
+    }));
 
   onClickStudentLessonPlan = () => {
     firehoseClient.putRecord(
