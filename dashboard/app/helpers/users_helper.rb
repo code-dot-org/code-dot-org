@@ -270,7 +270,7 @@ module UsersHelper
     user:,
     user_levels_by_level:,
     teacher_feedback_by_level:,
-    paired_user_levels:,
+    paired_user_levgels:,
     include_timestamp: false
   )
     progress = {}
