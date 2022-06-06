@@ -190,6 +190,9 @@
         "express-2018/Loops with Rey and BB-8": {
           "name": "Ciklusok Reyjel és BB-8-tel"
         },
+        "express-2018/While Loops in Farmer": {
+          "name": "Videó: While hurkok a farmerrel"
+        },
         "express-2018/Conditionals with Cards": {
           "name": "Feltételek kártyákkal"
         },
@@ -283,17 +286,56 @@
         "csd3-2018/Conditionals": {
           "name": "Feltételek"
         },
+        "csd3-2018/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2018/Collisions": {
+          "name": "Ütközések"
+        },
         "csd3-2018/Functions": {
           "name": "funkciók"
+        },
+        "csd3-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "csd6-2018/Board Events": {
           "name": "Táblás események"
         },
+        "csd6-2018/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
         "csd6-2018/Functions with Parameters": {
           "name": "Paraméteres függvények"
         },
+        "csd6-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Reprezentációk egyesítése"
+        },
+        "csd5-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2018/Linking Screens": {
+          "name": "Képernyők összekapcsolása"
+        },
+        "csd4-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd2-2018/Headings": {
+          "name": "Címsorok"
+        },
         "csd2-2018/Lists": {
           "name": "Listák"
+        },
+        "csd2-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "csd1-2018/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
@@ -382,6 +424,9 @@
         "express-2019/Loops with Rey and BB-8": {
           "name": "Ciklusok Reyjel és BB-8-tel"
         },
+        "express-2019/While Loops in Farmer": {
+          "name": "Videó: While hurkok a farmerrel"
+        },
         "express-2019/Build A Project": {
           "name": "Kurzus Projekt vége"
         },
@@ -418,20 +463,44 @@
         "csd3-2019/Conditionals": {
           "name": "Feltételek"
         },
+        "csd3-2019/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2019/Collisions": {
+          "name": "Ütközések"
+        },
         "csd3-2019/Functions": {
           "name": "funkciók"
         },
         "csd6-2019/Board Events": {
           "name": "Táblás események"
         },
+        "csd6-2019/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
         "csd6-2019/Functions with Parameters": {
           "name": "Paraméteres függvények"
+        },
+        "csd4-2019/Linking Screens": {
+          "name": "Képernyők összekapcsolása"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2019/Combining Representations": {
+          "name": "Reprezentációk egyesítése"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
         },
         "csd1-2019/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd2-2019/Headings": {
+          "name": "Címsorok"
         },
         "csd2-2019/Lists": {
           "name": "Listák"
@@ -490,14 +559,26 @@
         "csd3-2017/Conditionals": {
           "name": "Feltételek"
         },
+        "csd3-2017/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2017/Collisions": {
+          "name": "Ütközések"
+        },
         "csd3-2017/Functions": {
           "name": "funkciók"
         },
         "csd6-2017/Board Events_": {
           "name": "Táblás események"
         },
+        "csd6-2017/Getting Properties_": {
+          "name": "Tulajdonságok szerzése"
+        },
         "csd6-2017/Functions with Parameters_": {
           "name": "Paraméteres függvények"
+        },
+        "csd2-2017/Headings": {
+          "name": "Címsorok"
         },
         "csd2-2017/Lists": {
           "name": "Listák"
@@ -510,6 +591,18 @@
         },
         "csd1-2017/What is a Computer?": {
           "name": "Mi az a számítógép?"
+        },
+        "csd5-2017/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Reprezentációk egyesítése"
+        },
+        "csd4-2017/Linking Screens": {
+          "name": "Képernyők összekapcsolása"
         },
         "course4/Unplugged: Tangrams": {
           "name": "Gép nélküli feladatok: Tangram"
@@ -947,11 +1040,35 @@
         "coursee-2021/End of Course Project": {
           "name": "Kurzus Projekt vége"
         },
+        "csd7-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
         "csd6-2021/Board Events": {
           "name": "Táblás események"
         },
+        "csd6-2021/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
         "csd6-2021/Functions with Parameters": {
           "name": "Paraméteres függvények"
+        },
+        "csd6-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Reprezentációk egyesítése"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "csd3-2021/Variables": {
           "name": "változók"
@@ -971,8 +1088,17 @@
         "csd3-2021/Conditionals": {
           "name": "Feltételek"
         },
+        "csd3-2021/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Ütközések"
+        },
         "csd3-2021/Functions": {
           "name": "funkciók"
+        },
+        "csd3-2021/lesson-1": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
@@ -980,8 +1106,17 @@
         "csd1-2021/What is a Computer?": {
           "name": "Mi az a számítógép?"
         },
+        "csd2-2021/Headings": {
+          "name": "Címsorok"
+        },
         "csd2-2021/CSS Classes": {
           "name": "CSS osztályok"
+        },
+        "csd2-2021/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd2-2021/lesson-1": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
         "pre-express-2020/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével"
@@ -991,6 +1126,9 @@
         },
         "express-2020/Loops with Rey and BB-8": {
           "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "express-2020/While Loops with the Farmer": {
+          "name": "Videó: While hurkok a farmerrel"
         },
         "express-2020/End of Course Project": {
           "name": "Kurzus Projekt vége"
