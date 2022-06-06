@@ -76,7 +76,7 @@ Scenario: Toggle on Lockable Level
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
   And element "#locked-lesson" is not visible
-  And I see no difference for "view as student while unlocked"
+  And I see no difference for "view as student while unlocked" using stitch mode "none"
 
   Then I click selector ".uitest-viewAsTeacher"
   And element "#locked-lesson" is not visible
