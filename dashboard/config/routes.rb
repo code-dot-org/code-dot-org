@@ -222,7 +222,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
         get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
         if key == 'weblab'
-          get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/projects/weblab/%{channel_id}")
+          get "/#{key}/:channel_id", constraints: {host: CDO.dashboard_hostname}, to: redirect("//#{CDO.site_host('codeprojects.org')}/%{channel_id}/")
         else
           get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         end
