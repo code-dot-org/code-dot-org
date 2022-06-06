@@ -378,7 +378,7 @@ vi-VN:
   homepage_banner_40k_teachers_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
   homepage_slot_text_blurb_hoc: Ai cũng có thể học. Bắt đầu hôm nay
-  homepage_slot_text_link_hoc: Học thử Hour of Code
+  homepage_slot_text_link_hoc: Học thử Giờ lập trình
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
@@ -402,6 +402,7 @@ vi-VN:
   homepage_slot_text_link_buy: Tham gia
   homepage_slot_text_link_donate: Quyên góp
   homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
+  homepage_slot_text_link_thebadguys: Lập trình với Những kẻ xấu xa
   homepage_gallery_header: Hơn %{project_count} triệu dự án Code.org đã được tạo
   homepage_header_donors: Code.org cảm ơn những người ủng hộ nó
   homepage_donors_seall: Nhìn tất cả
@@ -1299,6 +1300,7 @@ vi-VN:
   header_educate_beyond: Đằng sau Code.org
   header_educate_inspire: Truyền cảm hứng cho Hssv
   header_educate_community: Cộng đồng trực tuyến
+  header_educate_requirements: Điều kiện kỹ thuật
   header_educate_tools: Các công cụ và video
   header_about_us: Về chúng tôi
   header_about_leadership: Khả năng lãnh đạo
@@ -1339,7 +1341,7 @@ vi-VN:
   user_header_view_all: Xem tất cả các dự án ...
   user_header_view_project_gallery: Xem các dự án
   user_header_view_my_projects: Xem chương trình của tôi
-  view_all_sections: Xem tất cả các phần
+  view_all_sections: Xem tất cả nhóm đào tạo
   hero_name: 'Minecraft: Hero''s Journey'
   applab_tile_subtitle: Hãy sáng tạo ứng dụng JavaScript của riêng mình bằng lập trình
     dạng khối. Hoặc là đưa kỹ năng của bản thân lên một đẳng cấp mới với lập trình
@@ -1552,6 +1554,7 @@ vi-VN:
   footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
     các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
     / hoặc các quốc gia khác.
+  codebytes_skinny_banner_english_only: Chỉ tiếng Anh
   footer_privacy_policy: Chính sách bảo mật
   footer_about: Về chúng tôi
   footer_partners: Đối tác
@@ -1637,3 +1640,8 @@ vi-VN:
     Hãy code một trình mô phỏng ổ dịch và đưa ra dự đoán về những gì sẽ xảy ra với
     những người hàng xóm của Thị Trấn Quái Vật.
   footer_cookie_notice: Thông báo về cookie
+  top_hoc_tutorial_applab_alt_text: Bàn tay màu nâu có ngón trỏ chạm vào màn hình
+    máy tính bảng màn hình cảm ứng, những ngôi sao bay ra cùng tia sáng trên nền màu
+    xanh dương
+  minecraft_tile_alt: Hai nhân vật Minecraft là Steve và Alex trên nền phong cảnh
+    đại dương Minecraft có san hô, cá heo và tảo biển.

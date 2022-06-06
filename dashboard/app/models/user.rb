@@ -491,6 +491,10 @@ class User < ApplicationRecord
     self.parent_email = parent_email_preference_email
   end
 
+  def memoized_teachers
+    @memoized_teachers ||= teachers.to_a
+  end
+
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
   validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
