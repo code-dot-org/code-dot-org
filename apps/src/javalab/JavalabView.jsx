@@ -229,7 +229,9 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 initialSelectedTab={
                   queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
-                    ? TabType.REVIEW
+                    ? experiments.isEnabled('code_review_v2')
+                      ? TabType.REVIEW_V2
+                      : TabType.REVIEW
                     : null
                 }
                 explicitHeight={height}
