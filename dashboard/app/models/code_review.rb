@@ -61,7 +61,6 @@ class CodeReview < ApplicationRecord
       id: id,
       channelId: nil,             # TODO: implement this!
       version: project_version,
-      isVersionExpired: false,    # TODO: implement this!
       isOpen: open?,
       createdAt: created_at,
     }.merge!(summarize_owner_info)
