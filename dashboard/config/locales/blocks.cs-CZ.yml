@@ -1230,6 +1230,7 @@ cs:
             '180': vlevo
             '270': nahoru
       gamelab_makeSpritesWithSize:
+        text: vytvoř {NUM} nových postav v kostýmu {COSTUME} o velikosti {SIZE}
         options:
           SIZE:
             '30': malý
@@ -1465,6 +1466,48 @@ cs:
         text: "{SPRITE} říká {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}říká{TEXT1}{NUM}sekund"
+      gamelab_spriteThink:
+        text: "{SPRITE} si myslí {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} si myslí {TEXT1} po dobu {NUM} sekund"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am hungry, too."': Taky mám hlad.
+            '"I only want the biggest goat."': Chci jen tu největší kozu.
+            '"I''m a green troll."': Jsem zelený trol.
+            '"No one will cross my bridge."': Přes můj most nikdo nepřejde.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Je čas spřátelit se s ovcemi.
+            '"She''ll never recognize me now."': Už mě nikdy nepozná.
+            '"This costume keeps me warm."': Tenhle kostým mě hřeje.
+            '"I am actually a wolf."': Ve skutečnosti jsem vlk.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Chce se mi spát.
+            '"No one could ever beat me."': Nikdo mě nemůže porazit.
+            '"I''ve done this race before."': Tenhle závod pro mě není nový.
+            '"My feet are bigger than Turtle''s feet."': Mám větší nohy než želva.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} si myslí {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Mám takový hlad.
+            '"I''m a visitor in this town."': Jsem v tomhle městě na návštěvě.
+            '"If we share, we''ll all have something to eat. "': Když se podělíme,
+              budeme mít všichni co jíst.
+            '"I''ll trick everyone into giving me their food."': Všechny obelstím,
+              aby mi dali svoje jídlo.
       gamelab_startAvoiding:
         text: "{SPRITE} se začne vyhýbat cíli {TARGET}"
       gamelab_startFollowing:

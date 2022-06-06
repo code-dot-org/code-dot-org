@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
-import {codeReviewTimelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
@@ -15,8 +17,9 @@ const DEFAULT_REVIEW = {
   createdAt: '2022-03-31T04:58:42.000Z',
   isOpen: true,
   version: 'asdfjkl',
-  isVersionExpired: false,
   timelineElementType: timelineElementType.review,
+  ownerId: 2,
+  ownerName: 'Jerry',
   comments: [
     {
       id: 123,
@@ -42,7 +45,8 @@ const DEFAULT_PROPS = {
   closeReview: () => {},
   toggleResolveComment: () => {},
   deleteCodeReviewComment: () => {},
-  viewAsCodeReviewer: false
+  viewAsCodeReviewer: false,
+  currentUserId: 1
 };
 
 const setUp = (overrideProps = {}) => {
@@ -53,7 +57,7 @@ const setUp = (overrideProps = {}) => {
 describe('CodeReviewTimelineReview', () => {
   it('renders a CodeReviewTimelineElement with type code_review, expected isLast', () => {
     const wrapper = setUp({isLastElementInTimeline: true});
-    const timelineElement = wrapper.find('CodeReviewTimelineElement');
+    const timelineElement = wrapper.find(CodeReviewTimelineElement);
     expect(timelineElement.props().type).to.equal(
       codeReviewTimelineElementType.CODE_REVIEW
     );
@@ -62,19 +66,23 @@ describe('CodeReviewTimelineReview', () => {
 
   it('passes project version to CodeReviewTimelineElement', () => {
     const wrapper = setUp();
-    const timelineElement = wrapper.find('CodeReviewTimelineElement');
+    const timelineElement = wrapper.find(CodeReviewTimelineElement);
     expect(timelineElement.props().projectVersionId).to.equal('asdfjkl');
   });
 
-  it('passes version expired to CodeReviewTimelineElement', () => {
-    let wrapper = setUp();
-    let timelineElement = wrapper.find('CodeReviewTimelineElement');
-    expect(timelineElement.props().isProjectVersionExpired).to.be.false;
+  it('displays your code review header if you are the owner of the review', () => {
+    const review = {...DEFAULT_REVIEW, ownerId: 123};
+    const wrapper = setUp({review: review, currentUserId: 123});
+    expect(wrapper.contains(javalabMsg.codeReviewForYou())).to.be.true;
+  });
 
-    const expiredVersionReview = {...DEFAULT_REVIEW, isVersionExpired: true};
-    wrapper = setUp({review: expiredVersionReview});
-    timelineElement = wrapper.find('CodeReviewTimelineElement');
-    expect(timelineElement.props().isProjectVersionExpired).to.be.true;
+  it('displays other students code review header if they are the owner', () => {
+    const wrapper = setUp();
+    expect(
+      wrapper.contains(
+        javalabMsg.codeReviewForStudent({student: DEFAULT_REVIEW.ownerName})
+      )
+    ).to.be.true;
   });
 
   it('displays the close button if the code review is not closed', () => {

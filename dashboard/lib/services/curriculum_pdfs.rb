@@ -22,7 +22,7 @@ require 'dynamic_config/dcdo'
 # - unit calendar
 # - four rollup pages for unit, unit group, one for each of:
 #   - vocab
-#   - resouces
+#   - resources
 #   - standards
 #   - programming expressions
 #
@@ -99,6 +99,9 @@ module Services
     #    cautious with the more-expensive PDFs generation process.
     #
     # In addition, we support manually disabling this feature with DCDO
+    #
+    # IMPORTANT: If you make updates to this method make sure to update the rake task for
+    # generate_missing_pdfs as well.
     def self.generate_pdfs?(script_data)
       return true if DEBUG
 

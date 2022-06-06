@@ -2,36 +2,6 @@
 in:
   data:
     script:
-      category:
-        csd_category_name: crwdns2659102:0crwdne2659102:0
-        csd_2018_category_name: crwdns2659104:0crwdne2659104:0
-        csd_2019_category_name: crwdns2659106:0crwdne2659106:0
-        csd_2020_category_name: crwdns2659108:0crwdne2659108:0
-        csd_2021_category_name: crwdns2659110:0crwdne2659110:0
-        csd_pilot_category_name: crwdns2659112:0crwdne2659112:0
-        csf_category_name: crwdns2659114:0crwdne2659114:0
-        csf_2018_category_name: crwdns2659116:0crwdne2659116:0
-        csf_2019_category_name: crwdns2659118:0crwdne2659118:0
-        csf_2020_category_name: crwdns2659120:0crwdne2659120:0
-        csf_2021_category_name: crwdns2659122:0crwdne2659122:0
-        csf_international_category_name: crwdns2659124:0crwdne2659124:0
-        csf2_draft_category_name: crwdns2659126:0crwdne2659126:0
-        csp_category_name: crwdns2659128:0crwdne2659128:0
-        csp_2018_category_name: crwdns2659130:0crwdne2659130:0
-        csp_2019_category_name: crwdns2659132:0crwdne2659132:0
-        csp_2020_category_name: crwdns2659134:0crwdne2659134:0
-        csp_2021_category_name: crwdns2659136:0crwdne2659136:0
-        cspexams_category_name: crwdns2659138:0crwdne2659138:0
-        csp17_category_name: crwdns2659140:0crwdne2659140:0
-        aiml_2021_category_name: crwdns2688612:0crwdne2688612:0
-        csc_2021_category_name: crwdns2713411:0crwdne2713411:0
-        full_course_category_name: crwdns2659142:0crwdne2659142:0
-        hoc_category_name: crwdns2659144:0crwdne2659144:0
-        math_category_name: crwdns2659146:0crwdne2659146:0
-        research_studies_category_name: crwdns2659148:0crwdne2659148:0
-        twenty_hour_category_name: crwdns2659150:0crwdne2659150:0
-        tts_category_name: crwdns2659152:0crwdne2659152:0
-        other_category_name: crwdns2659154:0crwdne2659154:0
       name:
         course1:
           title: crwdns2659156:0crwdne2659156:0
@@ -22727,6 +22697,7 @@ in:
           student_description: crwdns2887184:0crwdne2887184:0
           description_short: crwdns2887186:0crwdne2887186:0
           description_audience: crwdns2887188:0crwdne2887188:0
+          name: crwdns2929114:0crwdne2929114:0
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -23486,6 +23457,8 @@ in:
             Module 8:
               name: crwdns2917942:0crwdne2917942:0
           title: crwdns2917950:0crwdne2917950:0
+          lesson_groups: {}
+          name: crwdns2929116:0crwdne2929116:0
         vpl-csp-2022:
           lessons:
             Module 1:
@@ -23654,9 +23627,13 @@ in:
               name: crwdns2918446:0crwdne2918446:0
             lesson-3:
               name: crwdns2918454:0crwdne2918454:0
+            lesson-4:
+              name: crwdns2929118:0crwdne2929118:0
           title: crwdns2918460:0crwdne2918460:0
           description: crwdns2918462:0crwdne2918462:0
           student_description: crwdns2918464:0crwdne2918464:0
+          lesson_groups: {}
+          name: crwdns2929120:0crwdne2929120:0
         csa9-2022:
           lessons:
             The AP CSA Exam:

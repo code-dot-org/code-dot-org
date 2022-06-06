@@ -490,9 +490,24 @@ cs:
         poemart_imagery: Básnické umění Obrazotvornost
         poemart_celebration: Básnické umění Gratulace
         CSA-PL-debugging-temp: Příprava na ladění v prostředí Java Lab – dočasné
+        CSA-PL-for-loops: Cykly for v jazyce Java
+        CSA-PL-variables: Vytrváření proměnných v jazyce Java
         PL_CS_Journeys_Overview: Cesty informatiky
+        CSA-PL-intro-to-java-lab: Základy Java Lab
+        CSA-PL-first-program: Psaní programu v jazyce Java
+        CSD_u6_variables_part1: 'Objevování informatiky: Proměnné'
+        csd_u6_if_statements: 'Objevování informatiky: Příkazy if'
+        csc-poem-art-intro: Úvodní video
+        csc-poem-art-outro: Závěrečné video
+        csd_u6_call_define_functions: 'Objevování informatiky: Volání a definice funkcí'
         csp_applab_parameters: Funkce s Parametry
+        starquilts_intro_artist: Úvod do hvězdicových vzorů
         CSA-PL-intro-to-arrays: Jednorozměnrá (1D) pole
+        CSA-PL-1d-arrays-new-values: Zadávání hodnot do jednorozměrných (1D) polí
+        CSA-PL-conditionals: Podmíněné příkazy v Java
+        CSA-PL-two-way-selection: Volba dvou možností
+        CSA-PL-Printing-in-Java: Tisk v Java
+        CSA-PL-multi-selection-statements: Příkazy s více volbami
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

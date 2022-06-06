@@ -45,6 +45,16 @@ export function workspaceSvgResize(workspace) {
   return Blockly.svgResize(workspace);
 }
 
+export function bindBrowserEvent(element, name, thisObject, func, useCapture) {
+  return Blockly.browserEvents.bind(
+    element,
+    name,
+    thisObject,
+    func,
+    useCapture
+  );
+}
+
 export function isWorkspaceReadOnly(workspace) {
   return false; // TODO - used for feedback
 }

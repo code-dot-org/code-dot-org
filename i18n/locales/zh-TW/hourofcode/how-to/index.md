@@ -12,7 +12,7 @@ title: 一小時玩程式指南
 
 嘗試程式設計一個小時是向學生介紹電腦科學的簡單而有趣的方式，也許是第一次，它非常適合課堂和課後設置。 Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [觀看一小時玩程式指引視訊](#how-to-video)
+- [觀看一小時玩程式指南視訊](#how-to-video)
 - [探索活動和教程](#explore-activities)
 - [制定一天的計劃](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
@@ -27,7 +27,7 @@ title: 一小時玩程式指南
 
 <a id="how-to-video"></a>
 
-## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -103,7 +103,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
-- 在[這裡]({{ urls/girls }})查看説明年輕女性對電腦科學感興趣的提示。
+- 在[這裡]({{ urls/girls }})查看幫助年輕女性對電腦科學感興趣的提示。
 
 * * *
 
@@ -113,7 +113,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 引導學生參與活動
 
-- 將教程連結寫在白板上。在參與者數量下面找到你所選教程的[資訊]({{ urls/learn }})中列出的連結。
+- 將教程連結寫在白板上。在參與者數量下面找到[你所選教程的資訊]({{ urls/learn }})中列出的連結。
 
 當您的學生遭遇困難時，這樣回答也沒關係：
 

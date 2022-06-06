@@ -1799,6 +1799,8 @@
         "jigsaw/Jigsaw": {
           "name": "Skládačka",
           "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
+          "preparation": "-   Další obsah k tématu online bezpečnost najdete na webu společnosti [Common Sense Education](https://www.commonsense.org/education/digital-citizenship).",
+          "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
         "coursef-2021/lesson-6": {

@@ -500,7 +500,7 @@ export default {
 
         if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.bindEvent_(
+          Blockly.cdoUtils.bindBrowserEvent(
             editLabel.fieldGroup_,
             'mousedown',
             this,
