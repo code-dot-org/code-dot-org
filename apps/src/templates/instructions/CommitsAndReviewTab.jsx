@@ -2,6 +2,7 @@ import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -51,6 +52,13 @@ const CommitsAndReviewTab = props => {
   useEffect(() => {
     refresh();
   }, [refresh]);
+
+  // Explicitly remove URL param that opens review tab so that when users navigate between
+  // levels via the bubble navigation in the header,
+  // the review tab does not auto-open instead of the instructions.
+  useEffect(() => {
+    updateQueryParam(SHOW_REVIEW_TAB_URL_PARAM, undefined, true);
+  }, []);
 
   const refresh = useCallback(async () => {
     setIsLoadingTimelineData(true);

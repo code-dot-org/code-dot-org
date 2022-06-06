@@ -181,6 +181,8 @@ class JavalabView extends React.Component {
     );
   };
 
+  // TO DO: simplify back to inline ternary when switching to code review V2
+  // https://codedotorg.atlassian.net/browse/LP-2315
   getSelectedInstructionsTab = () => {
     if (queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true') {
       return TabType.REVIEW;
