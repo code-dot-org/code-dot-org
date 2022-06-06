@@ -57,9 +57,9 @@
     "parent_level_id": 20398,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/"
+      "/courses/vpl-csd6-ci-pilot-2022/guides/responding-to-user-input"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/",
+    "map_reference": "/courses/vpl-csd6-ci-pilot-2022/guides/circuit-playground",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -68,11 +68,11 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-05-23T20:22:17.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-05-23T20:22:17.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-05-23T20:22:17.755+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_2222\"},{\"changed_at\":\"2022-06-01 18:30:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"}]"
 }]]></config>

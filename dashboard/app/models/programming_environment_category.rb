@@ -53,7 +53,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       key: key,
       name: name,
       color: color,
-      docs: programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)
+      docs: (programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)).sort_by {|doc| doc[:name] }
     }
   end
 
