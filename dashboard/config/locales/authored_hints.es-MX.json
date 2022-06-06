@@ -896,7 +896,7 @@
           "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "[][0]"
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
@@ -962,14 +962,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "El código no será muy diferente de lo que fue en el último desafío, excepto que tendrás que girar al artista para saltar hacia abajo, y luego hacerlo dar la vuelta para estar listo para saltar hacia adelante otra vez.",
-          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n[][0]",
-          "courseF_artist_variables4_b": "[blockly block][0]"
+          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
+          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "La segunda mitad de tu código debe tener casi el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_, saltarás y girarás a la _derecha_.",
           "courseF_artist_variables5_b": "La primera mitad de tu código dibujará tres triángulos, y la segunda mitad dibujará los otros tres.",
           "courseF_artist_variables5_c": "Comienza por duplicar el código en la primera mitad de tu programa, luego modifícalo para que se muestre el diseño.",
-          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n[][0]"
+          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
@@ -1095,15 +1095,15 @@
           "mc_3_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "Underground Avoiding Lava": {
-          "mc_11_a": "Todo el código está en su lugar para revisar la lava y enfrentarla. Todo lo que necesitas hacer es agregar un bloque para moverte.",
+          "mc_11_a": "Todo el código está en su lugar para comprobar si hay lava y ocuparse de ella. Todo lo que necesitas hacer es agregar un bloque para moverte.",
           "mc_11_b": "¿Debería tu comando 'avanzar' estar dentro de la instrucción 'si' o después?"
         },
         "Underground Avoiding Lava_2019": {
-          "mc_11_a": "Todo el código está en su lugar para revisar la lava y enfrentarla. Todo lo que necesitas hacer es agregar un bloque para moverte.",
+          "mc_11_a": "Todo el código está en su lugar para comprobar si hay lava y ocuparse de ella. Todo lo que necesitas hacer es agregar un bloque para moverte.",
           "mc_11_b": "¿Debería tu comando 'avanzar' estar dentro de la instrucción 'si' o después?"
         },
         "Underground Avoiding Lava_2020": {
-          "mc_11_a": "Todo el código está en su lugar para revisar la lava y enfrentarla. Todo lo que necesitas hacer es agregar un bloque para moverte.",
+          "mc_11_a": "Todo el código está en su lugar para comprobar si hay lava y ocuparse de ella. Todo lo que necesitas hacer es agregar un bloque para moverte.",
           "mc_11_b": "¿Debería tu comando 'avanzar' estar dentro de la instrucción 'si' o después?"
         },
         "Underground If Statements": {
@@ -1396,7 +1396,7 @@
         "course4_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
           "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course4_harvester_nested_loops_challenge1": {
@@ -4962,7 +4962,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
           "course_starWars_loops8_b": "Piensa en la primera parte de este problema como un problema del escalón. ¿Cómo resolviste eso antes?",
-          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
+          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
@@ -4993,15 +4993,15 @@
           "courseD_artist_project1_b": "Recuerda que 'avanzar' dibuja una línea, mientras que 'salta adelante' no."
         },
         "courseD_artist_2_2018": {
-          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no.",
+          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no lo hace.",
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!"
         },
         "courseD_artist_2_2018_2019": {
-          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no.",
+          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no lo hace.",
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!"
         },
         "courseD_artist_2_2018_2020": {
-          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no.",
+          "courseD_artist_project1_b": "Recuerda que \"mover\" dibuja una linea, mientras que \"saltar\" no lo hace.",
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!"
         },
         "courseD_artist_5_2018": {
@@ -5656,7 +5656,7 @@
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
           "courseD_bee_conditionals4_b": "Usa una instrucción \\`si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals5": {
@@ -5706,35 +5706,35 @@
         },
         "courseD_bee_conditionals7": {
           "courseD_bee_conditionals7_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío.",
           "courseD_bee_conditionals7_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals7_2018": {
           "courseD_bee_conditionals7_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío.",
           "courseD_bee_conditionals7_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals7_2019": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío."
         },
         "courseD_bee_conditionals7_2020": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío."
         },
         "courseD_bee_conditionals7_predict2": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2018": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2019": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals7_predict2_2020": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
@@ -5800,8 +5800,8 @@
         },
         "courseD_bee_nestedLoops1": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para obtener todo el néctar?",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_b": "Intenta escribir código para un lado del cuadrado primero. ¿Puedes hacer un bucle (loop) para recoger todo el néctar?",
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1_2018": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
@@ -5820,7 +5820,7 @@
         },
         "courseD_bee_nestedLoops1a": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
-          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor."
+          "courseD_bee_nestedLoops1_c": "Recuerda usar el bloque `recoger néctar` una vez que estés en un cuadrado con una flor."
         },
         "courseD_bee_nestedLoops1a_2018": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
@@ -5856,8 +5856,8 @@
         },
         "courseD_bee_nestedLoops7": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
-          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este desafío.",
-          "courseD_bee_nestedLoops7_c": "Anida tus tres bloques así:\n\n-   repetir 4 \n    -   repetir 3 \n        -   repetir 12 \n            -   recoger néctar \n        -   avanzar\n    -   girar a la derecha"
+          "courseD_bee_nestedLoops7_b": "Tendrás que usar los tres bloques de `repetir` disponibles para resolver este rompecabezas.",
+          "courseD_bee_nestedLoops7_c": "Anida tus bloques en tres niveles, de esta forma:\n\n-   repetir 4\n    -   repetir 3\n        -   repetir 12\n            -   recoger néctar\n        -   avanzar\n    -   girar a la derecha"
         },
         "courseD_bee_nestedLoops7_2018": {
           "courseD_bee_nestedLoops7_a": "Necesitarás repetir `recoger néctar` dentro de otro 'repetir' que también tenga el bloque `avanzar` dentro.",
@@ -6075,25 +6075,25 @@
         "courseD_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
           "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2_2018": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
           "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2_2019": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
           "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2_2020": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
           "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2a": {
@@ -6114,92 +6114,92 @@
           "courseD_collector_ramp9_b": "Si quieres simplificar tu código, ¡puedes poner un loop repetir dentro de otro! Esto se llama un **loop anidado**."
         },
         "courseD_farmer_condLoops1": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un bucle (loop) de 'repetir'.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías intentar cosechar algo que no esté allí! "
         },
         "courseD_farmer_condLoops1_2018": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un bucle (loop) de 'repetir'.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías intentar cosechar algo que no esté allí! "
         },
         "courseD_farmer_condLoops1_2019": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un bucle (loop) de 'repetir'.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías intentar cosechar algo que no esté allí! "
         },
         "courseD_farmer_condLoops1_2020": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un bucle (loop) de 'repetir'.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías intentar cosechar algo que no esté allí! "
         },
         "courseD_farmer_condLoops2": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple.\".",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las instrucciones 'si' ubicando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este rompecabezas, debes tener una instrucción  `si / si no` y una instrucción  simple `si`.",
+          "courseD_farmer_condLoops2_c": "Tu instrucción `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops2_2018": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple.\".",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las instrucciones 'si' ubicando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este rompecabezas, debes tener una instrucción  `si / si no` y una instrucción  simple `si`.",
+          "courseD_farmer_condLoops2_c": "Tu instrucción `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops2_2019": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple.\".",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las instrucciones 'si' ubicando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este rompecabezas, debes tener una instrucción  `si / si no` y una instrucción  simple `si`.",
+          "courseD_farmer_condLoops2_c": "Tu instrucción `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops2_2020": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple.\".",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las instrucciones 'si' ubicando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este rompecabezas, debes tener una instrucción  `si / si no` y una instrucción  simple `si`.",
+          "courseD_farmer_condLoops2_c": "Tu instrucción `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops3": {
-          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
+          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar instrucciones  ' si ' de profundidad tres.\n\nEsto significa que debe poner una instrucción `si ' dentro de otra, a continuación, poner una tercera  instrucción`si ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este rompecabezas, usted debe tener dos `si/ si no` instrucciones y una instrucción 'si' simple"
         },
         "courseD_farmer_condLoops3_2018": {
-          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
+          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar instrucciones  ' si ' de profundidad tres.\n\nEsto significa que debe poner una instrucción `si ' dentro de otra, a continuación, poner una tercera  instrucción`si ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este rompecabezas, usted debe tener dos `si/ si no` instrucciones y una instrucción 'si' simple"
         },
         "courseD_farmer_condLoops3_2019": {
-          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
+          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar instrucciones  ' si ' de profundidad tres.\n\nEsto significa que debe poner una instrucción `si ' dentro de otra, a continuación, poner una tercera  instrucción`si ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este rompecabezas, usted debe tener dos `si/ si no` instrucciones y una instrucción 'si' simple"
         },
         "courseD_farmer_condLoops3_2020": {
-          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
+          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar instrucciones  ' si ' de profundidad tres.\n\nEsto significa que debe poner una instrucción `si ' dentro de otra, a continuación, poner una tercera  instrucción`si ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este rompecabezas, usted debe tener dos `si/ si no` instrucciones y una instrucción 'si' simple"
         },
         "courseD_farmer_condLoops4": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El loop `while` manejará espacios vacíos también! Como no hay lechuga, no elegirá ninguna y permitirá que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle (loop) 'mientras hay lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle (loop) `mientras` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un bucle (loop) `mientras camino por delante` o un bucle (loop) de 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops4_2018": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El loop `while` manejará espacios vacíos también! Como no hay lechuga, no elegirá ninguna y permitirá que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle (loop) 'mientras hay lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle (loop) `mientras` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un bucle (loop) `mientras camino por delante` o un bucle (loop) de 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops4_2019": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El loop `while` manejará espacios vacíos también! Como no hay lechuga, no elegirá ninguna y permitirá que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle (loop) 'mientras hay lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle (loop) `mientras` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un bucle (loop) `mientras camino por delante` o un bucle (loop) de 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops4_2020": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El loop `while` manejará espacios vacíos también! Como no hay lechuga, no elegirá ninguna y permitirá que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle (loop) 'mientras hay lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle (loop) `mientras` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un bucle (loop) `mientras camino por delante` o un bucle (loop) de 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops5": {
-          "courseD_farmer_condLoops5_a": "Hay un nuevo loop: 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este desafío?",
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!"
+          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle (loop): 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este rompecabezas?",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un bucle (loop) `mientras` para reunirlos a todos!"
         },
         "courseD_farmer_condLoops5_2018": {
-          "courseD_farmer_condLoops5_a": "Hay un nuevo loop: 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este desafío?",
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!"
+          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle (loop): 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este rompecabezas?",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un bucle (loop) `mientras` para reunirlos a todos!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un bucle (loop) `mientras` para reunirlos a todos!",
           "courseD_farmer_condLoops5_a": "Hay un nuevo bucle: `repetir hasta que haya calabazas`. ¿Puedes ver cómo utilizarlo en este puzzle?"
         },
         "courseD_farmer_condLoops5_2020": {
-          "courseD_farmer_condLoops5_a": "Hay un nuevo loop: 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este desafío?",
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!"
+          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle (loop): 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este rompecabezas?",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un bucle (loop) `mientras` para reunirlos a todos!"
         },
         "courseD_farmer_condLoops6": {
           "courseD_farmer_condLoops6_a": "Usa un loop 'mientras hay maíz' para asegurarte que obtienes todo el maíz en el camino. Este bloque no hará nada si no hay ningún maíz para recoger.",
@@ -6210,11 +6210,11 @@
           "courseD_farmer_condLoops6_b": "Sólo tienes que comprobar si hay maíz durante la mayor parte de la cosecha. Sólo tienes que recoger una calabaza al final de tu programa."
         },
         "courseD_farmer_condLoops6_2019": {
-          "courseD_farmer_condLoops6_a": "Utiliza un bucle `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
+          "courseD_farmer_condLoops6_a": "Utiliza un bucle (loop) `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
           "courseD_farmer_condLoops6_b": "Sólo tienes que comprobar si hay maíz durante la mayor parte de la cosecha. Sólo tienes que recoger una calabaza al final de tu programa."
         },
         "courseD_farmer_condLoops6_2020": {
-          "courseD_farmer_condLoops6_a": "Utiliza un bucle `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
+          "courseD_farmer_condLoops6_a": "Utiliza un bucle (loop) `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
           "courseD_farmer_condLoops6_b": "Sólo tienes que comprobar si hay maíz durante la mayor parte de la cosecha. Sólo tienes que recoger una calabaza al final de tu programa."
         },
         "courseD_farmer_condLoops7": {
@@ -6227,11 +6227,11 @@
         },
         "courseD_farmer_condLoops7_2019": {
           "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más fácil para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Intente usar `cuando camino adelante` para mantener la cosechadora moviéndose el número correcto de pasos."
+          "courseD_farmer_condLoops7_b": "Intente usar `mientras camino por delante` para mantener la cosechadora moviéndose el número correcto de pasos."
         },
         "courseD_farmer_condLoops7_2020": {
           "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más fácil para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Intente usar `cuando camino adelante` para mantener la cosechadora moviéndose el número correcto de pasos."
+          "courseD_farmer_condLoops7_b": "Intente usar `mientras camino por delante` para mantener la cosechadora moviéndose el número correcto de pasos."
         },
         "courseD_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "El botón \"Paso\" podría ser muy útil en este desafío.",
@@ -6250,16 +6250,16 @@
           "courseD_farmer_condLoops_challenge1_b": "Normalmente, tú simplemente \"recoge calabaza\" si estás en una calabaza. ¿Qué más necesitas hacer si estás en una calabaza?"
         },
         "courseD_farmer_condLoops_challenge2": {
-          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un loop `mientras` puede ayudar!"
+          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_condLoops_challenge2_2018": {
-          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un loop `mientras` puede ayudar!"
+          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_condLoops_challenge2_2019": {
-          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un loop `mientras` puede ayudar!"
+          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_condLoops_challenge2_2020": {
-          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un loop `mientras` puede ayudar!"
+          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_while1": {
           "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle (loop) de 'repetir' para esto?",
@@ -6328,22 +6328,22 @@
         "courseD_farmer_while5": {
           "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle (loop) `mientras` en el interior de un bucle (loop) de 'repetir'.",
           "courseD_farmer_conditionals5a_b": "La granjera necesita avanzar un total de cinco veces para llegar al final de la fila. ¿Qué más necesita hacer la granjera?",
-          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque \\`eliminar pila '."
+          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque 'mientras hay una pila '."
         },
         "courseD_farmer_while5_2018": {
           "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle (loop) `mientras` en el interior de un bucle (loop) de 'repetir'.",
           "courseD_farmer_conditionals5a_b": "La granjera necesita avanzar un total de cinco veces para llegar al final de la fila. ¿Qué más necesita hacer la granjera?",
-          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque \\`eliminar pila '."
+          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque 'mientras hay una pila '."
         },
         "courseD_farmer_while5_2019": {
           "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle (loop) `mientras` en el interior de un bucle (loop) de 'repetir'.",
           "courseD_farmer_conditionals5a_b": "La granjera necesita avanzar un total de cinco veces para llegar al final de la fila. ¿Qué más necesita hacer la granjera?",
-          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque \\`eliminar pila '."
+          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque 'mientras hay una pila '."
         },
         "courseD_farmer_while5_2020": {
           "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle (loop) `mientras` en el interior de un bucle (loop) de 'repetir'.",
           "courseD_farmer_conditionals5a_b": "La granjera necesita avanzar un total de cinco veces para llegar al final de la fila. ¿Qué más necesita hacer la granjera?",
-          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque \\`eliminar pila '."
+          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque 'mientras hay una pila '."
         },
         "courseD_farmer_while6": {
           "courseD_farmer_conditionals6_a": "Asegúrate de que estés utilizando el bucle (loop) 'mientras' para averiguar cuántas veces hacen falta para llenar cada hoyo.",
@@ -6366,44 +6366,44 @@
           "courseD_farmer_conditionals6_c": "El patrón de escalera utiliza los siguientes bloques:\n\n-   avanzar\n-   llenar hoyo\n-   girar a la derecha\n-   avanzar\n-   llenar hoyo\n-   girar a la izquierda\n\n¿Cuántas veces necesitas utilizar este patrón de escalera?\n\nAsegúrate de usar el bloque `mientras exista un hoyo` para llenar el hoyo."
         },
         "courseD_farmer_while7": {
-          "courseD_farmer_conditionals8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
-          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras haya camino adelante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
+          "courseD_farmer_conditionals8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras camino por delante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
           "courseD_farmer_conditionals8_c": "¿Qué necesitas hacer al final de cada camino?"
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_conditionals8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
-          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras haya camino adelante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
+          "courseD_farmer_conditionals8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras camino por delante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
           "courseD_farmer_conditionals8_c": "¿Qué necesitas hacer al final de cada camino?"
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_conditionals8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
-          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras haya camino adelante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
+          "courseD_farmer_conditionals8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras camino por delante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
           "courseD_farmer_conditionals8_c": "¿Qué necesitas hacer al final de cada camino?"
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_conditionals8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
-          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras haya camino adelante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
+          "courseD_farmer_conditionals8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras camino por delante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
           "courseD_farmer_conditionals8_c": "¿Qué necesitas hacer al final de cada camino?"
         },
         "courseD_farmer_while8": {
           "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle (loop) `mientras`.",
-          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras haya camino por delante' antes de usar 'mientras exista un hoyo\".",
-          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras hay camino por delante', 'mientras exista un hoyo' seis veces."
+          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras camino por delante' antes de usar 'mientras exista un hoyo\".",
+          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras camino por delante', 'mientras exista un hoyo' seis veces."
         },
         "courseD_farmer_while8_2018": {
           "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle (loop) `mientras`.",
-          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras haya camino por delante' antes de usar 'mientras exista un hoyo\".",
-          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras hay camino por delante', 'mientras exista un hoyo' seis veces."
+          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras camino por delante' antes de usar 'mientras exista un hoyo\".",
+          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras camino por delante', 'mientras exista un hoyo' seis veces."
         },
         "courseD_farmer_while8_2019": {
           "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle (loop) `mientras`.",
-          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras haya camino por delante' antes de usar 'mientras exista un hoyo\".",
-          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras hay camino por delante', 'mientras exista un hoyo' seis veces."
+          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras camino por delante' antes de usar 'mientras exista un hoyo\".",
+          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras camino por delante', 'mientras exista un hoyo' seis veces."
         },
         "courseD_farmer_while8_2020": {
           "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle (loop) `mientras`.",
-          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras haya camino por delante' antes de usar 'mientras exista un hoyo\".",
-          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras hay camino por delante', 'mientras exista un hoyo' seis veces."
+          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras camino por delante' antes de usar 'mientras exista un hoyo\".",
+          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras camino por delante', 'mientras exista un hoyo' seis veces."
         },
         "courseD_farmer_while_challenge1": {
           "courseD_farmer_while_challenge1_a": "Cada hoyo o pila se encuentra un espacio \\*\\* hacia atrás \\*\\* desde el final de la ruta.",
@@ -6596,7 +6596,7 @@
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "Para resolver este desafío, deberás \"anidar\" un bucle (loop) de 'repetir' dentro de otro.",
-          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón.",
+          "courseD_maze_nestedLoops3_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón.",
           "courseD_maze_nestedLoops3_c": "Intenta escribir código para una porción recta del camino y un giro. ¿Puedes repetir esto para llegar al girasol?"
         },
         "courseD_maze_nestedLoops3_2018": {
@@ -6636,7 +6636,7 @@
         },
         "courseD_maze_nestedLoops5": {
           "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
-          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar el bucle (loop)? Trata de escribir el código paso a paso, y buscar un patrón."
+          "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops5_2018": {
           "courseD_maze_nestedLoops5_a": "Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un bucle (loop) anidado.",
@@ -6651,7 +6651,7 @@
           "courseD_maze_nestedLoops5_b": "¿No sabes dónde colocar los bucles (loops)? Trata de escribir el código paso a paso, y buscar un patrón."
         },
         "courseD_maze_nestedLoops6": {
-          "courseD_maze_nestedLoops6_a": "Si te has atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
+          "courseD_maze_nestedLoops6_a": "Si estas atascado/a, intenta escribir el código sin bucles (loops) primero y busca patrones.",
           "courseD_maze_nestedLoops6_b": "Anidar bucles (loops) de 'repetir' puede ayudar a disminuir la cantidad de bloques utilizados.",
           "courseD_maze_nestedLoops6_c": "Necesitarás dos pares de bucles (loops) de 'repetir' anidados para resolver este rompecabezas."
         },
@@ -6862,31 +6862,31 @@
         },
         "courseD_maze_until5": {
           "courseD_maze_until5_a": "No te olvides de usar 'si camino a la izquierda´para hacer que el zombie continúe revisando donde girar.",
-          "courseD_maze_until5_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'.",
+          "courseD_maze_until5_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'.",
           "courseD_maze_until5_c": "Después de cada paso, el zombie debería revisar si hay un camino a la izquierda. ¿Qué debería hacer si encuentra uno?"
         },
         "courseD_maze_until5_2018": {
-          "courseD_maze_until5_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until5_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until5_2019": {
-          "courseD_maze_until5_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until5_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until5_2020": {
-          "courseD_maze_until5_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until5_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until6": {
           "courseD_maze_until6_a": "Esta vez, intenta usar 'si camino entonces a la derecha' para mantener al zombie en el camino.",
-          "courseD_maze_until6_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'.",
+          "courseD_maze_until6_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'.",
           "courseD_maze_until6_c": "¡Aunque hay mas giros aquí que en el ultimo rompecabezas, tu código puede ser casi idéntico por el bloque ´repetir hasta´!"
         },
         "courseD_maze_until6_2018": {
-          "courseD_maze_until6_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until6_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until6_2019": {
-          "courseD_maze_until6_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until6_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until6_2020": {
-          "courseD_maze_until6_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del bloque 'repetir hasta girasol'."
+          "courseD_maze_until6_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until7": {
           "courseD_maze_until7_a": "¡No necesitas que tu código sea más largo que la vez pasada solo porque el laberinto lo es!",
@@ -7224,17 +7224,17 @@
           "courseD_artist_functions8_d": "Para hacer una línea de cuadrados,\n\n-   repite 3 veces\n-   dibuja un cuadrado\n-   salta **100 pixeles** hacia adelante"
         },
         "courseE_artist_functions8c_2018": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece,   No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece! No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
         },
         "courseE_artist_functions8c_2019": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece,   No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece! No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
         },
         "courseE_artist_functions8c_2020": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece,   No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece! No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle  (loop) de 'repetir' para iniciar el siguiente ejercicio!"
         },
@@ -7439,12 +7439,12 @@
           "courseE_farmer_concept2_c": "Tu programa principal puede llamar a esta función con el bloque verde de 'hacer algo'."
         },
         "courseE_farmer_concept3": {
-          "grade3_robotFarmer_ConditionalsIntro_8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
           "grade3_robotFarmer_ConditionalsIntro_8_b": "¿Qué debes hacer una vez que hayas llegado al final de un camino?",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "Utiliza un loop 'repetir' para ejecutar el código varias veces para cada camino recto."
         },
         "courseE_farmer_concept3_2018": {
-          "grade3_robotFarmer_ConditionalsIntro_8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
           "grade3_robotFarmer_ConditionalsIntro_8_b": "¿Qué debes hacer una vez que hayas llegado al final de un camino?",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "Utiliza un loop 'repetir' para ejecutar el código varias veces para cada camino recto."
         },
@@ -8824,7 +8824,7 @@
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías utilizar un condicional con ellas para atravesar el Monumento Oceánico?"
+          "voyage_aquatic_10a": "¿Ves las **Linternas Marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías utilizar un condicional con ellas para atravesar el Monumento Oceánico?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Puedes usar el bloque de \"si hay camino\" para ayudarte a hacer los giros correctos."
@@ -8856,13 +8856,13 @@
           "verionhistory": "¿Te sientes atascado/a? Siempre puedes restablecer tu código haciendo clic en \"Historial de versiones\" y eligiendo \"Volver a empezar\"."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Si utilizas las funciones correctamente, este es el camino por el que viajarás...",
-          "Function_intro_Ryan_a": "¡Puedes usar una función varias veces dentro de tu programa!  Trata de usarla dos veces para resolver este puzle."
+          "Function_intro_Ryan_b": "Si utilizas las funciones correctamente, este es el camino por el que viajarás.",
+          "Function_intro_Ryan_a": "¡Puedes usar una función varias veces dentro de tu programa!  Trata de usarla dos veces para resolver este rompecabezas."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Arrastra un bloque de \"avanzar\" de la caja de herramientas al espacio de trabajo y conéctalo debajo del bloque \"al ejecutar\".",
           "MC_HOC_2017_01_RETRY_b": "No olvides hacer clic en \"Ejecutar\" para ejecutar el código para el Agent.",
-          "MC_HOC_2017_01_RETRY_c": "¡Una vez que el Agent haya ejecutado todo el programa, podrás mover al jugador con las teclas de flecha!"
+          "MC_HOC_2017_01_RETRY_c": "¡Una vez que el Agent haya ejecutado todo su código, podrás mover al jugador con las teclas de flecha!"
         },
         "MC_HOC_2017_02_Cole_2021": {
           "MC_HOC_2017_02_Cole_a": "Mueve al Agente dos espacios hacia adelante para que se pare sobre la placa de presión.  Eso le abrirá la puerta a tu jugador.",
@@ -8872,33 +8872,33 @@
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Una vez que lleves al Agente a la placa de presión, ¡puedes usar las teclas de flecha para mover al jugador hasta la brújula!",
-          "MC_HOC_2017_03_Cole_b": "¿Crees que el código es demasiado largo? Intenta usar el bucle \"repetir\" para averiguar la manera de acortarlo!"
+          "MC_HOC_2017_03_Cole_b": "¿Crees que el código es demasiado largo? Intenta usar el bucle (loop) de \"repetir\" para averiguar la manera de acortarlo!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"Girar a la derecha\" para cambiar la dirección del Agente",
-          "MC_HOC_2017_04POINT5_RYAN_a": "El Agente solo necesita llegar a la primera placa de presión para permitir que Alex o Steve lleguen hasta el hacha."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Usa el bloque \"girar a la derecha\" para cambiar la dirección del Agent",
+          "MC_HOC_2017_04POINT5_RYAN_a": "El Agent solo tiene que llegar al primer plato de presión para que Alex o Steve puedan llegar al hacha."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "El Agente necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle \"repetir\" para que esto ocurra?",
+          "MC_HOC_2017_04_Cole_a": "El Agent necesita \"avanzar\" 7 veces. ¿Cómo puedes usar un bucle (loop) de \"repetir\" para que esto ocurra?",
           "MC_HOC_2017_04_Cole_c": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
           "MC_HOC_2017_04_Cole_b": "Una vez que el Agente llegue a la placa de presión, le abrirá la puerta al jugador."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "¿Sabías que puedes poner más de una parte de un código dento de un bucle? Intenta poner avanzar **y** colocar una placa dentro de \"repetir\" para completar el puzle.",
-          "MC_HOC_2017_05_Cole_b": "Lleva al agente al otro lado del río y construye un puente según avanzas."
+          "MC_HOC_2017_05_Cole_a": "¿Sabías que puedes poner más de una parte de un código dento de un bucle (loop)? Intenta poner avanzar **y** colocar una placa dentro de \"repetir\" para completar el rompecabezas.",
+          "MC_HOC_2017_05_Cole_b": "Lleva al agente al otro lado del río y construye un puente sobre la marcha."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "¿Cuántas veces se ejecuta este bucle? ¿Cuántas veces _debería_ ejecutarse?",
+          "MC_HOC_2017_06_Cole_a": "¿Cuántas veces se ejecuta este bucle (loop)? ¿Cuántas veces _debería_ ejecutarse?",
           "MC_HOC_2017_06_Cole_b": "¡Ayuda al Agente a construir un puente sobre el agua! "
         },
         "MC_HOC_2017_07_Cole_2021": {
           "MC_HOC_2017_07_Cole_c": "Todo lo que necesita que el Agente haga es abrir el camino hacia la vagoneta.",
-          "MC_HOC_2017_07_Cole_a": "Para completar este puzle, descubre qué hace la función \"Despejar camino\" y úsala las veces que sean necesarias utilizando el pequeño bloque verde \"despejar camino\" de la caja de herramientas.",
-          "MC_HOC_2017_07_Cole_b": "Prueba a mezclar los bloques de funciones con otros bloques de la caja de herramientas para resolver este puzle."
+          "MC_HOC_2017_07_Cole_a": "Para completar este rompecabezas, descubre qué hace la función \"despejar camino\" y úsala las veces que sean necesarias utilizando el pequeño bloque verde \"despejar camino\" de la caja de herramientas.",
+          "MC_HOC_2017_07_Cole_b": "Prueba mezclando los bloques de funciones con otros bloques de la caja de herramientas para resolver este rompecabezas."
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "MC_HOC_2017_10_Cole_b": "¿No sabes a dónde ir? ¡Mira a ver si puedes encontrar la línea de puntos!",
-          "MC_HOC_2017_10_Cole_a": "¡Usa funciones para que resolver este puzle sea más fácil!"
+          "MC_HOC_2017_10_Cole_a": "¡Usa funciones para que resolver este rompecabezas sea más fácil!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
@@ -8910,7 +8910,7 @@
         },
         "Overworld Avoid Monsters_2021": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
-          "mc_8_b": "Usa los bucles \"repetir\" para simplificar tu código.",
+          "mc_8_b": "Use los bucles (loops) de \"repetir\" para simplificar su código.",
           "mc_8_c": "Tu objetivo es llegar a la entrada de la casa en la parte superior de la pantalla."
         },
         "Overworld Chop Tree_2021": {
@@ -8923,8 +8923,8 @@
         },
         "Overworld House Frame Chosen_2021": {
           "mc_6_a": "Haz clic en la flecha en el bloque `colocar` para elegir lo que deseas colocar.",
-          "mc_6_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle.",
-          "mc_6_c": "Puedes colocar más de un bloque en un bucle \"repetir\"."
+          "mc_6_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
+          "mc_6_c": "Puedes colocar más de un bloque en un bucle (loop) de \"repetir\"."
         },
         "Overworld Move to Sheep_2021": {
           "mc_1_a": "El bloque `avanzar` está en la parte superior de la caja de herramientas.",
@@ -8932,13 +8932,13 @@
         },
         "Overworld Place Wall_2021": {
           "mc_5_a": "Utiliza primero el bloque 'colocar', y luego el bloque 'mover'.",
-          "mc_5_b": "Asegúrate que ambos bloques dentro del loop de \"repetir\"para ejecutar el código más de una vez.",
-          "mc_5_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle."
+          "mc_5_b": "Asegúrate que ambos bloques están dentro del bucle (loop) de \"repetir\" para ejecutar el código más de una vez.",
+          "mc_5_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "Overworld Plant Crops_2021": {
           "mc_7_a": "Utiliza el bloque 'plantar cultivo' para plantar un cultivo en el espacio donde estás situado.",
           "mc_7_b": "Ambas franjas de tierra marrón oscura junto al agua deben llenarse con cultivos.",
-          "mc_7_c": "Puedes colocar más de un bloque en un bucle \"repetir\"."
+          "mc_7_c": "Puedes colocar más de un bloque en un bucle (loop) de \"repetir\"."
         },
         "Overworld Powered Minecart_2021": {
           "mc_13_a": "Utiliza 'colocar riel' para colocar un ferrocarril en el cuadro en el que estás ubicado.",
@@ -8947,16 +8947,16 @@
         "Overworld Shear Sheep_2021": {
           "mc_3_a": "El bloque `esquilar` pone a la oveja delante de ti. ¿Estás mirando hacia la oveja?",
           "mc_3_b": "Si necesitas cambiar la dirección en la que miras, utiliza un bloque `girar`.",
-          "mc_3_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el puzle."
+          "mc_3_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "Underground Avoiding Lava_2021": {
           "mc_11_a": "Todo el código está en su lugar para comprobar si hay lava y ocuparse de ella. Todo lo que necesitas hacer es agregar un bloque para moverte.",
-          "mc_11_b": "¿Debería tu comando 'avanzar' estar dentro de la afirmación 'si' o después?"
+          "mc_11_b": "¿Debería tu comando 'avanzar' estar dentro de la instrucción 'si' o después?"
         },
         "Underground If Statements_2021": {
           "mc_12_a": "Los espacios con puntos rojos son donde encontrarás piedras rojizas",
-          "mc_12_b": "¿Puedes usar un bucle \"repetir\" para acortar tu código?",
-          "mc_12_c": "Usa una afirmación \"si\" para espacios de lava, luego coloca adoquines. "
+          "mc_12_b": "¿Puedes usar un bucle (loop) de \"repetir\" para acortar tu código?",
+          "mc_12_c": "Usa una instrucción \"si\" para espacios de lava, luego coloca adoquines. "
         },
         "Underground Iron_2021": {
           "mc_10_a": "¡Los bloques de hierro son espacios manchados detrás de la antorcha! ¿Cómo vas a llegar allá?",
@@ -9907,7 +9907,7 @@
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": "Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops8_2021": {
@@ -10032,7 +10032,7 @@
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals2_2021": {
-          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una afirmación  `si`.",
+          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un `si` comunicado.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes."
         },
         "courseD_bee_conditionals2_dani": {
@@ -10043,8 +10043,8 @@
           "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals3_2021": {
-          "courseD_bee_conditionals3_a": "Asegúrate de usar una afirmación 'si' para revisar cada espacio para ver sí tiene una flor o no tiene nada.",
-          "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Prueba a agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el puzle."
+          "courseD_bee_conditionals3_a": "Asegúrate de usar una instrucción 'si' para verificar cada espacio para ver sí tiene una flor o nada.",
+          "courseD_bee_conditionals3_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún no has resuelto el rompecabezas."
         },
         "courseD_bee_conditionals3_dani": {
           "courseD_bee_conditionals3_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
@@ -10055,7 +10055,7 @@
         },
         "courseD_bee_conditionals4_2021": {
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. "
+          "courseD_bee_conditionals4_b": "Usa una instrucción \\`si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. "
         },
         "courseD_bee_conditionals4_dani": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
@@ -10065,7 +10065,7 @@
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals5_2021": {
-          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle (loop) anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
           "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
         },
         "courseD_bee_conditionals5_dani": {
@@ -10076,27 +10076,27 @@
           "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals6_2021": {
-          "courseD_bee_conditionals6_a": "Asegúrate de utilizar una afirmación \\`si' para comprobar si hay panales debajo de cada nube.",
+          "courseD_bee_conditionals6_a": "Asegúrate de utilizar una instrucción \\`si' para comprobar si hay panales debajo de cada nube.",
           "courseD_bee_conditionals6_b": "En este caso, no necesitas verificar si hay flores debajo de las nubes.",
-          "courseD_bee_conditionals6_c": "¿Hay algún bucle que puedas usar para simplificar tu código?"
+          "courseD_bee_conditionals6_c": "¿Hay algún bucle (loop) que puedas usar para simplificar tu código?"
         },
         "courseD_bee_conditionals7_2021": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío.",
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío.",
           "courseD_bee_conditionals7_b": "Si no hay una flor debajo de la nube, debe haber un panal, por lo que no necesitas pensar en el caso que sea un espacio vacío."
         },
         "courseD_bee_conditionals7_predict2_2021": {
-          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si / si no`) para resolver el desafío."
+          "courseD_bee_conditionals7_a": "\\*\\* Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta.   \n\nQuerrás utilizar un bloque condicional  ( `si'/ si no`) para resolver el desafío."
         },
         "courseD_bee_conditionals8_2021": {
-          "courseD_bee_conditionals8_a": "\\*\\* Recuerda: \\*\\* Este puzle cambia cada vez que se ejecuta.   \n\nTendrás que utilizar un bloque condicional  ( `si' o 'si /si no`) para resolver el desafío.",
-          "courseD_bee_conditionals8_b": "Este puzle es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
+          "courseD_bee_conditionals8_a": "\\*\\*Recuerda: \\*\\* Este rompecabezas cambia cada vez que se ejecuta. \n\nQuerrás utilizar un bloque condicional ( `si' o 'si / si no`) para resolver el desafío.\".",
+          "courseD_bee_conditionals8_b": "Este rompecabezas es difícil, porque no puedes verificar cuadrados en blanco, néctar _y_ miel con un único condicional. \n\nSolo comprueba si hay néctar y miel al final de tu camino."
         },
         "courseD_bee_conditionals_challenge1_2021": {
           "courseD_bee_conditionals_challenge1_a": "¿Puedes encontrar un camino que llegue a cada flor y panal sin golpear ningún árbol? El mejor camino es una espiral.",
           "courseD_bee_conditionals_challenge1_b": "En este rompecabezas, cada espacio podría tener una flor, un panal de miel o nada. Eso significa que puedes repetir tu condicional `si/si no` en cada cuadrado."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si hay flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
@@ -10170,87 +10170,87 @@
         },
         "courseD_collector_nested_loops_challenge2_2021": {
           "courseD_bee_nested_loops_challenge2_a": "No olvides que puedes `repetir` un solo comando o un patrón más largo. ¡Incluso se puede `` repetir\\` un bloque 'repetir'!",
-          "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
-          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.",
+          "courseD_bee_nested_loops_challenge2_b": "Si quieres obtener las 4 gemas, primero usa un bucle (loop) para alejarte del centro. Gira a la izquierda o a la derecha, y luego usa un bucle (loop) anidado para pasar de la primera pila del tesoros a la segunda. Si repites el bucle (loop) anidado lo suficiente, ¡la recolectora se moverá por _toda_ la cueva!",
+          "courseD_bee_nested_loops_challenge2_c": "El programa más corto que alcanza todo el tesoro usa solo un bloque `recoger` y dos turnos.",
           "courseD_bee_nested_loops_challenge2_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_farmer_condLoops1_2021": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar el maíz 5 veces, utilizando un bucle de repetición.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías acabar cosechando cualquier otra cosa!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un bucle (loop) de 'repetir'.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías intentar cosechar algo que no esté allí! "
         },
         "courseD_farmer_condLoops2_2021": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las sentencias 'if' situando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, deberías tener una sentencia `if/if else` y una sentencia `if`.",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `if` podría parecerse a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las instrucciones 'si' ubicando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este rompecabezas, debes tener una instrucción  `si / si no` y una instrucción  simple `si`.",
+          "courseD_farmer_condLoops2_c": "Tu instrucción `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops3_2021": {
-          "courseD_farmer_condLoops3_a": "Para conseguir todos los elementos, intenta anidar sentencias ' if' con tres profundidades.\n\nEsto significa que deberías situar una sentencia \\`if ' dentro de otra, y luego situar una tercera sentencia ' if ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, deberías tener dos sentencias `if/else` y una sentencia `if`."
+          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar instrucciones  ' si ' de profundidad tres.\n\nEsto significa que debe poner una instrucción `si ' dentro de otra, a continuación, poner una tercera  instrucción`si ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este rompecabezas, usted debe tener dos `si/ si no` instrucciones y una instrucción 'si' simple"
         },
         "courseD_farmer_condLoops4_2021": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle 'mientras haya lechuga' para seguir recogiendo hasta que no quede ninguna.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle `while` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puedes utilizar un bucle `mientras sigues adelante` o un bucle 'repetir\\` para pasar por todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle (loop) 'mientras hay lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle (loop) `mientras` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un bucle (loop) `mientras camino por delante` o un bucle (loop) de 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops5_2021": {
-          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle: 'repetir hasta en la calabaza'. ¿Puedes ver cómo utilizarlo en este desafío?",
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Utiliza un bucle `while` para reunirlas todas!"
+          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle (loop): 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este rompecabezas?",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un bucle (loop) `mientras` para reunirlos a todos!"
         },
         "courseD_farmer_condLoops6_2021": {
-          "courseD_farmer_condLoops6_a": "Utiliza un bucle `mientras haya camino por delante` o un bloque `si hay camino por delante / si no` para que la granjera avance por cada parte de la espiral.",
+          "courseD_farmer_condLoops6_a": "Utiliza un bucle (loop) `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
           "courseD_farmer_condLoops6_b": "Sólo tienes que comprobar si hay maíz durante la mayor parte de la cosecha. Sólo tienes que recoger una calabaza al final de tu programa."
         },
         "courseD_farmer_condLoops7_2021": {
-          "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más sencillo para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Intente usar `cuando camino adelante` para mantener la cosechadora moviéndose el número correcto de pasos."
+          "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más fácil para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Intente usar `mientras camino por delante` para mantener la cosechadora moviéndose el número correcto de pasos."
         },
         "courseD_farmer_condLoops_challenge1_2021": {
           "courseD_farmer_condLoops_challenge1_a": "El botón \"Paso\" podría ser muy útil en este desafío.",
           "courseD_farmer_condLoops_challenge1_b": "Normalmente, tú simplemente \"recoge calabaza\" si estás en una calabaza. ¿Qué más necesitas hacer si estás en una calabaza?"
         },
         "courseD_farmer_condLoops_challenge2_2021": {
-          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle `mientras` puede ayudar!"
+          "courseD_farmer_condLoops_challenge2_a": "La cantidad de cada vegetal en cada espacio puede cambiar. ¡Un bucle (loop) `mientras` puede ayudar!"
         },
         "courseD_farmer_while1_2021": {
-          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle 'repetir' para esto?",
-          "courseD_farmer_while1_b": "Usa el bloque `quita 1` cuando estés delante de la pila de tierra para quitarla."
+          "courseD_farmer_while1_a": "Tendrás que avanzar cuatro veces para llegar a la pila. ¿Puedes usar un bucle (loop) de 'repetir' para esto?",
+          "courseD_farmer_while1_b": "Usa el bloque `quita 1` cuando estés parado en la pila de tierra para quitarlo."
         },
         "courseD_farmer_while2_2021": {
           "courseD_farmer_while2_a": "Solo necesitarás moverte una vez para llegar al hoyo.",
-          "courseD_farmer_while2_b": "Necesitarás usar el bloque 'llenar 1' seis veces. ¿Puedes usar un bucle para hacerlo más fácil?"
+          "courseD_farmer_while2_b": "Necesitarás usar el bloque 'llenar 1' seis veces. ¿Puedes usar un bucle (loop) para hacerlo más fácil?"
         },
         "courseD_farmer_while3_2021": {
-          "courseD_farmer_while3_a": "Un bucle puede ayudarte aquí a simplificar tu código.",
+          "courseD_farmer_while3_a": "Un bucle (loop) puede ayudarte a simplificar tu código aquí.",
           "courseD_farmer_while3_b": "No tendrías que usar ningún bloque de`girar` para llegar a la pila."
         },
         "courseD_farmer_while4_2021": {
-          "courseD_farmer_conditionals4_a": "En lugar de utilizar un bucle `repetir`, utiliza un bucle `mientras` para seguir excavando hasta que el montón se termine.",
-          "courseD_farmer_conditionals4_b": "Esto se parece mucho a otro puzle anterior, siendo la única diferencia el bucle que necesitas usar."
+          "courseD_farmer_conditionals4_a": "En lugar de utilizar un bucle (loop) de `repetir`, utiliza un bucle (loop) `mientras` para seguir excavando hasta que la pila se termine.",
+          "courseD_farmer_conditionals4_b": "Esto se ve muy similar a un rompecabezas anterior, la única diferencia es cuál bucle (loop) necesitas."
         },
         "courseD_farmer_while5_2021": {
-          "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle `mientras` en el interior de un bucle 'repetir'.",
+          "courseD_farmer_conditionals5a_a": "Prueba a anidar un bucle (loop) `mientras` en el interior de un bucle (loop) de 'repetir'.",
           "courseD_farmer_conditionals5a_b": "La granjera necesita avanzar un total de cinco veces para llegar al final de la fila. ¿Qué más necesita hacer la granjera?",
-          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avances, elimina el montón de tierra utilizando el bloque \\`mientras haya un montón'."
+          "courseD_farmer_conditionals5a_c": "Avanza 5 veces. Cada vez que avance, elimine la pila de tierra utilizando el bloque \\`mientras hay una pila '."
         },
         "courseD_farmer_while6_2021": {
-          "courseD_farmer_conditionals6_a": "Asegúrate de que estés utilizando el bucle 'mientras' para averiguar cuántas veces hacen falta para llenar cada agujero.",
+          "courseD_farmer_conditionals6_a": "Asegúrate de que estés utilizando el bucle (loop) 'mientras' para averiguar cuántas veces hacen falta para llenar cada hoyo.",
           "courseD_farmer_conditionals6_b": "Observa que la granjera necesita avanzar y descender varias veces en un patrón de escalera.",
           "courseD_farmer_conditionals6_c": "El patrón de escalera utiliza los siguientes bloques:\n\n-   avanzar\n-   llenar hoyo\n-   girar a la derecha\n-   avanzar\n-   llenar hoyo\n-   girar a la izquierda\n\n¿Cuántas veces necesitas utilizar este patrón de escalera?\n\nAsegúrate de usar el bloque `mientras exista un hoyo` para llenar el hoyo."
         },
         "courseD_farmer_while7_2021": {
-          "courseD_farmer_conditionals8_a": "El bloque `mientras haya camino delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
-          "courseD_farmer_conditionals8_b": "Usar un bucle `mientras haya camino adelante` dentro de un bucle repetir puede ayudarte en este puzle.",
+          "courseD_farmer_conditionals8_a": "El bloque `mientras camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en un camino.",
+          "courseD_farmer_conditionals8_b": "Usar un bucle (loop) `mientras camino por delante` dentro de un bucle (loop) de 'repetir' puede ayudarte en este rompecabezas.",
           "courseD_farmer_conditionals8_c": "¿Qué necesitas hacer al final de cada camino?"
         },
         "courseD_farmer_while8_2021": {
-          "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle `mientras`.",
-          "courseD_farmer_conditionals8_b": "Cada agujero está al final de un camino así que usa el bloque 'mientras haya camino por delante' antes de usar 'mientras exista un agujero\".",
-          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras hay camino por delante', 'mientras exista un agujero' seis veces."
+          "courseD_farmer_conditionals8_a": "Vas a tener que utilizar más de un bucle (loop) `mientras`.",
+          "courseD_farmer_conditionals8_b": "Cada hoyo está al final de un camino así que usa el bloque 'mientras camino por delante' antes de usar 'mientras exista un hoyo\".",
+          "courseD_farmer_conditionals8_c": "Fíjate en que necesitas repetir la secuencia 'mientras camino por delante', 'mientras exista un hoyo' seis veces."
         },
         "courseD_farmer_while_challenge1_2021": {
-          "courseD_farmer_while_challenge1_a": "Cada hoyo o montón se encuentra un espacio **hacia atrás** desde el final de la ruta.",
-          "courseD_farmer_while_challenge1_b": "Si usas un loop `mientras`, se puede decir a la granjera que elimine un montón o llenar un agujero, incluso no hay uno. Eso significa que puedes programarla para eliminar cualquier tierra o rellenar cualquier agujero, sin importar dónde se encuentre.",
-          "courseD_farmer_conditionals8_c": "Es posible resolver esto sin usar ningún loop \"repetir\". Para hacerlo, necesitarás cuatro loops \"mientras\"."
+          "courseD_farmer_while_challenge1_a": "Cada hoyo o pila se encuentra un espacio \\*\\* hacia atrás \\*\\* desde el final de la ruta.",
+          "courseD_farmer_while_challenge1_b": "Si usas un bucle (loop) `mientras`, se puede decir a la granjera que elimine una pila o llenar un hoyo, incluso si no hay uno. Eso significa que puedes programarla para eliminar cualquier tierra o rellenar cualquier hoyo, sin importar dónde se encuentre.",
+          "courseD_farmer_conditionals8_c": "Es posible resolver esto sin usar ningún bucle (loop) de \"repetir\". Para hacerlo, necesitarás cuatro bucles (loops) \"mientras\"."
         },
         "courseD_harvester_nested_loops_challenge1_2021": {
           "courseD_harvester_nested_loops_challenge1_a": "¡Intenta seguir este camino para recoger todo el maíz! ",
@@ -10349,29 +10349,29 @@
           "courseC_maze_programming5_c": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
         },
         "courseD_maze_until1_2021": {
-          "courseD_maze_until1_a": "¿Existe alguna secuencia a la que puedas aplicar un loop para acortar el código?",
-          "courseD_maze_until1_b": "Intenta usar un ciclo anidado para resolver este acertijo."
+          "courseD_maze_until1_a": "¿Existe alguna secuencia a la que puedas aplicar un bucle (loop) para acortar el código?",
+          "courseD_maze_until1_b": "Intenta usar un bucle (loop) anidado para resolver este rompecabezas."
         },
         "courseD_maze_until3_2021": {
           "courseD_maze_until3_a": "-   ¿Qué hace tu código? \n-   ¿Qué se supone que haga? \n-   ¿Qué te dice eso?",
-          "courseD_maze_until3_b": "Si te estas atorando, intenta escribir todos los pasos en una hoja de papel y buscar donde se repiten.",
-          "courseD_maze_until3_c": "¿Hay un patrón de escalón que puedes seguir para este desafío?",
+          "courseD_maze_until3_b": "Si te estas atorando/a, intenta escribir todos los pasos en una hoja de papel y buscar donde se repiten.",
+          "courseD_maze_until3_c": "¿Hay un patrón de escalón que puedes seguir para este rompecabezas?",
           "courseD_maze_until3_d": "No olvides usar el bloque ´repetir hasta´para hacer tu código más corto."
         },
         "courseD_maze_until4_2021": {
           "courseD_maze_until4_a": "Usa el botón \"Paso\" para recorrer tu código línea por línea.\n\n-   ¿Todo funciona en el primer paso?\n-   ¿Todo funciona en el segundo paso?\n-   ¿Dónde está el error?",
-          "courseD_maze_until4_b": "¿Hay un patrón de escalón que puedes seguir para este desafío?",
+          "courseD_maze_until4_b": "¿Hay un patrón de escalón que puedes seguir para este rompecabezas?",
           "courseD_maze_until4_c": "No olvides usar el bloque ´repetir hasta´para hacer tu código más corto."
         },
         "courseD_maze_until5_2021": {
-          "courseD_maze_until5_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del ciclo 'repetir hasta girasol'."
+          "courseD_maze_until5_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until6_2021": {
-          "courseD_maze_until6_b": "Para usar solo un 'ir hacia adelante', ponlo dentro del ciclo 'repetir hasta girasol'."
+          "courseD_maze_until6_b": "Para usar solo un 'avanzar', ponlo dentro del bloque 'repetir hasta girasol'."
         },
         "courseD_maze_until7_2021": {
           "courseD_maze_until7_a": "¡No necesitas que tu código sea más largo que la vez pasada solo porque el laberinto lo es!",
-          "courseD_maze_until7_b": "¡Aunque hay mas giros aquí que en el ultimo desafío, tu código puede ser casi idéntico por el bloque ´repetir hasta´!"
+          "courseD_maze_until7_b": "¡Aunque hay mas giros aquí que en el ultimo rompecabezas, tu código puede ser casi idéntico por el bloque ´repetir hasta´!"
         },
         "courseD_maze_until9_2021": {
           "courseD_maze_until8_c": "¡Recuerda usar el bloque `repetir hasta` para llevarte al girasol!"
@@ -10433,7 +10433,7 @@
           "courseD_artist_functions8_d": "Para hacer una línea de cuadrados,\n\n-   repite 3 veces\n-   dibuja un cuadrado\n-   salta **100 pixeles** hacia adelante"
         },
         "courseE_artist_functions8c_2021": {
-          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece, ¡Aquí no tendrías que \"mover\" ni \"saltar\" ningún bloque!",
+          "courseD_artist_functions8_f": "Esto es mas fácil de lo que parece! No deberías necesitar ningún bloque de \"mover\" o \"saltar\"!",
           "courseD_artist_functions8_a": "¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!",
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle de repetición para iniciar el siguiente ejercicio!"
         },
