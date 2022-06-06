@@ -259,7 +259,8 @@ TargetMetadata:
   # In this configuration, AWS DMS has no information about the maximum size of LOBs to expect.
   # Thus, LOBs are migrated one at a time, piece by piece.
   # Full LOB mode can be quite slow.
-  FullLobMode: false
+  FullLobMode: true
+
   # Enter the size, in kilobytes, of the LOB chunks to use when replicating the data to the target.
   # The FullLobMode option works best for very large LOB sizes but tends to cause slower loading.
   #
@@ -267,7 +268,7 @@ TargetMetadata:
   # The LOB chunk size (K) option determines the size of each piece.
   # When setting this option, pay particular attention to the maximum packet size allowed by your network configuration.
   # If the LOB chunk size exceeds your maximum allowed packet size, you might see disconnect errors.
-  LobChunkSize: 0
+  LobChunkSize: 64
 
   # This value determines which LOBs AWS DMS transfers inline during a full load. Transferring small LOBs is more
   # efficient than looking them up from a source table. During a full load, AWS DMS checks all LOBs and performs an
