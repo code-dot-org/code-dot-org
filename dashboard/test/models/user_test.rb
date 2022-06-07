@@ -3787,6 +3787,29 @@ class UserTest < ActiveSupport::TestCase
     assert (create :teacher).lesson_extras_enabled?(script)
   end
 
+  test 'lesson_extras_enabled? for pl course' do
+    script = create :script, lesson_extras_available: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    other_script = create :script, lesson_extras_available: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    facilitator = create :facilitator
+    teacher = create :teacher
+
+    section1 = create :section, lesson_extras: true, script_id: script.id, user: facilitator
+    section1.add_student(teacher)
+    section2 = create :section, lesson_extras: true, script_id: script.id, user: facilitator
+    section2.add_student(teacher)
+    section3 = create :section, lesson_extras: true, script_id: other_script.id
+    section3.add_student(facilitator)
+
+    assert teacher.lesson_extras_enabled?(script)
+    refute teacher.lesson_extras_enabled?(other_script)
+
+    assert facilitator.lesson_extras_enabled?(script)
+    assert facilitator.lesson_extras_enabled?(other_script)
+
+    refute (create :teacher).lesson_extras_enabled?(script)
+    assert (create :facilitator).lesson_extras_enabled?(script)
+  end
+
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
@@ -3828,6 +3851,35 @@ class UserTest < ActiveSupport::TestCase
       @script.reload
       @script2.reload
       @script3.reload
+
+      @pl_script = create(:script, hideable_lessons: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_lesson1 = create(:lesson, script: @pl_script, absolute_position: 1, relative_position: '1')
+      @pl_lesson2 = create(:lesson, script: @pl_script, absolute_position: 2, relative_position: '2')
+      @pl_lesson3 = create(:lesson, script: @pl_script, absolute_position: 3, relative_position: '3')
+      @pl_custom_s1_l1 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson1,
+        position: 1
+      )
+      @pl_custom_s2_l1 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson2,
+        position: 1
+      )
+      @pl_custom_s2_l2 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson2,
+        position: 2
+      )
+      create(:script_level, script: @pl_script, lesson: @pl_lesson3, position: 1)
+      @pl_unit_group = create :unit_group
+
+      create :unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_script
+      @pl_unit_group.reload
+      @pl_script.reload
     end
 
     def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
@@ -4106,6 +4158,19 @@ class UserTest < ActiveSupport::TestCase
 
       # returns false for teacher
       assert_equal false, teacher.unit_hidden?(@script)
+    end
+
+    test "unit_hidden? for pl course" do
+      teacher = create :teacher
+      facilitator = create :facilitator
+      section = put_participant_in_section(teacher, facilitator, @pl_script, @pl_unit_group, 'teacher')
+      SectionHiddenScript.create(section_id: section.id, script_id: @pl_script.id)
+
+      # returns true for participant
+      assert_equal true, teacher.unit_hidden?(@pl_script)
+
+      # returns false for instructor
+      assert_equal false, facilitator.unit_hidden?(@pl_script)
     end
   end
 
