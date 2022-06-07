@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 
 $(document).ready(initPage);
 
@@ -45,9 +45,9 @@ function renderTeacherContentToggle(store) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeachersOnly>
+      <InstructorsOnly>
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
-      </TeachersOnly>
+      </InstructorsOnly>
     </Provider>,
     element
   );
