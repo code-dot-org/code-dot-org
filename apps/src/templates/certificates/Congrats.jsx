@@ -60,7 +60,7 @@ export default function Congrats(props) {
       />
       {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
       <hr style={styles.divider} />
-      <PetitionCallToAction />
+      <PetitionCallToAction gaPagePath={`/congrats/${tutorial}`} />
     </div>
   );
 }
