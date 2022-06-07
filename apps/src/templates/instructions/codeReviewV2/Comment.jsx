@@ -212,10 +212,7 @@ function Comment({
             ...(isCommentResolved && styles.lessVisibleBackgroundColor)
           }}
         >
-          <SafeMarkdown
-            markdown={commentText}
-            className="code-custom-background"
-          />
+          <SafeMarkdown markdown={commentText} className="comment-content" />
         </div>
       )}
       {displayError && (
