@@ -10,24 +10,6 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd/unit5/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd5"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd/unit5/vocab"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd/unit5/standards/"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2017"
     },
