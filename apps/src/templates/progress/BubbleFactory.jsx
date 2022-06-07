@@ -204,7 +204,8 @@ export function getBubbleUrl(
   levelUrl,
   studentId,
   sectionId,
-  preserveQueryParams = false
+  preserveQueryParams = false,
+  queryParamsToExclude = []
 ) {
   if (!levelUrl) {
     return null;
@@ -212,6 +213,7 @@ export function getBubbleUrl(
   const params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
+  //queryParamsToExclude.forEach(param => delete params[param]);
   if (sectionId) {
     params.section_id = sectionId;
   }
