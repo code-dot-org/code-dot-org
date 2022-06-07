@@ -217,6 +217,8 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
   get '/weblab/footer', to: 'projects#weblab_footer'
+  get '/scripts/hosted.js', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/weblab/footer.js')
+  get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab_footer.css')
 
   resources :projects, path: '/projects/', only: [:index] do
     collection do
