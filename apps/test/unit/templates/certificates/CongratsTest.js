@@ -5,6 +5,7 @@ import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
 import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHoc';
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
 describe('Congrats', () => {
   it('renders a Certificate component', () => {
@@ -60,5 +61,18 @@ describe('Congrats', () => {
       />
     );
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
+  });
+
+  it('renders a PetitionCallToAction component, regardless of user type', () => {
+    const wrapper = shallow(
+      <Congrats
+        completedTutorialType="other"
+        userType="signedOut"
+        language="en"
+      />
+    );
+    expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
+    expect(wrapper.find(PetitionCallToAction).props().gaPagePath).to.not.be
+      .undefined;
   });
 });
