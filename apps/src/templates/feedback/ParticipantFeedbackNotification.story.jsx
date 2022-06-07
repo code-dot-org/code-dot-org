@@ -1,17 +1,17 @@
 import React from 'react';
-import StudentFeedbackNotification from './StudentFeedbackNotification';
+import ParticipantFeedbackNotification from './ParticipantFeedbackNotification';
 import sinon from 'sinon';
 
 export default storybook => {
   return storybook
-    .storiesOf('StudentFeedbackNotification', module)
+    .storiesOf('ParticipantFeedbackNotification', module)
     .withReduxStore()
     .addStoryTable([
       {
-        name: 'StudentFeedbackNotification',
+        name: 'ParticipantFeedbackNotification',
         story: () => {
           withFakeServer();
-          return <StudentFeedbackNotification studentId={123} />;
+          return <ParticipantFeedbackNotification studentId={123} />;
         }
       }
     ]);
