@@ -13836,6 +13836,8 @@ zh-TW:
             csd3_2:
               display_name: 第 2 章：創建遊戲
           lessons:
+            Example Projects:
+              name: 示例項目
             Velocity:
               name: 速度
             Collision Detection:
@@ -14110,6 +14112,8 @@ zh-TW:
           lessons:
             Course F Introduction:
               name: Sprite Lab 簡介
+            lesson-3:
+              name: 小項目：用戶輸入程式
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
             Making Sprites:
@@ -14939,6 +14943,8 @@ zh-TW:
               name: 疫情爆發
             lesson-2:
               name: 語言的力量
+            lesson-11:
+              name: 小項目：用戶輸入程式
           lesson_groups:
             ramp_up:
               display_name: 角色
@@ -15088,6 +15094,8 @@ zh-TW:
               name: 運行中的角色
             introducing-spritelab:
               name: Sprite Lab 簡介
+            user-input-programs:
+              name: 小項目：用戶輸入程式
           lesson_groups:
             ramp_up:
               display_name: 介紹
@@ -16029,6 +16037,8 @@ zh-TW:
               name: 運行中的角色
             'Mini-Project: Virtual Pet':
               name: '小專案: 虛擬寵物'
+            'Mini-Project: User Input Programs':
+              name: 小項目：用戶輸入程式
             Simulating Experiments:
               name: 模擬實驗
           lesson_groups:
@@ -16748,6 +16758,8 @@ zh-TW:
               name: '小專案: 虛擬寵物'
             The Power of Words:
               name: 語言的力量
+            'Mini-Project: User Input Programs':
+              name: 小項目：用戶輸入程式
             Drawing with Loops:
               name: 以迴圈（Loop）繪畫
             Programming with the Bee:
@@ -16778,6 +16790,8 @@ zh-TW:
               name: '小專案: 虛擬寵物'
             lesson-2:
               name: 語言的力量
+            lesson-11:
+              name: 小項目：用戶輸入程式
             Loops with the Artist:
               name: 以迴圈（Loop）繪畫
             Nested Loops in the Maze:
@@ -17002,6 +17016,8 @@ zh-TW:
               name: 運行中的角色
             'Mini-Project: Virtual Pet':
               name: '小專案: 虛擬寵物'
+            'Mini-Project: User Input Programs':
+              name: 小項目：用戶輸入程式
             Simulating Experiments:
               name: 模擬實驗
             Outbreak:
