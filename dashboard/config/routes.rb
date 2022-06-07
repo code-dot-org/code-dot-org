@@ -216,6 +216,8 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
+  get '/weblab/footer', to: 'projects#weblab_footer'
+
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -915,6 +917,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
+  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
 
