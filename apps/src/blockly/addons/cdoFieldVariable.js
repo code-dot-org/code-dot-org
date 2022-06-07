@@ -51,12 +51,11 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
       }
     }
   }
-  menuGenerator_ = newDropdownCreate;
 }
 
-const originalDropdownCreate = FieldVariable.dropdownCreate;
-const newDropdownCreate = function() {
-  const options = originalDropdownCreate.call(this);
+FieldVariable.originalDropdownCreate = FieldVariable.dropdownCreate;
+FieldVariable.dropdownCreate = function() {
+  const options = FieldVariable.originalDropdownCreate.call(this);
 
   // Remove the last two options (Delete and Rename)
   options.pop();
