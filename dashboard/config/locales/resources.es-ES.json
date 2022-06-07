@@ -3320,93 +3320,189 @@
           "url": "https://youtu.be/auv10y-dN4s",
           "type": "Vídeo"
         },
+        "project-guide-html-project-2020/csd/2021": {
+          "name": "Guía de Proyecto - Proyecto HTML",
+          "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "name": "Revisión por Parejas - Página Web HTML",
+          "url": "https://docs.google.com/document/d/18JNbIAo4rrhAFlYk8qKxLrkYjmGp4k6RXQgXq5uFq2M/view"
+        },
         "html-web-page-1/csd/2021": {
+          "name": "Página Web HTML",
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit",
           "type": "Rúbrica"
         },
         "mini-project-html-page/csd/2021": {
+          "name": "Página Web HTML",
+          "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
           "type": "Diapositivas"
         },
         "html-web-page/csd/2021": {
+          "name": "Página Web HTML",
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/",
           "type": "Revisión por pares"
         },
         "html-page/csd/2021": {
+          "name": "Página Web HTML",
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
           "type": "Guía de Proyecto"
         },
         "formatting_html/csd/2021": {
           "name": "Formatear HTML",
+          "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
           "type": "Recurso"
         },
         "lists/csd/2021": {
           "name": "Listas",
+          "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
           "type": "Recurso"
         },
         "digital-footprint/csd/2021": {
           "name": "Huella digital",
+          "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
           "type": "Diapositivas"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
-          "name": "Investigador Social"
+          "name": "Investigador Social",
+          "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
         },
         "social-sleuth/csd/2021": {
-          "name": "Investigador Social"
+          "name": "Investigador Social",
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Introducción a CSS - Parte 1",
+          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
           "type": "Vídeo"
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "Introducción a CSS - Parte 2",
+          "url": "https://youtu.be/VgBVKlpLqsE",
           "type": "Vídeo"
         },
         "style_sheets/csd/2021": {
+          "name": "Hojas de Estilo",
+          "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
           "type": "Recurso"
         },
         "text_properties/csd/2021": {
+          "name": "Propiedades del Texto",
+          "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
           "type": "Recurso"
         },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "Guía de Proyecto - Tu Estilo Personal",
+          "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "Revisión por Parejas - Tu Estilo Personal",
+          "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view"
+        },
         "your-personal-style-1-2-3/csd/2021": {
+          "name": "Tu Estilo Personal",
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
           "type": "Rúbrica"
         },
         "your-personal-style-1/csd/2021": {
+          "name": "Tu Estilo Personal",
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
           "type": "Revisión por pares"
         },
         "your-personal-style/csd/2021": {
+          "name": "Tu Estilo Personal",
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
           "type": "Guía de Proyecto"
         },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "name": "Licencia de tu Trabajo",
+          "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing"
+        },
+        "licensing-your-work-2020/csd/2021": {
+          "name": "Licencia de tu Trabajo",
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+        },
         "creative-commons-video/csd/2021": {
+          "name": "Visión General de Creative Commons",
+          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY",
           "type": "Vídeo"
         },
         "creative_commons_search/csd/2021": {
           "name": "Búsqueda de Creative Commons",
+          "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
           "type": "Recurso"
         },
         "images_in_html/csd/2021": {
           "name": "Imágenes en HTML",
+          "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
           "type": "Recurso"
         },
+        "define-your-webpage-2020/csd/2021": {
+          "name": "Define tu Página Web",
+          "url": "https://docs.google.com/document/d/1jn2gZEwppoUfNQYyV-zdBp4phvA4rJZJENt5nsyzMCk/edit?usp=sharing"
+        },
+        "define-your-web-page/csd/2021": {
+          "name": "Define tu Página Web",
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+        },
+        "body-styling/csd/2021": {
+          "name": "Estilo del Cuerpo (Body)",
+          "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+          "type": "Página de Recursos"
+        },
         "layout-properties/csd/2021": {
-          "name": "Propiedades de diseño"
+          "name": "Propiedades de diseño",
+          "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
+          "type": "Página de Recursos"
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "name": "Preparar - Guía de Proyecto - Página Web Personal  ",
+          "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view"
         },
         "person-web-page-prepare/csd/2021": {
+          "name": "Preparar - Página web personal ",
+          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
           "type": "Guía de Proyecto"
         },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "name": "Prácticas de Reflexión",
+          "url": "https://docs.google.com/document/d/1J7Ghd-A6Y6onQq1zQU-VQ0ic2QV0I06x1ejxohX84RU/view"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "name": "Guía del Proyecto - Página Web Personal - Reflexión",
+          "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "name": "Revisión por Pares - Sitio Web Personal",
+          "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view"
+        },
         "personal-web-page-1/csd/2021": {
+          "name": "Página Web Personal",
+          "url": "https://docs.google.com/document/d/1IwOlw4RqqWtpi6qvOZf7BoQt_hpAGSL_p7os8rLOTK0/",
           "type": "Revisión por pares"
         },
         "person-web-page-reflect/csd/2021": {
+          "name": "Página Web Personal - Reflexión",
+          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
           "type": "Guía de Proyecto"
         },
         "personal-web-page/csd/2021": {
+          "name": "Página Web Personal",
+          "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
           "type": "Rúbrica"
         },
         "publishing_your_website/csd/2021": {
           "name": "Publicar tu sitio web",
+          "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Vídeo"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
+          "name": "Página Web Personal - Lista de Control del Estudiante",
+          "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view",
           "type": "Recurso"
         },
         "extra_code_in_challenge_levels/csd/2021": {
+          "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
           "type": "Recurso"
         },
         "websites-for-a-purpose-2020/csd/2021": {
@@ -3440,6 +3536,9 @@
         "hyperlinks/csd/2021": {
           "name": "Hipervínculos",
           "type": "Recurso"
+        },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "name": "Prácticas de Reflexión"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Revisión por pares"

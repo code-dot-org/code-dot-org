@@ -1493,24 +1493,48 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Máte dva samolepicí papírky. Na jeden napište jednu věc, kterou jste se dnes dověděli o kódování. \nNa druhý napište jednu věc, kterou jste se dnes dověděli o poezii. \n\nPodělte se s celou třídou zvednutím ruky o odpověď na otázku: Co dalšího doufáte, že byste se mohli o kódování a informatice naučit příště? "
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Nastavení fáze\n\nPřivítejte žáky ve třídě a velmi krátce představte aktivitu dne.\n\nŘekněte: _Dnes strávíme jednu hodinu řešením online úloh a osvojíme si zásady práce v počítačové učebně._\nCílem této diskuse je seznámit studenty s tím, co mají očekávat a jak se mají po vstupu do počítačové učebny chovat."
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Po počítačové učebně se pohybujte tiše\n-   Nezapomeňte, že do počítačové učebny nepatří žvýkačky ani bonbony\n-   Dezinfikujte si ruce\n-   Sdílejte počítač s partnerem\n-   Dbejte na to, aby první „řidič“ dosáhl na myš\n-   Když jste frustrovaní, nebouchejte do počítače ani do monitoru a netřeste jimi\n-   Dodržujte [pravidlo 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Jak se vypořádat s [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) každých 20–30 minut (vyžaduje bezplatné přihlášení na GoNoodle).\n-   Když něco nevíte, zeptejte se nejdřív partnera a až pak učitele\n-   Nezvyšujte příliš hlas, aby se slyšeli i ostatní\n-   Zaznamenávejte si do deníku své pocity a řešení"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Diskuse:**\nDiskutujte o očekáváních ohledně počítačové učebny a ujistěte se, že studenti rozumějí pravidlům. Možná témata k diskusi:\n\n-   Je běhání v počítačové učebně v pořádku?\n-   Jak hlasitě bychom měli chodit, když jsme v počítačové učebně?\n-   Co byste měli dělat, když si s úlohou nevíte rady?\n-   Pomůže v případě frustrace bouchnutí do počítače?\n-   Když se chystáme do počítačové učebny, jak bychom se měli připravit?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Náhled online hádanek ( minut)\n\nPromítněte zadání z lekce. Ukažte třídě, jak kliknout na obrázek a umístit ho na správné místo přetažením. Záměrně dělejte chyby, jako je kliknutí na pozadí nebo puštění obrázku ve chvíli, kdy ještě není na správném místě. Při těchto problémech požádejte o pomoc dobrovolníky ve třídě."
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Skládačka"
+          "name": "Skládačka",
+          "description": "Cíl:\\_ Žáci se naučí, jak používat Code.org k vypracování online úloh.\n\nTato fáze byla navržená tak, aby žáci dostali příležitost procvičit si koordinaci rukou a očí, stejně jako klikání a přetahování. Taky si v ní pohrají s posloupnostmi.\n\nPokud myslíte, že to žákům pomůže, nechte je, ať na tabuli napíšou jednotlivé kroky přetahování. Například: \n\n1.  Přesunutí kurzoru na blok. \n2.  Kliknutí a podržení tlačítka myši. \n3.  Pohyb myší. \n4.  Uvolnění tlačítka.\n\nŽáci si tak osvojí vytváření _algoritmů_ – tento koncept si vysvětlíme v následujících lekcích."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Věnujte nějakou dobu výuce správného klikání a přetahování. Seznamte žáky s terminologií zařízení, která budou při práci na úlohách používat. Pokud mají tablety, budou používat _dotykovou obrazovku_. Pokud notebooky, budou pravděpodobně používat _trackpad_. Stolní počítače, jaké můžete najít v počítačové učebně, budou spoléhat na používání _myši_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Naveďte studenty, ať dokončí kurz [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Povzbuďte studenty, kteří mají otázky nebo čelí nějaké výzvě, aby se nejprve zeptali spoužáka, se kterým spolupracují.\n-   Nezodpovězené otázky lze řešit se sousední skupinou, která už může znát řešení.\n-   Požádejte studenty, aby popsali problém, který řeší. Co by měl kód dělat? Co dělá? O čem to vypovídá?\n-   Připomeňte studentům, kteří pociťují frustraci, že frustrace je krokem na cestě k učení a že vytrvalost se vyplatí.\n-   Pokud se student po tom všem stále zasekává, položte mu návodné otázky, aby chybu sám odhalil."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Úrovně"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Reflexe"
+          "name": "Reflexe",
+          "description": "Nechte studenty, ať napíšou nebo nakreslí, co se naučili a jaký měli pocit, když úlohu dokončili.\n\n**Výzvy:**\n\n-   Dokážete nakreslit pořadí, v jakém se připravujete na cestu do počítačové učebny?\n-   Nakreslete, co se v počítačové učebně dělá a co se nedělá.\n-   Nakreslete a označte názvy příslušenství počítače, která jste během řešení úlohy používali ke klikání a přetahování (tlačítko myši, dotyková obrazovka, trackpad)."
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Dejte studentům [odchodové lístky](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaké měli pocity nebo co prožívali. Studenti mohou kreslit, psát nebo se vyjadřovat, jakkoli uznají za vhodné. Pak od nich při odchodu z místnosti všechny odchodové lístky vyberte. Pokud chcete, můžete lístky ve škole vyvěsit na nějaké nástěnce nebo jiném dobře viditelném místě jako připomínku Hodiny kódu."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5). Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků](https://code.org/volunteer/local)"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Úvod",
@@ -2235,7 +2259,7 @@
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Posloupnosti s Naštvanými ptáky",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
@@ -2618,8 +2642,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
@@ -4658,8 +4683,9 @@
           "description": "Rozdělte děti do dvojic a nechte je sledovat video o programování ve dvojicích jako třídu nebo na jejich stanovištích.  To by mělo studentům pomoci vydat se správným směrem."
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Mezi nejdůležitější úkoly učitele při výuce informatiky patří rozvíjení prostředí, ve kterém probíhá živá spolupráce. Při online výuce jde zejména o povzbuzování a podporu žáků. Online výuka je ale zaměřená na studenty, to znamená, že učitelé by neměli zasahovat, když si studenti nebudou vědět rady. Tady je pár tipů, jak to udělat:",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
@@ -4688,7 +4714,7 @@
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Programování s bloky",
           "tips": [
-            null
+            "Předveďte studentům správný způsob, jak pomáhat spolužákům:\n\n-   Nesedejte si na židli spolužáka.\n-   Nepoužívejte klávesnici spolužáka.\n-   Nedotýkejte se myši spolužáka. \n-   Než odejtedete, ujistěte se, že vám spolužák dokáže nahlas popsat řešení"
           ]
         },
         "20e998a3-d920-48f1-9d92-ec4102990042": {

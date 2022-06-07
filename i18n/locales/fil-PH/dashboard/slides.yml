@@ -2092,24 +2092,86 @@ fil:
         image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
         text: "Sa tula, ang mga awtor ay gumagamit ng mga imahe upang maipinta ang isang larawan sa isip ng mambabasa. Kapag nakita natin ang salitang buwaya, awtomatiko nating naiisip ang isang berdeng buwaya sa ating isipan. Upang gawing animation ang isang imaheng tulad nito, gagamit tayo ng mga sprite."
       2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Gumawa ito ng bagong sprite block na hinahayaan kang gumawa ng sprite at pumili ng kasuotan para dito. Pumili ng kasuotan para sa sprite na sa tingin mo ay kasama ng tula."
       3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Upang baguhin ang lokasyon ng sprite, maaari mong i-click ang pin icon sa block ng lokasyon, at pagkatapos ay i-click kung saan mo ito gustong pumunta sa play space."
       4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "Sa susunod na ilang mga antas makakakita ka ng ilang mga bagong block. Binibigyang-daan ka ng block na ito na baguhin ang laki ng sprite mo. Binibigyang-daan ka ng block na ito na i-animate ang pag-uugali ng sprite mo."
       5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Kung binanggit ng isang tula ang mga gumagala na ulap, gawin muna ang cloud sprite, pagkatapos ay piliin ang block ng gawi na ito, i-drag ito palabas, at piliin ang gumagala."
       6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Tiyaking tumutugma ang mga kasuotan ng sprite mo. Kapag pinindot mo ang run, mababasa mo at makakakita ka ng gumagalang ulap."
       7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Ngayon ay maaari kang magdagdag ng mga literal na larawan upang ilarawan ang mga salita sa tula. Magsaya ka!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Congratulations! Natutunan mo lang ang mga pangunahing kaalaman sa computer science at kung paano hanapin ang mood ng isang tula. Ngayon ay maaari kang lumikha ng sarili mong animated na tula upang ibahagi sa iyong mga kaibigan."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Maingat ka bang pipili ng isang simpleng eksena para sa buong tula?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "O gagamit ka ba ng maraming mga event upang lumikha ng isang bagong eksena para sa bawat linya ng iyong tula?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "Sa dulo ng tutorial maaari kang magbahagi ng link sa paglikha mo sa iyong mga kaibigan."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Iunat ang imahinasyon mo at magsaya!"
     hello_world_intro:
       1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Hi! Ang pangalan ko ay Erin, at ako ay isang software engineer dito sa Code.org. Ako ay nasasabik, dahil makakasama mo akong gawin ang tutorial na gagawin mo! Tinatawag namin itong \"Hello World.\""
       2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "Ang \"Hello World\" ay isang sikat na parirala sa computer science, at ang pagpapakita ng pariralang iyon ay isang karaniwang unang hakbang sa pag-aaral ng computer science. Sa susunod na oras, magsisimula ka sa computer science sa pamamagitan ng programming sa Sprite Lab."
       3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Isang tool Ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Makikita mo na ang iyong screen ay nahahati sa tatlong pangunahing bahagi. Sa kaliwa ay ang play space. Dito lalabas ang mga sprite mo."
       4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Ang mga sprite ay mga bagay sa screen na maaari kang makipag-ugnayan, tulad ng isang karakter o item sa isang kuwento o laro."
       5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
         text: "Ang gitnang bahaging ito ay ang toolbox. Ang mga bagong block ng code ay magiging available sa espasyong ito habang isinasagawa mo ang aralin."
       6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Ang espasyo sa kanan ay ang workspace. Maaari mong i-drag ang mga block palabas ng toolbox, at papunta sa workspace para buuin ang programa mo."
       7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
         text: "Ang mga instruksiyon sa bawat antas ay makikita dito sa tuktok ng screen. Kung gusto mo ng pahiwatig, mag-click sa bumbilya."
       8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Upang magsimula, gumawa tayo ng isang sprite! Hinahayaan ka ng block na ito na bigyan ang iyong sprite ng costume at lokasyon. Ang kasuotan ay ang salitang ginagamit natin upang ilarawan ang hitsura ng isang sprite. Upang baguhin ang lokasyon ng sprite, maaari mong i-click ang icon ng pin sa block ng lokasyon, at pagkatapos ay i-click kung saan mo ito gustong pumunta."
       9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Ngayon hayaan na nating ipakilala ang sprite! Para makapagsabi ng isang bagay ang sprite, gamitin itong \"Sabihin\" na block, at idagdag ito sa iyong program. Siguraduhin na ang kasuotan na napili sa iyong \"Sabihin\" na block ay tumutugma sa kasuotan sa sprite mo."
       10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Kapag pinindot mo ang \"Run\", sasabihin ng sprite ang anumang text na sasabihin mo dito. Ngayon ay oras na para magsimula sa Sprite Lab, at tingnan kung saan ka dadalhin ng iyong imahinasyon!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Ngayong natutunan mo na kung paano gamitin ang Sprite Lab, gugustuhin mong tumugon ang programa mo kapag may naglaro nito. Para magawa iyon, gagamit ka ng mga event. Ang isang event ay nagsasabi sa iyong programa na makinig sa isang bagay na mangyayari, at pagkatapos ay tutugon kaagad."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Ang ilang mga halimbawa ng mga event ay nakikinig sa isang pag-click ng mouse, isang arrow button, o isang pag-tap sa screen. Ang mga block tulad ng \"kapag na-click\" ay tinatawag na mga block ng event. Gumagana ang code na konektado sa isang block ng event kapag natukoy ang naaangkop na pagkilos."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Halimbawa, kung isasama ko itong \"sabihin\" na block sa \"kapag na-click\" na event, may sasabihin ang aking sprite kapag nag-click o nag-tap dito ang user. Pansinin na ang mga block ng event ay hindi pumapasok sa iyong pangunahing programa. Sa halip, gumagawa sila ng sarili nilang maliliit na programa."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Kung marami kang sprite, maaari kang gumamit ng mga karagdagang event para magkwento ng interactive na kwento."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Malapit mo nang matutunan kung paano gumawa ng higit pa sa Sprite Lab, kabilang ang pagbabago ng laki o hitsura ng isang sprite, pagtatakda ng iba't ibang background, pagtugtog ng mga tunog, at higit pa. Ano ang gusto mong gawin ng iyong mga sprite kapag may nakipag-ugnayan sa kanila? Ikaw ang bahala!"
     hello_world_congrats:
       1:
         image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'

@@ -258,6 +258,10 @@
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "模型和模擬",
+          "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
+        },
         "event/sports/unversioned": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
@@ -381,6 +385,10 @@
         "for_loop/coursef/2021": {
           "word": "計數/計次迴圈（For Loop）",
           "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "模型和模擬",
+          "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
         },
         "machine_learning/coursef/2021": {
           "word": "機器學習",

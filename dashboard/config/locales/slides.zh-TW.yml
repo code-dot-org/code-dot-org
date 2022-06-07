@@ -2200,18 +2200,25 @@ zh-TW:
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: 我叫Caia，是一名詩人，也是一名電腦科學專業的學生。我從程式設計中學到了很多東西，這些東西讓我成為了一個更好的詩人，而我的詩歌也讓我在程式設計方面做得更好，因為你必須認真思考你選擇的詞語，還有當它們彙集在一起時你會創造什麼。
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: 在接下來的一個小時裡，你將通過創作一首動畫詩來學習電腦科學和詩歌。從本質上講，詩歌是用文字創造藝術。我創作詩歌是為了表達我自己；我試圖用自己獨特的風格和韻律去激發受眾的想像力和情感。
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: 就像藝術一樣，詩歌可以有很多不同的解釋。同一首詩對不同的人可能有不同的含義，每首詩都有自己的意境。意境是你從一首詩中得到的感覺。有時人們會將某些顏色和意象與不同的意境聯繫起來。
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: 例如，黃色使我感到愉悅。當我想到恐懼之類的情緒時，我有時會在腦海中浮現一個漆黑的暴風雨之夜。在這個活動中，你將有機會根據你的感受來闡述和動畫化一首詩的意境。
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: 讓我們看看如何使用代碼來實現這一點。你將看到螢幕被分為三個主要部分。左邊是遊戲空間。你的動畫詩將在這裡出現。每首詩都有一個標題和一個作者。
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: 這個中間區域是工具箱。繼續進行課堂時，新的程式碼積木便會在這個位置提供。
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: 右邊的空間是工作區。你可將積木從工具箱拖曳至工作區，以建立你的程式。
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
       9:
@@ -2220,3 +2227,92 @@ zh-TW:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: 這個中間區域是工具箱。繼續進行課堂時，新的程式碼積木便會在這個位置提供。
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg

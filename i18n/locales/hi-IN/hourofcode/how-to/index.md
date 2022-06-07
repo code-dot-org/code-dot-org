@@ -1,5 +1,5 @@
 ---
-title: ऑवर ऑफ़ कोड हाउ-टू गाइड
+title: ऑवर ऑफ़ कोड कैसे करें मार्गदर्शिका
 ---
 
 {{ signup_button }}
@@ -8,32 +8,32 @@ title: ऑवर ऑफ़ कोड हाउ-टू गाइड
 
 ### इस अभियान से जुड़ें और छात्रों को इन दिए गए चरणों द्वारा कंप्यूटर विज्ञान के साथ परिचय कराएं।
 
-कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है साथ में, टेक्नोलॉजी दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है. आज, छात्रों को टेक्नोलॉजी के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए. जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी.
+कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है। साथ में, तकनीक दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है। आज, छात्रों को तकनीक के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए। जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी।
 
 ऑवर ऑफ़ कोड आज़माना छात्रों को कंप्यूटर साइंस से परिचित कराने का एक सरल और मज़ेदार तरीका है, शायद पहली बार के लिए, और यह कक्षा के अन्दर और स्कूल के बाद में, दोनों सेटिंग में पूरी तरह से फिट बैठता है। Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 - [ऑवर ऑफ़ कोड हाउ-टू विडियो देखें](#how-to-video)
-- [एक्टिविटी और ट्यूटोरियल देखें](#explore-activities)
-- [अपने दिन को प्लान करें](#create-your-plan)
+- [ गतिविधियाँ और ट्यूटोरियल देखें। ](#explore-activities)
+- [अपने दिन के प्लान का निर्माण करें](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
 - [अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें](#how-to-start)
 - [कोडिंग प्राप्त करें](#code)
 - [अपने छात्र की सफलता की ख़ुशी मनाएं](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
 
-### एक घंटा कोड का को दूर से भी होस्ट किया जा सकता है! आरंभ करने के लिए, हमारी [वर्चुअल ऑवर ऑफ़ कोड इवेंट को होस्ट करने के लिए टिप्स ](https://hourofcode.com/us/how-to/virtual) देखें। 
+### ऑवर ऑफ़ कोड को दूर से भी होस्ट किया जा सकता है! आरंभ करने के लिए, हमारी [वर्चुअल ऑवर ऑफ़ कोड इवेंट को होस्ट करने के लिए नुस्ख़े](https://hourofcode.com/us/how-to/virtual) देखें। 
 
 * * *
 
 <a id="how-to-video"></a>
 
-## ऑवर ऑफ़ कोड हाउ-टू विडियो देखें <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ऑवर ऑफ़ कोड हाउ-टू विडियो देखें <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 1) गतिविधियाँ और ट्यूटोरियल देखें। 
+## 2) गतिविधियाँ और ट्यूटोरियल खोजें।
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## अपने दिन को प्लान करें
+## 3. अपने दिन के प्लान का निर्माण करें
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 1. ऑवर ऑफ़ कोड को प्रमोट करें
+## 4. ऑवर ऑफ़ कोड को प्रमोट करें
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -88,7 +88,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें
+## 5. अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -99,25 +99,25 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-कोई बात नहीं अगर आप कंप्मेंयूटर साइंस में बिलकुल नए है| ऑवर ऑफ़ कोड में आपके क्रियाकलाप का परिचय देने के लिए कुछ सुझाव:
+कोई बात नहीं अगर आप कंप्मेंयूटर साइंस में बिलकुल नए है। ऑवर ऑफ़ कोडगतिविधि में आपके क्रियाकलाप का परिचय देने के लिए कुछ सुझाव:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- युवतियों की कंप्यूटर विज्ञान में रुचि जगाने के लिए टिप्स [यहाँ]({{ urls/girls }}) देखें.
+- युवतियों की कंप्यूटर विज्ञान में रुचि जगाने के लिए टिप्स [यहाँ]({{ urls/girls }}) देखें।
 
 * * *
 
 <a id="code"></a>
 
-## कोडिंग प्राप्त करें
+## 6.कोडिंग प्राप्त करें!
 
 Direct students to the activity
 
-- एक व्हाइटबोर्ड पर ट्यूटोरियल लिंक लिखें। प्रतिभागियों की संख्या के तहत [आपके चयनित ट्यूटोरियल के लिए जानकारी]({{ urls/learn }}) पर सूचीबद्ध लिंक ढूंढें। 
+- एक व्हाइटबोर्ड पर ट्यूटोरियल लिंक लिखें। प्रतिभागियों की संख्या के तहत [आपके चयनित ट्यूटोरियल के लिए जानकारी]({{ urls/learn }}) पर सूचीबद्ध लिंक ढूंढें।
 
 When your students come across difficulties it's okay to respond:
 
-- "मुझे मालूम नहीं. चलो ये साथ मिल कर सुलझाने की कोशिश करते है|"
+- "मुझे मालूम नहीं। चलो ये साथ मिल कर सुलझाने की कोशिश करते है|"
 - "तकनीक हमेशा जिस तरह से हम चाहते है वैसा काम नहीं करता है."
 - "संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"
 
@@ -130,7 +130,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. अपने छात्रों की सफलता का जश्न मनाएं 
+## 7. अपने छात्रों की सफलता का जश्न मनाएं
 
 [col-33]
 
@@ -150,10 +150,10 @@ What if a student finishes early?
 ## शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें.
+- [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें।
 
 ### अवर ओफ कोड के बाद क्या?
 
-कंप्यूटर विज्ञान को आवर ऑफ कोड के साथ समाप्त नहीं करना है! हमारा पाठ्यक्रम वेब-आधारित है और हमेशा के लिए उपयोग करने के लिए स्वतंत्र है। अपने स्कूल और छात्रों के लिए सीएस लाने के बारे में [जानें](/beyond)। 
+कंप्यूटर विज्ञान को ऑवर ऑफ़ कोड के साथ समाप्त नहीं करना है! हमारा पाठ्यक्रम वेब-आधारित है और हमेशा के लिए उपयोग करने के लिए नि:शुल्क है। अपने स्कूल और छात्रों के लिए सीएस लाने के बारे में [जानें](/beyond)। 
 
 {{ signup_button }}

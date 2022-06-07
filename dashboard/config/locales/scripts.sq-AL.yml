@@ -2,10 +2,6 @@
 sq:
   data:
     script:
-      category:
-        hoc_category_name: Ora e Kodimit
-        math_category_name: Matematikë
-        other_category_name: Të tjera/ë
       name:
         course1:
           title: Kursi 1

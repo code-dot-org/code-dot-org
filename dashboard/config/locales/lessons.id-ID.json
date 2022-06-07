@@ -108,6 +108,12 @@
           "purpose": "Prinsip dasar kompresi adalah mengembangkan sebuah metode atau protokol untuk menggunakan bit lebih sedikit untuk mewakili informasi asli. Cara kita mewakili data yang dikompresi dalam pelajaran ini, dengan “kamus” pola-pola yang diulang, mirip dengan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), tetapi harus diingat bahwa LZW sedikit berbeda dengan materi yang digeluti murid alam pelajaran ini. Murid menemukan caranya sendiri di sini. LZW digunakan bukan hanya untuk teks (zip files), tapi juga dengan format file gambar GIF.",
           "student_overview": "Suatu saat, kita akan mencapai batasan fisik dalam kecepatan pengiriman bit, dan jika kita ingin mengirim informasi besar dengan lebih cepat, kita harus mencari cara untuk menampilkan informasi yang sama dengan jumlah bit yang lebih kecil - kita harus memadatkan data tersebut."
         },
+        "outbreak/Outbreak": {
+          "overview": "Pelajaran ini memadukan **pengembangan keterampilan** seputar acara dengan **proyek mini** di mana siswa membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
+          "purpose": "Pada pelajaran sebelumnya, siswa mengumpulkan dan menafsirkan data dari simulasi sederhana. Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat kode model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
+          "student_overview": "Sebuah virus telah menyerang Monster Town! Belajarlah membuat simulator virus dan bantu para monster agar kembali sehat."
+        },
         "sports/Sports": {
           "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
@@ -2664,6 +2670,8 @@
         "jigsaw/Jigsaw": {
           "name": "Teka-teki",
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
+          "preparation": "-   Lihat situs web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) untuk konten keamanan online lainnya.",
+          "purpose": "Tujuan utama pelajaran ini adalah memupuk pengalaman siswa dengan komputer. Dengan membahas fungsi-fungsi komputer paling dasar, seperti mengklik, men-drag, dan men-drop, kita membuat tempat bermain yang lebih setara di kelas untuk puzzle-puzzle ke depan. Pelajaran ini juga memberi kesempatan yang bagus untuk memperkenalkan terminologi dasar perangkat keras komputer, seperti \"mouse\", \"trackpad\", atau \"layar sentuh\", sesuai perangkat Anda.",
           "student_overview": "Klik dan drag untuk menyelesaikan puzzle."
         },
         "coursef-2021/lesson-6": {
@@ -2685,6 +2693,7 @@
         "coursef-2021/Virtual Pet": {
           "name": "Mini-Project: Piaraan Virtual",
           "overview": "Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool \"Costumes\" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini memungkinkan murid menerapkan konsep-konsep pemrograman dari pelajaran sebelumnya ke dalam konteks kreatif yang lain.",
           "student_overview": "Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool \"Costumes\" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!"
         },
@@ -2711,23 +2720,27 @@
         "coursef-2021/Loops with the Artist": {
           "name": "Loop dengan Artis",
           "overview": "Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Murid akan berlatih menggunakan loop, sebuah konsep yang akan terus dipelajari lagi di sepanjang pelajaran-pelajaran yang akan datang.",
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Variabel pada intinya adalah tempat penampung nilai yang tidak diketahui pada saat Anda menjalankan program atau nilai yang dapat berubah selama eksekusi program. Variabel ini sangat penting untuk membuat kode dinamis karena memungkinkan program untuk berubah dan berkembang berdasarkan jumlah kemungkinan modifikasi. Tahap ini memantapkan penggunaan variabel menggunakan kemampuan pengaturan yang paling sederhana berikut penggunaannya.",
           "student_overview": "Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "name": "Nested Loop dalam Labirin",
           "overview": "Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini memperkenalkan (atau meninjau kembali) cara kerja puzzle Lebah dan memperkenalkan _nested loop_ kepada murid. Pelajaran selanjutnya akan kembali mengupas variable.",
           "student_overview": "Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain."
         },
         "coursef-2021/Variables that Change in Bee": {
           "name": "Mengubah Variable dengan Lebah",
           "overview": "Pelajaran ini akan membantu menjelaskan cara variable dapat membuat program lebih kuat dengan memudahkan nilai berubah pada saat code dijalankan. ",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini akan menjelaskan kegunaan code dengan nilai yang berubah-ubah dan mempersiapkan murid agar bisa memahami cara kerja loop \"for\" dalam pelajaran-pelajaran yang akan datang.",
           "student_overview": "Lebah ini menyukai variable!"
         },
@@ -2741,12 +2754,14 @@
         "coursef-2021/For Loops in Bee": {
           "name": "For Loop dengan Lebah",
           "overview": "Dengan menampilkan Lebah, pelajaran ini fokus pada loop `for` dan menggunakan variable yang terus bertambah untuk memecahkan puzzle yang lebih pelik. Murid akan memulai pelajaran dengan meninjau kembali loop dari pelajaran sebelumnya, lalu mereka mengikuti pengenalan tentang loop 'for' agar mereka bisa memecahkan masalah kompleks secara lebih efektif.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Konsep hari ini, for loop, adalah topik yang sangat penting dalam ilmu komputer. Konsep ini tidak hanya banyak digunakan, proses mempelajari for loop juga meningkatkan pembelajaran konsep-konsep penting lainnya (seperti variable dan parameter.) Murid akan banyak sekali berlatih mengkaji masalah secara kritis dengan menentukan nilai permulaan, nilai akhir, dan nilai langkah untuk setiap for loop. Konsep ini menggunakan banyak ilmu matematika juga, jadi jangan ragu-ragu memasangkan konsep ini dengan pelajaran matematika untuk mendapatkan pengalaman belajar-mengajar yang lebih dalam lagi.",
           "student_overview": "Ngung, ngung. Dalam puzzle ini, Anda akan menggiring lebah menuju nektar dan madu menggunakan loop `for`!"
         },
         "coursef-2021/For Loops in Artist": {
           "name": "For Loop dengan Artis",
           "overview": "Dalam pelajaran ini, murid terus berlatih loop 'for', tetapi kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Kreativitas dan pikiran kritis menyatu secara apik dalam pelajaran ini. Murid akan terus berlatih for loop dan variable sambil membuat gambar-gambar yang menakjubkan. Pelajaran ini memantik pikiran kreatif sambil mengajarkan konsep-konsep utama dalam ilmu komputer.",
           "student_overview": "Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum."
         },
@@ -2756,6 +2771,12 @@
           "preparation": "-   Tentukan apakah murid akan melakukan simulasi di komputer mereka sendiri atau Anda sendiri yang akan melakukannya bersama seluruh murid di kelas-   Jika perlu, persiapkan diri untuk memproyeksikan kedua simulasi dalam pelajaran ini.",
           "purpose": "Ilmu pengetahuan di berbagai disiplin menggunakan Ilmu Komputer untuk menjalankan model dan simulasi agar dapat melakukan eksperimen, mengumpulkan data, dan menganalisis data tersebut guna menggali insight. Meskipun simulasi yang diperkenalkan dalam pelajaran ini sangat sederhana, simulasi ini dapat digunakan sebagai batu lompatan bagi murid untuk mempertimbangkan bagaimana model-model komputasi yang lebih canggih dapat digunakan untuk menguji hipotesis.",
           "student_overview": "Lakukan simulasi di komputer dan lakukan eksperimen dengan mengubah variable."
+        },
+        "coursef-2021/lesson-5": {
+          "overview": "Pelajaran ini memadukan **pengembangan keterampilan** seputar acara dengan **proyek mini** di mana siswa membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
+          "purpose": "Pada pelajaran sebelumnya, siswa mengumpulkan dan menafsirkan data dari simulasi sederhana. Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat kode model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
+          "student_overview": "Sebuah virus telah menyerang Monster Town! Belajarlah membuat simulator virus dan bantu para monster agar kembali sehat."
         },
         "coursef-2021/AI for Oceans": {
           "name": "AI for Oceans",
@@ -3006,6 +3027,7 @@
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Memanen Hasil Panen dengan Loop",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Dalam pelajaran ini, murid akan menggunakan loop untuk mengulang tindakan seperti memanen labu. Pola-pola baru akan muncul dan murid akan menggunakan kreativitas dan pikiran kritis untuk menentukan code yang perlu diulang dan berapa kali.",
           "student_overview": "Mari gunakan loop untuk membantu pemanen memanen sayuran!"
         },
@@ -3025,11 +3047,13 @@
         "coursec-2021/Build a Flappy Game": {
           "name": "Buat Permainan Kepakan",
           "overview": "Dalam tahapan khusus ini, murid harus membuat permainan Flappy Bird sendiri dengan menggunakan pengatur event untuk mendeteksi klik mouse dan benturan objek. Pada akhir level, murid akan dapat menyesuaikan permainan mereka dengan mengubah tampilan visual atau aturan.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Event itu sangat lazim dalam program komputer. Dalam pelajaran ini, murid akan meningkatkan pemahamannya tentang event dengan membuat game _Flappy Bird_. Murid akan belajar membuat karakter mereka bergerak melintasi layar, mengeluarkan suara, dan bereaksi terhadap hambatan berdasarkan event yang dimulai-pengguna.",
           "student_overview": "Buat permainan Flappy Bird Anda sesuka hati, lalu bagikan ke teman-teman Anda!"
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Di sini, murid akan mengembangkan pengertian mereka tentang events lebih lanjut dengan menggunakan Play Lab. Murid akan menggunakan events untuk membuat karakter bergerak di layar, membuat suara, dan mengganti latar belakang berdasarkan masukan pengguna. Pada akhir urutan puzzle, murid akan diberi kesempatan untuk membagikan proyek mereka.  ",
           "student_overview": "Saatnya menjadi kreatif dan membuat permainan di Play Lab!"
         },
@@ -3071,6 +3095,7 @@
         "coursed-2021/Introduction to Online Puzzles": {
           "name": "Pengantar teka-Teki secara Online",
           "overview": "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Kami sadar bahwa setiap murid di kelas memiliki spektrum pemahaman untuk tiap mata pelajaran. Beberapa murid di kelas Anda mungkin jago komputer, sedangkan yang lain tidak memiliki pengalaman sama sekali. Dalam rangka untuk menciptakan medan bermain (dan belajar) yang setara, kami telah menciptakan “Ramp Up Stage” untuk Kursus D. Ini dapat digunakan entah sebagai pengenalan ataukah tinjauan kembali tentang cara menggunakan Code.org dan konsep ilmu komputer dasar. Tahap ini mencakup semua prasyarat yang diperlukan untuk memulai Kursus D.",
           "student_overview": "Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini."
         },
@@ -3083,6 +3108,7 @@
         "coursed-2021/Debugging in Collector": {
           "name": "Debugging dengan Laurel",
           "overview": "Dalam aktivitas online ini, murid akan berlatih debugging dalam lingkungan \"kolektor\". Murid harus berlatih membaca dan mengedit code untuk memperbaiki puzzle dengan algorithm, loop, dan nested loop sederhana.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Tujuan pelajaran ini adalah untuk mengajari murid bahwa kegagalan itu normal ketika mempelajari kecakapan baru. Murid akan menerima program yang sudah ditulis sebelumnya yang TIDAK bekerja. Mereka diminta memperbaiki program-program ini. Proses ini, disebut debugging, mengajarkan kecakapan memecahkan masalah pokok dan berpikir kritis kepada murid. Kecakapan ini tertanam ke diri para murid sewaktu mereka tekun menggarap proyek-proyek pemrograman yang makin sulit.",
           "student_overview": "Pernahkah Anda menemui masalah saat melakukan coding? Dalam pelajaran ini, Anda akan belajar tentang rahasia debugging. Debugging adalah proses mencari dan memperbaiki masalah dalam code."
         },
@@ -3117,12 +3143,14 @@
         "coursed-2021/Loops in Artist": {
           "name": "Menggambar Bentuk dengan Loop",
           "overview": "Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini juga berfungsi ganda sebagai latihan debugging untuk praktik pemecahan masalah ekstra.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Serial ini menyoroti kekuatan loop dengan larik puzzle yang dimaksudkan untuk memancing murid agar memikirkan alasan keunggulan loop `repeat` di atas tulisan yang panjang.",
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar keren dengan Artis!"
         },
         "coursed-2021/Nested Loops in Bee": {
           "name": "Nested Loop dalam Labirin",
           "overview": "Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Dalam pengantar tentang nested loop ini, murid akan keluar dari zona nyaman untuk membuat solusi yang lebih efisien bagi puzzle.  Dalam puzzle-puzzle sebelumnya, loop memaksa murid mengenali pengulangan. Di sini, murid akan belajar mengenali pola _di dalam_ pola berulang untuk mengembangkan nested loop. Tahap ini dimulai dengan mendorong murid untuk mencoba memecahkan puzzle yang code-nya sangat menggangu dan terlalu rumit jika dituliskan secara detail. Setelah melihat video yang memperkenalkan nested loop, murid menerima sebuah contoh dan diminta memprediksi apa yang akan terjadi ketika sebuah loop dimasukkan ke dalam loop lain. Runtun materi ini akan memberikan banyak sekali latihan bagi murid untuk memantapkan dan membangun pemahaman mereka tentang looping dalam pemrograman.",
           "student_overview": "Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop."
         },
@@ -3143,17 +3171,20 @@
         "coursed-2021/Conditionals in Bee": {
           "name": "If/Else dengan Lebah",
           "overview": "Sampai titik ini, murid sudah menulis code yang mengeksekusi dengan cara yang sama persis setiap kali dijalankan - andal, tetapi tidak terlalu fleksibel. Dalam pelajaran ini, murid Anda akan mulai mengcode dengan kondisional, yang memungkinkan mereka menulis code yang berfungsi berbeda bergantung pada kondisi khusus yang dijumpai oleh program.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Setelah menerima materi pengantar tentang conditional dalam \"Conditional dengan Kartu,\" kini murid akan berlatih menggunakannya dalam program mereka. Blok \"if / else\" akan melahirkan program yang lebih fleksibel. Lebah hanya akan mengumpulkan nektar _jika_ ada bunga atau membuat madu _jika_ ada sarang lebah. ",
           "student_overview": "Setelah Anda memahami conditional, kini saatnya memprogram Lebah untuk menggunakan conditional tersebut ketika mengumpulkan madu dan nektar. "
         },
         "coursed-2021/While Loops in Farmer": {
           "name": "While Loop dalam Petani",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Sewaktu murid Anda terus mendalami pengetahuan tentang loop, mereka akan menjumpai masalah berupa perintah yang perlu diulang, tetapi tidak diketahui jumlah perulangannya. Di sinilah fungsi while loop itu. Dalam pelajaran hari ini, mereka akan mengembangkan pemahaman pemula tentang loop berdasarkan syarat dan juga memperluas pengetahuan mereka tentang loop secara umum.",
           "student_overview": "Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!"
         },
         "coursed-2021/Until Loops in Maze": {
           "name": "Until Loop dalam Labirin",
           "overview": "Dalam pelajaran ini, murid akan belajar tentang loop `until`. Murid akan membuat program yang memerintahkan karakter utama mengulang-ulang kegiatan `until` mereka mencapai titik berhenti yang dikehendaki.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Rangkaian puzzle ini berfungsi untuk memantapkan dan membangun pengetahuan tentang loop lewat penambahan kondisional `until`. Dengan memasangkan dua konsep ini, murid akan mampu menguak potensi untuk menciptakan program yang inovatif dan kompleks.",
           "student_overview": "Anda dapat melakukan hal-hal menakjubkan ketika menggunakan `until` loops!"
         },
@@ -3423,18 +3454,21 @@
         },
         "coursee-2021/Simon Says": {
           "overview": "Dalam pelajaran ini, murid akan memainkan permainan yang dimaksudkan untuk memancing mereka berpikir tentang cara yang mengharuskan pemberian perintah untuk membuahkan hasil yang benar. Cara ini akan membantu mereka (murid) dengan mudah membawa pelajaran ini ke Sprite Lab dalam pelajaran yang akan datang. ",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini didesain untuk mempersiapkan mental murid agar siap memikirkan salah satu konsep utama pemrograman di Sprite Lab, yaitu perilaku. ",
           "student_overview": "Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "name": "Iklan Berenang dengan Sprite Lab",
           "overview": "Dalam pelajaran ini, murid akan belajar tentang dua konsep inti dari Sprite Lab: sprite dan perilaku. Sprite adalah karakter atau objek di layar yang dapat digerakkan, diubah, dan dimanipulasi oleh murid. Perilaku adalah kegiatan yang akan dilakukan terus-menerus oleh sprite sampai berhenti.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini didesain untuk memperkenalkan kosakata inti Sprite Lab kepada murid dan memudahkan mereka menerapkan konsep-konsep yang sudah dipelajari di lingkungan lain pada alat ini. Dengan membuat tangki ikan, murid mulai membangun pemahaman tentang model pemrograman alat ini dan mengeksplorasi cara-cara menggunakannya untuk mengekspresikan diri.",
           "student_overview": "Pelajari cara membuat dan mengedit sprite."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "name": "Event dengan Sprite Lab",
           "overview": "Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat \"pesta dansa alien\".  ",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini memberikan pengantar yang bagus tentang event dalam pemrograman dan bahkan memberi kesempatan kepada murid untuk mengasah dan unjuk kreativitas! Pada akhir pelajaran, murid akan mendapat kesempatan berbagi proyek karya mereka.",
           "student_overview": "Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas."
         },
@@ -3467,6 +3501,7 @@
         "coursee-2021/Programming and Loops with the Artist": {
           "name": "Loop dengan Artis",
           "overview": "Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Murid akan berlatih menggunakan loop, sebuah konsep yang akan terus dipelajari lagi di sepanjang pelajaran-pelajaran yang akan datang.",
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!"
         },
@@ -3492,12 +3527,14 @@
         "coursee-2021/Functions in Minecraft": {
           "name": "Function dalam Minecraft",
           "overview": "Murid mulai memahami betapa bergunanya function dalam petualangan Minecraft yang seru dan interaktif ini!",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Murid akan menemukan keluwesan pemrograman dengan mempraktikkan function di berbagai lingkungan. Di sini, murid akan mengenali pola-pola yang bisa digunakan lagi dan dapat meleburkan blok-blok yang diberi nama ke function yang sudah ditetapkan terlebih dahulu.",
           "student_overview": "Bisakah Anda menebak cara menggunakan function untuk code yang paling efisien?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Function dengan Artis",
           "overview": "Murid akan diperkenalkan dengan penggunaan function dengan Artis. Gambar-gambar megah akan dibuat dan dimodifikasi. Untuk pola yang lebih kompleks, murid akan belajar tentang pembuatan nested function dengan memanggil satu function dari dalam function yang lain.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Salah satu komponen terpenting dari pelajaran ini adalah penyediaan ruang bagi murid untuk membuat sesuatu yang mereka banggakan. Puzzle-puzzle ini menampilkan gambar yang semakin  kompleks, tetapi setiap puzzle baru merupakan perkembangan dari puzzle sebelumnya. Pada akhir pelajaran ini, murid akan merasa percaya diri dan bangga dengan kerja keras mereka.",
           "student_overview": "Buat gambar yang kompleks dengan lebih mudah menggunakan function!"
         },
@@ -3511,12 +3548,14 @@
         "coursee-2021/Conditionals": {
           "name": "Conditional dengan Petani",
           "overview": "Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini memperkenalkan while loop dan pernyataan \"if/else\" kepada murid.",
           "student_overview": "Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini."
         },
         "coursee-2021/Functions in Harvester": {
           "name": "Function dengan Pemanen",
           "overview": "Murid telah berlatih membuat desain impresif dalam Artis dan menavigasi labirin dalam Lebah, tetapi hari ini mereka akan menggunakan function untuk memetik hasil panen dalam Pemanen. Pelajaran ini akan mendorong murid menggunakan function dengan cara-cara baru dengan menggabungkan function tersebut dengan loop `while` dan pernyataan `if / else`.",
+          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
           "purpose": "Pelajaran ini hendaknya bisa mendorong murid lebih jauh untuk menggunakan conditional dengan function. Puzzle-puzzle ini dimaksudkan untuk meningkatkan kemampuan memecahkan masalah dan berpikir kritis.",
           "student_overview": "Function akan banyak menghemat pekerjaan saat Anda membantu petani memanen hasil panenannya!"
         },

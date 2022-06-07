@@ -43,8 +43,8 @@ ms:
   social_hoc2020_global_movement: Jam Kod ialah pergerakan global yang mencapai puluhan
     juta pelajar. Tutorial selama sejam tersedia dalam 45+ bahasa untuk semua peringkat
     umur.
-  social_hoc2020_coming_dates: Acara Jam Kod akan tiba pada 7-13 Disember 2020. Sains
-    komputer ialah asas untuk setiap pelajar mempelajarinya.
+  social_hoc2020_coming_dates: Acara Hour of Code akan tiba pada 7-13 Disember 2020.
+    Sains komputer ialah asas untuk setiap pelajar mempelajarinya.
   hoc2020_ai_subheader: Acara Jam Kod 2020 akan tiba!
   hoc2020_ai_header: Terokai Kecerdasan Buatan
   hoc2020_ai_description: AI dan Pembelajaran Mesin memberikan kesan kepada seluruh
@@ -284,7 +284,7 @@ ms:
   front_volunteers: Sukarelawan teknikal diperlukan
   front_start_learning: Memulakan pembelajaran
   header_menu_resources: Sumber
-  header_menu_faq: Soalan lazim
+  header_menu_faq: Soalan Lazim
   header_menu_how_to: Panduan Cara
   header_menu_promote: Menggalakkan
   header_menu_activities: Aktiviti
@@ -665,7 +665,7 @@ ms:
     berkembang kepada semua jenis usaha komuniti. Lihat [tutorials and activities](%{tutorials}).
     Kempen akar umbi ini disokong oleh lebih daripada [400 partners](%{partners})
     dan 200,000 pendidik di seluruh dunia.
-  hoc_faq_last_year: Cublah tutorial itu
+  hoc_faq_last_year: Cuba tutorial itu
   hoc_faq_when_is_hoc_q: Bilakah acara Hour of Code diadakan?
   hoc_faq_when_is_hoc_a: Acara Hour of Code diadakan pada setiap tahun semasa <a href='%{csedweek_url}'>
     Minggu Pendidikan Sains Komputer</a>. Minggu Pendidikan Sains Kumputer %{campaign_date_year}
@@ -739,7 +739,7 @@ ms:
     boleh didapati pada [%{partner_url}/learn](%{codeorg_url}/learn) di dalam huraian
     khusus tutorial. Jangan lupa bahawa kami juga menawarkan [unplugged activities](%{unplugged_url})
     jika sekolah anda tidak dapat memuatkan tutorial!
-  hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap peserta?
+  hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap penyertaan?
   hoc_faq_need_computers_a: Tidak. Kami menyediakan tutorial Hour of Code yang boleh
     dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer
     sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa
@@ -816,9 +816,9 @@ ms:
     awal). Jika anda melihat tutorial pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
     anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
     Code.org, Tynker, Lightbot, atau CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch tidak dijalankan pada tablet. Jika pelajar anda
-    ialah golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk pembaca
-    awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
+  hoc_faq_scratch_a_markdown: Scratch tidak dapat dijalankan pada tablet. Jika pelajar
+    anda ialah golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk
+    pembaca awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
     anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
     Code.org, Tynker, Lightbot, atau CodeSpark.
   hoc_faq_count_hoc_q: Bagaimanakah anda mengira Hour of Code?
@@ -879,7 +879,7 @@ ms:
     Selain pelajar, "pelajar" lain ialah pendidik yang memperoleh keyakinan selepas sejam bahawa mereka mereka boleh mengajar sains komputer walaupun mereka mungkin tidak mempunyai ijazah kolej sebagai saintis komputer. Puluhan ribu guru memutuskan untuk melanjutkan pelajaran dalam bidang sains komputer, sama ada menghadiri PD atau menawarkan kursus susulan dalam talian, atau kedua-duanya sekali. Dan ini juga diterima pakai kepada pentadbir sekolah, yang menyedari bahawa sains komputer ialah sesuatu yang dikehendaki oleh pelajar dan guru mereka berkebolehan melakukannya.
 
     Paling utama sekali, perkara yang boleh dipelajari oleh semua peserta dalam satu jam, kita pun boleh lakukannya.
-  hoc_faq_more_questions_q: Masih mempunyai soalan lagi?
+  hoc_faq_more_questions_q: Ada soalan lagi?
   hoc_faq_more_questions_a: Cuba dapatkan jawapan di dalam <a href='http://support.code.org'>forum
     sokongan</a> kami.
   hoc_faq_more_questions_a_markdown: Cuba dapatkan jawapan di dalam [support forum](http://support.code.org)
@@ -905,7 +905,7 @@ ms:
     kami bagi membolehkan anda mencetak sijil untuk seluruh kelas anda dengan lebih
     awal. Anda juga boleh mencetak [special certificates](%{codeorg_url}/certificates?course=mc)
     untuk pelajar yang melakukan tutorial Minecraft.
-  hoc_faq_logo_q: Adakah terdapat pengehadan kepada cara saya boleh menggunakan logo
+  hoc_faq_logo_q: Adakah terdapat pengehadan tentang cara saya boleh menggunakan logo
     atau nama Hour of Code?
   hoc_faq_logo_a: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu menghalang
     penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
@@ -956,7 +956,7 @@ ms:
   resources_stickers: Pelekat
   resources_how_to_guides: Panduan cara
   resources_promote: Menggalakkan
-  resources_nav_tutorials: Cublah tutorial itu
+  resources_nav_tutorials: Cuba tutorial itu
   resources_nav_promote: Sebarkan berita ini
   resources_nav_spread_word: Bagaimanakah untuk melibatkan diri
   resources_banner_promote_text: Menggalakkan

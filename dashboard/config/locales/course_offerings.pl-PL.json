@@ -75,7 +75,9 @@
         "hello-world-emoji": "Witaj świecie",
         "hello-world-food": "Witaj świecie",
         "hello-world-retro": "Witaj świecie",
+        "alltheselfpacedplthings": "Wszystkie PL rzeczy we własnym tempie",
         "k5-onlinepd": "k5-onlinepd",
+        "csd6-pilot": "Pilotaż informatyki z urzdzeniami fizycznymi (2022)",
         "csf-pilot": "csf-pilot",
         "peru": "peru",
         "vpl-csd": "vpl-csd",
@@ -211,7 +213,9 @@
         "csd5-preview-2021": "CSD Jednostka 5 - Dane i społeczeństwo ('21-'22 Beta podgląd)",
         "jess-test-script": "skrypt testu jess",
         "contagion-pilot": "Symulator zakażeń",
-        "csa-pl-standalone-code-2022": "csa-pl-standalone-code-2022"
+        "csa-pl-standalone-code-2022": "csa-pl-standalone-code-2022",
+        "csc-ecosystems-1": "csc-ecosystems-1",
+        "csc-ecosystems": "csc-ecosystems"
       }
     }
   }

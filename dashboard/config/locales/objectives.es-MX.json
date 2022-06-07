@@ -1404,22 +1404,22 @@
           "description": "Reflexionar sobre el desarrollo de un proyecto en curso"
         },
         "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
-          "description": "Identifica las innovaciones informáticas en un campo determinado"
+          "description": "Identificar las innovaciones en computación dentro de un ámbito específico"
         },
         "494a4afe-5479-4e4f-b656-99ddc4781740": {
-          "description": "Para un dispositivo determinado, articula las entradas y salidas probables"
+          "description": "Expresar las entradas y salidas posibles de un artefacto determinado"
         },
         "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
-          "description": "Plantea mejoras para que un dispositivo resuelva mejor un problema concreto"
+          "description": "Sugerir mejoras para ayudar al artefacto a solucionar mejor un problema específico"
         },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
-          "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+          "description": "Establecer las propiedades de los elementos de interfaz de usuario utilizando código"
         },
         "04724c46-add4-4ec1-af15-4c44eed0a91b": {
-          "description": "Responder a la entrada del usuario mediante un manejador de eventos"
+          "description": "Responder a la entrada de usuario utilizando un controlador de eventos"
         },
         "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
-          "description": "Escribir programas que cambien varios elementos en una sola pantalla en lugar de cambiar de pantalla"
+          "description": "Escribir programas que cambian los distintos elementos en una sola pantalla en lugar de cambiar pantallas"
         },
         "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
           "description": "Conectar y solucionar problemas de dispositivos externos"
