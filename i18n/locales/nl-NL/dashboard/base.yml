@@ -923,14 +923,14 @@ nl:
         lightbot: 'LightBot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anders:"
+        other: "Anders"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Anders:"
+        other: "Anders"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:

@@ -1327,6 +1327,7 @@ tr:
         music: Müzik
         art: Sanat
         other: 'Diğer:'
+        na: Uygulanamaz
       resources:
         bootstrap: Önyükleme
         codecademy: CodeCademy
@@ -1335,7 +1336,8 @@ tr:
         kodable: Kodlanabilir
         scratch: Scratch
         tynker: Tynker
-        other: 'Diğer:'
+        other: Diğer
+        na: Uygulanamaz
       robotics:
         grok: Grok
         kodable: Kodlanabilir
@@ -1345,7 +1347,8 @@ tr:
         sphero: Sfero
         raspberry: Raspberry Pi
         wonder: Wonder Atölyesi
-        other: 'Diğer:'
+        other: Diğer
+        na: Uygulanamaz
       workshop_course:
         csf_af: Bilgisayar Bilimi Temelleri (Dersler A-F)
         csf_express: Bilgisayar Bilimleri Temelleri (Hızlandırma Öncesi veya Hızlandırılmış)

@@ -22185,6 +22185,7 @@ pl:
               name: Projekty na koniec kursu
             Reviewing your reflections:
               name: Przeglądanie Twoich refleksji
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -22769,6 +22770,7 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+          name: vpl-csd-2022
         vpl-csp-2022:
           lessons:
             Module 1:
@@ -22856,6 +22858,9 @@ pl:
               name: Nauka Zasad Informatyki
             lesson-3:
               name: Nauczanie Zasad Informatyki
+            lesson-4:
+              name: Połącz się ze społecznością informatyki
+          name: self-paced-pl-csp4-2022
         csa9-2022:
           lessons:
             The AP CSA Exam:
