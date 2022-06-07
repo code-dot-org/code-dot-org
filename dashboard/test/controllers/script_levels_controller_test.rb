@@ -1730,7 +1730,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal expected, hidden
   end
 
-  def put_student_in_section(student, teacher, script)
+  def  put_participant_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
@@ -1741,7 +1741,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1771,7 +1771,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, @custom_script)
+    section = put_participant_in_section(student, teacher, @custom_script)
     assert @custom_script.hideable_lessons
 
     # start with no hidden scripts
@@ -1799,7 +1799,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, teacher, script)
+    section = put_participant_in_section(student, teacher, script)
     refute script.hideable_lessons
 
     post :toggle_hidden, params: {
@@ -1818,7 +1818,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
     lesson1 = @custom_script.lessons[0]
     assert @custom_script.hideable_lessons
 
@@ -1851,7 +1851,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     student = create :student
     sign_in teacher
 
-    section = put_student_in_section(student, other_teacher, @custom_script)
+    section = put_participant_in_section(student, other_teacher, @custom_script)
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
