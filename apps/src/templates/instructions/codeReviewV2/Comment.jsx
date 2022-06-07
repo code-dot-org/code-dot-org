@@ -79,7 +79,7 @@ function Comment({
   };
 
   const handleToggleResolved = () => {
-    const newIsResolvedStatus = !comment.isResolved;
+    const newIsResolvedStatus = !isCommentResolved;
     onResolveStateToggle(
       comment.id,
       newIsResolvedStatus,
