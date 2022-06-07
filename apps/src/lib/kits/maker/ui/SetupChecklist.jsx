@@ -50,6 +50,7 @@ export default class SetupChecklist extends Component {
 
   static propTypes = {
     webSerialPort: PropTypes.object,
+    setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
     stepDelay: PropTypes.number
   };
 
@@ -71,8 +72,12 @@ export default class SetupChecklist extends Component {
 
   detect() {
     const {webSerialPort} = this.props;
-    const wrappedSerialPort = new WebSerialPortWrapper(webSerialPort);
-    const setupChecker = new SetupChecker(wrappedSerialPort);
+    let {setupChecker} = this.props;
+    // If a webSerialPort has been provided, create a new SetupChecker with the port each detection cycle.
+    if (webSerialPort) {
+      const wrappedSerialPort = new WebSerialPortWrapper(webSerialPort);
+      setupChecker = new SetupChecker(wrappedSerialPort);
+    }
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
