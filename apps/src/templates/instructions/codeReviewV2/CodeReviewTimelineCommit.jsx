@@ -8,7 +8,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {commitShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
 const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
-  const {createdAt, comment, projectVersion, isVersionExpired} = commit;
+  const {createdAt, comment, projectVersion} = commit;
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   return (
@@ -16,7 +16,6 @@ const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
       type={codeReviewTimelineElementType.COMMIT}
       isLast={isLastElementInTimeline}
       projectVersionId={projectVersion}
-      isProjectVersionExpired={isVersionExpired}
     >
       <div style={styles.wrapper}>
         <div style={styles.header}>{javalabMsg.commit()}</div>

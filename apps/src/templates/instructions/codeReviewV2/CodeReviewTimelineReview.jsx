@@ -19,20 +19,10 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview,
   toggleResolveComment,
-  viewAsCodeReviewer,
   deleteCodeReviewComment,
   currentUserId
 }) => {
-  const {
-    id,
-    createdAt,
-    isOpen,
-    version,
-    isVersionExpired,
-    ownerId,
-    ownerName,
-    comments
-  } = review;
+  const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
@@ -43,12 +33,13 @@ const CodeReviewTimelineReview = ({
     );
   };
 
+  const viewingAsOwner = ownerId === currentUserId;
+
   return (
     <CodeReviewTimelineElement
       type={codeReviewTimelineElementType.CODE_REVIEW}
       isLast={isLastElementInTimeline}
       projectVersionId={version}
-      isProjectVersionExpired={isVersionExpired}
     >
       <div style={styles.wrapper}>
         <div style={styles.header}>
@@ -57,7 +48,7 @@ const CodeReviewTimelineReview = ({
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>
-              {ownerId === currentUserId
+              {viewingAsOwner
                 ? javalabMsg.codeReviewForYou()
                 : javalabMsg.codeReviewForStudent({student: ownerName})}
             </div>
@@ -65,7 +56,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && !viewAsCodeReviewer && (
+          {isOpen && viewingAsOwner && (
             <div>
               <Button
                 icon="close"
@@ -78,7 +69,7 @@ const CodeReviewTimelineReview = ({
             </div>
           )}
         </div>
-        {isOpen && !viewAsCodeReviewer && (
+        {isOpen && viewingAsOwner && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
             &nbsp;
@@ -89,15 +80,15 @@ const CodeReviewTimelineReview = ({
           comments.map(comment => {
             return (
               <Comment
+                viewingAsOwner={ownerId === currentUserId}
                 comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
                 onDelete={deleteCodeReviewComment}
-                viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
           })}
-        {isOpen && viewAsCodeReviewer && (
+        {isOpen && !viewingAsOwner && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)
@@ -112,7 +103,6 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   currentUserId: state.currentUser?.userId
 }))(CodeReviewTimelineReview);
 
@@ -122,7 +112,6 @@ CodeReviewTimelineReview.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
-  viewAsCodeReviewer: PropTypes.bool,
   deleteCodeReviewComment: PropTypes.func.isRequired,
   currentUserId: PropTypes.number
 };
