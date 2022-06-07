@@ -177,7 +177,8 @@ module AWS
               Id: app_name == proxy ? 'cdo' : app_name,
               CustomOriginConfig: {
                 OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
+                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1),
+                OriginReadTimeout: rack_env?(:levelbuilder) ? 60 : 30
               },
               DomainName: origin,
               OriginPath: '',

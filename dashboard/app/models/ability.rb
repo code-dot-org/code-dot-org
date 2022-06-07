@@ -212,13 +212,16 @@ class Ability
           end
 
           # Code review V2
+          project_level_id = level_to_view.project_template_level.try(:id) ||
+            level_to_view.id
+
           if user != user_to_assume &&
             !user_to_assume.student_of?(user) &&
             can?(:code_review, user_to_assume) &&
             CodeReview.open_reviews.find_by(
               user_id: user_to_assume.id,
               script_id: script_level.script_id,
-              level_id: level_to_view&.id # TODO replace with project level id
+              project_level_id: project_level_id
             )
             can_view_as_user_for_code_review = true
           end
