@@ -19,13 +19,13 @@ class CodeReviewsController < ApplicationController
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
-    code_reviews = CodeReview.where(project_id: project.id)
+    code_reviews = CodeReview.includes(:owner, comments: :commenter).where(project_id: project.id)
     render json: code_reviews.map(&:summarize_with_comments)
   end
 
   # POST /code_reviews
   def create
-    params.require([:channelId, :version, :scriptId, :levelId])
+    params.require([:channelId, :version, :scriptId, :levelId, :projectLevelId])
 
     project = Project.find_by_channel_id(params[:channelId])
     # TODO: Should we check that this is a valid version for this project?
@@ -36,7 +36,7 @@ class CodeReviewsController < ApplicationController
       project_id: project.id,
       script_id: params[:scriptId],
       level_id: params[:levelId],
-      project_level_id: params[:levelId],  # TODO: send projectLevelId from the client
+      project_level_id: params[:projectLevelId],
       project_version: params[:version],
       storage_id: project.storage_id
     )
@@ -66,15 +66,15 @@ class CodeReviewsController < ApplicationController
   end
 
   # GET /code_reviews/peers_with_open_reviews
-  # Returns the list of open code reviews for the given script and level
+  # Returns the list of open code reviews for the given script and project level
   # from peers in the user's code review groups.
   def peers_with_open_reviews
-    params.require([:scriptId, :levelId])
+    params.require([:scriptId, :projectLevelId])
 
     code_reviews = CodeReview.open_reviews.where(
       user_id: peer_user_ids(current_user),
-      level_id: params[:levelId],
-      script_id: params[:scriptId]
+      script_id: params[:scriptId],
+      project_level_id: params[:projectLevelId]
     ).includes(:owner)
 
     return render json: code_reviews.map(&:summarize_owner_info)
