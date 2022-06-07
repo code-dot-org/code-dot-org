@@ -140,7 +140,8 @@ const styles = {
   },
   title: {
     flexGrow: 1,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    marginRight: '10px'
   },
   codeReviewTitle: {
     fontFamily: '"Gotham 5r", sans-serif',
@@ -155,7 +156,7 @@ const styles = {
   date: {
     fontSize: '12px',
     marginBottom: '10px',
-    lineHeight: '12px'
+    lineHeight: '15px'
   },
   codeWorkspaceDisabledMsg: {
     textAlign: 'center',
