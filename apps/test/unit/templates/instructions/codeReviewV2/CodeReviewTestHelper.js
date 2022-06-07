@@ -1,14 +1,13 @@
 import {Factory} from 'rosie';
 
 Factory.define('CodeReviewComment')
+  .sequence('commenterId', n => n)
   .sequence('id', n => n)
-  .attr('name', 'Charlie Brown')
+  .attr('commenterName', 'Charlie Brown')
   .attr(
-    'commentText',
+    'comment',
     'This is brilliant and you are doing a great job and I love the simplicity here'
   )
-  .attr('timestampString', '2019-01-29T02:49:08.000Z')
-  .attr('onResolveStateToggle', () => {})
-  .attr('onDelete', () => {})
-  .attr('viewAsCodeReviewer', false)
-  .attr('viewAsTeacher', false);
+  .attr('isResolved', false)
+  .attr('createdAt', '2022-03-31T04:58:42.000Z')
+  .attr('isFromTeacher', false);

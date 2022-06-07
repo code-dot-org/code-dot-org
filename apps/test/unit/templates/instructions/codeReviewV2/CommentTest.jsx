@@ -11,7 +11,8 @@ const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
   onResolveStateToggle: () => {},
   onDelete: () => {},
-  viewAsCodeReviewer: false,
+  viewingAsOwner: false,
+  currentUserId: 111,
   viewAsTeacher: false
 };
 
@@ -52,13 +53,13 @@ describe('Code Review Comment', () => {
 
   it('body has a blue background when from teacher', () => {
     renderAndCheckBackgroundColor(color.lightest_cyan, {
-      viewAsTeacher: true
+      isFromTeacher: true
     });
   });
 
   it('displays check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
+    expect(wrapper.find('FontAwesome').props().icon).to.equal('check-circle');
   });
 
   it('displays show option for hidden resolved comment', () => {
@@ -78,15 +79,12 @@ describe('Code Review Comment', () => {
   });
 
   it('displays resolve option for code owner', () => {
-    const wrapper = renderWrapper({}, {viewAsCodeReviewer: false});
+    const wrapper = renderWrapper({}, {viewingAsOwner: true});
     expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
   });
 
   it('displays unresolve option for code owner', () => {
-    const wrapper = renderWrapper(
-      {isResolved: true},
-      {viewAsCodeReviewer: false}
-    );
+    const wrapper = renderWrapper({isResolved: true}, {viewingAsOwner: true});
     expect(wrapper.find('.fa-circle-o')).to.have.lengthOf(1);
   });
 
