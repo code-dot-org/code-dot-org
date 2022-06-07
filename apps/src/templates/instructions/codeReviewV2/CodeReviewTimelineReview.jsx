@@ -126,7 +126,7 @@ const styles = {
   icon: {
     marginRight: '5px',
     backgroundColor: 'lightgrey',
-    width: '30px',
+    minWidth: '30px',
     height: '30px',
     borderRadius: '100%',
     fontSize: '22px',
