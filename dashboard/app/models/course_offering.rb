@@ -208,4 +208,8 @@ class CourseOffering < ApplicationRecord
   def self.single_unit_course_offerings_containing_units(unit_ids)
     CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
+
+  def csd?
+    key == 'csd'
+  end
 end

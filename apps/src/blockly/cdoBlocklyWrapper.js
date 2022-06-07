@@ -249,6 +249,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     workspaceSvgResize: function(workspace) {
       return workspace.blockSpaceEditor.svgResize();
+    },
+    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+      return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     }
   };
   return blocklyWrapper;
