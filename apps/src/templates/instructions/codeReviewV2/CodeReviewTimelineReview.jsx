@@ -23,16 +23,7 @@ const CodeReviewTimelineReview = ({
   deleteCodeReviewComment,
   currentUserId
 }) => {
-  const {
-    id,
-    createdAt,
-    isOpen,
-    version,
-    isVersionExpired,
-    ownerId,
-    ownerName,
-    comments
-  } = review;
+  const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
@@ -48,7 +39,6 @@ const CodeReviewTimelineReview = ({
       type={codeReviewTimelineElementType.CODE_REVIEW}
       isLast={isLastElementInTimeline}
       projectVersionId={version}
-      isProjectVersionExpired={isVersionExpired}
     >
       <div style={styles.wrapper}>
         <div style={styles.header}>

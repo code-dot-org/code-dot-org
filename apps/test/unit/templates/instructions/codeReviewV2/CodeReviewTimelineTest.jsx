@@ -16,7 +16,6 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-04T04:58:42.000Z',
       comment: 'First commit',
       projectVersion: 'asdfjkl',
-      isVersionExpired: false,
       timelineElementType: timelineElementType.commit
     },
     {
@@ -24,7 +23,6 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-15T04:58:42.000Z',
       isOpen: false,
       version: 'asdfjkl',
-      isVersionExpired: false,
       timelineElementType: timelineElementType.review,
       comments: [
         {
@@ -48,7 +46,6 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-20T04:58:42.000Z',
       comment: 'Second commit (after review)',
       projectVersion: 'lkjfds',
-      isVersionExpired: false,
       timelineElementType: timelineElementType.commit
     }
   ],
