@@ -21,7 +21,7 @@ function Comment({
   onDelete,
   viewAsTeacher,
   currentUserId,
-  isViewingAsCodeReviewOwner
+  viewingAsOwner
 }) {
   const isMounted = useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
@@ -102,7 +102,7 @@ function Comment({
         iconClass: hideResolved ? 'eye' : 'eye-slash'
       });
     }
-    if (isViewingAsCodeReviewOwner) {
+    if (viewingAsOwner) {
       // Code owners can resolve/unresolve comment
       // TODO: Allow teachers to resolve/unresolve comments too
       menuItems.push({
@@ -229,7 +229,7 @@ Comment.propTypes = {
   comment: reviewCommentShape.isRequired,
   onResolveStateToggle: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-  isViewingAsCodeReviewOwner: PropTypes.bool.isRequired,
+  viewingAsOwner: PropTypes.bool.isRequired,
   // Populated by Redux
   viewAsTeacher: PropTypes.bool,
   currentUserId: PropTypes.number
