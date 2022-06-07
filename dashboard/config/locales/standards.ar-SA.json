@@ -223,6 +223,27 @@
         },
         "csta/1B-AP-17": {
           "description": "وصف الاختيارات التي تم اتخاذها أثناء تطوير البرنامج باستخدام تعليقات الكود والعروض التقديمية والعروض التوضيحية."
+        },
+        "csta/1B-IC-19": {
+          "description": ""
+        },
+        "csta/1B-AP-08": {
+          "description": ""
+        },
+        "csta/1B-AP-13": {
+          "description": ""
+        },
+        "csta/1B-DA-06": {
+          "description": ""
+        },
+        "csta/1B-DA-07": {
+          "description": ""
+        },
+        "csta/1B-NI-04": {
+          "description": ""
+        },
+        "csta/1B-AP-16": {
+          "description": ""
         }
       }
     }

@@ -1652,7 +1652,9 @@
         "Pixelation 4x4 Empty": "A szélesség és a magasság mostantól a pixeladatokban van kódolva. Kitalálod, hogyan lehet beállítani a méreteket?",
         "Pixelation Bee": "Ez a méhről készült nagyobb kép 12 bit per pixel színt kódol, de a hexában történő megtekintés megkönnyíti az egyes pixelek színének felismerését. Ha bináris módra váltasz - kapaszkodj meg - ez rengeteg bit. Itt egy másik észbontó dolog, ezt is kipróbálhatod: csúsztasd fel a pixelenkénti biteket 24 bit per pixelre. Mi történik? Meg tudod magyarázni ezt a viselkedést?",
         "Pixelation Flappy": "Íme egy nagyobb kép 9 bit per pixel arányban. A 9 bit per pixellel 512 különböző színt lehet kifejezni. Kattints a következő képhez, amely még bonyolultabb, de könnyebb megérteni.",
-        "allthethings-anigif-instructions": "Mozgass keletre, hogy elkapjam a malacot!"
+        "allthethings-anigif-instructions": "Mozgass keletre, hogy elkapjam a malacot!",
+        "Frequency Analysis": "Teszt",
+        "Vigenere": "Teszt"
       }
     }
   }

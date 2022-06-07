@@ -3436,3 +3436,19 @@ hu-HU:
         - {}
         - {}
         - {}
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U2 Image practice_pilot_2021:
+        display_name: Képek hozzáadása
+      CSD U3 drawing practice choice_2021:
+        display_name: Gyakorlás
+      CSD web draw loop practice choice_2021:
+        display_name: Gyakorlás
+      CSD web movement practice choice_2021:
+        display_name: Gyakorlás
+      CSD web text practice choice_2021:
+        display_name: Gyakorlás
+      ml-club app-choice parent:
+        display_name: Alkalmazás testreszabása
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Alkalmazás testreszabása

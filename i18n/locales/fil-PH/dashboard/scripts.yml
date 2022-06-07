@@ -2,15 +2,6 @@
 fil:
   data:
     script:
-      category:
-        csf_category_name: CS Fundamentals
-        csf_international_category_name: Internasyonal na CS Fundamentals
-        csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
-        cspexams_category_name: Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS
-        full_course_category_name: Buong mga Kurso
-        hoc_category_name: Hour of Code
-        math_category_name: Math
-        other_category_name: Iba
       name:
         course1:
           title: Kurso 1
@@ -544,6 +535,8 @@ fil:
               name: Pagpapadala ng mga Teksto na Naka-format
             Sending Numbers:
               name: Pagpapadala ng mga Numero
+            Text Compression:
+              name: Compression ng Text
         algebraPD:
           lessons:
             Course Overview:
@@ -582,6 +575,11 @@ fil:
               name: Iyong Laro - Pagtukoy ng Banggaan
             Your Game - Player Movement:
               name: Iyong Laro - Galaw ng Manlalaro
+        text-compression:
+          title: Compression ng Text
+          lessons:
+            Text Compression:
+              name: Compression ng Text
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1004,6 +1002,8 @@ fil:
               name: Studio
             Swapped Levels:
               name: Pinagpalit na mga Antas
+            Text Compression:
+              name: Compression ng Text
             TextMatch:
               name: TextMatch
             Web Lab:
@@ -1016,6 +1016,8 @@ fil:
               name: Standalone na video
             Curriculum Reference:
               name: Pagtukoy sa Kurikulum
+            Sprite Lab:
+              name: Sprite Lab
             Contained Levels:
               name: Nilalaman na mga Antas
             Java Lab:
@@ -1882,6 +1884,8 @@ fil:
               name: Paggawa ng mga Pagpapakita sa mga Datos
             Practice PT - Tell a Data Story:
               name: Pagsasanay sa PT - Pagkuwento ng isang Datos na Istorya
+            Text Compression:
+              name: Compression ng Text
             Unit 2 Chapter 1 Assessment:
               name: Yunit 2 Kabanata 1 Pagtatasa
             Unit 2 Chapter 2 Assessment:
@@ -2415,6 +2419,7 @@ fil:
             App Presentation:
               name: Pagpresenta ng App
         CSDU1-Draft:
+          description_short: Paglutas ng Problema
           lessons:
             Exploring Apps:
               name: Pagtuklas ng mga Apps
@@ -2474,6 +2479,8 @@ fil:
               name: External na mga Style Sheets
             Usability and Accessibility:
               name: Usability at Accessibility
+            Peer Review:
+              name: Pagsusuri ng Peer
             Describing Web Pages:
               name: Paglalarawan ng mga Pahina sa Web
         CSDU5-Draft:
@@ -3205,6 +3212,8 @@ fil:
               name: Mga Klase
             External Style Sheets:
               name: External na mga Style Sheets
+            Peer Review:
+              name: Pagsusuri ng Peer
             Box Model and Page Layout:
               name: Box Model at ang Page Layout
             Digital Footprint:
@@ -3345,6 +3354,7 @@ fil:
               name: Minecraft Hour of Code na Taga-disenyo
           student_description: Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft.
         flappy-impact-study:
+          title: Flappy Code na may Survey
           lessons:
             Pre Hour of Code Survey:
               name: Surbey Bago ang Hour of Code
@@ -3612,6 +3622,7 @@ fil:
             Post Hour of Code Survey:
               name: Surbey Pagkatapos ng Hour of Code
         hoc-impact-study:
+          title: Classic Maze na may Survey
           description_short: Subukan ang mga pangunahing kaalaman sa computer science gamit ang napakaraming nakaka-aliw na mga karakter!
           lessons:
             Pre Hour of Code Survey:
@@ -4514,6 +4525,8 @@ fil:
               name: Multi-Page na mga Website
             Classes:
               name: Mga Klase
+            Peer Review:
+              name: Pagsusuri ng Peer
             Digital Footprint:
               name: Digital na Bakas
             Publishing a Website:
@@ -6395,6 +6408,8 @@ fil:
               name: Proyekto - Pagdisenyo ng Laro
             CS Discoveries End of Semester Survey:
               name: Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
         csd2-2018:
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
           description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
@@ -6434,8 +6449,11 @@ fil:
               name: RGB na mga Kulay at mga Klase
             Project - Personal Portfolio Website:
               name: Proyekto - Personal na Portfolio na Website
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         coursea-2018:
+          title: Kursong A (2018)
           assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
@@ -6581,6 +6599,7 @@ fil:
               name: Graph Paper Programming
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2018:
+          title: Kursong B (2018)
           assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -6601,6 +6620,8 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             Move It, Move It:
               name: Galawin ito, Galawin ito
+            Copyright and Creativity:
+              name: Mahusay na Gumawa at Maglaro ng Patas
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursed-2018:
           title: Bagong Kursong D na Iskript
@@ -6646,6 +6667,7 @@ fil:
             Nested Loops in Maze:
               name: Naka-nest na mga Loops sa Maze
         coursec-2018:
+          title: Kursong C (2018)
           assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
@@ -6751,8 +6773,11 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         coursee-2018:
+          title: Kursong E (2018)
           assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_audience: 'Mga Edad: 8-12'
@@ -6810,8 +6835,11 @@ fil:
               name: Mga Conditional gamit ang mga Card
             Minecraft Hour of Code:
               name: Minecraft na Hour of Code
+            Copyright and Creativity:
+              name: Digital na Pagbabahagi
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2018:
+          title: Kursong F (2018)
           assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
@@ -6992,6 +7020,8 @@ fil:
               name: Pagpapahusay at pag-uulit
             Project - App Presentation:
               name: Proyekto - Pagpapakita ng App
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         csd5-2018:
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
@@ -7034,6 +7064,8 @@ fil:
               name: Pag-Automate ng mga Datos na mga Desisyon
             Project - Solve a Data Problem:
               name: Proyekto - Paglutas ang Problema sa mga Datos
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csp2-2018:
           lesson_groups:
@@ -7044,6 +7076,8 @@ fil:
           lessons:
             Bytes and File Sizes:
               name: Mga Byte at Laki ng mga File
+            Text Compression:
+              name: Compression ng Text
             Encoding B&W Images:
               name: Pag-eencode ng B&W na mga Larawan
             Encoding Color Images:
@@ -7476,6 +7510,8 @@ fil:
               name: Galawin ito, Galawin ito
             Your Digital Footprint:
               name: Ang Iyong Digital na Bakas
+            Copyright and Creativity:
+              name: Mahusay na Gumawa at Maglaro ng Patas
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
             'Persistence & Frustration: Stevie and the Big Project':
@@ -7509,6 +7545,10 @@ fil:
             Artist:
               name: Artista
         aquatic:
+          title: 'Minecraft: Paglalakbay sa Aquatic'
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Paglalakbay sa Aquatic'
           name: pantubig
         sconyers:
           lessons:
@@ -7532,7 +7572,13 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
+        dance-extras:
+          description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
+          student_description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
         coursef-2019:
+          title: Kursong F (2019)
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
@@ -7600,12 +7646,16 @@ fil:
               name: The Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
+            Digital Sharing:
+              name: Digital na Pagbabahagi
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         dance-low:
           lessons:
             Dance Party:
               name: Dance Party
         coursed-2019:
+          title: Kursong D (2019)
+          description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:
             csf_events:
@@ -7653,7 +7703,9 @@ fil:
               name: Bumuo ng Star Wars na Laro
             Dance Party:
               name: Dance Party
+          student_description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
         coursee-2019:
+          title: Kursong E (2019)
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_audience: 'Mga Edad: 8-12'
           lesson_groups:
@@ -7718,10 +7770,19 @@ fil:
               name: Naka-Nest na mga Loops sa Frozen
             Conditionals in Minecraft:
               name: Mga Kondisyonal sa Minecraft
+            Access Ability:
+              name: Pagdidisenyo sa Accessibility
+            Digital Sharing:
+              name: Digital na Pagbabahagi
+            Simon Says:
+              name: Sabi ni Simon
+            Designing for Accessibility:
+              name: Pagdidisenyo sa Accessibility
             Songwriting:
               name: Pagsusulat ng Awit
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         express-2019:
+          title: Pinabilis na Kurso (2019)
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           lesson_groups:
@@ -7847,7 +7908,12 @@ fil:
               name: blangko
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        dance-extras-gallery:
+          title: Magpatuloy sa Pagsasayaw
+          description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
+          student_description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
         coursec-2019:
+          title: Kursong C (2019)
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
@@ -7891,6 +7957,10 @@ fil:
               name: Masdan ang Hinaharap
             Binary Bracelets:
               name: Binary na mga Pulseras
+            Powerful Passwords:
+              name: Mga Makapangyarihang Password
+            Picturing Data:
+              name: Paglalarawan ng Data
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
@@ -7900,6 +7970,7 @@ fil:
         gamelab:
           title: Game Lab
         coursea-2019:
+          title: Kursong A (2019)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
@@ -7925,6 +7996,7 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2019:
+          title: Kursong B (2019)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
           lesson_groups:
@@ -8230,6 +8302,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
             required:
               display_name: Buod
           lessons:
@@ -8287,6 +8361,8 @@ fil:
           lessons:
             Bytes and File Sizes:
               name: Mga Byte at Laki ng mga File
+            Text Compression:
+              name: Compression ng Text
             Encoding B&W Images:
               name: Pag-eencode ng B&W na mga Larawan
             Encoding Color Images:
@@ -8540,6 +8616,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp2-pilot-staging:
           title: "(luma) Yunit 2: Ang Internet"
           lesson_groups:
@@ -8549,6 +8627,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -8557,12 +8637,16 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Mga listahan
             csp_loops:
               display_name: Mga loop
+            csp_project:
+              display_name: Proyekto
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -8571,6 +8655,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp7-pilot-staging:
           lessons:
             new stage:
@@ -8583,6 +8669,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -8591,6 +8679,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -8599,6 +8689,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -8623,6 +8715,8 @@ fil:
               display_name: Mga listahan
             csp_loops:
               display_name: Mga loop
+            csp_project:
+              display_name: Proyekto
             required:
               display_name: Buod
           lessons:
@@ -8717,6 +8811,8 @@ fil:
               name: Intelektwal na Pag-aari
             Images:
               name: Mga Larawan
+            Linking Pages:
+              name: Pag-uugnay ng Mga Pahina
           student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csd3-pilot:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
@@ -8959,10 +9055,15 @@ fil:
               name: Mga event
             Functions:
               name: Mga function
+            Sprite Lab:
+              name: Sprite Lab
             Variables:
               name: Mga variable
             For Loops:
               name: For Loops
+        dance-extras-2019:
+          description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
+          student_description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
         csp10-pilot:
           lessons:
             new stage:
@@ -8975,6 +9076,8 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
           lessons:
             new stage:
               name: bagong yugto
@@ -8984,8 +9087,12 @@ fil:
               name: Mga conditional
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+            Simon Says:
+              name: Sabi ni Simon
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            Access Ability:
+              name: Kakayahang Pag-access
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -9040,8 +9147,12 @@ fil:
               name: Mga conditional
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+            Simon Says:
+              name: Sabi ni Simon
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            Access Ability:
+              name: Kakayahang Pag-access
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -9063,8 +9174,12 @@ fil:
               name: Mga conditional
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+            Simon Says:
+              name: Sabi ni Simon
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            Access Ability:
+              name: Kakayahang Pag-access
         csp7-pilot:
           lesson_groups:
             required:
@@ -9083,12 +9198,16 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Mga listahan
             csp_loops:
               display_name: Mga loop
+            csp_project:
+              display_name: Proyekto
         csp9-pilot:
           lessons:
             new stage:
@@ -9119,6 +9238,8 @@ fil:
               name: 'Mga Website para sa Pagpapahayag '
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
+            Linking Pages:
+              name: Pag-uugnay ng Mga Pahina
         csd1-2020:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           lesson_groups:
@@ -9333,6 +9454,7 @@ fil:
             Sprites:
               name: Mga Sprites
         coursea-2020:
+          title: Kursong A (2020)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
@@ -9354,6 +9476,7 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2020:
+          title: Kursong B (2020)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
           lesson_groups:
@@ -9378,6 +9501,7 @@ fil:
               name: Mga Loops sa Harvester
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursec-2020:
+          title: Kursong C (2020)
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
@@ -9395,6 +9519,8 @@ fil:
           lessons:
             Screen Out the Mean:
               name: I-Screen Palabas ang Mean
+            Powerful Passwords:
+              name: Mga Makapangyarihang Password
             Programming in Maze:
               name: Pag-Program sa Maze
             Debugging in Maze:
@@ -9415,8 +9541,12 @@ fil:
               name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
+            Picturing Data:
+              name: Paglalarawan ng Data
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2020:
+          title: Kursong D (2020)
+          description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:
             csf_events:
@@ -9458,7 +9588,9 @@ fil:
               name: Digital na Pagkamamamayan
             Dance Party:
               name: Dance Party
+          student_description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
         coursee-2020:
+          title: Kursong E (2020)
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_audience: 'Mga Edad: 8-12'
           lesson_groups:
@@ -9475,8 +9607,12 @@ fil:
             csf_impacts:
               display_name: Epekto ng Pag-Compute
           lessons:
+            Simon Says:
+              name: Sabi ni Simon
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            Access Ability:
+              name: Pagdidisenyo sa Accessibility
             Nested Loops in Bee:
               name: Naka-nest na mga Loops sa Maze
             Nested Loops in Frozen:
@@ -9485,8 +9621,13 @@ fil:
               name: Pagsusulat ng Awit
             Functions in Artist:
               name: Mga Function sa Artist
+            Digital Sharing:
+              name: Digital na Pagbabahagi
+            Designing for Accessibility:
+              name: Pagdidisenyo sa Accessibility
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2020:
+          title: Kursong F (2020)
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
@@ -9518,8 +9659,11 @@ fil:
               name: Ang Kapangyarihan ng mga Salita
             Crowdsourcing:
               name: Pag-crowdsourcing
+            Digital Sharing:
+              name: Digital na Pagbabahagi
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2020:
+          title: Pinabilis na Kurso (2020)
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           lesson_groups:
@@ -9776,6 +9920,8 @@ fil:
             csd3_2:
               display_name: 'Kabanata 2: Paggawa ng mga Laro'
           lessons:
+            Example Projects:
+              name: Mga Halimbawa ng Proyekto
             Velocity:
               name: Belosidad
             Collision Detection:
@@ -9847,6 +9993,8 @@ fil:
               name: Mga variable
             For Loops:
               name: For Loops
+            Sprite Lab:
+              name: Sprite Lab
           lesson_groups:
             k5_getting_started_1:
               display_name: Pagsisimula
@@ -9928,6 +10076,8 @@ fil:
               name: Kursong A
             Course B:
               name: Kursong B
+            CS Discoveries:
+              name: CS Discoveries
             Course E:
               name: Kursong E
             Course F:
@@ -9959,6 +10109,8 @@ fil:
           student_description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
         2021drafting:
           lessons:
+            lesson-3:
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
           lesson_groups:
@@ -10013,6 +10165,10 @@ fil:
               name: Intelektwal na Pag-aari
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
+            Linking Pages:
+              name: Pag-uugnay ng Mga Pahina
+            lesson-1:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
@@ -10057,6 +10213,8 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             Project - Design a Game:
               name: Proyekto - Pagdisenyo ng Laro
+            lesson-1:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd3_1:
               display_name: 'Kabanata 1: Mga Larawan at Animation'
@@ -10090,6 +10248,8 @@ fil:
               name: Pagpapahusay at pag-uulit
             Project - App Presentation:
               name: Proyekto - Pagpapakita ng App
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd4_1:
               display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
@@ -10129,6 +10289,8 @@ fil:
               name: Pag-intindi ng mga Datos
             Automating Data Decisions:
               name: Pag-Automate ng mga Datos na mga Desisyon
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd5_1:
               display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
@@ -10168,6 +10330,8 @@ fil:
               name: Mga function na meron mga parameter
             Circuits and Physical Prototypes:
               name: Mga Circuit at Pisikal na mga Prototype
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd6_1:
               display_name: 'Kabanata 1: Output ng Hardware'
@@ -10214,12 +10378,16 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Mga listahan
             csp_loops:
               display_name: Mga loop
+            csp_project:
+              display_name: Proyekto
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -10305,6 +10473,8 @@ fil:
               name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
+            Picturing Data:
+              name: Paglalarawan ng Data
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -10366,12 +10536,20 @@ fil:
           lessons:
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            About Me:
+              name: 'Mini-Project: Tungkol sa Akin'
+            Digital Sharing:
+              name: Digital na Pagbabahagi
             Nested Loops in Bee:
               name: Naka-nest na mga Loops sa Maze
             'Functions: Songwriting':
               name: Pagsusulat ng Awit
             Functions in Artist:
               name: Mga Function sa Artist
+            Designing for Accessibility:
+              name: Pagdidisenyo sa Accessibility
+            lesson-1:
+              name: Pagdidisenyo sa Accessibility
           lesson_groups:
             ramp_up:
               display_name: Mga Loops na naka-nest
@@ -10403,10 +10581,16 @@ fil:
               name: Saya sa For Loop
             For Loops in Artist:
               name: Mga Loops sa Artist
+            Virtual Pet:
+              name: 'Mini-Project: Virtual na Alaga'
+            lesson-1:
+              name: Pagdidisenyo sa Accessibility
             lesson-5:
               name: Pagsiklab
             lesson-2:
               name: Ang Kapangyarihan ng mga Salita
+            lesson-11:
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
           lesson_groups:
             ramp_up:
               display_name: Mga Sprites
@@ -10459,6 +10643,8 @@ fil:
             lesson-1:
               name: Dance Party
           lesson_groups:
+            csf_warmup:
+              display_name: Warm Up
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -10492,6 +10678,8 @@ fil:
           lessons:
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
+            user-input-programs:
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
           lesson_groups:
             ramp_up:
               display_name: Panimula
@@ -10704,6 +10892,8 @@ fil:
           lessons:
             Survey Planning:
               name: Pagdidisenyo ng Koleksyon ng mga Datos
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             lessonGroup-4:
               display_name: Pagsisiyasat
@@ -10785,6 +10975,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Aralin
+            lessonGroup-3:
+              display_name: Proyekto
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
         csa-self-paced-pl:
@@ -10862,6 +11054,8 @@ fil:
               name: Mga Variable + Kung-Pahayag
             lesson-8:
               name: 'Mini-Project: On The Go na mga App'
+            lesson-9:
+              name: Mga LED na may kulay
             lesson-10:
               name: App Lab na mga Input (getProperty, getText) (Dropdowns Inputs Sliders?)
             lesson-11:
@@ -10880,6 +11074,8 @@ fil:
               name: Mga Pisikal na Input
             lesson-18:
               name: Prototyping
+            lesson-19:
+              name: Proyekto
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Template
@@ -10905,6 +11101,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Aralin
+            lessonGroup-3:
+              display_name: Proyekto
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
         tesstest921:
@@ -11013,6 +11211,8 @@ fil:
         csa5-exemplars:
           name: csa5-exemplars
           title: Yunit 5 - Pagbibigay ng Organisasyon ng Mga Bagay [Mga Halimbawa]
+        csd-post-survey-2021:
+          title: Survey ng CS Discoveries Post-Course
         csa6-pilot-facilitator:
           lessons:
             Java Lab:
@@ -11065,8 +11265,11 @@ fil:
               name: Spelling Bee
         explore-data-1-2021:
           lessons:
+            Exploring Box Plots and Histograms:
+              name: Pagsasalarawan ng Data
             lesson-1:
               name: Pag-explore ng Mga Box Plot at Histogram
+          title: Pagsasalarawan ng Data
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -11082,6 +11285,8 @@ fil:
           lessons:
             lesson-4:
               name: Simulator ng Pagsiklab
+            lesson-5:
+              name: 'Mini-Project: Tungkol sa Akin'
             Programming with the Bee:
               name: Naka-nest na mga Loops sa Maze
             For Loop Fun:
@@ -11092,6 +11297,11 @@ fil:
             lessonGroup-8:
               display_name: Hour of Code
         csf-2022-pilot:
+          lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual na Alaga'
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Sprites
@@ -11105,6 +11315,8 @@ fil:
               name: Ang Circuit na Playground
             Board Events:
               name: Mga Pangyayari sa Board
+            Arrays and Color LEDs:
+              name: Mga LED na may kulay
             lesson-10:
               name: Pinagsasama-sama ang mga Input
             Accelerometer:
@@ -11243,12 +11455,16 @@ fil:
               display_name: Mga conditional
             csp_functions:
               display_name: Mga function
+            csp_project:
+              display_name: Proyekto
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Mga listahan
             csp_loops:
               display_name: Mga loop
+            csp_project:
+              display_name: Proyekto
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -11294,6 +11510,8 @@ fil:
               name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
+            Picturing Data:
+              name: Paglalarawan ng Data
             Binary Bracelets:
               name: Binary na mga Pulseras
             Programming in Maze:
@@ -11372,14 +11590,24 @@ fil:
           lessons:
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+            'Mini-Project: About Me':
+              name: 'Mini-Project: Tungkol sa Akin'
+            Digital Sharing:
+              name: Digital na Pagbabahagi
             Songwriting:
               name: Pagsusulat ng Awit
             Functions with Artist:
               name: Mga Function sa Artist
+            Designing for Accessibility:
+              name: Pagdidisenyo sa Accessibility
+            About Me:
+              name: 'Mini-Project: Tungkol sa Akin'
             'Functions: Songwriting':
               name: Pagsusulat ng Awit
             Functions in Artist:
               name: Mga Function sa Artist
+            lesson-1:
+              name: Pagdidisenyo sa Accessibility
             'Hello World: Food':
               name: Hello World
           lesson_groups:
@@ -11398,8 +11626,12 @@ fil:
           description_audience: 'Mga Edad: 8-12'
         coursef-2022:
           lessons:
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual na Alaga'
             The Power of Words:
               name: Ang Kapangyarihan ng mga Salita
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
             Programming with the Bee:
               name: Naka-nest na mga Loops sa Maze
             For Loop Fun:
@@ -11410,8 +11642,12 @@ fil:
               name: Pagsiklab
             The Internet:
               name: The Internet
+            Virtual Pet:
+              name: 'Mini-Project: Virtual na Alaga'
             lesson-2:
               name: Ang Kapangyarihan ng mga Salita
+            lesson-11:
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
             Nested Loops in the Maze:
               name: Naka-nest na mga Loops sa Maze
             For Loops in Artist:
@@ -11521,6 +11757,10 @@ fil:
           lessons:
             The Power of Words:
               name: Ang Kapangyarihan ng mga Salita
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual na Alaga'
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Mga Programa sa Pag-input ng User'
             Outbreak:
               name: Pagsiklab
             The Internet:
@@ -11677,6 +11917,12 @@ fil:
               name: Intelektwal na Pag-aari
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
+            Linking Pages:
+              name: Pag-uugnay ng Mga Pahina
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
+            lesson-1:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
@@ -11721,6 +11967,10 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             Project - Design a Game:
               name: Proyekto - Pagdisenyo ng Laro
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
+            lesson-1:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd3_1:
               display_name: 'Kabanata 1: Mga Larawan at Animation'
@@ -11751,6 +12001,8 @@ fil:
               name: Pag-test ng App
             Project - App Presentation:
               name: Proyekto - Pagpapakita ng App
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd4_1:
               display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
@@ -11789,6 +12041,8 @@ fil:
               name: Pag-Automate ng mga Datos na mga Desisyon
             Problem Solving with Big Data:
               name: Paglutas ng Problema kasama ang Malalaking mga Datos
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             csd5_1:
               display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
@@ -11802,6 +12056,8 @@ fil:
           lessons:
             Survey Planning:
               name: Pagdidisenyo ng Koleksyon ng mga Datos
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             lessonGroup-4:
               display_name: Pagsisiyasat
@@ -11813,6 +12069,8 @@ fil:
               name: Ang Circuit na Playground
             Board Events:
               name: Mga Pangyayari sa Board
+            Color LEDs:
+              name: Mga LED na may kulay
             Combining Inputs and Outputs:
               name: Pinagsasama-sama ang mga Input
             Accelerometer:
@@ -11821,12 +12079,16 @@ fil:
               name: Paglikha ng Musika
             Functions:
               name: Mga function
+            CS Discoveries Post-Course Survey:
+              name: Survey ng CS Discoveries Post-Course
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kabanata 2: Input ng Hardware'
             lessonGroup-4:
               display_name: Pagsisiyasat
           description_short: Matutong mag-program sa mga pisikal na mga kagamitan.
+        csd-post-survey-2022:
+          title: Survey ng CS Discoveries Post-Course
         testtess2:
           name: testtess2
         aiml-2022:

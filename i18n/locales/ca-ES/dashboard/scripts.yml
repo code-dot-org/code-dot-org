@@ -2,10 +2,6 @@
 ca:
   data:
     script:
-      category:
-        hoc_category_name: L'hora del codi
-        math_category_name: Matemàtiques
-        other_category_name: Altres
       name:
         course1:
           title: Curs 1

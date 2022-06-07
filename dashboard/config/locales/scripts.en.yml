@@ -24489,6 +24489,7 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -24599,7 +24600,7 @@ en:
             lesson-1:
               name: Introduction to Physical Computing
             lesson-2:
-              name: Get to know the circuit playground
+              name: Get to know the Circuit Playground
             lesson-3:
               name: Experiment with inputs and outputs
             lesson-4:
@@ -25358,13 +25359,13 @@ en:
         vpl-csp-2022:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Wrapping Up Unit 3 & EIPM'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables Practice & Make Lessons'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Wrapping Up Unit 4 & Lists in Unit 5'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Mental Models, Datasets, & Assessment'
             'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
               name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
             'Module 6: Introduction to the Create Performance Task':
@@ -25381,11 +25382,13 @@ en:
               name: 'Module 7: Tools and Structure in Unit 9 - Data'
             Module 8:
               name: 'Module 8: Building Community and Preparing Students for the AP Exam'
-          title: CS Principles Virtual Professional Learning 21 - 22
+          title: CS Principles Virtual Professional Learning 22 - 23
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lessons:
             Welcome to Codeorg:

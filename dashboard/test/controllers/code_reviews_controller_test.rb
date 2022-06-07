@@ -17,21 +17,13 @@ class CodeReviewsControllerTest < ActionController::TestCase
   end
 
   test 'index returns both open and closed code reviews' do
-    script_id = 12
-    level_id = 5
-
     closed_at = DateTime.now
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
-      script_id: script_id, level_id: level_id, closed_at: closed_at
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
-      script_id: script_id, level_id: level_id, closed_at: closed_at + 1.second
-    create :code_review, user_id: @project_owner.id, project_id: @project.id,
-      script_id: script_id, level_id: level_id, closed_at: nil
+    create :code_review, user_id: @project_owner.id, project_id: @project.id, closed_at: closed_at
+    create :code_review, user_id: @project_owner.id, project_id: @project.id, closed_at: closed_at + 1.second
+    create :code_review, user_id: @project_owner.id, project_id: @project.id, closed_at: nil
 
     get :index, params: {
       channelId: @channel_id,
-      scriptId: script_id,
-      levelId: level_id
     }
     assert_response :success
 
@@ -42,20 +34,21 @@ class CodeReviewsControllerTest < ActionController::TestCase
   test 'create code review' do
     script_id = 42
     level_id = 17
+    project_level_id = 23
     project_version = 'abc'
 
     post :create, params: {
       channelId: @channel_id,
       version: project_version,
       scriptId: script_id,
-      levelId: level_id
+      levelId: level_id,
+      projectLevelId: project_level_id
     }
     assert_response :success
 
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
     assert_equal project_version, response_json['version']
-    assert_equal false, response_json['isVersionExpired']
     assert_equal true, response_json['isOpen']
     assert_not_nil response_json['createdAt']
   end
@@ -67,7 +60,8 @@ class CodeReviewsControllerTest < ActionController::TestCase
       channelId: @channel_id,
       version: project_version,
       scriptId: 15,
-      levelId: 31
+      levelId: 31,
+      projectLevelId: 41
     }
     assert_response :success
 
@@ -76,7 +70,8 @@ class CodeReviewsControllerTest < ActionController::TestCase
         channelId: @channel_id,
         version: project_version,
         scriptId: 7,
-        levelId: 19
+        levelId: 19,
+        projectLevelId: 43
       }
     end
   end
@@ -112,6 +107,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
   test 'peers_with_open_reviews returns correct data' do
     script_id = 91
     level_id = 161
+    project_level_id = 101
 
     student = create :student
     peer = create :student
@@ -124,12 +120,13 @@ class CodeReviewsControllerTest < ActionController::TestCase
     create :code_review_group_member, follower: student_follower, code_review_group: code_review_group
     create :code_review_group_member, follower: peer_follower, code_review_group: code_review_group
 
-    create :code_review, user_id: peer.id, script_id: script_id, level_id: level_id
+    create :code_review, user_id: peer.id,
+      script_id: script_id, level_id: level_id, project_level_id: project_level_id
 
     sign_in student
     get :peers_with_open_reviews, params: {
       scriptId: script_id,
-      levelId: level_id
+      projectLevelId: project_level_id
     }
     assert_response :success
 

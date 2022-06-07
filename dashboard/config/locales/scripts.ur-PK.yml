@@ -2,11 +2,6 @@
 ur:
   data:
     script:
-      category:
-        csf_category_name: CS کے بنیادی اصول
-        hoc_category_name: آور-آف-کوڈ
-        math_category_name: ریاضی
-        other_category_name: دیگر
       name:
         course1:
           description_audience: عمر 4-6

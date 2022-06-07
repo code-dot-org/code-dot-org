@@ -620,9 +620,24 @@ zh-CN:
         csd_app_lab_events: CSD应用程序实验室活动
         csd_u6_circuit_playground: 物理计算
         csd_u6_input_output: 输入和输出
+        CSA-PL-for-loops: Java中的For循环
+        CSA-PL-variables: 在Java中创建变量
         PL_CS_Journeys_Overview: CS旅行
+        CSA-PL-intro-to-java-lab: Java实验室基础
+        CSA-PL-first-program: 在Java中编写程序
+        CSD_u6_variables_part1: CSD：变量
+        csd_u6_if_statements: CSD：If語句
+        csc-poem-art-intro: 简介视频
+        csc-poem-art-outro: 结尾视频
+        csd_u6_call_define_functions: CSD：调用和定义函数
         csp_applab_parameters: 有参数的函数
+        starquilts_intro_artist: CSD：调用和定义函数
         CSA-PL-intro-to-arrays: 一维（1D）数组
+        CSA-PL-1d-arrays-new-values: 在1维数组中输入值
+        CSA-PL-conditionals: Java中的条件语句
+        CSA-PL-two-way-selection: 双向选择
+        CSA-PL-Printing-in-Java: Java中的打印
+        CSA-PL-multi-selection-statements: 多重选择语句
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

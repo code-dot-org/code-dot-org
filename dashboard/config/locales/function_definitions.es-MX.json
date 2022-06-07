@@ -4241,7 +4241,7 @@
             "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar tallos de oreja"
+            "name": "dibujar patillas"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -4315,7 +4315,7 @@
             "name": "dibujar una hilera de cuadrados"
           },
           "draw square": {
-            "name": "Dibuja un cuadrado"
+            "name": "dibujar cuadrado"
           },
           "do something": {
             "name": "hacer algo"

@@ -2,30 +2,6 @@
 pt:
   data:
     script:
-      category:
-        csd_category_name: Descobertas da Ciência da Computação (2018-2019)
-        csd_2018_category_name: Descobertas da Ciência da Computação (2018-2019)
-        csd_2019_category_name: Descobertas da Ciência da Computação (2019-2020)
-        csd_2020_category_name: Descobertas da Ciência da Computação (2120-2020)
-        csd_2021_category_name: Descobertas da Ciência da Computação (2021-2022)
-        csf_category_name: Conceitos básicos da CC
-        csf_international_category_name: Fundamentos da Ciencia da Computação International
-        csf2_draft_category_name: 'Em desenvolvimento: Cursos A - F'
-        csp_category_name: Princípios da CC (2015-2016)
-        csp_2018_category_name: Princípios de Ciência da Computação (18-19)
-        csp_2019_category_name: Princípios de Ciência da Computação (2019-2020)
-        csp_2020_category_name: Princípios de Ciência da Computação (2120-2020)
-        csp_2021_category_name: Princípios da CC (2021-2022)
-        cspexams_category_name: Teste prático dos princípios da CC
-        csp17_category_name: Princípios da CC (2017-2018)
-        aiml_2021_category_name: IA / AM
-        full_course_category_name: Cursos Completos
-        hoc_category_name: Hora do Código
-        math_category_name: Matemática
-        research_studies_category_name: Trabalhos de Investigação
-        twenty_hour_category_name: 10-Horas
-        tts_category_name: Texto-para-Voz
-        other_category_name: Outro
       name:
         course1:
           title: Curso 1

@@ -217,6 +217,9 @@
         "vocabulary/csd/2018": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/coursea/2019": {
           "name": "Giáo Án"
         },
@@ -228,6 +231,9 @@
         },
         "vocabulary/coursea/2019": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/courseb/2019": {
           "name": "Giáo Án"
@@ -241,6 +247,9 @@
         "vocabulary/courseb/2019": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/coursed/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/coursed/2019": {
           "name": "Giáo Án"
         },
@@ -253,6 +262,9 @@
         "vocabulary/coursed/2019": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/coursef/2019": {
           "name": "Giáo Án"
         },
@@ -264,6 +276,9 @@
         },
         "vocabulary/coursef/2019": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/coursee/2019": {
           "name": "Giáo Án"
@@ -288,6 +303,9 @@
         },
         "vocabulary/express/2019": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/coursec/2019": {
           "name": "Giáo Án"
@@ -621,7 +639,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -1520,7 +1539,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA",
@@ -1680,7 +1700,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Thang điểm"
         },
         "design-process/coursee/2021": {
           "name": "Quy trình thiết kế",
@@ -1770,6 +1791,9 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "Thang điểm"
+        },
         "survey_planning/csd/2021": {
           "name": "Bộ sưu tập Thiết kế dữ liệu"
         },
@@ -1779,6 +1803,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "Video"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Thang điểm"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
@@ -1786,7 +1813,8 @@
           "type": "Phản ánh"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Nguyên mẫu giấy"
+          "name": "Nguyên mẫu giấy",
+          "type": "Thang điểm"
         },
         "market-research/csd/2021": {
           "name": "Nghiên cứu thị trường"
@@ -1810,7 +1838,8 @@
           "name": "Ứng dụng đa màn hình"
         },
         "app-presentation/csd/2021": {
-          "name": "Trình bày ứng dụng"
+          "name": "Trình bày ứng dụng",
+          "type": "Thang điểm"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Trình bày ứng dụng"
@@ -1834,6 +1863,9 @@
         "functions_2/csd/2021": {
           "name": "Các hàm"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Thang điểm"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "Giới thiệu Danh sách",
           "type": "Video"
@@ -1848,11 +1880,17 @@
         "circuits-logic-video/csd/2021": {
           "type": "Video"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Thang điểm"
+        },
         "representing-information-1/csd/2021": {
           "name": "Miêu tả thông tin"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Video"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Thang điểm"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Video"
@@ -1872,6 +1910,9 @@
         },
         "video_training_data_and_bias/csd/2021": {
           "type": "Video"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Thang điểm"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1897,6 +1938,9 @@
         "sprite_properties/csd/2021": {
           "name": "Thuộc tính của nhân vật"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "Thang điểm"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },
@@ -1905,6 +1949,9 @@
         },
         "animating-sprites/csd/2021": {
           "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Thang điểm"
         },
         "boolean_expressions/csd/2021": {
           "type": "Video"
@@ -1915,6 +1962,9 @@
         "if_else_statements/csd/2021": {
           "type": "Video"
         },
+        "interactive_card/csd/2021": {
+          "type": "Thang điểm"
+        },
         "velocity_1/csd/2021": {
           "type": "Video"
         },
@@ -1924,12 +1974,21 @@
         "collision_detection/csd/2021": {
           "name": "Phát hiện va chạm"
         },
+        "side-scroller-1/csd/2021": {
+          "type": "Thang điểm"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Thang điểm"
+        },
         "calling_and_defining_functions/csd/2021": {
           "name": "Các hàm",
           "type": "Video"
         },
         "functions_1/csd/2021": {
           "name": "Các hàm"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Thang điểm"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Diễn đàn giáo viên"
@@ -1949,6 +2008,9 @@
         "what-do-computers-do/csd/2021": {
           "type": "Video"
         },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "Thang điểm"
+        },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Video"
         },
@@ -1960,6 +2022,9 @@
         },
         "video_debugging/csd/2021": {
           "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Thang điểm"
         },
         "lists/csd/2021": {
           "name": "Danh sách"
@@ -1973,11 +2038,17 @@
         "intro_to_css_-_part_2/csd/2021": {
           "type": "Video"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Thang điểm"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
         "images_in_html/csd/2021": {
           "name": "Hình ảnh trong HTML"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Thang điểm"
         },
         "publishing_your_website/csd/2021": {
           "type": "Video"
@@ -1990,6 +2061,9 @@
         },
         "how-search-works-video/csd/2021": {
           "type": "Video"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Thang điểm"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Giáo Án"
@@ -2015,6 +2089,9 @@
         "vocabulary/express/2020": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/courseb/2020": {
           "name": "Giáo Án"
         },
@@ -2026,6 +2103,9 @@
         },
         "vocabulary/courseb/2020": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/coursed/2020": {
           "name": "Giáo Án"
@@ -2039,6 +2119,9 @@
         "vocabulary/coursed/2020": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/coursec/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/coursec/2020": {
           "name": "Giáo Án"
         },
@@ -2050,6 +2133,9 @@
         },
         "vocabulary/coursec/2020": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/coursee/2020": {
           "name": "Giáo Án"
@@ -2063,6 +2149,9 @@
         "vocabulary/coursee/2020": {
           "name": "Từ vựng"
         },
+        "curriculum_guide/coursea/2020": {
+          "name": "Hướng dẫn giáo trình"
+        },
         "lesson_plans/coursea/2020": {
           "name": "Giáo Án"
         },
@@ -2074,6 +2163,9 @@
         },
         "vocabulary/coursea/2020": {
           "name": "Từ vựng"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Hướng dẫn giáo trình"
         },
         "lesson_plans/coursef/2020": {
           "name": "Giáo Án"
