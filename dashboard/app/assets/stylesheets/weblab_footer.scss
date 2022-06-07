@@ -1,10 +1,11 @@
 @import "font";
+@import "color";
 
 body {
   padding-bottom: 28px !important;
 }
 
-#codeprojects_pagefooter footer {
+#codeprojects_pagefooter {
   all: initial; /* blocking inheritance for all properties */
   display: block;
   width: 100%;
