@@ -80,7 +80,7 @@ const CodeReviewTimelineReview = ({
           comments.map(comment => {
             return (
               <Comment
-                isViewingAsCodeReviewOwner={ownerId === currentUserId}
+                viewingAsOwner={ownerId === currentUserId}
                 comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
