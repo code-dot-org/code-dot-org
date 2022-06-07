@@ -9,8 +9,7 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS,
-  FAILURE
+  SUCCESS
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
@@ -185,7 +184,7 @@ describe('SyncOmniAuthSectionControl', () => {
       expect(wrapper).to.containMatchingElement(
         <SyncOmniAuthSectionButton
           provider={defaultProps.sectionProvider}
-          buttonState={FAILURE}
+          buttonState={READY}
         />
       );
     });
@@ -197,7 +196,7 @@ describe('SyncOmniAuthSectionControl', () => {
     return expect(testSyncFails()).to.be.rejected.then(() => {
       expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
         'buttonState',
-        FAILURE
+        READY
       );
 
       // Now that we're in a failure state, test that we stay
