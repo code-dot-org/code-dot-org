@@ -56,11 +56,11 @@
     "parent_level_id": 25047,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/vpl-csd1-summer-pilot-2022/guides/variables",
-      "/courses/vpl-csd1-summer-pilot-2022/guides/drawing-shapes",
-      "/courses/vpl-csd1-summer-pilot-2022/guides/shapes-and-parameters"
+      "/courses/vpl-csd-summer-pilot-2022/guides/variables",
+      "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/courses/vpl-csd1-summer-pilot-2022/guides/naming-variables",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/naming-variables",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "encrypted": "false",
