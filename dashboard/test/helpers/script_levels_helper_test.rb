@@ -6,7 +6,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   include LevelsHelper
 
   setup do
-    @facilitator = create(:facilitator)
     @teacher = create(:teacher)
     @student = create(:student)
     script = create(:script, lesson_extras_available: true)
@@ -20,19 +19,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script.lesson_groups << create(:lesson_group) do |lesson_group|
       create_list(:lesson, 3, lesson_group: lesson_group) do |lesson|
         create_list(:script_level, 3, lesson: lesson, script: script)
-      end
-    end
-
-    pl_script = create(:script, lesson_extras_available: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @pl_section = create(:section, user: @facilitator, script: pl_script)
-    create(:follower, section: @pl_section, student_user: @teacher)
-
-    # give our test script a more-complex internal hierarchy than the one
-    # provided by the factory, so we can test a variety of script_level and
-    # lesson relative positions.
-    pl_script.lesson_groups << create(:lesson_group) do |lesson_group|
-      create_list(:lesson, 3, lesson_group: lesson_group) do |lesson|
-        create_list(:script_level, 3, lesson: lesson, script: pl_script)
       end
     end
   end
@@ -155,42 +141,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @section.save
     stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)
-    refute response[:redirect].end_with?('extras')
-  end
-
-  test 'get End-of-Lesson experience only for participant of instructor' do
-    script = @pl_section.script
-    script_level = script.lessons.first.last_progression_script_level
-    @pl_section.lesson_extras = true
-    @pl_section.save
-    response = {}
-
-    stubs(:current_user).returns(@teacher)
-    script_level_solved_response(response, script_level)
-    assert response[:redirect].end_with?('extras')
-    response = {}
-
-    instructorless_participant = create(:teacher)
-    stubs(:current_user).returns(instructorless_participant)
-    script_level_solved_response(response, script_level)
-    refute response[:redirect].end_with?('extras')
-    response = {}
-
-    stubs(:current_user).returns(@facilitator)
-    script_level_solved_response(response, script_level)
-    assert response[:redirect].end_with?('extras')
-    response = {}
-
-    stubs(:current_user).returns(nil)
-    script_level_solved_response(response, script_level)
-    refute response[:redirect].end_with?('extras')
-    response = {}
-
-    @pl_section.lesson_extras = false
-    @pl_section.save
-    stubs(:current_user).returns(@facilitator)
-    script_level_solved_response(response, script_level)
-    puts response
     refute response[:redirect].end_with?('extras')
   end
 end
