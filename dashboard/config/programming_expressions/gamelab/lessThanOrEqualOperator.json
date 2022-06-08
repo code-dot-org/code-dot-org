@@ -1,6 +1,0 @@
-{
-  "key": "lessThanOrEqualOperator",
-  "name": "lessThanOrEqualOperator",
-  "category": "Math",
-  "syntax": "__ <= __"
-}

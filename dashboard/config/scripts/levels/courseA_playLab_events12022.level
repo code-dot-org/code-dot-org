@@ -58,11 +58,16 @@
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:02.987+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events1_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:02.987+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events1_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

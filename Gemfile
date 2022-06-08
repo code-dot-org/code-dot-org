@@ -9,8 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.4.4'
+gem 'rails', '6.0.4.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -22,14 +21,9 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
-# breaks some firebase URIs. See
-# https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.1.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
-
-gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
@@ -85,12 +79,10 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.8', require: false
 
-  gem 'codecov', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'simplecov', '~> 0.9', require: false
   gem 'sqlite3'
   gem 'timecop'
 
@@ -111,11 +103,6 @@ group :development, :test do
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
   gem 'pdf-reader', require: false
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
@@ -174,10 +161,7 @@ gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
-# Ref: https://github.com/haml/haml/issues/940
-# https://github.com/haml/haml/issues/982
-# https://github.com/haml/haml/issues/985
-gem 'haml', github: 'wjordan/haml', ref: 'cdo'
+gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
@@ -258,7 +242,9 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 0.52', require: false
+  gem 'rubocop', '1.28', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
   gem 'scss_lint', require: false
 end
 
@@ -297,7 +283,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 11.0'
+gem 'composite_primary_keys', '~> 12.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -342,8 +328,8 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'active_record_union'
 gem 'activerecord-import'
+gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
 
@@ -361,3 +347,8 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+# Google's Compact Language Detector
+gem 'cld'
+
+gem 'crowdin-api', '~> 1.2.1'

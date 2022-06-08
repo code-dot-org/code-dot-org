@@ -25,22 +25,28 @@ Use the links below to find our program curriculum guides, course information, a
 [Course Overview Table >>](https://code.org/educate/curriculum/courses)
 <br/>
 
+### [Computer Science A](/educate/csa) (9-12)
+
+
+- CSA Teacher Resources - *Curriculum launches Summer 2022!*
+	- <a href="https://code.org/educate/csa_1-pager.pdf", target="_blank">CSA One-Pager</a>
+
 ### [CS Principles](/educate/csp#lessons) (9-12)
 
 - [CS Principles Teacher Resources](https://studio.code.org/courses/csp)
-  - [AP CS Principles One-Pager - 2020-21](https://code.org/files/2020-21_CSPrinciples_1-pager.pdf)
-  - [AP CS Principles Curriculum Guide - 2019-20](https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview)
+  - [AP CS Principles One-Pager](https://code.org/files/CSPrinciples_1-pager.pdf)
+  - [AP CS Principles Curriculum Guide](https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/preview)
 
 ### [CS Discoveries](https://code.org/educate/csd) (6-10)
 
 - [CS Discoveries Teacher Resources](http://curriculum.code.org/csd)
   - <a href="https://code.org/files/CSDiscoveries_1-pager.pdf", target="_blank">CS Discoveries One-Pager</a>
-  - [CS Discoveries Curriculum Guide - 2019-20](https://docs.google.com/document/d/19Hne2rEZrvWA8OcsLpt9ShpkPzKKlxYnj-_cIfLwHwI/preview)
+  - [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
 
 ### [CS Fundamentals](https://code.org/educate/curriculum/elementary-school) (K-5)
 
 - <a href="https://docs.google.com/presentation/d/1bsw3vZuFuC5EzDxGN6szQ_IJ0nhVnqlH34enhTqZ2L0/edit#slide=id.g449748f052_0_25", target="_blank">CS Fundamentals One-Pager</a><br/>
-- [CS Fundamentals Curriculum Guide - 2019-20](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview)
+- [CS Fundamentals Curriculum Guide](https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview)
 - <a href="https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit", target="_blank">Transitioning from Courses 1-4 to A-F Guide</a><br/>
 - <a href="https://code.org/professional-development-workshops", target="_blank">Find a K-5 Professional Development Workshop</a>
 

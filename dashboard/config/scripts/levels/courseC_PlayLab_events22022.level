@@ -45,11 +45,15 @@
     "background": "night",
     "parent_level_id": 21271,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.153+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events2_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.153+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events2_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

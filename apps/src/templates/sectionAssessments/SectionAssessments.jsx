@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -14,7 +11,6 @@ import {
   setStudentId,
   ASSESSMENT_FEEDBACK_OPTION_ID
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
@@ -61,7 +57,7 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,
@@ -183,7 +179,7 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      validScripts,
+      coursesWithProgress,
       scriptId,
       assessmentList,
       assessmentId,
@@ -206,7 +202,7 @@ class SectionAssessments extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onSelectScript}
             />
@@ -368,9 +364,9 @@ export const UnconnectedSectionAssessments = SectionAssessments;
 
 export default connect(
   state => ({
-    sectionId: state.sectionData.section.id,
+    sectionId: state.teacherSections.selectedSectionId,
     isLoading: !!state.sectionAssessments.isLoading,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,
@@ -378,7 +374,7 @@ export default connect(
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
     studentId: state.sectionAssessments.studentId,
-    studentList: getStudentList(state)
+    studentList: state.teacherSections.selectedStudents
   }),
   dispatch => ({
     setScriptId(scriptId) {

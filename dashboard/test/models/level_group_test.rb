@@ -271,6 +271,46 @@ MARKDOWN
     assert_equal 'level1_copy', page.levels.first.name
   end
 
+  test 'clone with suffix when sublevel names conflict after stripping version year' do
+    level_group_input_dsl = <<~DSL
+      name 'my level group'
+      page
+      level 'conflicting-level-2018'
+      level 'conflicting-level-2019'
+
+    DSL
+    expected_copy_dsl = <<~DSL.strip
+      name 'my level group_2020'
+
+      page
+      level 'conflicting-level_2020'
+      level 'conflicting-level_copy1_2020'
+    DSL
+
+    # Create the sublevels.
+    create :free_response, name: 'conflicting-level-2018'
+    create :free_response, name: 'conflicting-level-2019'
+
+    # Create the level_group.
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    File.stubs(:exist?).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(true)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(level_group_input_dsl)
+
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'my_level_group_2020.level_group' &&
+        actual_dsl == expected_copy_dsl
+    end.once
+
+    # Copy the level group and all its sub levels.
+    level_group_copy = level_group.clone_with_suffix('_2020')
+
+    # Verify the result
+    assert_equal 'my level group_2020', level_group_copy.name
+    assert_equal 1, level_group_copy.pages.count
+    page = level_group_copy.pages.first
+    assert_equal ['conflicting-level_2020', 'conflicting-level_copy1_2020'], page.levels.map(&:name)
+  end
+
   # Test that clone_with_suffix performs a deep copy of a LevelGroup, and the
   # copy has the correct dsl text.
   test 'clone level group with suffix' do
@@ -362,19 +402,19 @@ level 'level7_copy'"
   level 'level1'
   "
 
-    level_group_copy1_dsl = "name 'level_group_test assessment copy1'
+    level_group_copy1_dsl = "name 'level_group_test assessment_copy1'
 title 'Assessment'
 
 page
-text 'external1 copy1'
-level 'level1 copy1'"
+text 'external1_copy1'
+level 'level1_copy1'"
 
-    level_group_copy2_dsl = "name 'level_group_test assessment copy2'
+    level_group_copy2_dsl = "name 'level_group_test assessment_copy2'
 title 'Assessment'
 
 page
-text 'external1 copy2'
-level 'level1 copy2'"
+text 'external1_copy2'
+level 'level1_copy2'"
 
     # Create the multi level
     multi_dsl = get_multi_dsl(1)
@@ -391,19 +431,19 @@ level 'level1 copy2'"
     level_group.stubs(:dsl_text).returns(level_group_input_dsl)
 
     # Copy the level group and all its sub levels.
-    level_group_copy1 = level_group.clone_with_suffix(' copy1')
+    level_group_copy1 = level_group.clone_with_suffix('copy1')
     assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
-    assert_equal 'level_group_test assessment copy1', level_group_copy1.name
-    assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
-    assert_equal 'external1 copy1', level_group_copy1.pages.first.texts.first.name
+    assert_equal 'level_group_test assessment_copy1', level_group_copy1.name
+    assert_equal 'level1_copy1', level_group_copy1.pages.first.levels.first.name
+    assert_equal 'external1_copy1', level_group_copy1.pages.first.texts.first.name
 
     # Copy the level group again. copy2 suffix replaces copy1 suffix throughout,
     # rather than being concatenated, due to name_suffix field.
-    level_group_copy2 = level_group.clone_with_suffix(' copy2')
+    level_group_copy2 = level_group.clone_with_suffix('_copy2')
     assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
-    assert_equal 'level_group_test assessment copy2', level_group_copy2.name
-    assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
-    assert_equal 'external1 copy2', level_group_copy2.pages.first.texts.first.name
+    assert_equal 'level_group_test assessment_copy2', level_group_copy2.name
+    assert_equal 'level1_copy2', level_group_copy2.pages.first.levels.first.name
+    assert_equal 'external1_copy2', level_group_copy2.pages.first.texts.first.name
 
     # clean up
     File.delete(level_group_copy1.filename)
@@ -568,5 +608,35 @@ level 'level1 copy2'"
     assert_equal expected_results[level1.id][:lesson_name],
       actual_survey_results[level1.id][:lesson_name]
     assert_equal [], actual_survey_results[level1.id][:levelgroup_results]
+  end
+
+  test 'level group cannot contain level group' do
+    create :level_group, name: 'level group'
+
+    dsl_text = <<~DSL
+      name 'other level group'
+      page
+      level 'level group'
+    DSL
+
+    e = assert_raises do
+      LevelGroup.create_from_level_builder({}, {name: 'other level group', dsl_text: dsl_text})
+    end
+    assert_includes e.message, 'LevelGroup cannot contain level type level_group'
+  end
+
+  test 'level group cannot contain bubble choice' do
+    create :bubble_choice_level, name: 'bubble choice'
+
+    dsl_text = <<~DSL
+      name 'level group'
+      page
+      level 'bubble choice'
+    DSL
+
+    e = assert_raises do
+      LevelGroup.create_from_level_builder({}, {name: 'level group', dsl_text: dsl_text})
+    end
+    assert_includes e.message, 'LevelGroup cannot contain level type bubble_choice'
   end
 end

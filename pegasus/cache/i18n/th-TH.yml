@@ -325,7 +325,7 @@ th-TH:
   homepage_banner_40k_teachers_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
-  homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
+  homepage_slot_text_link_hoc: ลองใช้ Hour of Code
   homepage_slot_text_link_host: จัดงาน Hour of Code
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
   homepage_solot_text_link_volunteer: อาสาสมัครสำหรับชั่วโมงแห่งการเขียนโค้ด
@@ -507,6 +507,7 @@ th-TH:
   volunteer_engineer_submission_field_description: รายละเอียด
   volunteer_engineer_submission_field_email: ที่อยู่อีเมล
   volunteer_engineer_submission_field_email_placeholder: ที่อยู่อีเมล
+  volunteer_engineer_submission_field_email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
   volunteer_engineer_submission_field_email_preference_yes: ใช่
   volunteer_engineer_submission_field_email_preference_no: ไม่ใช่
   volunteer_engineer_submission_checkbox_age_18_plus: ฉันยืนยันว่าฉันอายุมากกว่าหรือเท่ากับ
@@ -830,6 +831,10 @@ th-TH:
   coursed-2021_name: หลักสูตร D (2021)
   coursee-2021_name: หลักสูตร E (2021)
   coursef-2021_name: หลักสูตร F (2021)
+  coursea-2022_name: หลักสูตร A (2021)
+  courseb-2022_name: หลักสูตร B (2021)
+  coursec-2022_name: หลักสูตร C (2021)
+  coursed-2022_name: หลักสูตร D (2021)
   pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
   express-2019_name: หลักสูตร Express (2019)
   pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)
@@ -939,6 +944,12 @@ th-TH:
   coursed-2021_gradelevel: เกรด 8 +
   coursee-2021_gradelevel: อายุ 8-12 ปี
   coursef-2021_gradelevel: อายุ 9 - 13 ปี
+  coursea-2022_gradelevel: อายุ 4 - 7 ปี
+  courseb-2022_gradelevel: อายุ 5-8 ปี
+  coursec-2022_gradelevel: อายุ 6-10 ปี
+  coursed-2022_gradelevel: เกรด 8 +
+  coursee-2022_gradelevel: อายุ 8-12 ปี
+  coursef-2022_gradelevel: อายุ 9 - 13 ปี
   accelerated_gradelevel: อายุ 10-18 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
@@ -1102,6 +1113,21 @@ th-TH:
   coursee-2021_shortdescription_congrats: เริ่มต้นเขียนโค้ดด้วยอัลกอริทึม ลูป เงื่อนไขและเหตุการณ์
     ก่อนดูรายละเอียดของฟังก์ชั่น และในส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดเพื่อแชร์กับเพื่อนและครอบครัว
   coursef-2021_shortdescription_congrats: ศึกษาวิธีการใช้รูปแบบต่างๆ ของลูป เหตุการณ์
+    ฟังก์ชั่นและเงื่อนไข ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
+    สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
+  coursea-2022_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  courseb-2022_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
+    ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  coursec-2022_shortdescription_congrats: ใช้การจัดลำดับ ลูปและเหตุการณ์สร้างโปรแกรม
+    แปลความคิดสร้างสรรเป็นไบนารี สำรวจเทคนิคการแก้ไขปัญหาในแบบต่าง ๆ และศึกษาวิธีตอบโต้การเหยียดบนโลกไซเบอร์
+    และในตอนท้ายของหลักสูตร คุณจะได้สร้างเกมหรือเรื่องราวของคุณก่อนนำมาแชร์!
+  coursed-2022_shortdescription_congrats: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป
+    (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events)
+    นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
+  coursee-2022_shortdescription_congrats: เริ่มต้นเขียนโค้ดด้วยอัลกอริทึม ลูป เงื่อนไขและเหตุการณ์
+    ก่อนดูรายละเอียดของฟังก์ชั่น และในส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดเพื่อแชร์กับเพื่อนและครอบครัว
+  coursef-2022_shortdescription_congrats: ศึกษาวิธีการใช้รูปแบบต่างๆ ของลูป เหตุการณ์
     ฟังก์ชั่นและเงื่อนไข ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
     สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
   codeorg_longdescription: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน
@@ -1419,8 +1445,10 @@ th-TH:
   user_header_playlab: เรื่องราวและเกม
   user_header_dance: Dance Party
   user_header_minecraft: ไมน์คราฟท์
+  user_header_flappy: แฟล๊ปปี้
   user_header_view_project_gallery: ดูโปรเจกต์ต่าง ๆ
   user_header_view_my_projects: ดูโปรเจกต์ต่าง ๆของฉัน
+  view_all_sections: ดูหมวดทั้งหมด
   signing_in: เข้าสู่ระบบ
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab_tile_subtitle: สร้างแอปของคุณเองในจาวาสคริปต์โดยใช้การเขียนโปรแกรมบนบล็อกเป็นหลัก
@@ -1504,6 +1532,9 @@ th-TH:
   hoc2018_mc_back_journey: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
     มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
   hoc2018_mc_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
+  hoc2018_mc_minecraft_education: การศึกษา Minecraft
+  hoc2018_mc_continue_learning: เรียนรู้ต่อไปกับ Minecraft
+  hoc2018_mc_go_to_mc_education: ไปที่ Minecraft Education
   hoc2018_mc_short_description_shorter: ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ
     เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
   hoc2018_mc_journey: ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
@@ -1581,6 +1612,7 @@ th-TH:
   hoc2021_mc_mee_ai_description: 'ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ
     และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition'
   footer_powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
+  codebytes_skinny_banner_english_only: ภาษาอังกฤษเท่านั้น
   footer_privacy_policy: นโยบายความเป็นส่วนตัว
   footer_about: เกี่ยวกับ
   footer_donate: ร่วมบริจาค
@@ -1653,3 +1685,4 @@ th-TH:
   outbreak_tile_title: การระบาด
   outbreak_tile_subtitle: Monster Town กำลังติดไวรัส! เขียนโค้ดเครื่องจำลองการแพร่ระบาดของไวรัส
     และคาดการณ์สิ่งที่จะเกิดขึ้นกับเมืองที่อยู่กับเมืองนี้
+  footer_cookie_notice: ประกาศเกี่ยวกับคุกกี้

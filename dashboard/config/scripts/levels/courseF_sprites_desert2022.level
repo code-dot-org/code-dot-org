@@ -67,11 +67,15 @@
     "encrypted_examples": "xGJ6MMHbLK8frMUOyA8aRLaZTm5R8BLtFc3OFiftQjBgWMhLknoDlMrFbFzp\naJ7M76f3Iu98L9gotpOM2X7mzQ==\n",
     "hide_pause_button": "false",
     "short_instructions": "Add code to create a desert scene with different sprites.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.676+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_desert\\\"\"],\"cloned_from\":\"courseF_sprites_desert\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:40.676+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_desert\\\"\"],\"cloned_from\":\"courseF_sprites_desert\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

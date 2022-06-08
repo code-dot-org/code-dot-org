@@ -12,6 +12,7 @@ describe('ActivitiesEditor', () => {
     defaultProps = {
       activities: sampleActivities,
       hasLessonPlan: true,
+      allowMajorCurriculumChanges: true,
       addActivity
     };
   });

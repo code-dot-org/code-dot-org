@@ -31,9 +31,21 @@ CHART_TYPE = {
   VIRAL: 'VIRAL',
 }
 
+SPOTIFY_CHARTS = [
+  {'id' => TOP_50_GLOBAL_ID, 'title' => 'Top 50 Worldwide', 'type' => CHART_TYPE[:TOP]},
+  {'id' => TOP_50_USA_ID, 'title' => 'Top 50 USA', 'type' => CHART_TYPE[:TOP]},
+  {'id' => VIRAL_50_GLOBAL_ID, 'title' => 'Viral 50 Worldwide', 'type' => CHART_TYPE[:VIRAL]},
+  {'id' => VIRAL_50_USA_ID, 'title' => 'Viral 50 USA', 'type' => CHART_TYPE[:VIRAL]}
+]
+
 def get_token
   client_id = CDO.spotify_api_client_id
   client_secret = CDO.spotify_api_client_secret
+
+  if CDO.spotify_api_client_id.blank? || CDO.spotify_api_client_secret.blank?
+    Honeybadger.notify_cronjob_error(error_message: "Environment not configured for Spotify API.")
+    return
+  end
 
   begin
     headers = {
@@ -46,7 +58,7 @@ def get_token
     auth_response = JSON.parse(RestClient.post(TOKEN_URL, form, headers))
     $token = auth_response['access_token']
   rescue RestClient::Exception => e
-    Honeybadger.notify(
+    Honeybadger.notify_cronjob_error(
       e,
       error_message: "Failed to retrieve OAuth token from Spotify for use in App Lab Datasets.",
       context: {
@@ -65,7 +77,7 @@ def get_playlist_data(chart_type, playlist_id)
     url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
     response = RestClient.get(url, {authorization: "Bearer #{$token}"})
   rescue RestClient::Exception => e
-    Honeybadger.notify(
+    Honeybadger.notify_cronjob_error(
       e,
       error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
       context: {
@@ -77,7 +89,7 @@ def get_playlist_data(chart_type, playlist_id)
   end
 
   items = JSON.parse(response)['tracks']['items']
-  columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
+  columns = ['id', 'Track Name', 'Artist', 'Position']
   columns.insert(4, 'Popularity') if chart_type === CHART_TYPE[:TOP] # Only include Popularity for Top Charts
 
   regex = generate_profanity_regex(items)
@@ -94,7 +106,6 @@ def get_playlist_data(chart_type, playlist_id)
     record['Track Name'] = track['name']
     record.Artist = track['artists'][0]['name'] # First will be main artist, featured artists included in record name
     record.Popularity = track['popularity'] if chart_type === CHART_TYPE[:TOP]
-    record.URL = track['href']
 
     records[id] = record.to_h.to_json
     id += 1
@@ -121,17 +132,26 @@ def main
   get_token
   fb = FirebaseHelper.new('shared')
 
-  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_GLOBAL_ID)
-  fb.upload_live_table('Top 50 Worldwide', records, columns)
+  if $token.nil_or_empty?
+    Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
+    return
+  end
 
-  records, columns = get_playlist_data(CHART_TYPE[:TOP], TOP_50_USA_ID)
-  fb.upload_live_table('Top 50 USA', records, columns)
-
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_GLOBAL_ID)
-  fb.upload_live_table('Viral 50 Worldwide', records, columns)
-
-  records, columns = get_playlist_data(CHART_TYPE[:VIRAL], VIRAL_50_USA_ID)
-  fb.upload_live_table('Viral 50 USA', records, columns)
+  SPOTIFY_CHARTS.each do |chart|
+    records, columns = get_playlist_data(chart['type'], chart['id'])
+    if records.nil_or_empty?
+      Honeybadger.notify_cronjob_error(
+        error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
+        context: {
+          chart_id: chart['id'],
+          chart_title: chart['title'],
+          chart_type: chart['type']
+        }
+      )
+      next
+    end
+    fb.upload_live_table(chart['title'], records, columns)
+  end
 end
 
 main

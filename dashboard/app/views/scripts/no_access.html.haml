@@ -1,2 +1,2 @@
 %div
-  = current_user.student? ? t('no_script_access_student') : t('no_script_access_teacher')
+  = current_user&.student? ? t('no_script_access_student') : t('no_script_access_teacher')

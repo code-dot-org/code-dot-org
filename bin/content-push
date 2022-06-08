@@ -9,6 +9,7 @@ CONTENT_PATHS = 'dashboard pegasus aws/dms'.freeze
 # Revert any local changes to these files on levelbuilder
 LEVELBUILDER_OMISSIONS = [
   'dashboard/db/schema_cache.yml',
+  'dashboard/db/schema.rb',
 ]
 
 def ask_for_name

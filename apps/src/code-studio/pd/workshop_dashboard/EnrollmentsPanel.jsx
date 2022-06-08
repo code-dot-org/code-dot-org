@@ -8,9 +8,12 @@ import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
-  useFoormSurvey,
+  SubjectNames,
+  ActiveCoursesWithSurveys
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  shouldUseFoormSurvey,
   shouldShowSurveyResults
 } from './workshop_summary_utils';
 
@@ -185,13 +188,11 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
-    if (
-      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
-    ) {
+    if (!ActiveCoursesWithSurveys.includes(course)) {
       return null;
     }
 
-    if (useFoormSurvey(subject, lastSessionDate)) {
+    if (shouldUseFoormSurvey(subject, lastSessionDate)) {
       return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
     } else if (subject === SubjectNames.SUBJECT_CSF_101) {
       // Pegasus-based results are no longer offered.

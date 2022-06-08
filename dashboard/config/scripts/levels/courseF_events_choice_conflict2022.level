@@ -75,11 +75,17 @@
     "short_instructions": "Make the plane sprite spin left when you press one key, and right when you press the other key. ",
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "star",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:51.168+00:00\",\"changed\":[\"cloned from \\\"courseF_events_choice_conflict\\\"\"],\"cloned_from\":\"courseF_events_choice_conflict\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:51.168+00:00\",\"changed\":[\"cloned from \\\"courseF_events_choice_conflict\\\"\"],\"cloned_from\":\"courseF_events_choice_conflict\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 2,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

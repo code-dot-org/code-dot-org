@@ -84,6 +84,9 @@ function showCourseEditor() {
         useMigratedResources={courseEditorData.course_summary.is_migrated}
         courseVersionId={courseEditorData.course_summary.course_version_id}
         coursePath={courseEditorData.course_summary.course_path}
+        courseOfferingEditorLink={
+          courseEditorData.course_summary.course_offering_edit_path
+        }
       />
     </Provider>,
     document.getElementById('course_editor')

@@ -133,8 +133,8 @@ const styles = {
       }
     },
     blue: {
-      backgroundColor: color.default_blue,
-      borderColor: color.default_blue
+      backgroundColor: color.cyan,
+      borderColor: color.cyan
     }
   },
   finish: {

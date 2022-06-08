@@ -9,10 +9,8 @@ import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
-  gradeFormatter,
   loginInfoFormatter,
   studentsFormatter,
-  GRADES,
   COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
@@ -167,6 +165,52 @@ const sectionGradesRowData = [
   }
 ];
 
+const plSectionRowData = [
+  {
+    id: 1,
+    name: 'sectionA',
+    studentCount: 3,
+    code: 'ABC',
+    courseId: 29,
+    grade: 'K',
+    loginType: SectionLoginType.picture,
+    participantType: 'teacher',
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 2,
+    name: 'sectionB',
+    studentCount: 4,
+    code: 'DEF',
+    courseId: 29,
+    grade: '1',
+    loginType: SectionLoginType.picture,
+    participantType: 'facilitator',
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 3,
+    name: 'sectionC',
+    studentCount: 0,
+    code: 'GHI',
+    courseId: 29,
+    scriptId: 168,
+    grade: '4',
+    loginType: SectionLoginType.picture,
+    participantType: 'teacher',
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  }
+];
+
 // Scramble these for the table to start un-ordered
 const initialState = {
   teacherSections: {
@@ -215,7 +259,6 @@ describe('OwnedSectionsTable Sorting', () => {
         expectedGradeOrder[rowIndex]
       );
     });
-    expect(GRADES.length).to.equal(15);
   });
 
   it('can be sorted by grade in the reverse order with a second click', () => {
@@ -229,7 +272,6 @@ describe('OwnedSectionsTable Sorting', () => {
       </Provider>
     );
 
-    expect(GRADES.length).to.equal(15);
     // first click should sort sections K-12
     wrapper.find('.uitest-grade-header').simulate('click');
     // second click should sort sections in reverse order
@@ -242,6 +284,29 @@ describe('OwnedSectionsTable Sorting', () => {
       const cells = tr.find('td');
       expect(cells.at(GRADE_COLUMN).text()).to.equal(
         expectedGradeOrder[rowIndex]
+      );
+    });
+  });
+
+  it('table for pl sections shows participant type instead of grade', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <OwnedSectionsTable
+          sectionIds={[1, 2, 3]}
+          sectionRows={plSectionRowData}
+          isPlSections={true}
+          onEdit={() => {}}
+        />
+      </Provider>
+    );
+    expect(wrapper.find('.uitest-participant-type-header').length).to.equal(1);
+    const expectedParticipantTypes = ['Teachers', 'Facilitators', 'Teachers'];
+
+    let trows = wrapper.find('tbody').find('tr');
+    trows.forEach((tr, rowIndex) => {
+      const cells = tr.find('td');
+      expect(cells.at(GRADE_COLUMN).text()).to.equal(
+        expectedParticipantTypes[rowIndex]
       );
     });
   });
@@ -330,16 +395,6 @@ describe('OwnedSectionsTable', () => {
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
       assert.equal(link, '/teacher_dashboard/sections/2/login_info');
-    });
-
-    it('gradeFormatter has grade text', () => {
-      const rowData = sectionRowData[0];
-      const gradeCol = shallow(gradeFormatter(null, {rowData}));
-      const text = gradeCol
-        .find('div')
-        .at(0)
-        .text();
-      assert.equal('5', text);
     });
 
     it('courseLinkFormatter provides links to course information and section information', () => {

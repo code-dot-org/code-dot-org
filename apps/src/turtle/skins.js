@@ -165,8 +165,63 @@ exports.load = function(assetUrl, id) {
 
     return mapping;
   };
+  /**
+   * Generates a mapping of geometry sticker names to the urls of their images.
+   *
+   * @return the mapping of names to urls
+   */
+  var shapes = function() {
+    // Pattern Blocks
+    var shapes = [
+      'smallRhombusMaroon',
+      'smallRhombusRed',
+      'smallRhombusOrange',
+      'smallRhombusYellow',
+      'smallRhombusGreen',
+      'smallRhombusCyan',
+      'smallRhombusLightBlue',
+      'smallRhombusBlue',
+      'smallRhombusPurple',
+      'smallRhombusMagenta',
+      'smallRhombusMaroon45',
+      'smallRhombusRed45',
+      'smallRhombusOrange45',
+      'smallRhombusYellow45',
+      'smallRhombusGreen45',
+      'smallRhombusCyan45',
+      'smallRhombusLightBlue45',
+      'smallRhombusBlue45',
+      'smallRhombusPurple45',
+      'smallRhombusMagenta45',
+      'smallRhombusMaroon30',
+      'smallRhombusRed30',
+      'smallRhombusOrange30',
+      'smallRhombusYellow30',
+      'smallRhombusGreen30',
+      'smallRhombusCyan30',
+      'smallRhombusLightBlue30',
+      'smallRhombusBlue30',
+      'smallRhombusPurple30',
+      'smallRhombusMagenta30',
+      'hexagonYellow',
+      'triangleGreen',
+      'squareOrange',
+      'trapezoidRed'
+    ];
+
+    var mapping = {};
+    var name;
+
+    for (var i = 0; i < shapes.length; i++) {
+      name = shapes[i];
+      mapping[name] = assetUrl('media/common_images/shapes/' + name + '.png');
+    }
+
+    return mapping;
+  };
 
   skin.stickers = stickers();
+  skin.shapes = shapes();
 
   var config = CONFIGS[skin.id];
 

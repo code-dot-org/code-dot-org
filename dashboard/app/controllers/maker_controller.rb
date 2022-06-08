@@ -22,8 +22,8 @@ class MakerController < ApplicationController
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_units = Script.maker_units.
-        sort_by(&:version_year).
+    maker_units = Script.maker_units(for_user).
+        sort_by {|s| s.unit_group.version_year}.
         reverse.
         freeze
     csd_courses = UnitGroup.all_courses.select {|c| c.family_name == 'csd'}.freeze

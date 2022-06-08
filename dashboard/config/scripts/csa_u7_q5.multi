@@ -18,12 +18,55 @@ MARKDOWN
 markdown <<MARKDOWN
 Consider the following code segment:
 
+```
+public class Point2D {
+  private int x;
+  private int y;
+  
+  public void location() {
+    System.out.println("x: " + x + "\ny: " + y);
+  }
+  
+  // other methods
+}
 
- 
-
-![](https://images.code.org/4a3ee0e14d75e6e512eb7e3aa0c7cb2d-image-1634928016679.png)
+public class Point3D extends Point2D {
+  private int z;
+  
+  // other code
+}
+```
 
 Which of the following methods in `Point3D` best overrides location to print all three values each on their own line?
 
-![](https://images.code.org/b5b7c59eed0daa926704f8c2936df753-image-1634928393272.png)
+A.
+```
+public void location() {
+  System.out.println("x: " + super.x + "\ny: " + super.y + "\nz: " + z);
+}
+```
+
+B.
+```
+public void location() {
+  System.out.println("z: " + z);
+}
+```
+
+C.
+```
+public void location() {
+  super.location();
+  System.out.println("z: " + z);
+}
+```
+
+D.
+```
+public void location() {
+  super.location(x, y, z);
+}
+```
+
+E. `location` cannot be overridden.
 MARKDOWN

@@ -1,5 +1,4 @@
 var CustomEvalError = require('./evalError');
-var _ = require('lodash');
 
 /**
  * Throws an exception if val is not of the expected type. Type is either a
@@ -23,7 +22,7 @@ module.exports.ensureStyle = function(val) {
       return;
     }
   }
-  if (_.includes(['outline', 'solid'], val)) {
+  if (['outline', 'solid'].includes(val)) {
     return;
   }
   throw new CustomEvalError(CustomEvalError.Type.BadStyle, val);

@@ -178,15 +178,15 @@ class Pd::Workshop < ApplicationRecord
 
   def self.in_state(state, error_on_bad_state: true)
     case state
-      when STATE_NOT_STARTED
-        where(started_at: nil)
-      when STATE_IN_PROGRESS
-        where.not(started_at: nil).where(ended_at: nil)
-      when STATE_ENDED
-        where.not(started_at: nil).where.not(ended_at: nil)
-      else
-        raise "Unrecognized state: #{state}" if error_on_bad_state
-        none
+    when STATE_NOT_STARTED
+      where(started_at: nil)
+    when STATE_IN_PROGRESS
+      where.not(started_at: nil).where(ended_at: nil)
+    when STATE_ENDED
+      where.not(started_at: nil).where.not(ended_at: nil)
+    else
+      raise "Unrecognized state: #{state}" if error_on_bad_state
+      none
     end
   end
 
@@ -215,7 +215,10 @@ class Pd::Workshop < ApplicationRecord
   def self.order_by_scheduled_start(desc: false)
     joins(:sessions).
       group_by_id.
-      order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's not injesting arbitrary strings, but programmatically constructing
+      # a string from hardcoded values, so it's safe to wrap in Arel.sql
+      order(Arel.sql('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : '')))
   end
 
   # Orders by the number of active enrollments
@@ -223,18 +226,26 @@ class Pd::Workshop < ApplicationRecord
   def self.order_by_enrollment_count(desc: false)
     left_outer_joins(:enrollments).
       group_by_id.
-      order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's not injesting arbitrary strings, but programmatically constructing
+      # a string from hardcoded values, so it's safe to wrap in Arel.sql
+      order(Arel.sql('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : '')))
   end
 
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_state(desc: false)
-    order(%Q(
-      CASE
-        WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
-        WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
-        ELSE "#{STATE_ENDED}"
-      END #{desc ? ' DESC' : ''})
+    order(
+      # This SQL string is not at risk for injection vulnerabilites because it
+      # exclusively uses hardcoded values rather than user-provided ones, so
+      # it's safe to wrap in Arel.sql
+      Arel.sql(%Q(
+        CASE
+          WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
+          WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
+          ELSE "#{STATE_ENDED}"
+        END #{desc ? ' DESC' : ''})
+      )
     )
   end
 
@@ -432,10 +443,11 @@ class Pd::Workshop < ApplicationRecord
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) two mechanisms we use to suppress
+  # Note that this is one of (at least) three mechanisms we use to suppress
   # email in various cases -- see the serialized attribute 'suppress_email'
   # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
+  # [MEG] It appears that these courses can move into the MUST_SUPPRESS_EMAIL_SUBJECTS constant
   def suppress_reminders?
     [
       SUBJECT_CSP_TEACHER_CON,
@@ -445,20 +457,6 @@ class Pd::Workshop < ApplicationRecord
       SUBJECT_CSF_FIT,
       SUBJECT_ADMIN_COUNSELOR_WELCOME
     ].include? subject
-  end
-
-  def self.send_virtual_order_reminder_for_upcoming_in_days(days)
-    # Collect errors, but do not stop batch. Rethrow all errors below.
-    errors = []
-    scheduled_start_in_days(days).each do |workshop|
-      workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_virtual_order_form_reminder(enrollment)
-        email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-      end
-    end
-    raise "Failed to send virtual order form reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
@@ -542,7 +540,6 @@ class Pd::Workshop < ApplicationRecord
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
-    send_virtual_order_reminder_for_upcoming_in_days(7 * 4)
     send_reminder_to_close
     send_follow_up_after_days(30)
   end

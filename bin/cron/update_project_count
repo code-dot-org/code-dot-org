@@ -20,10 +20,10 @@ require 'cdo/honeybadger'
 MAX_EXECUTION_TIME = 1_200_000
 MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
-# Connection to read from Pegasus reporting database.
-PEGASUS_DB_READER = sequel_connect(
-  CDO.pegasus_db_reader,
-  CDO.pegasus_db_reader,
+# Connection to read from Dashboard reader database.
+DASHBOARD_DB_READER = sequel_connect(
+  CDO.dashboard_db_reader,
+  CDO.dashboard_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
@@ -34,12 +34,12 @@ NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
 
 def main
   # Get the current amount of projects.
-  project_count = PEGASUS_DB_READER[:storage_apps].where(standalone: true).count
+  project_count = DASHBOARD_DB_READER[:projects].where(standalone: true).count
 
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
   if (existing_project_count - project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE
     # Raise error if the project count somehow went down by more than set threshold.
-    error_message = "storage_apps standalone project count decreased from #{existing_project_count} to #{project_count}"
+    error_message = "standalone project count decreased from #{existing_project_count} to #{project_count}"
     raise error_message
   end
 

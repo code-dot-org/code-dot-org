@@ -173,11 +173,11 @@ class Documents < Sinatra::Base
       # This is similar to the lazy loading we need to do for Haml:
       # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
       require 'cdo/pegasus/actionview_sinatra'
-      ActionViewSinatra::Base.new(self)
+      ActionViewSinatra.create_view(self)
     end
 
     update_actionview_assigns
-    @actionview.instance_variable_set("@_request", request)
+    @actionview.instance_variable_set(:@_request, request)
   end
 
   # This will make all instance variables on our sinatra controller also
@@ -546,7 +546,7 @@ class Documents < Sinatra::Base
       # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
       result = body
-      extensions.reverse.each do |extension|
+      extensions.reverse_each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
           # Symbolize the keys of the locals hash; previously, we supported

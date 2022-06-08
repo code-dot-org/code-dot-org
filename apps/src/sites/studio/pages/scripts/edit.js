@@ -51,7 +51,8 @@ export default function initPage(unitEditorData) {
         id={scriptData.id}
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
-        initialPublishedState={scriptData.publishedState}
+        initialPublishedState={scriptData.coursePublishedState}
+        initialUnitPublishedState={scriptData.unitPublishedState}
         initialInstructionType={scriptData.instructionType}
         initialInstructorAudience={scriptData.instructorAudience}
         initialParticipantAudience={scriptData.participantAudience}
@@ -106,6 +107,8 @@ export default function initPage(unitEditorData) {
         }
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
+        courseOfferingEditorLink={scriptData.courseOfferingEditPath}
+        isCSDCourseOffering={scriptData.isCSDCourseOffering}
       />
     </Provider>,
     document.querySelector('.edit_container')

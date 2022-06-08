@@ -3,6 +3,7 @@
   congrats_data = {}
   congrats_data[:language] = request.language
   congrats_data[:random_donor_twitter] = @random_donor_twitter
+  congrats_data[:random_donor_name] = @random_donor_name
   congrats_data[:hide_dance_followup] = DCDO.get("hide_dance_followup", false)
   if current_user
     congrats_data[:current_user] = current_user

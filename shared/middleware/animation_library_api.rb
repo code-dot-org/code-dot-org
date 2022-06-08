@@ -44,6 +44,26 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/level_animations/<version-id>/<filename>
+  # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
+  #
+  get %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
+    not_found if animation_name.empty?
+
+    begin
+      result = Aws::S3::Bucket.
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        object("level_animations/#{animation_name}").
+        get
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
+  #
   # POST /api/v1/animation-library/level_animations/<filename>
   # Create Sprite in Level Animations folder
   #

@@ -433,6 +433,14 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.muteBackgroundMusic) {
+    this.muteBackgroundMusic = config.muteBackgroundMusic;
+  }
+
+  if (config.unmuteBackgroundMusic) {
+    this.unmuteBackgroundMusic = config.unmuteBackgroundMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -556,7 +564,7 @@ StudioApp.prototype.init = function(config) {
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        avatar={this.icon}
+        avatar={this.icon || this.skin.staticAvatar}
         handleCancel={() => {
           this.skipLevel();
         }}
@@ -687,7 +695,9 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi
+        useFilesApi: !!config.useFilesApi,
+        selectedVersion: queryParams('version'),
+        isReadOnly: !!config.readonlyWorkspace
       }),
       contentDiv
     );
@@ -1509,7 +1519,7 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1650,13 +1660,6 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
 
   this.onFeedback(options);
-};
-
-StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
-  return (
-    this.feedback_.isFinalLevel(response) &&
-    this.feedback_.isFreePlay(feedbackType)
-  );
 };
 
 /**
@@ -2902,7 +2905,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function() {
       return false;
     }
     var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getTitleValue('NAME');
+    return actual && actual.getFieldValue('NAME');
   });
 };
 
@@ -2952,10 +2955,10 @@ StudioApp.prototype.getFunctionWithoutTwoExamples = function() {
       // Only care about functional_examples that have an ACTUAL input (i.e. it's
       // clear which function they're for
       var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getTitleValue('NAME');
+      return actual && actual.getFieldValue('NAME');
     })
     .map(function(exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
     });
 
   var definitionWithLessThanTwoExamples;
@@ -2989,7 +2992,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function(topLevelType) {
 
   if (unfilled.type === topLevelType) {
     return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getTitleValue()
+      topLevelBlockName: unfilled.getFieldValue()
     });
   }
 
@@ -3025,7 +3028,7 @@ StudioApp.prototype.checkForFailingExamples = function(failureChecker) {
     if (failure) {
       failingBlockName = exampleBlock
         .getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
+        .getFieldValue('NAME');
     }
   });
   return failingBlockName;
@@ -3303,6 +3306,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
     {
       exampleSolutions: config.exampleSolutions,
       isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
+      hasBackgroundMusic: level.levelTracks && level.levelTracks.length !== 0,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3319,6 +3323,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
+      displayOldVersionBanner: !!queryParams('version'),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
@@ -3338,12 +3343,15 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      isProjectTemplateLevel:
+        !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverProjectLevelId: config.serverProjectLevelId
     },
     appSpecificConstants
   );

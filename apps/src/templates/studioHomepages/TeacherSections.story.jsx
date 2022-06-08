@@ -101,7 +101,6 @@ function withFakeServer({courses = [], sections = []} = {}) {
     {'Content-Type': 'application/json'},
     JSON.stringify(body)
   ];
-  server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
   server.respondWith(
     'GET',
     '/dashboardapi/sections',
@@ -109,7 +108,7 @@ function withFakeServer({courses = [], sections = []} = {}) {
   );
   server.respondWith(
     'GET',
-    '/dashboardapi/sections/valid_scripts',
+    '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
   );
 }

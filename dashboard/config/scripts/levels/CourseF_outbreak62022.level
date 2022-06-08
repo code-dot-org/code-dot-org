@@ -57,7 +57,7 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "mini_toolbox": "true",
-    "long_instructions": "# Chance\r\n\r\n<div style=\"display:inline-block\">\r\n\r\n\r\n*Right now, it's impossible for monsters to give or get the virus if either of them is wearing a mask. This sounds great, but it's not really that simple. We should add a \"chance\" (or probability) for the virus to spread each time any two monsters touch. We can model the chance of getting the virus off of these notes.*\r\n\r\n</div>\r\n\r\n<details open><summary><em><strong>Notes:</strong>How face masks affect the Monster Town outbreak</em></summary>\r\n\r\n<div style=\"text-align:center;\">\r\n<div style=\"background-color:indianred; text-align:center; border-style: solid; display:inline-block; margin:0 auto;\">\r\n<img src=\"https://images.code.org/01291b1e958448f65abb46b0d135b916-image-1603206161098.png\" style=\"width:55%\">\r\n\r\n<div style=\"background-color:white; text-align:center; border-style: solid; margin:0 15px;\">\r\n<br>\r\n\r\n*Benefits of Face Masks*\r\n\r\n|Healthy|Sick|Chance|\r\n|:-:|:-:|:-:|\r\n|![](https://images.code.org/c1b4e6e8f10c6c31bbfb7c41146bfc81-image-1602689942798.png)|![](https://images.code.org/8cc6854f2fc10e8211644a1f22955acc-image-1602689948477.png)|**Very High**|\r\n|![](https://images.code.org/acb9359175b1de8319d6a1453b419aea-image-1602689928157.png)|![](https://images.code.org/8cc6854f2fc10e8211644a1f22955acc-image-1602689948477.png)|**High**|\r\n|![](https://images.code.org/c1b4e6e8f10c6c31bbfb7c41146bfc81-image-1602689942798.png)|![](https://images.code.org/2d5652abbe5351d343a8031849a6b15e-image-1602689933087.png)|**Low**|\r\n|![](https://images.code.org/acb9359175b1de8319d6a1453b419aea-image-1602689928157.png)|![](https://images.code.org/2d5652abbe5351d343a8031849a6b15e-image-1602689933087.png)|**Very Low**|\r\n\r\n<br>\r\n</div>\r\n<br>\r\n</div>\r\n</div>\r\n\r\n</details>\r\n\r\n## Do This\r\n\r\n1. Add this **logic** block under the `when touches` event and set it to a very high chance:\r\n\r\n<xml>   <block type=\"gamelab_withPercentChanceDropdown\">\r\n      <title name=\"NUM\">90</title>\r\n    </block></xml>\r\n\r\n2. Add more events that include monsters wearing masks and give each a different percent chance (probability). Click the lightbulb for a hint if you are not sure which events are needed.\r\n\r\n3. Press **Finish** when you are ready to move on.",
+    "long_instructions": "# Chance\r\n\r\n<div style=\"display:inline-block\">\r\n\r\n\r\n*Right now, it's impossible for monsters to give or get the virus if either of them is wearing a mask. This sounds great, but it's not really that simple. We should add a \"chance\" (or probability) for the virus to spread each time any two monsters touch. We can model the chance of getting the virus off of these notes.*\r\n\r\n</div>\r\n\r\n<details open><summary><em><strong>Notes:</strong>How face masks affect the Monster Town outbreak</em></summary>\r\n\r\n<div style=\"text-align:center;\">\r\n<div style=\"background-color:indianred; text-align:center; border-style: solid; display:inline-block; margin:0 auto;\">\r\n<img src=\"https://images.code.org/01291b1e958448f65abb46b0d135b916-image-1603206161098.png\" style=\"width:55%\">\r\n\r\n<div style=\"background-color:white; text-align:center; border-style: solid; margin:0 15px;\">\r\n<br>\r\n\r\n*Benefits of Face Masks*\r\n\r\n|Healthy|Sick|Chance|\r\n|:-:|:-:|:-:|\r\n|![](https://images.code.org/c1b4e6e8f10c6c31bbfb7c41146bfc81-image-1602689942798.png)|![](https://images.code.org/8cc6854f2fc10e8211644a1f22955acc-image-1602689948477.png)|**Very High**|\r\n|![](https://images.code.org/acb9359175b1de8319d6a1453b419aea-image-1602689928157.png)|![](https://images.code.org/8cc6854f2fc10e8211644a1f22955acc-image-1602689948477.png)|**High**|\r\n|![](https://images.code.org/c1b4e6e8f10c6c31bbfb7c41146bfc81-image-1602689942798.png)|![](https://images.code.org/2d5652abbe5351d343a8031849a6b15e-image-1602689933087.png)|**Low**|\r\n|![](https://images.code.org/acb9359175b1de8319d6a1453b419aea-image-1602689928157.png)|![](https://images.code.org/2d5652abbe5351d343a8031849a6b15e-image-1602689933087.png)|**Very Low**|\r\n\r\n<br>\r\n</div>\r\n<br>\r\n</div>\r\n</div>\r\n\r\n</details>\r\n\r\n## Do This\r\n\r\n1. Add this **conditional** block under the `when touches` event and set it to a very high chance:\r\n\r\n<xml>   <block type=\"gamelab_withPercentChanceDropdown\">\r\n      <title name=\"NUM\">90</title>\r\n    </block></xml>\r\n\r\n2. Add more events that include monsters wearing masks and give each a different percent chance (probability). Click the light bulb for a hint if you are not sure which events are needed.\r\n\r\n3. Press **Finish** when you are ready to move on.",
     "validation_enabled": "false",
     "display_name": "Random Chance",
     "bubble_choice_description": "A virus isn't always transmitted, and masks don't stop transmission perfectly either. Improve your simulation by making infections happen with a random chance.",
@@ -70,11 +70,16 @@
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "drmonster",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:40.340+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak6\\\"\"],\"cloned_from\":\"CourseF_outbreak6\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:40.340+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak6\\\"\"],\"cloned_from\":\"CourseF_outbreak6\"},{\"changed_at\":\"2022-01-24 14:55:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 14:56:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -444,33 +449,33 @@
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#99ff99</title>
+                <field name="COLOUR">#99ff99</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNumSprites">
-            <title name="ANIMATION_NAME">"healthy"</title>
+            <field name="ANIMATION_NAME">"healthy"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <title name="PROPERTY" config="&quot;scale&quot;, &quot;rotation&quot;, &quot;x&quot;, &quot;y&quot;, &quot;direction&quot;, &quot;recovery&quot;">"scale"</title>
+            <field name="PROPERTY" config="&quot;scale&quot;, &quot;rotation&quot;, &quot;x&quot;, &quot;y&quot;, &quot;direction&quot;, &quot;recovery&quot;">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_getAllSprites"/>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">50</title>
+                <field name="NUM">50</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"sick_mask"</title>
+            <field name="ANIMATION">"sick_mask"</field>
           </block>
         </category>
         <category name="Behaviors">
@@ -481,37 +486,37 @@
             <value name="BEHAVIOR">
               <block type="gamelab_behavior_get">
                 <mutation/>
-                <title name="VAR" id="wandering">wandering</title>
+                <field name="VAR" id="wandering">wandering</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
           <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"healthy_mask"</title>
+                <field name="ANIMATION">"healthy_mask"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"sick"</title>
+                <field name="ANIMATION">"sick"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"healthy"</title>
+                <field name="ANIMATION">"healthy"</field>
               </block>
             </value>
           </block>
         </category>
-        <category name="Logic">
+        <category name="Conditionals">
           <block type="gamelab_withPercentChanceDropdown">
-            <title name="NUM" config="90,75,25,10">90</title>
+            <field name="NUM" config="90,75,25,10">90</field>
           </block>
         </category>
       </xml>

@@ -33,10 +33,6 @@ class BubbleChoiceDSL < ContentDSL
     @hash[:sublevels] << name
   end
 
-  def self.parse_file(filename)
-    super(filename, File.basename(filename, '.bubble_choice'))
-  end
-
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"
     new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?

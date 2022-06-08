@@ -17,11 +17,12 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -29,6 +30,8 @@ import color from '@cdo/apps/util/color';
 class UnitOverview extends React.Component {
   static propTypes = {
     id: PropTypes.number,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
@@ -40,11 +43,10 @@ class UnitOverview extends React.Component {
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
-    minimal: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
@@ -53,6 +55,7 @@ class UnitOverview extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
+    completedLessonNumber: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -99,7 +102,6 @@ class UnitOverview extends React.Component {
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal,
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
@@ -107,7 +109,10 @@ class UnitOverview extends React.Component {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
-      isCsdOrCsp
+      isCsdOrCsp,
+      completedLessonNumber,
+      courseOfferingId,
+      courseVersionId
     } = this.props;
 
     const displayRedirectDialog =
@@ -123,6 +128,9 @@ class UnitOverview extends React.Component {
 
     return (
       <div>
+        {completedLessonNumber && (
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
+        )}
         <div>
           {showUnversionedRedirectWarningDialog && (
             <UnversionedScriptRedirectDialog />
@@ -173,9 +181,11 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
           />
         </div>
-        <ProgressTable minimal={minimal} />
+        <ProgressTable minimal={false} />
         <ProgressLegend
           includeCsfColumn={!excludeCsfColumnInLegend}
           includeReviewStates={isCsdOrCsp}
@@ -203,5 +213,5 @@ export default connect((state, ownProps) => ({
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
   hiddenLessonState: state.hiddenLesson,
-  selectedSectionId: parseInt(state.teacherSections.selectedSectionId)
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(UnconnectedUnitOverview);

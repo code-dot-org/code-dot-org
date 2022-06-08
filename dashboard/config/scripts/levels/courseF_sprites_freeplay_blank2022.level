@@ -70,11 +70,16 @@
     "short_instructions": "Now it's your turn to create whatever you want!",
     "hint_prompt_attempts_threshold": "1",
     "instructions_icon": "rikki",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.547+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_freeplay_blank\\\"\"],\"cloned_from\":\"courseF_sprites_freeplay_blank\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:41.547+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_freeplay_blank\\\"\"],\"cloned_from\":\"courseF_sprites_freeplay_blank\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

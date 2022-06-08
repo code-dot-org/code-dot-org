@@ -12,15 +12,11 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
-  setValidAssignments,
-  setValidGrades,
-  setTextToSpeechUnitIds,
-  setLessonExtrasUnitIds,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
+  setCourseOfferings,
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
@@ -29,56 +25,47 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
-import {setValidScripts} from '../../../../redux/unitSelectionRedux';
+import {
+  setCoursesWithProgress,
+  setScriptId
+} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import testJavabuilderWebsocketConnection from '@cdo/apps/util/testJavabuilderWebsocketConnection';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validGrades,
-  validScripts,
-  studentScriptIds,
-  validCourses,
-  hasSeenStandardsReportInfo,
+  validCourseOfferings,
   localeCode,
-  textToSpeechUnitIds,
-  lessonExtrasUnitIds,
-  isJavabuilderConnectionTestEnabled
+  hasSeenStandardsReportInfo,
+  coursesWithProgress
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
   registerReducers({
     teacherSections,
-    sectionData,
     manageStudents,
     sectionProgress,
     unitSelection,
     stats,
-    textResponses,
     sectionAssessments,
     currentUser,
     sectionStandardsProgress,
     locales
   });
   const store = getStore();
-  // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
+  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setValidAssignments(validCourses, validScripts));
-  store.dispatch(setValidGrades(validGrades));
+  store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
-  store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
@@ -87,9 +74,13 @@ $(document).ready(function() {
     store.dispatch(setShowSharingColumn(true));
   }
 
-  store.dispatch(
-    setValidScripts(validScripts, studentScriptIds, validCourses, section)
-  );
+  // Default the scriptId to the script assigned to the section
+  const defaultScriptId = section.script ? section.script.id : null;
+  if (defaultScriptId) {
+    store.dispatch(setScriptId(defaultScriptId));
+  }
+
+  store.dispatch(setCoursesWithProgress(coursesWithProgress));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -103,13 +94,12 @@ $(document).ready(function() {
               sectionId={section.id}
               sectionName={section.name}
               studentCount={section.students.length}
+              coursesWithProgress={coursesWithProgress}
             />
           )}
         />
       </Router>
     </Provider>,
-    document.getElementById('teacher-dashboard'),
-    () =>
-      isJavabuilderConnectionTestEnabled && testJavabuilderWebsocketConnection()
+    document.getElementById('teacher-dashboard')
   );
 });

@@ -49,11 +49,16 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:40.647+00:00\",\"changed\":[\"cloned from \\\"courseB_starWars_prog4_2021\\\"\"],\"cloned_from\":\"courseB_starWars_prog4_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:56:40.647+00:00\",\"changed\":[\"cloned from \\\"courseB_starWars_prog4_2021\\\"\"],\"cloned_from\":\"courseB_starWars_prog4_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

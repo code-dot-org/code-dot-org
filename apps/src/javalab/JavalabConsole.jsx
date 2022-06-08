@@ -16,6 +16,7 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import PhotoSelectionView from './components/PhotoSelectionView';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -51,7 +52,8 @@ class JavalabConsole extends React.Component {
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
-    photoPrompterPromptText: PropTypes.string
+    photoPrompterPromptText: PropTypes.string,
+    shouldJumpToInput: PropTypes.bool
   };
 
   state = {
@@ -83,6 +85,10 @@ class JavalabConsole extends React.Component {
     for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
         lines[++currentLine] = '';
+      } else if (log.type === 'markdown') {
+        lines[++currentLine] = (
+          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+        );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
         const splitText = text.split(/\r?\n/).entries();
@@ -183,7 +189,10 @@ class JavalabConsole extends React.Component {
   };
 
   onLogsClick = () => {
-    this.inputRef.focus();
+    // only jump to input if the program is currently in run or test mode.
+    if (this.props.shouldJumpToInput) {
+      this.inputRef.focus();
+    }
   };
 
   render() {
@@ -192,17 +201,28 @@ class JavalabConsole extends React.Component {
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
           />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
@@ -232,7 +252,8 @@ export default connect(
     consoleLogs: state.javalab.consoleLogs,
     displayTheme: state.javalab.displayTheme,
     isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
-    photoPrompterPromptText: state.javalab.photoPrompterPromptText
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
@@ -299,7 +320,8 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
   },
   log: {
     padding: 0,

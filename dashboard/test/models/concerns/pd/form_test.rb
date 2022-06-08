@@ -55,19 +55,19 @@ class DummyFormWithDynamicOptions < DummyForm
   # Valid options depend on which option_set is selected, determined at runtime
   def dynamic_options
     case sanitize_form_data_hash[:option_set]
-      when '1'
-        {
-          option: %w(One Two)
-        }
-      when '2'
-        {
-          option: %w(Three Four)
-        }
-      else
-        {
-          # always fail in this case
-          option: nil
-        }
+    when '1'
+      {
+        option: %w(One Two)
+      }
+    when '2'
+      {
+        option: %w(Three Four)
+      }
+    else
+      {
+        # always fail in this case
+        option: nil
+      }
     end
   end
 end

@@ -51,7 +51,8 @@ var MusicController = function(
   audioPlayer,
   assetUrl,
   trackDefinitions,
-  loopRandomWithDelay
+  loopRandomWithDelay,
+  muteMusic
 ) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
@@ -70,6 +71,9 @@ var MusicController = function(
 
   /** @private {number} */
   this.loopRandomWithDelay_ = loopRandomWithDelay;
+
+  /** @private {boolean} */
+  this.muteMusic_ = muteMusic;
 
   /**
    * @private {boolean} whether we stopped playing music due to video being
@@ -165,13 +169,21 @@ MusicController.prototype.preload = function() {
   }, this);
 };
 
+MusicController.prototype.setMuteMusic = function(
+  isBackgroundMusicMuted,
+  track
+) {
+  this.muteMusic_ = isBackgroundMusicMuted;
+  isBackgroundMusicMuted ? this.stop() : this.play(track);
+};
+
 /**
  * Begins playing a particular piece of music immediately.
  * @param {string} trackName
  */
 MusicController.prototype.play = function(trackName) {
   debug('play ' + trackName);
-  if (!this.audioPlayer_) {
+  if (!this.audioPlayer_ || this.muteMusic_) {
     return;
   }
 

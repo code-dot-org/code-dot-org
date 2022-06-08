@@ -1,7 +1,7 @@
 $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
-@import 'color';
+@import 'color.scss';
 @import 'mixins';
 @import '../VisualizationOverlay.scss';
 

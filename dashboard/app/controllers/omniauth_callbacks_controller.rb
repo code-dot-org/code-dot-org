@@ -358,9 +358,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # OAuth providers do not necessarily provide student email addresses, so we
     # want to perform silent takeover on these accounts, but *only if* the
     # student hasn't made progress with the initial account
+    has_auth_email = user.migrated? && user.authentication_options.any? {|ao| ao.hashed_email.present?}
     user.persisted? && user.oauth_student? &&
       user.email.blank? && user.hashed_email.blank? &&
-      !user.has_activity?
+      # Also *all* AuthenticationOption's emails are blank
+      !has_auth_email && !user.has_activity?
   end
 
   # Looks for an existing user with an email address matching the oauth credentials.
@@ -394,6 +396,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Transfer sections and destroy new user if takeover is possible
     if allows_section_takeover(oauth_user)
+      # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
+      if oauth_user.id == lookup_user.id
+        # Duplicate params only because this log is temporary
+        firehose_params = {
+          source_user: oauth_user,
+          destination_user: lookup_user,
+          type: 'silent-self',
+          provider: provider,
+        }
+        log_self_takeover_investigation_to_firehose(firehose_params)
+      end
       return unless move_sections_and_destroy_source_user(
         source_user: oauth_user,
         destination_user: lookup_user,

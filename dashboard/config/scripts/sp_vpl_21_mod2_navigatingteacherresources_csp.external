@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Navigate to additional teacher resources
 
-<img src="https://images.code.org/2b4f6dbea7fbb88998e64c2c1f2fb5f1-image-1637629946531.12.02 PM.png" alt="Screenshot of the CS Principles Course Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height:240px; width:450px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/7ef33d121cc185127d2bbb336453591a-image-1641932033249.13.33 PM.jpg" alt="Screenshot of the CS Principles Course Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="border:1px solid black; float: left; height:240px; width:450px; clear: both; margin: 0 20px 20px 0;">
 
 ## Steps to access course level resources
 
@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/03fd6052913bbff6d836334789e6e5c4-image-1637630003768.12.17 PM.png" alt="Screenshot of the Unit 1 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height:215px; width:450px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/03fd6052913bbff6d836334789e6e5c4-image-1637630003768.12.17 PM.png" alt="Screenshot of the Unit 1 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="border:1px solid black; float: left; height:215px; width:450px; clear: both; margin: 0 20px 20px 0;">
 
 ## Steps to access unit level resources
 
@@ -34,5 +34,4 @@ markdown <<MARKDOWN
 ##### **Step 4:** Select the resource that you would like to view from the dropdown menu. 
 
 <div style="clear:both"/>
-
 MARKDOWN

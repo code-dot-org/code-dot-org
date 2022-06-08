@@ -4,6 +4,8 @@ require 'webmock/minitest'
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -135,6 +137,48 @@ class LevelsControllerTest < ActionController::TestCase
     response: :forbidden,
     user: :teacher
   )
+
+  test "levelbuilder can get exemplar to edit" do
+    get :edit_exemplar,
+      params: {id: @level.id}
+    assert_response :success
+  end
+
+  test "teacher cannot get exemplar to edit" do
+    teacher = create(:teacher)
+    sign_out(@levelbuilder)
+    sign_in(teacher)
+
+    get :edit_exemplar,
+      params: {id: @level.id}
+    assert_response :forbidden
+  end
+
+  test "levelbuilder can update exemplar" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    exemplar_sources = {"File.java" => "System.out.println()"}
+    javalab_level = create(:javalab)
+    assert_nil javalab_level.exemplar_sources
+
+    post :update_exemplar_code,
+      params: {id: javalab_level.id},
+      body: {exemplar_sources: {"File.java" => "System.out.println()"}}.to_json
+
+    assert_response :success
+    javalab_level.reload
+    assert_equal exemplar_sources, javalab_level.exemplar_sources
+  end
+
+  test "teacher cannot update exemplar" do
+    teacher = create(:teacher)
+    sign_out(@levelbuilder)
+    sign_in(teacher)
+
+    javalab_level = create(:javalab)
+    post :update_exemplar_code,
+      params: {id: javalab_level.id}
+    assert_response :forbidden
+  end
 
   test "should get new" do
     get :new, params: {game_id: @level.game}
@@ -591,6 +635,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/"
   end
 
+  test 'can edit encrypted level' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    level = create :multi, encrypted: true
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+
+    level.update!(encrypted: 'true')
+    get :edit, params: {id: level.id}
+    assert_response :success
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
@@ -642,7 +699,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load file contents when editing a dsl defined level" do
     level_path = 'config/scripts/test_demo_level.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
 
     level = Level.find_by_name 'Test Demo Level'
@@ -654,7 +712,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
     level_path = 'config/scripts/test_external_markdown.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
@@ -734,6 +793,44 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :unprocessable_entity
 
     assert_match /JSON::ParserError/, JSON.parse(@response.body)['code_functions'].first
+  end
+
+  test "update_start_code encrypts validation" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    level = create(:javalab)
+    post :update_start_code, params: {
+      id: level.id
+    }, body:
+        {
+          validation: {"Validation.java" => "{}"},
+          start_sources: {"MyClass.java" => "{}"}
+        }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['validation']
+    assert level.validation
+    assert level.properties['encrypted_validation']
+
+    # this property is plaintext
+    assert level.properties['start_sources']
+  end
+
+  test "update_start_code works if level does not support validation" do
+    post :update_start_code, params: {
+      id: create(:applab).id,
+    }, body:
+           {
+             start_html: '<h1>foo</h1>',
+             start_blocks: 'console.log("hello world");',
+           }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>foo</h1>', level.properties['start_html']
+    assert_equal 'console.log("hello world");', level.properties['start_blocks']
   end
 
   test "should destroy level" do
@@ -1089,11 +1186,11 @@ class LevelsControllerTest < ActionController::TestCase
 
   test 'external markdown levels will render <user_id/> as the actual user id' do
     File.stubs(:write)
-    dsl_text = <<DSL
-name 'user_id_replace'
-title 'title for user_id_replace'
-markdown 'this is the markdown for <user_id/>'
-DSL
+    dsl_text = <<~DSL
+      name 'user_id_replace'
+      title 'title for user_id_replace'
+      markdown 'this is the markdown for <user_id/>'
+    DSL
     level = External.create_from_level_builder({}, {name: 'my_user_id_replace', dsl_text: dsl_text})
     sign_in @not_admin
     get :show, params: {id: level}
@@ -1189,7 +1286,7 @@ DSL
   # Assert that the url is a real S3 url, and not a placeholder.
   def assert_s3_image_url(url)
     assert(
-      %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
+      %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
     )
   end

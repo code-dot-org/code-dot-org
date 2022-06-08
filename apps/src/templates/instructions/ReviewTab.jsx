@@ -5,7 +5,6 @@ import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {currentLocation, navigateToHref} from '@cdo/apps/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
@@ -19,11 +18,13 @@ const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
   static propTypes = {
-    onLoadComplete: PropTypes.func,
+    // Used only in tests
+    dataApi: PropTypes.object,
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAsTeacher: PropTypes.bool,
+    userIsTeacher: PropTypes.bool,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
     serverScriptId: PropTypes.number
@@ -43,36 +44,11 @@ class ReviewTab extends Component {
     authorizationError: false,
     commentSaveError: false,
     commentSaveInProgress: false,
-    dataApi: {}
+    commentSaveErrorMessage: ''
   };
-
-  onSelectPeer = peer => {
-    if (!peer.id) {
-      return;
-    }
-
-    navigateToHref(
-      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
-    );
-  };
-
-  onClickBackToProject = () => {
-    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
-  };
-
-  generateLevelUrlWithCodeReviewParam = () =>
-    currentLocation().origin +
-    currentLocation().pathname +
-    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
     this.loadReviewData();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.loadingReviewData && !this.state.loadingReviewData) {
-      this.props.onLoadComplete();
-    }
   }
 
   loadReviewData = () => {
@@ -85,11 +61,10 @@ class ReviewTab extends Component {
       return;
     }
 
-    this.dataApi = new CodeReviewDataApi(
-      channelId,
-      serverLevelId,
-      serverScriptId
-    );
+    // API should only be passed via props for testing purposes
+    this.dataApi =
+      this.props.dataApi ||
+      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId);
 
     const loadPromises = [];
 
@@ -137,7 +112,8 @@ class ReviewTab extends Component {
   onNewCommentCancel = () => {
     this.setState({
       commentSaveError: false,
-      commentSaveInProgress: false
+      commentSaveInProgress: false,
+      commentSaveErrorMessage: ''
     });
   };
 
@@ -150,7 +126,7 @@ class ReviewTab extends Component {
 
     this.dataApi
       .submitNewCodeReviewComment(commentText)
-      .done(newComment => {
+      .then(newComment => {
         const newComments = comments;
         newComments.push(newComment);
 
@@ -160,8 +136,14 @@ class ReviewTab extends Component {
           commentSaveInProgress: false
         });
       })
-      .fail(result => {
-        if (result.status === 404) {
+      .catch(result => {
+        if (result.profanityFoundError) {
+          this.setState({
+            commentSaveError: true,
+            commentSaveInProgress: false,
+            commentSaveErrorMessage: result.profanityFoundError
+          });
+        } else if (result.status === 404) {
           this.setState({
             authorizationError: true,
             commentSaveInProgress: false
@@ -174,7 +156,7 @@ class ReviewTab extends Component {
 
   onCommentDelete = deletedCommentId => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .deleteCodeReviewComment(deletedCommentId)
       .done(() => {
         const updatedComments = [...comments];
@@ -187,7 +169,7 @@ class ReviewTab extends Component {
 
   onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
     const {comments} = this.state;
-    this.dataApi
+    return this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
         const toggledCommentIndex = comments.findIndex(
@@ -221,6 +203,13 @@ class ReviewTab extends Component {
     updatedComments[resolvedCommentIndex].hasError = newErrorStatus;
 
     this.setState({comments: updatedComments});
+  };
+
+  clearCommentError = () => {
+    this.setState({
+      commentSaveError: false,
+      commentSaveErrorMessage: ''
+    });
   };
 
   renderReadyForReviewCheckbox() {
@@ -315,16 +304,19 @@ class ReviewTab extends Component {
       authorizationError,
       isReadyForReview,
       commentSaveInProgress,
-      commentSaveError
+      commentSaveError,
+      commentSaveErrorMessage
     } = this.state;
     if (!authorizationError && (isReadyForReview || this.props.viewAsTeacher)) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
           onNewCommentCancel={this.onNewCommentCancel}
+          onCommentUpdate={this.clearCommentError}
           key={forceRecreateEditorKey}
           saveInProgress={commentSaveInProgress}
           saveError={commentSaveError}
+          saveErrorMessage={commentSaveErrorMessage}
         />
       );
     }
@@ -352,7 +344,8 @@ class ReviewTab extends Component {
       viewAsCodeReviewer,
       viewAsTeacher,
       codeReviewEnabled,
-      channelId
+      channelId,
+      userIsTeacher
     } = this.props;
     const {
       loadingReviewData,
@@ -399,10 +392,11 @@ class ReviewTab extends Component {
           {codeReviewEnabled && !viewAsTeacher && (
             <>
               <ReviewNavigator
-                onSelectPeer={this.onSelectPeer}
-                onReturnToProject={this.onClickBackToProject}
                 viewPeerList={!viewAsCodeReviewer}
                 loadPeers={this.loadPeers}
+                teacherAccountViewingAsParticipant={
+                  userIsTeacher && !viewAsTeacher
+                }
               />
               {reviewCheckboxEnabled &&
                 !viewAsCodeReviewer &&
@@ -433,9 +427,10 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
-  codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
+  codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAsTeacher: state.viewAs === ViewType.Instructor,
+  userIsTeacher: state.currentUser.userType === 'teacher',
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId

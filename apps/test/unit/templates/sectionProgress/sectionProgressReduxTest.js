@@ -11,25 +11,6 @@ import sectionProgress, {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {setSection} from '@cdo/apps/redux/sectionDataRedux';
-
-const fakeSectionData = {
-  id: 123,
-  students: [
-    {
-      id: 1,
-      name: 'studentb'
-    },
-    {
-      id: 2,
-      name: 'studenta'
-    }
-  ],
-  script: {
-    id: 300,
-    name: 'csp2'
-  }
-};
 
 const fakeUnitData789 = {
   unitDataByUnit: {
@@ -75,16 +56,6 @@ describe('sectionProgressRedux', () => {
       const action2 = setScriptId(130);
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.lessonOfInterest, 1);
-    });
-  });
-
-  describe('setSection', () => {
-    it('resets all non-section data to initial state', () => {
-      const action = setSection(fakeSectionData);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.unitDataByUnit, {});
-      assert.deepEqual(nextState.studentLevelProgressByUnit, {});
-      assert.deepEqual(nextState.studentLastUpdateByUnit, {});
     });
   });
 

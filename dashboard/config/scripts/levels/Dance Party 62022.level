@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T20:22:30.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -50,7 +46,7 @@
     "parent_level_id": 21498,
     "long_instructions": "These aliens are running wild! Let's calm them down.\r\n\r\nAdd an event that makes each alien stop moving after 5 seconds, using <xml><block type=\"gamelab_removeAllBehaviors\" block-text=\"the stops everything block\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>!",
     "show_type_hints": "true",
-    "short_instructions": "Add an event that makes each alien stop moving after 3 seconds.",
+    "short_instructions": "Add an event that makes each alien stop moving after 5 seconds.",
     "block_pool": "gamelab",
     "include_shared_functions": "false",
     "name_suffix": "2022",
@@ -65,8 +61,8 @@
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "teacher_markdown": "This lesson contains a **mini-project**. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\r\n\r\nThis level will validate a student’s code by checking that the following conditions have been met:\r\n* All alien sprites must stop their behaviors.",
     "hint_prompt_attempts_threshold": "1",
@@ -77,9 +73,17 @@
     "instructions_icon": "alien",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-06T20:22:30.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:30.559+00:00\",\"changed\":[\"cloned from \\\"Dance Party 6_2021\\\"\"],\"cloned_from\":\"Dance Party 6_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:30.559+00:00\",\"changed\":[\"cloned from \\\"Dance Party 6_2021\\\"\"],\"cloned_from\":\"Dance Party 6_2021\"},{\"changed_at\":\"2022-01-12 18:04:58 +0000\",\"changed\":[\"solution_blocks\",\"short_instructions\",\"soft_buttons\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <solution_blocks>
@@ -245,7 +249,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">swimming left and right</title>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
           <statement name="STACK">
             <block type="controls_if">
               <mutation elseif="1"/>
@@ -585,7 +589,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -606,7 +610,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -627,7 +631,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -648,7 +652,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
@@ -669,7 +673,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>
