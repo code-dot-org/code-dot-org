@@ -647,14 +647,32 @@
         "csd3-2018/Functions": {
           "name": "Funkce"
         },
+        "csd3-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd6-2018/Board Events": {
+          "name": "Události desky"
+        },
         "csd6-2018/Analog Input": {
           "name": "Analogový vstup"
         },
         "csd6-2018/Functions with Parameters": {
           "name": "Funkce s Parametry"
         },
+        "csd6-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd5-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd4-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
         "csd2-2018/Lists": {
           "name": "Seznamy"
+        },
+        "csd2-2018/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cestování bezpečně"
@@ -1057,6 +1075,9 @@
         },
         "csd3-2019/Functions": {
           "name": "Funkce"
+        },
+        "csd6-2019/Board Events": {
+          "name": "Události desky"
         },
         "csd6-2019/Analog Input": {
           "name": "Analogový vstup"
@@ -1549,6 +1570,9 @@
         },
         "csd3-2017/Functions": {
           "name": "Funkce"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Události desky"
         },
         "csd6-2017/Analog Input_": {
           "name": "Analogový vstup"
@@ -2607,11 +2631,26 @@
         "csd7-2021/Similarity Models": {
           "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
         },
+        "csd7-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd4-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd6-2021/Board Events": {
+          "name": "Události desky"
+        },
         "csd6-2021/Analog Input": {
           "name": "Analogový vstup"
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Funkce s Parametry"
+        },
+        "csd6-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd5-2021/CS Discoveries Post-Course Survey": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "csd3-2021/Variables": {
           "name": "Proměnné"
@@ -2636,6 +2675,12 @@
         },
         "csd3-2021/Functions": {
           "name": "Funkce"
+        },
+        "csd3-2021/lesson-1": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
+        },
+        "csd2-2021/lesson-1": {
+          "name": "Objevujeme informatiku – Průzkum po kurzu"
         },
         "pre-express-2020/Learn to Drag and Drop": {
           "name": "Naučte se přetahovat a upouštět"

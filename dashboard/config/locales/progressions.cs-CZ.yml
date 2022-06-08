@@ -3,10 +3,16 @@ cs:
   data:
     progressions:
       '"If/Else" with the Bee': Příkazy If/Else se včelkou
+      8-Bit Binary Number Widget: Widget 8bitového binárního čísla
+      AI Lab and Isaac's Data: Laboratoř umělé inteligence a Isaacova data
+      AI Lab and Kim's Data: Laboratoř umělé inteligence a data Kim
       AI Machine Learning - Video: 'Umělá inteligence: strojové učení – video'
+      'AI for Oceans: Fish vs Not Fish': 'AI pomáhá oceánům: „Ryba“ vs. „není ryba“'
+      'AI for Oceans: Types of Fish': 'AI pomáhá oceánům: Druhy ryb'
       'AI: Impact on Society - Video': 'Umělá inteligence: dopad na společnost – video'
       'AI: Training Data & Bias - Video': 'Umělá inteligence: trénovací data a podjatost
         – video'
+      Accelerometer Events: Události akcelerometru
       Add Content and HTML: Přidat obsah a HTML
       Add Content and Structure to Your Page: Přidat na stránku obsah a strukturu
       Add Movement: Přidat pohyb
@@ -22,13 +28,58 @@ cs:
       Alternative Datasets: Alternativní datové sady
       Animate Your Scene: Animace scény
       App Lab Intro - Video: Úvod k App Labu – video
+      'App Project: Screen Design': 'Projekt aplikace: Návrh obrazovky'
+      'App: Choose a Kid''s Movie': 'Aplikace: Volba filmu pro děti'
+      'App: Friend Finder': 'Aplikace: Vyhledávač kamarádů'
+      'App: Guess the Number': 'Aplikace: Uhodni číslo'
+      'App: How Many Countries': 'Aplikace: Kolik zemí'
+      'App: Improved Pet App': 'Aplikace: Vylepšená aplikace s domácími mazlíčky'
+      'App: Is It Your Birthday?': 'Aplikace: Máš narozeniny?'
+      'App: My Famous Birthday': 'Aplikace: Moje velkolepé narozeniny'
+      'App: National Parks': 'Aplikace: Národní parky'
+      'App: Outfit Picker': 'Aplikace: Výběr outfitu'
+      'App: Pet Chooser': 'Aplikace: Výběr domácího mazlíčka'
+      'App: Stamp Notebook': 'Aplikace: Sešit na razítka'
+      'App: Story Creator': 'Aplikace: Tvůrce příběhů'
+      'App: The Fastest Finger': 'Aplikace: Nejrychlejší prst'
+      'App: Where Should I Live?': 'Aplikace: Nejlepší místo na bydlení'
+      Artist Intro with JR Hildebrand: Úvod Umělec s JR Hildebrandem
+      Artist Intro with JR Hildebrande: Úvod Umělec s JR Hildebrandem
       Artist Project: Projekt Umělec
       'Artist: Variables': 'Umělec: proměnné'
       Assessment: Hodnocení
+      Attribution: Přisouzení
       Back and Forth: Sem a tam
+      Basic Conditionals: Základní podmínky
       Bass, Mid, and Treble: Basy, středy a výšky
+      Be a Super Digital Citizen: Buď super digitální občan
+      Begin planning your project: Začni plánovat projekt
+      Begin planning your project_2018: Začni plánovat projekt_2018
+      Binary Bracelets - Unplugged Activity: Binární náramky – aktivita bez počítače
+      Binary Number Widget: Widget binárního čísla
       Binary Numbers: Binární čísla
+      Board Events: Události desky
+      Board Input and Output: Vstup a výstup desky
+      Book Recommender App: Aplikace na doporučování knih
+      Book Recommender Model Card: Modelová karta aplikace na doporučování knih
+      Boolean Comparison: Porovnání logických hodnot
+      Build a Platform Jumper: Vytvoření kódu na přizpůsobení platformě
+      Build a Screen: Vytvoření obrazovky
+      Building a UI with Design Mode: Vytvoření UI s návrhovým režimem
+      Building an App: Vytvoření aplikace
+      Button Circuits: Obvody tlačítka
+      CS Discoveries Post-Course Survey: Objevujeme informatiku – Průzkum po kurzu
+      CS Discoveries Post-course Survey: Objevujeme informatiku – Průzkum po kurzu
+      CSD U3 Interactive Card Exemplar: Objevujeme informatiku – Interaktivní ukázková
+        karta U3
+      CSD U3 platform intro: Objevujeme informatiku – Informace o platformě U3
+      'CSD: For Loop': 'Objevujeme informatiku: Cyklus for'
+      Cake Defender: Obránce dortu
+      Cake Survey: Dort – průzkum
       Challenge: Výzva
+      Challenge Levels: Úrovně výzvy
+      'Challenge: Lists': 'Výzva: Seznamy'
+      'Challenge: RGB Colors': 'Výzva: Barvy RGB'
       Code Your Own Flappy Game: Naprogramujte si vlastní pleskací hru
       Dance Crews: Taneční skupiny
       Debugging: Ladění
@@ -37,9 +88,21 @@ cs:
       Designing for Accessibility: Návrh pro přístupnost
       Drawing: Kreslení
       Drawing Shapes: Kreslení tvarů
+      Driver Alert System: Systém výstrah pro řidiče
       End of Course Projects: Projekty k ukončení kurzu
+      Escape Room Example: Příklad útěku z místnosti
       Events: Události
+      Events and Linking Screens: Události a propojení obrazovek
+      Events and Properties: Události a vlastnosti
       Example: Příklad
+      Example Animated Scene: Ukázka animované scény
+      Example App Types: Ukázkové typy aplikací
+      'Example App: Zoo Classification': 'Ukázková aplikace: Klasifikace zvířat v
+        ZOO'
+      Example Apps: Ukázkové aplikace
+      Example Projects: Ukázkové projekty
+      Example projects: Ukázkové projekty
+      Exemplar Personal Websites: Ukázka osobních webových stránek
       For Loops: Cykly "For"
       Free Play: Volná hra
       Functions: Funkce
