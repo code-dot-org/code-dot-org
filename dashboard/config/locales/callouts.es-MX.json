@@ -731,24 +731,24 @@
           "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
         },
         "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Place Wall": {
@@ -1323,13 +1323,13 @@
           "courseD_collector_ramp8_1": "Usa este bloque para recolectar una sola pieza del tesoro.  "
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras haya camino delante' para resolver este rompecabezas."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."
@@ -1831,16 +1831,16 @@
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el GRAN pedazo de código con el mismo nombre en el área de trabajo."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
+          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle (loop) de \"repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "No puedes tirar esos bloques, pero ¡puedes editarlos!"
+          "MC_HOC_2017_06_Cole_1": "¡No puedes eliminar estos bloques, pero puedes editarlos!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "El Agente puede flotar sobre la lava, ¡pero Steve y Alex no!"
@@ -1849,10 +1849,10 @@
           "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
         },
         "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Este código empezará a construir tu casa. ¿Puedes acabarlo?"
+          "craft_callout_preplaced_house": "Este código comenzará a construir tu casa. ¿Puedes terminarla?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_run_button_callout": "Haz clic en \"Ejecutar\" para probar tu programa",
           "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
         },
         "Overworld Place Wall_2021": {
@@ -1997,13 +1997,13 @@
           "4_5_Bee_Conditionals_2_2": "¿Necesitas ayuda? ¡Haz click aquí para un VIDEO de ayuda!"
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "Usa este loop para recolectar todo el néctar (o miel) de una flor (o panal)."
+          "courseD_bee_conditionals_challenge2_1": "Usa este bucle (loop) para recolectar todo el néctar (o miel) de una flor (o panal)."
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Intenta recorrer tu código bloque a bloque."
         },
         "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar un bloque \"mientras camino adelante\" para resolver este desafío."
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar el bloque 'mientras camino por delante' para resolver este rompecabezas."
         },
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."

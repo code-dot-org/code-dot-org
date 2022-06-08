@@ -1025,7 +1025,7 @@ ga:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Eile:"
+        other: "Eile"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1035,7 +1035,7 @@ ga:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Eile:"
+        other: "Eile"
       workshop_course:
         csf_af: 'Buntús na Ríomheolaíochta (Cúrsaí A-F)'
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'

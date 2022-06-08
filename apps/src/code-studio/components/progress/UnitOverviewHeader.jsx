@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/util/dismissVersionRedirect';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -140,7 +140,7 @@ class UnitOverviewHeader extends Component {
             }}
           />
         )}
-        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
