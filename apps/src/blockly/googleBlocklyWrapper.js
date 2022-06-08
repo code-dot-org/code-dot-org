@@ -423,11 +423,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
       // Loop through all the child blocks and remove transform
       const blocksInWorkspace = workspace.getAllBlocks();
-      blocksInWorkspace.forEach(block => {
-        if (block.getParent() === null) {
+      blocksInWorkspace
+        .filter(block => block.getParent() === null)
+        .forEach(block => {
           block.svgGroup_.removeAttribute('transform');
-        }
-      });
+        });
 
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
