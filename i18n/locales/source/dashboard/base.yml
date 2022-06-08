@@ -1114,6 +1114,7 @@ en:
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
+        paraguay: 'Paraguay'
         thailand: 'Thailand'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1135,7 +1136,8 @@ en:
         efl: 'English as a Foreign Language'
         music: 'Music'
         art: 'Art'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1145,7 +1147,8 @@ en:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1155,7 +1158,8 @@ en:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Other:"
+        other: "Other"
+        na: 'Not applicable'
       workshop_course:
         csf_af: 'CS Fundamentals (Courses A-F)'
         csf_express: 'CS Fundamentals (Pre-Express or Express)'

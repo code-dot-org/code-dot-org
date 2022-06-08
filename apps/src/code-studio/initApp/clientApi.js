@@ -130,9 +130,9 @@ var base = {
       .done(function(data, textStatus, jqXHR) {
         callback(null, data, jqXHR);
       })
-      .fail(function(request, status, error) {
+      .fail(function(response, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
-        callback(err, undefined /*data*/, undefined /*jqXHR*/, request);
+        callback(err, undefined /*data*/, undefined /*jqXHR*/, response);
       });
   },
 
