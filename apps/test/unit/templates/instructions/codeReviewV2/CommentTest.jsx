@@ -6,7 +6,7 @@ import './CodeReviewTestHelper';
 import color from '@cdo/apps/util/color';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 
-const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
+const DEFAULT_COMMENT = Factory.build('CodeReviewV2Comment');
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
   onResolveStateToggle: () => {},
