@@ -14,6 +14,8 @@ import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
+// Duplicated in ProgressBubble because of import issue,
+// update there as well if changed.
 export const SHOW_REVIEW_TAB_URL_PARAM = 'showReviewTab';
 
 const CommitsAndReviewTab = props => {
