@@ -72,7 +72,7 @@
     "mini_rubric": "false",
     "bubble_choice_description": "Make a triangle out of circles.",
     "libraries_enabled": "false",
-    "map_reference": "/courses/vpl-csd2-summer-pilot-2022/guides/drawing-shapes",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
     "preload_asset_list": null
   },
   "level_num": "custom",
