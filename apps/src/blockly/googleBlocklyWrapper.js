@@ -424,7 +424,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       // Loop through all the child blocks and remove transform
       const blocksInWorkspace = workspace.getAllBlocks();
       blocksInWorkspace.forEach(block => {
-        block.svgGroup_.removeAttribute('transform');
+        if (block.getParent() === null) {
+          block.svgGroup_.removeAttribute('transform');
+        }
       });
 
       // Shrink SVG to size of the block
