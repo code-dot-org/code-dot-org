@@ -783,6 +783,13 @@ describe('Java Lab Editor Test', () => {
       const editor = createWrapper();
       expect(editor.find(backpackHeaderButtonId)).to.have.lengthOf(0);
     });
+
+    it('does not display code review readonly banner', () => {
+      const editor = createWrapper();
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
+    });
   });
 
   describe('View Only Mode', () => {
@@ -822,7 +829,9 @@ describe('Java Lab Editor Test', () => {
 
       const editor = createWrapper();
 
-      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(1);
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        1
+      );
     });
 
     it('does not display warning message if not open for review', () => {
@@ -831,7 +840,9 @@ describe('Java Lab Editor Test', () => {
 
       const editor = createWrapper();
 
-      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(0);
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
     });
 
     it("does not display warning message if viewing someone else's project", () => {
@@ -840,7 +851,9 @@ describe('Java Lab Editor Test', () => {
 
       const editor = createWrapper();
 
-      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(0);
+      expect(editor.find('div#openCodeReviewWarningBanner')).to.have.lengthOf(
+        0
+      );
     });
   });
 });

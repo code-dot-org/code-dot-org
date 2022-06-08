@@ -778,7 +778,7 @@ class JavalabEditor extends React.Component {
               />
             </div>
             <Tab.Content id="tab-content" animation={false}>
-              {hasOpenCodeReview && isViewingOwnProject && (
+              {isReadOnlyWorkspace && hasOpenCodeReview && isViewingOwnProject && (
                 <div
                   id="openCodeReviewWarningBanner"
                   style={styles.openCodeReviewWarningBanner}
