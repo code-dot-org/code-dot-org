@@ -1,6 +1,6 @@
 import {Factory} from 'rosie';
 
-Factory.define('CodeReviewCommentOld')
+Factory.define('CodeReviewComment')
   .sequence('id', n => n)
   .attr('name', 'Charlie Brown')
   .attr(
