@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-01T20:45:03.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -55,7 +51,7 @@
     "long_instructions": "# Finish the Scene\r\n\r\nThe scene below seems to be incomplete. Be creative and finish the drawing however you want!\r\n",
     "parent_level_id": 19233,
     "name_suffix": "_vpl-summer-pilot-2022",
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -68,10 +64,14 @@
     "libraries_enabled": "false",
     "encrypted_examples": "lhKZHYJ/Nr7YHVy5/2klUk8TnIlE7ps9ChY/XT7A4Y3YyK2sZzp4UpZxjyXv\nlsR5BZ1kDopWYSJtwFj1FA6vppgAlVvCBzf8paQRaS3sUD8kOnr5DTkj5H8c\nHZIkBM2tojR1j7acYn/pYYU/cLZYYA==\n",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes"
     ],
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-01T20:45:03.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:45:03.285+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes scene_2022\\\"\"],\"cloned_from\":\"CSD U3 shapes scene_2022\"}]"

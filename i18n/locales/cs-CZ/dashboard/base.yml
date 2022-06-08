@@ -1054,6 +1054,7 @@ cs:
         music: 'Hudba'
         art: 'Umění'
         other: "Ostatní:"
+        na: 'Nemá význam'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1062,7 +1063,8 @@ cs:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Ostatní:"
+        other: "Ostatní"
+        na: 'Nemá význam'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1072,7 +1074,8 @@ cs:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Divotvorná dílna'
-        other: "Ostatní:"
+        other: "Ostatní"
+        na: 'Nemá význam'
       workshop_course:
         csf_af: 'Základy informatiky (Kurzy A-F)'
         csf_express: 'Základy informatiky (Zrychlené kurzy)'

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:53:35.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -61,13 +57,17 @@
     "name_suffix": "_2022",
     "text_mode_at_start": "false",
     "long_instructions": "# getProperty and Variables\r\n\r\nThis program uses the `name` variable to display the name typed into \"name\\_input\" when the Submit button is clicked. It should do the same for *friend_input* and *friend_output*, but it's missing a block.\r\n\r\n# Do This\r\n* Read the code and comments, then run the program to see how it works. (Make sure you type in your name and your friend's name before hitting \"Submit\".)\r\n* Use a `getProperty` block to store the text property of *friend_input* into your the variable \"friend\\_name\". ([Show me where.](#triggercallout=code_triggered))",
-    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
+    "map_reference": "/courses/vpl-csd-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-26T18:53:35.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:53:35.680+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Level 3\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Level 3\"}]"

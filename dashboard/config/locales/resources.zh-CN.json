@@ -2727,9 +2727,11 @@
           "type": "资源"
         },
         "flyer-game-1/csd/2021": {
+          "name": "飞行者游戏",
           "type": "评分准则"
         },
         "flyer-game/csd/2021": {
+          "name": "飞行者游戏",
           "type": "项目指引"
         },
         "calling_and_defining_functions/csd/2021": {
@@ -2858,6 +2860,12 @@
           "name": "数字足迹",
           "type": "幻灯片"
         },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "社交侦探"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "社交侦探"
+        },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "CSS介绍 -第 1 部分",
           "type": "视频"
@@ -2924,6 +2932,7 @@
           "name": "有功能的网站"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "视频：管理分歧",
           "type": "视频"
         },
         "how-teamwork-works/csd/2021": {
@@ -2931,6 +2940,7 @@
           "type": "视频"
         },
         "how-search-works-video/csd/2021": {
+          "name": "视频：研究如何运行",
           "type": "视频"
         },
         "classes/csd/2021": {

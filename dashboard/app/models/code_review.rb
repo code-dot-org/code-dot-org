@@ -2,19 +2,18 @@
 #
 # Table name: code_reviews
 #
-#  id                         :bigint           not null, primary key
-#  user_id                    :integer          not null
-#  project_id                 :integer          not null
-#  script_id                  :integer          not null
-#  level_id                   :integer          not null
-#  project_level_id           :integer          not null
-#  project_version            :string(255)      not null
-#  project_version_expires_at :datetime
-#  storage_id                 :integer          not null
-#  closed_at                  :datetime
-#  deleted_at                 :datetime
-#  created_at                 :datetime         not null
-#  updated_at                 :datetime         not null
+#  id               :bigint           not null, primary key
+#  user_id          :integer          not null
+#  project_id       :integer          not null
+#  script_id        :integer          not null
+#  level_id         :integer          not null
+#  project_level_id :integer          not null
+#  project_version  :string(255)      not null
+#  storage_id       :integer          not null
+#  closed_at        :datetime
+#  deleted_at       :datetime
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 # Indexes
 #
@@ -61,7 +60,6 @@ class CodeReview < ApplicationRecord
       id: id,
       channelId: nil,             # TODO: implement this!
       version: project_version,
-      isVersionExpired: false,    # TODO: implement this!
       isOpen: open?,
       createdAt: created_at,
     }.merge!(summarize_owner_info)

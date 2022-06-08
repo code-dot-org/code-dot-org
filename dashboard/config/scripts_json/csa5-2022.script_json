@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:42:05 UTC",
+    "serialized_at": "2022-06-03 14:17:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1416,7 +1416,7 @@
       "key": "da8a09a0-727d-4032-8ff3-0856e4561440",
       "position": 6,
       "properties": {
-        "description": "We have used a standard algorithm to find the sum of all elements in a 1D array. Let's use what we know about traversing a 2D array to modify this algorithm to find the sum of all elements in a 2D array.",
+        "description": "We have used a standard algorithm to find the sum of all elements in a 1D array. All standard 1D array algorithms can be applied to 2D arrays. Let's use what we know about traversing a 2D array to modify this algorithm to find the sum of all elements in a 2D array.",
         "remarks": true
       },
       "seeding_key": {
@@ -1979,7 +1979,7 @@
       "key": "68a575fb-f54a-4d2d-b97c-ffbf550f44a6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array?*\n* *How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array?*\n* *How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*."
       },
       "seeding_key": {
         "activity_section.key": "68a575fb-f54a-4d2d-b97c-ffbf550f44a6",
@@ -1987,8 +1987,31 @@
       }
     },
     {
-      "key": "b5522023-9b57-4500-a22a-df021439258e",
+      "key": "87d00a4d-8716-4174-ba2a-250cae355473",
       "position": 8,
+      "properties": {
+        "description": "When using nested enhanced `for` loops to traverse a 2D array, the outer loop traverses the row. The enhanced `for` loop variable in the outer loop must be the type of each row, which is a 1D array. The inner loop traverses a single row, so the enhanced `for` loop variable for the inner loop must be the same type as the elements stored in the 1D array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "87d00a4d-8716-4174-ba2a-250cae355473",
+        "lesson_activity.key": "f323fd2f-f4e5-4f59-82dd-20ae3cd097d3"
+      }
+    },
+    {
+      "key": "9e13961e-7106-47b7-a848-956c72666b1d",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "9e13961e-7106-47b7-a848-956c72666b1d",
+        "lesson_activity.key": "f323fd2f-f4e5-4f59-82dd-20ae3cd097d3"
+      }
+    },
+    {
+      "key": "b5522023-9b57-4500-a22a-df021439258e",
+      "position": 10,
       "properties": {
         "description": "Traversing a 2D array using enhanced `for` loops is similar to traversing a 1D array using enhanced `for` loops. Tracing an enhanced `for` loop with a 2D array is also similar to tracing it with a 1D array.",
         "duration": "15",
@@ -2002,7 +2025,7 @@
     },
     {
       "key": "9e7d4285-cf6e-470d-861c-0dad4ffb52b2",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing Enhanced For Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Enhanced For Loops handout.",
         "tips": [
@@ -2019,7 +2042,7 @@
     },
     {
       "key": "3bf0aa0e-b766-4e84-b922-3c6be4244c05",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "Let's practice using enhanced `for` loops with 2D arrays!",
         "remarks": true
@@ -2031,7 +2054,7 @@
     },
     {
       "key": "d8894d77-5587-4f52-8a52-4cd529439af3",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students complete a choice level to use an enhanced `for` loop with a 2D array using the console or The Theater.",
         "progression_name": "Using Enhanced For Loops with 2D Arrays"
@@ -2043,7 +2066,7 @@
     },
     {
       "key": "25c52786-b0de-4aff-9e79-719fad2513fa",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Using Enhanced For Loops with 2D Arrays"

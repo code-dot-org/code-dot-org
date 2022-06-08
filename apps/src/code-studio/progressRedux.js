@@ -522,6 +522,7 @@ const lessonFromLesson = lesson =>
     'lessonNumber',
     'lessonStartUrl',
     'lesson_plan_html_url',
+    'lesson_feedback_url',
     'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'
