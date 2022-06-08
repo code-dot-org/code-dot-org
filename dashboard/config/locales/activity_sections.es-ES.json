@@ -16655,27 +16655,57 @@
           "progression_name": "Reflexión"
         },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "name": "El Último Sitio Web que has Visitado",
+          "description": "**Pregunta:** ¿Cuál ha sido el último sitio web que has visitado? ¿Por qué has visitado ese sitio web?",
           "tips": [
-            null
+            "**Sitios Web vs. Aplicaciones:** Es posible, en ocasiones, que los alumnos no _piensen_ que visitan los sitios web con mucha frecuencia, porque en su lugar utilizan aplicaciones. Si te encuentras con esto, anima a los alumnos a considerar si esas aplicaciones pueden tener también versiones web. Facebook, por ejemplo, puede utilizarse con más frecuencia desde una aplicación, pero originalmente comenzó como un sitio web, y todavía se puede acceder a él desde la web."
           ]
         },
         "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "description": "**Debatir:** Pide a los alumnos que compartan el último sitio web que han visitado. Asegúrate de que los estudiantes compartan por qué fueron a ese sitio web y si el sitio web les proporcionó lo que estaban buscando.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo de este debate es sacar a relucir que los sitios web comparten información y que la gente acude a los sitios web con un propósito concreto."
           ]
+        },
+        "8f260b2d-3718-492f-b75b-fa99597fef18": {
+          "description": "Se nos ocurren muchas razones por las que visitamos sitios web, pero eso es sólo una parte del panorama. Los creadores de los sitios web también tienen sus propias razones para hacerlo. En la siguiente actividad, vas a empezar a pensar en los propósitos que tienen los distintos sitios web tanto para el usuario como para el creador."
+        },
+        "8faac7b6-fb5b-4b94-982a-f7c8188bca44": {
+          "description": "**Pregunta del Día: ¿Cuáles son las diferentes razones por las que la gente crea sitios web?**"
+        },
+        "fb115984-94cf-4127-a53a-43a973865616": {
+          "name": "Finalidad de los Sitios Web",
+          "description": "**Agrupar:** Coloca a los alumnos en parejas.\n\n**Distribuir:** Reparte una copia de la guía de actividad a cada estudiante.\n\nRemite a los alumnos al nivel \"Ejemplos de Sitios Web\" en Code Studio."
         },
         "4e4b8bec-4263-4163-9bad-dee99822db2a": {
           "progression_name": "Top de Sitios Web"
         },
+        "050b41d5-f6a2-41e0-89e7-8bd3139dae2f": {
+          "description": "#### Explorando Sitios Web\n\n#### Ejemplos de Sitios Web"
+        },
         "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "description": "En esta guía de actividad se pide a los alumnos que analicen los fines que pueden tener algunas páginas web de ejemplo. Las parejas de estudiantes seleccionan dos páginas web que les interesan y comentan cada una de ellas:",
           "tips": [
-            null
+            "No es necesario que acierten con cada sitio, pero deben demostrar que han analizado las posibles finalidades que un sitio web puede tener para el creador. Si los alumnos tienen dificultades para identificar el propósito de un sitio, piensa en plantear las siguientes preguntas:\n\n-   ¿Quiere el creador del sitio web que el usuario haga algo?\n-   ¿Intenta el sitio web convencer al usuario de algo en particular?\n-   ¿Qué problema soluciona el sitio web?\n-   ¿Qué impacto quiere el creador que tenga el sitio web?"
           ]
         },
+        "272735d4-bd69-48d9-b443-dbe7055d5ec9": {
+          "description": "-   ¿Por qué la gente puede usar ese sitio? (¿qué propósito tiene para los usuarios?)\n-   ¿Por qué los creadores podrían haber hecho ese sitio? (¿qué propósito tiene para los creadores?)\n\nAnima a los alumnos a ser lo más concretos posible cuando hagan una lluvia de ideas sobre los propósitos de estos sitios."
+        },
         "286dd512-4c7c-42ec-8028-428a89833572": {
+          "description": "**Debatir:** Una vez que todos han tenido la oportunidad de hacer una lluvia de ideas sobre sus sitios, da a la clase la oportunidad de debatir sus ideas sobre los ejemplos de sitios web.",
           "tips": [
-            null
+            "El objetivo de este debate es preparar a los alumnos para que piensen en los sitios web como una herramienta para resolver problemas y efectuar cambios.  Cuando los alumnos analicen el tema, anímalos a imaginar por qué podrían crear un sitio similar a los de los ejemplos y qué problemas podrían resolver con un sitio web.  "
           ]
+        },
+        "0635e0b2-714a-4200-a9d1-56a791801297": {
+          "description": "Si los alumnos no han tenido tiempo de pensar en las razones por las que podrían crear un sitio web, permíteles hacerlo antes de pasar a formar los grupos."
+        },
+        "e9f0bd2a-f77d-4011-82d6-906f22197bdf": {
+          "description": "En las próximas clases, tendrás la oportunidad de trabajar en grupo para crear tu propio sitio web y ayudar a resolver un problema."
+        },
+        "da79aa9d-2640-4ffb-a31d-4438be9d202a": {
+          "description": "**Compartir:** Pide a los alumnos que compartan los diferentes problemas que podrían resolver con una página web y que expongan sus respuestas en la parte delantera de la clase."
         },
         "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
           "tips": [
