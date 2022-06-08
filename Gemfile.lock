@@ -992,7 +992,7 @@ DEPENDENCIES
   memory_profiler
   mini_magick (>= 4.9.4)
   mini_racer
-  minitest (~> 5.5)
+  minitest (~> 5.15)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
   mocha
