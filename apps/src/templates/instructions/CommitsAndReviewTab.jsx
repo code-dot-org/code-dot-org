@@ -9,7 +9,10 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
-import {setIsReadOnlyWorkspace} from '@cdo/apps/javalab/javalabRedux';
+import {
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
+} from '@cdo/apps/javalab/javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 
@@ -27,7 +30,8 @@ const CommitsAndReviewTab = props => {
     codeReviewEnabled,
     locale,
     isReadOnlyWorkspace,
-    setIsReadOnlyWorkspace
+    setIsReadOnlyWorkspace,
+    setHasOpenCodeReview
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
@@ -128,6 +132,7 @@ const CommitsAndReviewTab = props => {
       setTimelineData([...timelineData, closedReview]);
       setOpenReviewData(null);
       setIsReadOnlyWorkspace(false);
+      setHasOpenCodeReview(false);
       onSuccess();
     } catch (err) {
       console.log(err);
@@ -142,6 +147,7 @@ const CommitsAndReviewTab = props => {
       const newReview = await dataApi.openNewCodeReview(currentVersion);
       setOpenReviewData(newReview);
       setIsReadOnlyWorkspace(true);
+      setHasOpenCodeReview(true);
       setOpenReviewError(false);
     } catch (err) {
       console.log(err);
@@ -252,7 +258,9 @@ export default connect(
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
-      dispatch(setIsReadOnlyWorkspace(isReadOnly))
+      dispatch(setIsReadOnlyWorkspace(isReadOnly)),
+    setHasOpenCodeReview: hasOpenCodeReview =>
+      dispatch(setHasOpenCodeReview(hasOpenCodeReview))
   })
 )(CommitsAndReviewTab);
 
@@ -268,7 +276,8 @@ CommitsAndReviewTab.propTypes = {
   serverScriptId: PropTypes.number,
   locale: PropTypes.string,
   isReadOnlyWorkspace: PropTypes.bool,
-  setIsReadOnlyWorkspace: PropTypes.func.isRequired
+  setIsReadOnlyWorkspace: PropTypes.func.isRequired,
+  setHasOpenCodeReview: PropTypes.func.isRequired
 };
 
 const styles = {
