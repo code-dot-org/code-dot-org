@@ -52,9 +52,9 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/vpl-csd1-summer-pilot-2022/guides/variables",
-      "/courses/vpl-csd1-summer-pilot-2022/guides/drawing-shapes",
-      "/courses/vpl-csd1-summer-pilot-2022/guides/shapes-and-parameters"
+      "/courses/vpl-csd-summer-pilot-2022/guides/variables",
+      "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-summer-pilot-2022/guides/shapes-and-parameters"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
