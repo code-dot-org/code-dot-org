@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.5'
+ruby '~> 2.6'
 
 gem 'berkshelf'
 gem 'chef', '15.2.20'
