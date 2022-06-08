@@ -4384,6 +4384,7 @@
           "description": "Alla fine dell'ultima lezione, stavamo esaminando le somiglianze tra storie di spazi vuoti e app che chiedono input a un utente. \nQuando un messaggio sullo schermo del computer è in attesa del tuo input, lo chiamiamo prompt. \nQuando un utente digita un messaggio, è come se il computer stesse memorizzando le informazioni in un contenitore.\nL'etichetta della variabile ci dice che tipo di informazioni aspettarsi.\nOggi impareremo il codice per creare un prompt in Sprite Lab."
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Testo e richieste all'utente",
           "description": "#### Prediction (5 min)\n\n\\*\\*Fai questo: \\*\\* Chiedi agli studenti di leggere il codice fornito e di fare una previsione su cosa accadrà. Dopo aver premuto «Esegui», concedi agli studenti il tempo di riflettere su tutto ciò che hanno trovato interessante o che li ha sorpresi.",
           "progression_name": "Previsione"
         },
@@ -7476,6 +7477,7 @@
           "description": "Quando un messaggio sullo schermo del computer è in attesa del tuo input, lo chiamiamo prompt. \nQuando un utente digita un messaggio, è come se il computer stesse memorizzando le informazioni in un contenitore.\nL'etichetta della variabile ci dice che tipo di informazioni aspettarsi.\nOggi impareremo il codice per creare un prompt in Sprite Lab."
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Testo e richieste all'utente",
           "description": "#### Prediction (5 min)\n\n\\*\\*Fai questo: \\*\\* Chiedi agli studenti di leggere il codice fornito e di fare una previsione su cosa accadrà. Dopo aver premuto «Esegui», concedi agli studenti il tempo di riflettere su tutto ciò che hanno trovato interessante o che li ha sorpresi.",
           "progression_name": "Previsione"
         },
