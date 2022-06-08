@@ -5643,6 +5643,8 @@ ms:
               name: Gelung
             lesson-21:
               name: Konsol
+            lesson-23:
+              name: Pra-tinjauan CSP
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
@@ -5782,6 +5784,12 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        csa-backpack-2022:
+          lessons:
+            lesson-4:
+              name: TextProcessor
+            lesson-3:
+              name: ImagePlus dan ScenePlus
         coursef-2022-pilot:
           lessons:
             The Power of Words:
