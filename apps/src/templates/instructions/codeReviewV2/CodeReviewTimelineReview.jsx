@@ -19,7 +19,6 @@ const CodeReviewTimelineReview = ({
   addCodeReviewComment,
   closeReview,
   toggleResolveComment,
-  viewAsCodeReviewer,
   deleteCodeReviewComment,
   currentUserId
 }) => {
@@ -34,6 +33,8 @@ const CodeReviewTimelineReview = ({
     );
   };
 
+  const viewingAsOwner = ownerId === currentUserId;
+
   return (
     <CodeReviewTimelineElement
       type={codeReviewTimelineElementType.CODE_REVIEW}
@@ -47,7 +48,7 @@ const CodeReviewTimelineReview = ({
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>
-              {ownerId === currentUserId
+              {viewingAsOwner
                 ? javalabMsg.codeReviewForYou()
                 : javalabMsg.codeReviewForStudent({student: ownerName})}
             </div>
@@ -55,7 +56,7 @@ const CodeReviewTimelineReview = ({
               {javalabMsg.openedDate({date: formattedDate})}
             </div>
           </div>
-          {isOpen && !viewAsCodeReviewer && (
+          {isOpen && viewingAsOwner && (
             <div>
               <Button
                 icon="close"
@@ -68,7 +69,7 @@ const CodeReviewTimelineReview = ({
             </div>
           )}
         </div>
-        {isOpen && !viewAsCodeReviewer && (
+        {isOpen && viewingAsOwner && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>
             &nbsp;
@@ -79,15 +80,15 @@ const CodeReviewTimelineReview = ({
           comments.map(comment => {
             return (
               <Comment
+                viewingAsOwner={ownerId === currentUserId}
                 comment={comment}
                 key={`code-review-comment-${comment.id}`}
                 onResolveStateToggle={toggleResolveComment}
                 onDelete={deleteCodeReviewComment}
-                viewAsCodeReviewer={viewAsCodeReviewer}
               />
             );
           })}
-        {isOpen && viewAsCodeReviewer && (
+        {isOpen && !viewingAsOwner && (
           <CodeReviewCommentEditor
             addCodeReviewComment={(commentText, onSuccess, onFailure) =>
               addCodeReviewComment(commentText, id, onSuccess, onFailure)
@@ -102,7 +103,6 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   currentUserId: state.currentUser?.userId
 }))(CodeReviewTimelineReview);
 
@@ -112,7 +112,6 @@ CodeReviewTimelineReview.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
-  viewAsCodeReviewer: PropTypes.bool,
   deleteCodeReviewComment: PropTypes.func.isRequired,
   currentUserId: PropTypes.number
 };
@@ -126,7 +125,7 @@ const styles = {
   icon: {
     marginRight: '5px',
     backgroundColor: 'lightgrey',
-    width: '30px',
+    minWidth: '30px',
     height: '30px',
     borderRadius: '100%',
     fontSize: '22px',
@@ -140,7 +139,8 @@ const styles = {
   },
   title: {
     flexGrow: 1,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    marginRight: '10px'
   },
   codeReviewTitle: {
     fontFamily: '"Gotham 5r", sans-serif',
@@ -155,7 +155,7 @@ const styles = {
   date: {
     fontSize: '12px',
     marginBottom: '10px',
-    lineHeight: '12px'
+    lineHeight: '15px'
   },
   codeWorkspaceDisabledMsg: {
     textAlign: 'center',

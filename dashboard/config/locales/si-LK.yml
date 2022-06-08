@@ -817,12 +817,15 @@ si:
         math: ගණිත
         science: විද්‍යාව
         la: භාෂා අධ්‍යනය
+        other: වෙනත්
       resources:
         khan: ඛාන් ඇකඩමිය
         kodable: කෝඩබල්
         lightbot: Lightbot
+        other: වෙනත්
       robotics:
         kodable: කෝඩබල්
+        other: වෙනත්
       workshop_course:
         csp: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
       email_opt_in:

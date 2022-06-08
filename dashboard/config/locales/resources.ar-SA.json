@@ -1710,10 +1710,12 @@
         },
         "artist_introduction/express/2021": {
           "name": "تقديم الفنان",
+          "url": "",
           "type": "فيديو"
         },
         "turns_angles/express/2021": {
           "name": "لفات وزوايا",
+          "url": "",
           "type": "فيديو"
         },
         "turns_angles_1/express/2021": {
@@ -1756,7 +1758,8 @@
           "type": "ورقة عمل"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify Playlist (كل الأعمار)"
+          "name": "Spotify Playlist (كل الأعمار)",
+          "url": ""
         },
         "open-ended_programming_levels/express/2021": {
           "name": "مستويات برمجة مفتوحة",
@@ -1789,6 +1792,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "شرائح"
         },
@@ -1799,11 +1803,13 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "دليل تخطيط نهاية الدورة التدريبية \"مبادئ علوم الكمبيوتر\"",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": ""
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": ""
         },
         "csta_standards_mapping/express/2021": {
           "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر",

@@ -586,6 +586,7 @@ fil:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Ang Code.org ay gumagamit ng p5.play, na lisensiyado sa ilalim ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Pinagana sa pamamagitan ng Amazon Web Services'
+    built_on_github: 'Binuo sa GitHub mula sa Microsoft'
     google_copyright: '&copy; Ginamit nang may pahintulot ang Google Inc. Isang trademark ng Google Inc ang Google Classroom.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, ang CODE logo at ang Hour of Code&reg; ay pagkakakilanlan ng Code.org.'
     copyright: 'Karapatang-ari'
@@ -597,12 +598,14 @@ fil:
     tos_short: 'Mga Alituntunin'
     tos: 'Mga Alituntunin ng Serbisyo'
     privacy: 'Patakaran sa Pagkapribado'
+    privacy_updated: 'Patakaran sa Pagkapribado (na-update)'
     secure: 'Tiyak na Bersyon'
     report_abuse: 'I-report ang Abuso'
     built_on_code_studio: 'Ginawa sa Code Studio'
     make_my_own_app: 'Gumawa ng sarili kong app'
     how_it_works: 'Paano ito Gumana (Tingnan ang Code)'
     try_hour_of_code: 'Subukan ang Hour of Code!'
+    store: 'Tindahan'
     cookie_notice: 'Paunawa ng Cookie'
   reference_area:
     title: 'Nangangailangan ng tulong?'
@@ -1068,6 +1071,7 @@ fil:
         music: 'Musika'
         art: 'Sining'
         other: "Iba pa:"
+        na: 'Hindi angkop'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'Codecademy'
@@ -1076,7 +1080,8 @@ fil:
         kodable: 'Kodable'
         scratch: 'Kuskusin'
         tynker: 'Tynker'
-        other: "Iba pa:"
+        other: "Iba"
+        na: 'Hindi angkop'
       robotics:
         grok: 'Grok na Pagkatuto'
         kodable: 'Kodable'
@@ -1086,7 +1091,8 @@ fil:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Iba pa:"
+        other: "Iba"
+        na: 'Hindi angkop'
       workshop_course:
         csf_af: 'Mga Pundamental sa CS (Kursong A-F)'
         csf_express: 'Mga Pundamental ng CS (Pre-Express o Express)'
