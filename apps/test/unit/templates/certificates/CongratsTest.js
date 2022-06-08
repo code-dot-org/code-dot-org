@@ -8,26 +8,44 @@ import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHo
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
 describe('Congrats', () => {
-  it('renders a Certificate component', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="signedOut"
-        language="en"
-      />
-    );
-    expect(wrapper.find(Certificate).exists()).to.be.true;
-  });
+  const userTypes = ['signedOut', 'teacher', 'student'];
 
-  it('renders a StudentsBeyondHoc component, regardless of user type', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="signedOut"
-        language="en"
-      />
-    );
-    expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
+  userTypes.forEach(userType => {
+    it(`renders a Certificate component for user type ${userType}`, () => {
+      const wrapper = shallow(
+        <Congrats
+          completedTutorialType="other"
+          userType={userType}
+          language="en"
+        />
+      );
+      expect(wrapper.find(Certificate).exists()).to.be.true;
+    });
+
+    it(`renders a StudentsBeyondHoc for user type ${userType}`, () => {
+      const wrapper = shallow(
+        <Congrats
+          completedTutorialType="other"
+          userType={userType}
+          language="en"
+        />
+      );
+      expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
+    });
+
+    it(`renders a PetitionCallToAction component with tutorial for user type ${userType}`, () => {
+      const wrapper = shallow(
+        <Congrats
+          completedTutorialType="other"
+          userType={userType}
+          language="en"
+          tutorial="coursea"
+        />
+      );
+      expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
+      expect(wrapper.find(PetitionCallToAction).props().tutorial).to.not.be
+        .undefined;
+    });
   });
 
   it('renders a TeachersBeyondHoc component, for teachers', () => {
@@ -61,18 +79,5 @@ describe('Congrats', () => {
       />
     );
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
-  });
-
-  it('renders a PetitionCallToAction component, regardless of user type', () => {
-    const wrapper = shallow(
-      <Congrats
-        completedTutorialType="other"
-        userType="signedOut"
-        language="en"
-      />
-    );
-    expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
-    expect(wrapper.find(PetitionCallToAction).props().gaPagePath).to.not.be
-      .undefined;
   });
 });
