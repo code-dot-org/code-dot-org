@@ -63,7 +63,7 @@
     "long_instructions": "<img src=\"https://images.code.org/a4bc7d3dbd2ea2fd744ec64a9ee5ac76-image-1560890596053.42.55 PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# Debugging: Fix the stoplight\r\n\r\nThis stoplight is all mixed up.  Fix it so that it looks like the picture on the right.\r\n\r\n# Do This\r\n\r\n* Read the code below. It's intended to create a stoplight, but the colors are incorrect.\r\n* Change the code so the colors are correct.",
     "parent_level_id": 18774,
     "name_suffix": "_vpl-summer-pilot-2022",
-    "map_reference": "/courses/vpl-csd2-summer-pilot-2022/guides/drawing-shapes",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/drawing-shapes",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

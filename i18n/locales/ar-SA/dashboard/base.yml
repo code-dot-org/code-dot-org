@@ -1062,6 +1062,7 @@ ar:
         music: 'الموسيقى'
         art: 'الفن'
         other: "غير ذلك:"
+        na: 'لا ينطبق'
       resources:
         bootstrap: 'التمهيد'
         codecademy: 'CodeCademy'
@@ -1070,7 +1071,8 @@ ar:
         kodable: 'كودابل'
         scratch: 'لغة سكراتش (برمجة)'
         tynker: "Tynker\n"
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       robotics:
         grok: 'Grok Learning'
         kodable: 'كودابل'
@@ -1080,7 +1082,8 @@ ar:
         sphero: "Sphero\n"
         raspberry: "Raspberry Pi\n"
         wonder: 'Wonder Workshop'
-        other: "غير ذلك:"
+        other: "الأخرى"
+        na: 'لا ينطبق'
       workshop_course:
         csf_af: 'أساسيات علوم الكمبيوتر (دورات أ-و)'
         csf_express: 'أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)'

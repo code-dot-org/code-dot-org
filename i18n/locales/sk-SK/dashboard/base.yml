@@ -1044,6 +1044,7 @@ sk:
         music: 'Hudba'
         art: 'Umenie'
         other: "Iné:"
+        na: 'Neuplatňuje sa'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1052,7 +1053,8 @@ sk:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Iné:"
+        other: "Ostatné"
+        na: 'Neuplatňuje sa'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1062,7 +1064,8 @@ sk:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Seminár Wonder'
-        other: "Iné:"
+        other: "Ostatné"
+        na: 'Neuplatňuje sa'
       workshop_course:
         csf_af: 'Základy informatiky (kurzy A-F)'
         csf_express: 'Základy informatiky (zrýchlený kurz)'

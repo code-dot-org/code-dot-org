@@ -3400,9 +3400,7 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
-          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
           "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
-          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!",
           "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         },
         "courseC_artist_prog_challenge1_2021": {
@@ -3652,8 +3650,7 @@
         },
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "A 'gyűjts nektárt' blokkot kell ismételned egy másik 'ismételd' blokkon belül, amiben használnod kell az 'előrelépni' blokkot is.",
-          "courseD_bee_nestedLoops7_b": "Mindhárom 'ismételd' blokkra szükséged lesz, hogy megoldd ezt a feladványt.",
-          "courseD_bee_nestedLoops7_c": "A következők szerint készítsd el a kódot:\n\n-   ismételd 4 alkalommal\n    -   ismételd 3 alkalommal\n        -   ismételd 12 alkalommal\n            -   gyűjts nektárt\n        -   előrelépni\n    -   fordulj jobbra"
+          "courseD_bee_nestedLoops7_b": "Mindhárom 'ismételd' blokkra szükséged lesz, hogy megoldd ezt a feladványt."
         },
         "courseD_collector_nested_loops_challenge2_2021": {
           "courseD_bee_nested_loops_challenge2_a": "Ne felejtsd el, hogy használhatod az 'ismételd' blokkal egyetlen parancsot és hosszabb mintákat is ismételhetsz. Még egy 'ismétled' blokkot is betehetsz egy 'ismétled' blokkba.",
