@@ -216,7 +216,8 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-  get '/weblab/footer', to: 'projects#weblab_footer'
+  # Routes needed for the footer on weblab share links on codeprojects
+  get '/weblab/footer', to: 'projects#weblab_footer', constraints: {host: CDO.codeprojects_hostname}
   get '/scripts/hosted.js', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/weblab/footer.js')
   get '/style.css', constraints: {host: CDO.codeprojects_hostname}, to: redirect('/assets/weblab/footer.css')
 
