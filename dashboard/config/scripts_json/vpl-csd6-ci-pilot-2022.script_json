@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-02 18:56:44 UTC",
+    "serialized_at": "2022-06-07 18:08:30 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -253,6 +253,7 @@
       "key": "f5597545-d3e5-4d50-ba88-593612403623",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction to inputs and outputs"
       },
       "seeding_key": {
         "activity_section.key": "f5597545-d3e5-4d50-ba88-593612403623",
@@ -639,7 +640,8 @@
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Overview"
-        ]
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -664,7 +666,8 @@
         "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_2222"
-        ]
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -686,7 +689,11 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_2222"
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
@@ -708,7 +715,11 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_2222"
+        ],
+        "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
       "seeding_key": {
