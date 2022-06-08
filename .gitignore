@@ -19,7 +19,6 @@ jsconfig.json
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
-.ruby-version
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log
