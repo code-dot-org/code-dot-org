@@ -208,8 +208,10 @@ module LevelsHelper
           !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
           false
       )
-      # readonly if viewing another user's channel or a code review is open for that project
+
       view_options(has_open_code_review: true) if CodeReview.open_for_project?(channel: channel)
+      view_options(is_viewing_own_project: true) unless @user
+      # readonly if viewing another user's channel or a code review is open for that project
       readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
     end
 
