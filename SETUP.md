@@ -21,26 +21,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 3. `cd code-dot-org`
 
-4. For Apple Silicon (M1), make these changes to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
-
-   ```text
-   ...
-   libv8-node (15.14.0.0)
-   ...
-   mini_racer (0.4.0)
-     libv8-node (~> 15.14.0.0)
-   ...
-   ```
-
 5. `gem install bundler -v 1.17.3`
-
-6. `export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib/`
 
 7. `rbenv rehash`
 
 8. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
-    - For Apple Silicon (M1), you may need to update **ffi** via `bundle update ffi`
 
 9. `bundle exec rake install:hooks`
     <details>
@@ -69,7 +55,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 12. `bundle exec rake build`
-    - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
+    - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
 
 13. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
     - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
@@ -155,9 +141,21 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 15. Install **OpenSSL**
     1. Run `brew install openssl`
-    2. Following the instructions in the output, run a form of `exportLIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
+    2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
 16. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+
+4. For Apple Silicon (M1), make these changes to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
+
+   ```text
+   ...
+   libv8-node (15.14.0.0)
+   ...
+   mini_racer (0.4.0)
+     libv8-node (~> 15.14.0.0)
+   ...
+   ```
+
 
 Return to the [Overview](#overview) to continue installation. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
@@ -304,6 +302,8 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
         1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
+    1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
+        1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
