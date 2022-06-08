@@ -13,6 +13,9 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
     false
   );
+  const [addCommentFailureMessage, setAddCommentFailureMessage] = useState(
+    null
+  );
 
   const handleSubmit = () => {
     addCodeReviewComment(
@@ -33,7 +36,12 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     textArea.current.editorInst.deleteSelection(0, selectionEnd);
   };
 
-  const onSubmitFailure = () => {
+  const onSubmitFailure = err => {
+    if (err.profanityFoundError) {
+      setAddCommentFailureMessage(err.profanityFoundError);
+    } else {
+      setAddCommentFailureMessage(null);
+    }
     setDisplayAddCommentFailure(true);
   };
 
@@ -61,13 +69,18 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
         ref={textArea}
       />
       <div style={styles.submit}>
+        {displayAddCommentFailure && (
+          <CodeReviewError
+            messageText={addCommentFailureMessage}
+            style={styles.error}
+          />
+        )}
         <Button
           onClick={handleSubmit}
           text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
           style={styles.submitButton}
         />
-        {displayAddCommentFailure && <CodeReviewError />}
       </div>
     </>
   );
@@ -91,5 +104,8 @@ const styles = {
   },
   submitButton: {
     marginTop: '10px'
+  },
+  error: {
+    marginTop: '8px'
   }
 };
