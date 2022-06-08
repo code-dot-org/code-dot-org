@@ -641,10 +641,13 @@ sl:
         math: 'Matematika'
         science: 'Znanost'
         la: 'Jezikoslovje'
+        other: "Drugi"
       resources:
         kodable: 'Kodable'
+        other: "Drugi"
       robotics:
         kodable: 'Kodable'
+        other: "Drugi"
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'

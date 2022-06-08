@@ -27,16 +27,18 @@ const DEFAULT_PROPS = {
       comments: [
         {
           id: 123,
-          commentText: 'Great work on this!',
-          name: 'Steve',
-          timestampString: '2022-03-31T04:58:42.000Z',
+          comment: 'Great work on this!',
+          commenterName: 'Steve',
+          commenterId: 987,
+          createdAt: '2022-03-31T04:58:42.000Z',
           isResolved: false
         },
         {
           id: 124,
-          commentText: 'Could you add more comments?',
-          name: 'Karen',
-          timestampString: '2022-03-31T04:58:42.000Z',
+          comment: 'Could you add more comments?',
+          commenterName: 'Karen',
+          commenterId: 654,
+          createdAt: '2022-03-31T04:58:42.000Z',
           isResolved: false
         }
       ]
