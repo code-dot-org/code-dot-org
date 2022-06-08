@@ -3853,7 +3853,7 @@ class UserTest < ActiveSupport::TestCase
       @script2.reload
       @script3.reload
 
-      @pl_script = create(:script, hideable_lessons: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_script = create(:script, hideable_lessons: true)
       @pl_lesson1 = create(:lesson, script: @pl_script, absolute_position: 1, relative_position: '1')
       @pl_lesson2 = create(:lesson, script: @pl_script, absolute_position: 2, relative_position: '2')
       @pl_lesson3 = create(:lesson, script: @pl_script, absolute_position: 3, relative_position: '3')
@@ -3876,7 +3876,7 @@ class UserTest < ActiveSupport::TestCase
         position: 2
       )
       create(:script_level, script: @pl_script, lesson: @pl_lesson3, position: 1)
-      @pl_unit_group = create :unit_group
+      @pl_unit_group = create :unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
       create :unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_script
       @pl_unit_group.reload
@@ -3968,13 +3968,20 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "script_level_hidden? if can be instructor for course" do
-      stubs(:script_level_hidden?).returns(true)
+      teacher = create :teacher
+      facilitator = create :facilitator
 
-      assert_equal false, @teacher.script_level_hidden?(@lesson1.script_levels.first)
-      assert_equal true, @teacher.script_level_hidden?(@pl_lesson1.script_levels.first)
+      section1 = put_participant_in_section(teacher, facilitator, @script)
+      section2 = put_participant_in_section(teacher, facilitator, @pl_script)
 
-      assert_equal false, @facilitator.script_level_hidden?(@lesson1.script_levels.first)
-      assert_equal false, @facilitator.script_level_hidden?(@pl_lesson1.script_levels.first)
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @lesson1.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @pl_lesson1.id)
+
+      assert_equal false, teacher.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal true, teacher.script_level_hidden?(@pl_lesson1.script_levels.first)
+
+      assert_equal false, facilitator.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal false, facilitator.script_level_hidden?(@pl_lesson1.script_levels.first)
     end
 
     test "user in two sections, both attached to script" do
