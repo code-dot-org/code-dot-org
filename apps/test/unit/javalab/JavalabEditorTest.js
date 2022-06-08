@@ -22,7 +22,8 @@ import javalab, {
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   setBackpackApi,
-  setIsReadOnlyWorkspace
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {
@@ -813,6 +814,33 @@ describe('Java Lab Editor Test', () => {
 
         expect(isButtonDisabled).to.be.true;
       });
+    });
+
+    it('displays warning message when open for review and being viewed by project owner', () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(1);
+    });
+
+    it('does not display warning message if not open for review', () => {
+      store.dispatch(setHasOpenCodeReview(false));
+      store.dispatch(setPageConstants({isViewingOwnProject: true}));
+
+      const editor = createWrapper();
+
+      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(0);
+    });
+
+    it("does not display warning message if viewing someone else's project", () => {
+      store.dispatch(setHasOpenCodeReview(true));
+      store.dispatch(setPageConstants({isViewingOwnProject: false}));
+
+      const editor = createWrapper();
+
+      expect(editor.find('#openCodeReviewWarningBanner')).to.have.lengthOf(0);
     });
   });
 });
