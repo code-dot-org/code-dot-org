@@ -36,28 +36,6 @@ class ProjectVersionsControllerTest < ActionController::TestCase
     assert_equal ['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']}
   end
 
-  test "versions more than a year old have isVersionExpired set to true" do
-    student = create :student
-    sign_in student
-
-    fake_storage_id = 123
-    fake_project_id = 654
-    fake_channel_id = 'abcdef'
-    @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
-
-    create :project_version, project_id: fake_project_id, comment: "First comment", created_at: 2.years.ago
-    create :project_version, project_id: fake_project_id, comment: "Second comment", created_at: 2.days.ago
-
-    get :project_commits, params: {channel_id: fake_channel_id}
-    assert_response :ok
-
-    returned_commits = JSON.parse(@response.body)
-    assert_equal 2, returned_commits.length
-    refute returned_commits.last['isVersionExpired']
-    assert returned_commits.first['isVersionExpired']
-  end
-
   test "can fetch project versions and blank comments are filtered out" do
     student = create :student
     sign_in student
