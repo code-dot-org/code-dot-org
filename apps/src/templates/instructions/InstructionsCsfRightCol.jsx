@@ -72,12 +72,12 @@ class InstructionsCsfRightCol extends React.Component {
   }
 
   getColumnWidth() {
-    // Leave at least 50 pixels in this column in case we are going to
-    // show some scroll buttons.
     const collapserWidth = this.shouldDisplayCollapserButton()
       ? $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true)
       : this.props.collapsed
       ? 10
+      : this.props.isMinecraft
+      ? 100
       : 80;
     return collapserWidth;
   }
