@@ -3813,6 +3813,7 @@ class UserTest < ActiveSupport::TestCase
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
+      @facilitator = create :facilitator
 
       @script = create(:script, hideable_lessons: true)
       @lesson1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
@@ -3883,7 +3884,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
-      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type
+      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grade: participant_type == 'student' ? '9' : 'pl'
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
     end
@@ -3964,6 +3965,16 @@ class UserTest < ActiveSupport::TestCase
       # Find the second lesson, since the 1st is hidden
       refute_nil student.next_unpassed_visible_progression_level(script)
       assert_equal(2, student.next_unpassed_visible_progression_level(script).chapter)
+    end
+
+    test "script_level_hidden? if can be instructor for course" do
+      stubs(:script_level_hidden?).returns(true)
+
+      assert_equal false, @teacher.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal true, @teacher.script_level_hidden?(@pl_lesson1.script_levels.first)
+
+      assert_equal false, @facilitator.script_level_hidden?(@lesson1.script_levels.first)
+      assert_equal false, @facilitator.script_level_hidden?(@pl_lesson1.script_levels.first)
     end
 
     test "user in two sections, both attached to script" do
