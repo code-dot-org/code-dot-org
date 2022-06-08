@@ -1039,6 +1039,15 @@ cs:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): otáčení doprava
+            new Behavior(spinning_left, []): otáčení doleva
+            new Behavior(fluttering, []): třepotání
+            new Behavior(jittering, []): komíhání
+            new Behavior(wobbling, []): kymácení
+            new Behavior(wandering, []): potulování se
+            new Behavior(patrolling, []): patrolování
+            new Behavior(moving_west_and_looping, []): posuv na západ a zacyklení
+            new Behavior(moving_east_and_looping, []): posuv na východ a zacyklení
             new Behavior(moving_north_and_looping, []): posuv na sever a zacyklení
             new Behavior(moving_south_and_looping, []): posuv na jih a zacyklení
       gamelab_comment:
@@ -1311,6 +1320,7 @@ cs:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): pohyb pomocí kláves se šipkami
+            new Behavior(driving_with_arrow_keys, []): ovládání šipkovými klávesami
             draggable(): přetažení
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
@@ -2083,12 +2093,28 @@ cs:
         text: 'sprajt {ANIMATION_NAME} začne {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': třepotání
+            '"growing"': růst
+            '"jittering"': komíhání
+            '"shrinking"': smršťování
+            '"spinning_left"': otáčení doleva
+            '"spinning_right"': otáčení doprava
             '"swimming_left_and_right"': plavání
+            '"wandering"': potulování se
+            '"wobbling"': kymácení
       Poetry_stopBehavior:
         text: 'sprajt {ANIMATION_NAME} zastaví {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': třepotání
+            '"growing"': růst
+            '"jittering"': komíhání
+            '"shrinking"': smršťování
+            '"spinning_left"': otáčení doleva
+            '"spinning_right"': otáčení doprava
             '"swimming_left_and_right"': plavání
+            '"wandering"': potulování se
+            '"wobbling"': kymácení
             '"all"': "--všechna chování--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

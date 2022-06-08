@@ -168,5 +168,11 @@ tg:
       gender:
         male: 'Мард'
         female: 'Зан'
+      subjects:
+        other: "Дигар"
+      resources:
+        other: "Дигар"
+      robotics:
+        other: "Дигар"
   cookie_banner:
     accept: 'Ман розӣ ҳастам'
