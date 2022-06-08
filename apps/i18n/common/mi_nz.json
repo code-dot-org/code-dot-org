@@ -78,6 +78,7 @@
   "courseCatalogTitle": "Whārangi Akoranga",
   "courses": "Akoranga",
   "coursesLearnHeroButton": "Me timata",
+  "courseOfferingMath": "Pāngarau",
   "coursesTeachHeroButton": "Me timata",
   "create": "Waihanga",
   "createAccount": "Waihangahia tētahi pūkete",
@@ -252,8 +253,10 @@
   "orientationLock": "Whakawetohia te raka takotoranga i ngā tautuhinga pūrere.",
   "pairingNavigatorWarning": "I te wā o te takiruatanga ki te {driver} ka tutuki tēnei panga. Tirohia tēnei panga i tōna pūkei ki te kite i te urupare nā koutou i waihanga hei tīma.",
   "pairProgramming": "Papatonotanga ā-Tānga",
+  "participantTypeTeacherTitle": "Ngā Pouako",
   "password": "Kupuhipa",
   "passwordConfirmation": "Whakaū kupuhipa",
+  "petitionMessage": "E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao rorohiko",
   "play": "tākaro",
   "playzoneArtistDescription": "Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!",
   "playzoneArtistTitle": "Tānga Hou",
@@ -405,6 +408,7 @@
   "update": "Whakahou",
   "versionHistory_clearProgress_cancel": "Whakakore",
   "versionHistory_header": "Hītori Putanga",
+  "view": "Tirohanga",
   "viewLessonPlan": "Tirotiro Mahere Akoranga",
   "viewPageAs": "Tirohia te whārangi hei:",
   "viewSection": "Tirohia te wāhanga",
@@ -415,5 +419,6 @@
   "when": "ina",
   "whenRun": "ina whakahaerehia",
   "workspaceHeaderShort": "Papamahi: ",
-  "yes": "Āe"
+  "yes": "Āe",
+  "zipOrCountry": "ZIP rohenga, Whenua rānei"
 }

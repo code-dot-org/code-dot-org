@@ -52,11 +52,17 @@
     "mini_rubric": "false",
     "tts_long_instructions_override": "Let's Get in  Formation!\r\n\r\nCheck out this dance that uses the layout block to change the backup dancers' formation throughout the dance. Try one of these ideas to extend it:\r\n\r\nCreate a second group of dancers in a different layout.\r\nChange layout when a key is pressed.\r\nChange a property when the dancers change formation",
     "thumbnail_url": "https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.979+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_bonus3_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_bonus3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:01.979+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_bonus3_2021\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_bonus3_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

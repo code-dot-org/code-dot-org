@@ -391,6 +391,7 @@
   coursee-2017_name: کورس E (2017)
   coursef-2017_name: کورس F (2017)
   coursed-2021_name: کورس D (2021)
+  coursed-2022_name: کورس D (2021)
   pre-express-2018_name: پری ریڈر ایکسپریس کورس (2018)
   pre-express-2019_name: پری ریڈر ایکسپریس کورس (2019)
   pre-express-2020_name: پری ریڈر ایکسپریس کورس (2020)
@@ -476,6 +477,12 @@
   coursed-2021_gradelevel: عمر 7-11
   coursee-2021_gradelevel: "Ages 8-12\n"
   coursef-2021_gradelevel: "Ages 9-13\n"
+  coursea-2022_gradelevel: عمر 4-7
+  courseb-2022_gradelevel: "Ages 5-8\n"
+  coursec-2022_gradelevel: "Ages 6-10\n"
+  coursed-2022_gradelevel: عمر 7-11
+  coursee-2022_gradelevel: "Ages 8-12\n"
+  coursef-2022_gradelevel: "Ages 9-13\n"
   accelerated_gradelevel: "Ages 10-18\n"
   thinkersmithspanish_platformtext: "پلگ نکالا ہوا"
   thinkersmith_platformtext: "پلگ نکالا ہوا"
@@ -548,6 +555,7 @@
   user_header_signin: "سائن ان کریں"
   user_header_create: 'تخلیق کریں '
   user_header_dance: "ڈانس پارٹی"
+  user_header_flappy: "فلاپی"
   user_header_view_project_gallery: "تمام منصوبوں کو دیکھیں"
   user_header_view_my_projects: "تمام منصوبوں کو دیکھیں"
   view_all_sections: "تمام سیکشن دیکھیں"
@@ -586,6 +594,7 @@
   hoc2021_mc_mee_villages_description: 'کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔'
   hoc2021_mc_mee_ai_title: "AI ہمیشہ کے لیے"
   hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  codebytes_skinny_banner_english_only: "صرف انگریزی"
   footer_privacy_policy: "رازداری کی پالیسی"
   footer_about: "متعلق"
   footer_donate: "عطیہ کریں"

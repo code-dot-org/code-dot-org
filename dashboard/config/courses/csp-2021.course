@@ -10,13 +10,23 @@
     "csp7-2021",
     "csp8-2021",
     "csp9-2021",
-    "csp10-2021"
+    "csp10-2021",
+    "csp-post-survey-2021"
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "notice": "Bring AP® Computer Science A to your students next year!",
+        "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall. ",
+        "link": "https://code.org/educate/csa",
+        "type": "bullhorn",
+        "visibility": "Teacher-only"
+      }
+    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "version_year": "2021"

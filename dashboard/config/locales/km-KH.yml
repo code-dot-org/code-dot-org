@@ -378,6 +378,7 @@ km:
       prizes_link: ព័ត៌មាន​បន្ថែម
   teacher:
     answer: ចម្លើយ
+    dashboard: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
     for_teachers_only: សម្រាប់តែគ្រូបង្រៀន
     title:
       one: គ្រូ​របស់​អ្នក៖
@@ -599,10 +600,13 @@ km:
         math: គណិត​វិទ្យា
         science: វិទ្យាសាស្រ្ត
         la: អក្សរសាស្រ្ត
+        other: ផ្សេងៗ
       resources:
         kodable: Kodable
+        other: ផ្សេងៗ
       robotics:
         kodable: Kodable
+        other: ផ្សេងៗ
       email_opt_in:
         opt_in_yes: យល់ព្រម
         opt_in_no: ទេ

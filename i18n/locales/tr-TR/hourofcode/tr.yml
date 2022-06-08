@@ -144,6 +144,9 @@ tr:
     verileri ve yanlılık hakkında bilgi sahibi olun. Bilgisayar bilimi kodlamadan
     çok daha fazlasıdır! Müfredatımız boyunca yapay zeka ile ilgili daha fazla şey
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -167,6 +170,11 @@ tr:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Yapay zeka nedir?
   ai_video_title_algorithm_bias: Algoritmalarda yanlılık ile mücadele
   ai_video_title_phone_knows_dog: Telefonunuz bunun köpek olduğunu nasıl anladı?
@@ -234,7 +242,7 @@ tr:
     düzenleyebilir. 45’ten fazla dilde bir saatlik eğitimler Deneyim gerektirmez.
   hourofcode_homepage_hoc2018_header_line2: Yediden yetmişe.
   codeorg_homepage_hoc_is_coming: Kodlama Saati geliyor
-  codeorg_homepage_celebrate_cse: Bilgisayar bilimini her yerde kutlayın!
+  codeorg_homepage_celebrate_cse: Bilgisayar bilimini her yerde tanıtın!
   codeorg_homepage_csc: Bilgisayar bilimi, BB Bağlantıları'nda dil bilimi, matematik
     ve daha fazlasıyla buluşuyor
   codeorg_homepage_csc_long: Müfredatımızda bilgisayar biliminin, dil sanatları, matematik
@@ -650,15 +658,16 @@ tr:
     yıl bilgisayar biliminin öncüsü [Amiral Grace Murray Hopper'ın](%{grace_hopper})
     doğum gününü (9 Aralık 1906) hatırlatacak şekilde düzenlenmektedir.
   hoc_faq_why_cs_q: Neden bilgisayar bilimi?
-  hoc_faq_why_cs_a: "<i>Her</i> öğrenci bilgisayar bilimini öğrenebilme şansına sahip
-    olmalı. Bu, öğrencilerin problem çözme becerisini, mantığını ve yaratıcılığını
-    beslemeye yardımcı olur. Erken başlayarak öğrenciler, herhangi bir 21. yüzyıl
-    kariyerine sağlam bir temel atarlar. Daha fazla istatistik için <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a: "<i>Her</i> öğrencinin bilgisayar bilimini öğrenme fırsatı olmalıdır.
+    Bilgisayar bilimi; problem çözme becerileri, mantık ve yaratıcılığın gelişmesine
+    yardım eder. Öğrenciler erken yaşta başlayarak, 21. yüzyıl kariyer yollarından
+    herhangi birinde başarı için temel atacaktır. Daha fazla istatistiğe <a href='%{stats_url}'>buradan</a>
+    ulaşabilirsiniz."
   hoc_faq_why_cs_a_markdown: _Her_ öğrencinin bilgisayar bilimini öğrenme fırsatı
     olmalıdır. Bilgisayar bilimi; problem çözme becerileri, mantık ve yaratıcılığın
-    gelişmesine yardım eder. Öğrenciler erken yaşta başlayarak, 21. yüzyıl kariyerleri
-    yolunda başarının temelini oluşturacaktır. Daha fazla istatistiğe [buradan](%{stats_url})
-    bakabilirsiniz.
+    gelişmesine yardım eder. Öğrenciler erken yaşta başlayarak, 21. yüzyıl kariyer
+    yollarından herhangi birinde başarı için temel atacaktır. Daha fazla istatistiğe
+    [buradan](%{stats_url}) bakabilirsiniz.
   hoc_faq_how_participate_q: Hour of Code'a nasıl katılabilirim?
   hoc_faq_how_participate_a: Nasıl yapılır? rehberimizi gözden geçirerek <a href='/how-to'>burada
     planlamaya başlayın</a>. Okulunuzda veya topluluğunuzda, müfredat dışı bir kulüp,
@@ -678,56 +687,57 @@ tr:
   hoc_faq_behind_hoc_a_markdown: Hour of Code; Hour of Code ve Bilgisayar Bilimi Eğitim
     Haftası [Danışma ve Değerlendirme Komiteleri](%{partner_url}) ile aralarında Microsoft,
     Apple, Amazon, Boys and Girls Clubs of America and the College Board gibi kuruluşların
-    da olduğu, Kodlama Saati'ne destek olmak için bir araya gelen eşsiz ortakların
-    güç birliği ile yürütülmektedir.
-  hoc_faq_host_q: Kodlama hakkında hiç bir fikrim yok. Yine de bir aktiviteye ev sahipliği
-    yapabilir miyim?
+    da olduğu, Hour of Code'a destek olmak için bir araya gelen eşsiz ortakların güç
+    birliği ile yürütülmektedir.
+  hoc_faq_host_q: Kodlama hakkında hiçbir şey bilmiyorum. Yine de bir aktiviteye ev
+    sahipliği yapabilir miyim?
   hoc_faq_host_a: Elbette. Hour of Code aktiviteleri kendi kendine yönlendirmelidir.
-    Yapmanız gereken tek şey <a href='%{codeorg_url}/learn'>mevcut öğreticilerimizi
-    denemek</a>, istediğiniz birini seçmek ve bir saat belirlemek. Gerisini biz hallederiyoruz.
-    Ayrıca anaokulundan başlayarak her yaş ve her seviyeye uygun seçeneklerimiz de
-    mevcuttur. <a href='/how-to'>Nasıl yapılır rehberimizi</a> okuyarak etkinliğinizi
-    planlamaya başlayabilirsiniz.
-  hoc_faq_host_a_markdown: Elbette. Hour of Code aktiviteleri, kendi kendine yönlendirmelidir.
+    Tek yapmanız gereken <a href='%{codeorg_url}/learn'>güncel öğretici materyallerimizi
+    denemek</a>, istediğiniz materyali seçmek ve bir saat belirlemek. Gerisini biz
+    hallediyoruz. Anaokulundan başlayarak her yaş ve deneyim seviyesine göre de seçeneklerimiz
+    var. <a href='/how-to'>Nasıl yapılır?</a> rehberimizi okuyarak etkinliğinizi planlamaya
+    başlayın.
+  hoc_faq_host_a_markdown: Elbette. Hour of Code aktiviteleri kendi kendine yönlendirmelidir.
     Tek yapmanız gereken [güncel öğretici materyallerimizi denemek](%{codeorg_url}/learn),
     istediğiniz materyali seçmek ve bir saat belirlemek. Gerisini biz hallediyoruz.
     Anaokulundan başlayarak her yaş ve deneyim seviyesine göre de seçeneklerimiz var.
-    [Nasıl yapılır?](%{howto}) rehberimizi koruyarak etkinliğinizi planlamaya başlayın.
+    [Nasıl yapılır?](%{howto}) rehberimizi okuyarak etkinliğinizi planlamaya başlayın.
   hoc_faq_devices_q: Öğrencilerim için hangi aygıtları kullanmalıyım?
   hoc_faq_devices_a: Code.org dersleri tüm aygıtlar ve tarayıcılar üzerinde çalışmaktadır.
-    Code.org'ın öğretici teknik ihtiyaçları hakkında daha fazla bilgiyi bulabilirsiniz
-    <a href='%{codeorg_url}/educate/it'> burada</a>. Teknik Code.org eğitim için <a
-    href='%{codeorg_url}/learn'>%{partner_url}/öğrenmek</a> öğretici belirli açıklama
-    bulunabilir. Unutmayın, okulunuz bu dersleri karşılayamıyorsa <a href='%{unplugged_url}'>
-    biz bu faaliyetleri </a> bilgisayar olmadan da sunuyoruz!
+    Code.org'un öğretici teknoloji ihtiyaçları ile ilgili daha fazla bilgiyi <a href='%{codeorg_url}/educate/it'>burada</a>
+    bulabilirsiniz. Code.org dışındaki aktivitelerde gerekli olan teknoloji ihtiyaçları
+    <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> adresinde ilgili aktivitenin
+    açıklamasında bulunabilir. Bu öğretici materyaller okulunuzda olmadığında <a href='%{unplugged_url}'>bağlantısız
+    aktiviteler</a> de sunduğumuzu unutmayın!
   hoc_faq_devices_a_markdown: Code.org öğretici materyalleri tüm cihaz ve tarayıcılarda
     çalışır. Code.org'un öğretici teknoloji ihtiyaçları ile ilgili daha fazla bilgiyi
     [burada](%{codeorg_url}/educate/it) bulabilirsiniz. Code.org dışındaki aktivitelerde
     gerekli olan teknoloji ihtiyaçları [%{partner_url}/learn](%{codeorg_url}/learn)
     adresinde ilgili aktivitenin açıklamasında bulunabilir. Bu öğretici materyaller
-    okulunuzda olmadığında [bağımsız aktiviteler](%{unplugged_url}) de sunduğumuzu
+    okulunuzda olmadığında [bağlantısız aktiviteler](%{unplugged_url}) de sunduğumuzu
     unutmayın!
   hoc_faq_need_computers_q: Her katılımcı için bilgisayara ihtiyaç var mı?
   hoc_faq_need_computers_a: Hayır. Bilgisayar, akıllı telefon, tabletlerde çalışan
     ve bazıları da hiç bilgisayar gerektirmeyen Hour of Code öğretici materyallerimiz
-    var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz. <p><i>İşte birkaç seçenek:</i><br><ul><li><b>İkili
-    gruplar halinde çalışın.</b><a href='%{pair_programming_research}'>Araştırmalara
-    göre</a> öğrencilerin en iki öğrendiği düzen, <a href='%{pair_programming_video}'>çiftli
-    programlama</a>; yani bir bilgisayarı paylaşarak birlikte çalışma düzeni. Öğrencilerinizi
+    var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz. <p><i>İşte birkaç seçenek:</i>
+    <br> <ul> <li><b>İkili gruplar halinde çalışın.</b> <a href='%{pair_programming_research}'>Araştırmalara
+    göre</a> öğrencilerin en iyi öğrendiği düzen, <a href='%{pair_programming_video}'>eşli
+    programlama</a>; yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi
     ikili gruplar oluşturmaya teşvik edin. <li><b>Yansıtmalı bir ekran kullanın.</b>
     İnternete bağlı bir bilgisayar için hem projektör hem de ekranınız varsa grubunuz
     birlikte bir Hour of Code yapabilir. Videoları birlikte izleyin ve sırayla bulmacaları
-    çözün veya soruları yanıtlayın. <li><b>Bağımsız olun.</b> Hiç <a href='%{unplugged_url}'>bilgisayar
-    gerektirmeyen öğretici materyaller de sunuyoruz</a>.
+    çözün veya soruları yanıtlayın. <li><b>Bağlantısız olun.</b> Hiç <a href='%{unplugged_url}'>bilgisayar
+    gerektirmeyen öğretici materyaller de sunuyoruz</a>.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Hayır. Bilgisayar, akıllı telefon, tabletlerde çalışan ve bazıları da hiç bilgisayar gerektirmeyen Hour of Code öğretici materyallerimiz var! İstediğiniz yerden, elinizdekilerle katılabilirsiniz.
 
     _İşte birkaç seçenek:_
 
-    - **İkili gruplar halinde çalışın.** [Araştırmalara göre](%{pair_programming_research}) öğrencilerin en iki öğrendiği düzen, [iki programlama](%{pair_programming_video}); yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi ikili gruplar oluşturmaya teşvik edin.
+    - **İkili gruplar halinde çalışın.** [Araştırmalara göre](%{pair_programming_research}) öğrencilerin en iyi öğrendiği düzen, [eşli programlama](%{pair_programming_video}); yani bir bilgisayarı paylaşıp birlikte çalışma düzeni. Öğrencilerinizi ikili gruplar oluşturmaya teşvik edin.
     - **Yansıtmalı bir ekran kullanın.** İnternete bağlı bir bilgisayar için hem projektör hem de ekranınız varsa grubunuz birlikte bir Hour of Code yapabilir. Videoları birlikte izleyin ve sırayla bulmacaları çözün veya soruları yanıtlayın.
-    - **Bağımsız olun.** Hiç [bilgisayar gerektirmeyen öğretici materyaller de sunuyoruz](%{unplugged_url}).
-  hoc_faq_international_q: Ben <country>'deyim. Nasıl katılım gösterebilirim?
+    - **Bağlantısız olun.** Hiç [bilgisayar gerektirmeyen öğretici materyaller de sunuyoruz](%{unplugged_url}).
+  hoc_faq_international_q: 'Benim yaşadığım ülke: <country>. Uluslararası olarak nasıl
+    katılabilirim?'
   hoc_faq_international_a: Herkes, dünyanın her yerinde bir Hour of Code etkinliği
     organize edebilir. Geçtiğimiz yıl, dünyanın her yerinden öğrenciler Hour of Code
     için bir araya geldiler. <a href='/promote'>Buradan</a> daha fazlasını öğrenebilirsiniz.
@@ -736,67 +746,69 @@ tr:
     Hour of Code için bir araya geldiler. [Buradan](%{promote}) daha fazlasını öğrenebilirsiniz.
   hoc_faq_tutorial_q: Nasıl bir Hour of Code öğreticisi hazırlayabilirim?
   hoc_faq_tutorial_a: Eğer bir öğretici ortağı olmak isterseniz, <a href='target-tutorial-guidelines'>rehberimizi
-    ve yönlendirmelerimizi inceleyin</a>. Bir çok bağlantılı ve farklı seçeneği bünyemizde
+    ve yönlendirmelerimizi inceleyin</a>. Birçok bağlantılı ve farklı seçeneği bünyemizde
     bulundurmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci
     ve öğretmenler için ilk tecrübelerini en iyi hale getirmek.
   hoc_faq_tutorial_a_markdown: Eğer bir öğretici ortağı olmaya niyetliyseniz [kurallar
     ve yönergelerimizi](%{tutorial_guidelines}) inceleyin. İlgi çekici seçeneklere
-    ev sahipliği yapmaktan memnuniyet duyarız, ancak birincil amacımız bilgisayar
-    bilimiyle yeni tanışan öğrenci ve öğretmenlerin deneyimlerini iyileştirmektir.
-  hoc_faq_account_q: Öğrenciler bir hesap oluşturmak zorunda mıdır?
+    ev sahipliği yapmaktan memnuniyet duyarız ancak birincil amacımız bilgisayar bilimiyle
+    yeni tanışan öğrenci ve öğretmenlerin deneyimlerini iyileştirmektir.
+  hoc_faq_account_q: Öğrenciler bir hesap kullanarak giriş yapmak zorunda mıdır?
   hoc_faq_account_a: Hayır. Öğrencilerin Hour of Code'u denemeleri için kesinlikle
     bir kayıt veya oturum açma işlemi gerekmez. Ancak çoğu <a href='%{codeorg_url}/learn/beyond'>devam
-    ders</a> için öğrencinin ilerleme durumunun kaydedilmesi amacıyla kayıt oluşturmak
+    dersi</a> için öğrencinin ilerleme durumunun kaydedilmesi amacıyla hesap açmak
     gerekir. Ayrıca Hour of Code için kaydolunması ile otomatik olarak bir Code Studio
     hesabı OLUŞTURULMAZ. Öğrencileriniz için hesap oluşturmak isterseniz lütfen şu
-    <a href='https://youtu.be/_smelV_KISE'>talimatlar</a> izleyin.
+    <a href='https://youtu.be/_smelV_KISE'>talimatları</a> izleyin.
   hoc_faq_account_a_markdown: Hayır. Öğrencilerin Hour of Code'u denemeleri için kesinlikle
     bir kayıt veya oturum açma işlemi gerekmez. Ancak çoğu [devam dersi](%{codeorg_url}/learn/beyond)
-    için öğrencinin ilerleme durumunun kaydedilmesi amacıyla kayıt oluşturmak gerekir.
+    için öğrencinin ilerleme durumunun kaydedilmesi amacıyla hesap oluşturmak gerekir.
     Ayrıca Hour of Code için kaydolunması ile otomatik olarak bir Code Studio hesabı
-    OLUŞTURULMAZ. Öğrencileriniz için hesap oluşturmak isterseniz lütfen şu [talimatları](https://youtu.be/_smelV_KISE)
-    izleyin.
+    OLUŞTURULMAZ. Öğrencileriniz için hesap oluşturmak isterseniz lütfen şu [instructions](%{section_instructions_url})
+    adımlarını izleyin.
   hoc_faq_high_school_q: Lise öğrencileriyle hangi aktiviteyi yapmamı önerirsiniz?
-  hoc_faq_high_school_a: Tüm yaşlar için, ilk aşamada <a href='http://code.org/learn'>Code.org/learn</a>
-    adresindeki başlangıç öğreticilerinden herhangi birini denemenizi öneririz, örneğin
-    Angry Birds'lü veya Anna ve Elsa'nın olduğu öğretici gibi. Bir lise öğrencisi
-    bunlardan birini 30 dakika içinde bitirebilecek seviyede olmalıdır, ancak bundan
-    sonra Khan Academy ya da CodeHS gibi daha ileri seviye JavaScript öğreticileri
-    deneyebilir.
+  hoc_faq_high_school_a: Star Wars ve Minecraft öğretici materyallerimiz özellikle
+    lise seviyesi için çok iyidir; özellikle de Star Wars JavaScript sürümü ile iki
+    öğreticideki ücretsiz oyun seviyesi.  Alternatif olarak, başlangıçta Angry Birds
+    veya Anna ve Elsa karakterlerini içeren öğretici materyalleri gibi başlangıç seviyesinde
+    olanlardan birini <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> üzerinden
+    denemelerini öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitirebilmeleri
+    gerekir. Ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri
+    düzeyde öğretici materyalleri deneyebilirler.
   hoc_faq_high_school_a_markdown: Star Wars ve Minecraft öğretici materyallerimiz
     özellikle lise seviyesi için çok iyidir; özellikle de Star Wars JavaScript sürümü
     ile iki öğreticideki ücretsiz oyun seviyesi.  Alternatif olarak, başlangıçta Angry
     Birds veya Anna ve Elsa karakterlerini içeren öğretici materyalleri gibi başlangıç
     seviyesinde olanlardan birini [%{partner_url}/learn](%{codeorg_url}/learn) üzerinden
-    denemenizi öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitiriip
-    ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri düzeyde
-    öğretici materyalleri deneyebilmeleri gerekir.
+    denemelerini öneririz. Lise öğrencilerinin bunlardan birini 30 dakikada bitirebilmeleri
+    gerekir. Ardından JavaScript üzerinde Khan Academy veya CodeHS gibi daha ileri
+    düzeyde öğretici materyalleri deneyebilirler.
   hoc_faq_scratch_q: Hour of Code için Scratch kullanıyorum, öğrencilerimde dizüstü
     bilgisayar yerine iPad varsa ne yapmalıyım?
-  hoc_faq_scratch_a: Scratch tabletlerde çalışmaz. Eğer öğrencileriniz küçük yaşlardalarsa,
-    ScratchJR iPad uygulamasını kullanabilirler. Eğer <a href='http://code.org/learn'>Code.org/learn</a>
-    sitesindeki öğreticilere bakarsanız, iPad'lerde çalışan birçok öğretici bulabilirsiniz
-    - Code.org, Tynker, Lightbot ya da CodeSpark'tan.
-  hoc_faq_scratch_a_markdown: Scratch tabletlerde çalışmaz. Eğer öğrencileriniz küçük
-    yaşlardalarsa, ScratchJR iPad uygulamasını kullanabilirler. Eğer  [%{partner_url}/learn](%{codeorg_url}/learn)
+  hoc_faq_scratch_a: Scratch tabletlerde çalışmaz. Eğer öğrencilerinizin yaşları küçükse,
+    ScratchJR iPad uygulamasını kullanabilirler. Eğer <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    sitesindeki öğreticilere bakarsanız Code.org, Tynker, Lightbot ya da CodeSpark'tan
+    iPad'lerde çalışan birçok öğretici bulabilirsiniz.
+  hoc_faq_scratch_a_markdown: Scratch tabletlerde çalışmaz. Eğer öğrencilerinizin
+    yaşları küçükse, ScratchJR iPad uygulamasını kullanabilirler. Eğer [%{partner_url}/learn](%{codeorg_url}/learn)
     sitesindeki öğreticilere bakarsanız Code.org, Tynker, Lightbot ya da CodeSpark'tan
     iPad'lerde çalışan birçok öğretici bulabilirsiniz.
   hoc_faq_count_hoc_q: Hour of Code'u nasıl sayıyorsunuz ?
-  hoc_faq_map_q: Neden haritada benim noktamı görmüyorum?
+  hoc_faq_map_q: Neden haritada kendi noktamı görmüyorum?
   hoc_faq_map_a: Etkinliğinizi, Hour of Code haritasında görmediğiniz için çok üzgünüz.
     Kaydolan on binlerce organizatör nedeniyle, harita verileri topluyor ve birkaç
-    etkinlik için bir nokta gösteriyor. Haritanın altındaki <a href='%{events_url}'>events
-    page</a> bağlantısına tıklarsanız ülkede yapılan tüm etkinliklerin listesine yönlendirileceksiniz
-    ve etkinliğinizi o listede bulacaksınız. Ek olarak, Hour of Code'a kaydolan binlerce
-    kişi göz önüne alındığında, harita ve etkinlik listesinin güncellenmesi genellikle
-    48 saat sürer. Birkaç gün içinde tekrar bakın!
+    etkinlik için bir nokta gösteriyor. Haritanın altındaki <a href='%{events_url}'>etkinlikler
+    sayfası</a> bağlantısına tıklarsanız ülkede yapılan tüm etkinliklerin listesine
+    yönlendirileceksiniz ve etkinliğinizi o listede bulacaksınız. Ek olarak, Hour
+    of Code'a kaydolan binlerce kişi göz önüne alındığında, harita ve etkinlik listesinin
+    güncellenmesi genellikle 48 saat sürer. Birkaç gün içinde tekrar bakın!
   hoc_faq_map_a_markdown: Etkinliğinizi, Hour of Code haritasında görmediğiniz için
     çok üzgünüz. Kaydolan on binlerce organizatör nedeniyle, harita verileri topluyor
-    ve birkaç etkinlik için bir nokta gösteriyor. Haritanın altındaki [events page](%{events_url})
-    bağlantısına tıklarsanız ülkede yapılan tüm etkinliklerin listesine yönlendirileceksiniz
-    ve etkinliğinizi o listede bulacaksınız. Ek olarak, Hour of Code'a kaydolan binlerce
-    kişi göz önüne alındığında, harita ve etkinlik listesinin güncellenmesi genellikle
-    48 saat sürer. Birkaç gün içinde tekrar bakın!
+    ve birkaç etkinlik için bir nokta gösteriyor. Haritanın altındaki [etkinlikler
+    sayfası](%{events_url}) bağlantısına tıklarsanız ülkede yapılan tüm etkinliklerin
+    listesine yönlendirileceksiniz ve etkinliğinizi o listede bulacaksınız. Ek olarak,
+    Hour of Code'a kaydolan binlerce kişi göz önüne alındığında, harita ve etkinlik
+    listesinin güncellenmesi genellikle 48 saat sürer. Birkaç gün içinde tekrar bakın!
   hoc_faq_count_hoc_a: Hour of Code takipçisi, kullanımı kesin olarak ölçmez. Hour
     of Code'a katılımları takip ederken her öğrencinin ID'lerini tek tek saymıyoruz
     çünkü öğrencilerin giriş yapmasını ya da kaydolmasını zorunlu tutmuyoruz. Sonuç
@@ -812,42 +824,42 @@ tr:
     bir bilgisayar bilimcisine dönüştürmek değildir. Bir saat ancak bilgisayar biliminin
     eğlenceli ve yaratıcı olduğunu, temeli ne olursa olsun her yaşa ve her öğrenciye
     hitap edebileceğini görmeye yeter. Bu kampanyanın başarı ölçütü, öğrencilerin
-    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyet,
-    etnik ve sosyoekonomik grupların geniş katılımı ve bunun sonucunda tüm sınıf düzeylerinde
-    bilgisayar bilimi derslerinde gördüğümüz kayıt ve katılım artışı olarak yansır.
-    Katılan öğrenci ve öğretmenlerden milyonlarcası bu bir saatin ötesine geçip tüm
-    gün veya bir hafta ya da daha uzun süre öğrenmeye karar verdiler. Sonuç olarak
-    tam bir ders almaya ve hatta üniversitede bölüm olarak seçmeye karar veren öğrenci
-    sayısı da çok oldu. <br/><br/>Öğrencilerin yanı sıra, diğer bir "öğrenci", bilgisayar
-    bilimcisi olarak kolej diplomasına sahip olmamasına rağmen, bir saatlik eğitimden
-    sonra bilgisayar bilimi öğretebilecekleri konusunda güven kazanan eğitimcilerdir.
-    On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine (PD) katılarak ya da devam
-    niteliğindeki çevrimiçi dersleri sunarak bilgisayar bilimine devam etmeye veya
-    her ikisini birden yapmaya karar veriyor. Bu, bilgisayar biliminin öğrencilerin
-    istediği ve öğretmenlerin yapabileceği bir alan olduğunu fark eden okul yöneticileri
-    için de geçerli. <br/><br/>Hepsinden önemlisi, tüm katılımcıların bir saatte öğrendiği
-    şu oluyor: Bunu yapabiliriz.'
+    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyetlerden,
+    etnik ve sosyoekonomik gruplardan kişilerin geniş katılımı ve bunun sonucunda
+    tüm sınıf düzeylerinde bilgisayar bilimi derslerinde gördüğümüz kayıt ve katılım
+    artışı olarak yansır. Katılan öğrenci ve öğretmenlerden milyonlarcası bu bir saatin
+    ötesine geçip tüm gün veya bir hafta ya da daha uzun süre öğrenmeye karar verdiler.
+    Sonuç olarak tam bir ders almaya ve hatta üniversitede bölüm olarak seçmeye karar
+    veren öğrenci sayısı da çok oldu. <br/><br/>Öğrencilerin yanı sıra, diğer bir
+    "öğrenci", bilgisayar bilimcisi olarak üniversite diplomasına sahip olmamasına
+    rağmen, bir saatlik eğitimden sonra bilgisayar bilimi öğretebilecekleri konusunda
+    güven kazanan eğitimcilerdir. On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine
+    (PD) katılarak ya da devam niteliğindeki çevrimiçi dersleri sunarak bilgisayar
+    bilimine devam etmeye veya her ikisini birden yapmaya karar veriyor. Bu, bilgisayar
+    biliminin öğrencilerin istediği ve öğretmenlerin yapabileceği bir alan olduğunu
+    fark eden okul yöneticileri için de geçerli. <br/><br/>Hepsinden önemlisi, tüm
+    katılımcıların bir saatte öğrendiği şu oluyor: Bunu yapabiliriz.'
   hoc_faq_one_hour_a_markdown: "Hour of Code'un amacı, herhangi birini alıp bir saatte
     uzman bir bilgisayar bilimcisine dönüştürmek değildir. Bir saat ancak bilgisayar
     biliminin eğlenceli ve yaratıcı olduğunu, temeli ne olursa olsun her yaşa ve her
     öğrenciye hitap edebileceğini görmeye yeter. Bu kampanyanın başarı ölçütü, öğrencilerin
-    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyet,
-    etnik ve sosyoekonomik grupların geniş katılımı ve bunun sonucunda tüm sınıf düzeylerinde
-    bilgisayar bilimi derslerinde gördüğümüz kayıt ve katılım artışı olarak yansır.
-    Katılan öğrenci ve öğretmenlerden milyonlarcası bu bir saatin ötesine geçip tüm
-    gün veya bir hafta ya da daha uzun süre öğrenmeye karar verdiler. Sonuç olarak
-    tam bir ders almaya ve hatta üniversitede bölüm olarak seçmeye karar veren öğrenci
-    sayısı da çok oldu. \n\nÖğrencilerin yanı sıra, diğer bir \"öğrenci\", bilgisayar
-    bilimcisi olarak kolej diplomasına sahip olmamasına rağmen, bir saatlik eğitimden
-    sonra bilgisayar bilimi öğretebilecekleri konusunda güven kazanan eğitimcilerdir.
-    On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine (PD) katılarak ya da devam
-    niteliğindeki çevrimiçi dersleri sunarak bilgisayar bilimine devam etmeye veya
-    her ikisini birden yapmaya karar veriyor. Bu, bilgisayar biliminin öğrencilerin
-    istediği ve öğretmenlerin yapabileceği bir alan olduğunu fark eden okul yöneticileri
-    için de geçerli.\n\nHepsinden önemlisi, tüm katılımcıların bir saatte öğrendiği
-    şu oluyor: Bunu yapabiliriz."
-  hoc_faq_more_questions_q: Hala başka sorularınız mı var?
-  hoc_faq_more_questions_a: "<a href='http://support.code.org'>Destek forumu</a> altında
+    bilgisayar biliminden ne kadar çok şey öğrendiği değildir. Başarı; farklı cinsiyetlerden,
+    ırklardan, etnik ve sosyoekonomik gruplardan kişilerin geniş katılımı ve bunun
+    sonucunda tüm sınıf düzeylerinde bilgisayar bilimi derslerinde gördüğümüz kayıt
+    ve katılım artışı olarak yansır. Katılan öğrenci ve öğretmenlerden milyonlarcası
+    bu bir saatin ötesine geçip tüm gün veya bir hafta ya da daha uzun süre öğrenmeye
+    karar verdiler. Sonuç olarak tam bir ders almaya ve hatta üniversitede bölüm olarak
+    seçmeye karar veren öğrenci sayısı da çok oldu. \n\nÖğrencilerin yanı sıra, diğer
+    bir \"öğrenci\", bilgisayar bilimcisi olarak üniversite diplomasına sahip olmamasına
+    rağmen, bir saatlik eğitimden sonra bilgisayar bilimi öğretebilecekleri konusunda
+    güven kazanan eğitimcilerdir. On binlerce öğretmen, Profesyonel Gelişim Eğitimlerine
+    (PD) katılarak ya da devam niteliğindeki çevrimiçi dersleri sunarak bilgisayar
+    bilimine devam etmeye veya her ikisini birden yapmaya karar veriyor. Bu, bilgisayar
+    biliminin öğrencilerin istediği ve öğretmenlerin yapabileceği bir alan olduğunu
+    fark eden okul yöneticileri için de geçerli.\n\nHepsinden önemlisi, tüm katılımcıların
+    bir saatte öğrendiği şu oluyor: Bunu yapabiliriz."
+  hoc_faq_more_questions_q: Başka sorularınız mı var?
+  hoc_faq_more_questions_a: "<a href='http://support.code.org'>Destek forumumuzda</a>
     bir yanıt bulmaya çalışabilirsiniz."
   hoc_faq_more_questions_a_markdown: "[Destek forumumuzda](http://support.code.org)
     bir yanıt bulmaya çalışabilirsiniz."
@@ -855,23 +867,24 @@ tr:
   hoc_faq_keep_learning_a: Herkes istediği zaman Hour of Code'a ev sahipliği yapabilir.
     Öğretici materyaller yıl boyunca kullanılabilir. Tüm öğretici materyallerimizin
     ve müfredatımızın sitemizde kalıcı olacağını düşünebilirsiniz. Etkinlik Nasıl
-    Yapılır rehberleri ve Kodlama Saati etkinliğinizin başarılı geçmesine yardımcı
+    Yapılır rehberleri ve Hour of Code etkinliğinizin başarılı geçmesine yardımcı
     olacak diğer kaynaklar için <a href='/promote'>kaynaklarımıza</a> gidin.
   hoc_faq_keep_learning_a_markdown: Herkes istediği zaman Hour of Code'a ev sahipliği
     yapabilir. Öğretici materyaller yıl boyunca kullanılabilir. Tüm öğretici materyallerimizin
     ve müfredatımızın sitemizde kalıcı olacağını düşünebilirsiniz. Etkinlik Nasıl
-    Yapılır rehberleri ve Kodlama Saati etkinliğinizin başarılı geçmesine yardımcı
+    Yapılır rehberleri ve Hour of Code etkinliğinizin başarılı geçmesine yardımcı
     olacak diğer kaynaklar için [kaynaklarımıza](%{promote}) gidin.
   hoc_faq_certificates_q: Öğrencilerim için sertifikaları nerede yazdırabilirim?
   hoc_faq_certificates_a: Sınıfınız için önceden de belgeler yazdırabileceğiniz <a
-    href='%{codeorg_url}/certificates'> sertifikalar sayfamıza </a> gidin. Minecraft
-    dersini alan öğrencilerinize <a href='%{codeorg_url}/certificates?course=mc'>
-    özel sertifikalar </a> da yazdırabilirsiniz.
+    href='%{codeorg_url}/certificates'>sertifikalar sayfamıza</a> gidin. Minecraft
+    dersini alan öğrencilerinize <a href='%{codeorg_url}/certificates?course=mc'>özel
+    sertifikalar</a> da yazdırabilirsiniz.
   hoc_faq_certificates_a_markdown: Sınıfınız için sertifikaları önceden yazdırabileceğiniz
     [sertifikalar sayfamıza](%{codeorg_url}/certificates) gidin. Minecraft aktivitesini
     yapan öğrencilere [özel sertifikalar](%{codeorg_url}/certificates?course=mc) da
     yazdırabilirsiniz.
-  hoc_faq_logo_q: Hour of Code logosu veya ismini kullanmamda bir sınırlama var mıdır?
+  hoc_faq_logo_q: Hour of Code logosu veya ismini kullanmamla ilgili bir sınırlama
+    var mıdır?
   hoc_faq_logo_a: '"Hour of Code" ticari markadır. Bu markanın kullanımına engel olmak
     istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz. Lütfen <a href=''%{logo_url}''>kullanım
     yönergelerine</a> bakın.'
@@ -1017,6 +1030,7 @@ tr:
   footer_menu_support: Destek
   footer_menu_terms: Şartlar
   footer_menu_privacy: Gizlilik Politikası
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Hour of Code Aktiviteleri
   learn_banner_blurb: Her yaşa göre tasarlanmış 45’ten fazla dildeki bir saatlik dersleri
     deneyin.  Bir Hour of Code ile başlayarak 180’den fazla ülkedeki milyonlarca öğrenci
@@ -10737,86 +10751,167 @@ tr:
   all: Hepsi
   dont_know: Bilmiyorum
   language_label: Dil
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: İngilizce
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: İngilizce
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: İngilizce
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

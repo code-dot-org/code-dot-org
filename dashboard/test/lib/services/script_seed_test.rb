@@ -83,12 +83,13 @@ module Services
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
+      #   1 query to check if units in family have the same course type settings
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(86) do
+      assert_queries(87) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -242,8 +243,8 @@ module Services
         lesson.lesson_activities.first.update!(name: 'Updated Activity Name')
         lesson.lesson_activities.create(
           name: 'New Activity Name',
-          position: 2,
-          key: "#{lesson.name}-activity-2"
+          position: 3,
+          key: "#{lesson.name}-activity-3"
         )
       end
 
@@ -266,8 +267,8 @@ module Services
         activity.activity_sections.first.update!(name: 'Updated Section Name')
         activity.activity_sections.create(
           name: 'New Section Name',
-          position: 2,
-          key: "#{activity.key}-section-2"
+          position: 3,
+          key: "#{activity.key}-section-3"
         )
       end
 

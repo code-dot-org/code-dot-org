@@ -1,4 +1,5 @@
 # coding: utf-8
+
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
 require 'cdo/chat_client'
@@ -54,7 +55,7 @@ namespace :test do
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging(
         'bundle', 'exec', './runner.rb',
-        '-c', 'Chrome,iPhone,IE11',
+        '-c', 'Chrome,iPhone',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
@@ -105,7 +106,6 @@ namespace :test do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-        ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
         ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
@@ -192,7 +192,6 @@ namespace :test do
 
         ENV.delete 'UNIT_TEST'
         ENV.delete 'USE_PEGASUS_UNITTEST_DB'
-        ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
@@ -200,28 +199,36 @@ namespace :test do
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_shared_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :pegasus_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_pegasus_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :lib_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_lib_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :bin_i18n_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_bin_i18n_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
@@ -293,7 +300,7 @@ namespace :test do
           'lib/**/*',
           'shared/**/*'
         ],
-        ignore: ['dashboard/test/ui/**/*']
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_tests
       end

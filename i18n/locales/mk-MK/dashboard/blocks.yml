@@ -72,6 +72,17 @@ mk:
             '"a"': А
             '"s"': Југ
             '"d"': Д
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': цигла
+            '"fire"': оган
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': ѕвоно
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': балонче
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Рипај
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -680,6 +680,12 @@ Dance.prototype.displayFeedback_ = function() {
     artistTwitterHandle +
     ' on @codeorg!';
 
+  const comma = '%2C';
+  const hashtags =
+    artistTwitterHandle === 'Coldplay'
+      ? ['codeplay', 'HourOfCode'].join(comma)
+      : ['HourOfCode'];
+
   let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
@@ -691,7 +697,7 @@ Dance.prototype.displayFeedback_ = function() {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.'
     },
-    twitter: {text: twitterText}
+    twitter: {text: twitterText, hashtag: hashtags}
   };
 
   // Disable social share for users under 13 if we have the cookie set.

@@ -113,7 +113,7 @@
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "2-3 Artist Functions 10": {
@@ -141,23 +141,23 @@
         },
         "2-3 Artist Functions 2": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           }
         },
         "2-3 Artist Functions 9": {
@@ -833,17 +833,17 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_10_RETRY": {
@@ -872,7 +872,7 @@
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -880,7 +880,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -888,7 +888,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -967,18 +967,18 @@
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           }
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "description": "dibuja un cuadro que es 100 píxeles de tamaño"
           }
         },
         "NEW Course 4 Artist Functions 7": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           }
         },
         "NEW Course 4 Artist Functions 8": {
@@ -989,7 +989,7 @@
         },
         "NEW Course 4 Artist Functions 9": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw a triangle": {
             "name": "dibujar un triángulo"
@@ -997,7 +997,7 @@
         },
         "NEW Course 4 Artist Params 1": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "Draw a triangle": {
             "name": "Dibujar un triángulo"
@@ -1113,7 +1113,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -1167,7 +1167,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             },
@@ -1200,7 +1200,7 @@
         },
         "NEW Course 4 Artist Params 9": {
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -1280,7 +1280,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -1309,7 +1309,7 @@
               "actor": "actor",
               "speed": "velocidad"
             },
-            "description": "Una función para patrullar, la cuál tiene un actor y un parámetro de velocidad."
+            "description": "una función de patrulla que tiene un actor y un parámetro de velocidad"
           }
         },
         "Robot Doodle": {
@@ -2209,7 +2209,7 @@
         },
         "courseE_artist_concept4": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw a line of squares": {
             "name": "dibujar una hilera de cuadrados"
@@ -2220,7 +2220,7 @@
         },
         "courseE_artist_concept4_2018": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw a line of squares": {
             "name": "dibujar una hilera de cuadrados"
@@ -2251,7 +2251,7 @@
         },
         "courseE_artist_functions1": {
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions10": {
@@ -2300,47 +2300,47 @@
         },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2477,7 +2477,7 @@
         },
         "courseE_artist_functions8a_2018": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -2485,7 +2485,7 @@
         },
         "courseE_artist_functions8a_2019": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -2493,7 +2493,7 @@
         },
         "courseE_artist_functions8a_2020": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -2735,42 +2735,42 @@
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3291,7 +3291,7 @@
         },
         "courseF_artist_fwp1": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "checker": {
             "name": "verificador",
@@ -3318,7 +3318,7 @@
         },
         "courseF_artist_fwp2": {
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             },
@@ -3349,7 +3349,7 @@
         },
         "courseF_artist_fwp2_predict1": {
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             },
@@ -3358,7 +3358,7 @@
         },
         "courseF_artist_fwp3": {
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -3475,7 +3475,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -3931,7 +3931,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -3998,7 +3998,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -4049,7 +4049,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4099,7 +4099,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4149,7 +4149,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4157,7 +4157,7 @@
         },
         "CourseF_app_computer": {
           "reset game": {
-            "name": "reiniciar el juego"
+            "name": "reinicia el juego"
           }
         },
         "Function intro Ryan_2021": {
@@ -4167,7 +4167,7 @@
         },
         "MC_HOC_2017_07_Cole_2021": {
           "clear path": {
-            "name": "limpiar camino"
+            "name": "despejar camino"
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
@@ -4180,7 +4180,7 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4233,12 +4233,12 @@
         },
         "courseE_artist_functions1_dani": {
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
             "name": "dibujar patillas"
@@ -4246,10 +4246,10 @@
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -4293,7 +4293,7 @@
         },
         "courseE_artist_functions8a_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -4370,18 +4370,18 @@
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
-            "name": "dibujar patillas"
+            "name": "dibujar tallos de oreja"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -4500,6 +4500,28 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "Dibuja un cuadrado"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "función 1"
+          },
+          "function 2": {
+            "name": "función 2"
           }
         }
       }

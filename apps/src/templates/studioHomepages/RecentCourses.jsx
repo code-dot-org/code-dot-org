@@ -17,7 +17,8 @@ export default class RecentCourses extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     isTeacher: PropTypes.bool.isRequired,
-    hasFeedback: PropTypes.bool.isRequired
+    hasFeedback: PropTypes.bool.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   static defaultProps = {
@@ -27,20 +28,33 @@ export default class RecentCourses extends Component {
   };
 
   render() {
-    const {courses, topCourse, isTeacher, hasFeedback} = this.props;
+    const {
+      courses,
+      topCourse,
+      isTeacher,
+      hasFeedback,
+      isProfessionalLearningCourse
+    } = this.props;
     const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || !!topCourse;
 
     return (
       <div id="recent-courses">
-        <ContentContainer heading={i18n.myCourses()}>
+        <ContentContainer
+          heading={
+            isProfessionalLearningCourse
+              ? i18n.myProfessionalLearningCourses()
+              : i18n.myCourses()
+          }
+        >
           {topCourse && (
             <TopCourse
               assignableName={topCourse.assignableName}
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}
               linkToLesson={topCourse.linkToLesson}
+              isProfessionalLearningCourse={isProfessionalLearningCourse}
             />
           )}
           {topFourCourses.length > 0 && (
@@ -51,14 +65,24 @@ export default class RecentCourses extends Component {
                     title={course.title}
                     description={course.description}
                     link={course.link}
+                    isProfessionalLearningCourse={isProfessionalLearningCourse}
                   />
                 </div>
               ))}
             </div>
           )}
-          {moreCourses.length > 0 && <SeeMoreCourses courses={moreCourses} />}
-          {!isTeacher && hasFeedback && <ViewFeedback />}
-          <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
+          {moreCourses.length > 0 && (
+            <SeeMoreCourses
+              courses={moreCourses}
+              isProfessionalLearningCourse={isProfessionalLearningCourse}
+            />
+          )}
+          {!isTeacher && hasFeedback && !isProfessionalLearningCourse && (
+            <ViewFeedback />
+          )}
+          {!isProfessionalLearningCourse && (
+            <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
+          )}
         </ContentContainer>
       </div>
     );

@@ -1,0 +1,182 @@
+{
+  "it-IT": {
+    "data": {
+      "standards": {
+        "ccela/6.SL.1": {
+          "description": "Impegnarsi efficacemente in una serie di discussioni collaborative (in coppia, in gruppo e sotto la guida di un insegnante) con diversi partner su argomenti di prima media, basandosi sulle idee degli altri ed esprimendo chiaramente le proprie."
+        },
+        "ccela/7.SL.1": {
+          "description": "Impegnarsi efficacemente in una serie di discussioni collaborative (in coppia, in gruppo e sotto la guida di un insegnante) con diversi partner su argomenti di seconda media, basandosi sulle idee degli altri ed esprimendo chiaramente le proprie."
+        },
+        "ccmath/MP.1": {
+          "description": "Comprende il significato dei problemi e persevera nella loro soluzione."
+        },
+        "ccmath/MP.2": {
+          "description": "Ragiona in modo astratto e quantitativo."
+        },
+        "ccmath/MP.5": {
+          "description": "Utilizza strategicamente strumenti appropriati."
+        },
+        "ccmath/MP.6": {
+          "description": "Punta alla precisione."
+        },
+        "ccmath/MP.7": {
+          "description": "Cerca e fa uso di strutture."
+        },
+        "ccmath/MP.8": {
+          "description": "Cerca ed esprime delle regolarità nel ragionamento ciclico."
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Implementare soluzioni ai problemi utilizzando un linguaggio di programmazione visuale basato su blocchi."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Utilizzare i passaggi di base della risoluzione dei problemi algoritmica per progettare soluzioni (ad esempio, dichiarazione ed esplorazione del problema, esame di istanze di esempio, progettazione, implementazione di una soluzione, test e valutazione)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Utilizzare l'astrazione per scomporre un problema in problemi piu' piccoli."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Descrivere e analizzare una sequenza di istruzioni da seguire (ad esempio, descrivere il comportamento di un personaggio in un videogioco come guidato da regole e algoritmi)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Rappresentare i dati in diversi modi, inclusi testo, suoni, immagini e numeri."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Utilizzare rappresentazioni visive di stati, strutture e dati problematici (ad es. Grafici, diagrammi, diagrammi di rete, diagrammi di flusso)."
+        },
+        "iste/1.a": {
+          "description": "Applicare la conoscenza esistente per generare nuove idee, prodotti o processi."
+        },
+        "iste/1.b": {
+          "description": "Creare opere originali come mezzo di espressione personale o di gruppo."
+        },
+        "iste/1.c": {
+          "description": "Usare modelli e simulazioni per esplorare sistemi e problemi complessi."
+        },
+        "iste/4.b": {
+          "description": "Pianificare e gestire le attività per sviluppare una soluzione o completare un progetto."
+        },
+        "iste/6.a": {
+          "description": "Comprendere e utilizzare i sistemi tecnologici."
+        },
+        "iste/6.c": {
+          "description": "Risolvere i problemi di sistemi e applicazioni."
+        },
+        "iste/6.d": {
+          "description": "Trasferire le conoscenze attuali all'apprendimento di nuove tecnologie."
+        },
+        "ccela/1.L.6": {
+          "description": "Usare parole e frasi acquisite attraverso conversazioni, lettura, lettura e risposta a testi, incluso l'uso di congiunzioni ricorrenti per segnalare relazioni semplici (ad es. Perché)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Partecipare a conversazioni collaborative con diversi partner su argomenti e testi di prima elementare con colleghi e adulti in gruppi piccoli e più grandi."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Determinare il significato di parole e frasi così come vengono utilizzate in un testo, inclusi significati figurativi, connotativi e tecnici; analizzare come un autore utilizza e perfeziona il significato di uno o più termini chiave nel corso di un testo (ad esempio, come Madison definisce"
+        },
+        "ccela/2.L.6": {
+          "description": "Utilizzare parole e frasi acquisite attraverso conversazioni, letture e in risposta ai testi, incluso l'uso di aggettivi e avverbi per descrivere (ad esempio, quando gli altri bambini sono felici, la cosa mi rende felice)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Partecipare a conversazioni collaborative con diversi compagni su argomenti e testi di seconda elementare con compagni e adulti in gruppi piccoli e più grandi."
+        },
+        "ccela/3.L.6": {
+          "description": "Acquisire e utilizzare parole e frasi colloquiali, accademiche generali e specifiche del dominio appropriate al livello scolare, comprese quelle che segnalano le relazioni spaziali e temporali (ad esempio, dopo cena quella sera siamo andati a cercarli)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Impegnarsi efficacemente in una serie di discussioni collaborative (a tu per tu, in gruppo e guidate dall'insegnante) con diversi compagni su argomenti e testi della quinta classe, basandosi sulle idee altrui ed esprimendo chiaramente le proprie."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Usa l'addizione e la sottrazione entro il numero 20 per risolvere problemi formulati a parole che coinvolgono situazioni in cui occorre aggiungere, sottrarre, mettere insieme, smontare e confrontare, con incognite in tutte le posizioni, ad es. usando oggetti, disegni ed equazioni"
+        },
+        "ccmath/2.OA.1": {
+          "description": "Usa l'addizione e la sottrazione entro il numero 100 per risolvere problemi formulati a parole in una o due fasi che implicano situazioni in cui bisogna aggiungere, sottrarre, mettere insieme, smontare e confrontare, con incognite in tutte le posizioni, ad esempio usando disegni ed equazioni con un sistema"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Usare la moltiplicazione e la divisione entro 100 per risolvere problemi di parole in situazioni che coinvolgono gruppi uguali, matrici e quantità di misura, ad esempio utilizzando disegni ed equazioni con un simbolo per il numero sconosciuto per rappresentare il problema.1"
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Usare dispositivi input e output standard per operare con successo sui computer e le tecnologie correlate."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Praticare la cittadinanza digitale responsabile (comportamenti legali ed etici) nell'uso di sistemi tecnologici e software."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Utilizzare risorse tecnologiche (ad es. Calcolatrici, sonde per la raccolta dati, dispositivi mobili, video, software educativo e strumenti web) per la risoluzione dei problemi e l'apprendimento autodiretto."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Acquisire e utilizzare con precisione parole e frasi accademiche generali e specifiche per il settore, sufficienti per leggere, scrivere, parlare e ascoltare a livello universitario e di preparazione alla carriera; dimostrare indipendenza nel raccogliere la conoscenza del glossario quando si considera"
+        },
+        "ccela/4.L.6": {
+          "description": "Acquisire e utilizzare in modo accurato parole e frasi accademiche generali e frasi specifiche del settore, comprese quelle che segnalano azioni precise, emozioni o stati d'essere (ad esempio, interrogato, lamentato, balbettato) e che sono fondamentali per un particolare argomento (ad esempio"
+        },
+        "ccela/5.L.6": {
+          "description": "Acquisire e utilizzare parole e frasi accademiche generali e specifiche del dominio appropriate al livello scolare, comprese quelle che segnalano contrasto, addizione e altre relazioni logiche (ad esempio, tuttavia, sebbene, allo stesso modo, in aggiunta, in aggiunta)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Misurare gli angoli in gradi interi usando un goniometro. Disegnare gli angoli della misura specificata."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Moltiplicare in modo fluido numeri interi a più cifre utilizzando l'algoritmo standard."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Moltiplica un numero intero fino a quattro cifre per un numero intero di una cifra e moltiplica due numeri a due cifre, utilizzando strategie basate sul valore della posizione e sulle proprietà delle operazioni. Illustra e spiega il calcolo utilizzando equazioni, "
+        },
+        "ccmath/7.G.2": {
+          "description": "Disegnare (a mano libera, con righello e goniometro e con tecnologia) forme geometriche con determinate condizioni. Concentrarsi sulla costruzione di triangoli da tre misure di angoli o lati, notando quando le condizioni determinano un triangolo unico, più di un triangl"
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Utilizzare risorse multimediali adeguate allo sviluppo (ad es. Libri interattivi e software educativo) per supportare l'apprendimento in tutto il curriculum."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Costruire una serie di affermazioni da eseguire per svolgere un compito semplice (ad esempio, istruzioni per la tartaruga)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Utilizzare la tecnologia, incluso Internet, per produrre, pubblicare e aggiornare prodotti di scrittura individuali o condivisi in risposta a commenti, inclusi nuovi argomenti o informazioni."
+        },
+        "ccela/4.W.3": {
+          "description": "Scrivere narrazioni per sviluppare esperienze o eventi reali o immaginari utilizzando una tecnica efficace, dettagli descrittivi e chiare sequenze di eventi."
+        },
+        "ccela/6.W.6": {
+          "description": "Utilizzare la tecnologia, incluso Internet, per produrre e pubblicare testi, nonché per interagire e collaborare con altri; dimostrare sufficiente padronanza della tastiera per scrivere un minimo di tre pagine in una sola seduta."
+        },
+        "ccela/7.W.3": {
+          "description": "Scrivere narrazioni per sviluppare esperienze o eventi reali o immaginari utilizzando una tecnica efficace, dettagli descrittivi e chiare sequenze di eventi."
+        },
+        "ccela/7.W.6": {
+          "description": "Utilizzare la tecnologia, compreso Internet, per produrre e pubblicare testi scritti e collegare e citare fonti, nonché per interagire e collaborare con altri, inclusi collegamenti e citazioni di fonti."
+        },
+        "ccela/8.W.6": {
+          "description": "Utilizzare la tecnologia, compreso Internet, per produrre e pubblicare scritti e presentare le relazioni tra informazioni e idee in modo efficiente, nonché per interagire e collaborare con gli altri."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Utilizzare la tecnologia, compreso Internet, per produrre, pubblicare e aggiornare prodotti di scrittura individuali o condivisi, sfruttando la capacità della tecnologia di collegarsi ad altre informazioni e di visualizzare le informazioni in modo flessibile e dinamico."
+        },
+        "ccmath/MP.4": {
+          "description": "Modellare con la matematica"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Utilizzare risorse online (ad es., E-mail, discussioni online, ambienti web collaborativi) per partecipare ad attività collaborative di risoluzione dei problemi allo scopo di sviluppare soluzioni o prodotti."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Usare le risorse tecnologiche per condurre ricerche adeguate all'età."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Progettare, sviluppare, pubblicare e presentare prodotti (ad esempio, pagine web, applicazioni mobili, animazioni) utilizzando risorse tecnologiche che dimostrano e comunicano i concetti del piano di studi."
+        },
+        "iste/2.a": {
+          "description": "Interagire, collaborare e pubblicare con colleghi, esperti o altri che impiegano una varietà di ambienti e media digitali."
+        },
+        "iste/2.b": {
+          "description": "Comunicare informazioni e idee in modo efficace a più pubblici utilizzando una varietà di media e formati."
+        },
+        "iste/4.d": {
+          "description": "Utilizzare più processi e diverse prospettive per esplorare soluzioni alternative."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discutere delle tecnologie informatiche che hanno cambiato il mondo ed esprimere in che modo tali tecnologie influenzano e sono influenzate dalle abitudini culturali."
+        }
+      }
+    }
+  }
+}

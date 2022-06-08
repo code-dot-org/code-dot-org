@@ -4094,7 +4094,7 @@
           },
           "draw a circle": {
             "name": "画一个圆圈",
-            "description": "用给予的半径画一个圆圈",
+            "description": "用给定的半径画一个圆圈",
             "parameters": {
               "radius": "半径"
             }
@@ -4461,6 +4461,28 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "花园广场"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "画一个正方形"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "函数1"
+          },
+          "function 2": {
+            "name": "函数2"
           }
         }
       }

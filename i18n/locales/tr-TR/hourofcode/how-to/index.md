@@ -27,7 +27,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 
 <a id="how-to-video"></a>
 
-## 1. Hour of Code Nasıl Yapılır? videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Hour of Code Nasıl Yapılır? videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -150,7 +150,7 @@ Bazı öğrenciler erken bitirirse ne yapmalı?
 ## Eğitimciler için diğer Hour of Code kaynakları:
 
 - Eğitmenlerden tavsiye, kavrama yardımı ve destek almak için [Hour of Code Öğretmen Forumu](http://forum.code.org/c/plc/hour-of-code)'nu ziyaret edin.
-- [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
+- [ Hour of Code SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) sayfasını gözden geçirin.
 
 ### Hour of Code etkinliğinden sonra ne yapmalı?
 

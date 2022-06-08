@@ -1,0 +1,14 @@
+{
+  "bg-BG": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Изчислително мислене"
+        },
+        "ccela/L": {
+          "description": "Език"
+        }
+      }
+    }
+  }
+}

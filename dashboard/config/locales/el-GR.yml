@@ -429,6 +429,7 @@ el:
       prizes_link: Περισσότερες πληροφορίες
   teacher:
     answer: Απάντηση
+    dashboard: πίνακας Δασκάλου
     for_teachers_only: Μόνο για εκπαιδευτικούς
     title:
       one: 'Ο δάσκαλος σας:'
@@ -998,7 +999,7 @@ el:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Άλλο:'
+        other: Άλλα
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1008,7 +1009,7 @@ el:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Άλλο:'
+        other: Άλλα
       workshop_course:
         csp: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
       email_opt_in:

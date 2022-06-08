@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T20:22:37.000Z",
-  "level_num": "custom",
-  "user_id": 833,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -54,9 +50,15 @@
     "hide_pause_button": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-01-06T20:22:37.000Z",
+  "user_id": 833,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.422+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_template_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_template_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.422+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_template_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_template_2021\"},{\"changed_at\":\"2022-01-24 19:39:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -954,95 +956,103 @@
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#999999</title>
+                <field name="COLOUR">#999999</field>
               </block>
             </value>
           </block>
           <block type="gamelab_randomColor"/>
           <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"cave"</title>
+            <field name="IMG">"cave"</field>
           </block>
           <block type="gamelab_playSound">
-            <title name="SOUND">Choose</title>
+            <field name="SOUND">Choose</field>
           </block>
           <block type="gamelab_printText">
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"kid_outline_1"</title>
+            <field name="ANIMATION_NAME">"kid_outline_1"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":100,"y":320}</title>
+                <field name="LOCATION">{"x":100,"y":320}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteSay">
+            <field name="SPEECH">Hello!</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveInDirection">
-            <title name="DIRECTION">"North"</title>
+            <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_turn">
-            <title name="DIRECTION">"right"</title>
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="N">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <field name="NUM">90</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
@@ -1050,20 +1060,20 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Locations">
           <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":100,"y":320}</title>
+            <field name="LOCATION">{"x":100,"y":320}</field>
           </block>
           <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":320}</title>
+            <field name="LOCATION">{"x":200,"y":320}</field>
           </block>
           <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":300,"y":320}</title>
+            <field name="LOCATION">{"x":300,"y":320}</field>
           </block>
           <block type="gamelab_randomLocation"/>
         </category>
@@ -1071,56 +1081,56 @@
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
           <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+            <field name="UNIT">"seconds"</field>
             <value name="N">
               <block type="math_number">
-                <title name="NUM">3</title>
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
           <block type="gamelab_keyPressed">
-            <title name="CONDITION">"when"</title>
-            <title name="KEY">"up"</title>
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
           <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>

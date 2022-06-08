@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   setup do
-    @user = create :teacher
+    @teacher = create :teacher
     @plc_course = create :plc_course
     # Create course units out of order to make sure that unit_order is respected
     @course_unit2 = create(:plc_course_unit, plc_course: @plc_course, unit_order: 2)
@@ -10,7 +10,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a course creates unit enrollments' do
-    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @plc_course)
+    enrollment = Plc::UserCourseEnrollment.create(user: @teacher, plc_course: @plc_course)
 
     assert_equal [@course_unit2, @course_unit1], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status).uniq
@@ -23,9 +23,9 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     nonexistent_email = 'wrong-email@wrong.com'
 
     created_enrollments, nonexistent_users, nonteacher_users, other_failure_users =
-      Plc::UserCourseEnrollment.enroll_users([@user.email, user_from_id.id.to_s, nonexistent_email, student_email], @plc_course.id)
+      Plc::UserCourseEnrollment.enroll_users([@teacher.email, user_from_id.id.to_s, nonexistent_email, student_email], @plc_course.id)
 
-    assert_equal created_enrollments, [@user.email, user_from_id.email]
+    assert_equal created_enrollments, [@teacher.email, user_from_id.email]
     assert_equal nonexistent_users, [nonexistent_email]
     assert_equal nonteacher_users, [student_email]
     assert_empty other_failure_users
@@ -34,14 +34,14 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   test 'enrolling in a started course creates unit enrollments that are in progress' do
     @course_unit1.update(started: true)
 
-    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @plc_course)
+    enrollment = Plc::UserCourseEnrollment.create(user: @teacher, plc_course: @plc_course)
 
     assert_equal [@course_unit2, @course_unit1], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED, Plc::EnrollmentUnitAssignment::IN_PROGRESS], enrollment.plc_unit_assignments.map(&:status)
   end
 
   test 'summarize works as expected' do
-    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @plc_course)
+    enrollment = Plc::UserCourseEnrollment.create(user: @teacher, plc_course: @plc_course)
     expected_summary = {
       courseName: @plc_course.name,
       link: Rails.application.routes.url_helpers.course_path(@plc_course.unit_group),
@@ -64,28 +64,16 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     assert_equal expected_summary, enrollment.summarize
   end
 
-  test 'enrolling a non-authorized user in a course creates an authorized teacher user permission' do
-    refute UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
-    create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
-    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
+  test 'enrolling a non-authorized teacher in a course creates an authorized teacher user permission' do
+    refute UserPermission.exists?(user_id: @teacher.id, permission: UserPermission::AUTHORIZED_TEACHER)
+    create(:plc_user_course_enrollment, user: @teacher, plc_course: @plc_course)
+    assert UserPermission.exists?(user_id: @teacher.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 
-  test 'unenrolling a user from their only course removes their authorized teacher user permission' do
-    refute Plc::UserCourseEnrollment.exists?(user_id: @user.id)
-    enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
-    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
-
-    enrollment.destroy
-    refute UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
-  end
-
-  test 'unenrolling a user from one of multiple course enrollments does not remove their authorized teacher user permission' do
-    create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
-    plc_course2 = create :plc_course, name: 'plc_course2'
-    enrollment2 = create(:plc_user_course_enrollment, user: @user, plc_course: plc_course2)
-    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
-
-    enrollment2.destroy
-    assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
+  test 'enrolling a student in a course does not create an authorized teacher user permission' do
+    student = create :student
+    refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)
+    create(:plc_user_course_enrollment, user: student, plc_course: @plc_course)
+    refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 end

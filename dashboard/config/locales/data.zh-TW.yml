@@ -576,6 +576,15 @@ zh-TW:
         csd_ml_import_model: 匯入 AI 模型
         playlab_2021: Play Lab 的介紹
         playlab_2021_reader: Play Lab 的介紹
+        PL_CSD_TeacherTips_Advise: 教師提示 - 給新教師的建議
+        PL_CSD_TeacherTips_IntroToCSD: 教師提示 - 電腦科學發現簡介
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 教師提示 - 解決問題的流程
+        PL_CSD_TeacherTips_PairProgramming: 教師提示 - 結對程式設計
+        PL_CSD_TeacherTips_Debugging: 教師提示 - 調試
+        PL_CSD_TeacherTips_LeadLearner: 教師提示 - 引導學習者
+        poembot-playtest-intro: 詩歌機器人遊戲測試簡介
+        poembot-playtest-sprites: 詩歌機器人遊戲測試簡介
+        poembot-playtest-events: 詩歌機器人遊戲測試活動
         hello_world_intro: 你好世界 - 歡迎來到精靈圖實驗室
         hello_world_events: 你好世界 - 使用事件進行程式設計
         hello_world_congrats: 你好世界 - 做你想做的
@@ -589,6 +598,27 @@ zh-TW:
         poetry_module_multichoiceprompts: 多選題提示 - 程式設計如寫詩
         poetry_module_conditionals: 條件陳述式 - 程式設計如寫詩
         poemart_intro: 詩歌藝術介紹
+        CSA-PL-debugging-temp: Java實驗室調試介紹 - 臨時
+        csd_u6_circuit_playground: 實體運算
+        csd_u6_input_output: 輸入與輸出
+        CSA-PL-for-loops: Java中的For循環
+        CSA-PL-variables: 在Java中創建變數
+        PL_CS_Journeys_Overview: 計算機科學的旅程
+        CSA-PL-intro-to-java-lab: Java實驗室基礎
+        CSA-PL-first-program: 在Java中編寫程式
+        CSD_u6_variables_part1: CSD：變數
+        csd_u6_if_statements: CSD：If语句
+        csc-poem-art-intro: 簡介視訊
+        csc-poem-art-outro: 結尾視訊
+        csd_u6_call_define_functions: CSD：調用和定義函數
+        csp_applab_parameters: 函式帶參數
+        starquilts_intro_artist: 星星被子簡介
+        CSA-PL-intro-to-arrays: 一維（1D）陣列
+        CSA-PL-1d-arrays-new-values: 在1維陣列中輸入值
+        CSA-PL-conditionals: Java中的條件語句
+        CSA-PL-two-way-selection: 雙向選擇
+        CSA-PL-Printing-in-Java: Java中的列印
+        CSA-PL-multi-selection-statements: 多重選擇語句
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

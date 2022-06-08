@@ -1,5 +1,13 @@
 mr:
   data:
     block_categories:
+      Actions: कृती
+      Category: वर्ग
+      Color: रंग
       Conditionals: कंडीशनल्स 
       Events: ईव्हेंट्स
+      Logic: लॉजिक
+      Loops: लूप्स
+      Math: गणित
+      Text: टेक्स्ट
+      Variables: व्हेरीएबल्स

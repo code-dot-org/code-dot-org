@@ -18,10 +18,6 @@ social:
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways! 
 
-## Try out CS Connections with these activities for Hour of Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Poem Art", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
-{{ clearfix }}
-
 ## Modules
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
@@ -35,6 +31,8 @@ They're perfect for teachers who'd like to incorporate computer science into the
 Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 
 <em>Tip: These projects require some understanding of computer science basics, so we recommend completing our Hello World Hour of Code activity before getting started!</em>
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
 
 {{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
 {{ csc_module, title: "Life Cycles", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}

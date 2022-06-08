@@ -1,12 +1,28 @@
 cs:
   data:
     progressions:
+      '"If/Else" with the Bee': 'Příkazy If/Else se včelkou'
       AI Machine Learning - Video: 'Umělá inteligence: strojové učení – video'
       'AI: Impact on Society - Video': 'Umělá inteligence: dopad na společnost – video'
       'AI: Training Data & Bias - Video': 'Umělá inteligence: trénovací data a podjatost – video'
+      Add Content and HTML: Přidat obsah a HTML
+      Add Content and Structure to Your Page: Přidat na stránku obsah a strukturu
+      Add Movement: Přidat pohyb
+      Add Sprites: Přidat sprajty
+      Add Style: Přidat styl
+      Add Style to Your Page: Přidat na stránku styl
+      Add Text: Přidat text
+      Add a Welcome Screen: Přidat úvodní obrazovku
+      Adding Images: Přidávání obrázků
+      Adding New Screens: Přidávání nových obrazovek
+      Adding Pages: Přidávání stránek
+      Adding Screens: Přidávání obrazovek
+      Alternative Datasets: Alternativní datové sady
+      Animate Your Scene: Animace scény
       App Lab Intro - Video: Úvod k App Labu – video
       Artist Project: Projekt Umělec
       'Artist: Variables': 'Umělec: proměnné'
+      Assessment: Hodnocení
       Back and Forth: Sem a tam
       Bass, Mid, and Treble: Basy, středy a výšky
       Binary Numbers: Binární čísla
@@ -52,10 +68,13 @@ cs:
       Setting Properties: Nastavení vlastností
       Share Your App: Sdílej svou appku
       Speed it Up, Slow it Down: Zrychli to, zpomal to
+      Sprite Lab Project: Projekt Laboratoře sprajtů
+      Sprite Properties: Vlastnosti sprajtu
       Teach AI a New Word: Nauč umělou inteligenci nové slovo
       Text Compression: Komprese textu
       The Harvester: Zahradnice
       Tour of Design Mode: Představení dizajnového módu
+      Train an AI to Clean the Ocean: Učení umělé inteligence čistit oceán
       Variables: Proměnné
       Velocity: Rychlost
       Video: Video

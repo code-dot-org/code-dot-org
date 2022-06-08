@@ -57,11 +57,17 @@
     "songs": "[\"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\"]",
     "parent_level_id": 21547,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.528+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_07_Cole_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_07_Cole_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.528+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_07_Cole_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_07_Cole_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

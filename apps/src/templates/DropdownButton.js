@@ -47,7 +47,8 @@ const styles = {
  */
 export const DropdownButton = class DropdownButtonComponent extends Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    customText: PropTypes.node,
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
     size: PropTypes.string,
     onClick: PropTypes.func,
@@ -124,7 +125,11 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           iconStyle={styles.icon}
           color={color}
           className={this.props.className}
-        />
+        >
+          {this.props.customText && (
+            <div style={styles.main}>{this.props.customText}</div>
+          )}
+        </Button>
 
         {dropdownOpen && (
           <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>

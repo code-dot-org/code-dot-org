@@ -61,6 +61,168 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "ကိုယ်စားလှယ်ကတော့ ချော်ရည်ပေါ်မှာ ပေါ်နေနိုင်ပါတယ်။ဒါပေမယ့် Steve(စတိပ်) နဲ့ Alex (အဲလက်စ်) ကတော့ မလုပ်နိုင်ပါဘူး!  "
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "screen စိမ်းသွားပါလား။ စိမ်းသွားရင် \"Finish\" ကိုနှိပ်ပါ။ မစိမ်းရင် \"Reset\" ကိုနှိပ်ပါ။ code ကိုပြန်စစ်ပြီး ပြောင်းကြည့်ပါ။ ပြီးရင် \"Run\" ပြန်နှိပ်ပါ။ "
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "သင်အခု ဒီဇိုင်းဆင် ြခင်း အဆင့်ကို​ရောက်ရှိလာပါပြီ"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Block အသစ်! ",
+          "new_block_4": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Block အသစ်! ",
+          "new_block_4": "Block အသစ်! "
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "ဒီနေရာမှာ သင့် dancer အသစ်တစ်ယောက် ထည့်ပါ။"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Block အသစ်! ",
+          "dance_callout_11_b": "Block အသစ်! "
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "\"all ducks\" blocks အတွက်ဒီကိုကြည့်ပါ"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Block အသစ်! "
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Block အသစ်! "
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Block အသစ်! ",
+          "new_block_4": "Block အသစ်! "
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "ဒီနေရာမှာ သင့် dancer အသစ်တစ်ယောက် ထည့်ပါ။"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Block အသစ်! ",
+          "dance_callout_11_b": "Block အသစ်! "
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "\"all ducks\" blocks အတွက်ဒီကိုကြည့်ပါ"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "အဆင်သင့်ဖြစ်ပြီဆိုရင် စ ကစားဖို့ \"Run\" ကို နှိပ်ပါ။"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "စ ရွေ့လျားအောင် \"Run\" ကို နှိပ်ပါ။"
+        },
+        "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Block အသစ်! "
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Block အသစ်! ",
+          "poetry_foreground": "Block အသစ်! "
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Block အသစ်! "
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Block အသစ်! ",
+          "poetry_music": "Block အသစ်! "
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Block အသစ်! ",
+          "poetry_sprite_stops": "Block အသစ်! "
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Block အသစ်! ",
+          "poetry_remove_sprite": "Block အသစ်! "
         }
       }
     }

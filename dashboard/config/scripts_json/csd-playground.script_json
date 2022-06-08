@@ -1,0 +1,1076 @@
+{
+  "script": {
+    "name": "csd-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csd-playground",
+    "serialized_at": "2022-04-05 19:19:46 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csd-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Level Updates",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Innovations in Computing",
+      "name": "Innovations in Computing",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment_opportunities": "1. **Identify computing innovations within a given field**\n\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n\n2. **Describe the inputs and outputs of a device**\n\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\n\n3. **Describe the impacts of the device on society**\n\n\tActivity Guide, page 2: The description of the impact should identify the people who are impacted and either positive or negative effects of that impact.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
+        "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.",
+        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
+        "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+      "position": 1,
+      "properties": {
+        "name": "CSD U3L27.1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+      "position": 2,
+      "properties": {
+        "name": "CSD U3L17.2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+      "position": 3,
+      "properties": {
+        "name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+      "position": 4,
+      "properties": {
+        "name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+      "position": 5,
+      "properties": {
+        "name": "CSD U4L14 and L16"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+      "position": 6,
+      "properties": {
+        "name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d12637c4-eb13-421b-ba75-c3100d524738",
+      "position": 7,
+      "properties": {
+        "name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
+      "position": 1,
+      "properties": {
+        "name": "Before The Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "5259db4f-6402-4f4d-841c-9c3430ae9669",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5259db4f-6402-4f4d-841c-9c3430ae9669",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e",
+      "position": 5,
+      "properties": {
+        "name": "Extensions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d",
+      "position": 6,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L27.1 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/27/levels/1))",
+        "progression_name": "U3L27.1"
+      },
+      "seeding_key": {
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
+      }
+    },
+    {
+      "key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L17.2 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/17/levels/2))",
+        "progression_name": "U3L17.2"
+      },
+      "seeding_key": {
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179"
+      }
+    },
+    {
+      "key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U2L9.6.A from 2021 curriculum ([Link Here](https://levelbuilder-studio.code.org/s/csd2-2021/lessons/9/levels/6/sublevel/1))",
+        "progression_name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e"
+      }
+    },
+    {
+      "key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L7.8 from 2021 curriculum ([Link Here](https://studio.code.org/s/csd3-2021/lessons/7/levels/8))",
+        "progression_name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18"
+      }
+    },
+    {
+      "key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace existing video at beginning of U4 Level 14, and instead they will appear at beginning of Level 14 and then Level 16",
+        "progression_name": "CSD U4L14 & U4L16"
+      },
+      "seeding_key": {
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd"
+      }
+    },
+    {
+      "key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace CSD U6L8.3 ([Link Here](https://levelbuilder-studio.code.org/s/csd6-pilot-2022/lessons/8/levels/3) - but update when clone to `csd6-2022`). It splits this level into two levels connected as a project level. The first level is just editing the code for the dropdown, the second level is going to design mode to add new options",
+        "progression_name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4"
+      }
+    },
+    {
+      "key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace the sequence of levels 5 and 6.\n\nCurrently: 5 is video, 6 is predict.\n\nNew: 5 is predict, 6 is video, 7 is skill building (see below)",
+        "progression_name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738"
+      }
+    },
+    {
+      "key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
+      "position": 1,
+      "properties": {
+        "description": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+      "position": 2,
+      "properties": {
+        "description": "Students will be researching computing innovations on the internet. You can provide students with copies of the [Computing Innovation Research Areas](https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit) guide to students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**",
+        "name": "Preparing for the Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** _What is an example of a time you've used a computer that doesn't look or feel like a computer? Think about devices you may have at home or even in your pocket!_\n\n**Discussion Goal:** Encourage students to consider computing devices as part of their everyday experiences, such as embedded in a car or in a watch or even a touchscreen that lets them order food or drink at a restaurant. As students share answers, you might keep track of their responses at the front of the room and encourage them to keep coming up with ideas.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
+      "position": 2,
+      "properties": {
+        "description": "Computing devices are all around us, embedded in vehicles or our pockets or sometimes even our clothes! In this unit, we'll learn how to create our own computing devices to solve problems in the world around us.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "dc1a813c-efaa-418f-bd5e-3de077c18620",
+      "position": 3,
+      "properties": {
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
+        "name": "Get Inspired\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc1a813c-efaa-418f-bd5e-3de077c18620",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** _What is an innovation? What does it mean for something to be innovative?_\n\n**Discussion Goal:** This should be a quick discussion. The primary goal is for the class to come to a common understanding of what it means for something to be innovative. That it's not enough for a product to look sleeker than the last version, but that innovation means to really do something better than it's been done before, or to do things that have _never_ been done before.\n",
+        "name": "Innovation Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4\n\n**Distribute:** Hand out copies of the activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Innovation Research:** Present the overview from the activity guide or the slides as a class. During this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a topic they would like to focus on and mark it on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Researching Your Topic:** Present the next section of the activity guide or slides as a class. Students will be using the internet to research computing innovations in their chosen area.\n\n**Distribute:** Digitally distribute copies of the Computing Innovations Research Areas handout.\n\n**Do This:** Find at least two computing innovations from your chosen topic. Students can use the provided websites, or search the internet for other reputable sources."
+      },
+      "seeding_key": {
+        "activity_section.key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "7990e95d-c410-4c48-8315-22eff3b35396",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Student Research**: The goal of this research is twofold:\n* First, develop a deeper understanding of a chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n* Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that may not look like computers, but perform computing functions using input and output."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7990e95d-c410-4c48-8315-22eff3b35396",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+      "position": 4,
+      "properties": {
+        "description": "Once groups have selected a specific innovative device, they can complete the second page of this activity guide, which asks them to do the following:\n\n* **What Problem Does It Solve?:** For some topics this may be more clear (for example healthcare devices typically have a very specific goal), but for others students may need to think more broadly about what they consider problems. More frivolous wearables or digital art installations may be more concerned with personal expression than solving a specific problem.\n* **What Is Innovative About It?:** Encourage students to refer back to the earlier discussion about innovation for this. It can also be useful to compare against other devices found during the research phase.\n* **How Do You Interact With It?:** Ask students to think back to the _Input, Output, Storage, Processing_ model that was introduced way back in Unit 1. The goal here is to identify specifically the Inputs and Outputs provided by a given device - the more specific these are, the more easily students will be able to connect elements of the Circuit Playground to these devices.\n* **What is the Impact?:** Encourage students to think of the people who are affected by this innovation. Most innovations were probably designed to improve someone's life, and students can write about the impact this could have on individuals. But some devices may have unexpected or unintended consequences, and students can reflect on how those consequences could affect individuals.",
+        "name": "An Innovative Solution"
+      },
+      "seeding_key": {
+        "activity_section.key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "5f93034b-5213-41fc-9440-1047992185c6",
+      "position": 5,
+      "properties": {
+        "description": "Give groups a minute each to share their findings. See the extension activities for alternate ways to share.",
+        "name": "Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f93034b-5213-41fc-9440-1047992185c6",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
+      "key": "c6ad130a-0a16-4da4-9e0b-9d8328cffde2",
+      "position": 1,
+      "properties": {
+        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6ad130a-0a16-4da4-9e0b-9d8328cffde2",
+        "lesson_activity.key": "5259db4f-6402-4f4d-841c-9c3430ae9669"
+      }
+    },
+    {
+      "key": "4f0ab896-2c67-4201-bc5b-4df66a77985d",
+      "position": 1,
+      "properties": {
+        "description": "Ask groups to create a poster that shares the innovation device that they researched. Posters should include:\n\n* Who invented the device\n* What problem they were trying to solve\n* Why it is unique or innovative\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\n\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
+        "name": "Innovation Posters\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f0ab896-2c67-4201-bc5b-4df66a77985d",
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e"
+      }
+    },
+    {
+      "key": "2ded03fc-6744-429e-8037-ffe968a19690",
+      "position": 2,
+      "properties": {
+        "description": "Instead of (or in addition to) your posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
+        "name": "Innovation Websites\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ded03fc-6744-429e-8037-ffe968a19690",
+        "lesson_activity.key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e"
+      }
+    },
+    {
+      "key": "e95dcf05-6bad-4d38-a4e4-bd102c53991d",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e95dcf05-6bad-4d38-a4e4-bd102c53991d",
+        "lesson_activity.key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "progression": "U3L27.1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      },
+      "level_keys": [
+        "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "progression": "U3L17.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      },
+      "level_keys": [
+        "CSD U3 - Interactive Card - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "progression": "CSD U2L9.6.A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      },
+      "level_keys": [
+        "CSD U2 image debug match_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "progression": "CSD U3L7.8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      },
+      "level_keys": [
+        "CSD U3 drawSprites placement match_2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Design Mode Video"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Events Video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.2_2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - ArrayVideo_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.2_2022"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Design a Game 1 - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Interactive Card - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 image debug match_2022",
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawSprites placement match_2022",
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Design Mode Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - ArrayVideo_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
+      "key": "computer_science_is_changing_everything",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "name": "Computing Innovations",
+      "url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/view",
+      "key": "computing_innovations",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/export?format=pdf",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "name": "Computing Innovations Research Areas",
+      "url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit",
+      "key": "computing_innovations_research_areas",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/export?format=pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
+      "name": "Innovations in Computing",
+      "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
+      "key": "innovations_in_computing",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "name": "The Internet of Things",
+      "url": "https://youtu.be/xQGsubJNbQw",
+      "key": "the_internet_of_things",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_of_things"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "the_internet_of_things"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "innovation",
+      "word": "Innovation",
+      "definition": "A new or improved idea, device, product, etc. or the development thereof",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "innovation"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "vocabulary.key": "innovation"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "43157d11-cd32-45a6-bf01-a58915905177",
+      "properties": {
+        "description": "Describe the impacts of the device on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "43157d11-cd32-45a6-bf01-a58915905177"
+      }
+    },
+    {
+      "key": "adacbb5c-dc7d-445f-9139-beba72ce596f",
+      "properties": {
+        "description": "Describe the inputs and outputs of a device"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "adacbb5c-dc7d-445f-9139-beba72ce596f"
+      }
+    },
+    {
+      "key": "d5dda030-df23-4276-812e-6ba4df91d9aa",
+      "properties": {
+        "description": "Identify computing innovations within a given field"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "d5dda030-df23-4276-812e-6ba4df91d9aa"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

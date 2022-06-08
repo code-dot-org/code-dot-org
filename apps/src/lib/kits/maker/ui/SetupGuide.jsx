@@ -21,6 +21,9 @@ import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
+import experiments from '@cdo/apps/util/experiments';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -38,7 +41,7 @@ const style = {
 export default class SetupGuide extends React.Component {
   constructor(props) {
     super(props);
-    this.setupChecker = new SetupChecker();
+    this.state = {webSerialPort: null};
   }
 
   render() {
@@ -49,8 +52,37 @@ export default class SetupGuide extends React.Component {
         responsive
       })
     );
+    const {webSerialPort} = this.state;
 
-    if (isCodeOrgBrowser() || isChromeOS()) {
+    // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
+    let isWebSerial = experiments.isEnabled('webserial');
+
+    // WebSerial requires user input for user to select port.
+    // Add a button for user interaction before initiated Setup Checklist
+    if (isWebSerial && !webSerialPort) {
+      return (
+        <input
+          style={{marginLeft: 9, marginTop: -4}}
+          className="btn"
+          type="button"
+          value={'Connect to Board'}
+          onClick={() => {
+            navigator.serial
+              .requestPort({filters: WEB_SERIAL_FILTERS})
+              .then(port => {
+                this.setState({webSerialPort: port});
+              });
+          }}
+        />
+      );
+    }
+
+    let wrappedPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedPort);
+
+    if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
     }
     return (

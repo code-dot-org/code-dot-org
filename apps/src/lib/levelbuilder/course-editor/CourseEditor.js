@@ -57,6 +57,7 @@ class CourseEditor extends Component {
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
+    courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
@@ -162,6 +163,22 @@ class CourseEditor extends Component {
       return;
     }
 
+    if (this.state.publishedState !== this.props.initialPublishedState) {
+      const msg =
+        'It looks like you are updating the published state. ' +
+        'Are you sure you want to update the published state? ' +
+        'Once you update the published state you can not go back to this published state. ' +
+        'For example once you set the published state to beta you can not go back to in development. ' +
+        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     $.ajax({
       url: `/courses/${this.props.name}`,
       method: 'PUT',
@@ -187,7 +204,13 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
+    const {
+      name,
+      unitNames,
+      courseFamilies,
+      versionYearOptions,
+      initialPublishedState
+    } = this.props;
     const {
       announcements,
       teacherResources,
@@ -207,6 +230,11 @@ class CourseEditor extends Component {
       instructorAudience,
       participantAudience
     } = this.state;
+
+    const allowMajorCurriculumChanges =
+      initialPublishedState === PublishedState.in_development ||
+      initialPublishedState === PublishedState.pilot;
+
     return (
       <div>
         <h1>{name}</h1>
@@ -312,11 +340,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <AnnouncementsEditor
-            announcements={announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
         </CollapsibleEditorSection>
 
         <CourseTypeEditor
@@ -332,6 +355,7 @@ class CourseEditor extends Component {
           handleParticipantAudienceChange={e =>
             this.setState({participantAudience: e.target.value})
           }
+          allowMajorCurriculumChanges={allowMajorCurriculumChanges}
         />
 
         <CollapsibleEditorSection title="Publishing Settings">
@@ -346,6 +370,7 @@ class CourseEditor extends Component {
             updateVersionYear={versionYear => this.setState({versionYear})}
             families={courseFamilies}
             versionYearOptions={versionYearOptions}
+            initialPublishedState={this.props.initialPublishedState}
             publishedState={publishedState}
             updatePublishedState={publishedState =>
               this.setState({publishedState})
@@ -355,6 +380,15 @@ class CourseEditor extends Component {
               this.props.initialFamilyName !== ''
             }
             isCourse
+            courseOfferingEditorLink={this.props.courseOfferingEditorLink}
+          />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
 
@@ -398,11 +432,13 @@ class CourseEditor extends Component {
             </div>
             <CourseUnitsEditor
               inputStyle={styles.input}
+              initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>
                 this.setState({unitsInCourse})
               }
               unitNames={unitNames}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           </label>
         </CollapsibleEditorSection>

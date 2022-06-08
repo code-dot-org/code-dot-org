@@ -2026,6 +2026,122 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klik di sini untuk menampilkan grid."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Apa kegunaan garis ini?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Menentukan memulai permainan di sini"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Tentukan Pemain yang bisa dipindahkan() disini"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klik kategori untuk melihat blok di kotak alat anda! Seret blok ke ruang kerja untuk menambahkannya ke program anda",
+          "New Artist Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda",
+          "New Play Lab Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Klik disini untuk melihat kodenya bekerja!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu.",
+          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
         }
       }
     }

@@ -2,17 +2,456 @@
   "is-IS": {
     "data": {
       "resources": {
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Myndband"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Myndband"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Myndband"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Myndband"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Myndband"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Myndband"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Myndband"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Myndband"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Myndband"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/express/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/express/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Orðaforði"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Kennaraspjall"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Stöðluð samsvörun"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Orðaforði"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Orðaforði"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Kóði kynntur"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Orðaforði"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Kynning á Kvikasmiðjunni"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Kynning á Kvikasmiðjunni"
+          "name": "Kynning á Kvikasmiðjunni",
+          "type": "Myndband"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Upplýsingar um Kvikasmiðju"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Kvikar í verki"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Myndband"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Myndband"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Fyndnar frá lykkjur"
@@ -27,13 +466,24 @@
           "name": "Fyndnar frá lykkjur"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Fyndnar frá lykkjur"
+          "name": "Fyndnar frá lykkjur",
+          "type": "Mat"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Myndband"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Myndband"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Myndband"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internetið"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "type": "Mat"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
@@ -62,11 +512,15 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Félagaforritun"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "Myndband"
+        },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie og Stóra verkefnið"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "Ófundnar villur"
+          "name": "Ófundnar villur",
+          "type": "Myndband"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Lykkjulæti"
@@ -75,16 +529,22 @@
           "name": "Lykkjulæti"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Lykkjulæti"
+          "name": "Lykkjulæti",
+          "type": "Mat"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Lykkjulæti"
         },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Myndband"
+        },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Stórviðburður"
+          "name": "Stórviðburður",
+          "type": "Myndband"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "Stórviðburður"
+          "name": "Stórviðburður",
+          "type": "Mat"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Stórviðburður"
@@ -98,14 +558,33 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Félagaforritun"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "Myndband"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Myndband"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Krúttleg kort"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "Myndband"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Myndband"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "Myndband"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Myndband"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Stórviðburður"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Stórviðburður"
+          "name": "Stórviðburður",
+          "type": "Mat"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Stórviðburður"
@@ -132,16 +611,21 @@
           "name": "Vinir mínir vélmennin"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Félagaforritun"
+          "name": "Félagaforritun",
+          "type": "Myndband"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Stórviðburður"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Stórviðburður"
+          "name": "Stórviðburður",
+          "type": "Mat"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Stórviðburður"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "Myndband"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Stafræn armbönd"
@@ -153,7 +637,8 @@
           "name": "Stafræn armbönd"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Stafræn armbönd"
+          "name": "Stafræn armbönd",
+          "type": "Mat"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Stafræn armbönd"
@@ -177,7 +662,8 @@
           "name": "Forritun rúðublaða"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Forritun rúðublaða"
+          "name": "Forritun rúðublaða",
+          "type": "Mat"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Forritun rúðublaða"
@@ -203,6 +689,12 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Boðhlaupsforritun"
         },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Myndband"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Myndband"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Skilyrði með kortum"
         },
@@ -210,7 +702,8 @@
           "name": "Skilyrði með kortum"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Skilyrði með kortum"
+          "name": "Skilyrði með kortum",
+          "type": "Mat"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Skilyrði með kortum"
@@ -225,7 +718,14 @@
           "name": "Kennaraspjall"
         },
         "pair_programming/express/2021": {
-          "name": "Félagaforritun"
+          "name": "Félagaforritun",
+          "type": "Myndband"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Myndband"
+        },
+        "turns_angles/express/2021": {
+          "type": "Myndband"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Upplýsingar um Kvikasmiðju"
@@ -236,6 +736,12 @@
         "sprites_in_action/express/2021": {
           "name": "Kvikar í verki"
         },
+        "pause_and_think_online/express/2021": {
+          "type": "Myndband"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "Myndband"
+        },
         "variables_video/express/2021": {
           "name": "Breytur"
         },
@@ -245,11 +751,29 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Félagaforritun"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "Myndband"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "Myndband"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "Myndband"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Kennaraspjall"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Myndband"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Myndband"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "Mat"
         },
         "implementation_guide/coursee/2021": {
           "name": "Leiðarvísir innleiðingar"
@@ -259,6 +783,383 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Myndband"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Myndband"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Myndband"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Myndband"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Myndband"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Myndband"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Myndband"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Myndband"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Myndband"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Myndband"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Söfnun gagna hönnuð"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Myndband"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Myndband"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Myndband"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Endurlit"
+        },
+        "design_mode/csd/2021": {
+          "name": "Hönnun"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Myndband"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Myndband"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Hönnun"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Öpp með fleiri en eina skjámynd"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Kennaraspjall"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Myndband"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Tölvunarfræði er að breyta öllu",
+          "type": "Myndband"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Hvernig tölvur virka: vélbúnaður og hugbúnaður",
+          "type": "Myndband"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Myndband"
+        },
+        "functions_2/csd/2021": {
+          "name": "Föll"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Kynning á fylkjum",
+          "type": "Myndband"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Frá lykkjur",
+          "type": "Myndband"
+        },
+        "for_loops/csd/2021": {
+          "name": "Frá lykkjur"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Hvernig tölvur virka: rásir og rökvísi",
+          "type": "Myndband"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Myndband"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Myndband"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Myndband"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Myndband"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Myndband"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Myndband: Vélarnám",
+          "type": "Myndband"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Myndband"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Myndband"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Myndband"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Myndband"
+        },
+        "variables_1/csd/2021": {
+          "name": "Breytur"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Myndband"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Hreyfingasíðan",
+          "type": "Myndband"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Kvikar"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Eiginleikar kvika"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Myndband"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Myndband"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Hreyfing kvika",
+          "type": "Myndband"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Rökyrðingar",
+          "type": "Myndband"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Skilyrðingar",
+          "type": "Myndband"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Ef/Annars yrðingar",
+          "type": "Myndband"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Hraði",
+          "type": "Myndband"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Hraði"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Skynjun árekstra"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Skynjun árekstra"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Hröðun og Teljaramynstrið"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Föll",
+          "type": "Myndband"
+        },
+        "functions_1/csd/2021": {
+          "name": "Föll"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Kennaraspjall"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Myndband"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Myndband"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Inntak og Úttak"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Inntak og Úttak"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Myndband"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Öpp og Þrautalausnir"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Öpp og Þrautalausnir",
+          "type": "Álit samnemenda"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Öpp og Þrautalausnir"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Myndband"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Myndband"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Myndband"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Myndband"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "lists/csd/2021": {
+          "name": "Listar"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Kynning á tölvunarfræði - 1. hluti",
+          "type": "Myndband"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Kynning á tölvunarfræði - 2. hluti",
+          "type": "Myndband"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Myndband"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Myndir í HTML"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Að gefa út vefinn þinn",
+          "type": "Myndband"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Myndband"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Myndband"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Myndband"
+        },
+        "classes/csd/2021": {
+          "name": "Klasar"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Álit samnemenda"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/express/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Orðaforði"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Kennsluáætlanir"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Stöðluð samsvörun"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Kennaraspjall"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Orðaforði"
         }
       }
     }

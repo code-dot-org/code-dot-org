@@ -9,16 +9,7 @@ describe('StandardView', () => {
   beforeEach(() => {
     DEFAULT_PROPS = {
       showStandardsIntroDialog: false,
-      section: {
-        id: 6,
-        script: {
-          id: 1163,
-          name: 'express-2019',
-          project_sharing: true
-        },
-        students: [],
-        lessonExtras: false
-      },
+      sectionId: 6,
       scriptData: {
         id: 1163,
         excludeCsfColumnInLegend: false,

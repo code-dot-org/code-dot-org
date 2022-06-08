@@ -99,7 +99,9 @@
         "helloworld_food_costumes": "学习改变精灵图的外观。",
         "helloworld_food_sounds": "学习如何播放声音。",
         "helloworld_retro_costumes": "学习改变精灵图的外观。",
-        "helloworld_retro_sounds": "学习如何播放声音。"
+        "helloworld_retro_sounds": "学习如何播放声音。",
+        "courseF_extras_sim": "创建和自定义您自己的模拟！",
+        "spritelab_extras_repeat": "使用循环快速创建许多匹配的精灵！"
       }
     }
   }

@@ -1,0 +1,14 @@
+{
+  "sr-SP": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Компјутерско Размишљање"
+        },
+        "ccela/L": {
+          "description": "Језик"
+        }
+      }
+    }
+  }
+}

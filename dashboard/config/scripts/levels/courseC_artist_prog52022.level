@@ -45,11 +45,16 @@
     "include_shared_functions": "false",
     "parent_level_id": 21190,
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/71332e0584dba451fcad5a6ee70953fb=levelbuilder/51581.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:25.073+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog5_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:25.073+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog5_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

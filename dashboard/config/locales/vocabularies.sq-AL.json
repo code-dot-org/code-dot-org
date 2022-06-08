@@ -136,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Përcakto"
+        },
+        "debugging/csd/2021": {
+          "word": "Rregullimi"
+        },
+        "variable/csd/2021": {
+          "word": "Variabël"
+        },
+        "conditionals/csd/2021": {
+          "word": "Kushtet"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksioni"
+        },
+        "function/csd/2021": {
+          "word": "Funksion"
+        },
+        "copyright/csd/2021": {
+          "word": "E drejta e autorit"
         }
       }
     }

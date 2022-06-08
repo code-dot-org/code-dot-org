@@ -6,12 +6,14 @@
     "properties": {
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:25 UTC",
+    "family_name": "csd4-old",
+    "serialized_at": "2022-04-08 15:40:51 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

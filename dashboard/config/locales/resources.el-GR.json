@@ -2,6 +2,114 @@
   "el-GR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Σχέδια μαθήματος"
+        },
         "sprites_in_action/coursef/2021": {
           "name": "Χαρακτήρες σε Δράση"
         },
@@ -179,6 +287,9 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
@@ -203,6 +314,9 @@
         "sprites_in_action/express/2021": {
           "name": "Χαρακτήρες σε Δράση"
         },
+        "dance-party-playlist/express/2021": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
         "variables_video/express/2021": {
           "name": "Μεταβλητές"
         },
@@ -211,6 +325,117 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Οδηγός εφαρμογής"
+        },
+        "design_mode/csd/2021": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Πως λειτουργούν οι Υπολογιστές: Hardware & Software"
+        },
+        "functions_2/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Βρόχοι Για"
+        },
+        "for_loops/csd/2021": {
+          "name": "Βρόχοι Για"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Πως λειτουργούν οι Υπολογιστές: Κυκλώματα και Λογική"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Βίντεο: Μηχανική Μάθηση"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Ορίζοντας Μεταβλητές"
+        },
+        "variables_1/csd/2021": {
+          "name": "Μεταβλητές"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Η Καρτέλα Κίνησης"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Χαρακτήρας"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Boolean Εκφράσεις"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Συνθήκες Ελέγχου"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Δηλώσεις Αν/Αλλιώς"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Ταχύτητα"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Ταχύτητα"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "functions_1/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Κεφαλίδες και Παράγραφοι"
+        },
+        "lists/csd/2021": {
+          "name": "Λίστες"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Εισαγωγή στην CSS - μέρος 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Εισαγωγή στην CSS - μέρος 2"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Ιδιότητες Διάταξης"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Υπερσύνδεσμοι"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Σχέδια μαθήματος"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Σχέδια μαθήματος"
         }
       }
     }

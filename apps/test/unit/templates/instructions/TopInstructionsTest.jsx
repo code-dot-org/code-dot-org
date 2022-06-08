@@ -7,6 +7,8 @@ import {
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import sinon from 'sinon';
+import experiments from '@cdo/apps/util/experiments';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -32,6 +34,7 @@ const DEFAULT_PROPS = {
   isMinecraft: false,
   isBlockly: false,
   isRtl: false,
+  hasBackgroundMusic: false,
   displayReviewTab: false,
   exampleSolutions: [],
   isViewingAsInstructorInTraining: false
@@ -252,6 +255,65 @@ describe('TopInstructions', () => {
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.false;
+      });
+
+      it('passes displayReviewV2Tab false if displayReviewTab is false', () => {
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            displayReviewTab={false}
+          />
+        );
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewV2Tab)
+          .to.be.false;
+      });
+
+      it('passes displayReviewTab=true and displayReviewV2Tab=false if the code_review_v2 experiment is not enabled', () => {
+        sinon
+          .stub(experiments, 'isEnabled')
+          .withArgs('code_review_v2')
+          .returns(false);
+
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            displayReviewTab={true}
+          />
+        );
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).to
+          .be.true;
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewV2Tab)
+          .to.be.false;
+
+        experiments.isEnabled.restore();
+      });
+
+      it('passes displayReviewTab=false and displayReviewV2Tab=true if the code_review_v2 experiment is enabled', () => {
+        sinon
+          .stub(experiments, 'isEnabled')
+          .withArgs('code_review_v2')
+          .returns(true);
+
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            displayReviewTab={true}
+          />
+        );
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).to
+          .be.false;
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewV2Tab)
+          .to.be.true;
+
+        experiments.isEnabled.restore();
       });
     });
   });

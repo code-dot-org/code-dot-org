@@ -119,10 +119,12 @@
  * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
  * @property {boolean} submittable
- * @property {boolean} final_level
  * @property {array} levelVideos
  * @property {string} mapReference
  * @property {array} referenceLinks
+ * @property {boolean} isLastLevelInLesson
+ * @property {boolean} isLastLevelInScript
+ * @property {boolean} showEndOfLessonMsgs
  */
 
 /**

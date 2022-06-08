@@ -22,7 +22,7 @@ Our curriculum is available at [no cost](/commitment) for anyone, anywhere to te
 <div class="col-40" style="padding-right: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
-<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false', twitter: twitter, facebook: facebook%>
 
 </div>

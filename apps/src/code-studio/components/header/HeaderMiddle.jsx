@@ -270,6 +270,7 @@ class HeaderMiddle extends React.Component {
                 setDesiredWidth={width => {
                   this.setDesiredWidth('lessonProgress', width);
                 }}
+                lessonName={lessonData.name}
               />
             </div>
           )}
@@ -299,7 +300,12 @@ class HeaderMiddle extends React.Component {
           {this.props.lessonData && this.props.lessonData.finishLink && (
             <div
               id="finish_link_container"
-              style={{float: 'left', width: widths.finish, height: 18}}
+              style={{
+                float: 'left',
+                width: widths.finish,
+                marginRight: '5px',
+                height: 18
+              }}
             >
               <HeaderFinish
                 lessonData={lessonData}

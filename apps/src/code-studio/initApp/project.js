@@ -100,6 +100,7 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
+let fetchChannelResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -501,6 +502,10 @@ var projects = (module.exports = {
     return hasEditPermissions && isEditOrViewPage;
   },
 
+  channelNotFound() {
+    return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
+  },
+
   __TestInterface: {
     // Used by UI tests
     getCurrent() {
@@ -809,6 +814,7 @@ var projects = (module.exports = {
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
       case 'spritelab':
+      case 'thebadguys':
         return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
@@ -872,6 +878,7 @@ var projects = (module.exports = {
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
@@ -1050,14 +1057,18 @@ var projects = (module.exports = {
      */
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.saveSourceAndHtml_(
-            sourceAndHtml,
-            (err, result) => (err ? reject(err) : resolve()),
-            forceNewVersion,
-            preparingRemix
-          )
-        )
+        this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+          try {
+            this.saveSourceAndHtml_(
+              sourceAndHtml,
+              (err, result) => (err ? reject(err) : resolve()),
+              forceNewVersion,
+              preparingRemix
+            );
+          } catch (err) {
+            reject(err);
+          }
+        })
       );
 
     if (preparingRemix) {
@@ -1685,20 +1696,9 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          if (err.message.includes('error: Not Found')) {
-            // Project not found. Redirect to the most recent project of this
-            // type, or a new project of this type if none exists.
-            const newPath = utils
-              .currentLocation()
-              .pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
-            utils.navigateToHref(newPath);
-          }
-          // Reject even after navigation, to allow unit tests which stub
-          // navigateToHref to confirm that navigation has happened.
           return Promise.reject(err);
         })
+
         .then(this.fetchSource.bind(this))
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
@@ -1818,9 +1818,10 @@ var projects = (module.exports = {
    */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) =>
-        err ? reject(err) : resolve(data)
-      );
+      channels.fetch(channelId, (err, data, jqXhr, response) => {
+        fetchChannelResponseCode = response?.status;
+        err ? reject(err) : resolve(data);
+      });
     }).catch(err => {
       this.logError_(
         'load-channel-error',

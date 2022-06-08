@@ -2,9 +2,9 @@
 my:
   data:
     script:
-      category:
-        math_category_name: သင်္ချာ
       name:
+        hourofcode:
+          title: ဂန္တဝင် ဝင်္ကပါ
         usability:
           lessons:
             Variables:
@@ -13,6 +13,15 @@ my:
           lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+        flappy:
+          title: ဖလပ်ပီ ကုပ်
+          description: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏
+            ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
+          lessons:
+            Flappy Code:
+              name: ဖလပ်ပီ ကုပ်
+          student_description: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။
+            ကျွန်ုပ်တို့၏ ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
         algebraPD:
           lessons:
             Teacher Dashboard:
@@ -45,10 +54,17 @@ my:
           lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+        starwars:
+          lessons:
+            Hour of Code 2015:
+              name: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
         mc:
           title: Minecraft Hour of Code
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန်
             ကုတ်နံပါတ် blockများကို သုံးပါ
+          lessons:
+            Hour of Code 2015:
+              name: Minecraft Hour of Code
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ
             စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
         algebraPD1:
@@ -85,6 +101,10 @@ my:
           lessons:
             Lists:
               name: စာရင်းများ
+        flappy-impact-study:
+          lessons:
+            Flappy Code:
+              name: ဖလပ်ပီ ကုပ်
         csd6-draft:
           lessons:
             Lists:
@@ -330,10 +350,8 @@ my:
         csd3-2021:
           lessons:
             Variables:
-              key: Variables
               name: Variables
             Text:
-              key: စာ
               name: စာ
         csp4-2021:
           lesson_groups:
@@ -384,15 +402,12 @@ my:
         k5-onlinepd-2021:
           lessons:
             Loops:
-              key: Loops
               name: Loops
             Variables:
-              key: Variables
               name: Variables
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
-              key: ကွန်ပျူတာသိပ္ပံအခြေခံ။
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
         self-paced-pl-csd2-2021:
           lessons:
@@ -406,3 +421,79 @@ my:
           lesson_groups:
             lessonGroup-2:
               description: စမ်းသပ်မှု။
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        coursea-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
+        courseb-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Loops
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Loops
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ

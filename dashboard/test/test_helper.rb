@@ -9,16 +9,6 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment variable when running tests if you want to see test coverage
-  require 'simplecov'
-  SimpleCov.start :rails
-  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
-  if ENV['CIRCLECI'] || ENV['DRONE']
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
-  end
-end
-
 reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
@@ -85,13 +75,6 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
-
-    # A list of keys used by our shared cache that should be cleared between every test.
-    [
-      ProfanityHelper::PROFANITY_PREFIX,
-      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
-      AzureTextToSpeech::AZURE_TTS_PREFIX
-    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -635,15 +618,16 @@ def with_locale(locale)
   end
 end
 
-# Mock StorageApps to generate random tokens
-class StorageApps
+# Mock Projects to generate random tokens
+class Projects
   def initialize(storage_id)
     @storage_id = storage_id
   end
 
   def create(_, _)
-    storage_app_id = SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, storage_app_id)
+    # project_id must be an integer > 0
+    project_id = 1 + SecureRandom.random_number(100000)
+    storage_encrypt_channel_id(@storage_id, project_id)
   end
 
   def most_recent(_)
@@ -659,14 +643,17 @@ class StorageApps
   end
 end
 
-# Mock get_storage_id to generate random IDs. Seed with current user so that a user maintains
-# the same id
-def get_storage_id
-  return storage_id_for_user_id(current_user.id) if current_user
-  Random.new.rand(1_000_000)
+def stub_storage_id_for_user_id(user_id)
+  storage_id = fake_storage_id_for_user_id(user_id)
+  stubs(:storage_id_for_user_id).with(user_id).returns(storage_id)
 end
 
-def storage_id_for_user_id(user_id)
+def stub_get_storage_id(user_id)
+  fake_storage_id = fake_storage_id_for_user_id(user_id)
+  stubs(:get_storage_id).returns fake_storage_id
+end
+
+def fake_storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
 end
 

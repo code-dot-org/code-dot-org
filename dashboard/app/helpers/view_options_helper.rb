@@ -42,6 +42,7 @@ module ViewOptionsHelper
     :blocklyVersion,
     :disallowed_html_tags,
     :backpack_channel,
+    :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
   )
@@ -65,6 +66,9 @@ module ViewOptionsHelper
     :start_blocks,
     :toolbox_blocks,
     :edit_blocks,
+    :is_editing_exemplar,
+    :is_viewing_exemplar,
+    :exemplar_sources,
     :skip_instructions_popup,
     :embed,
     :share,
@@ -77,7 +81,8 @@ module ViewOptionsHelper
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,
-    :project_type
+    :project_type,
+    :validation
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally

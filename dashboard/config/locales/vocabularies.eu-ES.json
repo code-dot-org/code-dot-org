@@ -74,6 +74,9 @@
         "variable/coursef/2021": {
           "word": "Aldagaia"
         },
+        "input/coursef/2021": {
+          "word": "Sarrera"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
@@ -136,6 +139,27 @@
         },
         "define/coursee/2021": {
           "word": "Zehaztu"
+        },
+        "debugging/csd/2021": {
+          "word": "Arazketa"
+        },
+        "variable/csd/2021": {
+          "word": "Aldagaia"
+        },
+        "conditionals/csd/2021": {
+          "word": "Baldintzak"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakzioa"
+        },
+        "function/csd/2021": {
+          "word": "Funtzioa"
+        },
+        "input/csd/2021": {
+          "word": "Sarrera"
+        },
+        "copyright/csd/2021": {
+          "word": "Egile-eskubideak"
         }
       }
     }

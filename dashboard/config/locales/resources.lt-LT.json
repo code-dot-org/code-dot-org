@@ -2,6 +2,102 @@
   "lt-LT": {
     "data": {
       "resources": {
+        "lesson_plans/courseb/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Pamokos planai"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internetas"
         },
@@ -184,6 +280,87 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Diegimo vadovas"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "functions_2/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "for_loops/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "variables_1/csd/2021": {
+          "name": "Kintamieji"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Greitis"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Greitis"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_1/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "lists/csd/2021": {
+          "name": "Sąrašai"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Pamokos planai"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Pamokos planai"
         }
       }
     }

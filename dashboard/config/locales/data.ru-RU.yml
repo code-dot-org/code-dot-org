@@ -882,6 +882,9 @@ ru:
         PL_CSD_TeacherTips_PairProgramming: Подсказки Учителя - Парное Программирование
         PL_CSD_TeacherTips_Debugging: Подсказки учителя - Дебаггинг
         PL_CSD_TeacherTips_LeadLearner: Подсказки учителя - Ведущий Ученик
+        poembot-playtest-intro: Игровой тест PoemBot - введение
+        poembot-playtest-sprites: Игровой тест PoemBot - спрайты
+        poembot-playtest-events: Игровой тест PoemBot - события
         hello_world_intro: Привет, мир - Добро пожаловать в Sprite Lab
         hello_world_events: Привет, мир - Программирование с событиями
         hello_world_congrats: Привет, мир - Делайте, что вам хочется
@@ -897,6 +900,10 @@ ru:
           и поэзия
         poetry_module_conditionals: Условные операторы - Кодирование и поэзия
         poemart_intro: Введение в поэтическое искусство
+        CSA-PL-debugging-temp: Введение в отладку в лаборатории Java - шаблон
+        PL_CS_Journeys_Overview: Занятия по информатике
+        csp_applab_parameters: Процедуры с параметрами
+        CSA-PL-intro-to-arrays: Одномерные (1D) массивы
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

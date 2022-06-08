@@ -1,0 +1,85 @@
+{
+  "category_key": "org_code_media",
+  "content": "Represents a color as amounts of red, green, and blue (ranging from `0` to `255`) that blend together to make a unique color. This class also provides a number of preset colors, like `fuschia`, which can be referenced either by a string value or as one of the constants in this class, e.g. `Color.FUSCHIA`.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[{\"name\":\"MAX_VALUE = 255\",\"type\":\"static final int\",\"description\":\"the maximum value for the red, green, and blue values of this `Color`\"},{\"name\":\"MIN_VALUE = 0\",\"type\":\"static final int\",\"description\":\"the minimum value for the red, green, and blue values of this `Color`\"},{\"name\":\"red\",\"type\":\"final int\",\"description\":\"the red value of this `Color`\"},{\"name\":\"green\",\"type\":\"final int\",\"description\":\"the green value of this `Color`\"},{\"name\":\"blue\",\"type\":\"final int\",\"description\":\"the blue value of this `Color`\"},{\"name\":\"WHITE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 255, 255)`\\n\\n\"},{\"name\":\"SILVER\",\"type\":\"static final Color \",\"description\":\"a color with the value `(192, 192, 192)`\"},{\"name\":\"GRAY\",\"type\":\"static final Color \",\"description\":\"a color with the value `(128, 128, 128)`\"},{\"name\":\"BLACK\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 0, 0)`\"},{\"name\":\"RED\",\"type\":\"static final Color\",\"description\":\"a color with the value `(255, 0, 0)`\"},{\"name\":\"MAROON\",\"type\":\"static final Color\",\"description\":\"a color with the value `(128, 0, 0)`\"},{\"name\":\"YELLOW\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 255, 0)`\"},{\"name\":\"OLIVE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(128, 128, 0)`\"},{\"name\":\"LIME\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 255, 0)`\"},{\"name\":\"GREEN\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 128, 0)`\"},{\"name\":\"AQUA\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 255, 255)`\"},{\"name\":\"TEAL\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 128, 128)`\"},{\"name\":\"BLUE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 0, 255)`\"},{\"name\":\"NAVY\",\"type\":\"static final Color \",\"description\":\"a color with the value `(0, 0, 128)`\"},{\"name\":\"FUSCHIA\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 0, 255)`\"},{\"name\":\"PURPLE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(128, 0, 128)`\"},{\"name\":\"PINK\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 192, 203)`\\n\\n\"},{\"name\":\"ORANGE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 165, 0)`\"},{\"name\":\"GOLD\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 215, 0)`\"},{\"name\":\"BROWN\",\"type\":\"static final Color \",\"description\":\"a color with the value `(165, 42, 42)`\\n\\n\"},{\"name\":\"CHOCOLATE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(210, 105, 30)`\"},{\"name\":\"TAN\",\"type\":\"static final Color \",\"description\":\"a color with the value `(210, 180, 140)`\"},{\"name\":\"TURQUOISE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(64, 224, 208)`\"},{\"name\":\"INDIGO\",\"type\":\"static final Color \",\"description\":\"a color with the value `(75, 0, 130)`\"},{\"name\":\"VIOLET\",\"type\":\"static final Color \",\"description\":\"a color with the value `(238, 130, 238)`\"},{\"name\":\"BEIGE\",\"type\":\"static final Color \",\"description\":\"a color with the value `(245, 245, 220)`\"},{\"name\":\"IVORY\",\"type\":\"static final Color \",\"description\":\"a color with the value `(255, 255, 240)`\"}]",
+  "key": "Color",
+  "name": "Color",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "name": "Color",
+      "position": 0,
+      "key": "color",
+      "overload_of": null,
+      "content": "Creates a `Color` object from a `String`, like `\"red\"` or `\"brown\"`. If the name is not recognized, this constructor will throw an `IllegalArgumentException`.",
+      "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the color (case-insensitive)\"}]",
+      "examples": "[{\"description\":\"**Possible color names are:**\\n\\n![](https://images.code.org/b93be88eb3e0a7ea66fe63503b51dee1-color_names.png)\"}]",
+      "syntax": "`public Color(String color) throws IllegalArgumentException`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Color",
+      "position": 1,
+      "key": "color2",
+      "overload_of": "color",
+      "content": "Create a new `Color` object based on the red, green, and blue values provided.",
+      "parameters": "[{\"name\":\"red\",\"type\":\"int\",\"required\":true,\"description\":\"the red value to set the `Color` (between `0` and `255`)\"},{\"name\":\"green\",\"type\":\"int\",\"required\":true,\"description\":\"the green value to set the `Color` (between `0` and `255`)\"},{\"name\":\"blue\",\"type\":\"int\",\"required\":true,\"description\":\"the blue value to set the `Color` (between `0` and `255`)\"}]",
+      "examples": "[]",
+      "syntax": "`public Color(int red, int green, int blue)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "key": "color3",
+      "overload_of": "color",
+      "content": "Creates a new `Color` object by copying the red, green, and blue values from the specified `Color`.",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to copy\"}]",
+      "examples": "[]",
+      "syntax": "`public Color(Color color)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "getRed",
+      "position": 3,
+      "key": "getred",
+      "overload_of": null,
+      "content": "Returns the amount of red of this `Color` (ranging from `0` to `255`).",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": "`public int getRed()`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "getGreen",
+      "position": 4,
+      "key": "getgreen",
+      "overload_of": null,
+      "content": "Returns the amount of green of this `Color` (ranging from `0` to `255`).",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": "`public int getGreen()`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "getBlue",
+      "position": 5,
+      "key": "getblue",
+      "overload_of": null,
+      "content": "Returns the amount of blue of this `Color` (ranging from `0` to `255`).",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": "`public int getBlue()`",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

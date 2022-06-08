@@ -17,10 +17,7 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
@@ -29,6 +26,7 @@ class ProgressBubbleSet extends React.Component {
     lessonExtrasEnabled: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
+    lessonName: PropTypes.string,
     // Redux
     isRtl: PropTypes.bool
   };
@@ -86,6 +84,7 @@ class ProgressBubbleSet extends React.Component {
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
             onClick={this.props.onBubbleClick}
+            lessonName={this.props.lessonName}
           />
         </div>
       </div>

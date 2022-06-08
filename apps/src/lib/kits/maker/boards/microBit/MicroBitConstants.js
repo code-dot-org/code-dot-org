@@ -25,7 +25,10 @@ export const MB_COMPONENTS = [
   'Accelerometer',
   'MicroBitThermometer',
   'Compass',
-  'LightSensor'
+  'LightSensor',
+  'ExternalButton',
+  'ExternalLed',
+  'CapacitiveTouchSensor'
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
@@ -48,3 +51,5 @@ export const MB_COMPONENT_EVENTS = {
   accelerometer: ['change', 'data', 'shake']
 };
 MB_SENSOR_VARS.forEach(sensor => (MB_COMPONENT_EVENTS[sensor] = SENSOR_EVENTS));
+
+export const MICROBIT_FIRMWARE_VERSION = 'micro:bit Firmata 1.1';

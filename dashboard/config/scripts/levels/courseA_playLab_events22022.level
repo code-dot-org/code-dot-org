@@ -61,11 +61,16 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/2044cc18f7c5c79547a88ea76e2a1934=levelbuilder/45307.png",
     "encrypted": "false",
     "long_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.100+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events2_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-07T18:57:03.100+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events2_2021\\\"\"],\"cloned_from\":\"courseA_playLab_events2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

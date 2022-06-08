@@ -412,6 +412,7 @@ cs:
       educate_beyond: Nad rámec Code.org
       educate_inspire: Inspirujte studenta
       educate_community: Online komunita
+      educate_requirements: Technické požadavky
       educate_tools: Nástroje a videa
       about_us: O nás
       about_leadership: Koordinátoři
@@ -453,7 +454,9 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Bounce
+      calc: Calc
       dance: Taneční večírek
+      eval: Eval
       flappy: Flappy
       frozen: Frozen
       gamelab: Game Lab
@@ -493,6 +496,7 @@ cs:
       prizes_link: Více informací
   teacher:
     answer: Odpověď
+    dashboard: Katedra učitele
     for_teachers_only: Pouze pro učitele
     title:
       one: 'Tvůj učitel:'
@@ -800,6 +804,13 @@ cs:
       title: Taneční večírek
     dance-2019:
       title: Taneční večírek
+    hello-world:
+      title: Ahoj, světe
+      body: Vyberte si jeden ze čtyř zábavných motivů a naprogramujte interaktivní
+        postavičky ve světě, co si sami vytvoříte.
+    poem-art:
+      title: Básnické umění
+      body: Vyjádřete se napsáním kódu animovaných básní.
     hoc:
       title: Klasické bludiště
       body: Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.
@@ -1010,17 +1021,6 @@ cs:
       v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující
       JavaScript jim mohou být nedostupné.
     review_terms: Zkontrolujte aktualizované podmínky
-  donor_interstitial:
-    title: Vaše bezplatné kurzy počítačových věd umožňuje...
-    subtitle: Rádi bychom poděkovali štědrým dárcům, jejichž podpora umožnila úspěch
-      Code.org. Díky neutuchající štědrosti našich [dárců](%{donors_url}) jsme odhodláni
-      nadále poskytovat Code.org studentům a školám po celém světě zdarma!
-    local_supporters: Místní podporovatelé
-    global_supporters: Globální podporovatelé
-    support_codeorg_1: Každý dolar daný společnosti Code.org přináší příležitost dalším
-      studentům.
-    support_codeorg_2: "[Darujte teď](%{donate_url}) a podpořte Code.org."
-    get_started: Začněte na Code.org
   school_info_interstitial:
     title: Chceme přinášet počítačovou vědu všem studentům - pomozte nám sledovat
       náš pokrok!
@@ -1223,9 +1223,11 @@ cs:
       gender: Rod
       school: Škola
       school_name: Název školy
+      school_city: Město, kde škola sídlí
       school_city_district: Město / školní obvod
       school_country: Země školy
       school_department_region: Školní okrsek / region
+      colombian_school_city: Město, kde škola sídlí
       colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy
@@ -1288,6 +1290,7 @@ cs:
         music: Hudba
         art: Umění
         other: 'Ostatní:'
+        na: Nemá význam
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1296,7 +1299,8 @@ cs:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Ostatní:'
+        other: Ostatní
+        na: Nemá význam
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1306,7 +1310,8 @@ cs:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Divotvorná dílna
-        other: 'Ostatní:'
+        other: Ostatní
+        na: Nemá význam
       workshop_course:
         csf_af: Základy informatiky (Kurzy A-F)
         csf_express: Základy informatiky (Zrychlené kurzy)
@@ -1361,3 +1366,4 @@ cs:
     this_sprite: tento sprajt
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Hlavní strana Code.org
+  teacher_feedback: Zpětná vazba učitele

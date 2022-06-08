@@ -5,7 +5,7 @@ title: कैसे एक ऑवर ऑफ़ कोड की मेजबान�
 {{ signup_button }}
 
 # Hour of Code को आप के कंपनी में कैसे लाया जाय
-### पता लगाएं कि आप और आपके कर्मचारी छात्रों को कंप्यूटर विज्ञान की कोशिश करने के लिए प्रेरित कर सकते हैं!
+### छात्रों को कंप्यूटर साइंस के प्रति रूचि जगाने के लिए आप और आपके कर्मचारी कैसे प्रेरित कर सकते हैं!
 
 ***
 
@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - अपनी कंपनी के** सॉफ्टवेयर इंजीनियरों ** को, स्थानीय कक्षा में अवर ओफ कोड चलाने के लिए और छात्रों को संगणक शास्त्र विज्ञान के अध्ययन के लिए प्रेरित करने के लिए, प्रोत्साहित करे। They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

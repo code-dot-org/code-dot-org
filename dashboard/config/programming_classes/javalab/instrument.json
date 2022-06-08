@@ -1,0 +1,14 @@
+{
+  "category_key": "org_code_theater",
+  "content": "",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[{\"name\":\"PIANO\",\"type\":\"int\",\"description\":\"Represents a piano sound.\"},{\"name\":\"BASS\",\"type\":\"int\",\"description\":\"Represents a lower bass guitar sound.\"}]",
+  "key": "Instrument",
+  "name": "Instrument",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

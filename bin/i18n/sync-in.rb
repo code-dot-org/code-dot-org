@@ -23,6 +23,7 @@ def sync_in
   localize_block_content
   localize_animation_library
   localize_shared_functions
+  localize_course_offerings
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -133,10 +134,15 @@ def get_i18n_strings(level)
 
       # Spritelab behaviors
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      unless behaviors.empty?
+        i18n_strings['behavior_names'] = Hash.new
+        i18n_strings['behavior_descriptions'] = Hash.new
+      end
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
+        description = behavior.at_xpath('./mutation/description')
         i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings['behavior_descriptions'][description.content] = description.content if description
       end
 
       ## Variable Names
@@ -285,7 +291,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.unit_in_category?(:hoc, script.name)
+        if Script.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -373,6 +379,20 @@ def localize_shared_functions
   end
   File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
     f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
+  end
+end
+
+# Aggregate every CourseOffering record's `key` as the translation key, and
+# each record's `display_name` as the translation string.
+def localize_course_offerings
+  puts "Preparing course offerings"
+
+  hash = {}
+  CourseOffering.all.sort.each do |co|
+    hash[co.key] = co.display_name
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+    f.write(JSON.pretty_generate(hash))
   end
 end
 
@@ -472,10 +492,13 @@ def localize_markdown_content
     ai.md.partial
     athome.md.partial
     break.md.partial
+    coldplay.md.partial
     csforgood.md
     curriculum/unplugged.md.partial
     educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
+    educate/it.md
+    farsi.md
     helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial

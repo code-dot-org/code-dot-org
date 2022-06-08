@@ -134,7 +134,7 @@
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
           "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
           "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli animali domestici"
         },
         "courseC_data wizard_2020": {
           "d93dfc24c6ce3e53d8ee07416c743e60": "Un cane!",
@@ -147,11 +147,11 @@
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
           "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
           "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli animali domestici"
         },
         "courseE_aboutme_1": {
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
-          "810896b14fc6615f0c76628b9b6a727e": "Questa è la mia migliore amica Thuy! Lei è molto brava agli sport!",
+          "810896b14fc6615f0c76628b9b6a727e": "Questa è Thuy, la mia migliore amica! Lei è molto brava nello sport!",
           "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Il gelato è il mio cibo preferito! Ma probabilmente non dovrei mangiarlo sul divano...",
           "a50ec512bdd98483a7cdcd88cbe11933": "Questo è il mio coniglietto, Lecca-lecca! Non ho idea del perché l'abbia chiamata così!",
           "6f97975a0bda0c9219915161149cbb26": "Questo è il mio computer! Lo uso SEMPRE per programmare!",
@@ -162,7 +162,7 @@
         },
         "courseE_aboutme_1_2020": {
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
-          "810896b14fc6615f0c76628b9b6a727e": "Questa è la mia migliore amica Thuy! Lei è molto brava agli sport!",
+          "810896b14fc6615f0c76628b9b6a727e": "Questa è Thuy, la mia migliore amica! Lei è molto brava nello sport!",
           "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Il gelato è il mio cibo preferito! Ma probabilmente non dovrei mangiarlo sul divano...",
           "a50ec512bdd98483a7cdcd88cbe11933": "Questo è il mio coniglietto, Lecca-lecca! Non ho idea del perché l'abbia chiamata così!",
           "6f97975a0bda0c9219915161149cbb26": "Questo è il mio computer! Lo uso SEMPRE per programmare!",
@@ -398,14 +398,14 @@
           "7f945c111ba5ea6d7b1547601db6ba0e": " draghi!",
           "71fc859f3abd22273bad5d0d8eda2173": "Conta tutti gli animali!",
           "f62038e77820419cd978f7b722da560a": "Quanti ne appariranno?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli Animali Domestici"
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conta gli animali domestici"
         },
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
-          "810896b14fc6615f0c76628b9b6a727e": "Questa è la mia migliore amica Thuy! Lei è molto brava agli sport!",
+          "810896b14fc6615f0c76628b9b6a727e": "Questa è Thuy, la mia migliore amica! Lei è molto brava nello sport!",
           "6f97975a0bda0c9219915161149cbb26": "Questo è il mio computer! Lo uso SEMPRE per programmare!",
           "8e985f60f328934accd78e7649584840": "Il gelato è il mio dolce preferito!",
-          "31ba97bb501bb1f5b448221be09bad32": "Questo è il mio corgi, lecca-lecca! Devo insegnarle a codificare!"
+          "31ba97bb501bb1f5b448221be09bad32": "Questa è Lollipop, la mia corgi! Devo insegnarle a programmare!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Ciao a tutti!"
@@ -460,12 +460,12 @@
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
         },
         "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società",
           "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
@@ -476,12 +476,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi di società",
           "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
@@ -509,7 +509,7 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Chi è che compie gli anni?",
           "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?"
         },
         "courseF_text_choice_title": {
@@ -527,19 +527,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "cosa desideri per il tuo compleanno?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fine",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Grazie per aver chattato!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda",
+          "50d489a15105b987ec6d4410900c95dd": "Inserisci un termine che indichi un'azione:"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "scelta 1",

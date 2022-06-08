@@ -3,10 +3,8 @@ require 'test_helper'
 class CoursesControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
-  setup do
+  setup_all do
     @teacher = create :teacher
-    sign_in @teacher
-
     @levelbuilder = create :levelbuilder
 
     @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -16,15 +14,30 @@ class CoursesControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
+    @pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_pl_section = create :section, user: @pilot_facilitator, unit_group: @pilot_pl_unit_group
+    @pilot_participant = create :teacher
+    create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
+
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
+    @migrated_pl_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
+    @migrated_pl_unit.reload
 
     @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1
+  end
+
+  setup do
+    sign_in @teacher
+
+    @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
@@ -45,9 +58,9 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
   end
 
   class CachedQueryCounts < ActionController::TestCase
@@ -81,14 +94,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(5) do
+      assert_cached_queries(6) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(8) do
+      assert_cached_queries(9) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -106,7 +119,6 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family" do
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -118,7 +130,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csd'
     ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -130,9 +141,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csd-2019'
   end
 
+  test "get_unit_group for family name with no stable versions does not redirect" do
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
+    offering = create :course_offering, key: 'csd'
+    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {course_name: 'csd'}
+    end
+  end
+
   test 'redirect to latest standards in course family' do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all")
 
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
@@ -158,6 +178,19 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: 'csp-2019'}
 
     assert_redirected_to '/courses/csp-2017/?redirect_warning=true'
+  end
+
+  test "show: redirect participant from new unstable version to assigned version" do
+    teacher = create :teacher
+    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :follower, section: create(:section, unit_group: plcsp2017), student_user: teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
+    sign_in teacher
+    get :show, params: {course_name: 'pl-csp-2019'}
+
+    assert_redirected_to '/courses/pl-csp-2017/?redirect_warning=true'
   end
 
   test "show: redirect to latest stable version in course family for logged out user" do
@@ -195,6 +228,19 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
+  test "show: redirect to latest stable version in course family for participant" do
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
+    sign_in create(:teacher)
+    get :show, params: {course_name: 'pl-csp-2017'}
+    assert_redirected_to '/courses/pl-csp-2018/?redirect_warning=true'
+
+    get :show, params: {course_name: 'pl-csp-2019'}
+    assert_redirected_to '/courses/pl-csp-2018/?redirect_warning=true'
+  end
+
   test "show: do not redirect student to latest stable version in course family if they have progress" do
     create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
@@ -202,6 +248,17 @@ class CoursesControllerTest < ActionController::TestCase
     UnitGroup.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: do not redirect participant to latest stable version in course family if they have progress" do
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
+    UnitGroup.any_instance.stubs(:has_progress?).returns(true)
+    sign_in create(:teacher)
+    get :show, params: {course_name: 'pl-csp-2017'}
 
     assert_response :ok
   end
@@ -218,11 +275,38 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: do not redirect participant to latest stable version in course family if they are assigned" do
+    teacher = create :teacher
+    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :follower, section: create(:section, unit_group: plcsp2017), student_user: teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
+    sign_in teacher
+    get :show, params: {course_name: 'pl-csp-2017'}
+
+    assert_response :ok
+  end
+
   test "show: do not redirect teacher to latest stable version in course family" do
+    teacher = create :teacher
+    sign_in teacher
+
     create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: do not redirect instructor to latest stable version in course family" do
+    facilitator = create :facilitator
+    sign_in facilitator
+
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+
+    get :show, params: {course_name: 'pl-csp-2017'}
 
     assert_response :ok
   end
@@ -239,11 +323,28 @@ class CoursesControllerTest < ActionController::TestCase
   no_access_msg = "You don&#39;t have access to this course."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pl_unit_group_migrated.name}},
+                              name: 'signed out user cannot view pl course'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @pl_unit_group_migrated.name}},
+                              name: 'student user cannot view pl course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {{course_name: @pilot_unit_group.name}},
                               name: 'signed out user cannot view pilot course'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'student cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'participant not in pilot section cannot view pilot course'
   ) do
     assert response.body.include? no_access_msg
   end
@@ -255,6 +356,13 @@ class CoursesControllerTest < ActionController::TestCase
     assert response.body.include? no_access_msg
   end
 
+  test_user_gets_response_for(:show, response: :success, user: :facilitator,
+                              params: -> {{course_name: @pilot_pl_unit_group.name}},
+                              name: 'instructor without pilot access cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
@@ -262,8 +370,21 @@ class CoursesControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
+                              params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
+                              name: 'pilot instructor can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_participant},
+                              params: -> {{course_name: @pilot_pl_unit_group.name}}, name: 'pilot participant can view pilot course'
   ) do
     refute response.body.include? no_access_msg
   end
@@ -331,6 +452,28 @@ class CoursesControllerTest < ActionController::TestCase
     post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     UnitGroup.find_by_name!('csp-1991')
     assert_redirected_to '/courses/csp-1991/edit'
+  end
+
+  test "create: defaults to teacher led, teacher to student course if nothing provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    ug = UnitGroup.find_by_name!('csp-1991')
+    assert_equal ug.instruction_type, 'teacher_led'
+    assert_equal ug.instructor_audience, 'teacher'
+    assert_equal ug.participant_audience, 'student'
+  end
+
+  test "create: sets course type if info is provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self_paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    ug = UnitGroup.find_by_name!('pl-csp-1991')
+    assert_equal ug.instruction_type, 'self_paced'
+    assert_equal ug.instructor_audience, 'universal_instructor'
+    assert_equal ug.participant_audience, 'teacher'
   end
 
   test "create: writes course json file" do
@@ -484,6 +627,10 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
+    File.stubs(:write).with do |filename, data|
+      filename.to_s.end_with?("#{unit_group.name}.course") && data.include?(resource1.name) && data.include?(resource2.name)
+    end.once
+
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.resources.length
@@ -522,6 +669,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: cannot change course version for unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
     script = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
@@ -542,23 +690,50 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal course_version, unit_group.course_version
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+  no_access_msg = "You don&#39;t have access to this course."
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for(:vocab, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view vocab page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:vocab, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'student cant view vocab page for pl course')
+  test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view vocab page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for :vocab, response: 403, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for(:resources, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view resources page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:resources, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'student cant view resources page for pl course')
+  test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view resources page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for :resources, response: 403, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for(:standards, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view standards page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:standards, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'student cant view standards page for pl course')
+  test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view standards page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for :standards, response: 403, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for(:code, response: :success, user: :facilitator, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'instructor can view code page for pl course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for(:code, response: :forbidden, user: :student, params: -> {{course_name: @pl_unit_group_migrated.name}}, name: 'student cant view code page for pl course')
+  test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}, name: 'teacher can view code page for student facing course') do
+    refute response.body.include? no_access_msg
+  end
+  test_user_gets_response_for :code, response: 403, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   # tests for edit
 
   test "edit: does not work for plc_course" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :plc_course, name: 'plc-course'
 
     assert_raises ActiveRecord::ReadOnlyRecord do
@@ -569,6 +744,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
@@ -579,6 +755,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated
@@ -598,6 +775,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated

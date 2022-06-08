@@ -18,11 +18,6 @@ module Dashboard
     !!db[:users][id: user_id, admin: true]
   end
 
-  def self.hidden_script_access?(user_id)
-    user = User.get(user_id)
-    user && (user.admin? || user.has_permission?('hidden_script_access'))
-  end
-
   class User
     # Wrap dashboard user row in this helper object.
     # You can use this, but it's preferred that clients call User.get(user_id).
@@ -67,9 +62,9 @@ module Dashboard
     def has_permission?(permission)
       permission = permission.to_s.strip.downcase
       case permission
-        when 'admin' then admin?
-        when 'teacher' then teacher?
-        else !!Dashboard.db[:user_permissions][user_id: id, permission: permission]
+      when 'admin' then admin?
+      when 'teacher' then teacher?
+      else !!Dashboard.db[:user_permissions][user_id: id, permission: permission]
       end
     end
 

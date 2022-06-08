@@ -9,12 +9,14 @@ ar:
       Arrays: المصفوفات
       Artist Project: مشروع الرسام
       'Artist: Variables': 'الفنان: المتغيرات'
+      Assessment: التقييم
       Back and Forth: للخلف وللأمام
       Bass, Mid, and Treble: صوت الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
       Binary Numbers: أرقام ثنائية
       Board Events: أحداث اللوحة
       'Bunny ': ' باني '
       CS Discoveries Post-Course Survey: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
+      Challenge: تحدي
       Collision Detection: كشف التصادم
       Collisions: التصادمات
       Combining Representations: الجمع بين التمثيلات
@@ -35,6 +37,7 @@ ar:
       Example: مثال
       Example Projects: مشاريع كمثال
       Exploration: استكشاف
+      Extra: إضافي
       For Loops: للحلقات
       Free Play: اللعب الحر
       Functions: دوال
@@ -85,16 +88,21 @@ ar:
       Speed it Up, Slow it Down: التسريع والإبطاء
       Sprite Lab Example Project: عينة من مشاريع مختبر الرسوم المتحركة
       Sprite Lab Project: مشروع Sprite Lab
+      Sprite Movement: حركة الرسوم المتحركة
+      Sprite Properties: خصائص الكائنات
       Teach AI a New Word: تدريس نشاط الذكاء الاصطناعي - كلمة جديدة
       Text Compression: ضغط النص
       The Animation Tab: تبويب الرسوم المتحركة
       The Draw Loop: حلقة الرسم
       The Harvester: عامِلة الحصاد
+      Train an AI to Clean the Ocean: تدريب الذكاء الاصطناعي لتنظيف المحيط
       Using the Repeat Block: استخدام حلقة "التكرار"
       Variables: المتغيرات
       Velocity: السرعة
       Video: فيديو
       'Video: CS Matters': 'فيديو: أهمية علم الحاسوب'
+      'Video: Outbreak Simulator: Introduction': 'فيديو: انفجار المحاكاة: مقدمة'
+      'Video: Programming with Blocks': 'البرمجة بالقطع البرمجية'
       Warm Up: نشاط تحضيري
       Welcome to Monster Town: مرحبًا بك في Monster Town
       Where'd They Go?: أين ذهبوا؟

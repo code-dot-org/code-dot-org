@@ -4,6 +4,12 @@
       "resources": {
         "variables_video/express/2021": {
           "name": "Променливи"
+        },
+        "variables_1/csd/2021": {
+          "name": "Променливи"
+        },
+        "lists/csd/2021": {
+          "name": "Листи"
         }
       }
     }

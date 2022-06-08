@@ -38,6 +38,8 @@
   "drawATriangle": "画一个三角形",
   "drawUpperWave": "绘制上波浪",
   "drawLowerWave": "绘制下波浪",
+  "drawShape": "画一个图形",
+  "drawShapeWithSideLength": "画一个边长的形状",
   "drawSticker": "画贴纸",
   "drawStickerWithSize": "画有尺寸的贴纸",
   "forward": "前进",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "使小艺术家可见或不可见。",
   "widthTooltip": "更改铅笔的宽度。",
   "withSize": "尺寸",
+  "withSideLength": "使用边长",
   "wrongColour": "您的图片显示颜色是错误的。该谜题需要颜色是 %1。"
 }

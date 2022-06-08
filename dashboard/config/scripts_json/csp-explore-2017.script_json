@@ -10,26 +10,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp/csp-explore/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp/ap-prep"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp/csp-explore/standards/"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2017"
     },
     "new_name": "csp-explore-2017",
     "family_name": "csp-explore",
-    "serialized_at": "2021-11-22 17:07:53 UTC",
+    "serialized_at": "2022-03-22 21:16:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -479,13 +465,62 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp/csp-explore/",
+      "key": "lesson_plans_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_1"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp/csp-explore/standards/",
+      "key": "standard_mappings_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_1"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/ap-prep",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_1",
+        "script.name": "csp-explore-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_1",
+        "script.name": "csp-explore-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp-explore-2017"
+      }
+    }
   ],
   "scripts_student_resources": [
 

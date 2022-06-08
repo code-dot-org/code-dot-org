@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 vi:
   errors:
     messages:
@@ -273,6 +279,7 @@ vi:
       cant_join_own_section: "Xin lỗi, bạn không thể tham gia phần riêng của bạn."
       provider_managed_section: "Mục này được quản lý bởi nhà cung cấp khác và bạn không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm bạn vào và tham gia mục này."
       restricted_section: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ."
+      not_participant_type: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì bạn không phù hợp với kiểu người tham gia nhóm đào tạo này."
     mail:
       student_disassociated:
         subject: "Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn."
@@ -322,6 +329,7 @@ vi:
       educate_beyond: "Đằng sau Code.org"
       educate_inspire: "Truyền cảm hứng cho Hssv"
       educate_community: "Cộng đồng trực tuyến"
+      educate_requirements: "Điều kiện kỹ thuật"
       educate_tools: "Các công cụ và video"
       about_us: "Về chúng tôi"
       about_leadership: "Khả năng lãnh đạo"
@@ -337,7 +345,7 @@ vi:
       stats: "Xem thống kê"
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
-      about: "về chúng tôi"
+      about: "Về chúng tôi"
       legal_privacy: "Chính sách bảo mật"
       legal_tos: "Các điều khoản của Code.org"
     user:
@@ -373,6 +381,7 @@ vi:
       iceage: 'Kỉ băng hà'
       infinity: 'Vô cùng'
       minecraft_adventurer: 'Minecraft Chuyến phiêu lưu'
+      minecraft_aquatic: 'Minecraft Thủy sinh'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
@@ -461,6 +470,7 @@ vi:
     remove_parent_email_label: "Loại bỏ"
     none: "Không có"
     only_one_parent_email_supported_warning: "Lưu ý: Hiện tại, chúng tôi chỉ có thể hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh."
+    encrypted: "mã hóa"
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -506,6 +516,7 @@ vi:
     student_ids_not_entered: "Vui lòng cung cấp student_ids."
     student_not_found: "Không thể tìm thấy một hoặc vài sinh viên."
     all_students_must_be_in_current_section: "Tất cả các sinh viên hiện phải đăng ký trong phần của bạn."
+    not_correct_participant_type: "Bạn không thể di chuyển những người dùng này vì họ không có quyền trở thành người tham gia nhóm đào tạo mới."
   share:
     title: "Học về Xưởng Code"
     description: "Bất kỳ ai cũng có thể học khoa học máy tính. Tạo trò chơi, ứng dụng và nghệ thuật bằng mã."
@@ -541,6 +552,7 @@ vi:
     make_my_own_app: 'Tạo ứng dụng của tôi'
     how_it_works: 'Nó hoạt động như thế nào'
     try_hour_of_code: 'Hãy thử Giờ lập trình!'
+    cookie_notice: 'Thông báo về cookie'
   reference_area:
     title: 'Cần trợ giúp?'
     subtitle: 'Xem các video và gợi ý'
@@ -606,6 +618,12 @@ vi:
       title: 'Bữa Tiệc Khiêu Vũ'
     dance-2019:
       title: 'Bữa Tiệc Khiêu Vũ'
+    hello-world:
+      title: 'Xin chào cả thế giới'
+      body: 'Hãy chọn trong bốn chủ đề thú vị để lập trình các nhân vật tương tác trong thế giới do chính bạn tạo ra.'
+    poem-art:
+      title: 'Tranh thơ ca'
+      body: 'Hãy thể hiện bản thân! Hãy dùng mã lệnh để tạo bài thơ có hình chuyển động.'
     hoc:
       title: 'Mê cung cổ điển'
       body: 'Hãy thử những điều cơ bản của khoa học máy tính. Hàng triệu người đã sử dụng nó.'
@@ -927,14 +945,17 @@ vi:
         ages_19_over: '19 tuổi trở lên'
       subjects:
         cs: 'Khoa học máy tính'
-        math: 'thuật toán'
+        math: 'Phép toán'
         science: 'Khoa học'
         la: 'Nghệ thuật ngôn ngữ'
+        other: "Khác"
       resources:
         khan: 'Học viện Khan'
         scratch: 'Scratch'
+        other: "Khác"
       robotics:
         grok: 'Tìm hiểu Grok'
+        other: "Khác"
       workshop_course:
         csf_express: 'Nguyên tắc cơ bản của KHMT (Cấp tốc hoặc Cấp tốc cho trẻ chưa biết đọc)'
       email_opt_in:
@@ -956,3 +977,4 @@ vi:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: "Liên kết thư điện tử của bạn"
     not_now: "Để sau"
+  teacher_feedback: "Phản hồi của giáo viên"

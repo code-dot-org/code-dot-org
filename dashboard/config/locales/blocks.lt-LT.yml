@@ -2,6 +2,22 @@
 lt:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': šiek tiek
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': šiek tiek
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           MOVE1:
@@ -204,6 +220,10 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_getProp:
         options:
           PROPERTY:
@@ -243,6 +263,12 @@ lt:
             '90': žemyn
             '180': kairėn
             '270': aukštyn
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': šiek tiek
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -431,6 +457,31 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': širdelės
+            '"rainbow"': vaivorykštė
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': naktis
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': šok
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': debesuota
+            '"hearts"': širdelės
+          PALETTE:
+            '"rainbow"': vaivorykštė
+            '"winter"': žiema
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': širdelės
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:

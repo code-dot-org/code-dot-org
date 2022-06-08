@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 23:08:10 UTC",
+    "serialized_at": "2022-05-20 16:25:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -37,6 +46,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp10-2021"
       }
     }
@@ -328,6 +349,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp10-2021"
       }
     }
@@ -1159,6 +1195,18 @@
         "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2021"
       }
+    },
+    {
+      "key": "fbd7c069-d24b-4a67-87ca-7e4e7465b68a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbd7c069-d24b-4a67-87ca-7e4e7465b68a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp10-2021"
+      }
     }
   ],
   "activity_sections": [
@@ -1665,7 +1713,7 @@
       "key": "98bd233e-f176-45a9-be50-e153c6118595",
       "position": 1,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the benefits/convenience?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "duration": "10",
         "name": "Convenience vs Privacy - Facial Recognition "
       },
@@ -1678,7 +1726,7 @@
       "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 2,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on location data, take notes on the following:\n\n* What kind of data is being collected and shared?\n* Who is the “third party” in this situation? \n* Why is this a tradeoff between privacy and security?",
         "duration": "10",
         "name": "Security vs Privacy - Should the Government Need a Warrant?"
       },
@@ -1691,7 +1739,7 @@
       "key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
       "position": 3,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
       },
       "seeding_key": {
         "activity_section.key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
@@ -2575,7 +2623,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To assign questions to students on AP Classroom, once logged in navigate to the Question Bank. Search for the following question:\n\n*benefit of storing call session information*\n\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105017.png)\n\nThen add this question to a quiz like so:\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105009.png)\n\nOnce you have added one question, you'll see that you can easily import the other 4 practice questions into your quiz. \n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105024.png)\n\nClick where it says \"5 questions\"\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105037.png)\n\nAnd choose to add all of the questions.\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105031.png)\n\nFollowing this, you can assign the assessment to your students and they can practice the Reading Passage questions. \n"
+            "markdown": "To assign questions to students on [AP Classroom](https://apclassroom.collegeboard.org/103/home), once logged in navigate to the Question Bank. Search for the following question:\n\n*benefit of storing call session information*\n\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105017.png)\n\nThen add this question to a quiz like so:\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105009.png)\n\nOnce you have added one question, you'll see that you can easily import the other 4 practice questions into your quiz. \n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105024.png)\n\nClick where it says \"5 questions\"\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105037.png)\n\nAnd choose to add all of the questions.\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105031.png)\n\nFollowing this, you can assign the assessment to your students and they can practice the Reading Passage questions. \n"
           }
         ]
       },
@@ -2975,6 +3023,23 @@
         "activity_section.key": "bcf7af60-547c-4b8a-a343-7a6ef9b9f47b",
         "lesson_activity.key": "3f3efefa-fa34-4f8b-bc58-610b7469fe4d"
       }
+    },
+    {
+      "key": "9e1989b9-dc09-45a9-833d-57bf6415cf92",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9e1989b9-dc09-45a9-833d-57bf6415cf92",
+        "lesson_activity.key": "fbd7c069-d24b-4a67-87ca-7e4e7465b68a"
+      }
     }
   ],
   "script_levels": [
@@ -3302,6 +3367,31 @@
       "level_keys": [
         "CSP 20-21 Unit 10 Assessment_2021"
       ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp10-2021",
+        "activity_section.key": "9e1989b9-dc09-45a9-833d-57bf6415cf92"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3460,6 +3550,18 @@
         "script.name": "csp10-2021",
         "activity_section.key": "ef0a23e8-7f4d-424e-b2bd-8fb2d2841f85"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp10-2021",
+        "activity_section.key": "9e1989b9-dc09-45a9-833d-57bf6415cf92"
+      }
     }
   ],
   "resources": [
@@ -3496,6 +3598,18 @@
       },
       "seeding_key": {
         "resource.key": "call-center-reading-passage"
+      }
+    },
+    {
+      "name": "Cops Need A Warrant To Search Your Cell Phone’s Location History, Supreme Court Rules",
+      "url": "https://youtu.be/07YzpuDgvDM",
+      "key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
       }
     },
     {
@@ -3645,6 +3759,18 @@
       },
       "seeding_key": {
         "resource.key": "innovation-simulation-bios"
+      }
+    },
+    {
+      "name": "Is Facial Recognition Invading Your Privacy?",
+      "url": "https://youtu.be/f5qgOqNQ7zY",
+      "key": "is_facial_recognition_invading_your_privacy_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "is_facial_recognition_invading_your_privacy_"
       }
     },
     {
@@ -3904,6 +4030,12 @@
     {
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
+        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Value of Privacy",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
@@ -3911,6 +4043,12 @@
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
         "resource.key": "data-policies-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Value of Privacy",
+        "resource.key": "is_facial_recognition_invading_your_privacy_"
       }
     }
   ],

@@ -8,6 +8,7 @@ class LevelsHelperTest < ActionView::TestCase
     user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
     stubs(:current_user).returns user
+    stub_get_storage_id(user.id)
   end
 
   setup do
@@ -22,6 +23,7 @@ class LevelsHelperTest < ActionView::TestCase
     end
 
     stubs(:current_user).returns nil
+    stub_get_storage_id(nil)
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
@@ -113,6 +115,79 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create(:applab, embed: false, widget_mode: true)
     @is_start_mode = true
     refute blockly_options[:embed]
+  end
+
+  test "blockly_options 'level.isLastLevelInLesson' is false if script level is not the last level in the lesson" do
+    @level = create :applab
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, chapter: 1, position: 1
+    create :script_level, lesson: @lesson, chapter: 2, position: 2
+
+    options = blockly_options
+
+    refute options[:level]['isLastLevelInLesson']
+  end
+
+  test "blockly_options 'level.isLastLevelInLesson' is true if script level is the last level in the lesson" do
+    @level = create :applab
+    @lesson = create :lesson
+    create :script_level, lesson: @lesson, position: 1, chapter: 1
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2, chapter: 2
+
+    options = blockly_options
+
+    assert options[:level]['isLastLevelInLesson']
+  end
+
+  test "blockly_options 'level.isLastLevelInScript' is false if script level is not the last level in the script" do
+    @script = create :script
+    lesson_group = create :lesson_group, script: @script
+    @lesson = create :lesson, lesson_group: lesson_group, relative_position: 1
+    lesson_2 = create :lesson, lesson_group: lesson_group, relative_position: 2
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+    create :script_level, lesson: lesson_2
+
+    options = blockly_options
+
+    refute options[:level]['isLastLevelInScript']
+  end
+
+  test "blockly_options 'level.isLastLevelInScript' is true if script level is the last level in the script" do
+    @script = create :script
+    lesson_group = create :lesson_group, script: @script
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    @lesson = create :lesson, lesson_group: lesson_group, relative_position: 2
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level], position: 1
+
+    options = blockly_options
+
+    assert options[:level]['isLastLevelInScript']
+  end
+
+  test "blockly_options 'level.showEndOfLessonMsgs' is true if script.show_unit_overview_between_lessons? is true" do
+    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
+    @script = create :script
+    @lesson = create :lesson
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+
+    options = blockly_options
+
+    assert options[:level]['showEndOfLessonMsgs']
+  end
+
+  test "blockly_options 'level.showEndOfLessonMsgs' is false if script.show_unit_overview_between_lessons? is false" do
+    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
+    @script = create :script
+    @lesson = create :lesson
+    @level = create :applab
+    @script_level = create :script_level, lesson: @lesson, levels: [@level]
+
+    options = blockly_options
+
+    refute options[:level]['showEndOfLessonMsgs']
   end
 
   test "get video choices" do
@@ -234,7 +309,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to false if level is channel backed with contained levels" do
     @level = create :applab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     assert_equal false, app_options['levelRequiresChannel']
   end
@@ -247,7 +322,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to true for Javalab with contained levels" do
     @level = create :javalab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     @controller.stubs(:params).returns({action: 'edit_blocks'})
     assert_equal true, app_options['levelRequiresChannel']
@@ -337,13 +412,14 @@ class LevelsHelperTest < ActionView::TestCase
     # two different users
     @user = create :user
     sign_in create(:user)
+    stub_storage_id_for_user_id(@user.id)
 
     script = create(:script)
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
     # channel exists
-    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
     assert_not_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
@@ -352,12 +428,36 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, view_options[:readonly_workspace]
   end
 
+  test 'readonly workspace should be set if the level is channel-backed and a code review is open for the project' do
+    @user = create :user
+    sign_in @user
+    stub_storage_id_for_user_id(@user.id)
+
+    script = create(:script)
+    @level = create :javalab
+    create(:script_level, script: script, levels: [@level])
+
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
+    @channel_id = get_channel_for(@level, script.id, @user)
+    assert_not_nil @channel_id
+
+    _,  @project_id = storage_decrypt_channel_id(@channel_id)
+    create :code_review, user_id: @user.id, project_id: @project_id
+
+    # calling app_options should set readonly_workspace, since a code review is open
+    app_options
+    assert_equal true, view_options[:readonly_workspace]
+  end
+
   test 'level_started? should return true if a channel exists for a channel backed level' do
     user = create :user
+    stub_storage_id_for_user_id(user.id)
+
     applab_level = create :applab # is channel backed
     script = create(:script)
     create(:script_level, levels: [applab_level], script: script)
-    create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(user.id)
+
+    create :channel_token, level: applab_level, storage_id: fake_storage_id_for_user_id(user.id)
 
     assert_equal true, level_started?(applab_level, script, user)
   end
@@ -396,10 +496,13 @@ class LevelsHelperTest < ActionView::TestCase
     @script = script = create(:script)
     create(:script_level, levels: [@level], script: script)
 
+    stub_storage_id_for_user_id(@user.id)
+
     teacher = create :teacher
     sign_in teacher
+
     # create progress on level for teacher to ensure we get back student isStarted value
-    create :channel_token, level: @level, storage_id: storage_id_for_user_id(teacher.id)
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(teacher.id)
 
     assert_equal false, app_options[:level][:isStarted]
   end
@@ -418,6 +521,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
     @driver = create :student
+    stub_storage_id_for_user_id(@driver.id)
     @navigator = create :student
     create_applab_progress_for_pair @level, @driver, @navigator
 
@@ -463,7 +567,7 @@ class LevelsHelperTest < ActionView::TestCase
     navigator_user_level = create :user_level, user: navigator, level: level
     create :paired_user_level,
       driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
-    create :channel_token, level: level, storage_id: storage_id_for_user_id(driver.id)
+    create :channel_token, level: level, storage_id: fake_storage_id_for_user_id(driver.id)
   end
 
   def stub_country(code)

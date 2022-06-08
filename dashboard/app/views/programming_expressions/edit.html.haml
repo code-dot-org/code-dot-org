@@ -1,3 +1,10 @@
+%link{href: asset_path('css/markdown.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/programming_expressions/edit.js'),
-  data: {programmingExpression: @programming_expression.summarize_for_edit.to_json, environmentCategories: @environment_categories.to_json, videoOptions: Video.all.where(locale: 'en-US').map {|v| {key: v.key, name: v.localized_name}}.to_json}}
+  data: {
+    programmingExpression: @programming_expression.summarize_for_edit.to_json,
+    environmentCategories: @environment_categories.to_json,
+    videoOptions: Video.all.where(locale: 'en-US').map {|v| {key: v.key, name: v.localized_name}}.to_json,
+    levelSearchingInfo: {programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit)}.to_json
+  }
+}
 #edit-container

@@ -1,4 +1,6 @@
 {
   "cancel": "Atcelt",
-  "delete": "Izdzēst"
+  "delete": "Izdzēst",
+  "rename": "Pārsaukt",
+  "submit": "Iesniegt"
 }

@@ -186,16 +186,30 @@ export const PaneButton = Radium(function(props) {
       const Icon = icon.type;
       return (
         <Icon {...icon.props} style={{...iconStyle, ...icon.props.style}}>
-          {icon.children}
+          {icon.props.children}
         </Icon>
       );
     }
   }
 
+  function onKeyDownWrapper(event) {
+    const {onClick} = props;
+    if (
+      event.key === ' ' ||
+      event.key === 'Enter' ||
+      event.key === 'Spacebar'
+    ) {
+      onClick();
+    }
+  }
+
   return (
     <div
+      role="button"
+      tabIndex="0"
       id={props.id}
       style={divStyle}
+      onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
       onClick={props.isDisabled ? () => {} : props.onClick}
     >
       <span style={styles.headerButtonSpan}>

@@ -16,20 +16,11 @@ export default function CommitDialogBody({
   files,
   notes,
   onToggleFile,
-  onChangeNotes
+  onChangeNotes,
+  showSaveToBackpackSection
 }) {
-  return (
-    <div>
-      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
-        {i18n.commitNotes()}
-      </label>
-      <textarea
-        id="commit-notes"
-        placeholder={i18n.commitNotesPlaceholder()}
-        onChange={e => onChangeNotes(e.target.value)}
-        style={styles.textarea}
-        value={notes}
-      />
+  const renderSaveToBackpackSection = () => (
+    <>
       <div style={{...styles.bold, ...styles.filesHeader}}>
         {i18n.saveToBackpack()}
       </div>
@@ -42,6 +33,22 @@ export default function CommitDialogBody({
           />
         );
       })}
+    </>
+  );
+
+  return (
+    <div>
+      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
+        {i18n.commitNotes()}
+      </label>
+      <textarea
+        id="commit-notes"
+        placeholder={i18n.commitNotesPlaceholder()}
+        onChange={e => onChangeNotes(e.target.value)}
+        style={styles.textarea}
+        value={notes}
+      />
+      {showSaveToBackpackSection && renderSaveToBackpackSection()}
     </div>
   );
 }
@@ -50,7 +57,8 @@ CommitDialogBody.propTypes = {
   files: PropTypes.arrayOf(PropTypes.shape(fileShape)).isRequired,
   notes: PropTypes.string,
   onToggleFile: PropTypes.func.isRequired,
-  onChangeNotes: PropTypes.func.isRequired
+  onChangeNotes: PropTypes.func.isRequired,
+  showSaveToBackpackSection: PropTypes.bool
 };
 
 const styles = {

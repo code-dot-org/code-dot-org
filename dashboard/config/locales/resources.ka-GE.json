@@ -2,8 +2,454 @@
   "ka-GE": {
     "data": {
       "resources": {
+        "poem_art_celebration/poem-art/2021": {
+          "type": "ვიდეო"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "ვიდეო"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "ვიდეო"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "ვიდეო"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "ვიდეო"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "ვიდეო"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "ვიდეო"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "ვიდეო"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "ვიდეო"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/express/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/express/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/express/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/express/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced/csd/2018": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/csd/2018": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/express/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/express/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/express/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/express/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "ლექსიკონი"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced/csd/2019": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced/csd/2017": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/csd/2017": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "ლექსიკონი"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "კოდის წარდგენა"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "ლექსიკონი"
+        },
         "exploring_apps/coursef/2021": {
           "name": "აპლიკაციების გამოკვლევა"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "ვიდეო"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "აპლიკაციების გამოკვლევა",
@@ -16,6 +462,9 @@
         "sprites_in_action/coursef/2021": {
           "name": "სპრაიტები მოქმედებაში"
         },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "ვიდეო"
+        },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
@@ -23,7 +472,8 @@
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "შეჩერდი და დაფიქრდი"
+          "name": "შეჩერდი და დაფიქრდი",
+          "type": "ვიდეო"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "ხალისი \"მიზნისთვის\" ციკლით",
@@ -43,7 +493,17 @@
           "name": "ხალისი \"მიზნისთვის\" ციკლით"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "ხალისი \"მიზნისთვის\" ციკლით"
+          "name": "ხალისი \"მიზნისთვის\" ციკლით",
+          "type": "შეფასება"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "ვიდეო"
+        },
+        "ai-training/coursef/2021": {
+          "type": "ვიდეო"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "ვიდეო"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "ინტერნეტი",
@@ -53,7 +513,8 @@
           "name": "IP მისამართებისა და მიწოდების ტიპის ბარათები"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "ინტერნეტი"
+          "name": "ინტერნეტი",
+          "type": "შეფასება"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "ინტერნეტი"
@@ -132,6 +593,9 @@
           "name": "პროგრამირება წყვილებში",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "ვიდეო"
+        },
         "happy-map-game-pieces/courseb/2021": {
           "name": "ბედნიერი რუკის თამაშის ნაწილები"
         },
@@ -143,7 +607,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "შეუჩმნეველი შეცდომები",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "ვიდეო"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "ჩაციკლვა",
@@ -155,7 +620,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "ჩაციკლვა",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "შეფასება"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "ჩაციკლვა",
@@ -167,14 +633,17 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "დიდი მოვლენა",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "ვიდეო"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "დიდი მოვლენა"
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "დიდი მოვლენა"
@@ -221,6 +690,13 @@
           "name": "პროგრამირება წყვილებში",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "ვიდეო"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ვიდეო"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "ბედნიერი რუკები"
         },
@@ -236,6 +712,12 @@
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blockly-ის ბლოკები უკომპიუტეროდ (საფეხურები K-1)"
         },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "ვიდეო"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "ვიდეო"
+        },
         "happy-map-cards-xl/coursea/2021": {
           "name": "ბედნიერი რუკის ბარათები XL"
         },
@@ -246,14 +728,16 @@
           "name": "მეტყველი სახეები"
         },
         "pair-programming/coursea/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
         },
         "csf_lesson_recommendations/coursea/2021": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
@@ -263,7 +747,8 @@
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "დიდი მოვლენა"
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "დიდი მოვლენა"
@@ -328,25 +813,39 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "პროგრამირება წყვილებში",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "მობრუნება და კუთხეები"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "დიდი მოვლენა",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "დიდი მოვლენა"
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "დიდი მოვლენა"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "ბიტი ბაიტის წინააღმდეგ",
@@ -364,7 +863,8 @@
           "name": "ორობითი სამაჯურები"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "ორობითი სამაჯურები"
+          "name": "ორობითი სამაჯურები",
+          "type": "შეფასება"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "ორობითი სამაჯურები"
@@ -422,7 +922,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "შეფასება"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
@@ -454,7 +955,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
@@ -464,7 +966,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "პირობები ბარათებით",
@@ -478,7 +981,8 @@
           "name": "პირობითი ბრძანებები ბანქოს პროგრამის ნიმუშოთ"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "პირობები ბარათებით"
+          "name": "პირობები ბარათებით",
+          "type": "შეფასება"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "პირობები ბარათებით",
@@ -524,7 +1028,21 @@
         },
         "pair_programming/express/2021": {
           "name": "პროგრამირება წყვილებში",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
+        },
+        "artist_introduction/express/2021": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "ვიდეო"
+        },
+        "turns_angles/express/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "ვიდეო"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "მობრუნება და კუთხეები"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Sprite ლაბორატორია დოკუმენტაცია",
@@ -539,13 +1057,15 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "open-ended_programming_levels/express/2021": {
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
         },
         "variables_video/express/2021": {
           "name": "ცვლადები",
@@ -579,9 +1099,16 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "მეტყველი სახეები"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "ვიდეო"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "ვიდეო"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "შეჩერდი და დაფიქრდი",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
         },
         "csta_standards_mapping/pre-express/2021": {
           "url": "https://studio.code.org/s/pre-express-2021/standards"
@@ -607,7 +1134,18 @@
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "შეჩერდი და დაფიქრდი"
+          "name": "შეჩერდი და დაფიქრდი",
+          "type": "ვიდეო"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "ვიდეო"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "სიმღერის წერა ფუნქციებით",
@@ -621,7 +1159,8 @@
           "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
+          "type": "შეფასება"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
@@ -676,6 +1215,426 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI-ს დანახვა",
+          "type": "ვიდეო"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "არეკვლა"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "ქაღალდის პროტოტიპები"
+        },
+        "design_mode/csd/2021": {
+          "name": "დიზაინის რეჟიმი"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "დიზაინის რეჟიმი"
+        },
+        "app-presentation/csd/2021": {
+          "name": "აპლიკაციის პრეზენტაცია"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "აპლიკაციის პრეზენტაცია"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "როგორ მუშაობს კომპიუტერი: აპარატული და პროგრამული უზრუნველყოფა",
+          "type": "ვიდეო"
+        },
+        "physical_input/csd/2021": {
+          "name": "ფიზიკურად შეყვანილი ინფორმაცია"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "functions_2/csd/2021": {
+          "name": "ფუნქციები"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "შესავალი მასივებში",
+          "type": "ვიდეო"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "\"მიზნისთვის\" ციკლები",
+          "type": "ვიდეო"
+        },
+        "for_loops/csd/2021": {
+          "name": "\"მიზნისთვის\" ციკლები"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "როგორ მუშაობს კომპიუტერი: სქემები და ლოგიკა",
+          "type": "ვიდეო"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "ინფორმაციის წარმოდგენა"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "რიცხვების წარმოდგენა"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "გადაწყვეტილების მიღება მონაცემებთან ერთად"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "variables_1/csd/2021": {
+          "name": "ცვლადები"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "ანიმაციის ტაბი",
+          "type": "ვიდეო"
+        },
+        "sprites_1/csd/2021": {
+          "name": "სპრაიტები"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "ხატვის ციკლი"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "სპრაიტების მოძრაობა",
+          "type": "ვიდეო"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "ბულის ტიპის გამოთქმები",
+          "type": "ვიდეო"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "პირობითი დებულებები",
+          "type": "ვიდეო"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "„თუ/სხვაგვარად“ დებულებები",
+          "type": "ვიდეო"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "velocity_1/csd/2021": {
+          "name": "სიჩქარე",
+          "type": "ვიდეო"
+        },
+        "velocity_2/csd/2021": {
+          "name": "სიჩქარე"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "collision_detection/csd/2021": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ფუნქციები",
+          "type": "ვიდეო"
+        },
+        "functions_1/csd/2021": {
+          "name": "ფუნქციები"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "რა არის კომპიუტერი?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "თანატოლის კომენტარი"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "video_debugging/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "html-web-page/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "lists/csd/2021": {
+          "name": "სიები"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "ციფრული ნაკვალევი"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "შესავალი CSS-ში - ნაწილი 1",
+          "type": "ვიდეო"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "შესავალი CSS-ში - ნაწილი 2",
+          "type": "ვიდეო"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "images_in_html/csd/2021": {
+          "name": "სურათები HTML-ში"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "ვიდეო"
+        },
+        "classes/csd/2021": {
+          "name": "კლასები"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/express/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/express/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/express/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/express/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "ლექსიკონი"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "გაკვეთილის გეგმები"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "სტანდარტული კავშირები"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "ლექსიკონი"
         }
       }
     }

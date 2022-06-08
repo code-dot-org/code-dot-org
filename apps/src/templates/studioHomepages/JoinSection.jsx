@@ -16,6 +16,7 @@ class JoinSection extends React.Component {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
     updateSectionsResult: PropTypes.func.isRequired,
+    isTeacher: PropTypes.bool,
 
     // Provided by Redux
     isRtl: PropTypes.bool
@@ -61,7 +62,7 @@ class JoinSection extends React.Component {
         const sectionName = data.sections.find(
           s => s.code === normalizedSectionCode
         ).name;
-        this.props.updateSections(data.sections);
+        this.props.updateSections(data.studentSections, data.plSections);
         this.props.updateSectionsResult(
           'join',
           data.result,
@@ -103,7 +104,11 @@ class JoinSection extends React.Component {
       >
         <div style={wordBoxStyle}>
           <div style={styles.heading}>{i18n.joinASection()}</div>
-          <div style={styles.details}>{i18n.joinSectionDescription()}</div>
+          <div style={styles.details}>
+            {this.props.isTeacher
+              ? i18n.joinSectionTeacherDescription()
+              : i18n.joinSectionDescription()}
+          </div>
         </div>
         <div style={styles.actionBox}>
           <input

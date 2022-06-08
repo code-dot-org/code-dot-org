@@ -367,6 +367,8 @@ it:
       provider_managed_section: Questa sezione è gestita da un altro provider e non
         può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider}
         e risincronizza la loro sezione.
+      not_participant_type: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché non soddisfi la tipologia di partecipante per la sezione.
     mail:
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
@@ -511,6 +513,7 @@ it:
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
+    dashboard: Cruscotto dell'Insegnante
     for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'
@@ -680,6 +683,8 @@ it:
       già ad una classe di questo insegnante.
     third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
       con un strumento di terze parti.
+    not_correct_participant_type: Non puoi spostare questi utenti perché non hanno
+      le autorizzazioni a partecipare alla nuova sezione.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -742,6 +747,7 @@ it:
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
     store: Negozio
+    cookie_notice: Informativa sui cookie
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -824,6 +830,10 @@ it:
       title: Ballando col codice
     dance-2019:
       title: Ballando col codice
+    hello-world:
+      title: Ciao Mondo
+    poem-art:
+      title: L'arte della poesia
     hoc:
       title: Labirinto Classico
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
@@ -1047,20 +1057,6 @@ it:
       potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente
       i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
-  donor_interstitial:
-    title: Questi corsi di informatica sono gratuiti grazie a...
-    subtitle: 'Ringraziamo i generosi finanziatori il cui sostegno ha reso possibile
-      il successo di Code.org. Ci impegniamo a mantenere Code.org gratuito sia per
-      le scuole sia per gli studenti, in tutto il mondo, grazie alla continua generosità
-      dei nostri [donors](%{donors_url})!
-
-'
-    local_supporters: Sostenitori locali
-    global_supporters: Sostenitori globali
-    support_codeorg_1: Ogni dollaro donato a Code.org permette di dare un'opportunità
-      a tantissimi studenti.
-    support_codeorg_2: "[Dona ora](%{donate_url}) per sostenere Code.org."
-    get_started: Inizia con Code.org
   school_info_interstitial:
     title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
       dei nostri progressi!
@@ -1351,6 +1347,7 @@ it:
         music: Musica
         art: Arte
         other: 'Altro:'
+        na: Non applicabile
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy - l'Accademia del Codice
@@ -1359,7 +1356,8 @@ it:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1369,7 +1367,8 @@ it:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Laboratorio di meraviglie
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
@@ -1451,3 +1450,4 @@ it:
     this_sprite: questo personaggio
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
+  teacher_feedback: Commento dell'insegnante

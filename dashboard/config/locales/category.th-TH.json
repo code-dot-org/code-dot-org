@@ -1,0 +1,23 @@
+{
+  "th-TH": {
+    "data": {
+      "category": {
+        "csta2011/CPP": {
+          "description": "การฝึกการคำนวณด้วยคอมพิวเตอร์และการเขียนโปรแกรม"
+        },
+        "csta2011/CT": {
+          "description": "คิดคำนวณ"
+        },
+        "ccela/L": {
+          "description": "ภาษา"
+        },
+        "csta2011/CL": {
+          "description": "การทำงานร่วมกัน"
+        },
+        "csta/IC": {
+          "description": "ผลกระทบจากการใช้คอมพิวเตอร์"
+        }
+      }
+    }
+  }
+}

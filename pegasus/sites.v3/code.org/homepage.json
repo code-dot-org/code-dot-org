@@ -1,0 +1,37 @@
+{
+  "pages": {
+    "homepage": ["csa-launch-2022"]
+  },
+
+  "banners": {
+    "csa-launch-2022": {
+      "dcdo": "csa-homepage-banner-2022",
+      "languages": ["en"],
+      "class": "csa",
+      "desktopImage": "/images/marketing/homepage-csa-background.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_csa_subhead"
+        },
+        {
+          "type": "text",
+          "text": "homepage_csa_title"
+        },
+        {
+          "type": "text",
+          "text": "homepage_csa_body"
+        },
+        {
+          "type": "image",
+          "url": "/images/marketing/homepage-csa-right.svg"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "homepage_banner_text_link",
+          "url": "/educate/csa"
+        }
+      ]
+    }
+  }
+}

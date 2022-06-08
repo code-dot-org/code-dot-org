@@ -1886,6 +1886,16 @@
           "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
           "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
           "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "ここをクリックしてプログラムが動くのを見てみよう！"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。",
+          "make_sprite": "Spriteを作成するには、ここのブロックを使用します！"
         }
       }
     }

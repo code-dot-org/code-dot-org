@@ -1561,6 +1561,28 @@
           "draw circle": {
             "name": "нацртај круг"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "моја функција"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "моја функција"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "нацртај квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "дужина"
+            }
+          }
         }
       }
     }

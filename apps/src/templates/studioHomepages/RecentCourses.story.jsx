@@ -54,6 +54,51 @@ const topCourse = {
     'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
 };
 
+const plCourses = [
+  {
+    title: 'Self Paced CSP Unit 1',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp1-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 2',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp2-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 3',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp3-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 4',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp4-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 5',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp5-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 6',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp6-2021'
+  },
+  {
+    title: 'Self Paced CSP Unit 7',
+    description: 'Self paced learning',
+    link: 'studio.code.org/s/self-paced-csp7-2021'
+  }
+];
+
+const topPlCourse = {
+  assignableName: 'Virtual PL',
+  lessonName: 'Assignment 3',
+  linkToOverview: 'http://studio.code.org/s/vpl-csd-2021',
+  linkToLesson: 'http://studio.code.org/s/vpl-csd-2021/lessons/3/levels/1'
+};
+
 export default storybook => {
   return storybook
     .storiesOf('Homepages/RecentCourses', module)
@@ -67,7 +112,6 @@ export default storybook => {
           <RecentCourses
             courses={[]}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={true}
           />
         )
@@ -80,7 +124,6 @@ export default storybook => {
           <RecentCourses
             courses={[]}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={false}
           />
         )
@@ -92,7 +135,6 @@ export default storybook => {
           <RecentCourses
             courses={courses.slice(0, 4)}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={true}
           />
         )
@@ -104,7 +146,6 @@ export default storybook => {
           <RecentCourses
             courses={courses.slice(0, 4)}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={false}
             topCourse={topCourse}
           />
@@ -117,7 +158,6 @@ export default storybook => {
           <RecentCourses
             courses={courses}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={true}
           />
         )
@@ -129,9 +169,42 @@ export default storybook => {
           <RecentCourses
             courses={courses.slice(0, 7)}
             showAllCoursesLink={true}
-            heading="My Courses"
             isTeacher={false}
             topCourse={topCourse}
+          />
+        )
+      },
+      {
+        name: 'Recent PL Courses - teacher, 4 courses ',
+        description: ` Recent Courses when the teacher has 4 PL courses.`,
+        story: () => (
+          <RecentCourses
+            courses={plCourses.slice(0, 4)}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
+          />
+        )
+      },
+      {
+        name: 'Recent PL Courses - 5 courses ',
+        description: ` Recent Courses when the 5 courses in progress.`,
+        story: () => (
+          <RecentCourses
+            courses={plCourses.slice(0, 4)}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
+            topCourse={topPlCourse}
+          />
+        )
+      },
+      {
+        name: 'Recent PL Courses - 7 courses ',
+        description: ` Recent Courses with 7 courses. Should see a View More button`,
+        story: () => (
+          <RecentCourses
+            courses={plCourses}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
           />
         )
       }

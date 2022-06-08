@@ -74,11 +74,17 @@
       "upButton"
     ],
     "short_instructions": "Add a prompt for the variable called \"color\".",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.685+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_color\\\"\"],\"cloned_from\":\"courseF_text_choice_color\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.685+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_color\\\"\"],\"cloned_from\":\"courseF_text_choice_color\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 1,
+    "variables": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

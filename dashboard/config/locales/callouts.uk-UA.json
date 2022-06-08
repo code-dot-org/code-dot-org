@@ -691,6 +691,110 @@
           "New Play Lab Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми",
           "New Play Lab Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
           "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Додай свій код тут"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
+          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
+          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
         }
       }
     }

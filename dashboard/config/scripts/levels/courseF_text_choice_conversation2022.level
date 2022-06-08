@@ -75,11 +75,16 @@
       "upButton"
     ],
     "short_instructions": "Use the `print` block to make two characters have a conversation.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:33.684+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_conversation\\\"\"],\"cloned_from\":\"courseF_text_choice_conversation\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:33.684+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_conversation\\\"\"],\"cloned_from\":\"courseF_text_choice_conversation\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

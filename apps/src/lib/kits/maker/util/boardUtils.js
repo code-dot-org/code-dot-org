@@ -5,6 +5,7 @@ import {
   MICROBIT_PID,
   MICROBIT_VID
 } from '../portScanning';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -33,3 +34,20 @@ export function detectBoardTypeFromPort(port) {
   }
   return boardType;
 }
+
+/**
+ * Determines whether the serial port is WebSerial Port. Otherwise, port is assumed to be Node SerialPort.
+ */
+export function isWebSerialPort(port) {
+  return port instanceof WebSerialPortWrapper;
+}
+
+/** @const {number} serial port transfer rate */
+export const SERIAL_BAUD = 57600;
+
+// Filter available ports to the boards we support
+export const WEB_SERIAL_FILTERS = [
+  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
+  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
+  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
+];

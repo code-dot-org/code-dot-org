@@ -17,5 +17,6 @@
   "danceFeedbackOnlyOneDancerMoved": "உங்கள் நடனக் கலைஞர்களில் ஒருவர் மட்டுமே நகர்ந்தார்.",
   "danceFeedbackNeedLead": "நீங்கள் ஒரு முன்னணி நடனக் கலைஞரை  <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> தொகுதி.",
   "danceFeedbackNeedBackup": "நீங்கள் <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\"> 10 <title name=\"COSTUME\"> \"யூனிகார்ன்\" </title> உடன் காப்பு நடனக் கலைஞர்களின் குழுவை உருவாக்க வேண்டும். </title><title name=\"LAYOUT\">\"வட்டம்\"</title> </block> </xml> தொகுதி.",
-  "danceFeedbackSetSize": "இசை தொடங்கிய பிறகு குறைந்தது ஒரு நடனக் கலைஞரின் அளவை நீங்கள் மாற்ற வேண்டும்."
+  "danceFeedbackSetSize": "இசை தொடங்கிய பிறகு குறைந்தது ஒரு நடனக் கலைஞரின் அளவை நீங்கள் மாற்ற வேண்டும்.",
+  "measure": "அளவை:"
 }

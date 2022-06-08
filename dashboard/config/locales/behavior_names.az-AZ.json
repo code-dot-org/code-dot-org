@@ -3294,6 +3294,32 @@
           "moving east and looping": "şərqə doğru döngə hərəkəti",
           "moving north and looping": "şimala doğru hərəkət və döngə",
           "moving south and looping": "cənuba doğru hərəkət və döngü"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "sola və sağa üzmək",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "growing": "böyüyən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət",
+          "spinning right": "sağa fırlanır"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "sola və sağa üzmək",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "growing": "böyüyən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət",
+          "spinning right": "sağa fırlanır"
         }
       }
     }

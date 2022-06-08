@@ -12,7 +12,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -71,11 +71,16 @@
     "instructions_icon": "drmonster",
     "video_key": "outbreak_outro",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:41.889+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak8\\\"\"],\"cloned_from\":\"CourseF_outbreak8\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:41.889+00:00\",\"changed\":[\"cloned from \\\"CourseF_outbreak8\\\"\"],\"cloned_from\":\"CourseF_outbreak8\"},{\"changed_at\":\"2022-01-18 14:35:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 15:33:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -580,7 +585,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the right across the screen</description>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -602,7 +607,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its left</description>
           </mutation>
-          <title name="NAME">spinning left</title>
+          <title name="NAME" id="spinning left">spinning left</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"left"</title>
@@ -624,7 +629,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its right</description>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>
@@ -690,7 +695,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite downwards across the screen</description>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -835,7 +840,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite upwards across the screen</description>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -888,7 +893,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the left across the screen</description>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
@@ -967,7 +972,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">moving with arrow keys</title>
+          <title name="NAME" id="moving with arrow keys">moving with arrow keys</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
@@ -1073,43 +1078,43 @@
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#99ff99</title>
+                <field name="COLOUR">#99ff99</field>
               </block>
             </value>
           </block>
           <block type="gamelab_printText">
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="gamelab_textJoin">
-            <title name="TEXT1"/>
+            <field name="TEXT1"/>
           </block>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNumSprites">
-            <title name="ANIMATION_NAME">"healthy"</title>
+            <field name="ANIMATION_NAME">"healthy"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <title name="PROPERTY" config="&quot;scale&quot;, &quot;rotation&quot;, &quot;x&quot;, &quot;y&quot;, &quot;direction&quot;, &quot;recovery&quot;">"scale"</title>
+            <field name="PROPERTY" config="&quot;scale&quot;, &quot;rotation&quot;, &quot;x&quot;, &quot;y&quot;, &quot;direction&quot;, &quot;recovery&quot;">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_getAllSprites"/>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">50</title>
+                <field name="NUM">50</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"healthy"</title>
+            <field name="ANIMATION">"healthy"</field>
           </block>
         </category>
         <category name="Behaviors">
@@ -1120,78 +1125,78 @@
             <value name="BEHAVIOR">
               <block type="gamelab_behavior_get">
                 <mutation/>
-                <title name="VAR" id="wandering">wandering</title>
+                <field name="VAR" id="wandering">wandering</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
           <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"healthy_mask"</title>
+                <field name="ANIMATION">"healthy_mask"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"sick"</title>
+                <field name="ANIMATION">"sick"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"healthy"</title>
+                <field name="ANIMATION">"healthy"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+            <field name="UNIT">"seconds"</field>
             <value name="N">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
           <block type="gamelab_repeatForever"/>
         </category>
-        <category name="Logic">
+        <category name="Conditionals">
           <block type="gamelab_withPercentChanceDropdown">
-            <title name="NUM" config="90,75,25,10">90</title>
+            <field name="NUM" config="90,75,25,10">90</field>
           </block>
           <block type="gamelab_withPercentChance">
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <field name="NUM">90</field>
               </block>
             </value>
           </block>
           <block type="controls_if"/>
           <block type="logic_operation">
-            <title name="OP">AND</title>
+            <field name="OP">AND</field>
           </block>
           <block type="logic_compare">
-            <title name="OP">EQ</title>
+            <field name="OP">EQ</field>
           </block>
         </category>
         <category name="Math">
           <block type="math_number">
-            <title name="NUM">0</title>
+            <field name="NUM">0</field>
           </block>
           <block type="gamelab_countByAnimation">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"sick"</title>
+                <field name="ANIMATION">"sick"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_getTime">
-            <title name="UNIT">"seconds"</title>
+            <field name="UNIT">"seconds"</field>
           </block>
           <block type="math_arithmetic">
-            <title name="OP">ADD</title>
+            <field name="OP">ADD</field>
           </block>
         </category>
       </xml>

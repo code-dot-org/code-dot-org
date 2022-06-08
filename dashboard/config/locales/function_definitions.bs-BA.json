@@ -1962,6 +1962,18 @@
               "binary": "binarno"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "dužina"
+            }
+          }
         }
       }
     }
