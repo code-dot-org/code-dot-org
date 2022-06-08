@@ -780,12 +780,8 @@ class JavalabEditor extends React.Component {
             <Tab.Content id="tab-content" animation={false}>
               {hasOpenCodeReview && isViewingOwnProject && (
                 <div
-                  id="notStartedBanner"
-                  style={{
-                    ...styles.studentNotStartedWarning,
-                    ...(displayTheme === DisplayTheme.DARK &&
-                      styles.darkThemeWarningText)
-                  }}
+                  id="openCodeReviewWarningBanner"
+                  style={styles.openCodeReviewWarningBanner}
                 >
                   hey how are ya
                 </div>
@@ -904,7 +900,7 @@ const styles = {
     float: 'left',
     overflow: 'visible'
   },
-  studentNotStartedWarning: {
+  openCodeReviewWarningBanner: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
     height: 20,
