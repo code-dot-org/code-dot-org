@@ -105,6 +105,7 @@ class JavalabEditor extends React.Component {
     isEditingStartSources: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     hasOpenCodeReview: PropTypes.bool,
+    isViewingOwnProject: PropTypes.bool,
     backpackEnabled: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
@@ -634,6 +635,7 @@ class JavalabEditor extends React.Component {
       isEditingStartSources,
       isReadOnlyWorkspace,
       hasOpenCodeReview,
+      isViewingOwnProject,
       showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
@@ -776,10 +778,14 @@ class JavalabEditor extends React.Component {
               />
             </div>
             <Tab.Content id="tab-content" animation={false}>
-              {hasOpenCodeReview && (
+              {hasOpenCodeReview && isViewingOwnProject && (
                 <div
                   id="notStartedBanner"
-                  style={styles.studentNotStartedWarning}
+                  style={{
+                    ...styles.studentNotStartedWarning,
+                    ...(displayTheme === DisplayTheme.DARK &&
+                      styles.darkThemeWarningText)
+                  }}
                 >
                   hey how are ya
                 </div>
@@ -905,7 +911,8 @@ const styles = {
     padding: 5,
     opacity: 0.9,
     position: 'absolute',
-    width: '100%'
+    width: '100%',
+    color: color.black
   }
 };
 
@@ -917,6 +924,7 @@ export default connect(
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
+    isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     backpackEnabled: state.javalab.backpackEnabled,
     showProjectTemplateWorkspaceIcon:
       !!state.pageConstants.isProjectTemplateLevel &&
