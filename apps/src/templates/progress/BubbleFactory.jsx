@@ -213,7 +213,7 @@ export function getBubbleUrl(
   const params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
-  //queryParamsToExclude.forEach(param => delete params[param]);
+  queryParamsToExclude.forEach(param => delete params[param]);
   if (sectionId) {
     params.section_id = sectionId;
   }
