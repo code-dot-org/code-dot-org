@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:41:46 UTC",
+    "serialized_at": "2022-06-07 17:59:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -557,7 +557,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6f73ae3d-c63a-42a6-b584-86824bb799c3",
