@@ -30,6 +30,7 @@ const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
+const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
 
 // Exported for test
 export const initialState = {
@@ -60,7 +61,8 @@ export const initialState = {
   isVisualizationCollapsed: false,
   isPhotoPrompterOpen: false,
   photoPrompterPromptText: '',
-  isReadOnlyWorkspace: false
+  isReadOnlyWorkspace: false,
+  hasOpenCodeReview: false
 };
 
 // Action Creators
@@ -270,6 +272,11 @@ export const setIsReadOnlyWorkspace = isReadOnlyWorkspace => ({
   isReadOnlyWorkspace
 });
 
+export const setHasOpenCodeReview = hasOpenCodeReview => ({
+  type: SET_HAS_OPEN_CODE_REVIEW,
+  hasOpenCodeReview
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -469,6 +476,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isReadOnlyWorkspace: action.isReadOnlyWorkspace
+    };
+  }
+  if (action.type === SET_HAS_OPEN_CODE_REVIEW) {
+    return {
+      ...state,
+      hasOpenCodeReview: action.hasOpenCodeReview
     };
   }
   return state;
