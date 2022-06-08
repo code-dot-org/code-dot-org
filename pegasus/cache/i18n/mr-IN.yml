@@ -1,6 +1,7 @@
 ---
 mr-IN:
   hour_of_code: अवर ऑफ कोड
+  hello: हॅलो वर्ल्ड
   'yes': होय
   'no': नाही
   select_language: कृपया आपली भाषा निवडा
@@ -14,11 +15,14 @@ mr-IN:
   petition_message: प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी
     मिळाली पाहिजे
   name: नाव
+  email: ईमेल
   zipcode: पोस्टल क्रमांक
   twentyhours_heading: संगणक शास्त्राशी ओळख करून पहा
   twentyhours_text: "'आवर ऑफ कोड' चा पहिला भाग संपला ? आमच्या पुढच्या आभ्यास्क्रमामध्ये
     संगणक शास्त्र आणि प्रोग्रामिंग च्या अजून संकल्पना शिका."
   csedweek_map_search_reset: रिसेट करा
+  cded_sign_up: साइन अप करा
+  try_now: आता वापरून पहा
   write_your_first_program: तुमचा पहिला कॉम्प्युटर प्रोग्रॅम लिहा
   third_party_gradelevel_kto8: इयत्ता बालवाडी-8
   third_party_gradelevel_kto2: इयत्ता बालवाडी-2
@@ -30,6 +34,7 @@ mr-IN:
   support_url: http://support.code.org/
   country: देश
   city: शहर
+  gender: 'लिंग '
   boys: मुले
   girls: मुली
   give_my_hour: 'तुमचा एक तास द्या:'
@@ -48,6 +53,7 @@ mr-IN:
   studiobar_donate_body: "- निवड करा -"
   homepage_slot_text_frozen: अॅना आणि एल्सासह फ्रोझन
   homepage_slot_text_flappy: फ्लॅपी कोड
+  homepage_action_text_sign_up: साइन अप करा
   homepage_action_text_girlvideo: एका मुलीला प्रोत्साहन द्या
   homepage_slot_text_title_hoc: अवर ऑफ कोड
   homepage_slot_text_link_hoc: अवर ऑफ कोड करून पहा
@@ -111,24 +117,41 @@ mr-IN:
   video_5min: 5 मिनिटे
   no_internet: इंटरनेट नाहीये का?
   download_offline: 'ऑफलाईन व्हर्जन डाऊनलोड करा '
+  are_you_teacher: तुम्ही शिक्षक आहात का?
   volunteer_engineer_submission_field_name: नाव
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: वर्णन
+  volunteer_engineer_submission_field_email: ईमेल पत्ता
+  volunteer_engineer_submission_field_email_placeholder: ईमेल पत्ता
   volunteer_engineer_submission_field_email_preference_privacy: "(आमचे गोपनीयता धोरण
     पाहा)"
   volunteer_engineer_submission_field_email_preference_yes: होय
   volunteer_engineer_submission_field_email_preference_no: नाही
+  petition_age: वय
+  dashboard_landing_print_certificates: हा अभ्यासक्रम पूर्ण करणार्‍या विद्यार्थ्यांचे
+    प्रमाणपत्र प्रिंट करा
+  dashboard_landing_educator_blog: आमच्या एज्युकेटर ब्लॉगवर आमच्या सामग्रीच्या बातम्या
+    आणि अपडेट्सबद्दल वाचा
+  dashboard_landing_video_player: तुमच्या शाळेत आमच्या नवीन व्हिडिओ प्लेयरची चाचणी
+    घ्या
   dashboard_action_cancel: रद्द करा
   dashboard_action_delete_yes: होय
   dashboard_action_delete_no: नाही
   dashboard_navigation_section_community: सहाय्य
   dashboard_sections_close: Band
   dashboard_students_name: नाव
+  dashboard_students_male: पुरुष
+  dashboard_students_female: महिला
   dashboard_pre-express: 'वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम: '
   dashboard_overview: आढावा
   dashboard_debugging: 'डीबगिंग:'
+  dashboard_login_none: ईमेल
+  dashboard_stage: स्टेज
+  dashboard_puzzle: 'कोडे '
   dashboard_student: विध्यार्थी
+  learn_more: आता वापरून पहा
+  learn_sign_up_button: साइन अप करा
   hoc2014_try_frozen: फ्रोझनमधील अॅना आणि एल्सासह आर्टीस्ट
   frozen_name: अॅना आणि एल्साबरोबर कोड लिहा
   starwars_name: 'स्टार वॉर्स: कोड वापरून एक आकाशगंगा तयार करा'
@@ -322,16 +345,39 @@ mr-IN:
   mozilla_beyond_gradelevel: वय वर्षे 12+
   flappy_shortcode: फ्लॅप
   header_my_dashboard: माझा डॅशबोर्ड
+  header_courses: अभ्यासक्रम
   header_course_catalog: अभ्यासक्रमाचा कॅटलॉग
   header_project_gallery: प्रकल्प
   header_professional_learning: व्यावसायिक अध्ययन
   header_educate_hoc: अवर ऑफ कोड
+  header_educate_partner: आमच्यासोबत भागीदारी करा
+  header_educate_beyond: Code.org पलीकडे
+  header_educate_inspire: विद्यार्थ्याला प्रेरित करा
+  header_educate_community: ऑनलाइन समुदाय
   header_educate_requirements: तांत्रिक आवश्यकता
+  header_educate_tools: टूल्स आणि व्हिडिओ
+  header_about_us: आमच्याविषयी
+  header_about_leadership: 'नेतृत्व '
+  header_about_donors: देणगीदार
+  header_about_partners: भागीदार
+  header_about_team: पूर्ण टीम
+  header_about_news: न्यूजरूम
+  header_about_evaluation: मूल्यमापन
+  header_about_jobs: कारकीर्द
+  header_about_contact: आमच्याशी संपर्क साधा
+  header_about_faqs: वारंवार विचारले जाणारे प्रश्न
+  header_learn: शिका
+  header_teach: शिकवा
+  header_help_us: मदत करा
   header_about: या बद्दल
   header_help_support: 'सहाय्य आणि मदत '
   header_report_bug: समस्या रिपोर्ट करा
   header_legal_privacy: गोपनीयता धोरण
   header_legal_tos: सेवेच्या अटी
+  user_header_label: नमस्कार %{username}
+  user_header_team: संघ
+  user_header_settings: खाते सेटिंग्ज
+  user_header_logout: साइन आउट करा
   user_header_signin: साइन इन करा
   user_header_create: 'बनवा '
   user_header_artist: आर्टीस्ट
@@ -344,6 +390,10 @@ mr-IN:
     पातळीला न्या. (फक्त इंग्रजी)    '
   applab_tile_start_tutorial: सुरुवात
   applab_tile_teacher_guide: शिक्षक मार्गदर्शक पहा
+  account_sign_up_email_opt_in: आम्ही तुम्हाला आमच्या कोर्सेस, स्थानिक संधी किंवा
+    इतर संगणक विज्ञान बातम्यांबद्दल ईमेल करू शकतो? (अंदाजे महिन्यातून एकदा)
+  account_sign_up_child_accept_terms: Code.org सेवा वापरण्यासाठी माझ्याकडे माझ्या
+    पालकांची किंवा कायदेशीर पालकांची परवानगी असल्याची मी पुष्टी करतो.
   hoc_overview_dance_title: डांस पार्टी
   hoc_overview_dance_subtitle: तुमच्या मित्रमैत्रिणींबरोबर शेअर करण्यासाठी एका डान्स
     पार्टीचा कोड लिहा. यामध्ये सहभागी असतील केटी पेरी, मॅडोना, जे. बाल्विन, सिया,
@@ -493,6 +543,7 @@ mr-IN:
   codebytes_skinny_banner_english_only: फक्त-इंग्रजी
   footer_privacy_policy: गोपनीयता धोरण
   footer_about: या बद्दल
+  footer_partners: भागीदार
   footer_support: सहाय्य
   ai_for_oceans: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   ai_for_oceans_lesson_plan: धड्याचा प्लॅन

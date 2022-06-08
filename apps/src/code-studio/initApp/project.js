@@ -100,6 +100,7 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
+let fetchChannelResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -499,6 +500,10 @@ var projects = (module.exports = {
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
+  },
+
+  channelNotFound() {
+    return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
   },
 
   __TestInterface: {
@@ -1691,20 +1696,9 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          if (err.message.includes('error: Not Found')) {
-            // Project not found. Redirect to the most recent project of this
-            // type, or a new project of this type if none exists.
-            const newPath = utils
-              .currentLocation()
-              .pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
-            utils.navigateToHref(newPath);
-          }
-          // Reject even after navigation, to allow unit tests which stub
-          // navigateToHref to confirm that navigation has happened.
           return Promise.reject(err);
         })
+
         .then(this.fetchSource.bind(this))
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
@@ -1824,9 +1818,10 @@ var projects = (module.exports = {
    */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) =>
-        err ? reject(err) : resolve(data)
-      );
+      channels.fetch(channelId, (err, data, jqXhr, response) => {
+        fetchChannelResponseCode = response?.status;
+        err ? reject(err) : resolve(data);
+      });
     }).catch(err => {
       this.logError_(
         'load-channel-error',
