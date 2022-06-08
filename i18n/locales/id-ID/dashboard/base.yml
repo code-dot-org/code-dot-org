@@ -1070,6 +1070,7 @@ id:
         music: 'Musik'
         art: 'Seni'
         other: "Lainnya:"
+        na: 'Tidak dapat diterapkan'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1079,7 +1080,8 @@ id:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Lainnya:"
+        other: "Lain"
+        na: 'Tidak dapat diterapkan'
       robotics:
         grok: 'Pembelajaran Grok'
         kodable: 'Kodable'
@@ -1089,7 +1091,8 @@ id:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Lainnya:"
+        other: "Lain"
+        na: 'Tidak dapat diterapkan'
       workshop_course:
         csf_af: 'CS Fundamentals (Kursus A-F)'
         csf_express: 'CS Fundamentals (Praekspres atau Ekspres)'

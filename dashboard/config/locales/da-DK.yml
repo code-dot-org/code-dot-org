@@ -1091,12 +1091,15 @@ da:
         math: Matematik
         science: Videnskab
         la: Sprog kunst
+        other: Andre
       resources:
         bootstrap: Bootstrap
         khan: Khan Academy
         kodable: Kodable
+        other: Andre
       robotics:
         kodable: Kodable
+        other: Andre
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej

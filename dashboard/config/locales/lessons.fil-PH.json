@@ -103,8 +103,10 @@
           "student_overview": "Sa ilang mga punto, naabot natin ang pisikal na limitasyon kung gaano tayo kabilis makapagpadala ng mga bit at kung gusto nating magpadala ng malaking impormasyon nang mas mabilis, kailangan nating maghanap ng paraan upang kumatawan sa parehong impormasyon na may mas kaunting mga bit - dapat nating i-compress ang data."
         },
         "outbreak/Outbreak": {
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
-          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo."
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
+          "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
         },
         "sports/Sports": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
@@ -125,6 +127,7 @@
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
         },
         "oceans/Oceans": {
+          "name": "AI para sa mga Karagatan  ",
           "overview": "Sa araling ito, nakakakuha ang mga mag-aaral sa lahat ng edad ng panimulang karanasan sa coding at computer science sa isang ligtas at sumusuportang kapaligiran. Una, inuuri ng mga mag-aaral ang mga bagay bilang alinman sa \"isda\" o \"hindi isda\" upang subukang alisin ang mga basura mula sa karagatan. Pagkatapos, kakailanganin ng mga mag-aaral na palawakin ang kanilang set ng data ng pagsasanay upang maisama ang iba pang nilalang sa dagat. Sa ikalawang bahagi ng aktibidad, pipili ang mga mag-aaral ng kanilang sariling mga label na ilalapat sa mga larawan ng random na nabuong isda. Ginagamit ang data ng pagsasanay na ito sa isang modelo ng machine learning na makapag-label ng mga bagong larawan nang mag-isa."
         },
         "poetry-hoc3/lesson-1": {
@@ -2177,7 +2180,8 @@
           "name": "Jigsaw",
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Suriin ang website ng [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para sa higit pang nilalamang pangkaligtasan sa online.",
-          "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device."
+          "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
         },
         "coursef-2021/Virtual Pet": {
           "name": "Mini-Project: Virtual na Alaga",
@@ -2222,8 +2226,10 @@
         },
         "coursef-2021/lesson-5": {
           "name": "Pagsiklab",
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
-          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo."
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
+          "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
         },
         "coursef-2021/Internet": {
           "name": "The Internet",
@@ -2250,7 +2256,8 @@
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Matutong Mag-Drag at Mag-Drop",
-          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Happy Maps",
@@ -2428,7 +2435,8 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Matutong Mag-Drag at Mag-Drop",
-          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
@@ -2899,6 +2907,9 @@
         },
         "coursef-2020/Envelope Variables": {
           "name": "Balot ng mga Variables"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "AI para sa mga Karagatan  "
         },
         "coursef-2020/Internet": {
           "name": "The Internet"

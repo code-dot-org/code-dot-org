@@ -317,6 +317,11 @@ ur:
         math: ریاضی
         science: سائنس
         la: لسانی آرٹس
+        other: دیگر
+      resources:
+        other: دیگر
+      robotics:
+        other: دیگر
       workshop_course:
         csf_express: CS بنیادی اصول (پری ایکسپریس یا ایکسپریس)
       email_opt_in:
