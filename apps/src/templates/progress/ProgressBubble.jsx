@@ -16,7 +16,10 @@ import {levelProgressStyle} from './progressStyles';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from './BubbleBadge';
 import i18n from '@cdo/locale';
-import {SHOW_REVIEW_TAB_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
+
+// Duplicated in CommitsAndReviewTab because of import issue,
+// update there as well if changed.
+const URL_PARAMS_TO_EXCLUDE = ['showReviewTab'];
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -59,9 +62,13 @@ export default class ProgressBubble extends React.Component {
     const {onClick, level, selectedSectionId, selectedStudentId} = this.props;
     return onClick
       ? null
-      : getBubbleUrl(level.url, selectedStudentId, selectedSectionId, true, [
-          SHOW_REVIEW_TAB_URL_PARAM
-        ]);
+      : getBubbleUrl(
+          level.url,
+          selectedStudentId,
+          selectedSectionId,
+          true,
+          URL_PARAMS_TO_EXCLUDE
+        );
   }
 
   renderBubbleBadge(bubbleShape, bubbleSize) {
