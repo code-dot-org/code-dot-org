@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobilne Safari 11.x</td>
         </tr>
         <tr>
           <td>Edge 87.x</td>
@@ -95,17 +95,17 @@ Nasze zajęcia w ramach Godziny Kodowania i kursy Podstaw Informatyki można uko
 
 ## Filmy
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.org i naszej [platformie edukacyjnej online](https://studio.code.org). W przypadku szkół z zablokowanym YouTube próbujemy zamiast tego wyświetlić odtwarzacz wideo hostowany na Code.org.
 
 ### Czy możesz odtworzyć ten film?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-Jest to odtwarzacz używany w całym programie nauczania. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
 
-### Video not playing?
+### Film się nie odtwarza?
 
 Jeśli wideo nie działa, możesz wysłać do nas e-mail na adres support@code.org.
 
@@ -119,7 +119,7 @@ Jednak nadal możesz korzystać z naszych samouczków bez wideo.
 
 ## Specjalne ustawienia dla użytkowników Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. Zapoznaj się z [tym przewodnikiem](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do zatwierdzonej listy. Możesz też zapoznać się z [tym przewodnikiem](https://support.google.com/a/answer/6212415?hl=pl), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
 
 ## Czy nadal masz problemy?
 
