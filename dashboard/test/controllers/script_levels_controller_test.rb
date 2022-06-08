@@ -2100,7 +2100,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
-  test "lesson extras shows instructor progress for participant if section and user id" do
+  test "lesson extras shows progress to instructor for participant if section and user id" do
     sign_in @facilitator
     pl_course = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     lesson_group = create(:lesson_group, script: pl_course)
