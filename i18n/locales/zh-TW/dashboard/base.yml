@@ -1072,6 +1072,7 @@ zh-TW:
         music: '音樂'
         art: '藝術'
         other: "其它："
+        na: '不適用'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1080,7 +1081,8 @@ zh-TW:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "其它："
+        other: "其它"
+        na: '不適用'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1090,7 +1092,8 @@ zh-TW:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "其它："
+        other: "其它"
+        na: '不適用'
       workshop_course:
         csf_af: '計算機科學基本原理（課程 A-F）'
         csf_express: '計算機科學基礎（速學先修或速學）'
