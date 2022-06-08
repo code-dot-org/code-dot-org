@@ -12,7 +12,7 @@ import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
 import ReviewNavigator from './codeReview/ReviewNavigator';
 import Button from '@cdo/apps/templates/Button';
 
-export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
+export const SHOW_REVIEW_TAB_URL_PARAM = 'showReviewTab';
 
 const FLASH_ERROR_TIME_MS = 5000;
 

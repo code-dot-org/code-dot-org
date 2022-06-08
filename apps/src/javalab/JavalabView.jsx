@@ -19,7 +19,6 @@ import TopInstructions, {
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 import {SHOW_REVIEW_TAB_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
@@ -181,18 +180,6 @@ class JavalabView extends React.Component {
     );
   };
 
-  // TO DO: simplify back to inline ternary when switching to code review V2
-  // https://codedotorg.atlassian.net/browse/LP-2315
-  getSelectedInstructionsTab = () => {
-    if (queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true') {
-      return TabType.REVIEW;
-    } else if (queryParams(SHOW_REVIEW_TAB_URL_PARAM) === 'true') {
-      return TabType.REVIEW_V2;
-    } else {
-      return null;
-    }
-  };
-
   render() {
     const {
       displayTheme,
@@ -240,7 +227,13 @@ class JavalabView extends React.Component {
                   experiments.JAVALAB_DOCUMENTATION
                 )}
                 displayReviewTab
-                initialSelectedTab={this.getSelectedInstructionsTab()}
+                initialSelectedTab={
+                  queryParams(SHOW_REVIEW_TAB_URL_PARAM) === 'true'
+                    ? experiments.isEnabled('code_review_v2')
+                      ? TabType.REVIEW_V2
+                      : TabType.REVIEW
+                    : null
+                }
                 explicitHeight={height}
                 resizable={false}
               />
