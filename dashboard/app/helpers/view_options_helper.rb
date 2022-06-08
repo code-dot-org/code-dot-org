@@ -45,6 +45,7 @@ module ViewOptionsHelper
     :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
+    :has_open_code_review
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

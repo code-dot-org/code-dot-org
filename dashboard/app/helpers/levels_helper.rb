@@ -209,6 +209,7 @@ module LevelsHelper
           false
       )
       # readonly if viewing another user's channel or a code review is open for that project
+      view_options(has_open_code_review: true) if CodeReview.open_for_project?(channel: channel)
       readonly_view_options if @user || CodeReview.open_for_project?(channel: channel)
     end
 
