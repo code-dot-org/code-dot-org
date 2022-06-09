@@ -71,10 +71,10 @@ const PetitionForm = ({tutorial}) => {
     };
 
     $.ajax({
-      url: pegasus('/forms/Petition'),
+      url: '/v2/forms/Petition',
       type: 'post',
-      dataType: 'json',
-      data: data
+      contentType: 'application/json; charset=UTF-8',
+      data: JSON.stringify(data)
     })
       .done(handleSuccessfulSubmit)
       .fail(handleFailedSubmit);
