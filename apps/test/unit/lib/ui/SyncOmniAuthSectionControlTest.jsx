@@ -79,16 +79,18 @@ describe('SyncOmniAuthSectionControl', () => {
     expect(wrapper2).to.be.blank();
   });
 
-  it('renders nothing if no section code is given', () => {
+  it('renders error dialog if no section code is given', () => {
     // This usually means we're still async-loading section data
     const wrapper = shallow(
       <SyncOmniAuthSectionControl {...defaultProps} sectionCode={null} />
     );
-    expect(wrapper).to.be.blank();
+    expect(wrapper).to.containMatchingElement(
+      <SyncOmniAuthSectionButton provider={defaultProps.sectionProvider} />
+    );
   });
 
   it('calls updateRoster when clicked', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     expect(updateRoster).to.have.been.calledOnce;
   });
@@ -112,7 +114,7 @@ describe('SyncOmniAuthSectionControl', () => {
   });
 
   it('goes into an in-progress state when clicked', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     expect(wrapper).to.containMatchingElement(
       <SyncOmniAuthSectionButton
@@ -123,7 +125,7 @@ describe('SyncOmniAuthSectionControl', () => {
   });
 
   it('does not respond to clicks in the in-progress state', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
       'buttonState',
@@ -138,7 +140,7 @@ describe('SyncOmniAuthSectionControl', () => {
   });
 
   it('goes into a success state when sync succeeds', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
       expect(wrapper).to.containMatchingElement(
@@ -151,34 +153,15 @@ describe('SyncOmniAuthSectionControl', () => {
   });
 
   it('reloads the page when sync succeeds', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
       expect(utils.reload).to.have.been.calledOnce;
     });
   });
 
-  it('does not respond to clicks in the success state', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
-    wrapper.simulate('click');
-    return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        SUCCESS
-      );
-
-      // Now that we're in a success state, test that we stay
-      // in it on click!
-      wrapper.simulate('click');
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        SUCCESS
-      );
-    });
-  });
-
-  it('goes into a failure state when sync fails', () => {
-    const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
+  it('goes into a ready state when sync fails', () => {
+    const wrapper = shallow(<SyncOmniAuthSectionButton {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncFails()).to.be.rejected.then(() => {
       expect(wrapper).to.containMatchingElement(
