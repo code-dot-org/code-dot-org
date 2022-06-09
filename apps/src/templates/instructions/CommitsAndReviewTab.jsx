@@ -92,8 +92,7 @@ const CommitsAndReviewTab = props => {
       });
       onSuccess();
     } catch (err) {
-      console.log(err);
-      onFailure();
+      onFailure(err);
     }
   };
 
