@@ -62,13 +62,14 @@ const CommitsAndReviewTab = props => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
       setTimelineData(timelineData);
       setOpenReviewData(openReview);
+      setHasOpenCodeReview(!!openReview);
       setTimelineLoadingError(false);
     } catch (err) {
       console.log(err);
       setTimelineLoadingError(true);
     }
     setIsLoadingTimelineData(false);
-  }, [dataApi]);
+  }, [dataApi, setHasOpenCodeReview]);
 
   const loadPeers = async (onSuccess, onFailure) => {
     try {
