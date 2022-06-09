@@ -34,6 +34,7 @@ import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
+import {hasQueryParam} from '@cdo/apps/code-studio/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import {getDefaultFileContents} from './JavalabFileHelper';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
@@ -643,6 +644,12 @@ class JavalabEditor extends React.Component {
       backpackEnabled
     } = this.props;
 
+    const showOpenCodeReviewWarning =
+      isReadOnlyWorkspace &&
+      hasOpenCodeReview &&
+      isViewingOwnProject &&
+      !hasQueryParam('version');
+
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
       position: 'fixed',
@@ -778,7 +785,7 @@ class JavalabEditor extends React.Component {
               />
             </div>
             <Tab.Content id="tab-content" animation={false}>
-              {isReadOnlyWorkspace && hasOpenCodeReview && isViewingOwnProject && (
+              {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
                   style={styles.openCodeReviewWarningBanner}
