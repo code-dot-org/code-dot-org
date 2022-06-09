@@ -31,6 +31,7 @@ const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_IS_READONLY_WORKSPACE = 'javalab/SET_IS_READONLY_WORKSPACE';
 const SET_HAS_OPEN_CODE_REVIEW = 'javalab/SET_HAS_OPEN_CODE_REVIEW';
+const SET_COMMIT_SAVE_STATUS = 'javalab/SET_COMMIT_SAVE_STATUS';
 
 // Exported for test
 export const initialState = {
@@ -62,7 +63,9 @@ export const initialState = {
   isPhotoPrompterOpen: false,
   photoPrompterPromptText: '',
   isReadOnlyWorkspace: false,
-  hasOpenCodeReview: false
+  hasOpenCodeReview: false,
+  isCommitSaveInProgress: false,
+  hasCommitSaveError: false
 };
 
 // Action Creators
@@ -277,6 +280,15 @@ export const setHasOpenCodeReview = hasOpenCodeReview => ({
   hasOpenCodeReview
 });
 
+export const setCommitSaveStatus = (
+  isCommitSaveInProgress,
+  hasCommitSaveError
+) => ({
+  type: SET_COMMIT_SAVE_STATUS,
+  isCommitSaveInProgress,
+  hasCommitSaveError
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -482,6 +494,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       hasOpenCodeReview: action.hasOpenCodeReview
+    };
+  }
+  if (action.type === SET_COMMIT_SAVE_STATUS) {
+    return {
+      ...state,
+      isCommitSaveInProgress: action.isCommitSaveInProgress,
+      hasCommitSaveError: action.hasCommitSaveError
     };
   }
   return state;
