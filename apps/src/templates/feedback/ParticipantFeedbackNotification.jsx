@@ -6,7 +6,8 @@ import $ from 'jquery';
 
 export default class ParticipantFeedbackNotification extends Component {
   static propTypes = {
-    studentId: PropTypes.number.isRequired
+    studentId: PropTypes.number.isRequired,
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   constructor(props) {
@@ -42,7 +43,11 @@ export default class ParticipantFeedbackNotification extends Component {
     return (
       <Notification
         type={NotificationType.feedback}
-        notice={i18n.feedbackNotification()}
+        notice={
+          this.props.isProfessionalLearningCourse
+            ? i18n.feedbackNotificationInstructor()
+            : i18n.feedbackNotification()
+        }
         details={notificationDetails}
         buttonText={i18n.feedbackNotificationButton()}
         buttonLink="/feedback"
