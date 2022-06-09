@@ -2058,7 +2058,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows instructor no progress if no section and user id" do
     sign_in @facilitator
-    pl_course = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     lesson_group = create(:lesson_group, script: pl_course)
     lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: pl_course
@@ -2102,7 +2102,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows progress to instructor for participant if section and user id" do
     sign_in @facilitator
-    pl_course = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     lesson_group = create(:lesson_group, script: pl_course)
     lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: pl_course
@@ -2127,7 +2127,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "lesson extras does not show teacher participant in pl course progress for participant even if section and user id" do
     teacher2 = create :teacher
     sign_in @teacher
-    pl_course = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     lesson_group = create(:lesson_group, script: pl_course)
     lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: pl_course
