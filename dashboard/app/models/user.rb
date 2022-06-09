@@ -1805,7 +1805,7 @@ class User < ApplicationRecord
   end
 
   def visible_scripts
-    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    scripts.map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
