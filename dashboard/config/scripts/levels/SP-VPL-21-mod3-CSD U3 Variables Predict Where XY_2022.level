@@ -52,9 +52,9 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/self-paced-pl-csd3-2022/guides/variables",
-      "/courses/self-paced-pl-csd3-2022/guides/drawing-shapes",
-      "/courses/self-paced-pl-csd3-2022/guides/shapes-and-parameters"
+      "/courses/self-paced-pl-csd-2022/guides/variables",
+      "/courses/self-paced-pl-csd-2022/guides/drawing-shapes",
+      "/courses/self-paced-pl-csd-2022/guides/shapes-and-parameters"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
