@@ -9,6 +9,7 @@ export default function Congrats(props) {
   /**
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
    * @returns {string} The category type the specific tutorial belongs to i.e. 'dance', 'applab', etc
+   * adding a sample comment
    */
   const getTutorialType = tutorial =>
     ({
