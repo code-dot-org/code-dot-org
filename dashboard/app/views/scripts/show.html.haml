@@ -14,7 +14,7 @@
 = render partial: 'shared/check_admin'
 = render partial: 'shared/emulate_print_media'
 
-- if @current_user.try(:script_hidden?, @script)
+- if @current_user.try(:unit_hidden?, @script)
   = render partial: 'hidden_script'
 - else
   #landingpage

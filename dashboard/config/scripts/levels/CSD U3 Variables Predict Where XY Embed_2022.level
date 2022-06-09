@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-03-30T23:39:00.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "long_instructions": "# Predict\r\n\r\nIn which corner of the screen will the circle be drawn?\r\n\r\n_Hint: Click the \"Show grid\" box to help you find the exact coordinates on the screen._",
     "instructions_important": "false",
@@ -16,6 +12,10 @@
     "parent_level_id": 20665,
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-03-30T23:39:00.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:00.569+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where XY Embed_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where XY Embed_2021\"}]"

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-26T18:56:17.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -80,9 +76,13 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-26T18:56:17.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:17.966+00:00\",\"changed\":[\"cloned from \\\"CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify\\\"\"],\"cloned_from\":\"CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:17.966+00:00\",\"changed\":[\"cloned from \\\"CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify\\\"\"],\"cloned_from\":\"CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify\"},{\"changed_at\":\"2022-06-03 01:08:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-06-03 01:09:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

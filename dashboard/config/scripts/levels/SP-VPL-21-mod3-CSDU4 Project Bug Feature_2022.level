@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-27T22:24:40.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "embed": "false",
@@ -50,12 +46,12 @@
     "parent_level_id": 27194,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/app-lab/design-mode/importing-screens/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
+      "/courses/self-paced-pl-csd3-2022/guides/changing-screens",
+      "/courses/self-paced-pl-csd3-2022/guides/responding-to-user-input",
+      "/courses/self-paced-pl-csd3-2022/guides/importing-screens",
+      "/courses/self-paced-pl-csd3-2022/guides/multi-screen-apps",
+      "/courses/self-paced-pl-csd3-2022/guides/design-mode",
+      "/courses/self-paced-pl-csd3-2022/guides/design-mode-elements"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -66,6 +62,10 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-27T22:24:40.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-27T22:24:40.881+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod3-CSDU4 Project Bug Feature_preview-2021\\\"\"],\"cloned_from\":\"SP-VPL-21-mod3-CSDU4 Project Bug Feature_preview-2021\"}]"

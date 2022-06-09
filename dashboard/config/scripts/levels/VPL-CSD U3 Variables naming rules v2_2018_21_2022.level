@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:38.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -57,9 +53,9 @@
     "parent_level_id": 24274,
     "teacher_markdown": "If students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page.  To get back into block mode, students will first need to fix the problem with the variable names.  Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace.",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/vpl-csd-2022/guides/variables",
+      "/courses/vpl-csd-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-2022/guides/shapes-and-parameters"
     ],
     "map_reference": "/docs/csd-1718/naming_variables/index.html",
     "video_key": "csd_gamelab_variables_1",
@@ -70,9 +66,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:38.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:38.404+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD U3 Variables naming rules v2_2018_21\\\"\"],\"cloned_from\":\"VPL-CSD U3 Variables naming rules v2_2018_21\"},{\"changed_at\":\"2022-06-02 20:07:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -282,7 +282,7 @@ const styles = {
   },
   header: {
     display: 'flex',
-    flexWrap: 'wrap-reverse',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     margin: '5px 0'
   },
