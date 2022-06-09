@@ -16,5 +16,4 @@
 #congrats-container
 
 - content_for(:head) do
-  = stylesheet_link_tag 'css/petition', media: 'all'
   %script{src: webpack_asset_path('js/congrats/index.js'), data: {congrats: congrats_data.to_json}}
