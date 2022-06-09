@@ -1,4 +1,4 @@
-class Api::V1::SectionLibrariesController < Api::V1::JSONApiController
+class Api::V1::SectionLibrariesController < Api::V1::JsonApiController
   before_action :authenticate_user!
   check_authorization unless: :no_active_sections?
 

@@ -14,7 +14,7 @@ def set_course_audiences
     next if script.unit_group
 
     script.instructor_audience = if [].include?(script.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
                                  elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
                                         'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
                                         'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
@@ -25,11 +25,11 @@ def set_course_audiences
                                         'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview',
                                         'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4',
                                         'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  elsif [].include?(script.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
                                  else
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
                                  end
 
     script.participant_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
@@ -42,11 +42,11 @@ def set_course_audiences
                                       'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csd-overview', 'dlp21-csp-overview',
                                       'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4', 'dlp21-csd-mod1',
                                       'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
-                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
                                   elsif [].include?(script.name)
-                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   else
-                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
 
     script.update!(skip_name_format_validation: true)
@@ -58,17 +58,17 @@ def set_course_audiences
     next unless ['self-paced-pl-csp-2021'].include?(course.name)
 
     course.instructor_audience = if [].include?(course.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
                                  elsif [].include?(course.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  elsif ['self-paced-pl-csp-2021'].include?(course.name)
-                                   Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
                                  end
 
     course.participant_audience = if [].include?(course.name)
-                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
                                   elsif ['self-paced-pl-csp-2021'].include?(course.name)
-                                    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+                                    SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   end
 
     course.save!
