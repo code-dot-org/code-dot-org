@@ -1,3 +1,6 @@
+var MIN_XY = SPRITE_SIZE / 2 + 5;
+var MAX_XY = 400 - MIN_XY;
+
 function layoutGrid() {
   var spriteIds = getSpriteIdsInUse();
   var count = spriteIds.length;
@@ -9,7 +12,6 @@ function layoutGrid() {
     var col = i % numCols;
     var colFraction = col / (numCols - 1) || 0;
     var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
-
     var rowFraction = row / (numRows - 1) || 0;
     var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
 
