@@ -31,7 +31,9 @@ const CommitsAndReviewTab = props => {
     locale,
     isReadOnlyWorkspace,
     setIsReadOnlyWorkspace,
-    setHasOpenCodeReview
+    setHasOpenCodeReview,
+    isCommitSaveInProgress,
+    hasCommitSaveError
   } = props;
 
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
@@ -55,6 +57,14 @@ const CommitsAndReviewTab = props => {
   useEffect(() => {
     refresh();
   }, [refresh]);
+
+  useEffect(() => {
+    // If one of these values has change, and the save isn't in progress
+    // there has been a new commit and we need to refresh the timeline
+    if (!isCommitSaveInProgress && !hasCommitSaveError) {
+      refresh();
+    }
+  }, [isCommitSaveInProgress, hasCommitSaveError, refresh]);
 
   const refresh = useCallback(async () => {
     setIsLoadingTimelineData(true);
@@ -97,8 +107,7 @@ const CommitsAndReviewTab = props => {
       });
       onSuccess();
     } catch (err) {
-      console.log(err);
-      onFailure();
+      onFailure(err);
     }
   };
 
@@ -255,7 +264,9 @@ export default connect(
     serverProjectLevelId: state.pageConstants.serverProjectLevelId,
     serverScriptId: state.pageConstants.serverScriptId,
     locale: state.pageConstants.locale,
-    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
+    isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
+    hasCommitSaveError: state.javalab.hasCommitSaveError
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
@@ -278,7 +289,9 @@ CommitsAndReviewTab.propTypes = {
   locale: PropTypes.string,
   isReadOnlyWorkspace: PropTypes.bool,
   setIsReadOnlyWorkspace: PropTypes.func.isRequired,
-  setHasOpenCodeReview: PropTypes.func.isRequired
+  setHasOpenCodeReview: PropTypes.func.isRequired,
+  isCommitSaveInProgress: PropTypes.bool,
+  hasCommitSaveError: PropTypes.bool
 };
 
 const styles = {
