@@ -90,7 +90,6 @@ class SyncOmniAuthSectionControl extends React.Component {
       })
       .catch(sync_error => {
         this.setState({
-          buttonState: READY,
           syncFailErrorLog: '' + sync_error
         });
         this.openDialog();
@@ -115,7 +114,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   closeDialog = () => {
-    this.setState({isDialogOpen: false});
+    this.setState({buttonState: READY, isDialogOpen: false});
   };
 
   render() {
