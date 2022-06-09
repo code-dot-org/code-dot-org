@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import {connect} from 'react-redux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 import Button from './Button';
@@ -83,20 +81,20 @@ class VerticalImageResourceCard extends Component {
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={[cardStyle]}>
+      <div style={cardStyle}>
         <div style={imageStyle}>
           <a href={link}>
             <img src={imgSrc} alt={title} />
           </a>
         </div>
         <div>
-          <div style={[styles.text, styles.title]}>{title}</div>
-          <div style={[styles.text, descriptionStyle]}>
+          <div style={{...styles.text, ...styles.title}}>{title}</div>
+          <div style={{...styles.text, ...descriptionStyle}}>
             {description}
             {MCShareLink && (
               <input
                 type="text"
-                style={[styles.text, styles.shareLink]}
+                style={{...styles.text, ...styles.shareLink}}
                 value={MCShareLink}
                 onChange={() => {}}
                 onClick={e => e.target.select()}
@@ -180,6 +178,4 @@ const styles = {
   }
 };
 
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(Radium(VerticalImageResourceCard));
+export default VerticalImageResourceCard;
