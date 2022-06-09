@@ -1,4 +1,4 @@
-class Api::V1::AssessmentsController < Api::V1::JSONApiController
+class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
 
   before_action :load_from_cache

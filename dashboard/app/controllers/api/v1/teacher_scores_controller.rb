@@ -1,4 +1,4 @@
-class Api::V1::TeacherScoresController < Api::V1::JSONApiController
+class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   before_action :authenticate_user!
   authorize_resource
 
