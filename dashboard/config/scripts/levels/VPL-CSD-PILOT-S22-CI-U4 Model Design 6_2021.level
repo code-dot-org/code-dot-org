@@ -47,9 +47,9 @@
     "parent_level_id": 20240,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/vpl-csd4-ci-pilot-2022/guides/design-mode"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode"
     ],
-    "map_reference": "/courses/vpl-csd4-ci-pilot-2022/guides/design-mode-elements",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode-elements",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",
