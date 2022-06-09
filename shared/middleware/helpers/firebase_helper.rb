@@ -16,7 +16,7 @@ class FirebaseHelper
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def table_as_csv(table_name)
     response = @firebase.get(
-      "/v3/channels/#{@channel_id}/storage/tables/#{table_name}/records"
+      "/v3/channels/#{@channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
     )
     records = response.body || []
 
@@ -52,7 +52,7 @@ class FirebaseHelper
   end
 
   def escape_table_name(table_name)
-    return URI.escape(table_name).gsub('.', '%252E')
+    return CGI.escape(table_name).gsub('.', '%252E')
   end
 
   def unescape_table_name(table_name)

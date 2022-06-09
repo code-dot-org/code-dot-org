@@ -948,11 +948,14 @@ vi:
         math: 'Phép toán'
         science: 'Khoa học'
         la: 'Nghệ thuật ngôn ngữ'
+        other: "Khác"
       resources:
         khan: 'Học viện Khan'
         scratch: 'Scratch'
+        other: "Khác"
       robotics:
         grok: 'Tìm hiểu Grok'
+        other: "Khác"
       workshop_course:
         csf_express: 'Nguyên tắc cơ bản của KHMT (Cấp tốc hoặc Cấp tốc cho trẻ chưa biết đọc)'
       email_opt_in:

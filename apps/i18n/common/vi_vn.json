@@ -1930,6 +1930,8 @@
   "teacherTabStats": "Xem thống kê",
   "teachingGuide": "Hướng dẫn giảng dạy",
   "teachingTip": "Mẹo giảng dạy",
+  "organizerNotListed": "Người tổ chức của tôi không có trong danh sách",
+  "facilitatorNotListed": "Điều hành viên của tôi không có trong danh sách",
   "text": "Văn bản",
   "textVariable": "văn bản",
   "textToSpeechProfanity": "Văn bản của bạn chứa từ ngữ không phù hợp nên sẽ không được phát. Vui lòng cập nhật dự án của bạn để xóa {profanityCount, plural, one {từ} other {các từ}} \"{profaneWords}” này. \n",

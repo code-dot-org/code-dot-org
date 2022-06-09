@@ -406,10 +406,13 @@ bn:
       subjects:
         cs: 'কম্পিউটার বিজ্ঞান'
         math: 'গণিত'
+        other: "অন্যান্য"
       resources:
         kodable: 'কোডাবল'
+        other: "অন্যান্য"
       robotics:
         kodable: 'কোডাবল'
+        other: "অন্যান্য"
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: 'না'
