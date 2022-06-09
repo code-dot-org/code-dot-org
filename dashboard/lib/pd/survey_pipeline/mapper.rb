@@ -15,7 +15,7 @@ module Pd::SurveyPipeline
     #   conditions are met.
     #   :condition is a lambda.
     #   :field is a key in data going to be processed.
-    #   :reducers is an array of Reducer::Base-derived classes.
+    #   :reducers is an array of ReducerBase-derived classes.
     #
     def initialize(group_config:, map_config:)
       @group_config = group_config

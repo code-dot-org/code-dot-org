@@ -14,8 +14,3 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
-
-ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.acronym "DSL" # Domain-Specific Language
-  inflect.acronym "JSON" # JavaScript Object Notation
-end
