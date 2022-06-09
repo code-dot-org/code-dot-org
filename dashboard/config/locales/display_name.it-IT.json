@@ -525,7 +525,7 @@
         "helloworld_food_costumes": "Costumi",
         "helloworld_retro_costumes": "Costumi",
         "Course E: Artist Project_2021": "Crea un Progetto da artista",
-        "Course E: Frozen Project_2021": "Crea un progetto congelato",
+        "Course E: Frozen Project_2021": "Crea un progetto con Frozen",
         "CourseD_EOC_artist_example2021": "Scena della spiaggia (artista)",
         "CourseE_Project_SpriteLab_2021": "Crea un progetto nel Laboratorio dei personaggi",
         "CourseF_app_computer": "Costruisci un computer",
@@ -535,7 +535,7 @@
         "courseF_apps_aquarium": "Aquario virtuale",
         "courseF_apps_card": "Biglietto di Auguri",
         "courseF_apps_madlib": "Storia delle Caselle vuote",
-        "courseF_apps_pet": "Animale virtuale",
+        "courseF_apps_pet": "Animaletto virtuale",
         "courseF_editable_card": "Biglietto di Auguri",
         "courseF_editable_chatbot": "Chatbot",
         "courseF_editable_madlib": "Storia delle Caselle vuote",
@@ -553,7 +553,7 @@
         "courseF_sprites_freeplay_blank": "Vuoto",
         "courseF_sprites_freeplay_food": "Cibo felice",
         "ramp_artist_loops8_2021": "Ottagono",
-        "Course E: Artist Project_examples_2021": "Artista del modello",
+        "Course E: Artist Project_examples_2021": "Artista schematico",
         "Course E: Frozen Project_examples_2021": "Fiori a forma di fiocchi di neve",
         "Course F: Artist Project_2021": "Crea un Progetto da artista",
         "Course F: Artist Project_Flowers_examples_2021": "Fiori (Artista)",
@@ -598,7 +598,7 @@
         "courseF_events_freeplay_space": "Intergalattico",
         "courseF_events_key": "Eventi del tempo",
         "courseF_events_practice_reorder": "Imparare a volare",
-        "courseF_events_ship": "Salta fuori!",
+        "courseF_events_ship": "Partenza!",
         "courseF_events_stops": "Eventi del tempo",
         "courseF_events_time": "Eventi del tempo",
         "courseF_sprites_clouds": "Un giornata ventilata",
@@ -706,7 +706,8 @@
         "Oceans_Video_Training_Data_2021": "Video: Dati di apprendimento e distorsioni",
         "csd U3 conditional statements video_2021": "Video: Dichiarazioni condizionali",
         "helloworld_food_backgrounds": "Clicca Eventi",
-        "MC Agent Freeplay": "Tempo di giocare"
+        "MC Agent Freeplay": "Tempo di giocare",
+        "Course E: Frozen Project_2020": "Crea un progetto con Frozen"
       }
     }
   }

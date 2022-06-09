@@ -925,6 +925,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -970,6 +971,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1162,6 +1164,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
@@ -1205,6 +1208,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
@@ -1242,6 +1246,7 @@ vi:
             '180': trái
             '270': trên
       gamelab_makeSpritesWithSize:
+        text: tạo {NUM} nhân vật {SIZE} {COSTUME} mới
         options:
           SIZE:
             '30': nhỏ
@@ -1479,6 +1484,50 @@ vi:
         text: "{SPRITE} nói {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} nói {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink:
+        text: "{SPRITE} nghĩ {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} nghĩ {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink_fables1:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I am hungry, too."': Ta cũng đang đói.
+            '"I only want the biggest goat."': Ta chỉ cần con dê mập nhất.
+            '"I''m a green troll."': Ta là người khổng lồ xanh lá.
+            '"No one will cross my bridge."': Không ai có thể băng qua cây cầu của
+              ta.
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"Time to make friends with the sheep."': Tới lúc làm bạn với con cừu
+              rồi.
+            '"She''ll never recognize me now."': Giờ nó sẽ không thể nào nhận ra ta.
+            '"This costume keeps me warm."': Bộ trang phục này giúp ta giữ ấm.
+            '"I am actually a wolf."': Thực ra ta là sói.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m feeling sleepy."': Buồn ngủ ghê.
+            '"No one could ever beat me."': Không kẻ nào có thể đánh bại ta.
+            '"I''ve done this race before."': Đường đua này ta đã từng chinh phục.
+            '"My feet are bigger than Turtle''s feet."': Chân ta bự hơn chân Rùa.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m so hungry."': Đói quá.
+            '"I''m a visitor in this town."': Ta là du khách của thị trấn này.
+            '"If we share, we''ll all have something to eat. "': Nếu chia nhau thì
+              cả hai chúng ta đều có đồ ăn.
+            '"I''ll trick everyone into giving me their food."': Ta sẽ lừa tất cả
+              mọi người đưa đồ ăn cho ta.
       gamelab_startAvoiding:
         text: "{SPRITE} bắt đầu né {TARGET}"
       gamelab_startFollowing:

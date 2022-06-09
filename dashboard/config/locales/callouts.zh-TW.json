@@ -2244,7 +2244,8 @@
           "CSD_U3_variables": "在此修改數值"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+          "costumes_tab": "點擊這裡為你的項目添加服裝。",
+          "make_sprite": "使用這裡的模組來製作一個精靈圖！"
         }
       }
     }

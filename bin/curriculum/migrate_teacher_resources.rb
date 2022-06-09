@@ -51,7 +51,10 @@ def migrate_resources_for_unit_groups
     next unless course_version
     unit_group.resources =
       unit_group.teacher_resources.map {|tr| create_resource_from_teacher_resource(tr, course_version.id)}
-    unit_group.teacher_resources = []
+
+    # do not remove legacy teacher resources yet. keep serving the legacy
+    # teacher resources until migrated teacher resources have been translated.
+
     unit_group.save!
     puts "Migrated teacher resources for #{unit_group.name}"
   end

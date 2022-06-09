@@ -553,22 +553,42 @@
           "description": "**Dunia Nyata: Kompresi Zip**\n\n-   Lakukan eksperimen dengan zip menggunakan file teks dengan berbagai konten.  Apakah hasil untuk file kecil sebagus untuk file besar? (Di Macs, di Finder pilih “get info” tentang file untuk melihat jumlah aktual byte dalam file, karena tampilan Finder akan menunjukkan 4KB untuk sembarang file yang kurang dari angka itu.)\n    -   Peringatan: hasil mungkin berbeda-beda.  Zip sangat efektif untuk teks, tetapi mungkin tidak bisa mengecilkan file lain dengan baik karena file-file tersebut sudah terkompres atau tidak memiliki jenis pola \"embedded\" yang sama dengan yang dimiliki oleh dokumen teks.\n\n**Tantangan:  Telitilah algorithm LZW**\n\n-   Kompresi .zip didasarkan pada [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Meskipun ide di balik alat kompresi teks sama dengan algorithm LZW (zip), pelacakan jalur kompresi dan dekompresi sedikit berat.  Pembelajaran lebih jauh tentang LZW dan apa yang terjadi dalam proses algorithm ini akan menjadi proyek perpanjangan yang sangat bagus bagi sebagian murid."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Pendahuluan"
+          "name": "Pendahuluan",
+          "description": "**Diskusikan:**\n\n-   _Apa yang kita tahu tentang cara penyebaran virus?_\n-   _Apa yang dapat membuat virus menyebar lebih cepat ke seluruh kota?_\n-   _Apa yang dapat membantu memperlambat penyebaran virus?_\n\nTujuan dari diskusi ini adalah agar siswa memiliki kesempatan untuk mengingat kembali pengetahuan sebelumnya dan melihat ide-idenya di papan tulis. Ini juga merupakan kesempatan untuk membahas sejumlah kesalahpahaman tentang bagaimana virus menyebar."
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "description": "_Dalam pelajaran kali ini, kalian akan ke \"Monster Town\" di mana wabah virus akan segera terjadi. Dr. Monster membutuhkan bantuan kalian untuk memperlambat penyebaran virus._\n\n_Kalian akan membuat simulator wabah di Sprite Lab, lalu menggunakannya untuk memahami bagaimana proses penyebaran virus. Kalian juga akan membantu semua monster agar sehat kembali!_"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Lakukan Hal Ini:** Baca _Selamat Datang di Monster Town_ di kelas.",
           "progression_name": "Selamat Datang di Monster Town"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Lakukan Ini:** Periksa kosa katanya, **model dan simulasi** bersama siswa, yang dikembangkan dari pelajaran sebelumnya. Simulasi adalah model komputer dari sebuah proses atau sistem."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hari ini, kita akan membuat tempat seperti Monster Town menjadi hidup dengan menuliskan beberapa kode. Dalam simulasi kali ini, kalian akan menggunakan sprite untuk mewakili monster yang berbeda. Sprite-nya akan mengenakan kostum yang berbeda untuk memberitahu kita hal-hal seperti apakah mereka sakit atau sehat. Kalian juga akan menggunakan perilaku untuk membuat monsternya bergerak. Terakhir, kalian akan menggunakan event untuk mengubah kostum sprite ketika dua sprite menyentuh layar ini. Ini akan mewakili satu monster yang menularkan virus ke yang lain. Kalian akan membuat prediksi tentang apa yang akan terjadi pada tetangga Monster Town, dan membantu mereka menjadi sehat kembali!_"
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Lakukan Hal Ini:** Alihkan siswa ke komputernya, dan minta mereka mulai mengikuti petunjuk untuk tiap level di bagian pengembangan keterampilan. Jika siswa menyelesaikan bagian ini lebih awal, mereka dapat terus bereksperimen dengan kodenya di Level 6 hingga kelas siap untuk melanjutkan.",
           "progression_name": "Pembangunan Keterampilan"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Lakukan hal ini:** Alihkan siswa kembali ke komputernya, dan minta mereka mengerjakan level yang tersisa. Beberapa level ini menawarkan tantangan opsional. Minta para siswa untuk membaca petunjuknya dengan cermat dan bereksperimen dengan simulasinya.",
           "progression_name": "Mini-Project: Simulator Pendobrak"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Permainan Gratis"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulasi merupakan cara yang bagus untuk mempelajari hal-hal yang sulit diamati di dunia nyata. Simulasi membantu para ilmuwan menyelesaikan masalah, memprediksi cara menyelesaikan masalah, dan menguji ide-ide baru dengan aman dan efisien. Simulasi kalian adalah cara untuk menunjukkan bagaimana terjadinya wabah virus di Monster Town._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Diskusikan:**\n\n-   Bagaimana cara simulasi dalam membantu di dunia nyata?\n-   Bagaimana cara simulasi dalam membantu kita memahami dunia di sekitar kita?\n-   Bagaimana cara simulasi dalam meningkatkan cara kita menguji ide-ide?\n\nTujuan dari diskusi adalah agar siswa memahami bahwa simulasi merupakan cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga akan melihat bagaimana bahwa simulasi memudahkan orang dalam menguji ide dengan cepat, murah, dan aman."
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Bayangan"
+          "name": "Bayangan",
+          "description": "**Prompt:**\n\n-   Seperti apa simulasi ini di dunia nyata? Bagaimana perbedaannya?\n-   Apa yang ingin kalian ubah/tambahkan ke simulasi kalian?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Pendahuluan",
@@ -3903,24 +3923,48 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Anda memiliki dua catatan tempel. Di catatan pertama, tuliskan satu hal yang sudah Anda pelajari tentang coding hari ini. \nDi catatan kedua, tuliskan satu hal lagi yang sudah Anda pelajari tentang puisi hari ini. \n\nMari berbagi dengan seluruh murid di kelas dengan mengangkat tangan untuk menjawab pertanyaan berikut: Apa lagi yang Anda harap bisa dipelajari tentang coding dan ilmu komputer berikutnya? "
         },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Melakukan Persiapan\n\nSambut siswa di kelas dan perkenalkan kegiatan di hari tersebut secara singkat.\n\nKatakan: _Hari ini kita akan menghabiskan waktu satu jam untuk mengerjakan sejumlah puzzle online dan mempelajari tata tertib di lab komputer._\nTujuan dari diskusi ini adalah mengajarkan siswa tentang apa yang diharapkan dan bagaimana bersikap saat memasuki lab komputer."
+        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Bergerak dengan tenang di dalam lab\n-   Jangan mengunyah gula-gula atau permen karet\n-   Bersihkan tangan kalian\n-   Duduk dengan teman kalian di satu komputer\n-   Pastikan \"driver\" pertama dapat menjangkau mouse\n-   Saat bingung, jangan memukul atau menggoyangkan komputer atau monitor\n-   Ikuti [Aturan 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cara menghadapi [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) setiap 20-30 menit (memerlukan login gratis di GoNoodle).\n-   Tanyakan pada teman sebelum bertanya pada guru\n-   Kecilkan volume agar semua orang dapat mendengar temannya\n-   Gunakan jurnal kalian untuk melacak perasaan dan solusi"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Diskusikan:**\nLakukan diskusi yang baik seputar tata tertib di lab komputer agar semua siswa memahami aturan. Beberapa topik diskusinya bisa mencakup:\n\n-   Apakah berlarian di lab komputer itu boleh?\n-   Seberapa keras langkah kaki kita saat berjalan di lab komputer?-\n-   Apa yang harus kalian lakukan jika mengalami kebuntuan saat mengerjakan puzzle?\n-   Jika kalian bingung, apakah memukul komputer bisa membantu?\n-   Saat hendak masuk ke lab komputer, bagaimana cara mempersiapkan diri?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Pratinjau Puzzle Online\n\nProyeksikan puzzle dari pelajaran . Tunjukkan kepada siswa cara mengklik gambar dan menempatkannya di lokasi yang tepat dengan cara drag dan drop. Lakukan kesalahan dengan sengaja seperti mengklik latar belakang atau meletakkan gambar sebelum sampai di lokasi yang tepat. Minta bantuan relawan di kelas ketika Anda menghadapi masalah seperti ini."
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Teka-teki"
+          "name": "Teka-teki",
+          "description": "_Tujuan:_ Ini akan mengajarkan siswa cara menggunakan Code.org untuk menyelesaikan puzzle online.\n\nTahap ini dirancang untuk memberi kesempatan kepada siswa untuk melatih keterampilan koordinasi tangan dan mata, mengklik, dan drag & drop. Siswa juga akan bermain dengan urutan.\n\nPertimbangkan untuk meminta siswa menguraikan langkah-langkah drag & drop dan menulisnya di papan tulis. Misalnya:\n\n1.  Pindahkan panah ke blok.\n2.  Klik dan tahan tombol mouse.\n3.  Gerakkan mouse.\n4.  Lepaskan tombolnya.\n\nDengan melakukan hal ini, siswa akan berlatih membuat _algoritma_, yang merupakan konsep yang akan dipelajari dalam pelajaran berikutnya."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Luangkan waktu untuk mengajarkan cara mengklik, drag, dan drop dengan jelas kepada siswa. Perkenalkan bahasa seputar perangkat yang akan digunakan oleh siswa saat mereka mengerjakan puzzle. Jika Anda memiliki tablet, siswa akan menggunakan _layar sentuh_. Jika Anda memiliki laptop, siswa mungkin akan menggunakan _trackpad_. Komputer desktop yang mungkin banyak ditemui di lab akan mengandalkan penggunaan _mouse_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Guru berperan penting dalam pendidikan ilmu komputer dan mendukung lingkungan kelas yang kolaboratif dan penuh semangat. Selama puzzle online, peran utama guru adalah memberikan dorongan dan dukungan. Puzzle online dirancang agar berpusat pada siswa, jadi guru tidak boleh membantu saat siswa mengalami kebuntuan. Berikut sejumlah ide untuk melakukannya:",
           "tips": [
-            null
+            "Tunjukkan kepada siswa cara yang tepat untuk membantu teman sekelas:\n\n-   Jangan duduk di kursi teman sekelas\n-   Jangan menggunakan keyboard teman sekelas\n-   Jangan menyentuh mouse teman sekelas\n-   Pastikan teman sekelas dapat menjelaskan solusinya kepada Anda dengan lantang sebelum Anda pergi"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Semangati murid untuk memulai dengan pertanyaan/tantangan dengan bertanya kepada teman\n-   Pertanyaan yang tak terjawab dapat dilontarkan ke kelompok siswa terdekat, yang barangkali sudah tahu solusinya.\n-   Minta siswa untuk menjelaskan masalah yang mereka lihat. Apa yang harusnya dilakukan? Apa yang dilakukannya? Apa yang Anda pahami dari hal tersebut?\n-   Ingatkan siswa yang bingung bahwa kebingungan adalah hal yang akan ditemui dalam proses belajar, dan bahwa kegigihan akan berbuah manis.\n-   Jika soswa masih mengalami kebuntuan setelah melakukan semua hal di atas, ajukan pertanyaan yang menggiring siswa untuk menemukan sendiri kesalahannya."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Tingkat"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Bayangan"
+          "name": "Bayangan",
+          "description": "Minta siswa untuk menulis atau menggambarkan apa yang telah mereka pelajari, atau bagaimana perasaan mereka selesai menyelesaikan puzzle.\n\n**Prompt:**\n\n-   Bisakah Anda menggambarkan urutan persiapan diri untuk masuk ke lab komputer?\n-   Gambarlah \"Perintah” dan \"Larangan” di lab komputer\n-   Gambarlah dan labeli nama bagian komputer yang Anda gunakan ketika mengklik dan menarik/drag selama mengerjakan puzzle. (tombol mouse, layar sentuh, trackpad)"
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada tiap siswa dan minta mereka merangkum pelajaran yang telah dipelajari hari ini, kesan yang mereka rasakan, atau apa yang mereka alami. Siswa dapat menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat yang mencolok di sekolah sebagai pengingat Hour of Code Anda."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   Mengajarkan kursus [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Keenam kursus ini dirancang untuk pelajar muda. Murid mengerjakan sendiri serangkaian puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus-kursus di atas, baik secara online atau pribadi.\n\n-   Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas. Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Survei Pascakursus CS Discoveries",
@@ -4465,10 +4509,21 @@
           "progression_name": "Sesuaikan"
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
-          "name": "Pendahuluan"
+          "name": "Pendahuluan",
+          "description": "**Diskusikan:**\n\n-   _Apa yang kita tahu tentang cara penyebaran virus?_\n-   _Apa yang dapat membuat virus menyebar lebih cepat ke seluruh kota?_\n-   _Apa yang dapat membantu memperlambat penyebaran virus?_\n\nTujuan dari diskusi ini adalah agar siswa memiliki kesempatan untuk mengingat kembali pengetahuan sebelumnya dan melihat ide-idenya di papan tulis. Ini juga merupakan kesempatan untuk membahas sejumlah kesalahpahaman tentang bagaimana virus menyebar."
+        },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "description": "_Dalam pelajaran kali ini, kalian akan ke \"Monster Town\" di mana wabah virus akan segera terjadi. Dr. Monster membutuhkan bantuan kalian untuk memperlambat penyebaran virus._\n\n_Kalian akan membuat simulator wabah di Sprite Lab, lalu menggunakannya untuk memahami bagaimana proses penyebaran virus. Kalian juga akan membantu semua monster agar sehat kembali!_"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Lakukan Hal Ini:** Baca _Selamat Datang di Monster Town_ di kelas.",
           "progression_name": "Selamat Datang di Monster Town"
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**Lakukan Ini:** Periksa kosa katanya, **model dan simulasi** bersama siswa, yang dikembangkan dari pelajaran sebelumnya. Simulasi adalah model komputer dari sebuah proses atau sistem."
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_Hari ini, kita akan membuat tempat seperti Monster Town menjadi hidup dengan menuliskan beberapa kode. Dalam simulasi kali ini, kalian akan menggunakan sprite untuk mewakili monster yang berbeda. Sprite-nya akan mengenakan kostum yang berbeda untuk memberitahu kita hal-hal seperti apakah mereka sakit atau sehat. Kalian juga akan menggunakan perilaku untuk membuat monsternya bergerak. Terakhir, kalian akan menggunakan event untuk mengubah kostum sprite ketika dua sprite menyentuh layar ini. Ini akan mewakili satu monster yang menularkan virus ke yang lain. Kalian akan membuat prediksi tentang apa yang akan terjadi pada tetangga Monster Town, dan membantu mereka menjadi sehat kembali!_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
@@ -4476,16 +4531,25 @@
           ]
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**Lakukan Hal Ini:** Alihkan siswa ke komputernya, dan minta mereka mulai mengikuti petunjuk untuk tiap level di bagian pengembangan keterampilan. Jika siswa menyelesaikan bagian ini lebih awal, mereka dapat terus bereksperimen dengan kodenya di Level 6 hingga kelas siap untuk melanjutkan.",
           "progression_name": "Pembangunan Keterampilan"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "progression_name": "Pembelajaran dari Simulasi"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**Lakukan hal ini:** Alihkan siswa kembali ke komputernya, dan minta mereka mengerjakan level yang tersisa. Beberapa level ini menawarkan tantangan opsional. Minta para siswa untuk membaca petunjuknya dengan cermat dan bereksperimen dengan simulasinya.",
           "progression_name": "Mini-Project: Simulator Pendobrak"
         },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Simulasi merupakan cara yang bagus untuk mempelajari hal-hal yang sulit diamati di dunia nyata. Simulasi membantu para ilmuwan menyelesaikan masalah, memprediksi cara menyelesaikan masalah, dan menguji ide-ide baru dengan aman dan efisien. Simulasi kalian adalah cara untuk menunjukkan bagaimana terjadinya wabah virus di Monster Town._"
+        },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**Diskusikan:**\n\n-   Bagaimana cara simulasi dalam membantu di dunia nyata?\n-   Bagaimana cara simulasi dalam membantu kita memahami dunia di sekitar kita?\n-   Bagaimana cara simulasi dalam meningkatkan cara kita menguji ide-ide?\n\nTujuan dari diskusi adalah agar siswa memahami bahwa simulasi merupakan cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga akan melihat bagaimana bahwa simulasi memudahkan orang dalam menguji ide dengan cepat, murah, dan aman."
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
-          "name": "Bayangan"
+          "name": "Bayangan",
+          "description": "**Prompt:**\n\n-   Seperti apa simulasi ini di dunia nyata? Bagaimana perbedaannya?\n-   Apa yang ingin kalian ubah/tambahkan ke simulasi kalian?"
         },
         "2c7244e0-80ea-472a-9dbe-051909768cfc": {
           "description": "**Beri Motivasi:** Jelaskan tujuan aktivitas hari ini kepada murid. Mereka mulai menggunakan alat baru yang memudahkan mereka melatih model pembelajaran mesin yang sesungguhnya, semacam kecerdasan buatan. **Video:** Level pertama aktivitas ini berupa video yang memberikan konteks penting seputar kecerdasan buatan dan pembelajaran mesin. Tonton **\\*AI: Pembelajaran Mesin** bersama seluruh murid di kelas dan lakukan tanya jawab setelah itu untuk membantu murid memupuk pemahaman tentang isi materi pelajarannya."
@@ -4745,7 +4809,7 @@
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Pengurutan dengan Angry Birds",
           "tips": [
-            null
+            "Tunjukkan kepada siswa cara yang tepat untuk membantu teman sekelas:\n\n-   Jangan duduk di kursi teman sekelas\n-   Jangan menggunakan keyboard teman sekelas\n-   Jangan menyentuh mouse teman sekelas\n-   Pastikan teman sekelas dapat menjelaskan solusinya kepada Anda dengan lantang sebelum Anda pergi"
           ]
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
@@ -5218,8 +5282,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Guru berperan penting dalam pendidikan ilmu komputer dan mendukung lingkungan kelas yang kolaboratif dan penuh semangat. Selama puzzle online, peran utama guru adalah memberikan dorongan dan dukungan. Puzzle online dirancang agar berpusat pada siswa, jadi guru tidak boleh membantu saat siswa mengalami kebuntuan. Berikut sejumlah ide untuk melakukannya:",
           "tips": [
-            null
+            "Tunjukkan kepada siswa cara yang tepat untuk membantu teman sekelas:\n\n-   Jangan duduk di kursi teman sekelas\n-   Jangan menggunakan keyboard teman sekelas\n-   Jangan menyentuh mouse teman sekelas\n-   Pastikan teman sekelas dapat menjelaskan solusinya kepada Anda dengan lantang sebelum Anda pergi"
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
@@ -7905,8 +7970,9 @@
           "description": "Suruh murid berpasangan dan suruh mereka menonton video pair programming bersama seluruh murid di kelas atau di tempat duduk masing-masing. Teknik ini tentu membantu murid mengawali materi pelajaran di arah yang benar."
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Guru berperan penting dalam pendidikan ilmu komputer dan mendukung lingkungan kelas yang kolaboratif dan penuh semangat. Selama puzzle online, peran utama guru adalah memberikan dorongan dan dukungan. Puzzle online dirancang agar berpusat pada siswa, jadi guru tidak boleh membantu saat siswa mengalami kebuntuan. Berikut sejumlah ide untuk melakukannya:",
           "tips": [
-            null
+            "Tunjukkan kepada siswa cara yang tepat untuk membantu teman sekelas:\n\n-   Jangan duduk di kursi teman sekelas\n-   Jangan menggunakan keyboard teman sekelas\n-   Jangan menyentuh mouse teman sekelas\n-   Pastikan teman sekelas dapat menjelaskan solusinya kepada Anda dengan lantang sebelum Anda pergi"
           ]
         },
         "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
@@ -7938,7 +8004,7 @@
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Pemrograman dengan Blok",
           "tips": [
-            null
+            "Tunjukkan kepada siswa cara yang tepat untuk membantu teman sekelas:\n\n-   Jangan duduk di kursi teman sekelas\n-   Jangan menggunakan keyboard teman sekelas\n-   Jangan menyentuh mouse teman sekelas\n-   Pastikan teman sekelas dapat menjelaskan solusinya kepada Anda dengan lantang sebelum Anda pergi"
           ]
         },
         "20e998a3-d920-48f1-9d92-ec4102990042": {
@@ -8917,15 +8983,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "Mengenal Ikan"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "Mengenali Ciri-ciri Ikan"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "Mengenali Ekspresi"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -8933,7 +9008,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "Bayangan"
+          "name": "Bayangan",
+          "progression_name": "Survei Tengah Semester"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -8943,7 +9019,11 @@
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Mencari Pola"
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "Green Glass Door"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -8965,10 +9045,26 @@
             null
           ]
         },
+        "09d3ff6d-f87e-4309-b138-3ef66e33eab5": {
+          "name": "Pemberi Rekomendasi Sepatu"
+        },
+        "bf65cfae-cdec-4456-8acf-d475d2835417": {
+          "progression_name": "Pemberi Rekomendasi Sepatu"
+        },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
           "tips": [
             null
           ]
+        },
+        "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
+          "name": "Pemberi Rekomendasi Sepatu yang Lebih Baik"
+        },
+        "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
+          "progression_name": "Pemberi Rekomendasi Sepatu yang Lebih Baik"
+        },
+        "a0725763-95c5-47e3-ad8f-ce01dba4cda3": {
+          "name": "Survei Rekomendasi Sepatu",
+          "progression_name": "Survei Rekomendasi Sepatu"
         },
         "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
           "tips": [
@@ -8979,6 +9075,9 @@
           "tips": [
             null
           ]
+        },
+        "a5c8ac6d-bf15-4ce6-ae63-cc39ad9d23e4": {
+          "progression_name": "Pemberi Rekomendasi Sepatu Terbaik"
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
           "tips": [
@@ -9005,6 +9104,9 @@
             null
           ]
         },
+        "f2beead8-eebd-486b-8748-d31955df2c4d": {
+          "progression_name": "Fruit and Veggie Explorer"
+        },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
             null
@@ -9015,10 +9117,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "Mengenal Bentuk"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "Mengenal Bentuk"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -9035,6 +9143,9 @@
             null
           ]
         },
+        "040518cf-bdfa-4bea-a3c4-7e2a5b973097": {
+          "progression_name": "Rekomendasi Pizza"
+        },
         "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
           "tips": [
             null
@@ -9043,12 +9154,16 @@
         "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Silakan Pilih: Rekomendasi Restoran"
         },
         "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
           "tips": [
             null
           ]
+        },
+        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
+          "progression_name": "Apl. Pemberi Rekomendasi Buku"
         },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
           "tips": [
@@ -9068,7 +9183,11 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Impor sebuah Model"
+        },
+        "24852ddc-3470-46ba-b727-e205b2a6da3c": {
+          "progression_name": "Sesuaikan Apl. Anda"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
@@ -9078,7 +9197,8 @@
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Level Pilihan: Sesuaikan Apl. Anda"
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
           "tips": [
@@ -9089,6 +9209,12 @@
           "tips": [
             null
           ]
+        },
+        "5930841f-14d4-4405-915f-abebc0c094fe": {
+          "name": "Apl. Prioritas Medis"
+        },
+        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
+          "progression_name": "Apl. Prioritas Medis"
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
           "tips": [
@@ -9110,6 +9236,12 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "Kartu Model Pemberi Rekomendasi Buku"
+        },
+        "8a788853-2486-42f1-b0d0-572ad723f421": {
+          "progression_name": "  Kartu Model Dataset Medis"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
@@ -9121,20 +9253,32 @@
             null
           ]
         },
+        "d5f051bd-7a5c-464f-a830-e486187a0463": {
+          "name": "Prediksi Zoo",
+          "progression_name": "Prediksi Zoo"
+        },
         "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
           "tips": [
             null
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "Mengimpor Model Anda",
           "tips": [
             null
           ]
         },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "Mengimpor Model Anda"
+        },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "Apl. Contoh; Klasifikasi Zoo"
+        },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Pemberi Rekomendasi Piaraan"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -9144,7 +9288,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Pemberi Rekomendasi Piaraan"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "Pemberi Rekomendasi Piaraan"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -9155,6 +9303,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Menambahkan Layar Baru"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -9196,6 +9347,9 @@
             null
           ]
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Model Safari"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -9212,15 +9366,36 @@
             null
           ]
         },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Apl. Safari"
+        },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "Sistem Peringatan Pengemudi"
+        },
+        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
+          "progression_name": "Pemberi Rekomendasi Raspado"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "Sistem Peringatan Pengemudi"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "Sistem Peringatan Pengemudi"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
         },
+        "9749fdb5-91ad-41b8-9b83-5198ab37cc38": {
+          "progression_name": "Silakan Pilih: Sempurnakan Apl. Anda"
+        },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
           "tips": [
             null
           ]
+        },
+        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
+          "progression_name": "Latih Model di AI Lab"
         },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
           "tips": [
@@ -9231,6 +9406,9 @@
           "tips": [
             null
           ]
+        },
+        "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
+          "progression_name": "Buat Apl. di App Lab"
         },
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "Bayangan",
@@ -9256,6 +9434,9 @@
             null
           ]
         },
+        "8ae2778f-e311-4131-9116-8a2cb6ee5512": {
+          "progression_name": "Buat Google Form"
+        },
         "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
           "tips": [
             null
@@ -9268,17 +9449,25 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Survei"
+          "name": "Survei",
+          "progression_name": "Survei Kim"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Data Survei Kim"
         },
         "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
           "tips": [
             null
           ]
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "AI Lab dan Data Kim"
+        },
+        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
+          "progression_name": "Data Survei Isaac"
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
@@ -9289,7 +9478,11 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab dan Data Isaac"
+        },
+        "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
+          "progression_name": "Club Datasets"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -9309,10 +9502,20 @@
             null
           ]
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "impor Model Anda"
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "Tambahkan Layar Sambutan"
+        },
+        "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
+          "progression_name": "Sesuaikan Apl. Anda"
+        },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Periksa Aplikasimu"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "Pemanasan"
@@ -9350,7 +9553,8 @@
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desain Apl. AI - AI Lab"
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
           "name": "Penutupan"
@@ -9361,7 +9565,8 @@
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Desain Apl. AI - App Lab"
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
           "name": "Penutupan"
@@ -9639,7 +9844,8 @@
         "233defe7-9977-4539-8a42-7e146979db0e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Contoh Aplikasi untuk Kebaikan"
         },
         "f5bad206-6147-4a6c-af88-bf15c41f6469": {
           "tips": [
@@ -9700,6 +9906,9 @@
           "tips": [
             null
           ]
+        },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "Apl. Contoh"
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
@@ -9770,6 +9979,9 @@
           "tips": [
             null
           ]
+        },
+        "5d7ed2d7-0498-45a5-8969-679ad3abcad6": {
+          "progression_name": "Video: Pengantar Mode Desain"
         },
         "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
           "progression_name": "Buat Layar"
@@ -10057,6 +10269,9 @@
         "15e99a5a-e49e-47de-8eb1-f01b08a46a42": {
           "progression_name": "Buzzer"
         },
+        "1184f2a5-021b-42e7-ba86-75ac8ffcc8ad": {
+          "progression_name": "Tantangan Ekstra: Sound Board"
+        },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
           "tips": [
             null
@@ -10076,6 +10291,9 @@
         },
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "Sepeda motor"
+        },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "Tantangan Ekstra"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
@@ -10098,6 +10316,9 @@
             null
           ],
           "progression_name": "Sensor ke Warna"
+        },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "Tantangan Ekstra"
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
@@ -10288,6 +10509,9 @@
           "tips": [
             null
           ]
+        },
+        "57a93004-eeaa-48a5-b81b-6f9b05aedf82": {
+          "progression_name": "Video: Sirkuit dan Logika"
         },
         "4d9d84e9-900f-4816-81fd-b70a1ca43b16": {
           "progression_name": "Sirkuit Sederhana"
@@ -10491,6 +10715,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widget Angka Biner"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -10521,6 +10748,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "Widget Angka Biner 8-Bit"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -10611,6 +10841,9 @@
           "tips": [
             null
           ]
+        },
+        "4668155e-befd-4113-bcad-1c7a7fa245be": {
+          "progression_name": "Data Pesta Pizza"
         },
         "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
           "tips": [
@@ -10710,17 +10943,24 @@
         "e84d2260-141b-4899-971d-0e0e33eb12d2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Netflix dan Data"
         },
         "caccc30a-07e9-465a-a077-65788e7b4f1b": {
           "tips": [
             null
           ]
         },
+        "2837e4be-02be-4d45-91a4-2a155bfbb322": {
+          "progression_name": "Video: Waze dan Data"
+        },
         "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
           "tips": [
             null
           ]
+        },
+        "35b3c205-5ca5-43fa-b2ef-ee0f6d245722": {
+          "progression_name": "Video: Amazon dan Data"
         },
         "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
           "tips": [
@@ -10743,12 +10983,17 @@
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Apa itu Machine Learning?"
         },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "AI for Oceans: Ikan vs Bukan Ikan"
+        },
+        "037d1080-4d96-41bc-93af-bef5eef2007a": {
+          "progression_name": "Video: Data Pelatihan dan Bias"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "tips": [
@@ -10760,10 +11005,16 @@
             null
           ]
         },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "AI for Oceans: Jenis-jenis Ikan"
+        },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
             null
           ]
+        },
+        "e67f18c9-668b-44fb-95aa-1908687d9f52": {
+          "progression_name": "Video: Dampak terhadap Masyarakat"
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
           "tips": [
@@ -10942,7 +11193,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Pengantar Variabel"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
@@ -11100,8 +11352,17 @@
             null
           ]
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Buat Latar Belakang"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Tambahkan Sprite"
+        },
         "c0fc532b-e6eb-4858-af5b-5032cd917616": {
           "progression_name": "Tambah Teks"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Periksa Adeganmu"
         },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
@@ -11201,11 +11462,26 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Contoh Adegan Animasi "
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Rencanakan Adeganmu"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "Gambar sebuah Latar Belakang"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Tambahkan Sprite"
+        },
         "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
           "progression_name": "Tambah Teks"
         },
         "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
           "progression_name": "Tambah Gerakan"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Memeriksa Adegan Animasimu"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -11237,6 +11513,9 @@
           "tips": [
             null
           ]
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "Pemeriksaan Cepat"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "Pembangunan Keterampilan"
@@ -11340,10 +11619,14 @@
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "Apl. Demo: Kartu Interaktif"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Buat Kartu Interaktif"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Kerja Proyek"
@@ -11434,6 +11717,27 @@
             null
           ]
         },
+        "0525516c-cd72-4700-9c7b-36644137ab93": {
+          "progression_name": "Pengantar Side Scroller"
+        },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "Gambar Latar Belakang Anda"
+        },
+        "ef36eaf3-2930-44dd-a939-e0e614755352": {
+          "progression_name": "Buat Sprite-mu"
+        },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "Kontrol Pemain"
+        },
+        "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
+          "progression_name": "Perulangan"
+        },
+        "1ffc10cf-5883-4d6d-915c-2eb055ce8f84": {
+          "progression_name": "Skor & Papan Skor"
+        },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "Periksa Game-Mu"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
             null
@@ -11470,6 +11774,9 @@
             null
           ]
         },
+        "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "progression_name": "Prediksi Kode"
+        },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "tips": [
             null
@@ -11505,8 +11812,20 @@
             null
           ]
         },
+        "05331f50-c576-42e0-91ce-00561faee05c": {
+          "progression_name": "Pengantar Flyer Game"
+        },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "Buat Sprite Anda"
+        },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "Kontrol Pemain"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Gerakan Sprite"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "Periksa Game-Mu"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -11533,6 +11852,9 @@
           ],
           "progression_name": "Praktik"
         },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "Pemeriksaan Cepat"
+        },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
             null
@@ -11557,8 +11879,17 @@
             null
           ]
         },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "Game yang Sama"
+        },
         "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
           "progression_name": "Susun Rencana Proyek Anda"
+        },
+        "4a1fbbc7-9baa-4d49-bad8-71ea306857af": {
+          "progression_name": "Membuat Sprite"
+        },
+        "f860c052-f4a5-4925-bed9-78bf6c24605b": {
+          "progression_name": "Kontrol Pemainmu"
         },
         "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
           "tips": [
@@ -11599,7 +11930,8 @@
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Ulasan Platform Jumper"
         },
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "Tantangan"
@@ -11608,6 +11940,9 @@
           "tips": [
             null
           ]
+        },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "Contoh Game"
         },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
@@ -11619,6 +11954,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "Proyek - Sprite dan Interaksi"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "Periksa Game-Mu"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -11800,22 +12138,30 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Apl: Pemilih Hewan Piaraan"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Apl: Pembuat Cerita"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
             null
           ]
         },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "Apl: Apl. Piaraan yang Lebih Baik"
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
           "tips": [
             null
           ]
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "Apl: Apakah Sekarang Ulang Tahunmu?"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -11827,10 +12173,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "Apl: Taman Nasional"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "Apl: Berapa Banyak Negara"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -11841,6 +12193,21 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "Apl: Hari Ulang Tahunku yang Terkenal"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "Apl: Buku Catatan Stempel"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "Apl: Jari Tercepat"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Apl: Tebak Angka"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "Apl: Aku Harus Tinggal di Mana?"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -11862,10 +12229,22 @@
             null
           ]
         },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "App: Pemilih Pakaian"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "Apl: Pencari Teman"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "Apl: Pilih Film Anak"
+        },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
             null
           ]
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "progression_name": "Video: Model IOSP"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
           "tips": [
@@ -12103,6 +12482,9 @@
             null
           ]
         },
+        "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "progression_name": "Contoh Halaman Web Pribadi"
+        },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "Mengeksplorasi Situs Web",
           "tips": [
@@ -12215,12 +12597,14 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Pemeriksaan Cepat"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Debugging"
         },
         "b9b617ce-f9b9-4d30-90ae-0ecb111821d7": {
           "progression_name": "Praktik"
@@ -12240,6 +12624,18 @@
           "tips": [
             null
           ]
+        },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "Ulasan: HTML"
+        },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "Tantangan: Daftar"
+        },
+        "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
+          "progression_name": "Buat Kode Halaman Anda"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "Periksa Halamanmu"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -12272,6 +12668,9 @@
             null
           ]
         },
+        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "progression_name": "Contoh Situs Web"
+        },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
             null
@@ -12282,7 +12681,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Video: Pengantar CSS - Bagian 1"
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "Pembangunan Keterampilan"
@@ -12290,7 +12690,8 @@
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Pengantar CSS - Bagian 2"
         },
         "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
           "progression_name": "Pembangunan Keterampilan"
@@ -12329,6 +12730,21 @@
           "tips": [
             null
           ]
+        },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "Ulasan: CSS"
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "Tantangan: Warna RGB"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "Tambahkan Konten dan Struktur ke Halaman Anda"
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "Tambahkan Gaya ke Halaman Anda"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "Periksa Halamanmu"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Masukan Sejawat"
@@ -12413,6 +12829,9 @@
             null
           ]
         },
+        "890f7764-695b-4258-acbb-9b7e29804fc5": {
+          "progression_name": "Contoh Situs Web Pribadi"
+        },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
           "tips": [
             null
@@ -12432,6 +12851,9 @@
           "tips": [
             null
           ]
+        },
+        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
+          "progression_name": "Contoh Situs Web"
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "Eksplorasi"
@@ -12488,7 +12910,8 @@
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Mempublikasikan Situs Web Anda"
         },
         "21f831a9-7123-4982-b5fb-d37eadd0df25": {
           "progression_name": "Sedang diterbitkan situs web"
@@ -12550,7 +12973,8 @@
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Kerja Tim"
         },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
           "tips": [
@@ -12560,7 +12984,8 @@
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Mengelola Ketidakcocokan"
         },
         "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
           "tips": [
@@ -12582,6 +13007,9 @@
             null
           ]
         },
+        "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
+          "progression_name": "Video: Cara Kerja Pencarian"
+        },
         "136308c1-5aa0-4820-afe0-a16252ba6c74": {
           "tips": [
             null
@@ -12594,6 +13022,9 @@
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "Kelas"
+        },
+        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
+          "progression_name": "Contoh Situs Web"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "Eksplorasi"
@@ -12625,6 +13056,9 @@
           "tips": [
             null
           ]
+        },
+        "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
+          "progression_name": "Unggah Gambar Anda"
         },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
           "tips": [
@@ -12675,11 +13109,23 @@
             null
           ]
         },
+        "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed": {
+          "progression_name": "Proyek Tim Anda"
+        },
         "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
           "progression_name": "Tambah Konten dan HTML"
         },
+        "3c67e494-744f-4bc3-8068-56698fcc6c42": {
+          "progression_name": "Bagikan Halaman Anda"
+        },
         "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
           "progression_name": "Tambah Gaya"
+        },
+        "3db737c5-d81b-44fc-a3b1-6dd08594ce19": {
+          "progression_name": "Bagikan Stylesheet Anda"
+        },
+        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
+          "progression_name": "Periksa Karya Anda"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
@@ -12689,7 +13135,8 @@
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Sertakan Umpan Balik"
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
           "progression_name": "Bayangan"

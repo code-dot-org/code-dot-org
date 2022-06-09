@@ -942,6 +942,17 @@ pl:
         CSA-PL-two-way-selection: Dwustronny wybór
         CSA-PL-Printing-in-Java: Drukowanie w Javie
         CSA-PL-multi-selection-statements: Instrukcje wielokrotnego wyboru
+        PL_CSP_TeacherTips_Advice: 'Wskazówki dla nauczycieli: Porady dla nowych nauczycieli
+          informatyki'
+        PL_CSP_TeacherTips_IntroToCSP: 'Wskazówki dla nauczycieli: Wpropwadzenie do
+          zasad informatyki'
+        PL_CSP_TeacherTips_Debugging: 'Wskazówki dla nauczycieli: Pomoc w debugowaniu'
+        PL_CSP_TeacherTips_LeadLearner: 'Wskazówki dla nauczycieli: Jak zostać przodującym
+          uczniem'
+        PL_CSP_TeacherTips_APExam: 'Wskazówki dla nauczycieli: Przygotowanie do egzaminu
+          AP'
+        PL_CSP_TeacherTips_EIPM: 'Wskazówki dla nauczycieli: Proces EIPM'
+        PL_CSD_CircuitPlayground_Overview: Omówienie placu zabaw
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

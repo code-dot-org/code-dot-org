@@ -87,7 +87,8 @@ describe('UnitEditor', () => {
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
       scriptPath: '/s/test-unit',
-      initialProfessionalLearningCourse: ''
+      initialProfessionalLearningCourse: '',
+      isCSDCourseOffering: false
     };
   });
 
@@ -164,8 +165,8 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(25);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
@@ -173,6 +174,26 @@ describe('UnitEditor', () => {
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
+    });
+
+    it('maker unit checkbox shows for CSD course offering', () => {
+      const wrapper = createWrapper({
+        isMigrated: true,
+        initialCourseVersionId: 1,
+        isCSDCourseOffering: true
+      });
+
+      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(1);
+    });
+
+    it('maker unit checkbox does not show for non-CSD course offering', () => {
+      const wrapper = createWrapper({
+        isMigrated: true,
+        initialCourseVersionId: 1,
+        isCSDCourseOffering: false
+      });
+
+      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(0);
     });
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {

@@ -2,10 +2,6 @@
 mr:
   data:
     script:
-      category:
-        csf_category_name: संगणक शास्त्राची मूलतत्त्वे
-        hoc_category_name: अवर ऑफ कोड
-        math_category_name: गणित
       name:
         course1:
           description_audience: वय वर्षे 4-6

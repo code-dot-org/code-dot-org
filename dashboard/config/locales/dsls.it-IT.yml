@@ -5737,7 +5737,8 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseE_EOC_2020:
         display_name: Progetto di fine corso
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
@@ -6803,7 +6804,7 @@ it-IT:
 
           * Inizia con una **frase** memorabile
           * Solo i tuoi **genitori** dovrebbero conoscere la tua password.
-          * Non utilizzare mai  per la tua password alcuna informazione legate alla tua identità **personale**.
+          * Non utilizzare mai per la tua password alcuna informazione legata alla tua identità **personale**.
           * Crea password con almeno **otto** caratteri.
           * Usa lettere, numeri e **simboli** nella tua password.
 
@@ -7038,14 +7039,14 @@ it-IT:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema comprensibile ai computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
         markdown: |-
           # Braccialetti Binari
 
-          Crea un braccialetto che rappresenti il tuo nome in un sistema che sia comprensibile per i computer!
+          Crea un braccialetto che rappresenti il tuo nome in un sistema comprensibile ai computer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
@@ -7194,14 +7195,14 @@ it-IT:
           Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
       MyRoboticFriends-Unplugged:
         markdown: |-
-          # I Miei Amici Robotici
+          # I miei amici robotici
 
-          Impara a programmare scrivendo il codice per i tuoi amici!
+          Impara a programmare scrivendo codice per i tuoi amici!
       MyRoboticFriends-Unplugged_2020:
         markdown: |-
-          # I Miei Amici Robotici
+          # I miei amici robotici
 
-          Impara a programmare scrivendo il codice per i tuoi amici!
+          Impara a programmare scrivendo codice per i tuoi amici!
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Il Potere delle Parole
@@ -7310,20 +7311,20 @@ it-IT:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019_2020:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalFootprint-Unplugged:
@@ -7361,9 +7362,9 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged:
         markdown: |-
-          # A ripetizione di... ballo a ripetizione
+          # Diventare ripetitivi
 
-          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
+          Questa lezione introduce il concetto di ripetizione nella programmazione, attraverso un'attività di ballo.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # A ripetizione di... ballo a ripetizione
@@ -7478,7 +7479,7 @@ it-IT:
         markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
           e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
           \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
-          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          musica, fare acquisti o semplicemente navigare su Internet.\n* Per un programmatore
           è importante comprendere i bisogni altrui e tenerli presenti per progettare
           le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       TheRightAppMarkdownLevel_2019_2020:
@@ -7781,10 +7782,10 @@ it-IT:
         markdown: |-
           # Progettare per l'accessibilità
 
-          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
-          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
-          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
-          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per le persone con disabilità.
+          * Le disabilità possono essere di tipo fisico, uditivo, visivo e di molti altri tipi.
+          * Disabilità diverse, presentano impatti diversi sulle persone, compreso il modo in cui queste usano la tecnologia come nel caso delle app per gli smartphone.
+          * Progettare app accessibili per le persone con disabilità, rende queste app migliori anche per tutti gli altri!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalSharing-Unplugged_2021:
@@ -7799,9 +7800,9 @@ it-IT:
           Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
       GettingLoopy-Unplugged_2021:
         markdown: |-
-          # A ripetizione di... ballo a ripetizione
+          # Diventare ripetitivi
 
-          Questa lezione introduce il concetto della ripetizione a ciclo nella programmazione, attraverso un'attività di ballo.
+          Questa lezione introduce il concetto di ripetizione nella programmazione, attraverso un'attività di ballo.
       GraphPaperProgramming-Unplugged_2021:
         markdown: |-
           # Programmazione su carta a quadretti
@@ -8859,7 +8860,7 @@ it-IT:
         markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
           e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
           \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare
-          musica, fare acquisti o semplicemente navigare su internet.\n* Per un programmatore
+          musica, fare acquisti o semplicemente navigare su Internet.\n* Per un programmatore
           è importante comprendere i bisogni altrui e tenerli presenti per progettare
           le app!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC_2021:
@@ -9201,10 +9202,12 @@ it-IT:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
             pensi che succederà quando cliccherai su "Esegui"?
       courseE_EOC_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       courseE_EOC_examples_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       courseE_multi_dance_events_predict1_2021:
         answers:
@@ -9297,12 +9300,12 @@ it-IT:
           trascorri un po' tempo a osservare i progetti di esempio.
       courseF_events_predict_multi:
         answers:
-        - text: Il personaggiosi girerà soltanto verso destra.
-          feedback: Sbagliato. Il personaggio si muoverà anche verso est.
-        - text: Il personaggiosi muoverà semplicemente verso est.
+        - text: Il personaggio si girerà soltanto verso destra.
+          feedback: Sbagliato. Il personaggio si sposterà anche verso est.
+        - text: Il personaggio si sposterà semplicemente verso est.
           feedback: Sbagliato. Il personaggio non ha smesso di girare, quindi farà
             entrambe le cose contemporaneamente.
-        - text: Il personaggio girerà e si muoverà allo stesso tempo.
+        - text: Il personaggio girerà e si sposterà insieme.
           correct: true
           feedback: Corretto! Entrambi i comportamenti si manifesteranno contemporaneamente.
         - text: Il personaggio farà prima un giro e dopo si sposterà.
@@ -9375,8 +9378,8 @@ it-IT:
         answers:
         - text: Entrambi gli aerei si sposteranno di una casella lungo la griglia,
             poi si fermeranno.
-          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti", con cui
-            i personaggi continueranno a correre fin quando non gli diranno di fermarsi.
+          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti" che continuano
+            a compiersi finché non viene loro detto di fermarsi.
         - text: Entrambi gli aerei inizieranno a muoversi e non si fermeranno.
           correct: true
           feedback: Corretto! Questi comportamenti diranno agli aerei di iniziare
@@ -9386,8 +9389,8 @@ it-IT:
           feedback: Sbagliato. Ogni blocco di codice nel Laboratorio dei personaggi
             viene eseguito istantaneamente, uno dopo l'altro.
         - text: Gli aerei si scontrano.
-          feedback: Sbagliato. Gli aerei non sono posizionati in modo che si entrino
-            in contatto.
+          feedback: Sbagliato. Gli aerei non sono posizionati in modo da entrare in
+            contatto.
         questions:
         - text: Leggi il codice, poi fai una previsione.
       courseF_variables_predict_multi:
@@ -9399,15 +9402,16 @@ it-IT:
           correct: true
           feedback: Corretto! Quello che digiti viene usato al posto del blocco del
             nome.
-        - text: Il personaggio cambierà le sue dimensioni.
-          feedback: Sbagliato. Il testo viene stampato a video.
+        - text: Il personaggio cambierà dimensione.
+          feedback: Sbagliato. Il testo viene visualizzato sullo schermo.
         - text: Il computer farà un'altra domanda.
-          feedback: Sbagliato. Soltanto una domanda viene rivolta, proprio quando
-            il programma viene avviato.
+          feedback: Sbagliato. Viene rivolta solo una domanda, proprio quando il programma
+            viene avviato.
         questions:
         - text: 'Questo programma ti consente di rispondere a una domanda digitando
-            direttamente dalla tua tastiera. Il blocco "stampa" mostra il testo sullo
-            schermo. Fai una previsione: cosa succederà dopo aver risposto alla domanda?'
+            direttamente dalla tua tastiera. Il blocco `stampa` visualizza il testo
+            sullo schermo. Fai una previsione: cosa succederà dopo aver risposto alla
+            domanda?'
       courseF_variables_stop:
         content1: descrizione qui
         markdown: "# Stop!\n\n## Sei sicuro che tu sia pronto per procedere? \n\n\nNel
@@ -9480,7 +9484,8 @@ it-IT:
 
           ## Come muoverti in sicurezza online?
       express_EOC_2021:
-        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
+        description: Sei giunto alla conclusione del Corso E! Scegli un progetto da
+          creare.
         display_name: Progetto di fine corso
       grade2_multi_collector_A_predict1_2021:
         answers:
@@ -9517,27 +9522,32 @@ it-IT:
           ora per capire cos'è possibile fare. Entro la fine di questo corso, potrai
           creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
         teacher_markdown: |-
-          # Introduzione ai livelli aggiuntivi
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi facoltativi
+          Gli esercizi facoltativi offrono una scelta di esercizi aggiuntivi, che gli alunni devono portare a termine. Gli alunni devono completare almeno uno di questi sottolivelli.
 
-          Le scelte qui contenute conducono gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
+          Le scelte qui presentate accompagnano gli alunni ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
       courseF_sprites_freeplay:
         display_name: 'Personaggi: gioco libero'
-        description: Tocca a te creare qualsiasi cosa tu desideri! Che tipo di progetto
+        description: Ora tocca a te creare qualunque cosa desideri! Che tipo di progetto
           realizzerai?
       courseF_sprites_practice:
-        display_name: La pratica dei personaggi
-        description: Hai fatto un ottimo lavoro finora!
+        display_name: Esercitarsi con i personaggi
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con personaggi e comportamenti!
         teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica degli esercizi facoltativi
+          Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona la frutta.|Anima un veliero|Un giornata ventilata|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona il frutto|Anima un veliero|Una giornata ventilata|
           |-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Recensione**|**Recensione**|**Recensione**|
+          | ***Tipologia*** |**Ripasso**|**Ripasso**|**Ripasso**|**Ripasso**|
           | ***Concetto***|*personaggi, posizioni*|*personaggi, proprietà*|*personaggi, posizioni, comportamenti*|*comportamenti*|
+
+
+          esercizio
       SimonSays-Unplugged_2021:
         markdown: |-
           # Segui l'algoritmo
@@ -9549,24 +9559,24 @@ it-IT:
         display_name: Esempi di progetti
       courseF_artist_practice:
         display_name: Pratica dell'artista
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          i cicli e l'Artista!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con i cicli e l'Artista!
       courseF_beeFor_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          cicli e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con cicli e api!
       courseF_beeVar_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          variabili e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con variabili e api!
       courseF_bee_practice:
         display_name: Esercitazioni con le api
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          cicli e api!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con cicli e api!
       courseF_events_freeplay:
         display_name: 'Eventi: gioco libero'
         description: Ora puoi mettere in pratica ciò hai imparato per migliorare ancora
@@ -9574,44 +9584,46 @@ it-IT:
           inizia qualcosa di nuovo!
       courseF_events_practice:
         display_name: Esercitazioni per gli eventi
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          gli eventi!
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con gli eventi!
         teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli studenti a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi secondari da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Lancio!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Partenza!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
           |-|-|-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
-          | ***Concetto***|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*quando/durante gli eventi*|*quando/durante gli eventi*|
+          | ***Digita*** |**Revisione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
+          | ***Concetto***|*events, behaviors*|*eventi, comportamenti*|*events, behaviors*|*eventi, comportamenti*|*when/while events*|*quando/durante gli eventi*|
       courseF_text_practice:
         display_name: Pratica con il testo e i comandi
-        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
-          Portane a termine il maggior numero possibile. Continua ad esercitarti con
-          i testi e i comandi!
-        teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+        description: Per ora hai fatto un ottimo lavoro! Scegli la tua prossima attività.
+          Cerca quanto più possibile di portarla a termine. Continua a esercitarti
+          con i testi e i comandi!
+        teacher_markdown: |+
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi facoltativi mettono a disposizione una scelta di esercizi aggiuntivi. Gli alunni devono completarne almeno uno.
 
-          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+          Puoi utilizzare le descrizioni seguenti per aiutare gli alunni a selezionare autonomamente le scelte o per definire le aspettative sul numero di esercizi facoltativi da completare.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Discorso in testo!|Dal testo ai comandi|Dai un nome al robot|Etichette delle variabili|Grande testo|Suggerimento per i colori|Iniziare da capo|
-          |-|-|-|-|-|-|-|
-          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
-          | ***Concetto***|*blocco stampa, eventi*|*comandi, eventi*|*aggiunta di caselle*|*etichette delle variabili corrispondenti*|*blocchi della schermata del titolo*|*memorizzazione colori*|*nessun nuovo contenuto*
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Utilizzo della voce per il testo|Testo dal prompt|Dai un nome al robot!|Etichette di variabili|Testo grande|Richiesta di colori|Ripartire da zero|
+          |-|-|-|-|-|-|-|-|
+          | ***Tipologia*** |**Ripasso**|**Correzione**|**Correzione**|**Correzione**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
+          | ***Concetto***|*blocco scrivi, eventi*|*discussioni, eventi*|*aggiunta spazi*|*corrispondenza variabili di etichetta*|*blocchi  schermata introduttiva*|*salvataggio colori*|*nessun nuovo contenuto*
+
+
       courseF_variables_projects:
         display_name: Scegli un progetto
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
           caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
           alla \"Parte 2\".
         teacher_markdown: |
-          # Panoramica del livello delle scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma podevono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono essere incoraggiati a completare **due** livelli per lo stesso progetto.
 
-          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli studenti devono selezionare uno dei livelli contrassegnati come "Parte 1". Una volta che hanno terminato quel livello devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo livello fornirà agli studenti un feedback mentre mettono insieme i componenti base del loro progetto. Il secondo livello è' un "gioco libero" che consente agli studenti di apportare al loro codice tutte le modifiche che desiderano.
+          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due esercizi secondari. Per iniziare, gli studenti devono selezionare uno degli esercizi contrassegnati come "Parte 1". Una volta terminato quell'esercizio devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo esercizio fornirà agli studenti un riscontro mentre mettono insieme i componenti base del proprio progetto. Il secondo esercizio è un "esercizio libero" che consente agli studenti di apportare al loro codice tutte le modifiche desiderate.
       courseF_variables_samples:
         display_name: 'Esplorazione: Programmi di esempio'
         description: Creerai un biglietto di auguri, un chatbot o una storia delle
@@ -9619,8 +9631,8 @@ it-IT:
           per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
           per iniziare a pianificare il tuo programma.
         teacher_markdown: |-
-          # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          # Panoramica sugli esercizi opzionali
+          Gli esercizi opzionali offrono una scelta di esercizi aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
           Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
       express_EOC_examples_2021:
@@ -9631,7 +9643,7 @@ it-IT:
         markdown: |-
           # Storia delle caselle vuote
 
-          In questa lezione, imparerai a usare e scrivere storie delle caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
+          In questa lezione, imparerai a usare e scrivere storie con le caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
       CSD U3 Collisions SFLP:
         markdown: |+
           # Panoramica

@@ -7519,10 +7519,10 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -7540,10 +7540,10 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -7561,10 +7561,10 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -7582,10 +7582,10 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -7603,20 +7603,20 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7631,11 +7631,11 @@ es-MX:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7650,13 +7650,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
           feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
             nectar de cada flor y miel de cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si hay flor´ le permite a la
-            abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7669,13 +7669,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
           feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
             nectar de cada flor y miel de cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si hay flor´ le permite a la
-            abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7685,7 +7685,7 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7702,7 +7702,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7719,7 +7719,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7736,7 +7736,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: La abeja avanzará y obtendrá el néctar solo una vez.
+        - text: La abeja avanzará y recogerá el néctar solo una vez.
           feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
             y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
@@ -7867,7 +7867,7 @@ es-MX:
             veces y recogerá la mayor cantidad de maíz o lechuga que encuentre. No
             recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7888,7 +7888,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7909,7 +7909,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -7930,7 +7930,7 @@ es-MX:
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -8940,12 +8940,12 @@ es-MX:
         - text: La abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.
@@ -11736,21 +11736,21 @@ es-MX:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - text: BB-8 llegará demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 girará en la dirección equivocada después del primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 girará en la dirección equivocada después del primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         questions:
-        - text: Mira el siguiente programa con atención. ¿Qué sucederá cuando hagas
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseD_EOC_2021:
         description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
@@ -11801,10 +11801,10 @@ es-MX:
           feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
             recoger néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -11822,26 +11822,26 @@ es-MX:
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
-        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
-            una flor, la abeja no debería hacer nada. Observa el siguiente código
-            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+        - text: La nube está bloqueando la vista. Podría haber una flor debajo de
+            esta nube. Si hay una flor, la abeja tendría que recoger néctar una vez.
+            Si no hay una flor, la abeja no debería hacer nada. Observa el siguiente
+            código con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+        - text: La abeja tratará de recoger el néctar tanto de las flores como del
             panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja intentará obtener miel y néctar tanto de las flores como
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de recoger miel tanto de las flores como del panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
+        - text: La abeja intentará recoger miel y néctar tanto de las flores como
             del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+          feedback: " Incorrecto. El bloque ´si hay flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal."
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -11849,59 +11849,59 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - text: La abeja avanzará y recogerá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja girará en la dirección equivocada.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el puzle.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         questions:
-        - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
-            ocurrirá si haces clic en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '10'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - text: La granjera recogerá todos los cultivos.
+        - text: La cosechadora recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
-        - text: La granjera no recogerá ninguna de las cosechas con el camino que
-            está tomando.
+        - text: La cosechadora no recogerá cultivos en el camino que está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
           correct: true
           feedback: "¡Correcto!"
-        - text: La Granjera sólo recogerá la calabaza.
+        - text: La cosechadora sólo recogerá la calabaza.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
-        markdown: |
-          Los brotes en este desafió serán de maíz o lechuga.
+        markdown: |+
+          Los brotes en este rompecabezas serán de maíz o lechuga.
           <br/>
+
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
             en "Ejecutar"?
@@ -11913,13 +11913,13 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los hoyos completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para eliminar la tierra de la pila.
-        - text: Este código dejará el último agujero sin tocar.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
+        - text: Este código dejará el último hoyo sin tocar.
           feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este puzle?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - text: No sucederá nada.
@@ -11951,7 +11951,7 @@ es-MX:
             círculos sin parar.
           feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
             yendo hacia adelante y hacia atrás para siempre.
-        - text: El zombi se quedará atascado al final del camino de frente.
+        - text: El zombie se quedará atascado al final del camino de frente.
           feedback: En este código, el zombie se pasará del camino correcto y terminará
             yendo hacia adelante y hacia atrás para siempre.
         questions:
@@ -11959,7 +11959,7 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -12001,26 +12001,26 @@ es-MX:
             clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá la lechuga.
+        - text: La granjera recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La cosechadora recogerá el maíz.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_prediction_artistFunction1_2021:
         answers:
         - text: Nada. No se usa la función en el programa.
           feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
+          feedback: Incorrecto. El programa activa dos veces la función.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
@@ -12048,14 +12048,14 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: El pez dorado flotará hasta la parte superior de la pantalla
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: " El pez dorado comenzará a dar vueltas"
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: " La planta rodadora comenzará a dar vueltas"
           correct: true
           feedback: "¡Correcto!"
-        - text: El pez dorado se encenderá y apagará.
-          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?

@@ -329,9 +329,11 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::FLAPPY_NAME)
   end
 
+  # List of units in the CSD course offering which use the maker tools.
+  # Used to determine the most recent Maker Unit to show on the Maker Homepage
   def self.maker_units(user)
-    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
-    return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
+    # only units in CSD should be included in the maker units
+    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.get_course_version&.course_offering&.csd?}
   end
 
   class << self
@@ -1162,6 +1164,7 @@ class Script < ApplicationRecord
       raise 'Can not have both a destination unit group and a destination professional learning course.'
     end
 
+    source_course_version = get_course_version
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
@@ -1203,6 +1206,10 @@ class Script < ApplicationRecord
 
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
+        end
+
+        source_course_version&.reference_guides&.each do |reference_guide|
+          reference_guide.copy_to_course_version(destination_unit_group.course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1580,6 +1587,7 @@ class Script < ApplicationRecord
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
     summary
   end
 
@@ -1597,10 +1605,10 @@ class Script < ApplicationRecord
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section, filtered so that the only script id which appears
   #   is the current script id. This mirrors the output format of
-  #   User#get_hidden_script_ids, and satisfies the input format of
+  #   User#get_hidden_unit_ids, and satisfies the input format of
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
-    return {} unless user&.teacher?
+    return {} unless user && can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
     hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end

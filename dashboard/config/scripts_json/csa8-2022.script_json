@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:43:09 UTC",
+    "serialized_at": "2022-06-02 15:32:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1570,7 +1570,7 @@
       "key": "3ef3df02-b1b0-4d8d-8c63-70c357737393",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *binary search* and demonstrate the example.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How does increasing the length of the array impact the execution count?*\n* *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search. Students realize that the binary search algorithm is faster than the linear search algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *binary search* and demonstrate the example.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
       },
       "seeding_key": {
         "activity_section.key": "3ef3df02-b1b0-4d8d-8c63-70c357737393",
@@ -1578,8 +1578,31 @@
       }
     },
     {
-      "key": "c3152fe9-53dc-4b10-878a-d0b2f54ac275",
+      "key": "bfbe87fa-f71d-4950-9a4a-b6dc828c7b5a",
       "position": 4,
+      "properties": {
+        "description": "If you tried changing the order of the cards, you may have noticed that the binary search algorithm does not work as effectively. For a binary search algorithm to work, the data must already be sorted.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bfbe87fa-f71d-4950-9a4a-b6dc828c7b5a",
+        "lesson_activity.key": "8711f551-7484-42aa-b807-a0f7b900ea10"
+      }
+    },
+    {
+      "key": "dd47759f-d338-4edf-a82a-04d6bd4f351b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How does increasing the length of the array impact the execution count?*\n* *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search. Students realize that the binary search algorithm is faster than the linear search algorithm."
+      },
+      "seeding_key": {
+        "activity_section.key": "dd47759f-d338-4edf-a82a-04d6bd4f351b",
+        "lesson_activity.key": "8711f551-7484-42aa-b807-a0f7b900ea10"
+      }
+    },
+    {
+      "key": "c3152fe9-53dc-4b10-878a-d0b2f54ac275",
+      "position": 6,
       "properties": {
         "description": "You did some brainstorming for your Creative Coding Project in a previous lesson. Let's now take some time to create an initial plan to guide your development processes in upcoming lessons. Your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
         "duration": "15",
@@ -1593,7 +1616,7 @@
     },
     {
       "key": "b63438cc-f79c-4d8f-9863-4500224b6174",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with the Console Project.",
         "tips": [
@@ -1610,7 +1633,7 @@
     },
     {
       "key": "c3bee1d5-3d4d-41b3-bb4e-5330d5c7e7f2",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
@@ -2327,7 +2350,7 @@
       "key": "315676b2-9a76-4f4d-aa5d-019ccf15bd8c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *helper method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the base cases?*\n* *What is the recursive call?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item. Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *merge sort*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *helper method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the base cases?*\n* *What is the recursive call?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item. Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
       },
       "seeding_key": {
         "activity_section.key": "315676b2-9a76-4f4d-aa5d-019ccf15bd8c",
@@ -5788,7 +5811,7 @@
       }
     },
     {
-      "name": "Unit 8 Presentation Slides",
+      "name": "Unit 8 Presentation",
       "url": "https://docs.google.com/presentation/d/1rp9ZSNCOOctRKgNzQ5xwJa5r5Q_mUL2xOFrgOMgsdUc/edit?usp=sharing",
       "key": "unit_8_presentation_slides",
       "properties": {

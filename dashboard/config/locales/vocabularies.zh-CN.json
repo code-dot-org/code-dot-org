@@ -245,6 +245,10 @@
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "模型和模拟",
+          "definition": "复制或模仿现实世界事件的关键特征以研究其行为的程序，无需在现实生活中进行实验的成本、时间或危险。"
+        },
         "event/sports/unversioned": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
@@ -379,6 +383,10 @@
         "for_loop/coursef/2021": {
           "word": "For循环",
           "definition": "具有预定开始、结束和增量（步长间隔）的循环。"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "模型和模拟",
+          "definition": "复制或模仿现实世界事件的关键特征以研究其行为的程序，无需在现实生活中进行实验的成本、时间或危险。"
         },
         "machine_learning/coursef/2021": {
           "word": "机器学习",
