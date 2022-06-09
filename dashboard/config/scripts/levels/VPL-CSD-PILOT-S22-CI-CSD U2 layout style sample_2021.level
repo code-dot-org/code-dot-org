@@ -12,17 +12,17 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "reference_links": [
-      "/courses/vpl-csd2-ci-pilot-2022/guides/body-styling",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/images-in-html",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/creative-commons-search",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/style-sheets",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/text-properties",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/formatting-html",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/lists",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/headings-and-paragraphs",
-      "/courses/vpl-csd2-ci-pilot-2022/guides/html-tags"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/body-styling",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/images-in-html",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/creative-commons-search",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/style-sheets",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/text-properties",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/formatting-html",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/lists",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/headings-and-paragraphs",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/html-tags"
     ],
-    "map_reference": "/courses/vpl-csd2-ci-pilot-2022/guides/layout-properties"
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/layout-properties"
   },
   "level_num": "custom",
   "game_id": 58,

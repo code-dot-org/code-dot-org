@@ -65,14 +65,14 @@
     "parent_level_id": 20819,
     "name_suffix": "_2021",
     "reference_links": [
-      "/courses/vpl-csd3-ci-pilot-2022/guides/velocity",
-      "/courses/vpl-csd3-ci-pilot-2022/guides/booleans-and-comparison-operators",
-      "/courses/vpl-csd3-ci-pilot-2022/guides/if-statements",
-      "/courses/vpl-csd3-ci-pilot-2022/guides/if-else-statements",
-      "/courses/vpl-csd3-ci-pilot-2022/guides/the-draw-loop",
-      "/courses/vpl-csd3-ci-pilot-2022/guides/multi-frame-animations"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/velocity",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/booleans-and-comparison-operators",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/if-statements",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/if-else-statements",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/the-draw-loop",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/courses/vpl-csd3-ci-pilot-2022/guides/collision-detection",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/collision-detection",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
