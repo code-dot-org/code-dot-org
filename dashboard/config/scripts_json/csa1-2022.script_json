@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-01 20:53:22 UTC",
+    "serialized_at": "2022-06-02 16:57:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2835,7 +2835,7 @@
       "key": "e68d3c68-64b4-4942-b1a5-59fcc0b78237",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show how to create a new class in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the constructor for the `Painter` class and how it is called to create a `Painter` object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show how to create a new class in Java Lab.",
         "duration": "20",
         "name": "Creating PainterPlus Objects"
       },
@@ -2845,8 +2845,31 @@
       }
     },
     {
-      "key": "8fc43332-d085-4206-b210-cea8e30071ad",
+      "key": "110bab6b-e7af-4254-b555-3c346e126d87",
       "position": 7,
+      "properties": {
+        "description": "While a subclass inherits the attributes and behaviors of the superclass, it does not inherit the constructors in a superclass. We will need to write a constructor in the `PainterPlus` class so we can create `PainterPlus` objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "110bab6b-e7af-4254-b555-3c346e126d87",
+        "lesson_activity.key": "acbfe4b1-e47f-4e52-aa73-936d110ac6f2"
+      }
+    },
+    {
+      "key": "8cb2a8c5-fa57-4559-abd6-796b2cc661bc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the constructor for the `Painter` class and how it is called to create a `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cb2a8c5-fa57-4559-abd6-796b2cc661bc",
+        "lesson_activity.key": "acbfe4b1-e47f-4e52-aa73-936d110ac6f2"
+      }
+    },
+    {
+      "key": "8fc43332-d085-4206-b210-cea8e30071ad",
+      "position": 9,
       "properties": {
         "description": "Let's make our `PainterPlus` class!",
         "remarks": true
@@ -2858,7 +2881,7 @@
     },
     {
       "key": "15043e85-db16-4a84-9335-1b219d652f52",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to write the `PainterPlus` class by creating a new file and writing the class header and constructor. Students create a `PainterPlus` object on Level 3.",
         "progression_name": "Creating PainterPlus"
@@ -2944,7 +2967,7 @@
       "key": "559a8698-c2f7-4302-8c25-1335bd03c516",
       "position": 1,
       "properties": {
-        "description": "We created a `PainterPlus` class to have a new type of `Painter` with additional behaviors. Before adding new methods to the `PainterPlus` class, we need to know how to write a method.",
+        "description": "Software engineers often create subclasses to have additional methods or attributes. We created a `PainterPlus` class to have a new type of `Painter` with additional behaviors. Before adding new methods to the `PainterPlus` class, we need to know how to write a method.",
         "duration": "10",
         "name": "Writing Methods",
         "remarks": true
@@ -3062,6 +3085,18 @@
       },
       "seeding_key": {
         "activity_section.key": "42ceec14-172c-45fb-8273-267d5897719b",
+        "lesson_activity.key": "82aece15-8e5e-4234-8ece-aed67f302fa9"
+      }
+    },
+    {
+      "key": "bc61278b-4df7-4e23-a3ad-db67b8142708",
+      "position": 10,
+      "properties": {
+        "description": "The `Painter` class cannot use any methods that are written in the `PainterPlus` class. Any method that is called must be defined within its own class or its superclass.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bc61278b-4df7-4e23-a3ad-db67b8142708",
         "lesson_activity.key": "82aece15-8e5e-4234-8ece-aed67f302fa9"
       }
     },

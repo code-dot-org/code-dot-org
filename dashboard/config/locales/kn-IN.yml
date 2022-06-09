@@ -207,6 +207,14 @@ kn:
         math: ಗಣಿತ
         science: ವಿಜ್ಞಾನ
         la: ಭಾಷಾ ಕಲೆ
+        other: ಇತರೆ
+        na: ಅನ್ವಯಿಸುವುದಿಲ್ಲ
+      resources:
+        other: ಇತರೆ
+        na: ಅನ್ವಯಿಸುವುದಿಲ್ಲ
+      robotics:
+        other: ಇತರೆ
+        na: ಅನ್ವಯಿಸುವುದಿಲ್ಲ
       workshop_course:
         csf_express: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್‌ಗಳು (ಎಕ್ಸ್‌ಪ್ರೆಸ್‌ಗೂ ಮೊದಲು ಅಥವಾ ಎಕ್ಸ್‌ಪ್ರೆಸ್)
         not_applicable: ಅನ್ವಯಿಸುವುದಿಲ್ಲ

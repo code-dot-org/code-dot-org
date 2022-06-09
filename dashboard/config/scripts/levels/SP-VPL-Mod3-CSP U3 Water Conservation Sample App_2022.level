@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-27T22:24:46.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -224,6 +220,10 @@
     "thumbnail_url": "https://images.code.org/a2dc68f48ccbaf04a6fcca3588d478b8-image-1626379543163.03.24 PM.png",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-27T22:24:46.000Z",
+  "user_id": 832,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-27T22:24:46.550+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-Mod3-CSP U3 Water Conservation Sample App_2021\\\"\"],\"cloned_from\":\"SP-VPL-Mod3-CSP U3 Water Conservation Sample App_2021\"}]"

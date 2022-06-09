@@ -722,10 +722,13 @@ ca:
         math: Matemàtiques
         science: Ciència
         la: Arts del llenguatge
+        other: Altres
       resources:
         kodable: Kodable
+        other: Altres
       robotics:
         kodable: Kodable
+        other: Altres
       email_opt_in:
         opt_in_yes: Sí
         opt_in_no: 'No'

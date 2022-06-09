@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-31 20:42:54 UTC",
+    "serialized_at": "2022-06-02 15:13:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2286,7 +2286,7 @@
       "key": "bf703ea8-fb3a-49b3-bdf4-a922ea29e8a0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code."
       },
       "seeding_key": {
         "activity_section.key": "bf703ea8-fb3a-49b3-bdf4-a922ea29e8a0",
@@ -2294,8 +2294,31 @@
       }
     },
     {
-      "key": "fc592a1a-0e77-4a93-9cbb-e377397af0a1",
+      "key": "2a48ec78-4d94-462b-8dd6-17199622d92e",
       "position": 6,
+      "properties": {
+        "description": "As we saw in this example, the recursive call has its own set of local variables, including the formal parameters. The parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2a48ec78-4d94-462b-8dd6-17199622d92e",
+        "lesson_activity.key": "62dfbccf-692b-49b9-9fa2-dc34376a3824"
+      }
+    },
+    {
+      "key": "b63edf5b-f6c7-4b5d-b6f3-fc5e52dcbe7a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "b63edf5b-f6c7-4b5d-b6f3-fc5e52dcbe7a",
+        "lesson_activity.key": "62dfbccf-692b-49b9-9fa2-dc34376a3824"
+      }
+    },
+    {
+      "key": "fc592a1a-0e77-4a93-9cbb-e377397af0a1",
+      "position": 8,
       "properties": {
         "description": "Using the items on your Project Planning Board, begin developing your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
         "duration": "15",
@@ -2309,7 +2332,7 @@
     },
     {
       "key": "bb57f210-9918-4d8a-924f-de959af797f5",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
@@ -2327,7 +2350,7 @@
     },
     {
       "key": "7b753846-5b96-48b8-ad87-ca0332c7a6cb",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },

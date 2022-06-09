@@ -1347,6 +1347,7 @@ it:
         music: Musica
         art: Arte
         other: 'Altro:'
+        na: Non applicabile
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy - l'Accademia del Codice
@@ -1355,7 +1356,8 @@ it:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1365,7 +1367,8 @@ it:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Laboratorio di meraviglie
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)

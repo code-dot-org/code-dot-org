@@ -509,6 +509,11 @@ sr:
         math: Математика
         science: Наука
         la: Уметност језика
+        other: Други
+      resources:
+        other: Други
+      robotics:
+        other: Други
       email_opt_in:
         opt_in_yes: Да
         opt_in_no: не
