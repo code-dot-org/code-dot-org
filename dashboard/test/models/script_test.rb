@@ -19,7 +19,7 @@ class ScriptTest < ActiveSupport::TestCase
     @unit_group.reload
 
     @pl_unit_group = create(:unit_group)
-    @pl_unit_in_unit_group = create(:script, name: 'pl-unit-in-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @pl_unit_in_unit_group = create(:script, name: 'pl-unit-in-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create(:unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_unit_in_unit_group)
     @pl_unit_in_unit_group.reload
     @pl_unit_group.reload

@@ -3788,8 +3788,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'lesson_extras_enabled? for pl course' do
-    script = create :script, lesson_extras_available: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    other_script = create :script, lesson_extras_available: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    script = create :script, lesson_extras_available: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    other_script = create :script, lesson_extras_available: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     facilitator = create :facilitator
     teacher = create :teacher
 
@@ -3876,7 +3876,7 @@ class UserTest < ActiveSupport::TestCase
         position: 2
       )
       create(:script_level, script: @pl_script, lesson: @pl_lesson3, position: 1)
-      @pl_unit_group = create :unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pl_unit_group = create :unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
       create :unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_script
       @pl_unit_group.reload
