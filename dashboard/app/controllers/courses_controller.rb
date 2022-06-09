@@ -64,9 +64,9 @@ class CoursesController < ApplicationController
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
-      instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-      participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instruction_type: params[:instruction_type] ? params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      participant_audience: params[:participant_audience] ? params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       has_numbered_units: true
     )
     if @unit_group.save
@@ -195,7 +195,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
+    cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

@@ -1,4 +1,4 @@
-class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
+class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   authorize_resource
   load_resource only: :create
 
