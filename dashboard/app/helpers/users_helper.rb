@@ -119,9 +119,12 @@ module UsersHelper
   def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
     user_data = {}
     if user
+      is_instructor = unit.can_be_instructor?(user)
+
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
+      user_data[:lockableAuthorized] = is_instructor ? user.verified_instructor? : user.student_of_verified_instructor?
       user_data[:isTeacher] = true if user.teacher?
+      user_data[:isInstructor] = is_instructor
       user_data[:isVerifiedInstructor] = true if user.verified_instructor?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
