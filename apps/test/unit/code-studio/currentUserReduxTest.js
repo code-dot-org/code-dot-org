@@ -5,7 +5,9 @@ import currentUser, {
   setUserType,
   setCurrentUserHasSeenStandardsReportInfo,
   setCurrentUserName,
-  setInitialData
+  setInitialData,
+  setUserRoleInCourse,
+  CourseRoles
 } from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
@@ -30,6 +32,25 @@ describe('currentUserRedux', () => {
     });
     it('initially sets signInState to Unknown', () => {
       assert.equal(initialState.signInState, SignInState.Unknown);
+    });
+  });
+
+  describe('setUserRoleInCourse', () => {
+    it('can update userRoleInCourse', () => {
+      const instructor = currentUser(
+        initialState,
+        setUserRoleInCourse(CourseRoles.Instructor)
+      );
+      assert.equal(instructor.userRoleInCourse, CourseRoles.Instructor);
+
+      const participant = currentUser(
+        initialState,
+        setUserRoleInCourse(CourseRoles.Participant)
+      );
+      assert.equal(participant.userRoleInCourse, CourseRoles.Participant);
+    });
+    it('initially sets userRoleInCourse to Unknown', () => {
+      assert.equal(initialState.userRoleInCourse, CourseRoles.Unknown);
     });
   });
 
