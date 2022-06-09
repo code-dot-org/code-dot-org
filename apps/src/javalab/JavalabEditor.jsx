@@ -783,7 +783,7 @@ class JavalabEditor extends React.Component {
                   id="openCodeReviewWarningBanner"
                   style={styles.openCodeReviewWarningBanner}
                 >
-                  hey how are ya
+                  {javalabMsg.editingDisabledUnderReview()}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {
@@ -905,8 +905,6 @@ const styles = {
     backgroundColor: color.lightest_red,
     height: 20,
     padding: 5,
-    opacity: 0.9,
-    position: 'absolute',
     width: '100%',
     color: color.black
   }
