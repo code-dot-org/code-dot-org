@@ -1,3 +1,4 @@
+var SPRITE_SIZE = 25;
 var MIN_XY = SPRITE_SIZE / 2 + 5;
 var MAX_XY = 400 - MIN_XY;
 
