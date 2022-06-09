@@ -1,0 +1,7 @@
+{
+  "category": "Experiment",
+  "config": {
+    "func": "layoutGrid",
+    "blockText": "layout sprites as a grid"
+  }
+}

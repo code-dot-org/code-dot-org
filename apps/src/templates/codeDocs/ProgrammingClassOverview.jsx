@@ -11,7 +11,8 @@ export default function ProgrammingClassOverview({
   programmingClass,
   programmingEnvironmentName,
   programmingEnvironmentLanguage,
-  includeMethodSummary
+  includeMethodSummary,
+  isSmallWindow
 }) {
   return (
     <div style={{width: '100%'}}>
@@ -99,6 +100,7 @@ export default function ProgrammingClassOverview({
               method={method}
               programmingEnvironmentName={programmingEnvironmentName}
               programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+              isSmallWindow={isSmallWindow}
             />
           ))}
         </div>
@@ -121,5 +123,6 @@ ProgrammingClassOverview.propTypes = {
   programmingClass: programmingClassShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
   programmingEnvironmentLanguage: PropTypes.string,
-  includeMethodSummary: PropTypes.bool
+  includeMethodSummary: PropTypes.bool,
+  isSmallWindow: PropTypes.bool
 };
