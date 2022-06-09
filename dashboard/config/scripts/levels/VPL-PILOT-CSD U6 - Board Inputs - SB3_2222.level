@@ -64,10 +64,10 @@
     "parent_level_id": 20418,
     "name_suffix": "_2222",
     "reference_links": [
-      "/courses/vpl-csd6-ci-pilot-2022/guides/circuit-playground",
-      "/courses/vpl-csd6-ci-pilot-2022/guides/board-events"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/circuit-playground",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/board-events"
     ],
-    "map_reference": "/courses/vpl-csd6-ci-pilot-2022/guides/physical-input",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
