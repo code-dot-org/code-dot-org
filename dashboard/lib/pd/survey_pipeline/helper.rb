@@ -1,7 +1,7 @@
 require 'pd/survey_pipeline/daily_survey_retriever.rb'
 require 'pd/survey_pipeline/daily_survey_parser.rb'
 require 'pd/survey_pipeline/daily_survey_joiner.rb'
-require 'pd/survey_pipeline/mapper.rb'
+require 'pd/survey_pipeline/generic_mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
 
 module Pd::SurveyPipeline::Helper
@@ -105,7 +105,7 @@ module Pd::SurveyPipeline::Helper
       {
         condition: is_selected_question_all_ws,
         field: :answer_to_number,
-        reducers: [Pd::SurveyPipeline::AvgReducer]
+        reducers: [Pd::SurveyPipeline::Reducer::Average]
       }
     ]
 
@@ -125,7 +125,7 @@ module Pd::SurveyPipeline::Helper
       {
         condition: is_selected_question_this_ws,
         field: :answer_to_number,
-        reducers: [Pd::SurveyPipeline::AvgReducer]
+        reducers: [Pd::SurveyPipeline::Reducer::Average]
       }
     ]
 
@@ -161,8 +161,8 @@ module Pd::SurveyPipeline::Helper
       lambda {|hash| ![ANSWER_SINGLE_SELECT, ANSWER_SCALE].include?(hash.dig(:answer_type))}
 
     map_config = [
-      {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::HistogramReducer]},
-      {condition: not_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::NoOpReducer]}
+      {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::Reducer::Histogram]},
+      {condition: not_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::Reducer::NoOp]}
     ]
 
     Pd::SurveyPipeline::GenericMapper.
