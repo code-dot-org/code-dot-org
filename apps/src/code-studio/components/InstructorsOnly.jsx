@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
+import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 
-const InstructorsOnly = ({isTeacher, children}) => {
-  return isTeacher ? children : null;
+const InstructorsOnly = ({isInstructor, children}) => {
+  return isInstructor ? children : null;
 };
 
 export default connect(state => ({
-  isTeacher: state.currentUser.userType === 'teacher'
+  isInstructor: state.currentUser.userRoleInCourse === CourseRoles.Instructor
 }))(InstructorsOnly);
