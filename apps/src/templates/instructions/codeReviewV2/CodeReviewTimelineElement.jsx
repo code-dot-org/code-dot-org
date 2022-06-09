@@ -29,8 +29,12 @@ const CodeReviewTimelineElement = ({
   viewAsCodeReviewer,
   children
 }) => {
-  const versionLink =
-    location.origin + location.pathname + '?version=' + projectVersionId;
+  let versionLink = location.origin + location.pathname;
+  if (location.search) {
+    versionLink += `${location.search}&version=${projectVersionId}`;
+  } else {
+    versionLink += `?version=${projectVersionId}`;
+  }
 
   // You can only see previous versions of your own project
   const displayEyeball = !viewAsCodeReviewer && !!projectVersionId;
