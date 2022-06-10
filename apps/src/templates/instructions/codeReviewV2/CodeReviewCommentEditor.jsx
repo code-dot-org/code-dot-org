@@ -10,6 +10,9 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
     false
   );
+  const [addCommentFailureMessage, setAddCommentFailureMessage] = useState(
+    null
+  );
 
   const handleSubmit = () => {
     addCodeReviewComment(commentText, onSubmitSuccess, onSubmitFailure);
@@ -24,7 +27,12 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     setCommentText('');
   };
 
-  const onSubmitFailure = () => {
+  const onSubmitFailure = err => {
+    if (err.profanityFoundError) {
+      setAddCommentFailureMessage(err.profanityFoundError);
+    } else {
+      setAddCommentFailureMessage(null);
+    }
     setDisplayAddCommentFailure(true);
   };
 
@@ -38,6 +46,12 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
         style={styles.textarea}
       />
       <div style={styles.submit}>
+        {displayAddCommentFailure && (
+          <CodeReviewError
+            messageText={addCommentFailureMessage}
+            style={styles.error}
+          />
+        )}
         <Button
           disabled={commentText.length === 0}
           onClick={handleSubmit}
@@ -45,7 +59,6 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
           color={Button.ButtonColor.orange}
           style={styles.submitButton}
         />
-        {displayAddCommentFailure && <CodeReviewError />}
       </div>
     </>
   );
@@ -74,5 +87,8 @@ const styles = {
   },
   submitButton: {
     marginTop: '10px'
+  },
+  error: {
+    marginTop: '8px'
   }
 };
