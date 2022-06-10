@@ -87,7 +87,7 @@ export default class CommentEditor extends Component {
             fontFamily: '"Gotham 5r", sans-serif'
           }}
         /> */}
-        <ToastExampleTextArea />
+        {/* <ToastExampleTextArea /> */}
         <SlateExampleTextArea />
         {/* <TextAreaWithCodeButton />
         <TextAreaWithCode /> */}
