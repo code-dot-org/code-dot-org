@@ -13,7 +13,7 @@
 #
 
 class Pd::CourseFacilitator < ApplicationRecord
-  belongs_to :facilitator, class_name: 'User'
+  belongs_to :facilitator, class_name: 'User', optional: true
 
   validates_inclusion_of :course, in: Pd::Workshop::COURSES
   validates_uniqueness_of :course, scope: :facilitator_id
