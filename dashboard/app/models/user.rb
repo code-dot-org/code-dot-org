@@ -890,7 +890,7 @@ class User < ApplicationRecord
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?

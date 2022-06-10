@@ -36,7 +36,7 @@ class CodeReview < ApplicationRecord
     message: 'already has an open code review for this project'
 
   # Scope that includes only open code reviews
-  scope :open_reviews, -> { where(closed_at: nil) }
+  scope :open_reviews, -> {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
     _, project_id = storage_decrypt_channel_id(channel)

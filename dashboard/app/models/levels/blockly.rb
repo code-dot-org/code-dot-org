@@ -383,7 +383,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
