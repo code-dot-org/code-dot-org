@@ -166,7 +166,7 @@ class Slack
   def self.snippet(room, text)
     # omit leading '#' when passing channel names to this API
     channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
+    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.escape(text)}")
     return !!result
   end
 
