@@ -2,12 +2,78 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
-  InstanceType:
+  # We provide 5 entrypoints to the systems provisioned by this template. The subdomain and basedomain name settings
+  # control the fully qualified domain names used to host the systems provisioned by this Stack:
+  #
+  # code.org - The "Pegasus" corporate web site.
+  # studio.code.org - The "Dashboard" learning system.
+  # codeprojects.org - Enabled "Dashboard" to serve student created projects on a different base domain name.
+  # hourofcode.com - A "Pegasus" marketing site for the Hour of Code event.
+  # advocacy.code.org - A "Pegasus" site with content from our policy team.
+  SubDomainName:
     Type: String
-    Default: <%=INSTANCE_TYPE%>
+    Default: !Ref AWS::StackName
+    Description: Subdomain name of the system being provisioned. Typically the same as the Stack Name.
+  BaseDomainName:
+    Type: String
+    Default: code.org
+    Description: Base domain name ('code.org', 'dev-code.org', etc.) of the system being provisioned.
+  HostedZonedID:
+    Type: String
+    # Hosted Zone ID for 'code.org'.
+    Default: Z2LCOI49SCXUGU
+    Description: AWS Route53 Hosted Zone ID for base domain name.
+  HourOfCodeBaseDomainName:
+    Type: String
+    Default: hourofcode.com
+    Description: Base domain name ('hourofcode.com', 'dev-hourofcode.com', etc.) of the system being provisioned.
+  HourOfCodeHostedZonedID:
+    Type: String
+    # Hosted Zone ID for 'hourofcode.com'.
+    Default: Z3TQLAV9VNIB0G
+    Description: AWS Route53 Hosted Zone ID for Hour Of Code base domain name.
+  CodeProjectsBaseDomainName:
+    Type: String
+    Default: hourofcode.com
+    Description: Base domain name ('codeprojects.org', 'dev-codeprojects', etc.) of the system being provisioned.
+  CodeProjectsHostedZonedID:
+    Type: String
+    # Hosted Zone ID for 'codeprojects.org'.
+    Default: Z3TQLAV9VNIB0G
+    Description: AWS Route53 Hosted Zone ID for Code Projects base domain name.
+  # Core architecture of a Stack are configured with these options.
   Branch:
     Type: String
     Default: <%=branch%>
+  CDNEnabled:
+    Type: Boolean
+    Default: false
+    Description: Provision CloudFront Distributions to serve/cache HTTP requests as they first enter the system.
+  LoadBalancer:
+    Type: Boolean
+    Default: false
+    Description: Provision Load Balancers to route HTTP requests to Ruby web application server EC2 Instances.
+  # LoadBalancer must be set to 'true' to set Frontends to 'true'.
+  Frontends:
+    Type: Boolean
+    Default: false
+    Description: Provision Auto Scaling Group to dynamically Start & Terminate web server EC2 Instances as needed.
+  Database:
+    Type: Boolean
+    Default: false
+    Description: Provision Auto Scaling Group.
+  Alarms:
+    Type: Boolean
+    Default: true
+    Description: Provision CloudWatch Alarms to monitor key resources within the Stack.
+  Console:
+    Type: Boolean
+    Default: false
+    Description: Provision an EC2 Instance that hosts command line utilities to manage the system.
+  InstanceType:
+    Type: String
+    Default: <%=INSTANCE_TYPE%>
+    Description: AWS EC2 Instance Type used to provision daemon, console, and web application servers in this Stack.
 <% if database -%>
   DatabaseUsername:
     Type: String
