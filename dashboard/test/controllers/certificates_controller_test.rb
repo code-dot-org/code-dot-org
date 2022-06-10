@@ -7,6 +7,8 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_match %r{^/certificate_images/}, response_data['imageUrl']
   end
 
   test 'can show given bogus course' do
@@ -14,6 +16,8 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_match %r{^/certificate_images/}, response_data['imageUrl']
   end
 
   test 'can show without name or course' do
@@ -21,6 +25,8 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
   end
 
   test 'returns bad request given invalid base64' do
