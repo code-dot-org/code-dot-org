@@ -884,7 +884,7 @@ class User < ApplicationRecord
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
-      update_attributes(params, *options)
+      update(params, *options)
     else
       super
     end
