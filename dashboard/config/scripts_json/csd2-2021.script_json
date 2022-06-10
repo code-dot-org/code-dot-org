@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:09 UTC",
+    "serialized_at": "2022-06-09 15:54:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2721,7 +2721,7 @@
       "position": 10,
       "properties": {
         "description": "As part of this project, you may give students the opportunity to give feedback to their peers using the Peer Review form.  This will likely extend the project by at least one day.",
-        "name": "Peer Feeedback\r"
+        "name": "Peer Feedback"
       },
       "seeding_key": {
         "activity_section.key": "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c",
