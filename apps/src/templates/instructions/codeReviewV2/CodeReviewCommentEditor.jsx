@@ -39,14 +39,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
 
   return (
     <>
-      <textarea
-        placeholder={javalabMsg.addACommentToReview()}
-        rows={3}
-        value={commentText}
-        onChange={e => setCommentText(e.target.value)}
-        style={styles.textarea}
-      />
-      <SlateTextarea />
+      <SlateTextarea handleChange={val => setCommentText(val)} />
       <div style={styles.submit}>
         {displayAddCommentFailure && (
           <CodeReviewError

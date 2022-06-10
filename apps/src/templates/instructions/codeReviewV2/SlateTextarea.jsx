@@ -1,38 +1,29 @@
 import React, {useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
-import isHotkey from 'is-hotkey';
+import javalabMsg from '@cdo/javalab/locale';
 import {Editable, withReact, Slate} from 'slate-react';
 import {Editor, Transforms, createEditor, Element as SlateElement} from 'slate';
 import {serialize} from 'remark-slate';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 import '@cdo/apps/templates/instructions/codeReviewV2/slateTextArea.scss';
 
-const HOTKEYS = {
-  'mod+b': 'bold',
-  'mod+i': 'italic',
-  'mod+u': 'underline',
-  'mod+`': 'code'
-};
-
-const SlateExampleTextArea = () => {
+const SlateExampleTextArea = ({handleChange}) => {
   const renderElement = useCallback(props => <Element {...props} />, []);
   const renderLeaf = useCallback(props => <Leaf {...props} />, []);
   const editor = useMemo(() => withReact(createEditor()), []);
 
   const onChange = value => {
     console.log(value);
-    console.log(value.map(v => serialize(v)).join(''));
+    const markdownValue = value.map(v => serialize(v)).join('');
+    console.log(markdownValue);
+    handleChange(markdownValue);
   };
 
   return (
-    <div style={{border: '1px solid #59cad3'}}>
-      <Slate
-        editor={editor}
-        value={initialValue}
-        onChange={onChange}
-        style={{minHeight: '100px'}}
-      >
-        <div style={{borderBottom: '1px solid #59cad3'}}>
+    <div style={styles.wrapper}>
+      <Slate editor={editor} value={initialValue} onChange={onChange}>
+        <div style={styles.buttonsArea}>
           <div
             role="button"
             style={styles.codeButton}
@@ -47,19 +38,10 @@ const SlateExampleTextArea = () => {
         <Editable
           renderElement={renderElement}
           renderLeaf={renderLeaf}
-          placeholder="Add a comment to the review"
+          placeholder={javalabMsg.addACommentToReview()}
           className="editable-text-area"
           spellCheck
           autoFocus
-          onKeyDown={event => {
-            for (const hotkey in HOTKEYS) {
-              if (isHotkey(hotkey, event)) {
-                event.preventDefault();
-                const mark = HOTKEYS[hotkey];
-                toggleMark(editor, mark);
-              }
-            }
-          }}
         />
       </Slate>
     </div>
@@ -82,16 +64,6 @@ const toggleBlock = (editor, format) => {
   }
 };
 
-const toggleMark = (editor, format) => {
-  const isActive = isMarkActive(editor, format);
-
-  if (isActive) {
-    Editor.removeMark(editor, format);
-  } else {
-    Editor.addMark(editor, format, true);
-  }
-};
-
 const isBlockActive = (editor, format, blockType = 'type') => {
   const {selection} = editor;
   if (!selection) {
@@ -109,11 +81,6 @@ const isBlockActive = (editor, format, blockType = 'type') => {
   );
 
   return !!match;
-};
-
-const isMarkActive = (editor, format) => {
-  const marks = Editor.marks(editor);
-  return marks ? marks[format] === true : false;
 };
 
 const Element = ({attributes, children, element}) => {
@@ -150,9 +117,21 @@ const initialValue = [
 ];
 
 const styles = {
+  wrapper: {
+    border: `1px solid ${color.light_teal}`,
+    borderRadius: '5px'
+  },
   codeButton: {
     padding: '5px'
+  },
+  buttonsArea: {
+    borderBottom: `1px solid ${color.light_gray}`,
+    margin: '0 5px'
   }
+};
+
+SlateExampleTextArea.propTypes = {
+  handleChange: PropTypes.func
 };
 
 export default SlateExampleTextArea;
