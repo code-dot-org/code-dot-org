@@ -629,7 +629,7 @@ class UserTest < ActiveSupport::TestCase
       user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
       assert_equal 7, user.age
 
-      user.update_attributes(age: '9')
+      user.update(age: '9')
       assert_equal Date.new(Date.today.year - 9, Date.today.month, Date.today.day), user.birthday
       assert_equal 9, user.age
     end
@@ -671,7 +671,7 @@ class UserTest < ActiveSupport::TestCase
 
     Timecop.freeze(Date.today + 40) do
       assert_no_difference('user.reload.birthday') do
-        user.update_attributes(age: '7')
+        user.update(age: '7')
       end
       assert_equal 7, user.age
     end
