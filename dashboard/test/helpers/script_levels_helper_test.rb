@@ -9,9 +9,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @teacher = create(:teacher)
     @student = create(:student)
     script = create(:script, lesson_extras_available: true)
-    create(:section, user: @teacher, script: script)
-    @section = create(:section, user: @teacher, script: script)
-    create(:follower, section: @section, student_user: @student)
 
     # give our test script a more-complex internal hierarchy than the one
     # provided by the factory, so we can test a variety of script_level and
@@ -21,6 +18,10 @@ class ScriptLevelsHelperTest < ActionView::TestCase
         create_list(:script_level, 3, lesson: lesson, script: script)
       end
     end
+
+    create(:section, user: @teacher, script: script)
+    @section = create(:section, user: @teacher, script: script)
+    create(:follower, section: @section, student_user: @student)
   end
 
   test 'tracking_pixel_url' do
