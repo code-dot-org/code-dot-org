@@ -22,6 +22,6 @@
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_text_text-decoration.asp",
   "short_description": "Text Decoration\nThe text-decoration property specifies the appearance of decorative lines on text. The most common text-decoration are:",
-  "syntax": "[`text-decoration: value;`(#d3e965)](/docs/weblab/Text-Dec/)",
+  "syntax": "text-decoration: value;",
   "tips": "* You may combine different kinds of text decorative in one statement.\n* The default value is no text decoration. "
 }
