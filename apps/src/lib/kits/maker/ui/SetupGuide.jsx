@@ -22,7 +22,6 @@ import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
 import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -76,15 +75,8 @@ export default class SetupGuide extends React.Component {
       );
     }
 
-    this.setupChecker = new SetupChecker();
-
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
-      return (
-        <SetupChecklist
-          setupChecker={this.setupChecker}
-          webSerialPort={webSerialPort}
-        />
-      );
+      return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
       <Provider store={store}>
