@@ -30,6 +30,8 @@ const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const SET_FILE_METADATA_FROM_SOURCES = 'javalab/SET_FILE_METADATA_FROM_SOURCES';
+const SET_EDIT_TAB_KEY = 'javalab/SET_EDIT_TAB_KEY';
+const SET_FILE_METADATA = 'javalab/SET_FILE_METADATA';
 
 const getFileMetadataFromSources = (sources, isEditingStartSources) => {
   let fileMetadata = {};
@@ -295,6 +297,19 @@ export const setFileMetadataFromSources = () => {
   };
 };
 
+export const setEditTabKey = editTabKey => {
+  return {
+    type: SET_EDIT_TAB_KEY,
+    editTabKey
+  };
+};
+
+export const setFileMetadata = fileMetadata => {
+  return {
+    type: SET_FILE_METADATA,
+    fileMetadata
+  };
+};
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -509,6 +524,18 @@ export default function reducer(state = initialState, action) {
       ...state,
       fileMetadata,
       orderedTabKeys
+    };
+  }
+  if (action.type === SET_EDIT_TAB_KEY) {
+    return {
+      ...state,
+      editTabKey: action.editTabKey
+    };
+  }
+  if (action.type === SET_FILE_METADATA) {
+    return {
+      ...state,
+      fileMetadata: action.fileMetadata
     };
   }
   return state;
