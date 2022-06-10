@@ -4,6 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import SlateTextarea from '@cdo/apps/templates/instructions/codeReviewV2/SlateTextarea';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const [commentText, setCommentText] = useState('');
@@ -45,6 +46,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
         onChange={e => setCommentText(e.target.value)}
         style={styles.textarea}
       />
+      <SlateTextarea />
       <div style={styles.submit}>
         {displayAddCommentFailure && (
           <CodeReviewError
