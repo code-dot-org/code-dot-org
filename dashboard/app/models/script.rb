@@ -2048,6 +2048,6 @@ class Script < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    middle_high?
+    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version.course_offering.key)
   end
 end
