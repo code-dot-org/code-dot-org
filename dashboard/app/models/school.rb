@@ -35,7 +35,7 @@ class School < ApplicationRecord
 
   self.primary_key = 'id'
 
-  belongs_to :school_district
+  belongs_to :school_district, optional: true
 
   has_many :school_stats_by_year
   has_many :school_info
