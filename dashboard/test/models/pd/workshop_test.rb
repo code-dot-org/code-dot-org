@@ -1082,7 +1082,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
-    workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
+    workshop.stubs(:pre_survey_course_offering_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
       ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
@@ -1103,7 +1103,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
-    workshop.stubs(:pre_survey_course_name).returns(course_name)
+    workshop.stubs(:pre_survey_course_offering_name).returns(course_name)
     UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 

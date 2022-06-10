@@ -824,17 +824,17 @@ class Pd::Workshop < ApplicationRecord
     PRE_SURVEY_BY_COURSE.key? course
   end
 
-  def pre_survey_course_name
-    PRE_SURVEY_BY_COURSE[course].try(:[], :course_name)
+  def pre_survey_course_offering_name
+    PRE_SURVEY_BY_COURSE[course].try(:[], :course_offering_name)
   end
 
   def pre_survey_course
     return nil unless pre_survey?
-    UnitGroup.find_by_name! pre_survey_course_name
+    UnitGroup.latest_stable_version(pre_survey_course_offering_name)
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.
-    raise "No course found for name #{pre_survey_course_name}"
+    raise "No course found for course offering key #{pre_survey_course_offering_name}"
   end
 
   # @return an array of tuples, each in the format:
