@@ -18,6 +18,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
         create_list(:script_level, 3, lesson: lesson, script: script)
       end
     end
+    script.fix_script_level_positions
 
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
