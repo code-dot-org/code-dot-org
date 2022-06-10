@@ -70,7 +70,10 @@ const toggleBlock = (editor, format) => {
   const isActive = isBlockActive(editor, format);
 
   if (isActive) {
-    Transforms.unwrapNodes(editor, {match: n => n.type === format});
+    Transforms.unwrapNodes(editor, {
+      match: n => n.type === format,
+      split: true
+    });
   } else {
     Transforms.wrapNodes(editor, {
       type: format,
