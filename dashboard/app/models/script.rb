@@ -2,20 +2,21 @@
 #
 # Table name: scripts
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)      not null
-#  created_at           :datetime
-#  updated_at           :datetime
-#  wrapup_video_id      :integer
-#  user_id              :integer
-#  login_required       :boolean          default(FALSE), not null
-#  properties           :text(65535)
-#  new_name             :string(255)
-#  family_name          :string(255)
-#  published_state      :string(255)      default("in_development")
-#  instruction_type     :string(255)
-#  instructor_audience  :string(255)
-#  participant_audience :string(255)
+#  id                       :integer          not null, primary key
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  wrapup_video_id          :integer
+#  user_id                  :integer
+#  login_required           :boolean          default(FALSE), not null
+#  properties               :text(65535)
+#  new_name                 :string(255)
+#  family_name              :string(255)
+#  published_state          :string(255)      default("in_development")
+#  instruction_type         :string(255)
+#  instructor_audience      :string(255)
+#  participant_audience     :string(255)
+#  participant_school_level :string(255)
 #
 # Indexes
 #

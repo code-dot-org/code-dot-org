@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_06_173510) do
+ActiveRecord::Schema.define(version: 2022_06_10_194300) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1713,6 +1713,7 @@ ActiveRecord::Schema.define(version: 2022_06_06_173510) do
     t.string "instruction_type"
     t.string "instructor_audience"
     t.string "participant_audience"
+    t.string "participant_school_level"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
@@ -1944,6 +1945,7 @@ ActiveRecord::Schema.define(version: 2022_06_06_173510) do
     t.string "instruction_type", default: "teacher_led", null: false
     t.string "instructor_audience", default: "teacher", null: false
     t.string "participant_audience", default: "student", null: false
+    t.string "participant_school_level", default: "k-5", null: false
     t.index ["instruction_type"], name: "index_unit_groups_on_instruction_type"
     t.index ["instructor_audience"], name: "index_unit_groups_on_instructor_audience"
     t.index ["name"], name: "index_unit_groups_on_name"

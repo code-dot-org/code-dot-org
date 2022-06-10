@@ -2,15 +2,16 @@
 #
 # Table name: unit_groups
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)
-#  properties           :text(65535)
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  published_state      :string(255)      default("in_development"), not null
-#  instruction_type     :string(255)      default("teacher_led"), not null
-#  instructor_audience  :string(255)      default("teacher"), not null
-#  participant_audience :string(255)      default("student"), not null
+#  id                       :integer          not null, primary key
+#  name                     :string(255)
+#  properties               :text(65535)
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#  published_state          :string(255)      default("in_development"), not null
+#  instruction_type         :string(255)      default("teacher_led"), not null
+#  instructor_audience      :string(255)      default("teacher"), not null
+#  participant_audience     :string(255)      default("student"), not null
+#  participant_school_level :string(255)      default("k-5"), not null
 #
 # Indexes
 #
