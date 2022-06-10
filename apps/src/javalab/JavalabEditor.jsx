@@ -9,7 +9,9 @@ import {
   renameFile,
   removeFile,
   setRenderedHeight,
-  setEditorColumnHeight
+  setEditorColumnHeight,
+  setEditTabKey,
+  setFileMetadata
 } from './javalabRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -108,10 +110,13 @@ class JavalabEditor extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     backpackEnabled: PropTypes.bool,
     fileMetadata: PropTypes.object.isRequired,
+    setFileMetadata: PropTypes.func.isRequired,
     orderedTabKeys: PropTypes.array.isRequired,
+    // check if these should be required
     activeTabKey: PropTypes.string,
     lastTabKeyIndex: PropTypes.number.isRequired,
-    editTabKey: PropTypes.string
+    editTabKey: PropTypes.string,
+    setEditTabKey: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -330,10 +335,10 @@ class JavalabEditor extends React.Component {
   // This is called from the dropdown menu on the active tab
   // when the rename option is clicked
   renameFromTabMenu() {
+    this.props.setEditTabKey(this.state.contextTarget);
     this.setState({
       showMenu: false,
       contextTarget: null,
-      editTabKey: this.state.contextTarget,
       openDialog: Dialog.RENAME_FILE
     });
   }
@@ -408,9 +413,9 @@ class JavalabEditor extends React.Component {
 
     // update sources with new filename
     this.props.renameFile(oldFilename, newFilename);
+    this.props.setFileMetadata(newFileMetadata);
     projectChanged();
     this.setState({
-      fileMetadata: newFileMetadata,
       openDialog: null,
       renameFileError: null
     });
@@ -880,6 +885,8 @@ export default connect(
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),
     setRenderedHeight: height => dispatch(setRenderedHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height)),
+    setEditTabKey: tabKey => dispatch(setEditTabKey(tabKey)),
+    setFileMetadata: fileMetadata => dispatch(setFileMetadata(fileMetadata))
   })
 )(Radium(JavalabEditor));
