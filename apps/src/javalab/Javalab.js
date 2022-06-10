@@ -7,6 +7,7 @@ import javalab, {
   getSources,
   getValidation,
   setAllSources,
+  setFileMetadataFromSources,
   setAllValidation,
   setDisplayTheme,
   appendOutputLog,
@@ -222,6 +223,7 @@ Javalab.prototype.init = function(config) {
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
+  console.log(startSources);
   const validation = config.level.validation || {};
   if (config.level.exemplarSources) {
     // If we have exemplar sources (either for editing or viewing), set initial sources
@@ -251,6 +253,8 @@ Javalab.prototype.init = function(config) {
       );
     } else {
       getStore().dispatch(setAllSources(startSources));
+      // Not sure if this is right place for this?
+      getStore().dispatch(setFileMetadataFromSources());
     }
   }
 
