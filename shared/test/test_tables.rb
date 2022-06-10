@@ -36,10 +36,10 @@ class TablesTest < Minitest::Test
 
     assert_equal export_firebase.body, expected_csv_data
 
-    table_name_with_spaces = 'my+table'
+    table_name_with_spaces = 'my%20table'
 
     response.expect(:body, records_data)
-    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{CGI.escape(table_name_with_spaces)}/records"
+    firebase_path = "/v3/channels/#{@channel_id}#{TEST_SUFFIX}/storage/tables/#{table_name_with_spaces}/records"
     Firebase::Client.any_instance.expects(:get).with(firebase_path).returns(response)
     assert_equal export_firebase(table_name_with_spaces).body, expected_csv_data
 
