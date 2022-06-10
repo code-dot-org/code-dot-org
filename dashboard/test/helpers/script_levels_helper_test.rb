@@ -9,7 +9,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     @teacher = create(:teacher)
     @student = create(:student)
     script = create(:script, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true)
-    script.fix_script_level_positions
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
