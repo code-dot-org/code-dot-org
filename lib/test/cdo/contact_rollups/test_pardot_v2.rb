@@ -441,7 +441,7 @@ class PardotV2Test < Minitest::Test
 
   def test_delete_prospects_by_email_finds_matching_pardot_ids
     email = 'test@domain.com'
-    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
     pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
         <prospect>
@@ -459,7 +459,7 @@ class PardotV2Test < Minitest::Test
 
   def test_delete_prospects_by_email_sends_deletion_requests
     email = 'test@domain.com'
-    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
     pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
         <prospect>

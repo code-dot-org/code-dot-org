@@ -715,14 +715,14 @@ module LevelsHelper
     # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-      thank_you: CGI.escape(I18n.t('footer.thank_you')),
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
       help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: CGI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: CGI.escape(I18n.t('footer.code_from_html')),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: CGI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
       built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: CGI.escape(I18n.t('footer.google_copyright'))
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
