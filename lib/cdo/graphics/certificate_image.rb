@@ -145,7 +145,7 @@ class CertificateImage
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil)
+  def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil, default_random_donor: false)
     name = ' ' if name.nil? || name.empty?
 
     course ||= ScriptConstants::HOC_NAME
@@ -168,17 +168,19 @@ class CertificateImage
       apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
     end
 
-    unless donor_name
+    if default_random_donor && !donor_name
       donor = CdoDonor.get_random_donor_by_weight
       donor_name = donor[:name_s]
     end
 
-    # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
-    sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
-    # The area in pixels which will display the sponsor message.
-    sponsor_area_width = 1400
-    sponsor_area_height = 35
-    apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447, sponsor_area_width, sponsor_area_height)
+    if donor_name
+      # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
+      sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
+      # The area in pixels which will display the sponsor message.
+      sponsor_area_width = 1400
+      sponsor_area_height = 35
+      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447, sponsor_area_width, sponsor_area_height)
+    end
     image
   end
 
