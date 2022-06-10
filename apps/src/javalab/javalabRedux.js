@@ -29,6 +29,7 @@ const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
 const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
+const SET_FILE_METADATA_FROM_SOURCES = 'javalab/SET_FILE_METADATA_FROM_SOURCES';
 
 const getFileMetadataFromSources = (sources, isEditingStartSources) => {
   let fileMetadata = {};
@@ -288,6 +289,12 @@ export const setEditorColumnHeight = editorColumnHeight => ({
   editorColumnHeight
 });
 
+export const setFileMetadataFromSources = () => {
+  return {
+    type: SET_FILE_METADATA_FROM_SOURCES
+  };
+};
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -481,6 +488,27 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPhotoPrompterOpen: false,
       photoPrompterPromptText: ''
+    };
+  }
+  if (action.type === SET_FILE_METADATA_FROM_SOURCES) {
+    const {sources, isEditingStartSources} = state;
+
+    let fileMetadata = {};
+    let orderedTabKeys = [];
+
+    // need to dedupe this code with getFileMetadataFromSources
+    Object.keys(sources).forEach((file, index) => {
+      if (sources[file].isVisible || isEditingStartSources) {
+        let tabKey = getTabKey(index);
+        fileMetadata[tabKey] = file;
+        orderedTabKeys.push(tabKey);
+      }
+    });
+
+    return {
+      ...state,
+      fileMetadata,
+      orderedTabKeys
     };
   }
   return state;
