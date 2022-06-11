@@ -262,7 +262,11 @@ class JavalabPanels extends React.Component {
                   this.getInstructionsHeight() +
                   styleConstants['resize-bar-width']
                 }
-                onResize={this.handleInstructionsHeightResize}
+                onResize={desiredHeight =>
+                  this.handleInstructionsHeightResize(
+                    desiredHeight - styleConstants['resize-bar-width']
+                  )
+                }
               />
             )}
             {isLeftSideVisible && bottomLeftPanel(leftWidth)}
@@ -272,7 +276,11 @@ class JavalabPanels extends React.Component {
               vertical={true}
               resizeItemTop={() => 10}
               position={leftWidth + styleConstants['resize-bar-width']}
-              onResize={this.handleWidthResize}
+              onResize={desiredWidth =>
+                this.handleWidthResize(
+                  desiredWidth - styleConstants['resize-bar-width']
+                )
+              }
             />
           )}
           <div
@@ -290,9 +298,7 @@ class JavalabPanels extends React.Component {
             {topRightPanel(this.getEditorHeight())}
             <HeightResizer
               resizeItemTop={() => PANELS_TOP_COORDINATE}
-              position={
-                this.getEditorHeight() + styleConstants['resize-bar-width']
-              }
+              position={this.getEditorHeight()}
               onResize={this.handleEditorHeightResize}
               style={styles.rightResizer}
             />
