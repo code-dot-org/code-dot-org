@@ -8,7 +8,11 @@ class CongratsController < ApplicationController
     # handle and the second must be equally weighted across all donors.
     @random_donor_twitter = CdoDonor.get_random_donor_twitter
     @random_donor_name = CdoDonor.get_random_donor_name
-    course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
-    @certificate_image_url = certificate_image_url(nil, course_name, nil)
+    begin
+      course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
+      @certificate_image_url = certificate_image_url(nil, course_name, nil)
+    rescue OpenSSL::Cipher::CipherError
+      return render status: :bad_request, json: {message: 'invalid base64'}
+    end
   end
 end
