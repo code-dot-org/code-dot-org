@@ -9,12 +9,11 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'returns bad request without student name' do
+  test 'can show without student name' do
     data = {course: 'hourofcode', donor: 'Amazon'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
-    assert_response :bad_request
-    assert_includes response.body, 'student name is required'
+    assert_response :success
   end
 
   test 'can show certificate without donor name' do
