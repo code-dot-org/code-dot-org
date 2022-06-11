@@ -19,8 +19,6 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    return render status: :bad_request, json: {message: 'student name is required'} unless data['name']
-
     if data['donor'] && !CdoDonor.valid_donor_name?(data['donor'])
       return render status: :bad_request, json: {message: 'invalid donor name'}
     end
