@@ -200,7 +200,8 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  showStudioCertificate: PropTypes.bool
+  showStudioCertificate: PropTypes.bool,
+  initialCertificateImageUrl: PropTypes.string
 };
 
 const styles = {
