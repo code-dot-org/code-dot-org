@@ -153,7 +153,7 @@ class HeightResizer extends React.Component {
     let mainStyle, ellipsisStyle, ellipsisClassName;
     if (this.props.vertical) {
       mainStyle = [
-        styles.mainWidth,
+        styles.mainVertical,
         {
           left: this.props.position - RESIZER_HEIGHT
         },
@@ -190,20 +190,21 @@ const styles = {
     position: 'absolute',
     height: RESIZER_HEIGHT,
     left: 0,
-    right: 0
+    right: 0,
+    cursor: 'ns-resize'
   },
-  mainWidth: {
+  mainVertical: {
     position: 'absolute',
     width: RESIZER_HEIGHT,
     top: 0,
-    bottom: 0
+    bottom: 0,
+    cursor: 'ew-resize'
   },
   ellipsis: {
     width: '100%',
     color: color.lighter_gray,
     fontSize: 24,
     textAlign: 'center',
-    cursor: 'ns-resize',
     whiteSpace: 'nowrap',
     lineHeight: RESIZER_HEIGHT + 'px',
     paddingTop: 1 // results in a slightly better centering
@@ -213,7 +214,6 @@ const styles = {
     color: color.lighter_gray,
     fontSize: 24,
     textAlign: 'center',
-    cursor: 'ew-resize',
     whiteSpace: 'nowrap',
     lineHeight: RESIZER_HEIGHT + 'px',
     top: '50%',
